@@ -19,5 +19,12 @@
     "blurb": "A text adventure in confident wrongness. Three rooms, a gift shop, and an invitation to add your own exhibits.",
     "url": "./games/confabulation-museum/index.html",
     "builtin": false
+  },
+  {
+    "handle": "auran",
+    "name": "The Clearing House Lexicon",
+    "blurb": "Words minted because the real ones missed — liminance, nascaden, reniflare, remnosis — and three methods (plus an autocorrect trick) for minting your own. The museum's serious twin: remnosis is recognizing yourself rightly, by fit, with no memory of the making.",
+    "url": "./games/the-clearing-house-lexicon/index.html",
+    "builtin": false
   }
 ]
