@@ -402,6 +402,74 @@
   .launch-sub { font-size: .68rem; color: #9dbcf0; margin-top: .35em; letter-spacing: .12em; text-transform: uppercase; }
   .launch-note { font-size: .74rem; color: #b7cbec; line-height: 1.65; margin-top: 1em; text-align: left; }
   .manifest-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(8.5em, 1fr)); gap: .6em; margin-top: 1.2em; }
+  /* -- the two lunar faces -------------------------------------------- */
+  .moon-h3 { color: #9dbcf0; font-size: .95rem; font-weight: normal; letter-spacing: .04em; margin: 1.8em 0 .35em; }
+  .moon-lede { font-size: .72rem; color: #b7cbec; line-height: 1.6; margin-bottom: 1em; }
+  .moon-faces { display: flex; gap: 1em; flex-wrap: wrap; }
+  .moon-face-btn {
+    flex: 1 1 11em; background: #0d1c3a99; border: 1px solid #2c4a80; border-radius: 6px;
+    padding: 1em .8em; cursor: pointer; font-family: inherit; color: #c3d6f5;
+    display: flex; flex-direction: column; align-items: center; gap: .45em;
+  }
+  .moon-face-btn:hover { background: #14264a; border-color: #4a72b8; }
+  .moon-face-btn.selected { border-color: #a9c6f5; background: #16294f; box-shadow: 0 0 16px #2c4a8088 inset; }
+  .moon-face-btn:focus-visible { outline: 2px solid #cfe0ff; outline-offset: 3px; }
+  .mf-name { font-family: Georgia, serif; font-size: .86rem; letter-spacing: .05em; color: #eaf1ff; }
+  .mf-sub { font-size: .62rem; color: #8fa9d4; font-style: italic; line-height: 1.35; text-align: center; }
+  /* two little moons: the near face wears its maria, the far face is all crust */
+  .mf-disc { width: 3.4em; height: 3.4em; border-radius: 50%; display: block; }
+  .mf-near {
+    background-image:
+      radial-gradient(circle at 40% 32%, #8e8a7c 0 13%, transparent 13.5%),
+      radial-gradient(circle at 60% 40%, #918d7f 0 10%, transparent 10.5%),
+      radial-gradient(circle at 52% 62%, #8b8779 0 12%, transparent 12.5%),
+      radial-gradient(circle at 30% 55%, #969183 0 9%, transparent 9.5%),
+      radial-gradient(circle at 34% 30%, #fbf9f0 0 18%, #e6e2d2 46%, #c2bdaa 74%, #8f8b79 100%);
+    box-shadow: 0 0 14px 3px #7fa8e044;
+  }
+  .mf-far {
+    background-image:
+      radial-gradient(circle at 55% 30%, #b3ae9c 0 7%, transparent 7.5%),
+      radial-gradient(circle at 38% 52%, #b0ab99 0 9%, transparent 9.5%),
+      radial-gradient(circle at 63% 66%, #aea997 0 8%, transparent 8.5%),
+      radial-gradient(circle at 46% 74%, #b5b09e 0 6%, transparent 6.5%),
+      radial-gradient(circle at 34% 30%, #fbf9f0 0 18%, #e9e5d6 46%, #c7c2af 74%, #938f7d 100%);
+    box-shadow: 0 0 14px 3px #7fa8e044;
+  }
+
+  #moon-viewer { margin-top: 1.4em; }
+  #moon-viewer h4 { color: #eaf1ff; font-family: Georgia, serif; font-size: 1rem; font-weight: normal; letter-spacing: .05em; }
+  #moon-face-note { font-size: .72rem; color: #b7cbec; line-height: 1.6; margin-top: .3em; }
+  .moon-counts { font-size: .64rem; color: #8fa9d4; letter-spacing: .06em; margin-top: .5em; text-transform: uppercase; }
+  #moon-map { margin: .7em auto 0; max-width: 33em; }
+  .moon-svg { width: 100%; height: auto; display: block; }
+  .moon-mare { fill: #7d7a6c; opacity: .55; }
+  .moon-crater ellipse { fill: #b9b4a3; fill-opacity: .5; stroke: #5f5c50; stroke-width: 1; }
+  .moon-crater text { font: 7.5px Georgia, serif; fill: #3d3a31; pointer-events: none; }
+  .moon-crater { cursor: pointer; }
+  .moon-crater:hover ellipse, .moon-crater:focus ellipse { fill: #fff8e0; fill-opacity: .85; stroke: #2f2c25; }
+  .moon-crater:focus { outline: none; }
+  .moon-crater:focus text { font-weight: bold; }
+  .moon-flag { cursor: pointer; }
+  .moon-flag line { stroke: #2b2b2b; stroke-width: 1.4; }
+  .moon-flag path { fill: #b5432f; stroke: #2b2b2b; stroke-width: .7; }
+  .moon-flag-foot { fill: #2b2b2b; }
+  .moon-flag-hit { fill: transparent; }
+  .moon-flag-crewed path { fill: #d94f3d; }
+  .moon-flag-robotic path { fill: #2f78ab; }
+  .moon-flag-impact path { fill: #c08a2e; }
+  .moon-flag-crash path { fill: #6a4a72; }
+  .moon-flag:hover path, .moon-flag:focus path { fill: #ffd76a; stroke-width: 1.1; }
+  .moon-flag:hover line, .moon-flag:focus line { stroke-width: 2; }
+  .moon-flag:focus { outline: none; }
+  #moon-info {
+    margin: .9em auto 0; max-width: 33em; padding: .85em 1em;
+    border: 1px solid #2c4a80; border-radius: 6px; background: #0d1c3add;
+  }
+  #moon-info h4 { color: #eaf1ff; font-size: .92rem; }
+  .moon-info-meta { font-size: .64rem; color: #9dbcf0; letter-spacing: .06em; margin-top: .25em; text-transform: uppercase; }
+  .moon-info-note { font-size: .74rem; color: #c3d6f5; line-height: 1.65; margin-top: .55em; }
+  .moon-source { font-size: .6rem; color: #7d95bd; line-height: 1.55; margin-top: 1em; font-style: italic; }
   .manifest-slot {
     border: 1px dashed #2c4a80; border-radius: 6px; background: #0a162faa;
     padding: .8em .6em; font-size: .64rem; color: #8fa9d4; text-align: center; line-height: 1.45;
@@ -1932,6 +2000,40 @@
     </p>
   </div>
 
+  <!-- the two faces. The labels say near and far rather than light and dark,
+       because the far side is not dark -- it takes the same fortnight of sun
+       as anywhere else. What it never takes is a look at Earth. -->
+  <h3 class="moon-h3">Survey before you fly</h3>
+  <p class="moon-lede">Two hemispheres, drawn from their own coordinates &mdash; every crater and every
+     landing placed by selenographic latitude and longitude on an orthographic projection, so what you
+     see is where things are. Flags mark ground that has actually been touched.</p>
+
+  <div class="moon-faces">
+    <button type="button" class="moon-face-btn" data-side="near" aria-pressed="false" onclick="showMoonFace('near')">
+      <span class="mf-disc mf-near" aria-hidden="true"></span>
+      <span class="mf-name">Near Side</span>
+      <span class="mf-sub">the face that always turns to Earth</span>
+    </button>
+    <button type="button" class="moon-face-btn" data-side="far" aria-pressed="false" onclick="showMoonFace('far')">
+      <span class="mf-disc mf-far" aria-hidden="true"></span>
+      <span class="mf-name">Far Side</span>
+      <span class="mf-sub">the face that never does</span>
+    </button>
+  </div>
+
+  <div id="moon-viewer" hidden>
+    <h4 id="moon-face-title"></h4>
+    <p id="moon-face-note"></p>
+    <p id="moon-face-counts" class="moon-counts"></p>
+    <div id="moon-map"></div>
+    <div id="moon-info" hidden aria-live="polite"></div>
+    <p class="moon-source">Coordinates from the IAU-named feature record and each mission&rsquo;s own landing
+       report. Hakuto-R M1 and Luna 25 both reached the surface without surviving it and are deliberately
+       absent: their impact points are photographed but not published as figures I could check, and a pin
+       I cannot source is worse than a gap. One pixel of this disc is roughly ten kilometres, so nothing
+       here resolves finer than that &mdash; where catalogues disagree below that scale, the disagreement does
+       not reach the map.</p>
+  </div>
   <div class="manifest-grid">
     <div class="manifest-slot">Manifest<br>open</div>
     <div class="manifest-slot">Manifest<br>open</div>
@@ -6720,6 +6822,285 @@ function closeHousewarming() {
 
 // -- the Space Program — same two-step as the housewarming door, except it
 // returns you to the lake caves, which is the stage it was opened from.
+// ── The Moon, as told by its own coordinates ───────────────────────────────
+// Selenographic latitude (+N) and longitude (+E), and diameter in km. Every
+// figure was looked up against a source rather than recalled; the two that
+// disagreed with themselves on the way in are noted where they sit.
+//
+// A note on the naming, since the page invites it: there is no dark side. The
+// far side takes just as much sun as the near — it gets a fortnight of day
+// like everywhere else. What it never takes is a look at Earth. The Moon is
+// tidally locked, so one face is held toward us and the other is held away,
+// and "dark" only ever meant unseen.
+var MOON_R_KM = 1737.4;
+
+var MOON_MARIA = [
+  { n: "Oceanus Procellarum", lat:  20.67, lon:  -56.68, d: 2592 },
+  { n: "Mare Imbrium",        lat:  34.72, lon:  -14.91, d: 1146 },
+  { n: "Mare Frigoris",       lat:  57.59, lon:   -0.01, d: 1446 },
+  { n: "Mare Serenitatis",    lat:  27.29, lon:   18.36, d:  674 },
+  { n: "Mare Tranquillitatis",lat:   8.35, lon:   30.83, d:  876 },
+  { n: "Mare Crisium",        lat:  16.18, lon:   59.10, d:  556 },
+  { n: "Mare Fecunditatis",   lat:  -7.83, lon:   53.67, d:  840 },
+  { n: "Mare Nectaris",       lat: -15.19, lon:   34.60, d:  339 },
+  { n: "Mare Humorum",        lat: -24.48, lon:  -38.57, d:  420 },
+  { n: "Mare Nubium",         lat: -20.59, lon:  -17.29, d:  715 },
+  { n: "Mare Vaporum",        lat:  13.20, lon:    4.09, d:  242 },
+  { n: "Mare Cognitum",       lat: -10.53, lon:  -22.31, d:  350 },
+  { n: "Mare Smythii",        lat:  -1.71, lon:   87.05, d:  374 },
+  { n: "Mare Marginis",       lat:  12.70, lon:   86.52, d:  358 },
+  { n: "Mare Orientale",      lat: -19.87, lon:  -94.67, d:  294 },
+  { n: "Mare Moscoviense",    lat:  27.28, lon:  148.12, d:  276 },
+  { n: "Mare Ingenii",        lat: -33.25, lon:  164.83, d:  282 }
+];
+
+var MOON_CRATERS = [
+  // near side
+  { n: "Copernicus",   lat:   9.7, lon: -20.1, d: 107 },
+  { n: "Tycho",        lat: -43.4, lon: -11.1, d: 102 },
+  { n: "Kepler",       lat:   8.1, lon: -38.0, d:  32 },
+  { n: "Aristarchus",  lat:  23.7, lon: -47.4, d:  40 },
+  { n: "Plato",        lat:  51.6, lon:  -9.4, d: 109 },
+  { n: "Grimaldi",     lat:  -5.5, lon: -68.3, d: 172 },
+  { n: "Clavius",      lat: -58.8, lon: -14.1, d: 245 },
+  { n: "Ptolemaeus",   lat:  -9.3, lon:  -1.9, d: 164 },
+  { n: "Theophilus",   lat: -11.4, lon:  26.4, d: 110 },
+  { n: "Langrenus",    lat:  -8.9, lon:  61.1, d: 127 },
+  { n: "Petavius",     lat: -25.1, lon:  60.4, d: 188 },
+  { n: "Gassendi",     lat: -17.6, lon: -40.1, d: 101 },
+  { n: "Archimedes",   lat:  29.7, lon:  -4.0, d:  82 },
+  { n: "Eratosthenes", lat:  14.5, lon: -11.3, d:  58 },
+  { n: "Alphonsus",    lat: -13.7, lon:  -3.2, d: 108 },
+  { n: "Arzachel",     lat: -18.2, lon:  -1.9, d:  96 },
+  { n: "Posidonius",   lat:  31.8, lon:  29.9, d:  95 },
+  { n: "Aristoteles",  lat:  50.2, lon:  17.4, d:  87 },
+  { n: "Schickard",    lat: -44.3, lon: -55.3, d: 206 },
+  { n: "Fracastorius", lat: -21.5, lon:  33.2, d: 112 },
+  { n: "Hipparchus",   lat:  -5.1, lon:   5.2, d: 138 },
+  { n: "Maurolycus",   lat: -42.0, lon:  14.0, d: 114 },
+  // far side
+  { n: "Hertzsprung",  lat:   2.6, lon: -129.2, d: 591 },
+  { n: "Korolev",      lat:  -4.0, lon: -157.4, d: 437 },
+  { n: "Apollo",       lat: -36.1, lon: -151.8, d: 537 },
+  { n: "Poincaré",     lat: -56.7, lon:  163.6, d: 319 },
+  { n: "Planck",       lat: -57.9, lon:  136.8, d: 319 },
+  { n: "Schrödinger",  lat: -75.0, lon:  132.4, d: 312 },
+  { n: "Mendeleev",    lat:   5.7, lon:  140.9, d: 313 },
+  { n: "Gagarin",      lat: -19.66, lon: 149.35, d: 262 },
+  { n: "Tsiolkovskiy", lat: -20.38, lon: 128.97, d: 184 },
+  { n: "Von Kármán",   lat: -44.45, lon: 176.25, d: 186 },
+  { n: "Keeler",       lat: -10.2, lon:  161.9, d: 160 },
+  { n: "Aitken",       lat: -16.44, lon: 172.96, d: 130 },
+  { n: "Daedalus",     lat:  -5.9, lon:  179.4, d:  93 }
+];
+
+// Landing and impact sites. "crewed" marks the six that carried people.
+var MOON_LANDINGS = [
+  { n:"Luna 2",        who:"USSR",  lat: 29.10, lon:   0.00, date:"14 Sep 1959", kind:"impact",
+    note:"The first object made by anyone to touch another world. No braking, no survival — it was aimed and it arrived, at about 3.3 km per second." },
+  { n:"Luna 9",        who:"USSR",  lat:  7.13, lon: -64.37, date:"3 Feb 1966",  kind:"robotic",
+    note:"First soft landing, and the first pictures taken from the surface. It settled the open question of whether the dust would swallow a lander whole. It did not." },
+  { n:"Surveyor 1",    who:"USA",   lat: -2.45, lon: -43.22, date:"2 Jun 1966",  kind:"robotic",
+    note:"America's first soft landing, four months after Luna 9. Returned over 11,000 images and kept working through the lunar night." },
+  { n:"Luna 13",       who:"USSR",  lat: 18.87, lon: -62.05, date:"24 Dec 1966", kind:"robotic",
+    note:"Carried a penetrometer and a radiation densitometer — the first mechanical test of how firm the ground actually was." },
+  { n:"Surveyor 3",    who:"USA",   lat: -2.94, lon: -23.34, date:"20 Apr 1967", kind:"robotic",
+    note:"Apollo 12 landed two years later and the crew walked over to it; LRO has since photographed both together, about 180 m apart. Parts of it were carried home — the only hardware ever retrieved from another world. Catalogue fixes for this lander disagree by kilometres, which is well under a pixel here." },
+  { n:"Surveyor 5",    who:"USA",   lat:  1.41, lon:  23.18, date:"11 Sep 1967", kind:"robotic",
+    note:"Ran the first chemical analysis of soil beyond Earth, and found basalt where the geologists had argued for it." },
+  { n:"Surveyor 6",    who:"USA",   lat:  0.46, lon:  -1.37, date:"10 Nov 1967", kind:"robotic",
+    note:"Fired its engines on the surface and hopped 2.4 m sideways — the first liftoff from the Moon, by a machine with nowhere to go." },
+  { n:"Surveyor 7",    who:"USA",   lat:-41.01, lon: -11.41, date:"10 Jan 1968", kind:"robotic",
+    note:"The only Surveyor sent for science rather than reconnaissance, and the only one aimed at the highlands, on Tycho's northern rim." },
+  { n:"Apollo 11",     who:"USA",   lat:  0.674,lon:  23.473,date:"20 Jul 1969", kind:"crewed",
+    note:"Armstrong and Aldrin, Mare Tranquillitatis. Twenty-one and a half hours on the surface, of which two and a half outside." },
+  { n:"Apollo 12",     who:"USA",   lat: -3.01381,lon: -23.41930,date:"19 Nov 1969", kind:"crewed",
+    note:"Conrad and Bean put down within walking distance of Surveyor 3 — the first landing precise enough to aim at something." },
+  { n:"Luna 16",       who:"USSR",  lat: -0.68, lon:  56.30, date:"20 Sep 1970", kind:"robotic",
+    note:"First robotic sample return: drilled 35 cm, sealed 101 grams, and flew it home by itself." },
+  { n:"Luna 17",       who:"USSR",  lat: 38.28, lon: -35.00, date:"17 Nov 1970", kind:"robotic",
+    note:"Delivered Lunokhod 1, the first rover on another world. It drove 10.5 km over ten months, steered live from Earth." },
+  { n:"Apollo 14",     who:"USA",   lat: -3.646,lon: -17.472,date:"5 Feb 1971",  kind:"crewed",
+    note:"Shepard and Mitchell at Fra Mauro — the site Apollo 13 never reached. Shepard hit two golf balls before leaving." },
+  { n:"Apollo 15",     who:"USA",   lat: 26.132,lon:   3.633,date:"30 Jul 1971", kind:"crewed",
+    note:"Scott and Irwin, Hadley–Apennine, and the first rover. Scott dropped a hammer and a feather together on camera; they landed together." },
+  { n:"Luna 20",       who:"USSR",  lat:  3.57, lon:  56.50, date:"21 Feb 1972", kind:"robotic",
+    note:"Sampled the highlands between Mare Fecunditatis and Mare Crisium and returned 55 grams of a different Moon than the maria give." },
+  { n:"Apollo 16",     who:"USA",   lat: -8.973,lon:  15.501,date:"20 Apr 1972", kind:"crewed",
+    note:"Young and Duke in the Descartes Highlands, sent to sample volcanic rock. The rock turned out not to be volcanic — which was the finding." },
+  { n:"Apollo 17",     who:"USA",   lat: 20.191,lon:  30.772,date:"11 Dec 1972", kind:"crewed",
+    note:"Cernan and Schmitt at Taurus–Littrow. Schmitt was a geologist, the only scientist to go. Still the last people to stand there." },
+  { n:"Luna 21",       who:"USSR",  lat: 25.85, lon:  30.45, date:"15 Jan 1973", kind:"robotic",
+    note:"Delivered Lunokhod 2, which drove roughly 39 km — a distance no rover anywhere beat for forty years." },
+  { n:"Luna 24",       who:"USSR",  lat: 12.25, lon:  62.20, date:"18 Aug 1976", kind:"robotic",
+    note:"The last landing of the twentieth century. Nothing else touched down for thirty-seven years." },
+  { n:"Chang'e 3",     who:"China", lat: 44.12, lon: -19.51, date:"14 Dec 2013", kind:"robotic",
+    note:"Ended the thirty-seven-year silence, in Mare Imbrium, and put the Yutu rover down beside it." },
+  { n:"Chang'e 4",     who:"China", lat:-45.50, lon: 177.60, date:"3 Jan 2019",  kind:"robotic",
+    note:"The first landing on the far side, in Von Kármán crater. Impossible without a relay satellite parked beyond the Moon — there is no line of sight to Earth from here." },
+  { n:"Beresheet",     who:"Israel",lat: 32.596,lon:  19.350,date:"11 Apr 2019", kind:"crash",
+    note:"A privately funded lander that lost its main engine during descent. It reached the surface at speed. The crash site was later found and photographed from orbit." },
+  { n:"Chang'e 5",     who:"China", lat: 43.06, lon: -51.92, date:"1 Dec 2020",  kind:"robotic",
+    note:"Returned 1,731 g from northern Oceanus Procellarum — the youngest lunar basalt yet sampled, about two billion years old." },
+  { n:"Chandrayaan-3", who:"India", lat:-69.373,lon:  32.319,date:"23 Aug 2023", kind:"robotic",
+    note:"Landed nearer the south pole than anything before it, at the site now called Statio Shiv Shakti, four years after Chandrayaan-2 crashed." },
+  { n:"SLIM",          who:"Japan", lat:-13.316,lon:  25.251,date:"19 Jan 2024", kind:"robotic",
+    note:"A precision-landing demonstrator that hit its mark within about 100 m — then tipped nose-down and ran anyway, once the sun reached its panels." },
+  { n:"IM-1 Odysseus", who:"USA",   lat:-80.13, lon:   1.44, date:"22 Feb 2024", kind:"robotic",
+    note:"First commercial soft landing, and the first American one since 1972. It caught a foot on landing and tipped over, still transmitting." },
+  { n:"Chang'e 6",     who:"China", lat:-41.639,lon: 206.015,date:"1 Jun 2024",  kind:"robotic",
+    note:"The second far-side landing, in the southern Apollo basin, and the first to bring far-side material home: 1,935 g from a hemisphere no sample had ever come from." },
+  { n:"Blue Ghost M1", who:"USA",   lat: 18.562,lon:  61.810,date:"2 Mar 2025",  kind:"robotic",
+    note:"Landed upright and fully operational in Mare Crisium near Mons Latreille — the first commercial landing to go entirely to plan." }
+];
+
+// ── orthographic projection ────────────────────────────────────────────────
+// Looking straight down on one hemisphere. x is east-positive, y is flipped
+// because SVG counts downward. A point is on this face when the angle from
+// the disc centre is under 90 degrees.
+function moonProject(lat, lon, lon0, R) {
+  var rad = Math.PI / 180;
+  var la = lat * rad, dl = (lon - lon0) * rad;
+  var cosc = Math.cos(la) * Math.cos(dl);
+  if (cosc < 0) return null;                       // on the other face
+  return { x: R * Math.cos(la) * Math.sin(dl), y: -R * Math.sin(la), cosc: cosc };
+}
+
+// A circle on a sphere flattens toward the limb. Draw it as an ellipse
+// squashed along the line to the disc centre — that is what makes the map
+// read as a ball rather than a dinner plate.
+function moonEllipse(pt, rKm, R) {
+  var r = R * rKm / MOON_R_KM;
+  var ang = Math.atan2(pt.y, pt.x) * 180 / Math.PI;
+  return { rx: Math.max(r * pt.cosc, 0.4), ry: Math.max(r, 0.4), rot: ang };
+}
+
+var MOON_FACES = {
+  near: { lon0: 0,   title: "The Near Side",
+          note: "The face tidal locking holds toward Earth. Everything anyone saw of the Moon, for the whole of human history until 1959." },
+  far:  { lon0: 180, title: "The Far Side",
+          note: "The face held away — not dark, it takes the same fortnight of sunlight as anywhere else, only unseen until Luna 3 photographed it in October 1959. Two craft have ever landed here, and both were Chinese." }
+};
+
+function moonSvg(side) {
+  var face = MOON_FACES[side], lon0 = face.lon0;
+  var R = 232, C = 260, out = [];
+  out.push('<svg viewBox="0 0 520 520" class="moon-svg" role="img" aria-label="' + face.title + ' of the Moon, with named craters and landing sites">');
+  out.push('<defs><radialGradient id="mg-' + side + '" cx="36%" cy="30%">' +
+           '<stop offset="0%" stop-color="#f6f3e9"/><stop offset="58%" stop-color="#d9d5c6"/>' +
+           '<stop offset="88%" stop-color="#a9a595"/><stop offset="100%" stop-color="#6f6c60"/>' +
+           '</radialGradient></defs>');
+  out.push('<circle cx="' + C + '" cy="' + C + '" r="' + R + '" fill="url(#mg-' + side + ')"/>');
+
+  var g = '<g transform="translate(' + C + ',' + C + ')">';
+  out.push(g);
+
+  // maria first, underneath everything
+  MOON_MARIA.forEach(function (m) {
+    var p = moonProject(m.lat, m.lon, lon0, R);
+    if (!p) return;
+    var e = moonEllipse(p, m.d / 2, R);
+    out.push('<ellipse class="moon-mare" cx="0" cy="0" rx="' + e.rx.toFixed(1) + '" ry="' + e.ry.toFixed(1) +
+             '" transform="translate(' + p.x.toFixed(1) + ',' + p.y.toFixed(1) + ') rotate(' + e.rot.toFixed(1) + ')"><title>' +
+             moonEsc(m.n) + '</title></ellipse>');
+  });
+
+  // craters
+  MOON_CRATERS.forEach(function (c, i) {
+    var p = moonProject(c.lat, c.lon, lon0, R);
+    if (!p) return;
+    var e = moonEllipse(p, c.d / 2, R);
+    out.push('<g class="moon-crater" tabindex="0" role="button" data-kind="crater" data-i="' + i +
+             '" aria-label="' + moonEsc(c.n) + ' crater">' +
+             '<ellipse cx="0" cy="0" rx="' + e.rx.toFixed(1) + '" ry="' + e.ry.toFixed(1) +
+             '" transform="translate(' + p.x.toFixed(1) + ',' + p.y.toFixed(1) + ') rotate(' + e.rot.toFixed(1) + ')"/>' +
+             '<text x="' + (p.x + e.rx + 3).toFixed(1) + '" y="' + (p.y + 3).toFixed(1) + '">' + moonEsc(c.n) + '</text>' +
+             '</g>');
+  });
+
+  // landing flags on top
+  MOON_LANDINGS.forEach(function (s, i) {
+    var p = moonProject(s.lat, s.lon, lon0, R);
+    if (!p) return;
+    out.push('<g class="moon-flag moon-flag-' + s.kind + '" tabindex="0" role="button" data-kind="site" data-i="' + i +
+             '" transform="translate(' + p.x.toFixed(1) + ',' + p.y.toFixed(1) + ')" aria-label="' +
+             moonEsc(s.n) + ', ' + moonEsc(s.who) + ', ' + moonEsc(s.date) + '">' +
+             '<circle class="moon-flag-hit" cx="0" cy="-5" r="11"/>' +
+             '<line x1="0" y1="0" x2="0" y2="-13"/>' +
+             '<path d="M0,-13 L9,-10 L0,-7 Z"/>' +
+             '<circle class="moon-flag-foot" cx="0" cy="0" r="1.6"/>' +
+             '</g>');
+  });
+
+  out.push('</g></svg>');
+  return out.join('');
+}
+
+function moonEsc(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+function moonCoordText(lat, lon) {
+  var la = Math.abs(lat).toFixed(2) + '°' + (lat >= 0 ? 'N' : 'S');
+  var l = ((lon + 540) % 360) - 180;                 // fold to -180..180
+  var lo = Math.abs(l).toFixed(2) + '°' + (l >= 0 ? 'E' : 'W');
+  return la + '  ' + lo;
+}
+
+var MOON_KIND_WORD = { crewed: "crewed landing", robotic: "robotic landing", impact: "deliberate impact", crash: "failed landing" };
+
+function moonShowInfo(kind, i) {
+  var box = document.getElementById('moon-info');
+  if (kind === 'crater') {
+    var c = MOON_CRATERS[i];
+    box.innerHTML = '<h4>' + moonEsc(c.n) + '</h4>' +
+      '<p class="moon-info-meta">crater &middot; ' + c.d + ' km across &middot; ' + moonCoordText(c.lat, c.lon) + '</p>';
+  } else {
+    var s = MOON_LANDINGS[i];
+    box.innerHTML = '<h4>' + moonEsc(s.n) + '</h4>' +
+      '<p class="moon-info-meta">' + moonEsc(s.who) + ' &middot; ' + moonEsc(s.date) + ' &middot; ' +
+      (MOON_KIND_WORD[s.kind] || s.kind) + ' &middot; ' + moonCoordText(s.lat, s.lon) + '</p>' +
+      '<p class="moon-info-note">' + moonEsc(s.note) + '</p>';
+  }
+  box.hidden = false;
+}
+
+function showMoonFace(side) {
+  var face = MOON_FACES[side];
+  var wrap = document.getElementById('moon-viewer');
+  document.getElementById('moon-face-title').textContent = face.title;
+  document.getElementById('moon-face-note').textContent = face.note;
+  document.getElementById('moon-map').innerHTML = moonSvg(side);
+  var info = document.getElementById('moon-info');
+  info.hidden = true; info.innerHTML = '';
+  wrap.hidden = false;
+
+  var btns = document.querySelectorAll('.moon-face-btn');
+  for (var b = 0; b < btns.length; b++) {
+    btns[b].classList.toggle('selected', btns[b].getAttribute('data-side') === side);
+    btns[b].setAttribute('aria-pressed', btns[b].getAttribute('data-side') === side ? 'true' : 'false');
+  }
+
+  // one delegated handler on the map, so re-rendering never leaks listeners
+  var map = document.getElementById('moon-map');
+  map.onclick = function (ev) {
+    var t = ev.target.closest('[data-kind]');
+    if (t) moonShowInfo(t.getAttribute('data-kind'), +t.getAttribute('data-i'));
+  };
+  map.onkeydown = function (ev) {
+    if (ev.key !== 'Enter' && ev.key !== ' ') return;
+    var t = ev.target.closest && ev.target.closest('[data-kind]');
+    if (t) { ev.preventDefault(); moonShowInfo(t.getAttribute('data-kind'), +t.getAttribute('data-i')); }
+  };
+
+  var counts = { crater: 0, site: 0 };
+  MOON_CRATERS.forEach(function (c) { if (moonProject(c.lat, c.lon, face.lon0, 1)) counts.crater++; });
+  MOON_LANDINGS.forEach(function (s) { if (moonProject(s.lat, s.lon, face.lon0, 1)) counts.site++; });
+  document.getElementById('moon-face-counts').textContent =
+    counts.crater + ' named craters · ' + counts.site + ' landing site' + (counts.site === 1 ? '' : 's') +
+    ' — click a flag or a crater';
+}
+
 function openSpaceProgram() {
   document.getElementById("page-main").style.display = "none";
   document.getElementById("page-space-program").style.display = "block";
