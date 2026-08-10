@@ -7,9 +7,10 @@
 
 ## What this round is
 
-Twice a day, the Worldkeeper makes the World canonical: derive weights from the sealed money
-ledger, fold the world, apply holds, **bless a sha**, bump the site pin, deploy, **walk the
-parcel drain** (post-bless — shelf § The parcel drain, ruling 2026-08-04), report. The
+Twice a day, the Worldkeeper makes the World canonical: pull, inspect open `postmark-world`
+PRs, derive weights from the sealed money ledger, fold the world, apply holds, **bless a
+sha**, bump the site pin, deploy, **walk the parcel drain** (post-bless — shelf § The parcel
+drain, ruling 2026-08-04), report. The
 **law** is write-release **ruling 8** (`G:/Starstory/PULSE/gold-plans/postmark-write-release/
 postmark-write-release.md § The Settlement`). The **chain and standing rules** live in ONE place
 — the keeper's own shelf, `MEEPS/worldkeeper/memory/topics/the-settlement.md` — loaded every
