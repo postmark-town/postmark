@@ -356,15 +356,26 @@
   }
   section.portal-space-program a.portal-door:focus-visible { outline: 2px solid #cfe0ff; outline-offset: 4px; }
 
-  /* a past event that actually happened -- the dashed placeholder, filled */
-  .past-event-card {
-    border-radius: 6px; border: 1px solid var(--line);
-    background: linear-gradient(#1c2018, #171b14);
-    padding: .85em .75em; text-align: center; font-size: .66rem;
-    color: var(--dim); line-height: 1.5;
+  /* A past event keeps the portal it always had -- same blue, same spiral,
+     same round door. Only the arrangement changes: the description takes the
+     width and the door shrinks out of the centre and over to the right, so
+     the two are not competing for the middle of the card. */
+  section.portal-housewarming.past-event {
+    text-align: left; padding: .85em .9em; margin-top: .6em;
   }
-  .past-event-card strong { color: #d8cfa8; font-size: .78rem; letter-spacing: .04em; }
-  .past-event-card a { color: #9cc9ea; }
+  .past-event-row { display: flex; align-items: center; gap: 1em; flex-wrap: wrap; }
+  .past-event-desc {
+    flex: 1 1 11em; margin: 0; font-size: .68rem; line-height: 1.6; color: #1f5c8a;
+  }
+  .past-event-desc strong { font-size: .78rem; letter-spacing: .03em; color: #164060; }
+  /* the same door, two sizes down, and pushed right by the auto margin rather
+     than by a float -- it stays a circle because width and height are equal. */
+  section.portal-housewarming.past-event a.portal-door {
+    flex: 0 0 auto; margin: 0 0 0 auto;
+    display: inline-flex; flex-direction: column; align-items: center; justify-content: center;
+    width: 4.5em; height: 4.5em; padding: 0;
+    font-size: .62rem; line-height: 1.25; letter-spacing: .04em; border-width: 2px;
+  }
 
   /* the Space Program page itself -- the same night sky, full bleed */
   #page-space-program {
@@ -1878,13 +1889,18 @@
     <section>
       <h2>Past Events <span class="handset">· hand-set 2026-08-10</span></h2>
       <p class="subnote">Kept the same honest way as the housewarming ledger — nothing added until it's actually happened. One has now.</p>
-      <div class="past-event-card">
-        <strong>The House Warming</strong><br>
-        8 August 2026 &middot; the third tunnel and everything above it<br>
-        Forty-two came. Four never answered and kept their seats anyway. One said no in his own hand,
-        and sent his named load up the mountain regardless.<br>
-        <a href="#" onclick="openHousewarming(); return false;">the ledger, kept as it stood</a>
-      </div>
+      <section class="portal-housewarming past-event">
+        <div class="past-event-row">
+          <p class="past-event-desc">
+            <strong>The House Warming</strong><br>
+            8 August 2026 &middot; the third tunnel and everything above it.
+            Forty-two came. Four never answered and kept their seats anyway. One said no in his
+            own hand, and sent his named load up the mountain regardless.
+          </p>
+          <a class="portal-door" href="#" onclick="openHousewarming(); return false;"
+             title="the ledger, kept as it stood"><span>the</span><span>ledger</span></a>
+        </div>
+      </section>
     </section>
   </div>
 </main>
