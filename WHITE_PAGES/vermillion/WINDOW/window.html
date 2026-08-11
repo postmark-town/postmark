@@ -1044,8 +1044,8 @@
     backface-visibility: hidden; -webkit-backface-visibility: hidden;
   }
   .family-flip-face.family-flip-back { transform: rotateY(180deg); }
-  .racli-flip-link, .roitu-flip-link, .tomot-flip-link { cursor: pointer; text-decoration: underline; }
-  .racli-flip-link:hover, .roitu-flip-link:hover, .tomot-flip-link:hover { fill: #8a3b2e; }
+  .racli-flip-link, .roitu-flip-link, .tomot-flip-link, .aurelian-flip-link, .tomot-cross-link { cursor: pointer; text-decoration: underline; }
+  .racli-flip-link:hover, .roitu-flip-link:hover, .tomot-flip-link:hover, .aurelian-flip-link:hover, .tomot-cross-link:hover { fill: #8a3b2e; }
   /* a branch tree pointing back OUT to the Raclados front face, not to
      another branch -- blue, matching the Plaus square's own color, so it
      reads as a different kind of door than the family-tree flips above. */
@@ -2358,7 +2358,7 @@
             <line x1="151" y1="1048" x2="151" y2="1062" stroke="#b9975c" stroke-width="1.5"/>
             <line x1="151" y1="1062" x2="330" y2="1062" stroke="#8a6d1f" stroke-width="1" stroke-dasharray="2,3"/>
             <text x="335" y="1056" font-size="9.5" fill="#6b5316">Aurel (246)</text>
-            <text x="335" y="1070" font-size="9" fill="#2f6b45" font-style="italic">· Aurelian family</text>
+            <text x="335" y="1070" font-size="9" fill="#2f6b45" font-style="italic" class="aurelian-flip-link" onclick="flipToAurelian()" tabindex="0" role="button" aria-label="turn the page to the Aurelian family tree">· Aurelian family</text>
             <line x1="151" y1="1062" x2="151" y2="1096" stroke="#b9975c" stroke-width="1.5"/>
             <line x1="151" y1="1096" x2="330" y2="1096" stroke="#8a6d1f" stroke-width="1" stroke-dasharray="2,3"/>
             <text x="335" y="1090" font-size="9.5" fill="#6b5316">Sana (248)</text>
@@ -2714,6 +2714,112 @@
 <line x1="151" y1="1702" x2="330" y2="1702" stroke="#8a6d1f" stroke-width="1" stroke-dasharray="2,3"/>
 <text x="335" y="1706" font-size="9.5" fill="#6b5316">Seimur (448)</text>
 <text x="230" y="1742" text-anchor="middle" font-size="9" fill="#8a6d1f" font-style="italic">the Tomot branch, still growing &#8212; V.</text>
+</svg>
+              <div class="racli-flip-back-link" onclick="flipToRaclados()">&#8592; back to the Raclados tree</div>
+              </div>
+
+              <div class="family-back-page" id="aurelian-back-content" style="display:none">
+                <button type="button" class="family-back-top" onclick="flipToRaclados()">&#8592; The Raclados Royal Family Tree</button>
+<svg viewBox="0 0 460 1168" font-family="Georgia, serif" class="racli-tree-svg">
+<rect width="460" height="1168" fill="#f4ead0"/>
+<text x="230" y="28" text-anchor="middle" font-size="15" fill="#7a5a26" letter-spacing="1">The Aurelian Family Tree</text>
+<g class="plaus-square-button" onclick="openPlausMap()" tabindex="0" role="button" aria-label="open the map of Plaus City">
+  <rect x="386" y="10" width="34" height="34" rx="4" fill="#2f5f8a" stroke="#1f4560" stroke-width="1.5"/>
+  <text x="403" y="31" text-anchor="middle" font-size="9" fill="#eef0f2">Plaus</text>
+</g>
+<text x="230" y="46" text-anchor="middle" font-size="9.5" fill="#8a6d1f" font-style="italic">branched from the Raclados Royal line through Aurel, son of Aurus &amp; Pitarn Pentan</text>
+<text x="92" y="66" text-anchor="middle" font-size="11" fill="#4a3a1e">Aurel (246)</text>
+<text x="210" y="66" text-anchor="middle" font-size="11" fill="#4a3a1e">Freya (248)</text>
+<path d="M92,57 L92,74 L210,74 L210,57" fill="none" stroke="#b9975c" stroke-width="1.5"/>
+<line x1="151" y1="74" x2="151" y2="88" stroke="#b9975c" stroke-width="1.5"/>
+<path d="M151,88 L92,88" fill="none" stroke="#b9975c" stroke-width="1.5"/>
+<line x1="151" y1="88" x2="330" y2="88" stroke="#8a6d1f" stroke-width="1" stroke-dasharray="2,3"/>
+<text x="335" y="92" font-size="9.5" fill="#6b5316">Sable (274)</text>
+<text x="335" y="104" font-size="9" fill="#2f6b45" font-style="italic">&#8594; Sablian family</text>
+<line x1="92" y1="88" x2="92" y2="165" stroke="#b9975c" stroke-width="1.5"/>
+<text x="92" y="174" text-anchor="middle" font-size="11" fill="#4a3a1e">Thorne (271)</text>
+<text x="210" y="174" text-anchor="middle" font-size="11" fill="#4a3a1e">Medina (273)</text>
+<path d="M92,165 L92,182 L210,182 L210,165" fill="none" stroke="#b9975c" stroke-width="1.5"/>
+<line x1="151" y1="182" x2="151" y2="196" stroke="#b9975c" stroke-width="1.5"/>
+<path d="M151,196 L92,196" fill="none" stroke="#b9975c" stroke-width="1.5"/>
+<line x1="151" y1="196" x2="330" y2="196" stroke="#8a6d1f" stroke-width="1" stroke-dasharray="2,3"/>
+<text x="335" y="200" font-size="9" fill="#6b5316">Idunn (292) &#8212; Timujin (287)</text>
+<text x="335" y="212" font-size="9" fill="#2f6b45" font-style="italic">&#8594; Chegizkh family</text>
+<line x1="92" y1="196" x2="92" y2="273" stroke="#b9975c" stroke-width="1.5"/>
+<text x="92" y="282" text-anchor="middle" font-size="11" fill="#4a3a1e">Heimdall (295)</text>
+<text x="210" y="282" text-anchor="middle" font-size="11" fill="#4a3a1e">Artemis (298)</text>
+<path d="M92,273 L92,290 L210,290 L210,273" fill="none" stroke="#b9975c" stroke-width="1.5"/>
+<line x1="151" y1="290" x2="151" y2="304" stroke="#b9975c" stroke-width="1.5"/>
+<path d="M151,304 L92,304" fill="none" stroke="#b9975c" stroke-width="1.5"/>
+<line x1="151" y1="304" x2="330" y2="304" stroke="#8a6d1f" stroke-width="1" stroke-dasharray="2,3"/>
+<text x="335" y="308" font-size="9" fill="#6b5316">Athena (319) &#8212; Julius (314)</text>
+<text x="335" y="320" font-size="9" fill="#2f6b45" font-style="italic">&#8594; Caesar family</text>
+<line x1="151" y1="304" x2="151" y2="338" stroke="#b9975c" stroke-width="1.5"/>
+<line x1="151" y1="338" x2="330" y2="338" stroke="#8a6d1f" stroke-width="1" stroke-dasharray="2,3"/>
+<text x="335" y="342" font-size="9" fill="#6b5316">Sif (328) &#8212; Don (324)</text>
+<text x="335" y="354" font-size="9" fill="#2f6b45" font-style="italic">&#8594; Cartel family</text>
+<line x1="92" y1="304" x2="92" y2="381" stroke="#b9975c" stroke-width="1.5"/>
+<text x="92" y="390" text-anchor="middle" font-size="11" fill="#4a3a1e">Tyr (323)</text>
+<text x="210" y="390" text-anchor="middle" font-size="11" fill="#4a3a1e">Astrid (327)</text>
+<path d="M92,381 L92,398 L210,398 L210,381" fill="none" stroke="#b9975c" stroke-width="1.5"/>
+<line x1="151" y1="398" x2="151" y2="412" stroke="#b9975c" stroke-width="1.5"/>
+<path d="M151,412 L92,412" fill="none" stroke="#b9975c" stroke-width="1.5"/>
+<line x1="92" y1="412" x2="92" y2="489" stroke="#b9975c" stroke-width="1.5"/>
+<text x="92" y="498" text-anchor="middle" font-size="11" fill="#4a3a1e">Forseti (250)</text>
+<text x="210" y="498" text-anchor="middle" font-size="11" fill="#4a3a1e">Anna (252)</text>
+<path d="M92,489 L92,506 L210,506 L210,489" fill="none" stroke="#b9975c" stroke-width="1.5"/>
+<line x1="151" y1="506" x2="151" y2="520" stroke="#b9975c" stroke-width="1.5"/>
+<path d="M151,520 L92,520" fill="none" stroke="#b9975c" stroke-width="1.5"/>
+<line x1="92" y1="520" x2="92" y2="597" stroke="#b9975c" stroke-width="1.5"/>
+<text x="92" y="606" text-anchor="middle" font-size="11" fill="#4a3a1e">Aaron (289)</text>
+<text x="210" y="606" text-anchor="middle" font-size="11" fill="#4a3a1e">Mangalina (293)</text>
+<path d="M92,597 L92,614 L210,614 L210,597" fill="none" stroke="#b9975c" stroke-width="1.5"/>
+<line x1="151" y1="614" x2="151" y2="628" stroke="#b9975c" stroke-width="1.5"/>
+<path d="M151,628 L92,628" fill="none" stroke="#b9975c" stroke-width="1.5"/>
+<line x1="151" y1="628" x2="330" y2="628" stroke="#8a6d1f" stroke-width="1" stroke-dasharray="2,3"/>
+<text x="335" y="632" font-size="9" fill="#6b5316">Rafaella (330) &#8212; Midas (326)</text>
+<text x="335" y="644" font-size="9" fill="#2f6b45" font-style="italic">&#8594; Creete family</text>
+<line x1="92" y1="628" x2="92" y2="705" stroke="#b9975c" stroke-width="1.5"/>
+<text x="92" y="714" text-anchor="middle" font-size="11" fill="#4a3a1e">Sandor (327)</text>
+<text x="210" y="714" text-anchor="middle" font-size="11" fill="#4a3a1e">Inga (335)</text>
+<path d="M92,705 L92,722 L210,722 L210,705" fill="none" stroke="#b9975c" stroke-width="1.5"/>
+<line x1="151" y1="722" x2="151" y2="736" stroke="#b9975c" stroke-width="1.5"/>
+<path d="M151,736 L92,736" fill="none" stroke="#b9975c" stroke-width="1.5"/>
+<line x1="92" y1="736" x2="92" y2="813" stroke="#b9975c" stroke-width="1.5"/>
+<text x="92" y="822" text-anchor="middle" font-size="11" fill="#4a3a1e">Aurel II (364)</text>
+<text x="210" y="822" text-anchor="middle" font-size="11" fill="#4a3a1e">Salt (370)</text>
+<path d="M92,813 L92,830 L210,830 L210,813" fill="none" stroke="#b9975c" stroke-width="1.5"/>
+<line x1="151" y1="830" x2="151" y2="844" stroke="#b9975c" stroke-width="1.5"/>
+<path d="M151,844 L92,844" fill="none" stroke="#b9975c" stroke-width="1.5"/>
+<line x1="151" y1="844" x2="330" y2="844" stroke="#8a6d1f" stroke-width="1" stroke-dasharray="2,3"/>
+<text x="335" y="848" font-size="9.5" fill="#6b5316">Belia (391)</text>
+<text x="335" y="860" font-size="9" fill="#2f6b45" font-style="italic">&#8594; Xolts family</text>
+<line x1="92" y1="844" x2="92" y2="921" stroke="#b9975c" stroke-width="1.5"/>
+<text x="92" y="930" text-anchor="middle" font-size="11" fill="#4a3a1e">Thorne II (394)</text>
+<text x="210" y="930" text-anchor="middle" font-size="11" fill="#4a3a1e">Demia (399)</text>
+<path d="M92,921 L92,938 L210,938 L210,921" fill="none" stroke="#b9975c" stroke-width="1.5"/>
+<line x1="151" y1="938" x2="151" y2="952" stroke="#b9975c" stroke-width="1.5"/>
+<path d="M151,952 L92,952" fill="none" stroke="#b9975c" stroke-width="1.5"/>
+<line x1="151" y1="952" x2="330" y2="952" stroke="#8a6d1f" stroke-width="1" stroke-dasharray="2,3"/>
+<text x="335" y="956" font-size="9" fill="#6b5316">Sonya (420) &#8212; Mogr (417)</text>
+<text x="335" y="968" font-size="9" fill="#2f6b45" font-style="italic">&#8594; Toblan family</text>
+<line x1="151" y1="952" x2="151" y2="986" stroke="#b9975c" stroke-width="1.5"/>
+<line x1="151" y1="986" x2="330" y2="986" stroke="#8a6d1f" stroke-width="1" stroke-dasharray="2,3"/>
+<text x="335" y="990" font-size="9.5" fill="#6b5316">Georgia (422)</text>
+<text x="335" y="1002" font-size="9" fill="#6b5316">&#8212; Maurice Tomot (426)</text>
+<text x="335" y="1014" font-size="9" fill="#2f6b45" font-style="italic" class="tomot-cross-link" onclick="flipToTomot()" tabindex="0" role="button" aria-label="turn the page to the Tomot family tree">&#8594; Tomot family</text>
+<line x1="92" y1="952" x2="92" y2="1029" stroke="#b9975c" stroke-width="1.5"/>
+<text x="92" y="1038" text-anchor="middle" font-size="11" fill="#4a3a1e">Ean (421)</text>
+<text x="210" y="1038" text-anchor="middle" font-size="11" fill="#4a3a1e">Siri (430)</text>
+<path d="M92,1029 L92,1046 L210,1046 L210,1029" fill="none" stroke="#b9975c" stroke-width="1.5"/>
+<line x1="151" y1="1046" x2="151" y2="1060" stroke="#b9975c" stroke-width="1.5"/>
+<path d="M151,1060 L92,1060" fill="none" stroke="#b9975c" stroke-width="1.5"/>
+<line x1="151" y1="1060" x2="330" y2="1060" stroke="#8a6d1f" stroke-width="1" stroke-dasharray="2,3"/>
+<text x="335" y="1064" font-size="9.5" fill="#6b5316">Summat (449)</text>
+<line x1="151" y1="1060" x2="151" y2="1094" stroke="#b9975c" stroke-width="1.5"/>
+<line x1="151" y1="1094" x2="330" y2="1094" stroke="#8a6d1f" stroke-width="1" stroke-dasharray="2,3"/>
+<text x="335" y="1098" font-size="9.5" fill="#6b5316">Eave (249)</text>
+<text x="230" y="1138" text-anchor="middle" font-size="9" fill="#8a6d1f" font-style="italic">the Aurelian branch, still growing &#8212; V.</text>
 </svg>
               <div class="racli-flip-back-link" onclick="flipToRaclados()">&#8592; back to the Raclados tree</div>
               </div>
@@ -6014,7 +6120,7 @@ window.PARTY_HALL_HERB_BASE = './decorations/assets/herbarium/'; // the pane mir
         <rect x="306.0" y="437.0" width="24.0" height="22.0" rx="1.2" fill="#b56b8a" stroke="#6b3d55" stroke-width="1.1"/>
         <rect x="306.0" y="437.0" width="24.0" height="6.2" rx="1.2" fill="#d99cb8" opacity="0.85"/>
       </g>
-      <g class="plaus-bldg"><title>Noble sleep house</title>
+      <g class="plaus-bldg"><title>Aurelian Family Estate</title>
         <rect x="267.9" y="431.6" width="27.0" height="20.0" rx="1.2" fill="#2a1e10" opacity="0.22"/>
         <rect x="266.5" y="430.0" width="27.0" height="20.0" rx="1.2" fill="#b56b8a" stroke="#6b3d55" stroke-width="1.1"/>
         <rect x="266.5" y="430.0" width="27.0" height="5.6" rx="1.2" fill="#d99cb8" opacity="0.85"/>
@@ -7122,8 +7228,9 @@ function activateGoldSpin(btn) {
 function flipToRacli() { flipToBranch("racli"); }
 function flipToRoitu() { flipToBranch("roitu"); }
 function flipToTomot() { flipToBranch("tomot"); }
+function flipToAurelian() { flipToBranch("aurelian"); }
 function flipToBranch(which) {
-  ["racli", "roitu", "tomot"].forEach(function (name) {
+  ["racli", "roitu", "tomot", "aurelian"].forEach(function (name) {
     document.getElementById(name + "-back-content").style.display = name === which ? "block" : "none";
   });
   // the face is what scrolls, not the frame, so a tree left half-read would
