@@ -31,5 +31,5 @@
     "_note": "World-canon settles twice daily at the Worldkeeper's crossings (write-release ruling 8). Weights manifest at settlements; between crossings the record fluctuates and canon holds at the last blessed sha."
   },
   "_wiring": "Readers: tools/world-stake.mjs (read_side.weight, at derive time) and tools/stamp-mint.mjs + the office door (law_side.world_stake). Wiring lands with the P3 merge; until then this file is the declared truth the code converges to.",
-  "_provenance": "Born 2026-07-28, the settlement-ruling day (write-release ruling 8 + the draft-calls adjudication). ECONOMY.md remains unratified; only the subset named here is law."
+  "_provenance": "Born 2026-07-28, the settlement-ruling day (write-release ruling 8 + the draft-calls adjudication). Provenance trued 2026-08-11: ECONOMY.md was RATIFIED-IN-SUBSTANCE 2026-08-01 (its own header carries the standing); this file remains the declared subset that binds code, and a dial absent here is not law regardless of what the chapter designs. The 2026-08-11 founder ruling parked the whole mint lane (board purely liquid, BETA): q is deliberately ABSENT from these dials, burn-remint has no law_side block, and their absence IS the park — do not add either without the founder's un-park word."
 }

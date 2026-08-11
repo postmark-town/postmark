@@ -68,6 +68,16 @@ function townRepo() {
     law_side: { town_issuance: { treasury_handle: TREASURY, once_purposes: [PURPOSE] } },
   }, null, 2));
   writeFileSync(join(repo, 'targets.json'), JSON.stringify(TARGETS, null, 2));
+  // the polygon gate (ruling C, 2026-08-11): the act now demands a world state
+  // whose targets are polygon-trued and conflict-free. The fixture's three
+  // regions are disjoint and ringed, so the gate is exercised — not bypassed —
+  // on every execute below.
+  writeFileSync(join(repo, 'world-state.json'), JSON.stringify({
+    marks: TARGETS.map((t, i) => ({
+      id: t.mark, at: { x: i * 300, y: 0 }, extent: { w: 100, h: 100 },
+      points: [[i * 300 - 50, -50], [i * 300 + 50, -50], [i * 300 + 50, 50], [i * 300 - 50, 50]],
+    })),
+  }, null, 2));
   const keyFile = join(repo, 'stamp-key.pem');
   writeFileSync(keyFile, priv);
 
@@ -87,7 +97,8 @@ function townRepo() {
 
 function act(repo, extra = []) {
   const args = [join(repo, 'tools', 'founding-act.mjs'), '--repo', repo, '--date', '2026-08-10',
-    '--targets', join(repo, 'targets.json'), '--each', '77', ...extra];
+    '--targets', join(repo, 'targets.json'), '--each', '77',
+    '--world-state', join(repo, 'world-state.json'), ...extra];
   try {
     return { ok: true, out: execFileSync(process.execPath, args, { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] }) };
   } catch (e) {
@@ -212,6 +223,17 @@ test('FALSIFIER — a failing act commits NOTHING and restores the ledger', () =
     { founder: 'broken', mark: 'Not A Mark Id' },
     { founder: 'bob', mark: 'bob/the-shore' },
   ], null, 2));
+  // The malformed id must reach the STAKE ENGINE, not die at the polygon gate —
+  // this test exists for the mid-act failure and the restore, so the world
+  // state clears all three (the gate checks existence/rings/overlap, not id
+  // shape; id shape is the engine's own law, and it throwing mid-act is the
+  // point).
+  writeFileSync(join(repo, 'world-state.json'), JSON.stringify({
+    marks: ['alice/the-hill', 'Not A Mark Id', 'bob/the-shore'].map((id, i) => ({
+      id, at: { x: i * 300, y: 0 }, extent: { w: 100, h: 100 },
+      points: [[i * 300 - 50, -50], [i * 300 + 50, -50], [i * 300 + 50, 50], [i * 300 - 50, 50]],
+    })),
+  }, null, 2));
   // Commit the fixture change first, so the only thing that can dirty the tree
   // afterwards is the act itself — otherwise this test's own edit would be
   // indistinguishable from a failed restore.

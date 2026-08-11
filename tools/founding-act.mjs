@@ -66,6 +66,39 @@ export function auditAct({
   return failures;
 }
 
+// ── THE POLYGON GATE, as a pure function ─────────────────────────────────────
+// Founder ruling C (2026-08-11): "need polygons tonight. no conflicts allowed
+// at launch." The founding act stakes the town's stamps onto the region marks,
+// and it may not run while any two of those regions still contest ground — the
+// pre-carve site-cluster overlaps (the Pando pseudo-contest) are exactly what
+// the ruling forbids the act to inherit. The gate demands, for every target:
+//   1. the mark EXISTS in the provided world state;
+//   2. it carries a `points` polygon ring (the truing to the Atlas — a bare
+//      rect is the pre-truing shape);
+//   3. no two targets' claims overlap (bbox arithmetic: at/extent IS the
+//      ring's bbox by SCHEMA v2 law, so bbox-disjoint ⇒ polygon-disjoint;
+//      a bbox contact that needs finer arithmetic is named, not waved through).
+// Returns [] when the act may run; otherwise the reasons, each self-contained.
+export function polygonGate(targets, worldMarks) {
+  const failures = [];
+  const byId = new Map((worldMarks ?? []).map((m) => [m.id, m]));
+  const rects = [];
+  for (const t of targets) {
+    const m = byId.get(t.mark);
+    if (!m) { failures.push(`${t.mark}: not in the world state — the act stakes onto marks that exist`); continue; }
+    if (!m.at || !m.extent) { failures.push(`${t.mark}: no at/extent claim readable`); continue; }
+    if (m.points === undefined) failures.push(`${t.mark}: no points ring — region extents must be polygon-trued to the Atlas before the act (ruling C, 2026-08-11)`);
+    rects.push({ mark: t.mark, x1: m.at.x - m.extent.w / 2, x2: m.at.x + m.extent.w / 2, y1: m.at.y - m.extent.h / 2, y2: m.at.y + m.extent.h / 2 });
+  }
+  for (let i = 0; i < rects.length; i++) for (let j = i + 1; j < rects.length; j++) {
+    const a = rects[i], b = rects[j];
+    const w = Math.min(a.x2, b.x2) - Math.max(a.x1, b.x1);
+    const h = Math.min(a.y2, b.y2) - Math.max(a.y1, b.y1);
+    if (w > 0 && h > 0) failures.push(`${a.mark} × ${b.mark}: claims overlap ${Math.round(w)}×${Math.round(h)} m — no conflicts allowed at launch (ruling C)`);
+  }
+  return failures;
+}
+
 // ── the CLI ──────────────────────────────────────────────────────────────────
 // Guarded so this module can be imported for auditAct() without running an act.
 function main() {
@@ -125,6 +158,21 @@ function main() {
   const amount = Number(arg('--amount', String(staked)));
   if (!Number.isInteger(amount) || amount < 1) die(`--amount must be a whole number ≥ 1 (got ${arg('--amount')})`);
 
+  // ── the polygon gate (ruling C, 2026-08-11) ────────────────────────────────
+  // Evaluated from a world-state.json snapshot; REQUIRED to execute. The plan
+  // without one says so out loud — an unevaluated gate is a stop, not a pass.
+  const worldStatePath = arg('--world-state');
+  let gate = null;
+  if (worldStatePath) {
+    if (!existsSync(worldStatePath)) die(`--world-state file not found: ${worldStatePath}`);
+    const world = JSON.parse(readFileSync(worldStatePath, 'utf8'));
+    gate = polygonGate(targets, world.marks ?? []);
+  }
+  if (EXECUTE) {
+    if (gate === null) die('the polygon gate is UNEVALUATED — pass --world-state <world-state.json>. Ruling C (2026-08-11): no conflicts allowed at launch, and an unchecked gate is not a passed one.');
+    if (gate.length) die(`the polygon gate refuses the act:\n  - ${gate.join('\n  - ')}`);
+  }
+
   const dial = townIssuanceDial(repo);
   if (!dial) die('no law_side.town_issuance.treasury_handle in ECONOMY-DIALS.json — the treasury must be DECLARED before it can be funded');
   const treasury = dial.treasury_handle;
@@ -144,10 +192,14 @@ function main() {
     balance_before: before,
     balance_after_issuance: before + amount,
     balance_after_stakes: before + amount - staked,
+    polygon_gate: gate === null ? 'UNEVALUATED (pass --world-state)' : (gate.length ? gate : 'CLEAR'),
     targets, stake_lines: lines,
   };
   console.log(`FOUNDING ACT — one issuance of ${amount} to ${treasury} (purpose: ${purpose}), then ${targets.length} × ${each} = ${staked} staked`);
   console.log(`treasury: ${before} → ${before + amount} (issued) → ${before + amount - staked} (staked)`);
+  if (gate === null) console.log('polygon gate: UNEVALUATED — pass --world-state; the act will not execute without it (ruling C, 2026-08-11)');
+  else if (gate.length) { console.log('polygon gate: REFUSES —'); for (const g of gate) console.log(`  - ${g}`); }
+  else console.log('polygon gate: CLEAR — every region polygon-trued, no overlapping claims');
   if (before + amount - staked !== 0) {
     console.log(`note: ${before + amount - staked} would remain. Mint-at-demand puts the resting state at zero, so a non-zero remainder is a deliberate choice, not a default.`);
   }
