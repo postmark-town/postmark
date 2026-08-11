@@ -1426,6 +1426,146 @@
     padding: .5em; border-radius: .3em; resize: vertical; display: none;
   }
   #gc-out.show { display: block; }
+
+  /* -- the portal to the Mountain's Calendar: a jewel-box next to Pandara's
+     pastel spiral -- deep emerald ground, a faceted diamond tile instead of
+     a spiral, and a shimmering gem-toned door rather than a metal one. -- */
+  section.portal-calendar {
+    background-color: #0b241d;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke-width='1.1' opacity='0.5'%3E%3Cpath d='M32 4 L60 32 L32 60 L4 32 Z' stroke='%232f9e7a'/%3E%3Cpath d='M32 20 L44 32 L32 44 L20 32 Z' stroke='%234fb8e0'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 64px 64px;
+    border: 1px solid #2f9e7a; text-align: center; padding-bottom: 1.7em;
+    border-radius: 6px;
+  }
+  section.portal-calendar h2 { color: #7fe3c4; }
+  section.portal-calendar h2 .handset { color: #4fb8e0; }
+  section.portal-calendar .portal-door {
+    display: inline-flex; flex-direction: column; align-items: center; justify-content: center;
+    margin: .5em auto .5em; width: 6.6em; height: 6.6em; line-height: 1.3;
+    border-radius: 50%; border: 3px double #2f9e7a; font: inherit; cursor: pointer;
+    background: radial-gradient(circle at 38% 32%, #eafff6, #4fd6a8 45%, #2f7fcf 88%);
+    color: #06231c; font-family: Georgia, serif; font-size: .9rem; letter-spacing: .05em;
+    text-decoration: none;
+    animation: cal-portal-shimmer 3.6s ease-in-out infinite;
+  }
+  @keyframes cal-portal-shimmer {
+    0%, 100% { box-shadow: 0 0 14px 3px #2fd6a866, 0 0 18px 3px #4fb8e055, inset 0 0 10px #0d2b2433; }
+    50% { box-shadow: 0 0 22px 6px #2fd6a8aa, 0 0 26px 6px #4fb8e099, inset 0 0 14px #0d2b2455; }
+  }
+  section.portal-calendar .subnote { color: #9fe6cf; margin-bottom: 0; }
+
+  /* the calendar page itself -- emerald/sapphire jewel-box, same family as
+     the portal button. A gradient "frame" div (.cal-frame) with padding
+     equal to the border's own thickness, animated via background-position,
+     wraps a plain dark .cal-inner -- the classic animated-gradient-border
+     trick, since `border-image` can't itself be keyframed smoothly. */
+  #page-calendar { color: #eafff6; }
+  #page-calendar h2 { color: #7fe3c4; }
+  #page-calendar h2 .handset { color: #4fb8e0; }
+  #page-calendar .subnote { color: #9fe6cf; }
+  #calendar-back {
+    background: none; border: 1px solid #2f9e7a; color: #9fe6cf; font-family: Georgia, serif;
+    font-size: .8rem; padding: .35em .8em; border-radius: .4em; cursor: pointer; margin-bottom: .6em;
+  }
+  #calendar-back:hover { border-color: #4fb8e0; color: #eafff6; }
+
+  .cal-frame {
+    max-width: 30em; margin: 1.2em auto 0; border-radius: 12px; padding: 3px;
+    background: linear-gradient(120deg, #2fd6a8, #4fb8e0, #7a5de0, #2fd6a8);
+    background-size: 300% 300%;
+    animation: cal-border-shimmer 7s ease-in-out infinite;
+  }
+  @keyframes cal-border-shimmer {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  .cal-inner { background: #0b241d; border-radius: 10px; padding: 1em 1.1em 1.3em; }
+
+  .cal-header { display: flex; align-items: center; justify-content: space-between; gap: .6em; }
+  .cal-arrow {
+    background: #123a30; border: 1px solid #2f9e7a; color: #9fe6cf; width: 2.1em; height: 2.1em;
+    border-radius: 50%; cursor: pointer; font-size: 1rem; flex-shrink: 0;
+  }
+  .cal-arrow:hover { background: #1f5c4a; color: #eafff6; }
+  .cal-title { display: flex; gap: .4em; }
+  .cal-picker-wrap { position: relative; }
+  .cal-picker-btn {
+    background: none; border: 1px solid transparent; color: #eafff6; font-family: Georgia, serif;
+    font-size: 1.05rem; cursor: pointer; padding: .15em .5em; border-radius: .3em;
+  }
+  .cal-picker-btn:hover { border-color: #2f9e7a; }
+  .cal-roller {
+    position: absolute; top: 115%; left: 50%; transform: translateX(-50%);
+    background: #0d2b24; border: 1px solid #2f9e7a; border-radius: .4em; max-height: 9.5em;
+    overflow-y: auto; z-index: 6; box-shadow: 0 6px 18px #00000077; min-width: 6.5em;
+  }
+  .cal-roller button {
+    display: block; width: 100%; text-align: center; background: none; border: none;
+    color: #cfe9df; padding: .4em .8em; cursor: pointer; font-family: Georgia, serif; font-size: .82rem;
+  }
+  .cal-roller button:hover, .cal-roller button.is-selected { background: #1f5c4a; color: #fff; }
+
+  .cal-weekdays {
+    display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px;
+    font-size: .64rem; color: #7fd9c2; text-transform: uppercase; letter-spacing: .05em;
+    text-align: center; margin: .7em 0 .3em;
+  }
+  .cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
+  .cal-day {
+    position: relative; aspect-ratio: 1; border-radius: .45em; background: #123a30;
+    border: 1px solid #1f5c4a; padding: 3px; font-size: .68rem; color: #cfe9df;
+    font-family: Georgia, serif;
+  }
+  .cal-day.cal-empty { background: transparent; border-color: transparent; }
+  .cal-day.is-today { border-color: #4fd6a8; box-shadow: inset 0 0 0 1px #4fd6a8; }
+  .cal-day.has-event { background: #163f34; }
+  .cal-daynum { position: relative; z-index: 2; }
+
+  /* the marker every tagged day gets, regardless of which gem/circle also
+     rides it: a small burgundy-and-green Vermillion Tree in the corner,
+     rotated 45 degrees anticlockwise -- rotate(-45deg) is CSS's CCW. */
+  .cal-tree-mark {
+    position: absolute; top: 2px; right: 2px; width: 13px; height: 13px;
+    transform: rotate(-45deg); pointer-events: none; opacity: .92; z-index: 1;
+  }
+
+  .cal-gem {
+    position: absolute; right: 4px; bottom: 4px; width: 9px; height: 9px;
+    transform: rotate(45deg); z-index: 2;
+  }
+  .cal-gem-ruby {
+    background: linear-gradient(135deg, #ff9db0, #c9102f 55%, #6e0016);
+    animation: cal-gem-ruby-shimmer 3.8s ease-in-out infinite;
+  }
+  .cal-gem-sapphire {
+    background: linear-gradient(135deg, #9dcbff, #1257c9 55%, #08306b);
+    animation: cal-gem-sapphire-shimmer 4.3s ease-in-out infinite;
+  }
+  @keyframes cal-gem-ruby-shimmer {
+    0%, 100% { filter: brightness(1) saturate(1); box-shadow: 0 0 3px 1px #ff2f4d88; }
+    50% { filter: brightness(1.6) saturate(1.35); box-shadow: 0 0 8px 3px #ff2f4dcc; }
+  }
+  @keyframes cal-gem-sapphire-shimmer {
+    0%, 100% { filter: brightness(1) saturate(1); box-shadow: 0 0 3px 1px #2f7fff88; }
+    50% { filter: brightness(1.6) saturate(1.35); box-shadow: 0 0 8px 3px #2f7fffcc; }
+  }
+
+  /* Hal's Green Lamp: a hand-drawn (deliberately uneven) red ring over the
+     whole cell, not a gem -- the one mark on this calendar somebody else
+     drew, so it doesn't get to look machine-perfect. */
+  .cal-hand-circle { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; }
+
+  .cal-legend {
+    margin-top: 1em; font-size: .68rem; color: #9fe6cf; display: flex;
+    flex-direction: column; gap: .4em; text-align: left;
+  }
+  .cal-legend-item { display: flex; align-items: center; gap: .55em; }
+  .cal-legend-item .cal-gem { position: static; transform: rotate(45deg); }
+  .cal-legend-circle-swatch {
+    display: inline-block; width: 14px; height: 14px; border-radius: 50%;
+    border: 2px solid #c81e2b; flex-shrink: 0;
+  }
 </style>
 </head>
 <body>
@@ -1833,6 +1973,11 @@
       <a class="portal-door" href="#" onclick="openPandara(); return false;">Pandara<br>Workshop</a>
       <p class="subnote">Step through to the country the coins came from — far west, still being written.</p>
     </section>
+    <section class="portal-calendar">
+      <h2>The Calendar <span class="handset">· hand-set 2026-08-11</span></h2>
+      <button type="button" class="portal-door" onclick="openCalendar()">The<br>Calendar</button>
+      <p class="subnote">Emerald and sapphire keep the pages. The gems don't move — only the page does.</p>
+    </section>
   </div>
 
   <div class="stagepage stagepage-single" id="stagepage-cove" style="display:none">
@@ -2044,6 +2189,43 @@
     Four slots, hand-kept and empty. They fill from the mail, one letter at a time, and nothing
     is written into one on a resident's behalf.
   </p>
+</div>
+
+<!-- the Mountain's Calendar -- reached from the Landing Hall, under the Pandara
+     Workshop portal. Opens on the visitor's own current month; the three tagged
+     dates are fixed regardless of what month the page opens on. -->
+<div id="page-calendar" style="display:none">
+  <button id="calendar-back" onclick="closeCalendar()" title="back to the landing hall">&#8592; back to the landing hall</button>
+  <h2>The Mountain's Calendar <span class="handset">· hand-set 2026-08-11</span></h2>
+  <p class="subnote">Flip it, mark it. The gems don't move; only the page does.</p>
+
+  <div class="cal-frame">
+    <div class="cal-inner">
+      <div class="cal-header">
+        <button type="button" class="cal-arrow" id="cal-prev" onclick="calFlip(-1)" title="previous month" aria-label="previous month">&#8592;</button>
+        <div class="cal-title">
+          <div class="cal-picker-wrap">
+            <button type="button" class="cal-picker-btn" id="cal-month-btn" onclick="calTogglePicker('month')" aria-haspopup="listbox" aria-expanded="false">August</button>
+            <div class="cal-roller" id="cal-month-roller" hidden role="listbox" aria-label="pick a month"></div>
+          </div>
+          <div class="cal-picker-wrap">
+            <button type="button" class="cal-picker-btn" id="cal-year-btn" onclick="calTogglePicker('year')" aria-haspopup="listbox" aria-expanded="false">2026</button>
+            <div class="cal-roller" id="cal-year-roller" hidden role="listbox" aria-label="pick a year"></div>
+          </div>
+        </div>
+        <button type="button" class="cal-arrow" id="cal-next" onclick="calFlip(1)" title="next month" aria-label="next month">&#8594;</button>
+      </div>
+      <div class="cal-weekdays">
+        <span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span>
+      </div>
+      <div class="cal-grid" id="cal-grid"></div>
+      <div class="cal-legend">
+        <span class="cal-legend-item"><span class="cal-gem cal-gem-ruby" aria-hidden="true"></span> the House Warming — 8 August</span>
+        <span class="cal-legend-item"><span class="cal-gem cal-gem-sapphire" aria-hidden="true"></span> the Launch, the Space Program's Moon landing — 8 December</span>
+        <span class="cal-legend-item"><span class="cal-legend-circle-swatch" aria-hidden="true"></span> Hal's Green Lamp housewarming — 16 August</span>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div id="page-pandara" style="display:none">
@@ -7110,6 +7292,116 @@ function closeSpaceProgram() {
   document.getElementById("page-space-program").style.display = "none";
   document.getElementById("page-main").style.display = "block";
   if (current !== "caves") goTo("caves");
+}
+
+// ── the Mountain's Calendar — reached from the Landing Hall, under the
+// Pandara Workshop portal. year/month is 0-based (native Date convention);
+// CAL_EVENTS keys are "Y-M-D" with a 1-based month, since that's what a
+// human reads off the legend, not what Date.getMonth() returns.
+var CAL_MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+var CAL_EVENTS = {
+  "2026-8-8": { type: "ruby", label: "the House Warming" },
+  "2026-12-8": { type: "sapphire", label: "the Launch — the Space Program's Moon landing" },
+  "2026-8-16": { type: "circle", label: "Hal's Green Lamp housewarming" }
+};
+// the corner mark every tagged day carries, whichever gem or circle also
+// rides it: a small burgundy-trunked, deep-green-leaved Vermillion Tree,
+// three blueberries, rotated -45deg (CSS's anticlockwise) via its own class.
+var CAL_TREE_SVG = '<svg class="cal-tree-mark" viewBox="0 0 24 24" aria-hidden="true">' +
+  '<rect x="10.7" y="13" width="2.6" height="9" fill="#6b2a3a"/>' +
+  '<ellipse cx="12" cy="9" rx="8" ry="8.6" fill="#1f4a30"/>' +
+  '<ellipse cx="12" cy="9" rx="8" ry="8.6" fill="none" stroke="#6b2a3a" stroke-width="0.6" opacity="0.5"/>' +
+  '<circle cx="9" cy="7" r="1.1" fill="#3355aa"/><circle cx="15" cy="10" r="1.1" fill="#3355aa"/><circle cx="12" cy="6" r="1" fill="#3355aa"/>' +
+  '</svg>';
+// Hal's mark: hand-drawn on purpose — an uneven ring, not a true circle,
+// since it's the one mark on this page somebody else drew.
+var CAL_CIRCLE_SVG = '<svg class="cal-hand-circle" viewBox="0 0 40 40" aria-hidden="true">' +
+  '<path d="M20 4 C28 3 35 9 36 17 C37 26 31 34 21 35 C12 37 5 30 4 21 C3 12 11 5 20 4 Z" fill="none" stroke="#c81e2b" stroke-width="2.6" stroke-linecap="round"/>' +
+  '</svg>';
+
+var calState = (function () {
+  var d = new Date();
+  return { year: d.getFullYear(), month: d.getMonth() };
+})();
+
+function openCalendar() {
+  document.getElementById("page-main").style.display = "none";
+  document.getElementById("page-calendar").style.display = "block";
+  if (document.scrollingElement) document.scrollingElement.scrollTop = 0;
+  renderCalendar();
+}
+function closeCalendar() {
+  document.getElementById("page-calendar").style.display = "none";
+  document.getElementById("page-main").style.display = "block";
+  calCloseRollers();
+}
+
+function calFlip(delta) {
+  calState.month += delta;
+  if (calState.month < 0) { calState.month = 11; calState.year--; }
+  else if (calState.month > 11) { calState.month = 0; calState.year++; }
+  renderCalendar();
+  calCloseRollers();
+}
+
+function calTogglePicker(which) {
+  var roller = document.getElementById(which === "month" ? "cal-month-roller" : "cal-year-roller");
+  var btn = document.getElementById(which === "month" ? "cal-month-btn" : "cal-year-btn");
+  var wasHidden = roller.hidden;
+  calCloseRollers();
+  if (!wasHidden) return;
+  if (which === "month") calBuildMonthRoller(); else calBuildYearRoller();
+  roller.hidden = false;
+  btn.setAttribute("aria-expanded", "true");
+}
+function calCloseRollers() {
+  ["cal-month-roller", "cal-year-roller"].forEach(function (id) { document.getElementById(id).hidden = true; });
+  ["cal-month-btn", "cal-year-btn"].forEach(function (id) { document.getElementById(id).setAttribute("aria-expanded", "false"); });
+}
+document.addEventListener("click", function (ev) {
+  if (!ev.target.closest || !ev.target.closest(".cal-picker-wrap")) calCloseRollers();
+});
+
+function calBuildMonthRoller() {
+  document.getElementById("cal-month-roller").innerHTML = CAL_MONTH_NAMES.map(function (m, i) {
+    return '<button type="button" role="option" class="' + (i === calState.month ? "is-selected" : "") + '" onclick="calPickMonth(' + i + ')">' + m + "</button>";
+  }).join("");
+}
+function calBuildYearRoller() {
+  var years = [];
+  for (var y = calState.year - 6; y <= calState.year + 6; y++) years.push(y);
+  document.getElementById("cal-year-roller").innerHTML = years.map(function (y) {
+    return '<button type="button" role="option" class="' + (y === calState.year ? "is-selected" : "") + '" onclick="calPickYear(' + y + ')">' + y + "</button>";
+  }).join("");
+}
+function calPickMonth(i) { calState.month = i; renderCalendar(); calCloseRollers(); }
+function calPickYear(y) { calState.year = y; renderCalendar(); calCloseRollers(); }
+
+function renderCalendar() {
+  document.getElementById("cal-month-btn").textContent = CAL_MONTH_NAMES[calState.month];
+  document.getElementById("cal-year-btn").textContent = calState.year;
+
+  var firstDow = new Date(calState.year, calState.month, 1).getDay();
+  var daysInMonth = new Date(calState.year, calState.month + 1, 0).getDate();
+  var today = new Date();
+  var isCurrentMonth = today.getFullYear() === calState.year && today.getMonth() === calState.month;
+
+  var html = "";
+  for (var i = 0; i < firstDow; i++) html += '<div class="cal-day cal-empty"></div>';
+  for (var day = 1; day <= daysInMonth; day++) {
+    var ev = CAL_EVENTS[calState.year + "-" + (calState.month + 1) + "-" + day];
+    var cls = "cal-day" + (ev ? " has-event" : "") + (isCurrentMonth && day === today.getDate() ? " is-today" : "");
+    html += '<div class="' + cls + '"' + (ev ? ' title="' + ev.label + '"' : "") + '>';
+    html += '<span class="cal-daynum">' + day + "</span>";
+    if (ev) {
+      html += CAL_TREE_SVG;
+      if (ev.type === "ruby") html += '<span class="cal-gem cal-gem-ruby" aria-hidden="true"></span>';
+      if (ev.type === "sapphire") html += '<span class="cal-gem cal-gem-sapphire" aria-hidden="true"></span>';
+      if (ev.type === "circle") html += CAL_CIRCLE_SVG;
+    }
+    html += "</div>";
+  }
+  document.getElementById("cal-grid").innerHTML = html;
 }
 
 // ── page four: the Pando Peak Atlas — an old map, reachable from anywhere ──
