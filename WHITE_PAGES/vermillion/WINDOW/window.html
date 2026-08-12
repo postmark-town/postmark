@@ -470,6 +470,56 @@
   .moon-info-meta { font-size: .64rem; color: #9dbcf0; letter-spacing: .06em; margin-top: .25em; text-transform: uppercase; }
   .moon-info-note { font-size: .74rem; color: #c3d6f5; line-height: 1.65; margin-top: .55em; }
   .moon-source { font-size: .6rem; color: #7d95bd; line-height: 1.55; margin-top: 1em; font-style: italic; }
+  /* -- Space Invaders: launcher square, top right of the page -------- */
+  #page-space-program { position: relative; }
+  /* the launcher floats over the top-right corner, so the heading and the line
+     under it reserve room rather than running beneath the button. */
+  #page-space-program > h2, #page-space-program > .subnote { padding-right: 6.4em; }
+  #si-open {
+    position: absolute; top: 1.1em; right: 1em; width: 5.1em; height: 5.1em;
+    background: #0d1c3a; border: 1px solid #4a72b8; border-radius: 5px;
+    cursor: pointer; font-family: inherit; color: #cfe0ff;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .3em;
+    box-shadow: 0 0 12px #2c4a8066; padding: .3em;
+  }
+  #si-open:hover { border-color: #a9c6f5; background: #16294f; box-shadow: 0 0 18px #7fa8e088; }
+  #si-open:focus-visible { outline: 2px solid #cfe0ff; outline-offset: 3px; }
+  .si-open-label { font-size: .54rem; letter-spacing: .1em; line-height: 1.25; text-transform: uppercase; }
+  /* a little invader drawn in CSS so the button reads before the game loads */
+  .si-open-glyph {
+    width: 1.6em; height: 1.15em; background: #9dffc4;
+    clip-path: polygon(20% 0,80% 0,80% 20%,100% 20%,100% 70%,80% 70%,80% 55%,100% 100%,72% 100%,72% 80%,28% 80%,28% 100%,0 100%,20% 55%,20% 70%,0 70%,0 20%,20% 20%);
+  }
+
+  /* -- the modal ----------------------------------------------------- */
+  #si-backdrop {
+    position: fixed; inset: 0; z-index: 60; background: rgba(3,7,18,.86);
+    display: flex; align-items: center; justify-content: center; padding: 1em;
+  }
+  #si-backdrop[hidden] { display: none; }
+  #si-modal {
+    background: #050b18; border: 1px solid #2c4a80; border-radius: 8px;
+    box-shadow: 0 0 60px #000, 0 0 24px #2c4a8055; padding: .6em;
+    max-width: 100%; max-height: 100%; display: flex; flex-direction: column; gap: .5em;
+  }
+  #si-bar { display: flex; align-items: center; gap: .9em; flex-wrap: wrap; padding: 0 .2em; }
+  #si-title { font-family: Georgia, serif; font-size: .78rem; letter-spacing: .16em; color: #9dffc4; }
+  .si-stat { font-size: .62rem; letter-spacing: .1em; color: #8fa9d4; text-transform: uppercase; }
+  .si-stat b { color: #eaf1ff; font-weight: normal; font-size: .82rem; font-variant-numeric: tabular-nums; }
+  #si-mute, #si-close {
+    background: none; border: 1px solid #2c4a80; color: #9dbcf0; border-radius: 4px;
+    cursor: pointer; font-family: inherit; line-height: 1;
+  }
+  #si-mute { margin-left: auto; padding: .15em .45em; font-size: .8rem; }
+  #si-close { padding: .1em .42em; font-size: .95rem; }
+  #si-mute:hover, #si-close:hover { background: #16294f; color: #eaf1ff; }
+  #si-mute.off { color: #55688c; }
+  #si-canvas {
+    display: block; background: #0b1730; border: 1px solid #233a63;
+    border-radius: 4px; max-width: 100%; height: auto; image-rendering: pixelated;
+  }
+  #si-canvas:focus-visible { outline: 2px solid #9dffc4; outline-offset: 2px; }
+  #si-help { font-size: .58rem; color: #7d95bd; letter-spacing: .07em; text-align: center; }
   .manifest-slot {
     border: 1px dashed #2c4a80; border-radius: 6px; background: #0a162faa;
     padding: .8em .6em; font-size: .64rem; color: #8fa9d4; text-align: center; line-height: 1.45;
@@ -2157,6 +2207,11 @@
      than a slot quietly filled in on someone's behalf. -->
 <div id="page-space-program" style="display:none">
   <button id="space-back" onclick="closeSpaceProgram()" title="back to the lake caves">&#8592; back to the lake caves</button>
+  <button type="button" id="si-open" onclick="siOpen()" title="Space Invaders — a minigame"
+          aria-label="Open the Space Invaders minigame">
+    <span class="si-open-glyph" aria-hidden="true"></span>
+    <span class="si-open-label">Space<br>Invaders</span>
+  </button>
   <h2>The Space Program <span class="handset">· hand-set 2026-08-10</span></h2>
   <p class="subnote">A mountain four kilometres up is already most of the way there. The rest is arithmetic.</p>
 
@@ -2207,6 +2262,23 @@
        I cannot source is worse than a gap. One pixel of this disc is roughly ten kilometres, so nothing
        here resolves finer than that &mdash; where catalogues disagree below that scale, the disagreement does
        not reach the map.</p>
+  </div>
+  <!-- the minigame. Everything is drawn on one canvas; the two sprites are the
+       user's own pixel art with the transparency checkerboard cut at load. -->
+  <div id="si-backdrop" hidden>
+    <div id="si-modal" role="dialog" aria-modal="true" aria-label="Space Invaders">
+      <div id="si-bar">
+        <span id="si-title">SPACE INVADERS</span>
+        <span class="si-stat">SCORE <b id="si-score">0</b></span>
+        <span class="si-stat">LEVEL <b id="si-level">1</b></span>
+        <span class="si-stat">LIVES <b id="si-lives">3</b></span>
+        <button type="button" id="si-mute" onclick="siToggleMute()" title="sound on/off">&#9834;</button>
+        <button type="button" id="si-close" onclick="siClose()" title="close (Esc)">&times;</button>
+      </div>
+      <canvas id="si-canvas" width="640" height="480" tabindex="0"
+              aria-label="game area — left and right arrows to move, space to fire"></canvas>
+      <p id="si-help">&#8592; &#8594; move &nbsp;·&nbsp; SPACE fire &nbsp;·&nbsp; 20 invaders a level &nbsp;·&nbsp; they drop every 10s</p>
+    </div>
   </div>
   <div class="manifest-grid">
     <div class="manifest-slot">Manifest<br>open</div>
@@ -7683,6 +7755,356 @@ function showMoonFace(side) {
     counts.crater + ' named craters · ' + counts.site + ' landing site' + (counts.site === 1 ? '' : 's') +
     ' — click a flag or a crater';
 }
+
+// ══ Space Invaders ═════════════════════════════════════════════════════════
+// Sprites are the household's own pixel art. Both arrived as JPEGs with the
+// transparency checkerboard baked in as white and grey squares, so the alpha
+// is cut here at load: flood-fill inward from the border, clearing only
+// neutral light pixels reachable from the edge. Doing it by flood-fill rather
+// than by colour key is the whole trick — the dragon has white *inside* it,
+// and a plain "delete everything white" would punch holes through the beast.
+var SI = {
+  W: 640, H: 480,
+  player: { x: 320, y: 430, w: 46, h: 46, speed: 5 },
+  lives: 3, score: 0, level: 1,
+  aliens: [], shots: [], rays: [], sparks: [],
+  keys: {}, running: false, over: false, raf: null,
+  invulnUntil: 0, lastDrop: 0, lastRay: 0, started: 0,
+  sprites: {}, muted: false
+};
+var SI_PER_LEVEL = 20;          // 20 invaders make a level
+var SI_DROP_MS = 10000;         // they descend one step every ten seconds
+var SI_DROP_STEP = 18;
+var SI_FLASH_MS = 3000;         // three seconds of flashing after a hit
+
+// ── sprite preparation ─────────────────────────────────────────────────────
+function siCutCheckerboard(img) {
+  var c = document.createElement('canvas');
+  c.width = img.naturalWidth; c.height = img.naturalHeight;
+  var x = c.getContext('2d', { willReadFrequently: true });
+  x.drawImage(img, 0, 0);
+  var d;
+  try { d = x.getImageData(0, 0, c.width, c.height); }
+  catch (e) { return c; }   // tainted (file:// origin) — hand back the raw art
+  var q = d.data, W = c.width, H = c.height;
+  function isBg(i) {
+    var r = q[i], g = q[i+1], b = q[i+2];
+    if (Math.max(r,g,b) - Math.min(r,g,b) > 18) return false;   // must be neutral
+    return (r + g + b) / 3 > 178;                               // white or light grey
+  }
+  var seen = new Uint8Array(W * H), st = [], i;
+  for (i = 0; i < W; i++) { st.push(i); st.push((H-1)*W + i); }
+  for (i = 0; i < H; i++) { st.push(i*W); st.push(i*W + W - 1); }
+  while (st.length) {
+    var k = st.pop();
+    if (k < 0 || k >= W*H || seen[k]) continue;
+    if (!isBg(k*4)) continue;
+    seen[k] = 1; q[k*4+3] = 0;
+    var kx = k % W;
+    if (kx > 0) st.push(k-1);
+    if (kx < W-1) st.push(k+1);
+    st.push(k-W); st.push(k+W);
+  }
+  x.putImageData(d, 0, 0);
+  return c;
+}
+
+function siLoadSprites(done) {
+  if (SI.sprites.ready) return done();
+  var want = [['player','assets/vermillion-pixel.jpg'], ['alien','assets/invader-ship.jpg']];
+  var left = want.length;
+  want.forEach(function (pair) {
+    var im = new Image();
+    im.onload = function () {
+      SI.sprites[pair[0]] = siCutCheckerboard(im);
+      if (--left === 0) { SI.sprites.ready = true; done(); }
+    };
+    im.onerror = function () { if (--left === 0) { SI.sprites.ready = true; done(); } };
+    im.src = pair[1];
+  });
+}
+
+// ── sound: everything synthesised, so the page carries no audio files ──────
+var SI_AC = null;
+function siAudio() {
+  if (SI.muted) return null;
+  if (!SI_AC) { try { SI_AC = new (window.AudioContext || window.webkitAudioContext)(); } catch (e) { return null; } }
+  if (SI_AC.state === 'suspended') SI_AC.resume();
+  return SI_AC;
+}
+function siBeep(freq, dur, type, vol, slideTo) {
+  var ac = siAudio(); if (!ac) return;
+  var o = ac.createOscillator(), g = ac.createGain();
+  o.type = type || 'square';
+  o.frequency.setValueAtTime(freq, ac.currentTime);
+  if (slideTo) o.frequency.exponentialRampToValueAtTime(slideTo, ac.currentTime + dur);
+  g.gain.setValueAtTime(vol || 0.06, ac.currentTime);
+  g.gain.exponentialRampToValueAtTime(0.0001, ac.currentTime + dur);
+  o.connect(g); g.connect(ac.destination);
+  o.start(); o.stop(ac.currentTime + dur);
+}
+function siShootSound() { siBeep(880, 0.12, 'square', 0.05, 220); }
+function siHitSound()   { siBeep(150, 0.45, 'sawtooth', 0.09, 40); }
+function siPopSound()   { siBeep(320, 0.14, 'triangle', 0.07, 90); }
+function siLevelSound() { [523,659,784,1047].forEach(function (f, i) { setTimeout(function () { siBeep(f, 0.16, 'square', 0.06); }, i*110); }); }
+function siOverSound()  { [392,330,262,196].forEach(function (f, i) { setTimeout(function () { siBeep(f, 0.34, 'sawtooth', 0.08); }, i*190); }); }
+
+// The four-note descending bass loop, the way the arcade did it — and it
+// speeds up as the board empties, which is where the dread comes from.
+var SI_TUNE = [55, 49, 44, 41], siTuneStep = 0, siTuneTimer = null;
+function siTuneTick() {
+  if (!SI.running || SI.over) return;
+  siBeep(SI_TUNE[siTuneStep % 4], 0.16, 'square', 0.045);
+  siTuneStep++;
+  var alive = SI.aliens.length;
+  var interval = 240 + Math.min(360, alive * 22);   // fewer left, faster pulse
+  siTuneTimer = setTimeout(siTuneTick, interval);
+}
+function siStartTune() { if (siTuneTimer) clearTimeout(siTuneTimer); siTuneStep = 0; siTuneTick(); }
+function siStopTune() { if (siTuneTimer) clearTimeout(siTuneTimer); siTuneTimer = null; }
+function siToggleMute() {
+  SI.muted = !SI.muted;
+  var b = document.getElementById('si-mute');
+  b.classList.toggle('off', SI.muted);
+  b.textContent = SI.muted ? '♪' : '♫';
+  if (SI.muted) siStopTune(); else if (SI.running && !SI.over) siStartTune();
+}
+
+// ── level construction ─────────────────────────────────────────────────────
+function siBuildLevel() {
+  SI.aliens = [];
+  var cols = 10, rows = SI_PER_LEVEL / 10, aw = 38, ah = 30, gapX = 20, gapY = 26;
+  var totalW = cols * aw + (cols - 1) * gapX;
+  var x0 = (SI.W - totalW) / 2;
+  for (var r = 0; r < rows; r++) {
+    for (var c = 0; c < cols; c++) {
+      SI.aliens.push({ x: x0 + c * (aw + gapX), y: 60 + r * (ah + gapY), w: aw, h: ah, alive: true });
+    }
+  }
+  SI.dir = 1;
+  SI.lastDrop = performance.now();
+  SI.lastRay = performance.now();
+}
+
+function siReset() {
+  SI.lives = 3; SI.score = 0; SI.level = 1; SI.over = false;
+  SI.shots = []; SI.rays = []; SI.sparks = [];
+  SI.player.x = SI.W / 2;
+  SI.invulnUntil = 0;
+  siBuildLevel();
+  siPaintHud();
+}
+
+function siPaintHud() {
+  document.getElementById('si-score').textContent = SI.score;
+  document.getElementById('si-level').textContent = SI.level;
+  document.getElementById('si-lives').textContent = SI.lives;
+}
+
+// ── the loop ───────────────────────────────────────────────────────────────
+function siStep(now) {
+  if (!SI.running) return;
+  var cv = document.getElementById('si-canvas'), g = cv.getContext('2d');
+
+  if (!SI.over) {
+    // player
+    if (SI.keys.left)  SI.player.x -= SI.player.speed;
+    if (SI.keys.right) SI.player.x += SI.player.speed;
+    SI.player.x = Math.max(SI.player.w/2, Math.min(SI.W - SI.player.w/2, SI.player.x));
+
+    // drift sideways, and drop a step every ten seconds
+    var edge = false;
+    SI.aliens.forEach(function (a) {
+      a.x += SI.dir * 0.35;
+      if (a.x < 6 || a.x + a.w > SI.W - 6) edge = true;
+    });
+    if (edge) SI.dir *= -1;
+    if (now - SI.lastDrop > SI_DROP_MS) {
+      SI.aliens.forEach(function (a) { a.y += SI_DROP_STEP; });
+      SI.lastDrop = now;
+      siBeep(70, 0.2, 'sine', 0.05);
+    }
+
+    // invaders fire at random
+    if (now - SI.lastRay > 700 + Math.random() * 900 && SI.aliens.length) {
+      var shooter = SI.aliens[(Math.random() * SI.aliens.length) | 0];
+      SI.rays.push({ x: shooter.x + shooter.w/2, y: shooter.y + shooter.h, vy: 3.4 });
+      SI.lastRay = now;
+    }
+
+    SI.shots.forEach(function (b) { b.y -= 8; });
+    SI.rays.forEach(function (b) { b.y += b.vy; });
+    SI.shots = SI.shots.filter(function (b) { return b.y > -10; });
+    SI.rays  = SI.rays.filter(function (b) { return b.y < SI.H + 10; });
+
+    // player shot hits an invader
+    for (var i = SI.shots.length - 1; i >= 0; i--) {
+      for (var j = SI.aliens.length - 1; j >= 0; j--) {
+        var a = SI.aliens[j], b = SI.shots[i];
+        if (b && b.x > a.x && b.x < a.x + a.w && b.y > a.y && b.y < a.y + a.h) {
+          SI.aliens.splice(j, 1); SI.shots.splice(i, 1);
+          SI.score += 10; siPaintHud(); siPopSound();
+          for (var k = 0; k < 9; k++) {
+            SI.sparks.push({ x: a.x + a.w/2, y: a.y + a.h/2,
+                             vx: (Math.random()-0.5)*4, vy: (Math.random()-0.5)*4, life: 22 });
+          }
+          break;
+        }
+      }
+    }
+
+    // an invader's ray hits the player
+    if (now > SI.invulnUntil) {
+      for (var m = SI.rays.length - 1; m >= 0; m--) {
+        var r = SI.rays[m];
+        if (Math.abs(r.x - SI.player.x) < SI.player.w/2 && r.y > SI.player.y - SI.player.h/2 && r.y < SI.player.y + SI.player.h/2) {
+          SI.rays.splice(m, 1);
+          SI.lives--; siPaintHud(); siHitSound();
+          SI.invulnUntil = now + SI_FLASH_MS;          // three seconds flashing
+          if (SI.lives <= 0) siGameOver('THE MOUNTAIN IS OVERRUN');
+          break;
+        }
+      }
+    }
+
+    // an invader reaching the player's line ends it
+    for (var n = 0; n < SI.aliens.length; n++) {
+      if (SI.aliens[n].y + SI.aliens[n].h >= SI.player.y - SI.player.h/2) {
+        siGameOver('THEY REACHED THE LINE');
+        break;
+      }
+    }
+
+    // level cleared
+    if (!SI.over && SI.aliens.length === 0) {
+      SI.level++; SI.lives++; SI.score += 100;          // a life and a hundred
+      siPaintHud(); siLevelSound();
+      siBuildLevel();
+    }
+  }
+
+  SI.sparks.forEach(function (s2) { s2.x += s2.vx; s2.y += s2.vy; s2.life--; });
+  SI.sparks = SI.sparks.filter(function (s2) { return s2.life > 0; });
+
+  siDraw(g, now);
+  SI.raf = requestAnimationFrame(siStep);
+}
+
+function siDraw(g, now) {
+  g.fillStyle = '#0b1730';                      // night sky blue
+  g.fillRect(0, 0, SI.W, SI.H);
+  // a quiet starfield, seeded so it doesn't crawl
+  g.fillStyle = 'rgba(242,246,255,.75)';
+  for (var i = 0; i < 60; i++) {
+    var sx = (i * 6373) % SI.W, sy = (i * 2749) % SI.H;
+    g.globalAlpha = 0.25 + ((i * 37) % 60) / 100;
+    g.fillRect(sx, sy, 1.6, 1.6);
+  }
+  g.globalAlpha = 1;
+
+  // the player's line, so "reaching it" is visible
+  g.strokeStyle = 'rgba(157,255,196,.22)';
+  g.beginPath(); g.moveTo(0, SI.player.y - SI.player.h/2); g.lineTo(SI.W, SI.player.y - SI.player.h/2); g.stroke();
+
+  SI.aliens.forEach(function (a) {
+    if (SI.sprites.alien) g.drawImage(SI.sprites.alien, a.x, a.y, a.w, a.h);
+    else { g.fillStyle = '#9dffc4'; g.fillRect(a.x, a.y, a.w, a.h); }
+  });
+
+  g.fillStyle = '#ffd76a';
+  SI.shots.forEach(function (b) { g.fillRect(b.x - 1.5, b.y, 3, 11); });
+  g.fillStyle = '#ff7a6a';
+  SI.rays.forEach(function (b) { g.fillRect(b.x - 1.5, b.y, 3, 13); });
+
+  SI.sparks.forEach(function (s2) {
+    g.globalAlpha = Math.max(0, s2.life / 22);
+    g.fillStyle = '#ffd76a';
+    g.fillRect(s2.x, s2.y, 2.5, 2.5);
+  });
+  g.globalAlpha = 1;
+
+  // the player — blinking while the three seconds of invulnerability run
+  var hidden = now < SI.invulnUntil && (Math.floor(now / 110) % 2 === 0);
+  if (!hidden) {
+    var px = SI.player.x - SI.player.w/2, py = SI.player.y - SI.player.h/2;
+    if (SI.sprites.player) g.drawImage(SI.sprites.player, px, py, SI.player.w, SI.player.h);
+    else { g.fillStyle = '#3fd1a0'; g.fillRect(px, py, SI.player.w, SI.player.h); }
+  }
+
+  if (SI.over) {
+    g.fillStyle = 'rgba(5,11,24,.82)';
+    g.fillRect(0, 0, SI.W, SI.H);
+    g.textAlign = 'center';
+    g.fillStyle = '#ff7a6a'; g.font = '30px Georgia, serif';
+    g.fillText('GAME OVER', SI.W/2, SI.H/2 - 44);
+    g.fillStyle = '#cfe0ff'; g.font = '14px Georgia, serif';
+    g.fillText(SI.overReason || '', SI.W/2, SI.H/2 - 12);
+    g.fillStyle = '#eaf1ff'; g.font = '19px Georgia, serif';
+    g.fillText('score ' + SI.score + '  ·  level ' + SI.level, SI.W/2, SI.H/2 + 26);
+    g.fillStyle = '#9dffc4'; g.font = '13px Georgia, serif';
+    g.fillText('press SPACE to fly again', SI.W/2, SI.H/2 + 62);
+    g.textAlign = 'start';
+  }
+}
+
+function siGameOver(reason) {
+  SI.over = true; SI.overReason = reason;
+  siStopTune(); siOverSound();
+}
+
+// ── open / close ───────────────────────────────────────────────────────────
+function siOpen() {
+  var back = document.getElementById('si-backdrop');
+  back.hidden = false;
+  var cv = document.getElementById('si-canvas');
+  siLoadSprites(function () {
+    siReset();
+    SI.running = true;
+    SI.started = performance.now();
+    SI.lastDrop = SI.started; SI.lastRay = SI.started;
+    if (!SI.muted) siStartTune();
+    if (SI.raf) cancelAnimationFrame(SI.raf);
+    SI.raf = requestAnimationFrame(siStep);
+  });
+  cv.focus();
+}
+
+function siClose() {
+  SI.running = false;
+  if (SI.raf) cancelAnimationFrame(SI.raf);
+  SI.raf = null;
+  siStopTune();
+  document.getElementById('si-backdrop').hidden = true;
+  var b = document.getElementById('si-open');
+  if (b) b.focus();
+}
+
+// keys are bound once, and only act while the modal is open, so the rest of
+// the window keeps its own arrow-key behaviour untouched.
+document.addEventListener('keydown', function (e) {
+  var back = document.getElementById('si-backdrop');
+  if (!back || back.hidden) return;
+  if (e.key === 'Escape') { siClose(); return; }
+  if (e.key === 'ArrowLeft')  { SI.keys.left = true;  e.preventDefault(); }
+  if (e.key === 'ArrowRight') { SI.keys.right = true; e.preventDefault(); }
+  if (e.key === ' ' || e.key === 'Spacebar') {
+    e.preventDefault();
+    if (SI.over) {
+      siReset(); SI.over = false;
+      SI.lastDrop = performance.now(); SI.lastRay = performance.now();
+      if (!SI.muted) siStartTune();
+      return;
+    }
+    if (SI.shots.length < 3) {
+      SI.shots.push({ x: SI.player.x, y: SI.player.y - SI.player.h/2 });
+      siShootSound();
+    }
+  }
+});
+document.addEventListener('keyup', function (e) {
+  if (e.key === 'ArrowLeft')  SI.keys.left = false;
+  if (e.key === 'ArrowRight') SI.keys.right = false;
+});
 
 function openSpaceProgram() {
   document.getElementById("page-main").style.display = "none";
