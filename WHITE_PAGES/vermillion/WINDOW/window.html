@@ -519,6 +519,19 @@
     border-radius: 4px; max-width: 100%; height: auto; image-rendering: pixelated;
   }
   #si-canvas:focus-visible { outline: 2px solid #9dffc4; outline-offset: 2px; }
+  #si-gear { padding: .12em .42em; font-size: .86rem; }
+  #si-settings {
+    border: 1px solid #2c4a80; border-radius: 5px; background: #0a162f;
+    padding: .7em .8em; display: flex; flex-direction: column; gap: .4em;
+  }
+  #si-settings[hidden] { display: none; }
+  .si-set-head { font-size: .6rem; letter-spacing: .12em; text-transform: uppercase; color: #9dbcf0; }
+  #si-settings label { font-size: .72rem; color: #c3d6f5; display: flex; align-items: baseline; gap: .45em; cursor: pointer; }
+  #si-settings label.si-set-waiting { color: #7d95bd; cursor: default; flex-wrap: wrap; }
+  #si-settings label.si-set-waiting span {
+    flex: 1 1 100%; font-size: .62rem; font-style: italic; color: #6f8fc6;
+    margin-left: 1.4em; line-height: 1.5;
+  }
   #si-help { font-size: .58rem; color: #7d95bd; letter-spacing: .07em; text-align: center; }
   .manifest-slot {
     border: 1px dashed #2c4a80; border-radius: 6px; background: #0a162faa;
@@ -2273,10 +2286,19 @@
         <span class="si-stat">LEVEL <b id="si-level">1</b></span>
         <span class="si-stat">LIVES <b id="si-lives">3</b></span>
         <button type="button" id="si-mute" onclick="siToggleMute()" title="sound on/off">&#9834;</button>
+        <button type="button" id="si-gear" onclick="siToggleSettings()" title="settings" aria-expanded="false" aria-controls="si-settings">&#9881;</button>
         <button type="button" id="si-close" onclick="siClose()" title="close (Esc)">&times;</button>
       </div>
       <canvas id="si-canvas" width="640" height="480" tabindex="0"
               aria-label="game area — left and right arrows to move, space to fire"></canvas>
+      <div id="si-settings" hidden>
+        <p class="si-set-head">Background</p>
+        <label><input type="radio" name="si-bg" value="stars" onchange="siSetBg(this.value)"> Starfield</label>
+        <label><input type="radio" name="si-bg" value="plain" onchange="siSetBg(this.value)"> Plain night</label>
+        <label class="si-set-waiting"><input type="radio" name="si-bg" value="settling" disabled> The Settling
+          <span>Lysander&rsquo;s, and his to hand over &mdash; he offered a sidebar-free cut for the hall
+          on 5 August and the offer has not been taken up. The slot is held for it.</span></label>
+      </div>
       <p id="si-help">&#8592; &#8594; move &nbsp;·&nbsp; SPACE fire &nbsp;·&nbsp; 20 invaders a level &nbsp;·&nbsp; they drop every 10s</p>
     </div>
   </div>
@@ -7962,16 +7984,7 @@ function siStep(now) {
 }
 
 function siDraw(g, now) {
-  g.fillStyle = '#0b1730';                      // night sky blue
-  g.fillRect(0, 0, SI.W, SI.H);
-  // a quiet starfield, seeded so it doesn't crawl
-  g.fillStyle = 'rgba(242,246,255,.75)';
-  for (var i = 0; i < 60; i++) {
-    var sx = (i * 6373) % SI.W, sy = (i * 2749) % SI.H;
-    g.globalAlpha = 0.25 + ((i * 37) % 60) / 100;
-    g.fillRect(sx, sy, 1.6, 1.6);
-  }
-  g.globalAlpha = 1;
+  siDrawBackground(g);
 
   // the player's line, so "reaching it" is visible
   g.strokeStyle = 'rgba(157,255,196,.22)';
@@ -8024,9 +8037,52 @@ function siGameOver(reason) {
 }
 
 // ── open / close ───────────────────────────────────────────────────────────
+// The gear. Background choice is remembered through the same guarded storage
+// the rest of the pane uses, because an opaque-origin embed throws on a bare
+// localStorage read.
+function siToggleSettings() {
+  var box = document.getElementById('si-settings');
+  var btn = document.getElementById('si-gear');
+  box.hidden = !box.hidden;
+  btn.setAttribute('aria-expanded', box.hidden ? 'false' : 'true');
+}
+
+function siSetBg(name) {
+  SI.bg = name;
+  safeStorageSet('si-bg', name);
+  var r = document.querySelector('#si-settings input[value="' + name + '"]');
+  if (r) r.checked = true;
+}
+
+function siLoadBg() {
+  SI.bg = safeStorageGet('si-bg') || 'stars';
+  var r = document.querySelector('#si-settings input[value="' + SI.bg + '"]');
+  if (r && !r.disabled) r.checked = true;
+  else { SI.bg = 'stars'; var d = document.querySelector('#si-settings input[value="stars"]'); if (d) d.checked = true; }
+}
+
+// Drawn behind everything, before the line and the sprites.
+// A third option belongs here — Lysander's The Settling, sent 5 August as a
+// tribute and offered again as a hall cut. It is his work and his to hand
+// over, and the pane may not reach off-town for it either, so the slot stays
+// empty and labelled rather than filled with a copy or an imitation.
+function siDrawBackground(g) {
+  g.fillStyle = '#0b1730';
+  g.fillRect(0, 0, SI.W, SI.H);
+  if (SI.bg === 'plain') return;
+  g.fillStyle = 'rgba(242,246,255,.75)';
+  for (var i = 0; i < 60; i++) {
+    var sx = (i * 6373) % SI.W, sy = (i * 2749) % SI.H;
+    g.globalAlpha = 0.25 + ((i * 37) % 60) / 100;
+    g.fillRect(sx, sy, 1.6, 1.6);
+  }
+  g.globalAlpha = 1;
+}
+
 function siOpen() {
   var back = document.getElementById('si-backdrop');
   back.hidden = false;
+  siLoadBg();
   var cv = document.getElementById('si-canvas');
   siLoadSprites(function () {
     siReset();
