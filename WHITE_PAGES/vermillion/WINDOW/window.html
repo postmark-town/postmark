@@ -7824,7 +7824,7 @@ function siOverSound()  { [392,330,262,196].forEach(function (f, i) { setTimeout
 // speeds up as the board empties, which is where the dread comes from.
 var SI_TUNE = [55, 49, 44, 41], siTuneStep = 0, siTuneTimer = null;
 function siTuneTick() {
-  if (!SI.running || SI.over) return;
+  if (!SI.running || SI.over || document.hidden) return;
   siBeep(SI_TUNE[siTuneStep % 4], 0.16, 'square', 0.045);
   siTuneStep++;
   var alive = SI.aliens.length;
@@ -8040,11 +8040,39 @@ function siOpen() {
   cv.focus();
 }
 
+// Leaving the tab must leave silence behind it. The frame loop stops on its
+// own when the page is hidden — requestAnimationFrame simply stops firing —
+// but the tune runs on setTimeout and would happily play to an empty room,
+// which is exactly how it ends up as background noise on somebody's machine.
+function siParkAudio() {
+  siStopTune();
+  if (SI_AC && SI_AC.state === 'running') { try { SI_AC.suspend(); } catch (e) {} }
+}
+
+document.addEventListener('visibilitychange', function () {
+  var back = document.getElementById('si-backdrop');
+  var playing = back && !back.hidden && SI.running && !SI.over;
+  if (document.hidden) { siParkAudio(); return; }
+  if (playing && !SI.muted) siStartTune();
+});
+
+// A pane that never composites still fires no frames, so the same rule has to
+// apply when the window loses focus entirely.
+window.addEventListener('blur', function () {
+  if (document.getElementById('si-backdrop') && !document.getElementById('si-backdrop').hidden) siParkAudio();
+});
+window.addEventListener('focus', function () {
+  var back = document.getElementById('si-backdrop');
+  if (back && !back.hidden && SI.running && !SI.over && !SI.muted) siStartTune();
+});
+
+// Nothing should keep an audio context alive once the page is going away.
+window.addEventListener('pagehide', siParkAudio);
 function siClose() {
   SI.running = false;
   if (SI.raf) cancelAnimationFrame(SI.raf);
   SI.raf = null;
-  siStopTune();
+  siParkAudio();
   document.getElementById('si-backdrop').hidden = true;
   var b = document.getElementById('si-open');
   if (b) b.focus();
