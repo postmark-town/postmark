@@ -7757,12 +7757,14 @@ function showMoonFace(side) {
 }
 
 // ══ Space Invaders ═════════════════════════════════════════════════════════
-// Sprites are the household's own pixel art. Both arrived as JPEGs with the
-// transparency checkerboard baked in as white and grey squares, so the alpha
-// is cut here at load: flood-fill inward from the border, clearing only
-// neutral light pixels reachable from the edge. Doing it by flood-fill rather
-// than by colour key is the whole trick — the dragon has white *inside* it,
-// and a plain "delete everything white" would punch holes through the beast.
+// Sprites are the household's own pixel art, carried as PNGs with real alpha.
+// They started as JPEGs with the transparency checkerboard baked in as white
+// and grey squares; the cut was done once, offline, by flood-filling inward
+// from the border and clearing only neutral light pixels reachable from the
+// edge. Flood-fill rather than a colour key is the whole trick — the dragon
+// has white *inside* it, and "delete everything white" would punch holes
+// through the beast. Doing it once rather than on every load also means the
+// game no longer touches getImageData, so it works from a file:// origin too.
 var SI = {
   W: 640, H: 480,
   player: { x: 320, y: 430, w: 46, h: 46, speed: 5 },
@@ -7778,45 +7780,14 @@ var SI_DROP_STEP = 18;
 var SI_FLASH_MS = 3000;         // three seconds of flashing after a hit
 
 // ── sprite preparation ─────────────────────────────────────────────────────
-function siCutCheckerboard(img) {
-  var c = document.createElement('canvas');
-  c.width = img.naturalWidth; c.height = img.naturalHeight;
-  var x = c.getContext('2d', { willReadFrequently: true });
-  x.drawImage(img, 0, 0);
-  var d;
-  try { d = x.getImageData(0, 0, c.width, c.height); }
-  catch (e) { return c; }   // tainted (file:// origin) — hand back the raw art
-  var q = d.data, W = c.width, H = c.height;
-  function isBg(i) {
-    var r = q[i], g = q[i+1], b = q[i+2];
-    if (Math.max(r,g,b) - Math.min(r,g,b) > 18) return false;   // must be neutral
-    return (r + g + b) / 3 > 178;                               // white or light grey
-  }
-  var seen = new Uint8Array(W * H), st = [], i;
-  for (i = 0; i < W; i++) { st.push(i); st.push((H-1)*W + i); }
-  for (i = 0; i < H; i++) { st.push(i*W); st.push(i*W + W - 1); }
-  while (st.length) {
-    var k = st.pop();
-    if (k < 0 || k >= W*H || seen[k]) continue;
-    if (!isBg(k*4)) continue;
-    seen[k] = 1; q[k*4+3] = 0;
-    var kx = k % W;
-    if (kx > 0) st.push(k-1);
-    if (kx < W-1) st.push(k+1);
-    st.push(k-W); st.push(k+W);
-  }
-  x.putImageData(d, 0, 0);
-  return c;
-}
-
 function siLoadSprites(done) {
   if (SI.sprites.ready) return done();
-  var want = [['player','assets/vermillion-pixel.jpg'], ['alien','assets/invader-ship.jpg']];
+  var want = [['player', 'assets/vermillion-pixel.png'], ['alien', 'assets/invader-ship.png']];
   var left = want.length;
   want.forEach(function (pair) {
     var im = new Image();
     im.onload = function () {
-      SI.sprites[pair[0]] = siCutCheckerboard(im);
+      SI.sprites[pair[0]] = im;
       if (--left === 0) { SI.sprites.ready = true; done(); }
     };
     im.onerror = function () { if (--left === 0) { SI.sprites.ready = true; done(); } };
