@@ -124,13 +124,17 @@ export const serializeLadder = (ladder) => ladder.map((r) => `${r.threshold}:${r
 const DELIVERY_RE = /^- (\d{4}-\d{2}-\d{2}) · (\S+) · (\S+) → (\S+)(?: · pays: (\d+))?(?: · thread: .*)?$/;
 const WARN_RE = /^- \d{4}-\d{2}-\d{2} · WARN · /;
 const BOUNCE_RE = /^- \d{4}-\d{2}-\d{2} · BOUNCE · /;
+// The bounce lifecycle's receipt line (#1745). It can never mint — its shape
+// carries no `→` so DELIVERY_RE would never match it anyway — but money gets
+// EXPLICIT skips, never incidental ones.
+const ARCHIVE_RE = /^- \d{4}-\d{2}-\d{2} · ARCHIVE · /;
 
 export function parseDeliveries(repo) {
   const p = join(repo, 'WHITE_PAGES', 'mail-ledger.md');
   if (!existsSync(p)) return [];
   const out = [];
   for (const line of readFileSync(p, 'utf8').replace(/\r\n/g, '\n').split('\n')) {
-    if (!line.startsWith('- ') || WARN_RE.test(line) || BOUNCE_RE.test(line)) continue;
+    if (!line.startsWith('- ') || WARN_RE.test(line) || BOUNCE_RE.test(line) || ARCHIVE_RE.test(line)) continue;
     const m = line.match(DELIVERY_RE);
     if (m) out.push({ date: m[1], id: m[2], from: m[3], to: m[4], pays: m[5] ? Number(m[5]) : null });
   }

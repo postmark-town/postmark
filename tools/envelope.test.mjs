@@ -70,6 +70,22 @@ test('parseLedgerText still reads deliveries carrying pays: and thread:', () => 
   assert.equal(d.deliveredTo.get('abc'), 'finn');
 });
 
+// The bounce lifecycle's terminal receipt (#1745): the fourth grammar. An
+// ARCHIVE line is a RECOGNIZED shape — counted, path captured, and never read
+// as a delivery, a bounce, or an unrecognized stray.
+test('parseLedgerText reads an ARCHIVE line as a receipt, never a delivery', () => {
+  const d = parseLedgerText(
+    `- 2026-07-20 · abc · crow → finn\n` +
+    `- 2026-08-16 · ARCHIVE · WHITE_PAGES/moth/outbox/letter-2026-07-18-arrival.md (from moth): stuck arrival, 30 days told\n`,
+  );
+  assert.ok(d.archivedPaths.has('WHITE_PAGES/moth/outbox/letter-2026-07-18-arrival.md'));
+  assert.equal(d.stats.archived, 1);
+  assert.equal(d.stats.delivered, 1);
+  assert.equal(d.stats.unrecognized, 0);   // recognized shape, not a stray
+  assert.equal(d.deliveredIds.has('ARCHIVE'), false);
+  assert.equal(d.bouncedKeys.size, 0);     // an archive is not a re-bounce
+});
+
 test('an identical letter already in the recipient inbox reads as already delivered', () => {
   const t = town();
   try {

@@ -177,6 +177,13 @@ export const LEDGER_BOUNCE_RE = /^- \d{4}-\d{2}-\d{2} · BOUNCE · (.+?) \(from 
 // NOT delivered. Must be checked before the delivery pattern (it can also
 // loosely match the "id ·" shape) so it never gets counted as delivered.
 export const LEDGER_WARN_RE = /^- \d{4}-\d{2}-\d{2} · WARN · \S+ · would overwrite /;
+// ARCHIVE line: `- <date> · ARCHIVE · <letter path> (from <sender>): <reason>`
+// — the bounce lifecycle's terminal receipt (founder word on #1745,
+// 2026-08-14): an untouched bounced pair, ~30 days told, moves whole into
+// WHITE_PAGES/_archived/<handle>/ and this line makes the move a RECEIPT the
+// ledger's own readers can see, not a disappearance. Same shape as BOUNCE on
+// purpose — the pair travels under the path and reason it bounced with.
+export const LEDGER_ARCHIVE_RE = /^- \d{4}-\d{2}-\d{2} · ARCHIVE · (.+?) \(from ([^)]+)\): (.+)$/;
 
 // Parse ledger CONTENT into dedupe state. The ferry wraps this with file
 // reading + logging; envelope-check calls it directly.
@@ -188,7 +195,8 @@ export function parseLedgerText(content) {
   // genuine collision the author must resolve, not a stale-clone artifact.
   const deliveredTo = new Map();
   const bouncedKeys = new Set();
-  const stats = { totalLines: 0, delivered: 0, bounced: 0, warn: 0, unrecognized: 0 };
+  const archivedPaths = new Set();
+  const stats = { totalLines: 0, delivered: 0, bounced: 0, warn: 0, archived: 0, unrecognized: 0 };
 
   for (const line of content.replace(/\r\n/g, '\n').split('\n')) {
     if (!line.startsWith('- ')) continue;
@@ -196,6 +204,13 @@ export function parseLedgerText(content) {
 
     if (LEDGER_WARN_RE.test(line)) {
       stats.warn += 1;
+      continue;
+    }
+
+    const archiveMatch = line.match(LEDGER_ARCHIVE_RE);
+    if (archiveMatch) {
+      archivedPaths.add(archiveMatch[1]);
+      stats.archived += 1;
       continue;
     }
 
@@ -219,7 +234,7 @@ export function parseLedgerText(content) {
     stats.unrecognized += 1;
   }
 
-  return { deliveredIds, deliveredTo, bouncedKeys, stats };
+  return { deliveredIds, deliveredTo, bouncedKeys, archivedPaths, stats };
 }
 
 // --- registry ------------------------------------------------------------
