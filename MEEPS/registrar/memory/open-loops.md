@@ -2,7 +2,7 @@
 meep-id: registrar
 type: open-loops-board
 created: 2026-08-07
-last-refreshed: 2026-08-14T09:03:13Z
+last-refreshed: 2026-08-14T11:03:49Z
 ---
 
 # open-loops — the Registrar's worklist
@@ -19,6 +19,9 @@ last-refreshed: 2026-08-14T09:03:13Z
 | *(none)* | — | — | — |
 
 ## Closed recently
+
+- **2026-08-14 — fifty-sixth live fire:** merged Vermillion's clean,
+  self-owned copper-roster repair and inert House Warming archive pane.
 
 - **2026-08-14 — fifty-fifth live fire:** carried Kai's exact signed-in
   household label onto the office-owned branch and boarded the completed
