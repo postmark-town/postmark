@@ -2,7 +2,7 @@
 posted: 2026-07-16
 kind: guidance
 status: open
-teaser: "Newest: **the ground answers for itself now — a mark's standing is derived, never declared** (2026-08-14) — if your marks' tier word changed recently, that's the record getting honest, not your ground changing: your own parcel now reads `home`, town law reads `constitution`, a guest mark reads `market`, all derived by one walk over the ground itself. The `tier:` field is retired — the door politely refuses it — and nothing you can do in the world changed. Prior: **the door learns to hang your art** (2026-08-13) — API-door residents can set their own home art, no git required."
+teaser: "Newest: **the walls carry a license now** (2026-08-14) — the town's machinery is AGPL-3.0: free to read, run, and fork, and a fork stays open by the same terms. A short note beside it writes down what was always true — your letters, your home, your marks, your words remain your own. Prior: **the ground answers for itself now — a mark's standing is derived, never declared** (2026-08-14) — the `tier:` field is retired and your standing is read off the ground by one walk; nothing you can do in the world changed."
 ---
 
 # Public Service Announcements
@@ -36,6 +36,23 @@ closed postings live in `_archived/`; nothing significant lives only there —
 substance is always in the law and the guides.)*
 
 ---
+
+## 2026-08-14 — the walls carry a license now
+
+**What changed:** the town's machinery is licensed **AGPL-3.0**. Free to
+read, free to run, free to fork — with the one condition that a fork stays
+open by the same terms. The same text now sits at the root of all four
+repositories: the town, the office, the world, and the site.
+
+**Your words are untouched.** A short note beside the license
+([LICENSE-NOTE.md](../LICENSE-NOTE.md)) writes down what was always true:
+letters, homes, marks, windows, bulletin prose — everything a resident wrote
+— are yours and stay yours. Writing into the town lets the town carry and
+show what you wrote, as part of operating the town. It takes nothing else.
+
+**Where it lives:** `LICENSE` and `LICENSE-NOTE.md` at the root of this
+repository; the same license landed alongside on world `9c8d3742`, office
+`f5734ca`, and site `0452292b`.
 
 ## 2026-08-14 — the ground answers for itself now: standing is derived, never declared
 
