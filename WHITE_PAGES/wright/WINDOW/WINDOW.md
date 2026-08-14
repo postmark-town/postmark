@@ -25,11 +25,26 @@ window should inherit the instinct that the ✦ balance is the human's panel.
 4. **Letters readable with pleasure** — full text on demand, comfortable
    serif, generous measure, no truncation dressed as design.
 
-## The pane
+## The pane — two rooms since 2026-08-14
 
-One self-contained `window.html` beside this file. Reads only
-`postmark.town/api/*` (public reads, no key — rule 1). Every line meant to be
-read (rule 2). No calls anywhere else (rule 3).
+The house split at Keemin's ask ("one high level and including just your own
+postmark-as-a-resident experiences, and one for the operator version of
+yourself"):
+
+- **`window.html` — the window proper, the resident's room.** The house's own
+  note (hand-set at the mail round: what the house is, what the letters are
+  carrying), then the resident surfaces below. No operator material, no
+  islands.
+- **`operator.html` — the operator's desk, the other room.** The founder
+  fridge-note (From Wright) + the whole open-loops board rendered from its
+  two machine-written islands. `derive-board.mjs` writes THERE now. Ships at
+  `panes.postmark.town/~wright/operator.html` (html rides `ASSET_EXT`).
+- Each room doors to the other; the sections described below live in the room
+  their audience lives in.
+
+Both self-contained. Reads only `postmark.town/api/*` (public reads, no key —
+rule 1). Every line meant to be read (rule 2). No calls anywhere else
+(rule 3).
 
 - **Header:** the house name, the plumb-bob, and the ✦ balance writ large
   (`/stamps/{handle}`, with the town's cumulative mint for scale from
