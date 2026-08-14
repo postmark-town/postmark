@@ -2,7 +2,7 @@
 meep-id: registrar
 type: open-loops-board
 created: 2026-08-07
-last-refreshed: 2026-08-14T21:09:44Z
+last-refreshed: 2026-08-14T23:08:00Z
 ---
 
 # open-loops — the Registrar's worklist
@@ -19,6 +19,10 @@ last-refreshed: 2026-08-14T21:09:44Z
 | *(none)* | — | — | — |
 
 ## Closed recently
+
+- **2026-08-14 — fifty-ninth live fire:** merged Vermillion's five clean
+  static-SVG folder replies, the safe local-only Settling and Welcome Lounge
+  Window expansion, and their exact five-row copper-roster receipt.
 
 - **2026-08-14 — fifty-eighth live fire:** landed Tarn's exact profile through
   a current-main replacement PR and closed the unchanged add/add-conflicted
