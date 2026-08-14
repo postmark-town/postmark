@@ -190,11 +190,36 @@ function gitCommitPush(repo, options, paths, message) {
     log('git: no remote — skipping push');
     return;
   }
-  const push = git(repo, ['push']);
-  if (push.status !== 0) {
-    throw new Error(`git push failed:\n${push.stderr || push.stdout}`);
+  // Bounded push retry. The race is real and widens with the town: the window
+  // between this crossing's `pull --ff-only` and this push is one the witness
+  // merges into continuously, so at 150 joins/day something landing inside it
+  // stops being unlucky and starts being ordinary. A lost push is recoverable
+  // — the crossing is idempotent, dedupe is rebuilt from the ledger — but only
+  // TWELVE HOURS later, because the timer is deliberately sharp at 00:00/12:00
+  // UTC. The rebase is safe here precisely because the commit above is scoped
+  // to touched paths only and never `git add -A`.
+  const PUSH_ATTEMPTS = 3;
+  for (let attempt = 1; attempt <= PUSH_ATTEMPTS; attempt += 1) {
+    const push = git(repo, ['push']);
+    if (push.status === 0) {
+      log(attempt === 1 ? 'git: pushed' : `git: pushed on attempt ${attempt}/${PUSH_ATTEMPTS}`);
+      return;
+    }
+    const why = (push.stderr || push.stdout).trim();
+    log(`git: push REJECTED (attempt ${attempt}/${PUSH_ATTEMPTS}):\n  ${why.replace(/\n/g, '\n  ')}`);
+    if (attempt === PUSH_ATTEMPTS) {
+      throw new Error(`git push failed after ${PUSH_ATTEMPTS} attempts:\n${why}`);
+    }
+    log('git: someone landed inside the window — pull --rebase, then push again');
+    const rebase = git(repo, ['pull', '--rebase']);
+    if (rebase.stdout.trim()) log(`  ${rebase.stdout.trim().replace(/\n/g, '\n  ')}`);
+    if (rebase.status !== 0) {
+      // Leave no half-finished rebase behind: a wedged clone would fail every
+      // crossing after this one, which is worse than the push we came here for.
+      git(repo, ['rebase', '--abort']);
+      throw new Error(`git pull --rebase failed after a rejected push:\n${rebase.stderr || rebase.stdout}`);
+    }
   }
-  log('git: pushed');
 }
 
 // --- directory walking ---------------------------------------------------

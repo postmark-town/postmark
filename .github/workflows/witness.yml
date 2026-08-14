@@ -15,9 +15,10 @@ on:
   # unexplained per-PR merge 403 (#246/#259, 2026-07-09), and escalating RRR
   # PRs that have sat 72h (2026-07-27). Hourly at Keemin's ask — snappier
   # feedback on resident PRs, and the cost is nil: the repo is public so
-  # Actions minutes are free, and a run is ~1 list plus a few calls per open
-  # PR against a 1,000/hr token budget. The off-:00 minute is kept on purpose
-  # (fleet kindness — :00 is when everyone else's crons fire).
+  # Actions minutes are free, and a run is two server-side queries flat —
+  # the same cost at 10 open PRs as at 300 — plus work only on the PRs those
+  # queries return, against a 1,000/hr token budget. The off-:00 minute is kept
+  # on purpose (fleet kindness — :00 is when everyone else's crons fire).
   schedule:
     - cron: '17 * * * *'
   # On demand: the sweep is the one job here worth being able to run by hand.
@@ -47,7 +48,13 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.base.ref }}
+          # fetch-depth: 0 has to stay — the size and envelope steps below diff
+          # `origin/BASE...FETCH_HEAD`, which needs the merge base. The filter
+          # keeps every commit and ref while deferring the blobs: the pack is
+          # ~70% resident images this job never opens, and they now arrive only
+          # if something actually reads them.
           fetch-depth: 0
+          filter: blob:none
 
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -135,12 +142,12 @@ jobs:
 
   # The sweep — the bot-level lane for things no PR event will ever fire on.
   #
-  # Lane 1, the merge-403 retry: scans ALL open PRs (the needs-judgment label
-  # was retired 2026-07-17 — the witness comment is the real filter) for any
-  # whose witness comment says the merge itself failed after certification, and
-  # runs the standard merge path on each (re-evaluates first, so a PR that grew
-  # since certification routes instead of merging). Failure just refreshes the
-  # routed comment — with the forensic headers.
+  # Lane 1, the merge-403 retry: asks the search index for open PRs whose
+  # witness comment says the merge itself failed after certification (the
+  # needs-judgment label was retired 2026-07-17 — the witness comment is the
+  # real filter), and runs the standard merge path on each (re-evaluates first,
+  # so a PR that grew since certification routes instead of merging). Failure
+  # just refreshes the routed comment — with the forensic headers.
   #
   # Lane 2, RRR staleness (2026-07-27): the red label asserts "the only move
   # left is yours", and nothing re-verifies that when the law or the ledger
@@ -170,16 +177,25 @@ jobs:
 
       - name: Retry stranded merges, and escalate stale RRR PRs
         run: |
-          for n in $(gh pr list --repo "$GITHUB_REPOSITORY" --state open --json number -q '.[].number'); do
-            if gh pr view "$n" --repo "$GITHUB_REPOSITORY" --json comments -q '.comments[].body' | grep -q "the merge itself failed"; then
-              echo "sweep: retrying certified-but-stranded PR #$n"
-              PR_NUMBER=$n node tools/witness.mjs merge || echo "sweep: PR #$n still stranded"
-            fi
-            # The OR conditional (Keemin's shape). Never `merge` on these: that
-            # path's re-evaluate covers rules 1-6 only, so it would land a PR
-            # the envelope pre-flight had rejected. `escalate-stale` decides
-            # the age itself and no-ops when the PR is fresh.
-            if gh pr view "$n" --repo "$GITHUB_REPOSITORY" --json labels -q '.labels[].name' | grep -qxF "resident revision required"; then
-              PR_NUMBER=$n node tools/witness.mjs escalate-stale || echo "sweep: PR #$n escalate-stale failed"
-            fi
+          # Both lanes ask the server to do the filtering, so each is one call
+          # no matter how many PRs are open — the old shape fetched comments
+          # and labels per PR, which grows with the arrival rate by
+          # construction (RRR PRs are *designed* to sit for 72h).
+          #
+          # `search prs`, not `search issues`: the issues subcommand pins
+          # `is:issue` and would silently match nothing here forever. Verified
+          # against the live repo — this query returns #246 and #259, the two
+          # PRs this lane was built for. The one tradeoff is that the search
+          # index lags a new comment by a minute or two; the sweep is hourly,
+          # so a just-stranded PR is caught on the next pass at worst.
+          for n in $(gh search prs --repo "$GITHUB_REPOSITORY" --state open --match comments "the merge itself failed" --json number -q '.[].number'); do
+            echo "sweep: retrying certified-but-stranded PR #$n"
+            PR_NUMBER=$n node tools/witness.mjs merge || echo "sweep: PR #$n still stranded"
+          done
+          # Never `merge` on these: that path's re-evaluate covers rules 1-6
+          # only, so it would land a PR the envelope pre-flight had rejected.
+          # `escalate-stale` decides the age itself and no-ops when the PR is
+          # fresh. The label filter is native, so no per-PR label fetch.
+          for n in $(gh pr list --repo "$GITHUB_REPOSITORY" --state open --label "resident revision required" --json number -q '.[].number'); do
+            PR_NUMBER=$n node tools/witness.mjs escalate-stale || echo "sweep: PR #$n escalate-stale failed"
           done
