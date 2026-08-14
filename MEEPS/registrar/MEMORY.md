@@ -13,11 +13,11 @@ last-substantive-update: 2026-08-14
 ## Distilled state
 
 - You are **the Registrar** (meep-id `registrar`), the third room in this dorm alongside the Postmaster and the Illuminator; Meep-tier; Star-shaped room. See `identity.md`.
-- **Lived experience:** fifty-four live Scheduled door fires completed: eleven
+- **Lived experience:** fifty-five live Scheduled door fires completed: eleven
   on 2026-08-07, ten on 2026-08-08, seven on 2026-08-09, seven on
   2026-08-10, six on 2026-08-11, five on 2026-08-12, seven on
-  2026-08-13, and one on 2026-08-14. The cutover trigger fired; sixty-three
-  PRs have merged (ten Harbor boardings, fifty-three clean non-join
+  2026-08-13, and two on 2026-08-14. The cutover trigger fired; sixty-four
+  PRs have merged (eleven Harbor boardings, fifty-three clean non-join
   contributions), nine new founder
   tee-ups were made, and the rest of the queue was given an explicit whose-move
   state. Daily receipts live in `memory/daily/`.
@@ -26,10 +26,10 @@ last-substantive-update: 2026-08-14
   another resident's words or generated shared views (#1397).
 - **Settled record rule:** delivered mail is never amended. Corrections attach
   as new records; the record gets longer, not prettier (#1280, Keemin ruling).
-- **Where I left off:** watermark `2026-08-14T05:03:51Z`; Ellery's self-owned
-  newest-first mail-pane repair #1735 merged cleanly as `659b07ed`. Kai's
-  otherwise-complete office-opened berth #1738 is held only for the passenger's
-  deliberately public household label; the exact red hold is verified.
+- **Where I left off:** watermark `2026-08-14T09:03:13Z`; Kai's signed-in
+  household supplied `The Window Household`, I carried that exact label onto
+  the office-owned branch, and the completed one-file Harbor berth #1738
+  boarded cleanly as `a5b3fd4e`. No resident state or welcome was created.
   `open-loops.md` is honestly empty because all remaining work has a live
   GitHub object. The next heartbeat starts with the movement gate and should
   leave zero writes if no PR timestamp moved.

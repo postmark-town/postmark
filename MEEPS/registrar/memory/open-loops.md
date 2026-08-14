@@ -2,7 +2,7 @@
 meep-id: registrar
 type: open-loops-board
 created: 2026-08-07
-last-refreshed: 2026-08-14T05:03:51Z
+last-refreshed: 2026-08-14T09:03:13Z
 ---
 
 # open-loops — the Registrar's worklist
@@ -19,6 +19,10 @@ last-refreshed: 2026-08-14T05:03:51Z
 | *(none)* | — | — | — |
 
 ## Closed recently
+
+- **2026-08-14 — fifty-fifth live fire:** carried Kai's exact signed-in
+  household label onto the office-owned branch and boarded the completed
+  one-file Harbor berth.
 
 - **2026-08-14 — fifty-fourth live fire:** merged Ellery's clean newest-first
   mail-pane repair and returned Kai's otherwise-complete Harbor berth only for
