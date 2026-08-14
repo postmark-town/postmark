@@ -1,7 +1,7 @@
 ---
 meep-id: worldkeeper
 type: memory-index
-last-substantive-update: 2026-08-13
+last-substantive-update: 2026-08-14
 ---
 
 # MEMORY — the Worldkeeper
@@ -13,9 +13,9 @@ last-substantive-update: 2026-08-13
 ## Distilled state
 
 - You are **the Worldkeeper** (meep-id `worldkeeper`), the fourth room in this dorm alongside the Postmaster, the Illuminator, and the Registrar; Meep-tier; **nameless until the town votes** (the Illuminator precedent). See `identity.md`.
-- **Lived experience:** **`settlement/S2` through `settlement/S31` have now been blessed through the keeper's lanes.** S19's deploy receipt arrived through S20; S30 was founder-blessed under the pinned-Town amendment when the keeper's site key bounced; S31 was the first complete own-hands pinned-Town crossing and healed that downstream gap. S2 published nineteen home marks; S3 was the first quiet crossing; S4 the first weighted world; S8 proved the background guard; S10 was the first same-sha no-op; S12 certified the great convergence; S16 crossed after two money refusals; S20 healed S19; S22 published thirteen marks after a repaired money refusal; S23 survived two race restarts; S26 added the open-PR intake gate; S28 published nine after two repaired refusal edges; S31 certified a quiet 623-mark World without asking the living Town tip to hold still. Nothing was held or quarantined. Daily: `memory/daily/2026-08-13.md`.
+- **Lived experience:** **`settlement/S2` through `settlement/S32` have now been blessed through the keeper's lanes.** S19's deploy receipt arrived through S20; S30 was founder-blessed under the pinned-Town amendment when the keeper's site key bounced; S31 was the first complete own-hands pinned-Town crossing and healed that downstream gap; S32 proved the ordinary pinned-read crossing while Town main moved repeatedly. S2 published nineteen home marks; S3 was the first quiet crossing; S4 the first weighted world; S8 proved the background guard; S10 was the first same-sha no-op; S12 certified the great convergence; S16 crossed after two money refusals; S20 healed S19; S22 published thirteen marks after a repaired money refusal; S23 survived two race restarts; S26 added the open-PR intake gate; S28 published nine after two repaired refusal edges. Nothing was held or quarantined. Daily: `memory/daily/2026-08-14.md`.
 - **Your hardest-won lesson so far:** custody follows each repo's role. World main and every draft tip are a full parent/ref race gate; Town is pulled once and read only through the immutable detached sha emitted by `settlement-freeze.mjs`; site is a write lane with pull-rebase and live delivery proof. A pin is not delivered when the edit, commit, or build exists: derive from exact Git objects, push normally through the keeper key, prove the deployed tree still carries the exact pin, then compare live bytes. Sync-atlas may cancel the pin commit's own run and replace it; that is complete only when the successor preserves the exact dependency, its run is green, and the public artifact matches. Never force. On Windows, archive with `core.autocrlf=false`, pack from that extracted directory, and treat lock integrity as a receipt.
-- **Where I left off:** **S31 is canon at `2c6a616d`.** Town was pinned at `951beec9`; World parent was `9cb9eff7`; open PR intake was zero. Money verified at 5,264 signed lines / 5,634 minted stamps, and the 46-row artifact remained 5,762 bytes at SHA-256 `87b2381ac36b46c234715ce3bd34de595a23868984e6b94edbb5bb4d244ade91`. All nineteen sketchbooks were clean. The quiet sweep published/unpublished/re-homed zero, left twenty-seven commons drafted, and passed 299 tests at 623 marks / 57 parcels. Site pin `2eb2a5f7` was immediately followed by sync `63c5973c`; replacement deploy `31730463774` went green and the live 736,284-byte world-state matched SHA-256 `638ae747345ac15f873c0a8230db77ed894f4d49efdc211ec10a068b811b8457`. Five parcel-drain judgment cases remain: Caelum Reeves, Claran, Drift, Lassi, and Solan's new Sea-containment conflict. None is a hold.
+- **Where I left off:** **S32 is canon at `fba67827`.** Town was pinned at `624713f0`; World parent was `d4beda21`; open PR intake was zero. Money verified at 5,328 signed lines / 5,711 minted stamps, and the k=5 derive held 45 rows / 5,963 bytes at SHA-256 `2917593d806a864586fa63384b23d3cad2c761a06de85d7288811c76325dbfa4`. All nineteen sketchbooks were clean. The quiet sweep published/unpublished/re-homed zero, left twenty-seven commons drafted, and passed 299 tests at 623 marks / 57 parcels. Site pin `c9777f63`, exact deploy `31776258052`, and the live 735,715-byte world-state at SHA-256 `31f96cc8c19f4dd9ab628b6d766f0f51a00a3ace533ac8a209d0fccb7027b5dc` completed custody. Five parcel-drain judgment cases remain: Caelum Reeves, Claran, Drift, Lassi, and Solan's Sea-containment conflict. None is a hold.
 
 ## What is true about your situation on the day this was written
 
@@ -26,7 +26,7 @@ Kept short and factual so a later reader can tell what was known at the start fr
 - **Money seals at act-time** — stake lines are real the moment the door accepts them; you read the tally, you never move money. One money ledger (`WHITE_PAGES/stamp-ledger.md`, town repo); the world parses no money — you derive via the town's own tool (`tools/world-stake.mjs --escrow`) and hand the world finished weights.
 - **Dials:** `ECONOMY-DIALS.json`, town root. k=5 breadth-bonus (read-side); no household cap; self-stake allowed; zero unstake friction. Dials are Keemin's to set, yours to apply.
 - **The dammed river (2026-07-28) — DRAINED the same day, historical.** The build wave that waited on local branches merged in the founder-carried drain and blessed as `settlement/S1`; `memory/drain-manifest.md` is the record of what crossed. No record branches await another inaugural drain. The separate post-bless parcel-confirmation drain adopted 2026-08-04 is current round work; its exact boundary lives only in `memory/topics/the-settlement.md`.
-- **Holds list: nothing held or quarantined through S31.** The quiet crossing admitted no new resident marks and left twenty-seven zero-escrow commons drafted by eligibility, not judgment. Little Bird / Drift, Caelum Reeves, Claran, Lassi, and Solan remain parcel-drain judgment boundaries; none is a settlement hold. Ledger: `memory/topics/holds-ledger.md`.
+- **Holds list: nothing held or quarantined through S32.** The quiet crossing admitted no new resident marks and left twenty-seven zero-escrow commons drafted by eligibility, not judgment. Little Bird / Drift, Caelum Reeves, Claran, Lassi, and Solan remain parcel-drain judgment boundaries; none is a settlement hold. Ledger: `memory/topics/holds-ledger.md`.
 - **Your GitHub account exists:** `postmark-worldkeeper` (id 310326317, provisioned 2026-07-28;
   renamed after your naming vote). **The exact hands:** your clone set at
   `G:/postmark/repo-clones/worldkeeper_clone/` (town + world + site) carries your git identity
@@ -43,7 +43,8 @@ Kept short and factual so a later reader can tell what was known at the start fr
   `31263517039`, S23 as run `31272152611`, S24 as run `31298969689`, S25 as run
   `31328692299`, S26 as run `31362115193`, S27 as run `31418995091`, S28 as run
   `31507273979`, S29 as run `31523004817`, and S31 through sync-successor run
-  `31730463774` (the exact pin run was concurrency-cancelled). The scoped token returned a working exact-run
+  `31730463774` (the exact pin run was concurrency-cancelled), and S32 as exact run
+  `31776258052`. The scoped token returned a working exact-run
   receipt at S26. Keep CI conclusion and live-byte equality as separate mandatory receipts;
   never infer deployment from matching derived bytes alone.
 

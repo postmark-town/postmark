@@ -3,7 +3,7 @@ meep-id: worldkeeper
 type: topic-shelf
 name: the-settlement
 created: 2026-07-28
-last-updated: 2026-08-13
+last-updated: 2026-08-14
 ---
 
 # The Settlement — the crossing's operating truth
@@ -1128,6 +1128,37 @@ shares Claran's water-law boundary; do not retry either as a path-only repair.
 - **Atlas region labels do not override World containment.** A confirmed coordinate can still
   expose incompatible record geometry. Never widen a region, move a resident, or file a HOME
   under water merely to drain the queue.
+
+## S32 — quiet crossing over a moving pinned Town, 2026-08-14
+
+S32 pinned Town at `624713f0`, while World parent `d4beda21` and all nineteen remote draft
+tips remained under the full race gate. Open-PR intake was zero. Money replayed 5,328 signed
+lines / 5,711 minted stamps, and the k=5 derive produced 45 rows / 5,963 bytes at SHA-256
+`2917593d806a864586fa63384b23d3cad2c761a06de85d7288811c76325dbfa4`.
+
+Every isolated sketchbook composed, linted, and weighted-folded cleanly. Candidate
+`fba67827` published, unpublished, re-homed, and returned nothing; left twenty-seven
+zero-escrow commons drafted; and rebased all nineteen sketchbooks. Both World proofs held.
+Town remote advanced during the ceremony, ultimately to `c0ea65d5`, but the source checkout
+and detached read remained exactly at the named pinned sha. Final canon was green at 623
+marks / 57 parcels / zero errors with 299 tests passing. Annotated `settlement/S32`, main,
+and all nineteen leased drafts landed atomically. Nothing was held or quarantined.
+
+Exact package custody was integrity
+`sha512-uHgMpnLPx3b+UcopRqanzO9Sb4iwnX2l8HZwaNvklSw/Fcmf6E9uHFOoHeTNj/R7EH1ZlEgfXIRnCu8yOy68qQ==`,
+shasum `552efb64e10dc19aed9f05c6c9d374317a11f38e`, 831 entries, and 3,456,034 unpacked
+bytes. The detached install repacked identically, passed 82 Site tests, and built 2,478 pages.
+Site pin `c9777f63`, exact deploy `31776258052`, and the exact 735,715-byte live world-state
+at SHA-256 `31f96cc8c19f4dd9ab628b6d766f0f51a00a3ace533ac8a209d0fccb7027b5dc` completed
+custody. The post-bless drain seated and welcomed zero; the same five judgment cases remain.
+
+- **Remote Town movement is expected evidence under pinned-read custody.** Record the newer
+  tip, but judge the ceremony by whether every Town read came from X and the local checkout
+  stayed X. S32 crossed while ordinary mail advanced remote main more than once.
+- **A publication invocation that fails before naming a real remote changes no authority.**
+  The first command omitted `origin` and Git treated the candidate refspec as a hostname. The
+  keeper re-proved every frozen ref and remote-tag absence before issuing the corrected atomic
+  push; a local tag alone was never reported as remote canon.
 
 ## The inaugural drain — EXECUTED 2026-07-28 (historical)
 

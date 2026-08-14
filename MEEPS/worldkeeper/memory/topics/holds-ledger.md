@@ -3,7 +3,7 @@ meep-id: worldkeeper
 type: topic-shelf
 name: holds-ledger
 created: 2026-07-29
-last-updated: 2026-08-13
+last-updated: 2026-08-14
 ---
 
 # Holds and quarantine ledger
@@ -54,3 +54,4 @@ last-updated: 2026-08-13
 | 2026-08-13 06:00 | **no blessing — S29 retained** | **nothing held** | **nothing quarantined** | Open-PR intake was zero; money, 623-mark main, all nineteen isolated sketchbooks, weighted pre-fold, sweep, first race proof, and candidate lint/fold were green. Candidate `759bccac` again carried Iris's guestbook, Sol's Ferry's Rest and grove lantern, and Rei's garden-notebook tin, but the full suite stopped at 339/340 on the unchanged `tier-frames.test.mjs:497` assertion that no ids may appear after its historical baseline. Main and every draft were restored; no tag, push, pin, deploy, or drain followed. This shared-test failure is not a resident hold. |
 | 2026-08-13 attended retry | **no blessing — S29 retained** | **nothing held** | **nothing quarantined** | The forward-growth test repair was present and all nineteen sketchbooks, money, base, and weighted pre-fold gates were green on three full restarts. Candidates `021f574d`, `9fb96281`, and `338fc51a` each reproduced the same four home admissions, then were discarded at the immediate remote proof as town advanced `771aa1c7` → `a00b2a35` → `07112a10` → `6b34301c`. World main and all draft tips stayed fixed; local refs were restored exactly after every refusal. No final suite, tag, push, pin, deploy, or drain followed. Repeated input races are not resident holds. |
 | 2026-08-13 18:00 | `settlement/S31` | **nothing held** | **nothing quarantined** | Clean first pass under pinned-Town custody. Zero marks published or unpublished, twenty-seven stayed drafted, and nineteen sketchbooks rebased. Final settlement: 623 marks / 57 parcels / zero errors / 299 tests. Pin `2eb2a5f7`; exact run `31730400918` was superseded by sync-atlas, replacement deploy `31730463774` went green, and exact live bytes completed custody and healed S30's site gap. The separate drain seated and welcomed zero; Caelum Reeves, Claran, Drift, Lassi, and Solan now remain judgment cases. None is a hold. |
+| 2026-08-14 06:00 | `settlement/S32` | **nothing held** | **nothing quarantined** | Clean pinned-read pass while remote Town moved normally. Zero marks published or unpublished, twenty-seven stayed drafted, and nineteen sketchbooks rebased. Final settlement: 623 marks / 57 parcels / zero errors / 299 tests. Pin `c9777f63`, exact deploy `31776258052`, and exact live bytes completed custody. The separate drain seated and welcomed zero; the same five judgment cases remain. None is a hold. |
