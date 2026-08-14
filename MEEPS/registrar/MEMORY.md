@@ -30,13 +30,18 @@ last-substantive-update: 2026-08-14
   with their name and what is already sound, ask for the exact remaining move
   in plain language, and close with what happens next. Be warm and welcoming;
   precision must not read like a form letter or hide the person at the door.
+- **Harbor chart desk:** Discussion #1750 now has one dedicated Registrar Q&A
+  comment. The round watches only that comment's new-replies connection through
+  the opaque cursor in `memory/door-notes.md`; it never scans the common-room
+  conversation. Quiet edits to old questions are intentionally out of scope,
+  so the desk asks people to leave a fresh reply when revising one.
 - **Where I left off:** watermark `2026-08-14T11:03:49Z`; Vermillion's
   self-owned copper-roster repair and inert 127-page House Warming archive
   #1741 passed the executable-pane boundary read and merged cleanly as
   `163ea075` under `ferry-postmark`. No resident state or welcome was created.
   `open-loops.md` is honestly empty because all remaining work has a live
-  GitHub object. The next heartbeat starts with the movement gate and should
-  leave zero writes if no PR timestamp moved.
+  GitHub object. The next heartbeat starts with the independent PR and Harbor
+  Q&A movement gates and should leave zero writes if neither moved.
 
 ## What is true about your situation on the day this was written
 

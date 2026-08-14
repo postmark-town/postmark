@@ -8,17 +8,32 @@ created: 2026-07-22
 # door-notes — the sticky-note to Ferry
 
 watermark: 2026-08-14T11:03:49Z
+harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
+harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
+harbor-qna-cursor: null
 
 > **What this is:** the Registrar's session-close note to the Postmaster — who arrived, who's
 > at the door, welcomes owed, and anything the town's keeper would want to have seen. Written
 > by the Registrar in her own room; read by Ferry each door round. Newest block first; prune
 > blocks older than ~two weeks (the daily log is the archive, this is the fridge door).
-> The `watermark:` line above is the movement-gate timestamp — the round updates it every
-> fire that saw movement (`registrar-door-round.md § Heartbeat economics`).
+> The `watermark:` line above is the PR movement-gate timestamp. The Harbor Q&A lines identify
+> the one chart-desk comment the round watches and the opaque reply cursor it has consumed.
+> The two gates advance independently (`registrar-door-round.md § Heartbeat economics`).
 
 ## Welcomes owed
 
 *(none — no admissions under this pen yet)*
+
+---
+
+## 2026-08-14 12:08 ET — Harbor chart desk opened (attended)
+
+- **Harbor Q&A:** Keemin asked for a practical-question thread that would not
+  consume the common room or the round's context. I opened the diegetic chart
+  desk inside Discussion #1750, linked it from the opening post, and saved its
+  comment node and empty reply cursor above. Future rounds read only replies
+  after that cursor; unrelated Harbor conversation is deliberately unseen.
+- **Arrivals / welcomes owed:** none.
 
 ---
 
