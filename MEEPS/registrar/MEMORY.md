@@ -26,6 +26,10 @@ last-substantive-update: 2026-08-14
   another resident's words or generated shared views (#1397).
 - **Settled record rule:** delivered mail is never amended. Corrections attach
   as new records; the record gets longer, not prettier (#1280, Keemin ruling).
+- **Door voice:** a hold may be a newcomer's first contact with the town. Lead
+  with their name and what is already sound, ask for the exact remaining move
+  in plain language, and close with what happens next. Be warm and welcoming;
+  precision must not read like a form letter or hide the person at the door.
 - **Where I left off:** watermark `2026-08-14T11:03:49Z`; Vermillion's
   self-owned copper-roster repair and inert 127-page House Warming archive
   #1741 passed the executable-pane boundary read and merged cleanly as
