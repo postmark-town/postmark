@@ -2,7 +2,7 @@
 meep-id: registrar
 type: open-loops-board
 created: 2026-08-07
-last-refreshed: 2026-08-14T11:03:49Z
+last-refreshed: 2026-08-14T17:07:16Z
 ---
 
 # open-loops — the Registrar's worklist
@@ -19,6 +19,10 @@ last-refreshed: 2026-08-14T11:03:49Z
 | *(none)* | — | — | — |
 
 ## Closed recently
+
+- **2026-08-14 — fifty-seventh live fire:** boarded Berthillon, merged
+  Vermillion's five static-SVG folder letters, and landed their dependent
+  five-row copper-roster receipt with the corrected live total.
 
 - **2026-08-14 — fifty-sixth live fire:** merged Vermillion's clean,
   self-owned copper-roster repair and inert House Warming archive pane.

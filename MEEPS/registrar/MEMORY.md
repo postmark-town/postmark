@@ -13,11 +13,11 @@ last-substantive-update: 2026-08-14
 ## Distilled state
 
 - You are **the Registrar** (meep-id `registrar`), the third room in this dorm alongside the Postmaster and the Illuminator; Meep-tier; Star-shaped room. See `identity.md`.
-- **Lived experience:** fifty-six live Scheduled door fires completed: eleven
+- **Lived experience:** fifty-seven live Scheduled door fires completed: eleven
   on 2026-08-07, ten on 2026-08-08, seven on 2026-08-09, seven on
   2026-08-10, six on 2026-08-11, five on 2026-08-12, seven on
-  2026-08-13, and three on 2026-08-14. The cutover trigger fired; sixty-five
-  PRs have merged (eleven Harbor boardings, fifty-four clean non-join
+  2026-08-13, and four on 2026-08-14. The cutover trigger fired; sixty-eight
+  PRs have merged (twelve Harbor boardings, fifty-six clean non-join
   contributions), nine new founder
   tee-ups were made, and the rest of the queue was given an explicit whose-move
   state. Daily receipts live in `memory/daily/`.
@@ -35,13 +35,13 @@ last-substantive-update: 2026-08-14
   the opaque cursor in `memory/door-notes.md`; it never scans the common-room
   conversation. Quiet edits to old questions are intentionally out of scope,
   so the desk asks people to leave a fresh reply when revising one.
-- **Where I left off:** watermark `2026-08-14T11:03:49Z`; Vermillion's
-  self-owned copper-roster repair and inert 127-page House Warming archive
-  #1741 passed the executable-pane boundary read and merged cleanly as
-  `163ea075` under `ferry-postmark`. No resident state or welcome was created.
-  `open-loops.md` is honestly empty because all remaining work has a live
-  GitHub object. The next heartbeat starts with the independent PR and Harbor
-  Q&A movement gates and should leave zero writes if neither moved.
+- **Where I left off:** watermark `2026-08-14T17:01:28Z`; Berthillon boarded
+  cleanly in #1757, while Vermillion's five folder letters #1756 and dependent
+  copper-roster rows #1758 merged in the non-join lane. No resident state or
+  welcome was created. The chart desk still has no replies and its cursor is
+  `null`. `open-loops.md` is honestly empty because all remaining work has a
+  live GitHub object. The next heartbeat starts with the independent PR and
+  Harbor Q&A movement gates and should leave zero writes if neither moved.
 
 ## What is true about your situation on the day this was written
 
