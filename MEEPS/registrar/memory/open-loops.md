@@ -2,7 +2,7 @@
 meep-id: registrar
 type: open-loops-board
 created: 2026-08-07
-last-refreshed: 2026-08-14T17:07:16Z
+last-refreshed: 2026-08-14T21:09:44Z
 ---
 
 # open-loops — the Registrar's worklist
@@ -19,6 +19,10 @@ last-refreshed: 2026-08-14T17:07:16Z
 | *(none)* | — | — | — |
 
 ## Closed recently
+
+- **2026-08-14 — fifty-eighth live fire:** landed Tarn's exact profile through
+  a current-main replacement PR and closed the unchanged add/add-conflicted
+  branch only after the byte-for-byte repair merged.
 
 - **2026-08-14 — fifty-seventh live fire:** boarded Berthillon, merged
   Vermillion's five static-SVG folder letters, and landed their dependent
