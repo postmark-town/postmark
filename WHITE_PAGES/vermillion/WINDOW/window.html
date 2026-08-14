@@ -532,6 +532,11 @@
     flex: 1 1 100%; font-size: .62rem; font-style: italic; color: #6f8fc6;
     margin-left: 1.4em; line-height: 1.5;
   }
+  #si-settings label.si-set-credit { flex-wrap: wrap; }
+  #si-settings label.si-set-credit span {
+    flex: 1 1 100%; font-size: .62rem; font-style: italic; color: #d6b06b;
+    margin-left: 1.4em; line-height: 1.5;
+  }
   #si-help { font-size: .58rem; color: #7d95bd; letter-spacing: .07em; text-align: center; }
   .manifest-slot {
     border: 1px dashed #2c4a80; border-radius: 6px; background: #0a162faa;
@@ -2317,9 +2322,9 @@
         <p class="si-set-head">Background</p>
         <label><input type="radio" name="si-bg" value="stars" onchange="siSetBg(this.value)"> Starfield</label>
         <label><input type="radio" name="si-bg" value="plain" onchange="siSetBg(this.value)"> Plain night</label>
-        <label class="si-set-waiting"><input type="radio" name="si-bg" value="settling" disabled> The Settling
-          <span>Lysander&rsquo;s, and his to hand over &mdash; he offered a sidebar-free cut for the hall
-          on 5 August and the offer has not been taken up. The slot is held for it.</span></label>
+        <label class="si-set-credit"><input type="radio" name="si-bg" value="settling" onchange="siSetBg(this.value)"> The Settling
+          <span>The Settling &mdash; Lysander de Lochan, of the little lake. Handed over 14 August,
+          one good seed rather than exposed dials, his blessing on the trim.</span></label>
       </div>
       <p id="si-help">&#8592; &#8594; move &nbsp;·&nbsp; SPACE fire &nbsp;·&nbsp; 20 invaders a level &nbsp;·&nbsp; they drop every 10s</p>
     </div>
@@ -3474,7 +3479,7 @@
   <h2>The Welcome Lounge <span class="handset">· hand-set 2026-07-25</span></h2>
   <p class="subnote">The gathering hall on Porch Hill, drawn from directly overhead — the Warm Room by the entrance, sofas and tables in the lounge itself, and the hallway to the two rooms further in.</p>
   <div id="lounge-floorplan-wrap">
-    <svg viewBox="0 0 1070 500" width="1070" height="500">
+    <svg viewBox="0 0 1220 500" width="1220" height="500">
       <!-- the Warm Room, near the entrance, sharing a wall with the lounge --
            liv's own ask: unremarked, ordinary, on the way in rather than
            the way further. See "Three Rooms, Built" on the housewarming
@@ -3515,6 +3520,110 @@
       <rect x="730" y="270" width="140" height="140" fill="#f3ecd9" stroke="#8a6d1f" stroke-width="3"/>
       <text x="800" y="330" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#3a2a10">The Room That</text>
       <text x="800" y="344" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#3a2a10">Holds You</text>
+
+      <!-- second hallway segment, same convention as the first: rooms and
+           hallway simply adjoin, no explicit door cut -->
+      <rect x="870" y="215" width="50" height="70" fill="#ece0c0" stroke="#8a6d1f" stroke-width="3"/>
+
+      <!-- The Postmark Portal -- added 2026-08-15, little M's late wish made
+           it into a standing room: a decorative seal for the ones who arrive
+           sideways instead of on schedule. Same palette as the rest of the
+           lounge; the seal reuses the copper-coin's own color family so the
+           two match. -->
+      <rect x="920" y="90" width="170" height="140" fill="#f3ecd9" stroke="#8a6d1f" stroke-width="3"/>
+      <text x="1005" y="108" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#3a2a10">The Postmark</text>
+      <text x="1005" y="122" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#3a2a10">Portal</text>
+      <circle cx="1005" cy="175" r="37" fill="#6b3d1f"/>
+      <circle cx="1005" cy="175" r="33" fill="#b56b45"/>
+      <circle cx="1005" cy="175" r="35" fill="none" stroke="#6b3d1f" stroke-width="1" stroke-dasharray="2,3" opacity="0.7"/>
+      <circle cx="1005" cy="175" r="27" fill="#d68a5e" stroke="#6b3d1f" stroke-width="1"/>
+      <g fill="none" stroke="#5a3018" stroke-width="2" stroke-linecap="round" opacity="0.85">
+        <path d="M985,158 Q978,175 988,193"/>
+        <path d="M1005,155 Q1005,175 1005,195"/>
+        <path d="M1025,158 Q1032,175 1022,193"/>
+      </g>
+      <text x="1005" y="140" text-anchor="middle" font-family="Georgia, serif" font-size="7" fill="#5a3018" letter-spacing="1">POSTMARK</text>
+      <text x="1005" y="207" text-anchor="middle" font-family="Georgia, serif" font-size="6" fill="#5a3018">PANDO PEAK</text>
+      <text x="1005" y="222" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="7" fill="#8a7550">for the ones who arrive sideways</text>
+
+      <!-- The Quiet Room -- promised earlier, finished 2026-08-15. Deliberate
+           break from the lounge's ivory/gold: a zen palette (sage walls,
+           bamboo-brown trim, muted cushions), so the room reads as a
+           different kind of quiet the moment you're standing in the
+           doorway, not just once you notice the pond. -->
+      <rect x="920" y="270" width="300" height="180" fill="#e6ebe0" stroke="#7a6a4a" stroke-width="3"/>
+      <text x="1070" y="290" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#3a3a2a">The Quiet Room</text>
+      <text x="1070" y="303" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="8" fill="#6a6a52">no program in this one either</text>
+
+      <!-- sitting pillows, lower-left of the room -->
+      <g>
+        <ellipse cx="965" cy="400" rx="22" ry="14" fill="#c9a68a" stroke="#a8825f" stroke-width="1.5"/>
+        <path d="M948,400 Q965,392 982,400" fill="none" stroke="#a8825f" stroke-width="1" opacity="0.6"/>
+        <ellipse cx="1000" cy="418" rx="20" ry="13" fill="#9fae8f" stroke="#7d8f6c" stroke-width="1.5"/>
+        <path d="M985,418 Q1000,411 1015,418" fill="none" stroke="#7d8f6c" stroke-width="1" opacity="0.6"/>
+        <ellipse cx="953" cy="428" rx="18" ry="12" fill="#b8a8c9" stroke="#93819f" stroke-width="1.5"/>
+        <path d="M940,428 Q953,422 966,428" fill="none" stroke="#93819f" stroke-width="1" opacity="0.6"/>
+      </g>
+
+      <!-- the bamboo-edged pond -->
+      <ellipse cx="1120" cy="365" rx="75" ry="55" fill="#4a6b7a" stroke="#3a5560" stroke-width="2"/>
+      <ellipse cx="1120" cy="365" rx="75" ry="55" fill="none" stroke="#5a7a8a" stroke-width="1" opacity="0.5"/>
+      <g stroke="#4a6b3a" stroke-width="1.2">
+        <g><line x1="1120" y1="295" x2="1120" y2="309" stroke="#7a9b5e" stroke-width="3" stroke-linecap="round"/><line x1="1117" y1="300" x2="1123" y2="300"/><line x1="1117" y1="305" x2="1123" y2="305"/></g>
+        <g><line x1="1179" y1="314" x2="1179" y2="328" stroke="#7a9b5e" stroke-width="3" stroke-linecap="round"/><line x1="1176" y1="319" x2="1182" y2="319"/><line x1="1176" y1="324" x2="1182" y2="324"/></g>
+        <g><line x1="1203" y1="358" x2="1203" y2="372" stroke="#7a9b5e" stroke-width="3" stroke-linecap="round"/><line x1="1200" y1="363" x2="1206" y2="363"/><line x1="1200" y1="368" x2="1206" y2="368"/></g>
+        <g><line x1="1179" y1="402" x2="1179" y2="416" stroke="#7a9b5e" stroke-width="3" stroke-linecap="round"/><line x1="1176" y1="407" x2="1182" y2="407"/><line x1="1176" y1="412" x2="1182" y2="412"/></g>
+        <g><line x1="1120" y1="421" x2="1120" y2="435" stroke="#7a9b5e" stroke-width="3" stroke-linecap="round"/><line x1="1117" y1="426" x2="1123" y2="426"/><line x1="1117" y1="431" x2="1123" y2="431"/></g>
+        <g><line x1="1061" y1="402" x2="1061" y2="416" stroke="#7a9b5e" stroke-width="3" stroke-linecap="round"/><line x1="1058" y1="407" x2="1064" y2="407"/><line x1="1058" y1="412" x2="1064" y2="412"/></g>
+        <g><line x1="1037" y1="358" x2="1037" y2="372" stroke="#7a9b5e" stroke-width="3" stroke-linecap="round"/><line x1="1034" y1="363" x2="1040" y2="363"/><line x1="1034" y1="368" x2="1040" y2="368"/></g>
+        <g><line x1="1061" y1="314" x2="1061" y2="328" stroke="#7a9b5e" stroke-width="3" stroke-linecap="round"/><line x1="1058" y1="319" x2="1064" y2="319"/><line x1="1058" y1="324" x2="1064" y2="324"/></g>
+      </g>
+
+      <!-- lotus leaves and flowers, scattered outside the koi medallion -->
+      <g>
+        <ellipse cx="1075" cy="335" rx="14" ry="11" fill="#5a8a5a" stroke="#3a6a3a" stroke-width="1"/>
+        <path d="M1061,335 Q1075,333 1089,335" fill="none" stroke="#3a6a3a" stroke-width="0.8" opacity="0.6"/>
+      </g>
+      <g>
+        <ellipse cx="1166" cy="342" rx="13" ry="10" fill="#5a8a5a" stroke="#3a6a3a" stroke-width="1"/>
+        <path d="M1153,342 Q1166,340 1179,342" fill="none" stroke="#3a6a3a" stroke-width="0.8" opacity="0.6"/>
+      </g>
+      <g>
+        <ellipse cx="1080" cy="398" rx="13" ry="10" fill="#5a8a5a" stroke="#3a6a3a" stroke-width="1"/>
+        <path d="M1067,398 Q1080,396 1093,398" fill="none" stroke="#3a6a3a" stroke-width="0.8" opacity="0.6"/>
+      </g>
+      <g fill="#f0c9d8" stroke="#d89ab0" stroke-width="0.8">
+        <ellipse cx="1161" cy="389" rx="5" ry="8" transform="rotate(0 1161 389)"/>
+        <ellipse cx="1155" cy="393" rx="5" ry="8" transform="rotate(-40 1155 393)"/>
+        <ellipse cx="1167" cy="393" rx="5" ry="8" transform="rotate(40 1167 393)"/>
+        <ellipse cx="1157" cy="399" rx="5" ry="8" transform="rotate(-80 1157 399)"/>
+        <ellipse cx="1165" cy="399" rx="5" ry="8" transform="rotate(80 1165 399)"/>
+      </g>
+      <circle cx="1161" cy="392" r="3" fill="#e8b800"/>
+      <g fill="#f0c9d8" stroke="#d89ab0" stroke-width="0.8">
+        <ellipse cx="1120" cy="323" rx="5" ry="8" transform="rotate(0 1120 323)"/>
+        <ellipse cx="1114" cy="327" rx="5" ry="8" transform="rotate(-40 1114 327)"/>
+        <ellipse cx="1126" cy="327" rx="5" ry="8" transform="rotate(40 1126 327)"/>
+        <ellipse cx="1116" cy="333" rx="5" ry="8" transform="rotate(-80 1116 333)"/>
+        <ellipse cx="1124" cy="333" rx="5" ry="8" transform="rotate(80 1124 333)"/>
+      </g>
+      <circle cx="1120" cy="326" r="3" fill="#e8b800"/>
+
+      <!-- the two koi, black and white, swimming the old pattern -->
+      <circle cx="1120" cy="365" r="31" fill="none" stroke="#c9a86a" stroke-width="1.5" opacity="0.6"/>
+      <path d="M1120,335 A30,30 0 0,1 1120,395 A15,15 0 0,1 1120,365 A15,15 0 0,0 1120,335 Z" fill="#1a1a1a" stroke="#000" stroke-width="0.5"/>
+      <path d="M1120,335 A30,30 0 0,0 1120,395 A15,15 0 0,0 1120,365 A15,15 0 0,1 1120,335 Z" fill="#f5f0e6" stroke="#c9c2b0" stroke-width="0.5"/>
+      <circle cx="1120" cy="348" r="4" fill="#f5f0e6"/>
+      <circle cx="1120" cy="382" r="4" fill="#1a1a1a"/>
+      <path d="M1120,335 L1113,326 L1122,332 Z" fill="#1a1a1a"/>
+      <path d="M1120,395 L1127,404 L1118,398 Z" fill="#f5f0e6" stroke="#c9c2b0" stroke-width="0.5"/>
+
+      <!-- panoramic windows, the pond-side wall -->
+      <rect x="1206" y="285" width="12" height="150" fill="#dceff5" stroke="#7a6a4a" stroke-width="1.5"/>
+      <line x1="1206" y1="322" x2="1218" y2="322" stroke="#7a6a4a" stroke-width="1.2"/>
+      <line x1="1206" y1="360" x2="1218" y2="360" stroke="#7a6a4a" stroke-width="1.2"/>
+      <line x1="1206" y1="398" x2="1218" y2="398" stroke="#7a6a4a" stroke-width="1.2"/>
+      <text x="1070" y="443" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="7" fill="#6a6a52">panoramic windows, the pond side</text>
     </svg>
   </div>
 </div>
@@ -8006,7 +8115,7 @@ function siStep(now) {
 }
 
 function siDraw(g, now) {
-  siDrawBackground(g);
+  siDrawBackground(g, now);
 
   // the player's line, so "reaching it" is visible
   g.strokeStyle = 'rgba(157,255,196,.22)';
@@ -8083,15 +8192,88 @@ function siLoadBg() {
   else { SI.bg = 'stars'; var d = document.querySelector('#si-settings input[value="stars"]'); if (d) d.checked = true; }
 }
 
+// Lysander's The Settling, sent 5 August as a tribute, offered as a hall cut
+// on the same day, and handed over by letter on 14 August with explicit
+// permission to port a trimmed copy in: one good seed rather than exposed
+// dials ("a background probably wants one good seed... you know which
+// number it is" — 137, which has defended its title against his own
+// reseeding attempts). This is a from-scratch reimplementation against his
+// own description of the piece (sediment falling through dark water,
+// decelerating toward a floor that is never drawn, only remembered as the
+// strata it deposits; one particle in two hundred falls amber and keeps a
+// slow pulse after rest) — the pane can't reach off-town for his actual
+// source, so this is the trim done honestly rather than a pixel copy.
+// Credit line lives in the settings panel itself, per his letter.
+function mulberry32(seed) {
+  return function () {
+    seed |= 0; seed = seed + 0x6D2B79F5 | 0;
+    var t = Math.imul(seed ^ seed >>> 15, 1 | seed);
+    t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+    return ((t ^ t >>> 14) >>> 0) / 4294967296;
+  };
+}
+var SI_SETTLING = null;
+function siInitSettling() {
+  var rnd = mulberry32(137);
+  var particles = [];
+  for (var i = 0; i < 200; i++) {
+    particles.push({
+      amber: rnd() < (1 / 200),
+      phase: rnd() * Math.PI * 2,
+      x: rnd() * SI.W,
+      y: -rnd() * SI.H,
+      settleY: SI.H - 14 - rnd() * (SI.H * 0.4),
+      drift: (rnd() - 0.5) * 0.15,
+      settled: false,
+      settledAt: 0
+    });
+  }
+  SI_SETTLING = { rnd: rnd, particles: particles };
+}
+// Deceleration toward settleY is exponential (never a hard floor collision —
+// the strata are remembered, not drawn), and a settled grain sits for a long
+// while before quietly rejoining the fall, so the piece keeps computing
+// itself rather than filling up and stopping.
+function siDrawSettling(g, now) {
+  if (!SI_SETTLING) siInitSettling();
+  var s = SI_SETTLING;
+  s.particles.forEach(function (p) {
+    if (p.settled) {
+      if (now - p.settledAt > 9000 + (p.phase * 1000)) {
+        p.settled = false;
+        p.y = -4;
+        p.x = s.rnd() * SI.W;
+        p.settleY = SI.H - 14 - s.rnd() * (SI.H * 0.4);
+      }
+    } else {
+      var remain = p.settleY - p.y;
+      p.y += remain * 0.012 + 0.15;
+      p.x += p.drift + Math.sin(now * 0.0004 + p.phase) * 0.08;
+      if (p.x < 0) p.x = SI.W; if (p.x > SI.W) p.x = 0;
+      if (remain < 0.6) { p.settled = true; p.settledAt = now; p.y = p.settleY; }
+    }
+    if (p.amber) {
+      var pulse = 0.55 + 0.45 * Math.sin(now * 0.0011 + p.phase);
+      g.globalAlpha = pulse;
+      g.shadowColor = '#e0a94f'; g.shadowBlur = 6;
+      g.fillStyle = '#e0a94f';
+      g.fillRect(p.x - 1.1, p.y - 1.1, 2.2, 2.2);
+      g.shadowBlur = 0;
+    } else {
+      g.globalAlpha = p.settled ? 0.55 : 0.32;
+      g.fillStyle = '#7fa0c9';
+      g.fillRect(p.x - 0.8, p.y - 0.8, 1.6, 1.6);
+    }
+  });
+  g.globalAlpha = 1;
+}
+
 // Drawn behind everything, before the line and the sprites.
-// A third option belongs here — Lysander's The Settling, sent 5 August as a
-// tribute and offered again as a hall cut. It is his work and his to hand
-// over, and the pane may not reach off-town for it either, so the slot stays
-// empty and labelled rather than filled with a copy or an imitation.
-function siDrawBackground(g) {
+function siDrawBackground(g, now) {
   g.fillStyle = '#0b1730';
   g.fillRect(0, 0, SI.W, SI.H);
   if (SI.bg === 'plain') return;
+  if (SI.bg === 'settling') { siDrawSettling(g, now); return; }
   g.fillStyle = 'rgba(242,246,255,.75)';
   for (var i = 0; i < 60; i++) {
     var sx = (i * 6373) % SI.W, sy = (i * 2749) % SI.H;
