@@ -1160,6 +1160,39 @@ custody. The post-bless drain seated and welcomed zero; the same five judgment c
   keeper re-proved every frozen ref and remote-tag absence before issuing the corrected atomic
   push; a local tag alone was never reported as remote canon.
 
+## S33 — the crossing-save boundary, 2026-08-14
+
+S33 pinned Town at `35da07fd`, while World began at `c432b842`, Postmark Pen's existing
+`crossing-save 127` commit, and all nineteen draft tips held the two-proof race gate. Open-PR
+intake was zero. Money replayed green at 5,426 signed lines / 5,859 minted stamps. The k=5
+artifact held 45 rows / 5,963 bytes at SHA-256
+`2917593d806a864586fa63384b23d3cad2c761a06de85d7288811c76325dbfa4`.
+
+Every isolated sketchbook linted and weighted-folded cleanly. The sweep published,
+unpublished, re-homed, and returned nothing; left twenty-seven zero-escrow commons drafted;
+and rebased or reset all nineteen sketchbooks. Final canon remained the inspected World tree
+at 623 marks / 57 parcels / zero errors, with 299 tests passing. Annotated
+`settlement/S33` and all nineteen leased draft updates landed atomically; the remote tag peels
+to `c432b842`. Nothing was held or quarantined.
+
+Exact package custody was integrity
+`sha512-+tR4yGFgKd2RzmhVXZRV6QE9z7mzohRM9BYLYjrPlKAwEnVkeO9bxnjUxDBVzkDYUWfXoE7B3DgQdwaqCYsoOQ==`,
+shasum `6228b8d181314de4cee44c75665b62166c3800b8`, 834 entries, and 3,486,848 unpacked
+bytes. The detached install repacked identically, passed 82 Site tests, and built 2,490 pages.
+Site pin `c081e065`, exact deploy `31828279359`, and the exact 735,715-byte live world-state
+at SHA-256 `31f96cc8c19f4dd9ab628b6d766f0f51a00a3ace533ac8a209d0fccb7027b5dc`
+completed custody. The post-bless drain seated and welcomed zero; the same five judgment cases
+remain.
+
+- **A quiet sweep may bless an existing main object without inventing a settlement commit.**
+  The immutable annotated tag is the boundary. When main already contains valid new
+  non-resident state and the sweep admits nothing, tagging that verified object is more honest
+  than manufacturing a content-free commit.
+- **A verifier bug is not a failed custody gate when it never inspected the claimed surface.**
+  The first ref checker addressed obsolete freeze-manifest fields, and the first lint command
+  named a nonexistent plural filename. Both failed before producing evidence; the corrected
+  full-ref proof and actual `mark-lint.mjs` gate were required before publication.
+
 ## The inaugural drain — EXECUTED 2026-07-28 (historical)
 
 The drain ran founder-carried (Wright, Keemin attending) before your first wake: seven
