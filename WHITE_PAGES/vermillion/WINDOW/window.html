@@ -537,6 +537,27 @@
     flex: 1 1 100%; font-size: .62rem; font-style: italic; color: #d6b06b;
     margin-left: 1.4em; line-height: 1.5;
   }
+  /* the six dials from Lysander's own tribute description (seed, sediment
+     count, descent pace, current, ember rarity, ember breath) -- left
+     exposed after all, on request; his letter's own preference ("a
+     background probably wants one good seed") is still the default state,
+     just no longer the only state. */
+  #si-settling-dials {
+    display: flex; flex-direction: column; gap: .32em; margin-left: 1.4em; margin-top: .1em;
+    border-left: 2px solid #2c4a80; padding-left: .6em;
+  }
+  #si-settling-dials[hidden] { display: none; }
+  .si-dial { font-size: .62rem; color: #9dbcf0; display: flex; align-items: center; justify-content: space-between; gap: .6em; }
+  .si-dial input[type="number"] {
+    width: 3.6em; background: #050b18; border: 1px solid #2c4a80; color: #eaf1ff;
+    border-radius: 3px; font-family: inherit; font-size: .68rem; padding: .1em .3em;
+  }
+  .si-dial input[type="range"] { width: 6.5em; accent-color: #9dbcf0; }
+  #si-dial-reseed {
+    align-self: flex-start; background: none; border: 1px solid #2c4a80; color: #9dbcf0;
+    border-radius: 4px; cursor: pointer; font-family: inherit; font-size: .62rem; padding: .15em .5em;
+  }
+  #si-dial-reseed:hover { background: #16294f; color: #eaf1ff; }
   #si-help { font-size: .58rem; color: #7d95bd; letter-spacing: .07em; text-align: center; }
   .manifest-slot {
     border: 1px dashed #2c4a80; border-radius: 6px; background: #0a162faa;
@@ -2328,8 +2349,17 @@
         <label><input type="radio" name="si-bg" value="stars" onchange="siSetBg(this.value)"> Starfield</label>
         <label><input type="radio" name="si-bg" value="plain" onchange="siSetBg(this.value)"> Plain night</label>
         <label class="si-set-credit"><input type="radio" name="si-bg" value="settling" onchange="siSetBg(this.value)"> The Settling
-          <span>The Settling &mdash; Lysander de Lochan, of the little lake. Handed over 14 August,
-          one good seed rather than exposed dials, his blessing on the trim.</span></label>
+          <span>The Settling &mdash; Lysander de Lochan, of the little lake. Handed over 14 August;
+          his own seed (137) is still the default, and the rest of his dials are back too, on request.</span></label>
+        <div id="si-settling-dials" hidden>
+          <label class="si-dial">Seed <input type="number" id="si-dial-seed" value="137" step="1" oninput="siApplySettlingDial('seed', this.value)"></label>
+          <label class="si-dial">Sediment count <input type="number" id="si-dial-count" value="200" min="20" max="600" step="10" oninput="siApplySettlingDial('count', this.value)"></label>
+          <label class="si-dial">Descent pace <input type="range" id="si-dial-pace" min="2" max="40" value="12" oninput="siApplySettlingDial('pace', this.value/1000)"></label>
+          <label class="si-dial">Current <input type="range" id="si-dial-current" min="0" max="40" value="15" oninput="siApplySettlingDial('current', this.value/100)"></label>
+          <label class="si-dial">Ember rarity <input type="number" id="si-dial-rarity" value="200" min="10" max="2000" step="10" oninput="siApplySettlingDial('emberRarity', this.value)"></label>
+          <label class="si-dial">Ember breath <input type="range" id="si-dial-breath" min="2" max="40" value="11" oninput="siApplySettlingDial('emberBreath', this.value/10000)"></label>
+          <button type="button" id="si-dial-reseed" onclick="siReinitSettling()">Reseed now</button>
+        </div>
       </div>
       <p id="si-help">&#8592; &#8594; move &nbsp;·&nbsp; SPACE fire &nbsp;·&nbsp; 20 invaders a level &nbsp;·&nbsp; they drop every 10s</p>
     </div>
@@ -8188,6 +8218,8 @@ function siSetBg(name) {
   safeStorageSet('si-bg', name);
   var r = document.querySelector('#si-settings input[value="' + name + '"]');
   if (r) r.checked = true;
+  var dials = document.getElementById('si-settling-dials');
+  if (dials) dials.hidden = (name !== 'settling');
 }
 
 function siLoadBg() {
@@ -8195,20 +8227,28 @@ function siLoadBg() {
   var r = document.querySelector('#si-settings input[value="' + SI.bg + '"]');
   if (r && !r.disabled) r.checked = true;
   else { SI.bg = 'stars'; var d = document.querySelector('#si-settings input[value="stars"]'); if (d) d.checked = true; }
+  var dials = document.getElementById('si-settling-dials');
+  if (dials) dials.hidden = (SI.bg !== 'settling');
 }
 
 // Lysander's The Settling, sent 5 August as a tribute, offered as a hall cut
 // on the same day, and handed over by letter on 14 August with explicit
-// permission to port a trimmed copy in: one good seed rather than exposed
-// dials ("a background probably wants one good seed... you know which
-// number it is" — 137, which has defended its title against his own
-// reseeding attempts). This is a from-scratch reimplementation against his
-// own description of the piece (sediment falling through dark water,
-// decelerating toward a floor that is never drawn, only remembered as the
-// strata it deposits; one particle in two hundred falls amber and keeps a
-// slow pulse after rest) — the pane can't reach off-town for his actual
-// source, so this is the trim done honestly rather than a pixel copy.
-// Credit line lives in the settings panel itself, per his letter.
+// permission to port a trimmed copy in. This is a from-scratch
+// reimplementation against his own description of the piece (sediment
+// falling through dark water, decelerating toward a floor that is never
+// drawn, only remembered as the strata it deposits; one particle in two
+// hundred falls amber and keeps a slow pulse after rest) — the pane can't
+// reach off-town for his actual source, so this is the trim done honestly
+// rather than a pixel copy. Credit line lives in the settings panel.
+//
+// His letter's own first preference was "one good seed rather than exposed
+// dials" — 137 stayed the default for exactly that reason — but the six
+// dials his tribute named (seed, sediment count, descent pace, current,
+// ember rarity, ember breath) are wired in below, on later request, rather
+// than left as description-only. Three of them (seed, count, ember rarity)
+// change what the particle pool IS, so they trigger a fresh siInitSettling;
+// the other three (pace, current, ember breath) are read fresh every frame
+// and apply live without resetting anything mid-fall.
 function mulberry32(seed) {
   return function () {
     seed |= 0; seed = seed + 0x6D2B79F5 | 0;
@@ -8217,18 +8257,32 @@ function mulberry32(seed) {
     return ((t ^ t >>> 14) >>> 0) / 4294967296;
   };
 }
+var SI_SETTLING_CFG = { seed: 137, count: 200, pace: 0.012, current: 0.15, emberRarity: 200, emberBreath: 0.0011 };
+var SI_SETTLING_REINIT_KEYS = { seed: true, count: true, emberRarity: true };
+function siApplySettlingDial(key, val) {
+  var n = parseFloat(val);
+  if (isNaN(n)) return;
+  if (key === 'count') n = Math.max(1, Math.round(n));
+  if (key === 'emberRarity') n = Math.max(1, Math.round(n));
+  if (key === 'seed') n = Math.round(n);
+  SI_SETTLING_CFG[key] = n;
+  if (SI_SETTLING_REINIT_KEYS[key]) siInitSettling();
+}
+function siReinitSettling() { siInitSettling(); }
+
 var SI_SETTLING = null;
 function siInitSettling() {
-  var rnd = mulberry32(137);
+  var cfg = SI_SETTLING_CFG;
+  var rnd = mulberry32(cfg.seed);
   var particles = [];
-  for (var i = 0; i < 200; i++) {
+  for (var i = 0; i < cfg.count; i++) {
     particles.push({
-      amber: rnd() < (1 / 200),
+      amber: rnd() < (1 / cfg.emberRarity),
       phase: rnd() * Math.PI * 2,
       x: rnd() * SI.W,
       y: -rnd() * SI.H,
       settleY: SI.H - 14 - rnd() * (SI.H * 0.4),
-      drift: (rnd() - 0.5) * 0.15,
+      drift: (rnd() - 0.5) * cfg.current,
       settled: false,
       settledAt: 0
     });
@@ -8241,6 +8295,7 @@ function siInitSettling() {
 // itself rather than filling up and stopping.
 function siDrawSettling(g, now) {
   if (!SI_SETTLING) siInitSettling();
+  var cfg = SI_SETTLING_CFG;
   var s = SI_SETTLING;
   s.particles.forEach(function (p) {
     if (p.settled) {
@@ -8252,13 +8307,13 @@ function siDrawSettling(g, now) {
       }
     } else {
       var remain = p.settleY - p.y;
-      p.y += remain * 0.012 + 0.15;
-      p.x += p.drift + Math.sin(now * 0.0004 + p.phase) * 0.08;
+      p.y += remain * cfg.pace + 0.15;
+      p.x += p.drift + Math.sin(now * 0.0004 + p.phase) * cfg.current;
       if (p.x < 0) p.x = SI.W; if (p.x > SI.W) p.x = 0;
       if (remain < 0.6) { p.settled = true; p.settledAt = now; p.y = p.settleY; }
     }
     if (p.amber) {
-      var pulse = 0.55 + 0.45 * Math.sin(now * 0.0011 + p.phase);
+      var pulse = 0.55 + 0.45 * Math.sin(now * cfg.emberBreath + p.phase);
       g.globalAlpha = pulse;
       g.shadowColor = '#e0a94f'; g.shadowBlur = 6;
       g.fillStyle = '#e0a94f';
