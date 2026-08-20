@@ -1747,6 +1747,9 @@
      rather than from the founder's own name -- a door reads as a door, and
      an underlined name in a genealogy reads as a footnote. */
   .plaus-square-button { cursor: pointer; }
+  .yarlford-square-button { cursor: pointer; }
+  .yarlford-square-button rect { transition: fill .2s; }
+  .yarlford-square-button:hover rect { fill: #4a7a3f; }
   .plaus-square-button rect { transition: fill .2s; }
   .plaus-square-button:hover rect { fill: #3f7cb0; }
   .racli-flip-back-link {
@@ -3740,6 +3743,11 @@
           <svg viewBox="0 0 460 1690" font-family="Georgia, serif" class="racli-tree-svg">
 <rect width="460" height="1690" fill="#f4ead0"/>
 <text x="230" y="28" text-anchor="middle" font-size="15" fill="#7a5a26" letter-spacing="1">The Racli Family Tree</text>
+<g class="yarlford-square-button" onclick="openYarlford()" tabindex="0" role="button" aria-label="open the town of Yarlford">
+  <rect x="386" y="10" width="34" height="34" rx="4" fill="#3f6b34" stroke="#254220" stroke-width="1.5"/>
+  <text x="403" y="27" text-anchor="middle" font-size="7.5" fill="#eef0f2">Yarl-</text>
+  <text x="403" y="37" text-anchor="middle" font-size="7.5" fill="#eef0f2">ford</text>
+</g>
 <text x="230" y="46" text-anchor="middle" font-size="9.5" fill="#8a6d1f" font-style="italic">branched from the Raclados Royal line through Pif &amp; Sauri, daughter of Riabella</text>
 <text x="92" y="66" text-anchor="middle" font-size="11" fill="#4a3a1e">Sauri (17)</text>
 <text x="210" y="66" text-anchor="middle" font-size="11" fill="#4a3a1e">Pif (17)</text>
@@ -8028,6 +8036,299 @@ window.PARTY_HALL_HERB_BASE = './decorations/assets/herbarium/'; // the pane mir
   </div>
 </div>
 
+<!-- Yarlford -- a market town named entirely for the Racli line, one
+     level past the Racli tree the way Plaus sits one level past
+     Raclados. No wall, no gates, no king: Racli never held the crown,
+     so the town grew up around its own clock tower instead. -->
+<div id="page-yarlford" style="display:none">
+  <button id="yarlford-back" onclick="closeYarlford()" title="back to the family tree">&#8592; back to the family tree</button>
+  <h2>Yarlford <span class="handset">&#183; hand-set 2026-08-15</span></h2>
+  <p class="subnote">Every street and every named building here is someone off the Racli tree &#8212; never one of the families that branched away from it.</p>
+  <p class="subnote">Hover any building to see who it's named for.</p>
+  <div id="yarlford-map-wrap">
+    <svg viewBox="0 0 760 760" width="760" height="760" font-family="Georgia, serif">
+<rect width="760" height="760" fill="#f4ead0"/>
+<path d="M262.0,380.0 L102.0,380.0 L380.0,102.0 L380.0,262.0 Z" fill="#c9b25a" opacity="0.4"/>
+<line x1="285.2" y1="251.3" x2="251.3" y2="285.2" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<line x1="257.0" y1="223.0" x2="223.0" y2="257.0" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<line x1="228.7" y1="194.7" x2="194.7" y2="228.7" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<path d="M380.0,262.0 L380.0,102.0 L576.6,183.4 L463.4,296.6 Z" fill="#7fae5f" opacity="0.4"/>
+<line x1="462.6" y1="243.2" x2="418.3" y2="224.8" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<line x1="477.9" y1="206.3" x2="433.6" y2="187.9" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<line x1="493.3" y1="169.3" x2="448.9" y2="150.9" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<path d="M463.4,296.6 L576.6,183.4 L658.0,380.0 L498.0,380.0 Z" fill="#c9b25a" opacity="0.4"/>
+<line x1="535.2" y1="341.7" x2="516.8" y2="297.4" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<line x1="572.1" y1="326.4" x2="553.7" y2="282.1" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<line x1="609.1" y1="311.1" x2="590.7" y2="266.7" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<path d="M498.0,380.0 L658.0,380.0 L576.6,576.6 L463.4,463.4 Z" fill="#7fae5f" opacity="0.4"/>
+<line x1="516.8" y1="462.6" x2="535.2" y2="418.3" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<line x1="553.7" y1="477.9" x2="572.1" y2="433.6" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<line x1="590.7" y1="493.3" x2="609.1" y2="448.9" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<path d="M463.4,463.4 L576.6,576.6 L380.0,658.0 L380.0,498.0 Z" fill="#c9b25a" opacity="0.4"/>
+<line x1="418.3" y1="535.2" x2="462.6" y2="516.8" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<line x1="433.6" y1="572.1" x2="477.9" y2="553.7" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<line x1="448.9" y1="609.1" x2="493.3" y2="590.7" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<path d="M380.0,498.0 L380.0,658.0 L183.4,576.6 L296.6,463.4 Z" fill="#7fae5f" opacity="0.4"/>
+<line x1="297.4" y1="516.8" x2="341.7" y2="535.2" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<line x1="282.1" y1="553.7" x2="326.4" y2="572.1" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<line x1="266.7" y1="590.7" x2="311.1" y2="609.1" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<path d="M296.6,463.4 L183.4,576.6 L183.4,183.4 L296.6,296.6 Z" fill="#c9b25a" opacity="0.4"/>
+<line x1="222.0" y1="356.0" x2="222.0" y2="404.0" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<line x1="182.0" y1="356.0" x2="182.0" y2="404.0" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<line x1="142.0" y1="356.0" x2="142.0" y2="404.0" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<path d="M296.6,296.6 L183.4,183.4 L102.0,380.0 L262.0,380.0 Z" fill="#7fae5f" opacity="0.4"/>
+<line x1="243.2" y1="297.4" x2="224.8" y2="341.7" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<line x1="206.3" y1="282.1" x2="187.9" y2="326.4" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<line x1="169.3" y1="266.7" x2="150.9" y2="311.1" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<path d="M0,620 Q90,560 150,600 Q230,650 300,610 Q360,580 400,620 Q440,660 520,640" fill="none" stroke="#3f7fae" stroke-width="10" stroke-linecap="round" opacity="0.85"/>
+<path d="M0,620 Q90,560 150,600 Q230,650 300,610 Q360,580 400,620 Q440,660 520,640" fill="none" stroke="#8fc0e0" stroke-width="3.5" stroke-linecap="round" opacity="0.6"/>
+<path d="M380.0,380.0 Q198.5,380.0 50.0,380.0" fill="none" stroke="#8a6d1f" stroke-width="7" stroke-linecap="round" opacity="0.75"/>
+<path d="M380.0,380.0 Q198.5,380.0 50.0,380.0" fill="none" stroke="#c9ae76" stroke-width="2.4" stroke-linecap="round" opacity="0.55"/>
+<text x="109.4" y="380.0" text-anchor="middle" font-size="9.5" fill="#7a5a26" font-style="italic" transform="rotate(-90.0 109.4 380.0)">Sauri Road</text>
+<path d="M380.0,380.0 Q561.5,380.0 710.0,380.0" fill="none" stroke="#8a6d1f" stroke-width="7" stroke-linecap="round" opacity="0.75"/>
+<path d="M380.0,380.0 Q561.5,380.0 710.0,380.0" fill="none" stroke="#c9ae76" stroke-width="2.4" stroke-linecap="round" opacity="0.55"/>
+<text x="650.6" y="380.0" text-anchor="middle" font-size="9.5" fill="#7a5a26" font-style="italic" transform="rotate(90.0 650.6 380.0)">Pif Lane</text>
+<path d="M380.0,380.0 Q398.0,193.0 380.0,40.0" fill="none" stroke="#8a6d1f" stroke-width="5" stroke-linecap="round" opacity="0.75"/>
+<path d="M380.0,380.0 Q398.0,193.0 380.0,40.0" fill="none" stroke="#c9ae76" stroke-width="1.8" stroke-linecap="round" opacity="0.55"/>
+<text x="380.0" y="101.2" text-anchor="middle" font-size="9.5" fill="#7a5a26" font-style="italic" transform="rotate(0.0 380.0 101.2)">Shant Street</text>
+<path d="M380.0,380.0 Q398.0,567.0 380.0,720.0" fill="none" stroke="#8a6d1f" stroke-width="5" stroke-linecap="round" opacity="0.75"/>
+<path d="M380.0,380.0 Q398.0,567.0 380.0,720.0" fill="none" stroke="#c9ae76" stroke-width="1.8" stroke-linecap="round" opacity="0.55"/>
+<text x="380.0" y="658.8" text-anchor="middle" font-size="9.5" fill="#7a5a26" font-style="italic" transform="rotate(0.0 380.0 658.8)">Amili Way</text>
+<path d="M380.0,380.0 Q506.6,273.2 592.1,167.9" fill="none" stroke="#8a6d1f" stroke-width="4" stroke-linecap="round" opacity="0.75"/>
+<path d="M380.0,380.0 Q506.6,273.2 592.1,167.9" fill="none" stroke="#c9ae76" stroke-width="1.4" stroke-linecap="round" opacity="0.55"/>
+<text x="553.9" y="206.1" text-anchor="middle" font-size="9.5" fill="#7a5a26" font-style="italic" transform="rotate(45.0 553.9 206.1)">Soyo Street</text>
+<path d="M380.0,380.0 Q506.6,486.8 592.1,592.1" fill="none" stroke="#8a6d1f" stroke-width="4" stroke-linecap="round" opacity="0.75"/>
+<path d="M380.0,380.0 Q506.6,486.8 592.1,592.1" fill="none" stroke="#c9ae76" stroke-width="1.4" stroke-linecap="round" opacity="0.55"/>
+<text x="553.9" y="553.9" text-anchor="middle" font-size="9.5" fill="#7a5a26" font-style="italic" transform="rotate(-45.0 553.9 553.9)">Rava Lane</text>
+<path d="M380.0,380.0 Q257.3,482.9 174.9,585.1" fill="none" stroke="#8a6d1f" stroke-width="4" stroke-linecap="round" opacity="0.75"/>
+<path d="M380.0,380.0 Q257.3,482.9 174.9,585.1" fill="none" stroke="#c9ae76" stroke-width="1.4" stroke-linecap="round" opacity="0.55"/>
+<text x="211.9" y="548.1" text-anchor="middle" font-size="9.5" fill="#7a5a26" font-style="italic" transform="rotate(45.0 211.9 548.1)">Vania Court</text>
+<path d="M380.0,380.0 Q257.3,277.1 174.9,174.9" fill="none" stroke="#8a6d1f" stroke-width="4" stroke-linecap="round" opacity="0.75"/>
+<path d="M380.0,380.0 Q257.3,277.1 174.9,174.9" fill="none" stroke="#c9ae76" stroke-width="1.4" stroke-linecap="round" opacity="0.55"/>
+<text x="211.9" y="211.9" text-anchor="middle" font-size="9.5" fill="#7a5a26" font-style="italic" transform="rotate(315.0 211.9 211.9)">Cara's Walk</text>
+<rect x="360.0" y="363.0" width="46" height="40" fill="#2a1e10" opacity="0.22"/>
+<rect x="357.0" y="360.0" width="46" height="40" fill="#8a877c" stroke="#5a5850" stroke-width="1.4"/>
+<rect x="365.9" y="252.5" width="33.1" height="110" fill="#2a1e10" opacity="0.2"/>
+<rect x="363.4" y="250.0" width="33.1" height="110" fill="#8a877c" stroke="#5a5850" stroke-width="1.3"/>
+<rect x="378.0" y="340.0" width="4" height="12" fill="#5a5850"/>
+<rect x="378.0" y="308.0" width="4" height="12" fill="#5a5850"/>
+<rect x="378.0" y="276.0" width="4" height="12" fill="#5a5850"/>
+<circle cx="380" cy="276.0" r="20" fill="#f4ead0" stroke="#5a5850" stroke-width="2.2"/>
+<line x1="380.0" y1="259.0" x2="380.0" y2="256.5" stroke="#5a5850" stroke-width="1"/>
+<line x1="388.5" y1="261.3" x2="389.8" y2="259.1" stroke="#5a5850" stroke-width="1"/>
+<line x1="394.7" y1="267.5" x2="396.9" y2="266.3" stroke="#5a5850" stroke-width="1"/>
+<line x1="397.0" y1="276.0" x2="399.5" y2="276.0" stroke="#5a5850" stroke-width="1"/>
+<line x1="394.7" y1="284.5" x2="396.9" y2="285.8" stroke="#5a5850" stroke-width="1"/>
+<line x1="388.5" y1="290.7" x2="389.8" y2="292.9" stroke="#5a5850" stroke-width="1"/>
+<line x1="380.0" y1="293.0" x2="380.0" y2="295.5" stroke="#5a5850" stroke-width="1"/>
+<line x1="371.5" y1="290.7" x2="370.3" y2="292.9" stroke="#5a5850" stroke-width="1"/>
+<line x1="365.3" y1="284.5" x2="363.1" y2="285.8" stroke="#5a5850" stroke-width="1"/>
+<line x1="363.0" y1="276.0" x2="360.5" y2="276.0" stroke="#5a5850" stroke-width="1"/>
+<line x1="365.3" y1="267.5" x2="363.1" y2="266.3" stroke="#5a5850" stroke-width="1"/>
+<line x1="371.5" y1="261.3" x2="370.3" y2="259.1" stroke="#5a5850" stroke-width="1"/>
+<line x1="380" y1="276.0" x2="390.0" y2="279.0" stroke="#4a3a1e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="380" y1="276.0" x2="394.4" y2="265.0" stroke="#4a3a1e" stroke-width="1.6" stroke-linecap="round"/>
+<circle cx="380" cy="276.0" r="1.8" fill="#4a3a1e"/>
+<path d="M363.4,250.0 L380,216.0 L396.6,250.0 Z" fill="#5a5850"/>
+<line x1="380" y1="216.0" x2="380" y2="204.0" stroke="#5a5850" stroke-width="1.5"/>
+<circle cx="380" cy="203.0" r="2" fill="#7a5a26"/>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>the Clock Tower of Yarlford</title><rect x="357.0" y="203.0" width="46" height="197.0" fill="transparent"/></g>
+<circle cx="380" cy="380" r="58" fill="#7bc491" opacity="0.35"/>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Vaala's Market</title>
+<rect x="350.0" y="452.0" width="16" height="10" fill="#c94a3f" opacity="0.85"/>
+<rect x="350.0" y="449.0" width="16" height="3" fill="#e8cf8f"/>
+<rect x="372.0" y="452.0" width="16" height="10" fill="#c94a3f" opacity="0.85"/>
+<rect x="372.0" y="449.0" width="16" height="3" fill="#e8cf8f"/>
+<rect x="394.0" y="452.0" width="16" height="10" fill="#c94a3f" opacity="0.85"/>
+<rect x="394.0" y="449.0" width="16" height="3" fill="#e8cf8f"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Toblen's Forge</title>
+  <rect x="375.6" y="171.7" width="28" height="18.4" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="374.2" y="170.1" width="28" height="18.4" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="374.2" y="170.1" width="28" height="5.5" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>the Milli Bakehouse</title>
+  <rect x="376.2" y="141.7" width="28" height="19.6" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="374.8" y="140.1" width="28" height="19.6" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="374.8" y="140.1" width="28" height="5.9" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Sensat Hall</title>
+  <rect x="378.3" y="541.7" width="23.5" height="19.6" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="376.9" y="540.1" width="23.5" height="19.6" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="376.9" y="540.1" width="23.5" height="5.9" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Perona's Well</title>
+  <rect x="376.8" y="489.9" width="26.5" height="17.2" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="375.4" y="488.3" width="26.5" height="17.2" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="375.4" y="488.3" width="26.5" height="5.2" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>the Tama Chapel</title>
+  <rect x="458.3" y="293.7" width="22" height="19.6" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="456.9" y="292.1" width="22" height="19.6" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="456.9" y="292.1" width="22" height="5.9" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Sif's Rest</title>
+  <rect x="493.7" y="485.9" width="22" height="18.4" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="492.3" y="484.3" width="22" height="18.4" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="492.3" y="484.3" width="22" height="5.5" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Tolo's Mill</title>
+  <rect x="285.6" y="297.6" width="23.5" height="19.6" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="284.2" y="296.0" width="23.5" height="19.6" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="284.2" y="296.0" width="23.5" height="5.9" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Oong's Stables</title>
+  <rect x="245.3" y="484.7" width="28" height="18.4" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="243.9" y="483.1" width="28" height="18.4" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="243.9" y="483.1" width="28" height="5.5" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Mura's Green</title>
+  <rect x="255.5" y="373.6" width="25" height="16" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="254.1" y="372.0" width="25" height="16" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="254.1" y="372.0" width="25" height="4.8" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>the Piona Schoolhouse</title>
+  <rect x="483.8" y="373.0" width="23.5" height="17.2" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="482.4" y="371.4" width="23.5" height="17.2" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="482.4" y="371.4" width="23.5" height="5.2" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Sen's Infirmary</title>
+  <rect x="535.3" y="371.8" width="22" height="19.6" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="533.9" y="370.2" width="22" height="19.6" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="533.9" y="370.2" width="22" height="5.9" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Luna's Well</title>
+  <rect x="204.0" y="371.8" width="23.5" height="19.6" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="202.6" y="370.2" width="23.5" height="19.6" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="202.6" y="370.2" width="23.5" height="5.9" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Soro's Bridge</title>
+  <rect x="381.1" y="608.1" width="13" height="34" rx="2" fill="#c9ae76" stroke="#5a5850" stroke-width="1"/>
+  <rect x="381.1" y="608.1" width="3" height="34" rx="1" fill="#e8dcb8"/>
+</g>
+<line x1="202.4" y1="209.8" x2="138.7" y2="146.2" stroke="#5a4632" stroke-width="3" stroke-dasharray="1,4" opacity="0.7"/>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Williams Tribute Station</title>
+  <circle cx="202.4" cy="209.8" r="7" fill="#5a4632" stroke="#2f2515" stroke-width="1.2"/>
+  <rect x="193.4" y="200.8" width="18" height="18" fill="none" stroke="#5a4632" stroke-width="1" stroke-dasharray="2,2"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Tomo's House</title>
+  <rect x="167.0" y="374.6" width="18" height="14" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="165.6" y="373.0" width="18" height="14" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="165.6" y="373.0" width="18" height="4.2" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Amo's House</title>
+  <rect x="114.6" y="374.6" width="18" height="14" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="113.2" y="373.0" width="18" height="14" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="113.2" y="373.0" width="18" height="4.2" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Lilu's House</title>
+  <rect x="140.1" y="374.6" width="18" height="14" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="138.7" y="373.0" width="18" height="14" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="138.7" y="373.0" width="18" height="4.2" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Pean's House</title>
+  <rect x="563.4" y="374.6" width="18" height="14" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="562.0" y="373.0" width="18" height="14" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="562.0" y="373.0" width="18" height="4.2" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Shantde's House</title>
+  <rect x="615.8" y="374.6" width="18" height="14" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="614.4" y="373.0" width="18" height="14" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="614.4" y="373.0" width="18" height="4.2" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Samisen's House</title>
+  <rect x="590.5" y="374.6" width="18" height="14" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="589.1" y="373.0" width="18" height="14" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="589.1" y="373.0" width="18" height="4.2" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Abla's House</title>
+  <rect x="642.8" y="374.6" width="18" height="14" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="641.4" y="373.0" width="18" height="14" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="641.4" y="373.0" width="18" height="4.2" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Sim's House</title>
+  <rect x="378.1" y="118.6" width="18" height="14" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="376.7" y="117.0" width="18" height="14" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="376.7" y="117.0" width="18" height="4.2" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Ash's House</title>
+  <rect x="377.6" y="66.2" width="18" height="14" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="376.2" y="64.6" width="18" height="14" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="376.2" y="64.6" width="18" height="4.2" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Soni's House</title>
+  <rect x="380.8" y="572.1" width="18" height="14" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="379.4" y="570.5" width="18" height="14" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="379.4" y="570.5" width="18" height="4.2" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Mala's House</title>
+  <rect x="379.4" y="654.1" width="18" height="14" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="378.0" y="652.5" width="18" height="14" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="378.0" y="652.5" width="18" height="4.2" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Soro II's House</title>
+  <rect x="489.2" y="267.5" width="18" height="14" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="487.8" y="265.9" width="18" height="14" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="487.8" y="265.9" width="18" height="4.2" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Mi's House</title>
+  <rect x="525.8" y="230.7" width="18" height="14" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="524.4" y="229.1" width="18" height="14" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="524.4" y="229.1" width="18" height="4.2" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Si's House</title>
+  <rect x="450.8" y="443.5" width="18" height="14" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="449.4" y="441.9" width="18" height="14" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="449.4" y="441.9" width="18" height="4.2" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Soyo II's House</title>
+  <rect x="525.8" y="518.5" width="18" height="14" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="524.4" y="516.9" width="18" height="14" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="524.4" y="516.9" width="18" height="4.2" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Samisen II's House</title>
+  <rect x="297.0" y="440.5" width="18" height="14" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="295.6" y="438.9" width="18" height="14" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="295.6" y="438.9" width="18" height="4.2" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Bora's House</title>
+  <rect x="223.4" y="514.1" width="18" height="14" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="222.0" y="512.5" width="18" height="14" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="222.0" y="512.5" width="18" height="4.2" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Sif II's House</title>
+  <rect x="259.9" y="271.8" width="18" height="14" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="258.5" y="270.2" width="18" height="14" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="258.5" y="270.2" width="18" height="4.2" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Soni II's House</title>
+  <rect x="223.4" y="235.1" width="18" height="14" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="222.0" y="233.5" width="18" height="14" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="222.0" y="233.5" width="18" height="4.2" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<use href="#vermillion-tree-template" width="18.2" height="36.4" x="30.9" y="23.6"/>
+<use href="#vermillion-tree-template" width="23.8" height="47.6" x="688.1" y="42.4"/>
+<use href="#vermillion-tree-template" width="21.0" height="42.0" x="49.5" y="658.0"/>
+<use href="#vermillion-tree-template" width="22.4" height="44.8" x="698.8" y="615.2"/>
+<use href="#vermillion-tree-template" width="15.4" height="30.8" x="372.3" y="9.2"/>
+<use href="#vermillion-tree-template" width="15.4" height="30.8" x="32.3" y="349.2"/>
+<use href="#vermillion-tree-template" width="16.8" height="33.6" x="711.6" y="346.4"/>
+<use href="#vermillion-tree-template" width="16.8" height="33.6" x="371.6" y="686.4"/>
+<use href="#vermillion-tree-template" width="15.4" height="30.8" x="132.3" y="109.2"/>
+<use href="#vermillion-tree-template" width="19.6" height="39.2" x="630.2" y="100.8"/>
+<use href="#vermillion-tree-template" width="19.6" height="39.2" x="130.2" y="600.8"/>
+<use href="#vermillion-tree-template" width="21.0" height="42.0" x="619.5" y="578.0"/>
+<text x="380" y="26" text-anchor="middle" font-size="17" fill="#7a5a26" letter-spacing="1">Yarlford</text>
+<text x="380" y="42" text-anchor="middle" font-size="9" fill="#7a5a26" font-style="italic">named street by street for the Racli line, never for the crown</text>
+<text x="380" y="742" text-anchor="middle" font-size="8.5" fill="#7a5a26" font-style="italic">no wall, no gate, no king here &#8212; just the tower, and the family it's named for &#8212; V.</text>
+<g id="yarlford-hover-label" style="display:none;pointer-events:none;">
+  <rect id="yarlford-hover-bg" rx="3" fill="#2a1e10" opacity="0.88"/>
+  <text id="yarlford-hover-text" text-anchor="middle" font-size="10" fill="#f4ead0" font-family="Georgia, serif"></text>
+</g>
+</svg>
+  </div>
+</div>
+
 <!-- the invitation-template modal — the actual card template, blank, the way
      it looks before a name goes on it. Every guest's card (jetto's, limen's,
      crow's, wright's, rei's, Ferry's) is this same SVG with one line changed. -->
@@ -9927,6 +10228,51 @@ function closePlausMap() {
   document.getElementById("page-plaus-map").style.display = "none";
   document.getElementById("page-pandara").style.display = "block";
   if (document.scrollingElement) document.scrollingElement.scrollTop = plausReturnScroll;
+}
+
+// Yarlford -- one level past the Racli tree, same doesn't-touch-the-flip-
+// state-underneath and same scroll-preserving open/close as Plaus.
+var yarlfordReturnScroll = 0;
+function openYarlford() {
+  yarlfordReturnScroll = document.scrollingElement ? document.scrollingElement.scrollTop : 0;
+  document.getElementById("page-pandara").style.display = "none";
+  document.getElementById("page-yarlford").style.display = "block";
+  if (document.scrollingElement) document.scrollingElement.scrollTop = 0;
+}
+function closeYarlford() {
+  document.getElementById("page-yarlford").style.display = "none";
+  document.getElementById("page-pandara").style.display = "block";
+  if (document.scrollingElement) document.scrollingElement.scrollTop = yarlfordReturnScroll;
+}
+
+// Yarlford's own hover label -- a single floating tag, moved and
+// relabelled on every .plaus-bldg's mouseenter/mouseleave, rather than
+// relying on the browser's own native <title> tooltip (slow to appear,
+// small, styling out of our hands). Position comes from the hovered
+// element's own getBBox() -- every building here is a plain rect (or,
+// for the tower/station, a group with a known footprint), so no extra
+// transform math is needed to place the tag just above it.
+function yarlfordHover(el) {
+  var titleEl = el.querySelector("title");
+  if (!titleEl) return;
+  var g = document.getElementById("yarlford-hover-label");
+  var bg = document.getElementById("yarlford-hover-bg");
+  var text = document.getElementById("yarlford-hover-text");
+  text.textContent = titleEl.textContent;
+  g.style.display = "block";
+  var b = el.getBBox();
+  var tw = text.getComputedTextLength();
+  var cx = Math.min(Math.max(b.x + b.width / 2, tw / 2 + 6), 754 - tw / 2 - 6);
+  var ty = Math.max(b.y - 10, 12);
+  text.setAttribute("x", cx);
+  text.setAttribute("y", ty);
+  bg.setAttribute("x", cx - tw / 2 - 5);
+  bg.setAttribute("y", ty - 11);
+  bg.setAttribute("width", tw + 10);
+  bg.setAttribute("height", 15);
+}
+function yarlfordUnhover() {
+  document.getElementById("yarlford-hover-label").style.display = "none";
 }
 
 // a green loop whose circumference is replaced by 800 short zigzagging
