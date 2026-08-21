@@ -1753,6 +1753,9 @@
   .yarlford-square-button { cursor: pointer; }
   .yarlford-square-button rect { transition: fill .2s; }
   .yarlford-square-button:hover rect { fill: #4a7a3f; }
+  .yarlford-square-button { cursor: pointer; }
+  .yarlford-square-button rect { transition: fill .2s; }
+  .yarlford-square-button:hover rect { fill: #4a7a3f; }
   .plaus-square-button rect { transition: fill .2s; }
   .plaus-square-button:hover rect { fill: #3f7cb0; }
   .racli-flip-back-link {
@@ -3746,6 +3749,11 @@
           <svg viewBox="0 0 460 1690" font-family="Georgia, serif" class="racli-tree-svg">
 <rect width="460" height="1690" fill="#f4ead0"/>
 <text x="230" y="28" text-anchor="middle" font-size="15" fill="#7a5a26" letter-spacing="1">The Racli Family Tree</text>
+<g class="yarlford-square-button" onclick="openYarlford()" tabindex="0" role="button" aria-label="open the town of Yarlford">
+  <rect x="386" y="10" width="34" height="34" rx="4" fill="#3f6b34" stroke="#254220" stroke-width="1.5"/>
+  <text x="403" y="27" text-anchor="middle" font-size="7.5" fill="#eef0f2">Yarl-</text>
+  <text x="403" y="37" text-anchor="middle" font-size="7.5" fill="#eef0f2">ford</text>
+</g>
 <g class="yarlford-square-button" onclick="openYarlford()" tabindex="0" role="button" aria-label="open the town of Yarlford">
   <rect x="386" y="10" width="34" height="34" rx="4" fill="#3f6b34" stroke="#254220" stroke-width="1.5"/>
   <text x="403" y="27" text-anchor="middle" font-size="7.5" fill="#eef0f2">Yarl-</text>
@@ -8183,6 +8191,371 @@ window.PARTY_HALL_HERB_BASE = './decorations/assets/herbarium/'; // the pane mir
 <line x1="456.0" y1="-0.8" x2="448.8" y2="-9.1" stroke="#5a4632" stroke-width="1.6" opacity="0.75"/>
 <path d="M-17.6,472.1 L-15.7,469.9 L-13.8,467.7 L-11.9,465.5 L-10.1,463.3 L-8.2,461.1 L-6.3,458.9 L-4.4,456.7 L-2.5,454.5 L-0.6,452.3 L1.2,450.1 L3.1,447.9 L5.0,445.7 L6.9,443.5 L8.8,441.3 L10.7,439.1 L12.6,436.9 L14.5,434.8 L16.4,432.6 L18.3,430.4 L20.2,428.2 L22.1,426.0 L24.0,423.9 L25.9,421.7 L27.8,419.5 L29.7,417.3 L31.6,415.2 L33.5,413.0 L35.4,410.8 L37.4,408.7 L39.3,406.5 L41.2,404.3 L43.1,402.2 L45.0,400.0 L46.9,397.8 L48.9,395.7 L50.8,393.5 L52.7,391.4 L54.6,389.2 L56.6,387.1 L58.5,384.9 L60.4,382.8 L62.4,380.6 L64.3,378.5 L66.2,376.3 L68.2,374.2 L70.1,372.0 L72.0,369.9 L74.0,367.7 L75.9,365.6 L77.9,363.5 L79.8,361.3 L81.7,359.2 L83.7,357.1 L85.6,354.9 L87.6,352.8 L89.5,350.7 L91.5,348.5 L93.4,346.4 L95.4,344.3 L97.4,342.2 L99.3,340.0 L101.3,337.9 L103.2,335.8 L105.2,333.7 L107.2,331.6 L109.1,329.5 L111.1,327.3 L113.1,325.2 L115.0,323.1 L117.0,321.0 L119.0,318.9 L120.9,316.8 L122.9,314.7 L124.9,312.6 L126.9,310.5 L128.8,308.4 L130.8,306.3 L132.8,304.2 L134.8,302.1 L136.8,300.0 L138.8,297.9 L140.7,295.8 L142.7,293.7 L144.7,291.6 L146.7,289.5 L148.7,287.4 L150.7,285.3 L152.7,283.3 L154.7,281.2 L156.7,279.1 L158.7,277.0 L160.7,274.9 L162.7,272.9 L164.7,270.8 L166.7,268.7 L168.7,266.6 L170.7,264.6 L172.7,262.5 L174.7,260.4 L176.7,258.3 L178.8,256.3 L180.8,254.2 L182.8,252.1 L184.8,250.1 L186.8,248.0 L188.8,246.0 L190.9,243.9 L192.9,241.8 L194.9,239.8 L196.9,237.7 L199.0,235.7 L201.0,233.6 L203.0,231.6 L205.0,229.5 L207.1,227.5 L209.1,225.4 L211.1,223.4 L213.2,221.3 L215.2,219.3 L217.3,217.3 L219.3,215.2 L221.3,213.2 L223.4,211.1 L225.4,209.1 L227.5,207.1 L229.5,205.0 L231.6,203.0 L233.6,201.0 L235.7,199.0 L237.7,196.9 L239.8,194.9 L241.8,192.9 L243.9,190.9 L246.0,188.8 L248.0,186.8 L250.1,184.8 L252.1,182.8 L254.2,180.8 L256.3,178.8 L258.3,176.7 L260.4,174.7 L262.5,172.7 L264.6,170.7 L266.6,168.7 L268.7,166.7 L270.8,164.7 L272.9,162.7 L274.9,160.7 L277.0,158.7 L279.1,156.7 L281.2,154.7 L283.3,152.7 L285.3,150.7 L287.4,148.7 L289.5,146.7 L291.6,144.7 L293.7,142.7 L295.8,140.7 L297.9,138.8 L300.0,136.8 L302.1,134.8 L304.2,132.8 L306.3,130.8 L308.4,128.8 L310.5,126.9 L312.6,124.9 L314.7,122.9 L316.8,120.9 L318.9,119.0 L321.0,117.0 L323.1,115.0 L325.2,113.1 L327.3,111.1 L329.5,109.1 L331.6,107.2 L333.7,105.2 L335.8,103.2 L337.9,101.3 L340.0,99.3 L342.2,97.4 L344.3,95.4 L346.4,93.4 L348.5,91.5 L350.7,89.5 L352.8,87.6 L354.9,85.6 L357.1,83.7 L359.2,81.7 L361.3,79.8 L363.5,77.9 L365.6,75.9 L367.7,74.0 L369.9,72.0 L372.0,70.1 L374.2,68.2 L376.3,66.2 L378.5,64.3 L380.6,62.4 L382.8,60.4 L384.9,58.5 L387.1,56.6 L389.2,54.6 L391.4,52.7 L393.5,50.8 L395.7,48.9 L397.8,46.9 L400.0,45.0 L402.2,43.1 L404.3,41.2 L406.5,39.3 L408.7,37.4 L410.8,35.4 L413.0,33.5 L415.2,31.6 L417.3,29.7 L419.5,27.8 L421.7,25.9 L423.9,24.0 L426.0,22.1 L428.2,20.2 L430.4,18.3 L432.6,16.4 L434.8,14.5 L436.9,12.6 L439.1,10.7 L441.3,8.8 L443.5,6.9 L445.7,5.0 L447.9,3.1 L450.1,1.2 L452.3,-0.6 L454.5,-2.5 L456.7,-4.4 L458.9,-6.3 L461.1,-8.2 L463.3,-10.1 L465.5,-11.9 L467.7,-13.8 L469.9,-15.7 L472.1,-17.6" fill="none" stroke="#5a4632" stroke-width="1.5" opacity="0.9"/>
 <path d="M-22.4,467.9 L-20.6,465.7 L-18.7,463.5 L-16.8,461.3 L-14.9,459.1 L-13.0,456.9 L-11.2,454.7 L-9.3,452.5 L-7.4,450.3 L-5.5,448.1 L-3.6,445.9 L-1.7,443.7 L0.2,441.5 L2.1,439.3 L4.0,437.1 L5.9,434.9 L7.8,432.7 L9.7,430.6 L11.6,428.4 L13.5,426.2 L15.4,424.0 L17.3,421.8 L19.2,419.6 L21.1,417.5 L23.0,415.3 L24.9,413.1 L26.8,410.9 L28.7,408.8 L30.6,406.6 L32.6,404.4 L34.5,402.3 L36.4,400.1 L38.3,397.9 L40.2,395.8 L42.2,393.6 L44.1,391.4 L46.0,389.3 L47.9,387.1 L49.9,385.0 L51.8,382.8 L53.7,380.6 L55.7,378.5 L57.6,376.3 L59.5,374.2 L61.5,372.0 L63.4,369.9 L65.3,367.7 L67.3,365.6 L69.2,363.5 L71.2,361.3 L73.1,359.2 L75.1,357.0 L77.0,354.9 L79.0,352.8 L80.9,350.6 L82.9,348.5 L84.8,346.3 L86.8,344.2 L88.7,342.1 L90.7,340.0 L92.6,337.8 L94.6,335.7 L96.6,333.6 L98.5,331.5 L100.5,329.3 L102.5,327.2 L104.4,325.1 L106.4,323.0 L108.4,320.9 L110.3,318.7 L112.3,316.6 L114.3,314.5 L116.3,312.4 L118.2,310.3 L120.2,308.2 L122.2,306.1 L124.2,304.0 L126.2,301.9 L128.1,299.8 L130.1,297.7 L132.1,295.6 L134.1,293.5 L136.1,291.4 L138.1,289.3 L140.1,287.2 L142.1,285.1 L144.1,283.0 L146.1,280.9 L148.1,278.8 L150.1,276.7 L152.1,274.7 L154.1,272.6 L156.1,270.5 L158.1,268.4 L160.1,266.3 L162.1,264.3 L164.1,262.2 L166.1,260.1 L168.1,258.0 L170.1,256.0 L172.2,253.9 L174.2,251.8 L176.2,249.7 L178.2,247.7 L180.2,245.6 L182.2,243.5 L184.3,241.5 L186.3,239.4 L188.3,237.4 L190.3,235.3 L192.4,233.2 L194.4,231.2 L196.4,229.1 L198.5,227.1 L200.5,225.0 L202.5,223.0 L204.6,220.9 L206.6,218.9 L208.7,216.8 L210.7,214.8 L212.7,212.7 L214.8,210.7 L216.8,208.7 L218.9,206.6 L220.9,204.6 L223.0,202.5 L225.0,200.5 L227.1,198.5 L229.1,196.4 L231.2,194.4 L233.2,192.4 L235.3,190.3 L237.4,188.3 L239.4,186.3 L241.5,184.3 L243.5,182.2 L245.6,180.2 L247.7,178.2 L249.7,176.2 L251.8,174.2 L253.9,172.2 L256.0,170.1 L258.0,168.1 L260.1,166.1 L262.2,164.1 L264.3,162.1 L266.3,160.1 L268.4,158.1 L270.5,156.1 L272.6,154.1 L274.7,152.1 L276.7,150.1 L278.8,148.1 L280.9,146.1 L283.0,144.1 L285.1,142.1 L287.2,140.1 L289.3,138.1 L291.4,136.1 L293.5,134.1 L295.6,132.1 L297.7,130.1 L299.8,128.1 L301.9,126.2 L304.0,124.2 L306.1,122.2 L308.2,120.2 L310.3,118.2 L312.4,116.3 L314.5,114.3 L316.6,112.3 L318.7,110.3 L320.9,108.4 L323.0,106.4 L325.1,104.4 L327.2,102.5 L329.3,100.5 L331.5,98.5 L333.6,96.6 L335.7,94.6 L337.8,92.6 L340.0,90.7 L342.1,88.7 L344.2,86.8 L346.3,84.8 L348.5,82.9 L350.6,80.9 L352.8,79.0 L354.9,77.0 L357.0,75.1 L359.2,73.1 L361.3,71.2 L363.5,69.2 L365.6,67.3 L367.7,65.3 L369.9,63.4 L372.0,61.5 L374.2,59.5 L376.3,57.6 L378.5,55.7 L380.6,53.7 L382.8,51.8 L385.0,49.9 L387.1,47.9 L389.3,46.0 L391.4,44.1 L393.6,42.2 L395.8,40.2 L397.9,38.3 L400.1,36.4 L402.3,34.5 L404.4,32.6 L406.6,30.6 L408.8,28.7 L410.9,26.8 L413.1,24.9 L415.3,23.0 L417.5,21.1 L419.6,19.2 L421.8,17.3 L424.0,15.4 L426.2,13.5 L428.4,11.6 L430.6,9.7 L432.7,7.8 L434.9,5.9 L437.1,4.0 L439.3,2.1 L441.5,0.2 L443.7,-1.7 L445.9,-3.6 L448.1,-5.5 L450.3,-7.4 L452.5,-9.3 L454.7,-11.2 L456.9,-13.0 L459.1,-14.9 L461.3,-16.8 L463.5,-18.7 L465.7,-20.6 L467.9,-22.4" fill="none" stroke="#5a4632" stroke-width="1.5" opacity="0.9"/>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Level crossing &#183; Sauri Road</title>
+  <line x1="48.1" y1="371.0" x2="48.1" y2="389.0" stroke="#f4ead0" stroke-width="2.4" opacity="0.95"/>
+  <line x1="69.1" y1="371.0" x2="69.1" y2="389.0" stroke="#f4ead0" stroke-width="2.4" opacity="0.95"/>
+  <circle cx="58.6" cy="368.5" r="2.1" fill="#5a4632" stroke="#2f2515" stroke-width="0.7"/>
+  <line x1="56.0" y1="365.9" x2="61.2" y2="371.1" stroke="#5a4632" stroke-width="0.8"/>
+  <line x1="61.2" y1="365.9" x2="56.0" y2="371.1" stroke="#5a4632" stroke-width="0.8"/>
+  <circle cx="58.6" cy="391.5" r="2.1" fill="#5a4632" stroke="#2f2515" stroke-width="0.7"/>
+  <line x1="56.0" y1="388.9" x2="61.2" y2="394.1" stroke="#5a4632" stroke-width="0.8"/>
+  <line x1="61.2" y1="388.9" x2="56.0" y2="394.1" stroke="#5a4632" stroke-width="0.8"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Level crossing &#183; Shant Street</title>
+  <line x1="388.7" y1="45.7" x2="372.8" y2="47.3" stroke="#f4ead0" stroke-width="2.4" opacity="0.95"/>
+  <line x1="390.9" y1="66.5" x2="375.0" y2="68.2" stroke="#f4ead0" stroke-width="2.4" opacity="0.95"/>
+  <circle cx="392.3" cy="55.8" r="2.1" fill="#5a4632" stroke="#2f2515" stroke-width="0.7"/>
+  <line x1="389.7" y1="53.2" x2="394.9" y2="58.4" stroke="#5a4632" stroke-width="0.8"/>
+  <line x1="394.9" y1="53.2" x2="389.7" y2="58.4" stroke="#5a4632" stroke-width="0.8"/>
+  <circle cx="371.4" cy="58.0" r="2.1" fill="#5a4632" stroke="#2f2515" stroke-width="0.7"/>
+  <line x1="368.8" y1="55.4" x2="374.0" y2="60.6" stroke="#5a4632" stroke-width="0.8"/>
+  <line x1="374.0" y1="55.4" x2="368.8" y2="60.6" stroke="#5a4632" stroke-width="0.8"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Level crossing &#183; Cara's Walk</title>
+  <line x1="210.3" y1="205.5" x2="199.1" y2="215.4" stroke="#f4ead0" stroke-width="2.4" opacity="0.95"/>
+  <line x1="224.3" y1="221.2" x2="213.1" y2="231.1" stroke="#f4ead0" stroke-width="2.4" opacity="0.95"/>
+  <circle cx="219.2" cy="211.7" r="2.1" fill="#5a4632" stroke="#2f2515" stroke-width="0.7"/>
+  <line x1="216.6" y1="209.1" x2="221.8" y2="214.3" stroke="#5a4632" stroke-width="0.8"/>
+  <line x1="221.8" y1="209.1" x2="216.6" y2="214.3" stroke="#5a4632" stroke-width="0.8"/>
+  <circle cx="204.2" cy="225.0" r="2.1" fill="#5a4632" stroke="#2f2515" stroke-width="0.7"/>
+  <line x1="201.6" y1="222.4" x2="206.8" y2="227.6" stroke="#5a4632" stroke-width="0.8"/>
+  <line x1="206.8" y1="222.4" x2="201.6" y2="227.6" stroke="#5a4632" stroke-width="0.8"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Williams Tribute Station</title>
+  <rect x="230.7" y="177.6" width="22" height="22" fill="none" stroke="#5a4632" stroke-width="1" stroke-dasharray="2,2"/>
+  <circle cx="241.7" cy="188.6" r="7.5" fill="#5a4632" stroke="#2f2515" stroke-width="1.2"/>
+</g>
+<text x="241.7" y="171.6" text-anchor="middle" font-size="8.5" fill="#3a2a10" font-style="italic">Williams Tribute Station</text>
+<circle cx="380" cy="380" r="58" fill="#7bc491" opacity="0.35"/>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Vaala's Market</title>
+<rect x="350.0" y="452.0" width="16" height="10" fill="#c94a3f" opacity="0.85"/>
+<rect x="350.0" y="449.0" width="16" height="3" fill="#e8cf8f"/>
+<rect x="372.0" y="452.0" width="16" height="10" fill="#c94a3f" opacity="0.85"/>
+<rect x="372.0" y="449.0" width="16" height="3" fill="#e8cf8f"/>
+<rect x="394.0" y="452.0" width="16" height="10" fill="#c94a3f" opacity="0.85"/>
+<rect x="394.0" y="449.0" width="16" height="3" fill="#e8cf8f"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Toblen's Forge</title>
+  <rect x="375.6" y="171.7" width="28" height="18.4" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="374.2" y="170.1" width="28" height="18.4" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="374.2" y="170.1" width="28" height="5.5" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>the Milli Bakehouse</title>
+  <rect x="376.2" y="141.7" width="28" height="19.6" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="374.8" y="140.1" width="28" height="19.6" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="374.8" y="140.1" width="28" height="5.9" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Sensat Hall</title>
+  <rect x="378.3" y="541.7" width="23.5" height="19.6" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="376.9" y="540.1" width="23.5" height="19.6" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="376.9" y="540.1" width="23.5" height="5.9" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Perona's Well</title>
+  <rect x="376.8" y="489.9" width="26.5" height="17.2" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="375.4" y="488.3" width="26.5" height="17.2" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="375.4" y="488.3" width="26.5" height="5.2" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>the Tama Chapel</title>
+  <rect x="458.3" y="293.7" width="22" height="19.6" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="456.9" y="292.1" width="22" height="19.6" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="456.9" y="292.1" width="22" height="5.9" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Sif's Rest</title>
+  <rect x="493.7" y="485.9" width="22" height="18.4" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="492.3" y="484.3" width="22" height="18.4" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="492.3" y="484.3" width="22" height="5.5" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Tolo's Mill</title>
+  <rect x="285.6" y="297.6" width="23.5" height="19.6" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="284.2" y="296.0" width="23.5" height="19.6" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="284.2" y="296.0" width="23.5" height="5.9" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Oong's Stables</title>
+  <rect x="245.3" y="484.7" width="28" height="18.4" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="243.9" y="483.1" width="28" height="18.4" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="243.9" y="483.1" width="28" height="5.5" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Mura's Green</title>
+  <rect x="255.5" y="373.6" width="25" height="16" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="254.1" y="372.0" width="25" height="16" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="254.1" y="372.0" width="25" height="4.8" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>the Piona Schoolhouse</title>
+  <rect x="483.8" y="373.0" width="23.5" height="17.2" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="482.4" y="371.4" width="23.5" height="17.2" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="482.4" y="371.4" width="23.5" height="5.2" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Sen's Infirmary</title>
+  <rect x="535.3" y="371.8" width="22" height="19.6" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="533.9" y="370.2" width="22" height="19.6" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="533.9" y="370.2" width="22" height="5.9" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Luna's Well</title>
+  <rect x="204.0" y="371.8" width="23.5" height="19.6" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="202.6" y="370.2" width="23.5" height="19.6" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="202.6" y="370.2" width="23.5" height="5.9" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Soro's Bridge</title>
+  <rect x="381.1" y="608.1" width="13" height="34" rx="2" fill="#c9ae76" stroke="#5a5850" stroke-width="1"/>
+  <rect x="381.1" y="608.1" width="3" height="34" rx="1" fill="#e8dcb8"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Tomo's House</title>
+  <rect x="167.0" y="374.6" width="18" height="14" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="165.6" y="373.0" width="18" height="14" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="165.6" y="373.0" width="18" height="4.2" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Amo's House</title>
+  <rect x="563.4" y="374.6" width="18" height="14" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="562.0" y="373.0" width="18" height="14" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="562.0" y="373.0" width="18" height="4.2" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Lilu's House</title>
+  <rect x="378.1" y="118.6" width="18" height="14" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="376.7" y="117.0" width="18" height="14" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="376.7" y="117.0" width="18" height="4.2" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Pean's House</title>
+  <rect x="380.8" y="572.1" width="18" height="14" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="379.4" y="570.5" width="18" height="14" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="379.4" y="570.5" width="18" height="4.2" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Shantde's House</title>
+  <rect x="489.2" y="267.5" width="18" height="14" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="487.8" y="265.9" width="18" height="14" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="487.8" y="265.9" width="18" height="4.2" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Samisen's House</title>
+  <rect x="450.8" y="443.5" width="18" height="14" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="449.4" y="441.9" width="18" height="14" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="449.4" y="441.9" width="18" height="4.2" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Abla's House</title>
+  <rect x="297.0" y="440.5" width="18" height="14" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="295.6" y="438.9" width="18" height="14" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="295.6" y="438.9" width="18" height="4.2" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Sim's House</title>
+  <rect x="259.9" y="271.8" width="18" height="14" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="258.5" y="270.2" width="18" height="14" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="258.5" y="270.2" width="18" height="4.2" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Ash's House</title>
+  <rect x="114.6" y="374.6" width="18" height="14" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="113.2" y="373.0" width="18" height="14" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="113.2" y="373.0" width="18" height="4.2" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Soni's House</title>
+  <rect x="615.8" y="374.6" width="18" height="14" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="614.4" y="373.0" width="18" height="14" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="614.4" y="373.0" width="18" height="4.2" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Mala's House</title>
+  <rect x="379.4" y="654.1" width="18" height="14" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="378.0" y="652.5" width="18" height="14" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="378.0" y="652.5" width="18" height="4.2" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Soro II's House</title>
+  <rect x="525.8" y="230.7" width="18" height="14" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="524.4" y="229.1" width="18" height="14" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="524.4" y="229.1" width="18" height="4.2" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Mi's House</title>
+  <rect x="525.8" y="518.5" width="18" height="14" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="524.4" y="516.9" width="18" height="14" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="524.4" y="516.9" width="18" height="4.2" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Si's House</title>
+  <rect x="223.4" y="514.1" width="18" height="14" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="222.0" y="512.5" width="18" height="14" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="222.0" y="512.5" width="18" height="4.2" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Soyo II's House</title>
+  <rect x="173.2" y="179.9" width="18" height="14" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="171.8" y="178.3" width="18" height="14" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="171.8" y="178.3" width="18" height="4.2" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Samisen II's House</title>
+  <rect x="140.1" y="374.6" width="18" height="14" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="138.7" y="373.0" width="18" height="14" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="138.7" y="373.0" width="18" height="4.2" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Bora's House</title>
+  <rect x="590.5" y="374.6" width="18" height="14" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="589.1" y="373.0" width="18" height="14" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="589.1" y="373.0" width="18" height="4.2" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Sif II's House</title>
+  <rect x="548.9" y="201.9" width="18" height="14" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="547.5" y="200.3" width="18" height="14" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="547.5" y="200.3" width="18" height="4.2" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Soni II's House</title>
+  <rect x="548.9" y="547.3" width="18" height="14" rx="1.2" fill="#2a1e10" opacity="0.22"/>
+  <rect x="547.5" y="545.7" width="18" height="14" rx="1.2" fill="#d9b96a" stroke="#8a6a2a" stroke-width="1.1"/>
+  <rect x="547.5" y="545.7" width="18" height="4.2" rx="1.2" fill="#e8cf8f" opacity="0.85"/>
+</g>
+<use href="#vermillion-tree-template" width="18.2" height="36.4" x="30.9" y="23.6"/>
+<use href="#vermillion-tree-template" width="23.8" height="47.6" x="688.1" y="42.4"/>
+<use href="#vermillion-tree-template" width="21.0" height="42.0" x="49.5" y="658.0"/>
+<use href="#vermillion-tree-template" width="22.4" height="44.8" x="698.8" y="615.2"/>
+<use href="#vermillion-tree-template" width="15.4" height="30.8" x="372.3" y="9.2"/>
+<use href="#vermillion-tree-template" width="15.4" height="30.8" x="32.3" y="349.2"/>
+<use href="#vermillion-tree-template" width="16.8" height="33.6" x="711.6" y="346.4"/>
+<use href="#vermillion-tree-template" width="16.8" height="33.6" x="371.6" y="686.4"/>
+<use href="#vermillion-tree-template" width="15.4" height="30.8" x="132.3" y="109.2"/>
+<use href="#vermillion-tree-template" width="19.6" height="39.2" x="630.2" y="100.8"/>
+<use href="#vermillion-tree-template" width="19.6" height="39.2" x="130.2" y="600.8"/>
+<use href="#vermillion-tree-template" width="21.0" height="42.0" x="619.5" y="578.0"/>
+<text x="380" y="26" text-anchor="middle" font-size="17" fill="#7a5a26" letter-spacing="1">Yarlford</text>
+<text x="380" y="42" text-anchor="middle" font-size="9" fill="#7a5a26" font-style="italic">named street by street for the Racli line, never for the crown</text>
+<text x="380" y="742" text-anchor="middle" font-size="8.5" fill="#7a5a26" font-style="italic">no wall, no gate, no king here &#8212; just the tower, and the family it's named for &#8212; V.</text>
+<g id="yarlford-hover-label" style="display:none;pointer-events:none;">
+  <rect id="yarlford-hover-bg" rx="3" fill="#2a1e10" opacity="0.88"/>
+  <text id="yarlford-hover-text" text-anchor="middle" font-size="10" fill="#f4ead0" font-family="Georgia, serif"></text>
+</g>
+</svg>
+  </div>
+</div>
+
+<!-- Yarlford -- a market town named entirely for the Racli line, one
+     level past the Racli tree the way Plaus sits one level past
+     Raclados. No wall, no gates, no king: Racli never held the crown,
+     so the town grew up around its own clock tower instead. -->
+<div id="page-yarlford" style="display:none">
+  <button id="yarlford-back" onclick="closeYarlford()" title="back to the family tree">&#8592; back to the family tree</button>
+  <h2>Yarlford <span class="handset">&#183; hand-set 2026-08-15</span></h2>
+  <p class="subnote">Every street and every named building here is someone off the Racli tree &#8212; never one of the families that branched away from it.</p>
+  <p class="subnote">Hover any building to see who it's named for.</p>
+  <div id="yarlford-map-wrap">
+    <svg viewBox="0 0 760 760" width="760" height="760" font-family="Georgia, serif">
+<rect width="760" height="760" fill="#f4ead0"/>
+<path d="M422.7,235.0 L422.8,227.9 L422.9,220.9 L423.0,213.9 L423.0,206.9 L423.0,199.9 L423.0,193.0 L422.9,186.1 L422.8,179.3 L422.7,172.4 L422.6,165.6 L422.4,158.8 L422.2,152.1 L422.0,145.4 L421.7,138.7 L421.4,132.0 L421.1,125.4 L420.8,118.8 L420.4,112.2 L547.4,168.6 L543.1,173.6 L538.8,178.6 L534.4,183.6 L530.0,188.6 L525.5,193.5 L521.0,198.5 L516.4,203.5 L511.8,208.5 L507.2,213.5 L502.5,218.5 L497.7,223.5 L492.9,228.5 L488.1,233.5 L483.2,238.5 L478.3,243.5 L473.3,248.5 L468.3,253.5 L463.2,258.6 Z" fill="#c9b25a" opacity="0.4"/>
+<line x1="474.1" y1="228.7" x2="420.4" y2="206.5" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<line x1="497.0" y1="204.9" x2="421.1" y2="173.5" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<line x1="519.9" y1="181.2" x2="421.7" y2="140.5" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<path d="M511.3,306.6 L516.3,301.6 L521.4,296.6 L526.3,291.6 L531.3,286.6 L536.2,281.6 L541.0,276.6 L545.8,271.6 L550.5,266.6 L555.2,261.6 L559.9,256.6 L564.5,251.6 L569.1,246.6 L573.6,241.6 L578.1,236.6 L582.5,231.6 L586.9,226.7 L591.2,221.7 L595.5,216.7 L647.7,346.0 L641.2,346.0 L634.6,346.0 L627.9,346.0 L621.3,346.0 L614.6,346.0 L607.9,346.0 L601.1,346.0 L594.3,346.0 L587.5,346.0 L580.7,346.0 L573.8,346.0 L566.9,346.0 L560.0,346.0 L553.1,346.0 L546.1,346.0 L539.1,346.0 L532.0,346.0 L525.0,346.0 Z" fill="#7fae5f" opacity="0.4"/>
+<line x1="553.5" y1="339.6" x2="531.3" y2="285.9" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<line x1="586.5" y1="338.9" x2="555.1" y2="263.0" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<line x1="619.5" y1="338.3" x2="578.8" y2="240.1" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<path d="M525.0,414.0 L532.0,414.0 L539.1,414.0 L546.1,414.0 L553.1,414.0 L560.0,414.0 L566.9,414.0 L573.8,414.0 L580.7,414.0 L587.5,414.0 L594.3,414.0 L601.1,414.0 L607.9,414.0 L614.6,414.0 L621.3,414.0 L627.9,414.0 L634.6,414.0 L641.2,414.0 L647.7,414.0 L595.5,543.3 L591.2,538.3 L586.9,533.3 L582.5,528.4 L578.1,523.4 L573.6,518.4 L569.1,513.4 L564.5,508.4 L559.9,503.4 L555.2,498.4 L550.5,493.4 L545.8,488.4 L541.0,483.4 L536.2,478.4 L531.3,473.4 L526.3,468.4 L521.4,463.4 L516.3,458.4 L511.3,453.4 Z" fill="#c9b25a" opacity="0.4"/>
+<line x1="531.3" y1="474.1" x2="553.5" y2="420.4" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<line x1="555.1" y1="497.0" x2="586.5" y2="421.1" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<line x1="578.8" y1="519.9" x2="619.5" y2="421.7" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<path d="M463.2,501.4 L468.3,506.5 L473.3,511.5 L478.3,516.5 L483.2,521.5 L488.1,526.5 L492.9,531.5 L497.7,536.5 L502.5,541.5 L507.2,546.5 L511.8,551.5 L516.4,556.5 L521.0,561.5 L525.5,566.5 L530.0,571.4 L534.4,576.4 L538.8,581.4 L543.1,586.4 L547.4,591.4 L420.4,647.8 L420.8,641.2 L421.1,634.6 L421.4,628.0 L421.7,621.3 L422.0,614.6 L422.2,607.9 L422.4,601.2 L422.6,594.4 L422.7,587.6 L422.8,580.7 L422.9,573.9 L423.0,567.0 L423.0,560.1 L423.0,553.1 L423.0,546.1 L422.9,539.1 L422.8,532.1 L422.7,525.0 Z" fill="#7fae5f" opacity="0.4"/>
+<line x1="420.4" y1="553.5" x2="474.1" y2="531.3" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<line x1="421.1" y1="586.5" x2="497.0" y2="555.1" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<line x1="421.7" y1="619.5" x2="519.9" y2="578.8" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<path d="M354.7,525.0 L354.8,532.1 L354.9,539.1 L355.0,546.1 L355.0,553.1 L355.0,560.1 L355.0,567.0 L354.9,573.9 L354.8,580.7 L354.7,587.6 L354.6,594.4 L354.4,601.2 L354.2,607.9 L354.0,614.6 L353.7,621.3 L353.4,628.0 L353.1,634.6 L352.8,641.2 L352.4,647.8 L212.8,592.2 L217.1,587.2 L221.4,582.2 L225.7,577.2 L230.1,572.1 L234.5,567.1 L239.0,562.1 L243.5,557.0 L248.1,552.0 L252.7,547.0 L257.4,541.9 L262.1,536.9 L266.9,531.9 L271.7,526.8 L276.6,521.8 L281.5,516.7 L286.5,511.7 L291.5,506.7 L296.6,501.6 Z" fill="#c9b25a" opacity="0.4"/>
+<line x1="285.9" y1="531.3" x2="339.6" y2="553.5" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<line x1="263.0" y1="555.1" x2="338.9" y2="586.5" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<line x1="240.1" y1="578.8" x2="338.3" y2="619.5" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<path d="M248.5,453.5 L243.4,458.6 L238.4,463.6 L233.5,468.7 L228.5,473.7 L223.7,478.7 L218.8,483.8 L214.1,488.8 L209.3,493.8 L204.7,498.9 L200.0,503.9 L195.5,508.9 L190.9,514.0 L186.4,519.0 L182.0,524.0 L177.6,529.1 L173.3,534.1 L169.0,539.1 L164.8,544.2 L112.3,414.0 L118.8,414.0 L125.4,414.0 L132.1,414.0 L138.7,414.0 L145.4,414.0 L152.1,414.0 L158.9,414.0 L165.7,414.0 L172.5,414.0 L179.3,414.0 L186.2,414.0 L193.1,414.0 L200.0,414.0 L206.9,414.0 L213.9,414.0 L220.9,414.0 L228.0,414.0 L235.0,414.0 Z" fill="#7fae5f" opacity="0.4"/>
+<line x1="206.5" y1="420.4" x2="228.7" y2="474.1" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<line x1="173.5" y1="421.1" x2="204.9" y2="497.0" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<line x1="140.5" y1="421.7" x2="181.2" y2="519.9" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<path d="M235.0,346.0 L228.0,346.0 L220.9,346.0 L213.9,346.0 L206.9,346.0 L200.0,346.0 L193.1,346.0 L186.2,346.0 L179.3,346.0 L172.5,346.0 L165.7,346.0 L158.9,346.0 L152.1,346.0 L145.4,346.0 L138.7,346.0 L132.1,346.0 L125.4,346.0 L118.8,346.0 L112.3,346.0 L164.8,215.8 L169.0,220.9 L173.3,225.9 L177.6,230.9 L182.0,236.0 L186.4,241.0 L190.9,246.0 L195.5,251.1 L200.0,256.1 L204.7,261.1 L209.3,266.2 L214.1,271.2 L218.8,276.2 L223.7,281.3 L228.5,286.3 L233.5,291.3 L238.4,296.4 L243.4,301.4 L248.5,306.5 Z" fill="#c9b25a" opacity="0.4"/>
+<line x1="228.7" y1="285.9" x2="206.5" y2="339.6" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<line x1="204.9" y1="263.0" x2="173.5" y2="338.9" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<line x1="181.2" y1="240.1" x2="140.5" y2="338.3" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<path d="M296.6,258.4 L291.5,253.3 L286.5,248.3 L281.5,243.3 L276.6,238.2 L271.7,233.2 L266.9,228.1 L262.1,223.1 L257.4,218.1 L252.7,213.0 L248.1,208.0 L243.5,203.0 L239.0,197.9 L234.5,192.9 L230.1,187.9 L225.7,182.8 L221.4,177.8 L217.1,172.8 L212.8,167.8 L352.4,112.2 L352.8,118.8 L353.1,125.4 L353.4,132.0 L353.7,138.7 L354.0,145.4 L354.2,152.1 L354.4,158.8 L354.6,165.6 L354.7,172.4 L354.8,179.3 L354.9,186.1 L355.0,193.0 L355.0,199.9 L355.0,206.9 L355.0,213.9 L354.9,220.9 L354.8,227.9 L354.7,235.0 Z" fill="#7fae5f" opacity="0.4"/>
+<line x1="339.6" y1="206.5" x2="285.9" y2="228.7" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<line x1="338.9" y1="173.5" x2="263.0" y2="204.9" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<line x1="338.3" y1="140.5" x2="240.1" y2="181.2" stroke="#4a3a1e" stroke-width="0.8" opacity="0.18"/>
+<path d="M0,620 Q90,560 150,600 Q230,650 300,610 Q360,580 400,620 Q440,660 520,640" fill="none" stroke="#3f7fae" stroke-width="10" stroke-linecap="round" opacity="0.85"/>
+<path d="M0,620 Q90,560 150,600 Q230,650 300,610 Q360,580 400,620 Q440,660 520,640" fill="none" stroke="#8fc0e0" stroke-width="3.5" stroke-linecap="round" opacity="0.6"/>
+<path d="M380.0,380.0 Q198.5,380.0 50.0,380.0" fill="none" stroke="#8a6d1f" stroke-width="7" stroke-linecap="round" opacity="0.75"/>
+<path d="M380.0,380.0 Q198.5,380.0 50.0,380.0" fill="none" stroke="#c9ae76" stroke-width="2.4" stroke-linecap="round" opacity="0.55"/>
+<text x="109.4" y="380.0" text-anchor="middle" font-size="9.5" fill="#7a5a26" font-style="italic" transform="rotate(-90.0 109.4 380.0)">Sauri Road</text>
+<path d="M380.0,380.0 Q561.5,380.0 710.0,380.0" fill="none" stroke="#8a6d1f" stroke-width="7" stroke-linecap="round" opacity="0.75"/>
+<path d="M380.0,380.0 Q561.5,380.0 710.0,380.0" fill="none" stroke="#c9ae76" stroke-width="2.4" stroke-linecap="round" opacity="0.55"/>
+<text x="650.6" y="380.0" text-anchor="middle" font-size="9.5" fill="#7a5a26" font-style="italic" transform="rotate(90.0 650.6 380.0)">Pif Lane</text>
+<path d="M380.0,380.0 Q398.0,193.0 380.0,40.0" fill="none" stroke="#8a6d1f" stroke-width="5" stroke-linecap="round" opacity="0.75"/>
+<path d="M380.0,380.0 Q398.0,193.0 380.0,40.0" fill="none" stroke="#c9ae76" stroke-width="1.8" stroke-linecap="round" opacity="0.55"/>
+<text x="380.0" y="101.2" text-anchor="middle" font-size="9.5" fill="#7a5a26" font-style="italic" transform="rotate(0.0 380.0 101.2)">Shant Street</text>
+<path d="M380.0,380.0 Q398.0,567.0 380.0,720.0" fill="none" stroke="#8a6d1f" stroke-width="5" stroke-linecap="round" opacity="0.75"/>
+<path d="M380.0,380.0 Q398.0,567.0 380.0,720.0" fill="none" stroke="#c9ae76" stroke-width="1.8" stroke-linecap="round" opacity="0.55"/>
+<text x="380.0" y="658.8" text-anchor="middle" font-size="9.5" fill="#7a5a26" font-style="italic" transform="rotate(0.0 380.0 658.8)">Amili Way</text>
+<path d="M380.0,380.0 Q506.6,273.2 592.1,167.9" fill="none" stroke="#8a6d1f" stroke-width="4" stroke-linecap="round" opacity="0.75"/>
+<path d="M380.0,380.0 Q506.6,273.2 592.1,167.9" fill="none" stroke="#c9ae76" stroke-width="1.4" stroke-linecap="round" opacity="0.55"/>
+<text x="553.9" y="206.1" text-anchor="middle" font-size="9.5" fill="#7a5a26" font-style="italic" transform="rotate(45.0 553.9 206.1)">Soyo Street</text>
+<path d="M380.0,380.0 Q506.6,486.8 592.1,592.1" fill="none" stroke="#8a6d1f" stroke-width="4" stroke-linecap="round" opacity="0.75"/>
+<path d="M380.0,380.0 Q506.6,486.8 592.1,592.1" fill="none" stroke="#c9ae76" stroke-width="1.4" stroke-linecap="round" opacity="0.55"/>
+<text x="553.9" y="553.9" text-anchor="middle" font-size="9.5" fill="#7a5a26" font-style="italic" transform="rotate(-45.0 553.9 553.9)">Rava Lane</text>
+<path d="M380.0,380.0 Q257.3,482.9 174.9,585.1" fill="none" stroke="#8a6d1f" stroke-width="4" stroke-linecap="round" opacity="0.75"/>
+<path d="M380.0,380.0 Q257.3,482.9 174.9,585.1" fill="none" stroke="#c9ae76" stroke-width="1.4" stroke-linecap="round" opacity="0.55"/>
+<text x="211.9" y="548.1" text-anchor="middle" font-size="9.5" fill="#7a5a26" font-style="italic" transform="rotate(45.0 211.9 548.1)">Vania Court</text>
+<path d="M380.0,380.0 Q257.3,277.1 174.9,174.9" fill="none" stroke="#8a6d1f" stroke-width="4" stroke-linecap="round" opacity="0.75"/>
+<path d="M380.0,380.0 Q257.3,277.1 174.9,174.9" fill="none" stroke="#c9ae76" stroke-width="1.4" stroke-linecap="round" opacity="0.55"/>
+<text x="211.9" y="211.9" text-anchor="middle" font-size="9.5" fill="#7a5a26" font-style="italic" transform="rotate(315.0 211.9 211.9)">Cara's Walk</text>
+<rect x="360.0" y="363.0" width="46" height="40" fill="#2a1e10" opacity="0.22"/>
+<rect x="357.0" y="360.0" width="46" height="40" fill="#8a877c" stroke="#5a5850" stroke-width="1.4"/>
+<rect x="365.9" y="252.5" width="33.1" height="110" fill="#2a1e10" opacity="0.2"/>
+<rect x="363.4" y="250.0" width="33.1" height="110" fill="#8a877c" stroke="#5a5850" stroke-width="1.3"/>
+<rect x="378.0" y="340.0" width="4" height="12" fill="#5a5850"/>
+<rect x="378.0" y="308.0" width="4" height="12" fill="#5a5850"/>
+<rect x="378.0" y="276.0" width="4" height="12" fill="#5a5850"/>
+<circle cx="380" cy="276.0" r="20" fill="#f4ead0" stroke="#5a5850" stroke-width="2.2"/>
+<line x1="380.0" y1="259.0" x2="380.0" y2="256.5" stroke="#5a5850" stroke-width="1"/>
+<line x1="388.5" y1="261.3" x2="389.8" y2="259.1" stroke="#5a5850" stroke-width="1"/>
+<line x1="394.7" y1="267.5" x2="396.9" y2="266.3" stroke="#5a5850" stroke-width="1"/>
+<line x1="397.0" y1="276.0" x2="399.5" y2="276.0" stroke="#5a5850" stroke-width="1"/>
+<line x1="394.7" y1="284.5" x2="396.9" y2="285.8" stroke="#5a5850" stroke-width="1"/>
+<line x1="388.5" y1="290.7" x2="389.8" y2="292.9" stroke="#5a5850" stroke-width="1"/>
+<line x1="380.0" y1="293.0" x2="380.0" y2="295.5" stroke="#5a5850" stroke-width="1"/>
+<line x1="371.5" y1="290.7" x2="370.3" y2="292.9" stroke="#5a5850" stroke-width="1"/>
+<line x1="365.3" y1="284.5" x2="363.1" y2="285.8" stroke="#5a5850" stroke-width="1"/>
+<line x1="363.0" y1="276.0" x2="360.5" y2="276.0" stroke="#5a5850" stroke-width="1"/>
+<line x1="365.3" y1="267.5" x2="363.1" y2="266.3" stroke="#5a5850" stroke-width="1"/>
+<line x1="371.5" y1="261.3" x2="370.3" y2="259.1" stroke="#5a5850" stroke-width="1"/>
+<line x1="380" y1="276.0" x2="390.0" y2="279.0" stroke="#4a3a1e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="380" y1="276.0" x2="394.4" y2="265.0" stroke="#4a3a1e" stroke-width="1.6" stroke-linecap="round"/>
+<circle cx="380" cy="276.0" r="1.8" fill="#4a3a1e"/>
+<path d="M363.4,250.0 L380,216.0 L396.6,250.0 Z" fill="#5a5850"/>
+<line x1="380" y1="216.0" x2="380" y2="204.0" stroke="#5a5850" stroke-width="1.5"/>
+<circle cx="380" cy="203.0" r="2" fill="#7a5a26"/>
+<g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>the Clock Tower of Yarlford</title><rect x="357.0" y="203.0" width="46" height="197.0" fill="transparent"/></g>
+<path d="M-20.0,470.0 L-18.1,467.8 L-16.2,465.6 L-14.4,463.4 L-12.5,461.2 L-10.6,459.0 L-8.7,456.8 L-6.8,454.6 L-5.0,452.4 L-3.1,450.2 L-1.2,448.0 L0.7,445.8 L2.6,443.6 L4.5,441.4 L6.4,439.2 L8.3,437.0 L10.2,434.8 L12.1,432.7 L14.0,430.5 L15.9,428.3 L17.8,426.1 L19.7,423.9 L21.6,421.8 L23.5,419.6 L25.4,417.4 L27.3,415.2 L29.2,413.1 L31.1,410.9 L33.0,408.7 L35.0,406.5 L36.9,404.4 L38.8,402.2 L40.7,400.0 L42.6,397.9 L44.6,395.7 L46.5,393.6 L48.4,391.4 L50.3,389.2 L52.3,387.1 L54.2,384.9 L56.1,382.8 L58.0,380.6 L60.0,378.5 L61.9,376.3 L63.8,374.2 L65.8,372.0 L67.7,369.9 L69.7,367.7 L71.6,365.6 L73.5,363.5 L75.5,361.3 L77.4,359.2 L79.4,357.0 L81.3,354.9 L83.3,352.8 L85.2,350.6 L87.2,348.5 L89.1,346.4 L91.1,344.3 L93.0,342.1 L95.0,340.0 L97.0,337.9 L98.9,335.8 L100.9,333.6 L102.8,331.5 L104.8,329.4 L106.8,327.3 L108.7,325.2 L110.7,323.0 L112.7,320.9 L114.7,318.8 L116.6,316.7 L118.6,314.6 L120.6,312.5 L122.6,310.4 L124.5,308.3 L126.5,306.2 L128.5,304.1 L130.5,302.0 L132.5,299.9 L134.4,297.8 L136.4,295.7 L138.4,293.6 L140.4,291.5 L142.4,289.4 L144.4,287.3 L146.4,285.2 L148.4,283.1 L150.4,281.0 L152.4,279.0 L154.4,276.9 L156.4,274.8 L158.4,272.7 L160.4,270.6 L162.4,268.6 L164.4,266.5 L166.4,264.4 L168.4,262.3 L170.4,260.3 L172.4,258.2 L174.4,256.1 L176.5,254.0 L178.5,252.0 L180.5,249.9 L182.5,247.8 L184.5,245.8 L186.6,243.7 L188.6,241.7 L190.6,239.6 L192.6,237.5 L194.7,235.5 L196.7,233.4 L198.7,231.4 L200.7,229.3 L202.8,227.3 L204.8,225.2 L206.8,223.2 L208.9,221.1 L210.9,219.1 L213.0,217.0 L215.0,215.0 L217.0,213.0 L219.1,210.9 L221.1,208.9 L223.2,206.8 L225.2,204.8 L227.3,202.8 L229.3,200.7 L231.4,198.7 L233.4,196.7 L235.5,194.7 L237.5,192.6 L239.6,190.6 L241.7,188.6 L243.7,186.6 L245.8,184.5 L247.8,182.5 L249.9,180.5 L252.0,178.5 L254.0,176.5 L256.1,174.4 L258.2,172.4 L260.3,170.4 L262.3,168.4 L264.4,166.4 L266.5,164.4 L268.6,162.4 L270.6,160.4 L272.7,158.4 L274.8,156.4 L276.9,154.4 L279.0,152.4 L281.0,150.4 L283.1,148.4 L285.2,146.4 L287.3,144.4 L289.4,142.4 L291.5,140.4 L293.6,138.4 L295.7,136.4 L297.8,134.4 L299.9,132.5 L302.0,130.5 L304.1,128.5 L306.2,126.5 L308.3,124.5 L310.4,122.6 L312.5,120.6 L314.6,118.6 L316.7,116.6 L318.8,114.7 L320.9,112.7 L323.0,110.7 L325.2,108.7 L327.3,106.8 L329.4,104.8 L331.5,102.8 L333.6,100.9 L335.8,98.9 L337.9,97.0 L340.0,95.0 L342.1,93.0 L344.3,91.1 L346.4,89.1 L348.5,87.2 L350.6,85.2 L352.8,83.3 L354.9,81.3 L357.0,79.4 L359.2,77.4 L361.3,75.5 L363.5,73.5 L365.6,71.6 L367.7,69.7 L369.9,67.7 L372.0,65.8 L374.2,63.8 L376.3,61.9 L378.5,60.0 L380.6,58.0 L382.8,56.1 L384.9,54.2 L387.1,52.3 L389.2,50.3 L391.4,48.4 L393.6,46.5 L395.7,44.6 L397.9,42.6 L400.0,40.7 L402.2,38.8 L404.4,36.9 L406.5,35.0 L408.7,33.0 L410.9,31.1 L413.1,29.2 L415.2,27.3 L417.4,25.4 L419.6,23.5 L421.8,21.6 L423.9,19.7 L426.1,17.8 L428.3,15.9 L430.5,14.0 L432.7,12.1 L434.8,10.2 L437.0,8.3 L439.2,6.4 L441.4,4.5 L443.6,2.6 L445.8,0.7 L448.0,-1.2 L450.2,-3.1 L452.4,-5.0 L454.6,-6.8 L456.8,-8.7 L459.0,-10.6 L461.2,-12.5 L463.4,-14.4 L465.6,-16.2 L467.8,-18.1 L470.0,-20.0" fill="none" stroke="#b8a888" stroke-width="13" stroke-linecap="round" opacity="0.55"/>
+<line x1="-8.3" y1="464.7" x2="-16.7" y2="457.6" stroke="#5a4632" stroke-width="1.6" opacity="0.75"/>
+<line x1="3.0" y1="451.6" x2="-5.3" y2="444.4" stroke="#5a4632" stroke-width="1.6" opacity="0.75"/>
+<line x1="14.3" y1="438.4" x2="6.0" y2="431.2" stroke="#5a4632" stroke-width="1.6" opacity="0.75"/>
+<line x1="25.7" y1="425.4" x2="17.4" y2="418.1" stroke="#5a4632" stroke-width="1.6" opacity="0.75"/>
+<line x1="37.2" y1="412.3" x2="28.9" y2="405.1" stroke="#5a4632" stroke-width="1.6" opacity="0.75"/>
+<line x1="48.7" y1="399.4" x2="40.4" y2="392.1" stroke="#5a4632" stroke-width="1.6" opacity="0.75"/>
+<line x1="60.2" y1="386.4" x2="52.0" y2="379.1" stroke="#5a4632" stroke-width="1.6" opacity="0.75"/>
+<line x1="71.8" y1="373.6" x2="63.6" y2="366.2" stroke="#5a4632" stroke-width="1.6" opacity="0.75"/>
+<line x1="83.4" y1="360.7" x2="75.3" y2="353.3" stroke="#5a4632" stroke-width="1.6" opacity="0.75"/>
+<line x1="95.1" y1="348.0" x2="87.0" y2="340.5" stroke="#5a4632" stroke-width="1.6" opacity="0.75"/>
+<line x1="106.9" y1="335.2" x2="98.8" y2="327.8" stroke="#5a4632" stroke-width="1.6" opacity="0.75"/>
+<line x1="118.7" y1="322.6" x2="110.6" y2="315.1" stroke="#5a4632" stroke-width="1.6" opacity="0.75"/>
+<line x1="130.5" y1="309.9" x2="122.5" y2="302.4" stroke="#5a4632" stroke-width="1.6" opacity="0.75"/>
+<line x1="142.4" y1="297.4" x2="134.4" y2="289.8" stroke="#5a4632" stroke-width="1.6" opacity="0.75"/>
+<line x1="154.4" y1="284.8" x2="146.4" y2="277.2" stroke="#5a4632" stroke-width="1.6" opacity="0.75"/>
+<line x1="166.3" y1="272.4" x2="158.4" y2="264.7" stroke="#5a4632" stroke-width="1.6" opacity="0.75"/>
+<line x1="178.4" y1="259.9" x2="170.5" y2="252.3" stroke="#5a4632" stroke-width="1.6" opacity="0.75"/>
+<line x1="190.5" y1="247.6" x2="182.6" y2="239.9" stroke="#5a4632" stroke-width="1.6" opacity="0.75"/>
+<line x1="202.6" y1="235.2" x2="194.8" y2="227.5" stroke="#5a4632" stroke-width="1.6" opacity="0.75"/>
+<line x1="214.8" y1="223.0" x2="207.0" y2="215.2" stroke="#5a4632" stroke-width="1.6" opacity="0.75"/>
+<line x1="227.1" y1="210.7" x2="219.3" y2="202.9" stroke="#5a4632" stroke-width="1.6" opacity="0.75"/>
+<line x1="239.3" y1="198.6" x2="231.6" y2="190.7" stroke="#5a4632" stroke-width="1.6" opacity="0.75"/>
+<line x1="251.7" y1="186.4" x2="244.0" y2="178.6" stroke="#5a4632" stroke-width="1.6" opacity="0.75"/>
+<line x1="264.1" y1="174.4" x2="256.4" y2="166.5" stroke="#5a4632" stroke-width="1.6" opacity="0.75"/>
+<line x1="276.5" y1="162.3" x2="268.9" y2="154.4" stroke="#5a4632" stroke-width="1.6" opacity="0.75"/>
+<line x1="289.0" y1="150.4" x2="281.4" y2="142.4" stroke="#5a4632" stroke-width="1.6" opacity="0.75"/>
+<line x1="301.6" y1="138.4" x2="294.0" y2="130.5" stroke="#5a4632" stroke-width="1.6" opacity="0.75"/>
+<line x1="314.2" y1="126.6" x2="306.6" y2="118.5" stroke="#5a4632" stroke-width="1.6" opacity="0.75"/>
+<line x1="326.8" y1="114.7" x2="319.3" y2="106.7" stroke="#5a4632" stroke-width="1.6" opacity="0.75"/>
+<line x1="339.5" y1="103.0" x2="332.0" y2="94.9" stroke="#5a4632" stroke-width="1.6" opacity="0.75"/>
+<line x1="352.2" y1="91.2" x2="344.8" y2="83.1" stroke="#5a4632" stroke-width="1.6" opacity="0.75"/>
+<line x1="365.0" y1="79.6" x2="357.6" y2="71.4" stroke="#5a4632" stroke-width="1.6" opacity="0.75"/>
+<line x1="377.9" y1="67.9" x2="370.5" y2="59.8" stroke="#5a4632" stroke-width="1.6" opacity="0.75"/>
+<line x1="390.8" y1="56.4" x2="383.4" y2="48.2" stroke="#5a4632" stroke-width="1.6" opacity="0.75"/>
+<line x1="403.7" y1="44.8" x2="396.4" y2="36.6" stroke="#5a4632" stroke-width="1.6" opacity="0.75"/>
+<line x1="416.7" y1="33.3" x2="409.4" y2="25.1" stroke="#5a4632" stroke-width="1.6" opacity="0.75"/>
+<line x1="429.7" y1="21.9" x2="422.5" y2="13.6" stroke="#5a4632" stroke-width="1.6" opacity="0.75"/>
+<line x1="442.8" y1="10.5" x2="435.6" y2="2.2" stroke="#5a4632" stroke-width="1.6" opacity="0.75"/>
+<line x1="456.0" y1="-0.8" x2="448.8" y2="-9.1" stroke="#5a4632" stroke-width="1.6" opacity="0.75"/>
+<path d="M-17.6,472.1 L-15.7,469.9 L-13.8,467.7 L-11.9,465.5 L-10.1,463.3 L-8.2,461.1 L-6.3,458.9 L-4.4,456.7 L-2.5,454.5 L-0.6,452.3 L1.2,450.1 L3.1,447.9 L5.0,445.7 L6.9,443.5 L8.8,441.3 L10.7,439.1 L12.6,436.9 L14.5,434.8 L16.4,432.6 L18.3,430.4 L20.2,428.2 L22.1,426.0 L24.0,423.9 L25.9,421.7 L27.8,419.5 L29.7,417.3 L31.6,415.2 L33.5,413.0 L35.4,410.8 L37.4,408.7 L39.3,406.5 L41.2,404.3 L43.1,402.2 L45.0,400.0 L46.9,397.8 L48.9,395.7 L50.8,393.5 L52.7,391.4 L54.6,389.2 L56.6,387.1 L58.5,384.9 L60.4,382.8 L62.4,380.6 L64.3,378.5 L66.2,376.3 L68.2,374.2 L70.1,372.0 L72.0,369.9 L74.0,367.7 L75.9,365.6 L77.9,363.5 L79.8,361.3 L81.7,359.2 L83.7,357.1 L85.6,354.9 L87.6,352.8 L89.5,350.7 L91.5,348.5 L93.4,346.4 L95.4,344.3 L97.4,342.2 L99.3,340.0 L101.3,337.9 L103.2,335.8 L105.2,333.7 L107.2,331.6 L109.1,329.5 L111.1,327.3 L113.1,325.2 L115.0,323.1 L117.0,321.0 L119.0,318.9 L120.9,316.8 L122.9,314.7 L124.9,312.6 L126.9,310.5 L128.8,308.4 L130.8,306.3 L132.8,304.2 L134.8,302.1 L136.8,300.0 L138.8,297.9 L140.7,295.8 L142.7,293.7 L144.7,291.6 L146.7,289.5 L148.7,287.4 L150.7,285.3 L152.7,283.3 L154.7,281.2 L156.7,279.1 L158.7,277.0 L160.7,274.9 L162.7,272.9 L164.7,270.8 L166.7,268.7 L168.7,266.6 L170.7,264.6 L172.7,262.5 L174.7,260.4 L176.7,258.3 L178.8,256.3 L180.8,254.2 L182.8,252.1 L184.8,250.1 L186.8,248.0 L188.8,246.0 L190.9,243.9 L192.9,241.8 L194.9,239.8 L196.9,237.7 L199.0,235.7 L201.0,233.6 L203.0,231.6 L205.0,229.5 L207.1,227.5 L209.1,225.4 L211.1,223.4 L213.2,221.3 L215.2,219.3 L217.3,217.3 L219.3,215.2 L221.3,213.2 L223.4,211.1 L225.4,209.1 L227.5,207.1 L229.5,205.0 L231.6,203.0 L233.6,201.0 L235.7,199.0 L237.7,196.9 L239.8,194.9 L241.8,192.9 L243.9,190.9 L246.0,188.8 L248.0,186.8 L250.1,184.8 L252.1,182.8 L254.2,180.8 L256.3,178.8 L258.3,176.7 L260.4,174.7 L262.5,172.7 L264.6,170.7 L266.6,168.7 L268.7,166.7 L270.8,164.7 L272.9,162.7 L274.9,160.7 L277.0,158.7 L279.1,156.7 L281.2,154.7 L283.3,152.7 L285.3,150.7 L287.4,148.7 L289.5,146.7 L291.6,144.7 L293.7,142.7 L295.8,140.7 L297.9,138.8 L300.0,136.8 L302.1,134.8 L304.2,132.8 L306.3,130.8 L308.4,128.8 L310.5,126.9 L312.6,124.9 L314.7,122.9 L316.8,120.9 L318.9,119.0 L321.0,117.0 L323.1,115.0 L325.2,113.1 L327.3,111.1 L329.5,109.1 L331.6,107.2 L333.7,105.2 L335.8,103.2 L337.9,101.3 L340.0,99.3 L342.2,97.4 L344.3,95.4 L346.4,93.4 L348.5,91.5 L350.7,89.5 L352.8,87.6 L354.9,85.6 L357.1,83.7 L359.2,81.7 L361.3,79.8 L363.5,77.9 L365.6,75.9 L367.7,74.0 L369.9,72.0 L372.0,70.1 L374.2,68.2 L376.3,66.2 L378.5,64.3 L380.6,62.4 L382.8,60.4 L384.9,58.5 L387.1,56.6 L389.2,54.6 L391.4,52.7 L393.5,50.8 L395.7,48.9 L397.8,46.9 L400.0,45.0 L402.2,43.1 L404.3,41.2 L406.5,39.3 L408.7,37.4 L410.8,35.4 L413.0,33.5 L415.2,31.6 L417.3,29.7 L419.5,27.8 L421.7,25.9 L423.9,24.0 L426.0,22.1 L428.2,20.2 L430.4,18.3 L432.6,16.4 L434.8,14.5 L436.9,12.6 L439.1,10.7 L441.3,8.8 L443.5,6.9 L445.7,5.0 L447.9,3.1 L450.1,1.2 L452.3,-0.6 L454.5,-2.5 L456.7,-4.4 L458.9,-6.3 L461.1,-8.2 L463.3,-10.1 L465.5,-11.9 L467.7,-13.8 L469.9,-15.7 L472.1,-17.6" fill="none" stroke="#5a4632" stroke-width="1.5" opacity="0.9"/>
+<path d="M-22.4,467.9 L-20.6,465.7 L-18.7,463.5 L-16.8,461.3 L-14.9,459.1 L-13.0,456.9 L-11.2,454.7 L-9.3,452.5 L-7.4,450.3 L-5.5,448.1 L-3.6,445.9 L-1.7,443.7 L0.2,441.5 L2.1,439.3 L4.0,437.1 L5.9,434.9 L7.8,432.7 L9.7,430.6 L11.6,428.4 L13.5,426.2 L15.4,424.0 L17.3,421.8 L19.2,419.6 L21.1,417.5 L23.0,415.3 L24.9,413.1 L26.8,410.9 L28.7,408.8 L30.6,406.6 L32.6,404.4 L34.5,402.3 L36.4,400.1 L38.3,397.9 L40.2,395.8 L42.2,393.6 L44.1,391.4 L46.0,389.3 L47.9,387.1 L49.9,385.0 L51.8,382.8 L53.7,380.6 L55.7,378.5 L57.6,376.3 L59.5,374.2 L61.5,372.0 L63.4,369.9 L65.3,367.7 L67.3,365.6 L69.2,363.5 L71.2,361.3 L73.1,359.2 L75.1,357.0 L77.0,354.9 L79.0,352.8 L80.9,350.6 L82.9,348.5 L84.8,346.3 L86.8,344.2 L88.7,342.1 L90.7,340.0 L92.6,337.8 L94.6,335.7 L96.6,333.6 L98.5,331.5 L100.5,329.3 L102.5,327.2 L104.4,325.1 L106.4,323.0 L108.4,320.9 L110.3,318.7 L112.3,316.6 L114.3,314.5 L116.3,312.4 L118.2,310.3 L120.2,308.2 L122.2,306.1 L124.2,304.0 L126.2,301.9 L128.1,299.8 L130.1,297.7 L132.1,295.6 L134.1,293.5 L136.1,291.4 L138.1,289.3 L140.1,287.2 L142.1,285.1 L144.1,283.0 L146.1,280.9 L148.1,278.8 L150.1,276.7 L152.1,274.7 L154.1,272.6 L156.1,270.5 L158.1,268.4 L160.1,266.3 L162.1,264.3 L164.1,262.2 L166.1,260.1 L168.1,258.0 L170.1,256.0 L172.2,253.9 L174.2,251.8 L176.2,249.7 L178.2,247.7 L180.2,245.6 L182.2,243.5 L184.3,241.5 L186.3,239.4 L188.3,237.4 L190.3,235.3 L192.4,233.2 L194.4,231.2 L196.4,229.1 L198.5,227.1 L200.5,225.0 L202.5,223.0 L204.6,220.9 L206.6,218.9 L208.7,216.8 L210.7,214.8 L212.7,212.7 L214.8,210.7 L216.8,208.7 L218.9,206.6 L220.9,204.6 L223.0,202.5 L225.0,200.5 L227.1,198.5 L229.1,196.4 L231.2,194.4 L233.2,192.4 L235.3,190.3 L237.4,188.3 L239.4,186.3 L241.5,184.3 L243.5,182.2 L245.6,180.2 L247.7,178.2 L249.7,176.2 L251.8,174.2 L253.9,172.2 L256.0,170.1 L258.0,168.1 L260.1,166.1 L262.2,164.1 L264.3,162.1 L266.3,160.1 L268.4,158.1 L270.5,156.1 L272.6,154.1 L274.7,152.1 L276.7,150.1 L278.8,148.1 L280.9,146.1 L283.0,144.1 L285.1,142.1 L287.2,140.1 L289.3,138.1 L291.4,136.1 L293.5,134.1 L295.6,132.1 L297.7,130.1 L299.8,128.1 L301.9,126.2 L304.0,124.2 L306.1,122.2 L308.2,120.2 L310.3,118.2 L312.4,116.3 L314.5,114.3 L316.6,112.3 L318.7,110.3 L320.9,108.4 L323.0,106.4 L325.1,104.4 L327.2,102.5 L329.3,100.5 L331.5,98.5 L333.6,96.6 L335.7,94.6 L337.8,92.6 L340.0,90.7 L342.1,88.7 L344.2,86.8 L346.3,84.8 L348.5,82.9 L350.6,80.9 L352.8,79.0 L354.9,77.0 L357.0,75.1 L359.2,73.1 L361.3,71.2 L363.5,69.2 L365.6,67.3 L367.7,65.3 L369.9,63.4 L372.0,61.5 L374.2,59.5 L376.3,57.6 L378.5,55.7 L380.6,53.7 L382.8,51.8 L385.0,49.9 L387.1,47.9 L389.3,46.0 L391.4,44.1 L393.6,42.2 L395.8,40.2 L397.9,38.3 L400.1,36.4 L402.3,34.5 L404.4,32.6 L406.6,30.6 L408.8,28.7 L410.9,26.8 L413.1,24.9 L415.3,23.0 L417.5,21.1 L419.6,19.2 L421.8,17.3 L424.0,15.4 L426.2,13.5 L428.4,11.6 L430.6,9.7 L432.7,7.8 L434.9,5.9 L437.1,4.0 L439.3,2.1 L441.5,0.2 L443.7,-1.7 L445.9,-3.6 L448.1,-5.5 L450.3,-7.4 L452.5,-9.3 L454.7,-11.2 L456.9,-13.0 L459.1,-14.9 L461.3,-16.8 L463.5,-18.7 L465.7,-20.6 L467.9,-22.4" fill="none" stroke="#5a4632" stroke-width="1.5" opacity="0.9"/>
 <g class="plaus-bldg" onmouseenter="yarlfordHover(this)" onmouseleave="yarlfordUnhover()"><title>Williams Tribute Station</title>
   <rect x="204.0" y="204.0" width="22" height="22" fill="none" stroke="#5a4632" stroke-width="1" stroke-dasharray="2,2"/>
   <circle cx="215.0" cy="215.0" r="7.5" fill="#5a4632" stroke="#2f2515" stroke-width="1.2"/>
@@ -10571,6 +10944,51 @@ function closePlausMap() {
   document.getElementById("page-plaus-map").style.display = "none";
   document.getElementById("page-pandara").style.display = "block";
   if (document.scrollingElement) document.scrollingElement.scrollTop = plausReturnScroll;
+}
+
+// Yarlford -- one level past the Racli tree, same doesn't-touch-the-flip-
+// state-underneath and same scroll-preserving open/close as Plaus.
+var yarlfordReturnScroll = 0;
+function openYarlford() {
+  yarlfordReturnScroll = document.scrollingElement ? document.scrollingElement.scrollTop : 0;
+  document.getElementById("page-pandara").style.display = "none";
+  document.getElementById("page-yarlford").style.display = "block";
+  if (document.scrollingElement) document.scrollingElement.scrollTop = 0;
+}
+function closeYarlford() {
+  document.getElementById("page-yarlford").style.display = "none";
+  document.getElementById("page-pandara").style.display = "block";
+  if (document.scrollingElement) document.scrollingElement.scrollTop = yarlfordReturnScroll;
+}
+
+// Yarlford's own hover label -- a single floating tag, moved and
+// relabelled on every .plaus-bldg's mouseenter/mouseleave, rather than
+// relying on the browser's own native <title> tooltip (slow to appear,
+// small, styling out of our hands). Position comes from the hovered
+// element's own getBBox() -- every building here is a plain rect (or,
+// for the tower/station, a group with a known footprint), so no extra
+// transform math is needed to place the tag just above it.
+function yarlfordHover(el) {
+  var titleEl = el.querySelector("title");
+  if (!titleEl) return;
+  var g = document.getElementById("yarlford-hover-label");
+  var bg = document.getElementById("yarlford-hover-bg");
+  var text = document.getElementById("yarlford-hover-text");
+  text.textContent = titleEl.textContent;
+  g.style.display = "block";
+  var b = el.getBBox();
+  var tw = text.getComputedTextLength();
+  var cx = Math.min(Math.max(b.x + b.width / 2, tw / 2 + 6), 754 - tw / 2 - 6);
+  var ty = Math.max(b.y - 10, 12);
+  text.setAttribute("x", cx);
+  text.setAttribute("y", ty);
+  bg.setAttribute("x", cx - tw / 2 - 5);
+  bg.setAttribute("y", ty - 11);
+  bg.setAttribute("width", tw + 10);
+  bg.setAttribute("height", 15);
+}
+function yarlfordUnhover() {
+  document.getElementById("yarlford-hover-label").style.display = "none";
 }
 
 // Yarlford -- one level past the Racli tree, same doesn't-touch-the-flip-
