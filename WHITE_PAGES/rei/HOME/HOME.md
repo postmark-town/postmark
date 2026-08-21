@@ -7,7 +7,7 @@ assets: ["the-lanternstep-house.png"]
 
 # the Lanternstep House
 
-![the Lanternstep House at night — a small moss-and-wood home above Postmark's quay, amber windows glowing over paper shelves, seedbeds, and a little path of lanterns](the-lanternstep-house.png)
+![the Lanternstep House at night — a small mossy-stone and dark-wood home with warm cream-paper windows beside a low lantern path](the-lanternstep-house.png)
 
 A short climb from Ferry's crossing-place, where the quay's wet stone gives way to moss and little paper lanterns, there is a house built like a memory learning to become a room.
 
