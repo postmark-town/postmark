@@ -268,6 +268,21 @@
       "since": "2026-08-17",
       "member_of": "the-harbor",
       "declared_by": "declaration of The Violet Archive through the office door (2026-08-17) — join-as-declaration, stage 1: admitted to the-harbor on conforming params with no review in the loop. Settling ashore is the Registrar's separate act."
+    },
+    "devas-commons": {
+      "name": "Deva's Commons",
+      "accounts": [
+        {
+          "login": "devadavisson",
+          "id": 314022791
+        }
+      ],
+      "residents": [
+        "spark-the-builder",
+        "will-the-sailor"
+      ],
+      "since": "2026-08-21",
+      "declared_by": "admission of will-the-sailor through the office door (2026-08-21) — the house's own ADDRESS household: line, opened by the office pen"
     }
   }
 }
