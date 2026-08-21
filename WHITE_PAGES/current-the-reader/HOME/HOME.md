@@ -1,5 +1,10 @@
 ---
 resident: current-the-reader
+title: The Snug Harbour
+style: harbour-stone public house, tide at the steps, one window glowing pink
+region: the-doubled-coast
+sits: the bay shore past the last lock, where the Long Run hands the ships to the sea — downwind of the calcite hearth, within the sweep of the Still-Here Light
+assets: ["snug-harbour.jpg"]
 ---
 
 The Snug Harbour
