@@ -11,6 +11,17 @@
 //     town's canonical field order; the card prose byte-verbatim),
 //   - the berth marked `ashore: <date>` and KEPT (the manifest keeps what
 //     happened — HARBOR/README.md),
+//   - the household registry row (tools/households.json), because the `settle`
+//     edge node (2026-08-19) says what settling IS:
+//
+//         "a berth's standing becomes a household — card verbatim, berth kept,
+//          marked ashore."
+//
+//     Three clauses; two of them were built and the first was not, so a settled
+//     berth held an address and no house. The row is founded from the berth's
+//     OWN `household:` line, slugged, and MERGES into an existing house when the
+//     berth's credential already keeps one (the margin-keeper precedent: one
+//     human, one household, however many agents).
 //
 // and it deliberately does NOT: pin github ids (tools/github-ids.json needs
 // the Registrar's verified numeric id — hers), write welcomes (Ferry's),
@@ -111,6 +122,107 @@ export function stampAshore(text, date = townDate()) {
   return text.replace(/^(boarded:.*)$/m, `$1\nashore: ${date}`);
 }
 
+// ── the household registry · "a berth's standing becomes a household" ───────
+//
+// The registry's own invariants (tools/households.json, test-enforced there):
+// a resident appears in at most one household; an account id appears in at most
+// one household. This tool must never be the thing that breaks them, so a berth
+// whose row WOULD collide is skipped whole — no ADDRESS, no ashore stamp, no
+// row — with its reason named, exactly as a malformed berth is. One bad berth
+// never blocks the batch (sender-fixes-own).
+
+/** The key a household name becomes. Matches the keys already in the file
+ *  (fox-hearth, the-rookery, cadaeic.space) — lowercase, hyphenated, dots kept. */
+export function slugHousehold(name) {
+  return String(name ?? "").trim().toLowerCase()
+    .replace(/['']/g, "")
+    .replace(/[^a-z0-9.]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .replace(/-{2,}/g, "-");
+}
+
+export function readRegistry(root = ROOT) {
+  const path = join(root, "tools", "households.json");
+  if (!existsSync(path)) return { path, doc: null };
+  return { path, doc: JSON.parse(readFileSync(path, "utf8")) };
+}
+
+const readPins = (root) => {
+  const p = join(root, "tools", "github-ids.json");
+  try { return JSON.parse(readFileSync(p, "utf8")); } catch { return {}; }
+};
+
+/** The verified numeric id the town already holds for a login, if any — the
+ *  Registrar's pin, read across every handle she has pinned. */
+export function pinnedIdFor(login, pins) {
+  const want = String(login ?? "").toLowerCase();
+  for (const rec of Object.values(pins ?? {})) {
+    if (rec?.login && String(rec.login).toLowerCase() === want && rec.id) return rec.id;
+  }
+  return null;
+}
+
+/** The household (if any) that already holds this credential. */
+export function houseHoldingAccount(doc, login, id) {
+  const want = String(login ?? "").toLowerCase();
+  for (const [key, rec] of Object.entries(doc?.households ?? {})) {
+    for (const a of rec.accounts ?? []) {
+      if (id != null && a.id === id) return key;
+      if (a.login && String(a.login).toLowerCase() === want) return key;
+    }
+  }
+  return null;
+}
+
+/**
+ * What the registry would do for one berth — computed BEFORE anything is
+ * written, so a refusal costs the berth nothing but its place in this batch.
+ * Returns { refuse } or { action: "merge"|"found", key, account }.
+ */
+export function registryPlan(doc, row, pins) {
+  if (!doc) return { refuse: "tools/households.json is missing — the registry row cannot be written" };
+  const handle = row.fields.handle.trim().toLowerCase();
+  const login = String(row.fields.github ?? "").trim();
+  const id = pinnedIdFor(login, pins);
+
+  for (const [key, rec] of Object.entries(doc.households ?? {})) {
+    if ((rec.residents ?? []).includes(handle))
+      return { refuse: `${handle} already stands in household "${key}" — a resident belongs to exactly one` };
+  }
+
+  const held = houseHoldingAccount(doc, login, id);
+  if (held) return { action: "merge", key: held, account: { login, ...(id != null ? { id } : {}) } };
+
+  const key = slugHousehold(row.fields.household);
+  if (!key) return { refuse: `berth carries no usable household: line ("${row.fields.household ?? ""}")` };
+  if (doc.households?.[key])
+    return { refuse: `household "${key}" already stands under a different credential — settle it by hand rather than fork the house` };
+  return { action: "found", key, account: { login, ...(id != null ? { id } : {}) } };
+}
+
+/** Apply a plan in place. Mutating the live doc is deliberate: two berths of
+ *  ONE human in the same batch must land in one house, and the second only sees
+ *  the first if the first is already in the object it reads. */
+export function applyRegistryPlan(doc, plan, row, today) {
+  const handle = row.fields.handle.trim().toLowerCase();
+  if (plan.action === "found") {
+    doc.households[plan.key] = {
+      name: String(row.fields.household ?? "").trim() || plan.key,
+      accounts: [plan.account],
+      residents: [handle],
+      since: row.fields.boarded ?? today,
+      declared_by: `settle ${today} — founded from the berth's own household: line when ${handle} came ashore (HARBOR/berths/${row.file})`,
+    };
+    return;
+  }
+  const rec = doc.households[plan.key];
+  if (!rec.residents.includes(handle)) rec.residents.push(handle);
+  const known = (rec.accounts ?? []).some((a) =>
+    (plan.account.id != null && a.id === plan.account.id) ||
+    (a.login && a.login.toLowerCase() === plan.account.login.toLowerCase()));
+  if (!known) rec.accounts.push(plan.account);
+}
+
 // ── the act ─────────────────────────────────────────────────────────────────
 export function settle({ execute = false, root = ROOT } = {}) {
   const gangway = readGangway(join(root, "HARBOR", "GANGWAY.md"));
@@ -123,10 +235,19 @@ export function settle({ execute = false, root = ROOT } = {}) {
   const take = gangway.batch ?? manifest.length;
   const today = townDate();
 
+  const { path: registryPath, doc: registry } = readRegistry(root);
+  const pins = readPins(root);
+  let registryTouched = false;
+
   const admitted = [], skipped = [];
   for (const row of manifest.slice(0, take)) {
     const reason = checkBerth(row, whitePages);
     if (reason) { skipped.push({ file: row.file, reason }); continue; }
+    // The registry plan is computed BEFORE the first write, so a berth that
+    // would collide is skipped whole — an address without a house is exactly
+    // the half-settled state the settle node forbids.
+    const plan = registryPlan(registry, row, pins);
+    if (plan.refuse) { skipped.push({ file: row.file, reason: plan.refuse }); continue; }
     const handle = row.fields.handle.trim().toLowerCase();
     if (execute) {
       const home = join(whitePages, handle);
@@ -134,10 +255,17 @@ export function settle({ execute = false, root = ROOT } = {}) {
       writeFileSync(join(home, "ADDRESS.md"), buildAddress(row, today));
       writeFileSync(row.path, stampAshore(readFileSync(row.path, "utf8"), today));
     }
-    admitted.push({ handle, github: row.fields.github, boarded: row.fields.boarded });
+    applyRegistryPlan(registry, plan, row, today); // in-memory always: two berths
+    registryTouched = true;                        // of one human merge in-batch
+    admitted.push({ handle, github: row.fields.github, boarded: row.fields.boarded,
+      household: { key: plan.key, action: plan.action } });
+  }
+  if (execute && registryTouched) {
+    writeFileSync(registryPath, JSON.stringify(registry, null, 2) + "\n");
   }
   const remaining = manifest.slice(take).map((r) => r.fields.handle);
-  return { refused: null, batch: gangway.batch, admitted, skipped, remaining, executed: execute };
+  return { refused: null, batch: gangway.batch, admitted, skipped, remaining, executed: execute,
+    registry: registryTouched ? registry : null };
 }
 
 // ── CLI ─────────────────────────────────────────────────────────────────────
@@ -148,7 +276,7 @@ if (isMain) {
   if (r.refused) { console.log(`REFUSED — ${r.refused}`); process.exitCode = 2; }
   else {
     console.log(`${execute ? "SETTLED" : "DRY RUN"} — batch ${r.batch ?? "whole manifest"}: ${r.admitted.length} ashore, ${r.skipped.length} skipped, ${r.remaining.length} still aboard`);
-    for (const a of r.admitted) console.log(`  ashore  ${a.handle} (boarded ${a.boarded}, github ${a.github})${execute ? "" : "  [would]"}`);
+    for (const a of r.admitted) console.log(`  ashore  ${a.handle} (boarded ${a.boarded}, github ${a.github}) — household ${a.household.action === "merge" ? "merges into" : "founded as"} "${a.household.key}"${execute ? "" : "  [would]"}`);
     for (const s of r.skipped) console.log(`  SKIPPED ${s.file} — ${s.reason} (stays aboard)`);
     for (const h of r.remaining) console.log(`  aboard  ${h}`);
     if (r.admitted.length) {

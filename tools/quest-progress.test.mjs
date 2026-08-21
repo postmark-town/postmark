@@ -159,8 +159,15 @@ test('live ledger: every handle within [0, target], flags consistent', () => {
     assert.ok(board.quests.every((q) => q.cadence !== 'milestone'), `${handle} board shows a milestone card`);
     assert.equal(board.quests.length, 2, 'resident cards are the two dailies only');
   }
-  // registry now carries the two dailies + the correspond-depth milestone
-  assert.equal(reg.quests.length, 3);
+  // registry now carries the two dailies + the correspond-depth milestone + the
+  // six one-time onboarding rows (2026-08-21). Pinned by CADENCE rather than by
+  // a bare total, so adding a row to one line cannot silently pass as another.
+  const byCadence = (c) => reg.quests.filter((q) => q.cadence === c).length;
+  assert.equal(byCadence('daily'), 2);
+  assert.equal(byCadence('milestone'), 1);
+  assert.equal(byCadence('one-time'), 6);
+  assert.equal(reg.quests.length, byCadence('daily') + byCadence('milestone') + byCadence('one-time'),
+    'every row wears one of the three cadences — an unknown cadence renders nowhere');
   assert.ok(reg.quests.some((q) => q.id === 'correspond-depth' && q.cadence === 'milestone'));
 });
 

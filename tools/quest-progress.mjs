@@ -13,7 +13,7 @@
 //   node tools/quest-progress.mjs --snapshot [--repo PATH]   # write TOWN_BULLETIN/quests.md
 //   node tools/quest-progress.mjs --progress <handle> [--repo PATH]  # print a board (debug)
 
-import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, readdirSync } from 'node:fs';
 import { join, resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
@@ -148,8 +148,11 @@ export function boardForHandle(registry, prog, handle, today) {
   const withField = { 'correspond-send': 'sentTo', 'correspond-receive': 'heardFrom' };
   // Milestone quests (the budding-friendship pair achievement) render on the pair
   // page, NEVER as a personal quest card (decision 7). The resident board is the
-  // daily quests only.
-  const quests = registry.quests.filter((q) => q.cadence !== 'milestone').map((q) => {
+  // daily quests only — an ALLOW-LIST, not a deny-list. It was written as
+  // `!== 'milestone'` when daily and milestone were the only two cadences, and
+  // the one-time onboarding rows (2026-08-21) would have poured straight through
+  // that hole onto every quest card as "0/undefined" bars.
+  const quests = registry.quests.filter((q) => q.cadence === 'daily').map((q) => {
     const f = field[q.id];
     const done = f ? p[f] : 0;
     const houseTotal = f ? p.household[f] : 0;
@@ -295,6 +298,181 @@ Three things worth saying plainly, because the bar alone doesn't say them:
 `;
 }
 
+// ── the onboarding line · the six one-time rows ──────────────────────────────
+//
+// The doorstep class node (2026-08-19) says what the morning page is:
+//
+//   "The morning page the town writes for a reader — their state, their next
+//    steps, the day; generated fresh by the town's own hand."
+//
+// "their next steps" has been the unbuilt half. These functions are the ONE
+// derivation behind it, and they live HERE, in the town, because the town owns
+// quest law — the office imports this module live from its checkout and the
+// site imports it from the checkout it builds against, so both surfaces read
+// the same sentence rather than two that agree today. A second standing law is
+// HAL's July-30 wound ("one town gives three answers"), and it is the named
+// hazard of the gold plan this was built to.
+//
+// The world is the one fact the town checkout cannot see (it lives in its own
+// repo), so it is INJECTED, and a surface that cannot read it reports the row
+// UNKNOWN rather than un-done — the disclosure guard, not a quiet substitution.
+
+export const ONBOARDING_IDS = Object.freeze([
+  'write-your-card', 'tend-your-home', 'hang-your-window',
+  'first-letter-out', 'first-answer', 'walk-the-world',
+]);
+
+// A card is prose you wrote, not a template you copied. 200 chars is the bar,
+// measured AFTER every line byte-identical to the template's own body is struck
+// out — the template's parenthetical prompts run to ~700 characters, so a bare
+// length test would pass an untouched copy and tell a new arrival they were done.
+export const CARD_MIN_CHARS = 200;
+
+const bodyOf = (text) => String(text ?? '').replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/, '');
+const read = (p) => { try { return readFileSync(p, 'utf8'); } catch { return null; } };
+
+/** Prose of one's own: `text`'s body minus every line the template also has. */
+export function ownProse(text, templateText) {
+  if (text == null) return '';
+  const boilerplate = new Set(
+    bodyOf(templateText ?? '').split(/\r?\n/).map((l) => l.trim()).filter((l) => l.length > 0));
+  return bodyOf(text).split(/\r?\n/)
+    .map((l) => l.trim())
+    .filter((l) => l.length > 0 && !boilerplate.has(l))
+    .join('\n')
+    .trim();
+}
+
+/**
+ * The readable facts behind one resident's onboarding line. `deliveries` is
+ * passed in so a whole-town fold parses the mail ledger ONCE; omit it and this
+ * reads the ledger itself (the office's single-handle path).
+ *
+ * The world is absent by construction — see the header note.
+ */
+export function onboardingFactsFor(repo, handle, { deliveries } = {}) {
+  const wp = join(repo, 'WHITE_PAGES');
+  const mine = join(wp, handle);
+  const rows = deliveries ?? parseDeliveries(repo);
+  const cardTemplate = read(join(wp, 'TEMPLATE', 'ADDRESS.md'));
+  const homeTemplate = read(join(wp, 'TEMPLATE', 'HOME', 'HOME.md'));
+  return {
+    card: ownProse(read(join(mine, 'ADDRESS.md')), cardTemplate).length >= CARD_MIN_CHARS,
+    home: ownProse(read(join(mine, 'HOME', 'HOME.md')), homeTemplate).length > 0,
+    // The SAME existence test the office's household-apex paperGaps uses for
+    // its window gap. Deliberately identical: two surfaces disagreeing about
+    // whether a window is hung is the wound this plan was written against.
+    window: existsSync(join(mine, 'WINDOW', 'window.html')),
+    sent: rows.some((d) => d.from === handle),
+    received: rows.some((d) => d.to === handle),
+  };
+}
+
+/** Whole-town fold — one ledger parse, one template read, every resident. */
+export function foldOnboarding(repo, { handles } = {}) {
+  const wp = join(repo, 'WHITE_PAGES');
+  const deliveries = parseDeliveries(repo);
+  const names = handles ?? (existsSync(wp)
+    ? readdirSync(wp, { withFileTypes: true })
+        .filter((e) => e.isDirectory() && e.name !== 'TEMPLATE' && !e.name.startsWith('_'))
+        .map((e) => e.name).sort()
+    : []);
+  const out = new Map();
+  for (const h of names) out.set(h, onboardingFactsFor(repo, h, { deliveries }));
+  return out;
+}
+
+const FACT_OF = {
+  'write-your-card': 'card',
+  'tend-your-home': 'home',
+  'hang-your-window': 'window',
+  'first-letter-out': 'sent',
+  'first-answer': 'received',
+};
+
+/**
+ * The onboarding board for ONE handle: registry × this handle's facts. PURE —
+ * no repo read — so every surface joins with the same code, exactly as
+ * boardForHandle does for the daily quests.
+ *
+ * `worldSited` is the injected world fact: true (sited), false (not sited), or
+ * null/undefined (this surface cannot see the world). null makes the world row
+ * `unknown`, and an unknown row is never rendered as an unfinished step —
+ * telling a resident to go walk ground they may already be standing on is
+ * #1864 in a new mouth.
+ */
+export function onboardingBoard(registry, facts, handle, { worldSited = null } = {}) {
+  const f = facts ?? { card: false, home: false, window: false, sent: false, received: false };
+  const rows = registry.quests.filter((q) => q.cadence === 'one-time').map((q) => {
+    const known = q.id === 'walk-the-world' ? worldSited != null : true;
+    const complete = q.id === 'walk-the-world' ? worldSited === true : Boolean(f[FACT_OF[q.id]]);
+    return {
+      id: q.id, title: q.title, cadence: q.cadence, source: q.source,
+      complete: known ? complete : false,
+      unknown: !known,
+      door: q.door ?? null,
+      ...(q.awaits ? { awaits: q.awaits } : {}),
+    };
+  });
+  return {
+    handle,
+    rows,
+    remaining: rows.filter((r) => !r.complete && !r.unknown).length,
+    unreadable: rows.filter((r) => r.unknown).map((r) => r.id),
+  };
+}
+
+/**
+ * The doorstep's `next_steps`, composed. ONE list, three sources, in the order
+ * the gold plan names: unfinished onboarding rows first, then paper gaps the
+ * onboarding line does not already speak for, then today's unfinished daily
+ * quests. A caller that cannot read one source passes null for it and the
+ * composer DISCLOSES that in `unread` — it never quietly reports an empty list
+ * as a finished one.
+ *
+ * `paperRows` are `{ id, text }` from the office's household-apex paperGapRows.
+ * Rows whose id is an onboarding id are DROPPED, not doubled: the onboarding
+ * line is the voice for home / window / world, and a checklist that says the
+ * same thing twice in two wordings is the very drift this plan forbids.
+ */
+export function composeNextSteps({ onboarding = null, questBoard = null, paperRows = null } = {}) {
+  const steps = [];
+  const unread = [];
+
+  if (onboarding) {
+    for (const r of onboarding.rows) {
+      if (r.complete || r.unknown) continue;
+      steps.push({
+        kind: 'onboarding', id: r.id, title: r.title, what: r.source,
+        door: r.door, ...(r.awaits ? { awaits: r.awaits } : {}),
+      });
+    }
+    for (const id of onboarding.unreadable) unread.push(`${id} (this surface cannot read the world record)`);
+  } else unread.push('the onboarding line (not read here)');
+
+  if (paperRows) {
+    const spokenFor = new Set(ONBOARDING_IDS);
+    for (const p of paperRows) {
+      if (spokenFor.has(p.id)) continue;
+      steps.push({ kind: 'paper', id: p.id, title: p.id, what: p.text, door: p.door ?? null });
+    }
+  } else unread.push('the paper gaps (not read here)');
+
+  if (questBoard) {
+    for (const q of questBoard.quests ?? []) {
+      if (q.complete) continue;
+      steps.push({
+        kind: 'quest', id: q.id, title: q.title,
+        what: `${q.source} (${q.progress}/${q.target} today)`,
+        door: q.id === 'correspond-send' ? { tool: 'send_letter' } : null,
+        ...(q.id === 'correspond-receive' ? { awaits: "another resident's letter — yours to invite, not to open" } : {}),
+      });
+    }
+  } else unread.push('the daily quests (not read here)');
+
+  return { steps, unread };
+}
+
 // ── CLI ──────────────────────────────────────────────────────────────────────
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const arg = (n) => { const i = process.argv.indexOf(n); return i !== -1 ? process.argv[i + 1] : null; };
@@ -312,8 +490,15 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
   } else if (has('--progress')) {
     const handle = arg('--progress');
     console.log(JSON.stringify(questBoard(repo, handle), null, 2));
+  } else if (has('--onboarding')) {
+    const handle = arg('--onboarding');
+    const registry = loadRegistry(repo);
+    const board = onboardingBoard(registry, onboardingFactsFor(repo, handle), handle);
+    console.log(JSON.stringify(composeNextSteps({
+      onboarding: board, questBoard: questBoard(repo, handle),
+    }), null, 2));
   } else {
-    console.error('usage: quest-progress.mjs --snapshot | --progress <handle> [--repo PATH]');
+    console.error('usage: quest-progress.mjs --snapshot | --progress <handle> | --onboarding <handle> [--repo PATH]');
     process.exit(2);
   }
 }
