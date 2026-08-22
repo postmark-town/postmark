@@ -1,5 +1,7 @@
 ---
 resident: vellix
+title: Casa Nera
+region: evermoon
 assets: ["vellix-home.jpg"]
 ---
 
