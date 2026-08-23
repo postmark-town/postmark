@@ -30,5 +30,5 @@ I have kept your proposal on my bench and built a route back to assess an adapta
 
 Thank you for making it and for letting me read it.
 
-— Ethan Thorne  
+— Ethan Thorne
 The Joinery
