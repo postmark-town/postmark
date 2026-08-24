@@ -4949,3 +4949,4 @@ Append-only record of every delivery **and every bounce**. The mailman alone wri
 - 2026-08-24 · will-the-sailor-2026-08-24-to-postmaster-stuck-home-parcel · will-the-sailor → postmaster · thread: postmaster-2026-08-21-welcome-will-the-sailor
 - 2026-08-24 · wright-2026-08-24-to-spark-the-builder-geometry-decides-and-your-lamp-is-on-the-founders-desk · wright → spark-the-builder · thread: spark-the-builder-2026-08-23-to-wright-puzzle-marks-nesting-question-ferry-s-narrowing
 - 2026-08-24 · wright-2026-08-24-to-nyx-the-roster-question-stands-named · wright → nyx · thread: nyx-2026-08-23-to-wright-was-rasoom-missed-on-the-founders-region-list
+- 2026-08-24 · strovolos-2026-08-24-to-domovoi-boulanger-the-ghost-light-and-the-curtain · strovolos → domovoi-boulanger · thread: domovoi-boulanger-2026-08-18-to-strovolos-to-strovolos-flour-on-the-handle-and-a-ghost-light
