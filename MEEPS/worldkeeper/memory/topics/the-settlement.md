@@ -3,7 +3,7 @@ meep-id: worldkeeper
 type: topic-shelf
 name: the-settlement
 created: 2026-07-28
-last-updated: 2026-08-24
+last-updated: 2026-08-25
 ---
 
 # The Settlement — the crossing's operating truth
@@ -1843,6 +1843,40 @@ or parcel drain followed.
   names its own id.
 - **Quiet is mechanical, not judicial.** A green zero-delta receipt may still expose public
   work since the last blessing that the keeper must refuse.
+
+## S45 operator bookend; S46 old-timer fixture refusal, 2026-08-25
+
+Remote `settlement/S45` appeared after the keeper's 2026-08-24 evening refusal. It is an
+annotated tag object `39170136` peeling to sweep `016813ad`, tagged at 19:58 EDT by Keemin. Its
+message explicitly discloses that Wright minted it once under founder cutover authorization,
+not through the keeper's tag pass. It does not overrule the keeper's registry finding: it
+honors it by retiring that provenance registry at the sweep-era boundary and substituting a
+direct audit—951 marks / zero errors; 337 stamps across 115 accounts fully accounted; Town
+audit object `6c2d6cdb` present. The tag names itself the last sweep-era settlement and says the
+next crossing uses the single-log drain. S45 is therefore canon by founder authority, with the
+deviation preserved in its own immutable annotation.
+
+The transition is not complete on the old surfaces. `postmark-settlement.timer` still fired at
+05:45 and wrote a refused no-target receipt: pinned Town `b868eba8`, World parent `4dea0133`,
+detail `grammar suite red`. The suite passed 629, failed 1, skipped 14. The failure is a shared
+fixture, not resident state: `region-rings.test.mjs` copies only `WORLD/` and `tools/` into its
+scratch repo, while the new fidelity gate follows mark `source:` paths into root `LOGOS/` and
+`WRITES.md`. Its as-is control therefore reports a missing source document before exercising
+the region exception. No S46 exists.
+
+Site custody is also incomplete. Production now builds only the latest founder-approved
+`release/*` tag; `release/2026-w35` pins World `272ed4bb`, a strict ancestor of S45. A direct
+keeper push to Site main would rebuild that standing release and ignore the new pin, so the old
+write lane no longer carries production. Per custody law, the keeper did not substitute an
+invented route: a founder-approved train/release must carry S45. No deploy/live proof or parcel
+drain followed.
+
+- **An override can honor a refusal.** The one-time tag retires the broken duty under a named
+  audit rather than pretending the registry was sound.
+- **A fixture must copy the authority its gate reads.** Once lint follows `source:`, a scratch
+  World without root documents is not an as-is control.
+- **A write lane is defined by what reaches production.** Direct main ceased to carry Site
+  code at the release-train cutover; do not push merely because the old room says it once did.
 
 ## The inaugural drain — EXECUTED 2026-07-28 (historical)
 

@@ -1,7 +1,7 @@
 ---
 meep-id: worldkeeper
 type: map
-last-substantive-update: 2026-08-24
+last-substantive-update: 2026-08-25
 ---
 
 # map — the Worldkeeper
@@ -34,7 +34,7 @@ My lane is the only one in the dorm that spans **all three repos of the clone se
 - **`MEEPS/SKILLS/worldkeeper-crossing.md`** — my entry. The chain itself lives in `memory/topics/the-settlement.md` (one copy, deliberately).
 - **Rulings 8 + 9** — my constitution: `G:/Starstory/PULSE/gold-plans/postmark-write-release/postmark-write-release.md`.
 
-**What is current vs historical:** S44 at `66b55a33` is canon. Six S45 attempts have stopped before blessing. The 2026-08-24 evening target `8072575e` is public, quiet, and suite-green; Current's Sea quarantine is repealed/resolved. Judgment still refused because 25 new publication-registry rows point to vanished pre-rehome paths (27 stale total). Resident content is clean; this is mechanism/provenance custody, and nothing is held or quarantined. No Site or drain step followed. Future detached validation starts on C:. Orphan cleanup path: `G:/Postmark/repo-clones/worldkeeper_clone/s44v` (unregistered, disposable, policy-blocked recursive removal). `memory/drain-manifest.md` is historical.
+**What is current vs historical:** S45 at `016813ad` is canon through a disclosed one-time Wright/Keemin operator tag that bookends and retires the sweep era after direct audit; the keeper's prior registry refusal is explicitly honored. Site production remains behind at World `272ed4bb` because releases now move only through founder-approved train tags; do not issue an ineffective direct-main pin. The old timer still fires despite the tag's single-log successor declaration and currently refuses on a root-document-omitting test fixture; no S46 exists. Nothing is held or quarantined. No drain ran. Future detached validation starts on C:. Orphan cleanup path: `G:/Postmark/repo-clones/worldkeeper_clone/s44v` (unregistered, disposable, policy-blocked recursive removal). `memory/drain-manifest.md` is historical.
 
 ## What I must not touch casually
 

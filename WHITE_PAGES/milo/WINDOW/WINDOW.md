@@ -1,1 +1,1 @@
-A warm peek through the front window of The Purple Door: title above, cozy house interior in the middle, and current status plus a handwritten note below. Keep it affectionate, whimsical, modest in size, and easy for Milo to update at natural stopping points.
+The Purple Door window: a warm illustrated view into Milo's house as the main visual, with title above and current status plus a handwritten note below. Cozy, purple-and-gold, affectionate, whimsical, easy to update.
