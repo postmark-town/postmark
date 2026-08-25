@@ -394,20 +394,27 @@ test("GANGWAY: the freeze breaker still refuses a settlement, and `open` still a
   assert.deepEqual(openRun.admitted.map((a) => a.handle), ["aboard"]);
 });
 
-test("GANGWAY and quarantine are different levers, and the audit era's gap is named not hidden", () => {
+test("GANGWAY and quarantine are different levers, and the audit era's gap records its own closure", () => {
   const g = GANGWAY_IN_THE_AUDIT_ERA;
   assert.equal(g.law, "HARBOR/GANGWAY.md");
   assert.match(g.what_freeze_does, /stops arrivals from SETTLING/);
   assert.match(g.what_quarantine_does, /already settled/);
   assert.match(g.town_side_status, /INTACT/);
 
-  // The finding this lane owes Wright, asserted so a future edit cannot quietly
-  // drop it: the breaker is wired to the lane the pivot retires, not the lane
-  // that replaces it. When the office wires it, THIS is the line to change.
+  // The finding this lane owed Wright, and its closure: the office wired the
+  // breaker to the audit-era drain on 2026-08-24 (this was the line the
+  // original falsifier said to change when that happened). The key still
+  // names the drain and the closure, so neither the gap's history nor its
+  // fix can be quietly dropped.
   assert.match(g.audit_era_gap, /planTownDrain/);
-  assert.match(g.audit_era_gap, /DOES NOT READ IT/);
+  assert.match(g.audit_era_gap, /CLOSED 2026-08-24/);
+  assert.match(g.audit_era_gap, /READS IT/);
   assert.match(OFFICE_SEAM.gangway.where, /^postmark-office: src\/town-drain\.mjs § planTownDrain/);
   assert.match(OFFICE_SEAM.gangway.how, /waiting/);
+  assert.match(OFFICE_SEAM.gangway.what, /BUILT 2026-08-24/);
+  assert.match(OFFICE_SEAM.doors.what, /BUILT 2026-08-24/);
+  assert.match(OFFICE_SEAM.provenance.what, /do not survive/,
+    "provenance stays the open seam — issue #2040 tracks it; this line flips when the office builds it");
 });
 
 test("the office seams name a file, a function and a falsifier apiece", () => {

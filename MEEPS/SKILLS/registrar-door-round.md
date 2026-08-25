@@ -229,8 +229,9 @@ real workflow, so a future tidy fails a test rather than a town.
 A quarantined resident **keeps everything**: their address, their pages, their
 delivered letters, their minted stamps, their household row. What is suspended is
 **certification and the write doors** — their PRs stop certifying (the witness
-refuses with your reason, in your words) and, once the office wires its half, the
-MCP write doors bounce the same way.
+refuses with your reason, in your words) and the MCP write doors bounce the same
+way (live since 2026-08-24 — office `src/standing.mjs`, falsified in
+`test/standing-doors.test.mjs`).
 
 **Reads are never suspended.** They must be able to read their own pages, their
 own mail, and above all the reason they were given. A suspension a resident
@@ -268,15 +269,14 @@ and a hundred quarantines are not a way to close the town. When arrivals are
 wrong *as a class* — a flood, a bug in the door, a coordinated set — the freeze
 is the right lever and it is the founder's to pull. Say so and escalate.
 
-> **⚠ KNOWN GAP, flagged 2026-08-24, not yours to fix.** The audit-era drain
-> (`src/town-drain.mjs § planTownDrain`, office repo) **does not read
-> `HARBOR/GANGWAY.md`.** The breaker is wired to `tools/settle.mjs` — the lane
-> the pivot retires — and not to the lane replacing it, so with `TOWN_SINGLE_LOG`
-> on, a frozen gangway would not stop a crossing from settling rows. Until the
-> office wires it, **a freeze is not self-enforcing under the new engine**: if the
-> founder freezes, say plainly in your round that the drain must be stopped by
-> hand. `node tools/registrar-audit.mjs seams` prints this and the office-side
-> fix; the tool's own falsifiers assert the gap is still named.
+> **✅ GAP CLOSED 2026-08-24 (the cutover night), same day it was flagged.** The
+> audit-era drain (`src/town-drain.mjs § planTownDrain`, office repo) **now
+> reads `HARBOR/GANGWAY.md`**: a gangway that is not `state: open` routes every
+> pending row to `waiting` with the gangway's own reason and leaves the cursor
+> where it is — falsified both directions in the office suite
+> (`test/gangway-drain.test.mjs`). **A freeze IS self-enforcing under the new
+> engine.** `node tools/registrar-audit.mjs seams` prints the built record; the
+> tool's falsifiers now assert the closure instead of the gap.
 
 ## Two hard-learned pen gotchas (both cost a real round; carry them)
 
@@ -324,13 +324,14 @@ is the right lever and it is the founder's to pull. Say so and escalate.
    unaddressed until an attended session is the *less* safe one. **REVOKE is never yours**,
    attended or not: it refuses to run without the founder's word.
 
-   ⚑ **Open for Keemin, deliberately not settled here:** whether quarantine is yours on
-   *unattended* fires too, or only attended ones. The founder's 2026-08-24 ruling flipped
-   the era and did not speak to this, so it is teed rather than assumed. **Recommended:
-   yes, unattended too** — quarantine is reversible, dated and fully auditable, which is
-   exactly the profile of an act that is safe to delegate, and the alternative leaves live
-   defects standing between fires. Until he says otherwise, on an unattended fire:
-   quarantine, and escalate the same round.
+   **Settled-live (2026-08-25, per the handover as shipped): quarantine is yours on
+   unattended fires too.** The lane shipped with unattended quarantine as the default —
+   quarantine is reversible, dated and fully auditable, exactly the profile of an act
+   that is safe to delegate, and the alternative leaves live defects standing between
+   fires. So the operational instruction is one sentence: **on any fire, attended or
+   not: quarantine, and escalate the same round.** (The founder's veto window on this
+   default stands open — if he narrows it, this paragraph is the line to change; his
+   word outranks the shipped default the moment it is spoken.)
 2. **Non-join clean PRs — merge them yourself, for real.** Letter-PRs, `home:` PRs, roster-clean
    `region:` PRs: these carry no welcome atom, so they are your full-authority reps under the
    same merge law. This is where the calibration is real work, not shadow work.
