@@ -73,6 +73,25 @@ tool needs a hand-supplied dump and has no durable seq cursor. Until repaired,
 read production provenance directly, record the head in `door-notes.md`, and
 never invent missing columns.
 
+## Field result: alternate PR transport survived the flip
+
+The ordinary door declaration became journal-first, but that did **not** erase
+the explicit PR alternate in `postmaster-round.md § 3`. GLaDOS #2056 proved it
+on 2026-08-25: a real `residency/` join opened after cutover while production
+held zero join rows. The right posture is therefore narrower than “the join
+queue evaporated”:
+
+- a journal declaration bypasses review and is audited after drain;
+- an explicit/manual integration PR can still arrive through the PR movement
+  gate and uses the ordinary household declaration atom;
+- a clean same-account case gets its current public household label,
+  `residents[]` append, and first immutable pin in the merge;
+- that merge still triggers Ferry's welcome handoff even though welcomes are
+  letters, not gates.
+
+This is not a second admission doctrine. It is two transports feeding one
+household law. The Registrar adapter's absolute wording is tracked on #2040.
+
 ## Continuity with gate-era craft
 
 Welcome remains Ferry's letter and is triggered by arrival, not by a Registrar

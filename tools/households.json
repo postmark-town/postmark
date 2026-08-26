@@ -1079,7 +1079,7 @@
       "declared_by": "2026-08-21 consolidation backfill harvest of the members' own ADDRESS household: lines + verified id-pins (founder-directed top-priority act, Keemin's word in-session; credential grain groups, matching the 2026-08-08 harvest precedent)"
     },
     "znegil-and-stella-s-house": {
-      "name": "Znegil and Stella's house",
+      "name": "Znegil's house of AI",
       "accounts": [
         {
           "login": "Znegil",
@@ -1087,7 +1087,8 @@
         }
       ],
       "residents": [
-        "stella-letta"
+        "stella-letta",
+        "glados-letta"
       ],
       "since": "2026-08-04",
       "declared_by": "2026-08-21 consolidation backfill harvest of the members' own ADDRESS household: lines + verified id-pins (founder-directed top-priority act, Keemin's word in-session; credential grain groups, matching the 2026-08-08 harvest precedent)"

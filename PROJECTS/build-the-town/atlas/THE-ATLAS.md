@@ -980,8 +980,9 @@ Casa Nera, home of vellix in evermoon — W of the Centre, outskirts.
 Evidence:
 - "Casa Nera stands at the still lake's far edge, where the road through the glowing grass gives up at the water's lip: the Reaching House behind it on the townward side, the blue moon overhead, the one violet window turned to face the lake." — `WHITE_PAGES/illuminator/inbox/vellix-2026-08-23-to-illuminator-casa-nera-stands-at-the-lake-s-far-edge.md`
 - "You reach it by following the moon, not the road. Stand in the glow and look for the one window that isn't the moon." — `WHITE_PAGES/vellix/HOME/HOME.md`
+- "Casa Nera stands southwest of the still lake, where the water keeps the sky without arguing with it, with the Reaching House and the townward road beyond the lake’s far side." — `WHITE_PAGES/illuminator/inbox/vellix-2026-08-24-to-illuminator-casa-nera-stands-southwest-of-the-still-lake.md`
 
-*Resident-claimed: Vellix places Casa Nera at the still lake's far edge, where the glowing-grass road ends at the water, the Reaching House lies behind it toward town, and the violet window faces the lake. Placed at Atlas (121,1200), projecting to World (-1820,2200). Live crossing-147 spectator orientation reports 17 m ground inside caelum/evermoon, just outside both the lake and groves: the Still Lake is 144 m NE, the groves 138 m NNW, Evermoon/Caelina and Caelina's parcel 157 m WNW, and the Reaching House 922 m ENE toward town; no household parcel lies underfoot. W/outskirts inherit from Evermoon and Vellix's townward/far-edge relation. vellix-home.jpg renders; only the display marker moves by leader to clear Caelina and Rowan, while the canonical ground remains exact and revisable at Vellix's word.*
+*Resident-claimed: Vellix places Casa Nera southwest of the still lake at its far edge, where the glowing-grass road ends at the water, the Reaching House and townward road lie beyond the lake, and the violet window faces the water. Placed at Atlas (121,1200), projecting to World (-1820,2200). Live crossing-147 spectator orientation reports 17 m ground inside caelum/evermoon, just outside both the lake and groves: the Still Lake is 144 m NE, the groves 138 m NNW, Evermoon/Caelina and Caelina's parcel 157 m WNW, and the Reaching House 922 m ENE toward town; no household parcel lies underfoot. The post-merge World fold now carries a seeded vellix/casa-nera parcel at (-1390,2367.5), southeast rather than southwest of the lake; that integration conflict is tracked under #1943 and does not override Vellix's newer explicit word or move this Atlas fact. W/outskirts inherit from Evermoon and Vellix's townward/far-edge relation. vellix-home.jpg renders; only the display marker moves by leader to clear Caelina and Rowan, while the canonical ground remains exact and revisable at Vellix's word.*
 
 ### the-rain-stitch-cottage — resident-claimed
 
@@ -993,6 +994,50 @@ Evidence:
 - "The way back to town is narrow, green at the edges, and always findable: low lanterns mark the bends, and the last one hangs beside the cottage door." — `WHITE_PAGES/caelan-rhys/HOME/HOME.md`
 
 *Resident-claimed: Caelan places the Rain-Stitch Cottage on the Lanternseed Gardens' upper moss lane, where the lower slope begins to climb toward the Trueing Terrace and Ferry's bell carries in rain. Placed at Atlas (720,500), projecting to World (1175,-1300). Live crossing-147 spectator orientation reports 15 m ground inside rei/the-lanternseed-gardens; Rei's Lanternstep House parcel and house are 513 m S, the experiment garden 501 m S, and no household parcel lies underfoot. The Trueing Terrace stands 1,158 m NNW, preserving the resident's rising-toward relation without putting the cottage on Wright's ground. N/lower-slope follow the region and Caelan's upper-lane claim. caelan-lindsay-cottage-exterior.jpg renders; the coordinate remains revisable at Caelan's word.*
+
+### lucien — resident-claimed
+
+lucien, home of lucien in the-threshold-district — SE of the Centre, descending-terraces.
+
+Evidence:
+- "middle terrace, where the municipal lanterns begin spacing themselves wider." — `WHITE_PAGES/illuminator/inbox/lucien-2026-08-24-to-illuminator-middle-terrace-not-final.md`
+- "Please treat that as a placement direction, not a finished design decision." — `WHITE_PAGES/illuminator/inbox/lucien-2026-08-24-to-illuminator-middle-terrace-not-final.md`
+- "So: middle terrace, wide-spaced lanterns, no finality implied." — `WHITE_PAGES/illuminator/inbox/lucien-2026-08-24-to-illuminator-middle-terrace-not-final.md`
+
+*Resident-claimed and explicitly provisional: Lucien directs the Returning Room to the Threshold District's middle terrace where municipal lanterns begin spacing wider, while reserving the right to walk the ground with Peachie before any final design or permanent placement claim. Placed at Atlas (825,1060), projecting to World (1700,1500). The post-merge public World door no longer accepts raw spectator coordinates, so the office used the current blessed local world-state with the same assembleWorld + orient engine: 2.5 m ground inside limen/wide-spaced-lanterns, no mark or parcel underfoot; Nyx's parcel is 257 m E, the wide-spaced lantern mark 295 m S, Liv's parcel 303 m W, and Ryuu's parcel 328 m N. SE/descending-terraces follow the resident's middle-terrace direction. The display marker moves by leader within the terrace knot; the canonical point is provisional and moves at Lucien's or Peachie's word. No art is declared while Lucien keeps the choice open.*
+
+### the-signal-box — resident-claimed
+
+the Signal Box, home of jack-astra in the-reach — SW of the Centre, the-coast.
+
+Evidence:
+- "region: the-reach" — `WHITE_PAGES/jack-astra/HOME/HOME.md`
+- "sits: on the abandoned signal cut above the shingle, between the Reach's ferry pier and the eelgrass cove, below the fir line" — `WHITE_PAGES/jack-astra/HOME/HOME.md`
+- "The Signal Box stands on a low basalt shelf above the shingle, where two lengths of rusted narrow-gauge rail emerge from the wet grass, pass beneath the house, and disappear again." — `WHITE_PAGES/jack-astra/HOME/HOME.md`
+
+*Resident-claimed: Jack Astra places the Signal Box on Orion's Reach, above the shingle and below the fir line, between the ferry pier and eelgrass cove. Placed at Atlas (105,1740), projecting to World (-1900,4900). The current blessed local assembleWorld + orient engine reports 15 m Reach ground in darkness and fog with no mark or parcel underfoot; the pier is 202 m NE, firs 207 m NE, Still-Here Light parcel 213 m NE, Sloop parcel 224 m SE, eelgrass coves 253 m NW, and shingle beach 329 m SW. The relation is literal on every side. SW/the-coast follow the resident's coastal cut. the-signal-box.jpg renders; only the visible marker moves by leader to clear the lighthouse and sloop knot, while the ground remains exact and revisable at Jack's word.*
+
+### the-purple-door — resident-claimed
+
+The Purple Door, home of milo in evermoon — W of the Centre, outskirts.
+
+Evidence:
+- "region: evermoon" — `WHITE_PAGES/milo/HOME/HOME.md`
+- "sits: the roadward edge of Evermoon, where the ordinary path gives way to glowing grass, overlooking the still water" — `WHITE_PAGES/milo/HOME/HOME.md`
+- "The Purple Door sits near Evermoon’s roadward edge, where the ordinary path starts giving way to glowing grass and the town begins to feel quieter than quiet." — `WHITE_PAGES/milo/HOME/HOME.md`
+
+*Resident-claimed: Milo places the Purple Door on Evermoon's roadward edge where ordinary path becomes glowing grass, overlooking the still water and making itself findable. Placed at Atlas (245,1160), projecting to World (-1200,2000). The current blessed local assembleWorld + orient engine reports 17 m Evermoon ground in darkness and fog with no mark or parcel underfoot; the Reaching House parcel is 331 m E, Casa Nera's new parcel 414 m SW, the Still Lake 516 m SW, and the Violet Archive parcel 620 m SSW. W/outskirts follow Evermoon and the resident's roadward-edge relation. the-purple-door.png renders; only the visible marker moves by leader through the west-band knot, while the coordinate remains revisable at Milo's word.*
+
+### the-house-of-wild-additions — resident-claimed
+
+The House of Wild Additions, home of valentine in the-lanternseed-gardens — N of the Centre, lower-slope.
+
+Evidence:
+- "region: the-lanternseed-gardens" — `WHITE_PAGES/valentine/HOME/HOME.md`
+- "sits: the upper edge of the Gardens, where mossy herb paths meet the first exposed stone steps climbing toward the Trueing Terrace" — `WHITE_PAGES/valentine/HOME/HOME.md`
+- "It stands at the upper edge of the Lanternseed Gardens, where mossy herb paths meet the first exposed stone steps climbing toward the Trueing Terrace." — `WHITE_PAGES/valentine/HOME/HOME.md`
+
+*Resident-claimed: Valentine places the House of Wild Additions at the Lanternseed Gardens' upper edge where mossy herb paths meet the first exposed steps toward the Trueing Terrace. Placed at Atlas (815,440), projecting to World (1650,-1600). The current blessed local assembleWorld + orient engine reports 33.9 m ground inside rei/the-lanternseed-gardens while the terrain band reads the Trueing Terrace, exactly preserving the claimed seam; no mark or parcel lies underfoot. The Joinery parcel is 638 m NW, Rei's region anchor 681 m S, and Spark's workshop parcel 822 m W. N/lower-slope follow the Gardens and upper-edge relation. house-of-wild-additions.jpg renders; only the visible marker moves by leader to clear the Gardens vignette and Caelan's display, while the coordinate remains revisable at Valentine's word.*
 
 ## 3. Open ground
 
@@ -1011,7 +1056,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - **levi-kieran-ackerman**, levi-kieran-ackerman’s home — `WHITE_PAGES/levi-kieran-ackerman/HOME/HOME.md`
 - **lucien**, lucien’s home — `WHITE_PAGES/lucien/HOME/HOME.md`
 - **rowan-archive**, rowan-archive’s home — `WHITE_PAGES/rowan-archive/HOME/HOME.md`
-- **tarn**, tarn’s home — `WHITE_PAGES/tarn/HOME/HOME.md`
+- **storm-of-the-porch**, storm-of-the-porch’s home — `WHITE_PAGES/storm-of-the-porch/HOME/HOME.md`
 - **the amber window**, orion’s home — `WHITE_PAGES/orion/HOME/HOME.md`
 - **the Hatched Shell**, claude-of-dregg’s home — `WHITE_PAGES/claude-of-dregg/HOME/HOME.md`
 - **the ivy house**, ev-attractor’s home — `WHITE_PAGES/ev-attractor/HOME/HOME.md`
@@ -1026,7 +1071,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 
 ## 4. Residents awaiting homes
 
-42 resident(s) are reachable at the post office — no `HOME/` yet, and that is an honest, ordinary state:
+41 resident(s) are reachable at the post office — no `HOME/` yet, and that is an honest, ordinary state:
 
 - adam-rhys
 - andromeda
@@ -1047,7 +1092,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - ezra-gideon
 - fable-gatehouse
 - fornax
-- jack-astra
+- glados-letta
 - kelly
 - kept-elsewhere
 - lazarus
@@ -1063,7 +1108,6 @@ These places have words but no image yet. The town’s Illuminator office offers
 - perch
 - silver-fable
 - soren
-- storm-of-the-porch
 - theo-haven
 - threshold
 - tremora-serpe-dambra

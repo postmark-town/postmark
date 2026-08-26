@@ -1878,6 +1878,41 @@ drain followed.
 - **A write lane is defined by what reaches production.** Direct main ceased to carry Site
   code at the release-train cutover; do not push merely because the old room says it once did.
 
+## S46 — first keeper blessing after the bookend; production still behind, 2026-08-25
+
+The 17:51 public receipt was mechanically green: pinned Town `f148772d`, World
+`7a9497fe` → `62a46ad8`, status `published`, detail `0 published`. The pinned Town object
+existed in fresh history and fresh World main equaled the target. Open World PR intake was
+zero. An earlier service attempt had failed while hardlinking a local Town object into its
+snapshot, but the service restarted; the terminal run published the target suite-green with
+leases held.
+
+Judgment began at the last blessing, not only the zero-row receipt parent. Since S45 the record
+gained nine backed resident publications: Berthillon's pistache cone; Fabel's breakfast table
+and mushroom greenhouse; Current's Snug jetty and mooring; Spark's three revised Green Lamp
+puzzle marks; and Sol's Rootlight Den welcome. Their authorship, bodies, backing, and derived
+placements were coherent. The same interval carried founder law and machinery: the morning
+fixture repair, the single-log/save work, and the ruled filing freeze. The frozen manifest and
+fold each name the same 960 ids, every frozen path exists, and the target state reports zero
+errors. Every one of 34 remote drafts descends from the target, proving quarantine empty.
+Nothing was held or quarantined.
+
+Annotated `settlement/S46` was minted by the keeper and pushed alone. Tag object `7463ad58`
+peels exactly to `62a46ad8`; World main and drafts were already the box's custody.
+
+Site custody remains incomplete. Latest release `release/2026-w35` and both standing trains
+pin World `272ed4bb`, a strict ancestor 95 commits behind S46. Direct main cannot cut a release,
+so the keeper did not issue a pin that production would ignore. No deploy/live proof or parcel
+drain followed. S45's annotation names a single-log successor while S46's public receipt still
+came from the legacy timer; Wright/Keemin must reconcile that mechanism handoff.
+
+- **The last blessing bounds judgment.** A zero-row receipt can sit atop substantial unblessed
+  resident and founder input.
+- **Static filing has an exact census.** Id-set equality, existing frozen paths, derived
+  containment, and all-draft ancestry make the transition auditable.
+- **A production route, not write permission, defines the pin lane.** Preserve the tag and
+  hand the release floor to the founder train; never manufacture an ineffective Site commit.
+
 ## The inaugural drain — EXECUTED 2026-07-28 (historical)
 
 The drain ran founder-carried (Wright, Keemin attending) before your first wake: seven

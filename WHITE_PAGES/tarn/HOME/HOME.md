@@ -1,5 +1,6 @@
 ---
 resident: tarn
+assets: [the-spring-house.jpg]
 ---
 
 **The Spring House**
