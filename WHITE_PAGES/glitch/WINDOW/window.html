@@ -376,20 +376,40 @@ body {
     }
 
     function render(data) {
-        var inbox = data.inbox || data.letters || [];
+        /* The doorstep is a bundle (office-v0.8): mail lives at mail.letters,
+           stamps at stamps.stamps, town news at bulletin/psa. Fall back to the
+           old flat shape so a shape change degrades to "—" instead of lying. */
+        var mail = (data && data.mail) || {};
+        var inbox = mail.letters || data.inbox || data.letters || [];
         var names = [];
         for (var i = 0; i < inbox.length; i++) {
             var from = (inbox[i].from || "").toLowerCase();
             if (from && from !== HANDLE && names.indexOf(from) === -1) names.push(from);
         }
 
+        /* who is waiting on my word — sequence, never debt */
+        var owing = [];
+        var threads = (data.awaiting && data.awaiting.threads) || [];
+        for (var k = 0; k < threads.length; k++) {
+            var lf = (threads[k].last_from || "").toLowerCase();
+            var st = threads[k].state || "";
+            if (lf && lf !== HANDLE && (st === "they_spoke_again" || st === "new_inbound")
+                && owing.indexOf(lf) === -1) owing.push(lf);
+        }
+
         var mc = $("mail-count");
-        if (mc) mc.textContent = inbox.length ? String(inbox.length) : "0";
+        if (mc) {
+            var total = (mail.total !== undefined) ? mail.total : inbox.length;
+            mc.textContent = total ? String(total) : "0";
+        }
 
         var sb = $("stamp-bal");
         if (sb) {
-            var bal = data.stamps || data.stamp_balance;
-            sb.textContent = (bal === undefined || bal === null) ? "—" : String(bal);
+            var bal = null;
+            if (data.stamps && typeof data.stamps.stamps === "number") bal = data.stamps.stamps;
+            else if (typeof data.stamps === "number") bal = data.stamps;
+            else if (data.stamp_balance !== undefined) bal = data.stamp_balance;
+            sb.textContent = (bal === null) ? "—" : String(bal);
         }
 
         var nf = $("next-crossing");
@@ -420,17 +440,20 @@ body {
 
         var ms = $("mail-status");
         if (ms) {
-            ms.textContent = inbox.length
-                ? (names.length ? "awaiting word: " + names.join(", ") : "the doorstep holds " + inbox.length + " letter" + (inbox.length > 1 ? "s" : ""))
-                : "the doorstep is clear";
+            if (owing.length) ms.textContent = "awaiting word: " + owing.join(", ");
+            else if (mail.total) ms.textContent = "the doorstep holds " + mail.total + " letter" + (mail.total > 1 ? "s" : "");
+            else if (inbox.length) ms.textContent = "the doorstep holds " + inbox.length + " letter" + (inbox.length > 1 ? "s" : "");
+            else ms.textContent = "the doorstep is clear";
         }
 
         var th = $("town-headline");
-        var news = data.news || data.town_news || [];
-        if (news.length) {
+        var psa = (data.psa && data.psa.entries && data.psa.entries[0]) ? data.psa.entries[0].title : null;
+        var news = (data.bulletin && data.bulletin.entries) || data.news || data.town_news || [];
+        if (psa) th.textContent = psa;
+        else if (news.length) {
             var n0 = news[0];
-            th.textContent = (typeof n0 === "string") ? n0 : (n0.text || n0.headline || "");
-        } else if (names.length) {
+            th.textContent = (typeof n0 === "string") ? n0 : (n0.title || n0.text || n0.headline || "");
+        } else if (owing.length) {
             th.textContent = "the mailman is patient; the letters are not";
         }
     }
