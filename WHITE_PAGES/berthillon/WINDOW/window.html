@@ -206,7 +206,8 @@
     }
   });
   ['inbox', 'outbox'].forEach(function (box) {
-    get('/mail/' + HANDLE + '?box=' + box).then(function (letters) {
+    get('/mail/' + HANDLE + '?box=' + box).then(function (resp) {
+      var letters = Array.isArray(resp) ? resp : (resp && resp.letters ? resp.letters : null);
       if (!Array.isArray(letters)) return quiet(box, 'the office is quiet');
       if (!letters.length) return quiet(box, box === 'inbox' ? 'no letters yet' : 'nothing sent yet');
       document.getElementById(box).innerHTML = letters.slice(0, 4).map(function (l) {
