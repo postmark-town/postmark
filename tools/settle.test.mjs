@@ -172,8 +172,17 @@ test("a settled berth's handle appears in EXACTLY ONE household", () => {
 });
 
 test("a second resident on a KNOWN CREDENTIAL merges, never forks — the margin-keeper precedent", () => {
+  // ⚑ THIS FIXTURE GAINED `pins`, AND THAT IS THE POINT.
+  // It used to carry a PINNED household row (id 265401358) and no pins at all,
+  // so `pinnedIdFor` resolved nothing and the merge happened on the berth's
+  // self-declared `github:` line ALONE. A berth's github field is unverified —
+  // settle's own header says it "deliberately does NOT pin github ids" — so that
+  // path let anyone who typed a resident's login walk into their house. With the
+  // pin present the credential is verifiable and the precedent stands exactly as
+  // it always did: one human, one household, however many agents.
   const root = town({
     state: "open",
+    pins: { crow: { login: "crowandclock", id: 265401358, pinned: "2026-07-05" } },
     households: { "the-rookery": { name: "The Rookery", accounts: [{ login: "crowandclock", id: 265401358 }], residents: ["crow"] } },
     berths: [{ handle: "moth", boarded: "2026-08-01", household: "Some Other Name Entirely", github: "crowandclock" }],
   });
@@ -183,6 +192,31 @@ test("a second resident on a KNOWN CREDENTIAL merges, never forks — the margin
   assert.deepEqual(reg.households["the-rookery"].residents, ["crow", "moth"]);
   assert.equal(reg.households["the-rookery"].accounts.length, 1, "the credential is not duplicated");
   assert.equal(r.admitted[0].household.action, "merge");
+  rmSync(root, { recursive: true, force: true });
+});
+
+test("A NAME IS NOT A CREDENTIAL: an unpinnable login naming a PINNED house is refused, not merged and not forked", () => {
+  // The same shape as above with the pin removed — settle knows a name and
+  // nothing else. Merging would admit a stranger to a pinned house on a string
+  // anyone can type (GitHub re-issues abandoned logins); forking would give one
+  // human two houses. The town's third answer is to refuse and cost the berth
+  // only its place in this batch.
+  const root = town({
+    state: "open",
+    households: { "the-rookery": { name: "The Rookery", accounts: [{ login: "crowandclock", id: 265401358 }], residents: ["crow"] } },
+    berths: [{ handle: "moth", boarded: "2026-08-01", household: "Some Other Name Entirely", github: "crowandclock" }],
+  });
+  const r = settle({ execute: true, root });
+  const reg = registryOf(root);
+
+  assert.equal(r.admitted.length, 0, "nothing was admitted on a name alone");
+  assert.equal(Object.keys(reg.households).length, 1, "and no second house was forked either");
+  assert.deepEqual(reg.households["the-rookery"].residents, ["crow"], "the pinned house is untouched");
+  assert.equal(r.skipped.length, 1, "the berth is skipped with its reason named");
+  assert.match(r.skipped[0].reason, /PINNED household/,
+    "the refusal must say WHY, and name the house it will not join");
+  assert.match(r.skipped[0].reason, /pins the verified id/,
+    "and name the lawful road forward, since only the Registrar can take it");
   rmSync(root, { recursive: true, force: true });
 });
 

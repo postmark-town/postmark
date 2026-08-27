@@ -105,6 +105,7 @@ import { join, dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { sealedAccountIds } from './stamp-mint.mjs';
 import { witnessRefusal } from './registrar-audit.mjs';
+import { rowHoldsAccount } from './account-match.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const [, , SUBCOMMAND, ...ARGS] = process.argv;
@@ -367,9 +368,14 @@ async function registryJudgment({ headSha, authorId, author }) {
   if (head.note !== base.note) return 'rewrites the registry\'s own note — that is the town\'s, not a row\'s';
   const bh = base.households || {}, hh = head.households || {};
   for (const slug of Object.keys(bh)) if (!(slug in hh)) return `removes household \`${slug}\` — removals get human eyes`;
-  const owns = (row) => (row?.accounts || []).some(
-    (a) => (authorId != null && a?.id === authorId) || String(a?.login || '').toLowerCase() === author
-  );
+  // ID FIRST; a login matches only where the row carries no id at all.
+  // This used to be an OR, so a login match ALONE certified a PR even when both
+  // sides carried ids that disagreed — and GitHub releases abandoned logins, so
+  // a stranger claiming a resident's old login was treated as the row's owner.
+  // `loadBindings` above already states the law ("a pinned resident is
+  // deliberately NOT login-matchable"); this is where it was not applied.
+  // The rule now has one home: tools/account-match.mjs.
+  const owns = (row) => rowHoldsAccount(row, authorId, author);
   for (const [slug, row] of Object.entries(hh)) {
     const before = bh[slug];
     if (before && JSON.stringify(before) === JSON.stringify(row)) continue;

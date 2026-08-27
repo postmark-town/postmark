@@ -35,6 +35,7 @@
 import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync } from "node:fs";
 import { join, dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { rowHoldsAccount, pinnedHouseNamingLogin } from "./account-match.mjs";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = process.env.SETTLE_ROOT ?? join(HERE, "..");
@@ -162,14 +163,13 @@ export function pinnedIdFor(login, pins) {
   return null;
 }
 
-/** The household (if any) that already holds this credential. */
+/** The household (if any) that already holds this credential.
+ *  ID FIRST; a login matches only where the row carries no id (account-match.mjs).
+ *  This decides which house a berth MERGES INTO, so a login-only match against a
+ *  pinned row would walk an arriving stranger straight into someone else's house. */
 export function houseHoldingAccount(doc, login, id) {
-  const want = String(login ?? "").toLowerCase();
   for (const [key, rec] of Object.entries(doc?.households ?? {})) {
-    for (const a of rec.accounts ?? []) {
-      if (id != null && a.id === id) return key;
-      if (a.login && String(a.login).toLowerCase() === want) return key;
-    }
+    if (rowHoldsAccount(rec, id, login)) return key;
   }
   return null;
 }
@@ -192,6 +192,23 @@ export function registryPlan(doc, row, pins) {
 
   const held = houseHoldingAccount(doc, login, id);
   if (held) return { action: "merge", key: held, account: { login, ...(id != null ? { id } : {}) } };
+
+  // A NAME IS NOT A CREDENTIAL. The berth's `github:` line is self-declared and
+  // this tool verifies nothing (see § header); the only id it can have is one
+  // the Registrar already pinned. So if that login names a household whose
+  // account IS pinned, we know two things and can act on neither: the row wants
+  // an id, and we have only a name. Merging would walk this berth into a pinned
+  // house on a string anyone can type — and GitHub hands out abandoned logins.
+  // Forking would quietly give one human two houses.
+  //
+  // Refuse. It costs the berth its place in this batch and nothing else, and it
+  // is the same answer the town already gives one line below when a slug is
+  // taken under a different credential. The lawful road forward is the one the
+  // tool already prints: the Registrar pins the verified id, and the next run
+  // merges by id with no ambiguity at all.
+  const pinnedElsewhere = pinnedHouseNamingLogin(doc, login);
+  if (pinnedElsewhere)
+    return { refuse: `berth names github login "${login}", which belongs to the PINNED household "${pinnedElsewhere}" — a berth cannot join a pinned house on a name alone. The Registrar pins the verified id in tools/github-ids.json (or settles it by hand), then this merges by id.` };
 
   const key = slugHousehold(row.fields.household);
   if (!key) return { refuse: `berth carries no usable household: line ("${row.fields.household ?? ""}")` };
@@ -217,9 +234,11 @@ export function applyRegistryPlan(doc, plan, row, today) {
   }
   const rec = doc.households[plan.key];
   if (!rec.residents.includes(handle)) rec.residents.push(handle);
-  const known = (rec.accounts ?? []).some((a) =>
-    (plan.account.id != null && a.id === plan.account.id) ||
-    (a.login && a.login.toLowerCase() === plan.account.login.toLowerCase()));
+  // Same rule (account-match.mjs). Getting this wrong does not authorise
+  // anything by itself, but it decides whether a credential is APPENDED to a
+  // house — and appending a stranger's account to a pinned household is how a
+  // recycled login would have become permanent.
+  const known = rowHoldsAccount(rec, plan.account.id, plan.account.login);
   if (!known) rec.accounts.push(plan.account);
 }
 
