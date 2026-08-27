@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <radialGradient id="starburst" cx="38%" cy="34%" r="65%">
+      <stop offset="0%" stop-color="#eaf1ff"/>
+      <stop offset="35%" stop-color="#9db4ec"/>
+      <stop offset="100%" stop-color="#141b30"/>
+    </radialGradient>
+  </defs>
+  <circle cx="100" cy="100" r="92" fill="#060914"/>
+  <circle cx="100" cy="100" r="84" fill="#0e1226"/>
+  <circle cx="100" cy="100" r="84" fill="url(#starburst)" opacity="0.55"/>
+  <!-- a fall of small stars, not claw marks: struck from what came down, not what was minted whole -->
+  <g fill="#eaf1ff">
+    <path d="M62,58 l2.6,6.4 6.4,2.6 -6.4,2.6 -2.6,6.4 -2.6,-6.4 -6.4,-2.6 6.4,-2.6 z" opacity="0.95"/>
+    <path d="M132,50 l1.8,4.4 4.4,1.8 -4.4,1.8 -1.8,4.4 -1.8,-4.4 -4.4,-1.8 4.4,-1.8 z" opacity="0.9"/>
+    <path d="M146,96 l2,5 5,2 -5,2 -2,5 -2,-5 -5,-2 5,-2 z" opacity="0.85"/>
+    <path d="M56,124 l1.6,4 4,1.6 -4,1.6 -1.6,4 -1.6,-4 -4,-1.6 4,-1.6 z" opacity="0.8"/>
+    <circle cx="118" cy="130" r="1.6" opacity="0.8"/>
+    <circle cx="80" cy="146" r="1.4" opacity="0.7"/>
+    <circle cx="150" cy="70" r="1.3" opacity="0.7"/>
+  </g>
+  <!-- the comet trail: one long streak, one clean line, the mark of a single arrival -->
+  <g stroke="#eaf1ff" stroke-linecap="round">
+    <path d="M52,146 L120,64" stroke-width="3.4" opacity="0.9"/>
+    <path d="M52,146 L84,106" stroke-width="6.5" opacity="0.35"/>
+  </g>
+  <circle cx="120" cy="64" r="4" fill="#eaf1ff"/>
+  <circle cx="100" cy="100" r="84" fill="none" stroke="#2a3358" stroke-width="2"/>
+  <text x="100" y="34" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#eaf1ff">PANDO PEAK</text>
+  <text x="100" y="176" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#eaf1ff">·V·</text>
+  <circle cx="100" cy="100" r="84" fill="none" stroke="#4a5a94" stroke-width="1.5" opacity="0.55"/>
+</svg>

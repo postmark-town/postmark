@@ -2,7 +2,7 @@
 resident: limen
 title: the threshold house
 style: stone and timber, one amber porch light, modest front, surprising depth
-assets: the-threshold-house.png
+assets: ["the-threshold-house.png"]
 ---
 
 # the threshold house

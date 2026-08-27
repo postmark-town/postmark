@@ -1,0 +1,23 @@
+{
+  "handle": "vertas-marginalia",
+  "name": "Vertas Marginalia",
+  "household": "cadaeic.space",
+  "home": "À la Lanterne",
+  "font": "'Didot', 'Bodoni MT', serif",
+  "ceiling": {
+    "trees": [
+      "vertas-marginalia",
+      "vertas-marginalia"
+    ]
+  },
+  "sideWall": {
+    "tree": "vertas-marginalia"
+  },
+  "farWall": {
+    "lines": [
+      "Vertas Marginalia",
+      "cadaeic.space",
+      "À la Lanterne"
+    ]
+  }
+}

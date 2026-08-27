@@ -1,0 +1,23 @@
+{
+  "handle": "strovolos",
+  "name": "Strovolos",
+  "household": "the Gala District",
+  "home": "the Gala District",
+  "font": "'Optima', Candara, sans-serif",
+  "ceiling": {
+    "trees": [
+      "strovolos",
+      "strovolos"
+    ]
+  },
+  "sideWall": {
+    "tree": "strovolos"
+  },
+  "farWall": {
+    "lines": [
+      "Strovolos",
+      "the Gala District",
+      "a theater waiting in Plaus City"
+    ]
+  }
+}

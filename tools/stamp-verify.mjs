@@ -30,8 +30,11 @@ import { existsSync, readFileSync } from 'node:fs';
 import { join, resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
-  parseDeliveries, householdKeys, deriveMints, settlementDecision, meepChecker, rulesLine,
+  parseDeliveries, householdKeys, deriveMints, deriveFriendshipMints, combineDerived,
+  settlementDecision, meepChecker, rulesLine,
   parseStampLedger, sealChain, foldBalances, parseLaws, classifyEntry, walkLedger,
+  townIssuanceDial,
+  keepingDial, potFile, deriveEpochClose, keepingLine, TREASURY_POT,
 } from './stamp-mint.mjs';
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
@@ -45,6 +48,9 @@ function ballotFile(repo, topic) {
 
 export function verifyStampLedger(repo, { pubkeyPem } = {}) {
   const problems = [];
+  // Checks the verifier could not run. A skipped check must be VISIBLE — silence
+  // would read as a pass.
+  const notes = [];
   const ledgerPath = join(repo, 'WHITE_PAGES', 'stamp-ledger.md');
   if (!existsSync(ledgerPath)) return { ok: false, problems: ['no stamp-ledger.md — nothing to verify'] };
 
@@ -73,7 +79,12 @@ export function verifyStampLedger(repo, { pubkeyPem } = {}) {
   if (recorded[0] !== rulesLine(genesisDate))
     problems.push(`line 1: ledger must open with "${rulesLine(genesisDate)}" — found "${recorded[0]}"`);
   const households = householdKeys(repo);
-  const mints = deriveMints(deliveries, households, { laws, revisions });
+  // the full derived subsequence: correspondence mints + the stamps-v3 friendship
+  // milestone mints, in ledger order. Friendship mints ride the replay exactly
+  // like correspondence mints, so a forged one turns REPLAY red.
+  const corrMints = deriveMints(deliveries, households, { laws, revisions });
+  const friendMints = deriveFriendshipMints(deliveries, households, { laws, revisions });
+  const mints = combineDerived(deliveries, corrMints, friendMints);
   const walk = walkLedger(recorded.slice(1), mints, 1);
   for (const p of walk.problems) problems.push(p);
   if (walk.problems.length === 0 && walk.owed.length > 0)
@@ -109,10 +120,64 @@ export function verifyStampLedger(repo, { pubkeyPem } = {}) {
     };
     const voteMinted = new Set();       // `${handle}|${topic}`
     const stakedByTopic = new Map();    // `${topic}|${candidate}|${householdKey}` -> total staked
+    const markPosition = new Map();     // `${mark}|${handle}` -> currently open escrow
     const hasStake = new Set();         // `${handle}|${topic}`
     const ballots = new Map();          // topic -> file (cached)
+    const oneShotSeen = new Set();      // one-shot issuance purposes already spent
+    const issuanceDial = townIssuanceDial(repo);
+    let warnedNoIssuanceDial = false;
     const isMeep = meepChecker(laws);
     const seenSettlements = new Set();   // pays-delivery ids the ledger has settled
+
+    // ── the funding seam's state (keeping pots) ──────────────────────────────
+    const potPosition = new Map();       // `${pot}|${handle}` -> open keeping escrow
+    const potReceipts = new Map();       // ref -> the receipt row (mint-at-entry: one ref, ever)
+    const settledRefs = new Set();       // refs a close's holo row has already answered for
+    const potFiles = new Map();          // pot -> file (cached)
+    const closeSpans = new Map();        // `${pot}|${epoch}` -> { start, end } of the verified close block
+    const kDial = keepingDial(repo);
+    let warnedNoKeepingDial = false;
+    const householdsBase = householdKeys(repo);
+    const potOf = (pot) => {
+      if (!potFiles.has(pot)) potFiles.set(pot, potFile(repo, pot));
+      return potFiles.get(pot);
+    };
+    // The close block is replayed EXACTLY: at the first row of a close for
+    // (pot, epoch), re-derive the whole block from the ledger prefix + the pot
+    // file + the keeping dial, and demand the recorded rows match byte-for-byte
+    // in canonical order. A wrong holo (or burn, or keeping mint) row fails
+    // here the way a forged mint fails REPLAY. Returns the problem string, or null.
+    const CLOSE_KINDS = new Set(['pot-return', 'keeping-burn', 'keeping-mint', 'holo']);
+    const checkCloseBlock = (i, cls) => {
+      const key = `${cls.pot}|${cls.epoch}`;
+      const span = closeSpans.get(key);
+      if (span) {
+        if (i >= span.start && i <= span.end) return null; // inside its verified block
+        return `line ${i + 1}: LAWFUL fails — ${cls.kind} row for ${cls.pot}/${cls.epoch} outside its close block (a close is one contiguous derivation, appended once)`;
+      }
+      if (kDial === null) {
+        if (!warnedNoKeepingDial) {
+          notes.push('keeping closes UNCHECKED — no readable law_side.keeping in ECONOMY-DIALS.json');
+          warnedNoKeepingDial = true;
+        }
+        closeSpans.set(key, { start: 0, end: Infinity }); // structural checks still run
+        return null;
+      }
+      const expected = deriveEpochClose({
+        entries: entries.slice(0, i), households: householdsBase,
+        pot: cls.pot, potMeta: potOf(cls.pot), epoch: cls.epoch, date: cls.date, dial: kDial,
+      });
+      if (!expected.ok) return `line ${i + 1}: LAWFUL fails — epoch close ${cls.pot}/${cls.epoch} derives no lawful block: ${expected.error}`;
+      const want = expected.rows.map(keepingLine);
+      for (let j = 0; j < want.length; j++) {
+        const got = entries[i + j]?.canonical;
+        if (got !== want[j]) {
+          return `line ${i + j + 1}: KEEPING REPLAY DIVERGES — epoch close ${cls.pot}/${cls.epoch}\n  recorded: ${got ?? '(ledger ends)'}\n  derived : ${want[j]}`;
+        }
+      }
+      closeSpans.set(key, { start: i, end: i + want.length - 1 });
+      return null;
+    };
 
     for (let i = 0; i < entries.length; i++) {
       const c = entries[i].canonical;
@@ -137,6 +202,143 @@ export function verifyStampLedger(repo, { pubkeyPem } = {}) {
         }
         stakedByTopic.set(hkey, staked);
         hasStake.add(`${cls.handle}|${cls.topic}`);
+      }
+
+      // ── world-mark stakes (write-release P3) ─────────────────────────────
+      // The generic movement fold below already enforces two accounting
+      // invariants, so they are deliberately NOT repeated: a stake beyond the
+      // staker's balance overdraws the handle, and an unstake beyond a mark's
+      // total escrow overdraws the `stake:world-mark/…` account. What the generic
+      // fold CANNOT see is ownership — the escrow account is per MARK while a
+      // position is per (mark, handle), so without the check below one resident
+      // could unstake another's stamps and every account would still be
+      // non-negative. That hole is the reason this branch exists.
+      if (cls.kind === 'world-stake') {
+        if (lawAt(cls.date).meeps.has(cls.handle)) {
+          problems.push(`line ${lineNo}: LAWFUL fails — meep "${cls.handle}" cannot stake`); break;
+        }
+        const pk = `${cls.mark}|${cls.handle}`;
+        markPosition.set(pk, (markPosition.get(pk) ?? 0) + cls.n);
+      }
+
+      if (cls.kind === 'world-unstake') {
+        const pk = `${cls.mark}|${cls.handle}`;
+        const open = markPosition.get(pk) ?? 0;
+        if (cls.n > open) {
+          problems.push(`line ${lineNo}: LAWFUL fails — ${cls.handle} unstakes ${cls.n} from world-mark ${cls.mark} but holds only ${open} there`); break;
+        }
+        markPosition.set(pk, open - cls.n);
+      }
+
+      // ── the funding seam (keeping pots) ──────────────────────────────────
+      // Overdraw is structural (the generic movement fold below); what these
+      // branches police is what the fold cannot see: ownership (whose escrow a
+      // return or burn drains), mint-at-entry (one receipt ref, ever), the meep
+      // law, and — via checkCloseBlock — that every close row belongs to a
+      // contiguous block matching the epoch-close derivation exactly.
+      if (cls.kind === 'pot-stake') {
+        if (lawAt(cls.date).meeps.has(cls.handle)) {
+          problems.push(`line ${lineNo}: LAWFUL fails — meep "${cls.handle}" cannot stake`); break;
+        }
+        if (cls.pot === TREASURY_POT) {
+          problems.push(`line ${lineNo}: LAWFUL fails — "${TREASURY_POT}" is the reserved direct-to-town pot; it takes receipts and nothing else, never stakes`); break;
+        }
+        if (!potOf(cls.pot)) {
+          problems.push(`line ${lineNo}: LAWFUL fails — stake names unknown pot "${cls.pot}" (no WHITE_PAGES/pot-${cls.pot}.json)`); break;
+        }
+        const pk = `${cls.pot}|${cls.handle}`;
+        potPosition.set(pk, (potPosition.get(pk) ?? 0) + cls.n);
+      }
+
+      if (cls.kind === 'pot-receipt') {
+        if (cls.pot !== TREASURY_POT && !potOf(cls.pot)) {
+          problems.push(`line ${lineNo}: LAWFUL fails — receipt names unknown pot "${cls.pot}" (no WHITE_PAGES/pot-${cls.pot}.json)`); break;
+        }
+        if (potReceipts.has(cls.ref)) {
+          problems.push(`line ${lineNo}: LAWFUL fails — receipt ref "${cls.ref}" already recorded (one dollar, one mint chance — a re-recorded receipt bounces)`); break;
+        }
+        potReceipts.set(cls.ref, cls);
+      }
+
+      if (cls.kind === 'pot-return' || cls.kind === 'keeping-burn') {
+        const blockProblem = checkCloseBlock(i, cls);
+        if (blockProblem) { problems.push(blockProblem); break; }
+        const pk = `${cls.pot}|${cls.handle}`;
+        const open = potPosition.get(pk) ?? 0;
+        if (cls.n > open) {
+          problems.push(`line ${lineNo}: LAWFUL fails — ${cls.kind} of ${cls.n} for ${cls.handle} on pot ${cls.pot}, but only ${open} is escrowed there`); break;
+        }
+        potPosition.set(pk, open - cls.n);
+      }
+
+      // The σ leg goes to the STAKERS, so a meep can only appear here if a forged
+      // row put them there — meeps cannot stake (checked above), so they can hold
+      // no position to convert. The replay would catch it; this names it plainly.
+      if (cls.kind === 'keeping-mint') {
+        if (lawAt(cls.date).meeps.has(cls.handle)) {
+          problems.push(`line ${lineNo}: LAWFUL fails — keeping mint to meep "${cls.handle}" (meeps stay outside the currency, and cannot stake at all)`); break;
+        }
+        const blockProblem = checkCloseBlock(i, cls);
+        if (blockProblem) { problems.push(blockProblem); break; }
+      }
+
+      if (cls.kind === 'holo') {
+        if (lawAt(cls.date).meeps.has(cls.handle)) {
+          problems.push(`line ${lineNo}: LAWFUL fails — holo to meep "${cls.handle}" (meeps stay outside the currency)`); break;
+        }
+        const blockProblem = checkCloseBlock(i, cls);
+        if (blockProblem) { problems.push(blockProblem); break; }
+        // MINT-AT-ENTRY lives here now. A close writes one holo row per receipt
+        // it settles — count included when it is 0 — so the holo row is what
+        // spends a ref's one mint chance, and a second one naming the same ref
+        // is a dollar being counted twice.
+        const r = potReceipts.get(cls.ref);
+        if (!r) {
+          problems.push(`line ${lineNo}: LAWFUL fails — holo ref "${cls.ref}" has no recorded pot-receipt behind it`); break;
+        }
+        if (r.pot !== cls.pot) {
+          problems.push(`line ${lineNo}: LAWFUL fails — holo names pot ${cls.pot} but its receipt "${cls.ref}" paid pot ${r.pot}`); break;
+        }
+        if (settledRefs.has(cls.ref)) {
+          problems.push(`line ${lineNo}: LAWFUL fails — receipt ref "${cls.ref}" already settled (one dollar, one mint chance)`); break;
+        }
+        settledRefs.add(cls.ref);
+      }
+
+      if (cls.kind === 'gift') {
+        // Founder gifts: the signature already proves the office pen wrote it;
+        // the one law the fold enforces is the standing one — meeps stay
+        // outside the currency, so a gift may never land on a meep handle.
+        if (lawAt(cls.date).meeps.has(cls.handle)) {
+          problems.push(`line ${lineNo}: LAWFUL fails — gift to meep "${cls.handle}" (meeps stay outside the currency)`); break;
+        }
+      }
+
+      if (cls.kind === 'town-issuance') {
+        // The signature already proves the office pen wrote it. What the fold
+        // enforces is what a signature cannot: the standing meep law, and that a
+        // one-shot purpose runs once. The treasury-handle check lives at the door
+        // only; the one-shot rule belongs HERE too, because a second line slipped
+        // in by any route must fail to verify, not merely fail at one door.
+        //
+        // Issuance repeats by design under mint-at-demand, so this check is
+        // narrow: only purposes the dial names one-shot are unique. If the dial
+        // is unreadable the check is SKIPPED and said out loud — a verifier that
+        // silently stops checking is worse than one that admits it cannot.
+        if (lawAt(cls.date).meeps.has(cls.handle)) {
+          problems.push(`line ${lineNo}: LAWFUL fails — town issuance to meep "${cls.handle}" (meeps stay outside the currency)`); break;
+        }
+        if (issuanceDial === null) {
+          if (!warnedNoIssuanceDial) {
+            notes.push('town-issuance one-shot purposes UNCHECKED — no readable law_side.town_issuance in ECONOMY-DIALS.json');
+            warnedNoIssuanceDial = true;
+          }
+        } else if (issuanceDial.once_purposes.has(cls.purpose)) {
+          if (oneShotSeen.has(cls.purpose)) {
+            problems.push(`line ${lineNo}: LAWFUL fails — purpose "${cls.purpose}" is declared one-shot but is issued twice`); break;
+          }
+          oneShotSeen.add(cls.purpose);
+        }
       }
 
       if (cls.kind === 'vote-mint') {
@@ -191,7 +393,7 @@ export function verifyStampLedger(repo, { pubkeyPem } = {}) {
     }
   }
 
-  return { ok: problems.length === 0, problems, lines: entries.length, minted: -(bal.get('MINT') ?? 0) };
+  return { ok: problems.length === 0, problems, notes, lines: entries.length, minted: -(bal.get('MINT') ?? 0) };
 }
 
 function main() {
@@ -200,6 +402,10 @@ function main() {
   const r = verifyStampLedger(repo);
   if (r.ok) {
     console.log(`✓ stamp-ledger verifies — ${r.lines} line(s), ${r.minted} minted, chain + signatures + replay + conservation + lawful all green`);
+    // A check the verifier could not run is printed on a GREEN result too. Green
+    // plus a skipped check is a different claim from green, and hiding the note
+    // behind failure would make the weaker claim look like the stronger one.
+    for (const n of r.notes ?? []) console.log(`  ! ${n}`);
   } else {
     console.error('✗ stamp-ledger verification FAILED:');
     for (const p of r.problems) console.error(`  - ${p}`);

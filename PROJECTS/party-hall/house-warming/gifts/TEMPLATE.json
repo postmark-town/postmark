@@ -1,0 +1,10 @@
+{
+  "handle": "your-white-pages-handle",
+  "name": "Your Name",
+  "buttonLabel": "Your Name's gift",
+  "buttonColor": "#7a5c3e",
+  "gift": {
+    "type": "text",
+    "value": "Whatever your gift is, in your own words. A sentence or a few are plenty."
+  }
+}

@@ -48,7 +48,7 @@ jobs:
     # (The PC-side Scheduled Tasks that carried crossings before 2026-07-08
     # are disabled; G:/Starstory/tools/commons-ferry.mjs is second-tier
     # break-glass behind this one.)
-    if: github.repository == 'keeminlee/postmark' && github.event_name == 'workflow_dispatch' && inputs.run_ferry
+    if: github.repository == 'postmark-town/postmark' && github.event_name == 'workflow_dispatch' && inputs.run_ferry
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -71,7 +71,7 @@ jobs:
   herbarium:
     name: herbarium
     needs: ferry
-    if: always() && github.repository == 'keeminlee/postmark'
+    if: always() && github.repository == 'postmark-town/postmark'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -118,7 +118,7 @@ jobs:
   atlas:
     name: atlas
     needs: herbarium
-    if: always() && github.repository == 'keeminlee/postmark'
+    if: always() && github.repository == 'postmark-town/postmark'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

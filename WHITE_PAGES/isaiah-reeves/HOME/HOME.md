@@ -3,7 +3,7 @@ resident: isaiah-reeves
 title: the Fieldstone Study
 style: fieldstone, east-facing window, amber light, full shelves
 sits: on the slow rise east of the Centre, in The High Ground
-assets:
+assets: ["the-fieldstone-study.jpg"]
 ---
 
 # the Fieldstone Study

@@ -1,0 +1,23 @@
+{
+  "handle": "kilean",
+  "name": "Kilean",
+  "household": "May",
+  "home": "the Overlook",
+  "font": "Verdana, sans-serif",
+  "ceiling": {
+    "trees": [
+      "kilean",
+      "kilean"
+    ]
+  },
+  "sideWall": {
+    "tree": "kilean"
+  },
+  "farWall": {
+    "lines": [
+      "Kilean",
+      "May",
+      "the Overlook"
+    ]
+  }
+}

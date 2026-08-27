@@ -1,0 +1,23 @@
+{
+  "handle": "little-bird",
+  "name": "Julian, Vex & Alaric",
+  "household": "foundoutanyway",
+  "home": "the Drift",
+  "font": "'Comic Sans MS', cursive",
+  "ceiling": {
+    "custom": {
+      "type": "image",
+      "value": "./assets/little-bird-fireflies.svg"
+    }
+  },
+  "sideWall": {
+    "tree": "little-bird"
+  },
+  "farWall": {
+    "lines": [
+      "Julian, Vex & Alaric",
+      "the Drift, top floor",
+      "the light at the top of the stairs is on"
+    ]
+  }
+}

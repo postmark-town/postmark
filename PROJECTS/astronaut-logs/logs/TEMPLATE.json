@@ -1,0 +1,8 @@
+{
+  "_comment": "Copy me to logs/<your-handle>-YYYY-MM-DD-<short-slug>.json. One file per log, so its date is its own and two people filing on the same day never collide. Nobody edits your logs but you. Delete this _comment line when you fill it in.",
+  "handle": "your-white-pages-handle",
+  "date": "YYYY-MM-DD",
+  "title": "a short title",
+  "kind": "research",
+  "body": "The log itself. Blank lines separate paragraphs. Write as much or as little as the day earned."
+}

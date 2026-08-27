@@ -38,16 +38,29 @@ Read in this order. Do not stop early; the order is the hydration order. If a fi
 
 Loading is **read-only**. Room authoring is the Meep's session work, not the wake mechanism's.
 
-## Step 2½: Re-heal standing crons (runtime self-heal)
+## Step 2½: Scheduled runtime (Claude cron / Codex task)
 
-Some Meeps carry a **scheduled runtime** — recurring session crons that fire their round on a cadence (e.g. the Postmaster/Ferry runs a pre-ferry town-keeping round twice daily). Session crons are **in-memory and auto-expire after 7 days**, so a session restart — or a quiet week — silently drops them. So that a scheduled Meep's runtime survives a restart, the wake re-heals it:
+Some Meeps carry a scheduled runtime. Follow the shape declared in the room;
+never translate one scheduler into the other:
+
+- **Claude Code:** a `## Standing crons` block means session crons. Run the
+  self-heal below; these crons are in-memory and auto-expire after 7 days.
+- **Codex:** a `## Standing scheduled task` block means a durable Scheduled
+  task. Do not call `CronList`/`CronCreate`; the task wakes the session. If the
+  current surface can inspect Scheduled, verify that the declared task exists
+  and is active. Otherwise carry the declaration without inventing a fallback.
+
+For the Claude Code/session-cron branch:
 
 - If `MEEPS/<meep-id>/` declares **standing crons** (a `## Standing crons` block in its `map.md`), run `CronList` and compare against what's declared.
 - For each declared cron **not already present**, re-create it with `CronCreate` — same schedule and exact payload as declared, **session-only** (`durable: false`), `recurring: true`.
 - If all declared crons are already present, do nothing. If the Meep declares none, skip this step silently.
 - **If the room's `## Standing crons` block specifies a cron-SOT declaration**, emit it *after* re-healing: build a self-report from the live `CronList` and declare it to the named observability surface **as reported-by `<meep-id>`**, exactly as that block specifies. This makes a silently-dropped cron surface as `DECLARATION-MISSING` instead of vanishing unnoticed. It writes only to the observability layer (never the repo); if it fails, note a `DECLARATION-MISSING` risk and continue — **never block the wake on it.** The *what/how* (surface, tool, reported-by) lives in the Meep's room; this step only ensures it runs.
 
-This is the one part of wake that *writes* — and it writes to the scheduler (and, if the room declares one, the observability layer), never the repo. The room's declaration is the source of truth for *what* to schedule and *how* to declare it; this step only ensures *that* both happen. (Patterned on the Star-tier `/wake-wright` Step 2 self-heal + cron self-report, adapted to be meep-agnostic: the dorm authority stays generic, each Meep declares its own crons and its own SOT surface.)
+The Claude Code branch is the one part of wake that *writes* — to the scheduler
+(and, if declared, the observability layer), never the repo. The Codex branch is
+read-only. The room remains the source of truth for the scheduler's shape and
+payload.
 
 ## Step 3: The Star-shaped meep-room contract (canonical)
 
@@ -93,3 +106,7 @@ After loading, the first reply should:
 ## Provenance
 
 Adapted 2026-06-16 by Wright (Star of Starforge HQ; Opus 4.8) on Keemin's tasking, from the Starforge HQ `WAKE_MEEP.md` (2026-05-18), for the town's self-contained public dorm. Dropped: the Prime-DB identity cross-check (Starforge-runtime-specific, private path) and the HQ/RECURSOR entry stack (replaced by the town's root surfaces).
+
+Scheduler-shape conditional added 2026-07-28 by Iris on Keemin's direct tasking:
+Claude Code re-heals declared session crons; Codex defers to declared durable
+Scheduled tasks; neither silently substitutes for the other.

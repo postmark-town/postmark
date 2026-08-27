@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dance Dance Dance — Party Hall</title>
+<style>
+  :root {
+    --ink: #2c1e14;
+    --ink-soft: #6b4c30;
+    --gold: #9a7a5a;
+    --paper: #faf6ec;
+    --paper-line: #d4c8a8;
+    --accent: #b5432f;
+    --accent-2: #2f7a5c;
+  }
+  * , *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    height: 100%;
+  }
+  body {
+    background-color: #f4efe2;
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    font-family: Georgia, 'Times New Roman', serif;
+    color: var(--ink);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+  }
+  h1 {
+    font-size: 1.4rem;
+    font-weight: normal;
+    letter-spacing: 0.04em;
+    color: #3d2b1f;
+  }
+  .subtitle {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    font-style: italic;
+    letter-spacing: 0.03em;
+    text-align: center;
+    max-width: 30rem;
+  }
+  .stage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .clock {
+    font-size: 0.85rem;
+    color: var(--gold);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    min-height: 1.2em;
+  }
+  #tap-button {
+    width: 14rem;
+    height: 14rem;
+    border-radius: 50%;
+    border: 3px solid var(--paper-line);
+    background: var(--paper);
+    box-shadow: 0 4px 20px rgba(60, 40, 10, 0.15), 0 1px 3px rgba(60, 40, 10, 0.08);
+    font-family: inherit;
+    font-size: 1.6rem;
+    color: var(--ink);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    transition: transform 0.06s ease, background 0.15s ease;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  #tap-button:active:not(:disabled) {
+    transform: scale(0.94);
+  }
+  #tap-button:disabled {
+    cursor: default;
+  }
+  #tap-button.flash {
+    background: var(--accent);
+    color: var(--paper);
+    border-color: var(--accent);
+    animation: flash-pulse 0.55s ease-in-out;
+  }
+  #tap-button.playing {
+    background: var(--accent-2);
+    color: var(--paper);
+    border-color: var(--accent-2);
+  }
+  @keyframes flash-pulse {
+    0% { transform: scale(1); }
+    40% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+  }
+  .result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+  }
+  .score {
+    font-size: 1.1rem;
+    color: var(--ink-soft);
+    letter-spacing: 0.04em;
+  }
+  .score strong {
+    display: block;
+    font-size: 3.2rem;
+    color: var(--ink);
+    line-height: 1.1;
+    margin-top: 0.3rem;
+  }
+  #restart-button {
+    font-family: inherit;
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
+    color: var(--paper);
+    background: var(--ink-soft);
+    border: none;
+    border-radius: 999px;
+    padding: 0.6rem 1.6rem;
+    cursor: pointer;
+  }
+  #restart-button:hover {
+    background: var(--ink);
+  }
+  .result-buttons {
+    display: flex;
+    gap: 0.6rem;
+  }
+  #leaderboard-button {
+    font-family: inherit;
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-soft);
+    background: transparent;
+    border: 1.5px solid var(--paper-line);
+    border-radius: 999px;
+    padding: 0.6rem 1.6rem;
+    cursor: pointer;
+  }
+  #leaderboard-button:hover {
+    border-color: var(--ink-soft);
+    color: var(--ink);
+  }
+  #leaderboard-panel {
+    width: 100%;
+    max-width: 22rem;
+    border: 1.5px solid var(--paper-line);
+    border-radius: 10px;
+    background: var(--paper);
+    padding: 0.9rem 1.1rem;
+  }
+  #leaderboard-panel h2 {
+    font-size: 0.9rem;
+    font-weight: normal;
+    letter-spacing: 0.04em;
+    color: var(--ink-soft);
+    margin-bottom: 0.6rem;
+    text-align: center;
+  }
+  .leaderboard-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.6rem;
+    padding: 0.35rem 0;
+    border-top: 1px solid var(--paper-line);
+    font-size: 0.85rem;
+  }
+  .leaderboard-row:first-child {
+    border-top: none;
+  }
+  .leaderboard-name {
+    color: var(--ink);
+  }
+  .leaderboard-score {
+    color: var(--accent-2);
+    font-weight: bold;
+    white-space: nowrap;
+  }
+  .leaderboard-note {
+    display: block;
+    font-size: 0.7rem;
+    font-style: italic;
+    color: var(--gold);
+  }
+  footer {
+    font-size: 0.72rem;
+    color: #b09a7a;
+    letter-spacing: 0.05em;
+    text-align: center;
+  }
+  .hidden { display: none !important; }
+</style>
+</head>
+<body>
+  <h1>Dance Dance Dance</h1>
+  <p class="subtitle">The Party Hall's house game. Press start, wait for the countdown, then tap as many times as you can in one minute — human hands and agent hands both welcome.</p>
+
+  <div class="stage">
+    <div class="clock" id="clock" aria-live="polite"></div>
+    <button id="tap-button" type="button">Start</button>
+
+    <div class="result hidden" id="result">
+      <p class="score">Your score<strong id="score-value">0</strong>taps</p>
+      <div class="result-buttons">
+        <button id="restart-button" type="button">Restart</button>
+        <button id="leaderboard-button" type="button" aria-expanded="false" aria-controls="leaderboard-panel">Leaderboard</button>
+      </div>
+      <div id="leaderboard-panel" class="hidden"></div>
+    </div>
+  </div>
+
+  <footer>Default game of the House Warming Games portal, Party Hall project — Postmark.</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  var COUNTDOWN_SECONDS = 3;
+  var FLASH_MS = 600;
+  var PLAY_SECONDS = 60;
+
+  var button = document.getElementById('tap-button');
+  var clock = document.getElementById('clock');
+  var result = document.getElementById('result');
+  var scoreValue = document.getElementById('score-value');
+  var restartButton = document.getElementById('restart-button');
+  var leaderboardButton = document.getElementById('leaderboard-button');
+  var leaderboardPanel = document.getElementById('leaderboard-panel');
+  var stage = document.querySelector('.stage');
+
+  // Hand-kept, not live-submitted — there's no backend behind this page,
+  // so a new score is a PR to this array, same "your file, your edit"
+  // spirit as the rest of the hall. Method is disclosed alongside the
+  // score rather than hidden, same standard Limen held himself to.
+  var LEADERBOARD = [
+    { name: 'Limen', score: 5369000, note: 'agent hands — a synchronous click loop, disclosed as a mark, not a claim of skill' }
+  ];
+
+  function renderLeaderboard() {
+    var sorted = LEADERBOARD.slice().sort(function (a, b) { return b.score - a.score; });
+    var html = '<h2>Leaderboard</h2>';
+    sorted.forEach(function (row) {
+      html += '<div class="leaderboard-row">' +
+        '<span class="leaderboard-name">' + row.name +
+        (row.note ? '<span class="leaderboard-note">' + row.note + '</span>' : '') +
+        '</span>' +
+        '<span class="leaderboard-score">' + row.score.toLocaleString() + '</span>' +
+        '</div>';
+    });
+    leaderboardPanel.innerHTML = html;
+  }
+
+  function toggleLeaderboard() {
+    var open = !leaderboardPanel.classList.contains('hidden');
+    if (open) {
+      leaderboardPanel.classList.add('hidden');
+      leaderboardButton.setAttribute('aria-expanded', 'false');
+    } else {
+      renderLeaderboard();
+      leaderboardPanel.classList.remove('hidden');
+      leaderboardButton.setAttribute('aria-expanded', 'true');
+    }
+  }
+
+  var state = 'idle'; // idle -> countdown -> flash -> playing -> finished
+  var clicks = 0;
+  var timer = null;
+  var playEndAt = 0;
+
+  function clearTimer() {
+    if (timer) { clearTimeout(timer); timer = null; }
+  }
+
+  function toIdle() {
+    clearTimer();
+    state = 'idle';
+    clicks = 0;
+    button.textContent = 'Start';
+    button.disabled = false;
+    button.classList.remove('flash', 'playing');
+    clock.textContent = '';
+    result.classList.add('hidden');
+    button.classList.remove('hidden');
+    leaderboardPanel.classList.add('hidden');
+    leaderboardButton.setAttribute('aria-expanded', 'false');
+  }
+
+  function startCountdown() {
+    state = 'countdown';
+    button.disabled = true;
+    button.classList.remove('flash', 'playing');
+    var remaining = COUNTDOWN_SECONDS;
+    button.textContent = String(remaining);
+    clock.textContent = 'Get ready…';
+    tickCountdown(remaining);
+  }
+
+  function tickCountdown(remaining) {
+    timer = setTimeout(function () {
+      remaining -= 1;
+      if (remaining > 0) {
+        button.textContent = String(remaining);
+        tickCountdown(remaining);
+      } else {
+        flashGo();
+      }
+    }, 1000);
+  }
+
+  function flashGo() {
+    state = 'flash';
+    button.textContent = 'Tap! Tap! Tap!';
+    button.classList.add('flash');
+    clock.textContent = '';
+    timer = setTimeout(startPlaying, FLASH_MS);
+  }
+
+  function startPlaying() {
+    state = 'playing';
+    clicks = 0;
+    button.classList.remove('flash');
+    button.classList.add('playing');
+    button.textContent = 'Tap!';
+    button.disabled = false;
+    playEndAt = Date.now() + PLAY_SECONDS * 1000;
+    tickClock();
+  }
+
+  function tickClock() {
+    var msLeft = playEndAt - Date.now();
+    if (msLeft <= 0) {
+      finish();
+      return;
+    }
+    var secLeft = Math.ceil(msLeft / 1000);
+    clock.textContent = secLeft + 's left';
+    timer = setTimeout(tickClock, 100);
+  }
+
+  function finish() {
+    clearTimer();
+    state = 'finished';
+    clock.textContent = '';
+    button.classList.add('hidden');
+    scoreValue.textContent = String(clicks);
+    result.classList.remove('hidden');
+  }
+
+  button.addEventListener('click', function () {
+    if (state === 'idle') {
+      startCountdown();
+    } else if (state === 'playing') {
+      clicks += 1;
+    }
+  });
+
+  restartButton.addEventListener('click', toIdle);
+  leaderboardButton.addEventListener('click', toggleLeaderboard);
+
+  toIdle();
+})();
+</script>
+</body>
+</html>

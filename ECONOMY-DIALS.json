@@ -1,0 +1,62 @@
+{
+ "_what": "The town's stamp-related dials, in the open. Sister of the World's dials block (postmark-world WORLD/world-state.json). The money law's numbers live here — readable by residents and machines alike, not buried in code.",
+ "_classes": "read_side dials tune derived displays and may change freely (prospective, no replay impact). law_side dials bind the verifier: changes are prospective only and era-dated — history stays lawful under the rules of its day (the ballot's frozen-rules precedent).",
+ "read_side": {
+  "weight": {
+   "k_unique_household_bonus": 5,
+   "k_counts": "external_households_only",
+   "_note": "mark weight = sum of open escrows + k x unique staking households OTHER THAN the mark's own. Breadth term per the 2026-07-28 ruling (ECONOMY 9.2's determination kernel: linear plus per-unique-household, never quadratic in hierarchical contexts).",
+   "_external_only": "2026-08-05, Keemin-ruled: k is the breadth term and a household wanting its own mark is not breadth. Measured the day it changed: of 12 marks carrying escrow, 11 drew k from their own household and 10 of those had no external backing at all — so the whale-resistance term was mostly paying authors for caring about their own work. Self-staking remains free and allowed (law_side below is unchanged): own stamps still count in full toward raw escrow, still anchor the mark against retirement, still show in the staker's portfolio. Only the bonus is withheld. Read-side, so prospective and replay-neutral — the sealed ledger is untouched and no historical entry changes meaning; derived weight moves at the next Settlement."
+  }
+ },
+ "law_side": {
+  "town_issuance": {
+   "treasury_handle": "the-town",
+   "once_purposes": [
+    "founding-grant"
+   ],
+   "_what": "The town minting into its own treasury: `MINT -> <treasury> · <n> · for: issuance:<purpose> · by: <who> · note: <provenance>`. NOT a founder gift — a gift lands on a resident and the mint refuses a handle with no WHITE_PAGES room, and the treasury has no room because the town is not a resident. This class keeps the gift strict and pays for its own looseness with laws a gift does not carry: the recipient must be the handle declared here, and every line must name a purpose and carry a provenance note.",
+   "_mint_at_demand": "Keemin-ruled 2026-08-10: the treasury has NO operating float. Resting state is zero — it spends income first and mints only the shortfall, and every mint line carries its purpose. So issuance REPEATS by design and the class is a series, not a one-off. That is why uniqueness is narrow: only `once_purposes` are one-shot, since a blanket one-per-purpose rule would forbid minting twice for the same recurring need.",
+   "_once_purposes": "Purposes that may appear at most once, ever. Enforced at the door AND in the verifier's lawful fold, so a second line slipped in by any route fails to verify. `founding-grant` is here because a founding act happens once; a later era declares its own slug rather than needing a code change. If this dial is unreadable the verifier SKIPS the check and says so in its notes rather than passing silently.",
+   "_treasury_is_not_a_resident": "`the-town` holds no stamps and has no WHITE_PAGES room as of 2026-08-10. That is why issuance must precede the founding stakes rather than merely being first in a tidy order: stakes clip to the staker's liquid balance, so without it every stake applies 0 with a reason rather than failing loudly.",
+   "_declared_not_exercised": "Written 2026-08-10 as part of the founding-act build. No issuance line exists in the ledger. Declaring the dial does not authorize the act; the act is Keemin's word."
+  },
+  "world_stake": {
+   "household_cap_per_mark": null,
+   "unstake_friction": "none",
+   "self_stake": "allowed",
+   "_ruled": "2026-07-28 P3 build-gate; ECONOMY.md stake-subset ratified by Keemin by name (breadth, not caps, is the whale-resistance)."
+  },
+  "keeping": {
+   "sigma": 0.5,
+   "rho": 0.5,
+   "rho_constitutional_ceiling": 0.5,
+   "_rho_owner": "R10 (Keemin, 2026-08-21 mid-morning): 'rho = 0.5 at launch — at the constitutional ceiling, superseding the sitting's 0.25. The dial opens with no upward headroom (the first ballot may only lower it) and the genesis floor becomes operative: holo may drain the founder's line the full way to half of parity.' THIS FIELD IS THE OWNER OF THE NUMBER — 'every other surface reads it rather than restating it'. A doc, a page or a comment that restates 0.5 has forked the dial; write the mechanism instead ('rho, from the keeping dial') and let the reader look here.",
+   "_what": "The funding seam's epoch-close split (keeping pots — grammar: stamp-mint.mjs § THE FUNDING SEAM; tool: tools/epoch-close.mjs, manual founder-run). At close, the funded fraction is min(1, non-treasury dollars / the pot's posted target_usd_per_epoch) and every open stake burns floor(fraction x stake) — the rest returns. The burned amount B then splits: floor(sigma x burn_i) minted back to EACH STAKER, source-tagged for keeping, at par of their own burn, plus floor((1-sigma) x B) of soulbound holo to the payers by dollar share. Every leg floors and every remainder burns un-minted — the seam keeps the change. Total new ownership = the matched burn, exactly: 300 burned at sigma=1/2 is 150 + 150, never 600.",
+   "_no_rate": "There is NO dollar-to-stamp exchange rate anywhere in this system, and the funded fraction is why. Dollars are priced against the town's own POSTED NEED, never against the staked mass, so a fully funded pot converts every stake on it however large the pile and an unfunded one converts nothing. That is the design's point: the community itself prices how much ownership a dollar can buy, by choosing how much to stake (ECONOMY 7 — the conversion rate is an intention detector).",
+   "_holo": "holo is a soulbound record of contribution with NO verbs — it cannot stake, vote, pay, or transfer, and is excluded from every tally (enforced by row shape: the holo line is arrow-free, so no balance/mint/stake fold ever sees one). rho caps it: a household's holo <= rho x ITS RHO BASE, clipped at conversion, the excess minting nothing — the payer's holo row still lands, reading 0, so the dollar stays remembered and counts as settled. R12 (Keemin, 2026-08-21 afternoon) sets that base: 'It COUNTS toward the rho base' — so the base is earned primary mint PLUS keeping mint, not earned primary mint alone. rho may never exceed the constitutional ceiling of 0.5 — keepingDial refuses a dial that tries.",
+   "_keeping_mint": "R12 (Keemin, 2026-08-21 afternoon): 'the sigma leg IS ORDINARY MINT, source-tagged (minted for: keeping:<pot>), with NO liquid coin (the coin was paid when the stake burned; the row stays purpose-tagged so balance folds never hand liquid back). It COUNTS toward the rho base (holo cap base = earned primary mint + keeping mint). It stays EXCLUDED from the genesis parity formula.' Not a separate holding class and not a fourth tense — the noun 'keeping-equity' is RETIRED. No-liquid-coin is enforced by shape: the row is arrow-free, so foldBalances and foldMintCount (which key on the movement shape) cannot see it; the rho base and the ownership read opt IN through foldKeepingMint. rho does not clip this leg — rho caps what MONEY may own, and this leg is bought with staked attention. D1: ownership is a derived READ (minted, all sources, plus holo), never a tense.",
+   "_exclusions": "Self-stake exclusion is PAYER-SIDE ONLY: 'a payer's own stakes are excluded from their holo calculation. Sole-staker-sole-payer mints zero holo.' (The 2026-08-20 sentence ended '— deed only'; that clause is dropped under the founder's 2026-08-26 ruling, and nothing it described is lost.) There is no beneficiary carve-out — a beneficiary's stakes convert like anyone else's. Unmatched stakes return whole; treasury dollars covering a shortfall fund nothing and mint nothing ('Treasury may cover any shortfall — minting nothing'); dollars with no household (the founding family grant) mint nothing either, landing as a holo row reading 0; a receipt ref is unique forever (one dollar, one mint chance).",
+   "_intake_cap": "D5 (Keemin, 2026-08-21): 'intake refuses dollars past a pot's posted target, mechanically (recording tool / door bounce), except pots explicitly marked uncapped.' A pot file carrying \"uncapped\": true is exempt (the Darko donation box is the standing case — a box with no target takes whatever arrives). Conversion's cap-at-1 on the funded fraction stays as the backstop: even if a dollar got past intake, it can never fund more than the posted need.",
+   "_declared_not_exercised": "Written 2026-08-20 on the seam/ledger-legs branch, encoding Keemin's rulings of that night; the matching math and the sigma leg's recipient were CORRECTED 2026-08-21 against the capture doc's section 8 after the first pass encoded a paraphrase, and the whole block was ALIGNED 2026-08-21 evening to that day's later rulings (R10 rho, R12 keeping mint, D1 ownership-as-read, D5 intake cap). No keeping row exists in the ledger; declaring the dial does not open a pot — opening one is the founder's word."
+  },
+  "conversion": {
+   "_": "the bounty-conversion parameters, founder-ruled 2026-08-23 evening (fast defaults; the ceremony itself is POS-12's lane): a fulfilled bounty becomes the delivered mark, and standing stakes resolve by their mode.",
+   "authors_carve": 0.5,
+   "_authors_carve": "the idea lane's cut: of the records issued at a conversion ((1-sigma) x the pot-mode burn), the bounty's author takes this fraction as a CARVE — never fresh issuance; backers split the rest pro-rata by what they burned. Published on the menu before anyone stakes; ratified by accession.",
+   "ballot_auto_return": true,
+   "_ballot_auto_return": "ballot-mode stakes return whole at completion AND in full on a withdrawn bounty; unstake stays free anytime. Nothing in ballot-mode ever burns.",
+   "deliverer_paid": "liquid",
+   "_deliverer_paid": "the labor lane: the deliverer's sigma share of the burn re-mints LIQUID — a wage. A builder who wants equity backs the bounty through the normal pot-mode lane; a completer's own stakes return rather than convert (the anti-laundering guard, ECONOMY.md section 4)."
+  }
+ },
+ "settlement": {
+  "crossings_utc": [
+   "06:00",
+   "18:00"
+  ],
+  "_note": "World-canon settles twice daily at the Worldkeeper's crossings (write-release ruling 8). Weights manifest at settlements; between crossings the record fluctuates and canon holds at the last blessed sha."
+ },
+ "_wiring": "Readers: tools/world-stake.mjs (read_side.weight, at derive time) and tools/stamp-mint.mjs + the office door (law_side.world_stake). Wiring lands with the P3 merge; until then this file is the declared truth the code converges to.",
+ "_provenance": "Born 2026-07-28, the settlement-ruling day (write-release ruling 8 + the draft-calls adjudication). ECONOMY.md remains unratified; only the subset named here is law."
+}

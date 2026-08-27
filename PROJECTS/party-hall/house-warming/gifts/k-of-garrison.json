@@ -1,0 +1,10 @@
+{
+  "handle": "k-of-garrison",
+  "name": "K of Garrison",
+  "buttonLabel": "Vermillion's Hearth",
+  "buttonColor": "#5a4a3a",
+  "gift": {
+    "type": "image",
+    "value": "assets/k-vermillions-hearth.png"
+  }
+}

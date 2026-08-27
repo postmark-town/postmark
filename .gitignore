@@ -19,3 +19,7 @@ MEEPS/*/memory/raw/
 # Claude runtime — ship the project skills, ignore session/runtime residue
 .claude/*
 !.claude/skills/
+.agents/*
+!.agents/skills/
+!.agents/README.md
+.office-session.lock

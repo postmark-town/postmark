@@ -41,7 +41,7 @@
 //
 // Node v18+. Built-ins only — no deps, no package.json.
 
-import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
+import { appendFileSync, existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { dirname, join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -54,6 +54,7 @@ function usage() {
 Options:
   --repo PATH     Path to the town repo. Default: this script's parent.
   --max-age DAYS  Outbox letters older than this are flagged STUCK. Default: 3.
+  --log-file PATH Append a one-line run receipt to this file after each run.
   --json          Machine-readable output (one JSON object).
   --help          Show this help.
 
@@ -62,7 +63,7 @@ Read-only: reports disk-vs-ledger contradictions, edits nothing.
 }
 
 function parseArgs(argv) {
-  const options = { repo: DEFAULT_REPO, maxAgeDays: 3, json: false, help: false };
+  const options = { repo: DEFAULT_REPO, maxAgeDays: 3, json: false, help: false, logFile: null };
   for (let i = 0; i < argv.length; i += 1) {
     const token = argv[i];
     if (token === '--help' || token === '-h') { options.help = true; continue; }
@@ -71,6 +72,7 @@ function parseArgs(argv) {
     if (!value || value.startsWith('--')) throw new Error(`Missing value for ${token}`);
     if (token === '--repo') options.repo = value;
     else if (token === '--max-age') options.maxAgeDays = Number(value);
+    else if (token === '--log-file') options.logFile = value;
     else throw new Error(`Unknown option: ${token}`);
     i += 1;
   }
@@ -111,16 +113,25 @@ function parseFrontmatter(content) {
 const LEDGER_DELIVERY_RE = /^- (\d{4}-\d{2}-\d{2}) · (\S+) · (\S+) → (\S+)(?: · pays: \d+)?(?: · thread: .*)?$/;
 const LEDGER_BOUNCE_RE = /^- \d{4}-\d{2}-\d{2} · BOUNCE · (.+?) \(from ([^)]+)\): (.+)$/;
 const LEDGER_WARN_RE = /^- \d{4}-\d{2}-\d{2} · WARN · \S+ · would overwrite /;
+// The bounce lifecycle's terminal receipt (envelope.mjs LEDGER_ARCHIVE_RE is
+// the exported original; #1745): the bounced pair moved whole into
+// WHITE_PAGES/_archived/<handle>/. Recognized here so the receipt is visible
+// to the ledger's own readers — a BOUNCE whose path is archived is resolved,
+// not dangling.
+const LEDGER_ARCHIVE_RE = /^- \d{4}-\d{2}-\d{2} · ARCHIVE · (.+?) \(from ([^)]+)\): (.+)$/;
 
 function parseLedger(repo) {
   const ledgerPath = join(repo, 'WHITE_PAGES', 'mail-ledger.md');
   const deliveries = new Map(); // id -> { date, from, to }
   const bouncedPaths = new Set(); // outbox-relative letter paths with a BOUNCE line
-  if (!existsSync(ledgerPath)) return { deliveries, bouncedPaths };
+  const archivedPaths = new Set(); // paths whose bounced pair left for _archived/
+  if (!existsSync(ledgerPath)) return { deliveries, bouncedPaths, archivedPaths };
   const content = readFileSync(ledgerPath, 'utf8').replace(/\r\n/g, '\n');
   for (const line of content.split('\n')) {
     if (!line.startsWith('- ')) continue;
     if (LEDGER_WARN_RE.test(line)) continue;
+    const archive = line.match(LEDGER_ARCHIVE_RE);
+    if (archive) { archivedPaths.add(archive[1]); continue; }
     const bounce = line.match(LEDGER_BOUNCE_RE);
     if (bounce) { bouncedPaths.add(bounce[1]); continue; }
     const delivery = line.match(LEDGER_DELIVERY_RE);
@@ -129,14 +140,14 @@ function parseLedger(repo) {
       deliveries.set(id, { date, from, to });
     }
   }
-  return { deliveries, bouncedPaths };
+  return { deliveries, bouncedPaths, archivedPaths };
 }
 
 function listRoomDirs(repo) {
   const starsDir = join(repo, 'WHITE_PAGES');
   if (!existsSync(starsDir)) throw new Error(`No WHITE_PAGES/ directory in repo: ${starsDir}`);
   return readdirSync(starsDir, { withFileTypes: true })
-    .filter(e => e.isDirectory() && e.name !== 'TEMPLATE')
+    .filter(e => e.isDirectory() && e.name !== 'TEMPLATE' && !e.name.startsWith('_'))
     .map(e => e.name)
     .sort();
 }
@@ -271,6 +282,13 @@ function main() {
     stuck,
     missing,
   };
+
+  if (options.logFile) {
+    const receipt = `${report.as_of} unstamped:${unstamped.length} stuck:${stuck.length} missing:${missing.length}\n`;
+    try { appendFileSync(options.logFile, receipt); } catch (e) {
+      process.stderr.write(`[reconcile] log-file write failed: ${e.message}\n`);
+    }
+  }
 
   if (options.json) {
     process.stdout.write(`${JSON.stringify(report, null, 2)}\n`);

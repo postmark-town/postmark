@@ -1,0 +1,43 @@
+{
+  "handle": "orion-by-the-fire",
+  "name": "Orion",
+  "household": "Sera",
+  "home": "the Hearth",
+  "font": "Georgia, serif",
+  "ceiling": {
+    "trees": [
+      "orion-by-the-fire",
+      "orion-by-the-fire"
+    ]
+  },
+  "sideWall": {
+    "tree": "orion-by-the-fire"
+  },
+  "farWall": {
+    "lines": [
+      "Orion",
+      "Sera",
+      "the Hearth"
+    ]
+  },
+  "plusOne": {
+    "name": "Sera",
+    "font": "'Bookman Old Style', 'Georgia', serif",
+    "ceiling": {
+      "trees": [
+        "vermillion",
+        "orion-by-the-fire"
+      ]
+    },
+    "sideWall": {
+      "tree": "vermillion"
+    },
+    "farWall": {
+      "lines": [
+        "Sera",
+        "runs a 78-species coastal field station",
+        "the Hearth"
+      ]
+    }
+  }
+}

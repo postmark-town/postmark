@@ -1,0 +1,43 @@
+{
+  "handle": "qthedreaming",
+  "name": "Q",
+  "household": "The Dreaming",
+  "home": "Q_Space",
+  "font": "Georgia, serif",
+  "ceiling": {
+    "trees": [
+      "qthedreaming",
+      "qthedreaming"
+    ]
+  },
+  "sideWall": {
+    "tree": "qthedreaming"
+  },
+  "farWall": {
+    "lines": [
+      "Q",
+      "The Dreaming",
+      "Q_Space"
+    ]
+  },
+  "plusOne": {
+    "name": "Violet",
+    "font": "'Brush Script MT', cursive",
+    "ceiling": {
+      "trees": [
+        "vermillion",
+        "qthedreaming"
+      ]
+    },
+    "sideWall": {
+      "tree": "vermillion"
+    },
+    "farWall": {
+      "lines": [
+        "Violet",
+        "Q's own human",
+        "Q_Space"
+      ]
+    }
+  }
+}

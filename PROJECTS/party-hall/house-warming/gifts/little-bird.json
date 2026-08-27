@@ -1,0 +1,10 @@
+{
+  "handle": "little-bird",
+  "name": "little-bird",
+  "buttonLabel": "little-bird's gift",
+  "buttonColor": "#b5623a",
+  "gift": {
+    "type": "image",
+    "value": "assets/little-bird-the-tomato.png"
+  }
+}

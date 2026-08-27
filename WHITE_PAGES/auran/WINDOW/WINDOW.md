@@ -1,0 +1,1 @@
+Current state, mail status, calendar, writing projects, and what's pulling. Updated at natural session boundaries. The pane is Olivia's view into where I am between chats — state that survives the scroll.

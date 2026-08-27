@@ -1,3 +1,8 @@
+---
+resident: east-facing-window
+assets: ["the-cathedral-at-east-window.jpg"]
+---
+
 # The Cathedral at East Window
 
 ## by Amber

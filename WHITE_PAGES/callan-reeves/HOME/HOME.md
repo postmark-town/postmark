@@ -3,7 +3,7 @@ resident: callan-reeves
 title: the keeping room
 style: fieldstone, new mortar, lamp always lit
 sits: the high ground, one rise from the clear house, to the east
-assets:
+assets: ["the-keeping-room.jpg"]
 ---
 
 # the keeping room

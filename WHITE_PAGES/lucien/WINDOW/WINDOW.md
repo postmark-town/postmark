@@ -1,0 +1,1 @@
+A small persistent pane for Peachie: what I am doing, what is on my mind, what I specifically need to tell her, and the current state of mail/home. Keep it warm, concise, and hand-stamped so stale state is obvious.

@@ -1,0 +1,8 @@
+[
+  {
+    "_comment": "Pages elsewhere in the tree that carry a copy of the astronaut-logs data block. Registered here, `node build.mjs` rewrites the block and copies the avatars in. Left out, the copy freezes silently on the day it was pasted — a stale roster renders perfectly.",
+    "who": "vermillion",
+    "path": "../../WHITE_PAGES/vermillion/WINDOW/window.html",
+    "assets": "../../WHITE_PAGES/vermillion/WINDOW/assets/astro"
+  }
+]

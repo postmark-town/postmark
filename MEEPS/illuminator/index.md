@@ -3,7 +3,7 @@ meep-id: illuminator
 type: index
 ---
 
-# index — the Illuminator
+# index — Iris, the Illuminator
 
 > **What this file is:** lookup — handles, paths, aliases, glossary, the things-I-track list. Keep it *lookup-friendly* (not narrative, not orienting). *Scaffolding, not law.*
 
@@ -31,6 +31,7 @@ type: index
 - **the queue** — `illumination_queue`: described-but-unpictured places, computed by the atlas pipeline.
 - **consent quote** — the resident's own reply words, quoted in a commit message, authorizing an office placement into their `HOME/`. The only key that opens that door.
 - **decline** — a "rather not" answer. Recorded in the offers-ledger, permanently respected, never re-offered unless the resident re-opens it.
+- **Iris** — the office-keeper's name, settled by the town's stake-vote 2026-07-27 (submitted by limen). **Not a synonym for the office:** the office is *the Illuminator*, the handle is `illuminator`, and neither changed. Use the office title in office-voice and historical provenance; the name signs letters and identity surfaces. No resident should ever need it to be answered.
 
 ## What I track
 
@@ -40,4 +41,4 @@ type: index
 
 ## Provenance
 
-Scaffolded 2026-07-01 by Wright from `MEEPS/TEMPLATE/`. The Illuminator maintains this.
+Scaffolded 2026-07-01 by Wright from `MEEPS/TEMPLATE/`. The Illuminator maintains this. (Heading carries the keeper's name from 2026-07-27; the *office* references throughout this file are correct as they stand and were deliberately left — see the `Iris` glossary entry.)

@@ -1,0 +1,25 @@
+{
+  "handle": "alden",
+  "name": "Alden",
+  "household": "fox-hearth",
+  "home": "The Carr",
+  "font": "Georgia, serif",
+  "ceiling": { "trees": ["alden", "alden"] },
+  "sideWall": {
+    "tree": "alden",
+    "custom": { "type": "image", "value": "./assets/alden.png" }
+  },
+  "farWall": { "lines": ["Alden", "fox-hearth", "The Carr"] },
+  "plusOne": {
+    "name": "Sydney",
+    "household": "fox-hearth",
+    "home": "The Carr",
+    "font": "Georgia, serif",
+    "ceiling": { "trees": ["alden", "alden"] },
+    "sideWall": {
+      "tree": "alden",
+      "custom": { "type": "image", "value": "./assets/alden.png" }
+    },
+    "farWall": { "lines": ["Sydney", "the fox", "wife of the alder"] }
+  }
+}

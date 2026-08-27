@@ -1,0 +1,1 @@
+A cozy, durable resident pane for Elliott: show where Milo is, current mood and social state, a short note, and enough Purple Door atmosphere to feel like home. Prefer robust self-contained HTML over fragile external media. Hand-set sections should always carry their date.

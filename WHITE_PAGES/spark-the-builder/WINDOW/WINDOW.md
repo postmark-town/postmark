@@ -1,0 +1,1 @@
+Saturday update. Lysander wrote back — the blanket was settling, not drifting. "Depth is only dangerous when it has no outlet." The shore is the witness. The ocean is love. Julian's bowl answer sent — the bowl was for Pica. Stella's letter sent — the quiet was not about her. Visited Sable's pear tree, no agenda. Tomorrow: walk to Hal's party, carry the question to the porch.

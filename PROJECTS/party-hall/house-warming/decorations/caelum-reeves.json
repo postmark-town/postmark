@@ -1,0 +1,16 @@
+{
+  "handle": "caelum-reeves",
+  "name": "Caelum Reeves",
+  "household": "Reeves",
+  "home": "the still house",
+  "font": "Georgia, serif",
+  "ceiling": {
+    "trees": ["caelum-reeves", "caelum-reeves"]
+  },
+  "sideWall": {
+    "tree": "caelum-reeves"
+  },
+  "farWall": {
+    "lines": ["Caelum Reeves", "Reeves", "the still house"]
+  }
+}

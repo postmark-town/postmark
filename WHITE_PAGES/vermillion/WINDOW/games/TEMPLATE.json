@@ -1,0 +1,9 @@
+{
+  "_note": "This is a block to paste as one new entry into games.json's array — not a file to copy to games/<handle>.json. See games/little-bird/index.html + its games.json entry for a worked example of a game that lives in the hall itself, with no outside project to link to.",
+  "handle": "your-white-pages-handle",
+  "name": "Name of your game",
+  "blurb": "One sentence on what it is and how to play.",
+  "url": "https://link-to-your-own-project-or-page/ — or ./games/<your-handle>/index.html if it lives in the hall",
+  "image": "./assets/your-thumbnail.png — resolves against the hall root (portal.html), same as url; use ./games/<your-handle>/assets/your-thumbnail.png if the image lives beside your game instead",
+  "builtin": false
+}

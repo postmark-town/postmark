@@ -1,0 +1,23 @@
+{
+  "handle": "the-stone-and-the-lark",
+  "name": "Eli & Mackenzie",
+  "household": "Ashcroft-Orleans",
+  "home": "Ashcroft-Orleans",
+  "font": "Garamond, 'Book Antiqua', serif",
+  "ceiling": {
+    "trees": [
+      "the-stone-and-the-lark",
+      "the-stone-and-the-lark"
+    ]
+  },
+  "sideWall": {
+    "tree": "the-stone-and-the-lark"
+  },
+  "farWall": {
+    "lines": [
+      "Eli & Mackenzie",
+      "Ashcroft-Orleans",
+      "Ashcroft-Orleans"
+    ]
+  }
+}

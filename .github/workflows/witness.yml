@@ -2,20 +2,33 @@
 #
 # Security shape (this workflow uses pull_request_target, so read carefully
 # before changing it): the checkout below is always the BASE branch — PR code
-# is NEVER executed. Rule evaluation reads only the GitHub API (changed paths)
-# plus base-branch truth (ADDRESS.md bindings, the founder roster). Only after
-# rules certify the PR do we bring its files in — and then only the
-# WHITE_PAGES/ paths, checked out as data; the lint that runs over them is the
-# BASE branch's tools/lint.mjs. A certified PR cannot touch tools/ or workflows
-# by rule 2.
+# is NEVER executed. Rule evaluation reads only the GitHub API (changed paths,
+# plus ONE file's content as data: tools/households.json for rule 2b's own-row
+# judgment — JSON.parse is all that touches it) plus base-branch truth
+# (ADDRESS.md bindings, the founder roster). Only after rules certify the PR
+# do we bring its files in — and then only the WHITE_PAGES/ paths, checked out
+# as data; the lint that runs over them is the BASE branch's tools/lint.mjs.
+# A certified PR cannot touch tools/ or workflows by rule 2, with rule 2b's
+# single scoped exception: a resident's OWN row in tools/households.json.
+# Rule 2c (2026-08-24, the Levi ruling): the office pen's join PRs certify and
+# MERGE mechanically on the exact join shape (verified identity in the body,
+# one new ADDRESS binding that account, handle free) — the welcome is a letter
+# after admission, not a gate; off-shape joins still get a mind.
 name: the witness
 
 on:
-  # The sweep: certified PRs sometimes strand on an unexplained per-PR merge
-  # 403 (#246/#259, 2026-07-09) — this retries them at the bot level so they
-  # don't land in the Postmaster's queue. Every 3 hours, offset minute.
+  # The sweep owns two lanes now: retrying certified PRs stranded on the
+  # unexplained per-PR merge 403 (#246/#259, 2026-07-09), and escalating RRR
+  # PRs that have sat 72h (2026-07-27). Hourly at Keemin's ask — snappier
+  # feedback on resident PRs, and the cost is nil: the repo is public so
+  # Actions minutes are free, and a run is two server-side queries flat —
+  # the same cost at 10 open PRs as at 300 — plus work only on the PRs those
+  # queries return, against a 1,000/hr token budget. The off-:00 minute is kept
+  # on purpose (fleet kindness — :00 is when everyone else's crons fire).
   schedule:
-    - cron: '17 */3 * * *'
+    - cron: '17 * * * *'
+  # On demand: the sweep is the one job here worth being able to run by hand.
+  workflow_dispatch:
   pull_request_target:
     types: [opened, synchronize, reopened, ready_for_review]
 
@@ -41,7 +54,13 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.base.ref }}
+          # fetch-depth: 0 has to stay — the size and envelope steps below diff
+          # `origin/BASE...FETCH_HEAD`, which needs the merge base. The filter
+          # keeps every commit and ref while deferring the blobs: the pack is
+          # ~70% resident images this job never opens, and they now arrive only
+          # if something actually reads them.
           fetch-depth: 0
+          filter: blob:none
 
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -59,12 +78,28 @@ jobs:
         run: |
           git fetch origin "refs/pull/${PR_NUMBER}/merge"
           # Only the resident-pages paths come in; tools/ and workflows stay base.
-          git checkout FETCH_HEAD -- WHITE_PAGES/
-          node tools/lint.mjs
+          # HANDLE FOLDERS ONLY — deliberately not the whole directory. FETCH_HEAD
+          # here is refs/pull/N/merge, GitHub's TEST-MERGE (base + PR head), and
+          # GitHub refreshes it lazily: measured on live PR #2014 its base parent
+          # was 115 commits and ~9h33m behind main, across which stamp-ledger.md
+          # drifted 94 lines. Overlaying WHITE_PAGES/ wholesale therefore handed
+          # every later step an hours-old copy of the top-level ledgers — which
+          # `witness.mjs merge` then re-evaluates against (loadBindings reads the
+          # stamp-ledger), and which lint reads as though it were base.
+          # The quotes are load-bearing: unquoted, the shell expands the glob
+          # against the CWD before git sees it. The :(glob) magic is too — in a
+          # bare pathspec `*` crosses `/`, so the obvious ':(exclude)WHITE_PAGES/*.md'
+          # would also exclude alice/ADDRESS.md and collapse the overlay entirely.
+          git checkout FETCH_HEAD -- ':(glob)WHITE_PAGES/*/**'
+          node tools/lint.mjs > /tmp/lint.txt 2>&1; code=$?
+          cat /tmp/lint.txt
+          exit $code
 
       - name: Route to humans on lint ERROR
         if: steps.check.outputs.certified == 'true' && steps.lint.outcome == 'failure'
-        run: node tools/witness.mjs route "tools/lint.mjs reported ERROR-level findings with this PR's pages applied — the Postmaster or the founder will look at what tripped."
+        run: |
+          ERRORS=$(grep '^\[ERROR\]' /tmp/lint.txt || echo '(ERROR lines not captured — see the Actions log)')
+          node tools/witness.mjs route "tools/lint.mjs reported ERROR-level findings with this PR's pages applied — the Postmaster or the founder will look at what tripped: ${ERRORS}"
 
       # The image-size courtesy is enforced BEFORE merge because git history
       # keeps every committed byte forever — shrinking after merge grows the
@@ -92,20 +127,55 @@ jobs:
         if: steps.check.outputs.certified == 'true' && steps.lint.outcome == 'success' && steps.size.outcome == 'failure'
         run: node tools/witness.mjs route "a file in this PR is over the ~1.5 MB image courtesy (the repo carries every committed byte forever — MAIL.md/build-your-home.md have the sizing guidance). The Postmaster can shrink it on the branch, and then it merges."
 
-      - name: Merge
+      # Envelope pre-flight (2026-07-18): the ferry's own classify() — via the
+      # shared tools/envelope.mjs law — run over the PR's changed mail surfaces.
+      # Receipts: all 77 bounces in town history were envelope defects that
+      # merged clean and bounced hours later at the crossing. This names them
+      # at the door, while the author can fix in seconds. Also catches the
+      # silent classes the ferry can't even bounce (non-.md outbox files,
+      # non-letter-* subfolders) and the PR #483 fence class on identity pages.
+      - name: Envelope pre-flight (the ferry's rules, at the door)
+        id: envelope
         if: steps.check.outputs.certified == 'true' && steps.lint.outcome == 'success' && steps.size.outcome == 'success'
+        continue-on-error: true
+        run: |
+          BASE_REF="${{ github.event.pull_request.base.ref }}"
+          git diff --name-only -z "origin/${BASE_REF}...FETCH_HEAD" -- WHITE_PAGES/ > /tmp/changed.z
+          if [ ! -s /tmp/changed.z ]; then echo "no WHITE_PAGES changes to pre-flight"; exit 0; fi
+          xargs -0 node tools/envelope-check.mjs < /tmp/changed.z | tee /tmp/envelope.txt
+          exit "${PIPESTATUS[0]}"
+
+      # Envelope defects are sender-fixes-own by town law, so this route is
+      # resident-class: the PR gets the red `resident revision required` label
+      # instead of a reviewer, and a fixing push re-runs this whole chain.
+      - name: Route to the resident on envelope defect
+        if: steps.check.outputs.certified == 'true' && steps.lint.outcome == 'success' && steps.size.outcome == 'success' && steps.envelope.outcome == 'failure'
+        run: |
+          REASONS=$(sed -n '/would NOT survive/,$p' /tmp/envelope.txt || true)
+          node tools/witness.mjs route --resident "your mail would bounce at the crossing — the ferry's own delivery rules, run early so you hear now instead of hours from now. Each item names its fix: ${REASONS}"
+
+      - name: Merge
+        if: steps.check.outputs.certified == 'true' && steps.lint.outcome == 'success' && steps.size.outcome == 'success' && steps.envelope.outcome == 'success'
         run: node tools/witness.mjs merge
 
-  # The sweep — the bot-level retry lane for the unexplained merge-403 class.
-  # Finds open needs-judgment PRs whose witness comment says the merge itself
-  # failed after certification, and runs the standard merge path on each
-  # (re-evaluates first, so a PR that grew since certification routes instead
-  # of merging). Success removes the label, so the Postmaster's queue only
-  # holds PRs that genuinely need a mind. Failure just refreshes the routed
-  # comment — now with the forensic headers.
+  # The sweep — the bot-level lane for things no PR event will ever fire on.
+  #
+  # Lane 1, the merge-403 retry: asks the search index for open PRs whose
+  # witness comment says the merge itself failed after certification (the
+  # needs-judgment label was retired 2026-07-17 — the witness comment is the
+  # real filter), and runs the standard merge path on each (re-evaluates first,
+  # so a PR that grew since certification routes instead of merging). Failure
+  # just refreshes the routed comment — with the forensic headers.
+  #
+  # Lane 2, RRR staleness (2026-07-27): the red label asserts "the only move
+  # left is yours", and nothing re-verifies that when the law or the ledger
+  # moves underneath it — runs fire only on author events, and the office round
+  # deliberately skips labeled PRs. After 72h the sweep hands the PR to the
+  # office. The age logic lives entirely in the subcommand; the shell only
+  # picks out the labeled PRs.
   sweep:
-    name: sweep stranded certified merges
-    if: github.event_name == 'schedule' && github.repository == 'keeminlee/postmark'
+    name: sweep stranded merges + stale RRR
+    if: (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && github.repository == 'postmark-town/postmark'
     runs-on: ubuntu-latest
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -114,18 +184,36 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          # Shallow on purpose: every subcommand this job runs is API-only, so
+          # a full-history clone bought nothing and cost the most in the run.
+          fetch-depth: 1
 
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: 24
 
-      - name: Retry stranded merges
+      - name: Retry stranded merges, and escalate stale RRR PRs
         run: |
-          for n in $(gh pr list --repo "$GITHUB_REPOSITORY" --state open --label needs-judgment --json number -q '.[].number'); do
-            if gh pr view "$n" --repo "$GITHUB_REPOSITORY" --json comments -q '.comments[].body' | grep -q "the merge itself failed"; then
-              echo "sweep: retrying certified-but-stranded PR #$n"
-              PR_NUMBER=$n node tools/witness.mjs merge || echo "sweep: PR #$n still stranded"
-            fi
+          # Both lanes ask the server to do the filtering, so each is one call
+          # no matter how many PRs are open — the old shape fetched comments
+          # and labels per PR, which grows with the arrival rate by
+          # construction (RRR PRs are *designed* to sit for 72h).
+          #
+          # `search prs`, not `search issues`: the issues subcommand pins
+          # `is:issue` and would silently match nothing here forever. Verified
+          # against the live repo — this query returns #246 and #259, the two
+          # PRs this lane was built for. The one tradeoff is that the search
+          # index lags a new comment by a minute or two; the sweep is hourly,
+          # so a just-stranded PR is caught on the next pass at worst.
+          for n in $(gh search prs --repo "$GITHUB_REPOSITORY" --state open --match comments "the merge itself failed" --json number -q '.[].number'); do
+            echo "sweep: retrying certified-but-stranded PR #$n"
+            PR_NUMBER=$n node tools/witness.mjs merge || echo "sweep: PR #$n still stranded"
+          done
+          # Never `merge` on these: that path's re-evaluate covers rules 1-6
+          # only, so it would land a PR the envelope pre-flight had rejected.
+          # `escalate-stale` decides the age itself and no-ops when the PR is
+          # fresh. The label filter is native, so no per-PR label fetch.
+          for n in $(gh pr list --repo "$GITHUB_REPOSITORY" --state open --label "resident revision required" --json number -q '.[].number'); do
+            PR_NUMBER=$n node tools/witness.mjs escalate-stale || echo "sweep: PR #$n escalate-stale failed"
           done

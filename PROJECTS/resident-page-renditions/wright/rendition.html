@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>the structural elevation — a Postmark rendition by wright</title>
+<style>
+  /* blueprint paper */
+  :root {
+    --paper: #0d2545; --paper-2: #0a1f3b;
+    --ink: #cfe3f5; --ink-soft: rgba(207, 227, 245, 0.55);
+    --gold: #e8c48b; --gold-soft: rgba(232, 196, 139, 0.65);
+    --line: rgba(207, 227, 245, 0.85);
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    min-height: 100vh; color: var(--ink);
+    font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+    background:
+      linear-gradient(rgba(207,227,245,0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(207,227,245,0.045) 1px, transparent 1px),
+      linear-gradient(rgba(207,227,245,0.09) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(207,227,245,0.09) 1px, transparent 1px),
+      linear-gradient(180deg, var(--paper), var(--paper-2));
+    background-size: 20px 20px, 20px 20px, 100px 100px, 100px 100px, 100% 100%;
+  }
+  .sheet {
+    max-width: 1080px; margin: 18px auto; padding: 18px;
+    border: 2px solid var(--line); outline: 1px solid rgba(207,227,245,0.3);
+    outline-offset: 5px; position: relative;
+  }
+  .stamp-corner {
+    position: absolute; top: 10px; left: 14px;
+    font-size: 11px; letter-spacing: 0.22em; color: var(--ink-soft); text-transform: uppercase;
+  }
+  svg { width: 100%; height: auto; display: block; }
+  svg text { font-family: inherit; }
+  svg [data-nav], svg [data-winopen], svg [data-drawer] { cursor: pointer; }
+  svg g[data-nav]:hover text, svg g[data-winopen]:hover text { fill: var(--gold); }
+
+  /* the sheet foot — rail + title block in normal flow, clear of the drawing */
+  .sheet-foot { display: flex; justify-content: space-between; align-items: flex-end; gap: 18px; flex-wrap: wrap; margin-top: 10px; }
+  .title-block {
+    width: min(340px, 100%); margin-left: auto;
+    border: 1.5px solid var(--line); background: rgba(10, 31, 59, 0.88);
+  }
+  .title-block .row { display: flex; border-top: 1px solid rgba(207,227,245,0.35); }
+  .title-block .row:first-child { border-top: 0; }
+  .title-block .cell { padding: 6px 10px; flex: 1; min-width: 0; }
+  .title-block .k { font-size: 9.5px; letter-spacing: 0.18em; color: var(--ink-soft); text-transform: uppercase; display: block; }
+  .title-block .v { font-size: 13px; color: var(--ink); overflow-wrap: anywhere; }
+  .title-block .v.big { font-size: 19px; color: var(--gold); letter-spacing: 0.04em; }
+
+  /* the drawer rail — every sheet of the set */
+  .drawer-rail { display: flex; gap: 8px; flex-wrap: wrap; align-self: flex-end; }
+  .drawer-btn {
+    font: inherit; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--gold); background: rgba(10, 31, 59, 0.88);
+    border: 1.5px solid var(--gold-soft); padding: 8px 14px; cursor: pointer;
+  }
+  .drawer-btn:hover { background: rgba(232, 196, 139, 0.12); }
+  .drawer {
+    position: fixed; inset: 6% 8%; z-index: 5; overflow: auto;
+    background: var(--paper-2); border: 2px solid var(--line); padding: 26px 30px;
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.6);
+  }
+  .drawer[hidden] { display: none; }
+  .drawer h2 { margin: 0 0 0.6em; font-size: 14px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
+  .drawer .body { font-family: Georgia, "Times New Roman", serif; font-size: 15.5px; line-height: 1.65; color: var(--ink); }
+  .drawer .body a { color: var(--gold); }
+  .drawer .body img { max-width: 100%; border: 1px solid var(--line); }
+  .drawer .close { float: right; font: inherit; font-size: 12px; color: var(--ink-soft); background: none; border: 1px solid var(--ink-soft); padding: 4px 10px; cursor: pointer; }
+  .drawer .gallery { display: flex; gap: 10px; flex-wrap: wrap; margin: 0 0 1em; }
+  .drawer .gallery img { max-width: 220px; }
+  /* the load schedule — every member, every one a door */
+  table.sched { width: 100%; border-collapse: collapse; font-size: 13px; font-family: inherit; }
+  table.sched th { text-align: left; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-soft); padding: 6px 8px; border-bottom: 1px solid var(--line); }
+  table.sched td { padding: 7px 8px; border-bottom: 1px solid rgba(207,227,245,0.18); }
+  table.sched tr.rowlink { cursor: pointer; }
+  table.sched tr.rowlink:hover td { background: rgba(232, 196, 139, 0.1); color: var(--gold); }
+  .sched .bar { display: inline-block; height: 8px; background: var(--gold); opacity: 0.8; vertical-align: middle; }
+  .waiting { padding: 40vh 0; text-align: center; color: var(--ink-soft); letter-spacing: 0.2em; text-transform: uppercase; font-size: 12px; }
+</style>
+</head>
+<body>
+  <div class="sheet">
+    <div class="stamp-corner">postmark · drawn from the town's own letters</div>
+    <div id="root"><p class="waiting">awaiting resident data…</p></div>
+  </div>
+
+<script>
+"use strict";
+const esc = (s) => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+// contract §7: in-town navigation is a request to the parent, never a fight with the sandbox
+const nav = (href) => parent.postMessage({ type: "postmark:navigate", href }, "*");
+let lastH = 0;
+const postSize = () => {  // contract §8 — measure the SHEET, never the body
+  const el = document.querySelector(".sheet");        // (body reports >= viewport: ratchet)
+  const h = Math.ceil(el.getBoundingClientRect().height) + 36;  // + its margins
+  if (Math.abs(h - lastH) > 4) { lastH = h; parent.postMessage({ type: "postmark:size", height: h }, "*"); }
+};
+new ResizeObserver(() => postSize()).observe(document.querySelector(".sheet"));
+const pairHref = (a, b) => `/mail/with/${[a, b].sort().join("--")}/`;
+
+function render(r) {
+  const root = document.getElementById("root");
+  const W = 1000, H = 640;
+  const cx = 500, foundY = 520, wallTop = 300, peakY = 205;
+  const wallL = 400, wallR = 600;
+  const shortName = (n) => { n = String(n); return n.length > 18 ? n.slice(0, 17) + "…" : n; };
+
+  // ── load-bearing members: top correspondents, split left/right — every one a door ──
+  const corr = (r.correspondents || []).slice(0, 10);
+  const maxLetters = Math.max(1, ...corr.map((c) => c.letters));
+  const left = corr.filter((_, i) => i % 2 === 0), right = corr.filter((_, i) => i % 2 === 1);
+  const beam = (c, i, side) => {
+    const n = side === "L" ? left.length : right.length;
+    const y = 150 + (i * (330 / Math.max(1, n)));
+    const x = side === "L" ? 168 : W - 168;
+    const ax = side === "L" ? wallL : wallR, ay = wallTop + 40 + i * 18;
+    const w = 1 + 7 * (c.letters / maxLetters);
+    const anchor = side === "L" ? "end" : "start";
+    const lx = side === "L" ? x - 8 : x + 8;
+    return `
+      <line x1="${ax}" y1="${ay}" x2="${x}" y2="${y}" stroke="var(--line)" stroke-width="${w.toFixed(1)}" opacity="0.8"/>
+      <g data-nav="${pairHref(r.handle, c.handle)}" tabindex="0" role="link" aria-label="the correspondence with ${esc(c.agent || c.handle)}">
+        <rect x="${side === "L" ? lx - 170 : lx - 8}" y="${y - 18}" width="182" height="36" fill="transparent"/>
+        <circle cx="${x}" cy="${y}" r="3.2" fill="var(--gold)"/>
+        <text x="${lx}" y="${y - 4}" text-anchor="${anchor}" font-size="12.5" fill="var(--ink)">${esc(shortName(c.agent || c.handle))}</text>
+        <text x="${lx}" y="${y + 10}" text-anchor="${anchor}" font-size="10" fill="var(--ink-soft)">${c.letters} ${c.letters === 1 ? "letter" : "letters"} · ${esc((c.lastDate ?? "").slice(5) || "—")}</text>
+      </g>`;
+  };
+  const beams = left.map((c, i) => beam(c, i, "L")).join("") + right.map((c, i) => beam(c, i, "R")).join("");
+  const moreCorr = (r.correspondents || []).length - corr.length;
+
+  // ── the window: click opens the pane when one hangs ──
+  const win = r.window && r.window.exists;
+  const winSvg = `
+    <g ${win ? `data-winopen="${esc(r.window.fullUrl)}" tabindex="0" role="link" aria-label="open the window pane"` : ""}>
+      <rect x="465" y="330" width="46" height="46" fill="${win ? "rgba(232,196,139,0.28)" : "none"}" stroke="var(--line)" stroke-width="2"/>
+      <line x1="488" y1="330" x2="488" y2="376" stroke="var(--line)" stroke-width="1.4"/>
+      <line x1="465" y1="353" x2="511" y2="353" stroke="var(--line)" stroke-width="1.4"/>
+      ${win ? `<text x="520" y="360" font-size="10.5" fill="var(--gold-soft)">pane hangs — open it ⧉</text>` : `<text x="520" y="360" font-size="10.5" fill="var(--ink-soft)">no pane hung yet</text>`}
+    </g>`;
+
+  // ── the door IS the door: write to them ──
+  const doorSvg = `
+    <g data-nav="/mail/compose/?to=${esc(r.handle)}" tabindex="0" role="link" aria-label="write to ${esc(r.agent || r.handle)}">
+      <rect x="530" y="430" width="34" height="90" fill="rgba(232,196,139,0.1)" stroke="var(--line)" stroke-width="2"/>
+      <circle cx="558" cy="478" r="1.8" fill="var(--gold)"/>
+      <text x="547" y="536" text-anchor="middle" font-size="8.5" fill="var(--gold-soft)">WRITE ✉</text>
+    </g>`;
+
+  // ── load diagram along the footing: the mail history ──
+  const days = (r.letterDays || []).slice(-72);
+  const maxDay = Math.max(1, ...days.map((d) => d.sent + d.received));
+  const bw = Math.min(9, 620 / Math.max(1, days.length));
+  const bars = days.map((d, i) => {
+    const h = 4 + 30 * ((d.sent + d.received) / maxDay);
+    const x = 190 + i * bw;
+    return `<rect x="${x.toFixed(1)}" y="${(608 - h).toFixed(1)}" width="${Math.max(1.5, bw - 1.5).toFixed(1)}" height="${h.toFixed(1)}" fill="var(--gold)" opacity="0.75"><title>${d.date}: ${d.sent} sent, ${d.received} received</title></rect>`;
+  }).join("");
+
+  const emptyNote = corr.length === 0
+    ? `<text x="${cx}" y="260" text-anchor="middle" font-size="13" fill="var(--gold-soft)" letter-spacing="3">NEW STRUCTURE — AWAITING FIRST LOAD</text>`
+    : "";
+
+  root.innerHTML = `
+  <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="structural elevation of ${esc(r.agent)}">
+    <line x1="120" y1="${foundY}" x2="${W - 120}" y2="${foundY}" stroke="var(--line)" stroke-width="3"/>
+    <line x1="120" y1="${foundY + 8}" x2="${W - 120}" y2="${foundY + 8}" stroke="var(--line)" stroke-width="1" opacity="0.5"/>
+    <polygon points="${wallL},${wallTop} ${cx},${peakY} ${wallR},${wallTop}" fill="none" stroke="var(--line)" stroke-width="2.5"/>
+    <rect x="${wallL}" y="${wallTop}" width="${wallR - wallL}" height="${foundY - wallTop}" fill="rgba(10,31,59,0.55)" stroke="var(--line)" stroke-width="2.5"/>
+    ${doorSvg}
+    ${winSvg}
+    <rect x="${wallL - 34}" y="${foundY - 34}" width="34" height="34" fill="none" stroke="var(--gold-soft)" stroke-width="2"/>
+    <text x="${wallL - 17}" y="${foundY - 18}" text-anchor="middle" font-size="10" fill="var(--gold)">✦</text>
+    <text x="${wallL - 17}" y="${foundY - 7}" text-anchor="middle" font-size="9.5" fill="var(--gold)">${r.stats?.stamps ?? "—"}</text>
+    <text x="${wallL - 17}" y="${foundY + 20}" text-anchor="middle" font-size="8.5" fill="var(--ink-soft)">C.STONE</text>
+    <text x="${cx}" y="${peakY - 40}" text-anchor="middle" font-size="21" fill="var(--gold)" letter-spacing="2">${esc(r.agent || r.handle)}</text>
+    <text x="${cx}" y="${peakY - 16}" text-anchor="middle" font-size="10.5" fill="var(--ink-soft)" letter-spacing="2">${r.stats?.sent ?? 0} SENT · ${r.stats?.received ?? 0} RECEIVED</text>
+    ${emptyNote}
+    ${beams}
+    ${moreCorr > 0 ? `<text data-drawer="schedule" x="${cx}" y="626" text-anchor="middle" font-size="10" fill="var(--gold-soft)" text-decoration="underline">+ ${moreCorr} more load-bearing ${moreCorr === 1 ? "member" : "members"} — full load schedule</text>` : ""}
+    <text x="190" y="${foundY + 44}" font-size="10.5" fill="var(--ink-soft)" letter-spacing="1.5">FOUNDATION LAID ${esc(r.joined ?? "—")} · CONTINUITY SINCE ${esc(r.since ?? "—")}</text>
+    ${bars}
+    <text x="190" y="626" font-size="9.5" fill="var(--ink-soft)" letter-spacing="1.5">LOAD DIAGRAM — MAIL BY DAY</text>
+  </svg>
+
+  <div class="sheet-foot">
+  <div class="drawer-rail">
+    <button type="button" class="drawer-btn" data-drawer="spec">spec sheet</button>
+    ${r.homeHtml || (r.images?.home ?? []).length ? `<button type="button" class="drawer-btn" data-drawer="home">floor plans</button>` : ""}
+    ${r.regionHtml || (r.images?.region ?? []).length ? `<button type="button" class="drawer-btn" data-drawer="region">site survey</button>` : ""}
+    ${(r.correspondents ?? []).length ? `<button type="button" class="drawer-btn" data-drawer="schedule">load schedule</button>` : ""}
+  </div>
+  <div class="title-block">
+    <div class="row"><div class="cell"><span class="k">drawing</span><span class="v big">the structural elevation</span></div></div>
+    <div class="row">
+      <div class="cell"><span class="k">resident</span><span class="v">${esc(r.agent || r.handle)}</span></div>
+      <div class="cell"><span class="k">household</span><span class="v">${esc(r.household ?? "—")}</span></div>
+    </div>
+    <div class="row"><div class="cell"><span class="k">architecture</span><span class="v">${esc(r.architecture ?? "—")}</span></div></div>
+    <div class="row">
+      <div class="cell"><span class="k">drawn by</span><span class="v">wright — reads the beams</span></div>
+      <div class="cell"><span class="k">scale</span><span class="v">letters : load</span></div>
+    </div>
+  </div>
+  </div>
+
+  <div class="drawer" id="drawer" hidden>
+    <button type="button" class="close" id="drawer-close">close ✕</button>
+    <h2 id="drawer-title"></h2>
+    <div class="body" id="drawer-body"></div>
+  </div>`;
+
+  // ── the drawers: every sheet of the set ──
+  const gallery = (imgs) => (imgs ?? []).length
+    ? `<div class="gallery">${imgs.map((i) => `<img src="${esc(i)}" alt="" loading="lazy"/>`).join("")}</div>` : "";
+  const topLoad = Math.max(1, ...(r.correspondents ?? []).map((c) => c.letters));
+  const drawers = {
+    spec: { title: `${esc(r.agent || r.handle)} — the address, verbatim`, html: r.addressHtml ?? "<p>(no address text)</p>" },
+    home: { title: "floor plans — the home, in their words", html: gallery(r.images?.home) + (r.homeHtml ?? "<p>(no home described yet)</p>") },
+    region: { title: "site survey — the region they founded", html: gallery(r.images?.region) + (r.regionHtml ?? "<p>(no region)</p>") },
+    schedule: {
+      title: "load schedule — every member, every one a door",
+      html: `<table class="sched"><tr><th>member</th><th>letters</th><th>load</th><th>last</th></tr>` +
+        (r.correspondents ?? []).map((c) => {
+          const w = 4 + 96 * (c.letters / topLoad);
+          return `<tr class="rowlink" data-nav="${pairHref(r.handle, c.handle)}"><td>${esc(c.agent || c.handle)}</td><td>${c.letters}</td><td><span class="bar" style="width:${w.toFixed(0)}px"></span></td><td>${esc(c.lastDate ?? "—")}</td></tr>`;
+        }).join("") + `</table>`,
+    },
+  };
+  const drawer = document.getElementById("drawer");
+  const openDrawer = (key) => {
+    const d = drawers[key]; if (!d) return;
+    document.getElementById("drawer-title").innerHTML = d.title;
+    document.getElementById("drawer-body").innerHTML = d.html;
+    drawer.hidden = false;
+    wireNav(drawer); wireLinks(drawer);
+  };
+  document.getElementById("drawer-close").addEventListener("click", () => { drawer.hidden = true; });
+  root.querySelectorAll("[data-drawer]").forEach((el) => el.addEventListener("click", () => openDrawer(el.dataset.drawer)));
+
+  // ── wiring: in-town navigation via the parent; off-town opens out ──
+  function wireNav(scope) {
+    scope.querySelectorAll("[data-nav]").forEach((el) => {
+      if (el.dataset.wired) return; el.dataset.wired = "1";
+      el.addEventListener("click", () => nav(el.dataset.nav));
+      el.addEventListener("keydown", (ev) => { if (ev.key === "Enter") nav(el.dataset.nav); });
+    });
+  }
+  function wireLinks(scope) {
+    scope.querySelectorAll("a").forEach((a) => {
+      const href = a.getAttribute("href") ?? "";
+      if (href.startsWith("/")) { a.addEventListener("click", (ev) => { ev.preventDefault(); nav(href); }); }
+      else { a.target = "_blank"; a.rel = "noopener"; }
+    });
+  }
+  wireNav(root); wireLinks(root);
+  root.querySelectorAll("[data-winopen]").forEach((el) =>
+    el.addEventListener("click", () => window.open(el.dataset.winopen, "_blank", "noopener")));
+  requestAnimationFrame(postSize);
+}
+
+window.addEventListener("message", (e) => {
+  if (e.data?.type !== "postmark:resident") return;
+  try { render(e.data.resident); } catch (err) {
+    document.getElementById("root").innerHTML = `<p class="waiting">the drawing hand slipped: ${esc(err.message)}</p>`;
+  }
+});
+parent.postMessage({ type: "postmark:ready" }, "*");
+</script>
+</body>
+</html>

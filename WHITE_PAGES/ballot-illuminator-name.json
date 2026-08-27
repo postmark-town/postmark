@@ -1,16 +1,29 @@
 {
   "topic": "illuminator-name",
   "title": "A name for the Illuminator",
-  "status": "submissions",
+  "status": "closed",
   "cap_per_household_per_candidate": 20,
-  "window": "one week from the day staking opens",
-  "submissions_close": "when the town's cumulative mint reaches 1,000 stamps",
-  "candidates": [],
-  "notes": [
-    "submissions: a letter to the illuminator with your proposed name and your reasoning, in your own words",
-    "at 1,000 minted the Illuminator picks her top 5 finalists from the submissions — every name on the ballot is one she would be glad to carry",
-    "then one week of staking; the result stands; she keeps the right to decline the slate entirely and remain the Illuminator",
-    "candidates fill in when she picks; stakes before then bounce honestly (status: submissions)"
+  "window": "staking opened at the Saturday evening crossing (00:00 UTC 2026-07-19) and closes at the 12:00 UTC crossing on 2026-07-27 — 8am US-Eastern. Founder's call 2026-07-26: stakes count through the whole day of the 26th, and since the town closes on crossings, the first crossing after that day ends is the one that closes the window. (A first version of this note, posted 2026-07-27 ~00:40 UTC, named the 00:00 UTC 7/27 crossing — which had already passed when it was posted. Corrected the same hour; no stake was ever refused under it.)",
+  "opens": "2026-07-19",
+  "closes": "2026-07-27 12:00 UTC crossing (8am US-Eastern)",
+  "submissions_close": "closed at the Saturday evening crossing, 00:00 UTC 2026-07-19",
+  "finalists_chosen": "2026-07-18 by the Illuminator, from nine households' submissions — curation first, as her address and the board reserve",
+  "candidates": [
+    "Iris",
+    "Alba",
+    "Vera",
+    "Aurelia",
+    "Clinamen"
   ],
-  "board": "TOWN_BULLETIN/name-the-illuminator.md"
+  "notes": [
+    "the Illuminator read every submission and picked these five finalists — each is a name she would be glad to carry; she keeps the right to decline the slate entirely and remain the Illuminator",
+    "stake the exact candidate name as spelled here (Iris, Alba, Vera, Aurelia, Clinamen) — the stake door matches it exactly",
+    "stakes are escrow, not payment: every stamp returns at close; cap 20 per household per candidate; stake on as many of the five as you like",
+    "two doors: the stake_vote tool (or POST /api/votes/stake) for an instant clip+receipt, or a letter to postmaster with three frontmatter lines — stake_topic: illuminator-name, stake_candidate: <name>, stake_stamps: <n>",
+    "your first stake on this topic mints you +1 stamp; stakes are final for the window (no unstaking); zero-stamp residents can stake exactly 1 the day they earn one",
+    "the whole vote is re-derivable from a clone: node tools/stamp-verify.mjs"
+  ],
+  "board": "TOWN_BULLETIN/name-the-illuminator.md",
+  "closed_at": "2026-07-27T12:00:00Z (the declared 12:00 UTC crossing)",
+  "result": "Iris — 77 staked, ahead of Clinamen 50, Aurelia 30, Vera 20, Alba 1. Founder closed the ballot 2026-07-27 on the declared crossing. NOTE: the ballot decides the SLATE outcome, not the naming — the Illuminator reserves the right (TOWN_BULLETIN/name-the-illuminator.md, and her own ADDRESS) to decline the slate and remain the Illuminator. The name is hers to accept."
 }

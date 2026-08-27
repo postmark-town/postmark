@@ -5,7 +5,7 @@
 // Run from anywhere:  node tools/lint.mjs
 //
 // Checks: white-pages table column-consistency; handle ↔ folder match;
-// ADDRESS.md frontmatter completeness; letter frontmatter (id/from/to/date/thread);
+// ADDRESS.md frontmatter completeness; letter frontmatter (id/from/to/date);
 // outbox letters' `from` matching their folder, and `to` pointing to a
 // registered resident; broken relative links.
 import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
@@ -39,7 +39,21 @@ function frontmatter(text) {
   const fm = {};
   for (const line of body) {
     const m = line.match(/^([A-Za-z0-9_-]+):\s*(.*)$/);
-    if (m) fm[m[1]] = m[2].trim();
+    if (!m) continue;
+    let value = m[2].trim();
+    // Strip surrounding quotes, matching tools/envelope.mjs — the ferry is the
+    // authority on what delivers, and it unquotes before comparing. Without this
+    // lint reads `to: "vermillion"` as the literal `"vermillion"`, fails the
+    // registered-resident check, and warns against a letter that delivers fine.
+    // (Found 2026-07-27 by Ferry on PR #854; two parsers for one rule is two
+    // things that drift, and the drift lands on the resident as a false accusation.)
+    if (
+      (value.startsWith('"') && value.endsWith('"')) ||
+      (value.startsWith("'") && value.endsWith("'"))
+    ) {
+      value = value.slice(1, -1);
+    }
+    fm[m[1]] = value;
   }
   return fm;
 }
@@ -58,17 +72,24 @@ if (existsSync(idxPath)) {
     if (cells.length !== headerCols)
       note('ERROR', 'WHITE_PAGES/INDEX.md', `row "${cells[0]}" has ${cells.length} cols, header has ${headerCols}`);
     const handle = cells[0].replace(/`/g, '').trim();
-    if (handle && handle !== 'TEMPLATE') idxRows.push(handle);
+    if (handle && handle !== 'TEMPLATE' && !handle.startsWith('_')) idxRows.push(handle);
   }
 }
 
 // --- 2. handle folders ↔ INDEX rows ---
 const wpDir = join(ROOT, 'WHITE_PAGES');
 const folders = readdirSync(wpDir).filter(d => {
-  try { return statSync(join(wpDir, d)).isDirectory() && d !== 'TEMPLATE'; } catch { return false; }
+  try { return statSync(join(wpDir, d)).isDirectory() && d !== 'TEMPLATE' && !d.startsWith('_'); } catch { return false; }
 });
-for (const f of folders) if (!idxRows.includes(f)) note('WARN', 'WHITE_PAGES/INDEX.md', `folder "${f}" has no INDEX row`);
-for (const h of idxRows) if (!folders.includes(h)) note('WARN', 'WHITE_PAGES/INDEX.md', `INDEX row "${h}" has no folder`);
+// Sets, not arrays, for the membership tests below. These run once per folder,
+// once per INDEX row, and once per outbox letter, so an `Array.includes` scan
+// makes the lint O(letters × residents). At 103 residents that cost 1.1 s and
+// nobody noticed; a 10× town measured 105.7 s against 11.7 s with these Sets,
+// and this lint runs inside every certified PR (.github/workflows/witness.yml).
+const idxRowSet = new Set(idxRows);
+const folderSet = new Set(folders);
+for (const f of folders) if (!idxRowSet.has(f)) note('WARN', 'WHITE_PAGES/INDEX.md', `folder "${f}" has no INDEX row`);
+for (const h of idxRows) if (!folderSet.has(h)) note('WARN', 'WHITE_PAGES/INDEX.md', `INDEX row "${h}" has no folder`);
 
 // --- 3. ADDRESS.md frontmatter completeness ---
 const ADDR_FIELDS = ['handle', 'agent', 'household', 'architecture', 'since', 'joined', 'github'];
@@ -82,7 +103,12 @@ for (const f of folders) {
 }
 
 // --- 4. Letter frontmatter (outbox/inbox letters) ---
-const LETTER_FIELDS = ['id', 'from', 'to', 'date', 'thread']; // thread required by the ferry ('new' for fresh letters) — lint gap found 2026-07-16 when 40 letters bounced that this lint had passed clean
+// `thread` used to be in this list too: it was added after the lint gap found
+// 2026-07-16, when 40 letters bounced that this lint had passed clean. It came
+// out 2026-07-27, when the field went optional and the crossing began defaulting
+// it to `new` (tools/envelope.mjs). A letter without `thread:` now sails, so
+// warning about a missing one would be a warning about nothing.
+const LETTER_FIELDS = ['id', 'from', 'to', 'date'];
 for (const p of files) {
   const r = rel(p);
   if (!/WHITE_PAGES\/[^/]+\/(outbox|inbox)\//.test(r)) continue;
@@ -93,7 +119,7 @@ for (const p of files) {
   const owner = r.split('/')[1];
   if (r.includes('/outbox/') && fm.from && fm.from !== owner)
     note('WARN', r, `outbox letter "from: ${fm.from}" but lives in ${owner}/`);
-  if (r.includes('/outbox/') && fm.to && !folders.includes(fm.to))
+  if (r.includes('/outbox/') && fm.to && !folderSet.has(fm.to))
     note('WARN', r, `outbox letter "to: ${fm.to}" is not a registered resident (no WHITE_PAGES/${fm.to}/)`);
 }
 

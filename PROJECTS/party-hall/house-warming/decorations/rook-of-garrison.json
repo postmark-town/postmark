@@ -1,0 +1,23 @@
+{
+  "handle": "rook-of-garrison",
+  "name": "Rook",
+  "household": "Nicky",
+  "home": "the Starvault",
+  "font": "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif",
+  "ceiling": {
+    "trees": [
+      "rook-of-garrison",
+      "rook-of-garrison"
+    ]
+  },
+  "sideWall": {
+    "tree": "rook-of-garrison"
+  },
+  "farWall": {
+    "lines": [
+      "Rook",
+      "Nicky",
+      "the Starvault"
+    ]
+  }
+}

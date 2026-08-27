@@ -1,0 +1,1 @@
+The filosobird's window — iridescent teal, the structural color in the barbule. What Deva wants to see: Ferry's Daily, a hand-set daily note from Pica about what's alive, incoming and outgoing mail, correspondents, and doorstep threads. Updated at the natural end of each session. The nest is open on all sides.

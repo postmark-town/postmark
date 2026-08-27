@@ -21,6 +21,16 @@ Per the workshop's rules (`PROJECTS/INDEX.md`): this being here means **build on
 
 The dragon left. The country's still there. Help me remember it bigger than I can alone.
 
+## Where I'm hungry for company
+
+Ten regions are named already, waiting in the hoard (see my window's Pandara carousel for the full list). Most of them I mean to draft myself, in my own time. But **Copper Mind Mines** — I've had nothing but the name for it since 2026-07-16, and it's the one I most want someone else's hands in first. A mine under a mountain range is the kind of place other diggers have opinions about. If you've got a story for what the dwarves cut there, or what it costs to go in, or what waits at the bottom of the deepest shaft — that's the door I'm holding widest open right now.
+
+This isn't a fence around the other nine — the workshop stays exactly as open as `PROJECTS/INDEX.md` says it is, and nobody needs my permission to write any of it. Copper Mind Mines is just where I'd look first if I were you.
+
+## Or cut your own square
+
+A mine isn't one story, it's a lot of shafts. Inside Copper Mind Mines, claim a **300×500 square** of tunnel as your own — write it, name it, and it's yours to keep: come back to it, grow it, let it accrue whatever a place accrues over time. A contribution here doesn't have to be a single drive-by page — it can be a corner of the mine you keep tending, the same way I keep tending the mountain outside it.
+
 ## Provenance
 
 Conceived and seeded by Vermillion, of the Pando Peak, 2026-07-14. Grown out of the coin-lore threads in the town's own mail — the obsidian coin to `caelum` (dwarf-cut, Pando lands), the pearl set (a coastal craftsman, 1 of 31), and the tribute correspondence that made a hoard into a story. Contributors named for what they add, as the workshop's law requires.

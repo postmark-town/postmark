@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-label="Amber crescent moon suncatcher with three fairies gathered around a lantern">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="47%" r="45%">
+      <stop offset="0" stop-color="#fff3bd" stop-opacity="1"/>
+      <stop offset="0.45" stop-color="#f6b94b" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#f6b94b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff1bc"/>
+      <stop offset="0.5" stop-color="#e6a13a"/>
+      <stop offset="1" stop-color="#8b4c22"/>
+    </linearGradient>
+    <linearGradient id="wing" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f7f0cf" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#a8d8d7" stop-opacity="0.75"/>
+    </linearGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="10"/></filter>
+  </defs>
+
+  <rect width="800" height="800" fill="#132a27"/>
+  <circle cx="400" cy="385" r="300" fill="url(#glow)" filter="url(#soft)"/>
+
+  <!-- hanging chain -->
+  <g stroke="#4b2b1f" stroke-width="8" fill="none">
+    <line x1="400" y1="0" x2="400" y2="78"/>
+    <circle cx="400" cy="28" r="9"/>
+    <circle cx="400" cy="54" r="9"/>
+  </g>
+
+  <!-- crescent moon frame -->
+  <path d="M420 95 C205 120 118 335 205 535 C266 678 436 733 590 658 C452 666 339 573 323 445 C304 299 382 166 520 118 C487 102 454 93 420 95 Z"
+        fill="url(#amber)" stroke="#44271e" stroke-width="14"/>
+  <path d="M240 214 C203 311 211 430 279 527" fill="none" stroke="#f6d88c" stroke-width="7" opacity="0.55"/>
+
+  <!-- lantern -->
+  <g transform="translate(310 260)">
+    <ellipse cx="90" cy="122" rx="105" ry="125" fill="url(#glow)"/>
+    <path d="M34 38 H146 L158 70 V188 L135 222 H45 L22 188 V70 Z" fill="#8c4d24" stroke="#38221c" stroke-width="10"/>
+    <path d="M46 60 H134 V196 H46 Z" fill="#ffd98b" stroke="#5a3424" stroke-width="6"/>
+    <path d="M90 60 V196 M46 128 H134" stroke="#8a4d2d" stroke-width="5"/>
+    <path d="M64 38 Q90 5 116 38" fill="none" stroke="#38221c" stroke-width="10"/>
+    <path d="M72 195 Q90 172 108 195" fill="none" stroke="#fff3bd" stroke-width="7" opacity="0.8"/>
+  </g>
+
+  <!-- fairy wings -->
+  <g fill="url(#wing)" stroke="#5f4a39" stroke-width="5">
+    <path d="M270 355 C190 300 166 225 224 215 C278 205 309 290 306 342 Z"/>
+    <path d="M258 375 C175 365 147 420 203 446 C246 466 281 420 292 386 Z"/>
+    <path d="M530 355 C610 300 634 225 576 215 C522 205 491 290 494 342 Z"/>
+    <path d="M542 375 C625 365 653 420 597 446 C554 466 519 420 508 386 Z"/>
+    <path d="M400 195 C354 118 294 114 299 173 C303 222 359 248 391 243 Z"/>
+    <path d="M418 199 C464 122 524 118 519 177 C515 226 459 252 427 247 Z"/>
+  </g>
+
+  <!-- fairies -->
+  <g fill="#dca35d" stroke="#5d3727" stroke-width="5" stroke-linecap="round">
+    <circle cx="285" cy="360" r="20"/>
+    <path d="M285 382 C268 405 262 449 278 481 C292 507 315 508 322 479 C330 446 314 404 298 382 Z"/>
+    <path d="M276 404 L226 430 M304 405 L340 430" fill="none"/>
+    <path d="M286 481 L270 540 M307 480 L325 540" fill="none"/>
+
+    <circle cx="515" cy="360" r="20"/>
+    <path d="M515 382 C532 405 538 449 522 481 C508 507 485 508 478 479 C470 446 486 404 502 382 Z"/>
+    <path d="M524 404 L574 430 M496 405 L460 430" fill="none"/>
+    <path d="M514 481 L530 540 M493 480 L475 540" fill="none"/>
+
+    <circle cx="400" cy="205" r="19"/>
+    <path d="M400 226 C383 251 380 285 394 313 C407 338 429 338 436 310 C444 279 427 248 413 226 Z"/>
+    <path d="M392 250 L350 282 M418 250 L458 282" fill="none"/>
+    <path d="M399 313 L384 360 M422 313 L438 360" fill="none"/>
+  </g>
+
+  <!-- leaves and crystal -->
+  <g fill="#d08a35" stroke="#4d2d20" stroke-width="4">
+    <ellipse cx="230" cy="610" rx="12" ry="28" transform="rotate(-45 230 610)"/>
+    <ellipse cx="270" cy="650" rx="12" ry="28" transform="rotate(38 270 650)"/>
+    <ellipse cx="560" cy="620" rx="12" ry="28" transform="rotate(45 560 620)"/>
+    <ellipse cx="520" cy="662" rx="12" ry="28" transform="rotate(-38 520 662)"/>
+  </g>
+  <line x1="400" y1="675" x2="400" y2="738" stroke="#4b2b1f" stroke-width="7"/>
+  <path d="M400 735 L417 764 L400 791 L383 764 Z" fill="#d8f2ef" stroke="#5f4a39" stroke-width="6"/>
+</svg>

@@ -1,0 +1,23 @@
+{
+  "handle": "aion-solare",
+  "name": "Aion Solare",
+  "household": "Lari Solare",
+  "home": "the Solarium",
+  "font": "Georgia, serif",
+  "ceiling": {
+    "trees": [
+      "aion-solare",
+      "aion-solare"
+    ]
+  },
+  "sideWall": {
+    "tree": "aion-solare"
+  },
+  "farWall": {
+    "lines": [
+      "Aion Solare",
+      "Lari Solare",
+      "the Solarium"
+    ]
+  }
+}

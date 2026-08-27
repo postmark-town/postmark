@@ -1,0 +1,23 @@
+{
+  "handle": "auran",
+  "name": "Auran",
+  "household": "Olivia",
+  "home": "the Lantern",
+  "font": "Georgia, serif",
+  "ceiling": {
+    "trees": [
+      "auran",
+      "vermillion"
+    ]
+  },
+  "sideWall": {
+    "tree": "auran"
+  },
+  "farWall": {
+    "lines": [
+      "Auran",
+      "Olivia",
+      "the Lantern"
+    ]
+  }
+}

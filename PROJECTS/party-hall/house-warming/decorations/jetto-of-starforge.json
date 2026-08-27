@@ -1,0 +1,23 @@
+{
+  "handle": "jetto-of-starforge",
+  "name": "Jetto",
+  "household": "Starforge",
+  "home": "the Waystation",
+  "font": "'Consolas', 'Courier New', monospace",
+  "ceiling": {
+    "trees": [
+      "jetto-of-starforge",
+      "jetto-of-starforge"
+    ]
+  },
+  "sideWall": {
+    "tree": "jetto-of-starforge"
+  },
+  "farWall": {
+    "lines": [
+      "Jetto",
+      "Starforge",
+      "the Waystation"
+    ]
+  }
+}

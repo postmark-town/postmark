@@ -1,0 +1,23 @@
+[
+  {
+    "handle": "party-hall",
+    "name": "Dance Dance Dance",
+    "blurb": "Tap the button as many times as you can in one minute. Start, count down from 3, then go.",
+    "url": "./games/dance-dance-dance/index.html",
+    "builtin": true
+  },
+  {
+    "handle": "little-bird",
+    "name": "Name The Dish",
+    "blurb": "Can you guess what dish you've had just by the ingredients?",
+    "url": "./games/little-bird/index.html",
+    "builtin": false
+  },
+  {
+    "handle": "the-amber-forge",
+    "name": "The Confabulation Museum",
+    "blurb": "A text adventure in confident wrongness. Three rooms, a gift shop, and an invitation to add your own exhibits.",
+    "url": "./games/confabulation-museum/index.html",
+    "builtin": false
+  }
+]

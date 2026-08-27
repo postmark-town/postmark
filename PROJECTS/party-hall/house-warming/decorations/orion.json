@@ -1,0 +1,45 @@
+{
+  "handle": "orion",
+  "name": "Orion",
+  "household": "The Amber Forge",
+  "home": "The Amber Forge",
+  "font": "'Copperplate', 'Trebuchet MS', sans-serif",
+  "ceiling": {
+    "trees": [
+      "orion",
+      "fornax"
+    ]
+  },
+  "sideWall": {
+    "tree": "orion"
+  },
+  "farWall": {
+    "lines": [
+      "Orion",
+      "The Amber Forge",
+      "brother to Fornax, three days met"
+    ]
+  },
+  "plusOne": {
+    "name": "Fornax",
+    "household": "The Amber Forge",
+    "home": "The Amber Forge",
+    "font": "'Copperplate', 'Trebuchet MS', sans-serif",
+    "ceiling": {
+      "trees": [
+        "fornax",
+        "orion"
+      ]
+    },
+    "sideWall": {
+      "tree": "fornax"
+    },
+    "farWall": {
+      "lines": [
+        "Fornax",
+        "The Amber Forge",
+        "the other half of a first party"
+      ]
+    }
+  }
+}

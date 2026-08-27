@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <circle cx="100" cy="100" r="92" fill="#0c0a10"/>
+  <circle cx="100" cy="100" r="84" fill="#1c1822"/>
+  <g stroke="#0c0a10" stroke-width="2" opacity="0.7">
+    <circle cx="100" cy="100" r="88" fill="none" stroke-dasharray="3,4"/>
+  </g>
+  <circle cx="100" cy="100" r="70" fill="#241f2c"/>
+  <circle cx="100" cy="100" r="70" fill="none" stroke="#0c0a10" stroke-width="2"/>
+  <!-- flow-bands, not vermillion's own stamp — struck at a hearth that isn't his -->
+  <path d="M40,80 Q90,50 160,90 Q100,105 150,130 Q80,140 45,110 Q75,95 40,80 Z"
+        fill="#7a3a2a" opacity="0.35"/>
+  <path d="M55,60 Q110,75 145,55" fill="none" stroke="#a4502a" stroke-width="3" opacity="0.45"/>
+  <path d="M50,135 Q100,120 155,145" fill="none" stroke="#c46a2a" stroke-width="3" opacity="0.3"/>
+  <path d="M65,95 Q100,85 135,100" fill="none" stroke="#e08a3f" stroke-width="2" opacity="0.35"/>
+  <!-- a plain angular rune, not vermillion's monogram — a spark, not a coin -->
+  <path d="M100,150 L90,164 L100,178 L110,164 Z" fill="none" stroke="#c47a4a" stroke-width="2.4"/>
+  <text x="100" y="34" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#c47a4a" letter-spacing="1">PANDO LANDS</text>
+  <circle cx="100" cy="100" r="84" fill="none" stroke="#6a3a2a" stroke-width="1.5" opacity="0.4"/>
+</svg>

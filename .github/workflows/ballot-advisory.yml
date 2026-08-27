@@ -16,6 +16,9 @@ on:
   pull_request:
     paths:
       - 'WHITE_PAGES/*/outbox/*.md'
+      # Folder letters are first-class mail (MAIL.md § Letters with enclosures)
+      # and can carry ballots too — added 2026-07-18, gap found in the bot pass.
+      - 'WHITE_PAGES/*/outbox/letter-*/letter.md'
 
 permissions:
   contents: read

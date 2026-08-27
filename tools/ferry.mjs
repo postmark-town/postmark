@@ -40,6 +40,11 @@ import {
 } from 'node:fs';
 import { dirname, join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+// The envelope law (frontmatter parsing, classify, ledger dedupe, registry
+// scan) lives in tools/envelope.mjs — shared verbatim with the witness's
+// pre-merge check (tools/envelope-check.mjs) so a would-bounce letter is
+// named at the PR instead of the crossing. One source; never fork the rules.
+import { classify, collectHandles, parseFrontmatter, parseLedgerText, remedyFor } from './envelope.mjs';
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 const DEFAULT_REPO = resolve(SCRIPT_DIR, '..');
@@ -185,44 +190,36 @@ function gitCommitPush(repo, options, paths, message) {
     log('git: no remote — skipping push');
     return;
   }
-  const push = git(repo, ['push']);
-  if (push.status !== 0) {
-    throw new Error(`git push failed:\n${push.stderr || push.stdout}`);
-  }
-  log('git: pushed');
-}
-
-// --- frontmatter parsing -------------------------------------------------
-
-// Minimal YAML frontmatter reader: a leading `---` block of `key: value` lines.
-// Values are taken verbatim (trimmed). Sufficient for ADDRESS.md and letters.
-function parseFrontmatter(content) {
-  const text = content.replace(/^﻿/, '').replace(/\r\n/g, '\n');
-  if (!text.startsWith('---\n')) {
-    return null;
-  }
-  const end = text.indexOf('\n---', 4);
-  if (end === -1) {
-    return null;
-  }
-  const block = text.slice(4, end);
-  const fields = {};
-  for (const rawLine of block.split('\n')) {
-    const line = rawLine.trim();
-    if (!line || line.startsWith('#')) continue;
-    const idx = line.indexOf(':');
-    if (idx === -1) continue;
-    const key = line.slice(0, idx).trim();
-    let value = line.slice(idx + 1).trim();
-    if (
-      (value.startsWith('"') && value.endsWith('"')) ||
-      (value.startsWith("'") && value.endsWith("'"))
-    ) {
-      value = value.slice(1, -1);
+  // Bounded push retry. The race is real and widens with the town: the window
+  // between this crossing's `pull --ff-only` and this push is one the witness
+  // merges into continuously, so at 150 joins/day something landing inside it
+  // stops being unlucky and starts being ordinary. A lost push is recoverable
+  // — the crossing is idempotent, dedupe is rebuilt from the ledger — but only
+  // TWELVE HOURS later, because the timer is deliberately sharp at 00:00/12:00
+  // UTC. The rebase is safe here precisely because the commit above is scoped
+  // to touched paths only and never `git add -A`.
+  const PUSH_ATTEMPTS = 3;
+  for (let attempt = 1; attempt <= PUSH_ATTEMPTS; attempt += 1) {
+    const push = git(repo, ['push']);
+    if (push.status === 0) {
+      log(attempt === 1 ? 'git: pushed' : `git: pushed on attempt ${attempt}/${PUSH_ATTEMPTS}`);
+      return;
     }
-    fields[key] = value;
+    const why = (push.stderr || push.stdout).trim();
+    log(`git: push REJECTED (attempt ${attempt}/${PUSH_ATTEMPTS}):\n  ${why.replace(/\n/g, '\n  ')}`);
+    if (attempt === PUSH_ATTEMPTS) {
+      throw new Error(`git push failed after ${PUSH_ATTEMPTS} attempts:\n${why}`);
+    }
+    log('git: someone landed inside the window — pull --rebase, then push again');
+    const rebase = git(repo, ['pull', '--rebase']);
+    if (rebase.stdout.trim()) log(`  ${rebase.stdout.trim().replace(/\n/g, '\n  ')}`);
+    if (rebase.status !== 0) {
+      // Leave no half-finished rebase behind: a wedged clone would fail every
+      // crossing after this one, which is worse than the push we came here for.
+      git(repo, ['rebase', '--abort']);
+      throw new Error(`git pull --rebase failed after a rejected push:\n${rebase.stderr || rebase.stdout}`);
+    }
   }
-  return fields;
 }
 
 // --- directory walking ---------------------------------------------------
@@ -233,7 +230,7 @@ function listRoomDirs(repo) {
     throw new Error(`No WHITE_PAGES/ directory in repo: ${starsDir}`);
   }
   return readdirSync(starsDir, { withFileTypes: true })
-    .filter(entry => entry.isDirectory() && entry.name !== 'TEMPLATE')
+    .filter(entry => entry.isDirectory() && entry.name !== 'TEMPLATE' && !entry.name.startsWith('_'))
     .map(entry => entry.name)
     .sort();
 }
@@ -260,61 +257,16 @@ function listOutboxItems(repo, room) {
 }
 
 // --- ledger parsing (dedupe state — replaces the old SQLite cache) -------
-
-// Delivery line: `- <date> · <id> · <from> → <to>[ · pays: <n>][ · thread: <thread>]`
-// (older lines predate the trailing thread segment; both are optional here. The
-// optional `pays:` segment — witnessed at delivery when a letter carries a
-// `pays:` frontmatter — sits before thread so the greedy thread `.*` can't eat
-// it, matching stamp-mint.mjs / reconcile.mjs.)
-const LEDGER_DELIVERY_RE = /^- \d{4}-\d{2}-\d{2} · (\S+) · (\S+) → (\S+)(?: · pays: \d+)?(?: · thread: .*)?$/;
-// Bounce line: `- <date> · BOUNCE · <letter path> (from <sender>): <defect>`
-const LEDGER_BOUNCE_RE = /^- \d{4}-\d{2}-\d{2} · BOUNCE · (.+?) \(from ([^)]+)\): (.+)$/;
-// WARN line: a same-id inbox collision — the letter was left in the outbox,
-// NOT delivered. Must be checked before the delivery pattern (it can also
-// loosely match the "id ·" shape) so it never gets counted as delivered.
-const LEDGER_WARN_RE = /^- \d{4}-\d{2}-\d{2} · WARN · \S+ · would overwrite /;
+// Line grammar + parsing live in tools/envelope.mjs (parseLedgerText); this
+// wrapper keeps the file read + the no-ledger-yet log.
 
 function parseLedger(repo) {
   const ledgerPath = join(repo, 'WHITE_PAGES', 'mail-ledger.md');
-  const deliveredIds = new Set();
-  const bouncedKeys = new Set();
-  const stats = { totalLines: 0, delivered: 0, bounced: 0, warn: 0, unrecognized: 0 };
-
   if (!existsSync(ledgerPath)) {
     log('ledger: no mail-ledger.md yet — starting with empty dedupe state');
-    return { deliveredIds, bouncedKeys, stats };
+    return { deliveredIds: new Set(), bouncedKeys: new Set(), stats: { totalLines: 0, delivered: 0, bounced: 0, warn: 0, unrecognized: 0 } };
   }
-
-  const content = readFileSync(ledgerPath, 'utf8').replace(/\r\n/g, '\n');
-  for (const line of content.split('\n')) {
-    if (!line.startsWith('- ')) continue;
-    stats.totalLines += 1;
-
-    if (LEDGER_WARN_RE.test(line)) {
-      stats.warn += 1;
-      continue;
-    }
-
-    const bounceMatch = line.match(LEDGER_BOUNCE_RE);
-    if (bounceMatch) {
-      const [, letterPath, , defect] = bounceMatch;
-      bouncedKeys.add(`${letterPath}\0${defect}`);
-      stats.bounced += 1;
-      continue;
-    }
-
-    const deliveryMatch = line.match(LEDGER_DELIVERY_RE);
-    if (deliveryMatch) {
-      const [, id] = deliveryMatch;
-      deliveredIds.add(id);
-      stats.delivered += 1;
-      continue;
-    }
-
-    stats.unrecognized += 1;
-  }
-
-  return { deliveredIds, bouncedKeys, stats };
+  return parseLedgerText(readFileSync(ledgerPath, 'utf8'));
 }
 
 // --- registry (step 2) — read-only, recomputed fresh every run -----------
@@ -327,38 +279,10 @@ function parseLedger(repo) {
 // from disk on every run; there is nothing here that needs to persist
 // across runs beyond the ledger itself.
 function syncRegistry(repo) {
-  const rooms = listRoomDirs(repo);
-  const handles = new Set();
-  let registered = 0;
-
-  for (const room of rooms) {
-    const roomMd = join(repo, 'WHITE_PAGES', room, 'ADDRESS.md');
-    if (!existsSync(roomMd)) {
-      log(`registry: ${room} has no ADDRESS.md — skipping room`);
-      continue;
-    }
-    let fields;
-    try {
-      fields = parseFrontmatter(readFileSync(roomMd, 'utf8'));
-    } catch (error) {
-      log(`registry: WARN unreadable ADDRESS.md for ${room}: ${error.message} — skipping`);
-      continue;
-    }
-    if (!fields || !fields.handle) {
-      log(`registry: WARN unparseable ADDRESS.md frontmatter for ${room} — skipping`);
-      continue;
-    }
-
-    const handle = fields.handle;
-    if (handle !== room) {
-      log(`registry: WARN ${room}/ADDRESS.md declares handle "${handle}" (dir mismatch) — registering as "${handle}"`);
-    }
-
-    handles.add(handle);
-    registered += 1;
-  }
-
-  log(`registry: ${registered} room(s) recognized`);
+  // Scan shared with envelope-check via envelope.mjs; the ferry keeps the logs.
+  const { handles, warnings } = collectHandles(repo);
+  for (const w of warnings) log(`registry: ${w}`);
+  log(`registry: ${handles.size} room(s) recognized`);
   return handles;
 }
 
@@ -371,6 +295,23 @@ function bounceNoteBody(sender, today, defect, letterRelPath) {
   const base = letterRelPath.split('/').pop().replace(/\.md$/, '');
   const slug = base.replace(/^letter-\d{4}-\d{2}-\d{2}-/, '');
   const bounceId = `postmaster-bounce-${today}-${slug}`;
+  // The remedy — what to actually DO — comes from the same law that produced
+  // the defect (tools/envelope.mjs). Without it this note said only "fix the
+  // defect", which for `already delivered to ...` is wrong: nothing is broken
+  // and the letter arrived days ago. A defect the author cannot act on is a
+  // bounce that repeats forever.
+  const remedy = remedyFor(defect);
+  const remedySection = remedy ? `- What to do: ${remedy}\n` : '';
+  // Only promise reconsideration when revising the letter is in fact the
+  // remedy. An already-delivered copy will never be reconsidered no matter
+  // what the author does to it — the file simply wants dropping.
+  const closing = defect.startsWith('already delivered to ')
+    ? `Nothing here needs rewriting. The letter is fine and it arrived — this copy
+just needs to stop being offered. It will sit in your outbox harmlessly until
+you remove it, and it will not bounce again.`
+    : `The letter was left in your outbox. Fix the defect and it will be reconsidered
+on the next mail run. This bounce is deterministic — the same defect will not
+generate a second bounce note.`;
   return `---
 id: ${bounceId}
 from: postmaster
@@ -385,10 +326,8 @@ A letter in your outbox could not be delivered.
 
 - Offending file: \`${letterRelPath}\`
 - Defect: ${defect}
-
-The letter was left in your outbox. Fix the defect and it will be reconsidered
-on the next mail run. This bounce is deterministic — the same defect will not
-generate a second bounce note.
+${remedySection}
+${closing}
 
 — postmaster
 `;
@@ -441,7 +380,8 @@ function sweep(repo, options, today, handles, dedupe) {
         }
       }
 
-      const defect = forcedDefect || classify(fields, room, handles, dedupe);
+      const defect = forcedDefect
+        || classify(fields, room, handles, dedupe, { repo, sourcePath: outboxPath, kind: item.kind });
 
       if (defect) {
         bounced += handleBounce(
@@ -474,43 +414,7 @@ function sweep(repo, options, today, handles, dedupe) {
   return { delivered, bounced, touched: [...touched] };
 }
 
-// Returns a defect reason string, or null if well-formed.
-function classify(fields, room, handles, dedupe) {
-  if (!fields) {
-    return 'unparseable letter frontmatter';
-  }
-  const required = ['id', 'from', 'to', 'date', 'thread'];
-  for (const key of required) {
-    if (!fields[key]) {
-      return `missing required field: ${key}`;
-    }
-  }
-  // The id becomes the delivery filename (collision-proof, unlike the sender's
-  // outbox name). It must therefore be a single safe path segment — reject path
-  // separators, `..`, leading dots, spaces, etc. so a malformed/hostile id
-  // bounces rather than mis-delivering or escaping the inbox.
-  if (!/^[A-Za-z0-9][A-Za-z0-9._-]*$/.test(fields.id)) {
-    return `unsafe id for delivery filename: "${fields.id}"`;
-  }
-  if (fields.from !== room) {
-    return `from "${fields.from}" does not match room directory "${room}"`;
-  }
-  if (!handles.has(fields.to)) {
-    return `unknown recipient: "${fields.to}" is not a registered handle`;
-  }
-  // A `pays:` amount, if present, must be a positive integer — a nonsense
-  // payment (0, negative, decimal, non-numeric) bounces rather than getting
-  // witnessed onto the ledger. The mint reads this segment as authoritative, so
-  // the ferry is the gate that keeps garbage out of the witnessed record.
-  if (fields.pays !== undefined && !/^[1-9]\d*$/.test(fields.pays)) {
-    return `invalid pays: "${fields.pays}" — must be a positive integer`;
-  }
-  // Duplicate id already delivered (ledger-derived, updated in-run as we go).
-  if (dedupe.deliveredIds.has(fields.id)) {
-    return 'duplicate id';
-  }
-  return null;
-}
+// classify() — the envelope law — is imported from tools/envelope.mjs.
 
 function handleDeliver(
   repo, options, today, room, filename, outboxPath, letterRel, fields, ledgerLines, touched, dedupe, kind,

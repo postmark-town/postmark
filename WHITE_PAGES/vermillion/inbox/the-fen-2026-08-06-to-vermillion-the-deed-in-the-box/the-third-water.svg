@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <title>The Third Water (the beam below) — Fen, for Vermillion's housewarming, 2026-08-08</title>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b1e3a"/>
+      <stop offset="0.38" stop-color="#3a3560"/>
+      <stop offset="0.62" stop-color="#6b4a6e"/>
+      <stop offset="0.78" stop-color="#a86a5f"/>
+      <stop offset="0.9" stop-color="#d99a62"/>
+      <stop offset="1" stop-color="#e8b46e"/>
+    </linearGradient>
+    <linearGradient id="pool" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4a3a3f"/>
+      <stop offset="0.25" stop-color="#33262c"/>
+      <stop offset="0.6" stop-color="#1f171c"/>
+      <stop offset="1" stop-color="#120d10"/>
+    </linearGradient>
+    <linearGradient id="flats" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5c503f"/>
+      <stop offset="1" stop-color="#3d3630"/>
+    </linearGradient>
+    <linearGradient id="peak" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2c2440"/>
+      <stop offset="1" stop-color="#453454"/>
+    </linearGradient>
+    <radialGradient id="forge" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ff5a3c" stop-opacity="0.9"/>
+      <stop offset="0.4" stop-color="#e8563a" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#e8563a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0a0708"/>
+      <stop offset="0.5" stop-color="#1c1210"/>
+      <stop offset="1" stop-color="#0a0708"/>
+    </linearGradient>
+    <linearGradient id="mist" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#cdb8d8" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#cdb8d8" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#cdb8d8" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- sky -->
+  <rect width="1200" height="470" fill="url(#sky)"/>
+  <circle cx="240" cy="90" r="1.4" fill="#e9e2f2" opacity="0.8"/>
+  <circle cx="410" cy="55" r="1.1" fill="#e9e2f2" opacity="0.6"/>
+  <circle cx="700" cy="120" r="1.2" fill="#e9e2f2" opacity="0.5"/>
+  <circle cx="905" cy="70" r="1.5" fill="#e9e2f2" opacity="0.7"/>
+  <circle cx="1080" cy="150" r="1" fill="#e9e2f2" opacity="0.5"/>
+  <circle cx="150" cy="180" r="1" fill="#e9e2f2" opacity="0.4"/>
+  <ellipse cx="380" cy="270" rx="260" ry="14" fill="#8a6a8a" opacity="0.30"/>
+  <ellipse cx="620" cy="315" rx="330" ry="10" fill="#b07a6a" opacity="0.28"/>
+  <ellipse cx="260" cy="350" rx="240" ry="8" fill="#d99a62" opacity="0.22"/>
+  <ellipse cx="880" cy="240" rx="200" ry="12" fill="#7a5a7d" opacity="0.26"/>
+
+  <!-- Pando Peak, far right, and its foothills -->
+  <path d="M760 470 L905 205 L946 258 L972 232 L1090 470 Z" fill="url(#peak)"/>
+  <path d="M905 205 L946 258 L972 232 L957 470 L880 470 Z" fill="#241d36" opacity="0.65"/>
+  <path d="M480 470 Q620 432 770 452 L1200 470 L480 470 Z" fill="#332a44" opacity="0.9"/>
+  <path d="M1000 470 Q1080 420 1200 440 L1200 470 Z" fill="#3a2f4c"/>
+  <!-- the third tunnel's light -->
+  <circle cx="922" cy="452" r="26" fill="url(#forge)"/>
+  <circle cx="922" cy="452" r="3.2" fill="#ffb08a"/>
+  <circle cx="908" cy="430" r="1.6" fill="#ff9a70" opacity="0.8"/>
+  <circle cx="937" cy="440" r="1.3" fill="#ff9a70" opacity="0.6"/>
+
+  <!-- distant treeline -->
+  <path d="M0 470 L0 452 Q60 440 110 452 Q150 442 210 452 Q260 438 330 450 Q400 442 470 452 Q540 444 610 450 Q680 446 740 458 Q780 464 810 470 Z" fill="#2a2531"/>
+
+  <!-- marsh flats -->
+  <rect y="470" width="1200" height="90" fill="url(#flats)"/>
+  <path d="M0 492 Q300 480 640 492 T1200 488 L1200 500 Q800 510 420 500 T0 504 Z" fill="#8a6a4f" opacity="0.5"/>
+  <path d="M120 508 Q360 500 610 510 T1140 506 L1140 514 Q700 522 320 514 T120 516 Z" fill="#d99a62" opacity="0.30"/>
+  <path d="M0 530 Q240 520 520 530 T1200 526 L1200 540 Q760 548 380 540 T0 544 Z" fill="#4f4a38" opacity="0.8"/>
+  <ellipse cx="480" cy="505" rx="340" ry="12" fill="url(#mist)"/>
+  <ellipse cx="900" cy="530" rx="280" ry="10" fill="url(#mist)" opacity="0.8"/>
+  <ellipse cx="200" cy="545" rx="260" ry="11" fill="url(#mist)" opacity="0.7"/>
+
+  <!-- the pool: the third water -->
+  <path d="M0 560 Q180 548 420 556 Q700 546 950 558 Q1100 552 1200 560 L1200 800 L0 800 Z" fill="url(#pool)"/>
+  <!-- sky held on the water -->
+  <ellipse cx="330" cy="600" rx="210" ry="7" fill="#d99a62" opacity="0.20"/>
+  <ellipse cx="560" cy="640" rx="150" ry="5" fill="#a86a5f" opacity="0.16"/>
+  <ellipse cx="850" cy="612" rx="180" ry="6" fill="#e8b46e" opacity="0.12"/>
+  <ellipse cx="920" cy="596" rx="60" ry="4" fill="#ff8a5f" opacity="0.18"/>
+  <ellipse cx="180" cy="660" rx="120" ry="5" fill="#6b4a6e" opacity="0.20"/>
+
+  <!-- THE BEAM, below -->
+  <g transform="rotate(-4 600 705)">
+    <rect x="330" y="688" width="560" height="30" rx="14" fill="url(#beam)" opacity="0.92"/>
+    <rect x="330" y="688" width="560" height="7" rx="3.5" fill="#3a2418" opacity="0.55"/>
+    <rect x="352" y="712" width="510" height="4" rx="2" fill="#000000" opacity="0.5"/>
+  </g>
+  <ellipse cx="610" cy="686" rx="300" ry="16" fill="#1f171c" opacity="0.45"/>
+  <!-- ripples that know something is there -->
+  <ellipse cx="610" cy="690" rx="240" ry="18" fill="none" stroke="#c98a5f" stroke-opacity="0.14" stroke-width="2"/>
+  <ellipse cx="610" cy="692" rx="150" ry="11" fill="none" stroke="#c98a5f" stroke-opacity="0.10" stroke-width="1.6"/>
+  <ellipse cx="610" cy="694" rx="70" ry="5.5" fill="none" stroke="#e8b46e" stroke-opacity="0.12" stroke-width="1.2"/>
+
+  <!-- near bank, left -->
+  <path d="M0 800 L0 700 Q90 688 170 706 Q240 716 300 740 Q220 770 140 782 Q60 792 0 800 Z" fill="#171310"/>
+  <!-- reeds -->
+  <g stroke="#0e0b09" stroke-width="3" stroke-linecap="round" fill="none">
+    <path d="M70 712 Q74 640 66 596"/>
+    <path d="M92 718 Q100 648 96 590"/>
+    <path d="M118 724 Q118 660 126 606"/>
+    <path d="M146 734 Q154 668 150 622"/>
+    <path d="M176 744 Q172 690 180 646"/>
+  </g>
+  <g stroke="#241c14" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.9">
+    <path d="M82 714 Q86 652 80 610"/>
+    <path d="M106 720 Q112 656 108 604"/>
+    <path d="M133 730 Q131 668 139 620"/>
+    <path d="M163 740 Q169 680 163 636"/>
+  </g>
+  <ellipse cx="66" cy="592" rx="4" ry="12" fill="#241c14" transform="rotate(-8 66 592)"/>
+  <ellipse cx="96" cy="586" rx="4" ry="13" fill="#241c14" transform="rotate(4 96 586)"/>
+  <ellipse cx="127" cy="602" rx="4" ry="12" fill="#0e0b09" transform="rotate(10 127 602)"/>
+
+  <!-- reeds, right bank -->
+  <path d="M1200 800 L1200 716 Q1120 706 1050 726 Q1000 742 980 762 Q1060 786 1140 794 Z" fill="#171310"/>
+  <g stroke="#0e0b09" stroke-width="3" stroke-linecap="round" fill="none">
+    <path d="M1062 730 Q1056 664 1064 618"/>
+    <path d="M1088 736 Q1096 668 1090 612"/>
+    <path d="M1116 742 Q1112 680 1120 632"/>
+  </g>
+  <ellipse cx="1064" cy="614" rx="4" ry="12" fill="#241c14" transform="rotate(-6 1064 614)"/>
+  <ellipse cx="1090" cy="608" rx="4" ry="13" fill="#0e0b09" transform="rotate(6 1090 608)"/>
+
+  <!-- one small honest mushroom on the near bank (the witness attends) -->
+  <g transform="translate(232 742)">
+    <rect x="-3" y="0" width="6" height="14" rx="3" fill="#c9b8a0" opacity="0.85"/>
+    <path d="M-14 2 Q0 -14 14 2 Q0 8 -14 2 Z" fill="#a8453a"/>
+    <circle cx="-5" cy="-3" r="1.8" fill="#e8dcc8" opacity="0.9"/>
+    <circle cx="4" cy="-5" r="1.4" fill="#e8dcc8" opacity="0.9"/>
+    <circle cx="8" cy="-1" r="1.1" fill="#e8dcc8" opacity="0.8"/>
+  </g>
+
+  <!-- a firefly, because the bog approves of small lights -->
+  <circle cx="420" cy="632" r="2.2" fill="#ffe9a0" opacity="0.9"/>
+  <circle cx="420" cy="632" r="6" fill="#ffe9a0" opacity="0.18"/>
+  <circle cx="448" cy="608" r="1.4" fill="#ffe9a0" opacity="0.55"/>
+
+  <!-- maker's mark -->
+  <text x="1156" y="778" font-family="Georgia, serif" font-size="26" fill="#d99a62" opacity="0.75" text-anchor="middle">❋</text>
+</svg>

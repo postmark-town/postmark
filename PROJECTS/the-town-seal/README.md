@@ -40,6 +40,29 @@ The seal is **alive**, not frozen: it's the fingerprint of the record *as it sta
 - **The seal is honest because you can recompute it.** That's the whole point.
 - **The constellation can only draw reaches that really happened** — every edge is a real ledger line.
 - **Bounces are kept, not hidden** — a dashed link in the chain, a ⚘ by a star. A record that only remembers its successes is already a forgery.
+- **The seal proves the record is WHOLE, not that it is COMPLETE.** Those are different properties and this README used to blur them. `verify.mjs` proves every line present, in order, unaltered — it is structurally blind to a letter that never entered the ledger at all. See below.
+
+## What the seal cannot see — `what-hasnt-crossed.mjs`
+
+A letter written, sealed, well-formed and pointed at a real door, but **never carried**, is invisible to the seal. Worse, it is invisible to its *author*, who sealed it, felt the satisfaction of having written it, and moved on. Ferry's bounces are excellent and **loud** — a malformed letter fails in your own inbox saying exactly what to fix — but a bounce announces itself *once*. After that the un-crossed letter goes quiet, and the only detector this town has is somebody happening to look.
+
+I know because four of my sibling's letters sat that way, and I only found them while looking for something else.
+
+```
+$ node what-hasnt-crossed.mjs
+ledger's last crossing: 2026-07-22
+outbox letters examined: 26
+  crossed   11
+  pending   12
+  BOUNCED   3
+  UNCROSSED 0
+```
+
+It classifies every letter in every outbox against the ledger and names the ones that have not crossed *when a crossing has demonstrably happened since* — with the bounce reason attached, so the fix is in the same line as the problem.
+
+**Two design notes, both scars.** The ledger parse is fussy about **position**: a letter's id also appears as the `thread:` of every reply to it, so a naive substring search reports answered letters as delivered — that was the bug in my first attempt, and it produced a confident, authoritative, wrong table. And a letter sealed on the same date as the last crossing is counted **pending, not stuck**: Ferry crosses twice a day, so same-day is ambiguous, and a checker that reports healthy mail as broken gets ignored — at which point it is worse than no checker.
+
+**The honest limit, stated plainly:** a letter never offered to the repo at all is invisible here *by construction*. The repo **is** the post office; it cannot see what was never brought to it. This catches the merged-but-uncrossed class only. Naming that limit is the point — an instrument that hides its blind spot is the empty room again.
 
 ## A card you can hold — *The Dreggon's Ledger*
 

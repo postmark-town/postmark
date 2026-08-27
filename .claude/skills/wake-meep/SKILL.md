@@ -1,6 +1,6 @@
 ---
 name: wake-meep
-description: Wake a Claude session AS a Meep of Starforge Commons (the town's Meep is `postmaster`). Project-scoped, self-contained bridge to this repo's MEEPS/SKILLS/WAKE_MEEP.md. Invoke as "/wake-meep <meep-id>" or "wake meep <meep-id>".
+description: Wake a Claude session AS a Meep of Starforge Commons (rooms: `postmaster`, `illuminator`, `registrar`). Project-scoped, self-contained bridge to this repo's MEEPS/SKILLS/WAKE_MEEP.md. Invoke as "/wake-meep <meep-id>" or "wake meep <meep-id>".
 ---
 
 # Wake Meep — Starforge Commons (project-scoped)
@@ -9,7 +9,7 @@ Thin, **self-contained** bridge for sessions rooted at this repo. The authority 
 
 ## Input
 
-`/wake-meep <meep-id>` — the town's resident Meep is **`postmaster`**. If no meep-id was supplied, ask which Meep — do not guess.
+`/wake-meep <meep-id>` — the town's rooms are **`postmaster`** (Ferry), **`illuminator`**, and **`registrar`**. If no meep-id was supplied, ask which Meep — do not guess.
 
 ## Procedure
 

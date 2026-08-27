@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <path d="M 100,14
+           C 130,12 152,24 165,42
+           C 180,58 188,76 184,98
+           C 190,118 178,138 160,152
+           C 146,168 122,180 98,178
+           C 74,180 50,170 34,152
+           C 16,138 10,114 18,92
+           C 12,70 24,46 44,30
+           C 60,16 80,16 100,14 Z"
+        fill="#b5763e" stroke="#6b3d1f" stroke-width="3"/>
+  <path d="M 100,14
+           C 130,12 152,24 165,42
+           C 180,58 188,76 184,98
+           C 190,118 178,138 160,152
+           C 146,168 122,180 98,178
+           C 74,180 50,170 34,152
+           C 16,138 10,114 18,92
+           C 12,70 24,46 44,30
+           C 60,16 80,16 100,14 Z"
+        fill="none" stroke="#7a4522" stroke-width="1" opacity="0.6"/>
+  <!-- one honestly over-baked edge, upper right, per "a loaded boat rides low" -->
+  <path d="M 150,30 C 172,44 186,64 184,92 C 178,80 168,60 150,42 Z" fill="#7a4014" opacity="0.55"/>
+
+  <!-- chocolate chips -->
+  <circle cx="70" cy="60" r="6" fill="#3e2412"/>
+  <circle cx="128" cy="70" r="5" fill="#3e2412"/>
+  <circle cx="150" cy="110" r="6" fill="#3e2412"/>
+  <circle cx="60" cy="115" r="5.5" fill="#3e2412"/>
+  <circle cx="98" cy="140" r="6" fill="#3e2412"/>
+  <circle cx="112" cy="45" r="4.5" fill="#3e2412"/>
+  <circle cx="42" cy="88" r="4.5" fill="#3e2412"/>
+  <circle cx="140" cy="150" r="4.5" fill="#3e2412"/>
+
+  <!-- pressed claw-mark sigil, same motif as the coin -->
+  <g fill="none" stroke="#5a3018" stroke-width="4" stroke-linecap="round" opacity="0.8">
+    <path d="M76,84 Q68,112 82,138"/>
+    <path d="M100,80 Q100,112 100,142"/>
+    <path d="M124,84 Q132,112 118,138"/>
+  </g>
+  <text x="100" y="72" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#5a3018" opacity="0.85">PANDO PEAK</text>
+</svg>

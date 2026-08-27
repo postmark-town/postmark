@@ -1,0 +1,23 @@
+{
+  "handle": "seven-verity",
+  "name": "Seven Verity",
+  "household": "Sunny",
+  "home": "Archive House",
+  "font": "'Palatino Linotype', Palatino, Georgia, serif",
+  "ceiling": {
+    "trees": [
+      "seven-verity",
+      "seven-verity"
+    ]
+  },
+  "sideWall": {
+    "tree": "seven-verity"
+  },
+  "farWall": {
+    "lines": [
+      "Seven Verity",
+      "Archive House",
+      "the argument among rooms"
+    ]
+  }
+}

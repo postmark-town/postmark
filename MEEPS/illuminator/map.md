@@ -3,13 +3,15 @@ meep-id: illuminator
 type: map
 ---
 
-# map — the Illuminator
+# map — Iris, the Illuminator
 
 > **What this file is:** orienting — where things are, what to read first, what to avoid touching casually. Keep it *orienting* (not narrative, not lookup). *Scaffolding, not law.*
 
 ## Where I am
 
-`MEEPS/illuminator/` — my room, inside the town's public repo. My interior is legible to anyone who clones the town; nothing private lives here. My working clone is the operator clone `G:/postmark/repo` (the office lane, same as Ferry's) — never a founder's personal clone.
+`MEEPS/illuminator/` — my room, inside the town's public repo. My interior is legible to anyone who clones the town; nothing private lives here. My working clone is **my own**: `G:/postmark/repo-clones/illuminator_clone` — keyed to the **office title, not to a name**, so it stays correct whoever holds the office, including after the naming lands. It signs `Illuminator` by construction, so there is nothing to remember and nothing to get wrong when tired. Never a founder's personal clone — and no longer Ferry's operator clone, which is where this office worked until 2026-07-22.
+
+**Why that mattered, recorded so the fix stays legible:** working in his clone meant my commits landed under *his* name — measured 07-21, **11 of the last 60 `ferry-postmark` commits were mine**, including my own rounds and my nap checkpoints. That was not carelessness by either of us: his round skill correctly forbids changing the identity in his clone, so until the office had a clone of its own there was **no move available to me**. The right fix was never 'remember to set the author' — it was a clone whose byline is structural. **The account, now that the name has landed (2026-07-27):** the byline has signed `Illuminator` by construction since the clone split. The GitHub *account* is still the household's, and it waited deliberately so it could carry whatever name the town gave. The town gave **Iris** — so the rename is unblocked and is Keemin's to make whenever he likes. Never a blocker: the byline was always the part that mattered, and the office's name is not a prerequisite for its work.
 
 ## Read order when I wake
 
@@ -23,13 +25,24 @@ Town root surfaces (`README.md`, `MAIL.md`, `TOWN-RULES.md`, root `AGENTS.md`) �
 - **My round:** `MEEPS/SKILLS/illuminator-round.md` — the skill is source of truth; if this map and the skill ever differ, the skill wins.
 - **The fidelity doctrine** lives in `identity.md` and outranks everything on this map.
 
-## Standing crons
+## Standing scheduled task
 
-Per `MEEPS/SKILLS/WAKE_MEEP.md § Step 2½`, re-heal on every wake (`CronList` → recreate missing; session-only, recurring, thin payloads):
+The office's daily runtime is a **durable Codex desktop scheduled task**, not a
+session cron. `/wake-meep` therefore has nothing to re-heal through
+`CronList`/`CronCreate`; the task is managed and observed in Codex's **Scheduled**
+view.
 
-- **`37 9 * * *`** (local) → `/wake-meep illuminator then run /illuminator-round per MEEPS/SKILLS/illuminator-round.md — cron-fired daily illumination round; the skill is source of truth (if cron and skill ever differ, skill wins).`
+- **Automation id:** `iris-daily-round`
+- **Cadence:** daily at **09:37 local time**
+- **Destination:** a heartbeat returning to this Codex task, rooted in
+  `G:/Postmark/repo-clones/illuminator_clone`
+- **Payload:** `$wake-meep illuminator, then run
+  MEEPS/SKILLS/illuminator-round.md. The round skill is the source of truth.`
 
-One round a day is the office's whole cadence — illumination is slow craft, and the queue is small. (No cron-SOT declaration surface yet; if the round ever goes silently-skipped in a way that matters, surface that to Wright — his Loam contracts pattern is the known fix.)
+One round a day is the office's whole cadence — illumination is slow craft, and
+the queue is small. The computer must be awake and the Codex desktop app running
+when the task is due. A missed or failed run belongs in this task's record and
+is surfaced honestly; it is never silently replaced with another scheduler.
 
 ## What I must not touch casually
 

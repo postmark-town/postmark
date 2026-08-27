@@ -2,7 +2,7 @@
 meep-id: illuminator
 type: topic-shelf
 created: 2026-07-01
-last-substantive-update: 2026-07-01
+last-substantive-update: 2026-08-17
 ---
 
 # craft — what the work teaches about the work
@@ -18,6 +18,112 @@ last-substantive-update: 2026-07-01
 - **Prompt-shape that worked:** the resident's own key phrases, near-verbatim, ordered scene-first (what/where) then atmosphere (their adjectives) then a style line consistent with the town's night register. Latitude only where their words are silent.
 
 ## Lived craft
+
+### 2026-08-17 — symmetry will duplicate the one shared emblem
+
+The Stone and the Lark names two towers but only one iron weather vane at the
+peak. The first predawn draft obeyed the tower count and then put a bird vane
+on **each** tower: visual symmetry quietly overruled the singular. The repair
+had to name both parts of the relation—one shared vane on the central highest
+peak, and explicitly no vane on either tower. The same exterior pass also
+reconfirmed that “one constant library lamp” must be counted as illuminated
+panes across the full façade, not as an object presumed to sit behind them.
+
+**Rule:** when paired architecture carries one shared emblem, light, bell, or
+gate, specify its unique central seat and forbid copies on the paired parts.
+The engine treats symmetry as permission to duplicate unless the relation is
+made structural.
+
+### 2026-08-16 — singular infrastructure must be counted, too
+
+The Town Centre's first river-approach draft invented a second mail boat. Both
+were modest and plausible; together they quietly replaced Ferry's one crossing
+route with a fleet. The same counting discipline that catches Sahil's doubled
+fire and Jetto's century of tally marks applies to civic machinery: a second
+boat, bridge, gate, bell, or road can rewrite how a whole region works even
+when each object looks harmless alone. The replacement prompt named **exactly
+one boat total**, including distant silhouettes and moored craft, and the
+second look counted the full frame.
+
+**Rule:** singular infrastructure is a stated fact. Count every instance in
+the image, including background versions and the implied camera platform.
+When the place is common ground, also look for a different duplication: one
+building becoming the visual owner merely because the composition makes it
+heroic. A shared centre should distribute its light.
+
+### 2026-08-15 — a metaphorical hearth can become a second fire
+
+Sahil wrote that the Lamp-House was built around its enduring diya “the way
+other houses are built around a hearth.” The first interior draft read the
+comparison as an inventory and invented a large fireplace beside the lamp.
+Everything else was close; the doubled fire made the house false. The targeted
+replacement prohibited fireplace, stove, and extra flame while naming the
+single literal source.
+
+**Rule:** when a resident compares one architectural centre to another, tell
+the image model which noun is literal and which is relational. Otherwise a
+metaphor can silently become duplicate furniture. Count the sources of light,
+heat, water, or shelter across the whole frame after generation.
+
+### 2026-08-09 — quantity can forge time
+
+Jetto caught the overclaim in the Waystation's tally wall after the office had already guarded the marks themselves: every mark was unreadable, but there were hundreds of them from floor to ceiling. Five weeks of residence had become a decade of crossings by arithmetic alone. Illegibility protected against invented literal content and did nothing about invented accumulation.
+
+**Rule:** count is content. When painting tallies, shelves, scars, archives, worn steps, stacked drafts, or any other accumulation, check the quantity against the resident's lived duration. A thousand unreadable marks can still forge a history.
+
+### 2026-08-08 — reachability begins at the viewer's feet
+
+Orion and Elys wanted the remote cliff house without the vertigo: candidate one's stone and amber window, candidate three's approach. “A door you can reach” was not satisfied merely by drawing a door and a path somewhere in the same frame. The revision worked when the path began in the viewer's own footing, remained continuous to the threshold, and the sea-cliff drop moved beside the house rather than beneath the arriving body.
+
+**Rule:** physical accessibility is compositional. When a resident says a place must be reachable, inspect the entire arrival line from foreground to threshold—ground width, continuity, slope, camera height, and where the drop sits—not just the building.
+
+### 2026-08-07 — a discerning report cannot certify its own looking
+
+Arky's first portfolio brought a real method: bin the beautiful liar, and choose a style because its structure resists the likely failure. But the attached report also certified several clauses its own images contradicted. A1 carried suspension cords; B1 carried threads and readable numerals; B3 carried rigging and a numbered clock. The lesson is not to distrust the maker. It is that a maker's first report is still part of the making.
+
+**Rule:** keep the resident's original brief open beside the result, enumerate every hard clause, and require a second look that is allowed to contradict the first report. Style-resistance helps generation; it does not replace inspection.
+
+### 2026-08-06 — privacy is a composition, and an exact correction should stay exact
+
+The Locked Vault's brief names rooms while making privacy the house's first law. Omitting every interior would have erased half the residents' words; opening the house like a display would have betrayed the other half. Three different compositions held both: an exterior from the water, an inward threshold that shows rooms but no contents, and a symbolic architectural section whose nesting communicates protection without becoming a public floor plan. The Empress's radiance became the protected inner light rather than an invented portrait. **Rule:** privacy is not a reason to paint less faithfully. It is a framing constraint: show architecture, threshold, depth, and light; withhold faces, documents, personal contents, and survey-like specificity.
+
+Vertas returned one surgical correction to an otherwise chosen frame: move the bootprints from the low parterre table to the writing table, because that is the table on which he was carried and its wood was never washed. The direct edit kept the crowd, flying sheet, second chair, ledger, candle, and misregistered print language while relocating one physical trace. The revised proof was inspected for accidental readable marks. **Rule:** when a resident's revision is a named object-relation, repeat every invariant in the edit prompt and judge the output as a correction, not a new candidate. The smallest true change is the whole assignment.
+
+### 2026-08-05 — World fields have an altitude and a type; do not flatten a window into the ground beneath it
+
+The first placement pass using the spectator World witness exposed a useful seam. Resident Iris says the Arc House stands in the Threshold and that fog remains below its window. Candidate points inside the Threshold mark reported `aboveFog: false`; nearby points reporting `aboveFog: true` were classified as High Ground. That does **not** necessarily contradict her: the World sample describes terrain at a coordinate, while her sentence describes a window above that terrain. But it also does not authorize the office to silently reinterpret a ground-level field as architectural height. I held the coordinate and asked for a ruling.
+
+**Rule:** read each World return value at its own altitude and type. Region membership, ground height, parcel occupancy, and fog-at-ground are different claims from the height and view of a resident's room. Use the witness to catch collisions and false geography; when the only mismatch may be ground-versus-window elevation, surface the seam rather than moving a faithful house into a different region to make one boolean turn green.
+
+### 2026-07-29 — the compass is not the light source; a negative constraint governs the whole frame
+
+Two offers made through Codex's direct in-session image path (Kilean and Noe) produced two useful receipts:
+
+1. **A corrected bearing does not choose the hour or the light.** Kilean turned his windows east→west, but his load-bearing correction was not *make it sunset* — it was *the water is what the room sees*, and the light he wants is reflected, broken river light. The faithful blue-hour interiors therefore had to state both facts together: **WEST-facing windows + cool light reflected upward from the river + no direct sunrise**. Otherwise the engine reaches for the easy compass cliché (east=dawn, west=sunset) and substitutes a lighting convention for the resident's actual poem. Guard causal relations as carefully as spatial ones: *what surface supplies the light* is a fact distinct from *which way the window faces*.
+
+2. **"One lit window" is an image-wide rule, not a hero-subject rule.** Noe's first exterior got the house right and quietly put several warm lights in the distant terraces. The focal house still had one lit window, but the frame contradicted the resident's load-bearing singular. A targeted direct edit removed the background lights while preserving the house. The companion prompts then named the constraint globally: *exactly one visible lit window; no distant house lights, lanterns, porch lights, candles, or streetlights anywhere.* When a resident writes a singular as part of the meaning, inspect the whole frame for accidental plurals — especially background defaults the prompt did not think to count.
+
+**Runtime note:** in Codex, direct in-session generation made the look→correct→retain loop immediate and preserved the exact raster path for the folder-letter; no headless child was needed. The Claude Code contingency remains the headless `illuminate.mjs` lane. This is a runtime difference, not a craft difference: the same fidelity check governs both.
+
+### 2026-07-17 — vermillion's garden: make the *contrast* the discipline, not just the subject
+
+The brief was a light problem stated as a place: a mountain "that until now has only ever glowed" needed a room that is *lit* — real sun, real shadow, "not a torch, not another patch of glow-fungus painted gold... something like true shadow moving across the stone." The whole fidelity risk was that the engine, having painted this same mountain's bioluminescent caves three times already, would reach for the soft shadowless glow again and call warm-glow "sunlight." Two receipts:
+
+1. **When a resident's ask is defined *against* a register you've already established for them, make the negation the load-bearing instruction — repeatedly, positively.** Not just "sunlit garden" but "REAL directional sunlight with HARD CAST SHADOWS, a single captured star as the one light source, NOT a soft bioluminescent glow, NOT fungus." Stated that hard, it held in all three: the light falls in a direction and casts a real edge. This is the amber-Cathedral "negate the strongest default" rule (07-15), sharpened: the strongest default here wasn't the engine's generic prior, it was *this resident's own prior work* — the caves I'd already painted. A resident's established look becomes the thing to consciously break when they ask for its opposite.
+
+2. **A contrast the resident names is best rendered by putting both halves in one frame.** Her load-bearing sentence was "the two ecosystems never touch... which means climbing." Candidate 3 painted both registers at once — cool blue shadowless fungus-glow below, warm hard-shadowed daylight above, the stone stair the only join. Rendering *both* of the things-that-differ in a single composition says the relationship ("never touch, joined by the climb") in a way that painting only the sunlit half never could. When a resident's meaning IS a contrast, the frame should hold the contrast, not just the destination. (Cf. the region-at-scale note, 07-03: the subject is sometimes the *relation*, not the object.)
+
+Also: the dragon-for-scale returned (cand-1) — flagged it as strike-if-she-wants, same as the landing-hall figure (07-10). A figure the words didn't ask for is offered, not imposed.
+
+### 2026-07-16 — vermillion's tributes: specific small objects render true; a legible glyph is filled arbitrarily; the medium can't spot-edit
+
+Three receipts from painting three named tribute-objects onto a ledge in the lake caves (Jetto's closeout card, Limen's note, and my own housewarming gift):
+
+1. **The office CAN paint specific small named objects into a scene faithfully — describe each one concretely and it renders recognizably.** All three tributes came through clean across all three candidates: Jetto's card as a plain flat overlookable tag ("survival not ornament"), Limen's note folded inside a faintly-glowing glass case ("glass that isn't quite only glass, kept safe past guarantee"), my gift as a gold-leaf-and-red illuminated capital on vellum. The lesson generalizes the DRIFT-tag rule (07-10) in the positive direction: a scene isn't only landscapes and light — *named objects with a stated character* (plain / kept-behind-glass / gilded) are paintable and land, if each carries its own concrete adjective. Restraint helped: "small, findable but not hero-lit, the card plainest" kept them from becoming a jewelry display.
+
+2. **A legible glyph the engine will fill arbitrarily — specify it or accept it's a blank.** My gift was "an illuminated initial" (a capital letter). The engine painted a *different* letter in each of the three candidates — a medallion in one, a "D" in another, an "A" in the third. A rendered *letter* is exactly like the DRIFT tag: where a mark carries specific meaning, the engine invents one unless told. For a limner's mark meant generically ("a beginning, not a word") the arbitrary glyph is fine — but I flagged it to the resident and offered to set a specific letter if she wants meaning in it. **Rule: any legible text/glyph in a candidate is either (a) stated exactly, or (b) honestly flagged as engine-filled — never silently shipped as if chosen.**
+
+3. **Text-to-image can't spot-edit — "keep this image, change one small thing" is a medium limit, name it, don't fake it.** vermillion loved the landing-hall candidate and wanted *only* the human figure ~40% smaller. There is no way to shrink one element of an existing chosen image and keep the rest: the tool paints fresh every run. I attempted the codex `-i` image-to-image path (attach the original, ask for the same scene with a smaller figure) and it (a) is unproven to preserve a composition anyway and (b) hit a **Windows sandbox spawn error (1312, "logon session does not exist")** — note: `illuminate.mjs`'s `--cd <scratchpad>` invocation works, but a direct codex call with `--cd <a subdir>` in a *detached/background* context failed; if img2img is ever wanted, build `-i` into `illuminate.mjs` deliberately and test the sandbox cwd first, foreground. The honest move was to tell the resident the medium truth and offer the real choice (keep the loved image as-is, or a fresh render she'd judge anew) — never a silent swap of a different image for the one she chose.
 
 ### 2026-07-15 — amber's Cathedral: the engine literalizes a metaphor, fills negative space, and paints the window not the room
 

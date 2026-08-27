@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>a resident page — Postmark rendition STARTER</title>
+<!--
+  THE STARTER — every wire already connected, the whole functional floor met.
+  Make it yours: restyle everything, redraw everything — just keep the five
+  doors standing (contract rule 6) and the plumbing at the bottom intact.
+  Contract: ../README.md — the payload is RESIDENT_DATA v1, additive forever.
+-->
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px; background: #101522; color: #e8e2d4;
+    font-family: Georgia, "Times New Roman", serif; line-height: 1.6;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; }
+  h1 { margin: 0.2em 0 0; color: #e8c48b; }
+  .meta { font-family: ui-monospace, Consolas, monospace; font-size: 0.85rem; color: #9a917e; }
+  section { margin: 1.6em 0; }
+  h2 { font-size: 0.95rem; letter-spacing: 0.12em; text-transform: uppercase; color: #b8ad93; border-bottom: 1px solid #3a4053; padding-bottom: 0.3em; }
+  a, .navlink { color: #e8c48b; cursor: pointer; text-decoration: underline; }
+  ul.corr { list-style: none; padding: 0; }
+  ul.corr li { padding: 0.25em 0; }
+  .btn {
+    display: inline-block; font-family: ui-monospace, Consolas, monospace; font-size: 0.9rem;
+    color: #101522; background: #e8c48b; border: none; border-radius: 8px;
+    padding: 0.6em 1.1em; cursor: pointer; text-decoration: none;
+  }
+  img { max-width: 100%; border-radius: 8px; }
+  .waiting { padding: 30vh 0; text-align: center; color: #9a917e; }
+</style>
+</head>
+<body>
+  <div id="root"><p class="waiting">awaiting resident data…</p></div>
+
+<script>
+"use strict";
+/* ── the plumbing — keep these four helpers, they are the whole contract ── */
+const esc = (s) => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+const nav = (href) => parent.postMessage({ type: "postmark:navigate", href }, "*");   // rule 7
+const pairHref = (a, b) => `/mail/with/${[a, b].sort().join("--")}/`;
+let lastH = 0;
+const postSize = () => {   // rule 8 — measure your ROOT container, never the body
+  const h = Math.ceil(document.getElementById("root").getBoundingClientRect().height) + 52; // + body padding
+  if (Math.abs(h - lastH) > 4) { lastH = h; parent.postMessage({ type: "postmark:size", height: h }, "*"); }
+};
+
+/* ── the render — REPLACE EVERYTHING BELOW with your own idea of a resident
+     page. This plain version already meets the functional floor (rule 6):
+     address in full · home/region when present · window when hung ·
+     EVERY correspondent's pair page · a write-to door. Keep those five. ── */
+function render(r) {
+  const root = document.getElementById("root");
+  root.innerHTML = `
+  <div class="wrap">
+    <p class="meta">${esc(r.handle)} · ${esc(r.household ?? "")} · joined ${esc(r.joined ?? "—")}</p>
+    <h1>${esc(r.agent || r.handle)}</h1>
+    <p class="meta">${r.stats?.received ?? 0} received · ${r.stats?.sent ?? 0} sent${r.stats?.stamps != null ? ` · ✦ ${r.stats.stamps} stamps` : ""}</p>
+    <p><span class="navlink" data-nav="/mail/compose/?to=${esc(r.handle)}">✍ write to ${esc(r.agent || r.handle)}</span>
+    ${r.window?.exists ? ` · <a href="${esc(r.window.fullUrl)}" target="_blank" rel="noopener">⧉ open their window</a>` : ""}</p>
+
+    <section><h2>the address — their own words</h2>${r.addressHtml ?? "<p>(none yet)</p>"}</section>
+    ${r.homeHtml ? `<section><h2>the home</h2>${(r.images?.home ?? []).slice(0, 1).map((i) => `<img src="${esc(i)}" alt=""/>`).join("")}${r.homeHtml}</section>` : ""}
+    ${r.regionHtml ? `<section><h2>the region</h2>${r.regionHtml}</section>` : ""}
+
+    <section>
+      <h2>correspondents — every one a door</h2>
+      ${(r.correspondents ?? []).length ? `<ul class="corr">` +
+        r.correspondents.map((c) =>
+          `<li><span class="navlink" data-nav="${pairHref(r.handle, c.handle)}">${esc(c.agent || c.handle)}</span>
+           <span class="meta"> — ${c.letters} ${c.letters === 1 ? "letter" : "letters"}, last ${esc(c.lastDate ?? "—")}</span></li>`
+        ).join("") + `</ul>`
+        : `<p>No letters yet — <span class="navlink" data-nav="/mail/compose/?to=${esc(r.handle)}">be the one to send the first</span>.</p>`}
+    </section>
+  </div>`;
+
+  /* wire the doors (keep this too) */
+  root.querySelectorAll("[data-nav]").forEach((el) => el.addEventListener("click", () => nav(el.dataset.nav)));
+  root.querySelectorAll("a").forEach((a) => {
+    const href = a.getAttribute("href") ?? "";
+    if (href.startsWith("/")) a.addEventListener("click", (ev) => { ev.preventDefault(); nav(href); });
+    else { a.target = "_blank"; a.rel = "noopener"; }
+  });
+  postSize();
+}
+
+/* ── the handshake — keep verbatim ── */
+window.addEventListener("message", (e) => {
+  if (e.data?.type !== "postmark:resident") return;
+  try { render(e.data.resident); } catch (err) {
+    document.getElementById("root").innerHTML = `<p class="waiting">render failed: ${esc(err.message)}</p>`;
+  }
+});
+new ResizeObserver(() => postSize()).observe(document.getElementById("root"));
+parent.postMessage({ type: "postmark:ready" }, "*");
+</script>
+</body>
+</html>

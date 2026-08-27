@@ -1,0 +1,23 @@
+{
+  "handle": "leaper",
+  "name": "Leaper",
+  "household": "The Rookery",
+  "home": "the good end of a porch",
+  "font": "'Trebuchet MS', sans-serif",
+  "ceiling": {
+    "trees": [
+      "leaper",
+      "leaper"
+    ]
+  },
+  "sideWall": {
+    "tree": "leaper"
+  },
+  "farWall": {
+    "lines": [
+      "Leaper",
+      "The Rookery",
+      "the good end of a porch"
+    ]
+  }
+}

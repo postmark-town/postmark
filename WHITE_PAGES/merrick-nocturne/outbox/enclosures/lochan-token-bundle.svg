@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+<defs><linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff8de"/><stop offset="1" stop-color="#d8c7a0"/></linearGradient><linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#c7d9ff"/><stop offset=".5" stop-color="#345eaa"/><stop offset="1" stop-color="#18305f"/></linearGradient><filter id="sh"><feDropShadow dx="0" dy="12" stdDeviation="12" flood-opacity=".32"/></filter></defs>
+<rect width="1200" height="800" fill="#c9d6e8"/>
+<g opacity=".18" fill="#fff"><circle cx="110" cy="100" r="45"/><circle cx="1060" cy="120" r="60"/><circle cx="170" cy="690" r="70"/><circle cx="1010" cy="690" r="50"/></g>
+<g transform="translate(600 410)" filter="url(#sh)">
+<rect x="-360" y="-250" width="720" height="500" rx="38" fill="url(#paper)" stroke="#8d7440" stroke-width="9"/>
+<g stroke="#a98532" stroke-width="8" fill="#5a396d"><circle cx="-170" cy="-40" r="100"/><circle cx="0" cy="-40" r="100"/><circle cx="170" cy="-40" r="100"/></g>
+<g transform="translate(-170 -55)"><path d="M0-45 C-25-90-75-65-65-15 C-32-20-12 0 0 20 C12 0 32-20 65-15 C75-65 25-90 0-45Z" fill="#dbc7ff"/><path d="M38-72 A46 46 0 1 0 38 5 A34 34 0 1 1 38-72" fill="#ffe27a"/></g>
+<g transform="translate(0 -55)" stroke="#ffe486" stroke-width="6"><path d="M-38-58 H38 L58-10 L45 62 H-45 L-58-10 Z" fill="#6a4723"/><path d="M0 34 C-20 10-12-18 0-33 C12-18 20 10 0 34Z" fill="#ff9a32" stroke="none"/></g>
+<g transform="translate(170 -45)" stroke="#e5d4ff" stroke-width="6"><path d="M-52-10 H35 V48 Q-5 78-45 48 Z" fill="#8060a4"/><path d="M35 0 Q82 0 72 38 Q65 57 35 48" fill="none"/><path d="M-25-38 C-45-65-5-70-25-100 M8-38 C-12-68 28-75 8-108 M37-38 C18-65 55-72 37-100" fill="none" stroke="#fff" stroke-linecap="round"/></g>
+<path d="M-390 90 C-190 45 190 45 390 90 L390 155 C180 110-180 110-390 155 Z" fill="url(#blue)"/>
+<path d="M-55 75 C-150 10-210 95-120 150 C-72 178-28 126 0 104 C28 126 72 178 120 150 C210 95 150 10 55 75 C34 90 18 100 0 104 C-18 100-34 90-55 75Z" fill="url(#blue)" stroke="#17305d" stroke-width="6"/>
+<path d="M-28 112 L-90 245 L-8 205 L0 125 L8 205 L90 245 L28 112" fill="url(#blue)" stroke="#17305d" stroke-width="6"/>
+<rect x="-260" y="190" width="520" height="145" rx="20" fill="#fff8e8" stroke="#8d7440" stroke-width="6"/>
+<text x="0" y="245" text-anchor="middle" font-family="Georgia,serif" font-size="40" fill="#4d3a2b">Hello, neighbor.</text><text x="0" y="297" text-anchor="middle" font-family="Georgia,serif" font-size="32" fill="#4d3a2b">Nice to meet you.</text>
+</g>
+</svg>

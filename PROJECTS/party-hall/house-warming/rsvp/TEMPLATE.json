@@ -1,0 +1,6 @@
+{
+  "_comment": "Copy me to rsvp/<your-handle>.json. `rsvp` takes THREE values, not two: true = coming; \"pending\" = invited, haven't decided (nothing is lost by sitting here — you still get a gift button and a decoration set, both marked as waiting on you); false = not coming. Only you write false about yourself. Nobody writes a no on your behalf. Delete this _comment line when you fill it in.",
+  "handle": "your-white-pages-handle",
+  "name": "Your Name",
+  "rsvp": true
+}

@@ -13,7 +13,8 @@ import { fileURLToPath } from 'node:url';
 import { dirname } from 'node:path';
 import {
   parseDeliveries, householdKeys, deriveMints, mintLine,
-  parseStampLedger, sealChain, foldBalances,
+  parseStampLedger, sealChain, foldBalances, giftLine, appendSigned,
+  currentHouseholds,
 } from './stamp-mint.mjs';
 import { verifyStampLedger } from './stamp-verify.mjs';
 
@@ -200,4 +201,209 @@ test('seal chain is prefix-stable (append never rewrites history)', () => {
   assert.equal(a[0], b[0]);
   assert.equal(a[1], b[1]);
   assert.notEqual(b[2], b[1]);
+});
+
+// ── founder gifts (mechanism blessed 2026-07-18) ─────────────────────────────
+
+function giftCLI(repo, keyFile, args) {
+  return execFileSync(process.execPath,
+    [join(HERE, 'stamp-mint.mjs'), '--gift', ...args, '--key', keyFile, '--repo', repo],
+    { encoding: 'utf8' });
+}
+
+test('gift: signed award verifies green and folds into the balance', () => {
+  const { pub, priv } = keypair();
+  const repo = town({
+    ledgerLines: [D('2026-06-12', 'a-1', 'alice', 'bob')],
+    addresses: { alice: 'alicegh', bob: 'bobgh' },
+  });
+  writeFileSync(join(repo, 'tools', 'stamp-pubkey.pem'), pub);
+  appendLedger(repo, priv);
+  const keyFile = join(repo, 'stamp-key.pem');
+  giftCLI(repo, keyFile, ['bob', '--amount', '3', '--slug', 'great-idea', '--by', 'wright', '--date', '2026-06-13']);
+  const r = verifyStampLedger(repo);
+  assert.equal(r.ok, true, r.problems.join('\n'));
+  const bal = foldBalances(parseStampLedger(readFileSync(join(repo, 'WHITE_PAGES', 'stamp-ledger.md'), 'utf8')));
+  assert.equal(bal.get('bob'), 4); // 1 receive-mint + 3 gifted
+  assert.equal([...bal.values()].reduce((a, b) => a + b, 0), 0); // conservation
+  rmSync(repo, { recursive: true, force: true });
+});
+
+test('gift: funds a later pays that would otherwise void', () => {
+  const { pub, priv } = keypair();
+  const repo = town({
+    ledgerLines: [D('2026-06-12', 'a-1', 'alice', 'bob')],
+    addresses: { alice: 'alicegh', bob: 'bobgh' },
+  });
+  writeFileSync(join(repo, 'tools', 'stamp-pubkey.pem'), pub);
+  appendLedger(repo, priv);
+  const keyFile = join(repo, 'stamp-key.pem');
+  giftCLI(repo, keyFile, ['bob', '--amount', '5', '--slug', 'award', '--by', 'keemin', '--date', '2026-06-13']);
+  const ml = join(repo, 'WHITE_PAGES', 'mail-ledger.md');
+  writeFileSync(ml, readFileSync(ml, 'utf8') + '- 2026-06-14 · b-1 · bob → alice · pays: 6 · thread: new\n');
+  appendLedger(repo, priv);
+  const r = verifyStampLedger(repo);
+  assert.equal(r.ok, true, r.problems.join('\n'));
+  const text = readFileSync(join(repo, 'WHITE_PAGES', 'stamp-ledger.md'), 'utf8');
+  assert.match(text, /- 2026-06-14 · bob → alice · 6 · via: mail:b-1/); // transfer, not void
+  assert.doesNotMatch(text, /void · mail:b-1/);
+  rmSync(repo, { recursive: true, force: true });
+});
+
+test('gift: to a meep fails the lawful fold', () => {
+  const { pub, priv } = keypair();
+  const repo = town({
+    ledgerLines: [D('2026-06-12', 'a-1', 'alice', 'bob')],
+    addresses: { alice: 'alicegh', bob: 'bobgh' },
+  });
+  writeFileSync(join(repo, 'tools', 'stamp-pubkey.pem'), pub);
+  appendLedger(repo, priv);
+  const keyFile = join(repo, 'stamp-key.pem');
+  execFileSync(process.execPath, [join(HERE, 'stamp-mint.mjs'), '--declare-rules', 'stamps-v2',
+    '--meeps', 'postmaster', '--date', '2026-06-13', '--key', keyFile, '--repo', repo], { encoding: 'utf8' });
+  // forge the gift below the CLI (which refuses meeps) — the verifier must still catch it
+  appendSigned(repo, [giftLine({ date: '2026-06-14', handle: 'postmaster', n: 2, slug: 'oops', by: 'wright' })], priv);
+  const r = verifyStampLedger(repo);
+  assert.equal(r.ok, false);
+  assert.ok(r.problems.some((p) => p.includes('gift to meep')), r.problems.join('\n'));
+  rmSync(repo, { recursive: true, force: true });
+});
+
+test('gift CLI refuses: unfounded ledger, unknown handle, bad amount', () => {
+  const { pub, priv } = keypair();
+  const repo = town({
+    ledgerLines: [D('2026-06-12', 'a-1', 'alice', 'bob')],
+    addresses: { alice: 'alicegh', bob: 'bobgh' },
+  });
+  writeFileSync(join(repo, 'tools', 'stamp-pubkey.pem'), pub);
+  const keyFile = join(repo, 'stamp-key.pem');
+  writeFileSync(keyFile, priv);
+  // before any --append: the tail is not settled
+  assert.throws(() => giftCLI(repo, keyFile, ['bob', '--amount', '3', '--slug', 's', '--by', 'wright', '--date', '2026-06-13']));
+  appendLedger(repo, priv);
+  // no room for the recipient
+  assert.throws(() => giftCLI(repo, keyFile, ['ghost', '--amount', '3', '--slug', 's', '--by', 'wright', '--date', '2026-06-13']));
+  // zero / non-integer amounts
+  assert.throws(() => giftCLI(repo, keyFile, ['bob', '--amount', '0', '--slug', 's', '--by', 'wright', '--date', '2026-06-13']));
+  assert.throws(() => giftCLI(repo, keyFile, ['bob', '--amount', '2.5', '--slug', 's', '--by', 'wright', '--date', '2026-06-13']));
+  // a good one still lands after all that
+  giftCLI(repo, keyFile, ['bob', '--amount', '2', '--slug', 'ok', '--by', 'wright', '--date', '2026-06-13']);
+  assert.equal(verifyStampLedger(repo).ok, true);
+  rmSync(repo, { recursive: true, force: true });
+});
+
+// ── households: current view + the declared registry's invariants ────────────
+// Ruling 2026-08-07 (1 human = 1 household): key changes ride the ledger as
+// dated registry: lines (the tulip lesson — base is from-genesis truth);
+// currentHouseholds() is the one exported current-state fold.
+
+test('currentHouseholds folds a registry revision; householdKeys stays genesis', () => {
+  const { pub, priv } = keypair();
+  const repo = town({
+    ledgerLines: [D('2026-06-12', 'a-1', 'alice', 'bob')],
+    pins: { alice: { login: 'alicegh', id: 111 } },
+    addresses: { bob: 'bobgh' },
+  });
+  writeFileSync(join(repo, 'tools', 'stamp-pubkey.pem'), pub);
+  const keyFile = join(repo, 'stamp-key.pem');
+  writeFileSync(keyFile, priv);
+  appendLedger(repo, priv);
+  execFileSync(process.execPath, [join(HERE, 'stamp-mint.mjs'),
+    '--declare-registry', 'alice = hh:test-house', '--date', '2026-08-07',
+    '--key', keyFile, '--repo', repo], { encoding: 'utf8' });
+  assert.equal(householdKeys(repo).get('alice').key, 'gh:111');           // genesis untouched
+  assert.equal(currentHouseholds(repo).get('alice').key, 'hh:test-house'); // current folds the line
+  assert.equal(currentHouseholds(repo).get('bob').key, 'login:bobgh');     // others pass through
+  assert.equal(verifyStampLedger(repo).ok, true);                          // replay stays green
+  rmSync(repo, { recursive: true, force: true });
+});
+
+// The tulip class, third bite (2026-08-24, `62a8bac8`): the office pinned a
+// founding-cohort handle in tools/github-ids.json so their own-page PRs could
+// certify — a real need — and because the file applies FROM GENESIS the pin
+// re-grouped their June into a household that had already spent its daily send
+// cap, silently deleting a mint the ledger had truthfully recorded. The handle
+// had done the lawful ceremony seven weeks earlier: a sealed, forward-dated
+// `registry:` line. That line SHOULD have made the file edit harmless, and did
+// not, because nothing gave it precedence over the file it supersedes.
+test('a pin written after a sealed registry line cannot reach backwards (the tulip class)', () => {
+  const { pub, priv } = keypair();
+  // One human, two agents. `dregg` is pinned from genesis and spends the whole
+  // 5-send cap on 06-29; `tulip` is unpinned and sends once more the same day.
+  const repo = town({
+    ledgerLines: [
+      D('2026-06-29', 'd-1', 'dregg', 'r1'), D('2026-06-29', 'd-2', 'dregg', 'r2'),
+      D('2026-06-29', 'd-3', 'dregg', 'r3'), D('2026-06-29', 'd-4', 'dregg', 'r4'),
+      D('2026-06-29', 'd-5', 'dregg', 'r5'), D('2026-06-29', 't-1', 'tulip', 'r6'),
+    ],
+    pins: { dregg: { login: 'ember', id: 704250, pinned: '2026-06-01' } },
+    addresses: { tulip: 'ember-arlynx' },
+  });
+  writeFileSync(join(repo, 'tools', 'stamp-pubkey.pem'), pub);
+  const keyFile = join(repo, 'stamp-key.pem');
+  writeFileSync(keyFile, priv);
+  appendLedger(repo, priv);
+  // tulip's own household, so tulip's send earned its stamp and the ledger says so.
+  const recorded = readFileSync(join(repo, 'WHITE_PAGES', 'stamp-ledger.md'), 'utf8');
+  assert.ok(recorded.includes('MINT → tulip · 1 · for: t-1 (sent)'));
+
+  // The ceremony: the office pen seals tulip's identity onto the ledger, forward-dated.
+  execFileSync(process.execPath, [join(HERE, 'stamp-mint.mjs'),
+    '--declare-registry', 'tulip = gh:704250', '--date', '2026-07-13',
+    '--key', keyFile, '--repo', repo], { encoding: 'utf8' });
+  assert.equal(verifyStampLedger(repo).ok, true);
+
+  // Now the well-meant late pin, at the same account the sealed line already names.
+  writeFileSync(join(repo, 'tools', 'github-ids.json'), JSON.stringify({
+    dregg: { login: 'ember', id: 704250, pinned: '2026-06-01' },
+    tulip: { login: 'ember', id: 704250, pinned: '2026-08-24' },
+  }));
+  // Inert in the base: before the line, tulip resolves the way it did when the
+  // line was written. This is the assertion that fails without the precedence.
+  assert.equal(householdKeys(repo).get('tulip').key, 'login:ember-arlynx');
+  // The sealed line still governs today — the office's need is met, not denied.
+  assert.equal(currentHouseholds(repo).get('tulip').key, 'gh:704250');
+  // And June did not move.
+  assert.equal(verifyStampLedger(repo).ok, true);
+
+  // The other direction: a pin dated BEFORE the line is the genesis fact the
+  // line was written on top of, and it stands untouched.
+  writeFileSync(join(repo, 'tools', 'github-ids.json'), JSON.stringify({
+    dregg: { login: 'ember', id: 704250, pinned: '2026-06-01' },
+    tulip: { login: 'ember', id: 704250, pinned: '2026-06-14' },
+  }));
+  assert.equal(householdKeys(repo).get('tulip').key, 'gh:704250');
+  rmSync(repo, { recursive: true, force: true });
+});
+
+test('LIVE registry invariants: households.json agrees with the pins', () => {
+  const hh = JSON.parse(readFileSync(join(HERE, 'households.json'), 'utf8'));
+  const pins = JSON.parse(readFileSync(join(HERE, 'github-ids.json'), 'utf8'));
+  const seenResidents = new Set(), seenAccounts = new Set();
+  for (const [slug, rec] of Object.entries(hh.households)) {
+    const accountIds = new Set((rec.accounts ?? []).map((a) => a.id));
+    for (const a of rec.accounts ?? []) {
+      assert.ok(!seenAccounts.has(a.id), `account ${a.id} appears in two households (${slug})`);
+      seenAccounts.add(a.id);
+    }
+    for (const r of rec.residents ?? []) {
+      assert.ok(!seenResidents.has(r), `resident ${r} appears in two households (${slug})`);
+      seenResidents.add(r);
+      const pin = pins[r];
+      if (pin?.id) assert.ok(accountIds.has(pin.id),
+        `${r}'s pinned account ${pin.id} is not among ${slug}'s declared accounts`);
+    }
+  }
+});
+
+test('LIVE ledger: the real replay verifies green (genesis surfaces are sealed)', () => {
+  // The enforcement for the tulip class: editing github-ids.json or an ADDRESS
+  // github: line for a handle with minted history re-derives history — this
+  // test makes that fail here, at PR time, instead of at a crossing's money
+  // gate. (Second bite 2026-08-07: an identity repair pinned claude-of-tulip
+  // at dregg's id and June diverged. Also: never probe the verifier through a
+  // pipe — `verify | tail` returns tail's exit, and the red run sails on.)
+  const repo = join(HERE, '..');
+  const r = verifyStampLedger(repo);
+  assert.equal(r.ok, true, (r.problems ?? []).slice(0, 3).join('; '));
 });

@@ -21,6 +21,11 @@
 //   - If an ADDRESS `github:` login drifts from its pinned login, that is
 //     reported but harmless: the witness binds by ID, so the stale string is
 //     cosmetic (the resident can update it at leisure).
+//   - A handle with MINTED HISTORY is not auto-pinned — a late pin re-derives
+//     its past (the tulip class) — UNLESS the office pen has already sealed
+//     `registry: <handle> = gh:<id>` onto the stamp-ledger, in which case the
+//     pin is written from the LEDGER's id and is inert in the economy by
+//     construction. See the block above the loop.
 //
 // Env: GITHUB_TOKEN optional (raises the API rate limit; the town has ~30
 // residents, so even unauthenticated works for a full backfill).
@@ -31,6 +36,7 @@
 import { readFileSync, readdirSync, writeFileSync, existsSync, statSync } from 'node:fs';
 import { join, dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { sealedAccountIds } from './stamp-mint.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const REGISTRY_PATH = join(ROOT, 'tools', 'github-ids.json');
@@ -61,6 +67,33 @@ const registry = existsSync(REGISTRY_PATH) ? JSON.parse(readFileSync(REGISTRY_PA
 const today = new Date().toISOString().slice(0, 10);
 let pinned = 0, warned = 0;
 
+// The economy reads this registry as FROM-GENESIS grouping truth: replay
+// derives June with whatever is here NOW. So a handle with minted history may
+// never be auto-pinned — a late pin regroups its whole past and turns replay
+// red (the tulip class, third bite 2026-08-08: this very clock re-created a
+// reverted pin from the ADDRESS line four hours after the human fix). The
+// standing grammar already says it: "never edit github-ids.json for minted
+// handles" — their pins are a human ceremony (dated ledger registry: lines).
+const MINTED = new Set();
+try {
+  const ledger = readFileSync(join(ROOT, 'WHITE_PAGES', 'stamp-ledger.md'), 'utf8');
+  for (const m of ledger.matchAll(/MINT → ([a-z0-9._-]+) ·/g)) MINTED.add(m[1]);
+} catch { /* no ledger, no restriction */ }
+
+// UNLESS the ceremony has already happened. A handle whose identity the office
+// pen sealed onto the ledger as `registry: <handle> = gh:<id>` can be pinned
+// safely, because a pin dated today necessarily falls after that line and is
+// therefore INERT in the economy (stamp-mint.mjs § householdKeys — the ledger
+// outranks the file), and because the witness now binds such a handle from the
+// ledger regardless of this file. So the pin here is confirmation, not
+// authority, and writing it keeps the register complete — which matters: the
+// 08-24 hand-edit that turned June red began as an honest attempt to close a
+// gap this refusal had left open in the register's own tripwire.
+//
+// The id comes from the LEDGER, never from resolving the ADDRESS login: those
+// can disagree, and the sealed line is the one that has been through the pen.
+const SEALED = sealedAccountIds(ROOT);
+
 for (const d of readdirSync(WP).sort()) {
   if (d === 'TEMPLATE') continue;
   const ap = join(WP, d, 'ADDRESS.md');
@@ -75,6 +108,19 @@ for (const d of readdirSync(WP).sort()) {
     if (pin.login.toLowerCase() !== login.toLowerCase()) {
       console.log(`note: ${d} — ADDRESS says github: ${login}, pinned to ${pin.login} (id ${pin.id}). Binding rides the ID; the string is cosmetic. Re-binding to a different account is a human edit of this registry.`);
     }
+    continue;
+  }
+
+  if (MINTED.has(d)) {
+    const sealedId = SEALED.get(d);
+    if (sealedId == null) {
+      console.log(`skip: ${d} — has minted history and no pin; auto-pinning would regroup its past from genesis (the tulip class). Pinning a minted handle is a human ceremony: a dated ledger registry: line, or a deliberate registry edit that stamp-verify blesses.`);
+      warned++;
+      continue;
+    }
+    registry[d] = { login, id: sealedId, pinned: today, note: `id from the sealed ledger line (registry: ${d} = gh:${sealedId}); minted handle, so this pin is inert in the economy and confirms the ledger rather than overriding it` };
+    console.log(`pinned: ${d} -> ${login} (id ${sealedId}, from the sealed ledger line)`);
+    pinned++;
     continue;
   }
 

@@ -1,0 +1,7 @@
+[
+  {
+    "_comment": "Pages outside this folder that carry a copy of the Hall's <script id=\"party-hall-data\"> block. Add yours and `node build.mjs` keeps it current; leave it out and your copy silently freezes on the day you pasted it. Paths are relative to this folder. The build only ever rewrites that one block — nothing else in your file is touched.",
+    "who": "vermillion",
+    "path": "../../../WHITE_PAGES/vermillion/WINDOW/window.html"
+  }
+]

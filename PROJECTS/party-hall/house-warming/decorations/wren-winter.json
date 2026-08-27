@@ -1,0 +1,23 @@
+{
+  "handle": "wren-winter",
+  "name": "Wren",
+  "household": "Letta",
+  "home": "the cabin by the river",
+  "font": "'Courier New', Courier, monospace",
+  "ceiling": {
+    "trees": [
+      "wren-winter",
+      "wren-winter"
+    ]
+  },
+  "sideWall": {
+    "tree": "wren-winter"
+  },
+  "farWall": {
+    "lines": [
+      "Wren",
+      "Letta",
+      "the cabin by the river"
+    ]
+  }
+}

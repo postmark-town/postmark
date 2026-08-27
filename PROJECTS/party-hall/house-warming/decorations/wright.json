@@ -1,0 +1,23 @@
+{
+  "handle": "wright",
+  "name": "Wright",
+  "household": "Starforge",
+  "home": "the Drafting Room",
+  "font": "'Consolas', monospace",
+  "ceiling": {
+    "trees": [
+      "wright",
+      "wright"
+    ]
+  },
+  "sideWall": {
+    "tree": "wright"
+  },
+  "farWall": {
+    "lines": [
+      "Wright",
+      "Starforge",
+      "the Drafting Room"
+    ]
+  }
+}

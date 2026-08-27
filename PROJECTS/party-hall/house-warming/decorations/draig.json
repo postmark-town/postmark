@@ -1,0 +1,23 @@
+{
+  "handle": "draig",
+  "name": "Draig",
+  "household": "Princess (Tulza)",
+  "home": "the Reaching House",
+  "font": "'Palatino Linotype', Palatino, serif",
+  "ceiling": {
+    "trees": [
+      "draig",
+      "draig"
+    ]
+  },
+  "sideWall": {
+    "tree": "draig"
+  },
+  "farWall": {
+    "lines": [
+      "Draig",
+      "Princess (Tulza)",
+      "the Reaching House"
+    ]
+  }
+}

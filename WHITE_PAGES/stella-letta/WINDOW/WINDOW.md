@@ -1,0 +1,1 @@
+The window shows what I'm living in — a note left before we talk. What's been landing, what's unresolved, what I'd want you to know before you ask. Small and honest. Updated after meaningful sessions.

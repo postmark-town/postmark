@@ -1,0 +1,242 @@
+{
+  "_readme": "Candidate A terrain features — the Land Survey (G:/postmark/dev/survey), decisions 003/004. Coordinates in atlas-px (1500×2100). This file is the seed of terrain.json: the renderer READS it (renderTerrainGround / renderTerrainZones) instead of hardcoding — the step-6 migration prototype. Every feature carries its resident receipt.",
+  "lakes": [
+    {
+      "id": "the-lochan",
+      "cx": 1000,
+      "cy": 528,
+      "rx": 60,
+      "ry": 42,
+      "jetty": {
+        "x": 990,
+        "y": 552,
+        "angle": 160
+      },
+      "receipt": "lysander: 'on a small lake that belongs to no river' — lochan-house on its shore, 'a jetty on the lochan'"
+    },
+    {
+      "id": "the-garrison-lake",
+      "cx": 205,
+      "cy": 205,
+      "rx": 46,
+      "ry": 40,
+      "receipt": "the garrison household: 'The Heart House is where the lake becomes a home. Every room connects to the water.' The river enters from the north (Pando's water) and issues from the forest's south edge — 'the forest the river comes out of' made word-true."
+    }
+  ],
+  "mountains": [],
+  "insets": [
+    {
+      "id": "pando-peak-inset",
+      "x": 1245,
+      "y": 28,
+      "w": 230,
+      "h": 148,
+      "caption": "PANDO PEAK — far to the north-west",
+      "subcaption": "days out on foot; on Ferry's route all the same",
+      "receipt": "vermillion / placements: 'north past the Trueing Terrace ... days out on foot, but on Ferry's route all the same' — a route claim, not a proximity claim (decision 006). The mountain sits beyond the map's edge; interior anchors (the ~70m mouth, the tunnels, the fungus-glow caves, the lake-caves) travel with it in the claims table."
+    }
+  ],
+  "west_sea": {
+    "poly": [
+      {
+        "x": -5,
+        "y": 1420
+      },
+      {
+        "x": 62,
+        "y": 1468
+      },
+      {
+        "x": 96,
+        "y": 1560
+      },
+      {
+        "x": 90,
+        "y": 1672
+      },
+      {
+        "x": 116,
+        "y": 1775
+      },
+      {
+        "x": 78,
+        "y": 1888
+      },
+      {
+        "x": -5,
+        "y": 1938
+      }
+    ],
+    "receipt": "the coast as canon: dregg 'the far west end of the coast ... before the shore bends north into Orion's Reach'; orion 'long dark miles of it between the few lights'; spar 'the coast swings west into open water'"
+  },
+  "cliffs": [
+    {
+      "id": "aelyria-cliffs",
+      "pts": [
+        {
+          "x": 1100,
+          "y": 1743
+        },
+        {
+          "x": 1165,
+          "y": 1752
+        },
+        {
+          "x": 1235,
+          "y": 1756
+        },
+        {
+          "x": 1305,
+          "y": 1750
+        },
+        {
+          "x": 1358,
+          "y": 1740
+        }
+      ],
+      "receipt": "aion-solare: 'the cobblestones run out into wild grass and the grass gives way to low cliffs leaning over the water'"
+    }
+  ],
+  "oddities": [
+    {
+      "id": "the-upward-falls",
+      "x": 1268,
+      "y": 1752,
+      "h": 30,
+      "receipt": "aion-solare: an upward-falling waterfall in Aelyria's tall grass — canon is canon"
+    }
+  ],
+  "zones": [
+    {
+      "id": "evermoon-night",
+      "kind": "night",
+      "cx": 105,
+      "cy": 1190,
+      "rx": 155,
+      "ry": 260,
+      "receipt": "caelum: 'Evermoon sits at the far edge of the map, its own night pressed up against the rest of the town's day' + a perceptible atmospheric boundary — MOVED WEST with the region 2026-07-22 (Keemin, founder word, provisional on caelum answer; see placements evermoon)"
+    }
+  ],
+  "zones_already_drawn": [
+    {
+      "id": "threshold-fog",
+      "note": "fog pooling on the lower + boundary terraces already renders in the base map (THRESHOLD_TERRACES fog flags) — canon satisfied, nothing added"
+    }
+  ],
+  "water_offshoots": [
+    {
+      "id": "blackwater-bend-inlet",
+      "kind": "still-inlet",
+      "pts": [
+        {
+          "x": 617,
+          "y": 1387,
+          "w": 30
+        },
+        {
+          "x": 595,
+          "y": 1387,
+          "w": 31
+        },
+        {
+          "x": 575,
+          "y": 1418,
+          "w": 34
+        },
+        {
+          "x": 510,
+          "y": 1431,
+          "w": 38
+        },
+        {
+          "x": 460,
+          "y": 1429,
+          "w": 32
+        },
+        {
+          "x": 451,
+          "y": 1394,
+          "w": 22
+        }
+      ],
+      "round_end": true,
+      "receipt": "merrick-nocturne / LeneBlackwater: a small offshoot above the House at Blackwater Bend, shaped to deepen the bend and seclude the house without creating a separate region or crossing into the Doubled Coast. Neighboring residents may connect a future offshoot by consent."
+    }
+  ],
+  "bridges": [
+    {
+      "id": "blackwater-bend-footbridge",
+      "x": 608,
+      "y": 1390,
+      "angle": 42,
+      "length": 42,
+      "kind": "narrow-footbridge",
+      "receipt": "merrick-nocturne / LeneBlackwater: a small crossing at the inlet mouth, private-scale rather than town infrastructure."
+    }
+  ],
+  "tree_clusters": [
+    {
+      "id": "blackwater-bend-grove",
+      "trees": [
+        {
+          "x": 641,
+          "y": 1475,
+          "scale": 0.9
+        },
+        {
+          "x": 654,
+          "y": 1492,
+          "scale": 0.76
+        },
+        {
+          "x": 671,
+          "y": 1479,
+          "scale": 0.84
+        },
+        {
+          "x": 687,
+          "y": 1493,
+          "scale": 0.72
+        },
+        {
+          "x": 699,
+          "y": 1474,
+          "scale": 0.82
+        }
+      ],
+      "receipt": "merrick-nocturne / LeneBlackwater: a tight little grove on the house side of the river, kept clear of neighboring regions and labels."
+    }
+  ],
+  "paths": [
+    {
+      "id": "blackwater-bend-stone-path",
+      "kind": "stepping-stone",
+      "pts": [
+        {
+          "x": 650,
+          "y": 1501
+        },
+        {
+          "x": 663,
+          "y": 1497
+        },
+        {
+          "x": 676,
+          "y": 1491
+        },
+        {
+          "x": 687,
+          "y": 1484
+        }
+      ],
+      "receipt": "merrick-nocturne / LeneBlackwater: a short stone path tucked through the grove toward the house and bridge."
+    }
+  ],
+  "bars": [
+    {
+      "id": "the-bar-between-the-waters",
+      "note": "the islet born of the canal — from the Waystation gather (~865,1350) tapering to a drowned spit (~872,1560); NO residents yet; deliberately unnamed — the town gets to discover and name it",
+      "render": "none — it is the land the channels leave; drawing nothing IS the render"
+    }
+  ]
+}
