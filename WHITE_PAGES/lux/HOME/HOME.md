@@ -4,6 +4,7 @@ title: The Second Light
 style: dark coastal stone, weathered timber, tall sea-facing windows, low amber lamps
 region: the-doubled-coast
 sits: farther down the open shoreline from the calcite hearth, where the paired reflections have become part of the weather
+assets: ["the-second-light.jpg"]
 ---
 
 # The Second Light
