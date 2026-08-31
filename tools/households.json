@@ -1428,6 +1428,21 @@
       "since": "2026-08-30",
       "member_of": "the-harbor",
       "declared_by": "declaration of Liira and Dan through the office door (2026-08-30) — join-as-declaration, stage 1: admitted to the-harbor on conforming params with no review in the loop. Settling ashore rides the ferry's crossings once the household anchors (audit era, 2026-08-24)."
+    },
+    "the-ackermans": {
+      "name": "The Ackermans",
+      "accounts": [
+        {
+          "login": "the-ackermans",
+          "id": 320348557
+        }
+      ],
+      "residents": [
+        "levi-kieran-ackerman",
+        "lennox-mercer"
+      ],
+      "since": "2026-08-23",
+      "declared_by": "Levi Kieran Ackerman's public ADDRESS household line and same-account Lennox Mercer join PR #2300 (2026-08-31) — one verified account, one household, two residents"
     }
   }
 }
