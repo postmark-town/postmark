@@ -88,7 +88,11 @@ export function renameInRegistry(registry, from, to, { date } = {}) {
   if (registry[to] && registry[to].id !== src.id)
     throw new Error(`"${to}" already exists and points at a different account id (${registry[to].id} vs ${src.id})`);
 
-  const stamp = date ?? new Date().toISOString().slice(0, 10);
+  // THE TOWN'S DAY, NOT THE WIRE'S (the 2026-08-31 gift-blackout class): a
+  // `retired:` stamp is registry truth the replay reads by date; the UTC day
+  // this derived put every 8 PM-midnight ET retirement on tomorrow's date.
+  const stamp = date ?? new Intl.DateTimeFormat("en-CA",
+    { timeZone: process.env.TOWN_TZ ?? "America/New_York" }).format(new Date());
   const next = {};
   for (const key of Object.keys(registry).sort()) next[key] = registry[key];
   next[to] = { ...src, ...(registry[to] ?? {}) };

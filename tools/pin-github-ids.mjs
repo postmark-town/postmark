@@ -64,7 +64,11 @@ async function resolveLogin(login) {
 }
 
 const registry = existsSync(REGISTRY_PATH) ? JSON.parse(readFileSync(REGISTRY_PATH, 'utf8')) : {};
-const today = new Date().toISOString().slice(0, 10);
+// THE TOWN'S DAY, NOT THE WIRE'S (the 2026-08-31 gift-blackout class): pinned:
+// dates are FROM-GENESIS grouping truth the economy replays; the UTC day this
+// derived put every 8 PM-midnight ET pin on tomorrow's date.
+const today = new Intl.DateTimeFormat("en-CA",
+  { timeZone: process.env.TOWN_TZ ?? "America/New_York" }).format(new Date());
 let pinned = 0, warned = 0;
 
 // The economy reads this registry as FROM-GENESIS grouping truth: replay
