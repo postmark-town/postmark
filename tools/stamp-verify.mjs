@@ -124,6 +124,7 @@ export function verifyStampLedger(repo, { pubkeyPem } = {}) {
     const hasStake = new Set();         // `${handle}|${topic}`
     const ballots = new Map();          // topic -> file (cached)
     const oneShotSeen = new Set();      // one-shot issuance purposes already spent
+    const firstIdeaHouses = new Set();  // household keys already paid their first-idea mint
     const issuanceDial = townIssuanceDial(repo);
     let warnedNoIssuanceDial = false;
     const isMeep = meepChecker(laws);
@@ -312,6 +313,30 @@ export function verifyStampLedger(repo, { pubkeyPem } = {}) {
         if (lawAt(cls.date).meeps.has(cls.handle)) {
           problems.push(`line ${lineNo}: LAWFUL fails — gift to meep "${cls.handle}" (meeps stay outside the currency)`); break;
         }
+      }
+
+      if (cls.kind === 'first-idea') {
+        // The first-idea quest's witnessed mint (the Think Tank, 2026-08-30).
+        // The signature proves the office pen; the fold holds the quest's own
+        // terms — the whole point being that a forged-but-signed line, or a
+        // second line slipped in by any route, fails to VERIFY rather than
+        // minting twice. The terms, quoted from the rule's grammar comment:
+        // "amount exactly 5, authority the-town, the meep law, and
+        // once-per-household ever."
+        if (cls.n !== 5) {
+          problems.push(`line ${lineNo}: LAWFUL fails — first-idea mints exactly 5 (got ${cls.n})`); break;
+        }
+        if (cls.by !== 'the-town') {
+          problems.push(`line ${lineNo}: LAWFUL fails — first-idea is the town's mint (by: "${cls.by}", must be the-town)`); break;
+        }
+        if (lawAt(cls.date).meeps.has(cls.handle)) {
+          problems.push(`line ${lineNo}: LAWFUL fails — first-idea to meep "${cls.handle}" (meeps stay outside the currency)`); break;
+        }
+        const houseKey = hh(cls.handle, cls.date);
+        if (firstIdeaHouses.has(houseKey)) {
+          problems.push(`line ${lineNo}: LAWFUL fails — household of "${cls.handle}" already holds its first-idea mint (once per household, ever)`); break;
+        }
+        firstIdeaHouses.add(houseKey);
       }
 
       if (cls.kind === 'town-issuance') {

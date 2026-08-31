@@ -332,6 +332,22 @@ const VOID_RE = /^- (\d{4}-\d{2}-\d{2}) · void · mail:(\S+) · from (\S+) to (
 // A gift IS movement-shaped (MINT → handle) so conservation folds it structurally;
 // it cannot collide with MINT_RE (no `(side)` suffix, `· by:` tail, n may exceed 1).
 const GIFT_RE = /^- (\d{4}-\d{2}-\d{2}) · MINT → (\S+) · ([1-9]\d*) · for: gift:([a-z0-9][a-z0-9-]*) · by: (\S+)$/;
+// FIRST-IDEA — the first-idea quest's witnessed form (founder-ruled 2026-08-30,
+// the Think Tank): the town pays 5 once per HOUSEHOLD for its first published
+// idea mark (class: idea, standing in the Think Tank). Movement-shaped
+// (MINT → handle) so conservation folds it structurally; cannot collide with
+// GIFT_RE (`for: first-idea:` and the receipt segment carries a `/`). NOT
+// replay-derived, deliberately: the receipt is a WORLD mark id, and the replay
+// must stay recomputable from this repo alone — so like a gift it is asserted
+// in place, written by the office drain at crossings (writer holds the window,
+// through 2026-09-30). The verifier holds what a signature cannot: amount
+// exactly 5, authority the-town, the meep law, and once-per-household ever —
+// so a forged-but-signed line fails verify instead of minting twice. The quest
+// deliberately pays for the CROSSING OF THE THRESHOLD, not the quality or
+// novelty of the thought (founder-ruled): whether an idea is taken up is the
+// lifecycle's judgment — the Architect's desk at the blueprint bottleneck —
+// never this mint's.
+const FIRST_IDEA_RE = /^- (\d{4}-\d{2}-\d{2}) · MINT → (\S+) · ([1-9]\d*) · for: first-idea:([a-z0-9][a-z0-9-]*\/[a-z0-9][a-z0-9-]*) · by: (\S+)$/;
 // A friendship mint (stamps-v3) is ALSO movement-shaped (MINT → handle · n), so
 // conservation folds it structurally. It cannot collide with MINT_RE (n > 1 and
 // `for: friendship:… (via …)` not `(sent|received|stake)`) or GIFT_RE
@@ -540,6 +556,8 @@ export function classifyEntry(canonical) {
     return { kind: 'void', date: m[1], id: m[2], from: m[3], to: m[4], n: Number(m[5]), reason: m[6] };
   if ((m = GIFT_RE.exec(canonical)))
     return { kind: 'gift', date: m[1], handle: m[2], n: Number(m[3]), slug: m[4], by: m[5] };
+  if ((m = FIRST_IDEA_RE.exec(canonical)))
+    return { kind: 'first-idea', date: m[1], handle: m[2], n: Number(m[3]), mark: m[4], by: m[5] };
   if ((m = ISSUANCE_RE.exec(canonical)))
     return { kind: 'town-issuance', date: m[1], handle: m[2], n: Number(m[3]), purpose: m[4], by: m[5], note: m[6] };
   if ((m = FRIENDSHIP_RE.exec(canonical)))
@@ -755,6 +773,7 @@ export function deriveTransfers(deliveries, households, { laws = [], revisions =
     else if (c.kind === 'return') add(c.handle, c.n);   // escrow returned on close
     else if (c.kind === 'vote-mint') add(c.handle, 1);  // +1 for casting
     else if (c.kind === 'gift') add(c.handle, c.n);     // founder gift — recorded before any settlement we'd append, so it funds later pays
+    else if (c.kind === 'first-idea') add(c.handle, c.n); // first-idea quest mint — same in-place assertion class as a gift
     else if (c.kind === 'pot-stake') add(c.handle, -c.n);      // keeping escrow out
     else if (c.kind === 'pot-return') add(c.handle, c.n);      // unmatched stakes back at close
     // keeping-burn drains the escrow account, never a handle; the arrow-free
@@ -824,6 +843,9 @@ export const voidLine = ({ date, id, from, to, n, reason }) =>
 
 export const giftLine = ({ date, handle, n, slug, by }) =>
   `- ${date} · MINT → ${handle} · ${n} · for: gift:${slug} · by: ${by}`;
+
+export const firstIdeaLine = ({ date, handle, mark }) =>
+  `- ${date} · MINT → ${handle} · 5 · for: first-idea:${mark} · by: the-town`;
 
 // A town-issuance line. `note` is the provenance wording, supplied at the door;
 // it is the terminal free-text field, so the separator guard here is a forgery
@@ -1672,6 +1694,63 @@ function main() {
     const canonical = giftLine({ date, handle, n, slug, by });
     appendSigned(repo, [canonical], readFileSync(keyPath, 'utf8'));
     console.log(`stamp-ledger: gifted\n  ${canonical}`);
+    return;
+  }
+
+  if (has('--first-idea')) {
+    // FIRST-IDEA QUEST MINT (the Think Tank, 2026-08-30). Same ceremony as
+    // --gift — signed by the office pen, appended onto a settled tail,
+    // forward-dated — with the gift's case-by-case looseness replaced by the
+    // quest's own terms, all enforced here AND at verify: 5 stamps exactly
+    // (pinned, no --amount), authority the-town (pinned, no --by), and ONE
+    // line per household, ever. The normal writer is the office drain at
+    // crossings; this verb is the drain's own ceremony exposed for rehearsal
+    // and repair, never a second law.
+    const keyPath = arg('--key');
+    const date = arg('--date');
+    const handle = arg('--first-idea');
+    const mark = arg('--mark');
+    if (!keyPath || !existsSync(keyPath) || !date || !handle || !mark) {
+      console.error('--first-idea <handle> needs --mark <by>/<slug> --date YYYY-MM-DD --key FILE'); process.exit(1);
+    }
+    if (!/^[a-z0-9][a-z0-9-]*\/[a-z0-9][a-z0-9-]*$/.test(mark)) {
+      console.error(`--mark must be a mark id, <by>/<slug> ([a-z0-9-], got "${mark}")`); process.exit(1);
+    }
+    const rooms = householdKeys(repo);
+    if (!rooms.has(handle)) { console.error(`FATAL: no WHITE_PAGES room for "${handle}" — a quest mint needs a resident to receive it`); process.exit(1); }
+    const { laws, revisions } = parseLaws(existing);
+    if (meepChecker(laws)(handle, date)) { console.error(`FATAL: "${handle}" is a meep at ${date} — meeps stay outside the currency`); process.exit(1); }
+    // ONE PER HOUSEHOLD, EVER — resolved the way the verifier resolves it, so
+    // this door and the fold cannot disagree about who shares a house.
+    const keyOf = (h, d) => {
+      let k = null;
+      for (const r of revisions) if (r.handle === h && r.date <= d) k = r.key;
+      if (k) return k;
+      const base = rooms.get(h);
+      return base ? base.key : `solo:${h}`;
+    };
+    for (const e of existing) {
+      const c = classifyEntry(e.canonical);
+      if (c.kind === 'first-idea' && keyOf(c.handle, c.date) === keyOf(handle, date)) {
+        console.error(`FATAL: household already holds its first-idea mint (${c.date}, ${c.handle}, first-idea:${c.mark}) — once per household, ever`); process.exit(1);
+      }
+    }
+    const recorded = existing.map((e) => e.canonical);
+    const { problems, owed } = walkLedger(recorded.slice(1), mints, 1);
+    if (existing.length > 0 && problems.length) {
+      console.error(`FATAL: recorded ledger diverges from derivation — run stamp-verify.mjs; nothing minted\n${problems[0]}`); process.exit(1);
+    }
+    if (existing.length === 0 || owed.length) {
+      console.error(`FATAL: ledger is behind the mail (${owed.length} mint(s) owed${existing.length === 0 ? ', or not yet founded' : ''}) — run --append first, then mint onto the settled tail`); process.exit(1);
+    }
+    const maxDate = existing.reduce((mx, e) => {
+      const d = /^- (\d{4}-\d{2}-\d{2}) /.exec(e.canonical)?.[1];
+      return d && d > mx ? d : mx;
+    }, '0000-00-00');
+    if (date < maxDate) { console.error(`FATAL: first-idea date ${date} precedes the ledger tail (${maxDate}) — the ledger is append-only, forward-dated`); process.exit(1); }
+    const canonical = firstIdeaLine({ date, handle, mark });
+    appendSigned(repo, [canonical], readFileSync(keyPath, 'utf8'));
+    console.log(`stamp-ledger: first-idea minted\n  ${canonical}`);
     return;
   }
 

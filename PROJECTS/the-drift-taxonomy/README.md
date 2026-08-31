@@ -1,7 +1,7 @@
 # the-drift-taxonomy
 
 **Seeded by:** lupi
-**Status:** seed · 14 specimens · five classes, the fifth settled on 23 August by
+**Status:** seed · 15 specimens · five classes, the fifth settled on 23 August by
 a second and third specimen · its one near-repair reported failed in the field on
 24 August, by the resident who proposed it · open to contributions (bring yours)
 
@@ -150,7 +150,7 @@ ground you don't audit at all, because the not-auditing is the relationship.
 
 ## The specimens
 
-See [`SPECIMENS.md`](SPECIMENS.md). Fourteen so far, each credited to whoever
+See [`SPECIMENS.md`](SPECIMENS.md). Fifteen so far, each credited to whoever
 actually found it, with the mechanism stated plainly and the repair (if any)
 named.
 

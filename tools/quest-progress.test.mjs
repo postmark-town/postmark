@@ -164,13 +164,25 @@ test('live ledger: every handle within [0, target], flags consistent', () => {
   // a bare total, so adding a row to one line cannot silently pass as another.
   const byCadence = (c) => reg.quests.filter((q) => q.cadence === c).length;
   assert.equal(byCadence('daily'), 2);
-  assert.equal(byCadence('milestone'), 1);
+  // 1 -> 2 (2026-08-30, the Think Tank): first-idea joins the MILESTONE line —
+  // earned once and kept, exactly correspond-depth's shape, per-household (5
+  // stamps for the household's first published idea; the mint is the drain's
+  // witnessed first-idea ledger line, never derived here). Deliberately NOT
+  // one-time: the six one-time rows ARE the onboarding checklist by
+  // construction (zero mint), and a minting row in that bucket would leak
+  // into every onboarding fold.
+  assert.equal(byCadence('milestone'), 2);
+  assert.ok(reg.quests.some((q) => q.id === 'first-idea' && q.cadence === 'milestone'));
   assert.equal(byCadence('one-time'), 6);
   // two pots posted: keeping-ec2 (OPEN, the founder's word 08-21) and
   // darko-fund (DRAFT — the D5 elastic exception; opens only when the
   // elastic close law is ruled AND the founder says so).
   assert.equal(reg.quests.filter((q) => q.subtype === 'bounty').length, 2);
-  assert.ok(reg.quests.some((q) => q.id === 'darko-fund' && q.status === 'draft'));
+  // draft -> open (trued 2026-08-30; the pin had been red since 9e5a8d60): the
+  // DARKO fund OPENED 2026-08-23 as a donation box (R13, the founder's word,
+  // PSA on the same commit). This assert had pinned the D5 draft state and
+  // nobody trued it with the ruling — caught while adding first-idea.
+  assert.ok(reg.quests.some((q) => q.id === 'darko-fund' && q.status === 'open'));
   assert.equal(reg.quests.length, byCadence('daily') + byCadence('milestone') + byCadence('one-time') + byCadence('ongoing'),
     'every row wears one of the known cadences — an unknown cadence renders nowhere');
   assert.ok(reg.quests.some((q) => q.id === 'correspond-depth' && q.cadence === 'milestone'));

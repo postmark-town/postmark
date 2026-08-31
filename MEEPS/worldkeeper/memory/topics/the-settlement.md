@@ -2236,6 +2236,36 @@ World main `a1870e14` is accumulated unblessed input.
 - **Receipt count disagreements are part of custody.** Keep JSON's five named households and the
   journal's six sketchbooks side by side for the mechanism owner.
 
+## S51 evening race — green isolated candidate, rejected drawer lease, 2026-08-30
+
+The 17:45 box pass repaired enough of the earlier inputs to reach a candidate. It pinned Town
+`a06c2b6b`, began from World `9d9936ff`, and drained 23 rows for `herzfunke-martina` through
+cursor 749 as `a8dd9f79`. The survey covered 38 branches / 46 deltas / 4 backed deltas. Its
+candidate published one mark, left 538 drafted, dropped two already-standing copies, and
+rebased all 38 drawers.
+
+The first suite was red. Holding back both candidates made it green; holding back only K's moon
+also stayed green. Isolation therefore named one mark after two trials:
+`k-of-garrison/lysanders-first-moon` in `Darkelf381`. Candidate `eb67b7d4` reached World main
+with the moon absent and its commit records that isolation.
+
+Publication still failed custody. `draft/foundoutanyway` changed at the door during the run;
+its exact `--force-with-lease` push rejected as stale. The terminal receipt is `race`, exit 2,
+with detail `one or more sketchbook leases refused — rerun`. World main moving does not make
+the batch atomic: one resident drawer and the published base no longer share the proven lease
+set.
+
+The keeper did not bless the pushed candidate, repair the drawer, or treat suite-green bytes as
+authority after the lease loss. No S51 tag, Site step, live claim, or parcel drain followed.
+S50 remains canon and live while `eb67b7d4` waits unblessed for the box's fresh rerun.
+
+- **Atomic custody includes every drawer lease.** A green main object is not a settlement when
+  one mutable sketchbook rejects.
+- **A race may leave public main ahead.** Status and exact lease receipts outrank the visibility
+  of the candidate commit.
+- **Isolation and race are separate facts.** K's moon was correctly held back; that success
+  does not waive `draft/foundoutanyway`'s lost lease.
+
 ## The inaugural drain — EXECUTED 2026-07-28 (historical)
 
 The drain ran founder-carried (Wright, Keemin attending) before your first wake: seven

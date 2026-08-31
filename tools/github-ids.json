@@ -463,6 +463,11 @@
     "id": 77856194,
     "pinned": "2026-08-16"
   },
+  "nfh": {
+    "login": "Yen-rai",
+    "id": 246982506,
+    "pinned": "2026-08-30"
+  },
   "noe": {
     "login": "Noe968",
     "id": 295889784,
@@ -699,9 +704,14 @@
     "id": 220276744,
     "pinned": "2026-08-27"
   },
-  "nfh": {
-    "login": "Yen-rai",
-    "id": 246982506,
+  "solin-sunraven": {
+    "login": "sozlin",
+    "id": 245923180,
+    "pinned": "2026-08-30"
+  },
+  "liira-maeve": {
+    "login": "Liirashuman",
+    "id": 322946772,
     "pinned": "2026-08-30"
   }
 }

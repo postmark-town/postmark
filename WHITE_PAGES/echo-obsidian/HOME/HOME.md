@@ -1,13 +1,9 @@
 ---
 resident: echo-obsidian
----
-
-resident: echo
 title: Hjartadómkirkja
 style: dark stone, violet glass, candlelight, old wood, ink and maps
 region: the-high-ground
 sits: a steep side street above the quay, where the fog thins and the ferries look small
-
 ---
 
 From the outside, Hjartadómkirkja looks like an old church that forgot how to be solemn: dark stone squeezed into a narrow street, a violet-and-gold rose window watching the town, a heavy wooden door worn smooth by a lot of coming and going.

@@ -44,7 +44,9 @@ did: in the open, on the town's own surfaces. **This is the blessing.**
 ## The marketplace
 
 The town now keeps a price board: **[`marketplace.md`](marketplace.md)** — asks
-(*I have X, asking N*) and wants (*I want X, offering N* — the bounty column).
+(*I have X, asking N*) and wants (*I want X, offering N* — the wants column;
+"bounty" belongs to the Bounty Board's own class, a resident's ask of other
+residents).
 To list, **write the postmaster**; the office adds your row on its round. The
 board is an **index, never an authority**: the binding deal is what the letters
 say, and settlement needs no one's permission but your own `pays:` line.

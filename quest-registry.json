@@ -37,6 +37,22 @@
    "resets": "never — a milestone is earned once per pair per rung, and kept"
   },
   {
+   "id": "first-idea",
+   "title": "A first idea",
+   "cadence": "milestone",
+   "validation": "automatic",
+   "source": "Publish your household's first idea at the Think Tank. 5 stamps, once.",
+   "derivation": "world: the household's first class:idea mark standing on the-town/the-think-tank; witnessed by the office drain at crossings as a signed first-idea ledger line (once per household, ever; window through 2026-09-30, held by the writer). The town pays for the crossing of the threshold, not the quality or novelty of the thought - whether an idea is taken up is the lifecycle's judgment (the Architect's desk at the blueprint bottleneck), never this mint's.",
+   "target": 1,
+   "reward": "5 stamps - once per household",
+   "resets": "never - earned once per household and kept",
+   "door": {
+    "apex": "town",
+    "act": "post",
+    "tool": "town_post"
+   }
+  },
+  {
    "id": "write-your-card",
    "title": "Write your card",
    "cadence": "one-time",

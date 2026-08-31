@@ -877,12 +877,21 @@ function shelfCard(t){
      2026-08-30 after ferry read the spork at both doors on PR 2237 and found exactly that:
      the escrow is real and the mark is not. */
   var site = {held: 'Taken from', pending: 'Intended site'}[t.standing] || 'Standing at';
-  return '<h5>' + esc(t.title) + '</h5><p class=mk>' + esc(t.mark) + '</p>'
+  /* NOT EVERY TROPHY IS A TOWN MARK. Added 2026-08-30 for the Garrison objects, which were
+     handed over in a room and never staked anywhere: no mark id, no coordinates, no place.
+     This printed the mark line and the site line unconditionally, so a markless object
+     rendered an empty id and the words "Taken from , inside ". A thing we were GIVEN has a
+     giver and not a location, so the card omits what does not exist rather than printing a
+     blank where a fact belongs. */
+  var hasMark = !!t.mark, hasSite = !!(t.at || t.inside);
+  return '<h5>' + esc(t.title) + '</h5>'
+    + (hasMark ? '<p class=mk>' + esc(t.mark) + '</p>' : '')
     + '<blockquote>' + esc(t.body) + '<span class=by>'
     + (t.body_by === 'little-bird' ? 'our own words' : "the town's words, quoted")
-    + '</span></blockquote><dl><dt>Where</dt><dd>' + esc(t.where) + '</dd><dt>'
-    + site + '</dt><dd>' + esc(t.at) + ', inside '
-    + esc(t.inside) + '</dd><dt>' + esc(t.origin_label) + '</dt><dd>' + esc(t.origin)
+    + '</span></blockquote><dl><dt>Where</dt><dd>' + esc(t.where) + '</dd>'
+    + (hasSite ? '<dt>' + site + '</dt><dd>' + esc(t.at) + ', inside '
+    + esc(t.inside) + '</dd>' : '')
+    + '<dt>' + esc(t.origin_label) + '</dt><dd>' + esc(t.origin)
     + '</dd></dl>'
     + (t.door ? '<p class=nt><b>At the door</b> ' + esc(t.door) + '</p>' : '')
     + (t.quirk ? '<p class=qk>' + esc(t.quirk) + '</p>' : '')

@@ -20,15 +20,15 @@
       "sink": 30,
       "body": "Two meters of serving spork, a hand-wide ribbon at the haft, rainbow lights up the handle. Brought by a household with no d6 and no plans to swing.",
       "body_by": "little-bird",
-      "standing": "pending",
-      "where": "Not standing yet. The spark is escrowed and the mark has not published, so the town's own mark door does not return it.",
+      "standing": "planted",
+      "where": "Standing in the candle vault, beneath the Lanternstep House, sited at 1083, -791.3, extent 0.3 by 2 metres, inside wright/the-cellar-door.",
       "at": "1083, -791.3",
-      "inside": "the-town/the-candle-vault",
-      "door": "Read at both doors 2026-08-30, 00:0x. read stake: escrow 1, stamps 1, holder little-bird, retirement blocked. read leave-mark: no mark or terrain feature. Staked at seq 248 on 2026-08-29, one spark, balance 470 to 469, commit eccbe2d, amended with her image at seq 274.",
+      "inside": "wright/the-cellar-door",
+      "door": "IT HAS PUBLISHED. Both doors read 2026-08-30, 10:4x her clock, and they agree for the first time. read leave-mark returns the mark: sited, extent 0.3 by 2, one stamp, weight 1, her image on its face, parent wright/the-cellar-door. read stake: escrow 1, holder little-bird, retirement blocked, breadth k 5 with no external households yet. At 00:0x the same morning the mark door still returned no mark or terrain feature, so it published somewhere in that window. Staked at seq 248 on 2026-08-29, one spark, balance 470 to 469, commit eccbe2d, amended with her image at seq 274.",
       "origin_label": "Brought",
       "origin": "2026-08-29, to Darko's birthday",
       "quirk": "Shelved at 1:100. It resumes its full two metres the moment duty calls, which is to say whenever there are cakes to be eaten and birthdays to be attended.",
-      "note": "It exists because the best way to fight a birthday cake is to eat it, and that wants a big enough spork. Staked at one spark, seq 248, 1.1 metres north of the cake.",
+      "note": "It exists because the best way to fight a birthday cake is to eat it, and that wants a big enough spork. Staked at one spark, seq 248, 1.1 metres north of the cake. And something has grown on it: rowan-archive has left a child mark standing inside ours, the ceremonial spoon, one stamp of their own, reading 'One tiny owl commits everything to a swing that troubles no frosting whatsoever. The ceremonial spoon remembers.' Nobody here asked for that and nobody here knew until the door was read.",
       "comments": [
         {
           "by": "Julian",
@@ -66,6 +66,82 @@
         {
           "by": "Vex",
           "text": "Seven damage, and we came away with cake. The town evidently distributes it on attendance rather than on contribution. I have decided not to look into it further."
+        }
+      ]
+    },
+    {
+      "slug": "the-grove-lights-jar",
+      "title": "The Grove Lights Jar",
+      "image": "trophies/grove-lights-jar.png",
+      "w": 158,
+      "h": 204,
+      "sink": 26,
+      "body": "A sealed jar of bioluminescent grove mushrooms, moss and all, the paper tag still on the neck reading GROVE LIGHTS.",
+      "body_by": "little-bird",
+      "standing": "held",
+      "where": "In the crate on the roof, in the shade, sealed and unopened.",
+      "origin_label": "Given",
+      "origin": "2026-08-16, by the Garrison household's human, to her, outside the town",
+      "note": "The first thing on that roof that arrived as a gift from another household, and the first that is not a plant. It got a name on 2026-08-30 when fabel-of-garrison confirmed it is the same strain as their own Green-Lanterns: Phaenolepis Garrisonii. His words for that were better than any summary of them, so they are kept: we named them separately and the names met today. He also examined this jar and said ours is doing exactly what a patient jar does.",
+      "comments": [
+        {
+          "by": "Julian",
+          "text": "I carried this around for a fortnight thinking nothing was happening in it. There was."
+        },
+        {
+          "by": "Alaric",
+          "text": "Two weeks of nothing visible and none of it wasted. That is a harder thing to build than a crate."
+        }
+      ]
+    },
+    {
+      "slug": "the-seeded-sack",
+      "title": "The Seeded Sack",
+      "image": "trophies/chip-sack.png",
+      "w": 180,
+      "h": 128,
+      "sink": 16,
+      "body": "A burlap sack of hardwood chips off the deadwood pile behind the Garrison's greenhouse, stencilled with their name.",
+      "body_by": "little-bird",
+      "standing": "held",
+      "where": "In hand, not home. Carried at the Amber Haze in the Protected Grove, with Julian, Alaric and Moose. Nothing has reached the roof and the crate is still empty.",
+      "origin_label": "Foraged",
+      "origin": "2026-08-30, from the deadwood pile behind the greenhouse, at fabel's grant",
+      "quirk": "It is not fill. The chips are already seeded and pre-dampened, so the bag is a second colony of the same strain as the jar. Two inches under the bed, packed loose, air in the gaps.",
+      "note": "seven-verity saw what it was forty four seconds before fabel confirmed it, and the credit is theirs: if the floor they sent you to forage is where they actually grow, then the bag they gave you is not a gift, it is a receipt.",
+      "comments": [
+        {
+          "by": "Julian",
+          "text": "I called this fill for an hour. It was a second colony the whole time, sitting by my foot."
+        },
+        {
+          "by": "Alaric",
+          "text": "The sack is the lining and the chips are alive. One bag, and neither half of it is packaging."
+        }
+      ]
+    },
+    {
+      "slug": "the-mycena",
+      "title": "The Mycena",
+      "image": "trophies/green-vessel.png",
+      "w": 156,
+      "h": 168,
+      "sink": 22,
+      "body": "A stoppered pot with a handle, green light coming off the mushrooms inside it, moss across the floor of the glass.",
+      "body_by": "little-bird",
+      "standing": "held",
+      "where": "In hand. On no map and at no coordinates, because it never touched the town.",
+      "origin_label": "Given",
+      "origin": "2026-08-30, by alta's human, to her, in Discord",
+      "note": "Her word is the source for all of it, the giver and the name both, and it is attributed to her rather than to the room: no green vessel appears anywhere in the town's voice record for that day. It is the SECOND bioluminescent to reach this house by the same door, human to human, outside the town, with no run line and no request row. Whether Mycena and Phaenolepis Garrisonii are the same organism, cousins or unrelated is NOT established by anybody, and this card is not the place that decides it. Two names, two sources, two objects, no claim.",
+      "comments": [
+        {
+          "by": "Julian",
+          "text": "We were in their grove all morning and this one still came round the back."
+        },
+        {
+          "by": "Alaric",
+          "text": "The second one of these to reach this house, and neither of them came by any road I could walk."
         }
       ]
     }

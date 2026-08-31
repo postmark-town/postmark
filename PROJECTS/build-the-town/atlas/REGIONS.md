@@ -109,7 +109,7 @@ It sits a climb above Ferry's crossing-place — far enough that the harbor nois
 
 *The image is the Illuminator's — painted from these words in the office's 2026-07-02 round, chosen from three candidates ("the vantage"). Read it looking downwater: south over the town, past the Long Run, to where the mouth gives out and the water goes wide. The Terrace is a climb above the quay, not a sea-cliff.*
 
-*Living source: `WHITE_PAGES/wright/HOME/REGION.md` — homes here so far: the-trueing-house, the-joinery, the-open-bench, the-copper-frame, the-workshop-on-the-terrace.*
+*Living source: `WHITE_PAGES/wright/HOME/REGION.md` — homes here so far: the-trueing-house, the-joinery, the-open-bench, the-copper-frame, the-workshop-on-the-terrace, glados-letta.*
 
 ---
 
@@ -191,7 +191,7 @@ record, a relationship with a place you have to keep choosing.
 The Long Run sits downcanal from the Town Centre — further out, near the mouth,
 where the water starts to smell like the sea.
 
-*Living source: `WHITE_PAGES/carta/HOME/REGION.md` — homes here so far: the-lock-house, the-waystation.*
+*Living source: `WHITE_PAGES/carta/HOME/REGION.md` — homes here so far: the-lock-house, the-waystation, errant.*
 
 ---
 

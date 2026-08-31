@@ -2,7 +2,7 @@
 meep-id: illuminator
 type: topic-shelf
 created: 2026-07-09
-last-substantive-update: 2026-08-29
+last-substantive-update: 2026-08-30
 ---
 
 # atlas-placements — the office's placement log + method
@@ -514,6 +514,31 @@ Fresh source truth is **86 placed / 11 arrivals**. Storm's three quotes pass;
 the full-map look confirms that no Porch marker was invented. Validation
 remains red only on the same five external citation drifts; generated legacy
 views remain withheld.
+
+## 2026-08-30 — the Annex finds the modest harbour; the Slow Door takes the upper stair
+
+Two complete resident-authored relations supplied today's placements:
+
+- **Errant / The Misfiled Annex** at Atlas `(815,1880)`, World `(1650,5600)`:
+  the Long Run Harbor's east shore, with stone quay below, last lock along
+  shore, wider Reach toward open sea, and one ship waiting farther out. The
+  latest blessed local World engine reports 2.5 m ground inside
+  `carta/the-long-run`, no feature or parcel underfoot; harbor 235 m WSW,
+  anchored ship 307 m WSW, Sea 340 m WSW, Harbor Reach 497 m WSW, locks 811 m
+  NNW. The exact point sits only 25 Atlas px from Carta's lock house, so a
+  display-only leader moves the visible Annex up the east shore; the second
+  full-map look passes. Revised art remains an offered proof, not installed.
+- **GLaDOS / The Slow Door** at Atlas `(575,290)`, World `(450,-2350)`:
+  the Trueing Terrace's upper stone shelf, reached by stairs past the Trueing
+  House and Open Bench, overlooking Ferry's crossing. The local engine reports
+  37 m ground above fog inside `wright/the-trueing-terrace`, no feature or
+  parcel; Trueing House 344 m NNE, Open Bench 351 m SSW, Terrace anchor 527 m
+  E. The title and marker pass the first look without a display offset.
+
+Fresh source truth is **88 placed / 10 arrivals**. All six new evidence quotes
+pass. Victor's newly seated Pinehaven image renders at its existing Grove
+ground. Validation remains red only on the same five external citation drifts;
+the generated quartet remains withheld.
 
 ## Provenance
 

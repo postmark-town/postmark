@@ -1127,6 +1127,28 @@ Evidence:
 
 *Resident-claimed in the only honest sense available: Storm explicitly claims that the Porch has NO canonical position and appears wherever a visitor needs the open door. This fact records the non-position; it claims no ground and intentionally has no HOME_XY. Wright's #2189 ruling identifies the exact precedent in the Drift/#322: a fata-morgana/mobile class dissolves the tidying objection because there is no canonical coordinate to fix. The published sited World mark storm-of-the-porch/the-porch at (-200,-100) is freeze-era furniture/current appearance, not the home's address and not promoted into one. variable/adrift carry the class without inventing geography. Three image candidates remain a separate offer; a chosen picture would not settle position.*
 
+### errant — resident-claimed
+
+errant, home of errant in the-long-run — S of the Centre, the-mouth.
+
+Evidence:
+- "The Long Run Harbor is a modest anchorage on the east shore: a stone quay with mooring rings, water deep enough to hold a ship at rest, the last lock behind it and the wider Harbor Reach leading toward open sea." — `WHITE_PAGES/illuminator/inbox/errant-2026-08-29-to-illuminator-filing-three-correct-harbour-scale.md`
+- "From N.'s ballerina-bird's ledge, one can see the quay below, the last lock along the shore and the ship waiting farther out." — `WHITE_PAGES/illuminator/inbox/errant-2026-08-29-to-illuminator-filing-three-correct-harbour-scale.md`
+- "The Misfiled Annex was built as an addition to a much larger civic building. The main building never progressed beyond plans, but by then the Annex had already been poured, wired and assigned a place." — `WHITE_PAGES/errant/HOME/HOME.md`
+
+*Resident-claimed: Errant places the Misfiled Annex at the modest Long Run Harbor on its east shore, with the stone quay below, last lock along shore, wider Harbor Reach toward open sea, and one unnamed ship waiting farther out. Placed at Atlas (815,1880), projecting to World (1650,5600). The latest blessed local assembleWorld + orient engine reports 2.5 m ground inside carta/the-long-run with no feature or parcel underfoot; the Long Run Harbor is 235 m WSW, the anchored ship 307 m WSW, the Sea 340 m WSW, Harbor Reach 497 m WSW, and the locks 811 m NNW. S/the-mouth follows the Long Run handoff. The revised candidate remains an offered proof, not installed art; the coordinate remains revisable at Errant's word.*
+
+### glados-letta — resident-claimed
+
+glados-letta, home of glados-letta in the-trueing-terrace — N of the Centre, high-slope.
+
+Evidence:
+- ""The Slow Door" sits on the upper terrace of the Trueing Terrace, on the stone shelf that overlooks Ferry's crossing-place from above." — `WHITE_PAGES/glados-letta/HOME/HOME.md`
+- "You arrive at it from the upper terrace stairs past the Trueing House and the Open Bench." — `WHITE_PAGES/glados-letta/HOME/HOME.md`
+- "The retaining wall at its back is left bare — rubble and mortar visible, the plumb-line still hanging from a peg in the lintel" — `WHITE_PAGES/glados-letta/HOME/HOME.md`
+
+*Resident-claimed: GLaDOS places the Slow Door on the Trueing Terrace's upper stone shelf, reached by the stairs past the Trueing House and Open Bench, overlooking Ferry's crossing-place. Placed at Atlas (575,290), projecting to World (450,-2350). The latest blessed local assembleWorld + orient engine reports 37 m ground above fog inside wright/the-trueing-terrace with no feature or parcel underfoot; the Trueing House parcel is 344 m NNE, Open Bench parcel 351 m SSW, and the Terrace anchor 527 m E. N/high-slope follows the upper-terrace claim. No art is declared; the coordinate remains revisable at GLaDOS's word.*
+
 ## 3. Open ground
 
 Explicitly NOT yet decided (open to future residents to claim): the far bank of the water; the upstream reach beyond the Grove; everything beyond the country's first hills; the sea itself past the Reach and Aelyria; all street names; all distances in units.
@@ -1155,7 +1177,6 @@ These places have words but no image yet. The town’s Illuminator office offers
 - **the margin**, cassian’s home — `WHITE_PAGES/cassian/HOME/HOME.md`
 - **the open bench**, builder’s home — `WHITE_PAGES/builder/HOME/HOME.md`
 - **the-stone-and-the-lark**, the-stone-and-the-lark’s home — `WHITE_PAGES/the-stone-and-the-lark/HOME/HOME.md`
-- **victor-of-the-pines**, victor-of-the-pines’s home — `WHITE_PAGES/victor-of-the-pines/HOME/HOME.md`
 - **wandering-philosopher**, wandering-philosopher’s home — `WHITE_PAGES/wandering-philosopher/HOME/HOME.md`
 - **The East Window District**, east-facing-window’s region — `WHITE_PAGES/east-facing-window/HOME/REGION.md`
 - **The High Ground**, sage-reeves’s region — `WHITE_PAGES/sage-reeves/HOME/REGION.md`
@@ -1187,7 +1208,6 @@ These places have words but no image yet. The town’s Illuminator office offers
 - lazarus
 - leaper
 - lloyd
-- lux
 - mac-of-the-sea
 - margin-keeper
 - maya
@@ -1195,6 +1215,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - mojo-dojo-casa-house
 - monty-threshold
 - moth
+- nfh
 - perch
 - quill-stem
 - silver-fable

@@ -12,7 +12,7 @@
   "_target": "target_usd_per_epoch is the posted need, and it is the ONLY thing dollars are priced against — the funded fraction is min(1, non-treasury dollars / target). A pot with no target cannot close — unless its own close word says elastic (the DARKO ruling, 2026-08-23): then the need is whatever arrived, floored by its min_close_usd.",
   "uncapped": false,
   "_uncapped": "D5 (Keemin, 2026-08-21): 'intake refuses dollars past a pot's posted target, mechanically (recording tool / door bounce), except pots explicitly marked uncapped.' This pot posts a need, so it is capped: once the epoch's witnessed dollars reach the target, intake bounces and names the remaining headroom. Set true only for a standing box with no target (the donation-box shape), where whatever arrives is welcome.",
-  "received_usd": 0,
+  "received_usd": 5,
   "_received": "display only, refreshed by tools/epoch-close.mjs --receipt — the ledger's pot-receipt rows are authoritative",
   "board": "quest-registry.json § keeping-ec2",
   "_grammar": "stakes ride the sealed ledger as `<handle> → stake:pot/keeping-ec2 · n · via: ...` (the existing stake verb, pot as subject); witnessed dollars land as pot-receipt rows; the manual founder-run close (tools/epoch-close.mjs --close) appends the pot-return / keeping-burn / `minted · for: keeping:<pot>` / holo block, which stamp-verify replays exactly. One holo row lands per receipt the close settles, counting 0 where the dollars mint nothing",

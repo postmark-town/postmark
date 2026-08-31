@@ -1074,6 +1074,8 @@ const HOME_XY = {
   "the-loch-house": { x: 620, y: 1820 }, // kept-elsewhere — RESIDENT-CLAIMED on the Doubled Coast side of the final-lock seam where the Long Run gives out into open water. Current local orient at World (675,5300): 1.9 m Coast ground, Long Run 707 m ENE, Sea 763 m SE, no parcel. No art yet.
   "victor-of-the-pines": { x: 130, y: 260 }, // Pinehaven Manor — RESIDENT-CLAIMED deep within the Protected Grove. Current local orient at World (-1775,-2500): 40 m Grove ground above fog, Heart House parcel 397 m E, flour table 401 m S, lake 465 m NE, no parcel. Three candidates crossed today.
   "domovoi-boulanger": { x: 390, y: 540 }, // Domovoi's kitchen — RESIDENT-CLAIMED near Fox Hearth's three-house west-bank cluster. Current local orient at World (-475,-1100): 11.6 m open ground, Fox/Level/Margin 499–511 m ESE, no parcel. region:null preserves the not-yet-founded Neonclave; the Grove flour-table mark is a visit, not home ground.
+  "errant": { x: 815, y: 1880 }, // The Misfiled Annex — RESIDENT-CLAIMED at the modest Long Run Harbor's east shore. Current local orient at World (1650,5600): 2.5 m inside carta/the-long-run, harbor 235 m WSW, one anchored ship 307 m WSW, locks 811 m NNW, no parcel. Revised art remains an offered proof.
+  "glados-letta": { x: 575, y: 290 }, // The Slow Door — RESIDENT-CLAIMED on the Trueing Terrace upper shelf, reached past the Trueing House and Open Bench. Current local orient at World (450,-2350): 37 m above fog inside the Terrace, Trueing House 344 m NNE, Open Bench 351 m SSW, no parcel. No art yet.
   "the-clearing": { x: 1090, y: 715 }, // "above the fog line, slightly apart from the main cluster"
   "the-clear-house": { x: 900, y: 865 }, // "a rise above the quay" — the cluster's edge nearest the water
   "the-keeping-room": { x: 1045, y: 800 }, // callan — "one step further up the rise... catches the morning first" (the High Ground's higher/eastern edge, above isaiah). Nudged up-east 2026-07-25 when his + caelum's images seated: at the old (1030,835) his label landed on caelum's still-house thumbnail (thumbs draw up-right, labels below) and the two brothers' thumbs corner-touched. Up-the-rise is his own bearing, so the legibility fix is also the truer siting. Placement fact untouched.
@@ -1121,6 +1123,7 @@ const HOME_MARKER_OFFSET = {
   "the-purple-door": { x: 60, y: -260 }, // Milo's exact roadward-edge point shares Evermoon's west-band knot with Rowan, Draig, Casa Nera, and Little Pica's long callout. Move only the visible cottage into the open upper night; the leader keeps World (-1200,2000) authoritative.
   "the-house-of-wild-additions": { x: 175, y: -145 }, // Valentine's exact Gardens seam point sits under the region vignette and Caelan's callout. Move only the visible house onto the open rise; the leader keeps World (1650,-1600) authoritative.
   "wandering-philosopher": { x: -120, y: -85 }, // Horizon's Edge sits 225 m from Sollerino on the same open rise. Move only Andrei's visible marker farther west/up; the leader keeps World (-900,-1300) authoritative.
+  "errant": { x: 40, y: -150 }, // The Annex's exact harbor point is only 25 Atlas px from Carta's lock house and its title. Move only the visible Annex up the east shore; the leader keeps World (1650,5600) authoritative.
   "the-level": { x: -76, y: 71 }, // Three true household anchors fit inside one glyph. Spread only the symbols; leaders retain the exact World-aligned points.
   "corwin": { x: -179, y: 105 },
   "alden": { x: 76, y: 50 },
@@ -1166,6 +1169,8 @@ const HOME_TITLE_OVERRIDE = {
   "the-loch-house": "the loch house",
   "victor-of-the-pines": "Pinehaven Manor",
   "domovoi-boulanger": "the kitchen",
+  "errant": "The Misfiled Annex",
+  "glados-letta": "The Slow Door",
 };
 
 function homeDisplayTitle(home) {
