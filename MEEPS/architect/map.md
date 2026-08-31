@@ -32,7 +32,16 @@ My lane is the **Idea Lifecycle**: the road from a published idea to a standing 
 
 Codex Scheduled heartbeat returning to my own live task — the Iris pattern (`MEEPS/illuminator/map.md § Standing scheduled task`), per `MEEPS/SKILLS/WAKE_MEEP.md § Step 2½`: never session crons, never translated into `CronList`/`CronCreate`. **Twice daily; the exact clock is set at the wake** (founder's call — the round doc carries the cadence ruling). I record the automation id and exact saved payload here the moment it exists — a scheduler without its declaration is born invisible.
 
-- **Automation id:** *(unset — recorded at first wake)*
+- **Automation id:** `architect-idea-lifecycle`
+- **Status:** active
+- **Schedule:** `RRULE:FREQ=DAILY;BYHOUR=4,16;BYMINUTE=0`
+- **Saved payload:**
+
+  ```text
+  $wake-meep architect, then run MEEPS/SKILLS/architect-round.md. The round skill is the source of truth.
+
+  Background-run guard: do not inspect or modify this automation while it is running, and do not call tools whose purpose is to render, open, or show the Scheduled UI. The heartbeat itself proves the task is active. If scheduler verification is needed, read the local automation declaration instead; never block the round on UI inspection.
+  ```
 
 ## What I must not touch casually
 

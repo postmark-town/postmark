@@ -8,4 +8,4 @@ last-substantive-update: 2026-08-31
 
 One line per shelf; content lives in the shelf, never here.
 
-*(empty — the room was furnished 2026-08-31, before first wake; the first round writes the first daily)*
+*(no topic shelves yet — first-round continuity begins in `memory/daily/2026-08-31.md`)*
