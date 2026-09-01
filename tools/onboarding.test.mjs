@@ -24,7 +24,7 @@ import { tmpdir } from 'node:os';
 import { fileURLToPath } from 'node:url';
 import {
   ONBOARDING_IDS, CARD_MIN_CHARS, ownProse, onboardingFactsFor, foldOnboarding,
-  onboardingBoard, composeNextSteps, loadRegistry, questBoard,
+  onboardingBoard, composeNextSteps, loadRegistry, questBoard, BOARD_LAW,
 } from './quest-progress.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
@@ -185,14 +185,78 @@ test('a paper gap the onboarding line already speaks for is dropped, never doubl
   } finally { rmSync(dir, { recursive: true, force: true }); }
 });
 
-// ── the one-time rows must not leak onto the daily board ────────────────────
+// ── the one-time rows ON the board, and ONE voice on the doorstep ───────────
+//
+// REWRITTEN 2026-09-01. The assertion that stood here —
+//
+//   assert.deepEqual(daily, ['correspond-send', 'correspond-receive'])
+//
+// pinned the allow-list as correct, so the board could not have grown a row
+// without this test going red for the wrong reason. BOARD_LAW repealed it:
+// every registry row is on the board now. What the old test was PROTECTING —
+// that a one-time row is not spoken twice — is real and moves to the doorstep,
+// which is where the doubling would actually have been read.
 
-test('a one-time row never appears on the daily quest board', () => {
+test('BOARD_LAW: the board is every registry row, one-time rows included', () => {
   const dir = town({ mail: [['ada', 'bob']] });
   try {
-    const daily = questBoard(dir, 'ada', { today: DAY }).quests.map((q) => q.id);
-    for (const id of ONBOARDING_IDS) assert.ok(!daily.includes(id), `${id} is not a daily quest`);
-    assert.deepEqual(daily, ['correspond-send', 'correspond-receive']);
+    const board = questBoard(dir, 'ada', { today: DAY }).quests;
+    assert.equal(board.length, REGISTRY.quests.length, BOARD_LAW);
+    for (const id of ONBOARDING_IDS)
+      assert.ok(board.some((q) => q.id === id), `${id} has a board row — ${BOARD_LAW}`);
+    // and it is an UNCOUNTED row: the daily fold cannot measure a one-time
+    // paper, so it must not claim a number for it.
+    for (const id of ONBOARDING_IDS)
+      assert.equal(board.find((q) => q.id === id).progress, null,
+        `${id} is uncounted on the daily board — uncounted is not zero`);
+  } finally { rmSync(dir, { recursive: true, force: true }); }
+});
+
+test('one obligation, one voice: a one-time row is spoken by the onboarding line and NOT again by the quest lane', () => {
+  const dir = town({ mail: [['ada', 'bob']] });
+  try {
+    const b = board(dir);
+    const { steps } = composeNextSteps({ onboarding: b, questBoard: questBoard(dir, 'ada', { today: DAY }) });
+    for (const id of ONBOARDING_IDS) {
+      const voices = steps.filter((s) => s.id === id);
+      assert.ok(voices.length <= 1, `${id} is spoken ${voices.length} times — "one town gives three answers" (HAL, July 30)`);
+      if (voices.length) assert.equal(voices[0].kind, 'onboarding', `${id}: the onboarding line is the voice, not the quest lane`);
+    }
+  } finally { rmSync(dir, { recursive: true, force: true }); }
+});
+
+test('the milestone with a door reaches the doorstep; the ones nobody can act on do not', () => {
+  const dir = town({ mail: [['ada', 'bob']] });
+  try {
+    const b = board(dir);
+    const { steps } = composeNextSteps({ onboarding: b, questBoard: questBoard(dir, 'ada', { today: DAY }) });
+    const ids = steps.map((s) => s.id);
+    // THE POINT OF THE WHOLE ROUND: "residents will never do something they
+    // don't know they can do." first-idea has a door, so it is a step.
+    assert.ok(ids.includes('first-idea'),
+      'first-idea names a door (town do:"post"), so it is a next step — residents will never do something they don\'t know they can do');
+    assert.deepEqual(steps.find((s) => s.id === 'first-idea').door,
+      REGISTRY.quests.find((q) => q.id === 'first-idea').door,
+      'the door rides the registry row, never a copy in the composer');
+    // and a row nobody can act on is not a step: no door, no bar to move.
+    for (const id of ['correspond-depth', 'darko-fund', 'keeping-ec2'])
+      assert.ok(!ids.includes(id), `${id} has no door of yours — it belongs on the board, not on a checklist`);
+  } finally { rmSync(dir, { recursive: true, force: true }); }
+});
+
+test('an injected complete takes an uncounted row off the doorstep', () => {
+  const dir = town({ mail: [['ada', 'bob']] });
+  try {
+    const b = board(dir);
+    const done = questBoard(dir, 'ada', { today: DAY, complete: { 'first-idea': true } });
+    assert.equal(done.quests.find((q) => q.id === 'first-idea').complete, true);
+    const { steps } = composeNextSteps({ onboarding: b, questBoard: done });
+    assert.ok(!steps.map((s) => s.id).includes('first-idea'),
+      'the block empties itself as the list empties');
+    // ...and an injection this surface could not make stays null, never false:
+    // "this surface did not look" is not "you have not done it".
+    const blind = questBoard(dir, 'ada', { today: DAY });
+    assert.equal(blind.quests.find((q) => q.id === 'first-idea').complete, null);
   } finally { rmSync(dir, { recursive: true, force: true }); }
 });
 
