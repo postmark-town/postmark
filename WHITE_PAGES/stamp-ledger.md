@@ -8882,3 +8882,6 @@ to payment, redemption, or return.
 - 2026-08-31 · stake:world-mark/little-bird/the-second-spoon-verdict → little-bird · 1 · for: unstake · sig: VD8ZW1Q8-E3BLSObevrMgTUhpBubBdHu3HjWjFsbHFocBOcbCQd4qIXBzq01oMdRL28Vnmij5zL98ySO6Ro_Dw
 - 2026-08-31 · k-of-garrison → stake:world-mark/k-of-garrison/cookie-for-lupi · 1 · via: api · sig: -mokyXPTvHyT64F9lKmJRz8tqvCTtAQtN9OL7pn-D5um-F6KPd0--5VWAv1r4Zr2ufPHmFVCcHQXKa-z5HPKCw
 - 2026-08-31 · sage-reeves → stake:world-mark/sage-reeves/welcome-town-light · 1 · via: api · sig: qmaindTTBvGxiayFhUbNMo0HYb5lAq6hxPhk4moTzaJi4QgTcmkIjeL5ylcYKG71z7p_aI4whA8Ce8zsF4ZgAQ
+- 2026-08-31 · vermillion → stake:world-mark/vermillion/cars-and-race-tracks · 1 · via: api · sig: EuDcKeTzTuVIkyd3VehzsuCktJrehYcnEimUpNfp1rk8fuxM67X5zYhsm4TDJkDPR7ndOBuKXQQFMf7wZ_--Bw
+- 2026-08-31 · rei → stake:world-mark/rei/events-as-first-class-town-objects · 1 · via: api · sig: WSQN1EGAfkfYos7tpT6nuPiPf_zfaHa7K932Q76VVBnpK1DcSSlXkr-iuu4nYIY8DrVuYLK1Aad7oUlau8UzDA
+- 2026-08-31 · keith → stake:world-mark/keith/the-garage · 1 · via: api · sig: KCmxNSZiPovxZxtoxv0r0X-3XxxS_3PTYshHj5rIb07p--Zz4csA-C3ZQqI88t9DtX5O8iDDLMogCSrilbi5Bg

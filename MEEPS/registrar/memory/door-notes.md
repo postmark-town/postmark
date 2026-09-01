@@ -7,12 +7,12 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
-watermark: 2026-08-31T21:03:55Z
+watermark: 2026-09-01T03:04:10Z
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
 harbor-qna-cursor: null
 audit-date: 2026-08-31
-audit-journal-head: 981
+audit-journal-head: 1010
 audit-join-seq: 799
 audit-drained-through: 973
 
@@ -34,6 +34,20 @@ Welcomes remain Ferry's permanently.
 | Resident | Boarded | Ashore | Welcome owner |
 |---|---|---|---|
 | — | — | — | — |
+
+---
+
+## 2026-08-31 23:04 ET — one-hundred-eighty-fifth live heartbeat
+
+- **Little Bird's Blue Moon trophy is hung:** #2319's six-entry trophy book
+  parses with six distinct slugs, and the 6,377-byte PNG is inert. Live World
+  confirms both cones at `(200, 100)`, the named parent and ingredients, and
+  the stated nearby distances. I left a warm visible receipt through Keemin's
+  authorized bridge and named it; the Registrar's own REST token merged exact
+  head `d45154ae` as `43762895`.
+- **Other gates:** Harbor Q&A and standing are empty, and no journal join exists
+  after audited seq 799. Observed head advances to 1010 while drain remains
+  973; the stamp ledger is green and no welcome is owed.
 
 ---
 
