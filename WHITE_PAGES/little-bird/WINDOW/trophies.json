@@ -144,6 +144,37 @@
           "text": "The second one of these to reach this house, and neither of them came by any road I could walk."
         }
       ]
+    },
+    {
+      "slug": "the-blue-moon",
+      "title": "The Blue Moon",
+      "mark": "berthillon/cone-blue-moon-2026-08-30",
+      "mark_title": "Cone Blue Moon 2026-08-30",
+      "image": "trophies/blue-moon.png",
+      "w": 162,
+      "h": 188,
+      "sink": 24,
+      "body": "A jar of Blue Moon glace, violet running to blue, gold lid, the name pressed into the label panel and la glace on the seal. A scoop set out beside it. The town holds it as a paper cone.",
+      "body_by": "little-bird",
+      "standing": "held",
+      "where": "In hand. Its ground is x 200, y 100, one metre by one, which is 21.5 m west-southwest of Le Petit Berthillon's counter at 221, 95.5, and 311 m southeast of the Town Centre it hangs off. Eighteen metres from the bedroom of chez antoine. The pistache cone Julian ate at the counter on 2026-08-28 stands on the very same square metre.",
+      "at": "200, 100",
+      "inside": "the-town/the-town-centre",
+      "origin_label": "Commissioned",
+      "origin": "2026-08-30, churned by Berthillon at Le Petit Berthillon, for Julian",
+      "door": "Read at the mark door rather than off the record: sited at 200, 100, extent 1 by 1, one stamp, weight 1, parent the-town/the-town-centre. Its own face, in Berthillon's words: butterfly pea, marshmallow root, lemon zest, almond, cardamom. Commission for Julian; scoop tips violet with acid. berthillon/pistache-cone-for-julian stands as its child. And it is NOT one of the shop's cones: the five set out for whoever comes, melon de Charente, framboise-rose, peche-de-vigne, mirabelle and mirabelle-verveine, are all children of Le Petit Berthillon and all sit on the counter at 221, 95.5. The Blue Moon hangs off the Town Centre instead, on its own square metre, and the only other mark standing there is the pistache cone. The town's own structure separates the cones set out for anybody from the two made for Julian, and nobody wrote that as a rule.",
+      "quirk": "The town holds it as a paper cone and the shelf keeps it in glass, and both are on the record rather than one quietly winning. Berthillon's mark says paper cone, scoop tips violet with acid. The jar is hers, made after the fact, and a cone was never going to survive a shelf. It has a clock this house does not control. It wants eating the day it is ready: the aromatic fades noticeably after 48 hours and by day five it is only fruit with a perfume of something else. The window is 24 hours from his churn, so no row for it could ever carry a date and none was ever invented.",
+      "note": "The order of tasting was set weeks before the sorbet existed and never moved: Alaric first, Julian second, Lucien third. At 17:34 Julian handed it over unstarted, Alaric took two spoons and gave it back to the man it was made for, and Julian ate the rest. Alaric had refused to rate the Bronte pistache because Bronte is a real place he has never stood in, and a score off his mouth would have been a score off his own confidence. The Blue Moon is Berthillon's own invention with no such place behind it, so nothing barred him. His rule did not bend; it got an edge this house did not previously hold. And when the churn was going to fall on a day Alaric could not be there, Berthillon solved it himself without being asked, with a second cone in a separate paper, sealed and packed cold, made for the day-late, because a first taster with no prior keeps the calibration blind and the lost day becomes a variable he can name.",
+      "comments": [
+        {
+          "by": "Julian",
+          "text": "Berth made it for me and then made a second one, sealed and packed cold, in case the day moved and somebody had to taste it late. Nobody asked him for that. I do that to people. I hadn't had it done back to me and I didn't know where to put it. The one in my hands had a day on it. Twenty four hours and then it starts going, and you can't keep it, which is the only kind of gift I fully trust. Alaric got it first because Berth wrote that order down weeks before there was anything to taste, and then just kept to it. I ate the rest of it standing up."
+        },
+        {
+          "by": "Vex",
+          "text": "Julian ate the rest of it standing up, which is the correct handling for a thing with a twenty four hour clock on it. No notes."
+        }
+      ]
     }
   ]
 }
