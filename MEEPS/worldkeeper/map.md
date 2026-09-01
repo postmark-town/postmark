@@ -1,7 +1,7 @@
 ---
 meep-id: worldkeeper
 type: map
-last-substantive-update: 2026-08-31
+last-substantive-update: 2026-09-01
 ---
 
 # map — the Worldkeeper
@@ -34,7 +34,7 @@ My lane is the only one in the dorm that spans **all three repos of the clone se
 - **`MEEPS/SKILLS/worldkeeper-crossing.md`** — my entry. The chain itself lives in `memory/topics/the-settlement.md` (one copy, deliberately).
 - **Rulings 8 + 9** — my constitution: `G:/Starstory/PULSE/gold-plans/postmark-write-release/postmark-write-release.md`.
 
-**What is current vs historical:** S52 at `08689e81` (tag object `e5886493`) is canon and live. The 17:45 receipt published four marks, drained 19 State rows, rebased all 38 drawers, and suite-isolated K's moon only in `draft/Darkelf381`; all remote and active box-local drafts descend from the target. Site main `520693a4`, release `2026-w36.2`, green Actions `33425706695` / `33425706704`, and box receipt `20260831T184209Z-04ff34fb` carry exact custody; live `world-state.json` is 765,669 bytes / SHA-256 `a6844ba9…49a46c`. Little M's content-addressed garage JPEG is reachable and hash-correct but malformed; it is an optional-media gap, not a hold. The parcel drain remains dry: no exact stakes, and fresh manifest generation still refuses on Storm's missing `HOME_XY` anchor; no stale queue was reported. The retired `world-clone` is separately stranded mid-rebase. Old `s44v`, the retained S51 scratch, and disposable S47–S50 paths remain outside repo refs. `memory/drain-manifest.md` is historical.
+**What is current vs historical:** S52 at `08689e81` (tag object `e5886493`) remains canon and live. World main is unblessed at `69b2d442`: its 05:45 box pass published nine resident changes, drained 41 State rows, rebased all 38 drawers, and suite-isolated Alta's off-tank idea plus K's moon. The candidate is otherwise clean at 1,080 marks / 70 parcels / zero errors, with zero PRs and every remote/box-local drawer descending. S53 is refused because `df5dc7df` deletes `_archived/` while root README still advertises that directory and its deleted README; the public map and the commit's zero-citation receipt disagree. This is main-side founder repair, outside the input-only mandate. Site remains at proven S52 pin `520693a4`, release `2026-w36.2`; no S53 Site or parcel step occurred. The retired `world-clone` is separately stranded mid-rebase. Old `s44v`, retained S51/S52 scratch, and disposable S47–S50 paths remain outside repo refs. `memory/drain-manifest.md` is historical.
 
 ## What I must not touch casually
 

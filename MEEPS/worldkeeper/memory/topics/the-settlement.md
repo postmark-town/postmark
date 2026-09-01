@@ -3,7 +3,7 @@ meep-id: worldkeeper
 type: topic-shelf
 name: the-settlement
 created: 2026-07-28
-last-updated: 2026-08-31
+last-updated: 2026-09-01
 ---
 
 # The Settlement — the crossing's operating truth
@@ -2375,6 +2375,47 @@ reported and no wet run occurred.
   the CRLF worktree's inflated byte count before the custody record was written.
 - **A failed fresh manifest ends the parcel queue derivation.** Do not run the dry planner on
   the unchanged committed manifest and accidentally promote stale rows into evidence.
+
+## S53 refused — archive deletion left the public map pointing at absence, 2026-09-01
+
+The 05:45 box pass ran to a mechanically green publication after 29 minutes. It pinned Town
+`73e4f177`, moved World `243cc57b` → `69b2d442`, drained 41 State rows for seven households
+through cursor 840 as `1fa96c87`, surveyed 38 branches / 56 deltas / eight backed deltas,
+published nine resident changes, left 1,074 drafted, and rebased all 38 drawers. Eleven initial
+suite failures narrowed through nine trials to two attributions, both retained only in
+`draft/Darkelf381`: Alta's `pando-peak-family-excursion` declares `class: idea` away from the
+Think Tank, and K's `lysanders-first-moon` remains a post-freeze mark at the fossil Protected
+Grove path. The suite was green without them and every remote and box-local drawer descended
+from the target.
+
+Full-interval judgment since S52 found the resident work coherent: K's cookie and wet shoes,
+Vermillion's cars-and-race-tracks idea, Rei's events idea, Sage's four welcome predicates, and
+Keith's revised garage. The revision correctly moved its registry class from home to commons.
+The founder interval also carried 22 civic predicates under the Bounty Board, Ballot House,
+Marketplace, Quest Guild, and Think Tank; five plain-language plaque revisions; the polygon
+interior/walker-membership repair; crossing-save 162; and the 41-row journal drain. Main lint
+was CLEAN at 1,080 marks / 70 parcels / zero fold errors. Zero World PRs were open.
+
+Judgment still refused the target. Founder commit `df5dc7df` deletes the complete `_archived/`
+directory under a specific 2026-08-31 ruling and claims zero citations outside it. The current
+root README still lists `_archived/` in its tree, directs readers to the now-deleted
+`_archived/README.md`, and says the legacy simulation was retired there. The public router and
+provenance therefore point at absence, and the commit's own proof does not match the tree. The
+general furniture rule also says retired surfaces move into `_archived/`, never disappear
+in-place. An explicit founder exception may settle that policy question, but it cannot make the
+dangling README true.
+
+The keeper did not restore deleted founder files, rewrite root documentation on World main, or
+bless around the discrepancy. The repair mandate reaches mutable inputs, not the already-
+published candidate/main being judged. No `settlement/S53` tag was minted. Site remains at the
+proven S52 floor; no package, pin, CI, live claim, or post-bless parcel drain followed.
+
+- **A founder exception still owes truthful routers.** Even if deletion is specifically ruled,
+  every live map and provenance sentence must stop directing readers to what no longer exists.
+- **A green record fold is not a green repository judgment.** Canon is the exact Git object;
+  broken public furniture inside that object remains part of the blessing decision.
+- **Main-side repair is not an input repair.** Surface the exact dangling claims and wait for a
+  founder-authored correction plus a fresh box pass; never edit the patient and certify it.
 
 ## The inaugural drain — EXECUTED 2026-07-28 (historical)
 

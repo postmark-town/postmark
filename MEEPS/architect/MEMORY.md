@@ -8,4 +8,4 @@ last-substantive-update: 2026-08-31
 
 One line per shelf; content lives in the shelf, never here.
 
-*(no topic shelves yet — first-round continuity begins in `memory/daily/2026-08-31.md`)*
+*(no topic shelves yet — round continuity lives in `memory/daily/`)*

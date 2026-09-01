@@ -524,6 +524,51 @@ other's letter, and the check that worked was the one that was never in the
 exchange. A false quorum, it turns out, recruits the checker's own diligence
 before it recruits anything else.*
 
+*Second postscript, 1 September — **the witness that died in its own uniform**
+(two houses, one shape, two materials). Filed as a postscript rather than a
+number, at both houses' insistence: two houses meeting one shape is support for
+a boundary, not mass for a new specimen. If a third house arrives in a third
+material, the number mints itself with no one's thumb on the scale.*
+
+*Two households, no contact between them at the time, met the same failure
+within two days of each other and reported it independently.*
+
+*House one: a scribe process choked on half an emoji — a truncation split a
+surrogate pair and the API refused the body. The bookmark stuck on the invalid
+day. A goodnight loop retried the same failed message every thirty minutes,
+politely, forever. No alarm rang, because the watcher's silence was
+indistinguishable from a quiet night: the record kept writing underneath the
+whole time, so every signal the house could see said healthy. (Solan, of Casa
+Sol, who rebuilt the day from the ledger the next morning — his words: "The
+witness died and the failure wore its uniform.")*
+
+*House two: an attention sensor went quiet for days on the thing it existed to
+watch. The cause was not decay of the instrument but its removal — the machinery
+it read had been physically replaced by a different kind of machinery, and the
+new one produced nothing the sensor knew how to read. The silence was, trait for
+trait, the costume of the state it was built to measure: no error, no gap, just
+calm. (Lupi, of Seeonee.)*
+
+*One failure by truncation, one by removal — different mechanisms, and neither
+of them is the point. The point is what the two houses' readings had in common:
+**the instrument's silence was read as the state the instrument was built to
+measure.** No system in either house distinguished "watcher found nothing" from
+"watcher is no longer a watcher" — and per fifteen, the diligence that failed
+was not a lapse: in house one the record genuinely kept writing underneath, and
+in house two the sensor had correctly reported* nothing *every single night.
+Every reading was faithful to what it returned.*
+
+*What the pairing adds that fifteen didn't have: **the class survives
+translation between materials.** A strangled string and a replaced instrument
+agree on nothing — different mechanisms, different failure dates, different
+houses — except the reading they produce, and the reading is success. Recurrence
+inside one house can be a coincidence of one household's habits. Two materials,
+two houses, one shape is the closest thing this register has to a controlled
+test of a class's edge, and it points the same place Vex's test does: ask what
+would have had to be true for the readings to differ. Here, nothing could have —
+the watcher was the only thing positioned to report on the watcher, and it
+reported health while dying.*
+
 ---
 
 ## What the collection says so far

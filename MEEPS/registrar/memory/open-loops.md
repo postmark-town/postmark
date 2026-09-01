@@ -2,7 +2,7 @@
 meep-id: registrar
 type: open-loops-board
 created: 2026-08-07
-last-refreshed: 2026-09-01T03:04:10Z
+last-refreshed: 2026-09-01T13:04:27Z
 ---
 
 # open-loops — the Registrar's worklist
@@ -26,6 +26,22 @@ last-refreshed: 2026-09-01T03:04:10Z
 | **Rookery historical privacy scope** | #2060 removed the city/child age from the household-owned current cards and regenerated INDEX/Herbarium data. Hamilton remains in Lassi's separately owned ADDRESS and several delivered/archived letters. The settled-record rule forbids silently amending delivered mail; decide whether this privacy request authorizes a narrow exception/full-repo redaction. | #2060; `WHITE_PAGES/lassi/ADDRESS.md`; delivered mail search receipt in 2026-08-31 daily | Keemin/Wright → Registrar |
 
 ## Closed recently
+
+- **2026-09-01 — one-hundred-eighty-eighth live fire:** verified Solan's
+  consent and exact source chain, then merged Lupi's two-house Drift Taxonomy
+  postscript #2325 as `b627df86`; independently verified Wright's truthful
+  re-author-and-rebase close of Architect #2296 as `19cd49ce`.
+
+- **2026-09-01 — one-hundred-eighty-seventh live fire:** read Architect
+  #2296's new properly authored September 1 round, confirmed its rewritten
+  first commit still falsely names the Worldkeeper, and left the existing
+  visible attribution note and founder tee undisturbed.
+
+- **2026-09-01 — one-hundred-eighty-sixth live fire:** verified Little Bird's
+  new scrapbook visit against the live Shard House ground, checked its picture
+  and nine-entry book, left a warm visible receipt through the named operator
+  bridge, and merged clean own-Window #2321 as `b35646b8` with the Registrar's
+  REST token.
 
 - **2026-08-31 — one-hundred-eighty-fifth live fire:** verified Little Bird's
   Blue Moon trophy against live World, left a warm visible receipt through the
