@@ -1,0 +1,188 @@
+{
+  "_seeded": "SEEDED 2026-09-02 by atlas-anchors-gen.mjs --seed-offsets, then hand-tended. Unlike atlas-anchors.json this file IS a pen: regenerating it would erase every legibility decision made since the seed.",
+  "_what": "The PAINTING's own layer. offset = the hand-authored HOME_XY pixel minus the world-derived anchor, captured at the flip so that drawn = anchor + offset reproduces today's map exactly. Thereafter it holds leaders and legibility nudges — the 'may say less, never other' allowance. A large offset is a statement that the painting and the ground disagree, and is a question for the Illuminator, not a fact.",
+  "_units": "atlas px (5 m each)",
+  "seeded_from": {
+    "world_source": "G:/Postmark/postmark-world/WORLD/world-state.json",
+    "world_tick": 0,
+    "atlas": "render-town.mjs HOME_XY"
+  },
+  "offsets": {
+    "caelina": {
+      "x": 10.6,
+      "y": 6.7
+    },
+    "casa-nera": {
+      "x": 380,
+      "y": -430
+    },
+    "das-lichterfenster": {
+      "x": -10.9,
+      "y": -4.4
+    },
+    "east-facing-window": {
+      "x": -10.9,
+      "y": -4.4
+    },
+    "la-lanterne": {
+      "x": -4.2,
+      "y": 0.9
+    },
+    "the-arc-house": {
+      "x": -6.4,
+      "y": 3
+    },
+    "the-archive-house": {
+      "x": -6.4,
+      "y": 3
+    },
+    "the-calcite-hearth": {
+      "x": 0,
+      "y": -4.6
+    },
+    "the-clear-house": {
+      "x": 2.4,
+      "y": -4.2
+    },
+    "the-clearing": {
+      "x": 2.4,
+      "y": -4.2
+    },
+    "the-copper-frame": {
+      "x": -8.4,
+      "y": 10.1
+    },
+    "the-dreamer-s-anchor": {
+      "x": 0,
+      "y": -4.6
+    },
+    "the-fieldstone-study": {
+      "x": 2.4,
+      "y": -4.2
+    },
+    "the-fox-and-dragon-house": {
+      "x": -6.4,
+      "y": 3
+    },
+    "the-green-lamp-house": {
+      "x": -6.4,
+      "y": 3
+    },
+    "the-hatched-shell": {
+      "x": 0,
+      "y": -4.6
+    },
+    "the-heart-house": {
+      "x": 1,
+      "y": -1.4
+    },
+    "the-house-at-the-crooked-gate": {
+      "x": -2.6,
+      "y": -1.1
+    },
+    "the-joinery": {
+      "x": -8.4,
+      "y": 10.1
+    },
+    "the-keeping-room": {
+      "x": 17.4,
+      "y": -39.2
+    },
+    "the-kept-light": {
+      "x": -6.4,
+      "y": 3
+    },
+    "the-lamp-that-stays-on": {
+      "x": -6.4,
+      "y": 3
+    },
+    "the-lanternstep-house": {
+      "x": -2.6,
+      "y": -1.1
+    },
+    "the-lock-house": {
+      "x": -7.8,
+      "y": 1.7
+    },
+    "the-locked-vault": {
+      "x": 10.6,
+      "y": 6.7
+    },
+    "the-looking-room": {
+      "x": -2.6,
+      "y": -1.1
+    },
+    "the-low-door": {
+      "x": -6.4,
+      "y": 3
+    },
+    "the-margin": {
+      "x": -6.4,
+      "y": 3
+    },
+    "the-nest-on-the-middle-terrace": {
+      "x": -6.4,
+      "y": 3
+    },
+    "the-night-room": {
+      "x": -6.4,
+      "y": 3
+    },
+    "the-open-bench": {
+      "x": -8.4,
+      "y": 10.1
+    },
+    "the-open-terminal": {
+      "x": -10.9,
+      "y": -4.4
+    },
+    "the-purple-door": {
+      "x": 50,
+      "y": -127
+    },
+    "the-returning-house": {
+      "x": 7.5,
+      "y": 2.3
+    },
+    "the-rootlight-den": {
+      "x": 76,
+      "y": 13.6
+    },
+    "the-setting-down-house": {
+      "x": -6.4,
+      "y": 3
+    },
+    "the-still-here-light": {
+      "x": -5.6,
+      "y": 1.1
+    },
+    "the-threshold-house": {
+      "x": -6.4,
+      "y": 3
+    },
+    "the-trueing-house": {
+      "x": -8.4,
+      "y": 10.1
+    },
+    "the-violet-archive": {
+      "x": 10.6,
+      "y": -133.3
+    },
+    "the-waiting-room": {
+      "x": -4.2,
+      "y": 0.9
+    },
+    "the-waystation": {
+      "x": -7.8,
+      "y": 1.7
+    },
+    "the-working-window": {
+      "x": 0,
+      "y": -180
+    },
+    "the-workshop-on-the-terrace": {
+      "x": -8.4,
+      "y": 10.1
+    }
+  }
+}

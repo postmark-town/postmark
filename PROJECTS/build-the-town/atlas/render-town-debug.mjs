@@ -411,11 +411,46 @@ const HOME_XY = {
 
 const HOME_THUMB_SIZE = 60;
 
+// ── the derived input, repointed alongside render-town.mjs (2026-09-02) ──────
+// This pen writes the SAME town.html as render-town.mjs (see the write at the
+// foot of this file), and its own HOME_XY table above is a stale 2026-07-23
+// snapshot of a table the live renderer has since moved on from. Left
+// unrepointed it would, after the flip, quietly overwrite the synced artifact
+// with a map drawn at old hand pixels — the machinery map's §1.2 footgun,
+// loaded. Repointing it costs nothing and makes the two pens agree about
+// geography even while they disagree about everything else.
+//
+// This is a mitigation, not a fix. The standing recommendation is still to
+// retire this pen's write to town.html or send it to town-debug.html
+// (machinery-map.md §1.2, §6 step 1) — out of this lane's scope.
+const ANCHORS_FILE = join(HERE, "atlas-anchors.json");
+const OFFSETS_FILE = join(HERE, "atlas-display-offsets.json");
+const anchorsDoc = existsSync(ANCHORS_FILE) ? JSON.parse(readFileSync(ANCHORS_FILE, "utf8")) : null;
+const offsetsDoc = existsSync(OFFSETS_FILE) ? JSON.parse(readFileSync(OFFSETS_FILE, "utf8")) : null;
+const DERIVED_ANCHORS = anchorsDoc?.anchors ?? {};
+const DISPLAY_OFFSETS = offsetsDoc?.offsets ?? {};
+const DERIVED_MODE = !!(anchorsDoc && offsetsDoc);
+
+function homeAnchor(id) {
+  if (DERIVED_MODE) {
+    const a = DERIVED_ANCHORS[id];
+    if (a) {
+      const o = DISPLAY_OFFSETS[id] ?? { x: 0, y: 0 };
+      return { x: a.x + o.x, y: a.y + o.y };
+    }
+  }
+  return HOME_XY[id];
+}
+
+console.log(DERIVED_MODE
+  ? `atlas anchors (debug pen): DERIVED mode — ${Object.keys(DERIVED_ANCHORS).length} anchors + ${Object.keys(DISPLAY_OFFSETS).length} display offsets`
+  : `atlas anchors (debug pen): HOME_XY mode — this file's own stale hand table`);
+
 function renderHomes(homes) {
   let out = "";
   for (const home of homes) {
     if (home.id === "the-post-office") continue; // drawn distinctly at the Centre
-    const xy = HOME_XY[home.id];
+    const xy = homeAnchor(home.id);
     if (!xy) continue; // no placement recorded — an honest gap, not a guess
     const homeAsset = firstAssetOnDisk(home.assets);
     const hasImage = !!homeAsset;

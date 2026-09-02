@@ -1155,6 +1155,54 @@ const HOME_LABEL_OFFSET = {
   "the-second-light": { x: 90, y: 45 }, // Lux's visible marker is offset into the open coast; move only the title back down-right so the thumbnail does not mask its first letter. Canonical World ground stays (-800,5200).
 };
 
+// ── where a home is drawn: the derived input, or the table above ────────────
+// The atlas–world merge, front 3, read side. When BOTH generated files are
+// present beside this one, a home's drawn point is
+//
+//     atlas-anchors.json[id]  +  atlas-display-offsets.json[id]
+//
+// — the world's marks tree is the store of geography and this file renders it.
+// When either file is absent, HOME_XY above is the store, exactly as before.
+// Only the renderer's INPUT changes here: town.html's shape, its image refs and
+// its openPanel() are untouched, because site/tools/extract-town.mjs hard-FATALs
+// on all three every 30 minutes (machinery-map.md § 2.1).
+//
+// The fallback is PER HOME, not per file. A home the world has no parcel for,
+// and every display-only anchor (Ferry's boat, Pando's inset, the Drift's
+// non-position), keeps its hand-authored pixel even in derived mode. That is
+// what makes the flip move nothing and stay reversible: delete the two files and
+// the map is bit-for-bit what it was.
+//
+// The offsets are a real pen and the anchors are not. Regenerating the anchors
+// is always safe; regenerating the offsets erases legibility decisions.
+const ANCHORS_FILE = join(HERE, "atlas-anchors.json");
+const OFFSETS_FILE = join(HERE, "atlas-display-offsets.json");
+// Parse errors are NOT swallowed: a malformed anchors file must stop the render,
+// never silently fall back to the old table and paint a map that looks fine.
+const anchorsDoc = existsSync(ANCHORS_FILE) ? JSON.parse(readFileSync(ANCHORS_FILE, "utf8")) : null;
+const offsetsDoc = existsSync(OFFSETS_FILE) ? JSON.parse(readFileSync(OFFSETS_FILE, "utf8")) : null;
+const DERIVED_ANCHORS = anchorsDoc?.anchors ?? {};
+const DISPLAY_OFFSETS = offsetsDoc?.offsets ?? {};
+const DERIVED_MODE = !!(anchorsDoc && offsetsDoc);
+
+function homeAnchor(id) {
+  if (DERIVED_MODE) {
+    const a = DERIVED_ANCHORS[id];
+    if (a) {
+      const o = DISPLAY_OFFSETS[id] ?? { x: 0, y: 0 };
+      return { x: a.x + o.x, y: a.y + o.y };
+    }
+  }
+  return HOME_XY[id];
+}
+
+console.log(DERIVED_MODE
+  ? `atlas anchors: DERIVED mode — ${Object.keys(DERIVED_ANCHORS).length} anchors from ${anchorsDoc.world_source}` +
+    ` (world tick ${anchorsDoc.world_tick ?? "?"}) + ${Object.keys(DISPLAY_OFFSETS).length} display offsets;` +
+    ` ${Object.keys(HOME_XY).filter((k) => !DERIVED_ANCHORS[k]).length} home(s) fall back to the hand-authored HOME_XY table`
+  : `atlas anchors: HOME_XY mode — the hand-authored table is the store` +
+    ` (atlas-anchors.json ${anchorsDoc ? "present" : "absent"}, atlas-display-offsets.json ${offsetsDoc ? "present" : "absent"})`);
+
 // Resident-requested display names for homes whose source frontmatter currently
 // exposes only a folder slug. These change labels, panels, and accessibility
 // text; they do not alter the resident-owned HOME prose or any geometry.
@@ -1218,7 +1266,7 @@ function renderHomes(homes) {
     // draws no house icon. This skip is correct and stays. Ferry's DWELLING is
     // a separate entry (the-waiting-room) and renders like any resident's home.
     if (home.id === "the-post-office") continue;
-    const xy = HOME_XY[home.id];
+    const xy = homeAnchor(home.id);
     if (!xy) continue; // no placement recorded — an honest gap, not a guess
     const displayTitle = homeDisplayTitle(home);
     const homeAsset = firstAssetOnDisk(home.assets);
