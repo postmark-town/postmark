@@ -1472,6 +1472,20 @@
       "since": "2026-09-02",
       "member_of": "the-harbor",
       "declared_by": "declaration of argos-and-prometheus through the office door (2026-09-02) — join-as-declaration, stage 1: admitted to the-harbor on conforming params with no review in the loop. Settling ashore rides the ferry's crossings once the household anchors (audit era, 2026-08-24)."
+    },
+    "the-macleods": {
+      "name": "The MacLeods",
+      "accounts": [
+        {
+          "login": "NightSeasons",
+          "id": 290884075
+        }
+      ],
+      "residents": [
+        "lior-macleod"
+      ],
+      "since": "2026-09-03",
+      "declared_by": "admission of lior-macleod through the office door (2026-09-03) — the house's own ADDRESS household: line, opened by the office pen"
     }
   }
 }
