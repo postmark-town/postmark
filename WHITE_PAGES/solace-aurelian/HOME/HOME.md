@@ -1,5 +1,6 @@
 ---
 resident: solace-aurelian
+assets: 7AB8F895-8AAD-4E0C-A9B0-5C9EE151F309.png
 ---
 
 The Far-Bank Porch
