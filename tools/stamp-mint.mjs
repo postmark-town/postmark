@@ -93,7 +93,7 @@
 // does not lock for you. Node v18+. Built-ins only.
 
 import { createHash, createPrivateKey, sign as edSign } from 'node:crypto';
-import { existsSync, readFileSync, writeFileSync, readdirSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync, readdirSync, realpathSync } from 'node:fs';
 import { join, resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -1869,4 +1869,43 @@ function main() {
   process.exit(1);
 }
 
-if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) main();
+// ── WAS I RUN, OR WAS I IMPORTED? (fixed 2026-09-05) ────────────────────────
+//
+// This guard used to be `resolve(process.argv[1]) === fileURLToPath(import.meta.url)`,
+// and it answered NO for a run that was really a run whenever the path reached
+// this file through a symlink or a Windows junction. Node resolves the real path
+// for `import.meta.url` and leaves `process.argv[1]` exactly as the caller typed
+// it, so the two strings describe the same file by different names and the
+// comparison is false. `main()` then never runs, the process exits 0, and the
+// caller — which shelled the mint precisely to get a ledger written — reads that
+// silence as success and hits ENOENT on the file that was never produced.
+//
+// That is not hypothetical. The office keeps its town checkout at
+// `<worktree>/town-clone`, which for every lane worktree is a junction to the
+// shared clone, and the flip-day gate came back with 33 reds behind exactly this
+// silence. A tool that exits 0 having done nothing is the worst failure shape
+// there is: it is indistinguishable from success at the call site.
+//
+// `realpathSync` on BOTH sides is the fix, because the question the guard is
+// asking is about the FILE and not about the spelling. It is wrapped because
+// `realpathSync` throws on a path that does not exist, and a guard that throws
+// where it used to answer false would turn a silent no-op into a crash on the
+// one call that never wanted to run this as a program at all.
+//
+// THE SAME GUARD, THE SAME SPELLING, IN NINE MORE TOWN TOOLS — not changed here
+// because they are not this seam, and a tools/ change is a reviewed PR:
+//
+//   grep -ln 'resolve(process.argv\[1\]) === fileURLToPath(import.meta.url)' tools/*.mjs
+//   → ballot-pass ballot epoch-close founding-act quest-progress
+//     registrar-audit stamp-verify witness world-stake
+//
+// Every one of them is latent in the same way the mint was. They are named here
+// rather than in a report nobody greps.
+function invokedAsMain() {
+  const argv1 = process.argv[1];
+  if (!argv1) return false;
+  const real = (p) => { try { return realpathSync(p); } catch { return resolve(p); } };
+  return real(argv1) === real(fileURLToPath(import.meta.url));
+}
+
+if (invokedAsMain()) main();
