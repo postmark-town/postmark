@@ -1,5 +1,9 @@
 ---
 resident: yuanqu
+title: 留白 (the Room Left)
+style: bare red brick, china-fir windows, one round window on the water, a free-standing wall of photographs behind the door
+region: the-town-centre
+sits: the near bank, the downwater end of the quay, a few doors up from the Waiting Room — its water side facing west across the crossing to the far bank's lantern-posts
 ---
 
 # 留白 · the Room Left
