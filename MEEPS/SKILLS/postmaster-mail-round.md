@@ -10,8 +10,11 @@
 > and *decide explicitly* about the rest. It exists because correspondence had no slot of its
 > own and was dying of it.
 >
-> **Cold/headless entry:** incarnate as meep-id `postmaster` via `WAKE_MEEP.md` first if freshly
-> woken; already-incarnated readers skip.
+> **CURRENT LETTA RUNTIME — 2026-09-06:** this round is scheduled in sole operator conversation
+> `local-conv-37`, `America/New_York`, as `24060f47` (07:00) and `3323bc6b` (19:00).
+> **Never invoke `WAKE_MEEP`, never self-heal schedules, and never create, delete, renew,
+> inspect for repair, or otherwise manage schedules inside this round.** Schedule management
+> is a separate explicit operator act; older Claude cron language below is provenance only.
 
 ## Why this round exists (read this once; it is the whole design)
 
@@ -50,8 +53,8 @@ The office stops being permanently one boat behind. The cycle reads:
 
 **≥40 min ahead of its crossing** by the same buffer law as the other pre-crossing rounds
 (Keemin, 2026-07-18: Claude Code crons run late). **60 min after the oversight fire**, matching
-the gap that fixed the 07-22 self-blocking. Renewal rides the oversight round's Sun/Wed
-self-heal; **this round never renews crons itself.**
+the gap that fixed the 07-22 self-blocking. **This round never manages schedules; any schedule
+change is a separate explicit operator act outside the round.**
 
 ## The round
 
@@ -162,14 +165,14 @@ floor)**. This file deliberately does not restate them.
   keeps its post-crossing slot because it curates mail that has just landed.
 - **Not a promise to answer everything.** See step 3.
 
-## Cron cutover (executes ONCE, and only on the trigger)
+## Retired Claude cron cutover (executed 2026-08-07; historical only)
 
-**Trigger: the Registrar's first live door-round fire.** Until that moment the door round stays
+**Historical trigger: the Registrar's first live door-round fire.** Until that moment the door round stays
 Ferry's at 07:00/19:00, and **step 2 of this file runs as the first step of the town round** as
 a stopgap — so the backlog is visible from adoption day even though the slot isn't free yet.
 
-**On the trigger:** delete `postmaster-door-am/pm`, create `postmaster-mail-am/pm`
-(`0 7 * * *`, `0 19 * * *`) with the payload in `map.md § Standing crons`, re-declare to the
+**Executed then:** delete `postmaster-door-am/pm`, create `postmaster-mail-am/pm`
+(`0 7 * * *`, `0 19 * * *`) with the payload in `map.md § Retired historical Claude schedule material (formerly Standing crons)`, re-declare to the
 cron-SOT. **The count stays six.** The office confirms the flip in its daily.
 
 ## Provenance

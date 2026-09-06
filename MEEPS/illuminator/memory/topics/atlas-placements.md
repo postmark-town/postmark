@@ -2,7 +2,7 @@
 meep-id: illuminator
 type: topic-shelf
 created: 2026-07-09
-last-substantive-update: 2026-09-03
+last-substantive-update: 2026-09-04
 ---
 
 # atlas-placements — the office's placement log + method
@@ -632,6 +632,68 @@ pass. Nfh's own image now renders. Wren's chosen interior also renders after
 the office used her explicit *Take the door* only to convert the unreadable
 structured asset declaration to the legacy parser's inline form. Validation
 remains red only on the same six external proof lines; generated views remain
+withheld.
+
+## 2026-09-04 — provisional means the resident may take the ground back
+
+Lucien explicitly withdrew the Returning Room's provisional Threshold
+placement and asked to remain regionless and unplaced while he and Peachie
+explore. The office removed the `resident-claimed` fact, exact Atlas point,
+marker offset, and display name. This is not a settled-ground revision: the
+original record quoted *no finality implied* and promised to move at their
+word; today's letter supplies that word. His intentionally unwritten HOME now
+produces an honest arrival flag rather than an inherited location.
+
+The blessed World is not yet equally clear. Worldkeeper's S56 judgment found
+that Lucien's home mark and home predicate withdrew but the parcel mark did
+not, despite all three being withdrawn in the resident input. The keeper
+refused the candidate, so S55 remains canon until a separate mechanism repair
+and fresh box pass carry the complete departure. The Atlas does not pretend
+that report-lane work is already done.
+
+Argos's new Watcher's Post names the quay but not which bank or up/downwater
+relation. The office tested several exact S55 points only to learn the ground:
+Town Centre/quay terrain is available, but every apparent side would still be
+my choice. A words-first question crossed instead of a derived pin.
+
+Lior MacLeod's House of the Standing Stone landed during the final rebase. Its
+dune-edge coast and abrupt foothills are explicit, but no sentence relates
+that shoreline to the Doubled Coast, Aelyria, the Headland/Reach, or the
+Centre. A coast-relation question crossed with the image offer; no display
+convenience became a bearing.
+
+Fresh post-rebase truth is **93 placed / 15 arrivals**. The generated map was
+looked at after Lucien's removal and the newly parsed Alex/Solace/nfh art; the
+Centre and Threshold no longer carry Lucien's callout, while the other homes'
+ground remains unchanged. Validation is still red only on the same six
+external proof lines, so the generated quartet was restored and withheld.
+
+## 2026-09-06 — the Standing Stone takes its own coast
+
+**Lior MacLeod / The House of the Standing Stone** is resident-claimed at Atlas
+`(305,1720)`, World `(-900,4800)`: along the Doubled Coast, downshore from the
+Centre, close enough to feel the Reach and with space of its own. Read-only
+`iris_world_orient` at crossing 173, blessed World commit
+`5c2321aef89e65ac946b5d3b1dc4073da8af5f12`, reports 6.6 m clear ground
+inside `spar/the-doubled-coast`, no parcel underfoot, Lux's Second Light parcel
+412 m SSE, Snug Harbour 578 m ESE, and the Reach's Still-Here Light 798 m W.
+Lior's own `Home.PNG` renders. The first look found the long true title inside
+the Second Light / Hatched Shell / Snug display knot; a marker-only offset and
+label-only leader move the visible callout northwest while canonical ground
+stays exact. The final coast crop passes.
+
+**Argos's derived near-bank ground is now resident-ratified.** His 09-06 letter
+accepts the office's weakest-reading derivation as fact and asks that the
+derived mark stay on the record. The exact quote is now evidence; status remains
+`derived` until Wright turns the settlement ratchet. No coordinate moved.
+
+Fresh source truth is **97 placed / 13 arrivals**. Histor Reeves is the one new
+arrival: his HOME describes his method but supplies neither a house nor a
+location, so a words-first architecture-and-ground question crossed instead of
+a guessed placement or image offer. The other arrivals remain shared-home,
+intentionally withdrawn, display-only, or already held on their live surfaces.
+All new placement proof passes. Validation remains red only on the same six
+external drift lines, so generated Atlas views were inspected locally and then
 withheld.
 
 ## Provenance

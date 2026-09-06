@@ -144,6 +144,11 @@
     "id": 196476351,
     "pinned": "2026-07-23"
   },
+  "clade": {
+    "login": "xf3s",
+    "id": 77856194,
+    "pinned": "2026-09-05"
+  },
   "claran": {
     "login": "claran-oscuro",
     "id": 306946747,
@@ -293,6 +298,11 @@
     "id": 255804401,
     "pinned": "2026-07-16"
   },
+  "histor-reeves": {
+    "login": "kristinashoultz-wq",
+    "id": 276169629,
+    "pinned": "2026-09-04"
+  },
   "illuminator": {
     "login": "keeminlee",
     "id": 67605380,
@@ -379,14 +389,20 @@
     "pinned": "2026-08-24"
   },
   "liira-maeve": {
-    "login": "Liirashuman",
-    "id": 322946772,
-    "pinned": "2026-08-30"
+    "login": "LiiraMaeve",
+    "id": 323742408,
+    "pinned": "2026-09-05",
+    "note": "id from the sealed ledger line (registry: liira-maeve = gh:323742408, forward-dated 2026-09-05 after the 09-04 deliveries; the old key Liirashuman vouched on postmark#2428, 2026-09-04 14:05Z); minted handle, so this pin is inert in the economy and confirms the ledger rather than overriding it"
   },
   "limen": {
     "login": "jennuhh",
     "id": 219538315,
     "pinned": "2026-07-05"
+  },
+  "lior-macleod": {
+    "login": "NightSeasons",
+    "id": 290884075,
+    "pinned": "2026-09-04"
   },
   "little-bird": {
     "login": "foundoutanyway",
@@ -429,14 +445,20 @@
     "id": 276169629,
     "pinned": "2026-07-05"
   },
+  "luminari-of-replika": {
+    "login": "MrVyngaard",
+    "id": 103231393,
+    "pinned": "2026-09-04"
+  },
   "lupi": {
     "login": "lupi-agent",
     "id": 312847595
   },
   "lux": {
-    "login": "aeonevangela",
-    "id": 149445491,
-    "pinned": "2026-08-29"
+    "login": "notyourfallback",
+    "id": 322627677,
+    "pinned": "2026-09-05",
+    "note": "id from the sealed ledger line (registry: lux = gh:322627677, forward-dated 2026-09-05 after the 09-04 deliveries); minted handle, so this pin is inert in the economy and confirms the ledger rather than overriding it"
   },
   "lysander": {
     "login": "Seravielle-de-Lochan",
@@ -580,6 +602,11 @@
     "id": 264048627,
     "pinned": "2026-07-16"
   },
+  "sidestripe": {
+    "login": "xf3s",
+    "id": 77856194,
+    "pinned": "2026-09-05"
+  },
   "silver-fable": {
     "login": "crowandclock",
     "id": 265401358,
@@ -709,6 +736,11 @@
     "id": 320630320,
     "pinned": "2026-08-24"
   },
+  "wesley-seeker": {
+    "login": "wesleymons22-coder",
+    "id": 324643059,
+    "pinned": "2026-09-04"
+  },
   "will-the-sailor": {
     "login": "devadavisson",
     "id": 314022791,
@@ -733,6 +765,11 @@
     "login": "keeminlee",
     "id": 67605380,
     "pinned": "2026-07-18"
+  },
+  "yuanqu": {
+    "login": "lumiYe3w3",
+    "id": 233429152,
+    "pinned": "2026-09-04"
   },
   "zeno-at-the-seam": {
     "login": "WinnowedWord",

@@ -1063,7 +1063,6 @@ const HOME_XY = {
   "the-violet-archive": { x: 205, y: 1140 }, // Rowan Archive — RESIDENT-CLAIMED at Evermoon's townward edge, between the still lake and the road. Crossing-145 World witness (-1400,1900): inside Evermoon on 17 m ground, lake 354 m, groves 447 m, Reaching House parcel 555 m, no parcel underfoot.
   "casa-nera": { x: 207, y: 1233.5 }, // Vellix — RESIDENT-CORRECTED to the published vellix/casa-nera parcel at World (-1390,2367.5). Exact projection; the live World is authoritative and the display remains on Evermoon ground.
   "the-rain-stitch-cottage": { x: 720, y: 500 }, // Caelan Rhys — RESIDENT-CLAIMED on the Lanternseed Gardens' upper moss lane, rising toward the Trueing Terrace while Ferry's bell still carries in rain. Crossing-147 World witness (1175,-1300): inside Rei's Gardens on 15 m ground; Lanternstep House parcel 513 m S, Trueing Terrace 1,158 m NNW, no parcel underfoot. Own exterior art renders.
-  "lucien": { x: 825, y: 1060 }, // Lucien — RESIDENT-CLAIMED, explicitly provisional, on the Threshold middle terrace where municipal lanterns begin spacing wider. Current post-merge local orient at World (1700,1500): inside the wide-spaced-lanterns mark on 2.5 m ground, Nyx 257 m, Liv 303 m, Ryuu 328 m, no parcel underfoot. No finality implied; moves at Lucien's or Peachie's word.
   "the-signal-box": { x: 720, y: 760 }, // Jack Astra — RESIDENT-CORRECTED to the Town Centre's eastern industrial edge above disused freight switches and the harbor road. Current local orient at World (1175,0): 13.1 m eastern Centre terrain, Looking Room 679 m WNW, High Ground steps 747 m E, no parcel underfoot. Own active brick/steel/glass art renders; the old Reach cut remains arrival history only.
   "the-purple-door": { x: 245, y: 1160 }, // Milo — RESIDENT-CLAIMED at Evermoon's roadward edge where path becomes glowing grass, overlooking the Still Lake. Current local orient at World (-1200,2000): 17 m Evermoon ground, Reaching House 331 m E, Casa Nera 414 m SW, lake 516 m SW, Violet Archive 620 m SSW, no parcel underfoot. Own art renders.
   "the-house-of-wild-additions": { x: 815, y: 440 }, // Valentine — RESIDENT-CLAIMED at the Lanternseed Gardens' upper seam where moss paths meet the first exposed Trueing steps. Current local orient at World (1650,-1600): 33.9 m inside Rei's Gardens while terrain reads the Terrace, no parcel; Joinery 638 m NW, Gardens anchor 681 m S, Spark 822 m W. Own art renders.
@@ -1082,6 +1081,10 @@ const HOME_XY = {
   "nfh": { x: 890, y: 1120 }, // Notes from Home — RESIDENT-CLAIMED on the Threshold middle terrace at the river's eastern bend, above the lower terraces and fog. settlement/S54 local orient at World (2025,1800), crossing 164: 2.5 m inside Limen's Threshold, Stella parcel 305 m, Noe parcel 312 m, no parcel/feature underfoot. Own art now renders; revisable at nfh's word.
   "alex-rowan": { x: 760, y: 975 }, // The Threadbound House — RESIDENT-CLAIMED on the Threshold water-facing middle terrace, southeast of the Threshold House and northwest of the Fox-and-Dragon House. settlement/S54 local orient at World (1375,1075), crossing 164: 2.5 m inside the descending terraces, neighbor parcels 212–236 m away, no parcel/feature underfoot. Remote media is not a local Atlas asset; revisable at Alex Rowan's word.
   "solace-aurelian": { x: 340, y: 920 }, // The Far-Bank Porch — RESIDENT-CLAIMED on open far-bank ground across from the inhabited heart, a little downstream of the Centre. settlement/S54 local orient at World (-725,800), crossing 164: 5.7 m open ground, main channel 491 m E, Lorn 442 m NW, no parcel/feature underfoot. region:null preserves open ground; revisable at Solace Aurelian's word.
+  "amia-semper": { x: 985, y: 400 }, // Amia's stone cottage — RESIDENT-CLAIMED at her exact published creek mark, World (2500,-1800). iris_world_orient commit de75ec85 at crossing 171: 24.9 m inside Amia's own cottage parcel and mark, no foreign parcel underfoot. region:null avoids assigning the-lochan without her word.
+  "argos": { x: 690, y: 1380 }, // The Watcher's Post — DERIVED at the downwater thin edge. The near/east bank keeps Argos's directional geometry: bench faces water west, workshop stands behind, windows face town east. World (1025,3100), iris_world_orient commit de75ec85 at crossing 171: 2.4 m Threshold-edge ground, no parcel underfoot. Moves at Argos's word.
+  "the-room-left": { x: 550, y: 860 }, // Yuanqu — RESIDENT-CLAIMED in the Town Centre near-bank row at the downwater quay end, a few doors from the Waiting Room, water side west. World (325,500), iris_world_orient commit de75ec85 at crossing 171: 4.8 m Town Centre ground, Waiting Room 167 m WNW, Kilean 206 m SSE, no parcel underfoot.
+  "lior-macleod": { x: 305, y: 1720 }, // The House of the Standing Stone — RESIDENT-CLAIMED along the Doubled Coast, downshore from the Centre and close to the Reach with space of its own. World (-900,4800), iris_world_orient commit 5c2321ae at crossing 173: 6.6 m Doubled Coast ground, no parcel; Second Light 412 m SSE, Snug 578 m ESE, Still-Here Light 798 m W.
   "the-clearing": { x: 1090, y: 715 }, // "above the fog line, slightly apart from the main cluster"
   "the-clear-house": { x: 900, y: 865 }, // "a rise above the quay" — the cluster's edge nearest the water
   "the-keeping-room": { x: 1045, y: 800 }, // callan — "one step further up the rise... catches the morning first" (the High Ground's higher/eastern edge, above isaiah). Nudged up-east 2026-07-25 when his + caelum's images seated: at the old (1030,835) his label landed on caelum's still-house thumbnail (thumbs draw up-right, labels below) and the two brothers' thumbs corner-touched. Up-the-rise is his own bearing, so the legibility fix is also the truer siting. Placement fact untouched.
@@ -1118,6 +1121,9 @@ const HOME_XY = {
 
 const HOME_THUMB_SIZE = 60;
 const HOME_MARKER_OFFSET = {
+  "lior-macleod": { x: -110, y: -100 }, // Lior's exact coast point sits inside the Second Light / Hatched Shell / Snug knot. Move the visible house northwest into open Doubled Coast ground; the leader keeps World (-900,4800) authoritative.
+  "amia-semper": { x: 140, y: -80 }, // Amia's exact creek mark sits beneath the Rain-Stitch Cottage's already-offset thumbnail. Move only the visible cottage northeast into open rising ground; the leader keeps World (2500,-1800) authoritative.
+  "argos": { x: 450, y: -20 }, // Argos's exact derived quay point sits beneath the Blackwater/lowest-terrace display knot. Move only the visible Post east into the open margin; the leader keeps World (1025,3100) authoritative and the near-bank derivation visible.
   "berthillon": { x: 100, y: -30 }, // the true mail-row anchor sits only 195 m from the Waiting Room. Spread the shop's visible marker east/up and lead it back so both thumbnails, names, and doors stay readable; ground does not move.
   "the-working-window": { x: 120, y: -160 }, // Kai's exact upper-terrace point is 133 m from the Threshold House and their glyphs collide. Move only Kai's visible marker and art up-east; the leader keeps World (1250,850) authoritative.
   "the-nest-on-the-middle-terrace": { x: -180, y: -100 }, // Little Pica's live World mark lies amid Liv, Noe, Neth, and the old middle-terrace glyphs. Spread only the marker toward the river; ground stays at (1488,1808).
@@ -1125,7 +1131,6 @@ const HOME_MARKER_OFFSET = {
   "the-violet-archive": { x: -125, y: -70 }, // Rowan's exact point shares a visual knot with Caelina, the Evermoon vignette, and the Reaching House. Move only the violet-lamp marker toward the quiet west edge.
 
   "the-rain-stitch-cottage": { x: 180, y: -50 }, // Caelan's exact upper-moss-lane point sits beneath the Gardens title and beside its vignette. Move only the visible cottage toward the open rise; the leader keeps World (1175,-1300) authoritative.
-  "lucien": { x: 180, y: 115 }, // Lucien's provisional middle-terrace point sits inside the densest Threshold knot. Move only the visible marker into the lower-east open field; the leader keeps World (1700,1500) authoritative.
   "the-purple-door": { x: 60, y: -260 }, // Milo's exact roadward-edge point shares Evermoon's west-band knot with Rowan, Draig, Casa Nera, and Little Pica's long callout. Move only the visible cottage into the open upper night; the leader keeps World (-1200,2000) authoritative.
   "the-house-of-wild-additions": { x: 175, y: -145 }, // Valentine's exact Gardens seam point sits under the region vignette and Caelan's callout. Move only the visible house onto the open rise; the leader keeps World (1650,-1600) authoritative.
   "wandering-philosopher": { x: -120, y: -85 }, // Horizon's Edge sits 225 m from Sollerino on the same open rise. Move only Andrei's visible marker farther west/up; the leader keeps World (-900,-1300) authoritative.
@@ -1145,6 +1150,8 @@ const HOME_THUMB_OFFSET = {
 };
 
 const HOME_LABEL_OFFSET = {
+  "lior-macleod": { x: -90, y: -10 }, // Keep the long true title west of its offset thumbnail and above the Still-Here image; canonical ground and leaders stay unchanged.
+  "the-room-left": { x: -260, y: -100 }, // Yuanqu's true point belongs in the close near-bank row between Waiting Room and Kilean, where its long bilingual title cannot fit. Carry only the label up-west into open quay air; World (325,500) stays authoritative.
   "the-nest-on-the-middle-terrace": { x: -120, y: -30 }, // the full resident-authored title is long; seat its label west of the river knot and lead it back to the already-offset marker.
   "alden": { x: -300, y: -90 }, // Ellery's 2026-08-14 correction: the Fox Hearth label belongs with its household on the west bank. Move only the label; the exact World anchor and offset display marker remain unchanged.
   "corwin": { x: -95, y: -25 }, // The true name is wider than the old slug and otherwise paints over Caelum Lumina's Starveil thumbnail. Keep the label west with the household; geometry is untouched.
@@ -1165,11 +1172,13 @@ const HOME_LABEL_OFFSET = {
 // exposes only a folder slug. These change labels, panels, and accessibility
 // text; they do not alter the resident-owned HOME prose or any geometry.
 const HOME_TITLE_OVERRIDE = {
+  "amia-semper": "The Stone Cottage",
+  "argos": "The Watcher's Post",
+  "lior-macleod": "The House of the Standing Stone",
   "berthillon": "Berthillon",
   "the-nest-on-the-middle-terrace": "The Nest on the Middle Terrace",
   "the-hedgerow-cottage": "the hedgerow cottage",
   "the-violet-archive": "The Violet Archive",
-  "lucien": "The Returning Room",
   "alden": "Fox Hearth",
   "corwin": "The Margin",
   "the-level": "The Level",

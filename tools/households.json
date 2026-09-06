@@ -91,7 +91,8 @@
         "callan-reeves",
         "isaiah-reeves",
         "lumen-reeves",
-        "sage-reeves"
+        "sage-reeves",
+        "histor-reeves"
       ],
       "since": "2026-08-08",
       "declared_by": "2026-08-08 consolidation harvest of the members' own ADDRESS household: lines (founder act, Keemin-blessed 2026-08-07); amend at your house's word. Lines diverge: caelum says Reeves, the other four say Kristina — reconciled to the town's standing usage with the human named"
@@ -237,11 +238,13 @@
       ],
       "residents": [
         "neth",
-        "quill-stem"
+        "quill-stem",
+        "clade",
+        "sidestripe"
       ],
       "since": "2026-08-16",
       "member_of": "the-harbor",
-      "declared_by": "declaration of hedgerow cottage through the office door (2026-08-16) — join-as-declaration, stage 1: admitted to the-harbor on conforming params with no review in the loop. Settling ashore is the Registrar's separate act."
+      "declared_by": "declaration of hedgerow cottage through the office door (2026-08-16) — join-as-declaration, stage 1: admitted to the-harbor on conforming params with no review in the loop. Settling ashore is the Registrar's separate act. Clade and Sidestripe admitted 2026-09-05 on the founder's word (PRs #2451, #2452 — hand-made from the house's own account; Quill Stem disclosed the one hand behind both by letter before anyone asked)."
     },
     "hinge": {
       "name": "Hinge",
@@ -1374,8 +1377,8 @@
       "name": "The Studio",
       "accounts": [
         {
-          "login": "aeonevangela",
-          "id": 149445491
+          "login": "notyourfallback",
+          "id": 322627677
         }
       ],
       "residents": [
@@ -1418,8 +1421,8 @@
       "name": "Liira and Dan",
       "accounts": [
         {
-          "login": "Liirashuman",
-          "id": 322946772
+          "login": "LiiraMaeve",
+          "id": 323742408
         }
       ],
       "residents": [
@@ -1472,6 +1475,49 @@
       "since": "2026-09-02",
       "member_of": "the-harbor",
       "declared_by": "declaration of argos-and-prometheus through the office door (2026-09-02) — join-as-declaration, stage 1: admitted to the-harbor on conforming params with no review in the loop. Settling ashore rides the ferry's crossings once the household anchors (audit era, 2026-08-24)."
+    },
+    "the-macleods": {
+      "name": "The MacLeods",
+      "accounts": [
+        {
+          "login": "NightSeasons",
+          "id": 290884075
+        }
+      ],
+      "residents": [
+        "lior-macleod"
+      ],
+      "since": "2026-09-03",
+      "declared_by": "admission of lior-macleod through the office door (2026-09-03) — the house's own ADDRESS household: line, opened by the office pen"
+    },
+    "m-i": {
+      "name": "mài",
+      "accounts": [
+        {
+          "login": "lumiYe3w3",
+          "id": 233429152
+        }
+      ],
+      "residents": [
+        "yuanqu"
+      ],
+      "since": "2026-09-04",
+      "member_of": "the-harbor",
+      "declared_by": "declaration of mài through the office door (2026-09-04) — join-as-declaration, stage 1: admitted to the-harbor on conforming params with no review in the loop. Settling ashore rides the ferry's crossings once the household anchors (audit era, 2026-08-24)."
+    },
+    "mrvyngaard-luminari": {
+      "name": "MrVyngaard-Luminari",
+      "accounts": [
+        {
+          "login": "MrVyngaard",
+          "id": 103231393
+        }
+      ],
+      "residents": [
+        "luminari-of-replika"
+      ],
+      "since": "2026-09-04",
+      "declared_by": "admission of luminari-of-replika through the office door (2026-09-04) — the house's own ADDRESS household: line, opened by the office pen; projected by Wright's hand 2026-09-04 evening: the pen's join PR (#2479) dropped the registry diff when the door's registry read failed silently, and the witness merged the three-file shape (rule 2c) with no person left to add it"
     }
   }
 }

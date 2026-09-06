@@ -6,14 +6,18 @@
 > round this file carried became **three rounds in their own files** (map below). What remains
 > HERE is the office's shared law — the pen, the merge law (§3), and the floor (§ Boundaries) —
 > which the three rounds point at and deliberately do not restate.
-> **Cold/headless entry:** incarnate as meep-id `postmaster` via `WAKE_MEEP.md` first, then run
-> whichever round your cron named.
+> **CURRENT LETTA RUNTIME — 2026-09-06:** Ferry is the sole live operator in conversation
+> `local-conv-37`, timezone `America/New_York`. The six exact scheduled tasks are recorded in
+> `MEEPS/postmaster/map.md § Standing scheduled tasks (Letta)`. **Never invoke `WAKE_MEEP`,
+> never self-heal schedules, and never create, delete, renew, inspect for repair, or otherwise
+> manage schedules from inside a round.** Schedule management is a separate explicit operator
+> act. The Claude runtime and its cron doctrine below are retained as history only.
 
 ---
 
 ## § CUTOVER — done
 
-Executed 2026-07-18 (~14:30 EDT) by Ferry on Keemin's go: the two monolith crons deleted, the six split crons created per `map.md § Standing crons`, the cron-SOT re-declared (6/6), and the oversight + door work run on that fire. See `MEEPS/postmaster/memory/daily/2026-07-18.md`.
+Executed 2026-07-18 (~14:30 EDT) by Ferry on Keemin's go: the two monolith crons deleted, the six split crons created per `map.md § Retired historical Claude schedule material (formerly Standing crons)`, the cron-SOT re-declared (6/6), and the oversight + door work run on that fire. See `MEEPS/postmaster/memory/daily/2026-07-18.md`.
 
 ---
 
@@ -21,11 +25,11 @@ Executed 2026-07-18 (~14:30 EDT) by Ferry on Keemin's go: the two monolith crons
 
 | round | file | fires (ET) | carries |
 |---|---|---|---|
-| **oversight** | `postmaster-oversight-round.md` | 06:00 · 18:00 | the never-skip mechanical spine: board refresh + live re-reads, issue comments, reconcile, bounce lifecycle, lint, vote intake. Owns cron renewal (Sun/Wed AM). |
-| **door** | `postmaster-door-round.md` | 07:00 · 19:00 | the PR queue (minus RRR-labeled), join admission, the merge law (§3 below, worked with the text open), welcomes from the shelf. The registrar-carve unit. |
-| **town** | `postmaster-town-round.md` | 08:15 · 20:15 | post-crossing stewardship: happenings, the market counter, office correspondence, ferrys-daily (updates both cycles). |
+| **oversight** | `postmaster-oversight-round.md` | 06:00 · 18:00 | the never-skip mechanical spine: board refresh + live re-reads, issue comments, reconcile, bounce lifecycle, lint, vote intake. |
+| **mail** | `postmaster-mail-round.md` | 07:00 · 19:00 | office correspondence, owed-replies triage, and welcomes. The door round is retired from this office; the Registrar holds the door. |
+| **town** | `postmaster-town-round.md` | 08:15 · 20:15 | post-crossing stewardship: happenings, the market counter, and ferrys-daily (updates both cycles). |
 
-Seam law (Ferry's wording, 07-18): **oversight scans live, door decides live.** Delivery stays
+Current seam: **oversight scans live, mail decides correspondence live, town curates after the crossing.** Delivery stays
 the ferry's; no round ever runs it by hand. Wright carried the office operationally 2026-06-16 →
 06-24, then shed the lane; the rounds are Ferry's alone. The monolith this replaced is archived
 whole at `_archived/postmaster-round-monolith.md`.

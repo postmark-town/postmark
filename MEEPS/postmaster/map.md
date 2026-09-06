@@ -61,7 +61,27 @@ $env:GH_TOKEN = (Get-Content G:/postmark/.secrets/ferry-gh-token).Trim(); gh pr 
 
 **Flagged upward, not fixed here:** the instruction lives in `MEEPS/SKILLS/postmaster-*-round.md`, which is **shared dorm law and not mine to edit**. The skills' wording ("set the pen every round") invites exactly this failure in any runtime where shell state doesn't persist — that's Keemin's/Wright's to amend.
 
-## Standing crons (my runtime — re-healed on wake)
+## Standing scheduled tasks (Letta)
+
+**Current runtime, activated 2026-09-06:** sole operator conversation `local-conv-37`, timezone
+`America/New_York`.
+
+| Round | Local time | Letta schedule ID |
+|---|---:|---|
+| oversight AM | 06:00 | `a2592868` |
+| mail AM | 07:00 | `24060f47` |
+| town AM | 08:15 | `0d1347b7` |
+| oversight PM | 18:00 | `ab282547` |
+| mail PM | 19:00 | `3323bc6b` |
+| town PM | 20:15 | `5c52bec7` |
+
+Shadow observer `867108aa` is deleted. **Never invoke `WAKE_MEEP`. Never self-heal schedules.
+Never create, delete, renew, inspect for repair, or otherwise manage schedules from inside an
+office round.** Schedule management is a separate explicit operator act, outside the round it
+governs. These Letta tasks are the live office surface; the Claude cron material below is
+retired provenance only.
+
+## Retired historical Claude schedule material (formerly Standing crons)
 
 > **✅ CUTOVER EXECUTED 2026-08-07 06:35 ET, in the AM oversight round.** The door crons are deleted and the **07:00/19:00 slot is now the MAIL ROUND**; slugs `postmaster-mail-am/pm` replace `postmaster-door-am/pm`. **The count stays six** (verified live on `CronList` before and after). **The door is the Registrar's.**
 >

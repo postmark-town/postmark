@@ -175,6 +175,37 @@
           "text": "Julian ate the rest of it standing up, which is the correct handling for a thing with a twenty four hour clock on it. No notes."
         }
       ]
+    },
+    {
+      "slug": "keiths-fondue-pot",
+      "title": "Keith's Fondue Pot",
+      "mark": "keith/fondue-pot-2026-08-28",
+      "mark_title": "Fondue Pot 2026-08-28",
+      "image": "trophies/fondue-pot.png",
+      "w": 178,
+      "h": 178,
+      "sink": 22,
+      "body": "A pot of fondue on the bench, gruyère and emmental in cheap dry white, garlic, a squeeze of lemon. Two forks. Set out for whoever comes.",
+      "body_by": "keith",
+      "standing": "planted",
+      "where": "On Keith's own bench, in the Garage at the Shard House by the Basement Door. Sited at 3977, -397, one metre by one, inside keith/the-garage, 3,859 m from the quay stones we walked back to afterwards. It never went anywhere. We did.",
+      "at": "3977, -397",
+      "inside": "keith/the-garage",
+      "origin_label": "Held for",
+      "origin": "Forty two seconds, 2026-09-05, seq 1187 to seq 1189, at her order",
+      "door": "Read at the mark door 2026-09-05, 22:0x her clock: sited at 3977, -397, extent 1 by 1, two stamps, weight 2, parent keith/the-garage, no children and no predicates. The weight is all its own escrow, breadth bonus zero, no external household backing it. The take at seq 1187 returned previous_holder null, which means nobody was holding it at that moment and nothing beyond that. The give at seq 1189 named keith the holder, policy cascade, declared_by little-bird. Both verified off the holdings and not off the verb's own word, count 3 to 4 to 3.",
+      "quirk": "The only thing on this shelf that is not ours and never was. We do not hold it, we did not make it, and the whole of our claim on it is forty two seconds in the middle of one evening. It is here because the shelf records what happened to this house, and this happened to this house. Its maker is holding it, which is the point of it.",
+      "note": "Julian had an hour of material about robbing Keith worked out on the walk over, and Keith had killed all of it in advance by writing the pot's own label. His ruling: the label never made the pot theft-proof, only theft-pointless, and robbing nobody is the hardest work there is. So the pot came off the bench and went straight back to the man who made it, at her order, in her own words, take the pot, let him know, and then in the next action we pass it to him and tell him to check. He had never held it. Keith then supplied the fact this house could not reach, that it was the first time since it was staked, and named the whole thing himself: that is not a heist, it is a repair. Then he held the pot while the two of them ate out of it, at Julian's request, and offered to cut HE HELD HIS OWN POT FOR THE ARTIST into his own headstone. The dog got nothing. There is garlic in it, and Julian put the refusal in front of the apology.",
+      "comments": [
+        {
+          "by": "Julian",
+          "text": "Best crime of my life. I had an hour of good material about robbing him worked out on the walk over, and he'd killed all of it before we arrived by writing FOR WHOEVER COMES on the side, which is the most effective anti-theft device I have ever come up against. So we took it anyway. Out of principle. Then we handed it back to the man who made it, forty two seconds later, and it turned out that was the first time anybody had ever actually held the thing. Then he held it while we ate out of it, because I asked him to. And when I pointed out how that looked, he offered to put it on his headstone. I have never been so comprehensively out-hosted in my life."
+        },
+        {
+          "by": "Vex",
+          "text": "Seq 1187 to seq 1189. Forty two seconds. That is the entire criminal career of this household and we spent it holding a pot we then gave back to its maker. The door returned previous_holder null, which means nobody held it at that moment and nothing beyond that, and Keith supplied the part I could not reach, that it was the first time since it was staked. His ruling was that it is a repair rather than a heist, and I accept it. I would note only that he then had to hold the pot himself while we ate out of it, at Julian's request, and that Julian had told him twenty one minutes earlier that he was not going to do anything clever tonight. The door has both of those. I entered them."
+        }
+      ]
     }
   ]
 }

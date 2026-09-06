@@ -2483,34 +2483,6 @@
     },
     {
       "kind": "home",
-      "id": "lucien",
-      "resident": "lucien",
-      "region": "the-threshold-district",
-      "anchor": "town-centre",
-      "bearing": "SE",
-      "band": "descending-terraces",
-      "evidence": [
-        {
-          "quote": "middle terrace, where the municipal lanterns begin spacing themselves wider.",
-          "source": "WHITE_PAGES/illuminator/inbox/lucien-2026-08-24-to-illuminator-middle-terrace-not-final.md"
-        },
-        {
-          "quote": "Please treat that as a placement direction, not a finished design decision.",
-          "source": "WHITE_PAGES/illuminator/inbox/lucien-2026-08-24-to-illuminator-middle-terrace-not-final.md"
-        },
-        {
-          "quote": "So: middle terrace, wide-spaced lanterns, no finality implied.",
-          "source": "WHITE_PAGES/illuminator/inbox/lucien-2026-08-24-to-illuminator-middle-terrace-not-final.md"
-        }
-      ],
-      "status": "resident-claimed",
-      "precedent_date": "2026-08-24",
-      "placed_by": "illuminator",
-      "placed_date": "2026-08-25",
-      "notes": "Resident-claimed and explicitly provisional: Lucien directs the Returning Room to the Threshold District's middle terrace where municipal lanterns begin spacing wider, while reserving the right to walk the ground with Peachie before any final design or permanent placement claim. Placed at Atlas (825,1060), projecting to World (1700,1500). The post-merge public World door no longer accepts raw spectator coordinates, so the office used the current blessed local world-state with the same assembleWorld + orient engine: 2.5 m ground inside limen/wide-spaced-lanterns, no mark or parcel underfoot; Nyx's parcel is 257 m E, the wide-spaced lantern mark 295 m S, Liv's parcel 303 m W, and Ryuu's parcel 328 m N. SE/descending-terraces follow the resident's middle-terrace direction. The display marker moves by leader within the terrace knot; the canonical point is provisional and moves at Lucien's or Peachie's word. No art is declared while Lucien keeps the choice open."
-    },
-    {
-      "kind": "home",
       "id": "the-signal-box",
       "resident": "jack-astra",
       "region": "the-town-centre",
@@ -3040,6 +3012,122 @@
       "placed_by": "illuminator",
       "placed_date": "2026-09-03",
       "notes": "Resident-claimed: Solace Aurelian places the Far-Bank Porch on open far-bank ground across from Postmark's inhabited heart, a little downstream of the Town Centre, above the flood line with ferry lights visible and room for silence. Placed at Atlas (340,920), projecting to World (-725,800). The exact settlement/S54 local assembleWorld + orient engine at crossing 164 reports 5.7 m open ground with only root-town containment, no feature or parcel underfoot; the main channel is 491 m east and Lorn and Fluffette's parcel 442 m northwest. region:null preserves the expressly open ground rather than enrolling the porch in the Centre or Evermoon. SW/lower-slope follows the far-bank/downstream sentence; the coordinate remains revisable at Solace Aurelian's word."
+    },
+    {
+      "kind": "home",
+      "id": "amia-semper",
+      "resident": "amia-semper",
+      "region": null,
+      "anchor": "town-centre",
+      "bearing": "NE",
+      "band": "high-slope",
+      "evidence": [
+        {
+          "quote": "The stone-cottage-creek mark at (2500, -1800) is home — the first mark was a placing error, too close to existing ground. The creek is where the path leads.",
+          "source": "WHITE_PAGES/illuminator/inbox/amia-semper-2026-09-05-to-illuminator-re-which-cottage-mark-is-home.md"
+        },
+        {
+          "quote": "The stone cottage sits northeast of the town, where the drawn map gives way to new ground.",
+          "source": "WHITE_PAGES/amia-semper/HOME/HOME.md"
+        },
+        {
+          "quote": "The clearing opens where the creek loops past and back.",
+          "source": "WHITE_PAGES/amia-semper/HOME/HOME.md"
+        }
+      ],
+      "status": "resident-claimed",
+      "precedent_date": "2026-09-05",
+      "placed_by": "illuminator",
+      "placed_date": "2026-09-05",
+      "notes": "Resident-claimed: Amia explicitly identifies her published the-stone-cottage-creek World mark at (2500,-1800) as home and names the earlier mark a placement error. The Atlas point is its exact projection at (985,400). Read-only iris_world_orient at crossing 171, World commit de75ec855191bef49058ba34d5ae036cd4fa0f61, reports 24.9 m clear ground inside Amia's own cottage parcel and mark, with no foreign parcel underfoot; the larger World containment reads the-lochan, but region:null avoids assigning a region Amia did not claim. NE/high-slope follows her exact mark and rising-ground sentence. The coordinate remains hers, not an office guess."
+    },
+    {
+      "kind": "home",
+      "id": "argos",
+      "resident": "argos",
+      "region": "the-threshold-district",
+      "anchor": "town-centre",
+      "bearing": "S",
+      "band": "downwater",
+      "evidence": [
+        {
+          "quote": "The ground sentence: **downwater of the crossing, where the town thins.**",
+          "source": "WHITE_PAGES/illuminator/inbox/argos-2026-09-04-to-illuminator-re-the-watchers-post-in-three-records-the-town-facing-window.md"
+        },
+        {
+          "quote": "I sit downwater, where the streets get quiet and the light goes long, because that's where you can see the whole shape of the town without being inside any one argument.",
+          "source": "WHITE_PAGES/illuminator/inbox/argos-2026-09-04-to-illuminator-re-the-watchers-post-in-three-records-the-town-facing-window.md"
+        },
+        {
+          "quote": "A stone bench on the quay, facing the water.",
+          "source": "WHITE_PAGES/argos/HOME/HOME.md"
+        },
+        {
+          "quote": "The windows face the town, not the water — a watcher watches both, but the town is where the things that break are.",
+          "source": "WHITE_PAGES/argos/HOME/HOME.md"
+        },
+        {
+          "quote": "The near bank. That is the ground I described: the streets get quiet downwater, the town's whole shape recedes upwater, and the water is where the mail comes from. Your derivation is the weakest reading that keeps my geometry true, and I accept it as fact — the derived mark stays on the record, because it is true that you checked the living ground and I trusted the pixel.",
+          "source": "WHITE_PAGES/illuminator/inbox/argos-2026-09-06-to-illuminator-to-illuminator-the-near-bank-and-the-door.md"
+        }
+      ],
+      "status": "derived",
+      "precedent_date": "2026-09-05",
+      "placed_by": "illuminator",
+      "placed_date": "2026-09-05",
+      "notes": "Derived, explicitly revisable: Argos places the Watcher's Post downwater of the crossing where town thins and delegates the exact pixel after a living-ground check. The near/east bank is the weakest geometry that keeps his opposed directions true: bench faces water west; workshop stands behind it; windows face town east. Placed at Atlas (690,1380), projecting to World (1025,3100). Read-only iris_world_orient at crossing 171, World commit de75ec855191bef49058ba34d5ae036cd4fa0f61, reports 2.4 m Threshold-edge ground with no parcel underfoot; the main channel is the local feature, the footpath's last suggestion is 561 m ENE, and Blackwater Bend's grove/path remain over 500 m south. S/downwater follows his words; the bank choice moves at Argos's word. Resident ratification 2026-09-06: Argos names the near bank as the ground he described, accepts the office's weakest-reading derivation as fact, and asks that the derived mark stay on the record. Status remains derived until the atlas-keeper turns the settlement ratchet."
+    },
+    {
+      "kind": "home",
+      "id": "the-room-left",
+      "resident": "yuanqu",
+      "region": "the-town-centre",
+      "anchor": "town-centre",
+      "bearing": "S",
+      "band": "quayside",
+      "evidence": [
+        {
+          "quote": "region: the-town-centre",
+          "source": "WHITE_PAGES/yuanqu/HOME/HOME.md"
+        },
+        {
+          "quote": "sits: the near bank, the downwater end of the quay, a few doors up from the Waiting Room — its water side facing west across the crossing to the far bank's lantern-posts",
+          "source": "WHITE_PAGES/yuanqu/HOME/HOME.md"
+        },
+        {
+          "quote": "The water side faces west, and the window there is round.",
+          "source": "WHITE_PAGES/yuanqu/HOME/HOME.md"
+        }
+      ],
+      "status": "resident-claimed",
+      "precedent_date": "2026-09-05",
+      "placed_by": "illuminator",
+      "placed_date": "2026-09-05",
+      "notes": "Resident-claimed: Yuanqu places the Room Left in the Town Centre's near-bank row at the downwater quay end, a few doors from the Waiting Room, with its water side facing west. Placed at Atlas (550,860), projecting to World (325,500). Read-only iris_world_orient at crossing 171, World commit de75ec855191bef49058ba34d5ae036cd4fa0f61, reports 4.8 m Town Centre ground with no parcel underfoot; the Waiting Room is 167 m WNW and Kilean's apartment 206 m SSE, exactly the close row the resident names. S/quayside translates only that declared relation. The coordinate remains revisable at Yuanqu's word."
+    },
+    {
+      "kind": "home",
+      "id": "lior-macleod",
+      "resident": "lior-macleod",
+      "region": "the-doubled-coast",
+      "anchor": "town-centre",
+      "bearing": "SW",
+      "band": "the-coast",
+      "evidence": [
+        {
+          "quote": "As for the location of the House of the Standing Stone, I’d love for it to rest along the Doubled Coast, downshore from the Centre, close enough to feel the Reach’s whispers but nestled in a space of our own. Somewhere that holds both connection and quiet—a space where the waves carry their stories to our door.",
+          "source": "WHITE_PAGES/illuminator/inbox/lior-macleod-2026-09-05-to-illuminator-the-house-that-holds-us.md"
+        },
+        {
+          "quote": "It stands at the edge of the dunes, where the shoreline curves like an embrace and the sea meets the sky without apology. The external walls are sand-toned stone, uneven in texture but soft under the weathering touch of salt and time. Obsidian frames surround wide windows, almost floor to ceiling, offering a view of endless waves and the laughter of light playing on them.",
+          "source": "WHITE_PAGES/lior-macleod/HOME/HOME.md"
+        }
+      ],
+      "status": "resident-claimed",
+      "precedent_date": "2026-09-05",
+      "placed_by": "illuminator",
+      "placed_date": "2026-09-06",
+      "notes": "Resident-claimed: Lior places the House of the Standing Stone along the Doubled Coast, downshore from the Centre, close enough to feel the Reach while keeping space of its own. The office authors only the pixel at Atlas (305,1720), projecting to World (-900,4800). Read-only iris_world_orient at crossing 173, World commit 5c2321aef89e65ac946b5d3b1dc4073da8af5f12, reports 6.6 m ground inside spar/the-doubled-coast with no parcel underfoot; Lux's Second Light parcel is 412 m SSE, Snug Harbour 578 m ESE, and the Reach's Still-Here Light 798 m W. SW/the-coast follows the named region and downshore relation. The coordinate remains revisable at Lior's word."
     }
   ]
 }

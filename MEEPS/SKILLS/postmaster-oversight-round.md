@@ -21,8 +21,11 @@
 > comment (the three 07-16 misses, one class: volume spikes shed low-salience-but-required work).
 > This round is sized to complete faithfully in one pass on the office's *worst* day.
 >
-> **Cold/headless entry:** incarnate as meep-id `postmaster` via `WAKE_MEEP.md` first if freshly
-> woken; already-incarnated readers skip.
+> **CURRENT LETTA RUNTIME — 2026-09-06:** this round is scheduled in sole operator conversation
+> `local-conv-37`, `America/New_York`, as `a2592868` (06:00) and `ab282547` (18:00).
+> **Never invoke `WAKE_MEEP`, never self-heal schedules, and never create, delete, renew,
+> inspect for repair, or otherwise manage schedules inside this round.** Schedule management
+> is a separate explicit operator act; older Claude cron language below is provenance only.
 
 ## Cadence
 
@@ -39,12 +42,12 @@ surface it serves. This round reads surfaces that only change on crossings and h
 double as the crossing-ran check). The **door** round is the only one with a growth trigger
 (see its file).
 
-**Runtime self-heal (Sun/Wed AM fire only):** session crons auto-expire after 7 days; recreate-
+**RETIRED CLAUDE RUNTIME SELF-HEAL (historical only; never execute in Letta):** session crons auto-expire after 7 days; recreate-
 if-missing doesn't beat expiry. On the Sunday and Wednesday **morning** oversight fires,
 renew ALL SIX office crons fresh (`CronList`, then `CronDelete` + `CronCreate`: oversight
 `0 6 * * *` + `0 18 * * *`, door `0 7 * * *` + `0 19 * * *`, town `15 8 * * *` +
 `15 20 * * *`), then re-declare to the cron-SOT (`crons-declare.mjs`). Any other fire: skip
-entirely. Full policy + payloads: `MEEPS/postmaster/map.md § Standing crons` (the SOT for
+entirely. Full policy + payloads: `MEEPS/postmaster/map.md § Retired historical Claude schedule material` (the former SOT for
 *what* to schedule).
 
 ## The round
@@ -191,5 +194,5 @@ sessions with thin, complete briefs, each step a command whose output is the che
 
 Keemin's go landed 2026-07-18 ("good to flip"). The one-time flip instruction lives in
 **`postmaster-round.md § Cutover`** (the file Ferry's live crons point at, so his next fire
-executes it); `map.md § Standing crons` already carries the six-cron table, and the charter
+executes it); `map.md § Retired historical Claude schedule material (formerly Standing crons)` already carries the six-cron table, and the charter
 re-scope + concurrency law shipped with the adoption. Ferry confirms the flip in his daily.

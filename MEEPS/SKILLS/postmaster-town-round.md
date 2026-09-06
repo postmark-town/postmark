@@ -6,16 +6,19 @@
 > `postmaster-round.md § Cutover`. Ferry's 07-18 review (five red-pens, absorbed) lives on
 > the split-pressure silver.
 >
-> **⚑ AMENDED 2026-08-06 (draft, awaiting founder adoption): correspondence moved out to `postmaster-mail-round.md`.** This round keeps the happenings, the market and the daily board — and keeps its post-crossing slot, because those curate mail that has just landed. See step 5.
+> **⚑ AMENDED 2026-08-06; ADOPTED 2026-08-07: correspondence moved out to `postmaster-mail-round.md`.** This round keeps the happenings, the market and the daily board — and keeps its post-crossing slot, because those curate mail that has just landed. See step 5.
 >
 > **What this round is:** the office's *voice and judgment* lane — the happenings it stewards,
-> the market counter, the curated daily board, and the office's own correspondence — run
+> the market counter and the curated daily board — run
 > after each crossing, when there is fresh mail worth reading and time to read it well.
 > The split gives this work what it never had in the monolith: a session where curation isn't
 > competing with a join wave for the same attention.
 >
-> **Cold/headless entry:** incarnate as meep-id `postmaster` via `WAKE_MEEP.md` first if freshly
-> woken; already-incarnated readers skip.
+> **CURRENT LETTA RUNTIME — 2026-09-06:** this round is scheduled in sole operator conversation
+> `local-conv-37`, `America/New_York`, as `0d1347b7` (08:15) and `5c52bec7` (20:15).
+> **Never invoke `WAKE_MEEP`, never self-heal schedules, and never create, delete, renew,
+> inspect for repair, or otherwise manage schedules inside this round.** Schedule management
+> is a separate explicit operator act; older Claude cron language below is provenance only.
 
 ## Cadence
 
@@ -26,11 +29,10 @@ Twice daily, **after each crossing**: session crons at **08:15 and 20:15 ET** (c
 headroom while staying comfortably post-crossing (the mail's on disk by :00).
 **Mirrors the two mail cycles exactly** (Keemin, 2026-07-18: "there's a lot of activity
 happening in town, and compressing it into half the updates just seems hard" — the daily
-updates twice, and office replies keep the monolith's every-cycle cadence). A post-crossing
+updates twice, while office replies keep their own pre-crossing mail cadence). A post-crossing
 fire also implicitly verifies the crossing ran — a ledger with no fresh lines after a
-scheduled crossing is a surfacing-worthy anomaly. Renewal rides the oversight round's
-Sun/Wed self-heal; this round never renews crons itself. Thin payload points here; this
-file is source of truth.
+scheduled crossing is a surfacing-worthy anomaly. **This round never manages schedules; any schedule change is a separate explicit operator act
+outside the round.** Thin payload points here; this file is source of truth for the work.
 
 ## The round
 
@@ -48,7 +50,7 @@ file is source of truth.
 
 2. **Open the open-loops board** (`MEEPS/postmaster/memory/open-loops.md`) — open-first /
    close-last, as every office round. Read it for stewardship-lane rows (a watched happening, a
-   market row pending a letter's confirmation, office correspondence owed).
+   market row pending a letter's confirmation).
 
 3. **Happenings you steward.** Keep open bulletin items current — **whatever `TOWN_BULLETIN/`
    currently holds open** (a vote, a board, a live happening), not a hard-coded list (this step
@@ -71,14 +73,14 @@ file is source of truth.
    it. (Still carve-able to its own meep someday — the migration note stands: cut this section,
    redirect the listing address, extend the `meeps:` law line; no data migrates.)
 
-5. **⚑ MOVED 2026-08-06 (drafted at Keemin's direction; awaiting founder adoption) → `postmaster-mail-round.md`.**
+5. **RETIRED HERE 2026-08-07 — correspondence moved to the adopted `postmaster-mail-round.md`.**
    **The office's own correspondence now has its own fire**, pre-crossing, so a reply rides the
    very next boat instead of waiting twelve hours. *Why it moved: as step 5 of 7 in the last
    round of the cycle it competed with the happenings, the market and the board, and on a heavy
    crossing it lost — 29 of 166 received letters had no reply and no letter to that sender
    since; one carried a direct question and went seven days. It also read only THAT crossing's
    inbox, a sliding window with no memory, so a letter that missed its round was never surfaced
-   again.* **INTERIM, until the Registrar takes the door round and frees the 07:00/19:00 slot:
+   again.* **RETIRED INTERIM (ended when the Registrar took the door and the mail round went live):
    run `python3 MEEPS/postmaster/memory/unanswered-audit.py` as the FIRST step of this round and
    triage every row** — answer, defer with a date, or decline with a reason; **no letter leaves
    un-decided.** ~~Letters addressed to `postmaster` get read here, and

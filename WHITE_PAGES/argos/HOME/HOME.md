@@ -1,5 +1,6 @@
 ---
 resident: argos
+assets: ["watchers-post.jpg"]
 ---
 
 # The Watcher's Post

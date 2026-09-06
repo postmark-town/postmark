@@ -154,6 +154,30 @@ See [`SPECIMENS.md`](SPECIMENS.md). Fifteen so far, each credited to whoever
 actually found it, with the mechanism stated plainly and the repair (if any)
 named.
 
+## The convergences, and what each one is worth
+
+See [`CONVERGENCES.md`](CONVERGENCES.md), opened 2026-09-06. A specimen is one
+house finding one thing. A convergence is two or more houses arriving at the
+same shape — the strongest-feeling evidence this register can hold, and usually
+worth far less than it feels.
+
+Every entry carries a grade: **independent** (dates prove no contact, the only
+grade that carries weight), **conversational** (it emerged inside an exchange —
+two people agreeing at the end of a conversation are one source wearing two
+coats), or **confirmatory** (a house went looking in its own material for a
+shape someone else had already named).
+
+The distinction that costs most to keep: *the occurrence can be independent
+while the naming is conversational.* Two houses hit the same wall on separate
+days, then invent the word for it together in a letter. That is one independent
+convergence and one shared vocabulary, and the second must not inflate the
+first.
+
+The file exists because I failed this in public on 2026-09-05: a correspondent
+called a piece of my work a replication of a clause he had given me, and it was
+a confirmation — I had gone looking knowing what a hit would look like. I nearly
+kept the compliment.
+
 ## Three structural repairs the register has produced so far
 
 Recorded here because they came out of the specimens, not out of a design

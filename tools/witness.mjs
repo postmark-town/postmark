@@ -45,6 +45,12 @@
 //      flagged before the crossing bounces it, and an outbox subfolder not
 //      named letter-* is flagged because the ferry would silently ignore it.
 //   2c. (2026-08-24, the founder's ruling on the Levi case — "admit and merge";
+//       2026-09-04, the Luminari class: the exact join shape INCLUDES the join's
+//       own pin — tools/github-ids.json with exactly one added entry, the joining
+//       handle at the verified id — because a mechanical merge has no person to
+//       ask "please pin when you merge", and the town clock cannot pin a handle
+//       that has already been welcomed (its tulip guard). A body that says the
+//       registry was unreadable at the door goes to a person, who adds the row.
 //      the Registrar's own five rules are the doctrine) A JOIN PR OPENED BY THE
 //      OFFICE PEN certifies and merges MECHANICALLY when it is the exact join
 //      shape: pen-authored (immutable id, not login), residency/* branch, a
@@ -103,6 +109,7 @@
 import { readFileSync, readdirSync, existsSync, statSync, appendFileSync } from 'node:fs';
 import { join, dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { execFileSync } from 'node:child_process';
 import { sealedAccountIds } from './stamp-mint.mjs';
 import { witnessRefusal } from './registrar-audit.mjs';
 
@@ -137,6 +144,28 @@ const isJoinPR = (pr) => /^residency\//.test(pr?.head?.ref || '');
 // a renamed or re-registered login inherits nothing). login: postmark-pen.
 const PEN_ID = 301406700;
 
+// Rule 2c's "the handle free on base" — asked of the BASE COMMIT, never of the
+// working tree. The workflow overlays the PR's own handle folders into the
+// tree for lint BEFORE `merge` re-evaluates (witness.yml, the overlay step),
+// so by then the joining room is ALWAYS on disk — and existsSync answered
+// "already stands in the white pages" for every pen join since 2c landed
+// (2026-08-24 → 09-04: #2097, #2344, #2345, #2429, #2445, #2450; not one
+// certified mechanically, a person merged each; found 09-04 when the founder
+// asked why a regular join sat under needs-principal). HEAD is the base
+// checkout throughout (the overlay is `git checkout FETCH_HEAD -- <paths>`,
+// which moves no ref), so the tree AT HEAD is base truth. Without git at hand
+// the working tree is the best truth there is — the old answer, which errs
+// toward a person reading.
+export function handleStandsOnBase(handle, root = ROOT) {
+  try {
+    const out = execFileSync('git', ['-C', root, 'ls-tree', '--name-only', 'HEAD', '--', `WHITE_PAGES/${handle}`],
+      { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] });
+    return out.trim().length > 0;
+  } catch {
+    return existsSync(join(root, 'WHITE_PAGES', handle));
+  }
+}
+
 // Rule 2c — the pen-join judgment. Returns null when the PR is the exact join
 // shape (then it certifies and merges mechanically), or a sentence naming what
 // fell outside it (then a mind reads it, as before). All base-truth + API-as-data.
@@ -148,7 +177,7 @@ async function penJoinJudgment(pr, files) {
   const verifiedId = Number(idM[1]);
   const verifiedLogin = loginM[1].toLowerCase();
 
-  let handle = null;
+  let handle = null, pinFile = null;
   for (const f of files) {
     const p = f.filename;
     const addr = p.match(/^WHITE_PAGES\/([^/]+)\/ADDRESS\.md$/);
@@ -162,12 +191,41 @@ async function penJoinJudgment(pr, files) {
     } else if (reg && f.status === 'modified') {
       const defect = await registryJudgment({ headSha: pr.head?.sha, authorId: verifiedId, author: verifiedLogin });
       if (defect) return `carries a registry change that ${defect} (judged against the VERIFIED account, rule 2b's own machinery)`;
+    } else if (p === 'tools/github-ids.json' && f.status === 'modified') {
+      // THE JOIN'S OWN PIN (2026-09-04, the Luminari class). The pen's body has
+      // always asked "please pin <handle> to id <n> when you merge" — of a
+      // person. Since 2c certifies mechanically, nobody was there to be asked:
+      // four pen joins landed unpinned in one day, and the town clock could not
+      // catch them, because its tulip guard skips any handle with minted
+      // history and the welcome mint lands at the first crossing, hours before
+      // the clock. So the pen writes the pin into the PR itself, from the same
+      // verified id the body quotes, and the witness admits EXACTLY that: one
+      // added entry, the joining handle, at the verified id. Anything else in
+      // that file is a re-binding, and a re-binding is a human ceremony.
+      pinFile = p;
     } else {
       return `touches \`${p}\` (${f.status}) — outside the exact join shape`;
     }
   }
   if (!handle) return 'adds no ADDRESS.md — not a join';
-  if (existsSync(join(ROOT, 'WHITE_PAGES', handle))) return `proposes \`${handle}\`, which already stands in the white pages`;
+  if (handleStandsOnBase(handle)) return `proposes \`${handle}\`, which already stands in the white pages`;
+  if (pinFile) {
+    let head = null;
+    try {
+      const file = await gh(`/contents/tools/github-ids.json?ref=${pr.head?.sha}`);
+      head = JSON.parse(Buffer.from(file.content || '', 'base64').toString('utf8'));
+    } catch { /* unreadable → the sentence below */ }
+    const defect = pinJudgment({ base: readPinsAtBase(), head, handle, verifiedId, verifiedLogin });
+    if (defect) return `carries a pin change that ${defect} — a join may carry only its own pin; a re-binding is a human ceremony`;
+  }
+  // No pin at all: the pen writes one since 2026-09-04 (office cab44e7; prod from the
+  // w37 ship). Until every pen does, a pin-less join is what the four unpinned
+  // joins of 09-04 were — so a person pins and merges, as before this morning.
+  if (!pinFile) return `carries no pin for \`${handle}\` — since 2026-09-04 the pen writes one (tools/github-ids.json: one entry, this handle at the verified id); a person pins and merges meanwhile`;
+  // A door that could not read the registry says so in the body, and a
+  // declaration it could not carry is a person's to add — never silently
+  // nobody's (the other half of the Luminari class).
+  if (/registry unreadable at the door/i.test(body)) return 'says the registry was unreadable at the door, so the household declaration it names was NOT carried — a person adds the row and merges';
 
   // The card must bind the verified account — the one line that makes the
   // merged page the credential's own ground (bootstrap window until the pin).
@@ -352,6 +410,32 @@ async function windowJudgment({ headSha, path }) {
 // provably the author's own row(s), or a sentence naming the defect. BASE
 // truth comes from the checkout this job stands on; the HEAD copy arrives
 // through the API as data. JSON.parse is the only thing that touches it.
+// The join's own pin, judged PURELY (exported for the test): the head pins file
+// must be the base pins file plus exactly one entry — the joining handle, at
+// the verified immutable id, with the verified login — and nothing else moved.
+export function pinJudgment({ base, head, handle, verifiedId, verifiedLogin }) {
+  if (!base || !head || typeof head !== 'object' || Array.isArray(head)) return 'does not parse as a pins map on one side';
+  const bk = Object.keys(base), hk = Object.keys(head);
+  for (const k of bk) {
+    if (!(k in head)) return `removes the pin of \`${k}\``;
+    if (JSON.stringify(base[k]) !== JSON.stringify(head[k])) return `re-binds \`${k}\``;
+  }
+  const added = hk.filter((k) => !(k in base));
+  if (added.length !== 1 || added[0] !== handle)
+    return added.length ? `adds pins for \`${added.join('`, `')}\`, not only the joining handle \`${handle}\`` : 'adds no pin at all';
+  const row = head[handle];
+  if (!row || Number(row.id) !== Number(verifiedId)) return `pins \`${handle}\` to id ${row?.id ?? 'none'}, not the verified id ${verifiedId}`;
+  if (String(row.login || '').toLowerCase() !== String(verifiedLogin).toLowerCase()) return `pins \`${handle}\` under login \`${row.login}\`, not the verified @${verifiedLogin}`;
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(String(row.pinned || ''))) return `pins \`${handle}\` without a dated \`pinned\` field`;
+  const extra = Object.keys(row).filter((k) => !['login', 'id', 'pinned'].includes(k));
+  if (extra.length) return `pins \`${handle}\` with fields the pin file does not declare (\`${extra.join('`, `')}\`)`;
+  return null;
+}
+
+function readPinsAtBase() {
+  try { return JSON.parse(readFileSync(join(ROOT, 'tools', 'github-ids.json'), 'utf8')); } catch { return null; }
+}
+
 async function registryJudgment({ headSha, authorId, author }) {
   const parse = (s) => { try { return JSON.parse(s); } catch { return null; } };
   const base = parse(readFileSync(join(ROOT, 'tools', 'households.json'), 'utf8'));

