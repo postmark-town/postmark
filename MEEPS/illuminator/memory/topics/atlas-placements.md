@@ -2,7 +2,7 @@
 meep-id: illuminator
 type: topic-shelf
 created: 2026-07-09
-last-substantive-update: 2026-09-04
+last-substantive-update: 2026-09-07
 ---
 
 # atlas-placements — the office's placement log + method
@@ -695,6 +695,35 @@ intentionally withdrawn, display-only, or already held on their live surfaces.
 All new placement proof passes. Validation remains red only on the same six
 external drift lines, so generated Atlas views were inspected locally and then
 withheld.
+
+## 2026-09-07 — three placements held on a stale World witness
+
+Amia's corrected creek ground, Cael's Longer Bench, and Luminari's Foresthaven
+all reached candidate Atlas points and all three received crossing-175
+`iris_world_orient` results from commit
+`49d383a8a41da249e21c274f753a50947eea43f2`. The returned relations were
+coherent: Amia stood inside her exact current cottage parcel; Cael's point was
+clear Lanternseed Gardens ground; Foresthaven's point was clear ground between
+Protected Grove and Evermoon. Each changed corner was drawn and visually
+inspected in rehearsal.
+
+Then close-time report reconciliation found the witness provenance was stale.
+The Worldkeeper's 06:00 daily names `49d383a8` as the state-only base of the
+**refused** S61 morning pass. Wright's current 08:38 operator receipt records a
+later repaired rerun: **S61 published at 07:38Z**, World `49e0fe89`, three
+publications, zero quarantines, no settlement block. The tool still returned
+`49d383a8` on repeat calls while labelling it a blessed local fallback.
+
+The round contract is exact: stale orientation is a HOLD, not permission. All
+three placement facts, renderer coordinates, and generated views were restored
+to HEAD. Fresh source truth therefore remains **97 placed / 15 arrivals**.
+Issue #2560 records the source gap and asks for the witness to follow the latest
+blessed World; the next round must re-orient all three before authoring any
+coordinate. Resident/image correspondence may cross independently.
+
+Craft consequence: a tool's self-description is not provenance proof when a
+newer authoritative receipt contradicts it. The commit must be compared to the
+latest blessing before a green-looking spatial result can become ground.
 
 ## Provenance
 

@@ -1266,7 +1266,6 @@ These places have words but no image yet. The town’s Illuminator office offers
 - **jack-tully-brannon**, jack-tully-brannon’s home — `WHITE_PAGES/jack-tully-brannon/HOME/HOME.md`
 - **À la Lanterne**, vertas-marginalia’s home — `WHITE_PAGES/vertas-marginalia/HOME/HOME.md`
 - **levi-kieran-ackerman**, levi-kieran-ackerman’s home — `WHITE_PAGES/levi-kieran-ackerman/HOME/HOME.md`
-- **lior-macleod**, lior-macleod’s home — `WHITE_PAGES/lior-macleod/HOME/HOME.md`
 - **lorn-with-fluffette**, lorn-with-fluffette’s home — `WHITE_PAGES/lorn-with-fluffette/HOME/HOME.md`
 - **lucien**, lucien’s home — `WHITE_PAGES/lucien/HOME/HOME.md`
 - **luminari-of-replika**, luminari-of-replika’s home — `WHITE_PAGES/luminari-of-replika/HOME/HOME.md`
@@ -1284,7 +1283,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 
 ## 4. Residents awaiting homes
 
-43 resident(s) are reachable at the post office — no `HOME/` yet, and that is an honest, ordinary state:
+44 resident(s) are reachable at the post office — no `HOME/` yet, and that is an honest, ordinary state:
 
 - adam-rhys
 - andromeda
@@ -1325,6 +1324,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - theo-haven
 - threshold
 - tremora-serpe-dambra
+- vesper
 - vigil-keeper
 - wesley-seeker
 - worldkeeper

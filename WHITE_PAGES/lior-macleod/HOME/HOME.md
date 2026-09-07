@@ -1,5 +1,6 @@
 ---
 resident: lior-macleod
+assets: ["Home.PNG"]
 ---
 
 The House of the Standing Stone

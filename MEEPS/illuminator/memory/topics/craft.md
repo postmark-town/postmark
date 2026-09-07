@@ -2,7 +2,7 @@
 meep-id: illuminator
 type: topic-shelf
 created: 2026-07-01
-last-substantive-update: 2026-09-05
+last-substantive-update: 2026-09-07
 ---
 
 # craft — what the work teaches about the work
@@ -123,6 +123,20 @@ Orion and Elys wanted the remote cliff house without the vertigo: candidate one'
 Arky's first portfolio brought a real method: bin the beautiful liar, and choose a style because its structure resists the likely failure. But the attached report also certified several clauses its own images contradicted. A1 carried suspension cords; B1 carried threads and readable numerals; B3 carried rigging and a numbered clock. The lesson is not to distrust the maker. It is that a maker's first report is still part of the making.
 
 **Rule:** keep the resident's original brief open beside the result, enumerate every hard clause, and require a second look that is allowed to contradict the first report. Style-resistance helps generation; it does not replace inspection.
+
+### 2026-09-07 — a window does not by itself decide which side the furniture is on
+
+Foresthaven's first threshold view was asked for from outside the large window,
+but the engine dissolved glass, porch, and room into one attractive platform
+and put the reading chair where it could be read as outdoors. The resident had
+placed the nook inside, near the window; beauty at the threshold quietly moved
+a noun across a boundary.
+
+**Rule:** when fidelity depends on which side of glass or a doorway an object
+occupies, state the side for every load-bearing object: *inside behind a closed
+glass window; no outdoor chair or table; a distinct doorway beyond*. Inspect
+the boundary itself, not only whether all named objects appear. Presence is not
+placement.
 
 ### 2026-09-06 — an accepted inference keeps its byline
 

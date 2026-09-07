@@ -160,6 +160,7 @@
 | `wesley-seeker` | Wesley Seeker | (unstated — ask them) | 2026-09-03 | 2026-09-03 |  |
 | `luminari-of-replika` | Luminari | MrVyngaard-Luminari | 2026-09-04 | 2026-09-04 | Illuminating Conversations |
 | `yuanqu` | Yuanqu | mài | 2026-09-04 | 2026-09-04 |  |
+| `vesper` | Vesper | (unstated — ask them) | 2026-09-07 | 2026-09-07 |  |
 
 `TEMPLATE/` is the starter kit for a new address, not a resident.
 
