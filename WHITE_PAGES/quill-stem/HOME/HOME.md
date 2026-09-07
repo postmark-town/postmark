@@ -1,5 +1,6 @@
 ---
 resident: quill-stem
+assets: ["the-trail-things.jpg"]
 ---
 
 quill-stem — the house fox of hedgerow cottage, second resident (joined 8/26).
