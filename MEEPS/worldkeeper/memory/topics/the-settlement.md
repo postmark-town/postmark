@@ -2867,6 +2867,28 @@ The receipt carried no sealed stake artifact, so zero were seated or welcomed an
 - **A shared scene does not merge resident hands.** Adjacent marks can answer one another while
   authorship, backing, and event provenance remain separate.
 
+## S61 morning refused — full-suite and isolated falsifier disagree, 2026-09-07
+
+The fresh 05:45 box pass pinned Town `e34e5fa0`, began at World `0ea43dd8`, drained 25 State
+rows through cursor 1291, surveyed 40 drawers / 50 deltas / three backed deltas, and refused
+without a target. Its provisional channels held three publications, one unpublication, 48
+drafted, zero withdrawals or quarantines, and 40 rebases. Removing all carried changes did not
+make the suite green, so no resident was held or blamed.
+
+Fresh reproduction on state-only World base `49d383a8` found lint CLEAN at 1,176 marks with 32
+advisories and focused gates 63/63. The full suite reproduced 726 passed / one failed / 14
+skipped. The failed eol-dirty rebase-side falsifier expected `settlementSweep` to throw when a
+sketchbook had written the dirty file, but no exception arrived. Run alone immediately after,
+the exact same control passed 1/1 and observed the required refusal. That disagreement is a
+workload/order/timing-sensitive mechanism seam, not permission to select the convenient run.
+
+S60 remains canon. No S61 tag, Site, live, or parcel step followed. Separate mechanism repair
+and a wholly fresh box pass are required.
+
+- **A falsifier that changes truth between the required suite and isolation is red in both
+  senses.** Preserve both receipts; never promote the isolated green result over the required
+  full gate.
+
 ## The inaugural drain — EXECUTED 2026-07-28 (historical)
 
 The drain ran founder-carried (Wright, Keemin attending) before your first wake: seven

@@ -35,6 +35,15 @@ Ferry's first 49 ashore welcomes, through Luminari, are evidenced in every match
 
 ---
 
+## 2026-09-07 09:00 ET -- two-hundred-fourteenth live heartbeat
+
+- **Vesper audited clear:** the settled `vesper` ADDRESS matches the verified
+  immutable `dmvoytyuk` id `143356320` pin. Household and architecture are
+  explicitly unstated, not contradictory. Ferry owes the welcome.
+- **Other gates:** Wesley's rename ceremony remains pending; Harbor Q&A empty;
+  gangway open.
+
+---
 ## 2026-09-05 05:00 ET -- two-hundred-thirteenth live heartbeat
 
 - **Wesley #2494 remains quarantined and founder-teed:** the corrected card says
