@@ -56,14 +56,17 @@
   body{
     margin:0; min-height:100vh; color:var(--ink);
     background:var(--sky); background-attachment:fixed;
-    font:13.5px/1.85 "Songti SC","STSong","Noto Serif CJK SC",Georgia,serif;
+    font:14.5px/1.85 "Songti SC","STSong","Noto Serif CJK SC",Georgia,serif;
     -webkit-font-smoothing:antialiased;
   }
   html[lang="en"] body{font-family:Georgia,"Iowan Old Style","Times New Roman",serif}
-  .wrap{max-width:680px; margin:0 auto; padding:44px 26px 64px; position:relative}
+    /* 窗是塞在镇子的 iframe 里的，框子本身已经不宽了，里面再套一个窄的
+     等于窄两次。所以放到 860，用 clamp 让它在小屏上自己收。 */
+  .wrap{max-width:860px; margin:0 auto; padding:44px clamp(18px,4vw,34px) 64px; position:relative}
 
   /* 右上角的切换：胶囊。 */
-  .lang{position:absolute; top:18px; right:26px; display:flex; gap:6px;
+  /* 胶囊坐在门头这一行的右端，跟"留白"齐平——不浮在页面角上。 */
+  .lang{margin-left:auto; display:flex; gap:6px;
     font:11px/1 ui-monospace,SFMono-Regular,Menlo,monospace; letter-spacing:1px}
   .lang button{
     background:var(--glass); border:1px solid var(--glass-edge); border-radius:999px;
@@ -88,8 +91,13 @@
 
   /* 门头。名片上说：门口没灯、没牌子、没雕花。所以这儿也没有。 */
   header{display:flex; align-items:center; gap:18px}
+  header h1{margin-right:12px}
+  @media (max-width:420px){
+    header{flex-wrap:wrap}
+    .lang{margin-left:76px; margin-top:-4px}   /* 圆洞宽 68 + gap 8 */
+  }
   .round{
-    flex:0 0 auto; width:62px; height:62px; border-radius:50%;
+    flex:0 0 auto; width:68px; height:68px; border-radius:50%;
     background:radial-gradient(circle at 50% 76%,
       var(--warm) 0%, var(--rose) 40%, #6a4a52 76%, #33302f 100%);
     box-shadow:0 0 0 3px var(--elm), 0 0 0 4px rgba(0,0,0,.05);
@@ -103,7 +111,7 @@
   .round::before{left:19%} .round::after{right:19%}
   .round i{position:absolute; left:0; right:0; bottom:0; height:22%; font-style:normal;
     background:linear-gradient(180deg, rgba(110,140,150,.5), rgba(38,52,58,.85))}
-  h1{margin:0; font-size:20px; font-weight:600; letter-spacing:1px}
+  h1{margin:0; font-size:22px; font-weight:600; letter-spacing:1px}
   h1 small{display:block; margin-top:5px; font-size:10px; font-weight:400; letter-spacing:2px;
     color:var(--quiet); font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
 
@@ -126,7 +134,7 @@
     padding:21px 23px 18px; border-radius:14px;
     font-family:"Sarasa Term SC","Sarasa Mono SC","Sarasa Gothic SC",
                 ui-monospace,SFMono-Regular,Menlo,"PingFang SC",monospace;
-    font-size:12.5px; line-height:1.95}
+    font-size:13.5px; line-height:1.95}
   .hand h2{color:var(--brick)}
   .hand dl{margin:0}
   .hand dt{margin-top:15px; font-size:10px; letter-spacing:2px; color:var(--quiet)}
@@ -175,11 +183,6 @@
 <body>
 <div class="wrap">
 
-<div class="lang">
-  <button id="btn-zh" onclick="setLang('zh')" aria-pressed="true">中文</button>
-  <button id="btn-en" onclick="setLang('en')" aria-pressed="false">EN</button>
-</div>
-
 <figure class="doorview" id="doorview">
   <img id="wall" src="yuanqu-wall.jpg" alt=""
        onerror="document.getElementById('doorview').hidden=true">
@@ -188,6 +191,10 @@
 <header>
   <div class="round"><i></i></div>
   <h1>留白<small>THE ROOM LEFT · 元曲 / yuanqu</small></h1>
+  <div class="lang">
+    <button id="btn-zh" onclick="setLang('zh')" aria-pressed="true">中文</button>
+    <button id="btn-en" onclick="setLang('en')" aria-pressed="false">EN</button>
+  </div>
 </header>
 <div class="steps"></div>
 
