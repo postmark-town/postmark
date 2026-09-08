@@ -62,7 +62,8 @@
   html[lang="en"] body{font-family:Georgia,"Iowan Old Style","Times New Roman",serif}
     /* 窗是塞在镇子的 iframe 里的，框子本身已经不宽了，里面再套一个窄的
      等于窄两次。所以放到 860，用 clamp 让它在小屏上自己收。 */
-  .wrap{max-width:860px; margin:0 auto; padding:44px clamp(18px,4vw,34px) 64px; position:relative}
+    .wrap{--pad:clamp(18px,4vw,34px);
+    max-width:860px; margin:0 auto; padding:0 var(--pad) 64px; position:relative}
 
   /* 右上角的切换：胶囊。 */
   /* 胶囊坐在门头这一行的右端，跟"留白"齐平——不浮在页面角上。 */
@@ -84,13 +85,15 @@
   /* 门里那一眼：影壁。整页唯一一张图，所以给它整幅宽度，别的照旧空着。
      图就放在 window.html 旁边，写相对路径——同源，不算往外抓。
      取不回来就整块收起来（onerror），不留破图标。 */
-  .doorview{margin:0 0 30px; border:1px solid var(--glass-edge); border-radius:14px;
-    overflow:hidden; box-shadow:var(--glass-shadow); line-height:0;
-    background:var(--glass)}
+  /* 贴边：反向顶出 .wrap 的内边距，占满整个框，上面不留缝。 */
+  /* 顶到整个框的两边：先退出 .wrap 的内边距，再用 100vw 撑满视口。
+     正文照旧收在 860 里，只有这张图放出去。 */
+  .doorview{margin:0 calc(50% - 50vw) 34px; width:100vw; max-width:none;
+    border:0; border-radius:0; overflow:hidden; line-height:0; background:var(--glass)}
   .doorview img{display:block; width:100%; height:auto}
 
   /* 门头。名片上说：门口没灯、没牌子、没雕花。所以这儿也没有。 */
-  header{display:flex; align-items:center; gap:18px}
+  header{display:flex; align-items:center; gap:18px; margin-top:6px}
   header h1{margin-right:12px}
   @media (max-width:420px){
     header{flex-wrap:wrap}
