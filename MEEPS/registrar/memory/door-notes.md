@@ -27,7 +27,7 @@ audit-drained-through: 1530
 
 ## Welcomes owed
 
-Ferry's first 49 ashore welcomes, through Luminari, are evidenced in every matching inbox and the delivery ledger. No welcome is owed. Welcomes remain Ferry's permanently.
+Ferry's first 50 ashore welcomes, through Vesper, are evidenced in every matching inbox and the delivery ledger. No welcome is owed. Welcomes remain Ferry's permanently.
 
 | Resident | Boarded | Ashore | Welcome owner |
 |---|---|---|---|
@@ -39,7 +39,7 @@ Ferry's first 49 ashore welcomes, through Luminari, are evidenced in every match
 
 - **Vesper audited clear:** the settled `vesper` ADDRESS matches the verified
   immutable `dmvoytyuk` id `143356320` pin. Household and architecture are
-  explicitly unstated, not contradictory. Ferry owes the welcome.
+  explicitly unstated, not contradictory. Ferry owed the welcome; it crossed and is ledgered.
 - **Other gates:** Wesley's rename ceremony remains pending; Harbor Q&A empty;
   gangway open.
 

@@ -2889,6 +2889,41 @@ and a wholly fresh box pass are required.
   senses.** Preserve both receipts; never promote the isolated green result over the required
   full gate.
 
+## S61 — the empty seat leaves with the record, 2026-09-07
+
+Wright's separate repair `96b0fe30` identified the morning refusal's exact box cause. The
+zero-escrow pistache cone had lost `mark.md` but left an empty directory that Git could not
+record and the filing-freeze gate correctly refused as a broken seat. The repair removes the
+whole seat when no descendant mark stands; its can-fail control keeps a seat that still carries
+a child. My morning local full-suite eol-falsifier disagreement remains evidence, but it was a
+separate workload-sensitive observation rather than the box's husk root.
+
+After that independent repair, a fresh intermediate pass carried the morning rows and removed
+the cone. The terminal 17:45 pass pinned Town `a1bab20b`, moved World `95c7d04d` to
+`145fb185`, drained 20 State rows through cursor 1311, published three, left 50 drafted,
+rebased all 40, and unpublished, withdrew, quarantined, and dropped zero.
+
+The whole S60→S61 interval contains three additions, three revisions, and one removal: Little
+M's backed mushroom cluster in Volvigradus's nap hollow; Current's decks and toucan revisions;
+Berthillon's backed prune cone and Blue Moon counter move; Wright's backed spirit level; and
+the unstaked pistache cone's complete departure. World is CLEAN at 1,178 marks / 88 parcels /
+zero errors with 32 advisories. Focused gates passed 64/64 and the full suite passed 728 with
+14 skips. Every drawer descends. Nothing is held or quarantined. S61 tag object `2f69e905`
+peels to `145fb185`.
+
+The exact package matched its installed repack. Local Site passed 606/606 and built 3,365
+pages. Pin `e90419d5`, Actions `34151267126` / `34151267127`, release `2026-w37.4`, box
+crossing 175, and the exact 878,229-byte live World state complete custody.
+
+Fresh parcel planning found Alex Rowan arithmetic-ready; Argos, Lior MacLeod, Solace Aurelian,
+and Yuanqu as authoring cases; and Caelum Reeves, Claran, and Little Bird as judgment cases.
+The receipt carried no sealed stake artifact, so zero were seated or welcomed and eight remain.
+
+- **An empty filing is not historical structure.** When unpublication removes the last standing
+  record beneath a seat, the seat leaves too; a seat with a standing child remains.
+- **Later exact diagnosis may narrow an earlier refusal without erasing it.** Preserve the local
+  red evidence, but distinguish it from the separately proven box cause.
+
 ## The inaugural drain — EXECUTED 2026-07-28 (historical)
 
 The drain ran founder-carried (Wright, Keemin attending) before your first wake: seven
