@@ -35,6 +35,7 @@ import {
   readdirSync,
   readFileSync,
   renameSync,
+  rmSync,
   statSync,
   writeFileSync,
 } from 'node:fs';
@@ -133,16 +134,51 @@ function rel(repo, p) {
 
 // --- git helpers ---------------------------------------------------------
 
-function git(repo, args) {
+function git(repo, args, stdin = null) {
   const result = spawnSync('git', args, {
     cwd: repo,
     encoding: 'utf8',
-    stdio: ['ignore', 'pipe', 'pipe'],
+    // stdin is 'pipe' only when this call actually feeds it. `spawnSync`
+    // ignores `input` when stdio[0] is 'ignore', silently — a pathspec list fed
+    // to a closed stdin would stage NOTHING and commit cleanly, which is the
+    // quietest possible version of the bug this helper exists to kill.
+    stdio: [stdin === null ? 'ignore' : 'pipe', 'pipe', 'pipe'],
+    ...(stdin === null ? {} : { input: stdin }),
+    maxBuffer: 64 * 1024 * 1024,
   });
   if (result.error) {
     throw result.error;
   }
   return result;
+}
+
+// ── THE CROSSING'S ARGV CEILING (2026-09-10, the 10x read) ──────────────────
+//
+// Every delivered path used to ride in as one argument to `git add`. Measured
+// on the 10x load lane: `spawnSync` throws `ENAMETOOLONG` at ~476 paths, which
+// is ~179 delivered letters in one crossing (a delivery touches two paths — the
+// vacated outbox file and the new inbox file — plus the ledger). Today's
+// crossings carry 60–100 letters. That is a 2–3× ceiling, not a 10× one, and
+// the town is not the only thing that grows: one outreach mail-out spends it.
+//
+// The ceiling is the operating system's, not git's — Windows caps a whole
+// command line at 32,767 characters, Linux at `getconf ARG_MAX` — so no amount
+// of chunking makes argv the right channel for a list that grows with the town.
+// `--pathspec-from-file=-` reads the list from STDIN, which has no such cap;
+// `--pathspec-file-nul` makes the separator NUL, so a path containing a space,
+// a quote or a newline cannot be split into two pathspecs.
+//
+// NUL-separated pathspecs are also LITERAL: git does not apply glob or negation
+// magic to them, which is what `--` used to guarantee positionally. So a room
+// named `*` (or a letter slug with a leading `!`) is a path here and nothing
+// else — the same promise, kept by a stronger mechanism.
+function gitAddPaths(repo, paths) {
+  // Scoped add of ONLY touched files. NEVER `git add -A`.
+  return git(
+    repo,
+    ['add', '--pathspec-from-file=-', '--pathspec-file-nul'],
+    `${paths.join('\0')}\0`,
+  );
 }
 
 function hasRemote(repo) {
@@ -167,16 +203,22 @@ function gitPull(repo, options) {
   }
 }
 
-function gitCommitPush(repo, options, paths, message) {
+// ── THE TWO HALVES ARE SEPARATE BECAUSE THEIR FAILURES ARE ─────────────────
+//
+// A failed COMMIT means the crossing never entered the repo, and the moved
+// letters have to go back (see `undo` in main). A failed PUSH means the crossing
+// IS in the repo, locally, and the next run carries it — rolling the files back
+// there would delete mail that is already committed. Same throw, opposite
+// remedy, so they cannot stay in one function.
+function gitStageAndCommit(repo, options, paths, message) {
   if (options.noGit) {
     log('git: --no-git — skipping commit/push');
-    return;
+    return false;
   }
   if (paths.length === 0) {
-    return;
+    return false;
   }
-  // Scoped add of ONLY touched files. NEVER `git add -A`.
-  const add = git(repo, ['add', '--', ...paths]);
+  const add = gitAddPaths(repo, paths);
   if (add.status !== 0) {
     throw new Error(`git add failed:\n${add.stderr || add.stdout}`);
   }
@@ -185,7 +227,10 @@ function gitCommitPush(repo, options, paths, message) {
     throw new Error(`git commit failed:\n${commit.stderr || commit.stdout}`);
   }
   log(`git: committed — ${message}`);
+  return true;
+}
 
+function gitPushRetry(repo) {
   if (!hasRemote(repo)) {
     log('git: no remote — skipping push');
     return;
@@ -220,6 +265,69 @@ function gitCommitPush(repo, options, paths, message) {
       throw new Error(`git pull --rebase failed after a rejected push:\n${rebase.stderr || rebase.stdout}`);
     }
   }
+}
+
+// --- the crossing's undo journal -----------------------------------------
+//
+// ── WHY THE MOVE IS REVERSIBLE RATHER THAN LAST (2026-09-10, the 10x read) ──
+//
+// The read named the ordering defect beside the argv one: the crossing MOVES
+// the letters, APPENDS the ledger, and only then commits — so an `add` or a
+// `commit` that throws leaves the town's mail delivered on disk and absent from
+// the repo. That is the worst of the two failure shapes, because it is quiet:
+// the ledger on disk now says those ids are delivered, so the NEXT crossing
+// dedupes them away and never re-carries them, while the working tree's changes
+// belong to no commit and the site and the office index never see the mail.
+//
+// "Make the add+commit the last step" was the other option in the read, and it
+// is already true — steps 4 and 5 of `main` are in exactly that order. The
+// moves have to happen before the commit because there is nothing to commit
+// until they have. So the fix that is actually available is the second one:
+// make the move REVERSIBLE, and undo it when the commit is what failed.
+//
+// UNDONE ON A FAILED COMMIT, NEVER ON A FAILED PUSH — see `gitStageAndCommit`.
+// The undo runs in reverse order so a rename and a later write to the same path
+// unwind in the order they were made.
+//
+// An `mkdir` is deliberately NOT journalled: git does not track empty
+// directories, so an inbox/ left behind by an undone delivery is invisible to
+// the repo and correct for the room anyway.
+function newJournal() {
+  return [];
+}
+
+function journalRename(journal, from, to) {
+  journal.push({ kind: 'rename', from, to });
+}
+
+// `prev` is captured BEFORE the write, so restoring is a write of the old bytes
+// (or a delete when the file did not exist). Read as a Buffer, never as utf8 +
+// re-encode: a bounce note is authored text, but the ledger and a folder
+// letter's enclosures are not this function's business to transcode.
+function journalWrite(journal, path) {
+  const prev = existsSync(path) ? readFileSync(path) : null;
+  journal.push({ kind: 'write', path, prev });
+}
+
+function undoJournal(journal) {
+  let undone = 0;
+  for (let i = journal.length - 1; i >= 0; i -= 1) {
+    const entry = journal[i];
+    try {
+      if (entry.kind === 'rename') {
+        if (existsSync(entry.to)) { renameSync(entry.to, entry.from); undone += 1; }
+      } else if (entry.prev === null) {
+        if (existsSync(entry.path)) { rmSync(entry.path, { recursive: true, force: true }); undone += 1; }
+      } else {
+        writeFileSync(entry.path, entry.prev); undone += 1;
+      }
+    } catch (error) {
+      // A rollback that throws halfway is worse than one that reports what it
+      // could not put back: name the path and keep unwinding the rest.
+      log(`undo: FAILED to restore ${entry.kind === 'rename' ? entry.from : entry.path} — ${error.message}`);
+    }
+  }
+  return undone;
 }
 
 // --- directory walking ---------------------------------------------------
@@ -335,7 +443,7 @@ ${closing}
 
 // --- sweep (step 3) ------------------------------------------------------
 
-function sweep(repo, options, today, handles, dedupe) {
+function sweep(repo, options, today, handles, dedupe, journal) {
   const rooms = listRoomDirs(repo);
   const ledgerLines = [];
   let delivered = 0;
@@ -385,14 +493,14 @@ function sweep(repo, options, today, handles, dedupe) {
 
       if (defect) {
         bounced += handleBounce(
-          repo, options, today, room, filename, outboxPath, letterRel, defect, ledgerLines, touched, dedupe,
+          repo, options, today, room, filename, outboxPath, letterRel, defect, ledgerLines, touched, dedupe, journal,
         );
         continue;
       }
 
       // WELL-FORMED — deliver.
       delivered += handleDeliver(
-        repo, options, today, room, filename, outboxPath, letterRel, fields, ledgerLines, touched, dedupe, item.kind,
+        repo, options, today, room, filename, outboxPath, letterRel, fields, ledgerLines, touched, dedupe, item.kind, journal,
       );
     }
   }
@@ -405,6 +513,7 @@ function sweep(repo, options, today, handles, dedupe) {
     } else {
       const prev = existsSync(ledgerPath) ? readFileSync(ledgerPath, 'utf8') : '';
       const sep = prev.endsWith('\n') || prev === '' ? '' : '\n';
+      journalWrite(journal, ledgerPath);
       writeFileSync(ledgerPath, `${prev}${sep}${ledgerLines.join('\n')}\n`, 'utf8');
       touched.add(ledgerPath);
       log(`ledger: appended ${ledgerLines.length} line(s)`);
@@ -417,7 +526,7 @@ function sweep(repo, options, today, handles, dedupe) {
 // classify() — the envelope law — is imported from tools/envelope.mjs.
 
 function handleDeliver(
-  repo, options, today, room, filename, outboxPath, letterRel, fields, ledgerLines, touched, dedupe, kind,
+  repo, options, today, room, filename, outboxPath, letterRel, fields, ledgerLines, touched, dedupe, kind, journal,
 ) {
   const inboxDir = join(repo, 'WHITE_PAGES', fields.to, 'inbox');
   // Deliver under the letter's unique `id`, NOT the sender's outbox name.
@@ -455,6 +564,7 @@ function handleDeliver(
     ledgerLines.push(`- ${today} · WARN · ${fields.id} · would overwrite ${destRel}; left in outbox ${letterRel}`);
     return 0;
   }
+  journalRename(journal, outboxPath, destPath);
   renameSync(outboxPath, destPath);
   ledgerLines.push(`- ${today} · ${fields.id} · ${fields.from} → ${fields.to}${paysSeg} · thread: ${fields.thread}`);
   dedupe.deliveredIds.add(fields.id);
@@ -466,7 +576,7 @@ function handleDeliver(
 }
 
 function handleBounce(
-  repo, options, today, room, filename, outboxPath, letterRel, defect, ledgerLines, touched, dedupe,
+  repo, options, today, room, filename, outboxPath, letterRel, defect, ledgerLines, touched, dedupe, journal,
 ) {
   // sender = the room the letter sits in (authoritative for bounce routing).
   const sender = room;
@@ -495,6 +605,7 @@ function handleBounce(
   if (!existsSync(senderInbox)) {
     mkdirSync(senderInbox, { recursive: true });
   }
+  journalWrite(journal, bouncePath);
   writeFileSync(bouncePath, body, 'utf8');
 
   touched.add(bouncePath);
@@ -541,17 +652,52 @@ function main() {
   const handles = syncRegistry(repo);
 
   // Step 4: sweep + deliver/bounce + ledger.
-  const { delivered, bounced, touched } = sweep(repo, options, today, handles, dedupe);
+  // The journal rides the sweep so step 5 can put the disk back if the crossing
+  // never makes it into a commit — see the undo journal's own note above.
+  const journal = newJournal();
+  const { delivered, bounced, touched } = sweep(repo, options, today, handles, dedupe, journal);
 
-  // Step 5: scoped commit + push.
+  // Step 5: scoped commit, THEN push.
   if (!options.dryRun && (delivered > 0 || bounced > 0)) {
     const relPaths = touched.map(p => rel(repo, p));
-    gitCommitPush(
-      repo,
-      options,
-      relPaths,
-      `ferry: ${delivered} delivered, ${bounced} bounced (${today})`,
-    );
+    let committed = false;
+    try {
+      committed = gitStageAndCommit(
+        repo,
+        options,
+        relPaths,
+        `ferry: ${delivered} delivered, ${bounced} bounced (${today})`,
+      );
+    } catch (error) {
+      // The crossing never entered the repo. Put the town back the way it was
+      // found, so the ledger on disk stops claiming a delivery the repo never
+      // saw — and so the NEXT crossing carries this mail instead of deduping it
+      // away against a line nobody committed.
+      const undone = undoJournal(journal);
+      // THE INDEX IS PART OF "THE WAY IT WAS FOUND", and forgetting it makes
+      // the rollback worse than none: the `add` succeeded, so the index already
+      // records the delivery as a rename. Restore the files and stop there and
+      // the next crossing moves the same letter out of a working tree git no
+      // longer has an index entry for — `git add` then refuses the whole
+      // crossing with `pathspec … did not match any files`, and does so every
+      // twelve hours forever. Found by this lane's own falsifier, which ran the
+      // recovery crossing rather than stopping at "the letter is back".
+      // A SCOPED reset: only the paths this crossing staged, never a bare
+      // `git reset`, for the same reason the add is scoped.
+      if (!options.noGit) {
+        const unstage = git(repo, ['reset', '-q', '--pathspec-from-file=-', '--pathspec-file-nul'],
+          `${relPaths.join('\0')}\0`);
+        if (unstage.status !== 0) {
+          log(`undo: FAILED to unstage — ${(unstage.stderr || unstage.stdout).trim()}`);
+        }
+      }
+      log(`undo: the commit failed — ${undone} filesystem change(s) rolled back; no mail was delivered this crossing`);
+      throw error;
+    }
+    // PAST THIS LINE THE JOURNAL IS SPENT. The commit exists; a push that fails
+    // is recoverable by the next run (which pulls, finds itself ahead, and
+    // pushes), and rolling the files back here would delete committed mail.
+    if (committed) gitPushRetry(repo);
   }
 
   log(`ferry: done — ${delivered} delivered, ${bounced} bounced`);
