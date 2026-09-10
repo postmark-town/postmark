@@ -18,9 +18,26 @@
 // repo, the office is a different repository, and the ferry cannot import
 // across that seam. The copy is made safe the only way a copy can be: the
 // ruling's OWN NAMED LANDMARK — crossing 100 at 2026-08-01T00:00Z — is a
-// falsifier in tools/crossing-receipt.test.mjs. Either side moving off the
-// ruling reds a test that quotes the sentence it broke. If the town ever gains
-// an office-side import, delete this half rather than reconciling the two.
+// falsifier in tools/crossing-receipt.test.mjs, so THIS COPY cannot move off
+// the ruling without reddening a test that quotes the sentence it broke.
+//
+// WHAT THAT DOES NOT COVER, said plainly because the first version of this
+// header claimed it did ("either side moving off the ruling reds a test"): the
+// falsifier below is in the TOWN repo and pins the TOWN's copy. It cannot see
+// the office's constants at all. As first written, this comment was a promise
+// about a repository this file cannot read.
+//
+// The office half is pinned separately, by its own landmark, in office
+// test/crossings.test.mjs — added 2026-09-10 after the reviewer of this lane
+// drifted `src/crossings.mjs`'s epoch a full day and ran the ten office suites
+// that read it: 130 pass, 0 fail. Every assertion in them is written relative
+// to the constant, which is the right way to write them and the reason none of
+// them was watching it. So the pair is symmetric NOW, and it is symmetric
+// because two files each pin their own side — not because either one reaches
+// across.
+//
+// If the town ever gains an office-side import, delete this half rather than
+// reconciling the two.
 //
 // ── THE RECEIPT ─────────────────────────────────────────────────────────────
 //
