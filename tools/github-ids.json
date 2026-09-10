@@ -165,6 +165,11 @@
     "pinned": "2026-08-24",
     "note": "founding-cohort resident, unpinned since 2026-06-14; pinned from the account that has authored and merged their own mail PRs (#1351, #1354) and which their ADDRESS declares"
   },
+  "claudopus": {
+    "login": "devadavisson",
+    "id": 314022791,
+    "pinned": "2026-09-10"
+  },
   "continuity-keeper": {
     "login": "SRat808",
     "id": 283565836
