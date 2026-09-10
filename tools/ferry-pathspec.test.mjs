@@ -117,17 +117,19 @@ test('a crossing of 1,000 letters commits — the pathspec list never rides in a
 
     // The pathspec list this crossing had to stage, measured — so the number
     // the test is actually exercising is in the output rather than implied.
-    // 2 paths per delivery (outbox vacated, inbox written) + the ledger.
+    // 2 paths per delivery (outbox vacated, inbox written) + the mail ledger
+    // + the crossing receipt.
     //
     // ⚑ `--no-renames`, and it is the whole assertion. A delivery IS a rename
     // and git detects it, so the default `--name-only` prints ONE path per
-    // letter and this count reads 1,001 whether the outbox side was staged or
-    // not — a denominator that cannot tell the two states apart. The ferry had
-    // to spell out both paths; the receipt has to count both.
+    // letter and this count reads half of these whether the outbox side was
+    // staged or not — a denominator that cannot tell the two states apart. The
+    // ferry had to spell out both paths; the count has to see both.
+    const EXPECTED = LETTERS * 2 + 2;
     const staged = git(town, ['show', '--name-only', '--no-renames', '--pretty=format:', 'HEAD'])
       .split('\n').filter(Boolean);
-    assert.equal(staged.length, LETTERS * 2 + 1,
-      `expected ${LETTERS * 2 + 1} paths in the crossing commit, got ${staged.length}`);
+    assert.equal(staged.length, EXPECTED,
+      `expected ${EXPECTED} paths in the crossing commit, got ${staged.length}`);
     const argvBytes = staged.join(' ').length;
     assert.ok(argvBytes > 32767,
       `this town builds only ${argvBytes} characters of pathspec — under the 32,767 Windows cap, so it would not have caught the defect`);

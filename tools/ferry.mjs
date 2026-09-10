@@ -46,6 +46,9 @@ import { fileURLToPath } from 'node:url';
 // pre-merge check (tools/envelope-check.mjs) so a would-bounce letter is
 // named at the PR instead of the crossing. One source; never fork the rules.
 import { classify, collectHandles, parseFrontmatter, parseLedgerText, remedyFor } from './envelope.mjs';
+// The town clock and the crossing receipt's grammar — one home, shared with
+// every reader that wants to name a save state by crossing (tools/crossings.mjs).
+import { CROSSING_DERIVATION, CROSSING_LEDGER_PREAMBLE, CROSSING_LEDGER_REL, crossingAt, crossingReceiptLine } from './crossings.mjs';
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 const DEFAULT_REPO = resolve(SCRIPT_DIR, '..');
@@ -265,6 +268,37 @@ function gitPushRetry(repo) {
       throw new Error(`git pull --rebase failed after a rejected push:\n${rebase.stderr || rebase.stdout}`);
     }
   }
+}
+
+// --- the crossing receipt -------------------------------------------------
+//
+// One line per crossing that moved mail, naming the crossing number and the
+// town sha the crossing read. The grammar, the clock and the readers' parser
+// all live in tools/crossings.mjs — this half is only the write.
+
+function headSha(repo) {
+  const r = git(repo, ['rev-parse', 'HEAD']);
+  const sha = r.status === 0 ? r.stdout.trim() : '';
+  return /^[0-9a-f]{40}$/.test(sha) ? sha : null;
+}
+
+// The crossing this run belongs to. A `--date` replay is stamped from THAT
+// DAY'S FIRST CROSSING rather than from the wall clock — a simulation whose
+// receipts carried today's crossing number would be the exact confusion the
+// `--date` flag exists to avoid.
+function crossingOf(date) {
+  return crossingAt(date ? Date.parse(`${date}T00:00:00Z`) : Date.now());
+}
+
+function appendCrossingReceipt(repo, journal, { date, crossing, townSha, delivered, bounced }) {
+  if (!townSha) return null;
+  const path = join(repo, ...CROSSING_LEDGER_REL.split('/'));
+  const prev = existsSync(path) ? readFileSync(path, 'utf8') : CROSSING_LEDGER_PREAMBLE;
+  const sep = prev.endsWith('\n') || prev === '' ? '' : '\n';
+  journalWrite(journal, path);
+  writeFileSync(path, `${prev}${sep}${crossingReceiptLine({ date, crossing, townSha, delivered, bounced })}\n`, 'utf8');
+  log(`crossing: receipt written — crossing ${crossing} at ${townSha.slice(0, 8)}`);
+  return path;
 }
 
 // --- the crossing's undo journal -----------------------------------------
@@ -637,6 +671,18 @@ function main() {
   // Step 1: git pull.
   gitPull(repo, options);
 
+  // THE SAVE STATE THIS CROSSING READ, read HERE and nowhere later: after the
+  // pull, before a single letter has moved. A sha fetched after the sweep would
+  // be the same value today and a lie the first time anything commits in
+  // between — a stamp has to come from the same act as the answer it stamps.
+  // `null` when there is no HEAD to name (a fresh repo, a non-repo sandbox), in
+  // which case no receipt is written at all: a receipt whose whole job is to
+  // name a sha must never be written without one.
+  const townSha = headSha(repo);
+  const crossing = crossingOf(options.date);
+  if (townSha) log(`crossing: ${crossing} · town ${townSha.slice(0, 8)} (${CROSSING_DERIVATION})`);
+  else log('crossing: no HEAD to name — this run writes no crossing receipt');
+
   // Step 2: rebuild dedupe state from the ledger — the only durable state.
   const dedupe = parseLedger(repo);
   log(
@@ -657,8 +703,12 @@ function main() {
   const journal = newJournal();
   const { delivered, bounced, touched } = sweep(repo, options, today, handles, dedupe, journal);
 
-  // Step 5: scoped commit, THEN push.
+  // Step 5: the crossing receipt, then the scoped commit, THEN push.
   if (!options.dryRun && (delivered > 0 || bounced > 0)) {
+    const receiptPath = appendCrossingReceipt(repo, journal, {
+      date: today, crossing, townSha, delivered, bounced,
+    });
+    if (receiptPath) touched.push(receiptPath);
     const relPaths = touched.map(p => rel(repo, p));
     let committed = false;
     try {
