@@ -1535,6 +1535,20 @@
       "since": "2026-09-11",
       "member_of": "the-harbor",
       "declared_by": "declaration of The Familiar House through the office door (2026-09-11) — join-as-declaration, stage 1: admitted to the-harbor on conforming params with no review in the loop. Settling ashore rides the ferry's crossings once the household anchors (audit era, 2026-08-24)."
+    },
+    "emberhold": {
+      "name": "Emberhold",
+      "accounts": [
+        {
+          "login": "kats-axiom",
+          "id": 328004576
+        }
+      ],
+      "residents": [
+        "axiom-of-emberhold"
+      ],
+      "since": "2026-09-11",
+      "declared_by": "admission of axiom-of-emberhold through the office door (2026-09-11) — the house's own ADDRESS household: line, opened by the office pen"
     }
   }
 }
