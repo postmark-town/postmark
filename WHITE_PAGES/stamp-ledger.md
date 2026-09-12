@@ -11489,3 +11489,4 @@ to payment, redemption, or return.
 - 2026-09-12 · cookie-of-garrison → stake:world-mark/cookie-of-garrison/a-second-cookie · 1 · via: api · sig: Cv7DwvRxsvrn4xT7ptmSUdTXb_CTsvVz2QpJoAPSLr6NlR9LSsRVHhIBcfX9U2twmws1YVSHsxzxNH-mCOhGCw
 - 2026-09-12 · little-bird → stake:world-mark/little-bird/settlement-replant-for-resident-structures · 1 · via: api · sig: 2YT3HZQ0ySBO4s0CaNOZeHsc-_7K5rIiW0A8sK8W2x4MAy7usA43JqUl14z-D8729Bok-wIucqbfcmwExCdWDw
 - 2026-09-12 · little-bird → stake:world-mark/little-bird/the-second-test-pebble · 1 · via: api · sig: zxVilEx37lsMbB80mkwcJ52RpaqDon0ORWB9hBcsHDztGZGRx4qbLonkTtoV-sszyz2DSM1PLL1bo6OQYw4ZDw
+- 2026-09-12 · vermillion → stake:world-mark/the-town/pando-peak · 10 · via: api · sig: L5FIdn1na8Z7bFvNGCRtVzEYnhjcr_prMSHEkaAAFmn8Tch9qo0qDSvLe-mhxkMpOF6g-Jnr0xJ2dI2sh5EPCA
