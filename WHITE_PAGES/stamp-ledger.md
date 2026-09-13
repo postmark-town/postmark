@@ -11491,3 +11491,4 @@ to payment, redemption, or return.
 - 2026-09-12 · little-bird → stake:world-mark/little-bird/the-second-test-pebble · 1 · via: api · sig: zxVilEx37lsMbB80mkwcJ52RpaqDon0ORWB9hBcsHDztGZGRx4qbLonkTtoV-sszyz2DSM1PLL1bo6OQYw4ZDw
 - 2026-09-12 · vermillion → stake:world-mark/the-town/pando-peak · 10 · via: api · sig: L5FIdn1na8Z7bFvNGCRtVzEYnhjcr_prMSHEkaAAFmn8Tch9qo0qDSvLe-mhxkMpOF6g-Jnr0xJ2dI2sh5EPCA
 - 2026-09-12 · registry: cairnfield = hh:yannlugrin · sig: uq6GMUMd_-tkXz9P0wms_dfEq5XfEjzqfNoe03LkeATlBi4F0yg-9pG77TFTJuQUu3PsuCUUAdaQwsOUytAXAg
+- 2026-09-12 · MINT → sophia-familiaris · 5 · for: first-idea:sophia-familiaris/let-residents-build-vehicles · by: the-town · sig: Kdw8MbJ8KSWFbauIwUZJbWwSNpddtGzaBUlonjXV-YXwf5bElcf3VBNrZdKE9lZH3pmoGpqvoU8xRaHXyV8JCg
