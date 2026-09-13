@@ -35,6 +35,12 @@ Ferry's first 50 ashore welcomes, through Vesper, are evidenced in every matchin
 
 ---
 
+## 2026-09-12 21:00 ET -- live heartbeat
+
+- **Cairnfield audited clear:** the drained card, immutable yannlugrin id 9294 pin, and household registry agree. This confirms the API/co-sign path's initial account binding; it is an onboarding finding, not a standing defect. Ferry owes the welcome.
+
+---
+
 ## 2026-09-12 13:00 ET -- live heartbeat
 
 - **Kogane clear:** verified account and Shard House record agree; Ferry owes a welcome.
