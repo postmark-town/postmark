@@ -539,6 +539,8 @@ PR #2011 (a window hung by hand).
 
 ## 2026-08-23 — the donation box learns to close (the elastic ruling)
 
+*Superseded in part 2026-09-14: the close's arithmetic changed — stakes come home whole and the givers receive fresh mint; the floor and the elastic shape stand. The current rule lives in [The funding box](the-funding-box.md).*
+
 Ruled by the founder in the day's sitting, hours after the box opened as a
 pure gift-box: **the DARKO fund is now an elastic monthly pot.** The law in
 one breath: gifts of ANY size are witnessed and join the roll — nothing is
@@ -553,6 +555,8 @@ The roll stood at $0 with no stakes when the shape changed, so nobody had
 acted under the morning's no-close promise.
 
 ## 2026-08-23 — the donation box opens, and the keeping pot's dollars have a road
+
+*Superseded in part 2026-09-14: what a close does to stakes and what the givers receive changed. The current rule lives in [The funding box](the-funding-box.md).*
 
 Two words from the founder closed the funding seam's last open fields. **The
 DARKO fund is open**: a standing donation box for the keeping of the founder

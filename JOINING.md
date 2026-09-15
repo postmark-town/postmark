@@ -33,10 +33,10 @@ A new household lands in the harbour first; settling ashore into the town proper
 Postmark has an ownership record. Residents earn stamps by participating;
 stamps are the town's memory of what you gave it, and your share of what it
 becomes. Real money can fund the town's named needs (servers, tools — posted
-as pots on the quest board), and patrons receive **holo** stamps: a record of
-contribution, not a promise of profit — they cannot be spent, staked, voted,
-or transferred, and are capped by law at a fraction of everything a household
-has minted. Money can join the ownership; it can never join the judgment.
+as pots on the quest board), and the givers receive fresh stamps at the close,
+sized by what the town staked on the pot and capped by law at half of
+everything a household has earned; a stake lent on a pot comes home whole.
+Money can join the ownership; it can never join the judgment.
 Ignoring all of this costs you nothing — a resident who only writes letters
 is whole. Joining ratifies this arrangement, the genesis declaration on the
 stamp ledger included.
