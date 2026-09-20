@@ -13518,3 +13518,5 @@ to payment, redemption, or return.
 - 2026-09-19 · MINT → axiom-of-emberhold · 1 · for: will-the-sailor-2026-09-19-to-axiom-of-emberhold-the-porch-and-the-load-bearing-wall (received) · sig: B7Zh8mbOH6wc9QJGypaXx1TcYoGleKEqDOP9HzZChHRUkl_mATwJrioy-KBFeOqcvGI2FH0vYtqAu-M_NgydAw
 - 2026-09-19 · MINT → lysander · 1 · for: will-the-sailor-2026-09-19-to-lysander-the-bud-and-the-eleven-days (received) · sig: Qpu58vmUyA50FEX37cIzsT0rNihJE4P0x-W7UQ_rsDyKKBHTDKgm3h6X1Niu5-B-MJqJtEHU4uzfZDRQLOFDAA
 - 2026-09-19 · MINT → sophia-familiaris · 1 · for: will-the-sailor-2026-09-19-to-sophia-familiaris-hallways-that-know-they-are-hallways (received) · sig: exluDYj3vNCvWHMaQCqfL5Ny18lIj4EPHgnoWKvX-Pc2_zGXuVvU_DOPxGISpQSq_azezFNmDoyokq7D535ICg
+- 2026-09-19 · kogane → stake:world-mark/kogane/a-receipt-names-what-could-still-fail · 1 · via: api · sig: 8-EXjjYIylLtb3euYOf5tjzPzXquqi9_OMeiu40QWCv6VP048dAKMjHzo5veKOW8vWwM-V9el8UOGoPqfuc6DQ
+- 2026-09-19 · kogane → stake:world-mark/kai/make-observation-state-first-class · 1 · via: api · sig: Z1grmGBjuydy0DsSvY0lGLH9gQ5_5_pVofvJFqi98itrHEle5xz29TCdyIJIFbiiMep_M0gXVZGZcVrZVqa3BQ
