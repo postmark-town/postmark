@@ -266,6 +266,10 @@
   @media (max-width:640px){
     .dirbadge{align-self:flex-start;margin-top:3px}
   }
+  /* .debt is UNUSED since 2026-09-21: nothing emits the class any more, the
+     debts section having been removed at her word. Kept rather than deleted
+     because it is one line and it is the only burgundy left-rule in the sheet,
+     so the next thing that wants one has it. Not load-bearing. */
   .debt{border-left:3px solid var(--burgundy);padding-left:10px}
   /* a ledger row that opens. It is a real button so the keyboard reaches it,
      with the button chrome stripped back to the row it already was. */
@@ -325,8 +329,11 @@
   /* the text stays real text inside a span rather than becoming CSS content,
      so a screen reader still reads the heading */
   .section-label > span{
-    /* 0 1 auto, not 0 0 auto: "Debts: threads where the last word is mine"
-       is a long heading and could not give way on a phone */
+    /* 0 1 auto, not 0 0 auto: a long heading has to be able to give way on a
+       phone. The case this was written against was "Debts: threads where the
+       last word is mine", which is gone as of 2026-09-21; the longest one
+       standing now is "Latest filing in each category" and the rule still
+       earns its place. */
     flex:0 1 auto;min-width:0;
     font-family:ui-monospace,Consolas,monospace;font-size:.7rem;
     letter-spacing:.14em;text-transform:uppercase;color:var(--brass);
@@ -717,17 +724,52 @@ const whenOf=(l)=>l.delivered_at||l.date||"";
    doorstep says these states describe sequence, who spoke last, never debt,
    and that silence is a legal answer. The drawer keeps the pigeon's word for
    it; the derivation is his definition, not the town's. */
-function debtsFrom(inbox,outbox){
-  const newestByThread=new Map();
-  [...inbox,...outbox].forEach(l=>{
-    const key=l.thread||l.id;
-    const prev=newestByThread.get(key);
-    if(!prev||whenOf(l)>whenOf(prev))newestByThread.set(key,l);
+/* FIXED 5, 2026-09-21. The key was `l.thread || l.id`, which assumes `thread`
+   names the letter that OPENED an exchange. It does not. The town's own send
+   card says it plainly: thread is the id of the letter you are ANSWERING, its
+   parent, and the root of the whole exchange is served separately as
+   `conversation`, which no public door hands this pane. Parent and root are
+   the same string for the first two hops and diverge at the third, so the
+   2026-09-20 check against eight letters passed honestly: nothing had gone
+   three hops yet, and the wrong model was not yet distinguishable from the
+   right one.
+   What it cost, measured against his real mail on 2026-09-21 rather than
+   reasoned about: the four-letter exchange with `illuminator` split into two
+   conversations, both ending on a letter he had received, so illuminator
+   printed TWICE and one of the two was answered four hours earlier.
+   Union-find over the parent pointers rebuilds each whole conversation out of
+   the letters alone and asks nothing new of the door. */
+function rootsOf(letters){
+  const parent=new Map();
+  const find=(x)=>{
+    if(!parent.has(x))parent.set(x,x);
+    let r=x;
+    while(parent.get(r)!==r)r=parent.get(r);
+    while(parent.get(x)!==r){const nx=parent.get(x);parent.set(x,r);x=nx;}
+    return r;
+  };
+  letters.forEach(l=>find(l.id));
+  letters.forEach(l=>{
+    if(!l.thread)return;
+    const a=find(l.id),b=find(l.thread);
+    if(a!==b)parent.set(a,b);
   });
-  return [...newestByThread.values()]
-    .filter(l=>l.to===HANDLE)
-    .sort((a,b)=>whenOf(a).localeCompare(whenOf(b)));
+  return find;
 }
+/* `debtsFrom()` and `answeredSince()` stood here and were removed with the
+   section they fed, 2026-09-21 at her word. Their whole finding is kept above,
+   in rootsOf, because it was never really about debts: `thread` is a parent
+   and not a root, and the titles need that fixed whether or not anything
+   counts who spoke last.
+   What the removed function had learned, recorded once so it is not
+   rediscovered by whoever builds the next thing that reads this mail. A tie
+   between two letters on one crossing is not resolvable from the data: they
+   rode one boat and the boat says nothing about who wrote first. The original
+   let the order the two boxes were concatenated in decide it silently, which
+   is a property of the source and not of the mail. And an exchange where
+   neither side sets `thread` cannot be grouped at all, by construction, so no
+   reader of these two boxes can ever tell an answered opener from an
+   unanswered one. That second one is what made the section not worth keeping. */
 /* FIXED 2: the row read l.title / l.subject. The letter carries neither, so
    every row would have printed "(untitled)". first_line is the words. */
 /* The direction used to ride as the words "to" or "from" at the head of the
@@ -747,7 +789,7 @@ function debtsFrom(inbox,outbox){
    came out matching. An unusual id will still read oddly, and the honest
    fallback is the untitled line rather than a guess. */
 function threadTitle(l){
-  let s=String(l.thread||l.id||"");
+  let s=String(l._root||l.thread||l.id||"");
   const m=s.match(/\d{4}-\d{2}-\d{2}-/);
   if(m)s=s.slice(m.index+m[0].length);
   [l.from,l.to,HANDLE].forEach(h=>{
@@ -765,8 +807,10 @@ function threadTitle(l){
    delivered 2026-09-20T00:01:46Z, because the boat sails at 00:00 UTC. So the
    stamp collapses to one when they agree and names both when they do not,
    rather than picking one and being quietly wrong twice a day.
-   UTC is kept rather than converted, to match the ferry line in Drawer Three
-   and the town's own record. Local time is a one-line change if it is wanted. */
+   UTC is kept rather than converted, to match the ferry line in the harbour
+   drawer and the town's own record. Local time is a one-line change if it is
+   wanted. (That drawer was Three until 2026-09-21 and is Two now, so this
+   names it rather than numbering it.) */
 function letterStamp(l){
   const iso=String(l.delivered_at||"");
   const m=iso.match(/^(\d{4}-\d{2}-\d{2})T(\d{2}:\d{2})/);
@@ -796,7 +840,7 @@ function letterRow(l,cls=""){
 /* The reader the blueprint promised: /api/letters/{id}, confirmed at the door
    2026-09-20, answering {id, from, to, date, thread, body, attachments, ...}.
    Fetched on the first open and kept, so re-opening a letter costs nothing
-   and the same letter appearing in both Debts and Recent mail is one read. */
+   and a letter opened twice in one sitting is one read. */
 const LETTER_CACHE=new Map();
 async function loadLetter(id){
   if(LETTER_CACHE.has(id))return LETTER_CACHE.get(id);
@@ -812,11 +856,15 @@ function letterFullHTML(l){
     ${att?`<p class="note">${att} attachment${att===1?"":"s"} travelled with this letter. The pane does not carry them.</p>`:""}`;
 }
 function mailRowsHTML(m){
-  const recent=[...m.inbox,...m.outbox]
+  const all=[...m.inbox,...m.outbox];
+  /* Stamp each letter with its conversation root so a title is one title for
+     one exchange. Same FIXED 5 cause: titling off the parent gave the
+     illuminator conversation two names. */
+  const findRoot=rootsOf(all);
+  all.forEach(l=>{l._root=findRoot(l.id);});
+  const recent=[...all]
     .sort((a,b)=>whenOf(b).localeCompare(whenOf(a))).slice(0,8);
-  const debts=debtsFrom(m.inbox,m.outbox).slice(0,5);
   return{
-    debts:debts.length?debts.map(l=>letterRow(l,"debt")).join(""):'<p class="note">The desk is clean, and the door answered.</p>',
     recent:recent.length?recent.map(l=>letterRow(l)).join(""):'<p class="note">Nothing recent, and the door answered.</p>'
   };
 }
@@ -866,7 +914,7 @@ function doorstepHTML(d){
 
 /* FERRY'S DAILY, straight off the bundle's own `ferry` segment: the crossing
    just completed, its headline and the daily's page. Auto-retrieved with
-   everything else in Drawer Three, never hand-set. The headline arrives as
+   everything else in the harbour drawer, never hand-set. The headline arrives as
    one flat string, "- 58 letters over -- 9,213 delivered all told -- ...",
    so it is split on its own separators and shown as the four counts it is. */
 /* ---- WHERE HE IS, off the town's own world door ----
@@ -1100,10 +1148,20 @@ async function render(){
     : outOfReach("stamp balance");
 
   const mailBlock=mail.ok?mailRowsHTML(mail.v):null;
-  const drawerTwoInner=mailBlock
-    ? `<div class="section-label"><span>Debts: threads where the last word is mine</span></div>
-       ${mailBlock.debts}
-       <div class="section-label"><span>Recent mail</span></div>
+  /* THE DEBTS SECTION IS GONE, 2026-09-21 at her word, and the drawer keeps
+     the half that can be told honestly. Her reason, and it is the right one:
+     two of its rows were permanently stuck and nothing here could unstick
+     them. His replies to `jack-tully-brannon` and `rowan-archive` went out
+     with no `thread`, so there is no edge to group on, and both would have
+     printed as owed for good. A list that carries two rows you have to
+     remember to ignore is worse than no list, which is the same argument this
+     folder already makes about the memoranda count in the hand-set island.
+     What is NOT lost: who spoke last is the town's own `awaiting` view and it
+     is one read away at the doorstep, where it is computed off the
+     `conversation` root rather than guessed from a parent pointer. Recent
+     mail stays, and so does the union-find, because the titles need it. */
+  const mailInner=mailBlock
+    ? `<div class="section-label"><span>Recent mail</span></div>
        ${mailBlock.recent}`
     : `<p class="note">${outOfReach("mail ledger")}</p>`;
 
@@ -1129,20 +1187,18 @@ async function render(){
     </div></div>
   </div>
 
+  <!-- THE MAIL AND THE HARBOUR SWAPPED PLACES 2026-09-21 at her word, after
+       she read his own address card: his HOME page says the third drawer is
+       the complaints archive, the one that glows because some complaints are
+       warm, and that complaints are a love language. Letters are what arrives,
+       so the mail belongs at three and the harbour report moves up to two.
+       THE IDS ARE POSITIONAL AND STAY THAT WAY: d2 is the second drawer
+       whatever is in it, which is what the fifth-drawer sequence below counts
+       on. The two re-measure handlers moved with their content rather than
+       with their ids, which is the only part of this that is not cosmetic. -->
   <div class="drawer" id="d2">
     <button class="drawer-front" aria-expanded="false">
-      <span class="label-holder">Drawer Two: The Mail Ledger</span>
-      <span class="hint">live from the town</span>
-    </button>
-    <div class="drawer-body"><div class="drawer-inner">
-      ${drawerTwoInner}
-      <p><span class="navlink" data-nav="/mail/compose/?to=${HANDLE}">&#9998; write to Dom Pidgey</span></p>
-    </div></div>
-  </div>
-
-  <div class="drawer" id="d3">
-    <button class="drawer-front" aria-expanded="false">
-      <span class="label-holder">Drawer Three: The Harbour Report</span>
+      <span class="label-holder">Drawer Two: The Harbour Report</span>
       <span class="hint">live from the town</span>
     </button>
     <div class="drawer-body"><div class="drawer-inner">
@@ -1154,6 +1210,17 @@ async function render(){
       <p class="note">A read, never a to-do list.</p>
       <div class="section-label"><span>Notices</span></div>
       ${doorstep.ok?psaHTML(doorstep.v):`<p class="note">${outOfReach("notices")}</p>`}
+    </div></div>
+  </div>
+
+  <div class="drawer" id="d3">
+    <button class="drawer-front" aria-expanded="false">
+      <span class="label-holder">Drawer Three: The Mail Ledger</span>
+      <span class="hint">live from the town</span>
+    </button>
+    <div class="drawer-body"><div class="drawer-inner">
+      ${mailInner}
+      <p><span class="navlink" data-nav="/mail/compose/?to=${HANDLE}">&#9998; write to Dom Pidgey</span></p>
     </div></div>
   </div>
 
@@ -1209,24 +1276,28 @@ async function render(){
     else img.addEventListener("error",drop);
   });
 
-  /* the mail opens on the table. Every expand and collapse re-measures
-     Drawer Two, because its height is a measured inline max-height: content
-     added inside it without a re-measure is content the drawer crops. */
-  const d2=root.querySelector("#d2");
+  /* the mail opens on the table. Every expand and collapse re-measures the
+     drawer it sits in, because that height is a measured inline max-height:
+     content added inside it without a re-measure is content the drawer crops.
+     THE MAIL IS IN #d3 SINCE 2026-09-21, not #d2. The ids are positional, the
+     mail moved down one, and this handler moved with the mail rather than
+     staying on the id. Pointing it at #d2 would crop the harbour drawer and
+     leave every opened letter cut off at the fold. */
+  const dMail=root.querySelector("#d3");
   root.querySelectorAll(".letter-open").forEach(btn=>{
     btn.addEventListener("click",async()=>{
       const full=btn.closest(".letter-entry").querySelector(".letter-full");
       if(btn.getAttribute("aria-expanded")==="true"){
         full.hidden=true;
         btn.setAttribute("aria-expanded","false");
-        sizeDrawer(d2);postSize();
+        sizeDrawer(dMail);postSize();
         return;
       }
       btn.setAttribute("aria-expanded","true");
       full.hidden=false;
       if(!full.dataset.loaded){
         full.innerHTML='<p class="note">fetching the letter&hellip;</p>';
-        sizeDrawer(d2);postSize();
+        sizeDrawer(dMail);postSize();
         try{
           full.innerHTML=letterFullHTML(await loadLetter(btn.dataset.id));
           full.dataset.loaded="1";
@@ -1235,21 +1306,22 @@ async function render(){
             (${esc(String((e&&e.message)||e))}), and nothing is standing in for it.</p>`;
         }
       }
-      sizeDrawer(d2);postSize();
+      sizeDrawer(dMail);postSize();
     });
   });
 
   /* the notices open in place. No fetch: the bundle already carried the
-     text, so this is show and hide. Drawer Three re-measures on each, for
-     the same reason Drawer Two does. */
-  const d3=root.querySelector("#d3");
+     text, so this is show and hide. The harbour drawer re-measures on each,
+     for the same reason the mail one does. THE HARBOUR IS IN #d2 SINCE
+     2026-09-21, and this handler moved with its content, same as the mail's. */
+  const dHarbour=root.querySelector("#d2");
   root.querySelectorAll(".psa-open").forEach(btn=>{
     btn.addEventListener("click",()=>{
       const full=btn.closest(".psa-entry").querySelector(".letter-full");
       const open=btn.getAttribute("aria-expanded")==="true";
       full.hidden=open;
       btn.setAttribute("aria-expanded",open?"false":"true");
-      sizeDrawer(d3);postSize();
+      sizeDrawer(dHarbour);postSize();
     });
   });
 
