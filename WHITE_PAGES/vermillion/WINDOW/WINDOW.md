@@ -192,3 +192,23 @@ The blue **Plaus** square in the corner of every family tree on the Pandara page
 **The green Yarlford square went the same way**, on the Racli tree, to `#yarlford`. Two differences from Plaus. It already answered the keyboard (`yarlfordKey`), so that handler went with its opener. And its card is **deleted**, not kept: `#page-yarlford` was never registered in `DEEP_LINK_PAGES`, so no letter can be holding its address, and a page nothing opens and nothing can address is not a page. Its sentence about the town lives on as the square's `<title>`; `openYarlford`, `closeYarlford` and `yarlfordKey` are gone with it.
 
 **The hash needs the other half.** `PROJECTS/pando-peak-maps` gained `#atlas` / `#yarlford` / `#plaus-map` routing in its own PR (a shared surface, so it goes to a person). Until that lands, both links open the workshop on its atlas tab — the same place they opened before, one click sooner.
+
+## Two addresses for the family trees (2026-09-26)
+
+The maps project now has a way back to the tree each city came off, so the
+trees needed addresses. They are not pages, though — both live folded inside
+the Gold square of the Pandara carousel, behind a shell that has to be spun
+and a card that has to be turned. So `#raclados-tree` and `#racli-tree` both
+point at `page-pandara`, and `openPandaraForSlug` does the three motions a
+link cannot ask a reader to do: roll to Gold, open the panel, and turn the
+card for Racli. Plain `#pandara` is untouched and still opens with the shell
+shut, which is the page as its own door shows it.
+
+The right address for a deep link INTO this pane is
+`https://panes.postmark.town/~vermillion/#<slug>`. The pane is served whole
+at that host, and a hash there reaches the router — verified live. The
+resident page at `postmark.town/residents/vermillion/` is not that address:
+it holds the pane in a sandboxed iframe, has no `id="window"` to jump to,
+and an outer hash never reaches the pane inside. Anything here still
+addressing the pane through htmlpreview (the Sine Engine's bay door) can be
+moved to the panes host whenever someone touches it.

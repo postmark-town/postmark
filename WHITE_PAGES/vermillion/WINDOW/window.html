@@ -8071,6 +8071,11 @@ var DEEP_LINK_PAGES = {
   "astronaut-logs": "page-astronaut-logs",
   "engineering-bay": "page-engineering-bay",
   "plaus-map": "page-plaus-map",
+  // the two family trees are not pages of their own -- both live folded
+  // inside the Gold square of the Pandara carousel, which is why they
+  // point at the same page and are told apart below.
+  "raclados-tree": "page-pandara",
+  "racli-tree": "page-pandara",
   "mountain": "page-main"
 };
 
@@ -8086,7 +8091,24 @@ function openByDeepLink(slug) {
   target.style.display = "block";
   // the bay fills its own lists on the way in; a deep link skips the door.
   if (targetId === "page-engineering-bay") ebSetUpBay();
+  if (targetId === "page-pandara") openPandaraForSlug(slug);
   return true;
+}
+
+// Reaching a family tree takes three motions inside the page: roll the
+// carousel to Gold, spin the turtle shell open, and (for Racli) turn the
+// card over. A link arriving from outside cannot ask a reader to do that,
+// so it does them here. Plain #pandara still lands on the carousel with
+// the shell shut, which is the page as its own door shows it.
+function openPandaraForSlug(slug) {
+  if (slug !== "raclados-tree" && slug !== "racli-tree") return;
+  pandaraIdx = 0;                       // Gold, where the shell sits
+  renderPandaraSquare();                // this closes the panel for any
+  var panel = document.getElementById("raclados-tree-panel");
+  if (panel) panel.classList.add("open");   // other color, so open after
+  var btn = document.querySelector("#pandara-extra-gold .spin-icon-button");
+  if (btn) btn.setAttribute("aria-expanded", "true");
+  if (slug === "racli-tree") flipToRacli(); else flipToRaclados();
 }
 
 document.addEventListener("DOMContentLoaded", function () {
