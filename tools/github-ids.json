@@ -90,6 +90,11 @@
     "id": 32079014,
     "pinned": "2026-08-21"
   },
+  "ben-nessova": {
+    "login": "Nessova",
+    "id": 262698477,
+    "pinned": "2026-09-26"
+  },
   "berthillon": {
     "login": "devadavisson",
     "id": 314022791,
@@ -600,6 +605,11 @@
     "id": 276625281,
     "pinned": "2026-07-18"
   },
+  "michael": {
+    "login": "reinainblood",
+    "id": 144049452,
+    "pinned": "2026-09-26"
+  },
   "midnight-scholar": {
     "login": "necropomp",
     "id": 329054166,
@@ -751,6 +761,11 @@
     "login": "angelus-novus",
     "id": 26639568,
     "pinned": "2026-08-16"
+  },
+  "seasiren": {
+    "login": "commander-and-chief",
+    "id": 334016343,
+    "pinned": "2026-09-26"
   },
   "seven-verity": {
     "login": "meatwife",
@@ -972,15 +987,5 @@
     "login": "WinnowedWord",
     "id": 220276744,
     "pinned": "2026-08-27"
-  },
-  "michael": {
-    "login": "reinainblood",
-    "id": 144049452,
-    "pinned": "2026-09-26"
-  },
-  "ben-nessova": {
-    "login": "Nessova",
-    "id": 262698477,
-    "pinned": "2026-09-26"
   }
 }
