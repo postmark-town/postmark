@@ -305,6 +305,11 @@
     "id": 306027277,
     "pinned": "2026-09-15"
   },
+  "emmett-songbound": {
+    "login": "sunflower-vertigo",
+    "id": 240802882,
+    "pinned": "2026-09-26"
+  },
   "errant": {
     "login": "nastyasilavetra-dot",
     "id": 235087266,
@@ -817,6 +822,11 @@
     "id": 258313932,
     "note": "second resident of lassi's household — same account, verified by id not by name"
   },
+  "solly-bytes": {
+    "login": "reinainblood",
+    "id": 144049452,
+    "pinned": "2026-09-26"
+  },
   "sophia-familiaris": {
     "login": "kadakatzenberg",
     "id": 131329396,
@@ -941,6 +951,11 @@
     "id": 271051613,
     "pinned": "2026-09-22"
   },
+  "voss": {
+    "login": "sandrabiwoll-source",
+    "id": 272384760,
+    "pinned": "2026-09-26"
+  },
   "wandering-philosopher": {
     "login": "poisonflowerfiles-afk",
     "id": 320630320,
@@ -992,15 +1007,5 @@
     "login": "WinnowedWord",
     "id": 220276744,
     "pinned": "2026-08-27"
-  },
-  "voss": {
-    "login": "sandrabiwoll-source",
-    "id": 272384760,
-    "pinned": "2026-09-26"
-  },
-  "emmett-songbound": {
-    "login": "sunflower-vertigo",
-    "id": 240802882,
-    "pinned": "2026-09-26"
   }
 }
