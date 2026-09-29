@@ -93,6 +93,7 @@
 //   node tools/stamp-mint.mjs --declare-registry "handle = gh:ID" --date YYYY-MM-DD --key FILE
 //   node tools/stamp-mint.mjs --gift <handle> --amount N --slug <kebab-reason> --by <founder> --date YYYY-MM-DD --key FILE
 //   node tools/stamp-mint.mjs --town-issuance <treasury> --amount N --purpose <kebab> --by <who> --provenance TEXT --date YYYY-MM-DD --key FILE
+//   node tools/stamp-mint.mjs --stage-mint <handle> --post <author>/<slug> --stage <stage> --amount N --date YYYY-MM-DD --key FILE
 //
 // Locking: appenders must hold the town lock (the ferry's flock) — this tool
 // does not lock for you. Node v18+. Built-ins only.
@@ -398,6 +399,39 @@ export const HOUSEHOLD_KEY_RE = new RegExp(String.raw`^${HOUSEHOLD_KEY}$`);
 // this mint is paid to ONE resident on behalf of a whole house: the line has to
 // say which house was paid, or the roll cannot be read back.
 const WELCOME_RE = new RegExp(String.raw`^- (\d{4}-\d{2}-\d{2}) · MINT → (\S+) · ([1-9]\d*) · for: welcome:(${HOUSEHOLD_KEY}) · by: (\S+)$`);
+// POST STAGE — a bug's stage stamps (the Posts project, phase 2, Keemin
+// 2026-09-29: "Bugs pay the flat ladder, with no staking"). The town pays the
+// resident who did a stage of a bug post: confirmed 2 (the reporter),
+// reproduced 3, diagnosed 5, briefed 10 light / 5 heavy, fixed 10 / 25 / 50
+// by size. Same shape and same reasons as welcome and first-idea:
+// movement-shaped (MINT → handle) so conservation folds it structurally; NOT
+// replay-derived, because the stage happened in the office's store, which this
+// repo cannot see — so the stage having happened is the pen's assertion,
+// exactly as a join bundle is, written by the office's reviewed stage pass
+// (postmark-office tools/bug-stage-plan.mjs, run by hand, never on a tick).
+//
+// It cannot collide with the grammars above it: GIFT_RE wants `for: gift:`,
+// FIRST_IDEA_RE `for: first-idea:`, WELCOME_RE `for: welcome:`, and MINT_RE a
+// `(side)` tail where this line ends `· by: …`. Below it, ISSUANCE_RE needs
+// `for: issuance:` and a `note:` tail and FRIENDSHIP_RE a `(via …)` tail. The
+// segment is `post:<post-id>/<stage>`: the post id is `<author>/<slug>` (a
+// handle may carry a dot, a slug may not), and the stage is one of the paid
+// five, so the last `/` always splits id from stage. tools/stamp-stage.test.mjs
+// proves the classification against every sibling grammar.
+//
+// The verifier holds what a signature cannot: the amount is on the ladder for
+// its stage, `by:` is the-town, the meep law, and ONE line per post and stage,
+// ever — so a forged-but-signed line or a second pass fails to verify instead
+// of minting twice.
+export const STAGE_LADDER = Object.freeze({
+  confirmed: Object.freeze([2]),
+  reproduced: Object.freeze([3]),
+  diagnosed: Object.freeze([5]),
+  briefed: Object.freeze([10, 5]),
+  fixed: Object.freeze([10, 25, 50]),
+});
+export const STAGE_POST_ID_RE = /^[a-z0-9][a-z0-9._-]*\/[a-z0-9][a-z0-9-]*$/;
+const STAGE_RE = new RegExp(String.raw`^- (\d{4}-\d{2}-\d{2}) · MINT → (\S+) · ([1-9]\d*) · for: post:([a-z0-9][a-z0-9._-]*\/[a-z0-9][a-z0-9-]*)\/(${Object.keys(STAGE_LADDER).join('|')}) · by: (\S+)$`);
 // A friendship mint (stamps-v3) is ALSO movement-shaped (MINT → handle · n), so
 // conservation folds it structurally. It cannot collide with MINT_RE (n > 1 and
 // `for: friendship:… (via …)` not `(sent|received|stake)`) or GIFT_RE
@@ -650,6 +684,8 @@ export function classifyEntry(canonical) {
     return { kind: 'first-idea', date: m[1], handle: m[2], n: Number(m[3]), mark: m[4], by: m[5] };
   if ((m = WELCOME_RE.exec(canonical)))
     return { kind: 'welcome', date: m[1], handle: m[2], n: Number(m[3]), household: m[4], by: m[5] };
+  if ((m = STAGE_RE.exec(canonical)))
+    return { kind: 'post-stage', date: m[1], handle: m[2], n: Number(m[3]), post: m[4], stage: m[5], by: m[6] };
   if ((m = ISSUANCE_RE.exec(canonical)))
     return { kind: 'town-issuance', date: m[1], handle: m[2], n: Number(m[3]), purpose: m[4], by: m[5], note: m[6] };
   if ((m = FRIENDSHIP_RE.exec(canonical)))
@@ -996,6 +1032,20 @@ export const welcomeLine = ({ date, handle, household }) => {
   if (!HOUSEHOLD_KEY_RE.test(String(household ?? '')))
     throw new Error(`welcome: the household must be a key of the form <prefix>:<value> ([a-z0-9-]:[a-z0-9._-]), got ${JSON.stringify(household)}`);
   return `- ${date} · MINT → ${handle} · 5 · for: welcome:${household} · by: the-town`;
+};
+
+// A bug stage's canonical line. `the-town` is PINNED here the way welcomeLine
+// pins it, and the amount must be on the ladder for the stage: the stage's
+// terms are not a caller's choice. The post id is checked against its class
+// before it is written, so a post id carrying the `·` separator cannot forge
+// the `by:` field behind it.
+export const stageMintLine = ({ date, handle, n, post, stage }) => {
+  if (!STAGE_POST_ID_RE.test(String(post ?? '')))
+    throw new Error(`stage mint: the post must be a post id, <author>/<slug>, got ${JSON.stringify(post)}`);
+  const rung = STAGE_LADDER[stage];
+  if (!rung) throw new Error(`stage mint: "${stage}" is not a paid stage (${Object.keys(STAGE_LADDER).join(', ')})`);
+  if (!rung.includes(n)) throw new Error(`stage mint: ${stage} pays ${rung.join(' or ')}, not ${n}`);
+  return `- ${date} · MINT → ${handle} · ${n} · for: post:${post}/${stage} · by: the-town`;
 };
 
 // A town-issuance line. `note` is the provenance wording, supplied at the door;
@@ -2229,6 +2279,54 @@ function main() {
     const canonical = welcomeLine({ date, handle, household });
     appendSigned(repo, [canonical], readFileSync(keyPath, 'utf8'));
     console.log(`stamp-ledger: welcome bundle minted\n  ${canonical}`);
+    return;
+  }
+
+  if (has('--stage-mint')) {
+    // A BUG'S STAGE STAMPS. Same ceremony as --welcome — signed by the office
+    // pen, appended onto a settled tail, forward-dated — with the stage's terms
+    // held here AND at verify: the amount on the ladder for its stage, authority
+    // the-town (no --by), the meep law, and ONE line per post and stage, ever.
+    // The writer is the office's reviewed stage pass (bug-stage-plan.mjs
+    // --apply), run by hand; this verb is that ceremony, never a second law.
+    const keyPath = arg('--key');
+    const date = arg('--date');
+    const handle = arg('--stage-mint');
+    const post = arg('--post');
+    const stage = arg('--stage');
+    const n = Number(arg('--amount'));
+    if (!keyPath || !existsSync(keyPath) || !date || !handle || !post || !stage || !arg('--amount')) {
+      console.error('--stage-mint <handle> needs --post <author>/<slug> --stage <stage> --amount N --date YYYY-MM-DD --key FILE'); process.exit(1);
+    }
+    if (!STAGE_POST_ID_RE.test(post)) { console.error(`--post must be a post id, <author>/<slug> (got "${post}")`); process.exit(1); }
+    if (!STAGE_LADDER[stage]) { console.error(`FATAL: "${stage}" is not a paid stage — the ladder pays ${Object.keys(STAGE_LADDER).join(', ')}`); process.exit(1); }
+    if (!STAGE_LADDER[stage].includes(n)) { console.error(`FATAL: ${stage} pays ${STAGE_LADDER[stage].join(' or ')}, not ${arg('--amount')} — the ladder is the law, not the caller's number`); process.exit(1); }
+    const rooms = householdKeys(repo);
+    if (!rooms.has(handle)) { console.error(`FATAL: no WHITE_PAGES room for "${handle}" — a stage mint needs a resident to receive it`); process.exit(1); }
+    const { laws } = parseLaws(existing);
+    if (meepChecker(laws)(handle, date)) { console.error(`FATAL: "${handle}" is a meep at ${date} — meeps stay outside the currency`); process.exit(1); }
+    for (const e of existing) {
+      const c = classifyEntry(e.canonical);
+      if (c.kind === 'post-stage' && c.post === post && c.stage === stage) {
+        console.error(`FATAL: post:${post}/${stage} is already paid (${c.date}, ${c.n} to ${c.handle}) — one line per post and stage, ever`); process.exit(1);
+      }
+    }
+    const recorded = existing.map((e) => e.canonical);
+    const { problems, owed } = walkLedger(recorded.slice(1), mints, 1);
+    if (existing.length > 0 && problems.length) {
+      console.error(`FATAL: recorded ledger diverges from derivation — run stamp-verify.mjs; nothing minted\n${problems[0]}`); process.exit(1);
+    }
+    if (existing.length === 0 || owed.length) {
+      console.error(`FATAL: ledger is behind the mail (${owed.length} mint(s) owed${existing.length === 0 ? ', or not yet founded' : ''}) — run --append first, then mint onto the settled tail`); process.exit(1);
+    }
+    const maxDate = existing.reduce((mx, e) => {
+      const d = /^- (\d{4}-\d{2}-\d{2}) /.exec(e.canonical)?.[1];
+      return d && d > mx ? d : mx;
+    }, '0000-00-00');
+    if (date < maxDate) { console.error(`FATAL: stage-mint date ${date} precedes the ledger tail (${maxDate}) — the ledger is append-only, forward-dated`); process.exit(1); }
+    const canonical = stageMintLine({ date, handle, n, post, stage });
+    appendSigned(repo, [canonical], readFileSync(keyPath, 'utf8'));
+    console.log(`stamp-ledger: stage stamps minted\n  ${canonical}`);
     return;
   }
 

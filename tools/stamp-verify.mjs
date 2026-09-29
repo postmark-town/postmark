@@ -34,7 +34,7 @@ import {
   settlementDecision, meepChecker, rulesLine,
   parseStampLedger, sealChain, foldBalances, parseLaws, classifyEntry, walkLedger,
   townIssuanceDial,
-  keepingDial, potFile, deriveEpochClose, keepingLine, TREASURY_POT,
+  keepingDial, potFile, deriveEpochClose, keepingLine, TREASURY_POT, STAGE_LADDER,
 } from './stamp-mint.mjs';
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
@@ -161,6 +161,7 @@ export function verifyStampLedger(repo, { pubkeyPem } = {}) {
     const oneShotSeen = new Set();      // one-shot issuance purposes already spent
     const firstIdeaHouses = new Set();  // household keys already paid their first-idea mint
     const welcomedHouses = new Set();   // household keys already paid their welcome bundle
+    const paidStages = new Set();       // `${post}/${stage}` already paid its stage stamps
     // ONE HOUSE, TWO SPELLINGS (2026-09-20, cloud-phi). A household declared
     // through the office door is keyed `hh:<slug>` by the drain's registry line,
     // while the pin the welcome plan read the same afternoon keyed it
@@ -442,6 +443,29 @@ export function verifyStampLedger(repo, { pubkeyPem } = {}) {
           problems.push(`line ${lineNo}: LAWFUL fails — household of "${cls.handle}" already holds its welcome bundle (once per household, ever)`); break;
         }
         welcomedHouses.add(houseKey);
+      }
+
+      if (cls.kind === 'post-stage') {
+        // A bug's stage stamps (Posts phase 2, 2026-09-29). The signature proves
+        // the office pen; the stage having happened is the pen's assertion, as a
+        // join bundle's arrival is, because this repo cannot see the store. The
+        // fold holds the rest, quoted from the grammar comment: "the amount is on
+        // the ladder for its stage, by: is the-town, the meep law, and ONE line
+        // per post and stage, ever."
+        if (!(STAGE_LADDER[cls.stage] ?? []).includes(cls.n)) {
+          problems.push(`line ${lineNo}: LAWFUL fails — ${cls.stage} pays ${(STAGE_LADDER[cls.stage] ?? []).join(' or ')}, not ${cls.n} (post:${cls.post}/${cls.stage})`); break;
+        }
+        if (cls.by !== 'the-town') {
+          problems.push(`line ${lineNo}: LAWFUL fails — stage stamps are the town's mint (by: "${cls.by}", must be the-town)`); break;
+        }
+        if (lawAt(cls.date).meeps.has(cls.handle)) {
+          problems.push(`line ${lineNo}: LAWFUL fails — stage stamps to meep "${cls.handle}" (meeps stay outside the currency)`); break;
+        }
+        const k = `${cls.post}/${cls.stage}`;
+        if (paidStages.has(k)) {
+          problems.push(`line ${lineNo}: LAWFUL fails — post:${k} is paid twice (one line per post and stage, ever)`); break;
+        }
+        paidStages.add(k);
       }
 
       if (cls.kind === 'town-issuance') {
