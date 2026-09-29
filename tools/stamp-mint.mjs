@@ -2396,6 +2396,61 @@ function main() {
     return;
   }
 
+  if (has('--meep-law')) {
+    // A MEEP JOINS THE MEEP LAW. lawAt reads only the latest law, so a new meep
+    // is a whole restated law: this verb reads the latest one and restates it
+    // with ONE handle added — the same rules, the same friendship ladder, every
+    // meep already in the set carried forward. It never drops a handle and
+    // refuses one already there (leaving the set is --declare-rules, by hand, at
+    // the founder's word, as on 2026-07-25). Signed by the office pen, onto a
+    // settled tail, forward-dated past the last delivery like any law.
+    const keyPath = arg('--key');
+    const date = arg('--date');
+    const handle = arg('--meep-law');
+    if (!keyPath || !existsSync(keyPath) || !date || !handle) {
+      console.error('--meep-law <handle> needs --date YYYY-MM-DD --key FILE'); process.exit(1);
+    }
+    if (!/^[a-z0-9][a-z0-9._-]*$/.test(handle)) {
+      console.error(`--meep-law needs a handle ([a-z0-9._-], got "${handle}")`); process.exit(1);
+    }
+    const { laws } = parseLaws(existing);
+    const latest = laws[laws.length - 1];
+    if (!latest || latest.rules !== 'stamps-v3' || !latest.friendship) {
+      console.error(`FATAL: the latest law is ${latest ? latest.rules : 'absent'} — --meep-law restates a stamps-v3 law only`); process.exit(1);
+    }
+    if (latest.meeps.has(handle)) {
+      console.error(`FATAL: "${handle}" is already in the meep set (${latest.date} · meeps: ${[...latest.meeps].sort().join(',')}) — nothing to declare`); process.exit(1);
+    }
+    const meeps = new Set([...latest.meeps, handle]);
+    const recorded = existing.map((e) => e.canonical);
+    const { problems, owed } = walkLedger(recorded.slice(1), mints, 1);
+    if (problems.length) {
+      console.error(`FATAL: recorded ledger diverges from derivation — run stamp-verify.mjs; nothing declared\n${problems[0]}`); process.exit(1);
+    }
+    const settledIds = new Set();
+    for (const e of existing) {
+      const c = classifyEntry(e.canonical);
+      if (c.kind === 'transfer' || c.kind === 'void') settledIds.add(c.id);
+    }
+    const owedSettlements = transfers.filter((t) => !settledIds.has(t.id));
+    if (owed.length || owedSettlements.length) {
+      console.error(`FATAL: ledger is behind the mail (${owed.length} mint(s), ${owedSettlements.length} settlement(s) owed) — run --append first, then declare onto the settled tail`); process.exit(1);
+    }
+    const maxDate = existing.reduce((mx, e) => {
+      const d = /^- (\d{4}-\d{2}-\d{2}) /.exec(e.canonical)?.[1];
+      return d && d > mx ? d : mx;
+    }, '0000-00-00');
+    const maxDelivery = deliveries.reduce((mx, d) => (d.date > mx ? d.date : mx), '0000-00-00');
+    if (date <= maxDelivery) {
+      console.error(`FATAL: declaration date ${date} is not after the last delivery (${maxDelivery}) — a law must be forward-dated, never retroactive`); process.exit(1);
+    }
+    if (date < maxDate) { console.error(`FATAL: declaration date ${date} precedes the ledger tail (${maxDate})`); process.exit(1); }
+    const canonical = rulesV3Line(date, meeps, serializeLadder(latest.friendship));
+    appendSigned(repo, [canonical], readFileSync(keyPath, 'utf8'));
+    console.log(`stamp-ledger: ${handle} joins the meep law\n  ${canonical}`);
+    return;
+  }
+
   if (has('--declare-rules') || has('--declare-registry')) {
     const keyPath = arg('--key');
     const date = arg('--date');
@@ -2441,7 +2496,7 @@ function main() {
     return;
   }
 
-  console.error('usage: stamp-mint.mjs --derive | --append --key FILE | --balances | --declare-rules stamps-v2 --meeps a,b,c --date D --key FILE | --declare-rules stamps-v3 --meeps a,b,c --friendship 5:5,10:10 --date D --key FILE | --declare-registry "handle = key" --date D --key FILE | --gift <handle> --amount N --slug S --by <founder> --date D --key FILE | --town-issuance <treasury> --amount N --purpose <kebab> --by <who> --provenance TEXT --date D --key FILE  [--repo PATH]');
+  console.error('usage: stamp-mint.mjs --derive | --append --key FILE | --balances | --declare-rules stamps-v2 --meeps a,b,c --date D --key FILE | --declare-rules stamps-v3 --meeps a,b,c --friendship 5:5,10:10 --date D --key FILE | --meep-law <handle> --date D --key FILE | --declare-registry "handle = key" --date D --key FILE | --gift <handle> --amount N --slug S --by <founder> --date D --key FILE | --town-issuance <treasury> --amount N --purpose <kebab> --by <who> --provenance TEXT --date D --key FILE  [--repo PATH]');
   process.exit(1);
 }
 
