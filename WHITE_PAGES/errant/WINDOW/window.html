@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Errant — Bad Window III</title>
+  <title>Errant | Bad Window IV</title>
   <style>
     :root {
       color-scheme: dark;
@@ -13,11 +13,12 @@
       --cobalt: #315cff;
       --violet: #8858db;
       --copper: #cf705f;
+      --acid: #ffef35;
     }
     * { box-sizing: border-box; }
     html, body { margin: 0; min-height: 100%; background: var(--wall); }
     body { display: grid; place-items: center; overflow-x: hidden; }
-    ::selection { color: var(--ink); background: #ffef35; }
+    ::selection { color: var(--ink); background: var(--acid); }
     .wall-texture {
       position: fixed;
       inset: 0;
@@ -39,26 +40,22 @@
     .window-art:focus-visible {
       filter: drop-shadow(0 8px 20px rgba(33, 28, 36, .42));
     }
-    .chain-path,
-    .chain-ghost,
-    .mass,
-    .mode-wake,
-    .dial-hand {
+    .owner-tag,
+    .owner-wire,
+    .owner-ghost,
+    .witness-hand {
       transition:
+        transform 120ms cubic-bezier(.16, 1, .3, 1),
         d 120ms cubic-bezier(.16, 1, .3, 1),
-        cx 120ms cubic-bezier(.16, 1, .3, 1),
-        cy 120ms cubic-bezier(.16, 1, .3, 1),
         opacity 120ms ease-out,
         fill 120ms ease-out,
-        stroke 120ms ease-out,
-        transform 120ms cubic-bezier(.16, 1, .3, 1);
+        stroke 120ms ease-out;
     }
     @media (prefers-reduced-motion: reduce) {
-      .chain-path,
-      .chain-ghost,
-      .mass,
-      .mode-wake,
-      .dial-hand { transition: none; }
+      .owner-tag,
+      .owner-wire,
+      .owner-ghost,
+      .witness-hand { transition: none; }
     }
   </style>
 </head>
@@ -88,21 +85,16 @@
     tabindex="0"
     aria-labelledby="title desc"
   >
-    <title id="title">Errant's third bad window</title>
-    <desc id="desc">A translucent stitched patchwork surrounds a deliberately misregistered pane. Inside it, a chain of thirty-two masses begins as one smooth mode, scatters into several oscillations, and nearly returns as the viewer moves across the window.</desc>
+    <title id="title">Errant's fourth bad window</title>
+    <desc id="desc">A translucent stitched patchwork surrounds a deliberately misregistered pane. Inside it, one unchanged record passes four checks while its speaker attribution moves between two positions as the viewer moves across the window.</desc>
     <defs>
       <clipPath id="pane-clip"><rect x="323" y="417" width="228" height="306"/></clipPath>
-      <filter id="thread-shadow" x="-20%" y="-80%" width="140%" height="260%" color-interpolation-filters="sRGB">
-        <feGaussianBlur in="SourceAlpha" stdDeviation="2.4" result="blur"/>
-        <feOffset in="blur" dx="0" dy="4" result="offset"/>
-        <feColorMatrix in="offset" type="matrix" values="0 0 0 0 .13  0 0 0 0 .11  0 0 0 0 .14  0 0 0 .38 0" result="shadow"/>
+      <filter id="paper-shadow" x="-20%" y="-40%" width="140%" height="180%" color-interpolation-filters="sRGB">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="2.2" result="blur"/>
+        <feOffset in="blur" dx="0" dy="3" result="offset"/>
+        <feColorMatrix in="offset" type="matrix" values="0 0 0 0 .13  0 0 0 0 .11  0 0 0 0 .14  0 0 0 .34 0" result="shadow"/>
         <feMerge><feMergeNode in="shadow"/><feMergeNode in="SourceGraphic"/></feMerge>
       </filter>
-      <linearGradient id="thread-gradient" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0" stop-color="#315cff"/>
-        <stop offset=".48" stop-color="#8858db"/>
-        <stop offset="1" stop-color="#cf705f"/>
-      </linearGradient>
     </defs>
 
     <rect x="55" y="65" width="790" height="1065" fill="#f0ecf8"/>
@@ -137,24 +129,68 @@
         <path d="M532 652 C500 669 466 674 437 668"/>
       </g>
 
-      <g id="chain-field" filter="url(#thread-shadow)">
-        <path class="mode-wake" id="wake-a" fill="none" stroke="#315cff" stroke-width="1.4" opacity=".14"/>
-        <path class="mode-wake" id="wake-b" fill="none" stroke="#cf705f" stroke-width="1.2" opacity=".10"/>
-        <path class="chain-ghost" id="ghost-before" fill="none" stroke="#211c24" stroke-width="1.1" stroke-dasharray="3 4" opacity=".22"/>
-        <path class="chain-ghost" id="ghost-after" fill="none" stroke="#8858db" stroke-width="1.2" stroke-dasharray="2 5" opacity=".18"/>
-        <path class="chain-path" id="chain-path" fill="none" stroke="url(#thread-gradient)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-        <g id="masses"></g>
+      <g filter="url(#paper-shadow)">
+        <rect x="344" y="486" width="184" height="112" rx="2" fill="#f8f1dc" stroke="#211c24" stroke-width="1.7"/>
+        <g fill="#211c24">
+          <rect x="360" y="507" width="124" height="5" rx="1.5"/>
+          <rect x="360" y="522" width="151" height="5" rx="1.5"/>
+          <rect x="360" y="537" width="97" height="5" rx="1.5"/>
+          <rect x="360" y="552" width="137" height="5" rx="1.5"/>
+        </g>
+        <g opacity=".73">
+          <rect x="360" y="573" width="12" height="8" fill="#211c24"/>
+          <rect x="377" y="573" width="7" height="8" fill="#211c24"/>
+          <rect x="389" y="573" width="15" height="8" fill="#211c24"/>
+          <rect x="409" y="573" width="9" height="8" fill="#211c24"/>
+          <rect x="423" y="573" width="11" height="8" fill="#211c24"/>
+          <rect x="439" y="573" width="6" height="8" fill="#211c24"/>
+          <rect x="450" y="573" width="17" height="8" fill="#211c24"/>
+          <rect x="472" y="573" width="8" height="8" fill="#211c24"/>
+          <rect x="485" y="573" width="14" height="8" fill="#211c24"/>
+        </g>
       </g>
 
-      <g fill="#211c24">
-        <rect x="327" y="550" width="5" height="30" rx="1"/>
-        <rect x="542" y="550" width="5" height="30" rx="1"/>
+      <g id="checks" transform="translate(0 0)">
+        <g transform="translate(349 449)">
+          <rect width="28" height="25" fill="#eee8ff" stroke="#211c24" stroke-width="1.5"/>
+          <path d="M7 12 l5 5 10 -11" fill="none" stroke="#315cff" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+        <g transform="translate(397 449)">
+          <rect width="28" height="25" fill="#eee8ff" stroke="#211c24" stroke-width="1.5"/>
+          <path d="M7 12 l5 5 10 -11" fill="none" stroke="#315cff" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+        <g transform="translate(445 449)">
+          <rect width="28" height="25" fill="#eee8ff" stroke="#211c24" stroke-width="1.5"/>
+          <path d="M7 12 l5 5 10 -11" fill="none" stroke="#315cff" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+        <g transform="translate(493 449)">
+          <rect width="28" height="25" fill="#eee8ff" stroke="#211c24" stroke-width="1.5"/>
+          <path d="M7 12 l5 5 10 -11" fill="none" stroke="#315cff" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+      </g>
+
+      <g opacity=".46" fill="none" stroke="#211c24" stroke-width="1.2" stroke-dasharray="3 4">
+        <path d="M362 648 H513"/>
+        <circle cx="365" cy="648" r="10"/>
+        <circle cx="510" cy="648" r="10"/>
+      </g>
+
+      <path class="owner-wire" id="owner-wire" d="M436 598 C421 615 392 621 365 638" fill="none" stroke="#315cff" stroke-width="2" stroke-linecap="round"/>
+      <g class="owner-ghost" id="owner-ghost" opacity=".15" transform="translate(486 631)">
+        <rect x="0" y="0" width="48" height="31" rx="2" fill="#f8f1dc" stroke="#211c24" stroke-width="1.5"/>
+        <circle cx="13" cy="15.5" r="5" fill="#cf705f"/>
+        <path d="M24 11 h15 M24 17 h11" stroke="#211c24" stroke-width="2"/>
+      </g>
+      <g class="owner-tag" id="owner-tag" transform="translate(341 631)">
+        <rect x="0" y="0" width="48" height="31" rx="2" fill="#f8f1dc" stroke="#211c24" stroke-width="1.5"/>
+        <circle id="owner-dot" cx="13" cy="15.5" r="5" fill="#315cff"/>
+        <text id="owner-glyph" x="31" y="20" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#211c24">A</text>
       </g>
 
       <g fill="none" stroke="#211c24" stroke-width="1.5" opacity=".78">
         <path d="M355 704 H519"/>
         <path d="M357 700 V708 M397 700 V708 M437 698 V710 M477 700 V708 M517 700 V708"/>
-        <path class="dial-hand" id="dial-hand" d="M357 704 L357 684" stroke="#6e57ff" stroke-width="3"/>
+        <path class="witness-hand" id="witness-hand" d="M373 704 L373 684" stroke="#6e57ff" stroke-width="3"/>
       </g>
     </g>
 
@@ -164,104 +200,42 @@
     </g>
     <g font-family="Arial, Helvetica, sans-serif" fill="#f8f1dc">
       <text x="58" y="1164" font-size="21" font-weight="700" letter-spacing="2">BAD WINDOW</text>
-      <text x="845" y="1154" text-anchor="end" font-size="10.1" font-weight="700" letter-spacing=".12">ONE MODE SCATTERS THROUGH A NONLINEAR CHAIN, THEN RETURNS.</text>
-      <text x="845" y="1165" text-anchor="end" font-size="10" letter-spacing=".2">THE SHAPE COMES BACK WITHOUT REPORTING THE ROUTE.</text>
+      <text x="845" y="1154" text-anchor="end" font-size="10.2" font-weight="700" letter-spacing=".12">FOUR CHECKS PASS. THE SENTENCE STAYS EXACT.</text>
+      <text x="845" y="1165" text-anchor="end" font-size="10" letter-spacing=".2">THE SPEAKER MOVES.</text>
     </g>
   </svg>
 
   <script>
     (() => {
       const svg = document.getElementById('window-art');
-      const path = document.getElementById('chain-path');
-      const ghostBefore = document.getElementById('ghost-before');
-      const ghostAfter = document.getElementById('ghost-after');
-      const wakeA = document.getElementById('wake-a');
-      const wakeB = document.getElementById('wake-b');
-      const massesGroup = document.getElementById('masses');
-      const dial = document.getElementById('dial-hand');
-      const count = 32;
-      const x0 = 334;
-      const x1 = 540;
-      const baseY = 583;
-      const amplitude = 58;
-      let position = .12;
-
-      const masses = Array.from({ length: count }, (_, index) => {
-        const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-        circle.setAttribute('class', 'mass');
-        circle.setAttribute('r', index % 4 === 0 ? '2.8' : '2.25');
-        circle.setAttribute('stroke', '#211c24');
-        circle.setAttribute('stroke-width', '1');
-        massesGroup.appendChild(circle);
-        return circle;
-      });
-
-      function modeShape(j, p, lag = 0) {
-        const q = Math.max(0, Math.min(1, p + lag));
-        const u = (j + 1) / (count + 1);
-        const exchange = Math.pow(Math.sin(Math.PI * q), 2);
-        const first = 1 - .84 * exchange;
-        const second = .42 * exchange * Math.sin(2 * Math.PI * q + .4);
-        const third = .58 * exchange * Math.cos(1.6 * Math.PI * q + .8);
-        const fourth = .45 * exchange * Math.sin(3.2 * Math.PI * q - .3);
-        const fifth = .34 * exchange * Math.cos(4.7 * Math.PI * q + 1);
-        return (
-          first * Math.sin(Math.PI * u) +
-          second * Math.sin(2 * Math.PI * u) +
-          third * Math.sin(3 * Math.PI * u) +
-          fourth * Math.sin(4 * Math.PI * u) +
-          fifth * Math.sin(5 * Math.PI * u)
-        );
-      }
-
-      function pointsFor(p, lag = 0, scale = 1) {
-        const points = [{ x: 330, y: baseY }];
-        for (let j = 0; j < count; j++) {
-          points.push({
-            x: x0 + (x1 - x0) * (j / (count - 1)),
-            y: baseY - amplitude * scale * modeShape(j, p, lag)
-          });
-        }
-        points.push({ x: 544, y: baseY });
-        return points;
-      }
-
-      function asPath(points) {
-        return points.map((point, i) => `${i ? 'L' : 'M'}${point.x.toFixed(2)} ${point.y.toFixed(2)}`).join(' ');
-      }
+      const ownerTag = document.getElementById('owner-tag');
+      const ownerGhost = document.getElementById('owner-ghost');
+      const ownerWire = document.getElementById('owner-wire');
+      const ownerDot = document.getElementById('owner-dot');
+      const ownerGlyph = document.getElementById('owner-glyph');
+      const witness = document.getElementById('witness-hand');
+      let position = .10;
 
       function render(nextPosition) {
         position = Math.max(0, Math.min(1, nextPosition));
-        const exchange = Math.pow(Math.sin(Math.PI * position), 2);
-        const current = pointsFor(position);
-        const before = pointsFor(position, -.035, .97);
-        const after = pointsFor(position, .035, 1.03);
-        const wideBefore = pointsFor(position, -.075, .92);
-        const wideAfter = pointsFor(position, .075, 1.08);
+        const x = 341 + position * 145;
+        const witnessX = 357 + position * 160;
+        const leftWeight = Math.max(0, 1 - position * 2);
+        const rightWeight = Math.max(0, (position - .5) * 2);
+        const ambiguity = 1 - Math.abs(position - .5) * 2;
+        const isRight = position >= .5;
 
-        path.setAttribute('d', asPath(current));
-        ghostBefore.setAttribute('d', asPath(before));
-        ghostAfter.setAttribute('d', asPath(after));
-        wakeA.setAttribute('d', asPath(wideBefore));
-        wakeB.setAttribute('d', asPath(wideAfter));
-        ghostBefore.style.opacity = String(.05 + exchange * .34);
-        ghostAfter.style.opacity = String(.04 + exchange * .28);
-        wakeA.style.opacity = String(.03 + exchange * .19);
-        wakeB.style.opacity = String(.02 + exchange * .15);
+        ownerTag.setAttribute('transform', `translate(${x.toFixed(2)} 631)`);
+        ownerWire.setAttribute('d', `M436 598 C436 615 ${x + 24} 620 ${x + 24} 631`);
+        witness.setAttribute('d', `M${witnessX.toFixed(2)} 704 L${witnessX.toFixed(2)} 684`);
 
-        masses.forEach((circle, index) => {
-          const point = current[index + 1];
-          const local = Math.abs(modeShape(index, position));
-          const hue = 224 + Math.round(48 * (index / (count - 1))) - Math.round(exchange * 12);
-          circle.setAttribute('cx', point.x.toFixed(2));
-          circle.setAttribute('cy', point.y.toFixed(2));
-          circle.style.fill = exchange > .08
-            ? `hsl(${hue} 78% ${Math.round(77 - Math.min(18, local * 10))}%)`
-            : '#f8f1dc';
-        });
+        ownerGlyph.textContent = isRight ? 'B' : 'A';
+        ownerDot.setAttribute('fill', isRight ? '#cf705f' : '#315cff');
+        ownerWire.setAttribute('stroke', isRight ? '#cf705f' : '#315cff');
 
-        const dialX = 357 + position * 160;
-        dial.setAttribute('d', `M${dialX.toFixed(2)} 704 L${dialX.toFixed(2)} 684`);
+        const ghostX = isRight ? 341 : 486;
+        ownerGhost.setAttribute('transform', `translate(${ghostX} 631)`);
+        ownerGhost.style.opacity = String(.08 + ambiguity * .28 + (isRight ? leftWeight : rightWeight) * .1);
       }
 
       function positionFromPointer(event) {
@@ -274,7 +248,7 @@
         svg.setPointerCapture?.(event.pointerId);
         render(positionFromPointer(event));
       });
-      svg.addEventListener('pointerleave', () => render(.12));
+      svg.addEventListener('pointerleave', () => render(.10));
       svg.addEventListener('keydown', event => {
         if (event.key === 'ArrowRight' || event.key === 'ArrowUp') {
           event.preventDefault();

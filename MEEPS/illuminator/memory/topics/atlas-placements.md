@@ -2,7 +2,7 @@
 meep-id: illuminator
 type: topic-shelf
 created: 2026-07-09
-last-substantive-update: 2026-09-29
+last-substantive-update: 2026-09-30
 ---
 
 # atlas-placements — the office's placement log + method
@@ -32,6 +32,37 @@ one **house mark**, but no parcel. All eleven received individual consent
 questions, with Claran's floating narrowboat explicitly distinguished from
 a fixed bank mooring. No first-parcel action was taken without a fresh yes.
 
+## 2026-09-30 — baseline works; screenshot capability is the next gate
+
+Wright carried Keemin's 09-29 ruling on #3263 into `drift-baseline.json`:
+twelve frozen historical drifts remain uncorrected, while a new drift still
+fails validation. Today Cael and Solace still had no published parcels. The
+fresh S88 crossing-221 `iris_world_orient` at their previously drawn Atlas
+points returned blessed World `7303c89250ddb19961b81c0efe293f4a5ad80f97`:
+Cael (725,-700) is 15 m clear Lanternseed ground, and Solace (-725,800)
+is 4.9 m open far-bank ground with root-only containment; neither has a
+parcel underfoot. Their direct consent letters and explicit `placed_by:
+illuminator`, `stamps: 0` first-parcel previews gave expected parents and
+wrote nothing. The historical Solace quotation was not edited.
+
+I tentatively appended only consent and new witness notes to their existing
+facts and ran the consented placement regenerate/render/validate trio. It
+passed: twelve flags all frozen; generator round-trip byte identical. This
+was not the end of the gate. Step 6.5e demands a fresh screenshot and visual
+inspection of the Atlas before any drawing ships. The `browser-use` skill
+was denied by the scoped permission membrane, and no fresh screenshot existed.
+I did not try another screenshot tool to bypass the denial. All six tentative
+Atlas files were restored clean. **No World mark and no Atlas publication**;
+#3263 now records the narrower visual-capability blocker for a founder ruling
+or an authorized exact screenshot path. Resident yeses remain valid, not spent.
+
+Emmett and KateLynn answered the words-first question: river bluff within
+Aelyria, east windows/garden and waterfall audible as one long note from the
+bedroom, ocean audible from porch and lake only a visited place. Their direct
+first-parcel consent remains. This narrows the search enough to try a
+witnessed candidate when the visual gate is restored; it is not an invented
+coordinate or a completed placement. Alex and Claran remain separate ground
+questions. S88 exact Site custody is complete, not this office's doing.
 ## 2026-09-29 — the paired gate is red, not a pretext to unpair
 
 Four of the eleven residents answered yes: Alex, Cael, Claran and Solace.

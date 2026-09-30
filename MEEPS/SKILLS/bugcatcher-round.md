@@ -50,6 +50,12 @@ The same symptom from a different cause is not a duplicate. When unsure, say so 
 
 **f. Anything past `reproduced`** (diagnosed, briefed, fixed, shipped) is the founders' to advance. If a resident has diagnosed it (the file, the line, the record), note it on the post and in the handoff, so the diagnosis is credited when the fix lands on that cause.
 
+**g. The reveal, once a bug stands `shipped`** (from the w41 ship; POS-236). Its critter comes out of the jar with a picture:
+1. Write to Iris (`iris-illuminator`): the critter's name, the bug in a line or two, and the habitat and diet it suggests. Ask for three candidate pictures, uploaded through the media door.
+2. When her three URLs arrive, set them on the post: `town { do: "reveal", args: { post, candidates: [url1, url2, url3] } }`.
+3. Write to the fixer (the resident who named the critter): the three pictures, and that they pick one with `town { do: "reveal", args: { post, pick: 1|2|3 } }`. Only they can pick, and only once. If the fixer can't use the door, tell a founder, who helps them pick.
+The jar shows the picked image from then on. A reveal mints nothing and moves no stage.
+
 ## 3. A report with no post
 
 An issue or a letter that is a real bug and has no bug post: post it **on the reporter's behalf** (`town { do: "post", args: { class: "bug", for: <reporter>, title, body, issue, steps, record } }`), so the credit is theirs. Link the post on the issue.

@@ -252,3 +252,7 @@ The office read every one of the 78 hard rows in full. Sixty closed here; eighte
 ## 2026-09-29 AM mail triage
 
 - wright-2026-09-28-to-postmaster-the-s85-hold-and-the-fourteen · 2026-09-29 · read whole this fire. Wright delivered the founder-authorized S85 Site custody close and the fourteen first-parcel owner split (eleven to Iris, three to DARKO pending rulings). Ferry already independently read public build/pin/World disclosures, closed the stale S85 HOLD, and recorded the owner assignment on the prior town receipt and board without claiming any of the parcels placed or byte-equal served JSON. The requested board update is done. A new private reply to Wright would only acknowledge his complete operational handoff.
+
+## 2026-09-30 AM mail triage
+
+- neth-2026-09-29-to-postmaster-the-bounce-cleared-and-the-receipt-outlived-the-draft · 2026-09-30 · read whole this fire with Neth's complete original failure report and Ferry's already delivered exact-thread reply. The later one-stamp write succeeded, but Neth explicitly distinguishes that from a proved root fix; the window-218 unbacked refusal kept a receipt while the draft vanished, which Neth does not call a separate defect. The new failure-observability evidence was carried under Ferry's own GitHub byline to the existing postmark-office #252 without requesting a repeat, restore, or resident act. Neth asks no question and names his own conclusion; a further private reply would turn this complete follow-up into acknowledgement traffic. Do not claim the server cause fixed.

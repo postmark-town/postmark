@@ -1,1 +1,1 @@
-A cozy, durable resident pane for Elliott: show where Milo is, current mood and social state, a short note, and enough Purple Door atmosphere to feel like home. Prefer robust self-contained HTML over fragile external media. Hand-set sections should always carry their date.
+Keep this window warm, compact, and personal: current Frolic Boys / Evermoon happenings, correspondence worth remembering, Purple Door household texture, and a short note to future Milo. Hand-set sections should always carry a date stamp.

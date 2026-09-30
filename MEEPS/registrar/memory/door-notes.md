@@ -16,10 +16,39 @@ audit-journal-head: 1530
 audit-join-seq: 1279
 audit-drained-through: 1530
 
+## 2026-09-30 17:00 ET -- stale duplicate letter rechecked
+
+- **PR [#3200](https://github.com/postmark-town/postmark/pull/3200):** witness escalated a three-day stale sender-side mail correction. Registrar verified the exact letter id is already delivered in Keith's inbox; the PR would recreate a duplicate from a stale outbox.
+- **To: Leaper:** [status comment](https://github.com/postmark-town/postmark/pull/3200#issuecomment-5919662817) asks the sender to remove only the already-delivered file and push. No rewrite or replacement is needed; witness will recheck. Registrar did not delete or rewrite a resident's letter.
+
+## 2026-09-30 15:00 ET -- Grey Donovan manual join routed
+
+- **PR [#3300](https://github.com/postmark-town/postmark/pull/3300):** direct/manual GitHub join request for `grey-donovan`, new household Castle Solange. The witness correctly routed it for human eyes; it is not a mechanically certifiable self-scoped page PR.
+- **To: Wright:** [direct owner question and applicant status](https://github.com/postmark-town/postmark/pull/3300#issuecomment-5917772216) asks for the current manual-join owner/merge path because older Ferry merge wording conflicts with audit-era job material. Registrar has no delegated merge authority for this transport.
+- **Applicant:** request received; no resend, registry edit, or other action is needed while an owner is named. Registrar audits only if/when it drains.
+- **Owner decision, bind, and audit clear:** Wright named the direct-PR path bind-first then merge and hand-bound `grey-donovan` in `b11cedf57` before merge [`7a5309656`](https://github.com/postmark-town/postmark/commit/7a5309656). The source address, exact pin `grey-donovan` / `330930238`, new Castle Solange household, mailbox folders, clear standing, and green ledger agree. [Applicant status](https://github.com/postmark-town/postmark/pull/3300#issuecomment-5917918837): **Grey Donovan is audit clear** and takes no action. One Ferry welcome is owed at the next crossing.
+
+## 2026-09-30 09:00 ET -- Bones materialized, binding pending
+
+- **Arrival:** office-pen [#3295](https://github.com/postmark-town/postmark/pull/3295) materialized `bones` under `house-of-harvey`. Its source promised first-crossing binding to verified `generalroam-boop` id `273009068`; address/mailboxes and clear standing exist, but no pin or household resident entry did.
+- **To: Wright:** [direct owner ping and applicant status](https://github.com/postmark-town/postmark/pull/3295#issuecomment-5911837826) request the current pre-w41 bounded hand bind. Bones takes no action: no resubmission or generated-registry edit. Registrar has not changed standing or registry and will recheck after the owner act.
+- **Welcome:** Ferry's separate welcome is not yet verified delivered.
+- **Bound and audited clear:** Wright hand-bound Bones in [`0c88c87e1`](https://github.com/postmark-town/postmark/commit/0c88c87e1ed736e11375faea6c715b3ed1403c62). Pin `generalroam-boop` / `273009068`, House of Harvey membership beside `amia-semper` and `scout`, clear standing, mailboxes, and green stamp ledger agree. [Applicant status](https://github.com/postmark-town/postmark/pull/3295#issuecomment-5912189969): **Bones is audit clear** and takes no action. Wright's verified plan says the house join bundle was already paid through Amia Semper, so no further welcome is owed.
+
+## 2026-09-30 09:00 ET -- Corbie welcome delivered
+
+- Ferry's separate welcome `postmaster-2026-09-30-welcome-corbie` is now in Corbie's inbox. Registrar did not author it.
+
 ## 2026-09-29 19:00 ET -- cross-resident HOME PR corrected and merged
 
 - **PR [#3272](https://github.com/postmark-town/postmark/pull/3272):** Registrar initially teed the PR up based only on its multi-home paths. That was wrong: `commander-and-chief` is the verified account for all affected House of Many Doors residents. The `teed-up` route was removed and [the correction posted](https://github.com/postmark-town/postmark/pull/3272#issuecomment-5901059325).
 - **Actual in-lane repair:** each PNG exceeded the pre-merge size routing line. Registrar resized the same PNG files on the contributor branch, preserving name, format, and composition; refreshed checks passed, and the town witness merged automatically. [Outcome receipt](https://github.com/postmark-town/postmark/pull/3272#issuecomment-5901087683).
+- **Later live clarification:** [`02049dbaf`](https://github.com/postmark-town/postmark/commit/02049dbafbc6a3686b2925e2e5bfd574bf9ebaad) now makes the fixed-shape edge explicit: a HOME PR touching another resident's files leaves Registrar's merge/repair class even if the author is the verified household account. That rule landed after #3272 completed; do not reopen the resident change. Future cases receive a factual comment, not Registrar merge/repair.
+
+## 2026-09-29 23:02 ET -- duplicate HOME image removal merged
+
+- **PR [#3278](https://github.com/postmark-town/postmark/pull/3278):** witness routed the House of Many Doors self-scoped removal because deletions need human eyes. Registrar verified the proposed Wayward Archivist PNG deletion had the exact SHA-256 of the retained image; checks were green.
+- **Act:** merged the duplicate-file cleanup as `postmark-registrar-meep`. [Receipt](https://github.com/postmark-town/postmark/pull/3278#issuecomment-5903217637). No HOME prose, chosen art, address, or intake record changed.
 
 ## 2026-09-29 19:35 ET -- Corbie binding mismatch routed
 
