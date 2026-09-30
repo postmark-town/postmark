@@ -508,6 +508,45 @@ test('ONE HOUSE, TWO SPELLINGS: a welcome keyed gh:<id> stays lawful after the d
   assert.equal(v.ok, true, v.problems.join('\n'));
 });
 
+test('A HOUSE RE-KEYED after its welcome (POS-299, Emmett): a later registry line re-maps the handle, the ledger stays lawful, and nothing is owed', () => {
+  // The house was welcomed under gh:7, sealed as hh:the-long-key the same day,
+  // then re-keyed: the store renamed it (the old key kept in `formerly`, which
+  // the drain prints) and the office appended a second registry line.
+  const { pub, priv } = keypair();
+  const repo = town({ ledgerLines: [], pins: { cloud: { id: 7, pinned: '2026-09-19' } }, addresses: { cloud: null } });
+  writeFileSync(join(repo, 'tools', 'households.json'), JSON.stringify({ schema_version: 1, households: {
+    'the-held-place': { name: 'The Held Place', accounts: [{ login: 'stardust', id: 7 }], residents: ['cloud'], formerly: ['the-long-key.-a-whole-paragraph'] } } }));
+  forged(repo, pub, priv, [
+    '- 2026-09-20 · MINT → cloud · 5 · for: welcome:gh:7 · by: the-town',
+    '- 2026-09-20 · registry: cloud = hh:the-long-key.-a-whole-paragraph',
+    '- 2026-09-30 · registry: cloud = hh:the-held-place',
+  ]);
+  const v = verifyStampLedger(repo, { pubkeyPem: pub });
+  assert.equal(v.ok, true, v.problems.join('\n'));
+  assert.equal(currentHouseholds(repo).get('cloud').key, 'hh:the-held-place', 'the later line is the handle\'s key now');
+  const plan = runMint(repo, ['--welcome-plan', '--date', '2026-09-30']);
+  assert.equal(plan.ok, true, plan.out);
+  assert.match(plan.out, /1 household\(s\) in the roll, 1 already welcomed, 0 owed/, 'the re-keyed house is not re-paid');
+  assert.match(plan.out, /hh:the-held-place · paid 2026-09-20 → cloud/);
+  rmSync(repo, { recursive: true, force: true });
+});
+
+test('A FORMER KEY is not a hole: a key ANOTHER house once carried still fails LAWFUL', () => {
+  const { pub, priv } = keypair();
+  const repo = town({ ledgerLines: [], pins: { cloud: { id: 7 } }, addresses: { cloud: null } });
+  writeFileSync(join(repo, 'tools', 'households.json'), JSON.stringify({ schema_version: 1, households: {
+    'the-held-place': { name: 'The Held Place', accounts: [{ login: 'stardust', id: 7 }], residents: ['cloud'], formerly: ['the-long-key'] },
+    elsewhere: { name: 'elsewhere', accounts: [{ login: 'other', id: 8 }], residents: ['dave'], formerly: ['old-elsewhere'] } } }));
+  forged(repo, pub, priv, [
+    '- 2026-09-20 · registry: cloud = hh:the-long-key',
+    '- 2026-09-20 · MINT → cloud · 5 · for: welcome:hh:old-elsewhere · by: the-town',
+  ]);
+  const v = verifyStampLedger(repo, { pubkeyPem: pub });
+  assert.equal(v.ok, false);
+  assert.ok(v.problems.some((p) => /welcome names household "hh:old-elsewhere" but "cloud" is hh:the-long-key/.test(p)), v.problems.join('\n'));
+  rmSync(repo, { recursive: true, force: true });
+});
+
 test('ONE HOUSE, TWO SPELLINGS is not a hole: a gh: id the households file does not bind to the recipient\'s house still fails', () => {
   const { pub, priv } = keypair();
   const repo = town({ ledgerLines: [], pins: { cloud: { id: 7 } }, addresses: { cloud: null } });

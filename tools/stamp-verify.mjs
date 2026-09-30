@@ -176,8 +176,13 @@ export function verifyStampLedger(repo, { pubkeyPem } = {}) {
       const m = new Map();
       try {
         const hhFile = JSON.parse(readFileSync(join(repo, 'tools', 'households.json'), 'utf8'));
-        for (const [slug, rec] of Object.entries(hhFile?.households ?? {}))
+        for (const [slug, rec] of Object.entries(hhFile?.households ?? {})) {
           for (const a of rec?.accounts ?? []) if (a && a.id != null) m.set(`gh:${a.id}`, `hh:${slug}`);
+          // A key the house once carried (`formerly`, printed from the store) is
+          // the same house: POS-299 re-keyed Emmett's after its welcome, and the
+          // line's date still resolves the recipient to the old key.
+          for (const f of rec?.formerly ?? []) if (f) m.set(`hh:${f}`, `hh:${slug}`);
+        }
       } catch { /* no declared households: every key is its own spelling */ }
       return m;
     })();
