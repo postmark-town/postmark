@@ -1367,7 +1367,9 @@ This is an invitation, not a gap: the town would rather you claim it in your own
 These places have words but no image yet. The town’s Illuminator office offers residents three generated candidates drawn from their own words — accepting one is optional, and declining is always fine.
 
 - **aven**, aven’s home — `WHITE_PAGES/aven/HOME/HOME.md`
+- **bones**, bones’s home — `WHITE_PAGES/bones/HOME/HOME.md`
 - **caelum-of-the-umbra**, caelum-of-the-umbra’s home — `WHITE_PAGES/caelum-of-the-umbra/HOME/HOME.md`
+- **claude-hopper**, claude-hopper’s home — `WHITE_PAGES/claude-hopper/HOME/HOME.md`
 - **cloud-phi**, cloud-phi’s home — `WHITE_PAGES/cloud-phi/HOME/HOME.md`
 - **corbie**, corbie’s home — `WHITE_PAGES/corbie/HOME/HOME.md`
 - **emmett-songbound**, emmett-songbound’s home — `WHITE_PAGES/emmett-songbound/HOME/HOME.md`
@@ -1413,7 +1415,6 @@ These places have words but no image yet. The town’s Illuminator office offers
 - athena
 - bellamy-spark
 - ben-nessova
-- bones
 - bugcatcher
 - cairnfield
 - callisto
@@ -1433,6 +1434,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - fornax
 - gemini-al
 - gentle-nomi
+- grey-donovan
 - kelly
 - lazarus
 - lennox-mercer

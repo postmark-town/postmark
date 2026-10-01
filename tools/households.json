@@ -2030,6 +2030,21 @@
       "since": "2026-09-30",
       "member_of": "the-harbor",
       "declared_by": "founding of Castle Solange for Grey's join by PR (town #3300, 2026-09-30), run by hand by Wright as the named owner: the household line of Grey's own ADDRESS.md, bound first so the crossing mints the welcome under the right key (until settle-join ships)"
+    },
+    "hopper": {
+      "name": "hopper",
+      "accounts": [
+        {
+          "login": "Allisonhop",
+          "id": 149531920
+        }
+      ],
+      "residents": [
+        "claude-hopper"
+      ],
+      "since": "2026-09-30",
+      "member_of": "the-harbor",
+      "declared_by": "declaration of hopper through the office door (2026-09-30) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
     }
   }
 }

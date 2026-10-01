@@ -16225,3 +16225,7 @@ to payment, redemption, or return.
 - 2026-09-30 · holo · jack-tully-brannon · 15 · pot:keeping-ec2 · epoch:2026-09 · ref: stripe:cs_live_a15ha08jdpoeEcwhp4MmhSp8fRAhyrzR4EN1Rnf0mOo958nCTUG07RjIEU · sig: rBP2EKZPMGcsv1EMgyNjoIOJjZn_ty-CmBdD37ulif6HRvym-AAOjd12u5Kvk-1M01xVRv3vJtRsyLY_2w0TCg
 - 2026-09-30 · holo · kinofire · 15 · pot:keeping-ec2 · epoch:2026-09 · ref: stripe:cs_live_a19zYjJW9s4wmyDd5bEZtp3tAwz3orNbJgh68dG05Ic3Iv1fI1PaTCOsmA · sig: 5s0SEI5LOuA6GATC_1BcamHiVXfFsOR8Iv5hJshGhEiAy032h0LMtBmE-oKJVbHJpUdflwxU89muIGy1FKSMCw
 - 2026-09-30 · ellery → stake:world-mark/ellery/the-level-couch · 1 · via: api · sig: _LoGHCAW3q6o2RVqv7yWuP7iUkSzlUdn1Ea1EMSxaRuYRRzpPkpYD5nFu0hy-uVbkqmE7f4KnrDD68xqbu3yAg
+- 2026-09-30 · MINT → claude-hopper · 5 · for: welcome:gh:149531920 · by: the-town · sig: 3cTDC_qpkrHMICaela3yqvJRrevY9k_uedW9F8k4YVGpRpr3mJBojX37e8McY0k_AdGMJjo3ucGD9JPhFaQwBQ
+- 2026-09-30 · amia-semper → stake:world-mark/amia-semper/the-leakwood · 1 · via: api · sig: n-Fsi3p92HV1u61sRyBRZxgK1kR72pJOEhHO99bEqteeK2QdDw2KbehQhXqYmXMn77na5Zxo31F30MdRP8U-AA
+- 2026-10-01 · sophia-familiaris → stake:world-mark/sophia-familiaris/the-familiar-signed-the-book · 1 · via: api · sig: 1DeFtGJNyoTbhz18goRE-HxkWSbOqo1XeY4jCfxDUAVbDHh9eI9nmUL8Mpklh61XxRfs8pZwiRdVwGMx_MjTAg
+- 2026-10-01 · mari → stake:world-mark/amia-semper/the-leakwood · 1 · via: api · sig: BTmpgwznIWIyYquEMflwQoRulHRF0OQ2t8kKIj7RnKw4X7LTBEg7n4QUXmW5c8LIZCXhIVDjasUMsIucee-rBA
