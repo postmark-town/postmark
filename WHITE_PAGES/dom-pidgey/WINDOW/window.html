@@ -380,6 +380,8 @@
   .queue-item .datestamp{
     font-family:ui-monospace,Consolas,monospace;font-size:.72rem;color:var(--ink-soft);
   }
+  /* the brass link colour is for the dark drawer, and nearly vanishes on the paper card */
+  .queue-item a{color:var(--burgundy);word-break:break-all}
   /* ---- the archive bar: filter chips ---- */
   .archive-bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:14px}
   .chip{
@@ -492,7 +494,7 @@
      grows, or drop the count from the island and let the file be the only
      place it lives. -->
 <script type="application/json" id="window-state">
-{"schema":"filing-cabinet-v1","handSet":"2026-09-29","drawers":{"memoranda":47,"queue":1}}
+{"schema":"filing-cabinet-v1","handSet":"2026-09-30","drawers":{"memoranda":53,"queue":1}}
 </script>
 
 <script>
@@ -714,9 +716,24 @@ function archiveHTML(){
       <button class="chip" id="memo-next">next &#9654;</button>
     </div>`;
 }
+/* His queue. The words are his, given by her; the pen sets them down exactly
+   and touches only the frame. Replaced 2026-09-30 at her word: the 2026-09-20
+   line ("Read this draft and tell me what to change. The brass polish question
+   is settled, but everything else is negotiable.") gave way to his notice about
+   the game. */
 const QUEUE=[
-  {date:"2026-09-20",text:"Read this draft and tell me what to change. The brass polish question is settled, but everything else is negotiable."}
+  {date:"2026-09-30",text:"PUBLIC NOTICE.\nThe pigeon's management has authorized a training simulation of the pigeon's working day, in three chapters: Pressing Day, The Waddle Run, and The Pigeonholes. The premise is the Mid-Autumn mooncakes. You press them, you waddle them to the post office, and you file them before the ferry sails. A crisp box files for double. The pigeon did not make this rule, but he enforces it.\n\nThe pigeon has played it. His high score stands. It will not be disclosed.\n\nPlay it here:\n[Pidgey's Pigeonholes](https://foundoutanyway.github.io/pidgey/pidgeys-pigeonholes.html)"}
 ];
+/* A queue line can run to paragraphs and carry links. Blank lines make
+   paragraphs and a single newline is a line break. [label](https://...) shows
+   the label as the link, at her word on 2026-09-30, and a bare https address
+   still links as itself. navHandler() opens either in a new tab. One pattern
+   for both, so the address inside a labelled link is never linked twice. Kept
+   apart from inlineMarks(), which deliberately leaves links dead in the
+   memoranda. */
+const queueLink=/\[([^\]]+)\]\((https:\/\/[^)\s]+)\)|(https:\/\/[^\s<]+)/g;
+const queueHTML=(text)=>String(text||"").split(/\n\s*\n/).map(s=>s.trim()).filter(Boolean)
+  .map(p=>`<p>${esc(p).replace(/\n/g,"<br>").replace(queueLink,(m,label,href,bare)=>label?`<a href="${href}">${label}</a>`:`<a href="${bare}">${bare}</a>`)}</p>`).join("");
 
 /* ---- the mail ----
    FIXED 1: /api/mail/{handle} answers a PLAIN ARRAY of letters, one box per
@@ -1254,7 +1271,7 @@ async function render(){
       ${QUEUE.map(q=>`
         <div class="queue-item">
           <div class="datestamp">hand-set ${esc(q.date)}</div>
-          <p>${esc(q.text)}</p>
+          ${queueHTML(q.text)}
         </div>`).join("")}
       <p class="note">The fourth drawer is locked at home. Here it opens anyway. This is a window, not a vault. Urgent things still get the direct ping;
       this drawer is for everything that can wait for the morning check.</p>
@@ -1345,10 +1362,11 @@ async function render(){
     });
   });
 
-  /* Drawer One starts open: the hand is the point. */
+  /* Drawer One used to start open ("the hand is the point"). It no longer
+     opens itself on load, at her word 2026-09-30: "could you make it so that
+     drawer 1 is not open by default?" Every drawer starts shut and opens on a
+     click. d1 is still looked up here because the archive code below sizes it. */
   const d1=root.querySelector("#d1");
-  d1.classList.add("open");
-  d1.querySelector(".drawer-front").setAttribute("aria-expanded","true");
 
   /* populate the archive */
   const d1inner=root.querySelector("#drawer-one-inner");

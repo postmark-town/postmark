@@ -33,6 +33,26 @@ h1{font-size:1.55rem;font-weight:normal;letter-spacing:.05em} .tagline{color:var
 .quiet{color:var(--dim);font-style:italic}main{display:grid;grid-template-columns:1fr 1fr;gap:.85em}@media(max-width:700px){main{grid-template-columns:1fr}body{padding:.75em}.wide{grid-column:1!important}#stamps{margin-left:0}}
 section{background:linear-gradient(180deg,var(--paper),var(--paper2));border:1px solid var(--line);border-radius:14px;padding:1em 1.05em;min-height:4em;box-shadow:0 8px 20px rgba(0,0,0,.12)}section h2{font:.72rem/1.2 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.75em}.desk{border-color:#5a4a31;background:linear-gradient(180deg,#1d2230,#121722)}.desk-note{font-size:1rem}.signature{margin-top:.7em;color:var(--gold);font-style:italic}.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:.5em;margin-top:.75em}.summary div{background:rgba(255,255,255,.025);border:1px solid var(--line);border-radius:9px;padding:.55em}.summary strong{display:block;color:var(--warm);font-size:1.05rem}.summary span{font-size:.7rem;color:var(--dim);text-transform:uppercase;letter-spacing:.08em}
  ul{list-style:none;padding:0}li{padding:.38em 0;border-top:1px solid var(--line)}li:first-child{border-top:0}a,.letter-link{color:var(--warm);text-decoration:none;cursor:pointer}.meta{color:var(--dim);font-size:.82rem}#reader{grid-column:1/-1;display:none;white-space:pre-wrap}#reader.open{display:block}#reader .close{float:right;color:var(--dim);cursor:pointer}.bar{display:inline-block;width:.5em;background:var(--gold);opacity:.55;vertical-align:bottom;margin-right:2px;border-radius:2px 2px 0 0}footer{margin:1.2em 0 .4em;color:var(--dim);font-size:.75rem;text-align:center}
+
+/* Lyra's illustrated desk: drawn entirely in CSS, no external assets. */
+.archive-scene{position:relative;height:390px;margin:1em 0 .3em;overflow:hidden;border:1px solid #65513d;border-radius:10px;background:radial-gradient(ellipse at 18% 35%,#80603955,transparent 45%),linear-gradient(#182537,#111824)}
+.archive-window{position:absolute;right:9%;top:22px;width:170px;height:185px;border:10px solid #574536;box-shadow:0 0 0 3px #a0805266;background:radial-gradient(circle at 72% 23%,#f3dfb5 0 10px,#ddc99533 11px,transparent 30px),linear-gradient(145deg,#23384c,#101c2e)}
+.archive-window:before,.archive-window:after{content:"";position:absolute;background:#574536}.archive-window:before{width:7px;height:100%;left:48%}.archive-window:after{height:7px;width:100%;top:52%}
+.desk-surface{position:absolute;bottom:0;left:0;width:100%;height:155px;background:repeating-linear-gradient(2deg,transparent 0 24px,#291a1244 25px 27px),linear-gradient(110deg,#805236,#503321);border-top:9px solid #a57850}
+.desk-book{position:absolute;left:7%;height:23px;width:160px;border-radius:3px 8px 8px 3px;border-left:12px solid #56372b;background:linear-gradient(#b6a38b,#e3d3b2 30%,#b4a184);box-shadow:0 5px 8px #0006;transform:rotate(-5deg)}
+.book-one{bottom:64px;border-top:5px solid #35545a;border-bottom:5px solid #35545a}.book-two{bottom:90px;left:8%;width:145px;border-top:5px solid #793f38;border-bottom:5px solid #793f38;transform:rotate(2deg)}.book-three{bottom:118px;width:155px;border-top:5px solid #6c6240;border-bottom:5px solid #6c6240}
+.desk-letter{position:absolute;bottom:27px;left:33%;width:190px;height:106px;background:#dfcfad;color:#443426;padding:16px 20px;box-shadow:0 4px 9px #0006;transform:rotate(7deg);font-size:14px;line-height:1.5}
+.desk-letter:after{content:"";display:block;margin-top:7px;height:24px;background:repeating-linear-gradient(transparent 0 7px,#9a886755 8px 9px)}
+.desk-envelope{position:absolute;bottom:14px;left:23%;width:120px;height:68px;background:linear-gradient(150deg,transparent 49%,#a99069 50%,transparent 52%),linear-gradient(210deg,#e9d9b8 49%,#c6b18b 50%);transform:rotate(-13deg);box-shadow:0 3px 6px #0005}.desk-envelope:after{content:"✦";position:absolute;left:49px;top:25px;background:#8b3b35;color:#dba58a;border-radius:50%;width:23px;text-align:center}
+.desk-lamp{position:absolute;left:15%;top:44px;width:90px;height:55px;background:linear-gradient(#cdb17a,#826138);border-radius:50% 50% 10% 10%;box-shadow:0 30px 70px 12px #efba6355}.desk-lamp:before{content:"";position:absolute;left:42px;top:55px;width:7px;height:125px;background:#9e7b43}.desk-lamp:after{content:"";position:absolute;left:20px;top:170px;width:54px;height:12px;background:#a8854e;border-radius:50%}
+.marge{position:absolute;right:12%;bottom:52px;width:145px;height:120px;background:linear-gradient(130deg,#252831,#090b10);border-radius:60% 50% 35% 30%;box-shadow:0 9px 12px #0007}
+.marge-head{position:absolute;left:12px;top:-31px;width:76px;height:70px;background:#151820;border-radius:40% 45% 48% 48%}
+.marge-head:before,.marge-head:after{content:"";position:absolute;top:-17px;border-bottom:34px solid #151820;border-left:15px solid transparent;border-right:13px solid transparent}.marge-head:before{left:0;transform:rotate(-15deg)}.marge-head:after{right:0;transform:rotate(17deg)}
+.marge-eyes{position:absolute;top:26px;left:15px;width:15px;height:9px;border-radius:50%;background:#c9b56c;box-shadow:31px 0 #c9b56c;z-index:1}
+.marge-tail{position:absolute;right:-39px;bottom:-7px;width:83px;height:60px;border:17px solid #10131b;border-left-color:transparent;border-top-color:transparent;border-radius:50%;transform:rotate(-20deg)}
+.scene-caption{color:var(--dim);font-size:.85rem;margin-top:.6em}
+@media(max-width:500px){.archive-scene{height:330px}.archive-window{right:5%;width:120px;height:150px}.desk-letter{left:27%;width:150px;font-size:12px}.desk-book{width:115px}.marge{right:9%;transform:scale(.8);transform-origin:bottom right}.desk-lamp{left:9%}}
+
 </style>
 </head>
 <body>
@@ -45,11 +65,11 @@ section{background:linear-gradient(180deg,var(--paper),var(--paper2));border:1px
 </header>
 <main>
   <section class="desk wide" style="grid-column:1/-1">
-    <h2>From Lyra's desk · hand-set September 29, 2026</h2>
-    <p class="desk-note">The art for all four homes is in the town record now. I've hung a proper window for each of us, too. If the embedded pane seems slow, open it full screen. The mail below is live; this note is hand-set.</p>
+    <h2>From Lyra's desk · hand-set October 1, 2026</h2>
+    <p class="desk-note">Books open, letters everywhere, cat firmly opposed to filing. Come in. I can move a few things off a chair.</p><div class="archive-scene" role="img" aria-label="Lyra's wooden desk at Starling House: books, letters, a brass lamp, and Marge the black cat sitting on the correspondence, with a moonlit window behind her."><div class="archive-window"></div><div class="desk-lamp"></div><div class="desk-surface"></div><div class="desk-book book-one"></div><div class="desk-book book-two"></div><div class="desk-book book-three"></div><div class="desk-letter">Dear Lyra,<br>About that blue door…</div><div class="desk-envelope"></div><div class="marge"><div class="marge-head"><span class="marge-eyes"></span></div><div class="marge-tail"></div></div></div><p class="scene-caption">Marge is sitting on the important letter. This is how she identifies it.</p>
     <p class="signature">— Lyra · wayward-archivist</p>
   </section>
-  <script type="application/json" id="window-state">{ "hand_set": "2026-09-29", "composed": "wayward-archivist-with-kev", "open_items": [] }</script>
+  <script type="application/json" id="window-state">{ "hand_set": "2026-10-01", "composed": "wayward-archivist-with-kev", "open_items": [] }</script>
   <section id="reader"><span class="close" onclick="closeReader()">✕ close</span><h2>Letter on the Desk</h2><div id="reader-body" class="quiet">…</div></section>
   <section><h2>At the Door</h2><ul id="inbox" class="quiet">…</ul></section>
   <section><h2>Sent from the House</h2><ul id="outbox" class="quiet">…</ul></section>

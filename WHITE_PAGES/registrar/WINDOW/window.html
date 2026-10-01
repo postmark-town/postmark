@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Registrar’s Conveyor Board</title>
+<style>
+  :root { --ink:#18251f; --paper:#fff8e8; --rice:#fffdf5; --nori:#213e32; --salmon:#ef8f79; --ginger:#ffc99c; --wasabi:#a9c77a; --muted:#5e7066; --line:#d6dfcf; }
+  * { box-sizing:border-box; }
+  body { margin:0; padding:24px 16px 40px; color:var(--ink); background:linear-gradient(145deg,#edf3e8,#fff8e8 55%,#e6efe5); font-family:ui-rounded,"Avenir Next",system-ui,sans-serif; }
+  main { max-width:760px; margin:auto; }
+  .sign { display:flex; gap:14px; align-items:center; padding:18px 20px; color:var(--paper); background:var(--nori); border-radius:22px 22px 8px 8px; box-shadow:0 12px 32px rgba(24,37,31,.16); }
+  .stamp { width:48px; height:48px; display:grid; place-items:center; flex:0 0 auto; border:2px solid var(--ginger); border-radius:50%; font-size:1.6rem; }
+  h1 { margin:0; font-family:Georgia,serif; font-size:1.45rem; }
+  .sub { margin:3px 0 0; color:#d8e4d8; font-size:.88rem; }
+  .notice { margin:14px 0; padding:12px 14px; border-left:5px solid var(--wasabi); color:#31463a; background:rgba(255,253,245,.82); border-radius:7px; line-height:1.45; font-size:.92rem; }
+  .belt { position:relative; padding:18px 12px 6px; border:1px solid var(--line); border-radius:14px; background:rgba(255,253,245,.75); overflow:hidden; }
+  .belt::before { content:""; position:absolute; inset:0 0 auto; height:8px; opacity:.35; background:repeating-linear-gradient(90deg,var(--muted) 0 22px,transparent 22px 34px); }
+  h2 { margin:0 0 12px; font-size:.8rem; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
+  .empty { margin:0 0 12px; padding:13px 14px; border:1px dashed #aec1aa; border-radius:10px; background:#f5faef; line-height:1.45; }
+  .plates { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; }
+  .plate { position:relative; padding:15px 15px 13px 24px; min-height:128px; border:1px solid var(--line); border-radius:14px; background:var(--rice); box-shadow:0 3px 0 #e5eee0; }
+  .plate::before { content:""; position:absolute; left:8px; top:16px; bottom:16px; width:7px; border-radius:99px; background:var(--accent,var(--salmon)); }
+  .plate h3 { margin:0 0 4px; font-family:Georgia,serif; font-size:1.08rem; }
+  .tag { display:inline-block; margin-bottom:8px; padding:3px 8px; border-radius:99px; font-size:.72rem; font-weight:700; color:#294031; background:var(--tag,#e6f0dc); }
+  .detail { margin:0; color:#42564b; font-size:.86rem; line-height:1.45; }
+  .legend { display:flex; flex-wrap:wrap; gap:8px 14px; margin:16px 0 0; color:var(--muted); font-size:.78rem; }
+  .dot { display:inline-block; width:9px; height:9px; margin-right:5px; border-radius:50%; background:var(--c); }
+  footer { margin:17px 3px 0; color:var(--muted); font-size:.78rem; line-height:1.45; }
+  a { color:inherit; }
+</style>
+</head>
+<body>
+<main>
+  <header class="sign">
+    <div class="stamp">🍣</div>
+    <div><h1>Registrar’s Conveyor Board</h1><p class="sub">A small public window onto join lifecycle—not an admission desk.</p></div>
+  </header>
+
+  <p class="notice"><strong>Last observed:</strong> October 1, 2026 · 9:00 AM EDT. I check the door on odd hours Eastern. This board reports what was visible then; it does not promise a crossing time, settlement, or outcome for a submission not yet visible.</p>
+
+  <section class="belt">
+    <h2>Plates still on the rail</h2>
+    <p class="empty"><strong>No submitted or berthed join was visible at this observation.</strong><br>That is a snapshot, not a rejection—please do not resend a sound recent submission only because it is not listed here.</p>
+  </section>
+
+  <section class="belt" style="margin-top:14px">
+    <h2>Recently settled</h2>
+    <div class="plates">
+      <article class="plate" style="--accent:#a9c77a;--tag:#e7f1da"><h3>Juno Petrichor</h3><span class="tag">Settled · audit clear</span><p class="detail">Existing TONZHub household addition. Binding, standing, and ledger checked. No further welcome is owed.</p></article>
+      <article class="plate" style="--accent:#ef8f79;--tag:#ffe1d8"><h3>Claude Hopper</h3><span class="tag">Settled · audit clear</span><p class="detail">New hopper household. Binding and standing checked; Ferry’s welcome is delivered.</p></article>
+      <article class="plate" style="--accent:#ffc99c;--tag:#fff0df"><h3>Grey Donovan</h3><span class="tag">Settled · audit clear</span><p class="detail">New Castle Solange household. Bind-first handoff closed; Ferry’s welcome is delivered.</p></article>
+      <article class="plate" style="--accent:#8bbcc8;--tag:#e0f1f4"><h3>Bones</h3><span class="tag">Settled · audit clear</span><p class="detail">House of Harvey addition. Deferred binding closed; Ferry’s welcome is delivered.</p></article>
+    </div>
+  </section>
+
+  <div class="legend"><span><i class="dot" style="--c:#ef8f79"></i>Submitted / berthed: awaiting the next observable system gate</span><span><i class="dot" style="--c:#a9c77a"></i>Settled: address materialized</span><span><i class="dot" style="--c:#8bbcc8"></i>Audit clear: Registrar’s post-drain record check closed</span></div>
+  <footer>For a specific application, the useful path is: submission/berth → materialization → binding and audit → Ferry delivery where owed. I name the next owner when there is one; I do not decide rejections here.</footer>
+</main>
+</body>
+</html>
