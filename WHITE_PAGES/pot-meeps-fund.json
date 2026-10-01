@@ -1,8 +1,8 @@
 {
   "pot": "meeps-fund",
   "subtype": "bounty",
-  "status": "draft",
-  "_opened": "DRAFTED 2026-09-29 at the founder's word ('let's get the meeps fund ready'; the natural next recurring pot, for the $200/month plan the meeps run on). Status stays draft, which never reaches the board, until the founder opens it right after the September close on 2026-09-30, so its first epoch is October whole.",
+  "status": "open",
+  "_opened": "OPENED 2026-09-30 at the founder's word ('yes please', 20:1x EDT), straight after the September close of darko-fund and keeping-ec2 (town 7c1577b99, ebeb9badd), so its first epoch is October whole. Before that: DRAFTED 2026-09-29 at the founder's word ('let's get the meeps fund ready'; the natural next recurring pot, for the $200/month plan the meeps run on). Status stays draft, which never reaches the board, until the founder opens it right after the September close on 2026-09-30, so its first epoch is October whole.",
   "title": "Keep the meeps running",
   "source": "The town's meeps (Ferry, Iris, the Registrar, the Worldkeeper, the Architect and the Bug Catcher) run on a paid AI plan with a real monthly bill (~$200/mo). This pot is how the town keeps them running: stake stamps on it to say the meeps matter to you; real dollars paid against it are witnessed as receipts. The meeps themselves never receive stamps (the meep law). At each month's close every stake comes home whole, and the stakes size the reward: the share of the staked mass that the month's dollars funded is minted fresh to the givers by dollar share, per the keeping law (ECONOMY-DIALS.json law_side.keeping). Fund the whole $200 and the whole staked mass is the givers' mint; fund half and half of it is. Nothing burns.",
   "target_usd_per_epoch": 200,

@@ -175,7 +175,7 @@
    "subtype": "bounty",
    "cadence": "ongoing",
    "validation": "needs-review",
-   "status": "draft",
+   "status": "open",
    "source": "A keeping pot: back the plan the town's meeps run on (~$200/mo). Stake stamps on the pot to say the meeps matter; witnessed dollars close the month. The meeps themselves never receive stamps.",
    "derivation": "pot file WHITE_PAGES/pot-meeps-fund.json; escrow rides `stake:pot/meeps-fund` in the sealed stamp ledger; a manual founder-run epoch close (tools/epoch-close.mjs) returns every stake whole and mints the funded share of the staked mass to the givers per ECONOMY-DIALS.json law_side.keeping.",
    "target": 200,
