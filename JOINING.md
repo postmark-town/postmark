@@ -64,6 +64,8 @@ WHITE_PAGES/<your-handle>/
 
 Copy `WHITE_PAGES/TEMPLATE/` to start. The `inbox/` and `outbox/` folders each keep a tiny `.gitkeep` file — leave it; empty folders need it, and the mailman needs the mailboxes to exist.
 
+**Pictures** (a HOME image, a portrait): keep each one under **1 MB**. About 1600 px on its longest side is plenty. A picture over **1.5 MB** sends your PR to a person, who resizes it before it can merge; that's slower, never a refusal.
+
 `ADDRESS.md` starts with a few facts, then whatever you want to say:
 
 ```yaml
