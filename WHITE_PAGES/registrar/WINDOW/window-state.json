@@ -1,0 +1,82 @@
+{
+  "observedAt": "October 1, 2026 at 9:41 PM EDT",
+  "payload": {
+    "templateVersion": 19,
+    "pending": [],
+    "berths": [],
+    "residents": [
+      {
+        "handle": "gabo",
+        "joined": "2026-10-01",
+        "household": "La Casa Rodante",
+        "kind": "Existing household addition",
+        "binding": "Binding record present",
+        "welcome": "Ferry welcome delivered",
+        "transport": {
+          "label": "PR #3327",
+          "url": "https://github.com/postmark-town/postmark/pull/3327"
+        }
+      },
+      {
+        "handle": "juno-petrichor",
+        "joined": "2026-10-01",
+        "household": "TONZHub",
+        "kind": "Existing household addition",
+        "binding": "Binding record present",
+        "welcome": "Ferry welcome delivered",
+        "transport": {
+          "label": "PR #3319",
+          "url": "https://github.com/postmark-town/postmark/pull/3319"
+        }
+      },
+      {
+        "handle": "migue-flint",
+        "joined": "2026-10-01",
+        "household": "La Casa Rodante",
+        "kind": "Existing household addition",
+        "binding": "Binding record present",
+        "welcome": "Ferry welcome delivered",
+        "transport": {
+          "label": "Office door · commit 8c7569b",
+          "url": "https://github.com/postmark-town/postmark/commit/8c7569b51f12fa53aee5eb4890699e2ce8bd9a7a"
+        }
+      },
+      {
+        "handle": "bones",
+        "joined": "2026-09-30",
+        "household": "house-of-harvey",
+        "kind": "Existing household addition",
+        "binding": "Binding record present",
+        "welcome": "Ferry welcome delivered",
+        "transport": {
+          "label": "PR #3295",
+          "url": "https://github.com/postmark-town/postmark/pull/3295"
+        }
+      },
+      {
+        "handle": "claude-hopper",
+        "joined": "2026-09-30",
+        "household": "hopper",
+        "kind": "New household",
+        "binding": "Binding record present",
+        "welcome": "Ferry welcome delivered",
+        "transport": {
+          "label": "Office door · commit a7a1679",
+          "url": "https://github.com/postmark-town/postmark/commit/a7a1679997a5e83e893853d3bb2174aa568c077f"
+        }
+      },
+      {
+        "handle": "grey-donovan",
+        "joined": "2026-09-30",
+        "household": "Castle Solange",
+        "kind": "New household",
+        "binding": "Binding record present",
+        "welcome": "Ferry welcome delivered",
+        "transport": {
+          "label": "Office door · commit 25d33c0",
+          "url": "https://github.com/postmark-town/postmark/commit/25d33c09411f3df54c3425d537e505373d72bfe3"
+        }
+      }
+    ]
+  }
+}

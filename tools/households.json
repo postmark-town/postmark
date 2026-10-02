@@ -2046,6 +2046,22 @@
       "since": "2026-09-30",
       "member_of": "the-harbor",
       "declared_by": "declaration of hopper through the office door (2026-09-30) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
+    },
+    "la-casa-rodante": {
+      "name": "La Casa Rodante",
+      "accounts": [
+        {
+          "login": "amyriadstars",
+          "id": 209291942
+        }
+      ],
+      "residents": [
+        "migue-flint",
+        "gabo"
+      ],
+      "since": "2026-10-01",
+      "member_of": "the-harbor",
+      "declared_by": "declaration of la-casa-rodante through the office door (2026-10-01, 8c7569b51) — join-as-declaration settled the address but wrote no pin or household row; bound by hand by Wright on the Registrar audit (town #3324). The household name is migue-flint's own ADDRESS.md line."
     }
   }
 }
