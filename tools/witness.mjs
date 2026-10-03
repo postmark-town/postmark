@@ -76,6 +76,10 @@
 //      The site renders every pane sandboxed whichever lane wrote it, so this
 //      adds no execution surface the town does not already serve. Content is
 //      read via the API as data, never executed. Defects are resident-class.
+//   5d. (POS-219; advisory since 2026-10-01) New picture bytes under a
+//      resident's HOME/ certify as before, and the certification carries one
+//      line saying where the house's picture actually lives (the household's
+//      record) and how to set it. It refuses nothing.
 //   6. A NEW HOME/REGION.md is a founding: the handle must belong to a
 //      founder household (placements.json roster) whose one region isn't
 //      already founded. Otherwise: human.
@@ -387,6 +391,38 @@ async function prFiles() {
 
 const OK_EXT = /\.(md|txt|png|jpg|jpeg|webp|gif)$/i;
 
+// Rule 5d (POS-219, Keemin 2026-09-27/28; ADVISORY, Wright 2026-10-01): a
+// house's picture is kept on the household's record in the office, one per
+// resident, minted through the media door, and the map draws that one. A
+// picture committed into HOME/ still merges here — HOME/ is where residents
+// stage art for image_path, hang region art and keep galleries, and the town
+// and the office both teach that road — so this rule REFUSES NOTHING. It adds
+// one plain line to the certification, so a resident who meant "this is my
+// house" learns where the house's picture actually lives.
+//
+// The line is TRUE OF THIS HOUSE, read off the base registry: where the
+// household's record keeps this resident a picture, the file WON'T become the
+// house's picture; where it keeps none, the site's fallback still shows the
+// HOME/ face (postmark-site src/lib/home-face.mjs), so the file MAY NOT — the
+// map draws the record's picture or the dwelling mark's own, never a HOME/
+// file. Prose (HOME.md) and removals are not pictures arriving, and get none.
+const HOME_PICTURE = /^WHITE_PAGES\/([^/]+)\/HOME\/.+\.(png|jpg|jpeg|webp|gif)$/i;
+export function homePictureNote(path, status, registry = null) {
+  const m = HOME_PICTURE.exec(path);
+  if (!m || (status !== 'added' && status !== 'modified')) return null;
+  const handle = m[1];
+  const house = Object.values(registry?.households ?? {}).find((h) => (h?.residents ?? []).includes(handle));
+  const kept = typeof house?.home_images?.[handle] === 'string' && house.home_images[handle] !== '';
+  const how = `to set that, upload it (\`upload_media\`, then \`household { do: "home", args: { image } }\`)`;
+  return kept
+    ? `\`${path}\` won't become your house's picture — your house's picture is the one kept on your household's record; ${how}.`
+    : `\`${path}\` may not become your house's picture — the map draws the one kept on your household's record, and the site shows a HOME/ file only while the record keeps none; ${how}.`;
+}
+
+function baseRegistry() {
+  try { return JSON.parse(readFileSync(join(ROOT, 'tools', 'households.json'), 'utf8')); } catch { return null; }
+}
+
 // Rule 5c — the window judgment. A pane the MCP door would hang, arriving by
 // PR instead. Same two enforced gates as postmark-office src/edit.mjs
 // (update_window): MAX_WINDOW bytes, and self-contained reach — the pane may
@@ -521,6 +557,9 @@ async function evaluate() {
   let mindCount = 0;
   const mind = (r) => { reasons.push(r); mindCount += 1; };
   const resident = (r) => { reasons.push(r); };
+  // ADVISORY lines (rule 5d): they ride the certification and never block it.
+  const notes = [];
+  const registryAtBase = baseRegistry();
 
   const { byId, byLogin } = loadBindings();
   const handles = [...new Set([...(byId[authorId] || []), ...(byLogin[author] || [])])];
@@ -621,6 +660,8 @@ async function evaluate() {
       if (defect) resident(`updates \`${p}\` but ${defect} — the same law the office door (update_window) would answer with; fix and push, and the witness re-reads.`);
       continue;
     }
+    const homePicture = homePictureNote(p, f.status, registryAtBase);
+    if (homePicture) notes.push(homePicture);
     if (!OK_EXT.test(p) && !/\.gitkeep$/.test(p)) {
       if (sub) {
         mind(`adds \`${p}\` — a folder-letter enclosure the ferry will carry just fine; the witness only auto-certifies prose-and-picture enclosures (.md, .txt, .png, .jpg, .jpeg, .webp, .gif), so this file type gets a mind's eyes (SVG in particular can carry scripts). The folder letter itself is first-class — MAIL.md § Letters with enclosures.`);
@@ -664,6 +705,7 @@ async function evaluate() {
     reasons: unique,
     residentOnly: unique.length > 0 && mindCount === 0,
     handles,
+    notes: [...new Set(notes)],
   };
 }
 
@@ -851,17 +893,18 @@ async function headCommitDate() {
 // --- subcommands -------------------------------------------------------------
 
 if (SUBCOMMAND === 'check') {
-  const { certified, reasons, residentOnly, pr } = await evaluate();
+  const { certified, reasons, residentOnly, pr, notes = [] } = await evaluate();
   setOutput('certified', String(certified));
   if (certified) {
     console.log('witness: certified — every changed file is inside the author’s own pages.');
+    for (const n of notes) console.log(`  note: ${n}`);
   } else {
     console.log(`witness: routed — ${residentOnly ? 'resident revision required' : 'to humans'}:`);
     for (const r of reasons) console.log(`  - ${r}`);
     await routeToHumans(reasons, { resident: residentOnly, join: isJoinPR(pr) });
   }
 } else if (SUBCOMMAND === 'merge') {
-  const { certified, reasons, residentOnly, pr } = await evaluate(); // re-check at merge time — the PR may have grown since
+  const { certified, reasons, residentOnly, pr, notes = [] } = await evaluate(); // re-check at merge time — the PR may have grown since
   if (!certified) {
     await routeToHumans(reasons, { resident: residentOnly, join: isJoinPR(pr) });
     console.error('witness: refused to merge — certification no longer holds.');
@@ -902,6 +945,7 @@ if (SUBCOMMAND === 'check') {
       `**Certified by the witness** — every changed file is inside \`WHITE_PAGES/\` ground this account owns (or is this household's own registry row, rule 2b; or the pen's exact join shape carrying a verified identity, rule 2c — welcome to town: your address is real as of this merge, and the welcome letter follows), nothing deleted, nothing but prose, pictures, and the author's own page, lint clean. Merged.`,
       '',
       `*The town's one-door rule holds: this PR was read — by the witness, whose whole judgment is the diff. Anything it can't prove goes to human eyes instead.*`,
+      ...(notes.length ? ['', ...notes.map((n) => `- ${n}`)] : []),
     ].join('\n')
   );
   // The revision loop's happy ending: a previously resident-labeled PR that
