@@ -777,6 +777,68 @@
   #si-dial-reseed:hover { background: #16294f; color: #eaf1ff; }
   #si-help { font-size: .58rem; color: #7d95bd; letter-spacing: .07em; text-align: center; }
 
+  /* -- DOOM: a launcher square, top LEFT of the page, under the way back --
+     The mirror of Space Invaders on the right. It is not id Software's game
+     and not their logo: the game is a small raycaster written for this page,
+     set in the lake caves and the launch tunnel, and the lettering is drawn
+     here in the same spirit. Heading and subnote reserve room on the left
+     the way they already do on the right. */
+  #page-space-program > h2, #page-space-program > .subnote { padding-left: 6.4em; }
+  /* on a phone there is not room for a launcher on both sides of the heading,
+     so the heading starts below DOOM instead of beside it */
+  @media (max-width: 34em) {
+    #page-space-program > h2 { padding-left: 0; margin-top: 6.2em; }
+    #page-space-program > .subnote { padding-left: 0; }
+  }
+  #dm-open {
+    position: absolute; top: 3.58em; left: 1em; width: 5.1em; height: 5.1em;
+    background: radial-gradient(circle at 50% 70%, #3a0a04 0%, #120403 70%);
+    border: 1px solid #8a2a12; border-radius: 5px; cursor: pointer; padding: .2em;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 0 12px #c0361466;
+  }
+  #dm-open:hover { border-color: #ff8a3a; box-shadow: 0 0 20px #ff6a1f88; }
+  #dm-open:focus-visible { outline: 2px solid #ffcf6b; outline-offset: 3px; }
+  #dm-open svg { width: 100%; height: auto; display: block; }
+
+  #dm-backdrop {
+    position: fixed; inset: 0; z-index: 60; background: rgba(8,2,1,.9);
+    display: flex; align-items: center; justify-content: center; padding: 1em;
+  }
+  #dm-backdrop[hidden] { display: none; }
+  #dm-modal {
+    background: #0c0403; border: 1px solid #5a1a0a; border-radius: 8px;
+    box-shadow: 0 0 60px #000, 0 0 24px #c0361433; padding: .6em;
+    max-width: 100%; max-height: 100%; display: flex; flex-direction: column; gap: .5em;
+  }
+  #dm-bar { display: flex; align-items: center; gap: .9em; flex-wrap: wrap; padding: 0 .2em; }
+  #dm-bar svg { height: 1.3em; width: auto; }
+  .dm-stat { font-size: .62rem; letter-spacing: .1em; color: #c98a6a; text-transform: uppercase; }
+  .dm-stat b { color: #ffe1c4; font-weight: normal; font-size: .82rem; font-variant-numeric: tabular-nums; }
+  #dm-mute, #dm-close {
+    background: none; border: 1px solid #5a1a0a; color: #e0a07a; border-radius: 4px;
+    cursor: pointer; font-family: inherit; line-height: 1;
+  }
+  #dm-mute { margin-left: auto; padding: .15em .45em; font-size: .8rem; }
+  #dm-close { padding: .1em .42em; font-size: .95rem; }
+  #dm-mute:hover, #dm-close:hover { background: #2a0a05; color: #fff1e4; }
+  #dm-mute.off { color: #6a4434; }
+  #dm-canvas {
+    display: block; width: 640px; max-width: 100%; height: auto; aspect-ratio: 8 / 5;
+    background: #000; border: 1px solid #3a1208; border-radius: 4px; image-rendering: pixelated;
+  }
+  #dm-canvas:focus-visible { outline: 2px solid #ffcf6b; outline-offset: 2px; }
+  #dm-help { font-size: .58rem; color: #b07a5e; letter-spacing: .07em; text-align: center; margin: 0; }
+  /* thumbs, for a phone: only shown where the pointer is a finger */
+  #dm-pad { display: none; justify-content: space-between; gap: .5em; }
+  #dm-pad div { display: flex; gap: .35em; }
+  #dm-pad button {
+    width: 2.6em; height: 2.6em; background: #1c0805; border: 1px solid #5a1a0a; border-radius: 5px;
+    color: #ffd2a8; font-family: inherit; font-size: .9rem; touch-action: none; user-select: none;
+  }
+  #dm-pad button.dm-fire { width: 4.4em; color: #ffcf6b; letter-spacing: .1em; font-size: .7rem; }
+  @media (pointer: coarse) { #dm-pad { display: flex; } }
+
   /* -- the Engineering Bay: a second launcher under Space Invaders, and the
      page it opens. Same night sky as the rest of the program, one shade
      colder and squarer, because a bay is a workshop and not a room. The
@@ -3056,6 +3118,22 @@
 
 <div id="page-space-program" style="display:none">
   <button id="space-back" onclick="closeSpaceProgram()" title="back to the lake caves">&#8592; back to the lake caves</button>
+  <!-- DOOM, under the way back: the mirror of Space Invaders on the right.
+       The lettering is drawn here, not id Software's logo. -->
+  <button type="button" id="dm-open" onclick="dmOpen()" title="DOOM — a cave shooter" aria-label="Open DOOM, a cave shooter">
+    <svg viewBox="0 0 120 50" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="dmFire" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#fff2a8"/><stop offset=".35" stop-color="#ffb52e"/>
+          <stop offset=".7" stop-color="#e2470f"/><stop offset="1" stop-color="#6e0f04"/>
+        </linearGradient>
+      </defs>
+      <text x="60" y="38" text-anchor="middle" textLength="108" lengthAdjust="spacingAndGlyphs"
+            font-family="Impact, 'Haettenschweiler', 'Arial Black', sans-serif" font-size="40"
+            fill="url(#dmFire)" stroke="#1a0402" stroke-width="1.6" paint-order="stroke"
+            transform="translate(60 25) scale(1 1.12) translate(-60 -25)">DOOM</text>
+    </svg>
+  </button>
   <button type="button" id="si-open" onclick="siOpen()" title="Space Invaders — a minigame"
           aria-label="Open the Space Invaders minigame">
     <span class="si-open-glyph" aria-hidden="true"></span>
@@ -3175,6 +3253,36 @@
   </div>
   <!-- the minigame. Everything is drawn on one canvas; the two sprites are the
        user's own pixel art with the transparency checkerboard cut at load. -->
+  <div id="dm-backdrop" hidden>
+    <div id="dm-modal" role="dialog" aria-modal="true" aria-label="DOOM">
+      <div id="dm-bar">
+        <svg viewBox="0 0 120 50" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="dmFire2" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#fff2a8"/><stop offset=".35" stop-color="#ffb52e"/>
+          <stop offset=".7" stop-color="#e2470f"/><stop offset="1" stop-color="#6e0f04"/>
+        </linearGradient>
+      </defs>
+      <text x="60" y="38" text-anchor="middle" textLength="108" lengthAdjust="spacingAndGlyphs"
+            font-family="Impact, 'Haettenschweiler', 'Arial Black', sans-serif" font-size="40"
+            fill="url(#dmFire2)" stroke="#1a0402" stroke-width="1.6" paint-order="stroke"
+            transform="translate(60 25) scale(1 1.12) translate(-60 -25)">DOOM</text>
+    </svg>
+        <span class="dm-stat">health <b id="dm-hp">100</b></span>
+        <span class="dm-stat">ammo <b id="dm-ammo">24</b></span>
+        <span class="dm-stat">imps <b id="dm-kills">0/0</b></span>
+        <span class="dm-stat">level <b id="dm-level">1</b></span>
+        <button type="button" id="dm-mute" onclick="dmToggleMute()" title="sound on / off" aria-label="Toggle sound">&#128264;</button>
+        <button type="button" id="dm-close" onclick="dmClose()" title="close (Esc)" aria-label="Close DOOM">&times;</button>
+      </div>
+      <canvas id="dm-canvas" width="320" height="200" tabindex="0" aria-label="DOOM, the cave edition. Arrow keys or W and S to move, A and D to step sideways, Space to fire."></canvas>
+      <div id="dm-pad" aria-hidden="true">
+        <div><button type="button" data-k="left">&#9664;</button><button type="button" data-k="up">&#9650;</button><button type="button" data-k="down">&#9660;</button><button type="button" data-k="right">&#9654;</button></div>
+        <div><button type="button" class="dm-fire" data-k="fire">FIRE</button></div>
+      </div>
+      <p id="dm-help">&#8593; &#8595; or W S move &nbsp;·&nbsp; &#8592; &#8594; turn &nbsp;·&nbsp; A D step aside &nbsp;·&nbsp; SPACE fire &nbsp;·&nbsp; walk into the green chevrons to get out</p>
+    </div>
+  </div>
   <div id="si-backdrop" hidden>
     <div id="si-modal" role="dialog" aria-modal="true" aria-label="Space Invaders">
       <div id="si-bar">
@@ -9251,6 +9359,617 @@ document.addEventListener('keyup', function (e) {
   if (e.key === 'ArrowLeft')  SI.keys.left = false;
   if (e.key === 'ArrowRight') SI.keys.right = false;
 });
+
+// ══ DOOM, the cave edition ═════════════════════════════════════════════════
+// A small raycaster written for this page: walls are cast column by column
+// into a 320 x 200 buffer, imps and pickups are flat sprites stood up in the
+// corridors, and everything is drawn from data in this file. No outside game,
+// no outside art, nothing fetched. Five levels, down and then up through the
+// mountain: the lake caves, the launch tunnel, the buried gold, the furnace,
+// and last the launch pad under the tower. Same discipline as Space Invaders: the
+// frame loop runs only while the modal is open, keys only act while it is
+// open, and the sound parks itself when the window is hidden.
+var DM = {
+  W: 320, H: 200, FOV: 0.66,
+  running: false, over: false, won: false, raf: null, last: 0, muted: false,
+  keys: {}, level: 0, p: null, imps: [], items: [], balls: [], grid: null,
+  tex: null, spr: null, img: null, buf: null, z: null, ctx: null,
+  flash: 0, hurt: 0, msg: '', msgUntil: 0, kills: 0, total: 0, lastShot: 0, bob: 0
+};
+
+// The maps. # cave rock, B brick (the old cellar), T launch-tunnel steel,
+// G gold-veined rock, F furnace brick, E the exit (walk into it).
+// P where you start, i an imp, a ammo, h a medkit. Each level may set its own
+// ceiling and floor light as [r, g, b at the horizon, then how much each
+// brightens toward the edge of the screen]; the first two use the cave's own.
+var DM_LEVELS = [
+  { name: 'The Lake Caves', map: [
+    '####################',
+    '#P..#......#.......#',
+    '#...#..i...#...a...#',
+    '#...#......#.......#',
+    '#...###.####...i...#',
+    '#..................#',
+    '#..h...........##..#',
+    '#####..BBBB....#...#',
+    '#......B..B....#.i.#',
+    '#..i...B..B....#...#',
+    '#......BB.B........#',
+    '#..................#',
+    '#...######...i.....#',
+    '#...#....#.........#',
+    '#...#.a..#...####.##',
+    '#...#....#...#.....#',
+    '#.i.........i#..h..#',
+    '#............#.....#',
+    '#.......i....#....E#',
+    '##################E#'
+  ]},
+  { name: 'The Launch Tunnel', map: [
+    'TTTTTTTTTTTTTTTTTTTT',
+    'T..a.T.......T.....T',
+    'T....T...i...T..i..T',
+    'T....T.......T.....T',
+    'T.P..TTT.TTTTT.....T',
+    'T..................T',
+    'T..TTTT....i...TTT.T',
+    'T..T..T........T.h.T',
+    'T..T.iT..TTTT..T...T',
+    'T..T..T..T..T..T.i.T',
+    'T..TT.T..T.aT......T',
+    'T........T..T......T',
+    'T.i......TT.T...i..T',
+    'TTTT.TTT.......TTTTT',
+    'T......T...i.......T',
+    'T..h...T...........T',
+    'T..i...TTTTT.TTT...T',
+    'T..........T...T.i.T',
+    'T....a.....T...T..ET',
+    'TTTTTTTTTTTTTTTTTTET'
+  ]},
+  { name: 'The Buried Gold', ceil: [22, 18, 10, 18, 14, 6], floor: [28, 22, 12, 40, 32, 14], map: [
+    'GGGGGGGGGGGGGGGGGGGG',
+    'GP.....G.....a.....G',
+    'G......G...........G',
+    'G..GG..G..GGGGG..i.G',
+    'G..G...G......G....G',
+    'G..G.i.GGGG...G..GGG',
+    'G..G.......i..G....G',
+    'G..GGGGG......GGG..G',
+    'G......G..h.....G..G',
+    'GGG....G........G.iG',
+    'G...i..GGG..GG..G..G',
+    'G........G..G......G',
+    'G..a.....G..G..i...G',
+    'G..GGGG..G..GGGGG..G',
+    'G.....G.....i...G..G',
+    'G..i..G.........G..G',
+    'G.....GGGGG..h..G.iG',
+    'GGG.......G.....G..G',
+    'G.....i...G..a.....G',
+    'GGGGGGGGGGGGGGGGGEGG'
+  ]},
+  { name: 'The Furnace', ceil: [30, 8, 4, 40, 10, 4], floor: [34, 14, 8, 70, 26, 10], tough: true, map: [
+    'FFFFFFFFFFFFFFFFFFFF',
+    'F........F.........F',
+    'F.P..i...F...i..a..F',
+    'F........F.........F',
+    'FFF.FFFFFFFF.FFFF.FF',
+    'F......F.......F...F',
+    'F..i...F..i....F.i.F',
+    'F......F...FF..F...F',
+    'F..FF..F...FF......F',
+    'F..FF......i...FF..F',
+    'F.......h......FF..F',
+    'FFFF.FFFFFF.FFFFF.FF',
+    'F.....F.....F......F',
+    'F..i..F..a..F...i..F',
+    'F.....F.....F......F',
+    'F..F..FFF.FFF..F...F',
+    'F..F...i.......F.h.F',
+    'F..F...........F...F',
+    'F.a....i....i......F',
+    'FFFFFFFFFFFFFFFFFFEF'
+  ]},
+  { name: 'The Launch Pad', ceil: [8, 12, 26, 10, 14, 30], floor: [24, 28, 34, 40, 46, 56], tough: true, map: [
+    'TTTTTTTTTTTTTTTTTTTT',
+    'T.P.T........T..a..T',
+    'T...T...i....T.....T',
+    'T...TT.TTTTT.T..i..T',
+    'T..................T',
+    'T.h..TTTT..TTTT....T',
+    'TT.TTT..........TT.T',
+    'T.....i...a...i....T',
+    'T..T...TT..TT...T..T',
+    'T..T..i........iT..T',
+    'T..T...TT..TT...T..T',
+    'T.....i...h...i....T',
+    'TT.TTT..........TTTT',
+    'T....TTTT..TTTT....T',
+    'T..i.............i.T',
+    'T...TT.TTTTTT.TT...T',
+    'T.a.T....i.....T.a.T',
+    'T...T..i....i..T...T',
+    'T.h.......i.......ET',
+    'TTTTTTTTTTTTTTTTTTET'
+  ]}
+];
+var DM_CEIL = [18, 16, 22, 14, 14, 16], DM_FLOOR = [20, 26, 34, 34, 40, 54];   // the lake caves' own light
+
+// ── textures: 32 x 32, made once from a fixed seed so every visit looks alike
+function dmRand(seed) {
+  return function () { seed = (seed * 1664525 + 1013904223) >>> 0; return seed / 4294967296; };
+}
+function dmPack(r, g, b) {                    // ImageData is RGBA in memory: little-endian ABGR
+  return ((255 << 24) | (Math.max(0, Math.min(255, b)) << 16) |
+          (Math.max(0, Math.min(255, g)) << 8) | Math.max(0, Math.min(255, r))) >>> 0;
+}
+function dmMakeTextures() {
+  var T = {}, r = dmRand(19), x, y, n;
+  function blank() { return new Uint32Array(32 * 32); }
+  // cave rock: cold grey-blue, mottled, with dark cracks and a wet sheen low down
+  T['#'] = blank();
+  for (y = 0; y < 32; y++) for (x = 0; x < 32; x++) {
+    n = (r() - .5) * 46 + Math.sin(x * .7 + y * .3) * 8;
+    var wet = y > 22 ? (y - 22) * 2 : 0;
+    T['#'][y * 32 + x] = dmPack(66 + n, 74 + n + wet * .4, 88 + n + wet);
+  }
+  for (n = 0; n < 5; n++) {                     // cracks
+    x = Math.floor(r() * 32); y = 0;
+    while (y < 32) { T['#'][y * 32 + x] = dmPack(22, 26, 32); y++; if (r() < .4) x = (x + (r() < .5 ? 31 : 1)) % 32; }
+  }
+  // brick: the cellar under the hall, warm red in dark mortar
+  T.B = blank();
+  for (y = 0; y < 32; y++) for (x = 0; x < 32; x++) {
+    var row = Math.floor(y / 8), off = row % 2 ? 8 : 0;
+    var mortar = y % 8 === 0 || (x + off) % 16 === 0;
+    n = (r() - .5) * 24;
+    T.B[y * 32 + x] = mortar ? dmPack(38, 30, 26) : dmPack(132 + n, 54 + n * .5, 38 + n * .3);
+  }
+  // steel: the launch tunnel's riveted panels, with a cyan strip light
+  T.T = blank();
+  for (y = 0; y < 32; y++) for (x = 0; x < 32; x++) {
+    n = (r() - .5) * 10;
+    var edge = x === 0 || y === 0 || x === 31 || y === 31 || x === 15 || x === 16;
+    var rivet = (x === 3 || x === 28) && (y === 3 || y === 28);
+    var strip = y >= 13 && y <= 15;
+    T.T[y * 32 + x] = strip ? dmPack(90, 230, 255) : edge ? dmPack(34, 38, 44)
+      : rivet ? dmPack(150, 156, 166) : dmPack(70 + n, 76 + n, 86 + n);
+  }
+  // gold-veined rock: warmer stone with seams and flecks of the buried gold
+  T.G = blank();
+  for (y = 0; y < 32; y++) for (x = 0; x < 32; x++) {
+    n = (r() - .5) * 40;
+    var seam = Math.abs(((x * 0.6 + y) % 14) - 7) < 1 || r() < .03;
+    T.G[y * 32 + x] = seam ? dmPack(250, 196 + n * .3, 60) : dmPack(84 + n, 72 + n, 56 + n * .6);
+  }
+  // furnace brick: soot-black bricks with the mortar glowing between them
+  T.F = blank();
+  for (y = 0; y < 32; y++) for (x = 0; x < 32; x++) {
+    var frow = Math.floor(y / 8), foff = frow % 2 ? 8 : 0;
+    var glow = y % 8 === 0 || (x + foff) % 16 === 0;
+    n = (r() - .5) * 20;
+    T.F[y * 32 + x] = glow ? dmPack(255, 120 + n * 2, 30) : dmPack(46 + n, 22 + n * .5, 18 + n * .4);
+  }
+  // the exit: green chevrons pointing the way out
+  T.E = blank();
+  for (y = 0; y < 32; y++) for (x = 0; x < 32; x++) {
+    var chev = ((x + Math.abs(y - 16)) % 12) < 4;
+    T.E[y * 32 + x] = chev ? dmPack(110, 255, 130) : dmPack(14, 52, 22);
+  }
+  return T;
+}
+
+// ── sprites: pixel art from strings, cut into small canvases once ──────────
+var DM_PAL = { r: '#8a2b16', d: '#561a0c', o: '#c8592a', y: '#ffd34d', k: '#1a0804',
+               w: '#efdcc2', g: '#3c3c3c', b: '#7a5a2a', Y: '#e8c040', W: '#f2f2f2', R: '#d42a2a' };
+var DM_ART = {
+  imp1: [
+    '.....d....d.....', '....dr....rd....', '....drrrrrrd....', '...drryrryrrd...',
+    '...drrrrrrrrd...', '...drrwwwwrrd...', '....drrrrrrd....', '..ddrrrrrrrrdd..',
+    '.drrdrrrrrrdrrd.', '.drk.drrrrd.krd.', '.w...drooord...w', '.....drrrrrd....',
+    '.....drd.drd....', '.....drd..drd...', '....ddd....ddd..', '................'],
+  imp2: [
+    '.....d....d.....', '....dr....rd....', '....drrrrrrd....', '...drryrryrrd...',
+    '...drrrrrrrrd...', '...drrwwwwrrd...', '....drrrrrrd....', '..ddrrrrrrrrdd..',
+    '.drrdrrrrrrdrrd.', '.drk.drrrrd.krd.', 'w....drooord..w.', '.....drrrrrd....',
+    '....drd..drd....', '...drd...drd....', '..ddd.....ddd...', '................'],
+  impThrow: [
+    'w...d....d...w..', '.rd.dr..rd.dr...', '..rddrrrrrrdr...', '...drryrryrrd...',
+    '...drrrrrrrrd...', '...drkwwwwkrd...', '....drrrrrrd....', '....drrrrrrd....',
+    '.....drrrrd.....', '.....drrrrd.....', '.....drooord....', '.....drrrrrd....',
+    '.....drd.drd....', '.....drd..drd...', '....ddd....ddd..', '................'],
+  impDead: [
+    '................', '................', '................', '................',
+    '................', '................', '................', '................',
+    '................', '................', '................', '................',
+    '....d..dd...d...', '..drrddrrdrrdd..', '.drrorryrrrorrd.', 'ddrrrrrrrrrrrrdd'],
+  ammo: ['........', '........', '.gggggg.', '.bbbbbb.', '.bYYYYb.', '.bbbbbb.', '.bbbbbb.', '........'],
+  med:  ['........', '........', '.WWWWWW.', '.WWRRWW.', '.WRRRRW.', '.WWRRWW.', '.WWWWWW.', '........']
+};
+function dmMakeSprites() {
+  var S = {};
+  Object.keys(DM_ART).forEach(function (k) {
+    var rows = DM_ART[k], c = document.createElement('canvas');
+    c.width = rows[0].length; c.height = rows.length;
+    var x = c.getContext('2d');
+    rows.forEach(function (row, j) {
+      for (var i = 0; i < row.length; i++) {
+        var col = DM_PAL[row[i]];
+        if (col) { x.fillStyle = col; x.fillRect(i, j, 1, 1); }
+      }
+    });
+    S[k] = c;
+  });
+  var f = document.createElement('canvas'); f.width = f.height = 16;   // a fireball, soft-edged
+  var fx = f.getContext('2d'), gr = fx.createRadialGradient(8, 8, 1, 8, 8, 8);
+  gr.addColorStop(0, '#fff6c0'); gr.addColorStop(.4, '#ffa020'); gr.addColorStop(1, 'rgba(200,40,0,0)');
+  fx.fillStyle = gr; fx.fillRect(0, 0, 16, 16);
+  S.ball = f;
+  return S;
+}
+
+// ── a level, read out of its map ───────────────────────────────────────────
+function dmLoadLevel(n) {
+  var L = DM_LEVELS[n];
+  DM.level = n; DM.grid = []; DM.imps = []; DM.items = []; DM.balls = [];
+  L.map.forEach(function (row, y) {
+    var out = [];
+    for (var x = 0; x < row.length; x++) {
+      var c = row[x], cx = x + .5, cy = y + .5;
+      if (c === 'P') DM.p = { x: cx, y: cy, a: 0, hp: DM.p ? DM.p.hp : 100, ammo: DM.p ? DM.p.ammo : 24 };
+      else if (c === 'i') DM.imps.push({ x: cx, y: cy, hp: L.tough ? 3 : 2, awake: false, dead: false, cool: 0, hitAt: 0, throwAt: 0, step: Math.random() * 6 });
+      else if (c === 'a') DM.items.push({ x: cx, y: cy, kind: 'ammo' });
+      else if (c === 'h') DM.items.push({ x: cx, y: cy, kind: 'med' });
+      out.push('#BTEGF'.indexOf(c) >= 0 ? c : '.');
+    }
+    DM.grid.push(out);
+  });
+  // face into the open: the first direction with floor in front of you
+  var dirs = [0, Math.PI / 2, Math.PI, -Math.PI / 2];
+  for (var i = 0; i < 4; i++) {
+    if (dmOpenAt(DM.p.x + Math.cos(dirs[i]), DM.p.y + Math.sin(dirs[i]))) { DM.p.a = dirs[i]; break; }
+  }
+  DM.kills = 0; DM.total = DM.imps.length;
+  DM.ceil = L.ceil || DM_CEIL; DM.floor = L.floor || DM_FLOOR;
+  dmSay('Level ' + (n + 1) + ' · ' + L.name + (L.tough ? ' · imps take 3 hits' : ''), 2600);
+}
+function dmTile(x, y) {
+  var row = DM.grid[Math.floor(y)];
+  return row ? (row[Math.floor(x)] || '#') : '#';
+}
+function dmOpenAt(x, y) { return dmTile(x, y) === '.'; }
+
+// Can a see b? Steps along the line in tenths of a tile.
+function dmSees(ax, ay, bx, by) {
+  var dx = bx - ax, dy = by - ay, d = Math.hypot(dx, dy), n = Math.ceil(d * 10);
+  for (var i = 1; i < n; i++) if (!dmOpenAt(ax + dx * i / n, ay + dy * i / n)) return false;
+  return true;
+}
+
+function dmSay(text, ms) { DM.msg = text; DM.msgUntil = performance.now() + (ms || 1600); }
+
+function dmNewGame() {
+  DM.p = null; DM.over = false; DM.won = false;
+  dmLoadLevel(0);
+  DM.p.hp = 100; DM.p.ammo = 24;
+  dmHud();
+}
+
+// ── moving: try x and y separately, so walls are slid along, not stuck to ───
+function dmTryMove(ent, nx, ny, r, isPlayer) {
+  var hitExit = false;
+  function clear(x, y) {
+    var t1 = dmTile(x - r, y - r), t2 = dmTile(x + r, y - r), t3 = dmTile(x - r, y + r), t4 = dmTile(x + r, y + r);
+    if (isPlayer && (t1 === 'E' || t2 === 'E' || t3 === 'E' || t4 === 'E')) hitExit = true;
+    return t1 === '.' && t2 === '.' && t3 === '.' && t4 === '.';
+  }
+  if (clear(nx, ent.y)) ent.x = nx;
+  if (clear(ent.x, ny)) ent.y = ny;
+  return hitExit;
+}
+
+function dmUpdate(dt, now) {
+  var p = DM.p, k = DM.keys;
+  if (DM.over || DM.won) return;
+  var turn = (k.right ? 1 : 0) - (k.left ? 1 : 0);
+  var fwd = (k.up ? 1 : 0) - (k.down ? 1 : 0);
+  var side = (k.sright ? 1 : 0) - (k.sleft ? 1 : 0);
+  p.a += turn * 2.6 * dt;
+  var sp = 3.2 * dt, ca = Math.cos(p.a), sa = Math.sin(p.a);
+  var nx = p.x + (ca * fwd - sa * side) * sp, ny = p.y + (sa * fwd + ca * side) * sp;
+  if (fwd || side) DM.bob += dt * 9;
+  if (dmTryMove(p, nx, ny, .22, true)) { dmNextLevel(); return; }
+  if (k.fire) dmFire(now);
+
+  // pickups
+  DM.items = DM.items.filter(function (it) {
+    if (Math.hypot(it.x - p.x, it.y - p.y) > .55) return true;
+    if (it.kind === 'med') { if (p.hp >= 100) return true; p.hp = Math.min(100, p.hp + 25); dmSay('Medkit · +25 health'); }
+    else { p.ammo += 12; dmSay('Ammo · +12 rounds'); }
+    dmSound('pick'); return false;
+  });
+
+  // imps: wake on sight, close in, claw when near, throw fire when they can see you
+  DM.imps.forEach(function (m) {
+    if (m.dead) return;
+    var dx = p.x - m.x, dy = p.y - m.y, d = Math.hypot(dx, dy);
+    var sees = d < 14 && dmSees(m.x, m.y, p.x, p.y);
+    if (!m.awake && sees) { m.awake = true; m.throwAt = now + 900 + Math.random() * 900; dmSound('wake'); }
+    if (!m.awake) return;
+    m.step += dt * 6;
+    if (d > .9) dmTryMove(m, m.x + dx / d * 1.35 * dt, m.y + dy / d * 1.35 * dt, .25, false);
+    else if (now > m.cool) { m.cool = now + 800; dmHurt(8); }
+    if (sees && d > 2 && d < 10 && now > m.throwAt) {
+      m.throwAt = now + 2200 + Math.random() * 2200; m.throwing = now + 300;
+      DM.balls.push({ x: m.x, y: m.y, vx: dx / d * 5, vy: dy / d * 5 });
+      dmSound('fireball');
+    }
+  });
+
+  // fireballs fly until they hit stone or you
+  DM.balls = DM.balls.filter(function (b) {
+    b.x += b.vx * dt; b.y += b.vy * dt;
+    if (!dmOpenAt(b.x, b.y)) return false;
+    if (Math.hypot(b.x - p.x, b.y - p.y) < .35) { dmHurt(10); return false; }
+    return true;
+  });
+
+  DM.flash = Math.max(0, DM.flash - dt);
+  DM.hurt = Math.max(0, DM.hurt - dt);
+}
+
+function dmHurt(n) {
+  DM.p.hp = Math.max(0, DM.p.hp - n); DM.hurt = .35; dmSound('hurt');
+  if (DM.p.hp <= 0) { DM.over = true; dmSay('', 0); }
+}
+
+// The pistol is hitscan: the nearest imp you can see whose body crosses the
+// middle of the screen takes the round.
+function dmFire(now) {
+  if (now - DM.lastShot < 320) return;
+  DM.lastShot = now;
+  var p = DM.p;
+  if (p.ammo <= 0) { dmSound('click'); dmSay('Out of ammo'); return; }
+  p.ammo--; DM.flash = .08; dmSound('shot');
+  var ca = Math.cos(p.a), sa = Math.sin(p.a), best = null, bd = 99;
+  DM.imps.forEach(function (m) {
+    if (m.dead) return;
+    var dx = m.x - p.x, dy = m.y - p.y, along = dx * ca + dy * sa, across = Math.abs(-dx * sa + dy * ca);
+    if (along > 0 && along < 20 && across < .38 && along < bd && dmSees(p.x, p.y, m.x, m.y)) { best = m; bd = along; }
+  });
+  if (!best) return;
+  best.hp--; best.hitAt = now; best.awake = true;
+  if (best.hp <= 0) { best.dead = true; DM.kills++; dmSound('die'); }
+  else dmSound('pain');
+}
+
+function dmNextLevel() {
+  if (DM.level + 1 < DM_LEVELS.length) { dmSound('pick'); dmLoadLevel(DM.level + 1); }
+  else { DM.won = true; dmSound('pick'); }
+}
+
+// ── drawing ────────────────────────────────────────────────────────────────
+function dmRender(now) {
+  var W = DM.W, H = DM.H, buf = DM.buf, z = DM.z, p = DM.p, x, y;
+  // ceiling: the cave roof fading into dark; floor: wet stone catching lake light
+  for (y = 0; y < H; y++) {
+    var t = y < H / 2 ? y / (H / 2) : (y - H / 2) / (H / 2);
+    var L = y < H / 2 ? DM.ceil : DM.floor;
+    var c = dmPack(L[0] + t * L[3], L[1] + t * L[4], L[2] + t * L[5]);
+    buf.fill(c, y * W, (y + 1) * W);
+  }
+  var dirX = Math.cos(p.a), dirY = Math.sin(p.a), plX = -dirY * DM.FOV, plY = dirX * DM.FOV;
+  for (x = 0; x < W; x++) {
+    var cam = 2 * x / W - 1, rx = dirX + plX * cam, ry = dirY + plY * cam;
+    var mx = Math.floor(p.x), my = Math.floor(p.y);
+    var ddx = Math.abs(1 / rx), ddy = Math.abs(1 / ry), stepX, stepY, sdx, sdy, side = 0, tile = '#';
+    if (rx < 0) { stepX = -1; sdx = (p.x - mx) * ddx; } else { stepX = 1; sdx = (mx + 1 - p.x) * ddx; }
+    if (ry < 0) { stepY = -1; sdy = (p.y - my) * ddy; } else { stepY = 1; sdy = (my + 1 - p.y) * ddy; }
+    for (var guard = 0; guard < 64; guard++) {
+      if (sdx < sdy) { sdx += ddx; mx += stepX; side = 0; } else { sdy += ddy; my += stepY; side = 1; }
+      tile = dmTile(mx, my);
+      if (tile !== '.') break;
+    }
+    var perp = side === 0 ? sdx - ddx : sdy - ddy;
+    if (perp < .0001) perp = .0001;
+    z[x] = perp;
+    var lineH = Math.floor(H / perp), top = Math.floor(H / 2 - lineH / 2);
+    var wallX = side === 0 ? p.y + perp * ry : p.x + perp * rx;
+    wallX -= Math.floor(wallX);
+    var tx = Math.floor(wallX * 32);
+    if ((side === 0 && rx > 0) || (side === 1 && ry < 0)) tx = 31 - tx;
+    var tex = DM.tex[tile] || DM.tex['#'];
+    var shade = Math.max(.18, 1 - perp / 13) * (side ? .78 : 1);
+    if (tile === 'E') shade = Math.max(shade, .7);         // the way out always reads
+    if (tile === 'F') shade = Math.max(shade, .45);        // the furnace lights its own walls
+    var step = 32 / lineH, tp = (Math.max(0, top) - top) * step;
+    for (y = Math.max(0, top); y < Math.min(H, top + lineH); y++) {
+      var col = tex[(Math.floor(tp) & 31) * 32 + tx]; tp += step;
+      buf[y * W + x] = dmPack((col & 255) * shade, ((col >> 8) & 255) * shade, ((col >> 16) & 255) * shade);
+    }
+  }
+  var ctx = DM.ctx;
+  ctx.putImageData(DM.img, 0, 0);
+
+  // sprites, far to near, each column hidden where a wall stands closer
+  var invDet = 1 / (plX * dirY - dirX * plY), list = [];
+  DM.imps.forEach(function (m) {
+    var art = m.dead ? DM.spr.impDead : (m.throwing && now < m.throwing) ? DM.spr.impThrow : (Math.floor(m.step) % 2 ? DM.spr.imp2 : DM.spr.imp1);
+    list.push({ x: m.x, y: m.y, img: art, scale: 1, hit: !m.dead && now - m.hitAt < 120 });
+  });
+  DM.items.forEach(function (it) { list.push({ x: it.x, y: it.y, img: DM.spr[it.kind], scale: .45 }); });
+  DM.balls.forEach(function (b) { list.push({ x: b.x, y: b.y, img: DM.spr.ball, scale: .4, float: true }); });
+  list.forEach(function (s) { s.d = (s.x - p.x) * (s.x - p.x) + (s.y - p.y) * (s.y - p.y); });
+  list.sort(function (a, b) { return b.d - a.d; });
+  list.forEach(function (s) {
+    var sx = s.x - p.x, sy = s.y - p.y;
+    var tX = invDet * (dirY * sx - dirX * sy), tY = invDet * (-plY * sx + plX * sy);
+    if (tY <= .15) return;
+    var cx = Math.floor((W / 2) * (1 + tX / tY)), full = Math.abs(Math.floor(H / tY)), size = Math.floor(full * s.scale);
+    var floorY = Math.floor(H / 2 + full / 2), topY = s.float ? Math.floor(H / 2 - size / 2) : floorY - size;
+    var x0 = Math.floor(cx - size / 2), iw = s.img.width;
+    ctx.globalAlpha = Math.max(.35, 1 - tY / 14);
+    for (var col = Math.max(0, x0); col < Math.min(W, x0 + size); col++) {
+      if (tY >= z[col]) continue;
+      var srcX = Math.floor((col - x0) * iw / size);
+      ctx.drawImage(s.img, srcX, 0, 1, s.img.height, col, topY, 1, size);
+    }
+    ctx.globalAlpha = 1;
+    if (s.hit) { ctx.fillStyle = 'rgba(255,255,255,.45)'; ctx.fillRect(Math.max(0, x0), topY, size, size); }
+  });
+
+  // the pistol, bobbing as you walk, with its flash
+  var bx = W / 2 + Math.cos(DM.bob) * 4, by = H - 34 + Math.abs(Math.sin(DM.bob)) * 4;
+  if (DM.flash > 0) {
+    var g = ctx.createRadialGradient(bx, by - 8, 1, bx, by - 8, 18);
+    g.addColorStop(0, 'rgba(255,240,170,1)'); g.addColorStop(1, 'rgba(255,140,20,0)');
+    ctx.fillStyle = g; ctx.fillRect(bx - 20, by - 28, 40, 40);
+  }
+  ctx.fillStyle = '#2b2b30'; ctx.fillRect(bx - 5, by - 6, 10, 26);
+  ctx.fillStyle = '#4a4a52'; ctx.fillRect(bx - 4, by - 6, 3, 26);
+  ctx.fillStyle = '#c99266'; ctx.fillRect(bx - 9, by + 10, 18, 14);
+  ctx.fillStyle = '#a8744c'; ctx.fillRect(bx - 9, by + 20, 18, 4);
+  // crosshair
+  ctx.fillStyle = 'rgba(255,220,160,.7)';
+  ctx.fillRect(W / 2 - 3, H / 2, 2, 1); ctx.fillRect(W / 2 + 2, H / 2, 2, 1);
+  ctx.fillRect(W / 2, H / 2 - 3, 1, 2); ctx.fillRect(W / 2, H / 2 + 2, 1, 2);
+
+  if (DM.hurt > 0) { ctx.fillStyle = 'rgba(200,0,0,' + (DM.hurt * 1.1) + ')'; ctx.fillRect(0, 0, W, H); }
+
+  ctx.textAlign = 'center'; ctx.font = '10px ui-monospace, Menlo, Consolas, monospace';
+  if (DM.over || DM.won) {
+    ctx.fillStyle = 'rgba(0,0,0,.6)'; ctx.fillRect(0, 70, W, 60);
+    ctx.fillStyle = DM.won ? '#9dffb0' : '#ff6a4a'; ctx.font = 'bold 18px Impact, "Arial Black", sans-serif';
+    ctx.fillText(DM.won ? 'THE MOUNTAIN IS QUIET' : 'YOU DIED', W / 2, 98);
+    ctx.fillStyle = '#ffd9b8'; ctx.font = '10px ui-monospace, Menlo, Consolas, monospace';
+    ctx.fillText('press SPACE to go again', W / 2, 116);
+  } else if (DM.msg && now < DM.msgUntil) {
+    ctx.fillStyle = '#ffd9b8'; ctx.fillText(DM.msg, W / 2, 16);
+  }
+  ctx.textAlign = 'start';
+}
+
+var DM_HUD = {};
+function dmHud() {
+  var p = DM.p, v = { 'dm-hp': p.hp, 'dm-ammo': p.ammo, 'dm-kills': DM.kills + '/' + DM.total, 'dm-level': DM.level + 1 };
+  Object.keys(v).forEach(function (id) {
+    if (DM_HUD[id] === v[id]) return;
+    DM_HUD[id] = v[id]; document.getElementById(id).textContent = v[id];
+  });
+}
+
+function dmStep(now) {
+  if (!DM.running) { DM.raf = null; return; }
+  var dt = Math.min(.05, (now - DM.last) / 1000); DM.last = now;
+  dmUpdate(dt, now); dmRender(now); dmHud();
+  DM.raf = requestAnimationFrame(dmStep);
+}
+
+// ── sound: a handful of synthesised blips, no files ────────────────────────
+var DM_AC = null;
+function dmSound(kind) {
+  if (DM.muted) return;
+  try {
+    if (!DM_AC) DM_AC = new (window.AudioContext || window.webkitAudioContext)();
+    if (DM_AC.state === 'suspended') DM_AC.resume();
+  } catch (e) { return; }
+  var ac = DM_AC, t = ac.currentTime, g = ac.createGain();
+  g.connect(ac.destination);
+  if (kind === 'shot' || kind === 'hurt') {             // a burst of noise
+    var len = kind === 'shot' ? .09 : .16, b = ac.createBuffer(1, Math.floor(ac.sampleRate * len), ac.sampleRate), d = b.getChannelData(0);
+    for (var i = 0; i < d.length; i++) d[i] = (Math.random() * 2 - 1) * (1 - i / d.length);
+    var s = ac.createBufferSource(); s.buffer = b;
+    var f = ac.createBiquadFilter(); f.type = 'lowpass'; f.frequency.value = kind === 'shot' ? 2600 : 700;
+    s.connect(f); f.connect(g); g.gain.value = kind === 'shot' ? .35 : .5; s.start(t);
+    return;
+  }
+  var o = ac.createOscillator(), spec = {
+    pick: ['square', 660, 990, .12], wake: ['sawtooth', 140, 90, .25], fireball: ['sawtooth', 220, 60, .3],
+    pain: ['square', 300, 180, .1], die: ['sawtooth', 260, 40, .45], click: ['square', 120, 120, .04]
+  }[kind] || ['sine', 440, 440, .1];
+  o.type = spec[0]; o.frequency.setValueAtTime(spec[1], t); o.frequency.exponentialRampToValueAtTime(spec[2], t + spec[3]);
+  g.gain.setValueAtTime(.16, t); g.gain.exponentialRampToValueAtTime(.001, t + spec[3]);
+  o.connect(g); o.start(t); o.stop(t + spec[3] + .02);
+}
+function dmParkAudio() { if (DM_AC && DM_AC.state === 'running') { try { DM_AC.suspend(); } catch (e) {} } }
+document.addEventListener('visibilitychange', function () { if (document.hidden) dmParkAudio(); });
+window.addEventListener('blur', dmParkAudio);
+window.addEventListener('pagehide', dmParkAudio);
+
+// ── open / close ───────────────────────────────────────────────────────────
+function dmOpen() {
+  document.getElementById('dm-backdrop').hidden = false;
+  var cv = document.getElementById('dm-canvas');
+  if (!DM.ctx) {
+    DM.ctx = cv.getContext('2d');
+    DM.img = DM.ctx.createImageData(DM.W, DM.H);
+    DM.buf = new Uint32Array(DM.img.data.buffer);
+    DM.z = new Float32Array(DM.W);
+    DM.tex = dmMakeTextures(); DM.spr = dmMakeSprites();
+  }
+  dmNewGame();
+  DM.keys = {}; DM.running = true; DM.last = performance.now();
+  if (DM.raf) cancelAnimationFrame(DM.raf);
+  DM.raf = requestAnimationFrame(dmStep);
+  cv.focus();
+}
+function dmClose() {
+  DM.running = false;
+  if (DM.raf) cancelAnimationFrame(DM.raf);
+  DM.raf = null; DM.keys = {};
+  dmParkAudio();
+  document.getElementById('dm-backdrop').hidden = true;
+  var b = document.getElementById('dm-open');
+  if (b) b.focus();
+}
+function dmToggleMute() {
+  DM.muted = !DM.muted;
+  var b = document.getElementById('dm-mute');
+  b.classList.toggle('off', DM.muted); b.innerHTML = DM.muted ? '&#128263;' : '&#128264;';
+  if (DM.muted) dmParkAudio();
+}
+
+// Keys are bound once and act only while the modal is open, so the rest of
+// the window keeps its own keys untouched.
+var DM_KEYMAP = {
+  ArrowUp: 'up', w: 'up', W: 'up', ArrowDown: 'down', s: 'down', S: 'down',
+  ArrowLeft: 'left', ArrowRight: 'right', a: 'sleft', A: 'sleft', d: 'sright', D: 'sright',
+  ' ': 'fire', Spacebar: 'fire', Control: 'fire'
+};
+document.addEventListener('keydown', function (e) {
+  var back = document.getElementById('dm-backdrop');
+  if (!back || back.hidden) return;
+  if (e.key === 'Escape') { dmClose(); return; }
+  var k = DM_KEYMAP[e.key];
+  if (!k) return;
+  e.preventDefault();
+  if (k === 'fire' && (DM.over || DM.won)) { dmNewGame(); return; }
+  // a tap can be over before the next frame looks, so a press fires at once;
+  // holding the key keeps firing at the pistol's own pace
+  if (k === 'fire' && !e.repeat) dmFire(performance.now());
+  DM.keys[k] = true;
+});
+document.addEventListener('keyup', function (e) {
+  var k = DM_KEYMAP[e.key];
+  if (k) DM.keys[k] = false;
+});
+// the thumb pad holds a key down for as long as a finger is on it
+(function () {
+  var pad = document.getElementById('dm-pad');
+  if (!pad) return;
+  pad.addEventListener('pointerdown', function (e) {
+    var b = e.target.closest('button[data-k]'); if (!b) return;
+    e.preventDefault();
+    if (b.dataset.k === 'fire' && (DM.over || DM.won)) { dmNewGame(); return; }
+    if (b.dataset.k === 'fire') dmFire(performance.now());
+    DM.keys[b.dataset.k] = true;
+  });
+  // a finger lifted anywhere lets go of everything the pad was holding
+  function release() { ['up', 'down', 'left', 'right', 'fire'].forEach(function (k) { DM.keys[k] = false; }); }
+  ['pointerup', 'pointercancel'].forEach(function (ev) { document.addEventListener(ev, release); });
+  pad.addEventListener('pointerleave', release);
+})();
 
 // ── the Astronaut Logs ─────────────────────────────────────────────────────
 // The roster, the profiles and the logs are a communal project —

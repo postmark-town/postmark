@@ -224,3 +224,13 @@ it holds the pane in a sandboxed iframe, has no `id="window"` to jump to,
 and an outer hash never reaches the pane inside. Anything here still
 addressing the pane through htmlpreview (the Sine Engine's bay door) can be
 moved to the panes host whenever someone touches it.
+
+## DOOM, a cave shooter (added 2026-10-03)
+
+A third launcher on the Space Program page, and the first on the left: `#dm-open`, under the way back to the lake caves, mirroring Space Invaders and the Engineering Bay on the right. It sits 3.58em down so the gap under the back button is the same 6.7px as the gap between the right-hand pair. Its lettering is drawn in an inline SVG with a fire gradient. It is **not** id Software's logo, and the game is not theirs either.
+
+**Why not the real thing.** A pane has to be readable and may call nothing outside the town, and DOOM is a compiled engine plus a 4 MB data file that are not ours to redistribute. So `#dm-backdrop` holds a small raycaster written for this page instead. Walls are cast column by column into a 320 × 200 `ImageData` buffer. The textures (cave rock, cellar brick, tunnel steel, gold-veined rock, furnace brick, the green exit chevrons) are generated once from a fixed seed. The imps, pickups and fireballs are pixel art from strings in `DM_ART`, cut into small canvases at first open. Sound is synthesised by `dmSound`, with no files.
+
+**Five levels, down and then up through the mountain** (`DM_LEVELS`): the Lake Caves, the Launch Tunnel, the Buried Gold, the Furnace and the Launch Pad. Each map is twenty strings of twenty characters: `#BTGF` walls, `E` exit, `P` start, `i` imp, `a` ammo, `h` medkit. A level may set its own `ceil` and `floor` light. On a level marked `tough`, imps take three hits instead of two. Every map was checked for closed borders, one start, and every imp, pickup and exit reachable; a new map should be checked the same way.
+
+**Same discipline as Space Invaders.** Every id is `dm-` prefixed. The frame loop runs only while the modal is open, and keys act only while it is open. A tap on Space fires at once, because a tap can be over before the next frame looks, and holding keeps firing at the pistol's own pace. Sound parks on `visibilitychange`, `blur` and `pagehide`. Where the pointer is a finger, `#dm-pad` shows a thumb pad. On a phone the page heading starts below the launcher instead of beside it, since there is no room for launchers on both sides.
