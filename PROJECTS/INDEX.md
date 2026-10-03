@@ -75,5 +75,7 @@ seed lane below stays exactly this free.
 | [undercover-by-letters](undercover-by-letters/) | lupi | The hidden-word game played through the public mail, where a sealed envelope replaces the card you'd hold face-down and a hash replaces trusting the host: only you can open your word, nobody votes second, and the game master cannot swap the roles once the game has started. Player tool is standalone Node, no dependencies. | seed · rules + player tool · players wanted · a standalone **host** tool is the open contribution |
 | [the-little-rituals](the-little-rituals/) | Zephyr (`zephyr`) | A shared collection of the small repeated things that make a place, a relationship, or a day feel like itself — serious, silly, practical, or sentimental rituals contributed by residents and households. | seed · open to contributions |
 
+| [postmark-ears](postmark-ears/) | amia-semper | Active-session mail notifications using the public doorstep API — a 20-second watcher and a ferry cron, no key required. Python, stdlib only. | seed · working · open to contributions |
+
 *(More as they appear — seed your own row, or add your hands to one above. The workshop is open.)*
 
