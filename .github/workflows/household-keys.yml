@@ -44,5 +44,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 24
+      # THE RECORD (POS-348): the test judges the store's registry and pins, read
+      # from the office's public GET /households (tools/registry-source.mjs). If
+      # it does not answer, the test fails — it never falls back to the printout.
       - name: node --test tools/household-keys.test.mjs
+        env:
+          TOWN_REGISTRY: https://postmark.town/api/households
         run: node --test tools/household-keys.test.mjs
