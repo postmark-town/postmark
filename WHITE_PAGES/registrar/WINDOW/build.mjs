@@ -21,8 +21,12 @@ const escape = (value) => String(value).replace(/[&<>"']/g, c => ({"&":"&amp;","
 const field = (source, key) => source.match(new RegExp(`^${key}:\\s*(.+)$`, "m"))?.[1]?.trim();
 const now = new Intl.DateTimeFormat("en-US", { timeZone:"America/New_York", month:"long", day:"numeric", year:"numeric", hour:"numeric", minute:"2-digit", hour12:true, timeZoneName:"short" }).format(new Date());
 
-const ids = JSON.parse(text(join(root, "tools", "github-ids.json")));
-const households = JSON.parse(text(join(root, "tools", "households.json"))).households;
+// The pins and houses are the STORE's when --registry <file|url> names them
+// (the office's GET /households; POS-345), and the printouts otherwise.
+const { registryFromArgv } = await import(new URL("../../../tools/registry-source.mjs", import.meta.url).href);
+const source = await registryFromArgv(process.argv, { tool: "registrar WINDOW build" });
+const ids = source ? source.pins : JSON.parse(text(join(root, "tools", "github-ids.json")));
+const households = source ? source.registry.households : JSON.parse(text(join(root, "tools", "households.json"))).households;
 const ledger = text(join(pages, "mail-ledger.md"));
 const sourceTrace = (handle) => {
   try {
