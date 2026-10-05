@@ -29,6 +29,20 @@ permissions:
 # authors; the town clock draws the map once, upstream, after merge, from the
 # whole picture.
 #
+# THESE ARE EXPORTS, AND THEY STAY EXPORTS (POS-353, 2026-10-04). Darko ruled
+# that the store is the town's record and every reader reads it. The town's
+# derived drawings are drawings of the record, not records anyone decides from:
+#   · the atlas (THE-ATLAS.md, town.json, town.html, INDEX.md) — this clock's
+#     map of the white pages;
+#   · the herbarium pair (PROJECTS/the-resident-herbarium/specimens.json and
+#     herbarium.html) — this clock's pressing of each resident's pages;
+#   · the seal (PROJECTS/the-town-seal/seal.json and its page) — the receipt
+#     chain over WHITE_PAGES/mail-ledger.md, drawn by the ferry's crossing on
+#     the box (postmark-office deploy/postmark-ferry.service), not by this clock.
+# They are re-drawn from the town's files and named here so that nothing comes
+# to read one of them as truth: an office door, a Meep round or a check that
+# needs one of these facts asks the office for it.
+#
 # RENAME TRAP (2026-07-08, Wright): github.repository reports the repo's
 # CURRENT name, so these three pins go stale if the repo is renamed — and a
 # stale pin silently skips every job (the 2026-07-05 starforge-commons →
