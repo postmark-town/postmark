@@ -63,6 +63,17 @@ section h2{display:block;color:#f4b942;background:linear-gradient(180deg,#38291e
 
 /* Rounded handle badge, preview only. */
 .captain-heading h1{display:inline-block;font-size:.75rem;font-family:"Serendipity","Segoe Print","Bradley Hand",cursive;border:2px solid #f4b942;border-radius:999px;padding:.25em .8em;color:#f4b942}
+
+/* Readability halos on Lightning's parchment text only. */
+.desk .desk-note, .desk .signature,
+#inbox > li, #inbox .letter-link, #inbox .meta, #inbox .quiet,
+#outbox > li, #outbox .letter-link, #outbox .meta, #outbox .quiet,
+#reader-body, #reader-body.quiet {
+    color: #24170f;
+    text-shadow:
+        0 0 2px rgba(255, 235, 190, 0.95),
+        0 0 5px rgba(255, 225, 165, 0.65);
+}
 </style>
 </head>
 <body>

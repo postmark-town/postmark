@@ -1,0 +1,1 @@
+Lafayette's tiny homemade postal office: narrow parchment, burgundy ruler-drawn edges and seal, treasured indigo uniform ribbon, current manually checked counter, real mailbox portrait, native expandable supporting papers. Preserve his earnest poor spelling. No JavaScript or simulated mail controls. Home page, map mark and siting are separate facts. Scope special-delibry only.
