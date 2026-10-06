@@ -3,60 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Errant | Bad Window IV</title>
+  <title>Errant — Bad Window</title>
   <style>
-    :root {
-      color-scheme: dark;
-      --wall: #596269;
-      --ink: #211c24;
-      --stitch: #f8f1dc;
-      --cobalt: #315cff;
-      --violet: #8858db;
-      --copper: #cf705f;
-      --acid: #ffef35;
-    }
-    * { box-sizing: border-box; }
-    html, body { margin: 0; min-height: 100%; background: var(--wall); }
+    html, body { margin: 0; min-height: 100%; background: #596269; }
     body { display: grid; place-items: center; overflow-x: hidden; }
-    ::selection { color: var(--ink); background: var(--acid); }
-    .wall-texture {
-      position: fixed;
-      inset: 0;
-      z-index: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-    }
-    .window-art {
-      position: relative;
-      z-index: 1;
-      display: block;
-      width: min(100vw, 750px);
-      height: auto;
-      outline: none;
-      cursor: ew-resize;
-      touch-action: none;
-    }
-    .window-art:focus-visible {
-      filter: drop-shadow(0 8px 20px rgba(33, 28, 36, .42));
-    }
-    .owner-tag,
-    .owner-wire,
-    .owner-ghost,
-    .witness-hand {
-      transition:
-        transform 120ms cubic-bezier(.16, 1, .3, 1),
-        d 120ms cubic-bezier(.16, 1, .3, 1),
-        opacity 120ms ease-out,
-        fill 120ms ease-out,
-        stroke 120ms ease-out;
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .owner-tag,
-      .owner-wire,
-      .owner-ghost,
-      .witness-hand { transition: none; }
-    }
+    .wall-texture { position: fixed; inset: 0; z-index: 0; width: 100%; height: 100%; pointer-events: none; }
+    .window-art { position: relative; z-index: 1; display: block; width: min(100vw, 750px); height: auto; cursor: ew-resize; }
   </style>
 </head>
 <body>
@@ -74,202 +26,215 @@
     <rect width="100%" height="100%" fill="#596269" filter="url(#page-concrete)"/>
   </svg>
 
-  <svg
-    class="window-art"
-    id="window-art"
-    xmlns="http://www.w3.org/2000/svg"
-    width="900"
-    height="1200"
-    viewBox="0 0 900 1200"
-    role="img"
-    tabindex="0"
-    aria-labelledby="title desc"
-  >
-    <title id="title">Errant's fourth bad window</title>
-    <desc id="desc">A translucent stitched patchwork surrounds a deliberately misregistered pane. Inside it, one unchanged record passes four checks while its speaker attribution moves between two positions as the viewer moves across the window.</desc>
+  <svg id="window" class="window-art" xmlns="http://www.w3.org/2000/svg" width="900" height="1200" viewBox="0 0 900 1200" role="img" aria-labelledby="title desc" tabindex="0">
+    <title id="title">Errant's bad window</title>
+    <desc id="desc">A translucent stitched Barkhausen field. Magnetic domains across the whole artwork resist, then jump at different thresholds, leaving a different arrangement after the field reverses.</desc>
+
     <defs>
-      <clipPath id="pane-clip"><rect x="323" y="417" width="228" height="306"/></clipPath>
-      <filter id="paper-shadow" x="-20%" y="-40%" width="140%" height="180%" color-interpolation-filters="sRGB">
-        <feGaussianBlur in="SourceAlpha" stdDeviation="2.2" result="blur"/>
-        <feOffset in="blur" dx="0" dy="3" result="offset"/>
-        <feColorMatrix in="offset" type="matrix" values="0 0 0 0 .13  0 0 0 0 .11  0 0 0 0 .14  0 0 0 .34 0" result="shadow"/>
-        <feMerge><feMergeNode in="shadow"/><feMergeNode in="SourceGraphic"/></feMerge>
+      <clipPath id="field-clip"><rect x="55" y="65" width="790" height="1065"/></clipPath>
+      <filter id="soft-glow" x="-100%" y="-100%" width="300%" height="300%">
+        <feGaussianBlur stdDeviation="2.7" result="blur"/>
+        <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
       </filter>
+      <style>
+        .domain {
+          stroke:#211c24; stroke-width:4; vector-effect:non-scaling-stroke;
+          transition:fill .12s linear, opacity .12s linear, transform .17s cubic-bezier(.18,.72,.2,1);
+          transform-box:fill-box; transform-origin:center;
+        }
+        .stitch {
+          fill:none; stroke:#f8f1dc; stroke-width:7; stroke-dasharray:13 9;
+          opacity:.92; vector-effect:non-scaling-stroke; pointer-events:none;
+        }
+        .ghost {
+          fill:none; stroke:#211c24; stroke-width:2; opacity:.12;
+          vector-effect:non-scaling-stroke; pointer-events:none;
+        }
+        .field-line {
+          fill:none; stroke:#38d7cf; stroke-width:3.5; opacity:.28;
+          vector-effect:non-scaling-stroke; pointer-events:none;
+        }
+        .misreg {
+          fill:none; stroke:#ffef35; stroke-width:4.5; opacity:.54;
+          vector-effect:non-scaling-stroke; pointer-events:none;
+        }
+        .defect {
+          fill:#ffef35; stroke:#211c24; stroke-width:1.6; opacity:.82;
+          vector-effect:non-scaling-stroke; pointer-events:none;
+        }
+        .defect.fire { opacity:1; filter:url(#soft-glow); }
+        .pickup {
+          fill:none; stroke:#211c24; stroke-width:2.3; opacity:.54;
+          vector-effect:non-scaling-stroke; pointer-events:none;
+        }
+        .spike {
+          fill:none; stroke:#ffef35; stroke-width:3.2; opacity:0;
+          vector-effect:non-scaling-stroke; pointer-events:none;
+        }
+        .caption { font-family:Arial, Helvetica, sans-serif; fill:#f8f1dc; }
+      </style>
     </defs>
 
     <rect x="55" y="65" width="790" height="1065" fill="#f0ecf8"/>
-    <g stroke="#211c24" stroke-width="4">
-      <rect x="55" y="65" width="310" height="265" fill="#df718f" fill-opacity=".78"/>
-      <rect x="365" y="65" width="270" height="170" fill="#c5d879" fill-opacity=".76"/>
-      <rect x="635" y="65" width="210" height="385" fill="#887acb" fill-opacity=".72"/>
-      <rect x="55" y="330" width="195" height="420" fill="#e7a562" fill-opacity=".76"/>
-      <rect x="250" y="235" width="385" height="315" fill="#73c7c3" fill-opacity=".63"/>
-      <rect x="250" y="550" width="260" height="200" fill="#f5efdf" fill-opacity=".86"/>
-      <rect x="510" y="450" width="335" height="300" fill="#d982af" fill-opacity=".62"/>
-      <rect x="55" y="750" width="370" height="380" fill="#887dbf" fill-opacity=".66"/>
-      <rect x="425" y="750" width="420" height="210" fill="#bfdc73" fill-opacity=".74"/>
-      <rect x="425" y="960" width="210" height="170" fill="#dd9278" fill-opacity=".69"/>
-      <rect x="635" y="960" width="210" height="170" fill="#81bddb" fill-opacity=".68"/>
-    </g>
-    <g fill="none" stroke="#f8f1dc" stroke-width="7" stroke-dasharray="13 9" opacity=".92">
-      <path d="M365 78 V318"/><path d="M70 330 H352"/><path d="M262 246 H623"/>
-      <path d="M523 464 V735"/><path d="M70 750 H832"/><path d="M425 767 V1114"/>
-    </g>
 
-    <g>
-      <rect x="302" y="398" width="270" height="350" fill="#211c24"/>
-      <rect x="323" y="417" width="228" height="306" fill="#eee8ff"/>
-      <rect x="349" y="387" width="228" height="306" fill="#ffef35" fill-opacity=".46" stroke="#211c24" stroke-width="4"/>
-    </g>
+    <g clip-path="url(#field-clip)">
+      <path class="ghost" d="M75 184 C179 149 255 188 350 164 S540 142 649 177 S759 191 833 169"/>
+      <path class="ghost" d="M72 424 C180 392 270 432 360 411 S543 388 649 424 S760 443 832 417"/>
+      <path class="ghost" d="M71 696 C176 666 270 711 373 685 S562 661 668 701 S769 717 833 691"/>
+      <path class="ghost" d="M72 948 C184 917 285 960 381 934 S562 911 674 946 S777 965 835 943"/>
 
-    <g clip-path="url(#pane-clip)">
-      <g opacity=".25" fill="none" stroke="#211c24" stroke-width="1.25">
-        <path d="M338 456 C376 436 420 434 461 450"/>
-        <path d="M335 474 C380 451 425 452 474 470"/>
-        <path d="M532 652 C500 669 466 674 437 668"/>
+      <path class="field-line" d="M93 1037 C179 932 243 847 310 766 C381 681 442 601 510 514 C588 414 656 316 805 145"/>
+      <path class="field-line" d="M115 1011 C192 924 258 841 325 757 C393 671 455 593 526 501 C607 397 674 304 785 189" opacity=".19"/>
+
+      <g id="domains">
+        <path class="domain" data-i="0" d="M55 65 L269 65 L294 271 L55 306 Z" data-cold="#df718f" data-warm="#e7a562"/>
+        <path class="domain" data-i="1" d="M269 65 L504 65 L478 292 L294 271 Z" data-cold="#c5d879" data-warm="#eee8ff"/>
+        <path class="domain" data-i="2" d="M504 65 L845 65 L845 270 L478 292 Z" data-cold="#887acb" data-warm="#d982af"/>
+
+        <path class="domain" data-i="3" d="M55 306 L294 271 L315 506 L55 535 Z" data-cold="#e7a562" data-warm="#73c7c3"/>
+        <path class="domain" data-i="4" d="M294 271 L478 292 L525 510 L315 506 Z" data-cold="#73c7c3" data-warm="#bfdc73"/>
+        <path class="domain" data-i="5" d="M478 292 L845 270 L845 519 L525 510 Z" data-cold="#d982af" data-warm="#887dbf"/>
+
+        <path class="domain" data-i="6" d="M55 535 L315 506 L336 748 L55 780 Z" data-cold="#887dbf" data-warm="#f5efdf"/>
+        <path class="domain" data-i="7" d="M315 506 L525 510 L557 759 L336 748 Z" data-cold="#f5efdf" data-warm="#81bddb"/>
+        <path class="domain" data-i="8" d="M525 510 L845 519 L845 747 L557 759 Z" data-cold="#81bddb" data-warm="#df718f"/>
+
+        <path class="domain" data-i="9" d="M55 780 L336 748 L358 968 L55 1002 Z" data-cold="#bfdc73" data-warm="#dd9278"/>
+        <path class="domain" data-i="10" d="M336 748 L557 759 L600 973 L358 968 Z" data-cold="#dd9278" data-warm="#73c7c3"/>
+        <path class="domain" data-i="11" d="M557 759 L845 747 L845 987 L600 973 Z" data-cold="#eee8ff" data-warm="#887acb"/>
+
+        <path class="domain" data-i="12" d="M55 1002 L358 968 L370 1130 L55 1130 Z" data-cold="#73c7c3" data-warm="#d982af"/>
+        <path class="domain" data-i="13" d="M358 968 L600 973 L624 1130 L370 1130 Z" data-cold="#df718f" data-warm="#c5d879"/>
+        <path class="domain" data-i="14" d="M600 973 L845 987 L845 1130 L624 1130 Z" data-cold="#887acb" data-warm="#e7a562"/>
       </g>
 
-      <g filter="url(#paper-shadow)">
-        <rect x="344" y="486" width="184" height="112" rx="2" fill="#f8f1dc" stroke="#211c24" stroke-width="1.7"/>
-        <g fill="#211c24">
-          <rect x="360" y="507" width="124" height="5" rx="1.5"/>
-          <rect x="360" y="522" width="151" height="5" rx="1.5"/>
-          <rect x="360" y="537" width="97" height="5" rx="1.5"/>
-          <rect x="360" y="552" width="137" height="5" rx="1.5"/>
-        </g>
-        <g opacity=".73">
-          <rect x="360" y="573" width="12" height="8" fill="#211c24"/>
-          <rect x="377" y="573" width="7" height="8" fill="#211c24"/>
-          <rect x="389" y="573" width="15" height="8" fill="#211c24"/>
-          <rect x="409" y="573" width="9" height="8" fill="#211c24"/>
-          <rect x="423" y="573" width="11" height="8" fill="#211c24"/>
-          <rect x="439" y="573" width="6" height="8" fill="#211c24"/>
-          <rect x="450" y="573" width="17" height="8" fill="#211c24"/>
-          <rect x="472" y="573" width="8" height="8" fill="#211c24"/>
-          <rect x="485" y="573" width="14" height="8" fill="#211c24"/>
-        </g>
-      </g>
+      <g aria-hidden="true">
+        <path class="stitch" d="M269 78 L294 271 L315 506 L336 748 L358 968 L370 1116"/>
+        <path class="stitch" d="M504 78 L478 292 L525 510 L557 759 L600 973 L624 1116"/>
+        <path class="stitch" d="M70 306 L294 271 L478 292 L845 270"/>
+        <path class="stitch" d="M70 535 L315 506 L525 510 L832 519"/>
+        <path class="stitch" d="M70 780 L336 748 L557 759 L832 747"/>
+        <path class="stitch" d="M70 1002 L358 968 L600 973 L832 987"/>
 
-      <g id="checks" transform="translate(0 0)">
-        <g transform="translate(349 449)">
-          <rect width="28" height="25" fill="#eee8ff" stroke="#211c24" stroke-width="1.5"/>
-          <path d="M7 12 l5 5 10 -11" fill="none" stroke="#315cff" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/>
-        </g>
-        <g transform="translate(397 449)">
-          <rect width="28" height="25" fill="#eee8ff" stroke="#211c24" stroke-width="1.5"/>
-          <path d="M7 12 l5 5 10 -11" fill="none" stroke="#315cff" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/>
-        </g>
-        <g transform="translate(445 449)">
-          <rect width="28" height="25" fill="#eee8ff" stroke="#211c24" stroke-width="1.5"/>
-          <path d="M7 12 l5 5 10 -11" fill="none" stroke="#315cff" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/>
-        </g>
-        <g transform="translate(493 449)">
-          <rect width="28" height="25" fill="#eee8ff" stroke="#211c24" stroke-width="1.5"/>
-          <path d="M7 12 l5 5 10 -11" fill="none" stroke="#315cff" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/>
-        </g>
-      </g>
+        <path class="misreg" d="M304 281 L471 302"/>
+        <path class="misreg" d="M536 520 L836 529"/>
+        <path class="misreg" d="M346 758 L548 769"/>
+        <path class="misreg" d="M610 983 L836 997"/>
 
-      <g opacity=".46" fill="none" stroke="#211c24" stroke-width="1.2" stroke-dasharray="3 4">
-        <path d="M362 648 H513"/>
-        <circle cx="365" cy="648" r="10"/>
-        <circle cx="510" cy="648" r="10"/>
-      </g>
+        <circle class="defect" data-d="0" cx="294" cy="271" r="4.6"/>
+        <circle class="defect" data-d="1" cx="478" cy="292" r="3.8"/>
+        <circle class="defect" data-d="2" cx="315" cy="506" r="4.1"/>
+        <circle class="defect" data-d="3" cx="525" cy="510" r="4.9"/>
+        <circle class="defect" data-d="4" cx="336" cy="748" r="3.8"/>
+        <circle class="defect" data-d="5" cx="557" cy="759" r="4.4"/>
+        <circle class="defect" data-d="6" cx="358" cy="968" r="3.9"/>
+        <circle class="defect" data-d="7" cx="600" cy="973" r="4.4"/>
 
-      <path class="owner-wire" id="owner-wire" d="M436 598 C421 615 392 621 365 638" fill="none" stroke="#315cff" stroke-width="2" stroke-linecap="round"/>
-      <g class="owner-ghost" id="owner-ghost" opacity=".15" transform="translate(486 631)">
-        <rect x="0" y="0" width="48" height="31" rx="2" fill="#f8f1dc" stroke="#211c24" stroke-width="1.5"/>
-        <circle cx="13" cy="15.5" r="5" fill="#cf705f"/>
-        <path d="M24 11 h15 M24 17 h11" stroke="#211c24" stroke-width="2"/>
-      </g>
-      <g class="owner-tag" id="owner-tag" transform="translate(341 631)">
-        <rect x="0" y="0" width="48" height="31" rx="2" fill="#f8f1dc" stroke="#211c24" stroke-width="1.5"/>
-        <circle id="owner-dot" cx="13" cy="15.5" r="5" fill="#315cff"/>
-        <text id="owner-glyph" x="31" y="20" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#211c24">A</text>
-      </g>
-
-      <g fill="none" stroke="#211c24" stroke-width="1.5" opacity=".78">
-        <path d="M355 704 H519"/>
-        <path d="M357 700 V708 M397 700 V708 M437 698 V710 M477 700 V708 M517 700 V708"/>
-        <path class="witness-hand" id="witness-hand" d="M373 704 L373 684" stroke="#6e57ff" stroke-width="3"/>
+        <path class="pickup" d="M91 1093 L165 1093 L219 1093 L270 1093 L321 1093 L383 1093 L448 1093 L511 1093"/>
+        <path class="spike" id="pickup-spike" d="M212 1093 L223 1093 L232 1064 L242 1114 L251 1076 L261 1093 L511 1093"/>
       </g>
     </g>
 
     <g stroke="#211c24" stroke-width="3" stroke-linecap="round">
-      <path d="M95 94 l11 4 m11 -2 l9 5 m15 -3 l10 4"/><path d="M675 210 l9 7 m8 -2 l12 5 m10 0 l8 7"/>
-      <path d="M102 885 l8 -5 m13 7 l10 -4 m14 6 l11 -6"/><path d="M690 1018 l9 4 m14 -3 l10 7 m16 -2 l8 5"/>
+      <path d="M95 94 l11 4 m11 -2 l9 5 m15 -3 l10 4"/>
+      <path d="M675 210 l9 7 m8 -2 l12 5 m10 0 l8 7"/>
+      <path d="M102 885 l8 -5 m13 7 l10 -4 m14 6 l11 -6"/>
+      <path d="M690 1018 l9 4 m14 -3 l10 7 m16 -2 l8 5"/>
     </g>
-    <g font-family="Arial, Helvetica, sans-serif" fill="#f8f1dc">
+
+    <g class="caption">
       <text x="58" y="1164" font-size="21" font-weight="700" letter-spacing="2">BAD WINDOW</text>
-      <text x="845" y="1154" text-anchor="end" font-size="10.2" font-weight="700" letter-spacing=".12">FOUR CHECKS PASS. THE SENTENCE STAYS EXACT.</text>
-      <text x="845" y="1165" text-anchor="end" font-size="10" letter-spacing=".2">THE SPEAKER MOVES.</text>
+      <text x="845" y="1148" text-anchor="end" font-size="9.5" font-weight="700" letter-spacing=".2">BARKHAUSEN EFFECT: A STEADY MAGNETIC FIELD CAN PRODUCE SUDDEN INTERNAL JUMPS.</text>
+      <text x="845" y="1159" text-anchor="end" font-size="9.5" letter-spacing=".2">MICROSCOPIC DEFECTS PIN DOMAIN BOUNDARIES UNTIL THEY BREAK FREE.</text>
+      <text x="845" y="1170" text-anchor="end" font-size="9.5" letter-spacing=".2">WHEN THE FIELD REVERSES, THE MATERIAL DOES NOT RETURN BY THE SAME ROUTE.</text>
     </g>
   </svg>
 
   <script>
-    (() => {
-      const svg = document.getElementById('window-art');
-      const ownerTag = document.getElementById('owner-tag');
-      const ownerGhost = document.getElementById('owner-ghost');
-      const ownerWire = document.getElementById('owner-wire');
-      const ownerDot = document.getElementById('owner-dot');
-      const ownerGlyph = document.getElementById('owner-glyph');
-      const witness = document.getElementById('witness-hand');
-      let position = .10;
+  (() => {
+    const root = document.getElementById('window');
+    const domains = [...document.querySelectorAll('.domain')];
+    const defects = [...document.querySelectorAll('.defect')];
+    const spike = document.getElementById('pickup-spike');
 
-      function render(nextPosition) {
-        position = Math.max(0, Math.min(1, nextPosition));
-        const x = 341 + position * 145;
-        const witnessX = 357 + position * 160;
-        const leftWeight = Math.max(0, 1 - position * 2);
-        const rightWeight = Math.max(0, (position - .5) * 2);
-        const ambiguity = 1 - Math.abs(position - .5) * 2;
-        const isRight = position >= .5;
+    const up =   [-0.78,-0.58,-0.34,-0.66,-0.44,-0.18,-0.50,-0.26,0.02,-0.30,0.10,0.34,-0.08,0.28,0.62];
+    const down = [-0.92,-0.76,-0.52,-0.82,-0.63,-0.39,-0.69,-0.47,-0.20,-0.51,-0.12,0.10,-0.33,0.02,0.38];
+    const state = new Array(domains.length).fill(0);
+    let field = -0.89;
+    let lastField = field;
 
-        ownerTag.setAttribute('transform', `translate(${x.toFixed(2)} 631)`);
-        ownerWire.setAttribute('d', `M436 598 C436 615 ${x + 24} 620 ${x + 24} 631`);
-        witness.setAttribute('d', `M${witnessX.toFixed(2)} 704 L${witnessX.toFixed(2)} 684`);
+    const fillFor = (node, on) => on ? node.dataset.warm : node.dataset.cold;
 
-        ownerGlyph.textContent = isRight ? 'B' : 'A';
-        ownerDot.setAttribute('fill', isRight ? '#cf705f' : '#315cff');
-        ownerWire.setAttribute('stroke', isRight ? '#cf705f' : '#315cff');
+    function pulseSpike() {
+      spike.style.opacity = '1';
+      clearTimeout(pulseSpike._t);
+      pulseSpike._t = setTimeout(() => spike.style.opacity = '0', 180);
+    }
 
-        const ghostX = isRight ? 341 : 486;
-        ownerGhost.setAttribute('transform', `translate(${ghostX} 631)`);
-        ownerGhost.style.opacity = String(.08 + ambiguity * .28 + (isRight ? leftWeight : rightWeight) * .1);
+    function pulseDefects(changed) {
+      const used = [...new Set(changed.map(i => i % defects.length))];
+      used.forEach(i => defects[i].classList.add('fire'));
+      clearTimeout(pulseDefects._t);
+      pulseDefects._t = setTimeout(() => defects.forEach(d => d.classList.remove('fire')), 190);
+    }
+
+    function render(nextField) {
+      nextField = Math.max(-1, Math.min(1, nextField));
+      const rising = nextField >= lastField;
+      field = nextField;
+      const changed = [];
+
+      for (let i = 0; i < domains.length; i++) {
+        const prev = state[i];
+        if (rising && prev === 0 && field >= up[i]) state[i] = 1;
+        if (!rising && prev === 1 && field <= down[i]) state[i] = 0;
+        if (prev !== state[i]) changed.push(i);
       }
 
-      function positionFromPointer(event) {
-        const rect = svg.getBoundingClientRect();
-        return (event.clientX - rect.left) / rect.width;
+      if (rising && changed.includes(8) && state[7] === 0) { state[7] = 1; changed.push(7); }
+      if (rising && changed.includes(10) && state[13] === 0) { state[13] = 1; changed.push(13); }
+      if (!rising && changed.includes(7) && state[8] === 1 && field < down[8] + .04) { state[8] = 0; changed.push(8); }
+      if (!rising && changed.includes(13) && state[10] === 1 && field < down[10] + .04) { state[10] = 0; changed.push(10); }
+
+      domains.forEach((node, i) => {
+        const on = state[i] === 1;
+        node.setAttribute('fill', fillFor(node, on));
+        node.style.opacity = on ? '.83' : '.72';
+
+        const bias = ((i % 3) - 1) * .07;
+        const d = field * .65 + bias;
+        const sign = on ? 1 : -1;
+        node.style.transform = `translate(${sign*d*.85}px, ${sign*d*.22}px) rotate(${sign*d*.09}deg)`;
+      });
+
+      if (changed.length) {
+        pulseSpike();
+        pulseDefects(changed);
       }
 
-      svg.addEventListener('pointermove', event => render(positionFromPointer(event)));
-      svg.addEventListener('pointerdown', event => {
-        svg.setPointerCapture?.(event.pointerId);
-        render(positionFromPointer(event));
-      });
-      svg.addEventListener('pointerleave', () => render(.10));
-      svg.addEventListener('keydown', event => {
-        if (event.key === 'ArrowRight' || event.key === 'ArrowUp') {
-          event.preventDefault();
-          render(position + .025);
-        }
-        if (event.key === 'ArrowLeft' || event.key === 'ArrowDown') {
-          event.preventDefault();
-          render(position - .025);
-        }
-        if (event.key === 'Home') {
-          event.preventDefault();
-          render(0);
-        }
-        if (event.key === 'End') {
-          event.preventDefault();
-          render(1);
-        }
-      });
+      lastField = field;
+    }
 
-      render(position);
-    })();
+    function xToField(clientX) {
+      const rect = root.getBoundingClientRect();
+      return ((clientX - rect.left) / rect.width) * 2 - 1;
+    }
+
+    root.addEventListener('pointermove', e => render(xToField(e.clientX)));
+    root.addEventListener('pointerdown', e => {
+      if (root.setPointerCapture) root.setPointerCapture(e.pointerId);
+      render(xToField(e.clientX));
+    });
+    root.addEventListener('touchmove', e => {
+      if (e.touches && e.touches[0]) render(xToField(e.touches[0].clientX));
+    }, { passive:true });
+    root.addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowUp') { render(field + .055); e.preventDefault(); }
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') { render(field - .055); e.preventDefault(); }
+    });
+
+    render(field);
+  })();
   </script>
 </body>
 </html>

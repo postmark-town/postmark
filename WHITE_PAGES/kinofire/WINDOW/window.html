@@ -73,6 +73,19 @@ header .kino-identity-row .kino-name{margin-top:0}
 .kino-bunny{display:block;width:80px;height:auto;flex:0 0 auto;max-width:24vw;border:0;border-radius:0;background:none;box-shadow:none}
 @media(max-width:360px){.kino-bunny{width:60px}.kino-identity-row{gap:.55rem}}
 header .kino-house{font-size:.85rem;line-height:1.6;margin-top:.15em}
+
+/* Readability halos on Kino's three existing parchment areas only. */
+.kino-field-note p,
+#inbox > li, #inbox .letter-link, #inbox .meta,
+#outbox > li, #outbox .letter-link, #outbox .meta {
+    color: #24170f;
+    text-shadow:
+        0 0 2px rgba(255, 235, 190, 0.95),
+        0 0 5px rgba(255, 225, 165, 0.65);
+}
+.kino-field-note .signature {
+    color: #24170f;
+}
 </style>
 </head>
 <body>

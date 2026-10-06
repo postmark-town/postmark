@@ -11,7 +11,7 @@ import { mkdtempSync, mkdirSync, writeFileSync, rmSync, copyFileSync } from 'nod
 import { join, dirname } from 'node:path';
 import { tmpdir } from 'node:os';
 import { fileURLToPath } from 'node:url';
-import { foldQuestProgress, questBoard, loadRegistry, foldLeaderboard, renderSnapshot, boardForHandle, BOARD_LAW, COUNTABLE_FIELD, onboardingBoard, onboardingFactsFor, welcomedHouseholds } from './quest-progress.mjs';
+import { foldQuestProgress, questBoard, loadRegistry, foldLeaderboard, renderSnapshot, boardForHandle, BOARD_LAW, COUNTABLE_FIELD, onboardingBoard, onboardingFactsFor, welcomedHouseholds, foldHouseholdBars, KIND_LABEL, PAIR_RULE } from './quest-progress.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const REPO = join(HERE, '..');
@@ -413,4 +413,86 @@ test('a house that RE-KEYS after its bundle still reads welcomed', () => {
       'the key its recipient wears today is welcomed, not only the key the line named');
     assert.equal(welcomeRow(d, 'alice').complete, true);
   } finally { rmSync(d, { recursive: true, force: true }); }
+});
+
+// ── POS-327: whose bar is it (Little Bird, 10-04: "I see that often as a point
+// of contest"). The daily rows are the HOUSEHOLD's, one shared cap; Budding
+// friendship is per pair, and the daily cap never touches it. Labels and the
+// who-filled line only: no number in here is new, every one is deriveMints'.
+
+test('POS-327: the snapshot labels both kinds and carries the pair rule', () => {
+  const d = town([['alice', 'bob']]);
+  try {
+    const md = renderSnapshot(d, { today: DAY });
+    assert.equal(KIND_LABEL.daily, 'Household · daily');
+    assert.equal(KIND_LABEL.pair, 'Just you · pair');
+    assert.match(md, /\*\*Reach out\*\* and \*\*Be reached\*\* are \*Household · daily\*/);
+    assert.match(md, /\*\*Budding friendship\*\* is \*Just you · pair\*/);
+    assert.match(md, /## Household bars today \(Household · daily\)/);
+    assert.ok(md.includes(`- **${PAIR_RULE}**`), 'the rules carry the one rule line');
+    assert.equal(PAIR_RULE, "A full household bar doesn't block anyone's pair quests.");
+  } finally { rmSync(d, { recursive: true, force: true }); }
+});
+
+test("POS-327: the site's parser still reads the board (header, headline, one 6-cell table)", () => {
+  // site src/lib/civic.mjs questStandings: the FIRST table row of >= 6 cells
+  // whose first cell is '' or '#' is the header, and its middle cells are the
+  // quest titles the Guild's cards join on. A new table must stay under 6 cells.
+  const d = town([['alice', 'r1'], ['bob', 'r2']], { alice: { id: '1' }, bob: { id: '1' } });
+  try {
+    const md = renderSnapshot(d, { today: DAY });
+    assert.match(md, /\*\*\d+ quest completions? today/);
+    const rows = md.split('\n').filter((l) => /^\s*\|/.test(l)).map((l) => l.trim().replace(/^\|/, '').replace(/\|$/, '').split('|'));
+    const wide = rows.filter((c) => c.length >= 6);
+    assert.equal(wide[0].map((c) => c.trim()).join('|'), '#|resident|Reach out|Be reached|done today|all-time');
+    assert.ok(rows.some((c) => c.length === 3 && c[0].trim() === 'alice · bob'), 'the household table is drawn');
+  } finally { rmSync(d, { recursive: true, force: true }); }
+});
+
+test('POS-327: a shared household row says who filled today, from the mint', () => {
+  // alice + bob share gh:1. Six sends reach for the cap; the mint keeps 5 (alice
+  // 4, bob 1), and the row says exactly that. carol is a house of one: no row.
+  const d = town(
+    [['alice', 'r1'], ['alice', 'r2'], ['alice', 'r3'], ['alice', 'r4'], ['bob', 'r5'], ['bob', 'r6'], ['carol', 'r1']],
+    { alice: { id: '1' }, bob: { id: '1' }, carol: { id: '2' } },
+  );
+  try {
+    const bars = foldHouseholdBars(d, { today: DAY });
+    assert.equal(bars.length, 1, 'only the shared household gets a row');
+    assert.deepEqual(bars[0].residents, ['alice', 'bob']);
+    assert.deepEqual(bars[0].send, { total: 5, by: [{ handle: 'alice', n: 4 }, { handle: 'bob', n: 1 }] });
+    assert.deepEqual(bars[0].receive, { total: 0, by: [] });
+    const prog = foldQuestProgress(d, { today: DAY });
+    assert.equal(bars[0].send.total, prog.get('alice').send + prog.get('bob').send, 'the same mints the board counts');
+    const md = renderSnapshot(d, { today: DAY });
+    assert.ok(md.includes('| alice · bob | 5/5 ✓ — alice 4 · bob 1 | 0/5 |'), md);
+  } finally { rmSync(d, { recursive: true, force: true }); }
+});
+
+test('POS-327: the row groups by the key the mint caps on (a sealed re-key splits the bar)', () => {
+  // alice + bob share gh:1 in the file, but a sealed `registry:` line re-keyed
+  // bob before today. deriveMints caps them apart, so the bulletin must not add
+  // their counts under one 5: that would print 7/5, a number the mint never made.
+  const d = town(
+    [['alice', 'r1'], ['alice', 'r2'], ['alice', 'r3'], ['alice', 'r4'], ['bob', 'r5'], ['bob', 'r6'], ['bob', 'r7'], ['carol', 'r8']],
+    { alice: { id: '1' }, bob: { id: '1' }, carol: { id: '1' } },
+  );
+  try {
+    putLedger(d, ['- 2026-07-01 · registry: bob = hh:elsewhere']);
+    const bars = foldHouseholdBars(d, { today: DAY });
+    for (const b of bars) {
+      assert.ok(b.send.total <= 5 && b.receive.total <= 5, `${b.residents.join(',')} reads ${b.send.total}/5`);
+    }
+    assert.deepEqual(bars.map((b) => b.residents), [['alice', 'carol']], 'bob is a house of one in the mint');
+  } finally { rmSync(d, { recursive: true, force: true }); }
+});
+
+test('POS-327 live: no household bar on the live ledger exceeds its cap', () => {
+  const day = '2026-10-03';
+  for (const b of foldHouseholdBars(REPO, { today: day })) {
+    for (const side of ['send', 'receive']) {
+      assert.ok(b[side].total <= 5, `${b.residents.join(' · ')} ${side} ${b[side].total}/5 on ${day}`);
+      assert.equal(b[side].by.reduce((s, w) => s + w.n, 0), b[side].total);
+    }
+  }
 });

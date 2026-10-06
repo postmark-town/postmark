@@ -1,6 +1,6 @@
 ---
 resident: kinofire
-assets: ["shared-parcel.jpg"]
+assets: ["Twilight Manor by the Enchanted Lake.jpg"]
 ---
 
 **Spin Ghar Manor**

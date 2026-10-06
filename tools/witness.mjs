@@ -80,6 +80,11 @@
 //      resident's HOME/ certify as before, and the certification carries one
 //      line saying where the house's picture actually lives (the household's
 //      record) and how to set it. It refuses nothing.
+//   5e. (2026-10-05) Plain files only. Every added or changed file is looked
+//      up in the PR head's own git tree (the files list names paths and
+//      statuses, never modes), and anything that is not a plain file — a
+//      symbolic link, a submodule, an entry the tree does not show — gets a
+//      mind, by name. Applies to the pen's joins too.
 //   6. A NEW HOME/REGION.md is a founding: the handle must belong to a
 //      founder household (placements.json roster) whose one region isn't
 //      already founded. Otherwise: human.
@@ -134,7 +139,9 @@ if (IS_MAIN && (!TOKEN || !REPO || !PR_NUMBER || !SUBCOMMAND)) {
   process.exit(2);
 }
 
-const API = `https://api.github.com/repos/${REPO}`;
+// GITHUB_API_URL is the runner's own (Actions sets it, to this same host); a
+// test points it at a local stand-in.
+const API = `${process.env.GITHUB_API_URL || 'https://api.github.com'}/repos/${REPO}`;
 const MARKER = '<!-- the-witness -->';
 
 // A move-in the office pen opened on someone's behalf (the writing desk's
@@ -391,6 +398,53 @@ async function prFiles() {
 
 const OK_EXT = /\.(md|txt|png|jpg|jpeg|webp|gif)$/i;
 
+// Rule 5e — plain files only. The files list says what path changed and how,
+// not what KIND of entry it is, so rule 5's extension check alone would pass a
+// symbolic link that wears a page's name. The kind is read from the head's own
+// tree, one directory at a time (a recursive read truncates on a town this
+// size; a directory never does), with each tree fetched once per run.
+const PLAIN_FILE_MODES = new Set(['100644', '100755']);
+
+async function headModes(headSha, paths) {
+  const trees = new Map();
+  const entries = async (sha) => {
+    if (!trees.has(sha)) trees.set(sha, (await gh(`/git/trees/${sha}`))?.tree ?? null);
+    return trees.get(sha);
+  };
+  const modes = new Map();
+  for (const path of paths) {
+    let sha = headSha, mode = null;
+    const segs = path.split('/');
+    for (let i = 0; i < segs.length; i += 1) {
+      const e = (await entries(sha))?.find((x) => x.path === segs[i]);
+      if (!e) { mode = null; break; }
+      if (i === segs.length - 1 || e.type !== 'tree') { mode = i === segs.length - 1 ? e.mode : null; break; }
+      sha = e.sha;
+    }
+    modes.set(path, mode);
+  }
+  return modes;
+}
+
+// Pure (exported for the test): null for a plain file, else the sentence a
+// mind reads.
+export function modeJudgment(path, mode) {
+  if (PLAIN_FILE_MODES.has(mode)) return null;
+  if (mode === '120000') return `\`${path}\` is a symbolic link — the witness certifies plain files only, so a person reads it.`;
+  if (mode === '160000') return `\`${path}\` is a submodule — the witness certifies plain files only, so a person reads it.`;
+  if (mode == null) return `\`${path}\` could not be found in the PR head's tree as a file — the witness certifies plain files only, so a person reads it.`;
+  return `\`${path}\` is not a plain file (git mode ${mode}) — the witness certifies plain files only, so a person reads it.`;
+}
+
+async function plainFileReasons(pr, files) {
+  const paths = files.filter((f) => f.status !== 'removed').map((f) => f.filename);
+  if (!paths.length) return [];
+  let modes;
+  try { modes = await headModes(pr.head?.sha, paths); }
+  catch { return ['the kinds of the changed files could not be read from the PR head — the witness certifies plain files only, so a person reads it.']; }
+  return paths.map((p) => modeJudgment(p, modes.get(p))).filter(Boolean);
+}
+
 // Rule 5d (POS-219, Keemin 2026-09-27/28; ADVISORY, Wright 2026-10-01): a
 // house's picture is kept on the household's record in the office, one per
 // resident, minted through the media door, and the map draws that one. A
@@ -592,6 +646,7 @@ async function evaluate() {
     else {
       const defect = await penJoinJudgment(pr, files2c);
       if (defect) mind(`a pen-opened join, and ${defect} — rule 2c admits only the exact join shape; a person reads the rest (that is care, not a queue)`);
+      for (const r of await plainFileReasons(pr, files2c)) mind(r); // rule 5e
     }
     const unique2c = [...new Set(reasons)];
     return { pr, certified: unique2c.length === 0, reasons: unique2c, residentOnly: false, handles };
@@ -610,6 +665,7 @@ async function evaluate() {
   const roster = loadFounderRoster();
   const files = await prFiles();
   if (!files.length) mind('the PR changes no files.');
+  for (const r of await plainFileReasons(pr, files)) mind(r); // rule 5e
 
   for (const f of files) {
     const p = f.filename;
