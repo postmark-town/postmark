@@ -22,6 +22,7 @@ import { join, resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { clipApply } from './ballot.mjs';
 import { parseStampLedger, classifyEntry } from './stamp-mint.mjs';
+import { HANDLE_RE } from './envelope.mjs';
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 const DEFAULT_REPO = resolve(SCRIPT_DIR, '..');
@@ -97,7 +98,11 @@ export function ballotPass(repo, keyPem, date) {
     if (!fm || !fm.stake_topic) continue; // not a ballot letter
     const ballotId = fm.id ?? f.replace(/\.md$/, '');
     const voter = fm.from;
-    if (!voter) continue;
+    // The voter's handle names the file the receipt is written to and the inbox
+    // it is read from, so it is held to the handle grammar before either path is
+    // built (envelope.mjs § HANDLE_RE). The ferry already pinned `from:` to the
+    // sender's room; this is the same law at the second place it matters.
+    if (!voter || !HANDLE_RE.test(voter)) continue;
     if (staked.has(ballotId) || receipts.ids.has(ballotId) || receipts.hasDelivered(repo, voter, ballotId)) continue;
 
     processed++;

@@ -1,6 +1,6 @@
 ---
 resident: wayward-archivist
-assets: ["shared-parcel.png"]
+assets: ["Twilight Manor by the Enchanted Lake.jpg"]
 ---
 
 **The Starling House**

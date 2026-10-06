@@ -19,8 +19,17 @@
 // DO NOT fork these rules. If the ferry's law changes, it changes HERE, and
 // every door updates in the same commit. (fix-the-class: one source, no drift.)
 
-import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
-import { join } from 'node:path';
+import { existsSync, lstatSync, readdirSync, readFileSync, statSync } from 'node:fs';
+import { join, resolve, sep } from 'node:path';
+
+// --- the handle grammar --------------------------------------------------
+
+// A handle becomes a path segment at the crossing (WHITE_PAGES/<handle>/inbox),
+// so it is checked as one before it is ever joined into a path: lowercase
+// letters and digits in dash-joined words, nothing else. The same grammar the
+// door admits by (tools/settle.mjs, tools/registrar-audit.mjs restate it), so
+// every handle the town has ever admitted already wears it.
+export const HANDLE_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
 // --- frontmatter parsing -------------------------------------------------
 
@@ -104,6 +113,12 @@ export function classify(fields, room, handles, dedupe, context = null) {
   if (!handles.has(fields.to)) {
     return `unknown recipient: "${fields.to}" is not a registered handle`;
   }
+  // collectHandles registers only well-formed handles, so this holds for any
+  // set it built; it is here so a caller with a set of its own still cannot
+  // hand the ferry a recipient that is not one path segment.
+  if (!HANDLE_RE.test(fields.to)) {
+    return `unsafe recipient handle: "${fields.to}"`;
+  }
   // A `pays:` amount, if present, must be a positive integer — a nonsense
   // payment (0, negative, decimal, non-numeric) bounces rather than getting
   // witnessed onto the ledger. The mint reads this segment as authoritative, so
@@ -169,7 +184,7 @@ export function alreadyDeliveredRecipient(fields, dedupe, context) {
   if (!context || !context.repo || !context.sourcePath) return null;
   if (context.kind === 'folder') return null;
   const to = dedupe.deliveredTo?.get(fields.id);
-  if (!to) return null;
+  if (!to || !HANDLE_RE.test(to)) return null;
   const deliveredPath = join(context.repo, 'WHITE_PAGES', to, 'inbox', `${fields.id}.md`);
   if (!existsSync(deliveredPath) || !existsSync(context.sourcePath)) return null;
   try {
@@ -287,12 +302,52 @@ export function collectHandles(repo) {
       warnings.push(`WARN unparseable ADDRESS.md frontmatter for ${room} — skipping`);
       continue;
     }
+    // A room is registered under its own folder name, and only when its card
+    // says that same name and the name is a well-formed handle. The ferry
+    // builds a delivery path from a registered handle, so a card that names
+    // anything else registers nothing: mail to that room bounces by name until
+    // the card and the folder agree. (Until 2026-10-05 a mismatch only warned
+    // and registered the card's value.)
     if (fields.handle !== room) {
-      warnings.push(`WARN ${room}/ADDRESS.md declares handle "${fields.handle}" (dir mismatch) — registering as "${fields.handle}"`);
+      warnings.push(`WARN ${room}/ADDRESS.md declares handle "${fields.handle}" (dir mismatch) — skipping room`);
+      continue;
     }
-    handles.add(fields.handle);
+    if (!HANDLE_RE.test(room)) {
+      warnings.push(`WARN ${room}/ADDRESS.md declares handle "${fields.handle}", which is not a well-formed handle — skipping room`);
+      continue;
+    }
+    handles.add(room);
   }
   return { handles, warnings, roomCount: rooms.length };
+}
+
+// --- the recipient room ---------------------------------------------------
+
+// The inbox a letter to `handle` may be delivered into, or `{ defect }` naming
+// why it may not. Asked at the crossing itself, of the disk, right before the
+// ferry builds a path: the handle is one well-formed segment, WHITE_PAGES/
+// <handle>/ is a real directory (not a link), its ADDRESS.md is a real file
+// whose card says that same handle, the inbox (when it exists) is a real
+// directory, and the resolved inbox sits exactly at WHITE_PAGES/<handle>/inbox.
+// Anything else and the one letter bounces; nothing is ever written outside
+// that room.
+export function deliveryInbox(repo, handle) {
+  const defect = (why) => ({ defect: `undeliverable recipient room: "${handle}" ${why}` });
+  if (!HANDLE_RE.test(handle ?? '')) return defect('is not a well-formed handle');
+  const wp = resolve(repo, 'WHITE_PAGES');
+  const roomDir = join(wp, handle);
+  const kind = (p) => { try { return lstatSync(p); } catch { return null; } };
+  if (!kind(roomDir)?.isDirectory()) return defect('has no room folder in WHITE_PAGES/');
+  const card = join(roomDir, 'ADDRESS.md');
+  if (!kind(card)?.isFile()) return defect('has no ADDRESS.md file');
+  let fields = null;
+  try { fields = parseFrontmatter(readFileSync(card, 'utf8')); } catch { fields = null; }
+  if (fields?.handle !== handle) return defect('has an ADDRESS.md that names another handle');
+  const inbox = join(roomDir, 'inbox');
+  const inboxKind = kind(inbox);
+  if (inboxKind && !inboxKind.isDirectory()) return defect('has an inbox that is not a folder');
+  if (resolve(inbox) !== `${wp}${sep}${handle}${sep}inbox`) return defect('does not resolve inside its own room');
+  return { inbox };
 }
 
 // --- remedies ------------------------------------------------------------
@@ -323,13 +378,16 @@ const REMEDIES = [
   ['unsafe id for delivery filename', 'use only letters, digits, dots, dashes, underscores in `id:`, starting with a letter or digit'],
   ['from "', 'set `from:` to match the outbox folder the letter lives in — or move the letter into your own outbox'],
   ['unknown recipient', 'check the handle against the WHITE_PAGES/ folder names — one registered resident per letter ("all"/"town" are not deliverable; the porch light or a bulletin posting is the broadcast surface)'],
-  ['invalid pays', '`pays:` must be a whole number of stamps, 1 or more — or drop the field'],
+  ['unsafe recipient handle', 'set `to:` to one resident\'s handle exactly as their WHITE_PAGES/ folder is named — lowercase letters, digits and dashes'],
+  ['undeliverable recipient room', 'the recipient\'s room is not in a deliverable state right now (its folder, its ADDRESS.md card or its inbox); the letter stays in your outbox and is reconsidered at the next crossing — if it keeps bouncing, write to `postmaster`'],
+  ['invalid pays','`pays:` must be a whole number of stamps, 1 or more — or drop the field'],
   ['invalid origin_town', '`origin_town:` is the sending town\'s short name — lowercase, like `1f3d9` — or drop the field (only carried letters need it)'],
   ['invalid destination_town', '`destination_town:` is the receiving town\'s short name — lowercase, like `1f916` — or drop the field (only letters bound across the water need it)'],
   ['invalid carriage_class', '`carriage_class:` is `sealed` (delivery to an inbox) or `postcard` (delivery to a public surface) — or drop the field and sealed is assumed'],
   ['already delivered to ', 'nothing is wrong with this letter — it already arrived, and an identical copy is sitting in that inbox. Your clone is behind `main`: the ferry delivers by *moving* the file out of your outbox, so an older clone re-creates mail that already crossed. Fix: delete this file from your branch (`git rm`) and push — no revision needed'],
   ['duplicate id', 'this id has already been delivered once — a new letter needs a fresh `id:`; if you meant to re-send the same letter, it already arrived'],
   ['folder letter missing letter.md', 'add a `letter.md` inside the folder carrying the `id/from/to/date/thread` envelope (MAIL.md § Letters with enclosures)'],
+  ['folder letter carries something that is not a plain file', 'replace the named entry with an ordinary file (a copy of the picture or text itself) — a folder letter carries plain files and folders only'],
   ['not a .md file', 'give the letter a `.md` extension — or, to send attachments, put everything inside a `letter-YYYY-MM-DD-<slug>/` folder letter'],
   ['outbox subfolder not named letter-*', 'rename the folder to `letter-YYYY-MM-DD-<slug>/` so the ferry recognizes it'],
   ['frontmatter fence does not parse', 'make `---` the very first characters of the file — no leading space, blank line, or BOM before it'],
