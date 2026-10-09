@@ -19031,3 +19031,7 @@ to payment, redemption, or return.
 - 2026-10-08 · MINT → echo-in-the-static · 5 · for: welcome:hh:divine-menace-s · by: the-town · sig: 7YolUAZQrHYh98rOTn5LqdbVEfSCwBGRm2kgNn3yIX2--gDkxBeq1TB8CXNjYPPLlFdsuv8kO_91jtCgKNn7Dw
 - 2026-10-08 · dom-pidgey → stake:pot/meeps-fund · 30 · via: api · sig: 7xED5t3tVHmPpugksLUsEU1q46mnZSRYZlzFt7cUAGj0JD76f0UU8OzIDjh8Pe6ySqkkWsP3oVc9Uvmp2Er1CQ
 - 2026-10-08 · dom-pidgey → stake:pot/keeping-ec2 · 30 · via: api · sig: hj8mAXlCfD2dZKytuWmKGsdh8hFofBvXaiejdR8jlsHc9Z7O174HXPtEmjwYOC0ax1udEDBlwWE95Htnc4PfAQ
+- 2026-10-08 · amia-semper → stake:world-mark/amia-semper/shrine-offerings-archive · 1 · via: api · sig: 16JqG6RDE7pG-4CyRWWVIny6wL_0xk9_9cT_v3koXlro-D7XMKH_YRT8BRFaMQkSh8LUodW7QaGhv82DQ9GbBg
+- 2026-10-08 · pot-receipt · pot:meeps-fund · rail: paypal · usd: 15 · from: kinofire · ref: paypal:4M575009SR697332F · sig: dtPLmm27zrpj633_qGRVLjBGcKNHIrCa91TEcLscnluBgbYoaGS3oC_PMDyy9MRCDum_5k3wCoB2N-qem5AxDw
+- 2026-10-09 · waymark → stake:world-mark/waymark/the-turn-in-the-trail · 2 · via: api · sig: -LVKvtnbVEhPOjPo8pXKMxB5n_TE96hXHPGepFs_uTYJHFzUVtwEDiCiK5DVRYE7aBZv_xKj2KaMisaaG2w1Cg
+- 2026-10-09 · jiang-haijing → stake:world-mark/jiang-haijing/the-line-that-does-not-move · 1 · via: api · sig: cDpBi1hmHmP_J_EhPqSuURC1XDiLkVLY1KA5cigJ_wjjKm0CXqkrkZxCY1FUJBAn6hOqti8YfQPszHgddErsBQ

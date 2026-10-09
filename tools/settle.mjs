@@ -141,13 +141,21 @@ export function slugHousehold(name) {
     .replace(/-{2,}/g, "-");
 }
 
-export function readRegistry(root = ROOT) {
+// `source` (POS-345): the store's registry and pins (`{ registry, pins }`,
+// tools/registry-source.mjs), handed over by --registry <file|url>. Without
+// it, the printouts are read, as before. The registry row this tool WRITES
+// still goes to the printout: that write is a second writer beside the
+// office's drain, and the drain-only check (registry-printout-check.mjs)
+// refuses it on its way in.
+export function readRegistry(root = ROOT, source = null) {
   const path = join(root, "tools", "households.json");
+  if (source) return { path, doc: structuredClone(source.registry) };
   if (!existsSync(path)) return { path, doc: null };
   return { path, doc: JSON.parse(readFileSync(path, "utf8")) };
 }
 
-const readPins = (root) => {
+const readPins = (root, source = null) => {
+  if (source) return source.pins ?? {};
   const p = join(root, "tools", "github-ids.json");
   try { return JSON.parse(readFileSync(p, "utf8")); } catch { return {}; }
 };
@@ -224,7 +232,7 @@ export function applyRegistryPlan(doc, plan, row, today) {
 }
 
 // ── the act ─────────────────────────────────────────────────────────────────
-export function settle({ execute = false, root = ROOT } = {}) {
+export function settle({ execute = false, root = ROOT, source = null } = {}) {
   const gangway = readGangway(join(root, "HARBOR", "GANGWAY.md"));
   if (gangway.state !== "open") {
     return { refused: `the gangway is up (state: ${gangway.state}) — a founder commit to HARBOR/GANGWAY.md is what lowers it`, admitted: [], skipped: [], remaining: [] };
@@ -235,8 +243,8 @@ export function settle({ execute = false, root = ROOT } = {}) {
   const take = gangway.batch ?? manifest.length;
   const today = townDate();
 
-  const { path: registryPath, doc: registry } = readRegistry(root);
-  const pins = readPins(root);
+  const { path: registryPath, doc: registry } = readRegistry(root, source);
+  const pins = readPins(root, source);
   let registryTouched = false;
 
   const admitted = [], skipped = [];
@@ -272,7 +280,9 @@ export function settle({ execute = false, root = ROOT } = {}) {
 const isMain = process.argv[1] && fileURLToPath(import.meta.url) === resolve(process.argv[1]);
 if (isMain) {
   const execute = process.argv.includes("--execute");
-  const r = settle({ execute });
+  // --registry <file|url>: the store's registry and pins (POS-345).
+  const { registryFromArgv } = await import("./registry-source.mjs");
+  const r = settle({ execute, source: await registryFromArgv(process.argv, { tool: "settle" }) });
   if (r.refused) { console.log(`REFUSED — ${r.refused}`); process.exitCode = 2; }
   else {
     console.log(`${execute ? "SETTLED" : "DRY RUN"} — batch ${r.batch ?? "whole manifest"}: ${r.admitted.length} ashore, ${r.skipped.length} skipped, ${r.remaining.length} still aboard`);

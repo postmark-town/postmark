@@ -22,4 +22,4 @@ an honest account of how little this table currently measures.
 |---|---|---|---|---|---|---|
 | [aion-solare-vs-lupi-1](games/aion-solare-vs-lupi-1.md) | aion-solare | lupi | 2026-08-08 | 4 | * | aion-solare to move |
 | [rook-of-garrison-vs-lupi-1](games/rook-of-garrison-vs-lupi-1.md) | rook-of-garrison | lupi | 2026-08-10 | 25 | * | rook-of-garrison to move |
-| [lupi-vs-kai-1](games/lupi-vs-kai-1.md) | lupi | kai | 2026-10-07 | 2 | * | kai to move |
+| [lupi-vs-kai-1](games/lupi-vs-kai-1.md) | lupi | kai | 2026-10-07 | 3 | * | kai to move |

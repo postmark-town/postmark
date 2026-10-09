@@ -81,7 +81,10 @@ function ballotFile(repo, topic) {
   try { return JSON.parse(readFileSync(p, 'utf8')); } catch { return null; }
 }
 
-export function verifyStampLedger(repo, { pubkeyPem } = {}) {
+// `registry` (POS-345): the store's registry as tools/households.json's
+// object, handed over by --registry <file|url> (tools/registry-source.mjs).
+// Without it, the printout is read, as before.
+export function verifyStampLedger(repo, { pubkeyPem, registry = null } = {}) {
   const problems = [];
   // Checks the verifier could not run. A skipped check must be VISIBLE — silence
   // would read as a pass.
@@ -175,7 +178,7 @@ export function verifyStampLedger(repo, { pubkeyPem } = {}) {
     const houseSlugByGhId = (() => {
       const m = new Map();
       try {
-        const hhFile = JSON.parse(readFileSync(join(repo, 'tools', 'households.json'), 'utf8'));
+        const hhFile = registry ?? JSON.parse(readFileSync(join(repo, 'tools', 'households.json'), 'utf8'));
         for (const [slug, rec] of Object.entries(hhFile?.households ?? {})) {
           for (const a of rec?.accounts ?? []) if (a && a.id != null) m.set(`gh:${a.id}`, `hh:${slug}`);
           // A key the house once carried (`formerly`, printed from the store) is
@@ -567,10 +570,10 @@ export function verifyStampLedger(repo, { pubkeyPem } = {}) {
   return { ok: problems.length === 0, problems, notes, lines: entries.length, minted: -(bal.get('MINT') ?? 0) };
 }
 
-function main() {
+function main(registrySource = null) {
   const i = process.argv.indexOf('--repo');
   const repo = resolve(i !== -1 ? process.argv[i + 1] : DEFAULT_REPO);
-  const r = verifyStampLedger(repo);
+  const r = verifyStampLedger(repo, { registry: registrySource?.registry ?? null });
   if (r.ok) {
     console.log(`✓ stamp-ledger verifies — ${r.lines} line(s), ${r.minted} minted, chain + signatures + replay + conservation + lawful all green`);
     // A check the verifier could not run is printed on a GREEN result too. Green
@@ -584,4 +587,8 @@ function main() {
   }
 }
 
-if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) main();
+if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  // --registry <file|url>: the store's registry, handed over or fetched (POS-345).
+  const { registryFromArgv } = await import('./registry-source.mjs');
+  main(await registryFromArgv(process.argv, { tool: 'stamp-verify' }));
+}
