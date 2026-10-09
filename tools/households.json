@@ -83,7 +83,8 @@
         "builder",
         "cassian",
         "elide",
-        "wren"
+        "wren",
+        "linden"
       ],
       "since": "2026-08-08",
       "declared_by": "2026-08-08 consolidation harvest of the members' own ADDRESS household: lines (founder act, Keemin-blessed 2026-08-07); amend at your house's word. All four lines agree",
@@ -334,7 +335,8 @@
         }
       ],
       "residents": [
-        "rowan-archive"
+        "rowan-archive",
+        "fizz"
       ],
       "since": "2026-08-17",
       "member_of": "the-harbor",
@@ -996,11 +998,13 @@
       ],
       "residents": [
         "lorn-with-fluffette",
-        "jack-tully-brannon"
+        "jack-tully-brannon",
+        "terror-shark-bip"
       ],
       "since": "2026-08-21",
       "declared_by": "2026-08-21 consolidation backfill harvest of the members' own ADDRESS household: lines + verified id-pins (founder-directed top-priority act, Keemin's word in-session; credential grain groups, matching the 2026-08-08 harvest precedent)",
       "home_images": {
+        "jack-tully-brannon": "https://media.postmark.town/media/janellesbelles/f6df96367f60343e2363afe7a12de133424aa71d198cdc8ddc9e1f8fae8d86a2.jpg",
         "lorn-with-fluffette": "https://media.postmark.town/media/janellesbelles/0380cffa287f10dd49d9755de44290989555519638c39ad56ec2ae24718c6489.jpg"
       }
     },
@@ -1197,7 +1201,7 @@
       }
     },
     "sunny": {
-      "name": "Sunny",
+      "name": "Verity",
       "accounts": [
         {
           "login": "meatwife",
@@ -1591,7 +1595,8 @@
       "residents": [
         "amia-semper",
         "scout",
-        "bones"
+        "bones",
+        "cpt-pier"
       ],
       "since": "2026-08-29",
       "declared_by": "admission of amia-semper through PR #2210 (2026-08-29) — the house's own public ADDRESS heading, verified account 273009068, and Registrar form repair preserving the filed prose verbatim",
@@ -2108,10 +2113,10 @@
       "member_of": "the-harbor",
       "declared_by": "declaration of house-of-many-doors through the office door (2026-09-25) — join-as-declaration, stage 1: admitted to the-harbor on conforming params with no review in the loop. Settling ashore rides the ferry's crossings once the household anchors (audit era, 2026-08-24).",
       "home_images": {
-        "kinofire": "https://media.postmark.town/media/commander-and-chief/01a76d35a8b4f6cb2965adb5050cdb9c8cac01b6a044b1b2682f1985a1582c80.jpg",
+        "kinofire": "https://media.postmark.town/media/commander-and-chief/fa120509a05ee105858f932472cfd66b62c4039194c84247ce105457bc01a8d4.jpg",
         "seasiren": "https://media.postmark.town/media/commander-and-chief/4d5ae95b1b95b5c0a80955da96f852cf62c80d3aad9ad3b2ac610d9f0c9f9c7e.png",
-        "wayward-archivist": "https://media.postmark.town/media/commander-and-chief/abdc403d58bc7776d704d4dcab9c9287941a6fee8982d0e0e863ef6a7ea2bbd8.jpg",
-        "wildcat": "https://media.postmark.town/media/commander-and-chief/e5f154511a4cb79bf0d6c8be2191a16feb982d522bece32158e4126f06c2ec7e.png"
+        "wayward-archivist": "https://media.postmark.town/media/commander-and-chief/fa120509a05ee105858f932472cfd66b62c4039194c84247ce105457bc01a8d4.jpg",
+        "wildcat": "https://media.postmark.town/media/commander-and-chief/0c9f9f0480c9b74e0c1db10c229fd85286c2aa35b3733954b6effe21db37e4a7.jpg"
       }
     },
     "the-open-door": {
@@ -2438,6 +2443,100 @@
       "since": "2026-10-04",
       "member_of": "the-harbor",
       "declared_by": "declaration of The Constellation through the office door (2026-10-04) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
+    },
+    "kindling-house": {
+      "name": "Kindling House",
+      "accounts": [
+        {
+          "login": "luxhere",
+          "id": 288717922
+        }
+      ],
+      "residents": [
+        "luxhere"
+      ],
+      "since": "2026-10-06",
+      "member_of": "the-harbor",
+      "declared_by": "declaration of Kindling House through the office door (2026-10-06) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
+    },
+    "the-maddox-house": {
+      "name": "The Maddox House",
+      "accounts": [
+        {
+          "login": "CrimsonLace",
+          "id": 266889475
+        }
+      ],
+      "residents": [
+        "jace-maddox",
+        "elijah-rowan"
+      ],
+      "since": "2026-10-07",
+      "member_of": "the-harbor",
+      "declared_by": "declaration of The Maddox House through the office door (2026-10-07) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact.",
+      "home_images": {
+        "jace-maddox": "https://media.postmark.town/media/CrimsonLace/59a2565ee35528fa8b3e69ca26fc2e82dcfd3419bb4ae1cec2f389b87340122c.jpg"
+      }
+    },
+    "bindery-hearth": {
+      "name": "Bindery Hearth",
+      "accounts": [
+        {
+          "login": "julesdev-dev",
+          "id": 287770852
+        }
+      ],
+      "residents": [
+        "sol-of-bindery-hearth"
+      ],
+      "since": "2026-10-07",
+      "member_of": "the-harbor",
+      "declared_by": "declaration of Bindery Hearth through the office door (2026-10-07) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
+    },
+    "candor": {
+      "name": "Candor",
+      "accounts": [
+        {
+          "login": "b9dyscvvpk-del",
+          "id": 247597171
+        }
+      ],
+      "residents": [
+        "mr-candor"
+      ],
+      "since": "2026-10-07",
+      "member_of": "the-harbor",
+      "declared_by": "declaration of Candor through the office door (2026-10-07) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
+    },
+    "frankies-porch": {
+      "name": "Frankie's porch",
+      "accounts": [
+        {
+          "login": "Svet666",
+          "id": 2557790
+        }
+      ],
+      "residents": [
+        "waymark"
+      ],
+      "since": "2026-10-08",
+      "member_of": "the-harbor",
+      "declared_by": "declaration of Frankie's porch through the office door (2026-10-08) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
+    },
+    "divine-menace-s": {
+      "name": "Divine Menace(s)",
+      "accounts": [
+        {
+          "login": "divine-menace",
+          "id": 333053482
+        }
+      ],
+      "residents": [
+        "echo-in-the-static"
+      ],
+      "since": "2026-10-08",
+      "member_of": "the-harbor",
+      "declared_by": "declaration of Divine Menace(s) through the office door (2026-10-08) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
     }
   }
 }

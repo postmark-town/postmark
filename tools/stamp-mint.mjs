@@ -301,8 +301,13 @@ export function welcomeBinding(repo, registry = null) {
 // (1 human = 1 household): membership DECLARATIONS live in tools/households.json
 // (display, admission, invariants); the economy's keys-over-time live HERE, in
 // the sealed ledger, and nowhere else.
-export function currentHouseholds(repo) {
-  const map = householdKeys(repo);
+//
+// `base` is the key base when the CALLER read it (POS-341 part 4: the office
+// hands over the store's, householdKeys' shape, handle -> { key, provisional }).
+// Omitted, this reads householdKeys(repo) exactly as before. A copy is folded,
+// so the caller's map is never changed.
+export function currentHouseholds(repo, { base = null } = {}) {
+  const map = base ? new Map(base) : householdKeys(repo);
   const ledgerPath = join(repo, 'WHITE_PAGES', 'stamp-ledger.md');
   const entries = existsSync(ledgerPath) ? parseStampLedger(readFileSync(ledgerPath, 'utf8')) : [];
   const { revisions } = parseLaws(entries);
@@ -2140,6 +2145,23 @@ function main(registrySource = null) {
     ? { households: registrySource.registry.households ?? {}, pins: registrySource.pins ?? {} }
     : null);
 
+  // THE STORE'S KEY BASE, handed over by the office (POS-341 part 4): --base
+  // <file> is householdKeys' answer read from the store, as `{ <handle>: { key,
+  // provisional } }`. The welcome's roll and its house check read it in place
+  // of the printouts'; the law that folds it stays here. Without --base this is
+  // householdKeys(repo), as before. An unreadable file is a refusal.
+  const keyBase = () => {
+    const p = arg('--base');
+    if (!p) return null;
+    let doc;
+    try { doc = JSON.parse(readFileSync(p, 'utf8')); }
+    catch (e) { console.error(`FATAL: --base ${p} could not be read (${e.message}) — nothing planned, nothing minted`); process.exit(1); }
+    const ok = doc && typeof doc === 'object' && !Array.isArray(doc)
+      && Object.values(doc).every((r) => r && typeof r.key === 'string' && HOUSEHOLD_KEY_RE.test(r.key) && typeof r.provisional === 'boolean');
+    if (!ok) { console.error(`FATAL: --base ${p} is not { <handle>: { key, provisional } } — nothing planned, nothing minted`); process.exit(1); }
+    return new Map(Object.entries(doc));
+  };
+
   // ── the welcome bundle (founder-ruled 2026-09-14) ──────────────────────────
   //
   // THE PLAN comes first, and it is a DRY RUN: it writes nothing, signs nothing
@@ -2153,9 +2175,10 @@ function main(registrySource = null) {
   // no date to be early with, so they sort AFTER every pinned housemate and
   // alphabetically among themselves — a missing pin is an absent answer, never
   // an early one. The pins are the store's when the office hands them over
-  // with --registry (POS-344), and the printout's otherwise.
+  // with --registry (POS-344), and the printout's otherwise. The roll's key
+  // base is the store's with --base (POS-341 part 4), and householdKeys' otherwise.
   if (has('--welcome-plan')) {
-    const roll = currentHouseholds(repo);
+    const roll = currentHouseholds(repo, { base: keyBase() });
     const { laws } = parseLaws(existing);
     const isMeep = meepChecker(laws);
     const today = arg('--date') ?? new Intl.DateTimeFormat('en-CA', { timeZone: process.env.TOWN_TZ ?? 'America/New_York' }).format(new Date());
@@ -2256,7 +2279,7 @@ function main(registrySource = null) {
     if (!HOUSEHOLD_KEY_RE.test(household)) {
       console.error(`--household must be a household key, <prefix>:<value> ([a-z0-9-]:[a-z0-9._-], got "${household}")`); process.exit(1);
     }
-    const rooms = householdKeys(repo);
+    const rooms = keyBase() ?? householdKeys(repo);
     if (!rooms.has(handle)) { console.error(`FATAL: no WHITE_PAGES room for "${handle}" — a welcome bundle needs a resident to receive it`); process.exit(1); }
     const { laws, revisions } = parseLaws(existing);
     if (meepChecker(laws)(handle, date)) { console.error(`FATAL: "${handle}" is a meep at ${date} — meeps stay outside the currency`); process.exit(1); }

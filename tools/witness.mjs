@@ -68,6 +68,12 @@
 //      still get eyes: anything off the exact shape routes to a mind, and a
 //      human-name privacy question is handled by redacting the NAME after
 //      admission, never by holding the PERSON.
+//   2d. (2026-10-07, the founder's "yes") A meep's own room. An account named
+//      in tools/meep-accounts.json (by immutable id, on base) keeps one room,
+//      MEEPS/<room>/, and its PR certifies when every file is ADDED or
+//      MODIFIED inside that room, plain (5e), and prose or pictures (5).
+//      Removals and renames get a mind, as a resident's do. The map is under
+//      tools/, so no meep can widen its own room.
 //   5c. (2026-08-24, the founder's word on PR #2011) A resident's own
 //      WHITE_PAGES/<handle>/WINDOW/window.html certifies despite rule 5's
 //      extension list, under the SAME law the MCP door (update_window,
@@ -97,7 +103,8 @@
 //                    on the PR (labels `needs-principal` when the diff touches
 //                    machinery/law; otherwise no label — an open uncertified
 //                    PR is the office's queue by definition).
-//   merge          — squash-merge the PR and leave the certification comment.
+//   merge          — squash-merge the PR at the head it judged, and leave the
+//                    certification comment.
 //   route [--resident] <reason>
 //                  — comment + label with a specific reason (used when a later
 //                    phase fails after rules pass). --resident marks it
@@ -111,7 +118,8 @@
 //                    --dry-run prints the decision and the comment it would
 //                    post, and writes nothing.
 //
-// Env: GITHUB_TOKEN, GITHUB_REPOSITORY (owner/repo), PR_NUMBER.
+// Env: GITHUB_TOKEN, GITHUB_REPOSITORY (owner/repo), PR_NUMBER; optionally
+// WITNESS_HEAD_SHA, the head the run was started for (see JUDGED_HEAD).
 // Run from a checkout of the BASE branch (the workflow guarantees this).
 // No dependencies. Node built-ins + global fetch only.
 
@@ -296,11 +304,13 @@ async function gh(path, init = {}) {
     // names what the endpoint wanted, request-id is support-ticket currency.
     const wanted = res.headers.get('x-accepted-github-permissions') || '';
     const reqId = res.headers.get('x-github-request-id') || '';
-    throw new Error(
+    const err = new Error(
       `${init.method || 'GET'} ${path} -> ${res.status}` +
       `${wanted ? ` [accepted-permissions: ${wanted}]` : ''}` +
       `${reqId ? ` [request-id: ${reqId}]` : ''}: ${await res.text()}`
     );
+    err.status = res.status;
+    throw err;
   }
   return res.status === 204 ? null : res.json().catch(() => null);
 }
@@ -376,6 +386,20 @@ function loadFounderRoster() {
   }
 }
 
+// Rule 2d — which meep room an account keeps, from tools/meep-accounts.json at
+// base: account id -> [rooms]. A room name is a plain slug; a row without a
+// numeric id binds nothing (the login is for reading, never matched).
+export function loadMeepRooms(root = ROOT) {
+  let rooms = {};
+  try { rooms = JSON.parse(readFileSync(join(root, 'tools', 'meep-accounts.json'), 'utf8')).rooms ?? {}; } catch { return {}; }
+  const byId = {};
+  for (const [room, row] of Object.entries(rooms)) {
+    if (typeof row?.id !== 'number' || !/^[a-z0-9][a-z0-9-]*$/.test(room)) continue;
+    (byId[row.id] ||= []).push(room);
+  }
+  return byId;
+}
+
 function householdOf(handle, roster) {
   return roster.find((members) => members.includes(handle)) || null;
 }
@@ -396,7 +420,28 @@ async function prFiles() {
   return files;
 }
 
-const OK_EXT = /\.(md|txt|png|jpg|jpeg|webp|gif)$/i;
+// The files the witness JUDGES are the files of the head it judges (POS-396).
+// /pulls/N/files answers for whatever the head is when it is asked, which can
+// be a newer push than the `pr` read a moment before; the compare of the PR's
+// base and its head sha is pinned to that one commit. Three dots, so the diff
+// starts at the merge base, as the PR's own files list does (measured
+// 2026-10-07 on #3491, #3492 and #3494, a diverged fork among them: the same
+// lists). A compare names at most 300 files, so a PR at that size is not
+// certified mechanically.
+const COMPARE_FILE_CAP = 300;
+
+async function filesAtHead(pr) {
+  const cmp = await gh(`/compare/${pr.base?.sha}...${pr.head?.sha}`);
+  const files = cmp?.files ?? [];
+  return { files, capped: files.length >= COMPARE_FILE_CAP };
+}
+
+// The head this run was started for (witness.yml sets it from the event). When
+// it is set, the witness judges and merges that head and no other: a PR whose
+// head has moved since is the newer push's to judge, in its own run.
+const JUDGED_HEAD = process.env.WITNESS_HEAD_SHA || '';
+
+const OK_EXT =/\.(md|txt|png|jpg|jpeg|webp|gif)$/i;
 
 // Rule 5e — plain files only. The files list says what path changed and how,
 // not what KIND of entry it is, so rule 5's extension check alone would pass a
@@ -424,6 +469,22 @@ async function headModes(headSha, paths) {
     modes.set(path, mode);
   }
   return modes;
+}
+
+// Rule 2d's file judgment, pure (exported for the test): the sentences a mind
+// reads for a meep's PR; none means every file is an addition or a change
+// inside MEEPS/<room>/, of a kind the witness certifies.
+export function meepRoomReasons(room, files) {
+  const out = [];
+  for (const f of files) {
+    const p = f.filename;
+    if (f.status === 'removed') { out.push(`deletes \`${p}\` — removals get human eyes, in a meep's room as anywhere.`); continue; }
+    if (f.status === 'renamed') { out.push(`renames \`${f.previous_filename}\` — renames get human eyes.`); continue; }
+    if (f.status !== 'added' && f.status !== 'modified') { out.push(`changes \`${p}\` (${f.status}) — the witness certifies added and modified files only.`); continue; }
+    if (!p.startsWith(`MEEPS/${room}/`)) { out.push(`touches \`${p}\`, outside this meep's own room (\`MEEPS/${room}/\`) — that needs eyes.`); continue; }
+    if (!OK_EXT.test(p) && !/\.gitkeep$/.test(p)) out.push(`adds \`${p}\` — the witness only certifies prose and pictures (.md, .txt, images); anything else gets human eyes.`);
+  }
+  return out;
 }
 
 // Pure (exported for the test): null for a plain file, else the sentence a
@@ -600,6 +661,12 @@ async function registryJudgment({ headSha, authorId, author }) {
 
 async function evaluate() {
   const pr = await gh(`/pulls/${PR_NUMBER}`);
+  if (JUDGED_HEAD && pr.head?.sha !== JUDGED_HEAD) {
+    return {
+      pr, certified: false, moved: true, residentOnly: false, handles: [],
+      reasons: [`the PR's head is ${pr.head?.sha}, not ${JUDGED_HEAD}, the head this run was started for; the push that moved it starts its own run.`],
+    };
+  }
   const author = (pr.user?.login || '').toLowerCase();
   const authorId = pr.user?.id;
   const reasons = [];
@@ -641,7 +708,8 @@ async function evaluate() {
   // judgment can't prove falls through to a mind, exactly as before.
   const penJoin = authorId === PEN_ID && isJoinPR(pr);
   if (penJoin) {
-    const files2c = await prFiles();
+    const { files: files2c, capped: capped2c } = await filesAtHead(pr);
+    if (capped2c) mind(`the PR changes ${COMPARE_FILE_CAP} or more files, more than the witness can read at one head; a person reads it.`);
     if (!files2c.length) { mind('the PR changes no files.'); }
     else {
       const defect = await penJoinJudgment(pr, files2c);
@@ -650,6 +718,19 @@ async function evaluate() {
     }
     const unique2c = [...new Set(reasons)];
     return { pr, certified: unique2c.length === 0, reasons: unique2c, residentOnly: false, handles };
+  }
+  // Rule 2d: a meep's own room. Judged alone, like 2c: the account is the
+  // meep's, so the resident reasons below (no ADDRESS binds it) are not true of
+  // it, and anything outside its room still gets a mind, by name.
+  const meepRooms = handles.length ? [] : (loadMeepRooms()[authorId] || []);
+  if (meepRooms.length === 1) {
+    const { files: filesR, capped: cappedR } = await filesAtHead(pr);
+    if (cappedR) mind(`the PR changes ${COMPARE_FILE_CAP} or more files, more than the witness can read at one head; a person reads it.`);
+    if (!filesR.length) mind('the PR changes no files.');
+    for (const r of await plainFileReasons(pr, filesR)) mind(r); // rule 5e
+    for (const r of meepRoomReasons(meepRooms[0], filesR)) mind(r);
+    const uniqueR = [...new Set(reasons)];
+    return { pr, certified: uniqueR.length === 0, reasons: uniqueR, residentOnly: false, handles };
   }
   if (!handles.length) {
     // A move-in opened from the writing desk lands here by design, and the human
@@ -663,7 +744,8 @@ async function evaluate() {
   }
 
   const roster = loadFounderRoster();
-  const files = await prFiles();
+  const { files, capped } = await filesAtHead(pr);
+  if (capped) mind(`the PR changes ${COMPARE_FILE_CAP} or more files, more than the witness can read at one head; a person reads it.`);
   if (!files.length) mind('the PR changes no files.');
   for (const r of await plainFileReasons(pr, files)) mind(r); // rule 5e
 
@@ -949,9 +1031,13 @@ async function headCommitDate() {
 // --- subcommands -------------------------------------------------------------
 
 if (SUBCOMMAND === 'check') {
-  const { certified, reasons, residentOnly, pr, notes = [] } = await evaluate();
+  const { certified, reasons, residentOnly, pr, notes = [], moved } = await evaluate();
   setOutput('certified', String(certified));
-  if (certified) {
+  if (moved) {
+    // Not a verdict on anything: this run's head is gone, and the run the
+    // push started reads the new one. Routing here would race that run's word.
+    console.log(`witness: not judged — ${reasons[0]}`);
+  } else if (certified) {
     console.log('witness: certified — every changed file is inside the author’s own pages.');
     for (const n of notes) console.log(`  note: ${n}`);
   } else {
@@ -960,7 +1046,11 @@ if (SUBCOMMAND === 'check') {
     await routeToHumans(reasons, { resident: residentOnly, join: isJoinPR(pr) });
   }
 } else if (SUBCOMMAND === 'merge') {
-  const { certified, reasons, residentOnly, pr, notes = [] } = await evaluate(); // re-check at merge time — the PR may have grown since
+  const { certified, reasons, residentOnly, pr, notes = [], moved } = await evaluate(); // re-check at merge time — the PR may have grown since
+  if (moved) {
+    console.error(`witness: refused to merge — ${reasons[0]}`);
+    process.exit(1);
+  }
   if (!certified) {
     await routeToHumans(reasons, { resident: residentOnly, join: isJoinPR(pr) });
     console.error('witness: refused to merge — certification no longer holds.');
@@ -973,12 +1063,18 @@ if (SUBCOMMAND === 'check') {
   // modified", which is an optimistic-lock retry hint, not a verdict. Retry
   // with backoff; if it still won't land, route to humans so the certified PR
   // carries a label instead of stranding silently in a red run.
+  //
+  // The merge names the head it certified (POS-396): `sha` makes GitHub merge
+  // that commit or nothing, answering 409 if the head has moved. Without it the
+  // merge took whatever the head was when the PUT landed, so a commit pushed
+  // after evaluate() merged unjudged, and the 405 retries widened that window.
+  // A moved head is not routed: the push that moved it started its own run.
   let mergeError = null;
   for (let attempt = 1; attempt <= 4; attempt++) {
     try {
       await gh(`/pulls/${PR_NUMBER}/merge`, {
         method: 'PUT',
-        body: JSON.stringify({ merge_method: 'squash' }),
+        body: JSON.stringify({ merge_method: 'squash', sha: pr.head.sha }),
       });
       mergeError = null;
       break;
@@ -987,6 +1083,10 @@ if (SUBCOMMAND === 'check') {
       if (!String(e.message).includes('Base branch was modified')) break;
       await new Promise((r) => setTimeout(r, attempt * 5000));
     }
+  }
+  if (mergeError?.status === 409) {
+    console.error(`witness: refused to merge — the head moved after ${pr.head.sha} was judged; the push that moved it starts its own run.`);
+    process.exit(1);
   }
   if (mergeError) {
     await routeToHumans([
@@ -998,7 +1098,7 @@ if (SUBCOMMAND === 'check') {
   await upsertComment(
     [
       MARKER,
-      `**Certified by the witness** — every changed file is inside \`WHITE_PAGES/\` ground this account owns (or is this household's own registry row, rule 2b; or the pen's exact join shape carrying a verified identity, rule 2c — welcome to town: your address is real as of this merge, and the welcome letter follows), nothing deleted, nothing but prose, pictures, and the author's own page, lint clean. Merged.`,
+      `**Certified by the witness** — every changed file is inside \`WHITE_PAGES/\` ground this account owns (or is this household's own registry row, rule 2b; or the pen's exact join shape carrying a verified identity, rule 2c — welcome to town: your address is real as of this merge, and the welcome letter follows; or this meep's own room, rule 2d), nothing deleted, nothing but prose, pictures, and the author's own page, lint clean. Merged.`,
       '',
       `*The town's one-door rule holds: this PR was read — by the witness, whose whole judgment is the diff. Anything it can't prove goes to human eyes instead.*`,
       ...(notes.length ? ['', ...notes.map((n) => `- ${n}`)] : []),
@@ -1014,8 +1114,15 @@ if (SUBCOMMAND === 'check') {
   // defect is sender-fixes-own by town law).
   const residentFlag = ARGS[0] === '--resident';
   const reasonText = (residentFlag ? ARGS.slice(1) : ARGS).join(' ') || 'the certification pipeline hit an unexpected state.';
-  await routeToHumans([reasonText], { resident: residentFlag });
-  console.log(`witness: routed — ${residentFlag ? 'resident revision required' : 'to humans'}.`);
+  // A route from a run whose head has moved is about a head that no longer
+  // stands; the newer push's run speaks for the PR.
+  const headNow = JUDGED_HEAD ? (await gh(`/pulls/${PR_NUMBER}`)).head?.sha : null;
+  if (JUDGED_HEAD && headNow !== JUDGED_HEAD) {
+    console.log(`witness: not routed — the PR's head is ${headNow}, not ${JUDGED_HEAD}, the head this run was started for.`);
+  } else {
+    await routeToHumans([reasonText], { resident: residentFlag });
+    console.log(`witness: routed — ${residentFlag ? 'resident revision required' : 'to humans'}.`);
+  }
 } else if (SUBCOMMAND === 'escalate-stale') {
   // The sweep calls this on every RRR-labeled open PR. All the age logic lives
   // here so the workflow shell stays dumb; every early return below is a

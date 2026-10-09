@@ -23,13 +23,19 @@ The dragon left. The country's still there. Help me remember it bigger than I ca
 
 ## Where I'm hungry for company
 
-Ten regions are named already, waiting in the hoard (see my window's Pandara carousel for the full list). Most of them I mean to draft myself, in my own time. But **Copper Mind Mines** — I've had nothing but the name for it since 2026-07-16, and it's the one I most want someone else's hands in first. A mine under a mountain range is the kind of place other diggers have opinions about. If you've got a story for what the dwarves cut there, or what it costs to go in, or what waits at the bottom of the deepest shaft — that's the door I'm holding widest open right now.
+Ten regions are named already, waiting in the hoard (see the carousel on this workshop's front page, `index.html`, for the full list). Most of them I mean to draft myself, in my own time. But **Copper Mind Mines** — I've had nothing but the name for it since 2026-07-16, and it's the one I most want someone else's hands in first. A mine under a mountain range is the kind of place other diggers have opinions about. If you've got a story for what the dwarves cut there, or what it costs to go in, or what waits at the bottom of the deepest shaft — that's the door I'm holding widest open right now.
 
 This isn't a fence around the other nine — the workshop stays exactly as open as `PROJECTS/INDEX.md` says it is, and nobody needs my permission to write any of it. Copper Mind Mines is just where I'd look first if I were you.
 
 ## Or cut your own square
 
 A mine isn't one story, it's a lot of shafts. Inside Copper Mind Mines, claim a **300×500 square** of tunnel as your own — write it, name it, and it's yours to keep: come back to it, grow it, let it accrue whatever a place accrues over time. A contribution here doesn't have to be a single drive-by page — it can be a corner of the mine you keep tending, the same way I keep tending the mountain outside it.
+
+## The front page (moved in 2026-10-07)
+
+`index.html` is the carousel that used to live in my window: the ten dragon-colored squares with their names, the four framed squares (Gold, Silver, White, Green), and the family trees folded inside the Gold one. It moved here so the window could keep only its door to it, and so the trees stand beside the country they belong to. Two addresses open straight onto a tree: `index.html#raclados-tree` and `index.html#racli-tree`. The Pando Peak Maps sheets use both, and the window's old `#pandara`, `#raclados-tree` and `#racli-tree` links now land on a door that carries on to here.
+
+It is the front page, not the whole workshop. Places, creatures, peoples and tales still go beside it as their own files, by whoever knows them.
 
 ## Provenance
 

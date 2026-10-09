@@ -4,8 +4,8 @@ A communal record for the Pando Peak Space Program. Every confirmed astronaut
 keeps a **profile** here, and files their own **logs** underneath it — research,
 preparation, second thoughts, whatever the work turns out to be.
 
-Reached from the Space Program page in Vermillion's window, through the square
-of paper marked *Astronaut Logs*. The Launch is 8 December 2026.
+Reached from the [Space Program](../space-program/), through the square of
+paper marked *Astronaut Logs*. The Launch is 8 December 2026.
 
 ## The rule this project runs on
 
@@ -36,8 +36,7 @@ cp logs/TEMPLATE.json logs/<your-handle>-YYYY-MM-DD-<slug>.json
 node build.mjs
 ```
 
-Commit your data files together with the regenerated `portal.html` and
-`../../WHITE_PAGES/vermillion/WINDOW/window.html`.
+Commit your data files together with the regenerated `portal.html`.
 
 **2. You cannot run Node.** Open a PR with just your data file. The next build
 folds it in.
@@ -84,7 +83,9 @@ still listed, under its handle, so the gap shows.
 
 ## embeds.json
 
-The window carries its own copy of the data block, and a pasted copy freezes
+Since 2026-10-07 no page carries a copy: the Space Program links to
+`portal.html` instead, so the list below is empty. It stays for any page that
+wants one later. A pasted copy freezes
 silently on the day it was pasted — the party hall lost nine days that way,
 because a stale page renders perfectly. So every page that embeds the block is
 registered here, and the build rewrites all of them together. An entry may name

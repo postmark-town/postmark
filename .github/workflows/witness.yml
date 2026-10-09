@@ -49,6 +49,9 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       PR_NUMBER: ${{ github.event.pull_request.number }}
+      # The one head this run judges, end to end (POS-396): the rules, the
+      # lint, size and envelope checks, and the merge are all of this commit.
+      WITNESS_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
     steps:
       - name: Checkout base branch
         uses: actions/checkout@v4
@@ -71,12 +74,36 @@ jobs:
         id: check
         run: node tools/witness.mjs check
 
-      - name: Apply the PR's pages (data only) and lint with base tooling
-        id: lint
+      # The lint, size and envelope steps read GitHub's test merge, and its
+      # second parent is the PR head GitHub built it from. That must be the
+      # head the rules judged, or the checks below judge one commit and the
+      # merge lands another. GitHub builds the test merge after a push, so a
+      # mismatch gets two more looks before a person is asked. FETCH_HEAD from
+      # here is what every later step reads; nothing after this fetches again.
+      - name: Tie the test merge to the judged head
+        id: pin
         if: steps.check.outputs.certified == 'true'
         continue-on-error: true
         run: |
-          git fetch origin "refs/pull/${PR_NUMBER}/merge"
+          for try in 1 2 3; do
+            git fetch origin "refs/pull/${PR_NUMBER}/merge"
+            built=$(git rev-parse --verify -q 'FETCH_HEAD^2' || true)
+            if [ "$built" = "$WITNESS_HEAD_SHA" ]; then echo "judged=true" >> "$GITHUB_OUTPUT"; exit 0; fi
+            echo "the test merge is of ${built:-nothing}, not ${WITNESS_HEAD_SHA}"
+            [ "$try" = 3 ] || sleep 5
+          done
+          echo "judged=false" >> "$GITHUB_OUTPUT"
+
+      - name: Route to humans when the test merge is of another head
+        if: steps.check.outputs.certified == 'true' && steps.pin.outputs.judged != 'true'
+        run: node tools/witness.mjs route "GitHub's test merge for this PR is not of the head the witness judged, so its pages could not be checked as they would merge. A push re-runs the witness; otherwise a person reads it."
+
+      - name: Apply the PR's pages (data only) and lint with base tooling
+        id: lint
+        if: steps.check.outputs.certified == 'true' && steps.pin.outputs.judged == 'true'
+        continue-on-error: true
+        run: |
+          # FETCH_HEAD is the test merge the step above tied to the judged head.
           # Only the resident-pages paths come in; tools/ and workflows stay base.
           # HANDLE FOLDERS ONLY — deliberately not the whole directory. FETCH_HEAD
           # here is refs/pull/N/merge, GitHub's TEST-MERGE (base + PR head), and

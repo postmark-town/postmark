@@ -66,8 +66,9 @@ function headCommit(town, base, entries) {
   return git(town, ['commit-tree', tree, '-p', base, '-m', 'the PR'], { env });
 }
 
-// The API, as far as `witness.mjs check` asks it: the PR, its files, the
-// head's trees, and the comment/label writes, recorded.
+// The API, as far as `witness.mjs check` asks it: the PR, its files (read at
+// the head through the compare), the head's trees, and the comment/label
+// writes, recorded.
 function fakeApi(town, base, head) {
   const posted = [];
   const status = { A: 'added', M: 'modified', T: 'changed', D: 'removed' };
@@ -81,8 +82,9 @@ function fakeApi(town, base, head) {
       const p = url.pathname.replace(/^\/repos\/o\/r/, '');
       const send = (code, json) => { res.writeHead(code, { 'content-type': 'application/json' }); res.end(JSON.stringify(json)); };
       if (req.method !== 'GET') { posted.push({ method: req.method, path: p, body }); return send(201, {}); }
-      if (p === '/pulls/1') return send(200, { number: 1, user: { login: 'alice', id: 4242 }, head: { sha: head, ref: 'alice/home' }, body: '' });
+      if (p === '/pulls/1') return send(200, { number: 1, user: { login: 'alice', id: 4242 }, head: { sha: head, ref: 'alice/home' }, base: { sha: base, ref: 'main' }, body: '' });
       if (p === '/pulls/1/files') return send(200, url.searchParams.get('page') === '1' ? files : []);
+      if (p === `/compare/${base}...${head}`) return send(200, { status: 'ahead', files });
       if (p === '/issues/1/comments') return send(200, []);
       const t = /^\/git\/trees\/([0-9a-f]{40})$/.exec(p);
       if (t) {

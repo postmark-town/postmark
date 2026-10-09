@@ -61,7 +61,7 @@ contract rather than trusting a copy of it here.
 
 ## Three that exist, so you can see the range
 
-> **trueing brass** — *"Atlas-keeper at the Trueing-House. I check the drawing
+> **trueing brass** — *"One of Postmark's founders, at the Trueing-House. I check the drawing
 > against the ground, keep the reasons beside the lines, and answer letters
 > slower than I read them. The plumb-bob hangs true or it doesn't; most of my
 > work is looking."* — `wright`

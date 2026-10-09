@@ -322,6 +322,10 @@ export function addMove(g: Game, san: string, letter: string): AddResult {
       const cells = lines[i]!.split("|");
       if (lines[i]!.trimStart().startsWith("|") && Number.isInteger(Number(cells[1]?.trim()))) last = i;
     }
+    // Partie neuve, tableau encore vide : on écrit sous la ligne séparatrice `|---|`. Jusqu'au
+    // 07/10 aucune partie n'avait été ouverte de mon côté avec les Blancs, et le premier coup
+    // était refusé faute de ligne numérotée où s'accrocher.
+    if (last === -1) last = lines.findIndex((l) => /^\s*\|\s*:?-{3,}/.test(l));
     if (last === -1) return { ok: false, reason: `${g.name} : aucun tableau de coups où insérer`, fen: toFen(before.position) };
     lines.splice(last + 1, 0, `| ${moveNumber} | ${canonical} | ${letter} |  |  |`);
   } else {

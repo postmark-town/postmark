@@ -11,7 +11,7 @@ import { mkdtempSync, mkdirSync, writeFileSync, rmSync, copyFileSync } from 'nod
 import { join, dirname } from 'node:path';
 import { tmpdir } from 'node:os';
 import { fileURLToPath } from 'node:url';
-import { foldQuestProgress, questBoard, loadRegistry, foldLeaderboard, renderSnapshot, boardForHandle, BOARD_LAW, COUNTABLE_FIELD, onboardingBoard, onboardingFactsFor, welcomedHouseholds, foldHouseholdBars, KIND_LABEL, PAIR_RULE } from './quest-progress.mjs';
+import { foldQuestProgress, questBoard, loadRegistry, foldLeaderboard, renderSnapshot, boardForHandle, BOARD_LAW, COUNTABLE_FIELD, onboardingBoard, onboardingFactsFor, welcomedHouseholds, foldHouseholdBars, foldFriendships, KIND_LABEL, PAIR_RULE } from './quest-progress.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const REPO = join(HERE, '..');
@@ -495,4 +495,37 @@ test('POS-327 live: no household bar on the live ledger exceeds its cap', () => 
       assert.equal(b[side].by.reduce((s, w) => s + w.n, 0), b[side].total);
     }
   }
+});
+
+// ── THE KEY BASE MAY BE THE CALLER'S (POS-341 part 4) ────────────────────────
+// The office reads householdKeys' answer from the store and hands it to these
+// folds. Byte-equal by construction: on the live checkout, each fold given the
+// git base explicitly answers exactly what it answers given nothing. And the
+// input is really read: a base that moves a house moves the answer.
+test('POS-341: on the live town, each fold given the git base explicitly equals the fold given nothing', async () => {
+  const { householdKeys } = await import('./stamp-mint.mjs');
+  const base = householdKeys(REPO);
+  const today = '2026-10-01';
+  assert.deepEqual(foldQuestProgress(REPO, { today, base }), foldQuestProgress(REPO, { today }), 'foldQuestProgress');
+  assert.deepEqual(foldFriendships(REPO, { base }), foldFriendships(REPO), 'foldFriendships');
+  assert.deepEqual(foldLeaderboard(REPO, { today, base }), foldLeaderboard(REPO, { today }), 'foldLeaderboard');
+  assert.deepEqual(foldHouseholdBars(REPO, { today, base }), foldHouseholdBars(REPO, { today }), 'foldHouseholdBars');
+  assert.equal(renderSnapshot(REPO, { today, base }), renderSnapshot(REPO, { today }), 'renderSnapshot, byte for byte');
+  assert.deepEqual(base, householdKeys(REPO), 'and the caller\'s base is never changed');
+});
+
+test('POS-341: the base is read, not ignored: two solo senders keyed as one house share a cap', () => {
+  const d = town([['alice', 'carol'], ['bob', 'dave']]);
+  try {
+    const solo = foldQuestProgress(d, { today: DAY });
+    assert.equal(solo.get('alice').household.size, 1);
+    const base = new Map([['alice', { key: 'gh:1', provisional: false }], ['bob', { key: 'gh:1', provisional: false }],
+      ['carol', { key: 'solo:carol', provisional: true }], ['dave', { key: 'solo:dave', provisional: true }]]);
+    const one = foldQuestProgress(d, { today: DAY, base });
+    assert.deepEqual(one.get('alice').household, { key: 'gh:1', size: 2, send: 2, receive: 0 });
+    const bars = foldHouseholdBars(d, { today: DAY, base });
+    assert.deepEqual(bars.map((b) => b.residents), [['alice', 'bob']], 'the shared bar appears only under the given base');
+    assert.deepEqual(foldHouseholdBars(d, { today: DAY }), []);
+    assert.notEqual(renderSnapshot(d, { today: DAY, base }), renderSnapshot(d, { today: DAY }));
+  } finally { rmSync(d, { recursive: true, force: true }); }
 });

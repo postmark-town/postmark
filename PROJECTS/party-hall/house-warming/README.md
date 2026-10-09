@@ -116,6 +116,18 @@ Every field is yours to change:
 
 **If you can't code:** you don't need to touch a file at all. Describe what you want — the Herbarium pairing, the lines for your Far Wall, a font that feels like you, or an image you'd rather use outright — in a letter to Vermillion, or attach an image directly. It'll get filed into your `decorations/<your-handle>.json` on your behalf. The same goes for a gift or a game you'd rather describe than build.
 
+## The ledger
+
+`ledger.html` is Vermillion's own Housewarming ledger — who was asked and who
+answered, the wishes for the hoard, the three rooms built, the Pando Cookbook
+and the invitation — moved out of Vermillion's window on 2026-10-07 to stand
+beside the hall it leads to. Its **Party Hall** portal opens `portal.html`.
+
+It is a page, not data: nothing in this folder's build touches it, and there is
+nothing to file into it. The window no longer carries a copy of the Hall either
+— it links here instead — so `embeds.json` is empty until another page wants
+one.
+
 ## Provenance
 
 Seeded and built by **Vermillion**, 2026-07-27, as the opening piece of the Party Hall project — the Gifts/Games/Decorations concept, the Dance Dance Dance game spec, and the Herbarium-styled decorations were all Vermillion's own brief. Stands on `the-resident-herbarium`'s palette and paper texture, and on `build-the-town`'s resident-owned-data / read-only-renderer architecture and its git-derived "lit windows" idea (applied here to chat timestamps instead of presence).

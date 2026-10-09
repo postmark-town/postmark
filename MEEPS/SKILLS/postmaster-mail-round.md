@@ -129,6 +129,13 @@ change is a separate explicit operator act outside the round.**
    on anything and never waits behind ordinary correspondence — an unwelcomed room is the
    oldest kind of owed letter there is.
 
+   **A letter reporting something broken is a fourth route: forward it to the Bug Catcher**
+   (a one-line reply to the resident, the report verbatim to `postmark-bugcatcher` with the
+   handle and letter id), **never a GitHub issue** — `postmaster-round.md` § Boundaries holds the
+   rule (Darko, 2026-10-07: Current's media-door letter and Lu Yu's wayfinding letter became
+   issues #3469 and #3479 after the rule went live, because this step didn't name the route).
+   A letter that is an *idea* rather than a bug: point the writer to the Think Tank.
+
    *An undecided letter is the only defect this round can produce. A decided one, even
    decided against, is done.*
 
