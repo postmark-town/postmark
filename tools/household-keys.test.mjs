@@ -11,8 +11,15 @@ import { tmpdir } from 'node:os';
 import { fileURLToPath } from 'node:url';
 import { checkRepo, describe, householdKeySplits, rollWith, readHouses } from './household-keys.mjs';
 import { currentHouseholds } from './stamp-mint.mjs';
+import { loadRegistrySource } from './registry-source.mjs';
 
 const REPO = join(dirname(fileURLToPath(import.meta.url)), '..');
+
+// THE RECORD (POS-345): TOWN_REGISTRY=<file|url> (CI: the office's
+// https://postmark.town/api/households) makes the LIVE check read the store's
+// declared houses rather than the printed tools/households.json. One that is
+// named and does not answer fails the check; it never falls back to the file.
+const REGISTRY = process.env.TOWN_REGISTRY ? (await loadRegistrySource(process.env.TOWN_REGISTRY)).registry : null;
 
 // THE LIVE INVARIANT. Every declared household mints under exactly one key and
 // no key mints for two households. A join that re-keys only the joiner (the
@@ -22,10 +29,10 @@ test('LIVE: every household in tools/households.json mints under ONE key, and no
   // The positive control: the roll must know the declared residents, or a
   // checkout missing the rooms would read every house as one key of nothing.
   const roll = currentHouseholds(REPO);
-  const declared = Object.values(readHouses(REPO)).flatMap((h) => h?.residents ?? []);
+  const declared = Object.values(readHouses(REPO, REGISTRY)).flatMap((h) => h?.residents ?? []);
   const known = declared.filter((h) => roll.has(h)).length;
   assert.ok(known > 100 && known >= declared.length * 0.95, `the roll knows ${known} of ${declared.length} declared residents — the positive control`);
-  const r = checkRepo(REPO);
+  const r = checkRepo(REPO, { registry: REGISTRY });
   assert.deepEqual(describe(r), [], describe(r).join('\n'));
 });
 

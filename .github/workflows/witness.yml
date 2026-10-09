@@ -49,6 +49,10 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       PR_NUMBER: ${{ github.event.pull_request.number }}
+      # THE RECORD (POS-348): pins and houses come from the office's public
+      # GET /households, never the printouts. If it does not answer, the PR is
+      # not certified (it goes to a person) and the next pass asks again.
+      TOWN_REGISTRY: https://postmark.town/api/households
       # The one head this run judges, end to end (POS-396): the rules, the
       # lint, size and envelope checks, and the merge are all of this commit.
       WITNESS_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
@@ -207,6 +211,7 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      TOWN_REGISTRY: https://postmark.town/api/households # POS-348, as above
     steps:
       - name: Checkout
         uses: actions/checkout@v4

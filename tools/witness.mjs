@@ -129,6 +129,31 @@ import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
 import { sealedAccountIds } from './stamp-mint.mjs';
 import { witnessRefusal } from './registrar-audit.mjs';
+import { loadRegistrySource } from './registry-source.mjs';
+
+// ── THE RECORD, NOT ITS PRINTOUT (POS-348, Darko 2026-10-04) ────────────────
+//
+// The store is the town's record; tools/households.json and
+// tools/github-ids.json are its printout (the office's registry-drain renders
+// them). The witness certifies against pins and houses, so it reads them from
+// the record: CI sets TOWN_REGISTRY to the office's public GET /households
+// (https://postmark.town/api/households), loaded once per evaluation by
+// tools/registry-source.mjs. A record that does not answer CERTIFIES NOTHING:
+// the PR goes to a person with the reason, and the next pass asks again. It
+// never falls back to the printout. Without TOWN_REGISTRY (a hand run from a
+// checkout) the printouts are read, as before — registry-source's own rule.
+//
+// What still comes from the base checkout: the ADDRESS cards (the login
+// fallback for an unpinned resident) and the stamp ledger's sealed
+// `registry:` lines, which are signed and outrank both.
+let STORE = null; // { registry, pins }, the record's, for this evaluation
+
+/** Test seam: hand the witness the record's two objects (null = read the printouts). */
+export function __setStoreForTest(store) { STORE = store; }
+
+const readPrintout = (root, name) => {
+  try { return JSON.parse(readFileSync(join(root, 'tools', name), 'utf8')); } catch { return null; }
+};
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const [, , SUBCOMMAND, ...ARGS] = process.argv;
@@ -351,10 +376,8 @@ export function loadBindings(root = ROOT) {
   // a handle the ledger has never named keeps its file pin untouched, and with
   // no sealed `gh:` lines at all this function is byte-identical to before.
   const wp = join(root, 'WHITE_PAGES');
-  let pins = {};
-  try {
-    pins = JSON.parse(readFileSync(join(root, 'tools', 'github-ids.json'), 'utf8'));
-  } catch { /* no registry yet — every resident falls back to login */ }
+  // The record's pins when the record was read (POS-348), else the printout.
+  let pins = STORE ? structuredClone(STORE.pins) : (readPrintout(root, 'github-ids.json') ?? {});
   for (const [handle, id] of sealedAccountIds(root)) pins[handle] = { ...(pins[handle] ?? {}), id };
   const byId = {};    // numeric account id -> [handles]
   const byLogin = {}; // login (lowercased) -> [handles]
@@ -535,7 +558,7 @@ export function homePictureNote(path, status, registry = null) {
 }
 
 function baseRegistry() {
-  try { return JSON.parse(readFileSync(join(ROOT, 'tools', 'households.json'), 'utf8')); } catch { return null; }
+  return STORE ? STORE.registry : readPrintout(ROOT, 'households.json');
 }
 
 // Rule 5c — the window judgment. A pane the MCP door would hang, arriving by
@@ -610,13 +633,24 @@ export function pinJudgment({ base, head, handle, verifiedId, verifiedLogin }) {
   return null;
 }
 
+// The PR's DIFF is read against the base printout (what the PR changes in the
+// file); who a handle IS is the record's (loadBindings). Two questions, two
+// sources, on purpose: diffing the head file against the store would count
+// every lag between the store and its printout as the PR's own change.
 function readPinsAtBase() {
-  try { return JSON.parse(readFileSync(join(ROOT, 'tools', 'github-ids.json'), 'utf8')); } catch { return null; }
+  return readPrintout(ROOT, 'github-ids.json');
 }
 
+// THE OWN-ROW EXCEPTION, RESTATED AGAINST THE RECORD (POS-348). What the PR
+// changes is read file to file (the base printout against the head). Whether a
+// changed row is the author's own is read from the RECORD: the row's accounts
+// in the store must already hold the PR's verified account (or a new row must
+// name it). A hand edit to the printout that never reached the store cannot
+// make a row someone's own.
 async function registryJudgment({ headSha, authorId, author }) {
   const parse = (s) => { try { return JSON.parse(s); } catch { return null; } };
-  const base = parse(readFileSync(join(ROOT, 'tools', 'households.json'), 'utf8'));
+  const base = readPrintout(ROOT, 'households.json');
+  const recordRows = (STORE ? STORE.registry : base)?.households || {};
   let head = null;
   try {
     const file = await gh(`/contents/tools/households.json?ref=${headSha}`);
@@ -635,7 +669,8 @@ async function registryJudgment({ headSha, authorId, author }) {
   for (const [slug, row] of Object.entries(hh)) {
     const before = bh[slug];
     if (before && JSON.stringify(before) === JSON.stringify(row)) continue;
-    if (before ? !owns(before) : !owns(row))
+    const owner = recordRows[slug] ?? (before ? null : row); // a row the record lacks is nobody's yet
+    if (!owns(owner))
       return before
         ? `edits household \`${slug}\`, whose row does not hold this PR's account`
         : `adds household \`${slug}\` without naming this PR's own account in it`;
@@ -659,6 +694,19 @@ async function registryJudgment({ headSha, authorId, author }) {
   return null;
 }
 
+/**
+ * Load the record for this evaluation when TOWN_REGISTRY names it. Answers
+ * null (go on), or the sentence a person reads when the record did not answer.
+ */
+export async function loadStoreForEvaluation(env = process.env, { load = loadRegistrySource } = {}) {
+  if (!env.TOWN_REGISTRY) { STORE = null; return null; }
+  try { STORE = await load(env.TOWN_REGISTRY); return null; }
+  catch (e) {
+    STORE = null;
+    return `the town's record (TOWN_REGISTRY, the office's GET /households) did not answer — ${String(e?.message ?? e).slice(0, 200)} — so nothing was certified against a copy; the next pass asks again, or a person merges`;
+  }
+}
+
 async function evaluate() {
   const pr = await gh(`/pulls/${PR_NUMBER}`);
   if (JUDGED_HEAD && pr.head?.sha !== JUDGED_HEAD) {
@@ -669,6 +717,9 @@ async function evaluate() {
   }
   const author = (pr.user?.login || '').toLowerCase();
   const authorId = pr.user?.id;
+  // The record first (POS-348): nothing is certified against a copy.
+  const recordRefusal = await loadStoreForEvaluation();
+  if (recordRefusal) return { pr, certified: false, reasons: [recordRefusal], residentOnly: false, handles: [] };
   const reasons = [];
   // Reason classes: `mind` = a human/office judgment is genuinely needed;
   // `resident` = machine-detectably wrong AND only the author can fix it

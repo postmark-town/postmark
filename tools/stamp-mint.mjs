@@ -1972,7 +1972,7 @@ function loadState(repo) {
   return { ledgerPath, existing, laws, revisions, deliveries, mints, transfers };
 }
 
-function main() {
+function main(registrySource = null) {
   const repo = resolve(arg('--repo') ?? DEFAULT_REPO);
   const { ledgerPath, existing, deliveries, mints, transfers } = loadState(repo);
   const genesisDate = deliveries[0]?.date ?? '2026-06-12';
@@ -2138,20 +2138,12 @@ function main() {
     return;
   }
 
-  // THE STORE'S REGISTRY, handed over by the office (POS-344): --registry
-  // <file> is `{ households, pins }` written from the store. An unreadable
-  // file is a refusal, never a quiet fall back to the printouts.
-  const welcomeRegistry = () => {
-    const p = arg('--registry');
-    if (!p) return null;
-    let doc;
-    try { doc = JSON.parse(readFileSync(p, 'utf8')); }
-    catch (e) { console.error(`FATAL: --registry ${p} could not be read (${e.message}) — nothing planned, nothing minted`); process.exit(1); }
-    if (!doc || typeof doc !== 'object' || typeof doc.households !== 'object' || typeof doc.pins !== 'object' || !doc.households || !doc.pins) {
-      console.error(`FATAL: --registry ${p} is not { households, pins } — nothing planned, nothing minted`); process.exit(1);
-    }
-    return doc;
-  };
+  // THE STORE'S REGISTRY (POS-344/345): --registry <file|url>, read once at
+  // the entry by tools/registry-source.mjs (an unreadable one has already
+  // refused there, never falling back to the printouts).
+  const welcomeRegistry = () => (registrySource
+    ? { households: registrySource.registry.households ?? {}, pins: registrySource.pins ?? {} }
+    : null);
 
   // THE STORE'S KEY BASE, handed over by the office (POS-341 part 4): --base
   // <file> is householdKeys' answer read from the store, as `{ <handle>: { key,
@@ -2553,4 +2545,8 @@ function main() {
   process.exit(1);
 }
 
-if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) main();
+if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  // --registry <file|url>: the store's registry, handed over or fetched (POS-345).
+  const { registryFromArgv } = await import('./registry-source.mjs');
+  main(await registryFromArgv(process.argv, { tool: 'stamp-mint' }));
+}

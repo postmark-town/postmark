@@ -1,0 +1,46 @@
+# registry printouts — tools/households.json and tools/github-ids.json are the drain's alone (POS-345 d).
+#
+# The two files are the store's printout: the office's registry-drain renders
+# them from the store and commits them as the Postmark Pen. This check refuses
+# any commit to either file that is not the pen's, and any house or pin in them
+# that the store does not hold as written, reading the store through the
+# office's public GET /households. A store read that does not answer fails the
+# check (tools/registry-printout-check.mjs carries the rules).
+#
+# Security shape: plain `pull_request` (never pull_request_target), so a fork's
+# PR runs with a read-only token and no secrets. Nothing here writes.
+name: registry printouts
+
+on:
+  pull_request:
+    paths: ["tools/households.json", "tools/github-ids.json"]
+  push:
+    branches: [main]
+    paths: ["tools/households.json", "tools/github-ids.json"]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: registry-printout-${{ github.event.pull_request.number || github.sha }}
+  cancel-in-progress: true
+
+jobs:
+  drain-only:
+    name: the drain's alone, and the store's
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /tools/
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: node tools/registry-printout-check.mjs
+        env:
+          RANGE: ${{ github.event_name == 'pull_request' && format('{0}..{1}', github.event.pull_request.base.sha, github.event.pull_request.head.sha) || format('{0}..{1}', github.event.before, github.sha) }}
+        run: node tools/registry-printout-check.mjs --registry https://postmark.town/api/households --range "$RANGE"

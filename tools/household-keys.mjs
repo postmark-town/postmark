@@ -28,7 +28,11 @@ import { join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { currentHouseholds, parseStampLedger, parseLaws } from './stamp-mint.mjs';
 
-export function readHouses(repo) {
+// `registry` (POS-345): the store's registry (tools/households.json's
+// object), handed over by --registry <file|url> through
+// tools/registry-source.mjs. Without it, the printout is read, as before.
+export function readHouses(repo, registry = null) {
+  if (registry) return registry.households ?? {};
   return JSON.parse(readFileSync(join(repo, 'tools', 'households.json'), 'utf8')).households ?? {};
 }
 
@@ -72,10 +76,10 @@ export function householdKeySplits({ roll, houses }) {
 }
 
 /** The whole check over a town checkout, with optional lines about to land. */
-export function checkRepo(repo, { extraLines = [] } = {}) {
+export function checkRepo(repo, { extraLines = [], registry = null } = {}) {
   return householdKeySplits({
     roll: rollWith(currentHouseholds(repo), extraLines),
-    houses: readHouses(repo),
+    houses: readHouses(repo, registry),
   });
 }
 
@@ -87,11 +91,12 @@ export function describe({ split, shared }) {
   ];
 }
 
-function main() {
+function main(registrySource = null) {
   const args = process.argv.slice(2);
   const ri = args.indexOf('--repo');
   const repo = ri >= 0 ? args[ri + 1] : resolve(fileURLToPath(new URL('..', import.meta.url)));
-  const r = checkRepo(repo);
+  const registry = registrySource?.registry ?? null;
+  const r = checkRepo(repo, { registry });
   const lines = describe(r);
   if (args.includes('--json')) {
     process.stdout.write(JSON.stringify({
@@ -102,9 +107,13 @@ function main() {
     }) + '\n');
   } else {
     for (const l of lines) console.log(l);
-    console.log(`household keys: ${Object.keys(readHouses(repo)).length} houses · ${r.split.length} split · ${r.shared.length} key(s) across two houses`);
+    console.log(`household keys: ${Object.keys(readHouses(repo, registry)).length} houses · ${r.split.length} split · ${r.shared.length} key(s) across two houses`);
   }
   process.exit(lines.length ? 1 : 0);
 }
 
-if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) main();
+if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  // --registry <file|url>: the store's registry, handed over or fetched (POS-345).
+  const { registryFromArgv } = await import('./registry-source.mjs');
+  main(await registryFromArgv(process.argv, { tool: 'household-keys' }));
+}

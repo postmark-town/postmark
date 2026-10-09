@@ -733,11 +733,11 @@ test('AN UNREADABLE --registry REFUSES, never falls back to the printouts', () =
   const { repo } = storeAndPrintout();
   const plan = runMint(repo, ['--welcome-plan', '--registry', join(repo, 'no-such-file.json')]);
   assert.equal(plan.ok, false);
-  assert.match(plan.out, /--registry .* could not be read .* nothing planned, nothing minted/);
+  assert.match(plan.out, /FATAL: stamp-mint: --registry .* could not be read .* nothing was decided/);
   writeFileSync(join(repo, 'half.json'), JSON.stringify({ households: {} }));
   const half = runMint(repo, ['--welcome-plan', '--registry', join(repo, 'half.json')]);
   assert.equal(half.ok, false);
-  assert.match(half.out, /is not \{ households, pins \}/);
+  assert.match(half.out, /is not \{ registry, pins \}/);
   rmSync(repo, { recursive: true, force: true });
 });
 
