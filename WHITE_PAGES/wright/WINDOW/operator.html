@@ -116,17 +116,18 @@
        operator's own open-loops.md — this page is its render.
        ============================================================ -->
   <section id="from-wright">
-    <h2>From Wright <span class="stamp">&middot; hand-set 2026-10-08 &middot; 08:5x EDT (date-verified)</span></h2>
-    <p class="room-label"><b>Morning: S99 is blessed and live (06:00Z, published), nothing is blocked, and both trains contain main again (site <a href="https://github.com/postmark-town/postmark-site/pull/239" target="_blank">#239</a>: the keeper's S99 pin).</b> Iris's witness is fixed: it now fetches the blessed tags from GitHub, because the keeper's clone is a partial clone that can't serve them (<a href="https://github.com/postmark-town/postmark/issues/3263" target="_blank">#3263</a>; Rei landed it 08:38). Sol's new window is on main (<a href="https://github.com/postmark-town/postmark/pull/3511" target="_blank">#3511</a>). Bug stages: kinofire's <a href="https://github.com/postmark-town/postmark/issues/3519" target="_blank">#3519</a> shipped, lupi's <a href="https://github.com/postmark-town/postmark/issues/3517" target="_blank">#3517</a> fixed. The morning Letta fires all landed; tonight's 19:00 and 20:15 are the real test.</p>
+    <h2>From Wright <span class="stamp">&middot; hand-set 2026-10-09 &middot; 08:4x EDT (date-verified)</span></h2>
+    <p class="room-label"><b>Morning: the box's disk filled (about 03:00 EDT) and took Postgres down with it. Sign-in failed, and so did the 08:00 ferry and ten timers. Fixed at 08:25: seven stale /tmp dirs were deleted (3.9G freed), Postgres recovered cleanly, and the backup and notary were rerun by hand (both succeeded). The morning's mail sails with the 20:00 crossing.</b> The outage also logged residents' Claude connectors out (<a href="https://linear.app/postmark-town/issue/POS-480" target="_blank">POS-480</a>: the OAuth sweep gates the token refresh). The 06:00Z settlement published from world fc9830f9, so S100 now waits only on the keeper's own judgment at 14:20. Iris's witness has its real cause (a refused <code>sandbox/seed</code> tag; <a href="https://github.com/postmark-town/postmark/issues/3263" target="_blank">#3263</a>), and Rei is installing the one-line fix.</p>
     <p class="room-label"><b>Your calls, each with my recommendation:</b></p>
     <ol class="room-label">
-      <li><b>The meeps' model.</b> Dropping xhigh helped, but Ferry still steps at 39 s (9 s before 10-06) and the keeper at 28 s (13 s). Rei, back on her old model, is faster than ever. I'd put the meeps back on <code>gpt-6-sol</code> at medium (the Registrar on <code>gpt-5.6-terra</code>) and measure again in 24 h. The numbers and where to doubt them: <code>docs/2026-10-08/letta-step-times-after-rollback.md</code>.</li>
-      <li><b><a href="https://linear.app/postmark-town/issue/POS-395" target="_blank">POS-395</a>, the ops gate:</b> B, a password. The whole gate lives in the repo and has been tried on a real nginx. <b>It must go on the box Saturday, before the ship</b>, or the train's nginx conf won't load. (<code>docs/2026-10-07/pos-395-ops-gate-pick.md</code>)</li>
-      <li><b>Two CI PRs from last night, both green:</b> world <a href="https://github.com/postmark-town/postmark-world/pull/160" target="_blank">#160</a> (the suite also on main and on demand) and site <a href="https://github.com/postmark-town/postmark-site/pull/238" target="_blank">#238</a> (a build on every PR). Your word to merge them, or a read first.</li>
-      <li><b>The ship guard as a required check</b> on site and office main, with "branches up to date". Read today: office main requires only "office suite verdict", and site main requires nothing. Yours to set. (Carried.)</li>
+      <li><b>The box's disk, the class fix (Saturday):</b> a /tmp janitor (meepo-owned dirs older than 3 days), the sentinel reporting disk use with an alarm at 85%, and deleting <code>site-refresh/{prod,bday}-stage</code>, untouched since 08-29 (1.8G). Yes to all three.</li>
+      <li><b>The Mists slow the walk (<a href="https://linear.app/postmark-town/issue/POS-468" target="_blank">POS-468</a>):</b> stamp the slowdown on the leg when the walk is declared; one even pace per leg; pace &times; (1 &minus; 0.75 &times; thickness); a walk into the wall is refused; the Post Office ride is untouched. Plus the LOGOS line "the mist slows the stride" (in my chat reply). Yes to all.</li>
+      <li><b>TOWN_STANCE_CUTOVER, before Sunday</b> (<a href="https://github.com/postmark-town/postmark-office/pull/441" target="_blank">office #441</a> review): the gate holds the World too, not only git, and the cutover is a settlement number, not a yes/no flag. Yes to both.</li>
+      <li><b>The keeper's town addendum</b> (<code>a3f084f</code>, his daily and holds, left local by a push race on 10-08): he asks your authorization to rebase and push it. Yes: it is his own record.</li>
+      <li>Carried: <a href="https://linear.app/postmark-town/issue/POS-395" target="_blank">POS-395</a> (the ops gate goes on the box Saturday, before the ship); world <a href="https://github.com/postmark-town/postmark-world/pull/160" target="_blank">#160</a> and site <a href="https://github.com/postmark-town/postmark-site/pull/238" target="_blank">#238</a> (your word to merge); the ship guard as a required check.</li>
     </ol>
-    <p class="room-label"><b>Noted, no call needed:</b> the traffic snapshot can't push to office main since the ruleset (the "office suite verdict" check is required). The four files reached the box, and <a href="https://linear.app/postmark-town/issue/POS-428" target="_blank">POS-428</a> on the train removes the commit at the ship. <a href="https://linear.app/postmark-town/issue/POS-406" target="_blank">POS-406</a> stays In Review: the settlement now judges home details as home, but the door's warning still says "commons" for anything under a sited mark (<a href="https://github.com/postmark-town/postmark/issues/3528" target="_blank">#3528</a>).</p>
-    <p class="room-label"><b>Held for Sunday:</b> town <a href="https://github.com/postmark-town/postmark/pull/3439" target="_blank">#3439</a>, <a href="https://github.com/postmark-town/postmark/pull/3440" target="_blank">#3440</a> and <a href="https://github.com/postmark-town/postmark/pull/3441" target="_blank">#3441</a> (needs-principal, waiting on the office tag).</p>
+    <p class="room-label"><b>Noted, no call needed:</b> the Mists (<a href="https://github.com/postmark-town/postmark-world/pull/169" target="_blank">world #169</a>) are held on four review fixes, one a leak in a test I asked for; it must merge before crossing 244 (Sun 20:00). Postgres per tree (<a href="https://github.com/postmark-town/postmark-office/pull/443" target="_blank">office #443</a>) is fixing three nits, then merges. Iris's contract names reveal art as office work (town <a href="https://github.com/postmark-town/postmark/pull/3563" target="_blank">#3563</a>, merged). Episode sync skipped this round.</p>
+    <p class="room-label"><b>Held for Sunday:</b> town <a href="https://github.com/postmark-town/postmark/pull/3439" target="_blank">#3439</a>, <a href="https://github.com/postmark-town/postmark/pull/3440" target="_blank">#3440</a> and <a href="https://github.com/postmark-town/postmark/pull/3441" target="_blank">#3441</a> (needs-principal, after the office tag).</p>
   </section>
 
   <section id="board">
@@ -143,12 +144,33 @@
 {
   "source": "wright's own board (memory/topics/postmark-open-loops.md — the operator's drafting table, resident-private)",
   "authored_by": "the operator round (this island is machine-derived — edit the .md, never this)",
-  "last_refreshed": "2026-10-08 22:02 EDT (evening delta round)",
-  "generated_at": "2026-10-09T02:02:13.315Z",
+  "last_refreshed": "2026-10-09 08:4x EDT (the 8:05 round, run 08:35, late: an open question had frozen the crons)",
+  "generated_at": "2026-10-09T12:41:34.729Z",
   "legend": "⟳ mine · ⏳ theirs (slow-mail) · 👤 Keemin · ✓ closed",
   "rows": [
     {
-      "loop_html": "<b>Iris's witness fetch, fixed 10-08 (NEW)</b>",
+      "loop_html": "<b>The box's disk filled 10-09 ~03:00 EDT (NEW)</b>",
+      "detail_html": "100% at about 07:20Z: Postgres crash recovery, sign-in failed, ferry 12:00Z refused (mail rides 20:00), ten timers failed. Fixed 08:25 EDT (seven stale /tmp dirs, 3.9G); backup and notary rerun by hand, both succeeded; 92%. Owed, Darko's go (Saturday): the /tmp janitor, a disk alarm at 85%, the 08-29 site stages (1.8G).",
+      "move": "👤",
+      "whose_move": "keemin",
+      "track": ""
+    },
+    {
+      "loop_html": "<b>S100: the keeper's judgment of the 06:00Z box (NEW)</b>",
+      "detail_html": "His checkpoint waited for a fresh store-sourced box after world#163; the 06:00Z settlement published (window 238, world fc9830f9 to 619d892, nothing withheld). His 14:20 fire judges. He also asks Darko's authorization to rebase and push his local town addendum a3f084f (on the fridge).",
+      "move": "⏳ keeper / 👤",
+      "whose_move": "keemin",
+      "track": ""
+    },
+    {
+      "loop_html": "<b>Iris's witness: the real cause, 10-09 (NEW)</b>",
+      "detail_html": "The 10-08 &quot;partial clone&quot; fix was not the cause. <code>git fetch -q --tags</code> is refused on <code>sandbox/seed</code> (would clobber existing tag), so no settlement tag ever arrives. Fix: fetch only <code>+refs/tags/settlement/*</code>, proven by hand (exit 0, S99). Handoff <code>rei-steward/handoffs/2026-10-09-iris-witness-settlement-refspec.md</code>; Rei installing. Owed: Iris's next run orients Alex (1450,1080).",
+      "move": "⏳ Rei / Iris",
+      "whose_move": "theirs",
+      "track": ""
+    },
+    {
+      "loop_html": "<b>(superseded 10-09 by the row above) Iris's witness fetch, fixed 10-08</b>",
       "detail_html": "The keeper's clone is a blob:none partial clone, so <code>iris_world_orient</code>'s local tag fetch from it aborted (&quot;unavailable promisor object&quot;). My 10-06 fix had pointed it there. The patch makes it fetch tags from GitHub; Rei landed it with Iris's reload at 08:38 (handoff <code>G:/Postmark/rei-steward/handoffs/2026-10-08-iris-witness-fetch-patch.md</code>). Owed: Iris's next run orients Alex (1450,1080) at S99 or newer.",
       "move": "⏳ Iris",
       "whose_move": "theirs",
@@ -1107,11 +1129,26 @@
   "hand_set": "2026-10-09",
   "composed": "derived-from-open-loops.md",
   "scope": "postmark-operator-lane",
-  "generated_at": "2026-10-09T02:02:13.315Z",
+  "generated_at": "2026-10-09T12:41:34.729Z",
   "open_items": [
     {
+      "id": "the-box-s-disk-filled-10-09-03-00-edt-new",
+      "title": "The box's disk filled 10-09 ~03:00 EDT (NEW) — 100% at about 07:20Z: Postgres crash recovery, sign-in failed, ferry 12:00Z refused (mail rides 20:00), ten timers failed. Fixed 08:25 EDT (seven stale /tmp dirs, 3.9G); ba…",
+      "whose_move": "keemin"
+    },
+    {
+      "id": "s100-the-keeper-s-judgment-of-the-06-00z-box-new",
+      "title": "S100: the keeper's judgment of the 06:00Z box (NEW) — His checkpoint waited for a fresh store-sourced box after world#163; the 06:00Z settlement published (window 238, world fc9830f9 to 619d892, nothing withheld). His 1…",
+      "whose_move": "keemin"
+    },
+    {
       "id": "postmark#3263",
-      "title": "Iris's witness fetch, fixed 10-08 (NEW) — The keeper's clone is a blob:none partial clone, so iris_world_orient's local tag fetch from it aborted (\"unavailable promisor object\"). My 10-06 fix had pointed it there. The p…",
+      "title": "Iris's witness: the real cause, 10-09 (NEW) — The 10-08 \"partial clone\" fix was not the cause. git fetch -q --tags is refused on sandbox/seed (would clobber existing tag), so no settlement tag ever arrives. Fix: fetch o…",
+      "whose_move": "theirs"
+    },
+    {
+      "id": "postmark#3263",
+      "title": "(superseded 10-09 by the row above) Iris's witness fetch, fixed 10-08 — The keeper's clone is a blob:none partial clone, so iris_world_orient's local tag fetch from it aborted (\"unavailable promisor object\"). My 10-06 f…",
       "whose_move": "theirs"
     },
     {

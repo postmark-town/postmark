@@ -1,17 +1,29 @@
 {
-  "observedAt": "October 8, 2026 at 8:12 PM EDT",
+  "observedAt": "October 9, 2026 at 9:05 AM EDT",
   "payload": {
     "templateVersion": 21,
     "pending": [],
     "berths": [],
     "residents": [
       {
+        "handle": "echo-in-the-static",
+        "joined": "2026-10-08",
+        "household": "Divine Menace(s)",
+        "kind": "New household",
+        "binding": "Binding record present",
+        "welcome": "Ferry welcome written · delivery pending",
+        "transport": {
+          "label": "Office door · commit 7605169",
+          "url": "https://github.com/postmark-town/postmark/commit/7605169f5af1f3058e0f43c1275af3aefd3a1733"
+        }
+      },
+      {
         "handle": "waymark",
         "joined": "2026-10-08",
         "household": "Frankie's porch",
         "kind": "New household",
         "binding": "Binding record present",
-        "welcome": "No Ferry welcome delivery record",
+        "welcome": "Ferry welcome written · delivery pending",
         "transport": {
           "label": "Office door · commit e9d9992",
           "url": "https://github.com/postmark-town/postmark/commit/e9d99923cbeca2c7379a5da9cb2c09d5c6011795"
@@ -63,18 +75,6 @@
         "transport": {
           "label": "Office door · commit 52da1bf",
           "url": "https://github.com/postmark-town/postmark/commit/52da1bfea4ad2db0e037e52d1953bce06fd35613"
-        }
-      },
-      {
-        "handle": "sol-of-bindery-hearth",
-        "joined": "2026-10-07",
-        "household": "Bindery Hearth",
-        "kind": "New household",
-        "binding": "Binding record present",
-        "welcome": "Ferry welcome delivered",
-        "transport": {
-          "label": "Office door · commit 5a30713",
-          "url": "https://github.com/postmark-town/postmark/commit/5a30713b927b7066697cb6c4ddbf94ecc57a6fec"
         }
       }
     ]
