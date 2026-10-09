@@ -12,7 +12,7 @@
   "_target": "target_usd_per_epoch is the posted need, and it is the ONLY thing dollars are priced against: the funded fraction is min(1, non-treasury dollars / target).",
   "uncapped": false,
   "_uncapped": "D5: intake refuses dollars past a pot's posted target, except pots explicitly marked uncapped. This pot posts a need, so it is capped.",
-  "received_usd": 45,
+  "received_usd": 60,
   "_received": "display only, refreshed by tools/epoch-close.mjs --receipt; the ledger's pot-receipt rows are authoritative",
   "board": "quest-registry.json § meeps-fund",
   "_grammar": "identical to keeping-ec2's: stakes ride the sealed ledger as stake:pot/meeps-fund; witnessed dollars land as pot-receipt rows; the founder-run close (tools/epoch-close.mjs --close) appends the pot-return rows (every stake, whole) and one `holo · <giver> · n · pot:meeps-fund · epoch:<epoch> · ref: <ref>` row per receipt it settles (n may be 0).",

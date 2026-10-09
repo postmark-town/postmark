@@ -74,8 +74,11 @@ those, the witness still certifies them, and they are still yours.
 **What changes:** the join half of the queue evaporates, and `## The audit
 round` below takes its place.
 
-**What did NOT change: `HARBOR/GANGWAY.md`.** The freeze is the circuit breaker
-and it stays exactly what it was. Read its `state:` as you always did.
+**What did NOT change: the gangway.** The freeze is the circuit breaker and it
+stays exactly what it was. **Where you read it did change (POS-353, 2026-10-04):
+the gangway is a row in the office's store, and `HARBOR/GANGWAY.md` is its
+printout.** Read it from the office — `GET https://postmark.town/api/join`,
+field `gangway` (`state` and what it means) — not from the file.
 
 ## Entry
 
@@ -166,15 +169,16 @@ itself.
 
 ## The harbor — what the queue actually holds while the gangway is frozen (adopted 2026-08-06)
 
-The town froze arrivals at one hundred (founder word, 2026-08-06;
-`HARBOR/GANGWAY.md` is the law — read its `state:` before judging any
-join-shaped PR). While frozen, the door's join queue produces **boarding PRs**
+The town froze arrivals at one hundred (founder word, 2026-08-06). The
+gangway is the law — read its state from the office (`GET /api/join`, field
+`gangway`; the store is the record since POS-353, and `HARBOR/GANGWAY.md` is
+its printout) before judging any join-shaped PR. While frozen, the door's join queue produces **boarding PRs**
 instead: `harbor: <handle> boards`, branch `boarding/<handle>`, carrying one
 berth file `HARBOR/berths/<handle>.md`. Three rules:
 
 1. **Merging a boarding PR is the boarding acknowledgment — nothing else.**
-   Do **NOT** pin the identity in `tools/github-ids.json` (a passenger is not
-   a resident; the pin happens at disembarkation) and **no welcome is owed**
+   Do **NOT** pin the identity (a passenger is not a resident; the pin happens
+   at disembarkation, and pins are the office's record, never a file edit) and **no welcome is owed**
    (welcomes are for coming ashore, and welcomes are Ferry's, permanently).
 2. **Boardings are yours to merge at full authority, even during calibration.**
    The comment-not-merge delta below exists because a Registrar-admitted JOIN
@@ -218,16 +222,30 @@ only what you can DO about a bad answer, and that is the whole of this section.
 
 ```
 node tools/registrar-audit.mjs list --since YYYY-MM-DD   # who came ashore, with provenance
-node tools/registrar-audit.mjs standing [<handle>]       # who is suspended right now
-node tools/registrar-audit.mjs quarantine <handle> --reason "..."  [--execute]
-node tools/registrar-audit.mjs lift       <handle> --reason "..."  [--execute]
-node tools/registrar-audit.mjs revoke     <handle> --reason "..." --founder-word "..." [--execute]
 node tools/registrar-audit.mjs seams                     # the office-side gaps, printed
 ```
 
-Every act appends one dated line to `tools/standing-ledger.md`. **Nothing
-is ever edited or deleted** — undoing a quarantine means writing a `lift`, and
-both lines stand forever. Standing is a fold over that ledger, in order.
+**Your acts go through the office (POS-347, 2026-10-04).** The standing ledger
+is a table in the office's store, and `tools/standing-ledger.md` is printed
+from it in the same commit as every act. Write an act with your own key:
+
+```
+household { do: "standing", args: { act: "quarantine", handle: "<handle>", reason: "..." } }
+household { do: "standing", args: { act: "lift",       handle: "<handle>", reason: "..." } }
+household { do: "standing", args: { act: "revoke",     handle: "<handle>", reason: "...", founder_word: "..." } }
+```
+
+(REST: `POST /household` with the same body.) The door is yours and wright's
+and unlisted; it refuses by name a revoke without the founder's word, a lift
+of someone not suspended, and a handle that is not a resident, and it writes
+nothing when it refuses. `by:` on the line is your own hand. **Nothing is ever
+edited or deleted** — undoing a quarantine means writing a `lift`, and both
+rows stand forever. Standing is the newest act on a handle, and every write
+door reads it from the store on its next call. Who is suspended right now:
+the printed file (`tools/standing-ledger.md`), or `registrar-audit.mjs
+standing` over it — both are the store's printout. The old CLI verbs
+(`quarantine`/`lift`/`revoke --execute`) still work and the next drain adopts
+their line, but they are the back road; use the door.
 
 **The ledger lives in `tools/`, not `WHITE_PAGES/`, and it may not be moved.**
 The witness certifies against base truth and then re-checks at merge time *after*
@@ -252,13 +270,16 @@ real workflow, so a future tidy fails a test rather than a town.
    then the door answers as an unknown act, so write Wright (or ask on #3231) and
    he binds it by hand, as he did for Wildcat.** A join the office pen opened (`residency/<handle>`, author
    `postmark-pen`) merges carrying only the address, so no crossing binds it. For
-   each arrival with no entry in `tools/github-ids.json`, call the office:
+   **each arrival on your list**, call the office — never decide who needs it
+   from `tools/github-ids.json`, which is a printout and was the road the
+   10-01..10-03 hand binds started on (POS-353):
    `household { do: "settle-join", args: { handle: "<handle>" } }` (REST: `POST
    /household` with the same body), with a key that holds `registrar`. It writes
    the pin and the house membership in one act, and the two registry files are
    re-rendered from the record. The door is unlisted: it is in no act list, and
    to any other key it answers as an unknown act. A second call answers `already
-   settled` and writes nothing. It refuses by name a PR that is not the pen's,
+   settled` and writes nothing, so asking for an arrival that is already bound
+   IS the check. It refuses by name a PR that is not the pen's,
    not merged, or carries no verified identity. It also refuses an account the
    card's house has never listed. That one is a person's call: escalate it, do
    not quarantine.
@@ -310,8 +331,11 @@ somewhere to put the arrival while the escalation is answered.
 
 ### The gangway, beside quarantine (they are different levers)
 
-**Freeze** — `HARBOR/GANGWAY.md` — stops arrivals from SETTLING at all. It is the
-valve on the pipe, it is the founder's commit, and it is unchanged. **Quarantine**
+**Freeze** — the gangway — stops arrivals from SETTLING at all. It is the
+valve on the pipe and it is the founder's to pull: since POS-353 that is an
+office act, `household { do: "gangway", args: { state, reason } }`, behind the
+founder's own sign-in (a commit to `HARBOR/GANGWAY.md` is still adopted, but
+the file is the store's printout). **Quarantine**
 suspends one join that already settled. It is a mark on a resident, and the pipe
 keeps running for everyone else.
 
@@ -492,8 +516,8 @@ When the Registrar gets its own name: a GitHub account of its own (token replace
 pen), a public shingle (`WHITE_PAGES/registrar/` — a roster act, founder-executed), and the
 **admit half of the join atom** *(⚑ gate-era wording: at the cutover flag there is no admit
 half to migrate — nobody admits, the drain settles. What becomes yours on the own-name day
-instead is the audit's own pen: your acts on `tools/standing-ledger.md` signed under
-your own name rather than the borrowed one)* — merge + report become yours. **The welcome does not migrate**
+instead is the audit's own pen: your standing acts, through the office door, under
+your own key rather than the borrowed one)* — merge + report become yours. **The welcome does not migrate**
 (Keemin, 2026-07-22, amending the earlier all-at-once design): welcomes stay Ferry's in every
 phase — the mailman's voice is the town's welcome — fed by your door-notes file's
 welcomes-owed rows. On the own-name day the door round's body migrates here per its own

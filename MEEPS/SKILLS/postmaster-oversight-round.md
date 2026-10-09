@@ -145,16 +145,21 @@ entirely. Full policy + payloads: `MEEPS/postmaster/map.md § Retired historical
    caveat. **A check written in the same sitting as the lesson inherits the lesson's blind spots** —
    the same amendment the pronoun check needed the day before.)*
 
-   **Then the register tripwire, which stores nothing and compares two things that already exist:**
+   **Then the register tripwire, which stores nothing and compares two things that already exist.
+   The pins are read from the OFFICE, never from `tools/github-ids.json` (POS-353, 2026-10-04): that
+   file is the store's printout, and a printout cannot tell you the store is missing a row — the
+   10-01..10-03 hand binds wrote the file and never reached the store.**
 
    ```
-   ls -1 WHITE_PAGES/*/ADDRESS.md | grep -v TEMPLATE | wc -l   # the roll
-   python -c "import json,io;print(len(json.load(io.open('tools/github-ids.json',encoding='utf-8'))))"   # the pins
+   ls -1 WHITE_PAGES/*/ADDRESS.md | grep -v TEMPLATE | sed 's#WHITE_PAGES/##; s#/ADDRESS.md##'   # the roll
+   # for each handle on the roll: GET https://postmark.town/api/residents/<handle>
+   #   household.key "gh:<id>" = bound to its verified account; anything else = NOT bound
    ```
 
-   **They must be equal.** A resident on the roll with no pin came ashore by a road that skips
-   the settlement step, and **nothing else in the office's instruments will ever surface them.**
-   Pin them (`identity.md § The Registrar reports to you`) or hand it to her, but do not leave it.
+   **Every handle must come back `gh:`.** A resident on the roll with no binding came ashore by a
+   road that skips the settlement step, and **nothing else in the office's instruments will ever
+   surface them.** Hand them to the Registrar (her `settle-join` binds a merged join), but do not
+   leave it.
 
    > **Both receipts are from 2026-08-22.** `jack-tully-brannon` and `storm-of-the-porch` joined
    > on the 21st *after* that morning's audit ran; **the next morning's round did not re-run it**,
