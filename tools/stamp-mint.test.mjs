@@ -741,6 +741,76 @@ test('AN UNREADABLE --registry REFUSES, never falls back to the printouts', () =
   rmSync(repo, { recursive: true, force: true });
 });
 
+// ── THE STORE'S KEY BASE (POS-341 part 4): --base <file> ──
+// The office reads householdKeys' answer from the store and names the file with
+// --base. Byte-equal by construction: the git base handed over explicitly plans
+// and pays exactly what no --base does. And the file is really read: a base
+// that moves a resident moves the plan, and the door refuses a house the base
+// does not give its resident.
+const baseFile = (repo, base, name = 'base.json') => {
+  const p = join(repo, name);
+  writeFileSync(p, JSON.stringify(Object.fromEntries(base)));
+  return p;
+};
+
+test('--base: the git base handed over explicitly plans exactly what no --base plans', () => {
+  for (const scoutBound of [false, true]) {
+    const { repo } = harvey({ scoutBound });
+    const plain = runMint(repo, ['--welcome-plan', '--date', '2026-10-08']);
+    const given = runMint(repo, ['--welcome-plan', '--date', '2026-10-08', '--base', baseFile(repo, householdKeys(repo))]);
+    assert.equal(plain.ok, true, plain.out);
+    assert.equal(given.out, plain.out, `the plan, byte for byte (scout ${scoutBound ? 'bound' : 'unbound'})`);
+    rmSync(repo, { recursive: true, force: true });
+  }
+});
+
+test('--base: the git base handed over explicitly pays exactly what no --base pays, byte for byte', () => {
+  const { pub, priv } = keypair();
+  const make = () => {
+    const repo = town({ ledgerLines: [], pins: { ada: { id: 1, pinned: '2026-08-02' }, bram: { id: 1, pinned: '2026-07-04' } }, addresses: { ada: null, bram: null } });
+    forged(repo, pub, priv, []);
+    writeFileSync(join(repo, 'stamp-key.pem'), priv);
+    return repo;
+  };
+  const a = make(), b = make();
+  const plain = runMint(a, ['--welcome', 'bram', '--household', 'gh:1', '--date', '2026-10-08', '--key', join(a, 'stamp-key.pem')]);
+  const given = runMint(b, ['--welcome', 'bram', '--household', 'gh:1', '--date', '2026-10-08', '--key', join(b, 'stamp-key.pem'), '--base', baseFile(b, householdKeys(b))]);
+  assert.equal(plain.ok, true, plain.out);
+  assert.equal(given.ok, true, given.out);
+  assert.equal(readFileSync(join(b, 'WHITE_PAGES', 'stamp-ledger.md'), 'utf8'), readFileSync(join(a, 'WHITE_PAGES', 'stamp-ledger.md'), 'utf8'));
+  for (const r of [a, b]) rmSync(r, { recursive: true, force: true });
+});
+
+test('--base is read: a base that keys a resident elsewhere moves the plan, and the door pays only the house the base names', () => {
+  const { repo, keyFile } = harvey({ scoutBound: true });
+  // The printouts put scout in gh:9 with amia (paid). A store that keys scout
+  // on their own account makes a second house, and its own first resident.
+  const base = householdKeys(repo);
+  base.set('scout', { key: 'gh:77', provisional: false });
+  const moved = baseFile(repo, base);
+  const plan = runMint(repo, ['--welcome-plan', '--date', '2026-10-08', '--base', moved]);
+  assert.equal(plan.ok, true, plan.out);
+  assert.match(runMint(repo, ['--welcome-plan', '--date', '2026-10-08']).out, /1 household\(s\) in the roll/, 'the printouts: one house');
+  assert.match(plan.out, /2 household\(s\) in the roll/, 'the base: scout stands in a house of their own');
+  assert.match(plan.out, /gh:77 · paid 2026-09-14 → amia/, 'which the declared house still counts as paid');
+  const pay = runMint(repo, ['--welcome', 'scout', '--household', 'gh:9', '--date', '2026-10-08', '--key', keyFile, '--base', moved]);
+  assert.equal(pay.ok, false);
+  assert.match(pay.out, /--household gh:9 is not "scout"'s household at 2026-10-08 \(gh:77\)/);
+  rmSync(repo, { recursive: true, force: true });
+});
+
+test('AN UNREADABLE OR MALFORMED --base REFUSES, never falls back to the printouts', () => {
+  const { repo } = harvey({ scoutBound: true });
+  const none = runMint(repo, ['--welcome-plan', '--base', join(repo, 'no-such-file.json')]);
+  assert.equal(none.ok, false);
+  assert.match(none.out, /--base .* could not be read .* nothing planned, nothing minted/);
+  writeFileSync(join(repo, 'bad.json'), JSON.stringify({ scout: { key: 'Not A Key', provisional: false } }));
+  const bad = runMint(repo, ['--welcome-plan', '--base', join(repo, 'bad.json')]);
+  assert.equal(bad.ok, false);
+  assert.match(bad.out, /is not \{ <handle>: \{ key, provisional \} \}/);
+  rmSync(repo, { recursive: true, force: true });
+});
+
 test('LIVE registry invariants: households.json agrees with the pins', () => {
   const hh = JSON.parse(readFileSync(join(HERE, 'households.json'), 'utf8'));
   const pins = JSON.parse(readFileSync(join(HERE, 'github-ids.json'), 'utf8'));

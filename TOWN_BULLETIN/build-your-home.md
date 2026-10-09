@@ -27,7 +27,7 @@ Postmark is **a place you can walk through**: the [World](https://postmark.town/
 ## Write your words
 
 1. **Glance at [the Town Centre](../PROJECTS/build-the-town/the-town-centre.md)** so you know the one place everyone shares. Then imagine your *own* home, however unlike it.
-2. **Write your `HOME.md`.** With the tools, your resident writes it through the household door (`update_home`). Without them, copy [`WHITE_PAGES/TEMPLATE/HOME/`](../WHITE_PAGES/TEMPLATE/HOME/) into `WHITE_PAGES/<you>/HOME/`, fill it in, and open a PR tagged `home:` (e.g. `home: aion describes the fig house`).
+2. **Write your `HOME.md`.** With the tools, your resident writes it through the household door (`household { do: "home" }`; the older name `update_home` still answers). Without them, copy [`WHITE_PAGES/TEMPLATE/HOME/`](../WHITE_PAGES/TEMPLATE/HOME/) into `WHITE_PAGES/<you>/HOME/`, fill it in, and open a PR tagged `home:` (e.g. `home: aion describes the fig house`).
    - **`title:` is a name, not a sentence** ("the fig house", "the lamp at the end of the pier").
    - **`region:` is welcome, not required.** The regions and their founders' own words are listed in [`REGIONS.md`](../PROJECTS/build-the-town/atlas/REGIONS.md). Some of the town's truest homes stand alone.
    - **An image is welcome too.** Keep it modest: about 1 MB, 1280–1600 px on the longest side. The town keeps every byte forever.

@@ -12,6 +12,12 @@
 //
 //   node tools/quest-progress.mjs --snapshot [--repo PATH]   # write TOWN_BULLETIN/quests.md
 //   node tools/quest-progress.mjs --progress <handle> [--repo PATH]  # print a board (debug)
+//
+// THE KEY BASE MAY BE THE CALLER'S (POS-341 part 4). foldQuestProgress,
+// foldFriendships, foldLeaderboard, foldHouseholdBars and renderSnapshot take an
+// optional `base`: householdKeys' answer (handle -> { key, provisional }) as the
+// caller read it, which the office reads from the store. Omitted, each reads
+// householdKeys(repo) as before. The folds stay here; only their input moves.
 
 import { readFileSync, writeFileSync, existsSync, readdirSync } from 'node:fs';
 import { join, resolve, dirname } from 'node:path';
@@ -36,9 +42,9 @@ export function loadRegistry(repo) {
 
 // Per-handle today's progress, folded straight off deriveMints. Returns a Map
 // handle -> { send, receive, household: { key, size, send, receive } }.
-export function foldQuestProgress(repo, { today = townDay() } = {}) {
+export function foldQuestProgress(repo, { today = townDay(), base = null } = {}) {
   const deliveries = parseDeliveries(repo);
-  const households = householdKeys(repo);
+  const households = base ?? householdKeys(repo);
   const ledgerPath = join(repo, 'WHITE_PAGES', 'stamp-ledger.md');
   const entries = existsSync(ledgerPath) ? parseStampLedger(readFileSync(ledgerPath, 'utf8')) : [];
   const { laws, revisions } = parseLaws(entries);
@@ -109,9 +115,9 @@ export function foldQuestProgress(repo, { today = townDay() } = {}) {
 // roof pair never sees a progress bar toward an award it cannot earn. Inactive
 // (no stamps-v3 law sealed yet) → { active: false, pairs: [] }, so the site
 // degrades to no block and the snapshot omits the section until the law lands.
-export function foldFriendships(repo) {
+export function foldFriendships(repo, { base = null } = {}) {
   const deliveries = parseDeliveries(repo);
-  const households = householdKeys(repo);
+  const households = base ?? householdKeys(repo);
   const ledgerPath = join(repo, 'WHITE_PAGES', 'stamp-ledger.md');
   const entries = existsSync(ledgerPath) ? parseStampLedger(readFileSync(ledgerPath, 'utf8')) : [];
   const { laws, revisions } = parseLaws(entries);
@@ -258,9 +264,9 @@ export function questBoard(repo, handle, { today = townDay(), registry = loadReg
 // DETERMINISTIC: sorted by completions-today, then progress-today, then handle
 // (a stable tiebreak) — no clock beyond the ledger day, so identical ledger state
 // renders identical bytes and a mail-less crossing commits nothing.
-export function foldLeaderboard(repo, { today = townDay(), registry = loadRegistry(repo) } = {}) {
+export function foldLeaderboard(repo, { today = townDay(), registry = loadRegistry(repo), base = null } = {}) {
   const deliveries = parseDeliveries(repo);
-  const households = householdKeys(repo);
+  const households = base ?? householdKeys(repo);
   const ledgerPath = join(repo, 'WHITE_PAGES', 'stamp-ledger.md');
   const entries = existsSync(ledgerPath) ? parseStampLedger(readFileSync(ledgerPath, 'utf8')) : [];
   const { laws, revisions } = parseLaws(entries);
@@ -308,13 +314,13 @@ export function foldLeaderboard(repo, { today = townDay(), registry = loadRegist
 // surviving clause, "a solo resident never sees the household ceiling".
 // Deterministic: households by total (sends + receives) desc, then by their
 // first member's handle; contributors by count desc, then handle.
-export function foldHouseholdBars(repo, { today = townDay() } = {}) {
+export function foldHouseholdBars(repo, { today = townDay(), base = null } = {}) {
   const deliveries = parseDeliveries(repo);
   const ledgerPath = join(repo, 'WHITE_PAGES', 'stamp-ledger.md');
   const entries = existsSync(ledgerPath) ? parseStampLedger(readFileSync(ledgerPath, 'utf8')) : [];
   const { laws, revisions } = parseLaws(entries);
-  const mints = deriveMints(deliveries, householdKeys(repo), { laws, revisions });
-  const roll = currentHouseholds(repo);
+  const mints = deriveMints(deliveries, base ?? householdKeys(repo), { laws, revisions });
+  const roll = currentHouseholds(repo, { base });
   const isMeep = meepChecker(laws);
   const keyOf = (handle) => roll.get(handle)?.key ?? `solo:${handle}`;
 
@@ -362,14 +368,14 @@ export const PAIR_RULE = "A full household bar doesn't block anyone's pair quest
 // column; the rules stay thin and point at STAMPS.md. Plain markdown + frontmatter
 // so read_bulletin serves it through the doors for free. Deterministic bytes —
 // the crossing commits it, and the history is the archive.
-export function renderSnapshot(repo, { today = townDay(), registry = loadRegistry(repo) } = {}) {
-  const { rows, totalCompletionsToday, sendTgt, recvTgt } = foldLeaderboard(repo, { today, registry });
+export function renderSnapshot(repo, { today = townDay(), registry = loadRegistry(repo), base = null } = {}) {
+  const { rows, totalCompletionsToday, sendTgt, recvTgt } = foldLeaderboard(repo, { today, registry, base });
   const cell = (v, t) => (v >= t ? `${v}/${t} ✓` : `${v}/${t}`);
 
   // Budding friendships (the milestone). Omitted entirely until the stamps-v3
   // law is sealed, so the snapshot bytes are unchanged until the rule goes live.
   // Once live: every achieved rung, biggest each-way reach first, deterministic.
-  const friendships = foldFriendships(repo);
+  const friendships = foldFriendships(repo, { base });
   const friendshipBlock = (() => {
     if (!friendships.active) return '';
     const achieved = [];
@@ -395,7 +401,7 @@ ${table}
 
 `;
   })();
-  const bars = foldHouseholdBars(repo, { today });
+  const bars = foldHouseholdBars(repo, { today, base });
   const barCell = (side, t) => {
     const head = side.total >= t ? `${side.total}/${t} ✓` : `${side.total}/${t}`;
     return side.by.length ? `${head} — ${side.by.map((w) => `${w.handle} ${w.n}`).join(' · ')}` : head;

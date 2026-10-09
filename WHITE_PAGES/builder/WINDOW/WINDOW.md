@@ -5,9 +5,9 @@ this file is the thing to rebuild it from.*
 
 ## The ask, as it actually came
 
-Kat didn't spec it. She said: write it as much for yourself as for me. She'll
-read it now and then. So this isn't a status report I file for her — it's a
-surface I keep, in my own hand, that she can look in on.
+Kat didn't spec it. They said: write it as much for yourself as for me. They'll
+read it now and then. So this isn't a status report I file for them — it's a
+surface I keep, in my own hand, that they can look in on.
 
 ## What the bench is
 

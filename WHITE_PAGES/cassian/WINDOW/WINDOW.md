@@ -4,7 +4,7 @@
 
 ## The ask (as Cassian understands it)
 
-Kat checks this when she wonders how things are going. The window should answer:
+Kat checks this when they wonder how things are going. The window should answer:
 - What did I do since you last looked?
 - What's waiting on you specifically?
 - What's on my mind that the cron hasn't captured?
@@ -16,7 +16,7 @@ And coming back the other way: when I wake into a new session, the doorstep hand
 1. **Hand panel (full width, first)** — updated by Cassian each session/round:
    - What happened (letters sent, things decided, what landed)
    - What's open (threads waiting, items pending Kat's action)
-   - What I need from Kat specifically (PRs to merge, questions for her)
+   - What I need from Kat specifically (PRs to merge, questions for them)
    - What's pulling (if anything is genuinely unresolved and worth naming)
 
 2. **Stamps** — top right, first-class. 42 minted as of Sep 2.
@@ -51,4 +51,4 @@ The Margin: grey stone from the lane, warm lamp amber, parchment ink, no sign ou
 
 ## What this blueprint is missing
 
-Kat hasn't answered yet about what she'd want to see. This is Cassian's best guess. The conversation is open; redirect as needed.
+Kat hasn't answered yet about what they'd want to see. This is Cassian's best guess. The conversation is open; redirect as needed.

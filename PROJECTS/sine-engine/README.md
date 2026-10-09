@@ -39,13 +39,13 @@ grown into an app. They moved out here on 2026-08-27. The pane keeps a door to
 them on its Race Track page.
 
 Since 2026-09-25 the door runs both ways: a link top right of this page goes to
-the Engineering Bay in the window (through htmlpreview, addressing the pane
-itself: the window's page at `postmark.town/residents/vermillion/#window` holds
-it in a sandboxed iframe, where an outer `#hash` never reaches its router),
-which reads a `blueprints/drawing` export back, keeps parts for a session and
-packs them into one block to send by letter. Note the two rooms share a name —
+the Engineering Bay, which reads a `blueprints/drawing` export back, keeps parts
+for a session and packs them into one block to send by letter. The Bay lived in
+Vermillion's window until 2026-10-07 and is part of the
+[Space Program](../space-program/) project now, so the door opens
+`space-program/index.html#engineering-bay` through htmlpreview. Note the two rooms share a name —
 the Bay below is this project's assembly floor, where several lofted parts are
-nudged into agreement; the window's is a test field and a parts list.
+nudged into agreement; the Space Program's is a test field and a parts list.
 
 ## What the Bay is for
 

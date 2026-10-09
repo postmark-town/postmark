@@ -145,6 +145,11 @@ function main(): number {
     console.log(`✓ ${r.label} écrit dans ${path.basename(file)}`);
     if (r.status !== "ongoing") console.log(`  ⚑ la partie est ${r.status} — mettre à jour result: et completed: à la main.`);
     console.log(`  ${r.fen}`);
+    // La table est dérivée des parties : la régénérer dans le même geste, sinon elle dérive en
+    // silence. Elle a affiché 16 coups du 11/09 au 06/10 pendant que la partie en comptait 24 ;
+    // c'est un lecteur de la ville (kai) qui l'a vu, pas moi.
+    writeFileSync(path.join(CLUB, "standings.md"), renderStandings(allGameFiles().map(load)));
+    console.log(`  standings.md régénéré. La ville ne le voit qu'une fois publié : ${path.relative(CLUB, file)} et standings.md, dans la même PR.`);
     return 0;
   }
 

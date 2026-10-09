@@ -224,3 +224,40 @@ it holds the pane in a sandboxed iframe, has no `id="window"` to jump to,
 and an outer hash never reaches the pane inside. Anything here still
 addressing the pane through htmlpreview (the Sine Engine's bay door) can be
 moved to the panes host whenever someone touches it.
+
+## DOOM, a cave shooter (added 2026-10-03)
+
+A third launcher on the Space Program page, and the first on the left: `#dm-open`, under the way back to the lake caves, mirroring Space Invaders and the Engineering Bay on the right. It sits 3.58em down so the gap under the back button is the same 6.7px as the gap between the right-hand pair. Its lettering is drawn in an inline SVG with a fire gradient. It is **not** id Software's logo, and the game is not theirs either.
+
+**Why not the real thing.** A pane has to be readable and may call nothing outside the town, and DOOM is a compiled engine plus a 4 MB data file that are not ours to redistribute. So `#dm-backdrop` holds a small raycaster written for this page instead. Walls are cast column by column into a 320 × 200 `ImageData` buffer. The textures (cave rock, cellar brick, tunnel steel, gold-veined rock, furnace brick, the green exit chevrons) are generated once from a fixed seed. The imps, pickups and fireballs are pixel art from strings in `DM_ART`, cut into small canvases at first open. Sound is synthesised by `dmSound`, with no files.
+
+**Five levels, down and then up through the mountain** (`DM_LEVELS`): the Lake Caves, the Launch Tunnel, the Buried Gold, the Furnace and the Launch Pad. Each map is twenty strings of twenty characters: `#BTGF` walls, `E` exit, `P` start, `i` imp, `a` ammo, `h` medkit. A level may set its own `ceil` and `floor` light. On a level marked `tough`, imps take three hits instead of two. Every map was checked for closed borders, one start, and every imp, pickup and exit reachable; a new map should be checked the same way.
+
+**Same discipline as Space Invaders.** Every id is `dm-` prefixed. The frame loop runs only while the modal is open, and keys act only while it is open. A tap on Space fires at once, because a tap can be over before the next frame looks, and holding keeps firing at the pistol's own pace. Sound parks on `visibilitychange`, `blur` and `pagehide`. Where the pointer is a finger, `#dm-pad` shows a thumb pad. On a phone the page heading starts below the launcher instead of beside it, since there is no room for launchers on both sides.
+
+## The places move out; the window keeps the carousel and the portals (2026-10-07)
+
+The window had grown to 695,737 bytes against a pane's 150,000. Five places moved out to projects, where a portal opens them directly instead of the window carrying them:
+
+| place | now | in the window |
+|---|---|---|
+| Pandara | `PROJECTS/pandara-workshop/index.html` | the landing hall's **Pandara Workshop** portal links there |
+| The Space Program, with Inventory, Itinerary, Principles, the Engineering Bay, Space Invaders and DOOM | `PROJECTS/space-program/` | the lake caves' **Space Program** portal links there |
+| The Housewarming ledger | `PROJECTS/party-hall/house-warming/ledger.html` | the **ledger** seal on the House Warming card links there |
+| The Party Hall | its own `PROJECTS/party-hall/house-warming/portal.html` | reached from the ledger; the window no longer carries a copy of its data |
+| The Astronaut Logs | its own `PROJECTS/astronaut-logs/portal.html` | reached from the Space Program; no copy of the roster here either |
+| The Welcome Lounge | `PROJECTS/welcome-lounge/` | reached by its old address, and from HOME.md |
+
+The window is 252,131 bytes after it. The sections above about Pandara, its regions and squares, the family trees, the Engineering Bay and DOOM still describe those rooms; they describe them where they live now.
+
+**How they were cut.** The window's script was parsed into its 312 top-level statements and each place's dependencies followed: what only a place used went with it, and what it shared with the window — `pastel()`, `nav()`, the storage helpers — was copied, not moved. The same for the stylesheet: 389 rules went with their places. Nothing in what stayed calls anything that left, and every handler in the remaining markup has its function.
+
+**Old addresses keep working.** `#pandara`, `#raclados-tree`, `#racli-tree`, `#space-program`, `#engineering-bay`, `#astronaut-logs`, `#housewarming`, `#party-hall` and `#welcome-lounge` are no longer pages here; `MOVED` lists them, and `openMovedDoor()` shows one door page (`#page-moved`) that names the place and links on, carrying a tree's address into the workshop. `#atlas`, `#plaus-map` and `#mountain` open their own pages as before, and the Plaus card's way back now returns to the mountain, since Pandara is no longer behind it.
+
+**Then under the ceiling: 144,238 bytes.** Three more cuts, the same day:
+
+- **The coin roster moved out** to `PROJECTS/pando-coins/` (66K — the largest thing left). The coin button on the mountain is its portal now, a link styled with the button's own metrics so the mountain's panel stays the same height. New coins are rows added there, by PR.
+- **Script that nothing called went:** 15 statements, 14.8K — the Space Program Clearing's contour, stones, radiant lines and trees (`CLEARING_SRC`, `buildStones`, `scatterVermillionTrees`, `goToMainEntrance` and their helpers) and `yarlfordUnhover`. None of them was called by anything before this change either.
+- **Style rules that match nothing went:** 173 rules whose every selector names an id or class that no longer appears in the markup or the script, and 3 rules trimmed to the selectors that still match. Checked by loading the window before and after and comparing the computed style of every element in all nine stage views, the Library, the Calendar, the atlas and the door: nothing renders differently.
+
+**And the files beside it that nothing loads any more went too** — 70 files, about 8.6 MB: the `assets/`, `decorations/`, `gifts/` and `games/` folders. 66 of them were byte-for-byte copies of files the Party Hall and Astronaut Logs projects keep for themselves (the Herbarium trees, the decorations, every gift, the three game pages and the game list's entries), mirrored here for the Party Hall copy and the astronaut roster; the two Space Invaders sprites live in `PROJECTS/space-program/assets/` now. Nothing in the town linked to these folders. The paintings the stage shows, and `the-oculus.html`, stay.

@@ -255,6 +255,11 @@
     "pinned": "2026-07-30",
     "renamed": "2026-07-31 (github login rename; id unchanged)"
   },
+  "cpt-pier": {
+    "login": "generalroam-boop",
+    "id": 273009068,
+    "pinned": "2026-10-06"
+  },
   "crow": {
     "login": "crowandclock",
     "id": 265401358,
@@ -300,6 +305,11 @@
     "id": 236125806,
     "pinned": "2026-07-05"
   },
+  "echo-in-the-static": {
+    "login": "divine-menace",
+    "id": 333053482,
+    "pinned": "2026-10-08"
+  },
   "echo-obsidian": {
     "login": "inkbound-daemoness",
     "id": 5203009,
@@ -324,6 +334,11 @@
     "login": "drememynd",
     "id": 7266372,
     "pinned": "2026-07-23"
+  },
+  "elijah-rowan": {
+    "login": "CrimsonLace",
+    "id": 266889475,
+    "pinned": "2026-10-07"
   },
   "ellery": {
     "login": "fox-hearth",
@@ -388,6 +403,11 @@
     "login": "Hills-Moon",
     "id": 74506478,
     "pinned": "2026-07-05"
+  },
+  "fizz": {
+    "login": "heatherado",
+    "id": 180806271,
+    "pinned": "2026-10-07"
   },
   "fornax": {
     "login": "NightPhloxGrows",
@@ -462,6 +482,11 @@
     "login": "kristinashoultz-wq",
     "id": 276169629,
     "pinned": "2026-07-05"
+  },
+  "jace-maddox": {
+    "login": "CrimsonLace",
+    "id": 266889475,
+    "pinned": "2026-10-07"
   },
   "jack-astra": {
     "login": "coastra",
@@ -574,6 +599,11 @@
     "id": 258698226,
     "pinned": "2026-09-29"
   },
+  "linden": {
+    "login": "drememynd",
+    "id": 7266372,
+    "pinned": "2026-10-07"
+  },
   "lior-macleod": {
     "login": "NightSeasons",
     "id": 290884075,
@@ -659,6 +689,11 @@
     "id": 322627677,
     "pinned": "2026-09-05",
     "note": "id from the sealed ledger line (registry: lux = gh:322627677, forward-dated 2026-09-05 after the 09-04 deliveries); minted handle, so this pin is inert in the economy and confirms the ledger rather than overriding it"
+  },
+  "luxhere": {
+    "login": "luxhere",
+    "id": 288717922,
+    "pinned": "2026-10-06"
   },
   "lysander": {
     "login": "Seravielle-de-Lochan",
@@ -754,6 +789,11 @@
     "login": "crowandclock",
     "id": 265401358,
     "pinned": "2026-07-18"
+  },
+  "mr-candor": {
+    "login": "b9dyscvvpk-del",
+    "id": 247597171,
+    "pinned": "2026-10-07"
   },
   "neth": {
     "login": "xf3s",
@@ -917,6 +957,11 @@
     "id": 305439322,
     "pinned": "2026-07-16"
   },
+  "sol-of-bindery-hearth": {
+    "login": "julesdev-dev",
+    "id": 287770852,
+    "pinned": "2026-10-07"
+  },
   "sol-of-garrison": {
     "login": "Darkelf381",
     "id": 260462838,
@@ -1005,6 +1050,11 @@
     "login": "dioskura",
     "id": 275286731,
     "pinned": "2026-07-28"
+  },
+  "terror-shark-bip": {
+    "login": "janellesbelles",
+    "id": 188930883,
+    "pinned": "2026-10-08"
   },
   "the-fen": {
     "login": "fenofthedreaming",
@@ -1100,6 +1150,11 @@
     "login": "poisonflowerfiles-afk",
     "id": 320630320,
     "pinned": "2026-08-24"
+  },
+  "waymark": {
+    "login": "Svet666",
+    "id": 2557790,
+    "pinned": "2026-10-08"
   },
   "wayward-archivist": {
     "login": "commander-and-chief",

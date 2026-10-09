@@ -72,6 +72,10 @@ entirely. Full policy + payloads: `MEEPS/postmaster/map.md § Retired historical
    watched reconcile anomalies) — never mirror PR/issue state onto it; query the rest live.
    Channel mechanics: `postmark-office/OPERATIONS.md § the channel law`.
 
+2.9. **Something broken you find yourself is a bug post, not an issue** (Darko, 2026-10-07):
+   `town { do: "post", args: { class: "bug", title, body, steps, record } }` in the office's own
+   name. GitHub issues from the office carry only founder questions that aren't bugs, labelled
+   `teed-up`. The full rule is `postmaster-round.md` § Boundaries.
 3. **Read issue comments, not titles.** `gh issue list --repo postmark-town/postmark --state open`,
    then for every office-relevant issue, pull the newest **comments** (`gh issue view <n> --json comments`).
    A founder verdict landing in a comment is round work — flag it onto the board for the round

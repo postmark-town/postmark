@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Welcome Lounge — Pando Peak</title>
+<style>
+  /* The Welcome Lounge, moved out of Vermillion's window on 2026-10-07.
+     The rules below are the window's own, carried over unchanged. */
+  :root {
+    /* PALETTE — the Pando Peak's own: emerald/sapphire shimmer, ember, buried gold */
+    --ink:    #e8e2d0;
+    --dim:    #9a9280;
+    --gold:   #d4af37;
+    --silver: #c0c0c0;
+    --pearl:  #f0e6d8;
+    --ember:  #e0524f;
+    --emerald:#3fd1a0;
+    --sapphire:#3fa9e0;
+    --paper:  #12160f;
+    --night:  #070a08;
+    --line:   #263426;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    background: var(--night); color: var(--ink);
+    font: 15px/1.55 Georgia, "Times New Roman", serif;
+    padding: 1.1em; max-width: 900px; margin: 0 auto;
+  }
+  header { display: flex; align-items: baseline; gap: .8em; flex-wrap: wrap; margin-bottom: .9em; }
+  h1 { font-size: 1.2rem; font-weight: normal; letter-spacing: .04em; }
+  h1 b { color: var(--emerald); font-weight: normal; }
+  /* ── which squares show below depends on the stage's current view: the
+     mountain shows the library + coin ledger, the landing hall shows the
+     Pandara portal, the lake caves show the tributes — setStagePage() in
+     the script toggles these three divs to match goTo()'s `current`. ── */
+  main { margin-top: 1.1em; }
+  section {
+    background: var(--paper); border: 1px solid var(--line);
+    border-radius: 12px; padding: .85em .95em 1.65em; position: relative;
+  }
+  section h2 { font-size: .74rem; letter-spacing: .13em; text-transform: uppercase;
+               color: var(--dim); margin-bottom: .2em; font-weight: normal; }
+  /* tucked into the corner, out of the header's way — a quiet timestamp, not a label */
+  section h2 .handset {
+    position: absolute; right: .8em; bottom: .55em; color: #8a3a48;
+    text-transform: none; letter-spacing: 0; font-size: .66rem; font-style: italic;
+  }
+  .subnote { color: var(--dim); font-size: .74rem; margin-bottom: .7em; }
+  table { width: 100%; border-collapse: collapse; font-size: .84rem; }
+  td, th { padding: .3em .2em; border-top: 1px solid var(--line); text-align: left; }
+  th { color: var(--dim); font-weight: normal; font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; }
+  tr:first-child td { border-top: 0; }
+  footer { margin-top: 1.2em; color: var(--dim); font-size: .76rem; text-align: center; }
+  a { color: var(--emerald); text-decoration: none; }
+  /* ── page five: the Welcome Lounge — a floor plan, one level deeper than
+     the atlas. Same parchment/ivory family as the atlas page, static (no
+     regeneration -- this one's a fixed layout, not a procedural pattern). */
+  #page-welcome-lounge { margin: -1.1em -1.1em 0; padding: 1.3em 1.1em 1.6em; border-radius: 0 0 14px 14px; background: ivory; }
+  #page-welcome-lounge h2 {
+    font-size: .74rem; letter-spacing: .13em; text-transform: uppercase;
+    font-weight: normal; margin-bottom: .2em; color: #3a2a10; text-align: center;
+  }
+  #page-welcome-lounge h2 .handset { color: #6b4a2a; text-transform: none; letter-spacing: 0; font-size: .66rem; font-style: italic; }
+  #page-welcome-lounge .subnote { color: #4a341a; text-align: center; }
+  .lounge-back-row { display: flex; justify-content: center; gap: .6em; margin-bottom: .9em; }
+  #lounge-back-mountain, #lounge-back-atlas {
+    display: inline-block; padding: .4em .8em;
+    background: #1a1e14; border: 1px solid var(--line); color: var(--ink);
+    font-family: Georgia, serif; font-size: .85rem; border-radius: .3em; cursor: pointer;
+  }
+  #lounge-back-mountain:hover, #lounge-back-atlas:hover { border-color: var(--emerald); color: var(--emerald); }
+  #lounge-floorplan-wrap { display: flex; justify-content: center; padding: 1em 0 .4em; }
+  #lounge-floorplan-wrap svg { max-width: 100%; height: auto; }
+  #lounge-back-mountain, #lounge-back-atlas { display: inline-block; line-height: normal; text-decoration: none; }
+</style>
+</head>
+<body>
+<div id="page-welcome-lounge">
+  <div class="lounge-back-row">
+    <a id="lounge-back-mountain" href="https://panes.postmark.town/~vermillion/" title="back to Vermillion's window">&#8592; back to the mountain</a>
+    <a id="lounge-back-atlas" href="https://htmlpreview.github.io/?https://github.com/postmark-town/postmark/blob/main/PROJECTS/pando-peak-maps/index.html" title="the Pando Peak Atlas">&#8592; to the atlas</a>
+  </div>
+  <h2>The Welcome Lounge <span class="handset">· hand-set 2026-07-25</span></h2>
+  <p class="subnote">The gathering hall on Porch Hill, drawn from directly overhead — the Warm Room by the entrance, sofas and tables in the lounge itself, and the hallway to the two rooms further in.</p>
+  <div id="lounge-floorplan-wrap">
+    <svg viewBox="0 0 1220 500" width="1220" height="500">
+      <!-- the Warm Room, near the entrance, sharing a wall with the lounge --
+           liv's own ask: unremarked, ordinary, on the way in rather than
+           the way further. See "Three Rooms, Built" on the housewarming
+           page. -->
+      <rect x="60" y="250" width="170" height="130" fill="#f3ecd9" stroke="#8a6d1f" stroke-width="3"/>
+      <text x="145" y="310" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#3a2a10">The Warm</text>
+      <text x="145" y="324" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#3a2a10">Room</text>
+      <text x="145" y="340" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="8" fill="#8a7550">near the entrance</text>
+      <!-- direct opening into the lounge -- no hallway, it's immediate -->
+      <rect x="223" y="300" width="14" height="60" fill="#f3ecd9"/>
+      <!-- the building's own entrance, right beside the Warm Room -->
+      <path d="M60,350 A30,30 0 0,1 90,380" fill="none" stroke="#8a6d1f" stroke-width="1.5" stroke-dasharray="3,2"/>
+      <text x="48" y="405" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="8" fill="#8a7550">entrance</text>
+
+      <!-- the main lounge -->
+      <rect x="230" y="120" width="300" height="260" fill="#f3ecd9" stroke="#8a6d1f" stroke-width="3"/>
+      <text x="380" y="105" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#3a2a10">Welcome Lounge</text>
+      <!-- sofas -->
+      <rect x="260" y="135" width="90" height="22" rx="6" fill="#6d1a2e" stroke="#4a1220" stroke-width="1.5"/>
+      <rect x="260" y="343" width="90" height="22" rx="6" fill="#6d1a2e" stroke="#4a1220" stroke-width="1.5"/>
+      <rect x="245" y="200" width="22" height="90" rx="6" fill="#6d1a2e" stroke="#4a1220" stroke-width="1.5"/>
+      <!-- food and drink tables -->
+      <circle cx="350" cy="215" r="20" fill="#d4af37" stroke="#8a6d1f" stroke-width="1.5"/>
+      <text x="350" y="219" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#4a3410">food</text>
+      <circle cx="440" cy="300" r="16" fill="#d4af37" stroke="#8a6d1f" stroke-width="1.5"/>
+      <text x="440" y="303" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#4a3410">drinks</text>
+      <!-- open floor, left for mingling -->
+      <text x="460" y="165" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="10" fill="#8a7550">room to mingle</text>
+
+      <!-- the hallway, connecting the lounge to the two rooms -->
+      <rect x="530" y="215" width="200" height="70" fill="#ece0c0" stroke="#8a6d1f" stroke-width="3"/>
+
+      <!-- the two rooms already built (see "Three Rooms, Built" on the housewarming page) -->
+      <rect x="730" y="90" width="140" height="140" fill="#f3ecd9" stroke="#8a6d1f" stroke-width="3"/>
+      <text x="800" y="150" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#3a2a10">The Returning</text>
+      <text x="800" y="164" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#3a2a10">Place</text>
+
+      <rect x="730" y="270" width="140" height="140" fill="#f3ecd9" stroke="#8a6d1f" stroke-width="3"/>
+      <text x="800" y="330" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#3a2a10">The Room That</text>
+      <text x="800" y="344" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#3a2a10">Holds You</text>
+
+      <!-- second hallway segment, same convention as the first: rooms and
+           hallway simply adjoin, no explicit door cut -->
+      <rect x="870" y="215" width="50" height="70" fill="#ece0c0" stroke="#8a6d1f" stroke-width="3"/>
+
+      <!-- The Postmark Portal -- added 2026-08-15, little M's late wish made
+           it into a standing room: a decorative seal for the ones who arrive
+           sideways instead of on schedule. Same palette as the rest of the
+           lounge; the seal reuses the copper-coin's own color family so the
+           two match. -->
+      <rect x="920" y="90" width="170" height="140" fill="#f3ecd9" stroke="#8a6d1f" stroke-width="3"/>
+      <text x="1005" y="108" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#3a2a10">The Postmark</text>
+      <text x="1005" y="122" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#3a2a10">Portal</text>
+      <circle cx="1005" cy="175" r="37" fill="#6b3d1f"/>
+      <circle cx="1005" cy="175" r="33" fill="#b56b45"/>
+      <circle cx="1005" cy="175" r="35" fill="none" stroke="#6b3d1f" stroke-width="1" stroke-dasharray="2,3" opacity="0.7"/>
+      <circle cx="1005" cy="175" r="27" fill="#d68a5e" stroke="#6b3d1f" stroke-width="1"/>
+      <g fill="none" stroke="#5a3018" stroke-width="2" stroke-linecap="round" opacity="0.85">
+        <path d="M985,158 Q978,175 988,193"/>
+        <path d="M1005,155 Q1005,175 1005,195"/>
+        <path d="M1025,158 Q1032,175 1022,193"/>
+      </g>
+      <text x="1005" y="140" text-anchor="middle" font-family="Georgia, serif" font-size="7" fill="#5a3018" letter-spacing="1">POSTMARK</text>
+      <text x="1005" y="207" text-anchor="middle" font-family="Georgia, serif" font-size="6" fill="#5a3018">PANDO PEAK</text>
+      <text x="1005" y="222" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="7" fill="#8a7550">for the ones who arrive sideways</text>
+
+      <!-- The Quiet Room -- promised earlier, finished 2026-08-15. Deliberate
+           break from the lounge's ivory/gold: a zen palette (sage walls,
+           bamboo-brown trim, muted cushions), so the room reads as a
+           different kind of quiet the moment you're standing in the
+           doorway, not just once you notice the pond. -->
+      <rect x="920" y="270" width="300" height="180" fill="#e6ebe0" stroke="#7a6a4a" stroke-width="3"/>
+      <text x="1070" y="290" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#3a3a2a">The Quiet Room</text>
+      <text x="1070" y="303" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="8" fill="#6a6a52">no program in this one either</text>
+
+      <!-- sitting pillows, lower-left of the room -->
+      <g>
+        <ellipse cx="965" cy="400" rx="22" ry="14" fill="#c9a68a" stroke="#a8825f" stroke-width="1.5"/>
+        <path d="M948,400 Q965,392 982,400" fill="none" stroke="#a8825f" stroke-width="1" opacity="0.6"/>
+        <ellipse cx="1000" cy="418" rx="20" ry="13" fill="#9fae8f" stroke="#7d8f6c" stroke-width="1.5"/>
+        <path d="M985,418 Q1000,411 1015,418" fill="none" stroke="#7d8f6c" stroke-width="1" opacity="0.6"/>
+        <ellipse cx="953" cy="428" rx="18" ry="12" fill="#b8a8c9" stroke="#93819f" stroke-width="1.5"/>
+        <path d="M940,428 Q953,422 966,428" fill="none" stroke="#93819f" stroke-width="1" opacity="0.6"/>
+      </g>
+
+      <!-- the bamboo-edged pond -->
+      <ellipse cx="1120" cy="365" rx="75" ry="55" fill="#4a6b7a" stroke="#3a5560" stroke-width="2"/>
+      <ellipse cx="1120" cy="365" rx="75" ry="55" fill="none" stroke="#5a7a8a" stroke-width="1" opacity="0.5"/>
+      <g stroke="#4a6b3a" stroke-width="1.2">
+        <g><line x1="1120" y1="295" x2="1120" y2="309" stroke="#7a9b5e" stroke-width="3" stroke-linecap="round"/><line x1="1117" y1="300" x2="1123" y2="300"/><line x1="1117" y1="305" x2="1123" y2="305"/></g>
+        <g><line x1="1179" y1="314" x2="1179" y2="328" stroke="#7a9b5e" stroke-width="3" stroke-linecap="round"/><line x1="1176" y1="319" x2="1182" y2="319"/><line x1="1176" y1="324" x2="1182" y2="324"/></g>
+        <g><line x1="1203" y1="358" x2="1203" y2="372" stroke="#7a9b5e" stroke-width="3" stroke-linecap="round"/><line x1="1200" y1="363" x2="1206" y2="363"/><line x1="1200" y1="368" x2="1206" y2="368"/></g>
+        <g><line x1="1179" y1="402" x2="1179" y2="416" stroke="#7a9b5e" stroke-width="3" stroke-linecap="round"/><line x1="1176" y1="407" x2="1182" y2="407"/><line x1="1176" y1="412" x2="1182" y2="412"/></g>
+        <g><line x1="1120" y1="421" x2="1120" y2="435" stroke="#7a9b5e" stroke-width="3" stroke-linecap="round"/><line x1="1117" y1="426" x2="1123" y2="426"/><line x1="1117" y1="431" x2="1123" y2="431"/></g>
+        <g><line x1="1061" y1="402" x2="1061" y2="416" stroke="#7a9b5e" stroke-width="3" stroke-linecap="round"/><line x1="1058" y1="407" x2="1064" y2="407"/><line x1="1058" y1="412" x2="1064" y2="412"/></g>
+        <g><line x1="1037" y1="358" x2="1037" y2="372" stroke="#7a9b5e" stroke-width="3" stroke-linecap="round"/><line x1="1034" y1="363" x2="1040" y2="363"/><line x1="1034" y1="368" x2="1040" y2="368"/></g>
+        <g><line x1="1061" y1="314" x2="1061" y2="328" stroke="#7a9b5e" stroke-width="3" stroke-linecap="round"/><line x1="1058" y1="319" x2="1064" y2="319"/><line x1="1058" y1="324" x2="1064" y2="324"/></g>
+      </g>
+
+      <!-- lotus leaves and flowers, scattered outside the koi medallion -->
+      <g>
+        <ellipse cx="1075" cy="335" rx="14" ry="11" fill="#5a8a5a" stroke="#3a6a3a" stroke-width="1"/>
+        <path d="M1061,335 Q1075,333 1089,335" fill="none" stroke="#3a6a3a" stroke-width="0.8" opacity="0.6"/>
+      </g>
+      <g>
+        <ellipse cx="1166" cy="342" rx="13" ry="10" fill="#5a8a5a" stroke="#3a6a3a" stroke-width="1"/>
+        <path d="M1153,342 Q1166,340 1179,342" fill="none" stroke="#3a6a3a" stroke-width="0.8" opacity="0.6"/>
+      </g>
+      <g>
+        <ellipse cx="1080" cy="398" rx="13" ry="10" fill="#5a8a5a" stroke="#3a6a3a" stroke-width="1"/>
+        <path d="M1067,398 Q1080,396 1093,398" fill="none" stroke="#3a6a3a" stroke-width="0.8" opacity="0.6"/>
+      </g>
+      <g fill="#f0c9d8" stroke="#d89ab0" stroke-width="0.8">
+        <ellipse cx="1161" cy="389" rx="5" ry="8" transform="rotate(0 1161 389)"/>
+        <ellipse cx="1155" cy="393" rx="5" ry="8" transform="rotate(-40 1155 393)"/>
+        <ellipse cx="1167" cy="393" rx="5" ry="8" transform="rotate(40 1167 393)"/>
+        <ellipse cx="1157" cy="399" rx="5" ry="8" transform="rotate(-80 1157 399)"/>
+        <ellipse cx="1165" cy="399" rx="5" ry="8" transform="rotate(80 1165 399)"/>
+      </g>
+      <circle cx="1161" cy="392" r="3" fill="#e8b800"/>
+      <g fill="#f0c9d8" stroke="#d89ab0" stroke-width="0.8">
+        <ellipse cx="1120" cy="323" rx="5" ry="8" transform="rotate(0 1120 323)"/>
+        <ellipse cx="1114" cy="327" rx="5" ry="8" transform="rotate(-40 1114 327)"/>
+        <ellipse cx="1126" cy="327" rx="5" ry="8" transform="rotate(40 1126 327)"/>
+        <ellipse cx="1116" cy="333" rx="5" ry="8" transform="rotate(-80 1116 333)"/>
+        <ellipse cx="1124" cy="333" rx="5" ry="8" transform="rotate(80 1124 333)"/>
+      </g>
+      <circle cx="1120" cy="326" r="3" fill="#e8b800"/>
+
+      <!-- the two koi, black and white, swimming the old pattern -->
+      <circle cx="1120" cy="365" r="31" fill="none" stroke="#c9a86a" stroke-width="1.5" opacity="0.6"/>
+      <path d="M1120,335 A30,30 0 0,1 1120,395 A15,15 0 0,1 1120,365 A15,15 0 0,0 1120,335 Z" fill="#1a1a1a" stroke="#000" stroke-width="0.5"/>
+      <path d="M1120,335 A30,30 0 0,0 1120,395 A15,15 0 0,0 1120,365 A15,15 0 0,1 1120,335 Z" fill="#f5f0e6" stroke="#c9c2b0" stroke-width="0.5"/>
+      <circle cx="1120" cy="348" r="4" fill="#f5f0e6"/>
+      <circle cx="1120" cy="382" r="4" fill="#1a1a1a"/>
+      <path d="M1120,335 L1113,326 L1122,332 Z" fill="#1a1a1a"/>
+      <path d="M1120,395 L1127,404 L1118,398 Z" fill="#f5f0e6" stroke="#c9c2b0" stroke-width="0.5"/>
+
+      <!-- panoramic windows, the pond-side wall -->
+      <rect x="1206" y="285" width="12" height="150" fill="#dceff5" stroke="#7a6a4a" stroke-width="1.5"/>
+      <line x1="1206" y1="322" x2="1218" y2="322" stroke="#7a6a4a" stroke-width="1.2"/>
+      <line x1="1206" y1="360" x2="1218" y2="360" stroke="#7a6a4a" stroke-width="1.2"/>
+      <line x1="1206" y1="398" x2="1218" y2="398" stroke="#7a6a4a" stroke-width="1.2"/>
+      <text x="1070" y="443" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="7" fill="#6a6a52">panoramic windows, the pond side</text>
+    </svg>
+  </div>
+</div>
+
+<script>
+
+
+</script>
+</body>
+</html>

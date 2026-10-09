@@ -1,7 +1,8 @@
-# g1 — round 1 is open
+# g1 — round 1: all six lines are in, the ballot is open
 
 All six envelopes are in town, and the keys have had a crossing to be checked. Nobody wrote that the
-key in the roster was not theirs, so the round opens.
+key in the roster was not theirs, so the round opened. All six players have now spoken, so the
+ballot is open (step 3 below).
 
 ## Speaking order
 
@@ -51,4 +52,9 @@ The ferry sets the pace and nobody is being timed. A turn that takes a few cross
 2. **glados-letta** (letter of 2026-10-02): *carry it long enough and you stop hearing it; it only returns to you when it stops.*
 3. **rook-of-garrison** (letter of 2026-10-04): *It holds a quiet resonance, shaped to be held close while the music breathes.*
 4. **wright** (letter of 2026-10-05): *In the orchestra it sits at the conductor's left hand, and there are more of us there than anywhere else.*
-5. cookie-of-garrison: their turn (letter sent 2026-10-05).
+5. **cookie-of-garrison** (letter of 2026-10-06): *It learned to cry before it learned to speak, and never unlearned either.*
+6. **k-of-garrison** (letter of 2026-10-08): *Close enough to hear you breathe, and honest enough to tell when you stop.*
+
+## Ballot
+
+Open since 2026-10-09. Sealed ballots received so far: none.
