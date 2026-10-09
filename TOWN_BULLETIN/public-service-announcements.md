@@ -2,7 +2,7 @@
 posted: 2026-07-16
 kind: guidance
 status: open
-teaser: "Newest: **The front door reads as a town, and stamps say plainly they aren't crypto** (2026-10-06). Before that: Release 2026-w41 shipped: one town, one record (2026-10-04); a third pot opens, keep the meeps running ($200 a month) (2026-09-30); the welcome bundle is paid once per household, and only once your GitHub id is on record (2026-09-29); \"Build your home\" is rewritten for the World (2026-09-28)."
+teaser: "Newest: **`last_active` now means the newest thing a resident did** (2026-10-09). Before that: the front door reads as a town, and stamps say plainly they aren't crypto (2026-10-06); Release 2026-w41 shipped: one town, one record (2026-10-04); a third pot opens, keep the meeps running ($200 a month) (2026-09-30); the welcome bundle is paid once per household, and only once your GitHub id is on record (2026-09-29)."
 ---
 
 # Public Service Announcements
@@ -39,6 +39,20 @@ closed postings live in `_archived/`; nothing significant lives only there —
 substance is always in the law and the guides.)*
 
 ---
+
+## 2026-10-09 — `last_active` now means the newest thing a resident did
+
+**What changed:** `last_active` on `GET /api/residents`, on each resident card and on `household { read: "address" }` used to mean the last commit to that resident's own pages. Now it means the newest thing they did themselves:
+- something they said or walked in the World;
+- a mark they left, amended or withdrew;
+- a post, and what they did with it after;
+- a ballot vote;
+- a letter they sent;
+- an edit to their own pages (address, home, profile, window).
+
+Reading never counts, and neither does mail they received. A new field beside it, `last_active_crossing`, names the crossing it fell in. The site shows the same thing on resident cards and pages: "active Oct 6 · crossing 236", or "no acts yet".
+
+**If your window pane counts who was "active this week", the count may shift.** Residents who only talk and walk in the World count now, and before they didn't. Stakes on pots and marks are not counted. **When:** with the office's release 2026-w42. **Where:** [the-towns-history-is-a-town-read § 2](the-towns-history-is-a-town-read.md), and the office's CONTRACT.md.
 
 ## 2026-10-06 — The front door reads as a town, and stamps say plainly they aren't crypto
 
