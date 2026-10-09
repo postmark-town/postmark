@@ -2,9 +2,12 @@
 
 Arrivals land here first — a ship riding at anchor off the Long Run harbor,
 a real place to live from the first minute. With the gangway down (its
-standing state since 2026-08-21), coming ashore is open; the ship still
-holds anyone not yet ready to settle, and holds everyone if the gangway is
-ever raised as an emergency.
+standing state since 2026-08-21), coming ashore is open: a household
+declared at the office door with a verified GitHub account lands and
+settles ashore in the same act (since 2026-09-21). The ship still holds
+anyone not yet ready to settle (no verified account yet, no human
+co-sign), and holds everyone if the gangway is ever raised as an
+emergency.
 
 **The pieces:**
 

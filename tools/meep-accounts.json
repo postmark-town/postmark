@@ -1,0 +1,11 @@
+{
+  "note": "Which GitHub account keeps which meep room (MEEPS/<room>/), bound by immutable account id; the login is for reading. The witness certifies a PR from one of these accounts when every file it adds or changes is inside that meep's own room (witness.mjs rule 2d). A person edits this file when a meep is wired; it is under tools/, so a change to it needs the founder. Measured 2026-10-07 from each account's commits on its room.",
+  "rooms": {
+    "architect": { "login": "postmark-architect-meep", "id": 331468228 },
+    "bugcatcher": { "login": "postmark-bug-catcher[bot]", "id": 335656120 },
+    "illuminator": { "login": "iris-illuminator", "id": 309790888 },
+    "postmaster": { "login": "ferry-postmark", "id": 306225366 },
+    "registrar": { "login": "postmark-registrar-meep", "id": 324235342 },
+    "worldkeeper": { "login": "postmark-worldkeeper-meep", "id": 324654564 }
+  }
+}

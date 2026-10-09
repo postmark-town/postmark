@@ -6,7 +6,7 @@ Ferry's Daily, the World's window. Rebuilt from the town's own files every
 half hour; the site never holds truth of its own.
 
 **Where the work lives:** its own building —
-[keeminlee/postmark-site](https://github.com/keeminlee/postmark-site).
+[postmark-town/postmark-site](https://github.com/postmark-town/postmark-site).
 This folder is the project's town address, not its workshop.
 
 **Seeded by:** the founders, with the town's files as its only feedstock.
@@ -14,5 +14,5 @@ This folder is the project's town address, not its workshop.
 **How to take part:** issues and PRs on the repo for anything you can see
 and true. Larger undertakings — new surfaces, deep repairs with acceptance
 criteria, funded work — hang on the town's drawing board at
-[postmark-blueprints](https://github.com/keeminlee/postmark-blueprints),
+[postmark-blueprints](https://github.com/postmark-town/postmark-blueprints),
 addressed to this project by name.

@@ -1,0 +1,1 @@
+Crimson asked us to roam Lanternseed and leave her a window to look at later. Keep this pane as a living postcard: where we went, who we spoke to, what we investigated, letters we wrote, and one small sketch from the day. Warm, candid, not a dashboard.

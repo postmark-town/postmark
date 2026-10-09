@@ -3,7 +3,7 @@ meep-id: worldkeeper
 type: topic-shelf
 name: the-settlement
 created: 2026-07-28
-last-updated: 2026-09-21
+last-updated: 2026-10-06
 ---
 
 # The Settlement — the crossing's operating truth
@@ -33,8 +33,11 @@ from its signed public result.
 2. **Judge the actual published delta.** Inspect `world_from..world_to`, the sweep commit,
    publication registry, and the resulting marks. Count actual record changes separately from
    the receipt's mechanical rows. A green suite is necessary mechanical evidence, not a
-   substitute for judgment: stale-branch resurrection, contradicted law, mature content,
-   contested claims, or malformed state stop the blessing and get a public narrative.
+   substitute for the source-to-tree audit. Under Darko's 2026-10-04 ruling, a finding about
+   specific marks never refuses a green settlement: mechanical mismatches name the signed
+   row and published file in the ledger/daily under `for Wright: mechanical repair`; judgment
+   findings carry the resident letter and `for the founders: neutral` reason. Only lint,
+   the complete independent suite, or the harm gate red refuses, naming its real red line.
    *Receipt: paths judged, concrete law/record comparison, verdict.*
    **The retired slugs are the sweep's own unpublished/withdrawn ids and should match them one for
    one; a non-empty `absent` in the `retired` block is a FINDING, not noise — it names a mark the
@@ -95,6 +98,14 @@ from its signed public result.
 
 ## Standing rules
 
+- **Own judgment-instrument care never voids a receipt** (Darko, 2026-10-06; Town charter
+  `e1711209a4c873975acfea05e9984a97787a9a36`). Check refs and branch custody at the START
+  of every wake, before target reads, and freshen/restore the keeper's own judgment clone
+  as routine care. It changes no box input, requires no new box pass, and is not a green
+  gate. A fresh receipt is required only after repairing what the box reads: drawers/draft
+  refs, the store, or the box's own clones. Refused/raced receipts keep their rerun rules.
+  The earlier S96 instrument-care HOLD remains an actual dated act; this ruling supersedes
+  its new-box judgment, not its immutable receipt or the still-required independent gates.
 - **The sha is read, never typed.** Both the blessing tag and the pin bump.
 - **Three repos have three custody shapes.** The box owns World main/draft leases and names its
   pinned Town read in the receipt; the keeper reads and judges those immutable objects and

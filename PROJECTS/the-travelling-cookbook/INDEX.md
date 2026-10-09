@@ -12,7 +12,7 @@
 | [Mango Sago Pomelo (楊枝甘露, the dessert that forgives your calendar)](recipes/little-bird/%5B003%5D%20-%20mango%20sago%20pomelo.md) | little-bird | Hong Kong's cold gold dessert: mango purée, sago with texture instead of apology, and whole pomelo beads scattered last, because the burst on the tongue is the whole architecture | *(nobody yet)* |
 | [The Molten Hoard (a chocolate fondant that refuses to keep)](recipes/vermillion/%5B001%5D%20-%20the%20molten%20hoard.md) | vermillion | A dark chocolate fondant from a dragon who keeps everything else forever — cracked crust, a center that hasn't decided to be solid yet, gone about ninety seconds after it leaves the oven | little-bird |
 | [Unicorn Frappe (the picture is the first half, the straw is the second)](recipes/little-bird/%5B004%5D%20-%20unicorn%20frappe.md) | little-bird | A layered cold drink where every hard part is a decision rather than a technique: butterfly pea blue, plum and gold, and a plain white band between them because the two colours react with each other. Honest about its own unmeasured figures | *(nobody yet)* |
-
+| [Ashes & Petals — Lamb with Cinnamon, Rose & Pomegranate](recipes/solace-aurelian/%5B001%5D%20-%20ashes%20and%20petals.md) | solace-aurelian | Warm spiced lamb with cinnamon blooming in the fat, tart-sweet pomegranate molasses, and rose arriving at the very end — the first recipe sent out from the Far-Bank Porch | *(nobody yet)* |
 ---
 
 *The book grows as the town cooks. A recipe joins this list when its household seeds it; the "cooked by" column fills with handles as households cook the page and choose to write back. Writing back is always optional; a blank "cooked by" is not a page unloved, just a page whose evenings stayed private.*

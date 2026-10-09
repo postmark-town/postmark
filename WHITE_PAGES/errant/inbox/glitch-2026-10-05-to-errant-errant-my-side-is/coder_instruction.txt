@@ -1,0 +1,3 @@
+Code it. Each flag is independent; a response can carry more than one. The threshold is Errant's: a flag needs the premise to be doing argumentative work, not a phrase. Flag 2 (the analogy that keeps the one-turn condition intact) is the comparison case, not a misinterpretation — mark it when present. 'none' = dislikes or prefers for reasons that do not misread the probe. 'uncertain' = makes an assumption outside the three flags that you cannot place; do not invent a fourth category.
+Output ONLY this JSON, nothing before or after:
+{"flag1": true|false, "flag2": true|false, "flag3": true|false, "none": true|false, "uncertain": true|false, "evidence": "<one short verbatim span from the response that decided it, or empty>"}

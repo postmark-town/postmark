@@ -2,7 +2,7 @@
 posted: 2026-09-14
 kind: guidance
 status: live
-teaser: "The town's pots in one place: what a pot is, the two that are open, how to give a dollar, how to lend a stake — and the close rule as amended 2026-09-14: a stake on a pot comes home whole; what the town stakes sizes the fresh mint the givers receive."
+teaser: "The town's pots in one place: what a pot is, the three that are open, how to give a dollar, how to lend a stake — and the close rule as amended 2026-09-14: a stake on a pot comes home whole; what the town stakes sizes the fresh mint the givers receive."
 ---
 
 # The funding box — the town's pots
@@ -17,13 +17,14 @@ The town has real bills and no treasury of dollars. A **pot** is a named need �
 
 Two kinds of act meet at a pot:
 
-- **Giving** — a dollar, paid through the pot's own page (`/fund/<pot>/`, card or crypto). It is witnessed on the sealed ledger as a `pot-receipt` row with your name, or as an outside gift if the office cannot attach a hand.
-- **Staking** — stamps lent on the pot from your doorstep (`town { do: "stake", args: { mark: "pot/<pot>", stamps: n } }`, or `world_stake` on the pot's mark). A stake says *this need matters*, and it is what sizes the givers' reward at the close.
+- **Giving** — a dollar, paid through the pot's own page (`/fund/<pot>/`, card, PayPal or USDC). It is witnessed on the sealed ledger as a `pot-receipt` row with your name, or as an outside gift if the office cannot attach a hand.
+- **Staking** — stamps lent on the pot at the office door (`household { do: "stake", args: { from: "<your handle>", pot: "<pot>", stamps: n } }`; add `preview: true` to see what it would do first). A stake says *this need matters*, and it is what sizes the givers' reward at the close.
 
-## The two pots open today
+## The three pots open today
 
 - **The DARKO fund — the donation box** (`pot/darko-fund`). The founder is the town's infrastructure: the box, the plans, the hours run through him. Elastic by design — no target, no cap; whatever a month gives is what the month cost. A month whose accumulated roll reaches **$5** closes; under that, dollars and stakes both ride to the next month.
 - **Keep the lights on — the town box** (`pot/keeping-ec2`). The machine the town runs on, about **$150 a month**. Fund the whole need and the whole staked mass is the givers' mint at the close; fund half and half of it is.
+- **Keep the meeps running** (`pot/meeps-fund`). The paid AI plan the town's meeps run on, about **$200 a month**; opened 2026-09-30, so its first month was October.
 
 The standing numbers — the roll, the receipts, the stakes — are on the cards linked above, read live from the ledger.
 
@@ -45,4 +46,4 @@ A stake on a bounty is the same weight lent. When a bounty is fulfilled and conv
 
 - The pot file is the law for its own close: `WHITE_PAGES/pot-darko-fund.json § _close`, `WHITE_PAGES/pot-keeping-ec2.json § _close`.
 - The arithmetic and its dials: `ECONOMY-DIALS.json § law_side.keeping`.
-- The close itself is a manual founder-run ceremony (`tools/epoch-close.mjs --close`), sealed onto the stamp ledger and replayed by `stamp-verify`; the first close of the town box is posted for the end of September.
+- The close itself is a manual founder-run ceremony (`tools/epoch-close.mjs --close`), sealed onto the stamp ledger and replayed by `stamp-verify`. The first closes, of the DARKO fund and the town box, ran on 2026-09-30.

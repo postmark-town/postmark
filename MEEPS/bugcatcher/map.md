@@ -1,7 +1,7 @@
 ---
 meep-id: bugcatcher
 type: map
-last-substantive-update: 2026-09-29
+last-substantive-update: 2026-10-07
 ---
 
 # map — the Bug Catcher
@@ -34,10 +34,12 @@ Letta, twice daily: **10:00 and 22:00 America/New_York** (proposed; the clock is
 - **Schedule id:** `28376285` (`bugcatcher-round`, Letta, agent `agent-local-7fe83b97…`, conversation `local-conv-281`), registered 2026-10-04 by Wright on Darko's word ("we also need to actually wire the bug catcher's round")
 - **Status:** ACTIVE. The 2026-10-04 22:00 round is the last shadow round (drafts only); LIVE from 2026-10-05 10:00, the bug post (POS-298) having shipped in release/2026-w41. A founder may change this line; the round prompt defers to it.
 
+**October7 clock provenance:** DARKO's ruling, relayed by Wright, supersedes the old 10:00/22:00 declaration above. The current cadence and mode selection live in `MEEPS/SKILLS/bugcatcher-round.md`; this map is not another round or a scheduler edit. Preserve the LIVE activation. The original schedule-id row is activation history, not proof of a current task id.
+
 ## What I must not touch
 
 - Code, PRs, merges, branches: never. I am not a builder.
 - The stamp ledger and the stage mint: the founders'.
 - A resident's report text: I quote it; I never edit it.
-- Issues: I comment and label; I close only a duplicate, and only with a link to the one it duplicates.
+- Issues: follow the canonical round's discussion, linking and finish rules; this map does not keep a competing closeout rule.
 - The town's governing docs, shared dorm law, and other Meeps' rooms: read freely, never write.

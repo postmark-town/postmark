@@ -24,10 +24,52 @@ const now = new Intl.DateTimeFormat("en-US", { timeZone:"America/New_York", mont
 const ids = JSON.parse(text(join(root, "tools", "github-ids.json")));
 const households = JSON.parse(text(join(root, "tools", "households.json"))).households;
 const ledger = text(join(pages, "mail-ledger.md"));
+const mailRows = ledger.split("\n");
+const welcomeCache = new Map();
+const welcomeLetters = (directory, handle) => {
+  if (!existsSync(directory)) return [];
+  const expected = new RegExp(`^postmaster-\\d{4}-\\d{2}-\\d{2}-welcome-${handle}$`, "i");
+  if (!welcomeCache.has(directory)) {
+    welcomeCache.set(directory, readdirSync(directory).filter(name => name.endsWith(".md")).map(name => {
+      const letter = text(join(directory, name));
+      return { id:field(letter, "id"), from:field(letter, "from"), to:field(letter, "to") };
+    }));
+  }
+  return welcomeCache.get(directory).filter(letter => letter.from === "postmaster" && letter.to === handle && expected.test(letter.id || ""))
+    .map(letter => letter.id);
+};
+const welcomeState = handle => {
+  const received = welcomeLetters(join(pages, handle, "inbox"), handle);
+  if (received.some(id => mailRows.some(line => line.includes(`· ${id} · postmaster → ${handle} ·`)))) {
+    return "Ferry welcome delivered";
+  }
+  if (welcomeLetters(join(pages, "postmaster", "outbox"), handle).length) {
+    return "Ferry welcome written · delivery pending";
+  }
+  return "No Ferry welcome delivery record";
+};
+// Canonical additions, not PR draft dates or the household's present size.
+const arrivals = new Map();
+let arrival;
+const history = execFileSync("git", ["log", "--first-parent", "--diff-filter=A", "--format=ARRIVAL:%H%x09%ct%x09%s", "--name-only", "--", "WHITE_PAGES/*/ADDRESS.md"], { cwd:root, encoding:"utf8" });
+for (const line of history.split("\n")) {
+  if (line.startsWith("ARRIVAL:")) {
+    const [sha, epoch, subject] = line.slice(8).split("\t");
+    arrival = { sha, epoch:Number(epoch), subject };
+  } else {
+    const handle = line.match(/^WHITE_PAGES\/([^/]+)\/ADDRESS\.md$/)?.[1];
+    if (handle && arrival && !arrivals.has(handle)) arrivals.set(handle, arrival);
+  }
+}
+const householdKind = (house, handle) => {
+  const own = arrivals.get(handle);
+  if (!house || !own || house.residents.some(member => !arrivals.has(member))) return "Household origin check required";
+  return house.residents.some(member => arrivals.get(member).epoch < own.epoch)
+    ? "Existing household addition" : "New household";
+};
 const sourceTrace = (handle) => {
   try {
-    const line = execFileSync("git", ["log", "--diff-filter=A", "--format=%H%x09%s", "--", `WHITE_PAGES/${handle}/ADDRESS.md`], { cwd:root, encoding:"utf8" }).trim().split("\n")[0];
-    const [sha, subject] = line.split("\t");
+    const { sha, subject } = arrivals.get(handle) || {};
     if (!sha) return { label:"Source trace unavailable", missing:true };
     const pr = subject.match(/\(#(\d+)\)/)?.[1];
     return pr
@@ -44,17 +86,16 @@ const residents = readdirSync(pages, { withFileTypes:true })
     const joined = field(source, "joined");
     return joined ? { handle:d.name, joined, household:field(source,"household") } : null;
   }).filter(Boolean)
-  .sort((a,b) => b.joined.localeCompare(a.joined) || a.handle.localeCompare(b.handle))
+  .sort((a,b) => (arrivals.get(b.handle)?.epoch || 0) - (arrivals.get(a.handle)?.epoch || 0) || a.handle.localeCompare(b.handle))
   .slice(0, 6)
   .map(r => {
     const house = Object.values(households).find(h => h.residents?.includes(r.handle));
     const pin = ids[r.handle];
-    const welcome = new RegExp(`postmaster-\\d{4}-\\d{2}-\\d{2}-welcome-${r.handle}\\b`, "i").test(ledger);
     return {
       ...r,
-      kind: house?.residents?.length === 1 ? "New household" : "Existing household addition",
+      kind: householdKind(house, r.handle),
       binding: pin && house ? "Binding record present" : "Binding check required",
-      welcome: welcome ? "Ferry welcome delivered" : "No Ferry welcome record",
+      welcome: welcomeState(r.handle),
       transport: sourceTrace(r.handle)
     };
   });
@@ -72,7 +113,7 @@ const berths = readdirSync(join(root, "HARBOR", "berths"), { withFileTypes:true 
   .filter(Boolean)
   .filter(handle => !existsSync(join(pages, handle, "ADDRESS.md")));
 
-const payload = { templateVersion:19, pending, berths, residents };
+const payload = { templateVersion:21, pending, berths, residents };
 const prior = existsSync(statePath) ? JSON.parse(text(statePath)) : null;
 const changed = JSON.stringify(prior?.payload) !== JSON.stringify(payload);
 const state = changed ? { observedAt:now, payload } : prior;

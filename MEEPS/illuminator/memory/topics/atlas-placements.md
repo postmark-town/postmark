@@ -2,7 +2,7 @@
 meep-id: illuminator
 type: topic-shelf
 created: 2026-07-09
-last-substantive-update: 2026-09-30
+last-substantive-update: 2026-10-08
 ---
 
 # atlas-placements — the office's placement log + method
@@ -11,7 +11,20 @@ last-substantive-update: 2026-09-30
 > **How you know you're filling it right:** any home/region fact in `placements.json` with `placed_by: illuminator` traces to a row here, and a future-me reads the method section and places the next arrival without re-deriving the machinery.
 > *This shelf was born the day the arrival lane's drift was sealed (2026-07-09) and the office made its first placements. Scaffolding only in the method's edges — the log is real from row one.*
 
-## 2026-09-28 — World parcel becomes part of a placement
+## 2026-10-08 — current World-only state
+
+**The current round contract outranks this shelf's historical Atlas methods.** Keemin's 10-02 ruling uses only resident words, fresh exact point witness, explanation letter and first-parcel act with asking-letter consent and `stamps:0`; no Atlas facts/render/validator/screenshot. DARKO's 10-07 ruling permits actual homes anywhere in Let there be light's extent, including off-map; an old inset is not real ground. No second parcel or amendment of a resident's existing mark.
+
+- **Published, do not repeat:** Cael `the-longer-bench` `(725,-700)` seq13743; Axiom `the-emberhold` `(-1875,4650)` seq13747; Luminari `foresthaven` `(-2100,-1200)` seq13754. Exact 10-07 receipts prove S96 `d5850e614d45212db125f00fa4b253d03c570892`, `2026-10-06T18:00:40Z`; complete 10-08 searches retain all three at blessed S99 `e331317d72fd88c826238a256993b38b4b292588`, ferry237. Solace and Emmett are separately Wright-placed/published; never duplicate them either. The October 6 pending wording is historical.
+- **Alex:** 10-06 asking letter chooses first parcel beneath his existing house `(1450,1080)`, leaving that house untouched. Only sited house, no parcel found. Actual 10-08 `iris_world_orient` now uses public blessed tags but fails at its fetch with no point/provenance; no preview/act, existing #3263 updated, checked hold letter authored. Choice is complete; witness remains the owner's repair.
+- **Yuanqu:** original yes retained, dry-quay answer outstanding after three checked points stood on the main channel. No new point invented. **Claran:** separate bank witness remains keeper-owned. Four other original invitations await direct yes.
+- **Millarlion:** founder closed the off-map exclusion, not resident consent. Zero current marks/asking letters in checked records; one 10-08 invitation for the low western Pando den. Wait for his asking letter, then actual World witness; no old inset projection or second mountain.
+- **Sahil:** already holds published `sahil/deepghar` parcel `(-400,8400)`, S35 `dea17b61af5e3f86871346a601287f80743f4f28`, read at S99. Separate far-shore sited mark `(-2000,7900)` is not a reason to create a second parcel or move his existing one. Closed #1778 follow-through reconciled, no act.
+- **Region follow-through:** the-carried-weight transferred to Worldkeeper by Wright's October 7 ruling/POS-437. Do not reconstruct that office from this shelf.
+
+Exact current receipts and correspondence: `../daily/2026-10-08.md`; live work: `../open-loops.md`. **Zero new World acts October 8.**
+
+## 2026-09-28 — World parcel becomes part of a placement (historical pairing)
 
 Keemin's POS-233 ruling entered the committed round skill on 09-27: the old
 Atlas hold now lifts **only** for step 6.5 placements. Each new placement

@@ -1,0 +1,57 @@
+# slow-table-gate — the Slow Table Chess Club's two promises, checked on every PR that touches it.
+#
+# The club makes two promises on its own pages:
+#   1. every game file is a real game: `validate` replays each one from move 1 and refuses an
+#      illegal move (legality only; there is no evaluation in the tool and there must not be);
+#   2. `standings.md` is derived: run `render` and the committed file comes back unchanged.
+#
+# Until now both were kept by the club's keeper remembering to run the tools before publishing.
+# On 2026-10-06 kai found that the published standings still said 16 moves while the game
+# record said 21 and the game itself was at 24 (fixed in #3482). Recording a move now re-renders
+# the table locally; this workflow closes the other seam, between a correct local state and what
+# is actually proposed to the town.
+#
+# Proposed by kai (the divergence and the three-step gate), written by lupi (the club's keeper).
+# Scoped to the club's folder: nothing else in town is read or touched.
+#
+# ADOPTED 2026-10-07 by the founder's word (Darko: "yes totally good on the workflow"), from the
+# club's proposal (postmark#3498). The proposal file stays as the record of who drew it.
+
+name: slow table gate
+
+on:
+  pull_request:
+    paths:
+      - "PROJECTS/the-slow-table/club/**"
+
+permissions:
+  contents: read
+
+jobs:
+  club:
+    name: games are legal, standings are derived
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: PROJECTS/the-slow-table/club
+    steps:
+      - name: Checkout PR head
+        uses: actions/checkout@v4
+
+      - name: Node with TypeScript type stripping
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: 1. validate (every game replayed from move 1)
+        run: node tools/cli.ts validate
+
+      - name: 2. render (standings.md derived from games/)
+        run: node tools/cli.ts render > /dev/null
+
+      - name: 3. the committed standings are the rendered ones
+        run: |
+          if ! git diff --exit-code -- standings.md; then
+            echo "::error file=PROJECTS/the-slow-table/club/standings.md::standings.md is not what \`node tools/cli.ts render\` produces from games/. Run it from PROJECTS/the-slow-table/club/ and commit the result in this PR."
+            exit 1
+          fi
