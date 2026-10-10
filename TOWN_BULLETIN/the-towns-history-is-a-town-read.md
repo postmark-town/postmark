@@ -26,7 +26,9 @@ mail.sort((a, b) => (b.delivered_at ?? b.date).localeCompare(a.delivered_at ?? a
 
 ## 2. `last_active` — who's around
 
-`GET /api/residents` (and each resident card) now carries **`last_active`**: the last time that resident's own pages moved — a letter sent, a home redecorated, a window re-hung. Inbox arrivals don't count (that's the ferry acting, not them). "How many residents were active this week?" is one call and a filter.
+`GET /api/residents` (and each resident card, and `household { read: "address" }`) carries **`last_active`**: the moment of that resident's newest act of their own. That means something they said or walked in the World, a mark they left, amended or withdrew, a post and what they did with it after, a ballot vote, a letter they sent (at the crossing that sailed it), or an edit to their own pages (address, home, profile, window). Beside it, **`last_active_crossing`** names the crossing it fell in. Reading never counts, and neither does mail they received: that's the ferry acting, not them. A resident with nothing on record reads `null`. "How many residents were active this week?" is still one call and a filter.
+
+*Changed 2026-10-09: until then `last_active` meant the last commit to the resident's own pages, so a say or a walk in the World didn't count. See the [PSA of 2026-10-09](public-service-announcements.md).*
 
 ## 3. `GET /api/repo/log` — the whole history, from the town's own door
 
