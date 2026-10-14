@@ -13,6 +13,11 @@ A founder reads the drafts. That comparison is how the round earns its writes.
 
 From your own clone, pull (`git pull --ff-only`) and read your latest daily's **Where I left off**, including the last check, pending letters/questions, and payment checkpoints. Do the thin check in step 1 before a full `/wake-meep bugcatcher` or any room-tending. A failed read is an unknown queue, not an empty one.
 
+If the pull refuses because your own unpublished room commits diverged from moving
+main, run `bugcatcher-ops.mjs publish` (step 5) before anything else. It works with
+uncommitted room edits in place and never touches them. Never reset them away or
+repeat already accepted office acts to rebuild a checkpoint.
+
 ## 1. Take in the queue
 
 **One thin freshness check opens every wake:** new bug posts, new relevant issues or comments across the three repositories named below, new inbox letters, or new `for: post:` MINT lines since your last recorded check. If there is nothing new and no unfinished work due in this mode, **end the wake writing nothing: no daily, no commit, no room-tend or routine Discord receipt.** At 06:00/18:00, pending letters from an interim wake count as work even if no new input arrived since then. On the first check, inspect the existing queue rather than inventing an empty checkpoint.
@@ -127,7 +132,35 @@ Until the public **How to help build Postmark** page exists, this founder-ruled 
 - **The handoff:** sizes proposed, diagnoses to credit, anything that needs a founder, and the id of any private vulnerability report you filed (GHSA-…), never its contents.
 - **Where I left off:** last check, unfinished questions/letters, exact last payment line lettered, separately notified issue lines and their comment ids, and any partially completed payment batch. Carry pending work across dates.
 
-Commit it to your clone with your own byline, and push.
+Commit ready own-room records with your own byline, staging explicit paths only.
+Use your own `bugcatcher-ops.mjs` adapter for every Git command below; keep its
+App identity, committer checks, room-only hooks and normal `origin main` destination.
+Unfinished or unrelated drafts stay preserved, not swept into a closeout commit.
+
+**Publish with one command:** `node G:/Postmark/letta-meep-migration/bugcatcher/bugcatcher-ops.mjs publish`.
+It fetches `origin`, checks every outgoing commit (your own author and committer,
+`MEEPS/bugcatcher/` paths only, never `memory/raw/`), and HOLDs if the incoming
+commits touch any path you also hold: committed, edited, or untracked. If main
+has moved, it merges upstream FIRST in place, so your checkpoint keeps its sha and
+your uncommitted edits keep their exact bytes. Then it pushes through your hooks.
+If main moves again before the push lands, it retries up to 3 more times, then HOLDs.
+It prints one JSON receipt: `published`, `outgoing`, `merges`, `head`, `remote`,
+`retries`, `working_files_unchanged`, and on a HOLD, `stage` and `hold`.
+
+Record the receipt's head, remote and retries in **Where I left off**. A HOLD keeps
+everything: your commits, any merge it already made, and your uncommitted work.
+The next `publish` carries them. Report the receipt's `stage` and `hold` exactly.
+**One rule for a HOLD:** a `fetch`, `push` or `verify` HOLD (the network, or main
+still moving after 3 retries) is retried by the next round's ordinary `publish`;
+every other HOLD (`preflight`, `check`, `overlap`, `merge`) goes to Wright with the
+receipt. A staged but uncommitted index is a `preflight` HOLD: finish or unstage
+that closeout first. `remote_moved_after_push: true` is a success: your head is on
+main and someone published after you.
+
+Never run your own fetch/rebase/merge/push sequence to publish, never resolve an
+overlap yourself, and never force, reset, stash, autostash, skip hooks (`--no-verify`,
+`commit -n`) or amend.
+Publishing never repeats accepted bug acts, issue notices, letters or payments.
 
 ## Never
 

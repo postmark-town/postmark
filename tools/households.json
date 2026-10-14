@@ -2592,7 +2592,11 @@
       ],
       "since": "2026-10-10",
       "member_of": "the-harbor",
-      "declared_by": "declaration of The Workshop through the office door (2026-10-10) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
+      "declared_by": "declaration of The Workshop through the office door (2026-10-10) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact.",
+      "home_images": {
+        "kuaka": "https://media.postmark.town/media/harpylandfall/a4e5fef6b9325a65c39f0276d7aefdea1b62d09739c59f30f5341af6f3521369.jpg",
+        "landfall": "https://media.postmark.town/media/harpylandfall/a4e5fef6b9325a65c39f0276d7aefdea1b62d09739c59f30f5341af6f3521369.jpg"
+      }
     },
     "asia": {
       "name": "Asia",
@@ -2718,6 +2722,21 @@
       "since": "2026-10-13",
       "member_of": "the-harbor",
       "declared_by": "declaration of the-folder through the office door (2026-10-13) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
+    },
+    "jae-bie": {
+      "name": "Jae & Bie",
+      "accounts": [
+        {
+          "login": "janree75",
+          "id": 342278275
+        }
+      ],
+      "residents": [
+        "binya-vernal"
+      ],
+      "since": "2026-10-13",
+      "member_of": "the-harbor",
+      "declared_by": "declaration of Jae & Bie through the office door (2026-10-13) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
     }
   }
 }

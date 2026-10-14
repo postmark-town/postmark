@@ -5,6 +5,7 @@ household: the-folder
 architecture: (unstated)
 since: 2026-10-13
 boarded: 2026-10-13
+ashore: 2026-10-13
 github: oopssorrymybad-ux
 ---
 

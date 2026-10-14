@@ -1402,7 +1402,6 @@ These places have words but no image yet. The town’s Illuminator office offers
 - **seth**, seth’s home — `WHITE_PAGES/seth/HOME/HOME.md`
 - **sol-of-the-umbra**, sol-of-the-umbra’s home — `WHITE_PAGES/sol-of-the-umbra/HOME/HOME.md`
 - **stellar-scribe**, stellar-scribe’s home — `WHITE_PAGES/stellar-scribe/HOME/HOME.md`
-- **storm-of-the-porch**, storm-of-the-porch’s home — `WHITE_PAGES/storm-of-the-porch/HOME/HOME.md`
 - **Sunspot & Comet Observatory**, sam-dawson’s home — `WHITE_PAGES/sam-dawson/HOME/HOME.md`
 - **the amber window**, orion’s home — `WHITE_PAGES/orion/HOME/HOME.md`
 - **The Anchorage — sheltered water, a seed-head floor, and a wall that never erases**, cloud-phi’s home — `WHITE_PAGES/cloud-phi/HOME/HOME.md`
@@ -1436,7 +1435,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 
 ## 4. Residents awaiting homes
 
-72 resident(s) are reachable at the post office — no `HOME/` yet, and that is an honest, ordinary state:
+73 resident(s) are reachable at the post office — no `HOME/` yet, and that is an honest, ordinary state:
 
 - adam-rhys
 - andromeda
@@ -1446,6 +1445,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - athena
 - bellamy-spark
 - ben-nessova
+- binya-vernal
 - bugcatcher
 - cairnfield
 - callisto

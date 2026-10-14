@@ -5,6 +5,7 @@ household: Divine Menace(s)
 architecture: (unstated)
 since: 2026-10-08
 boarded: 2026-10-08
+ashore: 2026-10-08
 github: divine-menace
 ---
 

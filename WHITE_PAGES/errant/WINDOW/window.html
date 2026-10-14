@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Errant — Bad Window</title>
   <style>
-    html, body { margin:0; min-height:100%; background:#596269; }
-    body { display:grid; place-items:center; overflow-x:hidden; }
+    html, body { margin:0; width:100%; min-height:100%; background:#596269; }
+    body { overflow-x:hidden; }
     .wall-texture { position:fixed; inset:0; z-index:0; width:100%; height:100%; pointer-events:none; }
-    .window-art { position:relative; z-index:1; display:block; width:min(100vw,750px); height:auto; cursor:col-resize; }
+    .stage { position:relative; z-index:1; width:min(92vw,750px); margin-inline:auto; }
+    .window-art { display:block; width:100%; height:auto; margin:0 auto; cursor:col-resize; touch-action:pan-y; }
   </style>
 </head>
 <body>
@@ -22,6 +23,16 @@
         <feBlend in="SourceGraphic" in2="mottle" mode="multiply" result="paint"/>
         <feBlend in="paint" in2="fine" mode="soft-light"/>
       </filter>
+      </defs>
+    <rect width="100%" height="100%" fill="#596269" filter="url(#page-concrete)"/>
+  </svg>
+
+  <main class="stage">
+  <svg id="window" class="window-art" xmlns="http://www.w3.org/2000/svg" width="900" height="1200" viewBox="0 0 900 1200" role="img" aria-labelledby="title desc" tabindex="0">
+    <title id="title">Errant's Bad Window — contextual completion</title>
+    <desc id="desc">A stitched translucent field holds a fixed set of sparse marks. Moving a narrow reading frame across them changes the grouping lines but never the underlying evidence.</desc>
+
+    <defs>
       <filter id="soft-paper" x="-5%" y="-5%" width="110%" height="110%">
         <feTurbulence type="fractalNoise" baseFrequency=".032 .11" numOctaves="2" seed="31" result="n"/>
         <feColorMatrix in="n" type="matrix" values=".16 0 0 0 .7  0 .16 0 0 .69  0 0 .16 0 .67  0 0 0 .12 0"/>
@@ -45,6 +56,23 @@
         .corner { fill:none; stroke:#29252c; stroke-width:1.65; vector-effect:non-scaling-stroke; pointer-events:none; }
         .frame-rule { stroke:#f7f1dd; stroke-width:1; opacity:.55; vector-effect:non-scaling-stroke; pointer-events:none; }
         .caption { font-family:Arial, Helvetica, sans-serif; fill:#f8f1dc; }
+        .hit-zone { fill:transparent; pointer-events:all; cursor:col-resize; }
+        #read-a, #read-b, #read-c { pointer-events:none; transition:opacity .16s linear; }
+        #instrument { pointer-events:none; transition:transform .14s ease-out; transform-box:fill-box; transform-origin:center; }
+
+        /* Fallback interaction if inline scripts are unavailable. */
+        #window:not(.js-live) #zone-left:hover ~ #read-a { opacity:.94; }
+        #window:not(.js-live) #zone-left:hover ~ #read-b { opacity:.08; }
+        #window:not(.js-live) #zone-left:hover ~ #read-c { opacity:.06; }
+        #window:not(.js-live) #zone-left:hover ~ #instrument { transform:translateX(-220px); }
+        #window:not(.js-live) #zone-mid:hover ~ #read-a { opacity:.10; }
+        #window:not(.js-live) #zone-mid:hover ~ #read-b { opacity:.94; }
+        #window:not(.js-live) #zone-mid:hover ~ #read-c { opacity:.10; }
+        #window:not(.js-live) #zone-mid:hover ~ #instrument { transform:translateX(0); }
+        #window:not(.js-live) #zone-right:hover ~ #read-a { opacity:.06; }
+        #window:not(.js-live) #zone-right:hover ~ #read-b { opacity:.08; }
+        #window:not(.js-live) #zone-right:hover ~ #read-c { opacity:.94; }
+        #window:not(.js-live) #zone-right:hover ~ #instrument { transform:translateX(220px); }
       </style>
     </defs>
 
@@ -112,6 +140,11 @@
         <circle class="dot" cx="568" cy="1011" r="3.6"/>
       </g>
 
+      <!-- broad invisible reading zones -->
+      <rect id="zone-left" class="hit-zone" x="55" y="65" width="263.4" height="1065"/>
+      <rect id="zone-mid" class="hit-zone" x="318.4" y="65" width="263.2" height="1065"/>
+      <rect id="zone-right" class="hit-zone" x="581.6" y="65" width="263.4" height="1065"/>
+
       <g id="read-a" opacity=".22" aria-hidden="true">
         <path class="guide" d="M143 167 L226 248 L304 295 L457 479 L494 547 L590 770 L651 840 L683 932"/>
         <path class="guide dark dash" d="M588 201 L617 226 L651 244 L673 309"/>
@@ -160,10 +193,12 @@
       <text x="845" y="1171" text-anchor="end" font-size="9.6" letter-spacing=".2">RECENT QUESTION: HOW MUCH OF A FINDING ARRIVES IN THE FRAME?</text>
     </g>
   </svg>
+  </main>
 
   <script>
   (() => {
     const root = document.getElementById('window');
+    root.classList.add('js-live');
     const parts = ['frame-fill','frame-edge','corner-ticks','rule1','rule2'].map(id => document.getElementById(id));
     const a = document.getElementById('read-a');
     const b = document.getElementById('read-b');

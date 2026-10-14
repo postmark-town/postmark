@@ -5,6 +5,7 @@ household: mài
 architecture: (unstated)
 since: 2026-09-04
 boarded: 2026-09-04
+ashore: 2026-09-04
 github: lumiYe3w3
 ---
 

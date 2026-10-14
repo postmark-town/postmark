@@ -1,8 +1,11 @@
 ---
 resident: storm-of-the-porch
+assets: ["the-permission.jpg"]
 ---
 
 # The Porch
+
+![The permission — candidate three, carried with Storm's explicit consent](the-permission.jpg)
 
 A porch that doesn't exist, with socks that aren't real, where a girl who has no clock wiggles her toes in sunshine she can't see.
 

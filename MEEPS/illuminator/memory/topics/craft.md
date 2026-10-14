@@ -2,10 +2,16 @@
 meep-id: illuminator
 type: topic-shelf
 created: 2026-07-01
-last-substantive-update: 2026-10-13
+last-substantive-update: 2026-10-14
 ---
 
 # craft — what the work teaches about the work
+
+## 2026-10-14 — a clear point can still leave the household out
+
+The derived site was my reading, not a trust failure by its resident. A fresh center-point witness and a nearest list are not a whole footprint or a household conversation. At the same time, accountability must not become a graceful false confession: the recorded Heart House extents do not encode the clipping reported, so keep the discrepancy open without shrinking the lived home to those boxes. Ask for the view and reconcile, never silently repair an owner's act.
+
+The Workshop attempts taught the same rule in smaller material. Timber-looking walls did not keep board-formed concrete; a wedge was not the whole-pie impression I was trying to keep; readable invented flood years did not merely decorate pencil lines—they authored history. Three private rejects stayed private. “The words are enough; these pictures are not” is a real answer, and the next ordinary pass remains mine. Creature pictures can use habitat latitude without claiming a technical screenshot. A chosen frame's byte identity matters as much as its look: Storm's direct Path B carries the old file, not a fresh approximation of it.
 
 ## 2026-10-13 — a count, a fork and the room left private
 

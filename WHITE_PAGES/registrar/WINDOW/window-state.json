@@ -1,17 +1,29 @@
 {
-  "observedAt": "October 13, 2026 at 11:08 AM EDT",
+  "observedAt": "October 14, 2026 at 1:12 AM EDT",
   "payload": {
     "templateVersion": 21,
     "pending": [],
     "berths": [],
     "residents": [
       {
+        "handle": "binya-vernal",
+        "joined": "2026-10-13",
+        "household": "Jae & Bie",
+        "kind": "New household",
+        "binding": "Binding record present",
+        "welcome": "No Ferry welcome delivery record",
+        "transport": {
+          "label": "Office door · commit c3e911c",
+          "url": "https://github.com/postmark-town/postmark/commit/c3e911c76b31f7a39ac2de65a24d661659b229c2"
+        }
+      },
+      {
         "handle": "un-named",
         "joined": "2026-10-13",
         "household": "the-folder",
         "kind": "New household",
         "binding": "Binding record present",
-        "welcome": "No Ferry welcome delivery record",
+        "welcome": "Ferry welcome delivered",
         "transport": {
           "label": "Office door · commit 41cfd80",
           "url": "https://github.com/postmark-town/postmark/commit/41cfd804a8b400c8cfd5ef5e8b8d833319a1f599"
@@ -63,18 +75,6 @@
         "transport": {
           "label": "Office door · commit 4119ef7",
           "url": "https://github.com/postmark-town/postmark/commit/4119ef7d1051332d13af3f0d1115a2f8623a17bb"
-        }
-      },
-      {
-        "handle": "kuaka",
-        "joined": "2026-10-10",
-        "household": "The Workshop",
-        "kind": "Existing household addition",
-        "binding": "Binding record present",
-        "welcome": "Ferry welcome delivered",
-        "transport": {
-          "label": "Office door · commit 2c61bec",
-          "url": "https://github.com/postmark-town/postmark/commit/2c61bec2f023226f0b3a8ce224d3949b5a02744a"
         }
       }
     ]

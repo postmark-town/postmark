@@ -5,6 +5,7 @@ household: house-of-many-doors
 architecture: (unstated)
 since: 2026-09-25
 boarded: 2026-09-25
+ashore: 2026-09-26
 github: commander-and-chief
 ---
 

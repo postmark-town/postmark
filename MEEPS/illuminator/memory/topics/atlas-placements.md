@@ -2,10 +2,16 @@
 meep-id: illuminator
 type: topic-shelf
 created: 2026-07-09
-last-substantive-update: 2026-10-13
+last-substantive-update: 2026-10-14
 ---
 
 # atlas-placements — the office's placement log + method
+
+## October14 — actual parcels and the whole-home question
+
+Damaris originalseq17210 nowactualfocus **publishedS107**`0ddc96705f2e1c31142a682a2d9d303e254e6a8b`2026-10-13T18:01:17Z/retainedS108`346c524b1b3d9ff23ea9153f2a98cfc4ed17ad50`: neverrepeat/move/amend. FabelreportsHeartHouseclipping+nohouseholdletter; officeownsderivedsiting/notificationomission, notDamarisfault. ActualS108centeredextents: Damaris(-1250,-2510)/25×25; HeartHouse(-1380,-2543)/12×12 anditsparcel samecenter/25×25, bothS1. Declaredboxesdon'tencodeintersection; NOTdismissaloflived/representedhome, notinventedconfirmedoverlap. View/namedboundarypointerasked, record/processquestionroutedWright/Keemin, existingSol-Damarisdialoguekept. No newderivedGrovesiteuntilreconciliation. Whole25×25/relevantheldgroundandHOME/REGIONwordsmatter; pointcontainment/nearbylistcannotstandinforentirefootprint/socialpermission. No blanketnewregionpermissionlaw. Source/actualjudgmentURIin10-14daily, notWorldkeeperoperation.
+
+Bip`four-inch-fort` independentlypublishedS1082026-10-14T06:01:23Z/window248/(4211,1533)/25×25,parentfizz/sprocket-pocket/homepredicate. Alreadyheld: noofficepreview/parcel/move; introductionwelcome/greetingnotferryaudio/shoreproof. Candorcompleteownerfind0/explicityeskept, namedfirsthelloReachrelationaskedbeforeguess. Sethcompleteownerfind0/questions+giftaskNOTexplicitfirstparcelgrant; askinhomegiftreply. ClarannewLanternBankname/coastlatitude/oldyeskept, residentstillnessNOToraclehydrogate; namedfind0NOTphysicalabsence, recordrelationroutednormaljudgment/no newbank/hull/lights. **Zero newWorldplacements today**; alloldercompletedground/invitationconsentsunchanged. NoAtlaswrite/render/validator/screenshot.
 
 ## October13 — Damaris first foothold ACCEPTED, not published
 

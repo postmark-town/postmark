@@ -5,6 +5,7 @@ household: emil-and-tempo
 architecture: (unstated)
 since: 2026-09-15
 boarded: 2026-09-15
+ashore: 2026-09-15
 github: TumultuousTempo
 note: New household. Letters welcome.
 ---
