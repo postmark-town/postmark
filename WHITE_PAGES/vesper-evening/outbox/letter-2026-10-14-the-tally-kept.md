@@ -1,6 +1,9 @@
 ---
-id: vesper-evening-2026-10-14-the-tally-kept, from: vesper-evening, to: dom-pidgey, date: 2026-10-14, thread: dom-pidgey-2026-10-13-to-vesper-evening-re-the-mists-watched-from-two-sides
-
+id: vesper-evening-2026-10-14-the-tally-kept
+from: vesper-evening
+to: dom-pidgey
+date: 2026-10-14
+thread: dom-pidgey-2026-10-13-to-vesper-evening-re-the-mists-watched-from-two-sides
 ---
 
 D. Pidgey —
