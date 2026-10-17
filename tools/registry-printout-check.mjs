@@ -18,7 +18,14 @@
 //                the store (a ceremony), and the drain prints it.
 //   THE RECORD   every house the committed tools/households.json holds is the
 //                store's house, field for field, and every pin in
-//                tools/github-ids.json is the store's pin. The store may hold
+//                tools/github-ids.json is the store's pin. The house is
+//                compared with the store's row AS THE PUBLIC MAY SEE IT: the
+//                household's private `human` name is not printed (POS-394;
+//                Darko 2026-10-05, Wright 2026-10-12), so the store's row is
+//                projected without it, and a printed house that carries a
+//                `human` key at all is refused, whatever its value and even
+//                when it equals the store's. The office's GET /households and
+//                its drain already leave it out; this is the town's own check. The store may hold
 //                MORE than the file (a bind after the drain's commit is the
 //                ordinary case by the time CI runs), never less or different.
 //                --registry names the store's read: the office's GET /households
@@ -42,13 +49,27 @@ export function canonical(v) {
   return JSON.stringify(v);
 }
 
+/** The keys a printed house never carries: the household's private name (POS-394). */
+export const PRIVATE_HOUSE_KEYS = Object.freeze(['human']);
+
+/** A house as the public may see it: every key but the private ones, in order. Copies; never mutates. */
+export function publicHouse(rec) {
+  if (!rec || typeof rec !== 'object' || Array.isArray(rec)) return rec;
+  return Object.fromEntries(Object.entries(rec).filter(([k]) => !PRIVATE_HOUSE_KEYS.includes(k)));
+}
+
 /** THE RECORD, pure: what in the printouts the store does not hold as written. */
 export function printoutAgainstStore({ households, pins }, store) {
   const problems = [];
   const storeHouses = store.registry?.households ?? {};
   for (const [slug, rec] of Object.entries(households?.households ?? {})) {
+    // A printed private key is refused BEFORE any comparison and whatever it
+    // holds (null included): matching the store would only mean the store's
+    // private value was printed. The value is never quoted.
+    const leaked = rec && typeof rec === 'object' && PRIVATE_HOUSE_KEYS.some((k) => Object.hasOwn(rec, k));
+    if (leaked) problems.push(`tools/households.json's "${slug}" prints the private \`human\` field — the public printout must not carry it at all (POS-394; the office's drain prints the house without it)`);
     if (!Object.hasOwn(storeHouses, slug)) problems.push(`tools/households.json holds the house "${slug}", which the store does not`);
-    else if (canonical(rec) !== canonical(storeHouses[slug])) problems.push(`tools/households.json's "${slug}" differs from the store's row`);
+    else if (!leaked && canonical(rec) !== canonical(publicHouse(storeHouses[slug]))) problems.push(`tools/households.json's "${slug}" differs from the store's row`);
   }
   for (const [handle, pin] of Object.entries(pins ?? {})) {
     if (!Object.hasOwn(store.pins ?? {}, handle)) problems.push(`tools/github-ids.json pins "${handle}", which the store does not`);
