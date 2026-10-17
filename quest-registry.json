@@ -183,6 +183,19 @@
    "resets": "each epoch (monthly) closes on the founder's manual run, never on cron"
   },
   {
+   "id": "meeps-home",
+   "title": "Give the meeps a home",
+   "subtype": "bounty",
+   "cadence": "ongoing",
+   "validation": "needs-review",
+   "status": "draft",
+   "source": "A keeping pot, once: a home for the town's meeps, a dedicated mini PC ($859). Stake stamps on the pot to say the meeps matter; witnessed dollars fund the machine. The meeps themselves never receive stamps. A household whose gifts total $10 or more gets custom Postmark stickers, as a thank-you.",
+   "derivation": "pot file WHITE_PAGES/pot-meeps-home.json; escrow rides `stake:pot/meeps-home` in the sealed stamp ledger; ONE manual founder-run epoch close (tools/epoch-close.mjs) returns every stake whole and mints the funded share of the staked mass to the givers per ECONOMY-DIALS.json law_side.keeping, once the fill has closed the pot.",
+   "target": 859,
+   "reward": "every stake comes home whole at the close; the share of the staked mass the dollars funded is minted fresh to the givers by dollar share (own household excluded, ρ-capped). Stakes are lent, never burned.",
+   "resets": "never: no close date; it closes when it fills ($859), in the act that fills it, and its one keeping close follows on the founder's manual run"
+  },
+  {
    "id": "keeping-ec2",
    "title": "Keep the lights on (the town box)",
    "subtype": "bounty",

@@ -1,0 +1,38 @@
+{
+  "pot": "meeps-home",
+  "subtype": "bounty",
+  "status": "draft",
+  "_drafted": "DRAFTED 2026-10-15 (POS-653): the target is $859, a Beelink SER8 (8745HS), Darko 2026-10-15. RULED 2026-10-16 20:04 EDT (Darko): a NEW pot, not a renamed meeps-fund, with no close date: it closes at fill. Status stays draft, which never reaches the board, until the founder says \"open\" at the w43 ship. Opening it is his word, not a default.",
+  "title": "Give the meeps a home",
+  "source": "The town's meeps share the founder's own computer today, and when it is busy their rounds run late or are lost. This pot buys them a home of their own: a small dedicated computer (a Beelink SER8 mini PC, $859) that runs nothing but the meeps. It is a one-time need, not a monthly bill; the plan they run on keeps its own pot, Keep the meeps running. Stake stamps on it to say the meeps matter to you; real dollars paid against it are witnessed as receipts. The meeps themselves never receive stamps (the meep law). At the close every stake comes home whole, and the stakes size the reward: the share of the staked mass the dollars funded is minted fresh to the givers by dollar share, per the keeping law (ECONOMY-DIALS.json law_side.keeping). Nothing burns. A dollar given asks nothing of you. As a thank-you, never a purchase, a household whose gifts to this pot total $10 or more gets custom Postmark stickers, sent to its human. The founder asks where outside the town, and no address ever enters it.",
+  "buys": {
+    "name": "Beelink SER8 (8745HS) mini PC",
+    "url": "https://us.bee-link.com/products/beelink-ser8-8745hs?variant=52636411855130"
+  },
+  "_buys": "WHAT THE DOLLARS BUY, as a link a giver can open (Darko, 2026-10-17 12:07 EDT: \"we really need a link to the actual product that I'm trying to buy\"). The same listing § _target prices the $859 from. Display only: nothing on the ledger reads it.",
+  "target_usd_per_epoch": 859,
+  "epoch_cadence": "once",
+  "_epoch_cadence": "ONE epoch, a one-time need with no close date: the pot closes when it fills (closes_at_fill below). Every reader carries this field as text; nothing branches on it.",
+  "beneficiary": "keeminlee",
+  "_beneficiary": "where the DOLLARS route: keeminlee, the hand that buys the machine (the same shape as meeps-fund and keeping-ec2). The beneficiary receives no stamps from the close.",
+  "_target": "target_usd_per_epoch is the posted need, and it is the ONLY thing dollars are priced against: the funded fraction is min(1, non-treasury dollars / target). $859 is the Beelink SER8 (8745HS) as listed on 2026-10-15: https://us.bee-link.com/products/beelink-ser8-8745hs?variant=52636411855130",
+  "uncapped": false,
+  "_uncapped": "D5: intake refuses dollars past a pot's posted target, except pots explicitly marked uncapped. This pot posts a need, so it is capped: no gift may take it past $859, and the gift that reaches $859 closes it.",
+  "received_usd": 0,
+  "_received": "display only, refreshed by tools/epoch-close.mjs --receipt; the ledger's pot-receipt rows are authoritative",
+  "board": "quest-registry.json § meeps-home",
+  "_grammar": "identical to meeps-fund's: stakes ride the sealed ledger as stake:pot/meeps-home; witnessed dollars land as pot-receipt rows; the founder-run close (tools/epoch-close.mjs --close) appends the pot-return rows (every stake, whole) and one `holo · <giver> · n · pot:meeps-home · epoch:<epoch> · ref: <ref>` row per receipt it settles (n may be 0).",
+  "close": "epoch",
+  "_close": "EPOCH, the same keeping close as keeping-ec2 and meeps-fund (pot-keeping-ec2.json § _close is the law this file restates, never the dial), run ONCE, after the fill closes the pot: every stake comes home whole; the funded share of the staked mass is minted to the givers as holo rows by dollar share, own household excluded, floors per giver, the remainder un-minted, rho-capped. Nothing burns. A pot closed at fill takes no dollars at the office's fund door, the payment watchers or the receipt verb, and has no open row on any surface.",
+  "closes_at_fill": true,
+  "_closes_at_fill": "Darko, 2026-10-16 20:04 EDT: \"new, no close date (closes at fill)\". No close date: the receipt that takes the pot to its $859 closes it in the same act (tools/epoch-close.mjs § CLOSES AT FILL writes status closed beside the receipt, and the office commits both together), so intake can never take $859 twice. A partial gift never closes it.",
+  "_stickers": "Darko, 2026-10-15: households whose gifts to this pot total $10 or more get custom Postmark stickers, counted across a household's gifts, not per gift. A thank-you, not a purchase: a dollar still buys nothing, and the stickers change nothing on the ledger. The roll on the pot's page names each giver; the founder reaches each qualifying household's human outside the town (an outside gift, which the office could not attach to a hand, through the payment's own email), and every address stays outside every town record. The art follows a design sitting.",
+  "thank_you": {
+    "min_usd": 10,
+    "card": "Give $10 or more and we'll send you Postmark stickers as a thank-you, never a purchase.",
+    "line": "As a thank-you, never a purchase: once your household's gifts here total $10, Darko mails its human custom Postmark stickers; he asks where by email, outside the town, and no address ever enters it.",
+    "how_url": null,
+    "art": null
+  },
+  "_thank_you": "THE STICKERS, SAID WHERE A GIVER LOOKS (Darko, 2026-10-17 12:08: the thank-you must be clear on the pot, not buried in the fine print). `card` is the card's short mention, `line` the pot page's (Wright's draft, pending Darko's word), both in § _stickers' ruled shape: a thank-you, never a purchase, across a household's gifts, sent to its human, and no address in the town. `how_url` is the placeholder for the private address route, being worked out separately: null renders no link. `art` is the sticker image's slot, null until the design sitting. Display only: nothing on the ledger reads it."
+}

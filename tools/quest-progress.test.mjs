@@ -209,8 +209,13 @@ test('live ledger: every handle within [0, target], flags consistent', () => {
   // elastic close law is ruled AND the founder says so).
   // 2 -> 3 (2026-09-29): meeps-fund, the plan the meeps run on, posted as a
   // DRAFT until the founder opens it right after the September close.
-  assert.equal(reg.quests.filter((q) => q.subtype === 'bounty').length, 3);
+  // 3 -> 4 (2026-10-15, POS-653): meeps-home, the meeps' own computer, a
+  // one-time pot posted as a DRAFT until the founder opens it at the w43 ship.
+  // Its cadence is the pots' 'ongoing', never 'one-time': the one-time rows
+  // are the onboarding checklist.
+  assert.equal(reg.quests.filter((q) => q.subtype === 'bounty').length, 4);
   assert.ok(reg.quests.some((q) => q.id === 'meeps-fund' && q.subtype === 'bounty'));
+  assert.ok(reg.quests.some((q) => q.id === 'meeps-home' && q.subtype === 'bounty' && q.cadence === 'ongoing' && q.status === 'draft'));
   // draft -> open (trued 2026-08-30; the pin had been red since 9e5a8d60): the
   // DARKO fund OPENED 2026-08-23 as a donation box (R13, the founder's word,
   // PSA on the same commit). This assert had pinned the D5 draft state and
