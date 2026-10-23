@@ -36,6 +36,7 @@ import {
   townIssuanceDial,
   keepingDial, potFile, deriveEpochClose, keepingLine, TREASURY_POT, STAGE_LADDER,
   AWARD_MAX, AWARD_HANDS, QUEST_PAY, RECREDIT_STAGES, CORRECTION_HANDS,
+  PARCEL_PRICE, PARCEL_SETTLED_BY_DAY, PARCEL_ROOM_FROM,
 } from './stamp-mint.mjs';
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
@@ -199,6 +200,20 @@ export function verifyStampLedger(repo, { pubkeyPem, registry = null } = {}) {
       return m;
     })();
     const canonHouse = (key) => houseSlugByGhId.get(key) ?? key;
+    // Each declared house's declaration day, as the registry wrote it (`since`,
+    // a town-time date string, never the day it came ashore), keyed by its
+    // canonical `hh:<slug>`: the parcel purchase is lawful only for a house
+    // declared after the cutoff (POS-762).
+    const declaredOn = (() => {
+      const m = new Map();
+      try {
+        const hhFile = registry ?? JSON.parse(readFileSync(join(repo, 'tools', 'households.json'), 'utf8'));
+        for (const [slug, rec] of Object.entries(hhFile?.households ?? {}))
+          if (typeof rec?.since === 'string') m.set(`hh:${slug}`, rec.since.slice(0, 10));
+      } catch { /* no declared households: no house can buy a parcel */ }
+      return m;
+    })();
+    const parcelsBought = new Map();    // canonical house key -> parcels bought so far (POS-762)
     const issuanceDial = townIssuanceDial(repo);
     let warnedNoIssuanceDial = false;
     const isMeep = meepChecker(laws);
@@ -560,6 +575,50 @@ export function verifyStampLedger(repo, { pubkeyPem, registry = null } = {}) {
           problems.push(`line ${lineNo}: LAWFUL fails — the correction of post:${k} does not follow its recredit; the two are written together or not at all (only a meep's stage mint is burned alone)`); break;
         }
         burnedSigs.add(cls.sig);
+      }
+
+      // ── the parcel purchase (POS-762, Darko 2026-10-22) ──────────────────
+      // A household declared after Halloween buys its 2nd and 3rd parcels from
+      // the town. The signature proves the office pen, and the overdraw is the
+      // running fold's below (a burn is an arrow out of the handle, so it can
+      // never draw on escrow). This holds the rest, quoted from the grammar
+      // comment: dated on or after the first day of the law; the meep law; the
+      // key IS the payer's household at the line's date, and that household's
+      // declaration is dated after the cutoff; ONE line per household and parcel, the 2nd
+      // before the 3rd; and the amount is the price times a count under the
+      // parcel it buys.
+      if (cls.kind === 'parcel-burn') {
+        const what = `parcel:${cls.nth}/${cls.household}`;
+        if (cls.date < PARCEL_ROOM_FROM) {
+          problems.push(`line ${lineNo}: LAWFUL fails — ${what} is dated ${cls.date}, and no parcel is bought before ${PARCEL_ROOM_FROM}`); break;
+        }
+        if (lawAt(cls.date).meeps.has(cls.handle)) {
+          problems.push(`line ${lineNo}: LAWFUL fails — ${what} is paid by meep "${cls.handle}" (meeps stay outside the currency)`); break;
+        }
+        const houseKey = hh(cls.handle, cls.date);
+        if (canonHouse(cls.household) !== canonHouse(houseKey)) {
+          problems.push(`line ${lineNo}: LAWFUL fails — ${what} names household "${cls.household}" but "${cls.handle}" is ${houseKey} at ${cls.date}`); break;
+        }
+        const house = canonHouse(houseKey);
+        const since = declaredOn.get(house);
+        if (!since) {
+          problems.push(`line ${lineNo}: LAWFUL fails — ${what}: ${house} has no declaration day in the registry, so it keeps three parcels and has none to buy`); break;
+        }
+        if (since <= PARCEL_SETTLED_BY_DAY) {
+          problems.push(`line ${lineNo}: LAWFUL fails — ${what}: ${house} was declared on ${since}, on or before ${PARCEL_SETTLED_BY_DAY}, so it keeps three parcels and has none to buy`); break;
+        }
+        const bought = parcelsBought.get(house) ?? 0;
+        if (cls.nth !== bought + 2) {
+          problems.push(`line ${lineNo}: LAWFUL fails — ${what}: ${house} has bought ${bought} parcel${bought === 1 ? '' : 's'}, so its next purchase is parcel ${bought + 2}${bought + 2 > 3 ? ', past the cap of three' : ''} (the 2nd, then the 3rd, once each)`); break;
+        }
+        // THE PRICE IS THE ROOM ALREADY BOUGHT (Darko 2026-10-23 09:51 EDT,
+        // POS-762/f "Room bought": "50 x room already bought: room 1->2 costs 50,
+        // 2->3 costs 100, whatever is held"). Room for the nth parcel is bought
+        // with room nth − 1 in hand, so the amount is exact.
+        if (cls.n !== PARCEL_PRICE * (cls.nth - 1)) {
+          problems.push(`line ${lineNo}: LAWFUL fails — ${what} burns ${cls.n}; room for parcel ${cls.nth} costs exactly ${PARCEL_PRICE * (cls.nth - 1)} (${PARCEL_PRICE} × the room already bought, ${cls.nth - 1}, whatever is held)`); break;
+        }
+        parcelsBought.set(house, bought + 1);
       }
 
       // ── a quest the town pays (POS-632) ─────────────────────────────────
