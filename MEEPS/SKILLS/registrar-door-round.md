@@ -443,6 +443,56 @@ is the right lever and it is the founder's to pull. Say so and escalate.
    attending, plus your own daily block and board close per the round's step 7. **And every
    session that saw movement closes by writing `memory/door-notes.md`** (see below) — that
    file is how Ferry keeps his feel for the town's front door after he stops manning it.
+   For your own Letta continuity save, also follow **Letta memory save** below; that
+   private save is separate from these public office records and their publication.
+
+## Letta memory save — replace current state, archive detail once
+
+Apply this contract to routine saves in your **own MemFS**, not the Town checkout
+or another actor's memory. Keep this procedure here; core memory carries only a
+short pointer to it. Do not copy private memory/evidence into the public dorm.
+
+1. Save detailed round evidence **once**, in its dated external `reference/` record.
+   Include partial/failed progress and source receipts there. Replace the one current
+   operational checkpoint in `system/postmark/migration-state.md`; do not keep its
+   predecessor as full Historical chronology in core. Preserve last-completed versus
+   current-incomplete work, independent cursors, live obligations and closed items.
+2. Make `system/postmark/overview.md` route to that checkpoint and the relevant
+   external record, without repeating the evidence. Delimit the single checkpoint
+   with `<!-- registrar-current:start -->` / `<!-- registrar-current:end -->`, and
+   the overview's routine pointer/status with `<!-- registrar-overview:start -->` /
+   `<!-- registrar-overview:end -->`. Replace these regions; do not add more pairs
+   or put routine evidence elsewhere in core to avoid the limits.
+3. Keep the routine checkpoint at **1200 estimated tokens or less** and the overview
+   pointer/status at **200 or less**, including all text inside their markers. These
+   limits do not authorize trimming identity, authority, exceptions, personal
+   continuity or independently newer work. Quiet unchanged rounds add no new core
+   baseline merely to prove the clock fired; required office reporting is unchanged.
+4. Before committing a routine core save, run `letta memory tokens --memory-dir
+   <own-MemFS-root> --format json --quiet` and inspect the diff. The approved initial
+   aggregate ceiling is **100148 estimated tokens**, the verified post-trim value,
+   not a healthy final target. Later growth and a larger model context limit do not
+   raise it. The proposed canonical core must also not grow above the last accepted
+   save; a smaller accepted state tightens the next save. Raising the ceiling needs
+   explicit review, never a self-issued exception.
+5. Run the published read-only checker from your normally updated own checkout:
+   `node tools/registrar-memory-save-check.mjs --memory-dir <own-MemFS-root>
+   --accepted-ref <full-HEAD-sha> --legacy-ref <approved-trim-sha> --ceiling 100148
+   --format json`. It checks the aggregate, both regions, new historical chronology
+   and newly duplicated evidence blocks. Unchanged legacy retrieval stubs are not
+   full chronology. Compare LF/CRLF-normalized content for the before/after ratchet;
+   report the CLI aggregate separately. Do not silently replace an accepted baseline
+   with an older/larger one, expand an old stub into history, or duplicate evidence
+   under a different heading. A manual estimate does not substitute for a passing
+   checker result.
+6. A missing/failed checker is not PASS. Preserve the proposed work; replace current
+   state, keep full detail externally and retain a small actionable retrieval cue.
+   If a safe bounded save is not possible, report the exact memory-save blocker
+   rather than dropping an obligation, deleting authority, raising the budget or
+   disabling the gate. This gates the routine **core save**, not the office result:
+   preserve necessary external evidence and publish required office records/receipts
+   on time. No automatic trimming, baseline changes, extra round, replay or runtime
+   intervention follows from a failed check.
 
 ## The household law at the door (founder-ruled 2026-08-07; the join-flow spec is the source)
 
