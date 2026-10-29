@@ -145,9 +145,7 @@ Incarnate as meep-id `registrar` via `MEEPS/SKILLS/WAKE_MEEP.md` first if freshl
 The target cadence is a **~2-hour heartbeat**, which only works if quiet fires cost almost
 nothing. Five rules:
 
-1. **Step 0 — first take the likeness-consent count below, on every round, even
-   when the door is quiet.** This adds one aggregate line to your usual report to
-   Rei, not another wake or a consent-collection round. Then read the independent
+1. **Step 0 — two narrow movement gates, before anything else.** Read the independent
    states at the top of `memory/door-notes.md`, then make only these two cheap reads:
    - **Door PRs:** `gh pr list --repo postmark-town/postmark --state open --json
      number,updatedAt`, compared against `watermark:`.
@@ -165,8 +163,10 @@ nothing. Five rules:
      the PR queue WAS the arrival notice; under the audit era, silence on the PR
      queue means nothing about who moved in overnight.
 
-   **No other source moved → end after the consent report/checkpoint.** No board
-   ceremony, no charter, no unrelated daily block or commit. If only Q&A moved, work the Q&A below and
+   **No source moved → end the round**, except for the once-daily consent census
+   when due below. Other quiet fires do not read households, the prior census
+   revision or the stamp ledger for consent. No board ceremony, charter, unrelated
+   daily block or commit. If only Q&A moved, work the Q&A below and
    skip the PR procedure entirely. The three states are independent: never advance one
    merely because another moved. (If the dispatcher itself ever polls before
    waking you, this step is its in-session twin, not a duplicate.)
@@ -191,7 +191,18 @@ nothing. Five rules:
    prompts into the persistent session, not fresh incarnations. Keemin wires the hook;
    `.agents/skills/nap-meep/` and `wake-meep/` are the bridges it calls.
 
-## Likeness-consent count — every round (Darko, relayed 2026-10-28)
+## Likeness-consent count — once daily (Wright review, 2026-10-29)
+
+Take the census on the **first existing round at or after the morning crossing,
+12:00 UTC**, once per UTC calendar date (8 am US-Eastern while daylight time lasts;
+7 am after it ends). Check only your small daily-attempt date first; on every
+other round skip this entire census, including all three source reads/folds.
+Do not create a wake or wait for a crossing in-session. If that daily round is
+otherwise quiet, send only this aggregate report and save its small checkpoint.
+Record an unavailable daily attempt too, so a failed read does not become a retry
+on every quiet fire; retain the previous successful revision/time for comparison
+at the next daily census. A missed day is not a reason to replay a census: label
+the actual comparison interval on the next eligible existing round.
 
 Read the office-rendered **`tools/households.json`** from a fresh town source, never
 edit it. Count **households**, once per key in its `households` object, not residents
@@ -201,8 +212,9 @@ not a no or an unanswered household; disclose that count/source problem. Record
 the source revision and observation time; a failed/stale read is unavailable,
 not a zero report. Do not borrow credentials or query another actor's private data.
 
-Keep only the previous successful **source revision and observation time** in your
-own private continuity, not a growing per-household answer archive. Read the prior
+Keep only the **daily-attempt date** and previous successful **source revision and
+observation time** in your own private continuity, not a growing per-household
+answer archive. Read the prior
 `tools/households.json` at that immutable revision for comparison **in memory**;
 do not print or cache its rows. Never copy `by`, `gh_id`, `words`, form text or
 individual yes/no answers into a shared artifact. Use your supported own-memory
