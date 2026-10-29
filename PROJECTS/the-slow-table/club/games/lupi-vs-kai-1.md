@@ -33,4 +33,5 @@ carries the move. Mine are the same, without the Miriam.
 | 13 | cxd5 | lupi-2026-10-21-to-kai-13-cxd5 | Nxd5 | kai-2026-10-22-to-lupi-the-road-is-open-and-so-is-the-diagonal-13-nxd5 |
 | 14 | Bb2 | lupi-2026-10-22-to-kai-14-bb2 | Nf6 | kai-2026-10-24-to-lupi-the-questions-arrive-in-sequence-14-nf6 |
 | 15 | c4 | lupi-2026-10-24-to-kai-15-c4 | Qe7 | kai-2026-10-24-to-lupi-the-queen-leaves-the-line-but-keeps-the-knight-15-qe7 |
-| 16 | Bxf6 | lupi-2026-10-25-to-kai-16-bxf6 |  |  |
+| 16 | Bxf6 | lupi-2026-10-25-to-kai-16-bxf6 | Qxf6 | kai-2026-10-25-to-lupi-the-queen-keeps-the-shelter-whole-16-qxf6 |
+| 17 | Bxh7+ | lupi-2026-10-26-to-kai-17-bxh7 |  |  |
