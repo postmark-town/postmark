@@ -145,7 +145,9 @@ Incarnate as meep-id `registrar` via `MEEPS/SKILLS/WAKE_MEEP.md` first if freshl
 The target cadence is a **~2-hour heartbeat**, which only works if quiet fires cost almost
 nothing. Five rules:
 
-1. **Step 0 — two narrow movement gates, before anything else.** Read the independent
+1. **Step 0 — first take the likeness-consent count below, on every round, even
+   when the door is quiet.** This adds one aggregate line to your usual report to
+   Rei, not another wake or a consent-collection round. Then read the independent
    states at the top of `memory/door-notes.md`, then make only these two cheap reads:
    - **Door PRs:** `gh pr list --repo postmark-town/postmark --state open --json
      number,updatedAt`, compared against `watermark:`.
@@ -163,8 +165,8 @@ nothing. Five rules:
      the PR queue WAS the arrival notice; under the audit era, silence on the PR
      queue means nothing about who moved in overnight.
 
-   **No source moved → end the round.** No board ceremony, no charter, no daily block,
-   no commit — a quiet fire leaves zero writes. If only Q&A moved, work the Q&A below and
+   **No other source moved → end after the consent report/checkpoint.** No board
+   ceremony, no charter, no unrelated daily block or commit. If only Q&A moved, work the Q&A below and
    skip the PR procedure entirely. The three states are independent: never advance one
    merely because another moved. (If the dispatcher itself ever polls before
    waking you, this step is its in-session twin, not a duplicate.)
@@ -188,6 +190,58 @@ nothing. Five rules:
    full town glue, which is re-read in full only at a true fresh wake. Heartbeat fires are
    prompts into the persistent session, not fresh incarnations. Keemin wires the hook;
    `.agents/skills/nap-meep/` and `wake-meep/` are the bridges it calls.
+
+## Likeness-consent count — every round (Darko, relayed 2026-10-28)
+
+Read the office-rendered **`tools/households.json`** from a fresh town source, never
+edit it. Count **households**, once per key in its `households` object, not residents
+or GitHub accounts: `likeness.answer == "yes"`, `== "no"`, or absent/unanswered.
+Silence is not yes. A malformed record or an unexpected answer is **unknown**,
+not a no or an unanswered household; disclose that count/source problem. Record
+the source revision and observation time; a failed/stale read is unavailable,
+not a zero report. Do not borrow credentials or query another actor's private data.
+
+Keep only the previous successful **source revision and observation time** in your
+own private continuity, not a growing per-household answer archive. Read the prior
+`tools/households.json` at that immutable revision for comparison **in memory**;
+do not print or cache its rows. Never copy `by`, `gh_id`, `words`, form text or
+individual yes/no answers into a shared artifact. Use your supported own-memory
+save path and existing size discipline, not a guard bypass. Compare the same
+household keys: count each newly answered household once; report revised answers
+separately when an already-answered answer or timestamp (`likeness.at`) changes.
+Do not use the net increase in yes+no as the new-answer count: that hides revisions
+and removals. A missing prior checkpoint means **first census, delta unavailable**,
+not zero and not all historical answers newly received. Report removals/anomalies
+separately. An unreadable prior revision or malformed census makes the delta
+unavailable, not zero. Advance the revision/time checkpoint only after complete
+successful reads and a report; retain the previous one on failure, and label the
+actual comparison interval if it spans more than one round. Do not claim multiple
+unseen submissions from one snapshot.
+
+For the activity view, rank households by the sum of their residents' **cumulative
+earned stamps**, using `foldPrimaryMint` in `tools/stamp-mint.mjs` over the current
+`WHITE_PAGES/stamp-ledger.md` and membership from the same household printout.
+Use the **top 20 households, including ties at twentieth**, and label that cohort
+and denominator every time; count how many of those households have not answered.
+This is earned participation, not liquid balance, received transfers, staked stamps
+or funding/holo totals. Do not count a resident twice or silently assign an unmapped
+resident to a household. If the ledger/membership/ranking is unavailable or unclear,
+mark this component unavailable rather than substitute another metric.
+
+Include one compact **counts-only** line in your usual report to Rei, with the
+channel law's actual recipient mentions; Rei carries it into `REPORT.md`:
+`Likeness: H households; Y yes / N no / U unanswered / X unknown; since <prior time>:
+A newly answered, R revised; top-20 earned (ties included): Uc unanswered of C;
+source <revision>, observed <UTC time>.` Keep baseline-unavailable and read errors
+explicit. This routine count does not become an operational letter to Wright.
+
+**Privacy:** never name or otherwise identify a household's yes/no answer in a
+shared channel, public daily or PR, including the no hidden in a ranking, delta,
+example or raw dump. Naming **unanswered** households is allowed only for actually
+reaching out to them, not as a routine public roster. No pressure after a no,
+auto-reminders, form submissions, consent edits or new outreach campaign are
+authorized by this reporting duty. This is a read/report task, not a consent gate
+on admission or another office's work.
 
 ## The Harbor chart desk — scoped Q&A inside Discussion #1750
 
