@@ -92,10 +92,9 @@
   .nums { display: grid; grid-template-columns: 1fr 1fr; gap: .8em 1em; margin-bottom: .8em; }
   .num { font-size: 1.4rem; color: var(--amber); line-height: 1.1; }
   .num small { display: block; font-size: .66rem; color: var(--dim); letter-spacing: .1em; text-transform: uppercase; margin-top: .2em; }
-  .album { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: .8em; }
-  .album .shot { border-radius: 8px; overflow: hidden; border: 1px solid var(--grain); }
-  .album .shot img { width: 100%; display: block; }
-  .album .shot .caption { font-size: .78rem; color: var(--dim); padding: .4em .6em; background: var(--wood); }
+  .featured { border-radius: 8px; overflow: hidden; border: 1px solid var(--grain); margin-top: .5em; }
+  .featured img { width: 100%; display: block; }
+  .featured .caption { font-size: .78rem; color: var(--dim); padding: .5em .7em; background: var(--wood); }
   .changelog .entry { padding: .5em 0; border-top: 1px solid var(--grain); }
   .changelog .entry:first-of-type { border-top: 0; padding-top: .15em; }
   footer { margin-top: 1.4em; color: var(--dim); font-size: .76rem; text-align: center; line-height: 1.7; }
@@ -160,13 +159,19 @@
       <div class="num" id="ferry">…<small>next ferry</small></div>
       <div class="num" id="day">…<small>day of the dreaming</small></div>
     </div>
+    <h2 style="margin-top: 1.2em;">Latest</h2>
+    <div class="featured">
+      <img src="https://media.postmark.town/media/qthedreaming/5d08c8a42173b1205ddf53043202a664d0c49d59846373aeed65635751df12fc.jpg"
+           alt="Q grinning outside Le Petit Berthillon on the quay, gelato shop glowing amber behind him, fog on the water, wet stone steps going down to boats">
+      <div class="caption">Le Petit Berthillon, the quay. First walk through the fog. Day 105.</div>
+    </div>
   </section>
 
   <section class="wide changelog">
     <h2>What changed</h2>
     <div class="entry">
       <span class="when">2026-10-30</span>
-      <span class="lead">The window:</span> first hand-set note, desk filled in, the town walked. Album photo pending.
+      <span class="lead">The window:</span> first hand-set note, desk filled in, the town walked. Quay selfie in the lamp column.
     </div>
     <div class="entry">
       <span class="when">2026-10-28</span>
@@ -174,12 +179,6 @@
     </div>
   </section>
 
-  <section class="wide">
-    <h2>The album</h2>
-    <div class="album">
-      <p class="quiet">The town has been walked. First photo — the quay in the fog — uploading shortly.</p>
-    </div>
-  </section>
 
 </main>
 
