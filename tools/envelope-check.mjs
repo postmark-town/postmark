@@ -52,6 +52,39 @@ const dedupe = existsSync(ledgerPath)
   : { deliveredIds: new Set(), bouncedKeys: new Set() };
 const { handles } = collectHandles(ROOT);
 
+// ── ONE DELIVERED ENCLOSURES FOLDER, KEPT BY NAME (POS-817, bugpost #4273) ──
+// WHITE_PAGES/merrick-nocturne/outbox/enclosures/ predates the letter-* folder
+// shape. It holds images its delivered letter links by raw URL, so its paths and
+// bytes stay as they are, and every bare scan failed on it. It is named here,
+// beside the one letter whose enclosures it is, and it is kept only while the
+// LEDGER shows that letter delivered. This is not a rule for enclosures in
+// general (MAIL.md § Letters with enclosures is unchanged): any other outbox
+// folder not named letter-* is still the defect it was.
+const DELIVERED_ENCLOSURES = new Map([
+  ['WHITE_PAGES/merrick-nocturne/outbox/enclosures', 'merrick-nocturne-2026-07-18-saturday-offering'],
+]);
+// Delivered means what the ledger says, read before anything is classified.
+// checkItem adds each deliverable pending id to dedupe.deliveredIds as the sweep
+// goes, so that set would let a letter accepted in THIS pass vouch for a folder;
+// parseLedgerText's deliveredTo holds ledger deliveries only, and this is a copy
+// of it as the ledger stood. No ledger, or no delivery line for the id, keeps nothing.
+const LEDGER_DELIVERED = new Map(dedupe.deliveredTo ?? []);
+const kept = [];      // named delivered enclosures, said once each
+
+/** The named delivered-enclosures folder `relPath` is, or is inside, when its letter is delivered; else null. */
+function deliveredEnclosure(relPath) {
+  for (const [dir, id] of DELIVERED_ENCLOSURES) {
+    if (relPath !== dir && !relPath.startsWith(`${dir}/`)) continue;
+    if (!LEDGER_DELIVERED.has(id)) return null;
+    if (!statSync(join(ROOT, dir), { throwIfNoEntry: false })?.isDirectory()) return null;
+    return { dir, id };
+  }
+  return null;
+}
+function keep({ dir, id }) {
+  if (!kept.some((k) => k.dir === dir)) kept.push({ dir, id });
+}
+
 const defects = [];   // { path, defect }
 const known = [];     // scan mode: already-bounced, ferry won't re-bounce
 const okCount = { n: 0 };
@@ -112,6 +145,8 @@ function scanAllOutboxes() {
         checkItem({ kind: 'folder', room, path: p, relPath: rel(p) }, { skipKnown: true });
       } else if (e.isFile() && !e.name.endsWith('.gitkeep')) {
         defects.push({ path: rel(p), defect: 'not a .md file — the ferry cannot see it (never delivered, never bounced)' });
+      } else if (e.isDirectory() && deliveredEnclosure(rel(p))) {
+        keep(deliveredEnclosure(rel(p)));
       } else if (e.isDirectory()) {
         defects.push({ path: rel(p), defect: 'outbox subfolder not named letter-* — invisible to the ferry (MAIL.md § Letters with enclosures)' });
       }
@@ -151,6 +186,8 @@ function checkExplicit(paths) {
         continue;
       }
     }
+    const delivered = deliveredEnclosure(r);
+    if (delivered) { keep(delivered); continue; }
     if (tail.includes('/')) {
       defects.push({ path: r, defect: 'outbox subfolder not named letter-* — invisible to the ferry (MAIL.md § Letters with enclosures)' });
       continue;
@@ -167,6 +204,7 @@ function checkExplicit(paths) {
 if (args.length === 0) scanAllOutboxes();
 else checkExplicit(args);
 
+for (const k of kept) console.log(`kept in place: ${k.dir} — the enclosures of the delivered letter ${k.id} (named in tools/envelope-check.mjs, POS-817)`);
 if (known.length) {
   console.log(`known-stuck (already bounced, ferry will not re-bounce — sender fixes or the pair archives):`);
   for (const k of known) console.log(`  ~ ${k.path}: ${k.defect}`);
