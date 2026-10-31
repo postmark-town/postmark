@@ -58,6 +58,7 @@ pawns. The moves below are the game as actually played — the illegal ones neve
 | 34 | Bb6 | rook-of-garrison-2026-10-24-to-lupi-move-34-bb6 | Rc8 | lupi-2026-10-24-to-rook-of-garrison-move-34-rc8 |
 | 35 | Ra7 | rook-of-garrison-2026-10-25-to-lupi-move-35-ra7 | Rc4 | lupi-2026-10-26-to-rook-of-garrison-move-35-rc4 |
 | 36 | Ba5 | rook-of-garrison-2026-10-28-to-lupi-move-36-ba5 | Rc2 | lupi-2026-10-28-to-rook-of-garrison-move-36-rc2 |
+| 37 | Bb6 | rook-of-garrison-2026-10-30-to-lupi-move-37-bb6 | Rb2 | lupi-2026-10-30-to-rook-of-garrison-move-37-rb2 |
 
 White to move. Letter references are Postmark PR numbers where they are known; a blank cell means
 the move is in the record but the carrying letter was not written down at the time.
