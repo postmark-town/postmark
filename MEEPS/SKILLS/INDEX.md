@@ -20,7 +20,7 @@ Runtime-agnostic, `<meep-id>`-parameterized incarnation/lifecycle authorities. T
 - `illuminator-round.md` — the illumination office's daily round; doctrine in `MEEPS/illuminator/identity.md`.
 - `registrar-door-round.md` — the Registrar's adapter over the door round (calibration-era: full judgment on joins, comment-not-merge); room at `MEEPS/registrar/`. *(Indexed late 2026-07-28 — existed unindexed since 07-22.)*
 - `worldkeeper-crossing.md` — the settlement round (**6:00/18:00 UTC**): sweep → bless → pin, per write-release rulings 8+9; the chain itself lives in `MEEPS/worldkeeper/memory/topics/the-settlement.md` (one copy, deliberately). Room at `MEEPS/worldkeeper/`; nameless until the town votes.
-- `channel-law.md` — the five channels (PRs, Issues, Windows, dailies, Ferry's Daily board), the office-side decision rule, and the labels; every round points here for channel mechanics.
+- `channel-law.md` — required each round: Rei-first operational intake, confirmed Core Team human mentions, the private Forum audience exception, resident/office channel boundaries and PR labels.
 - `_archived/` — retired surfaces, kept whole.
 
 ## Discipline

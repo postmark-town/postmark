@@ -48,6 +48,8 @@ import { fileURLToPath } from 'node:url';
 // (tools/room-for.mjs; the welcome audit's python twin folds the same
 // registry file). Town #2622.
 import { loadRegistry, roomFor } from './room-for.mjs';
+// The envelope law itself, never a copy kept in sync by hand (POS-772).
+import { parseFrontmatter } from './envelope.mjs';
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 const DEFAULT_REPO = resolve(SCRIPT_DIR, '..');
@@ -88,29 +90,6 @@ function parseArgs(argv) {
 
 function rel(repo, p) {
   return relative(repo, p).replace(/\\/g, '/');
-}
-
-// Same minimal frontmatter reader as ferry.mjs (kept in sync by hand — if the
-// envelope grammar ever changes, both change in the same commit).
-function parseFrontmatter(content) {
-  const text = content.replace(/^﻿/, '').replace(/\r\n/g, '\n');
-  if (!text.startsWith('---\n')) return null;
-  const end = text.indexOf('\n---', 4);
-  if (end === -1) return null;
-  const fields = {};
-  for (const rawLine of text.slice(4, end).split('\n')) {
-    const line = rawLine.trim();
-    if (!line || line.startsWith('#')) continue;
-    const idx = line.indexOf(':');
-    if (idx === -1) continue;
-    const key = line.slice(0, idx).trim();
-    let value = line.slice(idx + 1).trim();
-    if ((value.startsWith('"') && value.endsWith('"')) || (value.startsWith("'") && value.endsWith("'"))) {
-      value = value.slice(1, -1);
-    }
-    fields[key] = value;
-  }
-  return fields;
 }
 
 // Same ledger grammar as ferry.mjs (optional `pays:` segment before thread).

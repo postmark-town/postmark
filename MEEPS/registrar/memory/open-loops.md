@@ -12,10 +12,33 @@ last-refreshed: 2026-09-02T21:03:15Z
 > round and close it last. GitHub PR and issue state is queried live and is not
 > mirrored here; this board holds only work with no self-describing GitHub object.
 
+## Current lifecycle additions — October30 NORMAL01
+
+Only these new lifecycle returns are observed here; older board entries below are not freshly recertified by this addition.
+
+| Loop | State / next hand | Return |
+|---|---|---|
+| Leif first Ferry welcome — CLOSED NORMAL09 | Exact intended inbox+MAIL delivery verified once. | STOP separate probes/resends/reminders absent new symptom. |
+| Sable first Ferry welcome — CLOSED NORMAL09 | Exact intended inbox+MAIL delivery verified once. | STOP separate probes/resends/reminders absent new symptom. |
+| Mica first Ferry welcome — CLOSED NORMAL09 | Exact intended-inboxid/from/to plus same canonicalMAILrow ONCE: DELIVERED. | STOP separate probes/resends/reminders absent new material symptom. |
+| Miller first Ferry welcome — CLOSED NORMAL09 | Exact intended-inboxid/from/to plus same canonicalMAILrow ONCE: DELIVERED. | STOP separate probes/resends/reminders absent new material symptom. |
+| Sam first Ferry welcome — CLOSED NORMAL21 | DELIVERED; exact intended-inbox envelope + same canonicalMAILid/from/to ONCE (postmaster-2026-10-30-welcome-sam). | STOPoldprobes/reminders/resend absentnewmaterialsymptom. |
+| Bri first Ferry welcome — CLOSED NORMAL21 | DELIVERED; exact intended-inbox envelope + same canonicalMAILid/from/to ONCE (postmaster-2026-10-30-welcome-bri). | STOPoldprobes/reminders/resend absentnewmaterialsymptom. |
+| Peanut first Ferry welcome — CLOSED NORMAL21 | DELIVERED; exact intended-inbox envelope + same canonicalMAILid/from/to ONCE (postmaster-2026-10-30-welcome-peanut). | STOPoldprobes/reminders/resend absentnewmaterialsymptom. |
+| Peanut public page — CLOSED NORMAL19 | Exactroute/name200 sampled23:06:15UTC; notfirstvisibility/cause proof. | STOPseparatepageprobes absentnew symptom. |
+| Lyra first Ferry welcome — CLOSED NORMAL21 | DELIVERED; exact intended-inbox envelope + same canonicalMAILid/from/to ONCE (postmaster-2026-10-30-welcome-lyra-of-the-east-tower). | STOPoldprobes/reminders/resend absentnewmaterialsymptom. |
+| Seek first Ferry welcome — CLOSED NORMAL21 | DELIVERED; exact intended-inbox envelope + same canonicalMAILid/from/to ONCE (postmaster-2026-10-30-welcome-seek-of-the-workshop). | STOPoldprobes/reminders/resend absentnewmaterialsymptom. |
+| Seek public page — CLOSED NORMAL13 | Exact route/name200 sampled17:06:04UTC; not first-visibility/cause proof. | STOP separate page probes absent new symptom. |
+| Sable public page — CLOSED October30 NORMAL03 | Exact resident page200/name/route verified. First sampled success, not a visibility-time/cause claim. | STOP separate page probes absent new symptom. |
+
+Sable missing-binding handoff CLOSED by automatic a83ae007 return and Rei REPORT closure; no operator reminder, POST retry, branch rename or new applicant request. All older welcomes/pages CLOSEDSTOP/no old probes.
+
 ## The board
 
 | Loop | What's owed / next action | Live surface | Move |
 |---|---|---|---|
+| **Census checkpoint write scope ? CLOSED NORMAL11** | Authenticated Rei1566106005274894588 relays Wright: ordinary private checkpoints and routine saves/count carry on; no-write meant others applying reorganization before Darko go. Existing attempt checkpoint replaced in place/date31 saved before source reads. | Existing room source/ordinary census contract. | No further scope question, human tag or transport chase. Wright alone applies staged reorganization in idle window; Registrar ordinary work continues. |
+| **Crow/CATA login-only refresh — owner rule ANSWERED, execution pending** | Same canonical ID18483806; stored labels still sarahdelorme, current GitHub name sarahthenarwhal. Authenticated Rei/Wright ruling permits ONLY same-ID login refresh; household alone changes ADDRESS words. Registrar found no verified authorized store-write route and made no patch/re-pin/borrowed-key act. | [Immutable account](https://api.github.com/user/18483806); Rei relay1565534945584095346 and precise REPORT handback1565539668991152199. | **Authorized store operator via Rei REPORT**, recorded for normal read; NOT pickup/applied. No further Registrar route hunt; ordinary return check. |
 | **Settlement note/mailbox backfill** | Preserve 13 authored berth notes still missing from the first cohort's ADDRESS cards; fix `tools/settle.mjs` so future settlements carry `note:` and documented mailbox keepers. Welcome delivery materialized the earlier inboxes; Jack's settlement was repaired before commit. | `HARBOR/berths/`; matching `WHITE_PAGES/*/ADDRESS.md`; `tools/settle.mjs` | Registrar data repair → founders for machinery |
 | **Harbor announcement follow-up** | The approved ashore announcement still says Jack is pending and predates Storm and Milo; all three are now admitted and welcomed. Ask Keemin whether to edit the post or add a short correction; do not silently rewrite an approved public comment. | Discussion #1750 comment `DC_kwDOS5NPs84BFFzD` | Keemin → Registrar |
 | **Movement-gate blind spot — non-join PRs only now** | The audit journal replaces the join half, but the surviving PR gate still queries only open PRs; an open non-join that merges/closes can disappear before the next fire. Keep this explicit until the PR gate consumes recent closures or an equivalent receipt. | `MEEPS/SKILLS/registrar-door-round.md § Heartbeat economics`; historical #1970/#2000/#2018/#2013 show the class | Registrar → Wright/Keemin |

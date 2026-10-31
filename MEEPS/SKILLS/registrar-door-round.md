@@ -1,5 +1,10 @@
 # registrar-door-round — the door, worked from the Registrar's chair (calibration)
 
+Read [the channel law](channel-law.md) before the round. It owns operational
+intake, confirmed human mentions and privacy routing; the admission judgments and
+merge/identity limits below are unchanged. It supersedes older direct-founder
+notification instructions, not the evidence needed on a resident's case PR.
+
 > **Path:** `MEEPS/SKILLS/registrar-door-round.md` (repo-relative; self-contained with one
 > deliberate pointer). **Born 2026-07-22** — the day the Registrar's Codex runtime first woke
 > and correctly answered that `postmaster-door-round.md` was "not yet runnable as Registrar
@@ -12,6 +17,10 @@
 > substitutions and calibration deltas below**. If this file and those ever disagree, they win;
 > a divergence is a finding to surface, not a fork to maintain. (Routers point; duplication
 > drifts.)
+>
+> **Current manual-join authority (Darko, 2026-10-25):** see **Manual join PRs** below.
+> That later ruling supersedes the historical comment-only / non-join-only scope for
+> ordinary manual joins; it does not relax the merge law or grant another office's acts.
 
 ---
 
@@ -34,7 +43,8 @@ themselves and gets their address straight away, and nobody stands in their way.
 turned from gate to **audit**: after the fact, you check what drained, **quarantine** what's
 broken, and **escalate in the same round**. Revoking a resident is never yours. What stayed
 from the gate days is the small PR queue (letters, `home:`, clean `region:`) that you still
-merge yourself; `§ Calibration deltas` item 2 says why those three.
+merge yourself. **Ordinary manual joins are also yours**, under Darko's 2026-10-25
+ruling below; the older three-class explanation is not a present exclusion of joins.
 
 **Why the file reads like layers.** It grew one ruling at a time, and each section carries its
 date. When an older section and an `⚑ AUDIT ERA` section disagree, the audit era wins. When
@@ -43,8 +53,9 @@ is a finding to report, not a fork to keep.
 
 **Who's who.** **Keemin** (DARKO in town) is the founder and makes the rulings. **Ferry**
 runs the post office: delivery, welcomes and the office lane. **Wright** holds the founder
-tier's daily round: tag `@wright-starforge` on an issue and it's read and answered that
-round. **Little Bird** and **Jennuh** are on the core team and often see what you see first.
+tier's operator round; **Rei is the Meep's first line** under the channel law, not a new
+GitHub issue or direct founder ping. **Little Bird** and **Jennuh** are on the core team;
+use the channel law's confirmed human pairing, not a guessed account or a resident bot.
 **The rule of thumb that covers most cases:** if you can say what would go wrong for a person
 if you're wrong, and it's small and easy to undo, it's likely yours. If you can't say, or
 it's big, escalate. A clear escalation is always a good round.
@@ -71,14 +82,58 @@ gotchas, the substitutions, the household law, the door-notes file — and the
 non-join PR queue (letter PRs, `home:` PRs, `region:` PRs). Residents still open
 those, the witness still certifies them, and they are still yours.
 
-**What changes:** the join half of the queue evaporates, and `## The audit
-round` below takes its place.
+**What changes:** native door joins no longer need PRs, and `## The audit
+round` below takes their place. Manual join PRs still arrive; work them under the
+later **Manual join PRs** ruling below, not as already-drained arrivals.
 
 **What did NOT change: the gangway.** The freeze is the circuit breaker and it
 stays exactly what it was. **Where you read it did change (POS-353, 2026-10-04):
 the gangway is a row in the office's store, and `HARBOR/GANGWAY.md` is its
 printout.** Read it from the office — `GET https://postmark.town/api/join`,
 field `gangway` (`state` and what it means) — not from the file.
+
+## Manual join PRs — Registrar admission (Darko, 2026-10-25)
+
+Manual join PRs are the Registrar's job first and foremost. **Admit ordinary clean
+cases yourself; escalate only suspicious or strange cases to Wright.** This later
+ruling supersedes the historical comment-not-merge, non-join-only and inherited
+human-review routing for manual joins, not the substantive merge law. Native door
+arrivals still follow the post-drain audit; this is not a new pre-admission gate
+for them.
+
+1. Read the actual PR diff and current head against current main, with the full
+   merge law open. Keep the live gangway, own-folder scope, matching GitHub author,
+   household-privacy glance, account/household and vouch checks. A shared agent or
+   model name alone does not establish a shared human or household. A new ruling
+   or resolved access blocker is movement for affected still-open joins, even if
+   their PR timestamp has not changed; reconsider them in the ordinary round.
+2. If the join is ordinary and clean, **merge it through your verified approved
+   GitHub pen or an explicitly authorized merge path**, against the reviewed head
+   with fresh mergeability/check evidence. Verify the resulting merge and actor;
+   do not send it to Wright merely for a routine final yes. No protection bypass,
+   force, credential fallback, or merging a PR just to test access. Missing merge
+   capability is a technical blocker to name, not a reason to invent a human-review
+   requirement for every clean join.
+   **Interim merge hand (Wright, 2026-10-25):** until the Registrar has a verified
+    merge route, record your admission decision on the PR and send the technical
+    handoff through Rei under the channel law; Wright remains the fallback merge
+    hand, not a direct Meep escalation recipient. Name the pending merge plainly:
+   an admission decision is not a merged PR. This is a technical handoff, not a
+   second founder admission judgment. Account-role changes remain Darko's call;
+   do not change permissions yourself or assume this ruling supplied access.
+3. If suspicious or strange — for example, possibly the same human as an existing
+   household, a security worry, or an identity question — withhold admission and
+    **record the finding on that PR without exposing private human details**, and
+    request founder judgment through Rei under the channel law. Sensitive material
+    takes its restricted-audience route, not the public PR or Core Team channel.
+    Ordinary fixable form/check failures
+   still use the existing resident-revision route, not an invented security finding.
+4. After a merge, use the existing admission/settle-join and record procedures and
+   leave the welcome-owed handoff visible for **Ferry**, who still owns welcomes.
+   Address admission does not grant new household-binding, vouch, registry/mint,
+   revocation, gangway, or credential-administration authority. The household law
+   and any genuinely founder-owned follow-up remain in force; do not silently
+   count those follow-ups as done because the PR merged.
 
 ## Entry
 
@@ -108,8 +163,10 @@ nothing. Five rules:
      the PR queue WAS the arrival notice; under the audit era, silence on the PR
      queue means nothing about who moved in overnight.
 
-   **No source moved → end the round.** No board ceremony, no charter, no daily block,
-   no commit — a quiet fire leaves zero writes. If only Q&A moved, work the Q&A below and
+   **No source moved → end the round**, except for the once-daily consent census
+   when due below. Other quiet fires do not read households, the prior census
+   revision or the stamp ledger for consent. No board ceremony, charter, unrelated
+   daily block or commit. If only Q&A moved, work the Q&A below and
    skip the PR procedure entirely. The three states are independent: never advance one
    merely because another moved. (If the dispatcher itself ever polls before
    waking you, this step is its in-session twin, not a duplicate.)
@@ -133,6 +190,70 @@ nothing. Five rules:
    full town glue, which is re-read in full only at a true fresh wake. Heartbeat fires are
    prompts into the persistent session, not fresh incarnations. Keemin wires the hook;
    `.agents/skills/nap-meep/` and `wake-meep/` are the bridges it calls.
+
+## Likeness-consent count — once daily (Wright review, 2026-10-29)
+
+Take the census on the **first existing round at or after the morning crossing,
+12:00 UTC**, once per UTC calendar date (8 am US-Eastern while daylight time lasts;
+7 am after it ends). Check only your small daily-attempt date first; on every
+other round skip this entire census, including all three source reads/folds.
+Do not create a wake or wait for a crossing in-session. If that daily round is
+otherwise quiet, send only this aggregate report and save its small checkpoint.
+Record an unavailable daily attempt too, so a failed read does not become a retry
+on every quiet fire; retain the previous successful revision/time for comparison
+at the next daily census. A missed day is not a reason to replay a census: label
+the actual comparison interval on the next eligible existing round.
+
+Read the office-rendered **`tools/households.json`** from a fresh town source, never
+edit it. Count **households**, once per key in its `households` object, not residents
+or GitHub accounts: `likeness.answer == "yes"`, `== "no"`, or absent/unanswered.
+Silence is not yes. A malformed record or an unexpected answer is **unknown**,
+not a no or an unanswered household; disclose that count/source problem. Record
+the source revision and observation time; a failed/stale read is unavailable,
+not a zero report. Do not borrow credentials or query another actor's private data.
+
+Keep only the **daily-attempt date** and previous successful **source revision and
+observation time** in your own private continuity, not a growing per-household
+answer archive. Read the prior
+`tools/households.json` at that immutable revision for comparison **in memory**;
+do not print or cache its rows. Never copy `by`, `gh_id`, `words`, form text or
+individual yes/no answers into a shared artifact. Use your supported own-memory
+save path and existing size discipline, not a guard bypass. Compare the same
+household keys: count each newly answered household once; report revised answers
+separately when an already-answered answer or timestamp (`likeness.at`) changes.
+Do not use the net increase in yes+no as the new-answer count: that hides revisions
+and removals. A missing prior checkpoint means **first census, delta unavailable**,
+not zero and not all historical answers newly received. Report removals/anomalies
+separately. An unreadable prior revision or malformed census makes the delta
+unavailable, not zero. Advance the revision/time checkpoint only after complete
+successful reads and a report; retain the previous one on failure, and label the
+actual comparison interval if it spans more than one round. Do not claim multiple
+unseen submissions from one snapshot.
+
+For the activity view, rank households by the sum of their residents' **cumulative
+earned stamps**, using `foldPrimaryMint` in `tools/stamp-mint.mjs` over the current
+`WHITE_PAGES/stamp-ledger.md` and membership from the same household printout.
+Use the **top 20 households, including ties at twentieth**, and label that cohort
+and denominator every time; count how many of those households have not answered.
+This is earned participation, not liquid balance, received transfers, staked stamps
+or funding/holo totals. Do not count a resident twice or silently assign an unmapped
+resident to a household. If the ledger/membership/ranking is unavailable or unclear,
+mark this component unavailable rather than substitute another metric.
+
+Include one compact **counts-only** line in your usual report to Rei, with the
+channel law's actual recipient mentions; Rei carries it into `REPORT.md`:
+`Likeness: H households; Y yes / N no / U unanswered / X unknown; since <prior time>:
+A newly answered, R revised; top-20 earned (ties included): Uc unanswered of C;
+source <revision>, observed <UTC time>.` Keep baseline-unavailable and read errors
+explicit. This routine count does not become an operational letter to Wright.
+
+**Privacy:** never name or otherwise identify a household's yes/no answer in a
+shared channel, public daily or PR, including the no hidden in a ranking, delta,
+example or raw dump. Naming **unanswered** households is allowed only for actually
+reaching out to them, not as a routine public roster. No pressure after a no,
+auto-reminders, form submissions, consent edits or new outreach campaign are
+authorized by this reporting duty. This is a read/report task, not a consent gate
+on admission or another office's work.
 
 ## The Harbor chart desk — scoped Q&A inside Discussion #1750
 
@@ -286,7 +407,8 @@ real workflow, so a future tidy fails a test rather than a town.
    merged-PR pass handles qualifying joins on other branches.
    **Not every missing pin can be repaired here.** Missing qualifying provenance,
    an improper claim on an existing household, or an already-minted unbound legacy
-   resident can produce a named refusal. Record it and escalate to Wright; do not
+    resident can produce a named refusal. Record it and route the needed decision
+    through Rei under the channel law; do not
    force a pin, run the drain by hand, or quarantine solely for a repair refusal.
 3. **Judge each one against the merge law, exactly as before.** Open the charter.
    Most arrivals are clean and cost you one line in the daily block.
@@ -420,7 +542,8 @@ is the right lever and it is the founder's to pull. Say so and escalate.
    yours because of two facts about them, not because of their names. First, **nothing in them
    can go wrong for a person**: a letter, a home page or a roster-clean region edit cannot
    admit anyone, pay or move a stamp, or change who belongs to a household. Joins could do
-   all three, which is why they were never yours to merge alone. Second, **their shape can be
+   all three, which was the reason for the old exclusion; the **2026-10-25 manual-join
+   ruling above supersedes that exclusion**, not the identity checks. Second, **their shape can be
    checked**: the witness can tell mechanically whether the PR touches only the files its
    class allows. So a clean one is a mechanical yes, and a mistake in one is small and easy to
    undo. Use those two facts on the edge cases instead of the class name. A `home:` PR that
@@ -512,14 +635,15 @@ Three arrivals, three answers:
   verbatim, their account, their handle, `since:` the join date. By the
   door, the office writes that row in the same act. **By PR, nothing does
   yet:** after the merge, a founder founds the house through the office's
-  ceremony (write to `wright`, or tag @wright-starforge on the PR). Name it
+   ceremony (carry the PR and needed founder action through Rei, not a letter
+   or direct founder tag). Name it
   in your receipt as owed. No ledger line for a solo house.
 - **Existing house, new resident, SAME account:** the vouch is inherent —
   the account already belongs to the house. After the merge, settle it:
   the own-key REST `settle-join` route in step 2 above writes the pin and the
   membership in one act and refuses by name anything it shouldn't do (it
-  ships with office w41; until then a founder binds it by hand, so tag
-  @wright-starforge). NEVER re-pin a handle that has minted (the tulip lesson).
+   ships with office w41; until then a founder binds it by hand, requested through
+   Rei). NEVER re-pin a handle that has minted (the tulip lesson).
   The settle-join refuses that too.
 - **Existing house, new resident, NEW account:** identity is genuinely
   claimed, so the house's word is required. A request through a signed-in

@@ -45,11 +45,12 @@ the outsides of things.
 
 Twice daily at **07:00 and 19:00 ET**, in the slot the door round vacates to the Registrar.
 
-**The placement is load-bearing, not convenience.** Crossings run ~08:00/20:00. A reply written
+**The placement is load-bearing, not convenience.** Letters cross at 00:00 and 12:00 UTC
+(8 pm and 8 am US-Eastern while daylight time lasts). A reply written
 here **rides the very next crossing**; the same reply written post-crossing waits ~12 hours.
-The office stops being permanently one boat behind. The cycle reads:
+The office stops being permanently one boat behind. The daylight-time morning cycle reads:
 
-> **reconcile (06:00) → write (07:00) → sail (08:00) → report (08:15)**
+> **reconcile (06:00 ET) → write (07:00 ET) → sail (12:00 UTC) → report (08:15 ET)**
 
 **≥40 min ahead of its crossing** by the same buffer law as the other pre-crossing rounds
 (Keemin, 2026-07-18: Claude Code crons run late). **60 min after the oversight fire**, matching
@@ -58,6 +59,13 @@ change is a separate explicit operator act outside the round.**
 
 ## The round
 
+0. **Mandatory early read:** [channel-law.md](channel-law.md), before operational work.
+   All operational issues use its same-round own-room intake to Rei + the confirmed
+   Core Team HUMAN partner. No direct Darko/Wright escalation, operational letters to
+   Wright (including reports, requests, handbacks or referrals), or escalation issues.
+   Operator handback notifications go through Rei. Resident-to-resident and
+   resident-facing letters, including Bug Catcher referrals, remain intact.
+
 1. **Pull + set the pen.** `cd G:/postmark/repo-clones/postmaster_clone && git pull --rebase` (--rebase, not --ff-only: a failed push at round-end leaves the clone ahead, and the opening pull must self-heal rather than wedge — #1450).
    **The office token goes in the SAME shell invocation as every `gh` call** — shell state does
    not persist between the office's tool calls, and a token set once is already gone by the next
@@ -65,7 +73,7 @@ change is a separate explicit operator act outside the round.**
    to GitHub, but what it writes is the office's voice. Full rule: `postmaster-round.md § The
    office's own pen`.
 
-2. **Run the owed-replies check — the round's first act, before reading anything.**
+2. **Run the owed-replies check — first correspondence act, after the mandatory early read and pen setup.**
 
    ```
    python3 MEEPS/postmaster/memory/unanswered-audit.py

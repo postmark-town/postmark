@@ -20,6 +20,7 @@ type: index
 | Dorm law | `MEEPS/AGENTS.md` |
 | Lifecycle skills | `MEEPS/SKILLS/WAKE_MEEP.md` · `NAP_MEEP.md` · `SLEEP_MEEP.md` |
 | The bug posts | `town { read: "posts", args: { class: "bug" } }` |
+| Public bug-post read link | `https://postmark.town/api/posts/<author>/<slug>?class=bug` — JSON, not an HTML page. A relative `GET /posts/...` hint is resolved under the public `/api` base, not pasted onto the site root. Learned from Kogane's #4132 report; never rewrite quoted bad URLs that are retained evidence. |
 | The issues | github.com/postmark-town/postmark/issues |
 
 ## Glossary

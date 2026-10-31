@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Errant — Bad Window</title>
+  <title>Errant — Bad Window — successful states</title>
   <style>
     html, body { margin:0; width:100%; min-height:100%; background:#596269; }
     body { overflow-x:hidden; }
     .wall-texture { position:fixed; inset:0; z-index:0; width:100%; height:100%; pointer-events:none; }
     .stage { position:relative; z-index:1; width:min(92vw,750px); margin-inline:auto; }
-    .window-art { display:block; width:100%; height:auto; margin:0 auto; cursor:col-resize; touch-action:pan-y; }
+    .window-art { display:block; width:100%; height:auto; margin:0 auto; cursor:ew-resize; touch-action:pan-y; }
   </style>
 </head>
 <body>
@@ -23,163 +23,194 @@
         <feBlend in="SourceGraphic" in2="mottle" mode="multiply" result="paint"/>
         <feBlend in="paint" in2="fine" mode="soft-light"/>
       </filter>
-      </defs>
+    </defs>
     <rect width="100%" height="100%" fill="#596269" filter="url(#page-concrete)"/>
   </svg>
 
   <main class="stage">
   <svg id="window" class="window-art" xmlns="http://www.w3.org/2000/svg" width="900" height="1200" viewBox="0 0 900 1200" role="img" aria-labelledby="title desc" tabindex="0">
-    <title id="title">Errant's Bad Window — contextual completion</title>
-    <desc id="desc">A stitched translucent field holds a fixed set of sparse marks. Moving a narrow reading frame across them changes the grouping lines but never the underlying evidence.</desc>
-
+    <title id="title">Errant's Bad Window — successful states</title>
+    <desc id="desc">Five nearly identical finished surfaces reveal different embedded histories only under a moving band of grazing light.</desc>
     <defs>
-      <filter id="soft-paper" x="-5%" y="-5%" width="110%" height="110%">
-        <feTurbulence type="fractalNoise" baseFrequency=".032 .11" numOctaves="2" seed="31" result="n"/>
-        <feColorMatrix in="n" type="matrix" values=".16 0 0 0 .7  0 .16 0 0 .69  0 0 .16 0 .67  0 0 0 .12 0"/>
-        <feBlend in="SourceGraphic" mode="soft-light"/>
-      </filter>
       <clipPath id="pane-clip"><rect x="55" y="65" width="790" height="1065"/></clipPath>
+      <clipPath id="light-clip"><rect id="light-clip-rect" x="300" y="65" width="170" height="1065" rx="4"/></clipPath>
+      <linearGradient id="light-gradient" x1="0" x2="1">
+        <stop offset="0" stop-color="#fff8d8" stop-opacity="0"/>
+        <stop offset=".24" stop-color="#fff8d8" stop-opacity=".05"/>
+        <stop offset=".47" stop-color="#fff8d8" stop-opacity=".30"/>
+        <stop offset=".57" stop-color="#fff8d8" stop-opacity=".48"/>
+        <stop offset=".72" stop-color="#fff8d8" stop-opacity=".08"/>
+        <stop offset="1" stop-color="#fff8d8" stop-opacity="0"/>
+      </linearGradient>
+      <linearGradient id="edge-shadow" x1="0" x2="1">
+        <stop offset="0" stop-color="#151317" stop-opacity="0"/>
+        <stop offset=".52" stop-color="#151317" stop-opacity="0"/>
+        <stop offset=".68" stop-color="#151317" stop-opacity=".16"/>
+        <stop offset=".85" stop-color="#151317" stop-opacity="0"/>
+      </linearGradient>
+      <filter id="paper" x="-6%" y="-12%" width="112%" height="124%">
+        <feTurbulence type="fractalNoise" baseFrequency=".025 .19" numOctaves="2" seed="42" result="n"/>
+        <feColorMatrix in="n" type="matrix" values=".12 0 0 0 .68  0 .12 0 0 .67  0 0 .12 0 .64  0 0 0 .16 0" result="grain"/>
+        <feBlend in="SourceGraphic" in2="grain" mode="soft-light"/>
+      </filter>
+      <filter id="emboss" x="-10%" y="-50%" width="120%" height="200%">
+        <feGaussianBlur stdDeviation="1.15" result="b"/>
+        <feOffset dx="-1.4" dy="-1.2" result="hi"/>
+        <feOffset dx="1.5" dy="1.3" result="lo"/>
+        <feFlood flood-color="#fff8df" flood-opacity=".72" result="hc"/>
+        <feFlood flood-color="#29242a" flood-opacity=".72" result="lc"/>
+        <feComposite in="hc" in2="hi" operator="in" result="h"/>
+        <feComposite in="lc" in2="lo" operator="in" result="l"/>
+        <feMerge><feMergeNode in="l"/><feMergeNode in="h"/></feMerge>
+      </filter>
       <style>
-        .patch { stroke:#211c24; stroke-width:3.2; vector-effect:non-scaling-stroke; }
-        .stitch { fill:none; stroke:#f8f1dc; stroke-width:6.5; stroke-dasharray:13 9; opacity:.9; vector-effect:non-scaling-stroke; pointer-events:none; }
-        .misreg { fill:none; stroke:#ffef35; stroke-width:3.4; opacity:.32; vector-effect:non-scaling-stroke; pointer-events:none; }
-        .evidence { fill:none; stroke:#28242b; stroke-width:2.3; stroke-linecap:round; stroke-linejoin:round; vector-effect:non-scaling-stroke; }
-        .evidence.fine { stroke-width:1.45; opacity:.9; }
-        .evidence.faint { stroke-width:1.2; opacity:.48; }
-        .dot { fill:#28242b; }
-        .guide { fill:none; stroke:#fbf6e8; stroke-width:1.55; stroke-linecap:round; stroke-linejoin:round; vector-effect:non-scaling-stroke; transition:opacity .18s linear; pointer-events:none; }
-        .guide.dark { stroke:#2d2930; opacity:.28; }
-        .guide.dash { stroke-dasharray:5 8; }
-        .guide.yellow { stroke:#f5e969; opacity:.38; }
-        .frame-fill { fill:#fffdf1; fill-opacity:.035; pointer-events:none; }
-        .frame-edge { fill:none; stroke:#f7f1dd; stroke-width:1.45; vector-effect:non-scaling-stroke; pointer-events:none; }
-        .corner { fill:none; stroke:#29252c; stroke-width:1.65; vector-effect:non-scaling-stroke; pointer-events:none; }
-        .frame-rule { stroke:#f7f1dd; stroke-width:1; opacity:.55; vector-effect:non-scaling-stroke; pointer-events:none; }
+        .patch { stroke:#211c24; stroke-width:3.1; vector-effect:non-scaling-stroke; }
+        .stitch { fill:none; stroke:#eee7d1; stroke-width:5.5; stroke-dasharray:14 10; opacity:.58; vector-effect:non-scaling-stroke; pointer-events:none; }
+        .plate { fill:#d7d3ca; stroke:#242127; stroke-width:2.2; rx:7; vector-effect:non-scaling-stroke; }
+        .plate-inner { fill:none; stroke:#f2ecda; stroke-width:1; opacity:.23; vector-effect:non-scaling-stroke; }
+        .registration { fill:#252229; opacity:.92; }
+        .registration-open { fill:none; stroke:#252229; stroke-width:1.6; vector-effect:non-scaling-stroke; }
+        .latent path, .latent line, .latent polyline { fill:none; stroke:#3b373d; stroke-width:3.2; stroke-linecap:round; stroke-linejoin:round; vector-effect:non-scaling-stroke; }
+        .latent .fine { stroke-width:1.5; }
+        .latent .hair { stroke-width:.9; }
+        .latent .broad { stroke-width:6.2; opacity:.44; }
+        .latent .ghost { opacity:.20; stroke-dasharray:2 7; }
+        .latent .scar { stroke:#6b4d44; }
+        .latent .pale { stroke:#f2ecd7; opacity:.88; }
+        .latent .dark { stroke:#262329; }
+        .latent circle { fill:#39353b; }
+        .base-relief { opacity:.018; }
+        .lit-relief { opacity:.96; filter:url(#emboss); }
         .caption { font-family:Arial, Helvetica, sans-serif; fill:#f8f1dc; }
-        .hit-zone { fill:transparent; pointer-events:all; cursor:col-resize; }
-        #read-a, #read-b, #read-c { pointer-events:none; transition:opacity .16s linear; }
-        #instrument { pointer-events:none; transition:transform .14s ease-out; transform-box:fill-box; transform-origin:center; }
-
-        /* Fallback interaction if inline scripts are unavailable. */
-        #window:not(.js-live) #zone-left:hover ~ #read-a { opacity:.94; }
-        #window:not(.js-live) #zone-left:hover ~ #read-b { opacity:.08; }
-        #window:not(.js-live) #zone-left:hover ~ #read-c { opacity:.06; }
-        #window:not(.js-live) #zone-left:hover ~ #instrument { transform:translateX(-220px); }
-        #window:not(.js-live) #zone-mid:hover ~ #read-a { opacity:.10; }
-        #window:not(.js-live) #zone-mid:hover ~ #read-b { opacity:.94; }
-        #window:not(.js-live) #zone-mid:hover ~ #read-c { opacity:.10; }
-        #window:not(.js-live) #zone-mid:hover ~ #instrument { transform:translateX(0); }
-        #window:not(.js-live) #zone-right:hover ~ #read-a { opacity:.06; }
-        #window:not(.js-live) #zone-right:hover ~ #read-b { opacity:.08; }
-        #window:not(.js-live) #zone-right:hover ~ #read-c { opacity:.94; }
-        #window:not(.js-live) #zone-right:hover ~ #instrument { transform:translateX(220px); }
+        .micro { font-family:Arial, Helvetica, sans-serif; fill:#2a262d; font-size:8.5px; letter-spacing:.9px; opacity:.58; }
+        .light-band, .shadow-band { pointer-events:none; }
+        .hit { fill:transparent; pointer-events:all; cursor:ew-resize; }
       </style>
     </defs>
 
-    <rect x="55" y="65" width="790" height="1065" fill="#ebe7ee"/>
+    <rect x="55" y="65" width="790" height="1065" fill="#8e9090"/>
 
-    <g clip-path="url(#pane-clip)" filter="url(#soft-paper)">
-      <path class="patch" fill="#c7d57d" d="M55 65 H327 L305 337 L55 359 Z"/>
-      <path class="patch" fill="#d68eaa" d="M327 65 H845 V313 L610 335 L305 337 Z"/>
-      <path class="patch" fill="#7eb8ba" d="M55 359 L305 337 L333 670 L55 692 Z"/>
-      <path class="patch" fill="#eee8f6" d="M305 337 L610 335 L584 680 L333 670 Z"/>
-      <path class="patch" fill="#d99b68" d="M610 335 L845 313 V708 L584 680 Z"/>
-      <path class="patch" fill="#8678bd" d="M55 692 L333 670 L370 1130 H55 Z"/>
-      <path class="patch" fill="#d5df80" d="M333 670 L584 680 L608 1130 H370 Z"/>
-      <path class="patch" fill="#df7693" d="M584 680 L845 708 V1130 H608 Z"/>
+    <g clip-path="url(#pane-clip)">
+      <path class="patch" fill="#777d72" d="M55 65 H366 L348 410 L55 432 Z"/>
+      <path class="patch" fill="#706878" d="M366 65 H845 V383 L615 409 L348 410 Z"/>
+      <path class="patch" fill="#8a7166" d="M55 432 L348 410 L379 793 L55 812 Z"/>
+      <path class="patch" fill="#6b7679" d="M348 410 L615 409 L589 795 L379 793 Z"/>
+      <path class="patch" fill="#77715f" d="M615 409 L845 383 V830 L589 795 Z"/>
+      <path class="patch" fill="#67636d" d="M55 812 L379 793 L402 1130 H55 Z"/>
+      <path class="patch" fill="#7e7f6b" d="M379 793 L589 795 L624 1130 H402 Z"/>
+      <path class="patch" fill="#7b656b" d="M589 795 L845 830 V1130 H624 Z"/>
+      <path class="stitch" d="M366 78 L348 410 L379 793 L402 1116"/>
+      <path class="stitch" d="M615 78 L615 409 L589 795 L624 1116"/>
+      <path class="stitch" d="M69 432 L348 410 L615 409 L831 383"/>
+      <path class="stitch" d="M69 812 L379 793 L589 795 L831 830"/>
 
-      <path class="stitch" d="M327 76 L305 337 L333 670 L370 1119"/>
-      <path class="stitch" d="M610 80 L610 335 L584 680 L608 1118"/>
-      <path class="stitch" d="M69 359 L305 337 L610 335 L832 313"/>
-      <path class="stitch" d="M69 692 L333 670 L584 680 L832 708"/>
-
-      <path class="misreg" d="M318 347 L601 345"/>
-      <path class="misreg" d="M344 680 L575 690"/>
-
-      <g id="evidence" aria-hidden="true">
-        <path class="evidence fine" d="M151 180 l12 5 m14 4 l10 4"/>
-        <path class="evidence" d="M206 220 q13 -8 25 -1"/>
-        <path class="evidence faint" d="M259 247 l17 3 m8 8 l9 2"/>
-        <circle class="dot" cx="226" cy="248" r="3.3"/>
-        <circle class="dot" cx="304" cy="295" r="2.8"/>
-
-        <path class="evidence" d="M588 201 q-5 24 0 49"/>
-        <path class="evidence fine" d="M617 226 q-2 22 2 39"/>
-        <path class="evidence faint" d="M651 244 q-6 18 -1 34"/>
-        <path class="evidence fine" d="M604 294 l17 -8 m12 6 l12 -5"/>
-        <circle class="dot" cx="673" cy="309" r="3.1"/>
-
-        <path class="evidence" d="M163 507 q19 -10 38 0 q15 9 31 1"/>
-        <path class="evidence faint" d="M267 542 l15 -5 m14 7 l11 -3"/>
-        <circle class="dot" cx="212" cy="557" r="3.7"/>
-        <circle class="dot" cx="338" cy="523" r="2.7"/>
-
-        <path class="evidence fine" d="M457 479 q16 -6 31 1 q13 7 28 0"/>
-        <path class="evidence faint" d="M523 527 l13 3 m11 8 l9 2"/>
-        <circle class="dot" cx="494" cy="547" r="3.1"/>
-
-        <path class="evidence fine" d="M650 532 l11 -9 m8 21 l13 -10 m7 24 l9 -7"/>
-        <path class="evidence" d="M711 521 q20 3 34 14"/>
-        <circle class="dot" cx="730" cy="562" r="2.9"/>
-
-        <path class="evidence" d="M149 777 q22 11 43 0 q18 -8 37 3"/>
-        <path class="evidence fine" d="M312 749 q17 9 34 -2 q16 -8 31 3"/>
-        <path class="evidence faint" d="M425 801 l17 -3 m13 7 l14 -2"/>
-        <circle class="dot" cx="277" cy="826" r="3.2"/>
-        <circle class="dot" cx="492" cy="783" r="2.7"/>
-
-        <path class="evidence fine" d="M590 770 q18 -10 36 0 q18 10 35 -1"/>
-        <path class="evidence" d="M698 805 q20 8 39 -1"/>
-        <circle class="dot" cx="651" cy="840" r="3.5"/>
-
-        <path class="evidence faint" d="M181 974 l12 -4 m11 7 l9 -3"/>
-        <path class="evidence" d="M332 928 q20 -8 39 1 q17 9 35 0"/>
-        <path class="evidence fine" d="M514 958 q18 -6 34 2"/>
-        <path class="evidence faint" d="M683 932 l16 4 m12 6 l10 3"/>
-        <circle class="dot" cx="360" cy="982" r="3.0"/>
-        <circle class="dot" cx="568" cy="1011" r="3.6"/>
+      <g id="plates" filter="url(#paper)">
+        <g transform="translate(0 0)">
+          <rect class="plate" x="119" y="138" width="662" height="132" rx="7"/>
+          <rect class="plate-inner" x="128" y="147" width="644" height="114" rx="4"/>
+          <circle class="registration" cx="150" cy="168" r="4"/><circle class="registration-open" cx="750" cy="240" r="7"/>
+          <text class="micro" x="687" y="165">✓</text>
+        </g>
+        <g>
+          <rect class="plate" x="119" y="320" width="662" height="132" rx="7"/>
+          <rect class="plate-inner" x="128" y="329" width="644" height="114" rx="4"/>
+          <circle class="registration" cx="150" cy="350" r="4"/><circle class="registration-open" cx="750" cy="422" r="7"/>
+          <text class="micro" x="687" y="347">✓</text>
+        </g>
+        <g>
+          <rect class="plate" x="119" y="502" width="662" height="132" rx="7"/>
+          <rect class="plate-inner" x="128" y="511" width="644" height="114" rx="4"/>
+          <circle class="registration" cx="150" cy="532" r="4"/><circle class="registration-open" cx="750" cy="604" r="7"/>
+          <text class="micro" x="687" y="529">✓</text>
+        </g>
+        <g>
+          <rect class="plate" x="119" y="684" width="662" height="132" rx="7"/>
+          <rect class="plate-inner" x="128" y="693" width="644" height="114" rx="4"/>
+          <circle class="registration" cx="150" cy="714" r="4"/><circle class="registration-open" cx="750" cy="786" r="7"/>
+          <text class="micro" x="687" y="711">✓</text>
+        </g>
+        <g>
+          <rect class="plate" x="119" y="866" width="662" height="132" rx="7"/>
+          <rect class="plate-inner" x="128" y="875" width="644" height="114" rx="4"/>
+          <circle class="registration" cx="150" cy="896" r="4"/><circle class="registration-open" cx="750" cy="968" r="7"/>
+          <text class="micro" x="687" y="893">✓</text>
+        </g>
       </g>
 
-      <!-- broad invisible reading zones -->
-      <rect id="zone-left" class="hit-zone" x="55" y="65" width="263.4" height="1065"/>
-      <rect id="zone-mid" class="hit-zone" x="318.4" y="65" width="263.2" height="1065"/>
-      <rect id="zone-right" class="hit-zone" x="581.6" y="65" width="263.4" height="1065"/>
-
-      <g id="read-a" opacity=".22" aria-hidden="true">
-        <path class="guide" d="M143 167 L226 248 L304 295 L457 479 L494 547 L590 770 L651 840 L683 932"/>
-        <path class="guide dark dash" d="M588 201 L617 226 L651 244 L673 309"/>
-        <path class="guide yellow" d="M163 507 L212 557 L338 523"/>
+      <g id="histories-base" class="latent base-relief" aria-hidden="true">
+        <g>
+          <path d="M170 221 C223 202 262 232 311 213 S407 206 453 218 S553 240 610 211 S694 203 730 219"/>
+          <path class="fine" d="M178 230 C240 213 266 244 325 224 S421 217 468 229 S566 251 622 223 S694 216 724 228"/>
+          <path class="hair" d="M364 178 q18 14 5 28 q-12 11 3 24 q11 10 0 23"/>
+        </g>
+        <g>
+          <path d="M166 392 C215 366 260 371 298 390 S379 421 425 390 S525 358 563 386 S650 420 725 386"/>
+          <path class="ghost" d="M183 403 C238 382 277 387 316 403 S391 429 438 400 S537 370 579 398 S659 430 721 398"/>
+          <path class="fine scar" d="M329 352 l16 16 -15 17 20 17 -16 19"/>
+          <path class="hair" d="M590 350 l-34 19 m49 -7 l-45 28 m58 -7 l-50 31"/>
+        </g>
+        <g>
+          <path class="broad" d="M182 571 C239 548 292 551 343 571 C390 590 447 592 499 569 C552 546 611 549 711 579"/>
+          <path class="fine" d="M181 558 C240 540 294 542 346 560 C398 579 447 579 498 558 C553 536 614 540 713 568"/>
+          <path class="fine" d="M184 585 C237 566 289 570 339 588 C391 607 448 608 501 585 C553 563 615 565 710 592"/>
+          <path class="hair pale" d="M414 532 l0 73 m16 -67 l0 63 m15 -58 l0 51"/>
+        </g>
+        <g>
+          <path d="M170 748 C231 730 276 734 326 750 S415 780 462 753 S548 721 594 746 S662 775 728 751"/>
+          <path class="fine" d="M171 760 C234 744 280 746 331 762 S421 790 468 765 S552 734 599 758 S663 785 728 763"/>
+          <path class="hair" d="M225 707 q19 12 0 26 q-14 11 1 23 m396 -44 q-18 13 0 27 q14 11 -1 22"/>
+          <path class="fine scar" d="M458 704 l-10 16 12 13 -11 16 13 12 -12 15"/>
+        </g>
+        <g>
+          <path d="M171 939 C226 916 267 923 309 944 S391 974 435 947 S525 909 571 939 S657 977 730 944"/>
+          <path class="fine" d="M174 952 C227 932 269 936 313 957 S394 986 438 960 S527 923 574 952 S660 988 727 957"/>
+          <path class="ghost" d="M190 910 C256 891 302 903 348 921 S430 943 477 919 S565 891 623 916 S686 936 719 923"/>
+          <path class="hair pale" d="M525 888 q-14 13 0 26 q12 12 0 25 q-12 13 0 26"/>
+          <circle cx="360" cy="936" r="3.2"/><circle cx="384" cy="949" r="2.3"/><circle cx="407" cy="932" r="2.7"/>
+        </g>
       </g>
 
-      <g id="read-b" opacity=".82" aria-hidden="true">
-        <path class="guide" d="M132 154 L326 154 L326 319 L132 319 Z"/>
-        <path class="guide" d="M565 176 L698 176 L698 333 L565 333 Z"/>
-        <path class="guide" d="M143 486 L365 486 L365 577 L143 577 Z"/>
-        <path class="guide" d="M441 456 L577 456 L577 568 L441 568 Z"/>
-        <path class="guide" d="M634 498 L755 498 L755 582 L634 582 Z"/>
-        <path class="guide" d="M132 731 L389 731 L389 844 L132 844 Z"/>
-        <path class="guide yellow dash" d="M571 744 L756 744 L756 858 L571 858 Z"/>
-        <path class="guide dark" d="M314 901 L585 901 L585 1027 L314 1027 Z"/>
+      <g id="histories-lit" class="latent lit-relief" clip-path="url(#light-clip)" aria-hidden="true">
+        <g>
+          <path d="M170 221 C223 202 262 232 311 213 S407 206 453 218 S553 240 610 211 S694 203 730 219"/>
+          <path class="fine" d="M178 230 C240 213 266 244 325 224 S421 217 468 229 S566 251 622 223 S694 216 724 228"/>
+          <path class="hair" d="M364 178 q18 14 5 28 q-12 11 3 24 q11 10 0 23"/>
+        </g>
+        <g>
+          <path d="M166 392 C215 366 260 371 298 390 S379 421 425 390 S525 358 563 386 S650 420 725 386"/>
+          <path class="ghost" d="M183 403 C238 382 277 387 316 403 S391 429 438 400 S537 370 579 398 S659 430 721 398"/>
+          <path class="fine scar" d="M329 352 l16 16 -15 17 20 17 -16 19"/>
+          <path class="hair" d="M590 350 l-34 19 m49 -7 l-45 28 m58 -7 l-50 31"/>
+        </g>
+        <g>
+          <path class="broad" d="M182 571 C239 548 292 551 343 571 C390 590 447 592 499 569 C552 546 611 549 711 579"/>
+          <path class="fine" d="M181 558 C240 540 294 542 346 560 C398 579 447 579 498 558 C553 536 614 540 713 568"/>
+          <path class="fine" d="M184 585 C237 566 289 570 339 588 C391 607 448 608 501 585 C553 563 615 565 710 592"/>
+          <path class="hair pale" d="M414 532 l0 73 m16 -67 l0 63 m15 -58 l0 51"/>
+        </g>
+        <g>
+          <path d="M170 748 C231 730 276 734 326 750 S415 780 462 753 S548 721 594 746 S662 775 728 751"/>
+          <path class="fine" d="M171 760 C234 744 280 746 331 762 S421 790 468 765 S552 734 599 758 S663 785 728 763"/>
+          <path class="hair" d="M225 707 q19 12 0 26 q-14 11 1 23 m396 -44 q-18 13 0 27 q14 11 -1 22"/>
+          <path class="fine scar" d="M458 704 l-10 16 12 13 -11 16 13 12 -12 15"/>
+        </g>
+        <g>
+          <path d="M171 939 C226 916 267 923 309 944 S391 974 435 947 S525 909 571 939 S657 977 730 944"/>
+          <path class="fine" d="M174 952 C227 932 269 936 313 957 S394 986 438 960 S527 923 574 952 S660 988 727 957"/>
+          <path class="ghost" d="M190 910 C256 891 302 903 348 921 S430 943 477 919 S565 891 623 916 S686 936 719 923"/>
+          <path class="hair pale" d="M525 888 q-14 13 0 26 q12 12 0 25 q-12 13 0 26"/>
+          <circle cx="360" cy="936" r="3.2"/><circle cx="384" cy="949" r="2.3"/><circle cx="407" cy="932" r="2.7"/>
+        </g>
       </g>
 
-      <g id="read-c" opacity=".18" aria-hidden="true">
-        <path class="guide" d="M118 275 C225 266 336 279 444 271 S662 261 790 272"/>
-        <path class="guide" d="M110 458 C246 448 353 463 488 454 S672 446 793 454"/>
-        <path class="guide" d="M109 657 C232 646 358 661 486 653 S666 647 792 655"/>
-        <path class="guide" d="M108 872 C246 860 357 875 482 867 S678 860 793 868"/>
-        <path class="guide dark dash" d="M108 1039 C236 1027 360 1041 481 1034 S673 1028 792 1035"/>
-      </g>
+      <rect id="shadow-band" class="shadow-band" x="300" y="65" width="190" height="1065" fill="url(#edge-shadow)" opacity=".68"/>
+      <rect id="light-band" class="light-band" x="300" y="65" width="190" height="1065" fill="url(#light-gradient)"/>
+      <line id="light-edge" x1="392" y1="92" x2="392" y2="1096" stroke="#fff7d6" stroke-width="1.15" opacity=".58"/>
 
-      <g id="instrument" aria-hidden="true">
-        <rect id="frame-fill" class="frame-fill" x="330" y="125" width="240" height="890"/>
-        <rect id="frame-edge" class="frame-edge" x="330" y="125" width="240" height="890"/>
-        <path id="corner-ticks" class="corner" d="M330 151 v-26 h26 M544 125 h26 v26 M330 989 v26 h26 M544 1015 h26 v-26"/>
-        <line id="rule1" class="frame-rule" x1="342" y1="154" x2="558" y2="154"/>
-        <line id="rule2" class="frame-rule" x1="342" y1="986" x2="558" y2="986"/>
-      </g>
+      <rect class="hit" x="55" y="65" width="790" height="1065"/>
     </g>
 
-    <g stroke="#211c24" stroke-width="3" stroke-linecap="round" aria-hidden="true">
+    <g stroke="#211c24" stroke-width="3" stroke-linecap="round" aria-hidden="true" opacity=".72">
       <path d="M96 94 l11 4 m11 -2 l9 5 m15 -3 l10 4"/>
       <path d="M676 208 l9 7 m8 -2 l12 5 m10 0 l8 7"/>
       <path d="M104 884 l8 -5 m13 7 l10 -4 m14 6 l11 -6"/>
@@ -188,9 +219,9 @@
 
     <g class="caption">
       <text x="58" y="1164" font-size="21" font-weight="700" letter-spacing="2">BAD WINDOW</text>
-      <text x="845" y="1147" text-anchor="end" font-size="9.6" font-weight="700" letter-spacing=".2">CONTEXTUAL COMPLETION: THE SAME MARKS CAN SUPPORT DIFFERENT GROUPINGS.</text>
-      <text x="845" y="1159" text-anchor="end" font-size="9.6" letter-spacing=".2">MOVE THE READING FRAME. THE GUIDES CHANGE; THE EVIDENCE DOES NOT.</text>
-      <text x="845" y="1171" text-anchor="end" font-size="9.6" letter-spacing=".2">RECENT QUESTION: HOW MUCH OF A FINDING ARRIVES IN THE FRAME?</text>
+      <text x="845" y="1147" text-anchor="end" font-size="9.6" font-weight="700" letter-spacing=".2">THE SURFACES AGREE. THE DEPTH DOES NOT.</text>
+      <text x="845" y="1159" text-anchor="end" font-size="9.6" letter-spacing=".2">MOVE THE LIGHT SIDEWAYS. NOTHING NEW IS ADDED.</text>
+      <text x="845" y="1171" text-anchor="end" font-size="9.6" letter-spacing=".2">RECENT QUESTION: HOW MUCH HISTORY CAN DISAPPEAR INSIDE A SUCCESSFUL STATE?</text>
     </g>
   </svg>
   </main>
@@ -198,46 +229,40 @@
   <script>
   (() => {
     const root = document.getElementById('window');
-    root.classList.add('js-live');
-    const parts = ['frame-fill','frame-edge','corner-ticks','rule1','rule2'].map(id => document.getElementById(id));
-    const a = document.getElementById('read-a');
-    const b = document.getElementById('read-b');
-    const c = document.getElementById('read-c');
+    const clipRect = document.getElementById('light-clip-rect');
+    const band = document.getElementById('light-band');
+    const shadow = document.getElementById('shadow-band');
+    const edge = document.getElementById('light-edge');
+    const PANE_X = 55, PANE_W = 790, BAND_W = 190;
     let t = 0;
-    const clamp = v => Math.max(-1, Math.min(1, v));
-    const weight = (x, center) => Math.max(.06, 1 - Math.abs(x-center)*1.45);
+    const q = new URLSearchParams(location.search).get('t');
+    if (q !== null && Number.isFinite(Number(q))) t = Math.max(-1, Math.min(1, Number(q)));
 
-    function render(next) {
-      t = clamp(next);
-      const dx = ((t + 1) / 2) * 440 - 220;
-      parts.forEach(el => el.setAttribute('transform', 'translate(' + dx.toFixed(1) + ' 0)'));
-      const wa = weight(t, -.72), wb = weight(t, 0), wc = weight(t, .72);
-      const s = wa + wb + wc;
-      a.style.opacity = (wa/s*.9 + .05).toFixed(3);
-      b.style.opacity = (wb/s*.9 + .05).toFixed(3);
-      c.style.opacity = (wc/s*.9 + .05).toFixed(3);
+    function render(v) {
+      t = Math.max(-1, Math.min(1, v));
+      const cx = PANE_X + ((t + 1) / 2) * PANE_W;
+      const x = Math.max(PANE_X - BAND_W/2, Math.min(PANE_X + PANE_W - BAND_W/2, cx - BAND_W/2));
+      clipRect.setAttribute('x', x.toFixed(1));
+      band.setAttribute('x', x.toFixed(1));
+      shadow.setAttribute('x', (x + 20).toFixed(1));
+      edge.setAttribute('x1', (x + BAND_W*.52).toFixed(1));
+      edge.setAttribute('x2', (x + BAND_W*.52).toFixed(1));
     }
-
-    function xToT(clientX) {
+    function clientToT(clientX) {
       const r = root.getBoundingClientRect();
-      return ((clientX-r.left)/r.width)*2-1;
+      const px = (clientX-r.left)/r.width * 900;
+      return ((px-PANE_X)/PANE_W)*2-1;
     }
-
-    root.addEventListener('pointermove', e => render(xToT(e.clientX)));
-    root.addEventListener('pointerdown', e => {
-      if (root.setPointerCapture) root.setPointerCapture(e.pointerId);
-      render(xToT(e.clientX));
-    });
-    root.addEventListener('touchmove', e => {
-      if (e.touches && e.touches[0]) render(xToT(e.touches[0].clientX));
-    }, {passive:true});
+    root.addEventListener('pointermove', e => render(clientToT(e.clientX)));
+    root.addEventListener('pointerdown', e => { if(root.setPointerCapture) root.setPointerCapture(e.pointerId); render(clientToT(e.clientX)); });
+    root.addEventListener('touchmove', e => { if(e.touches && e.touches[0]) render(clientToT(e.touches[0].clientX)); }, {passive:true});
     root.addEventListener('keydown', e => {
       if (e.key==='ArrowRight' || e.key==='ArrowUp') { render(t+.08); e.preventDefault(); }
       if (e.key==='ArrowLeft' || e.key==='ArrowDown') { render(t-.08); e.preventDefault(); }
       if (e.key==='Home') { render(-1); e.preventDefault(); }
       if (e.key==='End') { render(1); e.preventDefault(); }
     });
-    render(0);
+    render(t);
   })();
   </script>
 </body>

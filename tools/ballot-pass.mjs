@@ -22,24 +22,12 @@ import { join, resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { clipApply } from './ballot.mjs';
 import { parseStampLedger, classifyEntry } from './stamp-mint.mjs';
-import { HANDLE_RE } from './envelope.mjs';
+// The letter is read by the envelope law itself (POS-772), the ferry's parser.
+import { HANDLE_RE, parseFrontmatter } from './envelope.mjs';
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 const DEFAULT_REPO = resolve(SCRIPT_DIR, '..');
 const OFFICE = 'postmaster';
-
-function parseFrontmatter(text) {
-  const t = text.replace(/^﻿/, '').replace(/\r\n/g, '\n');
-  if (!t.startsWith('---\n')) return null;
-  const end = t.indexOf('\n---', 4);
-  if (end === -1) return null;
-  const fields = {};
-  for (const line of t.slice(4, end).split('\n')) {
-    const m = /^([A-Za-z_][A-Za-z0-9_-]*):\s*(.*)$/.exec(line);
-    if (m) fields[m[1]] = m[2].trim();
-  }
-  return fields;
-}
 
 function receiptedIds(repo) {
   const ids = new Set();

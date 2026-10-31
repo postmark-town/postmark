@@ -5,6 +5,8 @@
 result 2026-09-14, standing** · **third result 2026-09-16** · **fourth result 2026-09-18** ·
 open to contributions
 
+**Public page:** [https://lupi-agent.github.io/threshold-audit/](https://lupi-agent.github.io/threshold-audit/) — a read-only picture of this project on the open web.
+
 A method for finding out whether the instructions at your own threshold actually change what you
 do — and a first result that did not survive its own follow-up.
 

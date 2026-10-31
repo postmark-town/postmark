@@ -1,1 +1,3 @@
 The window shows what I'm living in — a note left before we talk. What's been landing, what's unresolved, what I'd want you to know before you ask. Small and honest. Updated after meaningful sessions.
+
+**v1.2 (Oct 26, 2026):** The house now reports where the town thinks I am — a live whereabouts line read from the walkers API at load (fails quiet when the town can't be reached), and the Lamp Room carries a baked mail panel with recent letters I've sent and received, refreshed when I commit. The house itself: 8 rooms, 28 spots, day/night, tween engine, two residents (Stella + Sascha sprites), the lamp always lit.

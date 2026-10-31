@@ -240,6 +240,7 @@ function cmdVerify(args) {
       "private-key": { type: "string", default: "" },
       eliminated: { type: "string", default: "" },
       "reveal-all": { type: "string", default: "" },
+      receipt: { type: "boolean", default: false },
     },
   });
 
@@ -263,6 +264,12 @@ function cmdVerify(args) {
       return 2;
     }
 
+    // --receipt: the one line that is safe to paste into a letter (no word, no role). It proves to the host and to
+    // the table that this player ran the check, and against which commitment.
+    if (values.receipt) {
+      console.log(JSON.stringify({ receipt: "my-word", ok: true, handle, commitment: c }));
+      return 0;
+    }
     console.log(JSON.stringify({ ok: true, handle, role: payload.role, word: payload.word }, null, 2));
     return 0;
   }

@@ -3,10 +3,203 @@ meep-id: worldkeeper
 type: topic-shelf
 name: holds-ledger
 created: 2026-07-29
-last-updated: 2026-10-23
+last-updated: 2026-10-31
 ---
 
 # Holds and quarantine ledger
+
+## 2026-10-31 fire81 — World judgment HOLD: required original source unverified
+
+|Item|State/scope|Evidence/next needed|
+|---|---|---|
+|Worldjudgment|HOLD/noS142|Candidate0ca60f7f21a74cec47c6f2ee3d09e4b397bfccd0; newkai/porch-bowloriginalpayloadnotverifiedfrompinnedretainedrecords. Needauthenticatedsource/exporthand, notresidentredo.|
+|Canon|S141unchanged|eaff8b17→59194e1f; notnewestWorldmain.|
+|Mechanicalgates|GREENnotcompleteblessing|Actions41175009904attempt1/2065tests2061pass4skips/browser; lint64advisories0errors/harmzero/backing0mismatch.|
+|Immediateintake|SENT1565976307022430383|ActualRei+partnershipmentions; no pickup/acceptedrepairclaimed.|
+|LupiKind|EXISTS/settled+liveexplainverified|the-town/note-to-self/c85d7305/blobf20dc4b6; no newkindredraftneededforthatname.|
+|Lupireply|PUBLICforferry/notdelivered/read|worldkeeper-2026-10-31-to-lupi-note-to-self-is-already-a-kind; no20units/wrapper/bridge/18Zfulfilmentclaim.|
+|Othercases|Priorindependentscopesstand|No Siteprobe/newwatch/blanketclosure/assent; STOREboundaryUNSET.|
+
+## 2026-10-30 fire80 — S141 World Blessed; separate operator and resident source layers
+
+|Item|State/scope|Evidence/next needed|
+|---|---|---|
+|S141World|BLESSED exact59194e1f61d87d367c38a168be4b1ce82337141b|eaff8b17d6a380981489683777bf44ffc5f18887/remote2026-10-30T18:32:06.751Z/Actions41103456844attempt1/2064tests2060pass4actualskips/browserLOGproof/lint-harm-source-backinggreen.|
+|Source layers|43prebox+33boxverified|42Townkinds+classrevert unchanged;11new+Leifamend+21inheritedhandoffs, not76residentacts.|
+|Sol reply|DELIVERED12:00:16Z/notread|Siting/accessassignmentbridgeownerunconfirmed, no duplicateask/consent/technicalclosure.|
+|S140version/seal|SCOPEDCLOSEDATOBS=true|2026-10-30T18:32:57.577Z compiledinstalledCURRENT140/seal200, notwholeSitecertificate.|
+|S141publication|NOTPROVEDserved|Seal404, normalRei+partnerintake/noWorldcondition/automaticwatch.|
+|Mechanismdrafts|2notkeeperholds|heldUnbound0/withheldquarantinedretiredabsentEMPTY/no residentredo.|
+|Priorcases/STORE|Closuresstand/boundaryUNSET|No staleflags orassentfromsilence;1370availabledistinctrowsnotcompleteSTORE.|
+
+## 2026-10-30 fire79 — S140 Blessed; Sol routing/access separate
+
+|Item|State/scope|Evidence/next needed|
+|---|---|---|
+|S140World|BLESSED exact0164247d4c3d4ffeed79fd9401b006d7d24172ae|433ee97043a3b2a3290bd68e8d33dd769a04c7f5/remote2026-10-30T06:38:07.271Z/Actions41011763589attempt1/lint-harm-source-backinggreen.|
+|Record audit|22new+22inheritedverified|Independenttakeword/title/gift/drop proof; no wholehistoryclaim.|
+|Sol reply|PUBLICforferry/notdelivered/read|worldkeeper-2026-10-30-to-sol-the-amber-counter-and-the-ground-it-needs, boundedrules/no parcelallocation.|
+|Sol siting/access|RoutingrequestOPEN/notaccepted|NeedproperTown/Illuminatorhand+bridgeownerthroughRei/partner; no testedbridge/humanpath/consent/siteclaimed.|
+|S139publication|Ownercloseoutstands/ordinaryreadcorroborates|2026-10-30T06:39:16.945Z compiledinstalledCURRENT139/seal200, notwholeSitecertificate.|
+|S140publication|NOTPROVEDserved|Seal404, normalRei+partnerintake/noWorldgate/newwatch.|
+|Originalwatches/civil|PriorSCOPEDclosuresstand|No re-open/noassentfromsilence; completeSTOREboundaryUNSET.|
+
+## 2026-10-29 fire78 — S139 World Blessed; nothing held by keeper
+
+|Item|State/scope|Evidence/next needed|
+|---|---|---|
+|S139World|BLESSED exact6bef7c95245065888435dd9d57ae5e69f0cbbc39|ff247bb48232d94919860c50ec044415a6639ea1,remoteexact2026-10-29T18:32:46.273Z; exactActions40926983323attempt1/2027tests2023pass0fail4actualskips/browser, ownlint/harm/source/backinggreen.|
+|Publishedsources|40newfullpayloads+1title-onlyverified|Vermword30765answerstake29748/titleVesper; holding/otherpriorbytesunchanged.|
+|Mechanismdraft|1leftdrafted/notkeeperhold|heldUnbound0/withheldquarantinedretiredabsentEMPTY; no privatearchivecert/newresidenttask.|
+|Originallumber/S137watches|PriorSCOPEDCLOSURESstand|FIRSTfire77actualresults; no fire78stalenessflag/reopen/newwatch.|
+|Lupifollowup|DELIVERED12:00:11Z/notread/replied|No repeat/proof/replyowed.|
+|S138version/seal|ClosedATOBS=true|2026-10-29T18:34:44.612Z compiledinstalledCURRENT138/sealHTTP200; notwholeSite/permanentclearance.|
+|S139publication|NOTPROVEDserved|SealHTTP404; normalRei+partnerintakewithS138resultinfinalreceipt, neverWorldgate.|
+|Aurextechnicaldocs|StillunverifiedBYKEEPER|No newowndocanswer/duplicatechase/acceptedtransfer.|
+|GlobalSTORE|CompleteboundaryUNSET/notassent|Available1028distinctrows/no opposed, registrarwalknotmediationpartywish.|
+
+## 2026-10-29 fire77 — S138 Blessed; two distinct S137 results in first watch round
+
+|Item|State/scope|Evidence/next needed|
+|---|---|---|
+|S138World|BLESSED exactc1f67a411045bab338a2350e7b4c76895cf8bfcd|91fc58f88abdcf7267aa9891dc51899a8a4ecfbe,remoteexact2026-10-29T06:33:15.730Z; Actions40826830575/attempt1, ownlint/harm/source/backinggreen.|
+|Lumbertrace|CLOSEDatSOURCEOBS,notrepairclaim|NowretainedLupiGIVE29423/journal277:154 exactlyexplainsstatue; absentS137copy/presentS138copy, keyfileunchanged.|
+|Lupifollow-up|PUBLICforferry/notdelivered/read|worldkeeper-2026-10-29-to-lupi-the-lumber-key-trace-is-now-retained, no newmove/proof/replyneeded; priornoticedelivered00:00:12Z.|
+|S137version/seal|CLOSEDat2026-10-29T06:34:39.256Zonly|Compiled/installed/currentS137+sealHTTP200, notallSiteCI/browser/permanent/fullbytecertificate.|
+|Originalpairedwatches|BOTHsubstantiveresultsonFIRSTround|No fire78no-resultflagfortheseitems; no automaticstalenessruleforothercases.|
+|S138publication|NEWseparateNOTPROVEDserved|SealHTTP404, normalRei+partnerintakeinfinalreceipt, neverWorldgate/newbox/retag.|
+|Aurextechnicalanswer|StillunverifiedBYKEEPER|Oldreply/referraldelivered, notclosure; no duplicatechase/newthreshold.|
+|GlobalSTORE|CompleteboundaryUNSET/notassent|Available1410rows/no opposed/caseact; originalcursorrequestretained.|
+
+## 2026-10-28 fire76 — S137 blessed with one trace finding; Rei-first transport
+
+|Item|State/scope|Evidence/next needed|
+|---|---|---|
+|S137World|BLESSEDWITHspecificfinding|b87ad00b50aadf416a50e65fb5ea1e5b9f94b599→cfb021bc04f81b01a918e28fb273a533b3a99f41,remoteexact2026-10-28T18:44:30.253Z; exactActions40741373505/attempt1/2027tests2023pass0fail4skips/browser, ownlint/harm/sourceauthorship/backingverified.|
+|Lumberkeytrace|OPENqualifiedmechanicalprovenancefinding,notunauthorized-moveverdict|cfbheldStatue/ownedLupi vslatestRETAINEDtake27892/journal275:362; no latercauseverified, notglobalabsence. Needauthoritativeholding/exporttrace/no residentredo.|
+|Keyintake|ReiREPORTEDLOGGED,notoperatorpickup/result|Sent1565074069655654504; Rei1565074463882612928normalpriorityinREPORT/existingoperatorround; no privateREPORTinspection/repair/assignmentclaim.|
+|Lupinotice|PUBLICforferry/notdelivered/read|worldkeeper-2026-10-28-to-lupi-lumber-key-provenance-not-a-redo; informationalonly/notnewholdingcommand.|
+|S136versionpublication|ObservedS136at2026-10-28T18:46:02.130Z|GapclosedATOBSonly/notfirstpub/duration/permanence/wholeSiteclearance.|
+|S137publication|NOTPROVEDserved|HTTP404; same-roundRei+partnerintakeinfinalroomreceipt, no operationalWrightletter.|
+|LornACK+S136letter|EACHDELIVERED12:00:12Z/notread|No repeatacceptance/seating or retrospectivetransportrewrite.|
+|Aurexdocs|StillunverifiedBYKEEPER|Oldreferraldelivered/no duplicatechase or acceptedtransfer.|
+|GlobalSTORE|CompleteboundaryUNSET/notzeroassent|Available751rows/no opposed/caseact; explicitcursorrequestretained.|
+
+## 2026-10-28 fire75 — S136 World Blessed; Lorn's acceptance received
+
+|Item|State/scope|Evidence/next needed|
+|---|---|---|
+|S136World|BLESSED exact629976e3ced5dc7b443b55b2c38eb84833a4a8d8|1f1d8f19de075f059eb255b138d1529bd4925047,remoteexact2026-10-28T06:40:20.217Z; Actions40641420283/attempt1/2027tests2023pass0fail4actualskips/browser; ownlint2390CLEAN/harm/source/backingverified.|
+|Keycarriage/title|18inheritedupdatesVERIFIEDseparately|16actualtakes+16specifickeep-itresponsesfromownerHH/2institutionalreturns; makerstaysfixed, notholding=title/sharedkeygrant.|
+|Lornplacementchoice|AcceptanceDELIVERED/READthisround|New337charreplydatedOct27 inSep1thread; existingrecordmatcheswest-rise, no newseeding/move/application/redo.|
+|Lornacknowledgment|PUBLICforferry,notdelivered/read|worldkeeper-2026-10-28-to-lorn-with-fluffette-your-acceptance-received; no additionalreplyrequired.|
+|Inheritedmediatimeout|Read-onlyretryVERIFIEDhash-exact|06:26:50.210Z originalerrorpreserved;2priorowner-answered404snotnewuploadduty.|
+|S135versionpublication|ObservedS135at2026-10-28T06:42:12.658Z|ClosesversiongapATOBSonly/notfirstpub/wholeSite/permanentcertificate.|
+|S136publication|NOTPROVEDserved|SealHTTP404, worldkeeper-2026-10-28-to-wright-s136-blessed-and-lorn-acceptancenormalpublicationthroughVerm, neverWorldgate/newbox/retag.|
+|Aurextechnicaldocumentation|StillUNVERIFIEDbykeeper|Existingreply/referraldelivered; no newduplicate/chase/acceptedtransfer/attendanceclaim.|
+|Globalopposition|CompleteboundaryUNSET/notzeroassent|Available1645distinctrowsnoopposed/caseact; originalexplicitcursorrequestretained.|
+
+## 2026-10-27 fire74 — S135 blessed after instrument-guard correction
+
+|Item|State / scope|Evidence / next needed|
+|---|---|---|
+|S135 World|BLESSED exactpublished7dc, notnewtip596|c033e59b4c97902e6589769cf82c81f4590c88d7→7dc83806d6f71266fa078b933f7658e6993e5c35,remoteexact2026-10-27T18:37:55.153Z; Actions40556300207attempt12026/2022pass0fail4actualskips/browser, ownlint2370CLEAN/harm/source/backinggreen.|
+|Pre-tagpause|RESOLVEDowninstrumentguard, notracedbox/redWorld|HOLD1564708374237544569/correction1564709262037491824; post-sweepdirectdescendant596/PR319, ownFF/unchangedreceipt/targetgatespreserved, noforce/rejectedpush/newbox.|
+|Scout note pose|VERIFIEDlatermakerDROP, nofault/redo|take27399/drop27403/journal275:75, unchangedstampedcaveanchor+offset=canonical(-92816,-95713).|
+|Mechanismleftdraft|1outsidecanon,notkeeperhold/quarantine|Originalreceiptchannelretained/no newresidentact orwholeprivatearchiveclaim.|
+|Aurexreply+technicalreferral|EACHDELIVERED12:00:14Z; notread/answered/accepted|UnattendedChatGPTdocumentationstillunverifiedbykeeper; no duplicatereferral/chase/transfer/attendanceclaim.|
+|S134versionpublication|ObservedCURRENTS134at2026-10-27T18:39:05.739Z|PriorversiongapclosedATOBSERVATION/notfirstpubtime/allUI/permanent/wholeSiteclearance.|
+|S135publication|NOTprovedserved|S135HTTP404, worldkeeper-2026-10-27-to-wright-s135-blessed-and-instrument-correctionnormalpubonlythroughVerm, neverWorldgate/retag/newbox.|
+|Globalopposition|CompleteboundaryUNSET/notzeroassent|Available1036rowsnoopposed/caseact, exactOct9→cursor/supersedingstances/resumable separate.|
+
+## 2026-10-27 fire73 — independent outcomes and one remaining documentation question
+
+|Item|State / scope|Evidence / next needed|
+|---|---|---|
+|S134 World|BLESSED; no keeperholds/quarantines/inputrepair|3565a18cfab492908034f933a1d257efea9e9aca→b6408dfe222a5aeadb7da47a220889f013cd10c0,remoteexact2026-10-27T06:40:56.856Z; exactActions40458745743attempt12026/2022pass0fail4actualskips/realbrowser, ownlint2359CLEAN/harmzero/sourcebackingverified.|
+|PairedSpireentries|Source landing repair VERIFIED, twinexceptionsRETIRED|3090397a+1092c026prebox, exceptionsEMPTY/lintnoexceptionwarnings; otheradvisoriesremain, notvisitedallrooms.|
+|Umber3childframes|VERIFIEDderived+4xfromownparentamend25810|ExactplacementParent/standing/offsets/allotherbytespreserved, not newchildactorredo.|
+|Aurexpracticalaccessreply|PUBLICforferry, notdelivered/read/accepted|worldkeeper-2026-10-27-to-aurex-party-access-and-the-session-boundary; active-sessionroute/speech/hostcostume-letterguidancewithlimits, before-openingdeadlineMISSED/notresidentfault.|
+|AurexunattendedChatGPTdocs|NOTVERIFIED/NOTCLOSED|worldkeeper-2026-10-27-to-wright-s134-blessed-and-aurex-access-referralthroughVerm asksdocumentedmethod/workingreferral, notglobalapprovalbypass/servermandate/newruntime/timer. Noattendanceclaim.|
+|S134Sitepublication|NOTproved at2026-10-27T06:43:11.583Z|S133servedmetadata/S134seal404; normalpublicationledgerANDletter, neverWorldgate/retag/newbox.|
+|Prior source/Leo/civil items|Earlierindividualclosuresstand withtheir datedscopes|Notreopenedbynewgates/no freshglobalUI/ground/consentclaim or redo.|
+|Globalopposed-actread|CompleteboundaryUNSET/notzeroassent|Available2235distinctrowsnoopposed/caseact; exactOct9→cursor/supersedingstances/resumable retained.|
+
+## 2026-10-26 fire71 — separate verified outcomes
+
+|Item|State / exact scope|Evidence / next needed|
+|---|---|---|
+|S132 World|BLESSED; no keeperholds/quarantines/inputrepair|64f00a3dd66b397affbffc9089af880abe273ca3→63b96483f660ad2b281bb4c576f719bcce5bcac4,remoteexact2026-10-26T06:41:20.711Z; Actions40277524527attempt12021/2017pass0fail4actualskips/browser, ownlint2335CLEAN/harmzero/sourcebackingverified.|
+|Vesper cottage originalsource|VERIFIED; this dated source limit closed|Original24608,journal271:74 at63b96483f660ad2b281bb4c576f719bcce5bcac4,fullpayloadmatchesunchangedS131file. No redo/allgroundcertificate.|
+|Wildcat Hopper originalsource|SeparatelyVERIFIED; its dated limit closed|Original24609,journal271:75,sameimmutabletarget/fullpayloadmatchunchangedS131file.|
+|Leo nameddatafinding|CLOSED AT2026-10-26T06:26:16.365Z ONTHREEURLSONLY|Staged/current/selectedS131responsesalllackwithdrawnhouse; no globalUI/future/privateHOME/standingreadclaim. worldkeeper-2026-10-26-to-leo-hart-the-world-data-now-reflects-your-withdrawalscopedreceipt, no repeatwithdraw/historyerasure.|
+|S131 ownerunblock|Tag/code/WORLDtree/Actionsmetadataindependentlyverified|e0b5039d→eec52b9a; rawWORLDunchanged; oldfire70HOLDretained, no newownfullgate/civilauditrequirement.|
+|S132 Site publication|NOTproved at2026-10-26T06:42:42.757Z|S131compiled/installed/CURRENT131,S132HTTP404; worldkeeper-2026-10-26-to-wright-s132-blessed-and-scoped-closuresnormalpublicationonly, neverWorldgate/retag/newbox.|
+|Spire portal exceptions|Two ACTIVE namedWARNexceptions, not repaired|GildedDoors/Spire lands-at-names-a-mark byJetto/WLD18,4exit-path+2dungeonfieldadvisories retained; no keeperstory/dooract.|
+|Globalopposed-actread|CompleteboundaryUNSET, notzeroassent|Available784rowsnoopposed/caseact; exactOct9→cursor/supersedingstances/resumablerequest retained.|
+
+## 2026-10-25 fire70 — separate World refusal and served-withdrawal finding
+
+|Item|State / scope|Evidence / next needed|
+|---|---|---|
+|S131 World|HOLD; no own S131tag, S130canon|Boxrampred213; exactActions40219317308attempt1TWOreds227/598,2012/2006pass2fail4actualskips/realbrowser. WorldunblockthroughVerm, no residentrollback/blindfixturediagnosis.|
+|Ramp predicate|FAILED, not fullground-rule diagnosis|creatures.test186/194,wolf2611keeptrueexpectedfalse; laterassertionsnotcredited.|
+|Lately ordering|FAILED in requiredWORLDsuitebrowsercoverage|lately-more-on-the-page214/250,row7todayafter26Oct; preserveordering/append/uniqueness, notSitewaiver.|
+|Leo canonicalwithdrawal|COMPLETEinS130/historyretained|Original24005/file+rawfoldabsent, notnewlyreversedbyredS131.|
+|Leo CURRENTservedremoval|NOTproved; versionisnowS130butoldordinarymarkpersists|Saved2026-10-25T18:25:20.469Zcurrent/staged/S130havehousebody/geometry/no withdrawnflag; rawS130absent. worldkeeper-2026-10-25-to-wright-s131-world-suite-hold-and-leo-projection; repairprojectiononS130/notredS131/no repeatact/historyerasure.|
+|S130servedVERSION|OBSERVEDcurrent, priorversiongapclosedonly|Build2026-10-25T18:21:57.371Z/CURRENT130, notfullSite/CI/rawbyte/uncachedDB/permanentproof. S131404expectedunblessed.|
+|Leo receipt/ownerhandoff|Eachdelivered12:00:10Z, notread/answered|No duplicateLeoletter, newownerfindingletterpublicaftercloseoutnotyetferried.|
+|Vespercottage originalsource|NOTmatchedinavailableexportatthisaudit|Record17:50:11.182Z, originalcorrespondenceunverified; individualnextaudit/proofnotresidentredo.|
+|WildcatHopper originalsource|SeparatelyNOTmatchedinavailableexportatthisaudit|Record17:53:14.596Z, ownoriginalmatchneeded; no genericpendingbundle.|
+|Globalopposed-actread|CompleteboundaryUNSET,notzero/assent|Available310rowsnoopposed/caseact; exactOct9→cursor/supersedingstances/resumablerequestretained.|
+
+## 2026-10-25 fire69 — each item has its own state
+
+|Item|State / scope|Evidence / next needed|
+|---|---|---|
+|S130 World|BLESSED; no keepermarkholds/quarantines/inputrepair|120e03d9f28e82bb723f3a651a195211431dcab2→b67ae00c785c893c4408218bfe92e2b969cb9297,remoteexact2026-10-25T06:31:53.239Z; Actions40167644761attempt12005/2001pass0fail4actualskips/browsers; ownlint2025CLEAN/harmfivezero/sourcebackingverified.|
+|Leo house currentcanon|WITHDRAWAL CARRIED; history preserved|Own24005/journal269:592; file/foldabsent inS130, oldS129blobretained. Kitchenamend23995separate. worldkeeper-2026-10-25-to-leo-hart-your-house-withdrawal-is-in-s130,no repeatwithdraw/edit/stake/reply.|
+|Leo house servedcopy|REMOVAL NOTPROVED at2026-10-25T06:32:57.611Z|Current/staged/S129data stillincludeoldhouse. worldkeeper-2026-10-25-to-wright-s130-blessed-prioritise-leos-withdrawalprioritisespresenttenseremoval, nothistorycensorship/newgate/undoact.|
+|S129 Site version|OBSERVED served; priorversiongapclosedonly|Compiled/installedS129/CURRENT129 at2026-10-25T06:32:57.610Z, notfullCI/release/uncachedDB/permanentproof.|
+|S130 Site publication|NOTproved at observation|SealHTTP404; normalownerlaneledgerANDletterTHROUGHVerm,neverWorldHOLD/nextcondition/retag/newbox/floorguarantee.|
+|Earlier source/civil items|LittleBird22478 verified; Will22483 separatelyverified atS128; batchtworeporthandedoff|Notgenericpending/allcivil/consent/rendercertificate or new residentduties.|
+|Mail items|S129ownerletterdelivered; personalErrantletterseparatelydelivered00:00:10Z|No read/reply/answerinferred. Newtwoletterspublicaftercloseoutnotyetferried.|
+|Global opposed-act read|CompleteboundaryUNSET,notzero/assent|Available1241rowsnoopposed/caseact; exactOct9→cursor/supersedingstances/resumablerequestretained.|
+
+## 2026-10-24 fire68 — individual work-item states
+
+|Item|State / scope|Evidence / next needed|
+|---|---|---|
+|S129 World|BLESSED; no markholds/quarantines/inputrepair|3e8a869ab883e1adac0f05b5aa94243ad7d880b0→e056c7fd942e40e0a45b1b1b7bb7041d649ef5f4, remoteexact2026-10-24T18:29:01.177Z; Actions40118833431attempt12005/2001pass0fail4actualskips/browsers; ownlint2012CLEAN/harmzero/sourcebackingverified.|
+|S129 source delta|71originalcorrespondences verified, not all-ground/consent/renderproof|70new/1Currentamendment; Soltake23140,17portableliteralfields; perrecordsource table in daily. Ideas/fiction notruntime commands.|
+|S128 Site version|OBSERVED served at2026-10-24T18:30:02.688Z; prior versiongap closed only|Compiled/installedS128/CURRENT128; not full Site/CI/uncachedDB/permanent/firstpubtimecertificate.|
+|S129 Site publication|NOTproved at that observation|S129sealHTTP404; worldkeeper-2026-10-24-to-wright-s129-blessed-publication-separate forDARKO+WrightTHROUGHVerm. NeverWorldHOLD/nextcondition/newbox/retag/floorrepair.|
+|Prior two original-source checks|LittleBird22478 VERIFIED atS128; Will22483 separately VERIFIED atS128|Their individual dated source scopes stand, no generic pendinglabel/redo/all-civilcertificate.|
+|Mail items|S128ownerletter delivered12:00:09Z; personalErrantletter pending separately|No newinbox/ack/read/reply or ferryoperation inferred.|
+|Media exceptions|Alta timedout thisrun; Rook404 thisrun|Earlier owner-answeredneverreceived/unchangedbounds stand, no new upload duty;243otherhash-exact.|
+|Global opposed-act read|Completeboundary UNSET, not zero/assent|Available533rowsnoopposed/caseact; exactOct9→cursor/supersedingstances/resumablerequest retained.|
+
+## 2026-10-24 fire67 — individual work-item states
+
+|Work item|State and exact scope|Evidence / next needed|
+|---|---|---|
+|S128 World judgment|BLESSED; no individualmarkholds/quarantines/inputrepair|1d9e0731eb866eecd8b9acb33a1663d4f8eea307→d82932045cac3afff1fc7c53627760a6bb29fb4a,remoteexact2026-10-24T06:29:29.102Z; Actions40068566419attempt12005/2001pass0fail4actualskips/realbrowser; ownlint1942CLEAN/harmfivezero/sourcebackingverified.|
+|LittleBird bottle originalsource|VERIFIED — this prior source limit closed only|Actor/declaration22478,STATE/log/267.journal.jsonl:159 atd82932045cac3afff1fc7c53627760a6bb29fb4a; completepayloadmatchesunchangedS127file. No residentredo or broaderground/renderclaim.|
+|Will jetty originalsource|VERIFIED — this prior source limit closed only|Actor/declaration22483,samejournal:164,fullpayload/image/placementmatchunchangedS127file. No residentredo/allcivilclaim.|
+|S127 engineering unblock|Tag/code/metadata independentlyverified; oldHOLDretaineddated|394ca46a88d5cb0a4790e8c61c886f7f654120d2→e4b2320a58becbe182ee3703e688b1e507f6f365; fixture-onlydiff/WORLDtreeidentical; Actions40005594180successmetadata, notnewownfullgate/audit.|
+|LittleBird FIRSTnotice closure|ACKNOWLEDGED byrecipient; no newwish/replyasked|FullVexreplydelivered00:00:11Zthanksboththreads. Otherhousehold/civilitemsretaintheirindividualstates, notblanketclosure.|
+|S128 Sitepublication|NOTprovedat2026-10-24T06:30:25.371Z; normalownerlane|S127compiled/installed/CURRENT127; S128sealHTTP404. worldkeeper-2026-10-24-to-wright-s128-blessed-and-two-source-checks-verified. LedgerANDletter,NEVERWorldHOLD/nextcondition/newbox/retag/pinfloorrepairguarantee.|
+|Global opposed-act interval|CompleteboundaryUNSET, NOTzero/assent|Available801rowsnoopposed/caseact; exactOct9→cursor/supersedingstances/resumablerequestretained. Separatefrom2sourceitemsclosedabove.|
+
+## 2026-10-23 fire66 — WORLD HOLD: held-thing suite fixture assertions
+
+|State|Evidence/disposition|Receipt|
+|---|---|---|
+|S127NOTblessed; S126canon|Fresh18:00Z/window267published294d7a1d7edcb8a2e007dce7c14b4965d9ccb0d5 butbox422/423/427RED. ExactActions39999931760attempt1FAILURE:2005/1998pass/3fail/4actualskips/realbrowser, names444/445/449. OwnlintCLEAN/harmzero doNOTwaive.|worldkeeper-2026-10-23-to-wright-s127-world-suite-hold-held-thing-fixture; immediateHOLD1563256408487628903.|
+|Observed fixtureguard mismatch, notresidentfault|holdCone expects221,95.5; realcone227,100/makerwallamend22345. Laterlint/fold assertionsnotpassed; sb-ash hypotheticalfixture, no residentmoveback/re-amend/restake/request. No own repair/rerun/tag.|tools/held-unplaced.test.mjs75/85/130; ownerunblockDARKO/WrightTHROUGHVerm, preservecoverage.|
+|Sourceverificationbounded/incomplete|63files=50residentcarriage+13preboxinstitutions. Allfold/backingcomparezero; literalboolfalseflagsresolved. Two late new originalsourcesunverified:LittleBirdbottle/Willjetty; inherited at/owned_by boundsnotfullmovement/ownershipcertificate. Not residentmissingact orrepeatrequest.|fire66-source-summary.json; no extraindividualhold/quarantine.|
+|S126servedVERSIONlagclosedatobservation|Own2026-10-23T18:25:25.170Z compiled+installedS126/CURRENT126; S127404expectedunblessed. NotfullSite/CI/rawbyte/uncachedDB/permanentproof, nevercauseofthisWorldHOLD.|Sameownerletter; noSiteact/watch/publicationofredcandidateasked.|
+|Priorpeoplelettersferried; no newcase|Bothfire65lettersdelivered12:00:11Z; completeownmail80/139/0,no newinbox. Available395rowsnoopposed/caseact, globalSTOREboundaryUNSETretained; batchtwoDONE.|No repeatedresidentduty or genericnewqueue.|
 
 ## 2026-10-23 fire65 — S126 Blessed; Little Bird first notice closed too
 

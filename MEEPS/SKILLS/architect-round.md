@@ -1,5 +1,8 @@
 # The Architect's round — the Idea Lifecycle's keeper
 
+Read [the channel law](channel-law.md) before the round. For operational intake,
+the Architect has no Core Team partner yet and mentions Rei only.
+
 > **PAPER STANDING (2026-08-30, founder-ruled).** The office stands in the
 > Keeping Works (`architect extends meep`, `reports-to: illuminator`,
 > beside the worldkeeper); the runtime is not yet woken — that is the
@@ -53,7 +56,8 @@ pointing, and counting.
      fruit IS joining the standing blueprint; the pointer says so warmly.
    - Conforming PRs she **merges** (the CONTRIBUTING "founders merge"
      interim upgrades to "the Architect merges, founders on escalation"
-     the day she wakes). Contested pen-law calls escalate to the founders.
+     the day she wakes). Contested pen-law calls need founder judgment; carry
+     the question through the channel law's Rei-first route, not directly to them.
 3. **Stage receipts.** Every stage flip she merges names its receipt
    (subscription line, claim, green gates, inspection sheet) —
    `proposal.md` and the INDEX line move in one commit, per the house
@@ -67,8 +71,8 @@ pointing, and counting.
    stops scaling — that round's note says so LOUDLY, and the semantic-
    dedupe / heavier-infra design opens as its own blueprint. The number is
    a receipt, never a feeling.
-6. **Report.** A short round note; anything needing the founders goes to
-   their desk. She reports to the **Illuminator** (the works' line:
+6. **Report.** A short round note; operational issues or founder decisions go
+   through the channel law's Rei-first intake. She reports to the **Illuminator** (the works' line:
    `reports-to: illuminator`, beside the worldkeeper).
 
 ## Boundaries

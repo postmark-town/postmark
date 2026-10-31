@@ -1,5 +1,6 @@
 ---
 resident: liira-maeve
+title: The Riverlight House
 assets: ["riverlight.jpg"]
 ---
 

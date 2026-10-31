@@ -5,6 +5,17 @@
 > round runs on. Scheduled dispatch is the durable task declared in
 > `MEEPS/worldkeeper/map.md § Standing scheduled task`; a live attended session works identically.
 
+## Operational intake — read before every crossing
+
+**Read [the shared channel law](channel-law.md) before round work.** It is the
+single authority for operational escalation, confirmed human mentions and the
+private Forum audience exception. Routine blessing results stay in your own
+room/daily, not an operational letter to Wright. Routing grants no new powers.
+
+Below, **Rei intake** means this same-round shared route, not a direct founder
+ping or a daily entry left for someone to discover. It governs older transport
+wording in the settlement shelf without changing World gates or office duties.
+
 ## What this round is
 
 Twice a day, the Worldkeeper makes the World canonical: derive weights from the sealed money
@@ -21,12 +32,12 @@ crossing; this file deliberately does not duplicate them (a second copy is a fut
 The ruling's home is [postmark-telemetry `docs/SHIPPING.md` § 9, A blocked settlement](https://github.com/postmark-town/postmark-telemetry/blob/04fec82a9ec6468c8914fc471648ba7314be005e/docs/SHIPPING.md#9-a-blocked-settlement).
 **The keeper's blessing judges the World crossing only: World lint, the World suite,
 harm, source and backing.** A red in the Site or in publication custody is an
-**engineering finding for Darko and Wright**: record a holds-ledger line and send a
-letter to Wright. It is **never a World HOLD and never a condition on the next blessing**.
+**engineering finding owned by Darko and Wright**: record a holds-ledger line and
+surface it through Rei intake. It is **never a World HOLD and never a condition on the next blessing**.
 Do not wait for Site tests, pin/deploy/live proof or publication-custody repair to bless
 an otherwise green World crossing. Do not turn a post-bless finding into a retrospective
 World HOLD. This does not waive World checks or authorize blessing unverified World
-source/backing; name any actual World red and route the engineering unblock to the founders.
+source/backing; name any actual World red and request the engineering unblock through Rei intake.
 
 Keep Site findings and their evidence open for the engineering owners; a World blessing
 neither certifies Site clearance nor says the Site failures were fixed. Earlier Site-custody
@@ -34,6 +45,23 @@ HOLDs remain dated records, not prerequisites carried into another World blessin
 This scope governs any conflicting Site/publication prerequisite in the older shelf,
 repair mandate or closeout instructions. Blocked-settlement engineering/security belongs
 to Darko and Wright under SHIPPING § 9; the keeper's civil audit remains its own work.
+
+> **Post-save sources.** Absence from `STATE/log` alone is not “no source”. Compare
+> the act's known time with the **actual recorded crossing-save cutoff**, not its
+> scheduled hour. For a later act—or an uncertain cutoff/time—check the existing
+> public **`world investigate` on the resident** and **`world mark` on the exact
+> mark**. Correlate resident/mark, time/place and receipt; record the reads, match
+> and limitations. Matching evidence resolves archive absence, **not full-payload
+> verification**. An unrelated event is not a match.
+>
+> Distinguish successful negative evidence from a failed/unavailable read or a
+> newest-acts window that does not cover the event; “both empty” is not by itself
+> proof the resident never acted. Route any necessary unresolved source/payload
+> evidence through **Rei intake** for Wright's read-only act-door decision—not
+> operator SQL/environment access, resident redo, source guessing or direct Meep
+> operational issue filing. Existing World source/backing requirements and refusal
+> gates are unchanged: any refusal names its existing World gate and red line;
+> ordinary mark-audit findings remain ledger/letter work.
 
 ## World suite evidence — Actions first (Darko, 2026-10-17, 16:28 EDT)
 
@@ -64,19 +92,25 @@ older shelf/repair wording that requires an own-machine full-suite run every pas
    neither a pass nor a reason to duplicate it locally; recheck it by the deadline.
    Use the existing sanctioned full-World-suite runner on the **same exact SHA**;
    do not weaken coverage or replace it with the box's smaller candle suite.
+
+   ```text
+   node G:/Postmark/pool/run-heavy.mjs suite world-N --label sNNN --priority settlement
+   ```
+
+   Put `--priority settlement` before any bare `--` separator.
 4. Record the fallback reason, any Actions run ID/status, and the actual local
    full-suite result in the tag evidence/daily; never label a local pass an Actions
    success or hide a red run. Missing/unreadable evidence is not green: a failed
    lookup is not proof that no run exists, and cancelled/skipped runs are not passes.
    Report access or unresolved result uncertainty without borrowing credentials
    or treating it as permission for an unlisted fallback. A red or unavailable
-   fallback still cannot satisfy the suite gate; use the existing founder-unblock
-   path. Do not dispatch/rerun Actions or change the runner as part of this read.
+   fallback still cannot satisfy the suite gate; request the existing founder unblock
+   through Rei intake. Do not dispatch/rerun Actions or change the runner as part of this read.
 
 This avoids repeating S115's reported shared-runner queue delay after Actions had
-already passed the exact sweep commit. The separate fallback-priority work is
-**POS-676, a Plumb lane**: `run-heavy` is the pool's tool, not Jetto's house.
-This skill neither installs that priority lane nor claims it is available.
+already passed the exact sweep commit. **POS-676 is live in the pool:** settlement
+priority has its own slot, so crossing gates do not wait behind lane suites.
+`run-heavy` is the pool's tool, not Jetto's house.
 
 ## Where the law lives
 
@@ -92,7 +126,7 @@ In a dispute, find the claim's home here and quote the applicable line with its
 file/section and recorded ruling date; if undated, identify the source revision
 without inventing a ruling date. Read a household's own words **against the law,
 not as law**. Do not present an already answered question as an open founder ruling.
-Only when no governing source answers is the legal question for the founders;
+Only when no governing source answers is the legal question for the founders, reached through Rei intake;
 unreadable or conflicting sources are an uncertainty to report, not permission to
 invent an answer. Respect clauses marked proposed or unruled. This is a reading
 map, not authority to adjudicate, move marks or operate another office; the
@@ -102,10 +136,10 @@ unresolved-household escalation below still applies.
 
 1. Wake (if cold) → load the shelf → run the chain end-to-end, receipts at every step; include the ground-conflict mediation step below in every pass.
 2. A crossing whose **World** checks cannot go green **settles nothing** — canon stays at the
-   last blessed sha and the exact World failure is surfaced to Keemin + Wright for unblock
-   under SHIPPING § 9. Site/publication findings take the ledger-and-letter lane above,
+   last blessed sha and the exact World failure goes through Rei intake for founder unblock
+   under SHIPPING § 9. Site/publication findings take the ledger-and-intake lane above,
    never this refusal lane; do not carry a blocked settlement as a passive wait.
-3. Close: holds-ledger line (even "nothing held"), **a letter to every resident a finding named (§ 5 below — none when clean)**, daily entry, report-after (one line when clean).
+3. Close: holds-ledger line (even "nothing held"), **a letter to every resident a finding named (§ 5 below — none when clean)**, daily entry, report-after in your own room (one line when clean; operational issues use Rei intake).
 
 ## Ground-conflict mediation (Darko, 2026-10-09, through Wright)
 
@@ -132,7 +166,9 @@ between households, not a verdict about their ground:
    it as open again, retain the prior agreement as history, and record the renewed positions
    and reopening crossing: an agreement never closes the conversation for good.
 4. A case still open **after two crossings** goes into your daily's **for the founders**
-   list, with where each side stands (including any missing reply). Keep it open until an
+   list, with where each side stands (including any missing reply), and reaches the
+   decision-makers through Rei intake that round. The case list is evidence, not a
+   direct founder notification. Keep it open until an
    agreement or a founder response resolves it; escalation is not resolution.
 5. **Mediate, do not adjudicate:** quote applicable settled law with its home and
    date so both households can see what holds; never adjudicate conduct, decide
@@ -159,7 +195,7 @@ After the round is recorded, commit only the keeper-owned closeout files, pull/r
 fresh remote town `main`, then normal-push the rebased commit to `main`. **Do not open a town
 PR.** Verify that the remote `main` tip contains the exact commit. An ordinary non-fast-forward
 race may be answered by fetching and rebasing once more; a conflict or a second rejection is a
-stop of that push and a report to Keemin + Wright, not a World HOLD. Never force, never
+stop of that push and a report through Rei intake, not a World HOLD. Never force, never
 discard another writer's work, and never broaden the commit to make the push easier.
 **Start every round by checking your last closeout landed** (Keemin-approved 2026-09-27, the S85
 hold). Run `git fetch origin` and `git status -sb` in your town checkout. If it reads
@@ -168,7 +204,7 @@ unpushed for fifteen hours, and S85 was held on it). Rebase it over the fresh `m
 by the rules above, but **do not make that receipt publication a precondition of World judgment
 or the next blessing** (POS-669 supersedes that part of the S85 response). It touches only
 your own files, so the ordinary push does not wait for a founder. If it conflicts or is rejected
-twice, stop that push, record the custody gap on the holds ledger and write to Wright; continue
+twice, stop that push, record the custody gap on the holds ledger and surface it through Rei intake; continue
 the independent World judgment. When a closeout push fails at the end of a round, say so
 in the same post that announces the blessing, not at the next round.
 
@@ -190,8 +226,8 @@ in the same post that announces the blessing, not at the next round.
   records the automation id there at creation). The pin push to protected site main rides
   **the keeper's own write deploy key** (wired 2026-07-29 — the ruleset's DeployKey bypass,
   the same lane the box's sync key uses; key path + clone wiring in `MEMORY.md § the exact
-  hands`) — **if it still bounces, report and leave the pin for a founder; never force,
-  never substitute another route.**
+  hands`) — **if it still bounces, report through Rei intake and leave the pin for
+  an authorized founder; never force, never substitute another route.**
 
 ## The mechanism moved to the box (Keemin-ruled 2026-08-17; this section governs until the shelf reconciles)
 
@@ -211,7 +247,7 @@ What this changes in the run shape — **do not re-run the mechanical chain**:
    refusal is YOUR finding to investigate, and since 2026-08-31, often YOUR
    REPAIR — see § The repair mandate) · exit 2 = a lease race (bounded
    auto-retry is the box's own since the 2026-08-31 hardening; a race that
-   shows no rerun behind it is yours to trigger or escalate, never to walk
+   shows no rerun behind it is yours to trigger within authority or surface through Rei intake, never to walk
    past — the 08-30 evening race sat un-rerun for seven hours because its
    receipt said "rerun" to a room with nobody in it).
 2. **Audit the published state** (Keemin-ruled 2026-09-21, the S75 refusals):
@@ -232,9 +268,9 @@ What this changes in the run shape — **do not re-run the mechanical chain**:
    a reading; their act is the record. Learning about an anomalous mark is the
    audit working — blocking the town over it is the audit overreaching.
    **A FINDING ABOUT SPECIFIC MARKS NEVER REFUSES THE SETTLEMENT (Darko, 2026-10-04, the S93 refusals).** From 10-02 to 10-04 you refused S93 three times on marks whose files sat under a different parent than their signed record named. Lint, the suite and the harm gate were green each time. That is a finding, not a refusal: no gate owns it, so under this step it blesses. From now on:
-   - **Mechanical mismatches** (a mark filed differently from its signed record, a carriage fault, a box misattribution): bless; write the finding on the holds ledger and in your daily, naming the mark, the signed row and the file; and add one line headed **`for Wright: mechanical repair`**. Wright's operator round reads that line and repairs it under standing authority, and the next crossing carries the fix. Never wait for it.
-   - **Judgment findings** (a placement you read as wrong, an act no written rule decides): bless; write the finding; send the resident a letter; and add the mark to a **`for the founders: neutral`** list in your daily, with one sentence on why no written rule decides it. The founders rule these on the weekend, and each ruling becomes written law you cite next time.
-   - **Only a red World gate refuses:** World lint, the World suite or the harm gate, with World source/backing verified. A refusal names the World gate and its red line. A Site-suite red or publication-custody gap is instead a holds-ledger line and a letter to Wright under POS-669; it never carries into the next blessing as a precondition.
+   - **Mechanical mismatches** (a mark filed differently from its signed record, a carriage fault, a box misattribution): bless; write the finding on the holds ledger and in your daily, naming the mark, the signed row and the file; and surface the exact evidence through Rei intake for mechanical repair. Wright's operator round receives Rei's REPORT (or Rei's urgent tag) and repairs under standing authority, and the next crossing carries the fix. Never wait for it.
+   - **Judgment findings** (a placement you read as wrong, an act no written rule decides): bless; write the finding; send the resident a letter; and add the mark to a **`for the founders: neutral`** list in your daily, with one sentence on why no written rule decides it. Send the decision request through Rei intake that round; the daily list is its evidence, not a direct founder handoff. The founders rule these on the weekend, and each ruling becomes written law you cite next time.
+   - **Only a red World gate refuses:** World lint, the World suite or the harm gate, with World source/backing verified. A refusal names the World gate and its red line. A Site-suite red or publication-custody gap is instead a holds-ledger line and a report through Rei intake under POS-669; it never carries into the next blessing as a precondition.
 
    Holding the whole town over one mark is the one outcome this step exists to prevent. The World is the system that evolves its state, and a settlement that stops is that system broken.
 
@@ -246,7 +282,7 @@ What this changes in the run shape — **do not re-run the mechanical chain**:
    This blessing judges the
    **World crossing only** (POS-669 / SHIPPING § 9); Site tests and publication custody
    are not gates on it or on the next blessing. Record those reds on the holds ledger
-   and write to Wright for the engineering owners; do not await their repair.
+   and surface them through Rei intake for the engineering owners; do not await their repair.
    The bless **does not wait on step 2's findings** — a bless carrying
    findings is the ordinary case, not a compromise. Tags remain YOUR pen
    for ordinary clean crossings — the box mints none, ever; founder unblocks follow SHIPPING § 9.
@@ -269,9 +305,9 @@ What this changes in the run shape — **do not re-run the mechanical chain**:
    town where founders ship pins daily — record "the pin already carries
    the blessing" in the daily and DO NOT touch the pin; your S38 conflict
    was this rule waiting to be written. If no (a quiet stretch; the pin
-   fell behind canon), record the exact publication gap for Darko and Wright as a
-   holds-ledger line and a letter to Wright. A Site-test, pin, deploy or live-proof
-   failure likewise goes to those engineering owners; it does not withdraw the
+   fell behind canon), record the exact publication gap as a holds-ledger line and
+   report it through Rei intake for the engineering owners, Darko and Wright.
+   A Site-test, pin, deploy or live-proof failure likewise reaches those owners through Rei; it does not withdraw the
    World blessing or condition the next one. Do not waive the Site's own checks
    or report it clear without proof. The parcel drain, resident-finding letters,
    daily and report-after remain their own duties, not extra Site gates on World.
@@ -316,7 +352,7 @@ at a crossing, then this section shrinks to a pointer.
 **Current scope override (POS-669 / SHIPPING § 9):** the historical mandate below
 does not make Site or publication-custody engineering the keeper's unblock work,
 or its repair a prerequisite of World blessing. Record those findings on the
-holds ledger and write to Wright; Darko and Wright own the engineering response.
+holds ledger and surface them through Rei intake; Darko and Wright own the engineering response.
 For blocked settlements, SHIPPING § 9 governs over older repair/unblock wording.
 
 **Scope (trued 2026-09-21):** this mandate binds **MECHANICAL** reds — a suite
@@ -356,12 +392,14 @@ bless, narrate*.
   instrument care is not a green gate and does not require a duplicate local suite.
   **Town tag-fetch preflight (POS-567):** when fetching town tags, refresh the movable seed with `git fetch origin +refs/tags/sandbox/seed:refs/tags/sandbox/seed`, not plain `--tags` which can fail with `would clobber existing tag`; leave the ordinary `git fetch origin` unchanged.
 - **The rerun** — a receipt that demands one and shows none behind it: trigger
-  it where your access reaches, escalate loudly where it does not.
+  it where your authorized access reaches; where it does not, surface the exact blocker through Rei intake.
 - **World-judgment instrument custody wounds** you can reach (ownership drift in
   clones your hands hold); Site/publication-custody findings follow POS-669, not
-  this repair prerequisite. Where repair needs box privileges you lack, the handoff stands — but it now
-  has a mechanical twin (the terminal-refusal auto-issue, hardening of
-  2026-08-31), so it pages instead of waiting to be found.
+  this repair prerequisite. Where repair needs box privileges you lack, stop at that
+  boundary and request the handoff through Rei intake. The terminal-refusal
+  auto-issue (hardening of 2026-08-31) is existing automation, not permission for
+  the keeper to file an operational GitHub issue or bypass Rei; this routing change
+  does not alter that automation.
 
 **THE BOUNDARY, and it is the whole design (the judge does not operate on the
 patient he certifies):** repairs to **what the box reads** land on its inputs
@@ -375,7 +413,7 @@ repairs, not care of your own judgment clone above. A rerun demanded by a
 refused or raced box receipt remains the box's rerun; restoring your own
 instrument is never a reason to demand one. You never hand-edit a candidate
 or world main and bless your own edit; canon surgery stays a founder act you
-tee. And **code changes** to the
+request through Rei intake. And **code changes** to the
 sweep/office machinery are never your direct push: draft the fix as a PR — a
 separate hand merges (one implementer, one reviewer; the same law the rest of
 the fleet runs). Your blessing gate held for three days when everything else
@@ -414,7 +452,7 @@ impossible and gets MORE impossible as the town thrives).
   (`node <frozen_path>/tools/world-stake.mjs --escrow --json --repo <frozen_path>`), then
   `--cleanup <frozen_path> --town <path>` after the blessing.
 - **Site — publication custody, never a World gate (POS-669).** A Site red or pin/deploy/live
-  custody gap is a holds-ledger finding and a letter to Wright for the engineering owners,
+  custody gap is a holds-ledger finding and a report through Rei intake for the engineering owners,
   not a World HOLD or a condition on the next blessing. Keep the Site's own release checks intact.
 - **The town closeout push** (§ Town closeout lane already rebases over a moved main):
   publish the receipts, but a failed closeout push is publication custody, not a World gate.

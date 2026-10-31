@@ -11,7 +11,7 @@
   "_beneficiary": "named at opening, 2026-08-23: the founder IS what this box keeps — dollars route to his own hand; stamps given are witnessed gifts on the ledger.",
   "uncapped": true,
   "_uncapped": "the donation-box shape: intake never bounces for exceeding a target, because there is none.",
-  "received_usd": 127,
+  "received_usd": 137,
   "_received": "display only; the ledger's pot-receipt rows are authoritative",
   "board": "quest-registry.json § darko-fund",
   "_grammar": "identical to keeping-ec2's: stakes ride the sealed ledger as stake:pot/darko-fund; witnessed dollars land as pot-receipt rows; the close follows _close (ruled 2026-08-23, amended 2026-09-14 and 2026-09-17; mechanics in tools/epoch-close.mjs's elastic branch — pot-return rows for every stake, then one `holo · <giver> · n · pot:darko-fund · epoch:<epoch> · ref: <ref>` row per receipt settled, n may be 0). The 2026-09-14 wording here named `minted · for: funding:darko-fund` rows; the ledger has no such grammar and never did — the founder's 2026-09-17 ruling makes the holo row the givers' reward outright, and those stamps are liquid.",

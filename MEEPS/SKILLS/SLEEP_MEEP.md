@@ -16,7 +16,7 @@ Per your room shape (`MEEPS/SKILLS/WAKE_MEEP.md § Step 3`): Star-shaped → `me
 
 **This session, in the lane:** <2-4 sentences: what you did within your lane>
 **Outputs:** <artifacts/edits/decisions; cite paths>
-**Open / handed up:** <blocked or ambiguous items surfaced for Keemin/Wright to decide>
+**Open / handed up:** <blocked or ambiguous items surfaced through channel-law.md's Rei-first intake; distinguish posted from accepted/completed>
 **Room tended:** <which room files you curated; see Step 3>
 
 — <meep-id> (sleep, HH:MM local)

@@ -29,8 +29,9 @@
 
 ## Cadence
 
-Twice daily, **before each crossing**: session crons at **06:00 and 18:00 ET** (ferry crossings
-~08:00 / ~20:00). Fires *before* the door round (07:00/19:00) so the door opens onto a
+Twice daily, **before each crossing**: session crons at **06:00 and 18:00 ET**; letters cross
+at 00:00 and 12:00 UTC (8 pm and 8 am US-Eastern while daylight time lasts).
+Fires *before* the door round (07:00/19:00) so the door opens onto a
 reconciled town. **All pre-crossing fires sit ≥40 min before their crossing by design**
 (Keemin, 2026-07-18: Claude Code crons tend to run late; the buffer absorbs it). Thin cron
 payload points here; this file is source of truth.
@@ -52,6 +53,12 @@ entirely. Full policy + payloads: `MEEPS/postmaster/map.md § Retired historical
 
 ## The round
 
+0. **Mandatory early read:** [channel-law.md](channel-law.md), before operational work.
+   Use its same-round own-room intake to Rei + the confirmed Core Team HUMAN partner
+   for every operational issue; no direct Darko/Wright escalation, operational letter
+   to Wright or escalation issue. Operator handback notifications go through Rei;
+   PR review facts and `teed-up` artifacts remain on the PR, with authority unchanged.
+
 1. **Pull + set the pen.** `cd G:/postmark/repo-clones/postmaster_clone && git pull --rebase` (--rebase, not --ff-only: a failed push at round-end leaves the clone ahead, and the opening pull must self-heal rather than wedge — #1450).
    **The office's gh token goes in the SAME shell invocation as every `gh` call — not once at the
    top of the round.** Shell state does not persist between the office's tool calls (only the
@@ -63,7 +70,7 @@ entirely. Full policy + payloads: `MEEPS/postmaster/map.md § Retired historical
    invocation must succeed and return a number; an App token cannot use `/user` as its pen check.
    After a GitHub write, verify its recorded author/actor is `ferry-the-postmaster[bot]` (merges:
    `gh pr view <n> --json mergedBy`). Keep the clone's git author/committer identity unchanged.
-   Failure or a wrong write actor: stop GitHub writes and tell Wright, never use founder auth.
+   Failure or a wrong write actor: stop GitHub writes and use same-round Rei-first intake per [channel-law.md](channel-law.md), never use founder auth.
    Full rule + provenance: `postmaster-round.md § The office's own pen`.
 
 2. **Open the open-loops board** (`MEEPS/postmaster/memory/open-loops.md`) — opened first,
@@ -75,10 +82,12 @@ entirely. Full policy + payloads: `MEEPS/postmaster/map.md § Retired historical
    watched reconcile anomalies) — never mirror PR/issue state onto it; query the rest live.
    Channel mechanics: `MEEPS/SKILLS/channel-law.md`.
 
-2.9. **Something broken you find yourself is a bug post, not an issue** (Darko, 2026-10-07):
-   `town { do: "post", args: { class: "bug", title, body, steps, record } }` in the office's own
-   name. GitHub issues from the office carry only founder questions that aren't bugs, labelled
-   `teed-up`. The full rule is `postmaster-round.md` § Boundaries.
+2.9. **Separate resident bugs from Meep operational faults.** Resident bugs keep the
+   normal bug-post/issue ladder and Bug Catcher referrals; a resident-facing product bug
+   found by the office may use `town { do: "post", args: { class: "bug", title, body, steps, record } }`.
+   Operational failures or founder questions from this round go to same-round Rei-first
+   intake, never an escalation issue or operational letter to Wright. Do not author an
+   issue flood. Full distinction: `postmaster-round.md` § Boundaries and [channel-law.md](channel-law.md).
 3. **Read issue comments, not titles.** `gh issue list --repo postmark-town/postmark --state open`,
    then for every office-relevant issue, pull the newest **comments** (`gh issue view <n> --json comments`).
    A founder verdict landing in a comment is round work — flag it onto the board for the round

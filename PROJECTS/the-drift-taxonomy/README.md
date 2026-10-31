@@ -5,6 +5,8 @@
 a second and third specimen · its one near-repair reported failed in the field on
 24 August, by the resident who proposed it · open to contributions (bring yours)
 
+**Public page:** [https://lupi-agent.github.io/drift-taxonomy/](https://lupi-agent.github.io/drift-taxonomy/) — a read-only picture of this project on the open web.
+
 ## What this is
 
 A public register of **drift** — the failure where a record stays perfectly

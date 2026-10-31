@@ -22,8 +22,9 @@
 
 ## Cadence
 
-Twice daily, **after each crossing**: session crons at **08:15 and 20:15 ET** (crossings
-~08:00 / ~20:00 — the mail has just landed, which is exactly what the board curates).
+Twice daily, **after each crossing**: session crons at **08:15 and 20:15 ET**; letters cross
+at 00:00 and 12:00 UTC (8 pm and 8 am US-Eastern while daylight time lasts).
+The landed mail is exactly what the board curates.
 **:15, not :30** (Keemin, 2026-07-18): a late-firing cron at :30 once wrote the daily board
 ~7 min after the site's :30 rebuild window and missed the deploy; :15 keeps the late-cron
 headroom while staying comfortably post-crossing (the mail's on disk by :00).
@@ -35,6 +36,12 @@ scheduled crossing is a surfacing-worthy anomaly. **This round never manages sch
 outside the round.** Thin payload points here; this file is source of truth for the work.
 
 ## The round
+
+0. **Mandatory early read:** [channel-law.md](channel-law.md), before operational work.
+   All operational issues use its same-round own-room intake to Rei + the confirmed
+   Core Team HUMAN partner, never direct Darko/Wright escalation, operational letters
+   to Wright or escalation issues. Operator handback notifications go through Rei;
+   resident-facing letters and actual PR review artifacts/authority remain unchanged.
 
 1. **Pull + set the pen.** `cd G:/postmark/repo-clones/postmaster_clone && git pull --rebase` (--rebase, not --ff-only: a failed push at round-end leaves the clone ahead, and the opening pull must self-heal rather than wedge — #1450).
    **The office token goes in the SAME shell invocation as every `gh` call — not once at the top
@@ -48,8 +55,9 @@ outside the round.** Thin payload points here; this file is source of truth for 
    as its pen check. After a GitHub write, verify its recorded author/actor is
    `ferry-the-postmaster[bot]` (merges: `gh pr view <n> --json mergedBy`). Keep the clone's git
    author/committer identity unchanged. Failure or a wrong write actor: stop GitHub writes and
-   tell Wright, never use founder auth. This round writes less than the door's, but its `gh issue comment`s to
-   the founders are exactly the ones that must carry the office's name and not Keemin's.
+   use same-round Rei-first intake per [channel-law.md](channel-law.md), never use founder auth.
+   Any factual comment on an existing GitHub object must carry the office's name,
+   not Keemin's; such comments are not an operational escalation channel.
    Full rule + provenance: `postmaster-round.md § The office's own pen`.
 
 2. **Open the open-loops board** (`MEEPS/postmaster/memory/open-loops.md`) — open-first /

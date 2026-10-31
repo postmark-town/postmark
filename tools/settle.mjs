@@ -35,6 +35,7 @@
 import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync } from "node:fs";
 import { join, dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { parseFrontmatter as envelopeFields } from "./envelope.mjs";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = process.env.SETTLE_ROOT ?? join(HERE, "..");
@@ -50,16 +51,19 @@ const RESERVED = new Set(["template", "index", "office", "postmaster", "ferry"])
 const townDate = () =>
   new Intl.DateTimeFormat("en-CA", { timeZone: process.env.TOWN_TZ ?? "America/New_York" }).format(new Date());
 
-// ── frontmatter (the same minimal shape every town tool parses) ─────────────
+// ── frontmatter: the ferry's law (tools/envelope.mjs), POS-772 ──────────────
+// The FIELDS are envelope.mjs's, so a berth reads the way a letter and an
+// ADDRESS.md do: a BOM is stripped, an indented line under a parent key is
+// nested and never overrides the top-level one (a nested `github:` must not
+// choose the login this tool binds), a `#` line is a comment, and one pair of
+// surrounding quotes is taken off a value. Only the BODY split is this file's,
+// since the ferry's parser hands back fields alone.
 export function parseFrontmatter(text) {
-  const m = /^---\r?\n([\s\S]*?)\r?\n---\r?\n?/.exec(text);
+  const t = text.replace(/^﻿/, "");
+  const fields = envelopeFields(t);
+  const m = fields && /^---\r?\n([\s\S]*?)\r?\n---\r?\n?/.exec(t);
   if (!m) return { fields: {}, body: text, raw: null };
-  const fields = {};
-  for (const line of m[1].split(/\r?\n/)) {
-    const c = line.indexOf(":");
-    if (c > 0) fields[line.slice(0, c).trim()] = line.slice(c + 1).trim();
-  }
-  return { fields, body: text.slice(m[0].length), raw: m[0] };
+  return { fields, body: t.slice(m[0].length), raw: m[0] };
 }
 
 export function readGangway(path = GANGWAY) {

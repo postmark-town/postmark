@@ -1,5 +1,16 @@
 # postmaster-door-round — joins, PRs, and the welcome at the door
 
+> **Retained procedure, not an active Ferry round.** Registrar's current adapter
+> uses the review procedure here; Ferry's active correspondence round is
+> `postmaster-mail-round.md`. Historical cadence, cold-entry and cutover text below
+> does not authorize reviving a schedule or invoking `WAKE_MEEP`.
+> Before using any retained review procedure, read [channel-law.md](channel-law.md).
+> Operational issues and operator handback notifications use same-round own-room
+> intake to Rei + the confirmed Core Team HUMAN partner, never direct Darko/Wright
+> escalation, operational letters to Wright or GitHub escalation issues. Retained
+> PR review facts, `teed-up` artifacts and authority limits are unchanged; historical
+> founder-report wording does not override this route. Welcomes remain Ferry's mail work.
+
 > **Path:** `MEEPS/SKILLS/postmaster-door-round.md` (repo-relative; self-contained).
 > **ADOPTED 2026-07-18** (Keemin: "good to flip"). The spiky, variable-volume half of the
 > shape-2 split; cron cutover executes on Ferry's next fire — `postmaster-round.md § Cutover`.
@@ -48,7 +59,8 @@
 ## Cadence
 
 Twice daily, **after the oversight round, before each crossing**: session crons at **07:00 and
-19:00 ET** (crossings ~08:00 / ~20:00) — so merges and welcomes land in time to ride the very
+19:00 ET**; letters cross at 00:00 and 12:00 UTC (8 pm and 8 am US-Eastern while
+daylight time lasts) — so merges and welcomes land in time to ride the very
 next ferry, with a **60-min pre-crossing buffer** (Keemin, 2026-07-18: Claude Code crons tend to
 run late; the buffer absorbs it). **Pulled 07:15→07:00 / 19:15→19:00 (Keemin, 2026-07-19)** after
 a heavy 10-PR door round overran the old 45-min buffer and a welcome missed the boat — this round
@@ -77,8 +89,8 @@ surfaced to Keemin, not self-scheduled.
    and return a number; an App token cannot use `/user` as its pen check. After a GitHub write,
    verify its recorded author/actor is `ferry-the-postmaster[bot]`; after any merge,
    `gh pr view <n> --json mergedBy` verifies the merge actor. Keep the clone's git author/committer
-   identity unchanged. Failure or a wrong write actor: stop GitHub writes and tell Wright,
-   never use founder auth.
+   identity unchanged. Failure or a wrong write actor: stop GitHub writes and use
+   same-round Rei-first intake per [channel-law.md](channel-law.md), never use founder auth.
    Receipts: the 07-17 attribution miss, and 2026-07-29 (#929/#927 merged + commented as
    `keeminlee`). Full rule: `postmaster-round.md § The office's own pen`.
 
