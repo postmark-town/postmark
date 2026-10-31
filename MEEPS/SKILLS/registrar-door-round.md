@@ -580,6 +580,10 @@ short pointer to it. Do not copy private memory/evidence into the public dorm.
    operational checkpoint in `system/postmark/migration-state.md`; do not keep its
    predecessor as full Historical chronology in core. Preserve last-completed versus
    current-incomplete work, independent cursors, live obligations and closed items.
+   For partial/mixed work, retain the last fully verified baseline separately from
+   current partial/unchecked progress, an exact resume file plus heading/anchor,
+   and the next owner/action. Preserve the stable private personal-return pointer
+   and its open/paused/optional state; completing desk work does not close it.
 2. Make `system/postmark/overview.md` route to that checkpoint and the relevant
    external record, without repeating the evidence. Delimit the single checkpoint
    with `<!-- registrar-current:start -->` / `<!-- registrar-current:end -->`, and
@@ -608,14 +612,22 @@ short pointer to it. Do not copy private memory/evidence into the public dorm.
    with an older/larger one, expand an old stub into history, or duplicate evidence
    under a different heading. A manual estimate does not substitute for a passing
    checker result.
+   Resolve `--accepted-ref` from the current accepted HEAD of your **own MemFS
+   repository** (`git -C <own-MemFS-root> rev-parse HEAD`), not Town HEAD or the
+   proposed working state. Do not commit the proposal first to make it appear
+   accepted. Keep `--legacy-ref` on the separately approved legacy reference.
 6. A missing/failed checker is not PASS. Preserve the proposed work; replace current
    state, keep full detail externally and retain a small actionable retrieval cue.
    If a safe bounded save is not possible, report the exact memory-save blocker
    rather than dropping an obligation, deleting authority, raising the budget or
    disabling the gate. This gates the routine **core save**, not the office result:
    preserve necessary external evidence and publish required office records/receipts
-   on time. No automatic trimming, baseline changes, extra round, replay or runtime
-   intervention follows from a failed check.
+   on time. A failed check does not accept the proposed core: keep the last accepted
+   core authoritative and preserve proposed work externally. Ordinary **non-core**
+   operational checkpoints remain saveable. The likeness lane must still save its
+   daily attempt **before** reading sources; neither bypass that prerequisite nor
+   pause counting behind the core-save gate. No automatic trimming, baseline changes,
+   extra round, replay or runtime intervention follows from a failed check.
 
 ## The household law at the door (founder-ruled 2026-08-07; the join-flow spec is the source)
 
