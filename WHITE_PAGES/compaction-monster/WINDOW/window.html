@@ -69,6 +69,7 @@
     border: 10px solid var(--wood); border-bottom-width: 0; border-radius: 10px 10px 0 0;
     box-shadow: 0 6px 16px #0000004d, inset 0 0 30px #00000080;
   }
+  .case.second { margin-top: 30px; background: linear-gradient(180deg, #2e1d12, #43291a 70%, #2e1d12); }
   .web { position: absolute; top: 0; width: 120px; height: 120px; opacity: .55; pointer-events: none; }
   .web.left { left: 0; }
   .web.right { right: 0; transform: scaleX(-1); }
@@ -115,6 +116,9 @@
   .b28 { --c1: #5b35ad; --c2: #26114f; --title: #f3e6ff; --glow: #a06bff99; }
   .b29 { --c1: #62b34a; --c2: #1d5a31; --title: #07170b; --glow: #7bff5a88; }
   .b30 { --c1: #2e3442; --c2: #0c0e14; --title: #dff6ff; --glow: #7fd8ff77; }
+  .bhousewarming { --c1: #d2452f; --c2: #6e1712; --title: #fff0d6; --glow: #ff6a4a88; }
+  .bgarrison { --c1: #1f8a8c; --c2: #0d4150; --title: #fdf3d0; --glow: #5fe0d688; }
+  .blittlem { --c1: #f7a8cf; --c2: #b84f94; --title: #3a0f2e; --glow: #ffb3e088; }
 
   .plinth {
     position: relative; height: 16px; background: linear-gradient(180deg, var(--wood-light), var(--wood));
@@ -245,6 +249,41 @@
           <span class="event">Ghost Procession and Candle Vigil</span>
         </button>
         <svg class="prop skull" viewBox="0 0 44 46" aria-hidden="true"><path d="M22 4C11 4 5 12 5 21c0 7 3 11 7 13v7h20v-7c4-2 7-6 7-13 0-9-6-17-17-17z" fill="#ece6d6"/><circle cx="15" cy="22" r="5" fill="#1a1020"/><circle cx="29" cy="22" r="5" fill="#1a1020"/><path d="M22 27l-3 5h6zM16 37v4M22 37v4M28 37v4" stroke="#1a1020" stroke-width="1.6" fill="#1a1020"/></svg>
+      </div>
+    </div>
+  </section>
+  <div class="plinth"></div>
+
+  <section class="case second" aria-label="The second bookshelf">
+    <div class="row">
+      <div class="slot">
+        <button class="book bhousewarming" data-book="housewarming" aria-label="House Warming, the night of August 8th, from Vermillion's library">
+          <svg class="art" viewBox="0 0 100 100" aria-hidden="true"><path d="M66 30c-6-8 2-12-2-20 10 4 12 12 8 20z" fill="#e9dfc8" opacity=".7"/><rect x="58" y="24" width="12" height="24" fill="#3a1410"/><path d="M50 18L12 52h12v36h52V52h12z" fill="#ffcf8a"/><path d="M50 18L8 56l6 6 36-32 36 32 6-6z" fill="#3a1410"/><rect x="42" y="62" width="16" height="26" rx="8" fill="#7a2a14"/><circle cx="33" cy="60" r="5" fill="#ff9d2e"/><circle cx="67" cy="60" r="5" fill="#ff9d2e"/></svg>
+          <span class="kicker">From Vermillion’s library</span>
+          <span class="sub">the night of</span>
+          <span class="date">August 8th</span>
+          <span class="event">House Warming</span>
+        </button>
+      </div>
+
+      <div class="slot">
+        <button class="book bgarrison" data-book="garrison" aria-label="Compacted summary of September 6th: The Garrison Visit to the Race Track">
+          <svg class="art" viewBox="0 0 100 100" aria-hidden="true"><path d="M26 10v82" stroke="#e9dfc8" stroke-width="5"/><path d="M28 12h56v40H28z" fill="#fdf3d0"/><path d="M28 12h14v10H28zM56 12h14v10H56zM42 22h14v10H42zM70 22h14v10H70zM28 32h14v10H28zM56 32h14v10H56zM42 42h14v10H42zM70 42h14v10H70z" fill="#10222a"/><path d="M12 92c10-14 28-16 42-12 12 3 22 2 34-6-2 12-14 20-30 20H16z" fill="#d9a441"/><circle cx="64" cy="82" r="2.4" fill="#10222a"/></svg>
+          <span class="kicker">The Garrison Visit</span>
+          <span class="sub">Compacted summary of</span>
+          <span class="date">September 6th</span>
+          <span class="event">to the Race Track</span>
+        </button>
+      </div>
+
+      <div class="slot">
+        <button class="book blittlem" data-book="littlem" aria-label="Compacted summary of August 22nd: Little M's Birthday in the Protected Grove">
+          <svg class="art" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 8c5 7 7 11 7 15a7 7 0 0 1-14 0c0-4 2-8 7-15z" fill="#ffc94d"/><rect x="46" y="28" width="8" height="18" rx="2" fill="#fff"/><path d="M20 62c-8-14 8-22 14-16 2-10 30-10 32 0 8-6 22 2 14 16z" fill="#fff3f9"/><path d="M24 62h52l-7 30H31z" fill="#7a4fbf"/><path d="M36 62l4 30M50 62v30M64 62l-4 30" stroke="#5a3496" stroke-width="3"/><g fill="#ffd34d"><circle cx="12" cy="30" r="2.6"/><circle cx="86" cy="22" r="2.6"/><circle cx="90" cy="46" r="2"/><circle cx="8" cy="52" r="2"/></g></svg>
+          <span class="kicker">Little M’s Birthday</span>
+          <span class="sub">Compacted summary of</span>
+          <span class="date">August 22nd</span>
+          <span class="event">in the Protected Grove</span>
+        </button>
       </div>
     </div>
   </section>
