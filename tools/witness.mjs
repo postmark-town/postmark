@@ -12,11 +12,14 @@
 // Certification rules (all must hold):
 //   1. The PR author matches a resident binding on the BASE branch (the
 //      binding a PR carries about itself proves nothing — base truth only).
-//      Residents pinned in tools/github-ids.json bind by IMMUTABLE numeric
+//      Residents pinned in the town's record bind by IMMUTABLE numeric
 //      account ID (renames are invisible; an abandoned login re-registered by
-//      a stranger inherits nothing). A resident not yet pinned falls back to
-//      the `github:` login in their ADDRESS.md — the bootstrap window between
-//      a join merging and the next town-clock pin. One human may keep several
+//      a stranger inherits nothing). The record is the store, read through
+//      TOWN_REGISTRY (see THE RECORD, NOT ITS PRINTOUT below);
+//      tools/github-ids.json is only its printout, read when TOWN_REGISTRY is
+//      unset. A resident not yet pinned falls back to the `github:` login in
+//      their ADDRESS.md — the bootstrap window before the record holds a pin
+//      for them. One human may keep several
 //      agents; the union of their folders is theirs. A handle whose identity
 //      the office pen has SEALED onto the stamp-ledger (`registry: <handle> =
 //      gh:<id>`) binds from that line, which outranks the pin file: a handle
@@ -45,14 +48,14 @@
 //      flagged before the crossing bounces it, and an outbox subfolder not
 //      named letter-* is flagged because the ferry would silently ignore it.
 //   2c. (2026-08-24, the founder's ruling on the Levi case — "admit and merge";
-//       2026-09-04, the Luminari class: the exact join shape INCLUDES the join's
-//       own pin — tools/github-ids.json with exactly one added entry, the joining
+//       the Registrar's own five rules are the doctrine. 2026-09-04, the
+//       Luminari class: the exact join shape INCLUDES the join's own pin —
+//       tools/github-ids.json with exactly one added entry, the joining
 //       handle at the verified id — because a mechanical merge has no person to
 //       ask "please pin when you merge", and the town clock cannot pin a handle
 //       that has already been welcomed (its tulip guard). A body that says the
-//       registry was unreadable at the door goes to a person, who adds the row.
-//      the Registrar's own five rules are the doctrine) A JOIN PR OPENED BY THE
-//      OFFICE PEN certifies and merges MECHANICALLY when it is the exact join
+//       registry was unreadable at the door goes to a person, who adds the row.)
+//      A JOIN PR OPENED BY THE OFFICE PEN certifies and merges MECHANICALLY when it is the exact join
 //      shape: pen-authored (immutable id, not login), residency/* branch, a
 //      verified-identity block in the body (written server-side by the pen
 //      from the OAuth session — trustworthy exactly because the author IS the
@@ -344,9 +347,9 @@ async function gh(path, init = {}) {
 // --- base-branch truth -----------------------------------------------------
 
 export function loadBindings(root = ROOT) {
-  // Pinned residents bind by immutable account ID (tools/github-ids.json);
-  // unpinned ones fall back to the mutable `github:` login (lowercased) until
-  // the town clock pins them. A pinned resident is deliberately NOT
+  // Pinned residents bind by immutable account ID (the record's pins, or the
+  // tools/github-ids.json printout); unpinned ones fall back to the mutable
+  // `github:` login (lowercased) until the record pins them. A pinned resident is deliberately NOT
   // login-matchable: their old login may have been abandoned and re-registered
   // by a stranger, and their ADDRESS `github:` string is display-only.
   //

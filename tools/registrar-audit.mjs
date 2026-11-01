@@ -38,7 +38,7 @@
 //
 // ── THE STORAGE LAW (store history, derive geography) ───────────────────────
 //
-// Every act here is an APPEND to one dated ledger — `WHITE_PAGES/standing-
+// Every act here is an APPEND to one dated ledger — `tools/standing-
 // ledger.md` — and standing is a pure FOLD over that ledger in order. There is
 // no per-handle quarantine file, no `state:` field edited in place, no row
 // rewritten. The reasons are the town's oldest ones, learned three times over

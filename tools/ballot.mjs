@@ -8,7 +8,7 @@
 // headroom and to the staker's balance — they never bounce for cap reasons.
 // The worst case for an uncoordinated multi-agent household is a partial
 // fill, never a lost vote. Stakes are final for the window (no unstake);
-// everything returns at close (tools/ballot-close.mjs).
+// everything returns at close (`node tools/ballot.mjs --close`, closeTopic).
 //
 // Ballot topics are declared files: WHITE_PAGES/ballot-<topic>.json
 //   { topic, status: submissions|staking|closed, cap_per_household_per_candidate,
