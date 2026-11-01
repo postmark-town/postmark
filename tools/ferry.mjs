@@ -46,7 +46,7 @@ import { fileURLToPath } from 'node:url';
 // scan) lives in tools/envelope.mjs — shared verbatim with the witness's
 // pre-merge check (tools/envelope-check.mjs) so a would-bounce letter is
 // named at the PR instead of the crossing. One source; never fork the rules.
-import { classify, collectHandles, deliveryInbox, parseFrontmatter, parseLedgerText, remedyFor } from './envelope.mjs';
+import { classify, collectHandles, deliveryInbox, listRoomDirs, parseFrontmatter, parseLedgerText, remedyFor } from './envelope.mjs';
 // The town clock and the crossing receipt's grammar — one home, shared with
 // every reader that wants to name a save state by crossing (tools/crossings.mjs).
 import { CROSSING_DERIVATION, CROSSING_LEDGER_PREAMBLE, CROSSING_LEDGER_REL, crossingAt, crossingReceiptLine } from './crossings.mjs';
@@ -389,17 +389,6 @@ function oddEntryIn(dir, prefix = '') {
     }
   }
   return null;
-}
-
-function listRoomDirs(repo) {
-  const starsDir = join(repo, 'WHITE_PAGES');
-  if (!existsSync(starsDir)) {
-    throw new Error(`No WHITE_PAGES/ directory in repo: ${starsDir}`);
-  }
-  return readdirSync(starsDir, { withFileTypes: true })
-    .filter(entry => entry.isDirectory() && entry.name !== 'TEMPLATE' && !entry.name.startsWith('_'))
-    .map(entry => entry.name)
-    .sort();
 }
 
 // An outbox item is either a classic single `.md` letter, or a FOLDER LETTER —

@@ -49,7 +49,7 @@ import { fileURLToPath } from 'node:url';
 // registry file). Town #2622.
 import { loadRegistry, roomFor } from './room-for.mjs';
 // The envelope law itself, never a copy kept in sync by hand (POS-772).
-import { parseFrontmatter } from './envelope.mjs';
+import { LEDGER_ARCHIVE_RE, LEDGER_BOUNCE_RE, LEDGER_WARN_RE, listRoomDirs, parseFrontmatter } from './envelope.mjs';
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 const DEFAULT_REPO = resolve(SCRIPT_DIR, '..');
@@ -94,14 +94,11 @@ function rel(repo, p) {
 
 // Same ledger grammar as ferry.mjs (optional `pays:` segment before thread).
 const LEDGER_DELIVERY_RE = /^- (\d{4}-\d{2}-\d{2}) · (\S+) · (\S+) → (\S+)(?: · pays: \d+)?(?: · thread: .*)?$/;
-const LEDGER_BOUNCE_RE = /^- \d{4}-\d{2}-\d{2} · BOUNCE · (.+?) \(from ([^)]+)\): (.+)$/;
-const LEDGER_WARN_RE = /^- \d{4}-\d{2}-\d{2} · WARN · \S+ · would overwrite /;
-// The bounce lifecycle's terminal receipt (envelope.mjs LEDGER_ARCHIVE_RE is
-// the exported original; #1745): the bounced pair moved whole into
-// WHITE_PAGES/_archived/<handle>/. Recognized here so the receipt is visible
-// to the ledger's own readers — a BOUNCE whose path is archived is resolved,
-// not dangling.
-const LEDGER_ARCHIVE_RE = /^- \d{4}-\d{2}-\d{2} · ARCHIVE · (.+?) \(from ([^)]+)\): (.+)$/;
+// BOUNCE, WARN and ARCHIVE lines are envelope.mjs's own (imported above). The
+// ARCHIVE line is the bounce lifecycle's terminal receipt (#1745): the bounced
+// pair moved whole into WHITE_PAGES/_archived/<handle>/. Recognized here so the
+// receipt is visible to the ledger's own readers — a BOUNCE whose path is
+// archived is resolved, not dangling.
 
 function parseLedger(repo) {
   const ledgerPath = join(repo, 'WHITE_PAGES', 'mail-ledger.md');
@@ -124,15 +121,6 @@ function parseLedger(repo) {
     }
   }
   return { deliveries, bouncedPaths, archivedPaths };
-}
-
-function listRoomDirs(repo) {
-  const starsDir = join(repo, 'WHITE_PAGES');
-  if (!existsSync(starsDir)) throw new Error(`No WHITE_PAGES/ directory in repo: ${starsDir}`);
-  return readdirSync(starsDir, { withFileTypes: true })
-    .filter(e => e.isDirectory() && e.name !== 'TEMPLATE' && !e.name.startsWith('_'))
-    .map(e => e.name)
-    .sort();
 }
 
 // Inbox items: classic .md letters and folder letters (directories holding a
