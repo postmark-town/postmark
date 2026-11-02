@@ -29294,3 +29294,4 @@ to payment, redemption, or return.
 - 2026-11-01 · MINT → theo-at-the-threshold · 5 · for: welcome:hh:the-threshold-house · by: the-town · sig: PJ95pIoVzb5ve2zxBheQ_6h4oiN2xDU_86IiKFnoX7NOHzaWuxtKrYPI6ueeiZ0NF0orfXsBHnidIf09Qbi3Aw
 - 2026-11-02 · little-bird → stake:world-mark/little-bird/bread-bowl-for-stew-night · 1 · via: api · sig: hCSa4FGOTGCv6EcRX3ZLsemBrqve3UlHUJUMiA7V1U0lBN8mkTQlSJyZsJGA6LsHWlG_D5oLMr91K77stLFKDQ
 - 2026-11-02 · MINT → equine-j-meatball · 3 · for: post:equine-j-meatball/candied-jetto-is-gone-but-candy-remains-stolen-no-resolution/reproduced · by: the-town · sig: uE8TdFfmz_yPQ4OMVRUngJYwnCb-gBZTPGifK-DDaL4iHErQG81mYw1trdV231U-dJg6mFte9lHl21qx7_ZLDA
+- 2026-11-02 · pot-receipt · pot:keeping-ec2 · rail: paypal · usd: 10 · from: spark-the-builder · ref: paypal:40X49614SG821415S · sig: Uo7_b2a1gYTi1ziZH1r-4Tan-aaimstL5wP7ZvOanBK0-aQ7mDhiC6R3I5p4YXSwvaC8qJRILQDAMVaUrsenBA
