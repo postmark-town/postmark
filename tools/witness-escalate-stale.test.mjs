@@ -65,6 +65,9 @@ const REGISTRAR = { login: 'postmark-registrar-meep', id: 324235342, type: 'User
 const FERRY = { login: 'ferry-the-postmaster[bot]', id: 342791614, type: 'Bot' };
 const SWEEP = { login: 'github-actions[bot]', id: 41898282, type: 'Bot' };
 const RESIDENT = { login: 'a-resident', id: 4242, type: 'User' };
+// A founder is matched by account id, never by login (the file's rule for PEN_ID):
+const RENAMED_FOUNDER = { login: 'keemin-lee', id: KEEMIN.id, type: 'User' }; // the founder's account under a new name
+const OTHER_ACCOUNT_ON_A_FOUNDER_LOGIN = { login: 'keeminlee', id: 99_000_111, type: 'User' }; // the old name, someone else's account
 
 function clock(now = Date.now()) {
   const stamp = (ms) => new Date(Math.floor(ms / 1000) * 1000).toISOString().replace('.000Z', 'Z');
@@ -172,8 +175,7 @@ const RESTARTED = /restarted by a founder's clear of `teed-up` at /;
 // ── the proposal's cases ─────────────────────────────────────────────────────
 
 // Case 1: RRR at T, a founder clears `teed-up` at T+60h, checked at T+80h.
-// The last entry is spelled in mixed case: GitHub logins are case-insensitive.
-for (const founder of [WRIGHT, KEEMIN, { ...KEEMIN, login: 'KeeminLee' }]) {
+for (const founder of [WRIGHT, KEEMIN]) {
   test(`a founder's clear inside the window leaves the PR alone: ${founder.login} (case 1)`, async () => {
     const c = clock();
     const r = await escalateStale(scenario({
@@ -254,6 +256,30 @@ for (const [who, actor] of [
     assert.doesNotMatch(r.stdout, /restarted by a founder/);
   });
 }
+
+// ── who is a founder: the account, not its name ──────────────────────────────
+
+test(`a founder's clear counts by account id, not by name: a renamed founder (same id, new login) restarts the clock`, async () => {
+  const c = clock();
+  const r = await escalateStale(scenario({
+    events: [labeled(c.ago(80), RRR, FERRY), unlabeled(c.ago(20), TEED_UP, RENAMED_FOUNDER)],
+    commentAt: c.ago(80),
+    headCommitAt: c.ago(82),
+  }));
+  leftAlone(r, `witness.mjs: a founder is "matched by the numeric id on the issue event's actor, never by login"`);
+  assert.match(r.stdout, RESTARTED);
+});
+
+test(`a founder's name is not a founder: another account on a founder's login does not restart the clock`, async () => {
+  const c = clock();
+  const r = await escalateStale(scenario({
+    events: [labeled(c.ago(80), RRR, FERRY), unlabeled(c.ago(20), TEED_UP, OTHER_ACCOUNT_ON_A_FOUNDER_LOGIN)],
+    commentAt: c.ago(80),
+    headCommitAt: c.ago(82),
+  }));
+  handedToTheOffice(r, `witness.mjs: "a login freed and taken by someone else inherits nothing"`);
+  assert.doesNotMatch(r.stdout, /restarted by a founder/);
+});
 
 // ── what else the rule reads, and what it must not ────────────────────────────
 

@@ -325,13 +325,15 @@ const STALE_HOURS = 72;
 // STALE_HOURS run from that clear. Without this the sweep put the label back on
 // PRs a founder had just handed back: #4189, #4208 and #4225 were cleared on
 // 10-28 and re-added on 10-29 and 10-30, and the first two again on 11-01 and
-// 11-02 (UTC), hours after a second clear. A founder is matched by the login
-// on the issue event's actor, lowercased, so a renamed founder fails closed
-// (the count is simply not restarted, as before). No list of founder logins
-// existed in tools/ or .github/ (loadFounderRoster below is founder
-// HOUSEHOLDS, for rule 6), so this is the list.
+// 11-02 (UTC), hours after a second clear. A founder is matched by the numeric
+// id on the issue event's actor, never by login, as rule 2c anchors PEN_ID: a
+// renamed founder is still a founder, and a login freed and taken by someone
+// else inherits nothing. The ids were read with `gh api users/<login> --jq .id`;
+// the names beside them are for people. No list of founder accounts existed in
+// tools/ or .github/ (loadFounderRoster below is founder HOUSEHOLDS, for rule 6;
+// tools/github-ids.json pins residents' handles, not roles), so this is the list.
 const TEED_UP_LABEL = 'teed-up';
-const FOUNDER_LOGINS = new Set(['wright-starforge', 'keeminlee']);
+const FOUNDER_IDS = new Set([67605380, 306351151]); // keeminlee, wright-starforge
 
 async function gh(path, init = {}) {
   const res = await fetch(`${API}${path}`, {
@@ -1080,7 +1082,7 @@ async function labelEventClocks() {
       if (!e.created_at) continue;
       if (e.event === 'labeled' && e.label?.name === RRR_LABEL) {
         if (!rrrLabeledAt || e.created_at > rrrLabeledAt) rrrLabeledAt = e.created_at;
-      } else if (e.event === 'unlabeled' && e.label?.name === TEED_UP_LABEL && FOUNDER_LOGINS.has(String(e.actor?.login ?? '').toLowerCase())) {
+      } else if (e.event === 'unlabeled' && e.label?.name === TEED_UP_LABEL && FOUNDER_IDS.has(e.actor?.id)) {
         if (!founderClearedAt || e.created_at > founderClearedAt) founderClearedAt = e.created_at;
       }
     }
