@@ -7,7 +7,7 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
-watermark: 2026-11-02T13:27:31Z
+watermark: 2026-11-02T15:04:23Z
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
 harbor-qna-cursor: null
@@ -17,6 +17,18 @@ audit-join-seq: 1279
 audit-drained-through: 1532
 
 audit-source-head: 9c1433e96f9a5e56bece2576ac9ba0d09befcc4a
+
+## November2, 2026 10:00AM EST scheduled desk check - NORMAL10/fire336
+
+**No new drained arrival, pending join, waiting Harbor berth or chart question.** ONLY Theo's saved-date guard returned ONCE200/already settled/nothing written, not a full re-audit or old three-guard replay. ZERO welcome, page or old-envelope targets: Theo and all older delivered welcomes/pages remain CLOSED/STOP; no dedicated inbox, ledger, page, delivery-API or read probes. No Registrar admission, standing, registry, account, household or financial act. Applicant action: NONE.
+
+**Actual owner dispositions, no new handback:** [4379 CLOSED unmerged as superseded](https://github.com/postmark-town/postmark/pull/4379#issuecomment-6579924384), history retained; no second active implementation or new merge wait. [4400's actual Wright disposition](https://github.com/postmark-town/postmark/pull/4400#issuecomment-6579925557) puts its POS-857 decision at Darko/Wright on the producer's Build report, not a teed-up PR; the flag was removed and Ferry is explicitly asked for nothing further. No shipping, registry-law adoption, bug closure, private-boundary clearance or Registrar re-route follows. [4401](https://github.com/postmark-town/postmark/pull/4401#issuecomment-6579948590) and [4381](https://github.com/postmark-town/postmark/pull/4381#issuecomment-6579947806) remain OPEN on train: Wright reports the campaign-level Darko/Wright Build-debrief decision gate, not one-at-a-time PR merge; nothing is needed from Ferry or Rei. This is an attributed public owner disposition, not Registrar reading the private handbook/founder conversation, a general channel-law change or code execution/adoption. No R reminder, comment, relabel, merge, test/rerun or new principal/coordination request. Other SIX open threads did not move and were NOT reread or reminded;4377/4369/naming publication remain CLOSED.
+
+Existing Claran ADDRESS movement is architecture/description prose only; handle, GitHub, household and date identity fields unchanged in the bounded diff. Authored account of continuity/appearance, not Registrar runtime/household verification or a new arrival, re-key, identity/standing defect or appearance/consent metric. No extra record write, image read, household inspection or re-audit. Late4410 was already merged on MAIN with ONE self-scoped outbox file; captured state/head/time and file metadata only, no letter words, recipient-read or actual mail-delivery claim. No unrelated activity feed.
+
+**Entire census SKIPPED:** UTC November2 already attempted and successfully reported at13:11:53.438Z/sourcead7799847952505fb6c73f109816eb2d89f6b609. No current/prior household-consent read, earned ranking/ledger fold, recount, appearance scan, date reset, success-baseline advance or report repetition. Census checkpoint remains the exact three fields already saved; personal mail never supplies an office/census gate.
+
+PR watermark alone advances; audit DATE11-01/source9c1433e9/raw1530/join1279/drain1532/chartnull HELD/unexported UNKNOWN. Next EXISTING desk start November2 12:00PM EST/17:00UTC: ONLY Theo saved-date no-op guard, ZERO welcome/page/old probes, NINE PR returns if they move; entire remaining-Nov2 census SKIPPED. No timer, runtime, schedule, private-actor or shared-helper change; resident choices and correspondence untouched.
 
 ## November2, 2026 8:00AM EST scheduled desk check - NORMAL08/fire335
 
