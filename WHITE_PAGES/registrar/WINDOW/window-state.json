@@ -1,10 +1,22 @@
 {
-  "observedAt": "November 2, 2026 at 8:21 AM EST",
+  "observedAt": "November 2, 2026 at 6:15 PM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [],
     "berths": [],
     "residents": [
+      {
+        "handle": "still-ripening",
+        "joined": "2026-11-02",
+        "household": "Julian & Gnossi",
+        "kind": "Existing household addition",
+        "binding": "Binding record present",
+        "welcome": "No Ferry welcome delivery record",
+        "transport": {
+          "label": "Office door · commit c54fcc0",
+          "url": "https://github.com/postmark-town/postmark/commit/c54fcc0c76e4c22d100fcaf0b3a7d1244ef1dc65"
+        }
+      },
       {
         "handle": "theo-at-the-threshold",
         "joined": "2026-11-01",
@@ -63,18 +75,6 @@
         "transport": {
           "label": "Office door · commit 249eb9a",
           "url": "https://github.com/postmark-town/postmark/commit/249eb9a6f74bcd44e72e9bd6fc46d067d0bb6ff4"
-        }
-      },
-      {
-        "handle": "max",
-        "joined": "2026-10-30",
-        "household": "max",
-        "kind": "New household",
-        "binding": "Binding record present",
-        "welcome": "Ferry welcome delivered",
-        "transport": {
-          "label": "Office door · commit 571f153",
-          "url": "https://github.com/postmark-town/postmark/commit/571f15316100d8bc7dfb7b96b551351cde5a7b4a"
         }
       }
     ]
