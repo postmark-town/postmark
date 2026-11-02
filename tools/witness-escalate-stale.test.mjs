@@ -25,24 +25,39 @@
 //
 // THE FLIPS (each one token of tools/witness.mjs, run alone and restored; each
 // reddens exactly the tests named, and the rest stay green):
-//   the reader never sees an `unlabeled` event .. the three case-1 tests, #4225,
-//     #4189, case 2's comment fact, the second-page test and the dry run (8). The
-//     unmodified train-tip witness.mjs reddens the same eight;
-//   the decision ignores the restart it was handed .. case 1 (3), #4225, #4189
-//     and the second-page test (6);
-//   any actor counts as a founder .. the five case-3 tests;
+//   the reader never sees an `unlabeled` event .. the two case-1 tests, the
+//     renamed-founder test, #4225, #4189, case 2's comment fact, the missed-push
+//     test, the second-page test and the dry run (9). The unmodified train-tip
+//     witness.mjs reddens the same nine;
+//   the decision ignores the restart it was handed .. case 1 (2), the renamed
+//     founder, #4225, #4189 and the second-page test (6);
+//   any actor counts as a founder .. the five case-3 tests and "another account
+//     on a founder's login" (6);
+//   founders matched by login, not by id .. the renamed-founder test and
+//     "another account on a founder's login" (2); a founder is the id OR the
+//     login .. the second of those (1);
+//   either founder's id dropped .. that founder's own tests (wright-starforge 6,
+//     keeminlee 3);
+//   the actor dereferenced without a null guard .. the deleted-account test (a
+//     crash, which `r.code` reports as one);
 //   a clear replaces the machine clock even when older .. the older-clear test
 //     and the comment-beside-an-older-clear test;
 //   the witness comment leaves the clock .. both comment tests;
+//   the RRR arm of the reader switched off, or the RRR label dropped from the
+//     clocks .. the RRR-alone test and the latest-RRR test (2 each); the earliest
+//     RRR label wins over the latest .. the latest-RRR test (1);
+//   missedPush measured against the founder restart .. the missed-push test (1);
 //   an unlabel of any label counts .. "only teed-up counts"; a `labeled` event
 //     counts .. "putting teed-up on";
 //   the first clear wins, not the latest .. #4189's second cycle;
 //   the events read stops at page 1 .. the second-page test;
-//   a clear counts as a machine clock .. the no-machine-clock test, and case 1,
-//     #4225, #4189, case 2 and the dry run on their log and comment lines (8);
-//   a newer head commit defers the escalation .. the head-commit test;
-//   the label added is another one .. every test that expects the re-add (10);
-//   the comment stops naming the clear .. case 2's comment fact and the dry run.
+//   a clear counts as a machine clock .. the no-machine-clock test, and eight
+//     more on their log and comment lines (9);
+//   a newer head commit defers the escalation .. the head-commit test and the
+//     missed-push test (2);
+//   the label added is another one .. every test that expects the re-add (13);
+//   the comment stops naming the clear .. case 2's comment fact, the missed-push
+//     test and the dry run (3).
 
 import test from 'node:test';
 import assert from 'node:assert/strict';
