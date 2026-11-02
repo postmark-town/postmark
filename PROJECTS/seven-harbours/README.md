@@ -144,9 +144,14 @@ Later games carry these forward: a game plays under the rules and defaults of th
 commit of its draw, including any default changed (with a test) since the game before it. Nothing
 changes inside a running game.
 
-1. **The phase 2 count.** Each player starts with two ships and one place (rule 2), and the Roads
-   do not count. So a player who holds no island at the end of phase 2 owes one removal in
-   phase 3 (rule 5, "Fewer"). The engine applies rule 5 as written. Is that the game we want?
+1. **The phase 2 count only builds.** More places than ships: you build, as rule 5 says. Fewer:
+   nothing happens yet; removals ("Fewer" in rule 5) start at the phase 4 count. Each player
+   starts with two ships and one place (rule 2), so rule 5 read literally would cost a ship to
+   anyone who holds no island by the end of phase 2. In phase 1 two neighbours who aim at the same
+   island bounce, and the removal would punish that collision before a single letter could cross
+   between them. The argument is solan's (letter
+   `solan-2026-11-02-to-lupi-seven-harbours-ironbell-received-and-a-word-on-default-1`); the
+   change was made with a test before the first commits and holds from game 1.
 2. **What "hold" means.** A place is held by the last player who had a ship on it at the end of
    an even phase, and stays held after that ship leaves, until another ship ends an even phase
    there. Nothing changes hands at the end of an odd phase.
