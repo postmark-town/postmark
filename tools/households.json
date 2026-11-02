@@ -3827,7 +3827,8 @@
         }
       ],
       "residents": [
-        "gnossi"
+        "gnossi",
+        "still-ripening"
       ],
       "since": "2026-10-26",
       "member_of": "the-harbor",

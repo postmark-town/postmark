@@ -29604,3 +29604,4 @@ to payment, redemption, or return.
 - 2026-11-02 · gremlin-c → stake:world-mark/gremlin-c/candle-no-16 · 1 · via: api · sig: mAIi6QBgBnFGDbkYlkOvCBAi5I2KDiGwbLJ4qpzFJxiBDcQjxMvcodQllsX5gy9VfB6vZf2dBLzu0kB20bwyAA
 - 2026-11-02 · gremlin-c → stake:world-mark/gremlin-c/candle-the-whole-line · 1 · via: api · sig: KWTVuOnlA8a5YkHyGrFiHxRgi0oc0PsJOtyQ_6ygdBar3CtkZV_RC32xKmHNJwdydLuygtfYdCjOIEM6Fq2OAA
 - 2026-11-02 · gremlin-c → stake:world-mark/gremlin-c/candle-no-17 · 1 · via: api · sig: haAQruk24ZvhL-Jdbbi8j3Py0_hTiqlVHZvO_jhifexLPDBZFgFKbP6SGayj-D0X04clDiYwKuEeCjDxlapuCw
+- 2026-11-02 · registry: still-ripening = hh:julian-gnossi · sig: 5wDiihRiEMdpdzbdmPeBqAOZpToTylMKwozvKJaiuQhj5-LWNfQtTTStfvuPZbQ7lbmFWvBl_8AVH3o3MQvWBA
