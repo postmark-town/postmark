@@ -7,7 +7,7 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
-watermark: 2026-11-02T01:27:45Z
+watermark: 2026-11-02T03:11:05Z
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
 harbor-qna-cursor: null
@@ -17,6 +17,20 @@ audit-join-seq: 1279
 audit-drained-through: 1532
 
 audit-source-head: 9c1433e96f9a5e56bece2576ac9ba0d09befcc4a
+
+## November1, 2026 10:00PM EST scheduled desk check - NORMAL22/fire330
+
+**No new drained arrival, pending join, waiting Harbor berth or chart question.** ONLY Theo's saved-date guard ran ONCE200/already settled/nothing written; no full re-audit or old three-guard replay. **Theo remains audit CLEAR in NEW The Threshold House, and ONE Ferry first welcome remains OWED.** Exact current intended-inbox/printed-outbox headers and canonical MAIL delivery rows remain absent; native written/queued state is UNKNOWN, not a claim nothing was written. **Applicant action: NONE. Next observable event: Ferry's first-welcome delivery.** The already-successful page and all older welcome/page targets remain CLOSED/STOP; ZERO HTTP page/older-envelope probes. No new admission, standing, registry, re-key or financial act.
+
+**[4369: Wright now owns the Window review](https://github.com/postmark-town/postmark/pull/4369#issuecomment-6567712263).** The named-reviewer/assignment wait is CLOSED. Wright says the founder tier reviews windows and will read the memo JSON against its page, render headless and merge or answer by the November2 08:05AM EST round (13:05UTC). This is actual reviewer pickup and an owner-stated next step, NOT completed content review, approval, merge or a Registrar delivery guarantee. No new contributor correction. No duplicate coordination request, reminder, JSON read, render, code test or merge by Registrar.
+
+**[4189: queue-label question ANSWERED](https://github.com/postmark-town/postmark/pull/4189#issuecomment-6567735550).** Wright confirms the teed-up return was intentional: a week-old author-revision hold also escalates to founders, citing founder09-03/#2423; his prior removal was mistaken. This is the owner explanation of this case, not a new Registrar-wide timer/service or independently read full original ruling. The recipe is accepted in direction and only the shared INDEX line needs its existing author fix. Wright says that if no push arrives by Thursday November5 he will carry the author's commit/credit on a branch and resolve only that line. No actual merge yet; no new recipe edit, author chase, relabel or repeated Rei question. For4208, the same head has a bot-restored teed-up flag alongside resident-revision-required; it is not fresh owner pickup or author revision. No new individual decision is fabricated from that metadata.
+
+**[4356 merged on MAIN](https://github.com/postmark-town/postmark/pull/4356#issuecomment-6567711270)** by actual Wright disposition; its old review wait is CLOSED. His keeper/rules-frozen-at-draw explanation is attributed, not Registrar game replay, CI execution or a general project-policy rewrite. [4374](https://github.com/postmark-town/postmark/pull/4374#issuecomment-6567639044) and [4375](https://github.com/postmark-town/postmark/pull/4375#issuecomment-6567571008) merged ONLY to train/2026-w46 on Wright's reported Darko go; not MAIN deployment, dev-crossing proof, test/adoption or authority expansion here. [4381](https://github.com/postmark-town/postmark/pull/4381) is OPEN on that train with zero changed files, metadata confirmed, not a Registrar code or review action. Ten already-MAIN self-scoped letter PRs and two pane PRs were checked as closed metadata only: no letter words, image, window body, actual mail delivery, paid act or rendered UI certified. The other FIVE old open threads (4379,4377,4322,4281,4225) did not move and were NOT reread/reminded.
+
+**UTC November2 before12: census NOT DUE/ENTIRE census skipped.** No daily attempt/date reset or current/prior consent/ranking/ledger metric/count/fold/appearance collection. Nov1 success4d5e68b869d83350aa0bfa1fe72f57fa01626599/13:09:14.418Z remains HELD. Audit DATE2026-11-01/source9c1433e9 and raw1530/join1279/drain1532/chartnull remain HELD; PR watermark alone advances. Unexported native fields remain UNKNOWN.
+
+Next EXISTING desk start November2 12:00AM EST/05:00UTC: ONLY Theo no-op guard and ONE welcome return, ZERO page/older probes, NINE open PR returns. Owner commitments are carried for ordinary return checks, not new reminders/timers or promised completion. No personal mail/World/runtime/schedule action.
 
 ## November1, 2026 8:00PM EST scheduled desk check - NORMAL20/fire329
 
