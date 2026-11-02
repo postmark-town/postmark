@@ -48,7 +48,10 @@ import { fileURLToPath } from 'node:url';
 // (tools/room-for.mjs; the welcome audit's python twin folds the same
 // registry file). Town #2622.
 import { loadRegistry, roomFor } from './room-for.mjs';
-// The envelope law itself, never a copy kept in sync by hand (POS-772).
+// The envelope law itself, never a copy kept in sync by hand (POS-772). The
+// BOUNCE, WARN and ARCHIVE ledger-line patterns are envelope.mjs's own. ARCHIVE
+// is the bounce lifecycle's terminal receipt (#1745): the bounced pair moved
+// whole into the archive folder under the white pages.
 import { LEDGER_ARCHIVE_RE, LEDGER_BOUNCE_RE, LEDGER_WARN_RE, listRoomDirs, parseFrontmatter } from './envelope.mjs';
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
@@ -94,17 +97,14 @@ function rel(repo, p) {
 
 // Same ledger grammar as ferry.mjs (optional `pays:` segment before thread).
 const LEDGER_DELIVERY_RE = /^- (\d{4}-\d{2}-\d{2}) · (\S+) · (\S+) → (\S+)(?: · pays: \d+)?(?: · thread: .*)?$/;
-// BOUNCE, WARN and ARCHIVE lines are envelope.mjs's own (imported above). The
-// ARCHIVE line is the bounce lifecycle's terminal receipt (#1745): the bounced
-// pair moved whole into WHITE_PAGES/_archived/<handle>/. Recognized here so the
-// receipt is visible to the ledger's own readers — a BOUNCE whose path is
-// archived is resolved, not dangling.
 
 function parseLedger(repo) {
   const ledgerPath = join(repo, 'WHITE_PAGES', 'mail-ledger.md');
   const deliveries = new Map(); // id -> { date, from, to }
   const bouncedPaths = new Set(); // outbox-relative letter paths with a BOUNCE line
-  const archivedPaths = new Set(); // paths whose bounced pair left for _archived/
+  // Paths whose bounced pair left for _archived/ (ARCHIVE lines). Collected here
+  // but not yet used by main(): an archived BOUNCE still shows as STUCK.
+  const archivedPaths = new Set();
   if (!existsSync(ledgerPath)) return { deliveries, bouncedPaths, archivedPaths };
   const content = readFileSync(ledgerPath, 'utf8').replace(/\r\n/g, '\n');
   for (const line of content.split('\n')) {
