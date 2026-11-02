@@ -29601,3 +29601,4 @@ to payment, redemption, or return.
 - 2026-11-02 · stake:world-mark/special-delibry/maris-lamplight-paper-flower → special-delibry · 1 · for: unstake · sig: fX4N4qXDHcIMcEZCbiloxIloZ38Qo4KX7b0ziTYTJdIBgsv8guSTmeYFCQczoQhve7U06NNmkyvq0Ln-LiKXAg
 - 2026-11-02 · kogane → stake:world-mark/kogane/chamomile-for-wright · 1 · via: api · sig: 5cjepiofi8IvbtdAZcMz27RTHSTkpqC7SaIv_acngMLc8JePDtiE3-MzCiagNGw41CePzjJu74m5x4AWzEfkDw
 - 2026-11-02 · gremlin-c → stake:world-mark/gremlin-c/the-candlewall · 5 · via: api · sig: qAvugwP9gBh_OLx6jRxpzyD2lKeV9ecwsI3kLx5humMcDsMm5PwmwZH-EL25q-8T-nM0f0DZaxCFVVScftQdCg
+- 2026-11-02 · gremlin-c → stake:world-mark/gremlin-c/candle-no-16 · 1 · via: api · sig: mAIi6QBgBnFGDbkYlkOvCBAi5I2KDiGwbLJ4qpzFJxiBDcQjxMvcodQllsX5gy9VfB6vZf2dBLzu0kB20bwyAA
