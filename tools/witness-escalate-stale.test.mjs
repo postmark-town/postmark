@@ -310,6 +310,42 @@ test(`control: with no founder clear, 73h of RRR hands the PR to the office and 
   leftAlone(await escalateStale(parked(71)), 'POS-842: "RRR and the 72 h stay."');
 });
 
+// The RRR half of the machine clock, and what `missedPush` is measured against.
+// Every test above stamps the witness comment at the same moment as the RRR
+// label, so none of them can tell the label from the comment: the label could
+// leave the clock, or the wrong one of two labelings could win, and they would all
+// still pass. The first two give the label a clock of its own (no witness comment).
+test(`the RRR label is a machine clock of its own: 80h of RRR and no witness comment hands the PR to the office`, async () => {
+  const c = clock();
+  const r = await escalateStale(scenario({ events: [labeled(c.ago(80), RRR, FERRY)], commentAt: null, headCommitAt: c.ago(82) }));
+  handedToTheOffice(r, 'witness.mjs § the staleness clock: "the RRR label going on (the verdict itself)"');
+  assert.match(r.stdout, /\(label \d{4}-\d\d-\d\dT[\d:]+Z, comment n\/a\)/, 'the label, and only the label, is the clock here');
+});
+
+test(`the latest RRR label counts, not the first: labeled 200h ago and again 10h ago, no witness comment, the PR is left alone`, async () => {
+  const c = clock();
+  const r = await escalateStale(scenario({
+    events: [labeled(c.ago(200), RRR, FERRY), unlabeled(c.ago(150), RRR, SWEEP), labeled(c.ago(10), RRR, FERRY)], // taken off, then put back
+    commentAt: null,
+    headCommitAt: c.ago(202),
+  }));
+  leftAlone(r, 'witness.mjs § labelEventClocks: "the LATEST RRR labeling"');
+});
+
+test(`a founder's restart does not hide a possibly missed push: the warning is measured against the machine's last word`, async () => {
+  const c = clock();
+  const r = await escalateStale(scenario({
+    events: [labeled(c.ago(200), RRR, FERRY), unlabeled(c.ago(100), TEED_UP, WRIGHT)], // the count restarts at the clear, 100h ago
+    commentAt: c.ago(200),
+    headCommitAt: c.ago(150), // after the machine's last word, before the founder's clear
+  }));
+  handedToTheOffice(r, `POS-842: "A PR still parked 72 h after a founder's clear escalates again."`);
+  assert.match(r.stdout, /AFTER the machine clock \(possible missed push/, 'the log line asks the machine clock, not the founder restart');
+  const [comment] = commentBodies(r);
+  assert.match(comment ?? '', /a founder last cleared `teed-up`/, 'the count did start at the founder clear');
+  assert.match(comment ?? '', /a push exists after the last machine check/, 'witness.mjs: "asks what the CHAIN has seen, not what a founder has"');
+});
+
 test(`a founder's clear on the second page of events still counts, and the read costs the same two pages`, async () => {
   const c = clock();
   const fillers = Array.from({ length: 120 }, (_, i) => event('subscribed', c.ago(79 - i * 0.1), { actor: SWEEP }));
