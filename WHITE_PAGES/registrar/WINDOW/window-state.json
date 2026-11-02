@@ -1,5 +1,5 @@
 {
-  "observedAt": "November 1, 2026 at 8:31 PM EST",
+  "observedAt": "November 2, 2026 at 6:17 AM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [],
@@ -11,7 +11,7 @@
         "household": "The Threshold House",
         "kind": "New household",
         "binding": "Binding record present",
-        "welcome": "No Ferry welcome delivery record",
+        "welcome": "Ferry welcome written · delivery pending",
         "transport": {
           "label": "Office door · commit 8da2d4e",
           "url": "https://github.com/postmark-town/postmark/commit/8da2d4ee8c0116e03c64087d9dcefe88484c78f1"
