@@ -81,6 +81,7 @@
 import { readFileSync, writeFileSync, appendFileSync, readdirSync, existsSync, statSync } from "node:fs";
 import { join, dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { townDay } from "./crossings.mjs";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 export const ROOT_DEFAULT = process.env.REGISTRAR_AUDIT_ROOT ?? resolve(HERE, "..");
@@ -145,8 +146,7 @@ export const LEDGER_PATH = "tools/standing-ledger.md";
 
 const IS_MAIN = Boolean(process.argv[1]) && resolve(process.argv[1]) === fileURLToPath(import.meta.url);
 
-export const townDate = (now = new Date()) =>
-  new Intl.DateTimeFormat("en-CA", { timeZone: process.env.TOWN_TZ ?? "America/New_York" }).format(now);
+export const townDate = (now = new Date()) => townDay(now);
 
 // ── the grammar ─────────────────────────────────────────────────────────────
 //

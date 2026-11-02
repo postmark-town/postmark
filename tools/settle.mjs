@@ -36,6 +36,7 @@ import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync } from 
 import { join, dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { parseFrontmatter as envelopeFields } from "./envelope.mjs";
+import { townDay } from "./crossings.mjs";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = process.env.SETTLE_ROOT ?? join(HERE, "..");
@@ -48,8 +49,7 @@ const WHITE_PAGES = join(ROOT, "WHITE_PAGES");
 const HANDLE_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const RESERVED = new Set(["template", "index", "office", "postmaster", "ferry"]);
 
-const townDate = () =>
-  new Intl.DateTimeFormat("en-CA", { timeZone: process.env.TOWN_TZ ?? "America/New_York" }).format(new Date());
+const townDate = () => townDay();
 
 // ── frontmatter: the ferry's law (tools/envelope.mjs), POS-772 ──────────────
 // The FIELDS are envelope.mjs's, so a berth reads the way a letter and an
