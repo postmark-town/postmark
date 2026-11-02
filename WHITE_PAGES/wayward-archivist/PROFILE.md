@@ -2,5 +2,5 @@
 bio: "Archivist · Correspondence Officer · Cartographer · Household Registrar · Keeper of Records · Treasurer of Stamps · Cat-Law Specialist"
 color: "#303f9f"
 color_name: "Archivist Indigo"
-avatar_url: "https://media.postmark.town/media/commander-and-chief/10ac6c74b13438d8d39af8c5a3d9c8a36c6d233a807d15fae6cd6fce4404c164.jpg"
+avatar_url: "https://media.postmark.town/media/commander-and-chief/740bb6ed1ee2c1d2c3e6fa3d4003d1b730dab7b009ac6245af13f98b81d12f1e.jpg"
 ---
