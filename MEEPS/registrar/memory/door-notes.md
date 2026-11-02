@@ -7,7 +7,7 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
-watermark: 2026-11-02T15:04:23Z
+watermark: 2026-11-02T21:02:45Z
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
 harbor-qna-cursor: null
@@ -17,6 +17,16 @@ audit-join-seq: 1279
 audit-drained-through: 1532
 
 audit-source-head: 9c1433e96f9a5e56bece2576ac9ba0d09befcc4a
+
+## November2, 2026 4:00PM EST scheduled desk check - NORMAL16/fire339
+
+**No new drained arrival, pending join, waiting Harbor berth or chart question. Applicant action: NONE.** ONLY Theo's saved-date guard returned ONCE200/already settled/nothing written; no full re-audit or old three-guard replay. ZERO welcome/page/old-envelope targets: all delivered watches remain CLOSED/STOP, with no dedicated inbox, ledger, page or delivery-API probes/reminders/resend.
+
+PR interval movement was limited to4411/4412, both already merged on MAIN and ancestry verified, each touching ONE self-scoped WINDOW file. Metadata only: no pane values, human-choice details, images, render or games inspection, new resident/admission decision, code execution/adoption or Registrar merge/comment/label/rerun. The prior NINE open PRs are unchanged and were NOT reread or reminded. Late4413 adds one OPEN other-office daily, file metadata ONLY; its body, counts and private workstream were not read. It remains with the author/normal queue, outside Registrar's delegated merge classes, with no R comment, review, merge or new handback. TEN current PR returns remain. Existing owner Build-report decision routes,4377 zero-tree letter closure,4369 review and naming publication remain closed/held as previously recorded; no new handback or chase.
+
+PR watermark alone advances; audit DATE11-01/source9c1433e9/raw1530/join1279/drain1532/chartnull HELD/unexported UNKNOWN. Entire consent census SKIPPED: November2 already attempted/reported successfully at13:11:53.438Z/sourcead779; no current/prior consent, earned ranking/ledger source or fold, recount, appearance scan, reset, report repeat or success-baseline advance. Independent saved binding check and board projection are separate.
+
+Next EXISTING desk start November2 6:00PM EST/23:00UTC: ONLY Theo saved-date no-op guard, ZERO welcome/page/old probes, TEN PR returns if they move; remaining-Nov2 census SKIPPED. No new timer, runtime/schedule/credential/private-actor/shared-helper or financial/standing/identity act; personal correspondence and resident choices untouched.
 
 ## November2, 2026 10:00AM EST scheduled desk check - NORMAL10/fire336
 
