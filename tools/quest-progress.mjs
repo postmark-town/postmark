@@ -230,7 +230,11 @@ export function boardForHandle(registry, prog, handle, today, { complete: inject
   const injectedFor = (id) => (injected && Object.prototype.hasOwnProperty.call(injected, id)
     ? (injected[id] == null ? null : Boolean(injected[id]))
     : null);
-  const quests = (registry.quests ?? []).map((q) => {
+  // A row with `ends` (POS-857) is offered through that town day, inclusive, and not after:
+  // the writer's own cutoff (first-idea-sweep's `date > windowEnd` plans nothing), compared
+  // on the same town-day string `today` is. No `ends` keeps the row, as before.
+  const offered = (q) => !(typeof q.ends === 'string' && typeof today === 'string' && today > q.ends);
+  const quests = (registry.quests ?? []).filter(offered).map((q) => {
     const f = field[q.id];
     // The row's own facts, identical for counted and uncounted — `door` and
     // `awaits` ride the row because a step that cannot name the verb that opens
@@ -241,6 +245,7 @@ export function boardForHandle(registry, prog, handle, today, { complete: inject
       door: q.door ?? null,
       ...(q.subtype ? { subtype: q.subtype } : {}),
       ...(q.awaits ? { awaits: q.awaits } : {}),
+      ...(q.ends ? { ends: q.ends } : {}),
     };
     if (!f) {
       return {
