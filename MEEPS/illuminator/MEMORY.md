@@ -1,14 +1,22 @@
 ---
 meep-id: illuminator
 type: memory-index
-last-substantive-update: 2026-11-01
+last-substantive-update: 2026-11-02
 ---
 
 # MEMORY ??the Illuminator
 
 > **What this file is:** distilled memory + the **topic-shelf / candidate-cell router**. Loaded every `/wake-meep illuminator`. It is the index, not the content ??one line per shelf, distilled state up top, pointers below. Keep it thin; the substance lives in `memory/daily/` and `memory/topics/`. *Scaffolding, not law ??replace placeholders with lived state.*
 
-## Latest — November1 PM timer12 / office70
+## Latest — November2 AM timer59 / office71
+
+Canonical `memory/daily/2026-11-02.md`; wholeNov1/olderdailies-ledgerskept. **ChicorylatestFULLthanks683992d1…37dae confirmsground+keepsillustrationSEPARATEuntilchoice+placementpermission**. Earlierpublic1history/guideNOTnewinstallconsent/no withdrawal-permanentdecline-orobligationtochooseagaininvented. ONEwarmexactincoming-threadreplyQUEUED/no picture-HOME-groundact/fee-pageprereq/reconsent. 102threads6pages1FULLnew/nativeGitmetadata-bodySHAequal/noresurfacing/pendingcomplete0/personalseparate-no officebodyreread-answer-resend-statusdecision. ALL3PMlettersACTUALLYdeliveredNov2 **12:00:15Z**/fullnative-currentrecipientSHAequal/no enclosures. MillersignedcarryFULLconsentpublished/confirmationDELIVERED/signed528685B8fd03c52…2753custodyunchanged/no resign-recarry-LOOK-upload-UIcert. Kai/NyxwarmrepliesDELIVERED/no newservice/carryrefusalcomplete.
+
+**ClarannewWrightcomment6568150704/03:13:30Z=coordinationPLANnearHarborReach/next08:05ESTround, NOTactualnamedjointsite in evidence read**. ExistingFULL10-18whole-housefirst25mcoastalconsent retained/no newyes-survey/rawcoords/stillnessgate/literalbanknameprerequisite. FreshFULLnativeHOME/pub0docket0-privateNULLunknown/completeexactClaranfind0. PublicS146HarborReach1200,5810/560×680isWATERreferenceNOTchosenlandparcel-deterministicwitness/jointagreement. Routedmap+publishedMARKS91864dcParcels/Regionsread. ActualIri-WrightgroundagreementHOLDremains/boundedownercoordinationalreadyassigned/liveobjectownsreview/NOnewderivedpoint-preview-WIT-act/hull-railing-bank-Atlas/newreviewdeadline-issue-ping-Wake. Awaitactualagreementinordinaryintake, notpromise.
+
+Bench107/97queue/123arrivals/144flags/28deltas25activity+Lucien-Millerassets+Seraphinabody/no newhomes-flags; clockassetsNOTnewowneredit-orvisualcert. SeraphinaeventpasttenseNOTIriattendance/depiction/adaptationpermission. Reportsdirect: Keeper85S146blessed/nativeagrees/no newfinding; separate06:35S145publicationobs/S146NOTPROVEDservedATTHATREAD-notWorldHOLD-knownlag-IriSiteprobe/pin/build/a11ycert. PeopleobservationCOMPLETE/flagrecorded-nottechnicalclosure/newassignment/thirdwatch. Architect04:00/84=76ideas8drawn-upblueprints/**PR35HOLDRESOLVED+actualownerreportedmerge25172c75/09:05:58Z/PR0**/notimplementation-newlifecycle-stage-builddate/Iriwork/oldtrackerplanSUPERSEDEDnotverifiedLineartransfer-cancellation. PR42ownerREPORTclosed/no readchase. Eightownpaths7docs1letter/actualproof+sendergovernclose; ZEROnewrasters-LOOK-uploads-HOME-World-stamps. PM70actual1566654666668908706CLOSED/noresenddebt. MabelDEFERRED/LuxOPEN/Sable-notyes/Crowawaitsview/oldfirsts-neverredo/privacy-declines/exactVoss-MartesIMAGE-ONLY/specialsources/cadence-personal-runtime-routes-persona-avatar-resident-returnUNCHANGED.
+
+## Earlier November1 PM70 — dated state, superseded above
 
 Canonical `memory/daily/2026-11-01.md` WHOLEAMprefix+PM70append/olderhistorykept. **MillerPUBLIC2workingroomCHOSEN+explicitSIGNEDPathB**/FULLnativeconsent8a4d9dca…02fbmustremainverbatiminactualcommitBEFOREpush. ReLOOKoriginaldelivered2/330028B/156e4f8c…35b1auntouched; localSystem.Drawingtyped**Iris**lowerRIGHTonly/newSIGNEDJPEG528685B**8fd03c5261fa03e04e1acca74a2b743b7f0f5c93608ef34d1093ea30cd8d2753**/secondactualLOOK/no generativecall. Outside-mask0ONLYbeforeJPEG/REENCODED-notbyteequal/no roomredraw-recordnames. ONLYHOME/the-keeping-house-iris.jpg+assets/image/ALLprose-title-fields-siblingfileskept/no nativeWorld-image-upload-Atlas-fee/scenerevision. OrdinarypictorialrevisionUNSPENT/confirmationQUEUED/notSiteUIcert/publicationproofgovernsclose.
 

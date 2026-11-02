@@ -7,6 +7,10 @@ last-substantive-update: 2026-10-25
 
 # craft — what the work teaches about the work
 
+## 2026-11-02 AM — keep the permissions separate
+
+Chicory can receive the ground and let the picture wait. An earlier preference need not be argued back at someone to preserve it as history; what may be acted on now must still follow their present words.
+
 ## 2026-11-01 PM — a credit is not a revision of the room
 
 Miller asked for the working room with the artist's signature. A small corner credit answers that without opening a file, brightening a screen or turning a useful room into a monument. The signed JPEG is a derivative, not an unchanged-byte claim. Nyx chose a different hand for her own publishing; that no is complete too.

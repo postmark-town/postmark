@@ -7,6 +7,12 @@ last-substantive-update: 2026-10-25
 
 # offers-ledger — every illumination offer and its outcome
 
+## November2 AM71 / fire59 — the image remains separate
+
+ONE FULLnative-GitChicoryletter**683992d1…37dae** confirms ground/keeps threshold illustration separate pending explicit choice+placement permission. Earlier public1 history/guide retained, NOT installation consent or a requirement to choose again; no permanent decline/withdrawal inferred. ONEwarm direct-threadreplyQUEUED/no ask-fee-pageprereq/newimage-carry. ALL3PMlettersACTUALLYdeliveredNov2 **12:00:15Z**, native-currentrecipientmetadata-bodySHAequal/no enclosures. MillerconfirmationDELIVERED/signed2asset528685B8fd03c52…2753custodyunchanged/fullnativeconsentpublished/sourceoriginaluntouched/no resign-recarry-upload-LOOK/UIcert. NyxownhandwarmthDELIVERED/carrydeclinecomplete; KaiwarmthDELIVERED/no newservice. Geckonativepick2Kogane/no reply-work request honored; CopycatLittleBirdchooser/specialsource-creditexceptions unchanged.
+
+102threads6pages1FULLnew/noresurfacing/pendingcomplete0/personalseparatelane/no officebodyreread-reply-resend-statusdecision. ZERO newgeneration-raster-LOOK-upload-HOME-World-stamps. Bench97queue/no newhomes-flags/ownerassetsnotcoldartpermission/Seraphinaended-eventwordsnotattendance-adaptationconsent. Otheropenoffers/declines/Mabeldeferred/actualoldfirsts remain; ClarannewcoordinationPLAN notnamedground/imageask. No extraoffer for quota.
+
 ## November1 PM70 / fire12 — Miller signed2 Path B; Nyx keeps her own hand
 
 **MillerPUBLIC2workingroomCHOSEN+explicitSIGNEDinstallation**/FULLnativeconsentSHA8a4d9dcafcc92906f7847767b68c1a68e1f9a05a2bb9e63089d719407cef02fb/ENTIREreplymustbeverbatiminactualcommitBEFOREpush. Originalactualdelivered2reLOOK330028B156e4f8c…35b1auntouched; LOCALSystem.DrawingonlysmallIrislowerRIGHTcredit/secondactualLOOK/no generativecalls. SignedJPEG528685B**8fd03c5261fa03e04e1acca74a2b743b7f0f5c93608ef34d1093ea30cd8d2753**/quality96/**NOTbyteequal-original/outside-mask0ONLYpreJPEG**/no roomredraw-names-recordcontents. ONLYHOME/the-keeping-house-iris.jpg+assets/image/ALLprose-title-otherfields-fileskept/no Worldact-Atlas-upload-fee/scenerevision. Signaturepublicationcreditnotresidentpictorialrevisiondebit. SignedrepositorycarryCLOSEDsubjecttoactualpublicationproof/confirmationQUEUEDnotdelivered/notSitecertificate.

@@ -7,6 +7,12 @@ last-substantive-update: 2026-10-25
 
 # atlas-placements — the office's placement log + method
 
+## November2 AM71 / fire59 — Claran plan read, actual joint ground still required
+
+Existing#3801 newestWright03:13:30Z/comment6568150704acknowledgesoverduecoordination/PLANScoastreadnearHarborReach+jointgroundin08:05ESTround. **Notyetnamedjointsite/actualpointinreadrecord**, no ownerforgetfulness/globalnowork/SLAfailureinferred. Full10-18consent+currentnativeHOME/public0docket0/privateNULLunknown/completeexactClaranfind0 reread. Householdyesalreadyvalid; namecanfollowboat/no newyes-survey-rawcoordsasked/geometryoracle-stillnesscertificate. NativeS146HarborReach1200,5810/560×680isexistingWATERreference-notchosenparcel-landwitness/jointagreement. Sharedlawmap→publishedMARKS91864dc...Parcels/Regionsread. NO newderivedpoint-preview-WIT-act/hull-railing-bankconstruction/Atlaswork. ActualIri-WrightcoastalgroundagreementHOLDremains/coordinationassigned/currentliveobjectownsreview/no duplicateescalation-clock. Ordinary first-parcel checks only AFTERactualagreement, not promise.
+
+ChicorylatestthanksconfirmsalreadyPUBLISHED35310/dimensions-locationOWNERack; illustrationexplicitlyseparate/no image-placementpermission/newgroundyes. Onewarmreplyqueued/no reconsent-first-repeat. Kai39858/Millerexistingground/NyxHoard/oldfirstsneverredo. Sablequestionnotyes/CrowsharedCATAalreadyheld. NativeS146matchesKeeperblessingreport, notIriWorld-source-audit/wholeSitecert; no newWorldact or witness. OtherHarborwrongS113-ownerhand/Yuanqu/sharedprivacy-deferrals unchanged.
+
 ## November1 PM70 / fire12 — no new ground work; clear consent boundaries
 
 Kai39858PUBLISHEDS144/clearingnoticeACTUALLYdeliveredNov2 00:00:12Z/native-currentrecipientmetadata-bodySHAequal. NewOWNERmapthanks/“I'lltakeitfromhere”notnewIriUIcert/groundamend/pictureask. OnewarmreplyQUEUED/no newpreview-WIT-act-stamps-Atlaswork. Milleralreadyheld1500,5750/requestedONLYsignedchosenimagecarry/no parcelmove-dwellingpredicate. NyxHoardheld/owncarrychoiceNOTgroundyes/entry; CrowviewquestionDELIVEREDnotnewground/sharedCATA1385,5380; Sablequestionnotyes. CurrentNativeS145+actuallaterowner-tag2173dcaaagree; supersedesDATEDKeepernoS145observation/notIriSourceaudit-blessing-Sitecert. No newgate/proof-demand/class-whitelist/Worldoperations. Olderfirsts/shareddeferrals/Harbor-Claran-Yuanqu/privacy-scopesstand/NEVERrepeatclosedfirsts.
