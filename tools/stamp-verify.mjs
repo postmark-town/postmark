@@ -23,7 +23,9 @@
 //                  vote-mints are once-per-handle-per-topic with a stake behind
 //                  them. You can't overdraw a stake without breaking the fold.
 //
-// Usage: node tools/stamp-verify.mjs [--repo PATH]   exits 0 green, 1 on any failure.
+// Usage: node tools/stamp-verify.mjs [--repo PATH] [--registry <file|url>]
+//        exits 0 green, 1 on any failure. --registry hands over the store's
+//        registry (tools/registry-source.mjs); without it the printout is read.
 
 import { createPublicKey, verify as edVerify } from 'node:crypto';
 import { existsSync, readFileSync } from 'node:fs';

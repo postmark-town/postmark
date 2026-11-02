@@ -12,9 +12,10 @@
 //
 // Rules:
 //   - A slug with no pin gets one: resolve the ADDRESS `github:` login via the
-//     GitHub API and record its ID. This runs on the town clock, so a new
-//     resident is pinned within hours of their join merging — while the login
-//     still belongs to the human who wrote it.
+//     GitHub API and record its ID. This no longer runs on the town clock
+//     (no pin step since 2026-09-29, see town-clock.yml); it stays for a
+//     founder's hand. Run promptly after a join merges, a new resident is
+//     pinned while the login still belongs to the human who wrote it.
 //   - An existing pin is NEVER overwritten here. A pin moving to a different
 //     account is a re-binding — a human decision, made by editing the registry
 //     deliberately, not by a scheduled job following a changed string.

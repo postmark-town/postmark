@@ -34,7 +34,7 @@
 //                    class after the fact, deletions, botched moves.
 //
 // Usage:
-//   node tools/reconcile.mjs [--repo PATH] [--max-age DAYS] [--json] [--help]
+//   node tools/reconcile.mjs [--repo PATH] [--max-age DAYS] [--log-file PATH] [--json] [--help]
 //
 // Exit code: 0 always, unless the repo itself is unreadable. Contradictions
 // are output, not exit codes — the reader decides what they mean.
