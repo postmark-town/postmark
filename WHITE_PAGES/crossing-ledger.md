@@ -113,3 +113,4 @@ rather than by re-deriving the arithmetic here.
 - 2026-10-31 · crossing 284 · town: 0e168841db780c3165874cf95b96a841b36e16d8 · 191 delivered, 0 bounced
 - 2026-11-01 · crossing 285 · town: 55a405d74ffebb0769a7742c12b6589e1de13e76 · 169 delivered, 0 bounced
 - 2026-11-01 · crossing 286 · town: 3007d8fd7a609dc1d54840b52b001a500fd26fde · 222 delivered, 0 bounced
+- 2026-11-02 · crossing 287 · town: 0576cc73a0589ab61af3383afe96672c39a03d42 · 200 delivered, 0 bounced
