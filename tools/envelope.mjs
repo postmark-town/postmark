@@ -27,8 +27,8 @@ import { join, resolve, sep } from 'node:path';
 // A handle becomes a path segment at the crossing (WHITE_PAGES/<handle>/inbox),
 // so it is checked as one before it is ever joined into a path: lowercase
 // letters and digits in dash-joined words, nothing else. The same grammar the
-// door admits by (tools/settle.mjs, tools/registrar-audit.mjs restate it), so
-// every handle the town has ever admitted already wears it.
+// door admits by (tools/settle.mjs and tools/registrar-audit.mjs import this
+// one), so every handle the town has ever admitted already wears it.
 export const HANDLE_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
 // --- frontmatter parsing -------------------------------------------------

@@ -82,6 +82,7 @@ import { readFileSync, writeFileSync, appendFileSync, readdirSync, existsSync, s
 import { join, dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { townDay } from "./crossings.mjs";
+import { HANDLE_RE } from "./envelope.mjs";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 export const ROOT_DEFAULT = process.env.REGISTRAR_AUDIT_ROOT ?? resolve(HERE, "..");
@@ -163,7 +164,6 @@ export const townDate = (now = new Date()) => townDay(now);
 
 export const ACTS = Object.freeze(["quarantine", "lift", "revoke"]);
 
-const HANDLE_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const LINE_RE =
   /^- (\d{4}-\d{2}-\d{2}) · (quarantine|lift|revoke) · ([a-z0-9][a-z0-9-]*) · by: ([^·\n]+?)(?: · founder-word: ([^·\n]+?))? · reason: ([^·\n]+)$/;
 
