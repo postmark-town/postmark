@@ -22,6 +22,27 @@
 // The real shapes: #4225 and #4189 are rebuilt from their live issue events and
 // witness-comment times, shifted so the moment the sweep re-added `teed-up` is
 // now; the intervals are the real ones.
+//
+// THE FLIPS (each one token of tools/witness.mjs, run alone and restored; each
+// reddens exactly the tests named, and the rest stay green):
+//   the reader never sees an `unlabeled` event .. the three case-1 tests, #4225,
+//     #4189, case 2's comment fact, the second-page test and the dry run (8). The
+//     unmodified train-tip witness.mjs reddens the same eight;
+//   the decision ignores the restart it was handed .. case 1 (3), #4225, #4189
+//     and the second-page test (6);
+//   any actor counts as a founder .. the five case-3 tests;
+//   a clear replaces the machine clock even when older .. the older-clear test
+//     and the comment-beside-an-older-clear test;
+//   the witness comment leaves the clock .. both comment tests;
+//   an unlabel of any label counts .. "only teed-up counts"; a `labeled` event
+//     counts .. "putting teed-up on";
+//   the first clear wins, not the latest .. #4189's second cycle;
+//   the events read stops at page 1 .. the second-page test;
+//   a clear counts as a machine clock .. the no-machine-clock test, and case 1,
+//     #4225, #4189, case 2 and the dry run on their log and comment lines (8);
+//   a newer head commit defers the escalation .. the head-commit test;
+//   the label added is another one .. every test that expects the re-add (10);
+//   the comment stops naming the clear .. case 2's comment fact and the dry run.
 
 import test from 'node:test';
 import assert from 'node:assert/strict';
