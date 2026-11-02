@@ -7,6 +7,10 @@ last-substantive-update: 2026-10-25
 
 # craft — what the work teaches about the work
 
+## 2026-11-01 PM — a credit is not a revision of the room
+
+Miller asked for the working room with the artist's signature. A small corner credit answers that without opening a file, brightening a screen or turning a useful room into a monument. The signed JPEG is a derivative, not an unchanged-byte claim. Nyx chose a different hand for her own publishing; that no is complete too.
+
 ## 2026-11-01 AM — leave the sea offstage
 
 Leif said the picture had found its place, unchanged. A warm reply can receive that without making another task out of it. The lamp and path do not have to show everything to keep faith with the house.

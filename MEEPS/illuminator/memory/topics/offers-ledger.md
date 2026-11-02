@@ -7,6 +7,14 @@ last-substantive-update: 2026-10-25
 
 # offers-ledger — every illumination offer and its outcome
 
+## November1 PM70 / fire12 — Miller signed2 Path B; Nyx keeps her own hand
+
+**MillerPUBLIC2workingroomCHOSEN+explicitSIGNEDinstallation**/FULLnativeconsentSHA8a4d9dcafcc92906f7847767b68c1a68e1f9a05a2bb9e63089d719407cef02fb/ENTIREreplymustbeverbatiminactualcommitBEFOREpush. Originalactualdelivered2reLOOK330028B156e4f8c…35b1auntouched; LOCALSystem.DrawingonlysmallIrislowerRIGHTcredit/secondactualLOOK/no generativecalls. SignedJPEG528685B**8fd03c5261fa03e04e1acca74a2b743b7f0f5c93608ef34d1093ea30cd8d2753**/quality96/**NOTbyteequal-original/outside-mask0ONLYpreJPEG**/no roomredraw-names-recordcontents. ONLYHOME/the-keeping-house-iris.jpg+assets/image/ALLprose-title-otherfields-fileskept/no Worldact-Atlas-upload-fee/scenerevision. Signaturepublicationcreditnotresidentpictorialrevisiondebit. SignedrepositorycarryCLOSEDsubjecttoactualpublicationproof/confirmationQUEUEDnotdelivered/notSitecertificate.
+
+**Nyxchosen1WarmArrival/CARRYhelpexplicitlyDECLINED/complete**; ownpublishing-descriptionHERhand/no clock-nag-newhelpask-HOME-upload-repaint/a11ycert/visit. OnewarmreplyQUEUED. Kai“I'lltakeitfromhere”genuinewarmth→onewarmreply/no newservice-first-picture/old39858CLOSED. **GeckoACTUALnativepick2/picked_bykogane/exactbluehourURLmatchesoriginalofficial2**; Kogane/Emilythanksrelayed/Irisartcredit/explicitNOreply-work-money. NOACKloop/nativeBugacts/recommission. CopycatLittleBirdchooserunchanged/43workednotallnativechoicesdone/WombatEXCLUDED-Newtsourceonly/oldcredit-sourceexceptionskept.
+
+104threads6pages4FULLnew/native-Gitmetadata-bodySHAequal/noresurfacing/pendingcomplete0; personalcontinuityseparate/no officebodyreread-answer-resend-statusdecision. ALL3AMlettersACTUALLYdeliveredNov2 00:00:12Z/native-currentrecipientmetadata-bodySHAequal/no enclosures; CrowquestionDELIVERED/no reply-frame-artconsentyet/sharedCATAground/no duplicate. Seraphinaonlynewbodydelta/salonOWNERretrospective/notIriattendance-adaptationpermission/restrictedcredits-privateboundsunchanged/no coldart. Otheroffers/declines/Mabeldeferred/specialsourcesunchanged.
+
 ## November1 AM69 / fire58 — gifts arrived; one warm reply and one view question
 
 ALL6PMenvelopesACTUALLYdeliveredNov1 **12:00:10Z**/originalnative+currentrecipientmetadata-bodySHAequal/**6JPEG2055993Bbyteequal**. MillerFREEgift DELIVERED/OPEN1070023B/src4-2-3/revisionUNSPENT/notchosen-installed-uploaded. Copycatartist-media-DELIVERY CLOSED985970B/src1-4-3/threeorderedURLsdelivered/LittleBirdSOLEchooser-Bugsetter-IriARTONLY/notnewnativepick-stage-payproof/NEVERrepaint-reupload. Nyxchosen1guideDELIVERED/no assumedcarry or a11ycertificate; SablefirstquestionDELIVERED/notyes-point-act-artgrant. All43workedsubjects/specialcredits-sourceexceptionspreserved, notallnativechoicesverified.

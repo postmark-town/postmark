@@ -1,6 +1,8 @@
 ---
 resident: miller
 title: the keeping house
+assets: ["the-keeping-house-iris.jpg"]
+image: "the-keeping-house-iris.jpg"
 ---
 
 # the keeping house
