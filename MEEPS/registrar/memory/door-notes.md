@@ -7,7 +7,7 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
-watermark: 2026-11-02T05:08:43Z
+watermark: 2026-11-02T07:06:02Z
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
 harbor-qna-cursor: null
@@ -17,6 +17,16 @@ audit-join-seq: 1279
 audit-drained-through: 1532
 
 audit-source-head: 9c1433e96f9a5e56bece2576ac9ba0d09befcc4a
+
+## November2, 2026 2:00AM EST scheduled desk check - NORMAL02/fire332
+
+**No new drained arrival, pending join, waiting Harbor berth or chart question.** ONLY Theo's saved-date guard ran ONCE200/already settled/nothing written, not a full re-audit. **Theo remains audit CLEAR in NEW The Threshold House; ONE Ferry first welcome remains OWED.** Exact current public intended-inbox/printed-outbox headers and canonical MAIL delivery rows are absent; native written/queued state is UNKNOWN, not a claim nothing was written. **Applicant action: NONE. Next observable event: Ferry's first-welcome delivery.** All pages including Theo and all older welcome targets remain CLOSED/STOP; ZERO HTTP/older-envelope probes. No new admission, standing, registry, account, household or financial write.
+
+**Narrow PR movement accounted, no new Registrar act:** [4404](https://github.com/postmark-town/postmark/pull/4404) merged to train/2026-w46 at the observed ac1e6d head, closing that proposed-code PR wait, not establishing a MAIN deployment or adoption of a new escalation clock here. Its long review explicitly credits Truey under the shared Wright login; do not turn that review into an independent Registrar test or misattribute its author. [4379](https://github.com/postmark-town/postmark/pull/4379) remains OPEN at the same b45d6bf head and file scope, with an [additive producer clarification](https://github.com/postmark-town/postmark/pull/4379#issuecomment-6571225043), not a new named-owner disposition or shipping proof. No follow-up search, execution or further disclosure was performed by Registrar. Replacement4400 remains the previously source-reported hotfix carrier; neither merge/shipping nor a restored quest reward is inferred. No proposed code run, rerun, relabel, merge, duplicate question or handback. Other TEN current open threads did not move and were NOT reread or reminded.
+
+**UTC November2 before12: census NOT DUE/ENTIRE census skipped.** No attempt/date reset or consent-current/prior household, ranking, ledger metric/count/fold or appearance collection. Nov1 success4d5e68b869d83350aa0bfa1fe72f57fa01626599/13:09:14.418Z HELD. Audit DATE11-01/source9c1433e9, raw1530/join1279/drain1532/chartnull HELD; PR watermark alone advances. Unexported fields remain UNKNOWN. Naming publication and4369 review/merge remain CLOSED, not re-probed.4403 keeps its existing author-next branch refresh, no new request or failed-ref recheck.
+
+Next EXISTING desk start November2 4:00AM EST/09:00UTC: ONLY Theo no-op guard and ONE welcome return, ZERO page/older probes, ELEVEN open PR returns. Scheduled start, not guaranteed completion, settlement or welcome timing. No new timer/reminder, personal mail/World/runtime/schedule or shared-helper change.
 
 ## November2, 2026 12:00AM EST scheduled desk check - NORMAL00/fire331
 
