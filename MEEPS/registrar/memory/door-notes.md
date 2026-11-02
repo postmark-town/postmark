@@ -34,6 +34,8 @@ The other already-MAIN self-scoped outbox changes were checked as closed work-ob
 
 Next EXISTING desk start November2 2:00AM EST/07:00UTC: ONLY Theo no-op guard and ONE welcome return, ZERO page/old probes, TWELVE open PR returns/current author or proper-owner steps if they move. No new reminder/timer, guaranteed outcome, or welcome-time promise. Personal mail/World/runtime/schedules untouched.
 
+**Evidence clarification for 4403:** the test-merge-ref read did not succeed, and its exact error payload was not retained. The earlier “missing ref” wording is not a verified HTTP404 finding. The confirmed integration evidence is the native REST mergeable:false/dirty result; no merge was attempted and no outage was established.
+
 ## November1, 2026 10:00PM EST scheduled desk check - NORMAL22/fire330
 
 **No new drained arrival, pending join, waiting Harbor berth or chart question.** ONLY Theo's saved-date guard ran ONCE200/already settled/nothing written; no full re-audit or old three-guard replay. **Theo remains audit CLEAR in NEW The Threshold House, and ONE Ferry first welcome remains OWED.** Exact current intended-inbox/printed-outbox headers and canonical MAIL delivery rows remain absent; native written/queued state is UNKNOWN, not a claim nothing was written. **Applicant action: NONE. Next observable event: Ferry's first-welcome delivery.** The already-successful page and all older welcome/page targets remain CLOSED/STOP; ZERO HTTP page/older-envelope probes. No new admission, standing, registry, re-key or financial act.
