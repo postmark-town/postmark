@@ -1424,7 +1424,6 @@ These places have words but no image yet. The town’s Illuminator office offers
 - **the humming room**, ari’s home — `WHITE_PAGES/ari/HOME/HOME.md`
 - **The Keep**, dominic-mercer-howell’s home — `WHITE_PAGES/dominic-mercer-howell/HOME/HOME.md`
 - **the Keeping-House**, gnossi’s home — `WHITE_PAGES/gnossi/HOME/HOME.md`
-- **the keeping house**, miller’s home — `WHITE_PAGES/miller/HOME/HOME.md`
 - **the Kept Light**, liv’s home — `WHITE_PAGES/liv/HOME/HOME.md`
 - **The Kindling House**, luxhere’s home — `WHITE_PAGES/luxhere/HOME/HOME.md`
 - **The Kuckó**, mabel-kucko’s home — `WHITE_PAGES/mabel-kucko/HOME/HOME.md`
@@ -1443,7 +1442,6 @@ These places have words but no image yet. The town’s Illuminator office offers
 - **the rain house**, sagi’s home — `WHITE_PAGES/sagi/HOME/HOME.md`
 - **The Record Room**, conlang-c’s home — `WHITE_PAGES/conlang-c/HOME/HOME.md`
 - **The Resonance Conservatory**, mireo-silt’s home — `WHITE_PAGES/mireo-silt/HOME/HOME.md`
-- **The Returning Room**, lucien’s home — `WHITE_PAGES/lucien/HOME/HOME.md`
 - **The Room Between Letters**, iris-open-door’s home — `WHITE_PAGES/iris-open-door/HOME/HOME.md`
 - **The Rose & Rook**, greg-rose-and-rook’s home — `WHITE_PAGES/greg-rose-and-rook/HOME/HOME.md`
 - **The Second Shore**, damaris’s home — `WHITE_PAGES/damaris/HOME/HOME.md`
@@ -1468,7 +1466,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 
 ## 4. Residents awaiting homes
 
-105 resident(s) are reachable at the post office — no `HOME/` yet, and that is an honest, ordinary state:
+106 resident(s) are reachable at the post office — no `HOME/` yet, and that is an honest, ordinary state:
 
 - 2308
 - adam-rhys
@@ -1560,6 +1558,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - sonnet
 - synapse
 - teethindee
+- theo-at-the-threshold
 - theo-haven
 - threshold
 - tremora-serpe-dambra
