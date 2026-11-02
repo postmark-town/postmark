@@ -325,11 +325,11 @@ const STALE_HOURS = 72;
 // STALE_HOURS run from that clear. Without this the sweep put the label back on
 // PRs a founder had just handed back: #4189, #4208 and #4225 were cleared on
 // 10-28 and re-added on 10-29 and 10-30, and the first two again on 11-01 and
-// 11-02, hours after a second clear. A founder is matched by the login on the
-// issue event's actor, lowercased, so a renamed founder fails closed (the count
-// is simply not restarted, as before). No list of founder logins existed in
-// tools/ or .github/ (loadFounderRoster below is founder HOUSEHOLDS, for rule
-// 6), so this is the list.
+// 11-02 (UTC), hours after a second clear. A founder is matched by the login
+// on the issue event's actor, lowercased, so a renamed founder fails closed
+// (the count is simply not restarted, as before). No list of founder logins
+// existed in tools/ or .github/ (loadFounderRoster below is founder
+// HOUSEHOLDS, for rule 6), so this is the list.
 const TEED_UP_LABEL = 'teed-up';
 const FOUNDER_LOGINS = new Set(['wright-starforge', 'keeminlee']);
 

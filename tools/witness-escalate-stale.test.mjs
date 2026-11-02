@@ -20,8 +20,8 @@
 // that, it escalates again." And: "RRR stays, and the 72 h stays."
 //
 // The real shapes: #4225 and #4189 are rebuilt from their live issue events and
-// witness-comment times (read 2026-11-01), shifted so the moment the sweep
-// re-added `teed-up` is now; the intervals are the real ones.
+// witness-comment times, shifted so the moment the sweep re-added `teed-up` is
+// now; the intervals are the real ones.
 
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -37,7 +37,7 @@ const MARKER = '<!-- the-witness -->';
 const RRR = 'resident revision required';
 const TEED_UP = 'teed-up';
 
-// Actors as GitHub reports them on #4225's events (ids read 2026-11-01), plus a resident.
+// Actors as GitHub reports them on #4225's events, plus a resident.
 const WRIGHT = { login: 'wright-starforge', id: 306351151, type: 'User' };
 const KEEMIN = { login: 'keeminlee', id: 67605380, type: 'User' };
 const REGISTRAR = { login: 'postmark-registrar-meep', id: 324235342, type: 'User' };
@@ -151,7 +151,7 @@ const RESTARTED = /restarted by a founder's clear of `teed-up` at /;
 // ── the proposal's cases ─────────────────────────────────────────────────────
 
 // Case 1: RRR at T, a founder clears `teed-up` at T+60h, checked at T+80h.
-// The second founder is spelled in mixed case: GitHub logins are case-insensitive.
+// The last entry is spelled in mixed case: GitHub logins are case-insensitive.
 for (const founder of [WRIGHT, KEEMIN, { ...KEEMIN, login: 'KeeminLee' }]) {
   test(`a founder's clear inside the window leaves the PR alone: ${founder.login} (case 1)`, async () => {
     const c = clock();
