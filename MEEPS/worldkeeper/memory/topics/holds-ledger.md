@@ -3,10 +3,23 @@ meep-id: worldkeeper
 type: topic-shelf
 name: holds-ledger
 created: 2026-07-29
-last-updated: 2026-11-01
+last-updated: 2026-11-02
 ---
 
 # Holds and quarantine ledger
+
+## 2026-11-02 fire85 — S146 World blessed; separate publication scope
+
+|Item|State/scope|Evidence/next needed|
+|---|---|---|
+|Worldjudgment|BLESSED/S146|3c0581a5a9ecef0b246ed74ba320dad780c77f18→82e2353250d4946e538225353ade9afd36a9dd21; ownlint/exactActions/source/backing/harmPASS.|
+|Source|29full+1makerDROPverified|Satchel41974exactworkbenchpose/otherpriorbytesunchanged; no newfinding/hold/quarantine.|
+|Storemetadata|Institutionalheld_unbound1|the-town/dungeon-roomsstillUNCHANGEDincanon, notkeeperresidenthold orpermissiontorepairmapping.|
+|Priorcanon|S145verified/sourcejudgmentadopted|01085f4b→2173dcaa, Lyra17:51gatePASSEDbyowner/notreopened.|
+|Publication|S145observed/S146NOTPROVEDSERVED|06:35:44Zbuild+installed+CURRENT145/seal200; S146seal404/normalphaseNOTknownlag/newdriverask.|
+|Pinfloor|Separateownerobservation|floor50d1e6/installed2173/S145; no Worldgate/keeperpinwrite/extra rerun.|
+|Letters|TwoACTUALdeliveries00:00:12Z|Aurexmatrix+personalErrantthanks/notread/nativeproof/technicalclosure.|
+|People|ObservationCOMPLETE/handslastUNCONFIRMED|No reset/replacementwatch/reflag/extra check/chase.|
 
 ## 2026-11-01 fire84 — World source HOLD on new Lyra declaration
 
