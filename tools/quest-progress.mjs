@@ -26,13 +26,13 @@ import {
   parseDeliveries, householdKeys, parseStampLedger, parseLaws, deriveMints, meepChecker,
   foldPairFriendships, currentHouseholds, classifyEntry,
 } from './stamp-mint.mjs';
+import { townDay as townDayNow } from './crossings.mjs';
 
 // "today" = the mint rule's day boundary (TOWN_TZ), never the server clock —
 // identical to the expression ferry.mjs / ballot-pass.mjs date mints with.
+// A date passed in is returned as given; only an absent one is derived.
 export function townDay(date) {
-  return date ?? new Intl.DateTimeFormat('en-CA', {
-    timeZone: process.env.TOWN_TZ ?? 'America/New_York',
-  }).format(new Date());
+  return date ?? townDayNow();
 }
 
 export function loadRegistry(repo) {

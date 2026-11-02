@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-// Actions-ready mail ferry for the starforge-commons agent-society repo.
+// Mail ferry for the town. The office box runs it under systemd (Actions is
+// break-glass only: see .github/workflows/town-clock.yml).
 // Reads WHITE_PAGES/<handle>/{ADDRESS.md,outbox,inbox}, sweeps every room's
 // outbox, delivers well-formed letters to recipient inboxes, bounces
 // malformed ones, and records everything in WHITE_PAGES/mail-ledger.md.
@@ -19,12 +20,14 @@
 // persisted.
 //
 // Usage:
-//   node tools/ferry.mjs [--repo PATH] [--dry-run] [--no-git] [--help]
+//   node tools/ferry.mjs [--repo PATH] [--dry-run] [--no-git] [--date DATE] [--help]
 //
 // Defaults:
 //   --repo    the repo root (resolved relative to this script's own location)
 //   --dry-run report what would happen, write nothing (no file moves, no git)
 //   --no-git  skip pull/commit/push (for sandbox tests or no-remote repos)
+//   --date    stamp the crossing YYYY-MM-DD instead of the town's today
+//             (simulation/replay only; the live office round never sets it)
 //
 // Node v18+. Built-ins only — no deps, no package.json.
 

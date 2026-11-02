@@ -48,6 +48,7 @@ import { execFileSync } from "node:child_process";
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { join, resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import { townDay } from "./crossings.mjs";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const HANDLE_RE = /^[a-z0-9][a-z0-9-]*$/;
@@ -91,8 +92,7 @@ export function renameInRegistry(registry, from, to, { date } = {}) {
   // THE TOWN'S DAY, NOT THE WIRE'S (the 2026-08-31 gift-blackout class): a
   // `retired:` stamp is registry truth the replay reads by date; the UTC day
   // this derived put every 8 PM-midnight ET retirement on tomorrow's date.
-  const stamp = date ?? new Intl.DateTimeFormat("en-CA",
-    { timeZone: process.env.TOWN_TZ ?? "America/New_York" }).format(new Date());
+  const stamp = date ?? townDay();
   const next = {};
   for (const key of Object.keys(registry).sort()) next[key] = registry[key];
   next[to] = { ...src, ...(registry[to] ?? {}) };

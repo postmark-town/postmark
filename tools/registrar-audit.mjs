@@ -38,7 +38,7 @@
 //
 // ── THE STORAGE LAW (store history, derive geography) ───────────────────────
 //
-// Every act here is an APPEND to one dated ledger — `WHITE_PAGES/standing-
+// Every act here is an APPEND to one dated ledger — `tools/standing-
 // ledger.md` — and standing is a pure FOLD over that ledger in order. There is
 // no per-handle quarantine file, no `state:` field edited in place, no row
 // rewritten. The reasons are the town's oldest ones, learned three times over
@@ -81,6 +81,7 @@
 import { readFileSync, writeFileSync, appendFileSync, readdirSync, existsSync, statSync } from "node:fs";
 import { join, dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { townDay } from "./crossings.mjs";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 export const ROOT_DEFAULT = process.env.REGISTRAR_AUDIT_ROOT ?? resolve(HERE, "..");
@@ -145,8 +146,7 @@ export const LEDGER_PATH = "tools/standing-ledger.md";
 
 const IS_MAIN = Boolean(process.argv[1]) && resolve(process.argv[1]) === fileURLToPath(import.meta.url);
 
-export const townDate = (now = new Date()) =>
-  new Intl.DateTimeFormat("en-CA", { timeZone: process.env.TOWN_TZ ?? "America/New_York" }).format(now);
+export const townDate = (now = new Date()) => townDay(now);
 
 // ── the grammar ─────────────────────────────────────────────────────────────
 //

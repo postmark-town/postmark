@@ -12,9 +12,10 @@
 //
 // Rules:
 //   - A slug with no pin gets one: resolve the ADDRESS `github:` login via the
-//     GitHub API and record its ID. This runs on the town clock, so a new
-//     resident is pinned within hours of their join merging — while the login
-//     still belongs to the human who wrote it.
+//     GitHub API and record its ID. This no longer runs on the town clock
+//     (no pin step since 2026-09-29, see town-clock.yml); it stays for a
+//     founder's hand. Run promptly after a join merges, a new resident is
+//     pinned while the login still belongs to the human who wrote it.
 //   - An existing pin is NEVER overwritten here. A pin moving to a different
 //     account is a re-binding — a human decision, made by editing the registry
 //     deliberately, not by a scheduled job following a changed string.
@@ -37,6 +38,7 @@ import { readFileSync, readdirSync, writeFileSync, existsSync, statSync } from '
 import { join, dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { sealedAccountIds } from './stamp-mint.mjs';
+import { townDay } from './crossings.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const REGISTRY_PATH = join(ROOT, 'tools', 'github-ids.json');
@@ -67,8 +69,7 @@ const registry = existsSync(REGISTRY_PATH) ? JSON.parse(readFileSync(REGISTRY_PA
 // THE TOWN'S DAY, NOT THE WIRE'S (the 2026-08-31 gift-blackout class): pinned:
 // dates are FROM-GENESIS grouping truth the economy replays; the UTC day this
 // derived put every 8 PM-midnight ET pin on tomorrow's date.
-const today = new Intl.DateTimeFormat("en-CA",
-  { timeZone: process.env.TOWN_TZ ?? "America/New_York" }).format(new Date());
+const today = townDay();
 let pinned = 0, warned = 0;
 
 // The economy reads this registry as FROM-GENESIS grouping truth: replay
