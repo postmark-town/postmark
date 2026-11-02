@@ -103,7 +103,9 @@ function parseLedger(repo) {
   const deliveries = new Map(); // id -> { date, from, to }
   const bouncedPaths = new Set(); // outbox-relative letter paths with a BOUNCE line
   // Paths whose bounced pair left for _archived/ (ARCHIVE lines). Collected here
-  // but not yet used by main(): an archived BOUNCE still shows as STUCK.
+  // but not yet used by main(): an archived BOUNCE still shows as STUCK, and an
+  // ARCHIVE line does not clear a STUCK entry (STUCK reads only deliveries, age
+  // and the letter's presence in the outbox).
   const archivedPaths = new Set();
   if (!existsSync(ledgerPath)) return { deliveries, bouncedPaths, archivedPaths };
   const content = readFileSync(ledgerPath, 'utf8').replace(/\r\n/g, '\n');

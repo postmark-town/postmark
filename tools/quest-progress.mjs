@@ -29,7 +29,8 @@ import {
 import { townDay as townDayNow } from './crossings.mjs';
 
 // "today" = the mint rule's day boundary (TOWN_TZ), never the server clock —
-// identical to the expression ferry.mjs / ballot-pass.mjs date mints with.
+// crossings.mjs' townDay(), the same one ballot-pass.mjs dates mints with
+// (ferry.mjs keeps its own `||` form: an empty TOWN_TZ falls back there, throws here).
 // A date passed in is returned as given; only an absent one is derived.
 export function townDay(date) {
   return date ?? townDayNow();
