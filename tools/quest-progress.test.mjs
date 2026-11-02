@@ -11,7 +11,7 @@ import { mkdtempSync, mkdirSync, writeFileSync, rmSync, copyFileSync } from 'nod
 import { join, dirname } from 'node:path';
 import { tmpdir } from 'node:os';
 import { fileURLToPath } from 'node:url';
-import { foldQuestProgress, questBoard, loadRegistry, foldLeaderboard, renderSnapshot, boardForHandle, BOARD_LAW, COUNTABLE_FIELD, onboardingBoard, onboardingFactsFor, welcomedHouseholds, foldHouseholdBars, foldFriendships, KIND_LABEL, PAIR_RULE } from './quest-progress.mjs';
+import { townDay, foldQuestProgress, questBoard, loadRegistry, foldLeaderboard, renderSnapshot, boardForHandle, BOARD_LAW, COUNTABLE_FIELD, onboardingBoard, onboardingFactsFor, welcomedHouseholds, foldHouseholdBars, foldFriendships, KIND_LABEL, PAIR_RULE } from './quest-progress.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const REPO = join(HERE, '..');
@@ -166,7 +166,10 @@ test('live ledger: every handle within [0, target], flags consistent', () => {
     // allow-list as correct. The invariant worth keeping is not the COUNT, it is
     // that a counted row's flag agrees with its own bar and an uncounted row
     // claims no bar at all.
-    assert.equal(board.quests.length, reg.quests.length, `${handle}: ${BOARD_LAW}`);
+    // Until POS-857 this asserted every registry row; a row whose `ends` has passed is the one
+    // named exception (offered through `ends`, inclusive), so the expected set is the rows still offered today.
+    const offeredToday = reg.quests.filter((q) => !(q.ends && townDay() > q.ends));
+    assert.equal(board.quests.length, offeredToday.length, `${handle}: ${BOARD_LAW}`);
     for (const q of board.quests) {
       if (q.progress === null) {
         assert.ok(q.complete === null || typeof q.complete === 'boolean',
@@ -610,4 +613,43 @@ test("#3616: a house named on the ledger reads as ONE house on the quest card, w
     assert.equal(q.household.size, 5);
     assert.equal(q.household.total, 3);
   } finally { rmSync(d, { recursive: true, force: true }); }
+});
+
+// ── POS-857 · a registry row can END, and the board stops offering it after ──
+//
+// LAW (Wright on Darko's behalf, 2026-11-01): "An optional registry `ends`, holding the
+// existing inclusive cutoff (2026-09-30 for "A first idea")." The writer's own cutoff is
+// inclusive (first-idea-sweep: `date > windowEnd` plans nothing), so the last offered day
+// is `ends` itself. The same registry object is read on both days; only `today` moves.
+const ENDING = { id: 'invented-window', title: 'An invented window', cadence: 'milestone', validation: 'automatic', source: 's', target: 1, reward: 'r', ends: '2026-03-15' };
+const LASTING = { id: 'invented-lasting', title: 'An invented lasting one', cadence: 'milestone', validation: 'automatic', source: 's', target: 1, reward: 'r' };
+const DAILY = { id: 'invented-daily', title: 'An invented daily', cadence: 'daily', validation: 'automatic', source: 's', target: 3, reward: 'r' };
+const ids = (b) => b.quests.map((q) => q.id);
+
+test('ends: the same registry offers a row through its last day and not the day after', () => {
+  const reg = { quests: [ENDING, LASTING, DAILY] };
+  const before = JSON.stringify(reg);
+  assert.deepEqual(ids(boardForHandle(reg, null, 'ada', '2026-03-14')), ['invented-window', 'invented-lasting', 'invented-daily']);
+  assert.deepEqual(ids(boardForHandle(reg, null, 'ada', '2026-03-15')), ['invented-window', 'invented-lasting', 'invented-daily'], 'the ends day itself is offered');
+  assert.deepEqual(ids(boardForHandle(reg, null, 'ada', '2026-03-16')), ['invented-lasting', 'invented-daily'], 'the next town day is not');
+  assert.equal(JSON.stringify(reg), before, 'the registry bytes were not touched between the reads');
+});
+
+test('ends: a row without ends is offered on any day, whatever its cadence', () => {
+  const reg = { quests: [LASTING, DAILY, { ...LASTING, id: 'invented-once', cadence: 'one-time' }] };
+  for (const day of ['2020-01-01', '2026-03-15', '2099-12-31']) assert.deepEqual(ids(boardForHandle(reg, null, 'ada', day)), ['invented-lasting', 'invented-daily', 'invented-once']);
+});
+
+test('ends: an offered row carries its ends, so a consumer can compare it', () => {
+  const row = boardForHandle({ quests: [ENDING, LASTING] }, null, 'ada', '2026-03-15').quests;
+  assert.equal(row.find((q) => q.id === 'invented-window').ends, '2026-03-15');
+  assert.equal('ends' in row.find((q) => q.id === 'invented-lasting'), false, 'no ends: no key');
+});
+
+test("ends: the real registry's first idea ends 2026-09-30, inclusive, and no other row ends", () => {
+  const reg = loadRegistry(REPO);
+  assert.deepEqual(reg.quests.filter((q) => q.ends).map((q) => [q.id, q.ends]), [['first-idea', '2026-09-30']]);
+  assert.ok(ids(boardForHandle(reg, null, 'ada', '2026-09-30')).includes('first-idea'));
+  assert.equal(ids(boardForHandle(reg, null, 'ada', '2026-10-01')).includes('first-idea'), false);
+  assert.equal(ids(boardForHandle(reg, null, 'ada', '2026-10-01')).length, ids(boardForHandle(reg, null, 'ada', '2026-09-30')).length - 1, 'only that row went');
 });
