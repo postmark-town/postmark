@@ -236,15 +236,21 @@ for (const [who, actor] of [
 
 // ── what else the rule reads, and what it must not ────────────────────────────
 
-test(`only an unlabel of teed-up counts: a founder's other label events do not restart the clock`, async () => {
+test(`putting teed-up on is not a clear: a founder's labeled event does not restart the clock`, async () => {
   const c = clock();
   const r = await escalateStale(scenario({
-    events: [
-      labeled(c.ago(80), RRR, FERRY),
-      labeled(c.ago(30), TEED_UP, WRIGHT), // putting it back is not handing the PR back
-      unlabeled(c.ago(25), 'needs-principal', KEEMIN), // a different label
-      event('subscribed', c.ago(20), { actor: WRIGHT }), // a different event
-    ],
+    events: [labeled(c.ago(80), RRR, FERRY), labeled(c.ago(20), TEED_UP, WRIGHT)],
+    commentAt: c.ago(80),
+    headCommitAt: c.ago(82),
+  }));
+  handedToTheOffice(r, 'POS-842: "the last `unlabeled teed-up` by a founder account"');
+  assert.doesNotMatch(r.stdout, /restarted by a founder/);
+});
+
+test(`only teed-up counts: a founder's unlabel of another label does not restart the clock`, async () => {
+  const c = clock();
+  const r = await escalateStale(scenario({
+    events: [labeled(c.ago(80), RRR, FERRY), unlabeled(c.ago(20), 'needs-principal', KEEMIN)],
     commentAt: c.ago(80),
     headCommitAt: c.ago(82),
   }));
