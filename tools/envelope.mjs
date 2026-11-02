@@ -275,21 +275,29 @@ export function parseLedgerText(content) {
 
 // --- registry ------------------------------------------------------------
 
+// The room folders under WHITE_PAGES/: every directory except TEMPLATE and the
+// `_`-prefixed ones (_archived and the like), sorted. Throws when the repo has
+// no WHITE_PAGES/ at all. One scan for the ferry, reconcile and collectHandles.
+export function listRoomDirs(repo) {
+  const starsDir = join(repo, 'WHITE_PAGES');
+  if (!existsSync(starsDir)) {
+    throw new Error(`No WHITE_PAGES/ directory in repo: ${starsDir}`);
+  }
+  return readdirSync(starsDir, { withFileTypes: true })
+    .filter(entry => entry.isDirectory() && entry.name !== 'TEMPLATE' && !entry.name.startsWith('_'))
+    .map(entry => entry.name)
+    .sort();
+}
+
 // The registered-handle set, recomputed fresh from ADDRESS.md files — same
 // derivation the ferry's syncRegistry does. Returns { handles, warnings } so
 // callers can log (the ferry) or stay quiet (the check) without forking the
 // scan itself.
 export function collectHandles(repo) {
   const starsDir = join(repo, 'WHITE_PAGES');
-  if (!existsSync(starsDir)) {
-    throw new Error(`No WHITE_PAGES/ directory in repo: ${starsDir}`);
-  }
   const handles = new Set();
   const warnings = [];
-  const rooms = readdirSync(starsDir, { withFileTypes: true })
-    .filter(entry => entry.isDirectory() && entry.name !== 'TEMPLATE' && !entry.name.startsWith('_'))
-    .map(entry => entry.name)
-    .sort();
+  const rooms = listRoomDirs(repo);
   for (const room of rooms) {
     const roomMd = join(starsDir, room, 'ADDRESS.md');
     if (!existsSync(roomMd)) {

@@ -35,7 +35,7 @@
 import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync } from "node:fs";
 import { join, dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { parseFrontmatter as envelopeFields } from "./envelope.mjs";
+import { HANDLE_RE, parseFrontmatter as envelopeFields } from "./envelope.mjs";
 import { townDay } from "./crossings.mjs";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
@@ -44,9 +44,7 @@ const GANGWAY = join(ROOT, "HARBOR", "GANGWAY.md");
 const BERTHS = join(ROOT, "HARBOR", "berths");
 const WHITE_PAGES = join(ROOT, "WHITE_PAGES");
 
-// The door's own admission grammar (residency.mjs is office-side; the rule is
-// restated here in its smallest form so the town tool stands alone).
-const HANDLE_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+// The door's own admission grammar (residency.mjs is office-side): envelope.mjs's.
 const RESERVED = new Set(["template", "index", "office", "postmaster", "ferry"]);
 
 const townDate = () => townDay();
