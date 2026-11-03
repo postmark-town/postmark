@@ -505,14 +505,18 @@ const QUEST_PAY_RE = new RegExp(String.raw`^- (\d{4}-\d{2}-\d{2}) · MINT → (\
 // that window; the hold itself (who held it, why, whether it was lifted or
 // cancelled) lives in the office, never here.
 //
-// "Founders' household and the town earn none" (POS-576/e, 2026-10-22 22:06,
-// "No, never"): an invitation into either pays NEITHER side. "Meeps can't be
-// named" (POS-576): the meep law holds on both recipients.
+// "The town earns none" (POS-576/e, 2026-10-22 22:06, "No, never"): an
+// invitation naming the town's own house pays NEITHER side. The founders' half
+// of that ruling is repealed (POS-816/d, Darko 2026-11-03 09:31 EDT: "this
+// should pay like any other under the new NOMOS"): the Starforge household pays
+// both sides like any other household. "Meeps can't be named" (POS-576): the
+// meep law holds on both recipients, and it is what keeps a meep of either house
+// from being paid.
 //
 // The verifier holds what a signature cannot, ONE judge shared by the verb and
 // the fold (judgeInviteLine below), so the door and the fold cannot disagree:
 // the amount for the side; by: the-town; the meep law; the two houses differ
-// and the inviter is not the founders' or the town's; the INVITED HOUSE'S OWN
+// and the inviter is not the town's own; the INVITED HOUSE'S OWN
 // REGISTRY ROW names this inviter (`invited_by`, office migration 085, printed
 // in tools/households.json), so the pen cannot credit a house the join never
 // named; the recipient's household at the line's date IS the house its side
@@ -537,8 +541,10 @@ export const INVITE_WITHIN_DAYS = 30;
 export const INVITE_CAP_PER_MONTH = 10;
 // The week the inviter's 10 waits after the activation (POS-816/a, "A week").
 export const INVITE_HOLD_DAYS = 7;
-// The founders' household and the town's own (POS-576/e), as canonical keys.
-export const INVITE_FOUNDERS = Object.freeze(['hh:starforge', 'hh:the-town']);
+// The town's own household (POS-576/e), as a canonical key. Until 2026-11-03 this was
+// INVITE_FOUNDERS = ['hh:starforge', 'hh:the-town']; the founders' household pays like
+// any other now (POS-816/d).
+export const INVITE_TOWN_HOUSE = 'hh:the-town';
 const INVITE_RE = new RegExp(String.raw`^- (\d{4}-\d{2}-\d{2}) · MINT → (\S+) · ([1-9]\d*) · for: invite:(${HOUSEHOLD_KEY})\/(${HOUSEHOLD_KEY})\/(?:(invited)|inviter\/(\d{4}-\d{2}-\d{2})) · by: (\S+)$`);
 // POST STAGE — a bug's stage stamps (the Posts project, phase 2, Keemin
 // 2026-09-29: "Bugs pay the flat ladder, with no staking"). The town pays the
@@ -1389,8 +1395,8 @@ export function judgeInviteLine(cls, { canon, invitationOf: invitation, houseAt,
   const invited = canon(cls.invited);
   const inviter = canon(cls.inviter);
   if (invited === inviter) return `an invite names one house on both sides (${invited})`;
-  if (INVITE_FOUNDERS.includes(inviter))
-    return `an invitation from the founders' household or the town's own (${inviter}) pays neither side (POS-576/e)`;
+  if (inviter === INVITE_TOWN_HOUSE)
+    return `an invitation from the town's own household (${inviter}) pays neither side (POS-576/e)`;
   const inv = invitation(invited);
   if (!inv) return `${cls.invited}'s own record names no invitation`;
   if (canon(`hh:${inv.by}`) !== inviter) return `${cls.invited}'s own record names its inviter as ${inv.by}, not ${cls.inviter}`;

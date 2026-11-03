@@ -492,7 +492,7 @@ export function verifyStampLedger(repo, { pubkeyPem, registry = null } = {}) {
       // judgeInviteLine (stamp-mint.mjs), the one judge the --invite-mint verb
       // also asks, quoted from the grammar comment: the amount for the side;
       // by: the-town; the meep law; two different houses and never the
-      // founders' or the town's; the invited house's own record names this
+      // town's own; the invited house's own record names this
       // inviter; the recipient's household; one line per invited house and
       // side, ever; the invited side after its welcome; and the activation,
       // the 30 days and the month's cap on the inviter side.

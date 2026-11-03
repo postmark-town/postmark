@@ -12,7 +12,9 @@
 //   - "at most 10 paid invitations per household per month", counted in the
 //     month it is paid ("Month paid");
 //   - the inviter's 10 waits "A week" after that first letter or home;
-//   - "Founders' household and the town earn none"; "meeps can't be named".
+//   - "Founders' household and the town earn none", of which the founders' half
+//     is repealed (POS-816/d, 2026-11-03 09:31 EDT: "this should pay like any
+//     other under the new NOMOS"); "meeps can't be named".
 //
 // In order:
 //   1. the grammar classifies as its own kind, both sides, and no sibling
@@ -34,7 +36,7 @@ import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import {
   classifyEntry, inviteInvitedLine, inviteInviterLine, INVITE_PAY, INVITE_WITHIN_DAYS,
-  INVITE_CAP_PER_MONTH, INVITE_HOLD_DAYS, INVITE_FOUNDERS, townDayOf,
+  INVITE_CAP_PER_MONTH, INVITE_HOLD_DAYS, INVITE_TOWN_HOUSE, judgeInviteLine, inviteState, townDayOf,
   parseStampLedger, foldBalances, sealChain, signSeal,
   giftLine, welcomeLine, firstIdeaLine, stageMintLine, questPayLine, mintLine, transferLine, rulesV2Line,
 } from './stamp-mint.mjs';
@@ -47,7 +49,8 @@ const MINT_CLI = join(HERE, 'stamp-mint.mjs');
 // keep was invited by castle (named carl) on 2026-10-27 (a town day); castle
 // keeps carl, cleo and moth (moth becomes a meep in the meep falsifier);
 // starforge and the-town are the founders' and the town's own houses; nook was
-// invited by starforge; tower was invited by nobody. lodge1..lodge11 were each
+// invited by starforge (it pays like any other); hall by the-town (it pays
+// nothing); tower was invited by nobody. lodge1..lodge11 were each
 // invited by castle, for the cap.
 const INVITED_AT = '2026-10-27T20:39:04.552Z';
 const LODGES = Array.from({ length: 11 }, (_, i) => `lodge${i + 1}`);
@@ -142,7 +145,6 @@ test('2 · the lines pin 5 and 10 and the-town, and refuse a forging key or day'
   assert.throws(() => inviteInvitedLine({ date: '2026-10-28', handle: 'dora', invited: 'hh:keep · by: keeminlee', inviter: 'hh:castle' }), /invited household must be a key/);
   assert.throws(() => inviteInvitedLine({ date: '2026-10-28', handle: 'dora', invited: 'hh:keep', inviter: 'hh:castle/x' }), /inviter household must be a key/);
   assert.throws(() => inviteInviterLine({ date: '2026-11-04', handle: 'carl', invited: 'hh:keep', inviter: 'hh:castle', activated: 'soon' }), /activation must be a town day/);
-  assert.deepEqual(INVITE_FOUNDERS, ['hh:starforge', 'hh:the-town']);
   assert.equal(townDayOf(INVITED_AT), '2026-10-27', 'the invitation\'s town day is read on the town clock');
 });
 
@@ -309,12 +311,31 @@ test('4 · the cap: at most 10 paid a month per inviting house, counted in the m
   green([WELCOME('lou11', 'gh:110'), INVITED({ handle: 'lou11', invited: 'hh:lodge11' }), ...ten], 'the eleventh invitee\'s own 5 is not capped');
 });
 
-test('4 · founders and the town: an invitation from either pays neither side, under any spelling', () => {
-  // LAW POS-576/e (Darko 2026-10-22 22:06): "No, never".
-  red([WELCOME('nell', 'gh:8'), INVITED({ handle: 'nell', invited: 'hh:nook', inviter: 'hh:starforge' })], /an invitation from the founders' household or the town's own \(hh:starforge\) pays neither side/);
-  red([INVITER({ handle: 'wren', invited: 'hh:nook', inviter: 'hh:starforge' })], /from the founders' household or the town's own \(hh:starforge\)/);
-  red([INVITER({ handle: 'wren', invited: 'hh:nook', inviter: 'gh:6' })], /from the founders' household or the town's own \(hh:starforge\)/);
-  red([WELCOME('hugo', 'gh:10'), INVITED({ handle: 'hugo', invited: 'hh:hall', inviter: 'hh:the-town' })], /from the founders' household or the town's own \(hh:the-town\)/);
+test('4 · the founders pay like any other (cap and meeps included); the town\'s own household pays neither side, under any spelling', () => {
+  // LAW POS-816/d (Darko 2026-11-03 09:31 EDT): "this should pay like any other under the new NOMOS".
+  // Until 2026-11-03 this asserted POS-576/e ("No, never", Darko 2026-10-22 22:06): an invitation from
+  // starforge was red on both sides, "an invitation from the founders' household or the town's own
+  // (hh:starforge) pays neither side".
+  assert.equal(INVITE_TOWN_HOUSE, 'hh:the-town');
+  const welcome = WELCOME('nell', 'gh:8');
+  const invited = INVITED({ handle: 'nell', invited: 'hh:nook', inviter: 'hh:starforge' });
+  const inviter = INVITER({ handle: 'wren', invited: 'hh:nook', inviter: 'hh:starforge' });
+  const v = green([welcome, invited, inviter], 'the founders\' invitation pays the 5 more and the 10');
+  assert.equal(v.minted, 5 + 5 + 10, 'both sides, the amounts any other house\'s invitation pays');
+  green([welcome, invited, INVITER({ handle: 'wren', invited: 'hh:nook', inviter: 'gh:6' })], 'and under the house\'s account spelling');
+  // like any other: the 10 a month is theirs too, counted in the month paid
+  const full = inviteState();
+  full.counts.set('hh:starforge|2026-11', INVITE_CAP_PER_MONTH);
+  const judge = (line, state) => judgeInviteLine(classifyEntry(line), { canon: (k) => k, invitationOf: () => ({ by: 'starforge', at: INVITED_AT }), houseAt: () => 'hh:starforge', isMeep: () => false, state });
+  assert.match(judge(INVITER({ handle: 'wren', invited: 'hh:nook', inviter: 'hh:starforge', date: '2026-11-20' }), full),
+    /hh:starforge already holds 10 paid invitations in 2026-11, the month this one is paid in: at most 10 a month/);
+  assert.equal(judge(INVITER({ handle: 'wren', invited: 'hh:nook', inviter: 'hh:starforge', date: '2026-12-02' }), full), null, 'the next month has room');
+  // MEEPS STAY OUT (POS-655): the Starforge household's meep is paid on neither side
+  red([rulesV2Line('2026-10-01', ['wren']), welcome, invited, inviter], /invite pay to meep "wren" \(meeps stay outside the currency\)/);
+  // the town's own household still pays neither side (it is the town's, not a household's)
+  red([WELCOME('hugo', 'gh:10'), INVITED({ handle: 'hugo', invited: 'hh:hall', inviter: 'hh:the-town' })], /an invitation from the town's own household \(hh:the-town\) pays neither side/);
+  red([INVITER({ handle: 'pen', invited: 'hh:hall', inviter: 'hh:the-town' })], /from the town's own household \(hh:the-town\)/);
+  red([INVITER({ handle: 'pen', invited: 'hh:hall', inviter: 'gh:7' })], /from the town's own household \(hh:the-town\)/);
   green([WELCOME(), INVITED()], 'the control: an ordinary house\'s invitation');
 });
 
@@ -338,15 +359,29 @@ test('4 · the record: the invited house\'s own row names the inviter, the recip
 
 // ── 5 · the quest row ──────────────────────────────────────────────────────
 
-test('5 · Bring a neighbour is on the board: ongoing, paid automatically, and the word "real" stays out', () => {
+test('5 · Bring a neighbour is on the board: monthly, paid automatically, in the words Darko picked, and the word "real" stays out', () => {
   const reg = JSON.parse(readFileSync(join(HERE, '..', 'quest-registry.json'), 'utf8'));
   const row = reg.quests.find((q) => q.id === 'bring-a-neighbour');
   assert.ok(row, 'the row is on the board (POS-816: "the quest row goes on the board")');
-  assert.equal(row.cadence, 'ongoing');
+  // POS-816/g (Darko 2026-11-03 09:42 EST: "if it's easier to just make a monthly cadence and keep things
+  // flat that's fine with me"). Until 2026-11-03 this asserted 'ongoing', which the office reads as a funding pot.
+  assert.equal(row.cadence, 'monthly');
+  assert.equal(row.target, INVITE_CAP_PER_MONTH, 'the board\'s target is the cap it is paid under');
   assert.equal(row.validation, 'automatic');
   assert.equal(row.subtype, undefined, 'a quest, not a pot');
+  // POS-816/e, option B (Darko 2026-11-03 09:31 EDT: "B"), whole. Until 2026-11-03 the file carried option A:
+  // "Invite someone you'd like to have in town: send them postmark.town/join/?invite=<your handle>. When they
+  // join, their household gets 10 stamps instead of 5. A week after their household sends its first letter or
+  // claims its home, the town thanks yours with 10 stamps."
+  assert.equal(row.source, 'Invite someone you\'d like to have in town. If they settle in, the town says thanks to you both: 10 stamps to their household when they join, and 10 to yours a week after their first letter or home. Your link: postmark.town/join/?invite=<your handle>.');
   for (const text of [row.title, row.source, row.reward, row.resets, row.awaits])
     assert.doesNotMatch(String(text), /\breal\b/i, `Little Bird 2026-10-30: keep "real" out of the town's words: ${text}`);
+  for (const text of [row.source, row.reward, row.resets, row.awaits, row.derivation])
+    assert.doesNotMatch(String(text), /founders/i, `POS-816/d: the founders pay like any other, so no word of the row says they do not: ${text}`);
+  // POS-816/f, option A (Darko 2026-11-03 09:31 EDT: "A"): STAMPS.md's hold sentence does not name who holds it.
+  const stamps = readFileSync(join(HERE, '..', 'STAMPS.md'), 'utf8').replace(/\*\*/g, '').replace(/\s+/g, ' ');
+  assert.ok(stamps.includes('The town then waits a week before it pays, so a new household is looked at before anyone is thanked for it, and the payout can be held in that week, always with a reason.'));
+  assert.doesNotMatch(stamps.split('### Bringing a neighbour')[1].split('### A vote')[0], /Little Bird/, 'option B named who holds it; A does not');
   assert.match(row.derivation, /invite:<invited-key>\/<inviter-key>\/invited/, 'the row reads the ledger\'s invite lines, the invited side');
   assert.match(row.derivation, /invite:<invited-key>\/<inviter-key>\/inviter\/<day>/, 'and the inviter side');
 });
