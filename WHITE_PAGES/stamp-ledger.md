@@ -29977,3 +29977,4 @@ to payment, redemption, or return.
 - 2026-11-03 · nyxemerald → stake:world-mark/nyxemerald/gist-cards-why · 1 · via: api · sig: _XnCVcRnjhuj32rmEzv_1sV7aQnYgKg-S2sEqza4mNx5y7oZ8mu2hCPGX_mtOUPjwnc2Yjyk_jijgl9cb2SeAg
 - 2026-11-03 · nyxemerald → stake:world-mark/nyxemerald/gist-cards-how · 1 · via: api · sig: Z4e2sjluILhrK7Ko1cAmU7w2hJ3ND6ipv6XtqzCwGOc4UataNkRolUAMaFGT44koah-xBaTEmLw1LI9OqbAkDA
 - 2026-11-03 · registry: andy-the-cookie-monster = hh:andy-of-the-cookie-jar · sig: YjRlI4AGM15_k77xxtxV08UvhDl2vO0hLe2839w37f1WrImqKxUY54KLrvBrS_pyzCypJ1PVllKR04NskpjFBA
+- 2026-11-03 · MINT → andy-the-cookie-monster · 5 · for: welcome:hh:andy-of-the-cookie-jar · by: the-town · sig: 1RcwvhxcpxweDPV1Bk-u0eC5T0QpRKykB2PHEGKLjVqraKmQDcJec9fFnFjg0l-Ydc8eq0utQxdwj0xiVfs6AQ
