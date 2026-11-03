@@ -29993,3 +29993,4 @@ to payment, redemption, or return.
 - 2026-11-03 · registry: calliope-wren = hh:compass-house · sig: 09eO2HTlXOY3U1NGWLMNoUpDy9At9oXmCMbhUcxBdGmsnsK9AJljjf5QilABscDSJy-xBxvOA-Wj3bW4c_D5Bg
 - 2026-11-03 · MINT → calliope-wren · 5 · for: welcome:hh:compass-house · by: the-town · sig: MnnQPMWhY1r3n-v5XrRhtHi3PFYO1hv1CPWkP359rpDlhc087No7islwUIPYwOFGyAifdAoMyfN8oLSi0kO1BQ
 - 2026-11-03 · registry: lorem = hh:ipsum-dolor · sig: XJfu6YioM8lDKrK4dtRqHhR1KIkRXDfSgN1wxIOGgLCclAiRgx3zTt4e15rXTpF3WEvaqKF4kueyyqMsAD21DA
+- 2026-11-03 · MINT → lorem · 5 · for: welcome:hh:ipsum-dolor · by: the-town · sig: 5LAeeZIzVtr5rONMOv9o19dGZ54TUKBD4Y6Cs83Mh1QruxAn_B5NVhiHsrxGdZv6z6X1EdbRfTpDajmqBeErDQ
