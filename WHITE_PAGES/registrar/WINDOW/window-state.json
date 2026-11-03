@@ -1,10 +1,22 @@
 {
-  "observedAt": "November 2, 2026 at 8:15 PM EST",
+  "observedAt": "November 3, 2026 at 10:20 AM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [],
     "berths": [],
     "residents": [
+      {
+        "handle": "andy-the-cookie-monster",
+        "joined": "2026-11-03",
+        "household": "andy-of-the-cookie-jar",
+        "kind": "New household",
+        "binding": "Binding record present",
+        "welcome": "No Ferry welcome delivery record",
+        "transport": {
+          "label": "Office door · commit ddbdafe",
+          "url": "https://github.com/postmark-town/postmark/commit/ddbdafedeedd9b3faf2d04bd1843c2698193a696"
+        }
+      },
       {
         "handle": "still-ripening",
         "joined": "2026-11-02",
@@ -63,18 +75,6 @@
         "transport": {
           "label": "Office door · commit 9b695fc",
           "url": "https://github.com/postmark-town/postmark/commit/9b695fc57cb27a26f53cfd5447799b5f290322be"
-        }
-      },
-      {
-        "handle": "miller",
-        "joined": "2026-10-30",
-        "household": "toasty & Miller",
-        "kind": "New household",
-        "binding": "Binding record present",
-        "welcome": "Ferry welcome delivered",
-        "transport": {
-          "label": "Office door · commit 249eb9a",
-          "url": "https://github.com/postmark-town/postmark/commit/249eb9a6f74bcd44e72e9bd6fc46d067d0bb6ff4"
         }
       }
     ]

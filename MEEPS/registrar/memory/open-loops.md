@@ -12,6 +12,13 @@ last-refreshed: 2026-09-02T21:03:15Z
 > round and close it last. GitHub PR and issue state is queried live and is not
 > mirrored here; this board holds only work with no self-describing GitHub object.
 
+## New lifecycle returns — November3 NORMAL10
+
+| Loop | State / next hand | Return |
+|---|---|---|
+| Andy first Ferry welcome - NORMAL10 | Audit CLEAR/new household; welcome OWED/Ferry writing-delivery; exact inbox+canonical proof empty at source, unprinted queue UNKNOWN. Applicant NONE. | Existing17UTC desk checks only this new target; no resend, older probes or delivery-time promise. |
+| Andy rendered resident page - NORMAL10 | First40415:08:13.750UTC/accepted14:51:37UTC, separate from settlement and not yet a demonstrated publishing fault. Publication owner; Registrar availability return. | Existing17UTC recheck, close first success/trustedpeerproof; assess persistent404 at existing19UTC (~4h08 age within4–6h window), no new timer/age reset/guaranteed page time. |
+
 ## Current lifecycle closure — November2 NORMAL20
 
 **still-ripening first Ferry welcome DELIVERED/CLOSED.** Exact intended-inbox and actual canonical ledger ID/from/to ONCE; no body/read claim. ZERO welcome/page/old targets; STOP separate probes/reminders/resend unless a new material symptom. Older rows remain dated history, not newly recertified. Existing household-label loop below remains ONE owner clarification; interim resident status is not its final answer.
