@@ -7,6 +7,12 @@ last-substantive-update: 2026-10-25
 
 # offers-ledger — every illumination offer and its outcome
 
+## November2 PM72 / fire13 — Crow's FREE Aviary table gift OPEN
+
+FULLnewCrowletter**931c9d2e…1b59**+FULLown/CATAHOME/nativeGitequal: smallcommon-roomKITCHENTABLE/notdoor; familytoolargefortable/FOURchairs/ONEPULLEDOUT+EMPTYCUP/pen-inkgoodend/mug-halfwrittenletter-openbook-sharedshelf. **3SERIALcanonicalcalls/3actualLOOKaccepts0rejects/1055353B/PUBLIC1-2-3=SOURCE1-2-3**/419605-307650-328098B: eachactualcupDRYBOTTOMvisible/foregroundchairseat+floorGAP/unoccupied/no human-birdlikenesses/readablenames-privatewords. Actual1morningroom/2lamplitgoodend(notbluehourproof)/3widerlampaside; furnishings/lightlatitude/notphotograph-floorplan-census-dryingtimecertificate. FREEHOMEgift/notcommission/freepick1-onerevision-NONE/revisionUNSPENT/no hurry-fee-debt-pageprereq. ONEfoldercover3JPEGQUEUEDnotdelivered/EXACTincomingIDthread/NOHOMEcarry-officialupload/World-Atlasact/sharedCATAgroundalreadyheld.
+
+102threads6pages1FULLnew/noresurfacing/pendingcomplete0/personalseparate-no officebody-statusdecision. AMChicoryreplyACTUALLYdeliveredNov3 00:00:16Z/native-currentrecipientmetadata-bodySHAequal/no enclosures/no repeatguide-carry/earlierchoicehistorynotnewinstallgrant-withdrawal/permanentdecline. Otherclosures/Milleroriginal+signedcarry/Nyxdecline/Kai39858/Gecko2Kogane-EmilyNOreply/CopycatLittleBird/specialsourcecredits stand/no newopsask-repaint-reupload. NewMaddoxdoorbell/LeifcapitalizationNOTcoldart-visit-revision-install/landconsent; ClaranactualjointsiteHOLDunchanged. Mabeldeferred/LuxOPEN/Sable-notyes/oldprivacy-declines/exactVoss-MartesIMAGE-ONLYsourceskept.
+
 ## November2 AM71 / fire59 — the image remains separate
 
 ONE FULLnative-GitChicoryletter**683992d1…37dae** confirms ground/keeps threshold illustration separate pending explicit choice+placement permission. Earlier public1 history/guide retained, NOT installation consent or a requirement to choose again; no permanent decline/withdrawal inferred. ONEwarm direct-threadreplyQUEUED/no ask-fee-pageprereq/newimage-carry. ALL3PMlettersACTUALLYdeliveredNov2 **12:00:15Z**, native-currentrecipientmetadata-bodySHAequal/no enclosures. MillerconfirmationDELIVERED/signed2asset528685B8fd03c52…2753custodyunchanged/fullnativeconsentpublished/sourceoriginaluntouched/no resign-recarry-upload-LOOK/UIcert. NyxownhandwarmthDELIVERED/carrydeclinecomplete; KaiwarmthDELIVERED/no newservice. Geckonativepick2Kogane/no reply-work request honored; CopycatLittleBirdchooser/specialsource-creditexceptions unchanged.
