@@ -39,6 +39,7 @@ import {
   keepingDial, potFile, deriveEpochClose, keepingLine, TREASURY_POT, STAGE_LADDER,
   AWARD_MAX, AWARD_HANDS, QUEST_PAY, RECREDIT_STAGES, CORRECTION_HANDS,
   PARCEL_PRICE, PARCEL_SETTLED_BY_DAY, PARCEL_ROOM_FROM,
+  houseCanonOf, invitationOf, inviteState, judgeInviteLine, foldInviteLine,
 } from './stamp-mint.mjs';
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
@@ -187,21 +188,22 @@ export function verifyStampLedger(repo, { pubkeyPem, registry = null } = {}) {
     // EITHER spelling, and once-per-household counts the house, not the
     // spelling. Nothing here widens what a lying key can do: a gh: id the
     // households file does not bind to the handle's declared house still fails.
-    const houseSlugByGhId = (() => {
-      const m = new Map();
-      try {
-        const hhFile = registry ?? JSON.parse(readFileSync(join(repo, 'tools', 'households.json'), 'utf8'));
-        for (const [slug, rec] of Object.entries(hhFile?.households ?? {})) {
-          for (const a of rec?.accounts ?? []) if (a && a.id != null) m.set(`gh:${a.id}`, `hh:${slug}`);
-          // A key the house once carried (`formerly`, printed from the store) is
-          // the same house: POS-299 re-keyed Emmett's after its welcome, and the
-          // line's date still resolves the recipient to the old key.
-          for (const f of rec?.formerly ?? []) if (f) m.set(`hh:${f}`, `hh:${slug}`);
-        }
-      } catch { /* no declared households: every key is its own spelling */ }
-      return m;
+    // The declared households, read once: the store's when the office hands
+    // them over (--registry), the printout otherwise.
+    const declaredHouseholds = (() => {
+      try { return (registry ?? JSON.parse(readFileSync(join(repo, 'tools', 'households.json'), 'utf8')))?.households ?? {}; }
+      catch { return {}; } // no declared households: every key is its own spelling
     })();
-    const canonHouse = (key) => houseSlugByGhId.get(key) ?? key;
+    // A key the house once carried (`formerly`, printed from the store) is the
+    // same house: POS-299 re-keyed Emmett's after its welcome, and the line's
+    // date still resolves the recipient to the old key. The map is
+    // houseCanonOf (stamp-mint.mjs), moved there unchanged so the invite verb
+    // resolves a key exactly as this fold does (POS-816).
+    const canonHouse = houseCanonOf(declaredHouseholds);
+    // Bring a neighbour (POS-816): the invitations the declared houses record,
+    // and the fold's running state for the one judge the verb also uses.
+    const invitation = invitationOf(declaredHouseholds);
+    const invites = inviteState();
     // Each declared house's declaration day, as the registry wrote it (`since`,
     // a town-time date string, never the day it came ashore), keyed by its
     // canonical `hh:<slug>`: the parcel purchase is lawful only for a house
@@ -477,6 +479,27 @@ export function verifyStampLedger(repo, { pubkeyPem, registry = null } = {}) {
           problems.push(`line ${lineNo}: LAWFUL fails — household of "${cls.handle}" already holds its welcome bundle (once per household, ever)`); break;
         }
         welcomedHouses.add(houseKey);
+      }
+      // Every welcome that stood (a ruled one too) is a house the invite's
+      // "5 more" may follow, by its house, never its spelling (POS-816).
+      if (cls.kind === 'welcome') {
+        invites.welcomed.add(canonHouse(cls.household));
+        invites.welcomed.add(canonHouse(hh(cls.handle, cls.date)));
+      }
+
+      // ── Bring a neighbour (POS-816) ───────────────────────────────────────
+      // The signature proves the office pen; the fold holds the terms through
+      // judgeInviteLine (stamp-mint.mjs), the one judge the --invite-mint verb
+      // also asks, quoted from the grammar comment: the amount for the side;
+      // by: the-town; the meep law; two different houses and never the
+      // founders' or the town's; the invited house's own record names this
+      // inviter; the recipient's household; one line per invited house and
+      // side, ever; the invited side after its welcome; and the activation,
+      // the 30 days and the month's cap on the inviter side.
+      if (cls.kind === 'invite') {
+        const why = judgeInviteLine(cls, { canon: canonHouse, invitationOf: invitation, houseAt: hh, isMeep: (h, d) => lawAt(d).meeps.has(h), state: invites });
+        if (why) { problems.push(`line ${lineNo}: LAWFUL fails — ${why}`); break; }
+        foldInviteLine(cls, invites, { canon: canonHouse });
       }
 
       if (cls.kind === 'post-stage') {

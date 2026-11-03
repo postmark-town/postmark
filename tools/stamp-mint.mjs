@@ -475,6 +475,71 @@ export const QUEST_PAY = Object.freeze({
 });
 export const QUEST_ID_RE = /^[a-z0-9][a-z0-9-]*$/;
 const QUEST_PAY_RE = new RegExp(String.raw`^- (\d{4}-\d{2}-\d{2}) · MINT → (\S+) · ([1-9]\d*) · for: quest:([a-z0-9][a-z0-9-]*)\/(${HOUSEHOLD_KEY}) · by: (\S+)$`);
+// INVITE — "Bring a neighbour" (POS-576: Darko 2026-10-11 09:53, amended
+// 2026-10-22 20:40 and 22:06; the deterministic mint POS-816: Darko 2026-10-28
+// 23:07 "otherwise little bird will drown", and 2026-11-02 23:56 "calls are
+// good. continue with the calls as stated"). Two lines, both movement-shaped
+// (MINT → handle) so conservation folds them structurally, both naming BOTH
+// households, the invited house first, so one invitation reads as one key:
+//
+//   - <date> · MINT → <handle> · 5 · for: invite:<invited-key>/<inviter-key>/invited · by: the-town
+//   - <date> · MINT → <handle> · 10 · for: invite:<invited-key>/<inviter-key>/inviter/<activated-day> · by: the-town
+//
+// THE INVITED SIDE: "an invited household's join bundle is 10 stamps, 5 more
+// than an ordinary join, paid at settle" (POS-576/a, /b). The welcome stays the
+// welcome (exactly 5, WELCOME_RE); the 5 more is this line, its own reason, so
+// the record says why (Wright's settled reading, POS-816 2026-11-03 04:56Z). It
+// follows its house's welcome on the ledger: it is the rest of the join bundle.
+//
+// THE INVITER SIDE: "its inviter gets 10 when the new household" sends its
+// first letter or claims its home "within 30 days" (POS-576/b; the word "real"
+// stays out of the town's words, Little Bird 2026-10-30, so the code says
+// ACTIVATED). The activation (a first delivered letter, or a first parcel in
+// the World) happens in the office's store, which this repo cannot see, so it
+// is the pen's assertion, exactly as a stage line's stage is; the line carries
+// its day so the record can be read back. "At most 10 paid invitations per
+// household per month" (POS-576/c), counted in the month the payout is paid
+// (Darko 2026-11-03 00:08 EDT, POS-816/b: "Month paid"), which is the month of
+// this line's own date. The payout waits a week after the activation
+// (POS-816/a: "A week"), so Little Bird, or Darko as her backup, can hold it in
+// that window; the hold itself (who held it, why, whether it was lifted or
+// cancelled) lives in the office, never here.
+//
+// "Founders' household and the town earn none" (POS-576/e, 2026-10-22 22:06,
+// "No, never"): an invitation into either pays NEITHER side. "Meeps can't be
+// named" (POS-576): the meep law holds on both recipients.
+//
+// The verifier holds what a signature cannot, ONE judge shared by the verb and
+// the fold (judgeInviteLine below), so the door and the fold cannot disagree:
+// the amount for the side; by: the-town; the meep law; the two houses differ
+// and the inviter is not the founders' or the town's; the INVITED HOUSE'S OWN
+// REGISTRY ROW names this inviter (`invited_by`, office migration 085, printed
+// in tools/households.json), so the pen cannot credit a house the join never
+// named; the recipient's household at the line's date IS the house its side
+// names; one line per invited house and side, ever; the invited side after
+// that house's welcome; and on the inviter side, the activation no earlier
+// than the invitation and within 30 days of it, the line at least a week after
+// the activation, and the month's cap. The days are town days, a floor the
+// office's own instants always clear: the office pays at the first settlement
+// at or after the activation's instant plus seven days, and a settlement falls
+// at 01:00 or 13:00 town time (02:00 or 14:00 in summer), so the town day it
+// lands on is never fewer than seven after the activation's, even across the
+// November clock change.
+//
+// It cannot collide with the grammars above it: GIFT wants `for: gift:`,
+// FIRST_IDEA `for: first-idea:`, WELCOME `for: welcome:`, QUEST_PAY
+// `for: quest:`, STAGE, RECREDIT and AWARD `for: post:`; this one alone says
+// `for: invite:`. A household key carries no `/`, so the separators are sound.
+export const INVITE_PAY = Object.freeze({ invited: 5, inviter: 10 });
+export const INVITE_WITHIN_DAYS = 30;
+// At most 10 paid a month, counted in the town month the line is dated
+// (POS-576/c; "Month paid", POS-816/b).
+export const INVITE_CAP_PER_MONTH = 10;
+// The week the inviter's 10 waits after the activation (POS-816/a, "A week").
+export const INVITE_HOLD_DAYS = 7;
+// The founders' household and the town's own (POS-576/e), as canonical keys.
+export const INVITE_FOUNDERS = Object.freeze(['hh:starforge', 'hh:the-town']);
+const INVITE_RE = new RegExp(String.raw`^- (\d{4}-\d{2}-\d{2}) · MINT → (\S+) · ([1-9]\d*) · for: invite:(${HOUSEHOLD_KEY})\/(${HOUSEHOLD_KEY})\/(?:(invited)|inviter\/(\d{4}-\d{2}-\d{2})) · by: (\S+)$`);
 // POST STAGE — a bug's stage stamps (the Posts project, phase 2, Keemin
 // 2026-09-29: "Bugs pay the flat ladder, with no staking"). The town pays the
 // resident who did a stage of a bug post: confirmed 2 (the reporter),
@@ -870,6 +935,8 @@ export function classifyEntry(canonical) {
     return { kind: 'welcome', date: m[1], handle: m[2], n: Number(m[3]), household: m[4], by: m[5] };
   if ((m = QUEST_PAY_RE.exec(canonical)))
     return { kind: 'quest-pay', date: m[1], handle: m[2], n: Number(m[3]), quest: m[4], household: m[5], by: m[6] };
+  if ((m = INVITE_RE.exec(canonical)))
+    return { kind: 'invite', side: m[6] ? 'invited' : 'inviter', date: m[1], handle: m[2], n: Number(m[3]), invited: m[4], inviter: m[5], activated: m[7] ?? null, by: m[8] };
   if ((m = RECREDIT_RE.exec(canonical)))
     return { kind: 'post-recredit', date: m[1], handle: m[2], n: Number(m[3]), post: m[4], stage: m[5], by: m[6] };
   if ((m = CORRECTION_BURN_RE.exec(canonical)))
@@ -1091,6 +1158,7 @@ export function deriveTransfers(deliveries, households, { laws = [], revisions =
     else if (c.kind === 'first-idea') add(c.handle, c.n); // first-idea quest mint — same in-place assertion class as a gift
     else if (c.kind === 'welcome') add(c.handle, c.n);  // welcome bundle — the same in-place assertion class, paid once per household at its first resident
     else if (c.kind === 'quest-pay') add(c.handle, c.n); // a hand-reviewed quest the town pays (POS-632) — the same in-place assertion class
+    else if (c.kind === 'invite') add(c.handle, c.n);    // Bring a neighbour (POS-816), either side — the same in-place assertion class
     // THE FOURTH ARM, and the fix REQUIRED it (2026-09-17). Town issuance is the
     // same in-place assertion class as a gift — `MINT → <treasury> · n · for:
     // issuance:…` — and it was missing here. It went unnoticed because it
@@ -1248,6 +1316,111 @@ export const questPayLine = ({ date, handle, quest, household }) => {
     throw new Error(`quest pay: the household must be a key of the form <prefix>:<value>, got ${JSON.stringify(household)}`);
   return `- ${date} · MINT → ${handle} · ${terms.amount} · for: quest:${quest}/${household} · by: the-town`;
 };
+
+// ── Bring a neighbour (POS-816): the two lines, and the ONE judge ────────────
+// The amounts and `the-town` are PINNED here from INVITE_PAY, and both keys and
+// the activation day are checked against their classes before anything is
+// written, so a `·` or a `/` in a field cannot forge the fields behind it.
+const INVITE_DAY_RE = /^\d{4}-\d{2}-\d{2}$/;
+const inviteKeysOk = (invited, inviter) => {
+  for (const [side, key] of [['invited', invited], ['inviter', inviter]])
+    if (!HOUSEHOLD_KEY_RE.test(String(key ?? '')))
+      throw new Error(`invite: the ${side} household must be a key of the form <prefix>:<value>, got ${JSON.stringify(key)}`);
+};
+export const inviteInvitedLine = ({ date, handle, invited, inviter }) => {
+  inviteKeysOk(invited, inviter);
+  return `- ${date} · MINT → ${handle} · ${INVITE_PAY.invited} · for: invite:${invited}/${inviter}/invited · by: the-town`;
+};
+export const inviteInviterLine = ({ date, handle, invited, inviter, activated }) => {
+  inviteKeysOk(invited, inviter);
+  if (!INVITE_DAY_RE.test(String(activated ?? '')))
+    throw new Error(`invite: the activation must be a town day, YYYY-MM-DD, got ${JSON.stringify(activated)}`);
+  return `- ${date} · MINT → ${handle} · ${INVITE_PAY.inviter} · for: invite:${invited}/${inviter}/inviter/${activated} · by: the-town`;
+};
+
+// The town day an instant falls on: the clock every ledger date is written on.
+export const townDayOf = (instant, tz = process.env.TOWN_TZ ?? 'America/New_York') =>
+  new Intl.DateTimeFormat('en-CA', { timeZone: tz }).format(new Date(instant));
+const dayGap = (from, to) => Math.round((Date.parse(`${to}T00:00:00Z`) - Date.parse(`${from}T00:00:00Z`)) / 864e5);
+
+// ONE HOUSE, TWO SPELLINGS (2026-09-20, cloud-phi; moved here from
+// stamp-verify.mjs unchanged, so the invite verb resolves a key exactly as the
+// fold does): a declared house's account ids (`gh:<id>`) and the slugs it once
+// carried (`formerly`) are the same house as its `hh:<slug>`.
+export function houseCanonOf(households) {
+  const m = new Map();
+  try {
+    for (const [slug, rec] of Object.entries(households ?? {})) {
+      for (const a of rec?.accounts ?? []) if (a && a.id != null) m.set(`gh:${a.id}`, `hh:${slug}`);
+      for (const f of rec?.formerly ?? []) if (f) m.set(`hh:${f}`, `hh:${slug}`);
+    }
+  } catch { /* a malformed row ends the read where it stands, as the verifier's own read always did */ }
+  return (key) => m.get(key) ?? key;
+}
+// The invitation a declared house's own registry row records (`invited_by`,
+// office migration 085: `{ by, named, at }`, the inviting house's slug first),
+// by its canonical key, or null.
+export function invitationOf(households) {
+  return (canonKey) => {
+    const slug = /^hh:(.+)$/.exec(String(canonKey ?? ''))?.[1];
+    const row = slug != null && Object.hasOwn(households ?? {}, slug) ? households[slug] : null;
+    const inv = row?.invited_by;
+    return inv && typeof inv.by === 'string' && inv.at ? inv : null;
+  };
+}
+
+export const inviteState = () => ({ welcomed: new Set(), paid: new Set(), counts: new Map() });
+// The cap's key for an inviter-side line: its house and the town month the
+// line is dated, the month it is paid in ("Month paid", POS-816/b).
+const inviteCapKey = (inviter, cls) => `${inviter}|${cls.date.slice(0, 7)}`;
+
+/**
+ * Is this invite line lawful, given the ledger before it? Null when it is; the
+ * reason otherwise. `cls` is classifyEntry's answer; `canon` folds a key to its
+ * house; `invitationOf` reads a house's own `invited_by`; `houseAt(handle,
+ * day)` is the recipient's household key that day; `isMeep(handle, day)` is
+ * the meep law; `state` is inviteState(), folded by foldInviteLine.
+ */
+export function judgeInviteLine(cls, { canon, invitationOf: invitation, houseAt, isMeep, state }) {
+  const side = cls.side;
+  if (cls.n !== INVITE_PAY[side]) return `an invite's ${side} side pays exactly ${INVITE_PAY[side]} (got ${cls.n})`;
+  if (cls.by !== 'the-town') return `an invite is the town's mint (by: "${cls.by}", must be the-town)`;
+  if (isMeep(cls.handle, cls.date)) return `invite pay to meep "${cls.handle}" (meeps stay outside the currency)`;
+  const invited = canon(cls.invited);
+  const inviter = canon(cls.inviter);
+  if (invited === inviter) return `an invite names one house on both sides (${invited})`;
+  if (INVITE_FOUNDERS.includes(inviter))
+    return `an invitation from the founders' household or the town's own (${inviter}) pays neither side (POS-576/e)`;
+  const inv = invitation(invited);
+  if (!inv) return `${cls.invited}'s own record names no invitation`;
+  if (canon(`hh:${inv.by}`) !== inviter) return `${cls.invited}'s own record names its inviter as ${inv.by}, not ${cls.inviter}`;
+  const own = side === 'invited' ? cls.invited : cls.inviter;
+  const house = houseAt(cls.handle, cls.date);
+  if (canon(house) !== canon(own)) return `the ${side} side names household "${own}" but "${cls.handle}" is ${house} at ${cls.date}`;
+  if (state.paid.has(`${invited}|${side}`))
+    return `${cls.invited}'s invitation already paid its ${side} side (one line per invited house and side, ever)`;
+  if (side === 'invited') {
+    if (!state.welcomed.has(invited)) return `${cls.invited}'s 5 more is the rest of its join bundle, and its house holds no welcome bundle yet`;
+    return null;
+  }
+  const invitedDay = townDayOf(inv.at);
+  if (cls.activated < invitedDay) return `the activation (${cls.activated}) is before the invitation (${invitedDay})`;
+  if (dayGap(invitedDay, cls.activated) > INVITE_WITHIN_DAYS)
+    return `the activation (${cls.activated}) is more than ${INVITE_WITHIN_DAYS} days after the invitation (${invitedDay})`;
+  if (dayGap(cls.activated, cls.date) < INVITE_HOLD_DAYS)
+    return `the inviter is paid on ${cls.date}, less than a week after the activation (${cls.activated}): it waits ${INVITE_HOLD_DAYS} days`;
+  if ((state.counts.get(inviteCapKey(inviter, cls)) ?? 0) >= INVITE_CAP_PER_MONTH)
+    return `${cls.inviter} already holds ${INVITE_CAP_PER_MONTH} paid invitations in ${cls.date.slice(0, 7)}, the month this one is paid in: at most ${INVITE_CAP_PER_MONTH} a month`;
+  return null;
+}
+/** Fold a lawful invite line into the state the next judgement reads. */
+export function foldInviteLine(cls, state, { canon }) {
+  state.paid.add(`${canon(cls.invited)}|${cls.side}`);
+  if (cls.side === 'inviter') {
+    const k = inviteCapKey(canon(cls.inviter), cls);
+    state.counts.set(k, (state.counts.get(k) ?? 0) + 1);
+  }
+}
 
 // A bug stage's canonical line. `the-town` is PINNED here the way welcomeLine
 // pins it, and the amount must be on the ladder for the stage: the stage's
@@ -2670,6 +2843,76 @@ function main(registrySource = null) {
     const canonical = questPayLine({ date, handle, quest, household });
     appendSigned(repo, [canonical], readFileSync(keyPath, 'utf8'));
     console.log(`stamp-ledger: quest paid\n  ${canonical}`);
+    return;
+  }
+
+  if (has('--invite-mint')) {
+    // BRING A NEIGHBOUR (POS-816). Same ceremony as --welcome: signed by the
+    // office pen, appended onto a settled tail, forward-dated. No --amount and
+    // no --by: every term is held by judgeInviteLine, the one judge the verifier
+    // folds with, so this door and the fold cannot disagree. The writer is the
+    // office's invite pass on its keeping tick (postmark-office
+    // deploy/invite-pass.mjs), which holds the inviter's side for review first;
+    // this verb is that ceremony, never a second law.
+    const keyPath = arg('--key');
+    const date = arg('--date');
+    const handle = arg('--invite-mint');
+    const side = arg('--side');
+    const invitedKey = arg('--invited');
+    const inviterKey = arg('--inviter');
+    const activated = arg('--activated');
+    if (!keyPath || !existsSync(keyPath) || !date || !handle || !side || !invitedKey || !inviterKey) {
+      console.error('--invite-mint <handle> needs --side invited|inviter --invited <key> --inviter <key> --date YYYY-MM-DD --key FILE (and --activated YYYY-MM-DD on the inviter side)'); process.exit(1);
+    }
+    if (!Object.hasOwn(INVITE_PAY, side)) { console.error(`--side must be invited or inviter, not "${side}"`); process.exit(1); }
+    if ((side === 'inviter') !== (activated != null)) {
+      console.error('--activated belongs to the inviter side, and only to it: the town day the invited house sent its first letter or claimed its home'); process.exit(1);
+    }
+    let canonical;
+    try {
+      canonical = side === 'invited'
+        ? inviteInvitedLine({ date, handle, invited: invitedKey, inviter: inviterKey })
+        : inviteInviterLine({ date, handle, invited: invitedKey, inviter: inviterKey, activated });
+    } catch (e) { console.error(`--invite-mint: ${e.message}`); process.exit(1); }
+    const rooms = keyBase() ?? householdKeys(repo);
+    if (!rooms.has(handle)) { console.error(`FATAL: no WHITE_PAGES room for "${handle}" — an invite pays a resident`); process.exit(1); }
+    const { laws, revisions } = parseLaws(existing);
+    const keyOf = (h, d) => {
+      let k = null;
+      for (const r of revisions) if (r.handle === h && r.date <= d) k = r.key;
+      if (k) return k;
+      const base = rooms.get(h);
+      return base ? base.key : `solo:${h}`;
+    };
+    // The registry the fold reads: the store's when the office hands it over
+    // (--registry), the printout otherwise, exactly as stamp-verify reads it.
+    const households = welcomeRegistry()?.households
+      ?? (() => { try { return JSON.parse(readFileSync(join(repo, 'tools', 'households.json'), 'utf8')).households ?? {}; } catch { return {}; } })();
+    const canon = houseCanonOf(households);
+    const state = inviteState();
+    for (const e of existing) {
+      const c = classifyEntry(e.canonical);
+      if (c.kind === 'welcome') { state.welcomed.add(canon(c.household)); state.welcomed.add(canon(keyOf(c.handle, c.date))); }
+      if (c.kind === 'invite') foldInviteLine(c, state, { canon });
+    }
+    const isMeep = meepChecker(laws);
+    const why = judgeInviteLine(classifyEntry(canonical), { canon, invitationOf: invitationOf(households), houseAt: keyOf, isMeep, state });
+    if (why) { console.error(`FATAL: ${why} — nothing minted`); process.exit(1); }
+    const recorded = existing.map((e) => e.canonical);
+    const { problems, owed } = walkLedger(recorded.slice(1), mints, 1);
+    if (existing.length > 0 && problems.length) {
+      console.error(`FATAL: recorded ledger diverges from derivation — run stamp-verify.mjs; nothing minted\n${problems[0]}`); process.exit(1);
+    }
+    if (existing.length === 0 || owed.length) {
+      console.error(`FATAL: ledger is behind the mail (${owed.length} mint(s) owed${existing.length === 0 ? ', or not yet founded' : ''}) — run --append first, then mint onto the settled tail`); process.exit(1);
+    }
+    const maxDate = existing.reduce((mx, e) => {
+      const d = /^- (\d{4}-\d{2}-\d{2}) /.exec(e.canonical)?.[1];
+      return d && d > mx ? d : mx;
+    }, '0000-00-00');
+    if (date < maxDate) { console.error(`FATAL: invite date ${date} precedes the ledger tail (${maxDate}) — the ledger is append-only, forward-dated`); process.exit(1); }
+    appendSigned(repo, [canonical], readFileSync(keyPath, 'utf8'));
+    console.log(`stamp-ledger: invite paid (${side})\n  ${canonical}`);
     return;
   }
 
