@@ -546,26 +546,48 @@ test("rule 5: no build in a harbour that is occupied, even one's own", () => {
   assert.deepEqual(r.report.built, [], "Saltmere still has its ship");
 });
 
-test("rule 5: fewer places than ships, a removal is owed and taken from the next orders", () => {
-  // B holds only Lanternfall after phase 2 with two ships: one removal owed.
+test("default 1: the phase 2 count only builds; the same count at phase 4 owes a removal", () => {
+  // Nobody moves: every player ends phase 2 with two ships and one place (rule 2).
   let s = initialState(B, HOMES);
   s = resolvePhase(B, s, { orders: {} }).state;
   const r2 = resolvePhase(B, s, { orders: {} });
-  assert.equal(r2.state.removalsOwed.B, 1);
-  const r3 = resolvePhase(B, r2.state, { orders: { B: ["remove LAN", "move LAN-R GULL"] } });
-  assert.deepEqual(r3.report.removed.filter((x) => x.player === "B"), [{ player: "B", at: "LAN", by: "player" }]);
-  assert.equal(where(r3.state).GULL, "B");
-  assert.equal(r3.report.removed.length, 5, "every player who took nothing by phase 2 owes one removal");
+  assert.deepEqual(placesHeld(r2.state, "B"), ["LAN"]);
+  assert.equal(r2.state.ships.filter((x) => x.owner === "B").length, 2);
+  assert.deepEqual(r2.state.removalsOwed, {}, "no island by the end of phase 2 costs nothing");
+  const r3 = resolvePhase(B, r2.state, { orders: { B: ["remove LAN"] } });
+  assert.deepEqual(r3.report.removed, []);
+  assert.match(line(r3, "remove LAN").reason!, /no removal is owed/);
+  // The same situation at the phase 4 count: one removal each, taken in phase 5.
+  const r4 = resolvePhase(B, r3.state, { orders: {} });
+  assert.deepEqual(placesHeld(r4.state, "B"), ["LAN"]);
+  assert.equal(r4.state.ships.filter((x) => x.owner === "B").length, 2);
+  for (const p of Object.keys(HOMES)) assert.equal(r4.state.removalsOwed[p], 1, `${p} owes one removal at phase 4`);
+  const r5 = resolvePhase(B, r4.state, { orders: {} });
+  assert.equal(r5.report.removed.length, 5);
+});
+
+test("default 1: the phase 2 count still builds", () => {
+  // A ends phase 2 on Gull Rock and Little Ash, with Saltmere empty: three places, two ships.
+  const r2 = resolvePhase(B, position({ GULL: "A", "SAL-R": "A" }, 1), { orders: { A: ["move SAL-R ASH"] } });
+  assert.deepEqual(placesHeld(r2.state, "A").sort(), ["ASH", "GULL", "SAL"]);
+  assert.deepEqual(r2.report.built.filter((x) => x.owner === "A"), [{ at: "SAL", owner: "A" }]);
+});
+
+test("rule 5: fewer places than ships, a removal is owed and taken from the next orders", () => {
+  // B holds only Lanternfall after phase 4 with two ships: one removal owed.
+  const r4 = resolvePhase(B, position({ LAN: "B", "LAN-R": "B" }, 3), { orders: {} });
+  assert.equal(r4.state.removalsOwed.B, 1);
+  const r5 = resolvePhase(B, r4.state, { orders: { B: ["remove LAN", "move LAN-R GULL"] } });
+  assert.deepEqual(r5.report.removed, [{ player: "B", at: "LAN", by: "player" }]);
+  assert.equal(where(r5.state).GULL, "B");
 });
 
 test("rule 5: without a removal order, the engine removes the ship farthest from home", () => {
-  let s = initialState(B, HOMES);
-  s = resolvePhase(B, s, { orders: { B: ["move LAN-R STILL"] } }).state;
-  const r2 = resolvePhase(B, s, { orders: {} });
-  assert.equal(r2.state.removalsOwed.B, 1);
-  const r3 = resolvePhase(B, r2.state, { orders: { B: ["move STILL GRE-R"] } });
-  assert.deepEqual(r3.report.removed.filter((x) => x.player === "B"), [{ player: "B", at: "STILL", by: "engine" }]);
-  assert.equal(line(r3, "move STILL GRE-R").status, "void");
+  const r4 = resolvePhase(B, position({ LAN: "B", STILL: "B" }, 3), { orders: {} });
+  assert.equal(r4.state.removalsOwed.B, 1);
+  const r5 = resolvePhase(B, r4.state, { orders: { B: ["move STILL GRE-R"] } });
+  assert.deepEqual(r5.report.removed, [{ player: "B", at: "STILL", by: "engine" }]);
+  assert.equal(line(r5, "move STILL GRE-R").status, "void");
   assert.equal(distance(B, "STILL", "LAN"), 2);
 });
 
@@ -708,12 +730,15 @@ test("replay: the short game lands where the rules say", () => {
   // Phase 2: A takes Little Ash; C takes Lanternfall Roads after B left it; D's Anvil ship meets nobody.
   const after2 = states[2];
   assert.deepEqual(placesHeld(after2, "A").sort(), ["ASH", "SAL"]);
-  assert.equal(after2.removalsOwed.B, 1, "B holds Lanternfall only, with two ships");
-  // C left Wren Key during phase 2, so it was never C's: C holds Greywick only and owes a removal too.
-  assert.equal(after2.removalsOwed.C, 1);
-  // Phase 3: B removes its harbour ship as ordered; C gave no removal, so the engine takes the
-  // farther of its two ships (Lanternfall Roads, two moves from Greywick).
-  assert.deepEqual(reports[2].removed, [{ player: "B", at: "LAN", by: "player" }, { player: "C", at: "LAN-R", by: "engine" }]);
+  // B holds Lanternfall only, with two ships; C left Wren Key during phase 2, so it was never C's
+  // and C holds Greywick only. Neither owes anything: the phase 2 count only builds (default 1).
+  assert.deepEqual(placesHeld(after2, "B"), ["LAN"]);
+  assert.deepEqual(placesHeld(after2, "C"), ["GRE"]);
+  assert.deepEqual(after2.removalsOwed, {});
+  // Phase 3: nothing is removed, and B's removal order is void.
+  assert.deepEqual(reports[2].removed, []);
+  const bRemove = reports[2].orders.find((o) => o.player === "B" && o.text === "remove LAN");
+  assert.match(bRemove!.reason!, /no removal is owed/);
   assert.equal(reports.length, 4);
 });
 
