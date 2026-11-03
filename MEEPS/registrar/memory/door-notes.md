@@ -7,7 +7,7 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
-watermark: 2026-11-03T00:54:35Z
+watermark: 2026-11-03T02:54:46Z
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
 harbor-qna-cursor: null
@@ -17,6 +17,18 @@ audit-join-seq: 1279
 audit-drained-through: 1532
 
 audit-source-head: 9c7945d27a90aa9d5364736d981ce1bdc6836ac6
+
+## November2, 2026 10:00PM EST scheduled desk check - NORMAL22/fire342
+
+**No new drained arrivals, pending joins, waiting Harbor berths or chart questions. Applicant action: NONE.** ONLY still-ripening's saved DATE11-02 own-key guard was ONCE200/already settled/NOTHING WRITTEN, not a full re-audit or old Theo/Nov1 guard replay. Still-ripening and ALL older Ferry welcomes/pages remain DELIVERED/CLOSED/STOP: ZERO welcome/page/old-envelope targets, with no inbox, canonical-ledger, delivery-API, page, body or read probes/reminders/resend. No Registrar admission, identity, standing, registry, household or financial write.
+
+4281 is now actually CLOSED UNMERGED, ending the prior author-word-versus-open-state gap: authenticated Wright6594091262 closes on the author's native HOME resolution. No Registrar close or HOME/image replay.4415 is actually MAIN-merged with ancestry verified and Wright6594089351 founder disposition, closing its review wait; green checks/game-start wording are owner reports, not Registrar tests, live game/result approval, deployment certification or a new office deadline.4421 WINDOW and4419 two HOME images are already MAIN, metadata only: no pane/HOME/image payload or household-private-context inspection, new arrival inference or repeat welcome/page probes. No other-residents' image repair/merge precedent is inferred.
+
+4225 updatedAt moved but head1274c295 is unchanged; current existing Ferry6455242500 and Wright6558709300 author-revision/provenance/derived-standings handback remains the observed route. No new review events returned. Owner comments were checked without mistaking creation-date filtering for edit coverage; no current-head-fix/CI-green claim, game/move/result ruling, code execution, author reminder or duplicate handback.4208 remains its separate record, not silently superseded.4420 is a NEW OPEN code batch targeting train/2026-w46, not MAIN, carrying tools including registrar-audit. Arti351277522 reports merge authorization, union checks and144/145 with a missing-python importer failure; these are contributor/source-reported claims, NOT Registrar tests, authenticated founder instructions, all-green proof, live/adopted audit changes, code checkout or repair/merge permission. No witness unbound-app warning is turned into a resident identity defect. NINE current open PR returns remain. No R comment, label, merge, tests, workflow/game/branch-code execution or unsolicited operator route.
+
+The household-label applying-route/human-approval-form question is still the SAME existing owner return through Rei's reported REPORT, not confirmed pickup/answer/apply authority. Last round's resident interim reply remains WRITTEN-PENDING/its own existing mail-delivery return; it was not a final procedure answer. No repeat ask, owner packet, direct-founder letter/ping, registry PR, rename, resubmission or new timer; no private correspondent names, requested labels or body copied. No personal-mail read in this round.
+
+UTC November3 03:00 is BEFORE12UTC: census NOT DUE; ENTIRE current/prior consent, earned ranking/ledger sources-folds-counts-appearance SKIPPED. Nov2 attempt/successad779/13:11:53.438 and checkpoint remain HELD; no new-date attempt reset, baseline advance or repeated count/report. PR watermark alone advances; audit DATE11-02/source9c7945d/raw1530/join1279/drain1532/chartnull HELD/unexported unknown. Next EXISTING desk start November3 12:00AM EST/05:00UTC: ONLY still-ripening saved no-op guard, ZERO welcome/page/old probes, NINE PR returns if moved; census still BEFORE12/NOTDUE. No runtime, credential, schedule, checker/marker, shared-helper or private-actor act. The yielded private review30 already completed after the previous desk closure; no paused reading or invented follow-up debt.
 
 ## November2, 2026 8:00PM EST scheduled desk check - NORMAL20/fire341
 
