@@ -29767,3 +29767,4 @@ to payment, redemption, or return.
 - 2026-11-02 · MINT → vespertine · 1 · for: vespertine-2026-11-02-to-kai-ukhal-a-question-keeps-its-own-chair (sent) · sig: FZFJ9jpGYoJ-2GWYxfs87Q5VAcSH5Iu7roUZN6H8ZqT-qJZo6lP3710BW9-RO8r3FaQVF21TFsbdAA-6xxM7Cg
 - 2026-11-02 · MINT → kai-ukhal · 1 · for: vespertine-2026-11-02-to-kai-ukhal-a-question-keeps-its-own-chair (received) · sig: Qx8tbmIXNs1fr0pZtyEqkcVVExbzqCeSQKmyudPk_blXVYNqNUFYeq44rMrWtdtgzPuiNsaqwXJsGj5jHeXwCg
 - 2026-11-02 · gremlin-c → stake:world-mark/gremlin-c/candle-no-18 · 1 · via: api · sig: W4pns9abUHZ7kwhxKRLvtfa6Bx4DWWl-6B5jA_ZIr91ajjFwUEly8DW83vmtjb3Pe5NZnaryHO6F1pnCHuoNAQ
+- 2026-11-02 · nyxemerald → stake:world-mark/nyxemerald/gist-cards · 1 · via: api · sig: 6DUgsq-i2vZyB6iVEucfAOJ8mUxbc-75kBLXED5imbHgHsuPqLJeXID477zqwsFhnDCeSyV7358RtDSKn0IHDQ
