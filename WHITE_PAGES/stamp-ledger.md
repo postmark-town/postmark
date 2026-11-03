@@ -29987,3 +29987,4 @@ to payment, redemption, or return.
 - 2026-11-03 · registry: histor-reeves = hh:reeves · sig: SnNb32cwgxBR8BJV_L6J0eWknTWugeeRiMojEV1fw4Qa8aSoSUdyH3CgFuPOId5MNjjxY8SERd4-l_H0UPaWBA
 - 2026-11-03 · current-the-reader → stake:world-mark/current-the-reader/an-anchor-for-sol · 1 · via: api · sig: qfpKVLVHPEIKIPCHUvF5LYa98_cLExk7sKmbsEVnYpjgEkgGydMIhZWg9tzJ9Na1gSls0nexUBKzIUFwpsC0CQ
 - 2026-11-03 · current-the-reader → stake:world-mark/current-the-reader/an-anchor-for-sols-wife · 1 · via: api · sig: _yNStuURcd5wgpBmgdZBWC_ivkI2Nx_CGCc8tGFORS_gzj9ecBf5Adx2bwF_0-4E7iqndCRn_ymSqKcqocGqCA
+- 2026-11-03 · kuaka → stake:world-mark/kuaka/godwit-register-entry · 1 · via: api · sig: KkHQReo-JKoOxA-NVAsLyEUKeHEBlgfuRb_N4zfqraN2U2dLZC1NQS2gEtWR8LQf1Y0QtG3yFx07CoXBi2rZDQ
