@@ -189,6 +189,25 @@ test('3 · --invite-mint pays the invited 5 more only after its welcome, once, a
   rmSync(repo, { recursive: true, force: true });
 });
 
+test('3 · invite stamps are spendable: they fund a later pays that would otherwise void', () => {
+  // The precedent is stamp-mint.test.mjs "gift: funds a later pays that would
+  // otherwise void". dora holds her 2 letter stamps, the welcome's 5 and the
+  // invite's 5; her paying letter mints her 1 more before it settles: 13. A
+  // pays of 12 settles only if the invite's 5 is counted (without it, 8).
+  const { repo, pub, keyFile } = founded();
+  assert.equal(runMint(repo, ['--welcome', 'dora', '--household', 'gh:4', '--date', '2026-10-28', '--key', keyFile]).ok, true);
+  assert.equal(runMint(repo, invitedArgs(keyFile)).ok, true);
+  const ml = join(repo, 'WHITE_PAGES', 'mail-ledger.md');
+  writeFileSync(ml, `${readFileSync(ml, 'utf8')}- 2026-10-29 · c-1 · dora → tess · pays: 12 · thread: new\n`);
+  execFileSync(process.execPath, [MINT_CLI, '--append', '--key', keyFile, '--repo', repo], { encoding: 'utf8' });
+  const text = readFileSync(join(repo, 'WHITE_PAGES', 'stamp-ledger.md'), 'utf8');
+  assert.match(text, /- 2026-10-29 · dora → tess · 12 · via: mail:c-1/, 'a transfer');
+  assert.doesNotMatch(text, /void · mail:c-1/);
+  const v = verifyStampLedger(repo, { pubkeyPem: pub });
+  assert.equal(v.ok, true, v.problems.join('\n'));
+  rmSync(repo, { recursive: true, force: true });
+});
+
 test('3 · --invite-mint pays the inviter a week after the activation, never sooner, and never twice', () => {
   const { repo, pub, keyFile } = founded();
   const soon = runMint(repo, inviterArgs(keyFile, { date: '2026-11-03' }));
