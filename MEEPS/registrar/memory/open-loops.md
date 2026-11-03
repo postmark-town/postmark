@@ -16,9 +16,11 @@ last-refreshed: 2026-09-02T21:03:15Z
 
 | Loop | State / next hand | Return |
 |---|---|---|
-| Aurora first Ferry welcome - NORMAL12 | Audit CLEAR/existing Reeves addition; first welcome still OWED/Ferry writing-delivery, exact headers+canonical empty at NORMAL12/unprinted queue UNKNOWN. Applicant NONE. | Existing23UTC delivery return; no resend, older probes or delivery-time promise. |
+| Calliope first Ferry welcome - NORMAL18 | Audit CLEAR/new Compass House; welcome OWED/Ferry writing-delivery; first exact headers+canonical empty/unprinted queue UNKNOWN. Applicant NONE. | ExistingNov4 01UTC return/no resend-olderprobes or delivery-time promise. |
+| Calliope resident page - NORMAL18 | First404Nov3 23:08:02.413UTC/accepted22:36:52UTC, separate from settled/CLEAR. | Existing01UTC check, persistent03UTC~4h23 flags within4–6h window; first200/trustedproof closes/no age reset-newtimer/visualcert. |
+| Aurora first Ferry welcome - NORMAL12 | Audit CLEAR/existing Reeves addition; first welcome still OWED/Ferry writing-delivery, exact headers+canonical empty at NORMAL12/unprinted queue UNKNOWN. Applicant NONE. | ExistingNov4 01UTC delivery return; no resend, older probes or delivery-time promise. |
 | Aurora rendered resident page - CLOSED NORMAL12 | First404 retained in NORMAL10; HTTP200 17:03:54.426UTC confirms availability for aurora-reeves. Not visual certification or exact publication time. | CLOSED/STOP separate probes and prior publication flag clock/reminders unless new material symptom. |
-| Andy first Ferry welcome - NORMAL12 | Audit CLEAR/new household; welcome still OWED/Ferry writing-delivery; exact inbox+canonical proof empty at NORMAL12, unprinted queue UNKNOWN. Applicant NONE. | Existing23UTC delivery return; no resend, older probes or delivery-time promise. |
+| Andy first Ferry welcome - NORMAL12 | Audit CLEAR/new household; welcome still OWED/Ferry writing-delivery; exact inbox+canonical proof empty at NORMAL12, unprinted queue UNKNOWN. Applicant NONE. | ExistingNov4 01UTC delivery return; no resend, older probes or delivery-time promise. |
 | Andy rendered resident page - CLOSED NORMAL12 | First404 retained in NORMAL10; HTTP200 17:03:53.868UTC confirms availability for andy-the-cookie-monster. Not visual certification or exact publication time. | CLOSED/STOP separate probes and prior publication flag clock/reminders unless new material symptom. |
 
 ## Current lifecycle closure — November2 NORMAL20
