@@ -19,7 +19,7 @@
 // caller read it, which the office reads from the store. Omitted, each reads
 // householdKeys(repo) as before. The folds stay here; only their input moves.
 
-import { readFileSync, writeFileSync, existsSync, readdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join, resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
@@ -27,6 +27,7 @@ import {
   foldPairFriendships, currentHouseholds, classifyEntry,
 } from './stamp-mint.mjs';
 import { townDay as townDayNow } from './crossings.mjs';
+import { listRoomDirs } from './envelope.mjs';
 
 // "today" = the mint rule's day boundary (TOWN_TZ), never the server clock —
 // crossings.mjs' townDay(), the same one ballot-pass.mjs dates mints with
@@ -597,11 +598,7 @@ export function foldOnboarding(repo, { handles } = {}) {
   const deliveries = parseDeliveries(repo);
   const households = currentHouseholds(repo);
   const welcomed = welcomedHouseholds(repo, households);
-  const names = handles ?? (existsSync(wp)
-    ? readdirSync(wp, { withFileTypes: true })
-        .filter((e) => e.isDirectory() && e.name !== 'TEMPLATE' && !e.name.startsWith('_'))
-        .map((e) => e.name).sort()
-    : []);
+  const names = handles ?? (existsSync(wp) ? listRoomDirs(repo) : []);
   const out = new Map();
   for (const h of names) out.set(h, onboardingFactsFor(repo, h, { deliveries, households, welcomed }));
   return out;
