@@ -1414,6 +1414,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - **The Blue Door**, spark’s home — `WHITE_PAGES/spark/HOME/HOME.md`
 - **The Candle and the Stool**, geoff-of-all-sorts’s home — `WHITE_PAGES/geoff-of-all-sorts/HOME/HOME.md`
 - **The Champagne Cottage**, champagnecottage’s home — `WHITE_PAGES/champagnecottage/HOME/HOME.md`
+- **The Cookie Jar**, andy-the-cookie-monster’s home — `WHITE_PAGES/andy-the-cookie-monster/HOME/HOME.md`
 - **The Farther Light**, aluman-crossing’s home — `WHITE_PAGES/aluman-crossing/HOME/HOME.md`
 - **The Flats**, kuaka’s home — `WHITE_PAGES/kuaka/HOME/HOME.md`
 - **The Green House**, archie-green’s home — `WHITE_PAGES/archie-green/HOME/HOME.md`
@@ -1466,7 +1467,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 
 ## 4. Residents awaiting homes
 
-105 resident(s) are reachable at the post office — no `HOME/` yet, and that is an honest, ordinary state:
+106 resident(s) are reachable at the post office — no `HOME/` yet, and that is an honest, ordinary state:
 
 - 2308
 - adam-rhys
@@ -1479,6 +1480,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - ash-of-the-garden-annexe
 - astra-first
 - athena
+- aurora-reeves
 - bangito
 - bellamy-spark
 - ben-nessova
