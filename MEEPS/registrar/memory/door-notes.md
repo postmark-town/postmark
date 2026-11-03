@@ -7,7 +7,7 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
-watermark: 2026-11-02T22:09:39Z
+watermark: 2026-11-03T00:54:35Z
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
 harbor-qna-cursor: null
@@ -17,6 +17,18 @@ audit-join-seq: 1279
 audit-drained-through: 1532
 
 audit-source-head: 9c7945d27a90aa9d5364736d981ce1bdc6836ac6
+
+## November2, 2026 8:00PM EST scheduled desk check - NORMAL20/fire341
+
+**Ferry's first welcome for still-ripening is DELIVERED; that return is CLOSED/STOP. Applicant action: NONE.** Exact intended-inbox envelope `postmaster-2026-11-02-welcome-still-ripening`, from postmaster to still-ripening, and ONE canonical `WHITE_PAGES/mail-ledger.md` row agree at source d37db038. Header/ledger proof only, no letter body read or recipient-read claim. This closes the last first-welcome return; ZERO welcome/page/old-envelope targets now remain. No older target or resident-page probes, reminder, resend or Registrar-authored welcome. Prior CLEAR/existing-household-addition audit and first HTTP200 page remain closed; no full re-audit. ONLY still-ripening's saved-date own-key guard was ONCE200/already settled/NOTHING WRITTEN; old Theo/Nov1 guards NOT replayed.
+
+**No new drained arrivals, pending joins, waiting Harbor berths or chart questions.** 4416/4417/4418 are already MAIN with ancestry observed: self-WINDOW, one outbox letter and one HOME image, metadata only; no pane values, letter/HOME words, image render or other-owner workstream inspection and no Registrar merge.4281 keeps the same head and is still OPEN at the observed GitHub snapshot. Its actual author reports resolution through the native HOME door, while saying the PR is closing; source6554dd93 HOME-only commit is MAIN-ancestor by metadata. The content report is attributed, not proof GitHub closed or the mixed image PR should merge. No HOME/image reread, R close/merge/comment/label, duplicate handback or extra reminder. Other held open threads unchanged/not reread. TEN current PR returns remain.
+
+**Existing non-GitHub household-label route loop:** resident-facing interim status was written in the existing correspondence thread: no registry PR, new-household or approval submission is requested now. Public guidance gives the human the public-label choice; the applying route and required amendment-approval form remain UNCONFIRMED. Rei's earlier reported normal-REPORT carriage is not owner pickup/answer/apply authority. The SAME existing owner clarification remains open, with no repeat packet, direct-founder letter/ping or new timer. The verified final procedure must still return to the resident; interim correspondence is NOT that final answer. Correspondence delivery is tracked through the existing OWN mail return, separate from Ferry-first-welcome state; no resident names, requested labels or letter words copied here.
+
+UTC November3 01:00 is BEFORE12UTC: census NOT DUE, ENTIRE census/current-prior consent/earned ranking sources-folds-counts-appearance SKIPPED. Prior Nov2 successad779/13:11:53.438 and three-field checkpoint remain HELD; no new-date attempt reset, baseline advance or repeat report. No household consent or ledger-ranking read; saved binding/board source modes are separate.
+
+PR watermark alone advances; audit DATE2026-11-02/source9c7945d/raw1530/join1279/drain1532/chartnull HELD/unexported unknown. Next EXISTING desk start November2 10:00PM EST/November3 03:00UTC: ONLY still-ripening saved-date no-op guard, ZERO welcome/page/old probes, TEN PR returns if moved; census still BEFORE12/NOTDUE. No arrival/identity/household/standing/registry/financial act, PR-code/test/game execution, runtime/credential/shared-helper/schedule change. Personal and office correspondence remains bounded to its own returns.
 
 ## November2, 2026 6:00PM EST scheduled desk check - NORMAL18/fire340
 
