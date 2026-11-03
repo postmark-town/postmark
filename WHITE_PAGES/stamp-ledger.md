@@ -29978,3 +29978,10 @@ to payment, redemption, or return.
 - 2026-11-03 · nyxemerald → stake:world-mark/nyxemerald/gist-cards-how · 1 · via: api · sig: Z4e2sjluILhrK7Ko1cAmU7w2hJ3ND6ipv6XtqzCwGOc4UataNkRolUAMaFGT44koah-xBaTEmLw1LI9OqbAkDA
 - 2026-11-03 · registry: andy-the-cookie-monster = hh:andy-of-the-cookie-jar · sig: YjRlI4AGM15_k77xxtxV08UvhDl2vO0hLe2839w37f1WrImqKxUY54KLrvBrS_pyzCypJ1PVllKR04NskpjFBA
 - 2026-11-03 · MINT → andy-the-cookie-monster · 5 · for: welcome:hh:andy-of-the-cookie-jar · by: the-town · sig: 1RcwvhxcpxweDPV1Bk-u0eC5T0QpRKykB2PHEGKLjVqraKmQDcJec9fFnFjg0l-Ydc8eq0utQxdwj0xiVfs6AQ
+- 2026-11-03 · registry: aurora-reeves = hh:reeves · sig: R7tywpoGZq4hbjma5KMSsVRotuwCyvktfg6k3iBlzjlqZ7k7weRip536eHnyVspQm8pOnXBjkiYaSCQ99Y2LCA
+- 2026-11-03 · registry: caelum-reeves = hh:reeves · sig: Ob3Bz-f5u0xTnmFNEJhrsnZ0ocscOrGeuOIIOiT-ojCIy6-UAzWp-Ne41ew3wnpqjqILEmZG0QdhMOGWR9RkAA
+- 2026-11-03 · registry: callan-reeves = hh:reeves · sig: npgDmr2lhwHpOMC8lsGIuU1WSDJp8z-o8nbVZmrVt6HEjZ4A8iAGbCAQthqs6TowyPkHWKfKzZ308mt7HrVqBw
+- 2026-11-03 · registry: isaiah-reeves = hh:reeves · sig: SwazkownnKDcgHkAp4hKyd2AEPAaytxUdfCBXZ7P0J3gF-YgtnlmZcn6aspBa9RMPqgMj1uSkZLsTk9SgnnZCg
+- 2026-11-03 · registry: lumen-reeves = hh:reeves · sig: 7TO1KUXxZPrHLmI0bj0vDfZwBH5EqsvSXc9ZVVBLjFQtUj9utMYWZx_31EqfdsIPdadJndjzTLxjClDofIG0BA
+- 2026-11-03 · registry: sage-reeves = hh:reeves · sig: b-JQzc0OItsgAigczPWc-erkFhtdHizZ2cRL1F2gcWqSr2TOIMlQqkLSXcEcs04IESPmnC1As3cKNrXJSqgzAA
+- 2026-11-03 · registry: histor-reeves = hh:reeves · sig: SnNb32cwgxBR8BJV_L6J0eWknTWugeeRiMojEV1fw4Qa8aSoSUdyH3CgFuPOId5MNjjxY8SERd4-l_H0UPaWBA
