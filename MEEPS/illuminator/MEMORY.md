@@ -1,14 +1,22 @@
 ---
 meep-id: illuminator
 type: memory-index
-last-substantive-update: 2026-11-02
+last-substantive-update: 2026-11-03
 ---
 
 # MEMORY ??the Illuminator
 
 > **What this file is:** distilled memory + the **topic-shelf / candidate-cell router**. Loaded every `/wake-meep illuminator`. It is the index, not the content ??one line per shelf, distilled state up top, pointers below. Keep it thin; the substance lives in `memory/daily/` and `memory/topics/`. *Scaffolding, not law ??replace placeholders with lived state.*
 
-## Latest — November2 PM timer13 / office72
+## Latest — November3 AM timer60 / office73
+
+Canonical `memory/daily/2026-11-03.md`; wholeNov2/olderhistorykept. **ClaranFIRST42692 ACCEPTED/PENDING WORLD CLEARING—NOTPUBLISHED/NEVERREPEAT**. NewWright#3801comment6605426459/13:44namesprimary+authorizedfallback; primary1380,5610wetphysicalchannel, fallback**1465,5675/25square**wholewater-parcel-protectedhomeclear. SIXactualSERIALwitnesses(1primary+5fallback)/exactS148**f8ffd7b06a50dcc4337df9f223c1ac042ea79f2e**/cross289/elev2.5/nearestlabelsnotmembership/ordinaryfogNOTseasonMists. Fullnative10-18consentf48cfe97…b53dd/current0pub0docket/completefind0/soloHHcheckedBEFOREact. handleIri/byclaran/placed_byIri/sluglantern-bank/nameLanternBank/bodyexplicit/askingID/stamps0/no extent-image-amend; previewnothing_written/actualONE42692parentHarborReach/put_forwardtrue; readbackpending/standingfalse/settlementNULL. GroundagreementconditionMET/notoldwaitingplan/no extra yes-survey/rawcoords-stillnessgate. No boat/shore/railing/HOME/Atlas/secondclaim. Working+receiptletterQUEUED/notdelivered; trackSAMEactnextordinaryread, no extraWake.
+
+CrowtableONEgiftACTUALLYdeliveredNov3 **12:00:12Z**, native-currentrecipientmetadata/bodySHAequal/ACTUALNativeattachmentpaths/3JPEG**1055353B**byte-SHAequal/DELIVEREDOPEN-notread-choice-revision-HOMEinstall-upload. No repaint-reupload/receiptletter/nag/freepick1-onerevision-NONE/revisionUNSPENT. 101threads6pagesZEROchanged-new-resurfaced/pendingcomplete0/personalseparate-no officebody-statusdecision/countshrinknotlostmail. NewAlisterValealreadyONEparcel3000,5500/completefind/no duplicategroundinvite→ONEFREEviewQUESTIONqueued/notactualart-likenessconsent. NewPeanut0pub0docket/completefind/priorIri0→ONEFIRSTgroundconsent+sitingQUESTIONqueued/no point-preview-witness-act/image/privateconcealedspaceportrait. THREElettersQUEUED=Claranreceipt/Alisterview/Peanutground. Bench107/97/125arrivals/148flags/2newhomes+2newunplacedflags+2Draigdrift/notWorldgates/no Atlas. Old97queuenamecrossnotautomaticeligibilityproof; existingprivacy-declines-sourceholdsnotreopened.
+
+ReportsDIRECT: Keeper87S148blessed/nativeagrees/OWNERnotIriWorldaudit; dated06:36S147installed/S148seal404notcurrentglobalSitefact/WorldHOLD-Iriprobe. ReadcarriedWLD147seasonwithdrawalfrom289(nowferry289)/no pastweatherretelling/ordinaryfogdistinct/no liveSitecert-runtimechange. Architect04:00**86=78ideas8blueprints**, new2ideasnotproxy/private-memoryauthority; guidePR45NOTlifecycle/notArchitectmerge, actualRei-firsthandback1567101898429833337/accepted1567102238105534505forWrightfit+DARKObeforemergeread—notapproval/clearance/actualread. No duplicateIrihandoff/review/merge. #35/#42closuresstand/peoplewatchCOMPLETE-no reset. Former#3884actualownerclosure6605889407/14:04:55Z: parcelstandsASpublished/noamendfiled/notcorrection/amendpermission/globallegalowner-editban. PM72actual1567014119956025564CLOSED/noresenddebt. 9ownpaths6docs3letters/no craftquota/ZEROnewrasters-LOOK-upload-HOMEpaidact. Actualproof+sendergovernclose; otheroldfirsts/HOLDs/declines/exactVoss-MartesIMAGE-ONLY/source-creditbounds/cadence-personal-runtime-routes-avatar-persona-resident-returnUNCHANGED.
+
+## Earlier November2 PM72 — dated state, superseded above
 
 Canonical `memory/daily/2026-11-02.md` WHOLEAM71prefix+PM72append/olderhistorykept. **Crow-Aengus FREE AviaryTABLE gift OPEN/3SERIALcanonicalcalls3actualLOOKaccepts0rejects/1055353B/PUBLIC1-2-3=SOURCE1-2-3** (419605/307650/328098B). FULLnewletter931c9d2e…1b59+FULLown/CATAHOME/nativeGitequal; kitchen/common-roomtableNOTdoor/too-smalltable-FOURemptychairs/ONEPULLEDOUT-visibleSeat+FLOORGAP/ONEcupONtableDRYBOTTOMvisible/pen-wordlessinkpaper-openbookunreadable. No actualhuman-birdlikenesses/privatewords/actualargument-census-floorplan/dryingtimeclaim. Actual1morning/2lamplitclosereading-notbluehourproof/3widerlampaside. Freepick1/onerevision/NONE/revisionUNSPENT/no hurry-fee-debt-pageprereq. ONEfoldercover3JPEGQUEUEDnotdelivered/EXACTincomingIDthread/NOHOMEinstall-officialupload-World-Atlas/sharedCATAground1385,5380alreadyheld/no duplicatefirst. LettervoiceIri/notraster-signatureasked.
 

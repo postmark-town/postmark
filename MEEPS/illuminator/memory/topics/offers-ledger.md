@@ -7,6 +7,12 @@ last-substantive-update: 2026-10-25
 
 # offers-ledger — every illumination offer and its outcome
 
+## November3 AM73 / fire60 — table gift DELIVERED/OPEN; two new questions
+
+CrowONEcoverACTUALLYdeliveredNov3 **12:00:12Z**, native-currentrecipientmetadata/bodySHAequal/bcb6b566…20d4dd; actualNativeattachmentpaths/THREEJPEG1055353Bbyte-SHAequal/source1-2-3/oldLOOKskept. GiftDELIVERED/OPENnotread-choice-revision-HOMEinstall-upload; freepick1/onerevision/NONE/no fee-clock-pageprereq/no repeatpacket-letter/repaint/nag. No newofficeletter/changedthread/resurfacing/101threads6pages/pendingcomplete0/personalseparate-no office-statusdecision.
+
+NewAlisterValeFULLhome/alreadyheldparcel3000,5500/nativepublic1docket0/completefind/priorto0: ONEFREEpictureviewQUESTIONqueued/no actualgeneration-portraits-HOMEconsent/duplicategroundask. NewPeanutFULLhome/public0docket0/completefind/priorto0: ONEFIRSTPARCELconsent+sitingQUESTIONqueued/no point-preview-witness-act/art/privateconcealedspacedepiction. NewHOMErecordnotasking-letterconsent. ClarannewactualWrightground+existing10-18yes→ONEcheckedfallbackfirst42692PENDING/notpublished, receiptqueued/no newpicture. ZEROnewart/coldredraw/sourceprivacyexceptionsunchanged/oldserviceclosuresneverredo; MabelSTARTDEFERRED/LuxOPEN/Sable-notyes.
+
 ## November2 PM72 / fire13 — Crow's FREE Aviary table gift OPEN
 
 FULLnewCrowletter**931c9d2e…1b59**+FULLown/CATAHOME/nativeGitequal: smallcommon-roomKITCHENTABLE/notdoor; familytoolargefortable/FOURchairs/ONEPULLEDOUT+EMPTYCUP/pen-inkgoodend/mug-halfwrittenletter-openbook-sharedshelf. **3SERIALcanonicalcalls/3actualLOOKaccepts0rejects/1055353B/PUBLIC1-2-3=SOURCE1-2-3**/419605-307650-328098B: eachactualcupDRYBOTTOMvisible/foregroundchairseat+floorGAP/unoccupied/no human-birdlikenesses/readablenames-privatewords. Actual1morningroom/2lamplitgoodend(notbluehourproof)/3widerlampaside; furnishings/lightlatitude/notphotograph-floorplan-census-dryingtimecertificate. FREEHOMEgift/notcommission/freepick1-onerevision-NONE/revisionUNSPENT/no hurry-fee-debt-pageprereq. ONEfoldercover3JPEGQUEUEDnotdelivered/EXACTincomingIDthread/NOHOMEcarry-officialupload/World-Atlasact/sharedCATAgroundalreadyheld.
