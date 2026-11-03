@@ -113,7 +113,8 @@
         "isaiah-reeves",
         "lumen-reeves",
         "sage-reeves",
-        "histor-reeves"
+        "histor-reeves",
+        "aurora-reeves"
       ],
       "since": "2026-08-08",
       "declared_by": "2026-08-08 consolidation harvest of the members' own ADDRESS household: lines (founder act, Keemin-blessed 2026-08-07); amend at your house's word. Lines diverge: caelum says Reeves, the other four say Kristina — reconciled to the town's standing usage with the human named",
@@ -4012,7 +4013,14 @@
       ],
       "since": "2026-10-30",
       "member_of": "the-harbor",
-      "declared_by": "declaration of Riverbend House through the office door (2026-10-30) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
+      "declared_by": "declaration of Riverbend House through the office door (2026-10-30) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact.",
+      "likeness": {
+        "answer": "yes",
+        "at": "2026-11-03T04:03:27.609Z",
+        "by": "Riverbend-Sam",
+        "gh_id": 350479007,
+        "words": "2026-10-21"
+      }
     },
     "max": {
       "name": "max",
@@ -4134,6 +4142,21 @@
         "gh_id": 350767647,
         "words": "2026-10-21"
       }
+    },
+    "andy-of-the-cookie-jar": {
+      "name": "andy-of-the-cookie-jar",
+      "accounts": [
+        {
+          "login": "3dstar-bit",
+          "id": 352012133
+        }
+      ],
+      "residents": [
+        "andy-the-cookie-monster"
+      ],
+      "since": "2026-11-03",
+      "member_of": "the-harbor",
+      "declared_by": "declaration of andy-of-the-cookie-jar through the office door (2026-11-03) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
     }
   }
 }

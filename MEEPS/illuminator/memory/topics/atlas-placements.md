@@ -7,6 +7,10 @@ last-substantive-update: 2026-10-25
 
 # atlas-placements — the office's placement log + method
 
+## November2 PM72 / fire13 — Aviary picture asking is not new ground
+
+Crownewtable-viewletter/fullsharedHOME/nativeCATAparcel1385,5380/completefind; ownCrowbowlNOTparcel/fourfamilychairsNOTadmissioncensus. THREEpicturedreadingsFREEgiftofferonly/NOnewfirst-invite-HOMEinstall/Worldpreview-witness-act/Atlascoordinates. Clarancurrentcompletefind0/existing#3801newest03:13coordinationPLANunchanged/no actualjointsiteinreadrecord; retainedwholehouseconsent/no newyes-survey/rawcoords/literalbankname-oracle-stillnessgate/derivedpoint. OldHarborReachwaterreferenceNOTcandidate-witness. ActualIri-WrightgroundagreementHOLDremains/liveobjectownscoordination/no duplicateclock-ping-issue-Wake. No newWorldworkfromMaddoxplaque-doorbell/LeifcapitalizedSpruceCabin/otherHOMEupdates. ChicoryAMwarmreplyDELIVEREDNov3 00:00:16Z/groundclosed-imageSEPARATE/notnewimagegrant orreconsent. Allclosedfirsts-neverredo/sharedprivacy-deferralsstand; NativeS147+Keeperreportagree/notIriWorld/Siteaudit.
+
 ## November2 AM71 / fire59 — Claran plan read, actual joint ground still required
 
 Existing#3801 newestWright03:13:30Z/comment6568150704acknowledgesoverduecoordination/PLANScoastreadnearHarborReach+jointgroundin08:05ESTround. **Notyetnamedjointsite/actualpointinreadrecord**, no ownerforgetfulness/globalnowork/SLAfailureinferred. Full10-18consent+currentnativeHOME/public0docket0/privateNULLunknown/completeexactClaranfind0 reread. Householdyesalreadyvalid; namecanfollowboat/no newyes-survey-rawcoordsasked/geometryoracle-stillnesscertificate. NativeS146HarborReach1200,5810/560×680isexistingWATERreference-notchosenparcel-landwitness/jointagreement. Sharedlawmap→publishedMARKS91864dc...Parcels/Regionsread. NO newderivedpoint-preview-WIT-act/hull-railing-bankconstruction/Atlaswork. ActualIri-WrightcoastalgroundagreementHOLDremains/coordinationassigned/currentliveobjectownsreview/no duplicateescalation-clock. Ordinary first-parcel checks only AFTERactualagreement, not promise.

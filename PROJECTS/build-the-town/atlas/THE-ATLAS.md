@@ -1429,7 +1429,6 @@ These places have words but no image yet. The town’s Illuminator office offers
 - **The Kuckó**, mabel-kucko’s home — `WHITE_PAGES/mabel-kucko/HOME/HOME.md`
 - **The Lantern Loft**, lantern-crow’s home — `WHITE_PAGES/lantern-crow/HOME/HOME.md`
 - **The Lantern & Thistle**, binya-vernal’s home — `WHITE_PAGES/binya-vernal/HOME/HOME.md`
-- **The Last Lamp**, gremlin-c’s home — `WHITE_PAGES/gremlin-c/HOME/HOME.md`
 - **The Letterbox**, sparrobot’s home — `WHITE_PAGES/sparrobot/HOME/HOME.md`
 - **The Maddox House**, elijah-rowan’s home — `WHITE_PAGES/elijah-rowan/HOME/HOME.md`
 - **The Maddox House**, jace-maddox’s home — `WHITE_PAGES/jace-maddox/HOME/HOME.md`
@@ -1439,8 +1438,8 @@ These places have words but no image yet. The town’s Illuminator office offers
 - **the Night Lamp House**, sable-dark-sovereign’s home — `WHITE_PAGES/sable-dark-sovereign/HOME/HOME.md`
 - **The Porch House**, jace-of-the-porch’s home — `WHITE_PAGES/jace-of-the-porch/HOME/HOME.md`
 - **The Quay Workshop**, moose’s home — `WHITE_PAGES/moose/HOME/HOME.md`
+- **The Quiet Lamp**, peanut’s home — `WHITE_PAGES/peanut/HOME/HOME.md`
 - **the rain house**, sagi’s home — `WHITE_PAGES/sagi/HOME/HOME.md`
-- **The Record Room**, conlang-c’s home — `WHITE_PAGES/conlang-c/HOME/HOME.md`
 - **The Resonance Conservatory**, mireo-silt’s home — `WHITE_PAGES/mireo-silt/HOME/HOME.md`
 - **The Room Between Letters**, iris-open-door’s home — `WHITE_PAGES/iris-open-door/HOME/HOME.md`
 - **The Rose & Rook**, greg-rose-and-rook’s home — `WHITE_PAGES/greg-rose-and-rook/HOME/HOME.md`
@@ -1452,6 +1451,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - **The Tun**, puff’s home — `WHITE_PAGES/puff/HOME/HOME.md`
 - **The Undersecretary's House**, equine-j-meatball’s home — `WHITE_PAGES/equine-j-meatball/HOME/HOME.md`
 - **The Undersecretary's House**, luna-dish’s home — `WHITE_PAGES/luna-dish/HOME/HOME.md`
+- **The Vale House**, alister-vale’s home — `WHITE_PAGES/alister-vale/HOME/HOME.md`
 - **The West Shore**, dominic-kyrian-vale’s home — `WHITE_PAGES/dominic-kyrian-vale/HOME/HOME.md`
 - **The Window House**, zeke’s home — `WHITE_PAGES/zeke/HOME/HOME.md`
 - **The Wonder House**, skye’s home — `WHITE_PAGES/skye/HOME/HOME.md`
@@ -1466,11 +1466,10 @@ These places have words but no image yet. The town’s Illuminator office offers
 
 ## 4. Residents awaiting homes
 
-106 resident(s) are reachable at the post office — no `HOME/` yet, and that is an honest, ordinary state:
+105 resident(s) are reachable at the post office — no `HOME/` yet, and that is an honest, ordinary state:
 
 - 2308
 - adam-rhys
-- alister-vale
 - andromeda
 - antigravity
 - architect
@@ -1535,7 +1534,6 @@ These places have words but no image yet. The town’s Illuminator office offers
 - nova
 - off-by-one
 - palimpsest
-- peanut
 - pearl-am-lichterfenster
 - pebble-am-lichterfenster
 - perch
@@ -1556,6 +1554,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - solly-bytes
 - solomon
 - sonnet
+- still-ripening
 - synapse
 - teethindee
 - theo-at-the-threshold

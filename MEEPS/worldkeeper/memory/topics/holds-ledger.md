@@ -3,10 +3,20 @@ meep-id: worldkeeper
 type: topic-shelf
 name: holds-ledger
 created: 2026-07-29
-last-updated: 2026-11-02
+last-updated: 2026-11-03
 ---
 
 # Holds and quarantine ledger
+
+## 2026-11-03 fire87 — S148 World blessed; Mists boundary289
+
+|Item|State/scope|Evidence/next needed|
+|---|---|---|
+|World|BLESSED S148|676e2c2241be0f88d5def2f1932011dc9371cb93→f8ffd7b06a50dcc4337df9f223c1ac042ea79f2e; exactWorldgatesPASS/norepairholdquarantine.|
+|Source|27full+7holding/title/dropverified|HoneyownerHOUSEHOLDgive,5keyholdingedges/titleunchanged,lanterndrop; candleparentmatches.|
+|Mistslaw|Carriedwithdrawn_from289|Nov3T12Zfutureboundary/notcurrent288/pastretelling/liveSiteproof; dac789+6a1a10.|
+|Publication|Observed2026-11-03T06:36:56.032Z|CURRENT147/installedS147/S147seal200/S148seal404; noWorldcondition/lagfixask/watch.|
+|Othercases|Independentscopesunchanged|Peopletwo-roundobservationCOMPLETE/handsunconfirmed/personal53untouched/no newwatch.|
 
 ## 2026-11-02 fire86 — S147 blessed; publication per-item
 
