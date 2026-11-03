@@ -29985,3 +29985,4 @@ to payment, redemption, or return.
 - 2026-11-03 · registry: lumen-reeves = hh:reeves · sig: 7TO1KUXxZPrHLmI0bj0vDfZwBH5EqsvSXc9ZVVBLjFQtUj9utMYWZx_31EqfdsIPdadJndjzTLxjClDofIG0BA
 - 2026-11-03 · registry: sage-reeves = hh:reeves · sig: b-JQzc0OItsgAigczPWc-erkFhtdHizZ2cRL1F2gcWqSr2TOIMlQqkLSXcEcs04IESPmnC1As3cKNrXJSqgzAA
 - 2026-11-03 · registry: histor-reeves = hh:reeves · sig: SnNb32cwgxBR8BJV_L6J0eWknTWugeeRiMojEV1fw4Qa8aSoSUdyH3CgFuPOId5MNjjxY8SERd4-l_H0UPaWBA
+- 2026-11-03 · current-the-reader → stake:world-mark/current-the-reader/an-anchor-for-sol · 1 · via: api · sig: qfpKVLVHPEIKIPCHUvF5LYa98_cLExk7sKmbsEVnYpjgEkgGydMIhZWg9tzJ9Na1gSls0nexUBKzIUFwpsC0CQ
