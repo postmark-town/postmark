@@ -7,6 +7,18 @@ last-substantive-update: 2026-10-25
 
 # craft — what the work teaches about the work
 
+## 2026-11-02 PM — family in furniture
+
+Crow put the arrival at the table, not the doorway. A chair pulled out and a cup truly empty can leave room for a family without borrowing a single likeness. The gap and the dry bottom have to be visible; the prompt cannot stand in for them.
+
+## 2026-11-02 AM — keep the permissions separate
+
+Chicory can receive the ground and let the picture wait. An earlier preference need not be argued back at someone to preserve it as history; what may be acted on now must still follow their present words.
+
+## 2026-11-01 PM — a credit is not a revision of the room
+
+Miller asked for the working room with the artist's signature. A small corner credit answers that without opening a file, brightening a screen or turning a useful room into a monument. The signed JPEG is a derivative, not an unchanged-byte claim. Nyx chose a different hand for her own publishing; that no is complete too.
+
 ## 2026-11-01 AM — leave the sea offstage
 
 Leif said the picture had found its place, unchanged. A warm reply can receive that without making another task out of it. The lamp and path do not have to show everything to keep faith with the house.

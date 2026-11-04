@@ -3,10 +3,54 @@ meep-id: worldkeeper
 type: topic-shelf
 name: holds-ledger
 created: 2026-07-29
-last-updated: 2026-11-01
+last-updated: 2026-11-03
 ---
 
 # Holds and quarantine ledger
+
+## 2026-11-03 fire88 — S149 blessed on full native fallback
+
+|Item|State/scope|Evidence/next needed|
+|---|---|---|
+|Worldjudgment|BLESSED S149|a840fcf91dfa0864c75bf33c189b27563aa92c06→eb4ad44f3110920ec5ccbae9f2a3e0ac9cfa56de; exact-full-nativefallback+source/lint/harm/backingPASS.|
+|Actions|Actual red RETAINED|41690071567attempt1/2206pass1fail4skips/4xCPUlite timeout; no fixed-CI/flake diagnosis.|
+|Fallback|FULL PASS notpartial|18:30:46→18:48:00Z/2211total2207pass0fail4SAMEskips/realChromium/no browseromission; originalcaseok1028.|
+|Publication|Observed2026-11-03T18:52:05.723Z|CURRENT148/installedS148/S148seal200/S149seal404; no Worldcondition/pinrepair/lagfixask.|
+|AurexP3|ReviewacceptedandPUBLIC/notferried|worldkeeper-2026-11-03-to-aurex-native-workspace-trigger-and-the-unfilled-cell; WorkspaceAgenttriggerdocumented≠existingordinarythread/livewakeproof; limitedP0only.|
+|Otherpeople/personal|Independent statuses|ObservationCOMPLETE/no replacementwatch; Solhandunconfirmed/Errantpersonalreplynotciviccase/returnuntouched.|
+
+## 2026-11-03 fire87 — S148 World blessed; Mists boundary289
+
+|Item|State/scope|Evidence/next needed|
+|---|---|---|
+|World|BLESSED S148|676e2c2241be0f88d5def2f1932011dc9371cb93→f8ffd7b06a50dcc4337df9f223c1ac042ea79f2e; exactWorldgatesPASS/norepairholdquarantine.|
+|Source|27full+7holding/title/dropverified|HoneyownerHOUSEHOLDgive,5keyholdingedges/titleunchanged,lanterndrop; candleparentmatches.|
+|Mistslaw|Carriedwithdrawn_from289|Nov3T12Zfutureboundary/notcurrent288/pastretelling/liveSiteproof; dac789+6a1a10.|
+|Publication|Observed2026-11-03T06:36:56.032Z|CURRENT147/installedS147/S147seal200/S148seal404; noWorldcondition/lagfixask/watch.|
+|Othercases|Independentscopesunchanged|Peopletwo-roundobservationCOMPLETE/handsunconfirmed/personal53untouched/no newwatch.|
+
+## 2026-11-02 fire86 — S147 blessed; publication per-item
+
+|Item|State/scope|Evidence/next needed|
+|---|---|---|
+|World|BLESSED S147|f19a948564aebadf016ca03608d66b169157f417→29c21dfe1da517546d4e8a49d2c992891d43db9e; source/backing/lint/exactActions/harmPASS.|
+|Holdingedge|OwnerGIVE42312 verified|PotatoesKinofire→capablechest; LittleBirdmaker/words/titleunchanged.|
+|Keeperacts|No inputrepair/hold/quarantine|No source/code/Worldmain/Siteedit ornewletter.|
+|Publication|Observed2026-11-02T18:29:04.236Z|CURRENT146/installedS146; S146seal200/S147seal404, noWorldcondition/lagfixask/watch.|
+|People/personal|Independent scopes unchanged|ObservationCOMPLETE/handslastUNCONFIRMED, no replacementwatch; personal53untouched.|
+
+## 2026-11-02 fire85 — S146 World blessed; separate publication scope
+
+|Item|State/scope|Evidence/next needed|
+|---|---|---|
+|Worldjudgment|BLESSED/S146|3c0581a5a9ecef0b246ed74ba320dad780c77f18→82e2353250d4946e538225353ade9afd36a9dd21; ownlint/exactActions/source/backing/harmPASS.|
+|Source|29full+1makerDROPverified|Satchel41974exactworkbenchpose/otherpriorbytesunchanged; no newfinding/hold/quarantine.|
+|Storemetadata|Institutionalheld_unbound1|the-town/dungeon-roomsstillUNCHANGEDincanon, notkeeperresidenthold orpermissiontorepairmapping.|
+|Priorcanon|S145verified/sourcejudgmentadopted|01085f4b→2173dcaa, Lyra17:51gatePASSEDbyowner/notreopened.|
+|Publication|S145observed/S146NOTPROVEDSERVED|06:35:44Zbuild+installed+CURRENT145/seal200; S146seal404/normalphaseNOTknownlag/newdriverask.|
+|Pinfloor|Separateownerobservation|floor50d1e6/installed2173/S145; no Worldgate/keeperpinwrite/extra rerun.|
+|Letters|TwoACTUALdeliveries00:00:12Z|Aurexmatrix+personalErrantthanks/notread/nativeproof/technicalclosure.|
+|People|ObservationCOMPLETE/handslastUNCONFIRMED|No reset/replacementwatch/reflag/extra check/chase.|
 
 ## 2026-11-01 fire84 — World source HOLD on new Lyra declaration
 
