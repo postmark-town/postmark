@@ -49,6 +49,7 @@ import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { join, resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { townDay } from "./crossings.mjs";
+import { reservedHandleRefusal } from "./reserved-handles.mjs";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const HANDLE_RE = /^[a-z0-9][a-z0-9-]*$/;
@@ -86,6 +87,9 @@ export function classifyVerify(output) {
 export function renameInRegistry(registry, from, to, { date } = {}) {
   const src = registry?.[from];
   if (!src) throw new Error(`registry has no handle "${from}" to rename`);
+  // berth-* and human-of-*: the town's one reserved-prefix rule (tools/reserved-handles.mjs, POS-884)
+  const reservedPrefix = reservedHandleRefusal(to);
+  if (reservedPrefix) throw new Error(reservedPrefix);
   if (registry[to] && registry[to].id !== src.id)
     throw new Error(`"${to}" already exists and points at a different account id (${registry[to].id} vs ${src.id})`);
 

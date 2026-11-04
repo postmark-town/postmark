@@ -88,7 +88,7 @@ test('a valid fictional first-join bundle gets every mechanical check, bound to 
   assert.equal(r.report.base, t.base);
   assert.deepEqual(r.report.rooms, ['fern']);
   assert.deepEqual(Object.fromEntries(r.report.checks.map((c) => [c.name.split(':')[0].split(' (')[0], c.result])), {
-    scope: 'pass', 'file kinds': 'pass', 'size courtesy': 'pass', lint: 'pass', 'INDEX row': 'not-applicable',
+    scope: 'pass', 'file kinds': 'pass', 'size courtesy': 'pass', handle: 'pass', lint: 'pass', 'INDEX row': 'not-applicable',
     'envelope pre-flight': 'pass', identity: 'not-applicable', 'registry rows': 'not-applicable',
   }, JSON.stringify(r.report.checks, null, 2));
   assert.match(r.out, /^<!-- join-preflight -->\n/);
@@ -158,6 +158,26 @@ test('unsafe file kinds are named and never written: a symbolic link, an executa
   assert.match(check(r.report, 'scope').evidence.join('\n'), /`WHITE_PAGES\/fern\/inbox\/forged\.md` is in the inbox/);
   assert.equal(check(r.report, 'envelope').result, 'pass', 'the safe pages are still checked');
   assert.equal(git(t.dir, ['status', '--porcelain', '--untracked-files=all']), '', 'nothing of it stays on disk');
+});
+
+test('POS-884: a proposed room wearing a reserved prefix fails the handle check by the one rule\'s sentence, beside an ordinary room that passes', () => {
+  // Both rooms are safe room names and pass every other check, so the failure is the prefix rule's
+  // (tools/reserved-handles.mjs) alone. The report still decides nothing; it names the rule.
+  const t = town();
+  for (const [handle, prefix] of [['berth-inv-tide', 'berth-'], ['human-of-inv-reed', 'human-of-']]) {
+    const bundle = Object.fromEntries(Object.entries(FERN).map(([p, v]) => [p.replace('WHITE_PAGES/fern/', `WHITE_PAGES/${handle}/`), typeof v === 'string' ? v.replaceAll('fern', handle) : v]));
+    const r = preflight(t, head(t, bundle));
+    assert.equal(r.code, 0, r.err);
+    assert.deepEqual(r.report.rooms, [handle]);
+    const c = check(r.report, 'handle');
+    assert.equal(c.result, 'fail', JSON.stringify(r.report.checks, null, 2));
+    assert.match(c.evidence.join('\n'), new RegExp(`wears the ${prefix} reserved prefix \\(the reserved-prefix rule: no resident handle begins with berth- or human-of-\\)`));
+    assert.deepEqual(r.report.checks.filter((x) => x.result === 'fail').map((x) => x.name), [c.name], 'the prefix rule is the one failure');
+    assert.match(r.out, /\| handle: no reserved prefix \(tools\/reserved-handles\.mjs\) \| \*\*fail\*\* \|/);
+  }
+  const ok = preflight(t, head(t, FERN));
+  assert.equal(check(ok.report, 'handle').result, 'pass', 'the ordinary room passes the same check');
+  assert.equal(git(t.dir, ['status', '--porcelain', '--untracked-files=all']), '', 'the base checkout is left exactly as it was');
 });
 
 test('a PR that brings no new room is not a join: nothing to preflight', () => {
