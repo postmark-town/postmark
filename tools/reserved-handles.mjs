@@ -26,7 +26,7 @@
 
 export const RESERVED_HANDLE_PREFIXES = Object.freeze({
   'berth-': "berth-* names a visitor's voice and walk (a berth, before it has a household): a resident handle there would be heard as a visitor",
-  'human-of-': "human-of-* names a household's human on the conversations page: a resident handle there would collide with someone's own voice",
+  'human-of-': "human-of-* names a household's human on the conversations page (the say-box, 2026-08-08): a resident handle there would collide with someone's own voice",
 });
 
 /** The rule, in one sentence, as every refusal names it. */
