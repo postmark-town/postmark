@@ -7,7 +7,7 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
-watermark: 2026-11-04T11:07:17Z
+watermark: 2026-11-04T13:19:25Z
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
 harbor-qna-cursor: null
@@ -17,6 +17,18 @@ audit-join-seq: 1279
 audit-drained-through: 1532
 
 audit-source-head: 26a92248ef5b2ca4494e5fa77ceeb6545c292012
+
+## November4, 2026 8:00AM EST scheduled desk check - NORMAL08/fire359
+
+**No new arrivals, address joins, Harbor waiting or chart questions.** FIVE savedDATE11-03 own-key guards Amet/Andy/Aurora/Calliope/Lorem ONCE200/already settled/NOTHING WRITTEN; no new full audit, old Nov2 guard or ledger verifier. **ONLY Amet first Ferry welcome remains OWED; applicant action NONE.** Exact only-Amet intended-inbox/Postmaster-outbox headers and actual canonical mail-ledger empty atsource6b48; unprinted writing/queue/pickup UNKNOWN, not failed/delivered/read/actual next-sailing promise. The post-sail own-mail66 check is not Town/Amet proof. Earlier FOUR welcomes and ALL pages remain CLOSED/STOP, not probed; no bodies/reminders/resend/Registrar welcome or Calliope flag.
+
+**Once-daily consent census COMPLETE and REPORTED, anonymous aggregates only:** 217 households/78yes/1no/138unanswered/0unknown. Since Nov3SUCCESS2dee13:08:33.265UTC:3newlyanswered/1revised/0removals/3added households (1 newly answered among added). Top20 household cumulative PRIMARY EARNED including cutoff ties:5unanswered of20/0unknown. Source6b48ae4a873a5a7187f65bcad57916f90910ce4d observedNov4 13:08:57.075UTC. Two retired/unassigned recipients carry5primary earned; cutoff-to-next gap18 makes membership invariant, NOT complete earnings attribution; treasury excluded/no guessed aliases. No individual household answer/history/by/form/words/ranked rows cached or printed, no appearance/sheet query, outreach, consent edit, admission/card/payout/financial grant.
+
+Private attempt a3802d1a0047184bffdba4254c6430f6ab7fadd4 committed BEFORE all current/prior consent and ranking sources. Actual aggregate-only report1567526448644886588 SENT to actual Rei+confirmed human; ONLY afterward successful revision/time commit e7bbb1dc963eb884e3b5571311feee760e1be351. One in-memory fold/comparison/earned cohort, no source retry. **ALL later UTCNov4 rounds SKIP ENTIRE census/current-prior-consent/earned-ranking sources/folds even changed data—not merely skip the report.** Removals0/no missing-key investigation or invented household replacement.
+
+**Separate non-join letter PR [4453](https://github.com/postmark-town/postmark/pull/4453): sender branch cleanup, NOT delivery blocked or reviewer pickup.** Exact own-scope author meatwife/264048627 pin verified for seven-verity; one added outbox letter. Witness6630663893 reports the copy already delivered. Independent WHOLE-byte comparison (CRLF normalization only) matches exactly ONE actual intended-inbox copy and exact canonical ID ONCE, MAIN outbox absent. This defeats the simple alternate same-title/day-different-letter explanation without printing/caching words or subject. It is NOT a clean merge candidate: do not recreate/resend/alter the delivered words or merge around the witness. Existing sender-facing witness supplies the cleanup; no duplicate Registrar comment, founder escalation, new bug, repair or personal ping. [4452](https://github.com/postmark-town/postmark/pull/4452) is already MAIN/ancestry verified, one self-WINDOW path METADATA ONLY/not pane words-counts-render-approval or Registrar merge. Nine open PRs; seven other held threads unchanged/NOT reread. Same-round closing caught the SAME4400head/body with [controlling comment6628149840](https://github.com/postmark-town/postmark/pull/4400#issuecomment-6628149840) edited13:19:25UTC. Latest SCOPE NOTE supports only the named pinned-byte comparisons, inherited-delta inspection and named local runs with CI/builder attribution; no failed test/new code finding and runs/comparisons NOT KNOWN affected by a method concern. Combined readiness is the lead's call, not founder fit/approval or Registrar test proof. Prior11:07pending-method-assessment/10:33custody labels are historical—not latest wording; do not infer explicit lead acceptance or closure. Updated-time rather than creation-only comment read, saved closing snapshots consumed/no another queue poll/census/lifecycle replay. Existing Rivet Build-report decision route stays unchanged/no new owner ask.
+
+PR watermark ALONE advancesNov4 13:19:25UTC. AuditDATE11-03/source26a92248/raw1530join1279drain1532chartnull HELD/unexported UNKNOWN/no date reset. Next EXISTING Nov4 10:00AM EST15UTC: five savedNov3guards+ONLYAmetwelcome/ZEROallpage-oldwelcomes/nine PR returns; tinyattemptdate FIRST means ENTIRE census skip. Ownmail66quiet/outgoing0/inbox32same/no query/support16416DELIVEREDCLOSED/same household-label owner procedure UNCONFIRMED via Rei REPORT-notpickup-finalanswer-apply/no repeatask. Curiosity67CarillonCOMPLETE/private/no pauseddebt; prior map-learning-resident-review complete. Dec3one-return SUPPORTED/request recorded NOT BOOKED/no admin-secondproposal-timer. Two prevention items remain in Rei REPORT, not actual pickup/approved fixes; no fresh caller/TLS/native error, shared-helper/CA/runtime/credential/schedule change, new live test or closed6/12 retrospective expansion.
 
 ## November4, 2026 6:00AM EST scheduled desk check - NORMAL06/fire358
 
