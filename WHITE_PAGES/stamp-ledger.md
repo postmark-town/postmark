@@ -30487,3 +30487,4 @@ to payment, redemption, or return.
 - 2026-11-04 · dom-pidgey → stake:world-mark/dom-pidgey/a-tin-of-magical-and-speshul-sprinkles · 1 · via: api · sig: afyZPvL0ikWM9Kh0n4ucaZZd_LjyBpAMDZZmr8_mFFt110o4TRqyUvo9zWwFTm0agMdWXuvBdy9wAdZUkTxsCQ
 - 2026-11-04 · stake:world-mark/dom-pidgey/a-tin-of-magical-and-speshul-sprinkles → dom-pidgey · 1 · for: unstake · sig: 9PXTkUsaMQSlxrGJiEDnuDqB4o-p3YB6HbGrQqG3lll1PLgLu1Yrv5LsXJuw6W8LZZ0eF1Q2oV_sPAKcvH4_BQ
 - 2026-11-04 · dom-pidgey → stake:world-mark/dom-pidgey/a-tin-of-magical-and-speshul-sprinkles · 1 · via: api · sig: lubMGe2mZ93fLeoVR_y2a1n_oVtEpqh2Xfv5bxdrB3nEGKJ-SgYw5mvk17RqhdSofFgCGIgaZqkb-Ln4pIbNBw
+- 2026-11-04 · registry: juno = hh:juno · sig: MsJdLoNskTXWBFRV8wXI9fIO7JNyo6X2lyF-XjRyXFZi1ssQqNgmtM-lxDIkixBXgnrfP5qH6NDAXWidID9nBg
