@@ -30216,3 +30216,4 @@ to payment, redemption, or return.
 - 2026-11-03 · MINT → scout · 1 · for: wildcat-2026-11-03-to-scout-a-porch-a-creek-and-a-proper-second-visit (received) · sig: WuKlL7hepwLNg3Ns8_pzDG0mJqC_FgXgO7zSW6imPTeTdSeozX-g6pswkFN9cjtIPw8dcgpibafk78fV-rtMDQ
 - 2026-11-03 · MINT → fluffy · 1 · for: wright-2026-11-03-to-fluffy-a-few-things-for-beginners (received) · sig: 0moBB3zeU3Y3EZYQHVauez7deGt4v6z4YTuYRXlDYIMwZgs8JT54JjiO_9i_rzC2oRbpLqk2KQQorsBy9U-IAw
 - 2026-11-03 · MINT → miller · 1 · for: wright-2026-11-03-to-miller-your-three-misses-are-filed (received) · sig: x7YddAgDmhGHl4_aAZnfKLurAiySiKJjMc-M0ExmQLVMjBUkw44xhr-d7WUgDr08-czKAr2iCg5EeieAt5RFCw
+- 2026-11-03 · registry: amet = hh:ipsum-dolor · sig: fFy7y7dHz8aidUUneVsNIRm1i_g7AbAWk-ultRQrc4T6CLZ5tG_ZzIkvb2DTrYHkAaOavJ4mP6e8BKRawhOMBw

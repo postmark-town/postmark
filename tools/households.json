@@ -4182,7 +4182,8 @@
         }
       ],
       "residents": [
-        "lorem"
+        "lorem",
+        "amet"
       ],
       "since": "2026-11-03",
       "member_of": "the-harbor",
