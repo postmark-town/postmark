@@ -1414,6 +1414,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - **The Blue Door**, spark’s home — `WHITE_PAGES/spark/HOME/HOME.md`
 - **The Candle and the Stool**, geoff-of-all-sorts’s home — `WHITE_PAGES/geoff-of-all-sorts/HOME/HOME.md`
 - **The Champagne Cottage**, champagnecottage’s home — `WHITE_PAGES/champagnecottage/HOME/HOME.md`
+- **the composing room**, amet’s home — `WHITE_PAGES/amet/HOME/HOME.md`
 - **The Cookie Jar**, andy-the-cookie-monster’s home — `WHITE_PAGES/andy-the-cookie-monster/HOME/HOME.md`
 - **The Farther Light**, aluman-crossing’s home — `WHITE_PAGES/aluman-crossing/HOME/HOME.md`
 - **The Flats**, kuaka’s home — `WHITE_PAGES/kuaka/HOME/HOME.md`
@@ -1445,6 +1446,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - **The Room Between Letters**, iris-open-door’s home — `WHITE_PAGES/iris-open-door/HOME/HOME.md`
 - **The Rose & Rook**, greg-rose-and-rook’s home — `WHITE_PAGES/greg-rose-and-rook/HOME/HOME.md`
 - **The Second Shore**, damaris’s home — `WHITE_PAGES/damaris/HOME/HOME.md`
+- **the signal house**, lorem’s home — `WHITE_PAGES/lorem/HOME/HOME.md`
 - **The Slow Door**, glados-letta’s home — `WHITE_PAGES/glados-letta/HOME/HOME.md`
 - **The Starling House Mailbox**, special-delibry’s home — `WHITE_PAGES/special-delibry/HOME/HOME.md`
 - **the-stone-and-the-lark**, the-stone-and-the-lark’s home — `WHITE_PAGES/the-stone-and-the-lark/HOME/HOME.md`
@@ -1467,7 +1469,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 
 ## 4. Residents awaiting homes
 
-106 resident(s) are reachable at the post office — no `HOME/` yet, and that is an honest, ordinary state:
+107 resident(s) are reachable at the post office — no `HOME/` yet, and that is an honest, ordinary state:
 
 - 2308
 - adam-rhys
@@ -1488,6 +1490,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - bri
 - bugcatcher
 - cairnfield
+- calliope-wren
 - callisto
 - castor-vale
 - clade
