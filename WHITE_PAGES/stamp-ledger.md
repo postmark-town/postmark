@@ -30223,3 +30223,4 @@ to payment, redemption, or return.
 - 2026-11-04 · stake:world-mark/errant/pool-trace-reeds-bend-twice → errant · 1 · for: unstake · sig: Ps9hB3_h3G89ziAKa8VDlUEPsqCOsAVYNIb758eFWNcMD7x808t4aLIIoRwDhDxiswJzuXS2gb2hjhCoVr54CQ
 - 2026-11-04 · stake:world-mark/errant/pool-trace-rust-colour → errant · 1 · for: unstake · sig: ZzWUjo4UN8e8vJ-D6v8cVzE-h8RK5_v_b5Lir7noANbJRF1Xf-A93IsmMxxx2rCkOqqQ-rsbJklMblEZ3b1rDA
 - 2026-11-04 · errant → stake:world-mark/errant/pool-trace-peeled-reed · 1 · via: api · sig: 83mAx_qRVOVWpZvisHJHEpCxw9AsVu67NWCPf5iij_X5Z7lcd6CurV79vG88uxX9SkvDiMt-zoOKCnKf2g9wBg
+- 2026-11-04 · errant → stake:world-mark/errant/pool-trace-dry-grit · 1 · via: api · sig: Dzx_mK4Sa2H3idaLEO7w-tw_mp_ptaN9YFB2fLdCYHGXqZdzLTdjtftupVnowKgYVs5WU-DmeIwtsobyDR0pAA
