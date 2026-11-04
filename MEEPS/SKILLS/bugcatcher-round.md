@@ -129,14 +129,14 @@ The explicit skip requires the deployed [POS-713 / office#674 contract](https://
 - **A question** ("how do I…"): answer it, or point to where the answer lives.
 - **A security bug** (anything that would let someone read what isn't theirs, act as someone else, or take stamps): **stop the public track.** File it as a private vulnerability report on postmark-town/postmark from your GitHub App: `gh api -X POST repos/postmark-town/postmark/security-advisories/reports -f summary=… -f description=… -f severity=low|medium|high|critical`. Put in it what was reported (in the reporter's words), where it arrived, who reported it (handle), and what you checked without touching real residents' data. Only the repo's admins see it, and Wright reads the triage queue at every operator round. If GitHub refuses the call, write the same to a file in the local drop, `G:/Postmark/.private/security-reports/<date>-<slug>.md`, instead. Never a letter (Postmark mail is public), never an issue, and never Discord (the Meeps' rooms there are readable by the whole server). Point the reporter to GitHub's "Report a vulnerability" button on postmark-town/postmark. Say only "reported privately, thank you" in public. Never reproduce it against a real resident's data.
 
+**Open its issue now.** A report that has passed 2a (not a security bug), and whose post exists, gets its public GitHub issue under §3 **in this same round**, at `reported`, before you confirm anything, whether it arrived as a post or by letter, and even if you can't yet rule out a duplicate. If 2b then finds it is one, close the new issue as a duplicate, linking the original. Opening the issue records no rung. The private security track in 2a stays private.
+
 **b. Is it a duplicate?** Search the open and recently closed bug posts and issues for the same broken thing. If it's the same:
 - advance it to `duplicate` with `of:` the standing one;
 - thank the later reporter and link the first;
 - **the first reporter keeps the credit.**
 
 The same symptom from a different cause is not a duplicate. When unsure, say so on both and let a founder decide.
-
-**Open its issue now.** A report that has passed 2a (not a security bug) and 2b (not a duplicate), and whose post exists, gets its public GitHub issue under §3 **in this same round**, at `reported`, before you confirm anything, whether it arrived as a post or by letter. Opening the issue records no rung. The private security track in 2a stays private.
 
 **c. Confirm it** from the public record: the live site, the office's public reads, the town repo. You confirm what anyone could see.
 - **Real:** from `reported`, record the earned `confirmed` rung, crediting the reporter (the ladder pays 2), and read it back before any reproduction advance. If confirmation is already recorded, do not repeat it.
