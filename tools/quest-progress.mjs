@@ -24,7 +24,7 @@ import { join, resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
   parseDeliveries, householdKeys, parseStampLedger, parseLaws, deriveMints, meepChecker,
-  foldPairFriendships, currentHouseholds, classifyEntry,
+  foldPairFriendships, currentHouseholds, classifyEntry, houseCanonOf,
 } from './stamp-mint.mjs';
 import { townDay as townDayNow } from './crossings.mjs';
 import { listRoomDirs } from './envelope.mjs';
@@ -41,6 +41,40 @@ export function loadRegistry(repo) {
   const p = join(repo, 'quest-registry.json');
   return JSON.parse(readFileSync(p, 'utf8'));
 }
+
+// ── BRING A NEIGHBOUR's COUNT (POS-816/g) ─────────────────────────────────────
+// The row is `monthly` (Darko 2026-11-03 09:42 EST: "if it's easier to just make a
+// monthly cadence and keep things flat that's fine with me"), and its progress is
+// the cap it is paid under: the household's INVITER-side payouts dated in the town
+// month, "at most 10 a month, counted in the month paid" (POS-576/c; POS-816/b,
+// "Month paid"), the same month the verifier's cap reads (stamp-mint.mjs §
+// inviteCapKey: the inviter's house and the line's own date). The invited side's
+// 5 more is not counted: it is not capped.
+//
+// PURE: the ledger's entries in, a Map of the inviting household's canonical key
+// to its count out. `canon` folds a key to its house (houseCanonOf), so a house
+// named under its account spelling or a slug it once carried counts as itself.
+export function invitesPaidByHouse(entries, month, canon = (k) => k) {
+  const paid = new Map();
+  for (const e of entries) {
+    const c = classifyEntry(e.canonical);
+    if (c.kind !== 'invite' || c.side !== 'inviter' || c.date.slice(0, 7) !== month) continue;
+    const k = canon(c.inviter);
+    paid.set(k, (paid.get(k) ?? 0) + 1);
+  }
+  return paid;
+}
+
+// The declared households, for the one-house-two-spellings fold; none when the
+// file is absent or unreadable (then a key folds to itself, as it does in a
+// checkout without the printouts).
+const declaredHouseholds = (repo) => {
+  try { return JSON.parse(readFileSync(join(repo, 'tools', 'households.json'), 'utf8'))?.households ?? {}; }
+  catch { return {}; }
+};
+
+/** The one MONTHLY row this fold can count, and the progress field it counts from. */
+export const MONTHLY_FIELD = Object.freeze({ 'bring-a-neighbour': 'invite' });
 
 // Per-handle today's progress, folded straight off deriveMints. Returns a Map
 // handle -> { send, receive, household: { key, size, send, receive } }.
@@ -72,6 +106,10 @@ export function foldQuestProgress(repo, { today = townDay(), base = null } = {})
     sizeByKey.set(rec.key, (sizeByKey.get(rec.key) ?? 0) + 1);
   }
   const keyOf = (handle) => roll.get(handle)?.key ?? `solo:${handle}`;
+  // Bring a neighbour's count: this town month's inviter-side payouts, by inviting household (POS-816/g).
+  const month = today.slice(0, 7);
+  const canon = houseCanonOf(declaredHouseholds(repo));
+  const invitesPaid = invitesPaidByHouse(entries, month, canon);
 
   const perHandle = new Map();
   const perHouse = new Map(); // key -> { send, receive }
@@ -106,6 +144,8 @@ export function foldQuestProgress(repo, { today = townDay(), base = null } = {})
       sentTo: ph.sentTo,
       heardFrom: ph.heardFrom,
       household: { key, size: sizeByKey.get(key) ?? 1, ...(perHouse.get(key) ?? { send: 0, receive: 0 }) },
+      // the household's, whoever of it asks: the month it was counted for, and how many it was paid in it
+      invite: { month, paid: invitesPaid.get(canon(key)) ?? 0 },
     });
   }
   return out;
@@ -244,6 +284,19 @@ export function boardForHandle(registry, prog, handle, today, { complete: inject
       ...(q.subtype ? { subtype: q.subtype } : {}),
       ...(q.awaits ? { awaits: q.awaits } : {}),
     };
+    // THE MONTHLY ROW (POS-816/g): Bring a neighbour is COUNTED when the progress entry was folded for this
+    // town month, as the household's inviter-side payouts against the cap of 10 (invitesPaidByHouse). An entry
+    // from a snapshot that predates the field, or was folded for another month, did not look this month: the
+    // row stays UNCOUNTED (progress: null), never a zero it cannot know ("uncounted is not zero", above).
+    const mf = MONTHLY_FIELD[q.id];
+    const looked = mf && p[mf]?.month === String(today ?? '').slice(0, 7) ? p[mf] : null;
+    if (looked) {
+      return {
+        ...base,
+        progress: looked.paid, complete: looked.paid >= q.target, counted: [],
+        household: { size: p.household.size, total: looked.paid, cap_shared: false },
+      };
+    }
     if (!f) {
       return {
         ...base,

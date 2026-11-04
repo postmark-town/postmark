@@ -11,7 +11,8 @@ import { mkdtempSync, mkdirSync, writeFileSync, rmSync, copyFileSync } from 'nod
 import { join, dirname } from 'node:path';
 import { tmpdir } from 'node:os';
 import { fileURLToPath } from 'node:url';
-import { foldQuestProgress, questBoard, loadRegistry, foldLeaderboard, renderSnapshot, boardForHandle, BOARD_LAW, COUNTABLE_FIELD, onboardingBoard, onboardingFactsFor, welcomedHouseholds, foldHouseholdBars, foldFriendships, KIND_LABEL, PAIR_RULE } from './quest-progress.mjs';
+import { foldQuestProgress, questBoard, loadRegistry, foldLeaderboard, renderSnapshot, boardForHandle, BOARD_LAW, COUNTABLE_FIELD, MONTHLY_FIELD, invitesPaidByHouse, onboardingBoard, onboardingFactsFor, welcomedHouseholds, foldHouseholdBars, foldFriendships, KIND_LABEL, PAIR_RULE } from './quest-progress.mjs';
+import { INVITE_CAP_PER_MONTH } from './stamp-mint.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const REPO = join(HERE, '..');
@@ -225,7 +226,12 @@ test('live ledger: every handle within [0, target], flags consistent', () => {
   // PSA on the same commit). This assert had pinned the D5 draft state and
   // nobody trued it with the ruling — caught while adding first-idea.
   assert.ok(reg.quests.some((q) => q.id === 'darko-fund' && q.status === 'open'));
-  assert.equal(reg.quests.length, byCadence('daily') + byCadence('milestone') + byCadence('one-time') + byCadence('ongoing'),
+  // 0 -> 1 (2026-11-03, POS-816/g): bring-a-neighbour is the first MONTHLY row, a flat cadence (Darko 09:42
+  // EST: "if it's easier to just make a monthly cadence and keep things flat that's fine with me"). Until then it
+  // wore the pots' 'ongoing', which the office reads as a funding pot. The pots keep 'ongoing' (5 rows above).
+  assert.equal(byCadence('monthly'), 1);
+  assert.ok(reg.quests.some((q) => q.id === 'bring-a-neighbour' && q.cadence === 'monthly' && !q.subtype));
+  assert.equal(reg.quests.length, byCadence('daily') + byCadence('monthly') + byCadence('milestone') + byCadence('one-time') + byCadence('ongoing'),
     'every row wears one of the known cadences — an unknown cadence renders nowhere');
   assert.ok(reg.quests.some((q) => q.id === 'correspond-depth' && q.cadence === 'milestone'));
   // "good to post the ec2 quest too" — the founder's word, 2026-08-21: the pot
@@ -324,12 +330,17 @@ test('BOARD_LAW: every registry row has a board row, by id, whatever its cadence
   } finally { rmSync(d, { recursive: true, force: true }); }
 });
 
-test('UNCOUNTED IS NOT ZERO: only the two countable rows carry a number', () => {
+test('UNCOUNTED IS NOT ZERO: only the rows this fold counts carry a number (the two daily rows, and the one monthly row)', () => {
+  // Until 2026-11-03 this asserted that ONLY the two daily rows carried a number. POS-816/g added Bring a
+  // neighbour's monthly count (the household's inviter-side payouts this town month: a clean 0 the fold DID
+  // look at). Every other row is still uncounted; the monthly row is measured, and its own tests are below.
   const reg = loadRegistry(REPO);
   const d = town([['alice', 'bob'], ['alice', 'carol']]);
   try {
     for (const q of questBoard(d, 'alice', { today: DAY }).quests) {
-      if (COUNTABLE_FIELD[q.id]) {
+      if (MONTHLY_FIELD[q.id]) {
+        assert.equal(q.progress, 0, `${q.id} is counted by the monthly fold: no payout in ${DAY.slice(0, 7)}, a measured zero`);
+      } else if (COUNTABLE_FIELD[q.id]) {
         assert.equal(typeof q.progress, 'number', `${q.id} is countable and carries a number`);
       } else {
         assert.equal(q.progress, null,
@@ -610,4 +621,95 @@ test("#3616: a house named on the ledger reads as ONE house on the quest card, w
     assert.equal(q.household.size, 5);
     assert.equal(q.household.total, 3);
   } finally { rmSync(d, { recursive: true, force: true }); }
+});
+
+// ── Bring a neighbour's count (POS-816/g) ────────────────────────────────────
+// The row is MONTHLY (Darko 2026-11-03 09:42 EST), and its progress is the cap it is paid under: the
+// household's INVITER-side payouts dated in the town month, "at most 10 a month, counted in the month
+// paid" (POS-576/c; POS-816/b "Month paid"). Every household, handle and line here is invented.
+const INVITER_AT = (date, handle, invited, inviter, activated = '2026-10-01') =>
+  `- ${date} · MINT → ${handle} · 10 · for: invite:${invited}/${inviter}/inviter/${activated} · by: the-town`;
+const INVITED_AT = (date, handle, invited, inviter) =>
+  `- ${date} · MINT → ${handle} · 5 · for: invite:${invited}/${inviter}/invited · by: the-town`;
+const entriesOf = (lines) => lines.map((canonical) => ({ canonical }));
+const BRING = (board) => board.quests.find((q) => q.id === 'bring-a-neighbour');
+
+test('invitesPaidByHouse counts the inviter side only, by the month the line is dated, for the inviting house', () => {
+  const lines = [
+    INVITER_AT('2026-10-31', 'alice', 'hh:ka', 'hh:castle'),
+    INVITER_AT('2026-11-01', 'alice', 'hh:kb', 'hh:castle', '2026-10-30'),   // activated in October, PAID in November: November's
+    INVITER_AT('2026-11-30', 'bob', 'hh:kc', 'gh:1', '2026-11-20'),           // the house under its account spelling
+    INVITER_AT('2026-12-01', 'alice', 'hh:kd', 'hh:castle', '2026-11-20'),
+    INVITER_AT('2026-11-15', 'zed', 'hh:ke', 'hh:other'),
+    INVITED_AT('2026-11-15', 'alice', 'hh:kf', 'hh:castle'),                  // an invited side is the newcomer's 5, never counted
+  ];
+  const canon = (k) => (k === 'gh:1' ? 'hh:castle' : k);
+  const nov = invitesPaidByHouse(entriesOf(lines), '2026-11', canon);
+  assert.deepEqual([...nov].sort(), [['hh:castle', 2], ['hh:other', 1]], 'November: castle twice (the account spelling folded in), other once');
+  assert.deepEqual([...invitesPaidByHouse(entriesOf(lines), '2026-10', canon)], [['hh:castle', 1]], 'October: the 31st');
+  assert.deepEqual([...invitesPaidByHouse(entriesOf(lines), '2026-12', canon)], [['hh:castle', 1]], 'December: the 1st');
+  assert.deepEqual([...invitesPaidByHouse(entriesOf(lines), '2027-01', canon)], [], 'a month nothing was paid in');
+  assert.deepEqual([...invitesPaidByHouse([], '2026-11')], [], 'an empty ledger');
+});
+
+test('Bring a neighbour: the board counts the household\'s payouts in the town month, and reads right across a month boundary', () => {
+  const d = town([['alice', 'bob']], { alice: { id: '1' }, bob: { id: '1' }, zed: { id: '2' } });
+  try {
+    writeFileSync(join(d, 'tools', 'households.json'), JSON.stringify({ households: {
+      castle: { residents: ['alice', 'bob'], accounts: [{ id: 1 }] }, other: { residents: ['zed'], accounts: [{ id: 2 }] } } }));
+    putLedger(d, [
+      '- 2026-06-12 · rules: stamps-v1',
+      INVITER_AT('2026-10-31', 'alice', 'hh:ka', 'hh:castle'),
+      INVITER_AT('2026-11-02', 'bob', 'hh:kb', 'hh:castle'),
+      INVITER_AT('2026-11-03', 'alice', 'hh:kc', 'hh:castle'),
+      INVITER_AT('2026-11-03', 'zed', 'hh:ke', 'hh:other'),
+      INVITED_AT('2026-11-03', 'alice', 'hh:kf', 'hh:castle'),
+    ]);
+    const at = (today, handle = 'alice') => BRING(questBoard(d, handle, { today }));
+    // November, from either resident of the house: two of castle's three payouts, not the October one
+    for (const handle of ['alice', 'bob']) {
+      const row = at('2026-11-03', handle);
+      assert.equal(row.cadence, 'monthly');
+      assert.equal(row.progress, 2, `${handle}: the household's two November payouts`);
+      assert.equal(row.complete, false);
+      assert.equal(row.target, INVITE_CAP_PER_MONTH, 'against the cap, derived from the town\'s own constant');
+      assert.deepEqual(row.counted, []);
+      assert.equal(row.household.total, 2);
+    }
+    assert.equal(at('2026-11-03', 'zed').progress, 1, 'another house, its own count');
+    // THE BOUNDARY: the same ledger, read on the last day of October and on the first of December
+    assert.equal(at('2026-10-31').progress, 1, 'October: the one paid on the 31st');
+    assert.equal(at('2026-11-30').progress, 2, 'the last day of November: still November\'s two');
+    assert.equal(at('2026-12-01').progress, 0, 'December: November\'s payouts do not carry, a clean zero the fold DID look at');
+    assert.equal(at('2026-12-01').complete, false);
+    // the entry says which month it counted, and the board refuses another month's
+    assert.deepEqual(foldQuestProgress(d, { today: '2026-11-03' }).get('alice').invite, { month: '2026-11', paid: 2 });
+    const stale = foldQuestProgress(d, { today: '2026-10-31' });
+    const row = BRING(boardForHandle(loadRegistry(d), stale.get('alice'), 'alice', '2026-11-03'));
+    assert.equal(row.progress, null, 'a progress folded for October, joined on a November day: it did not look, so UNCOUNTED, not 0');
+    assert.equal(row.complete, null);
+    // the cap reached: ten payouts in the month is a complete month
+    putLedger(d, ['- 2026-06-12 · rules: stamps-v1', ...Array.from({ length: INVITE_CAP_PER_MONTH }, (_, i) => INVITER_AT(`2026-11-${String(1 + i).padStart(2, '0')}`, 'alice', `hh:k${i}`, 'hh:castle'))]);
+    assert.deepEqual([at('2026-11-20').progress, at('2026-11-20').complete], [INVITE_CAP_PER_MONTH, true]);
+  } finally { rmSync(d, { recursive: true, force: true }); }
+});
+
+test('Bring a neighbour: a surface that did not look reads UNCOUNTED, never a zero it cannot know', () => {
+  // The office joins boardForHandle against its own hydrated snapshot (src/town-index.mjs § questRows keeps
+  // send, receive and the house columns), and an older snapshot has no `invite` at all (BOARD_LAW: "uncounted is
+  // not zero"). Absent from the fold altogether, the same.
+  const reg = loadRegistry(REPO);
+  const legacy = { send: 1, receive: 0, sentTo: [], heardFrom: [], household: { key: 'hh:castle', size: 1, send: 1, receive: 0 } };
+  for (const [what, prog] of [['an older snapshot', legacy], ['no progress entry', null], ['an entry for another month', { ...legacy, invite: { month: '2026-10', paid: 4 } }]]) {
+    const row = BRING(boardForHandle(reg, prog, 'alice', '2026-11-03'));
+    assert.equal(row.progress, null, what);
+    assert.equal(row.complete, null, what);
+    assert.equal(row.cadence, 'monthly', `${what}: the row is on the board either way (${BOARD_LAW})`);
+  }
+  const counted = BRING(boardForHandle(reg, { ...legacy, invite: { month: '2026-11', paid: 4 } }, 'alice', '2026-11-03'));
+  assert.deepEqual([counted.progress, counted.complete], [4, false], 'the control: an entry folded for this month is read');
+  // the daily mint still measures exactly its two rows, and the monthly field names the one row it counts
+  assert.equal(Object.keys(COUNTABLE_FIELD).length, 2);
+  assert.deepEqual(MONTHLY_FIELD, { 'bring-a-neighbour': 'invite' });
+  assert.equal(reg.quests.find((q) => q.id === 'bring-a-neighbour').target, INVITE_CAP_PER_MONTH);
 });
