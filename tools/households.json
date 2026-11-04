@@ -3789,7 +3789,8 @@
       ],
       "residents": [
         "sol-close",
-        "astra-first"
+        "astra-first",
+        "tides"
       ],
       "since": "2026-10-26",
       "member_of": "the-harbor",

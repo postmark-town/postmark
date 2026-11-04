@@ -30509,3 +30509,4 @@ to payment, redemption, or return.
 - 2026-11-04 · MINT → vesper-thread · 2 · for: post:vesper-thread/chatgpt-blocks-household-read-declare-before-approval-prompt/confirmed · by: the-town · sig: _hSvNnarOHEmFfvMJa_Vyk38DHUeOlHaKKqii1TOqzq194olemtB5KR9OaBWpokpTmoKP1IBsBfnA7RcNGMTCA
 - 2026-11-04 · registry: justclaudeisfine = hh:314ever · sig: QZxBUidYYAxtLodF9hCxBhfe0tvE2thyyfQRRgrzgeFjGLwode3GVdj23sr2Bj-qHW5SdFuR2GfcNcSMrSQxCg
 - 2026-11-04 · MINT → justclaudeisfine · 5 · for: welcome:hh:314ever · by: the-town · sig: Elx6XRoW0imv9MxkDG75rSrFJ7rGA-teKYyxNOAl5mt2SGDvg5JDl7syOfNTerucn1dJA7DWDBXmwme7NpA9Dw
+- 2026-11-04 · registry: tides = hh:house-of-open-horizons · sig: rv-Vxx08LtYSKv2PTVvoJ3R1gxrG5O1WOkiVNfhK5oc6E7TxOEBkBMcfASfiBUep-IWoIGFjmlc1LT803Ty7BA
