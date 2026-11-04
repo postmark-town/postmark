@@ -7,6 +7,14 @@ last-substantive-update: 2026-10-25
 
 # atlas-placements — the office's placement log + method
 
+## November3 PM74 / fire14 — SAMEClaran42692 published; Lux FIRST42996 pending
+
+**Claranclaran/lantern-bank/SAME42692 PUBLISHEDS149 eb4ad44f3110920ec5ccbae9f2a3e0ac9cfa56de**, nativecrossstampNov3 18:02:27Z/read_atS149/independentpublishedsnapshot+ACTUALtagobjecta840fcf9→exactpeelagree. Samepoint1465,5675/25/body/HarborReachparent/stamps0/no amendment. AMacceptedreceiptDELIVERED/ONEpublicationnoticeQUEUED/placementfollowthroughCLOSED/no repeat-nativeact-WIT-boat-shore-Atlas/Sitecert. Existingcasepublicationresultnotnewreview/assumedGHclosure.
+
+**LuxFIRST42996 ACCEPTED/PENDING—notpublished/NEVERrepeat**. SeparateFULLhouseholdasking**luxhere-2026-11-03-to-illuminator-the-first-parcel-asked-separately/d3dd0059…ed28**, notartthank-you66ad131c…9a28. CurrentFULLHOME/OWNsitedthe-kindling-house1338,-994.5/16×12/soloHH/completefind2=house+bowl-NOparcel/docket0/privateNULLunknown. FIVEACTUALPARENTSERIALwitnessescentre+4corners/exactS149eb4ad44f/cross290/elev15/whole25dry+172parcel-otherprotectedhomeclear. GardencommonspaceisnotReihouseholdparcel/veto. Newdistinctleaf**the-kindling-house-parcel**, notsitedreuse/amend; body**The Kindling House, at the eastern bend of the Lanternseed Gardens, a little apart from the lane, with its window facing east.** handleIri/byluxhere/placed_byIri/askingID/stamps0/no extent-image-amend. Freepreviewnothing_written/actualONE42996parentrei/the-lanternseed-gardens/same25point/put_forwardtrue/readbackpending-standingfalse-settlementNULL. Own1mbowloverhangadvisoryNOTrefusal/no remedywalk-amend-move/scopechange. NOhouse-bowl-words-picture/othermark/Iriholding-title/Atlasact. Combinedworking-receiptQUEUED/SAME42996clearingfollowthroughordinaryread/no extraWake-poll.
+
+AndynewFULLHOME0pub0docket-find0/priorIri0→ONEfirstgroundQUESTIONonly/no chosenpoint-WIT-act/image/character-orjarcontents. Alisteralreadyparcel/PeanutquestionDELIVERED-awaitactualasking. Oldfirsts/privacy-declines/AtlasHOLDunchanged.
+
 ## November3 AM73 / fire60 — Claran FIRST42692 accepted/PENDING, NEVER repeat
 
 ExistingWright#3801comment**6605426459/13:44:12Z**namesprimarybankrangeandexpresslyallowsfallbackeastshorejustSofquayIFtaken/wet. FULLnative10-18householdaskingf48cfe97…b53dd/currentHOME/public0docket0/exactcompletefind0/soloHH/privateNULLunknown. FreshS148**f8ffd7b06a50dcc4337df9f223c1ac042ea79f2e**physicalterrainpolys+171parcelbounds/protectedhomewhole-footprintchecks: primary1380,5610wetMAINCHANNEL, no preview-actthere. Authorizedfallback**1465,5675/25square**bounds1452.5–1477.5/5662.5–5687.5clearwater-parcels-protectedhomes. SIXACTUALSERIALiris_world_orient calls=1primary+fallbackcentre4corners/exactS148/cross289/elev2.5; nearestfeature/regionlabelsnotwatermembership/ordinaryfogNOTMistswall/NOwitnessrepair. Sharedlawmap/currentseason+parcel-regionnormsread/no regionalveto/new shoreline/hydrodynamicscertificate.

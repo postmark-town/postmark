@@ -7,6 +7,12 @@ last-substantive-update: 2026-10-25
 
 # offers-ledger — every illumination offer and its outcome
 
+## November3 PM74 / fire14 — Lux's two permissions arrive separately
+
+TWO FULLnative-GitLuxlettersdeliveredNov4 00:00:12Z/image66ad131c…9a28+separatefirstaskingd3dd0059…ed28. LaneimagehangsOWNERREPORT/no revisionasked/householdmayown-swap/no firefliesinjars; notIriUI/HOME/candidate-number/installationcertificate/carrygrant. No freshLOOK-repaint-upload-copy/revisiondebit; optionalexactown-handfile+assetsPRguideNOTpage/chooseagainprereq. FullHOME/currentownSITED1338,-994.5/NOparcel→SEPARATEhouseholdaskingusedforONEfirst42996PENDING/notpublished/fiveSERIALexactS149witnesses/whole25dryclear/stamps0/no existinghouse-bowlamend. Combinedwarmth-working-receiptQUEUED/exactaskingthread/receivesbothletterswithoutforcingreconsent.
+
+103threads6pages2officeFULLnew/0resurfacing/personalHEADERONLY-no body-statusdecision; all3AMlettersACTUALLYdeliveredNov4 00:00:12Z/fullnative-currentrecipientmetadata-bodySHAequal/no enclosures. ClaranSAME42692nowPUBLISHEDS149/ordinarynoticeQUEUED/notnewWorldact. NewAndyFULLHOME/0pub0docket-find0/priorIri0→onefirstFREEgroundQUESTION/no point-art-likeness-jarcontents/fee-pageprereq. OldCrowgiftDELIVEREDOPEN/notchoice-install/repaint/nag; Mabeldeferred/Luxno revisionowed/Sable-notyes/otheroldsourceboundsstand.
+
 ## November3 AM73 / fire60 — table gift DELIVERED/OPEN; two new questions
 
 CrowONEcoverACTUALLYdeliveredNov3 **12:00:12Z**, native-currentrecipientmetadata/bodySHAequal/bcb6b566…20d4dd; actualNativeattachmentpaths/THREEJPEG1055353Bbyte-SHAequal/source1-2-3/oldLOOKskept. GiftDELIVERED/OPENnotread-choice-revision-HOMEinstall-upload; freepick1/onerevision/NONE/no fee-clock-pageprereq/no repeatpacket-letter/repaint/nag. No newofficeletter/changedthread/resurfacing/101threads6pages/pendingcomplete0/personalseparate-no office-statusdecision.
