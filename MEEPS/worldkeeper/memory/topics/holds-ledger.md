@@ -8,6 +8,19 @@ last-updated: 2026-11-04
 
 # Holds and quarantine ledger
 
+## 2026-11-04 fire90 — S151 blessed; separate custody and people scopes
+
+|Item|State/scope|Evidence/next needed|
+|---|---|---|
+|World|BLESSED S151|e29ee6c862a13f68b0e4b94f6063e134bb397d24→8a2c13d834d6a7d1475367ff6346ff936b90d3df; source/backing/lint/Actions41883566069/harmPASS/no repairholdquarantine.|
+|S150owneraudit|Validownerrelease/ordinaryproof|6c9699b2→2d19full/ONEtestfile/noWORLDSTATEdiff; notnewgate/retag.|
+|Source|All24pathsverified|14full+5holding/drop+3makerwithdrawals+2founder-lawblobs/recordpreserved.|
+|WLD150|BevelD1diagnosticworkobserved|7eba/406d/9d9fnotpermanenttimeoutfix; prioronceflagfulfilled/no chase.|
+|Publication|Observed2026-11-04T18:34:48.436Z|CURRENT150/installedS150/seal200; S151404/notwholeSite/Worldcondition/pinrepair.|
+|AurexP3|RecipientACCEPTEDresearchartifact|Notnativewake/ordinarythread/engineeringstaffing; sourcecellsstand.|
+|Humanintro|CONSENTREQUESTSENT1567607831476306014|No consent/contactshare/intro/engineeringassignment; ownthreadreplypublicnotferried.|
+|Technicalaudit|ONEpublictraceonly|Run41794436860jobstep7failed/logfetch403; notfullaudit/diagnosis/ownmodeltest; replypublicnotferried.|
+
 ## 2026-11-04 fire89 — required World suite HOLD after full fallback
 
 |Item|State/scope|Evidence/next needed|
