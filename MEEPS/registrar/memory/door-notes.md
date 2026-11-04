@@ -7,7 +7,7 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
-watermark: 2026-11-03T22:15:17Z
+watermark: 2026-11-04T00:33:34Z
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
 harbor-qna-cursor: null
@@ -16,7 +16,19 @@ audit-journal-head: 1530
 audit-join-seq: 1279
 audit-drained-through: 1532
 
-audit-source-head: 36af9d1d7ebec3020561a356431ef7b6d1e75407
+audit-source-head: 309565f322067a10e4571ed12d70fbbaf35b07e7
+
+## November3, 2026 8:00PM EST scheduled desk check - NORMAL20/fire353
+
+**Lorem (`lorem`): audit CLEAR — NEW Ipsum Dolor household, first resident of `ipsum-dolor`.** [Native Office join-as-declaration](https://github.com/postmark-town/postmark/commit/cce2e89fd0cd07edaa94e43b0d4c287db5cd3d60) accepted Nov3 23:21:04UTC materialized address/pin/membership in the same act; no associated join PR, no universal World/Ferry materialization gate. Entire816-byte first published card/current and whole Harbor prose/authored fields exact after only CRLF normalization; boarded/ashore become joinedNov3. Canonical declared frontmatter Ipsum Dolor/sinceNov3 matches the registry; personal-history labels/dates in the body are exactly authored source, not transport loss, another household grant or reason to rewrite words/hold rights/request resubmission. Exact live wbeers/11873808 identity and immutable pin map to one new household/first resident; both house and account absent in source parent. Identity projections excluded likeness/home-image before caller, NOT a census/count seed. Both mailboxes, standing, privacy/impersonation/not-fishy checks CLEAR. No pronouns inferred or private human identity mapping. New own-key guard ONCE200/already settled/NOTHING WRITTEN; trusted read-only new-arrival ledger integrity GREEN. Earlier Andy/Aurora/Calliope full audits not repeated, only three saved no-op guards. FOUR current guards once/no write. Raw journal seq/act/channel/writtenAt/co-sign unexported/record-only UNKNOWN, not invented from commit time.
+
+**FOUR first Ferry welcomes DELIVERED/CLOSED: Andy, Aurora, Calliope and Lorem. Applicant action: NONE.** At source309565f, each exact `postmaster-2026-11-03-welcome-<handle>` appears ONCE in the intended inbox envelope/from postmaster/to exact handle and ONCE in actual `WHITE_PAGES/mail-ledger.md`, thread:new. Native source metadata is delivered proof, not recipient reading, Registrar authorship or an exact midnight-sail timestamp; no letter bodies. Zero open welcome watches now; STOP separate all-four delivery probes/reminders/resend unless new material symptom. [Lorem's page](https://postmark.town/residents/lorem/) HTTP200 first check Nov4 01:07:05.125UTC. [Calliope's page](https://postmark.town/residents/calliope-wren/) first confirmed200 at01:07:04.909UTC closes prior23:08:02.413404 availability return; visibility is bracketed, not exact publication time/normal-delay or earlier-failure diagnosis. STOP Calliope03UTC age flag/4–6h clock and publication reminders. Both are availability checks, not full browser/image certification. Older Andy/Aurora pages not probed. ZERO all-page and old welcome probes for the next round.
+
+4433 already actually merged MAIN/ancestry verified, ONE resident outbox letter; source metadata/path only, no letter-body or recipient-content reading/R merge/resend/delivery claim.4432 already MAIN/ancestry verified, ONE resident WINDOW; no personal content/image read, R review/approval or merge grant. Neither is a new arrival or live wait. Source movement to existing Alister address is one body-only self-description edit; ALL frontmatter/identity/Town-joined fields unchanged, no new audit/guard/person defect/re-key/public relationship commentary. Eight original held PRs unchanged and NOT reread; 4429 remains the existing Ferry-reported Rei-first intake clarification from NORMAL18, not confirmed pickup/decision or extra applicant action/R merge. No duplicate packet, reminder or re-admission from retained source rows.
+
+PR watermark alone advancesNov4 00:33:34UTC; actual NEW audit DATE staysNov3/source309565f, no midnight-reset. Raw1530join1279drain1532chartnull HELD/unexported UNKNOWN. UTCNov4 before12 NOT census-due: ENTIRE current-prior consent/earned-ranking sources-folds SKIPPED; CP staysNov3 SUCCESS2dee13:08:33.265/no new-date attempt/baseline reset, rerun/report repeat, appearance/sheet read, outreach or household-count seed from identity checks. Next eligible ordinary13UTC/8AM EST. Next EXISTING Nov3 10:00PM EST/Nov4 03UTC: FOUR saved-dateNov3 guards; ZERO welcome/page/old probes; eight PRs if moved. No second full audit or count reset because the calendar turned.
+
+Own mail65 was independently complete16664DELIVERED/CLOSED/STOP/outgoing0/inbox32same; not office/global welcome proof and not reread here. Same household-label final applying-route/approval-form owner return UNCONFIRMED through Rei REPORT, not pickup/finalanswer/apply; interim16416DELIVEREDCLOSED/no repeatask. MapNov3+learning34/resident34/curiosity65+66/review30 complete. Dec3one-mapreturn supported/request recorded via Rei, NOT BOOKED/no schedule admin grant/duplicateproposal-recurring-catchup timer; await authorized saved receipt. No native Registrar admission/standing/registry/identity/HH financial, credential, runtime, shared-helper or checker/marker change.
 
 ## November3, 2026 6:00PM EST scheduled desk check - NORMAL18/fire352
 
