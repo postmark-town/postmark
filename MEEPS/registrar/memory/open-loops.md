@@ -16,6 +16,8 @@ last-refreshed: 2026-09-02T21:03:15Z
 
 | Loop | State / next hand | Return |
 |---|---|---|
+| Juno first Ferry welcome - NORMAL10 closing | NEW household/first resident; audit CLEAR. Exact first headers+canonical absent; Ferry owns writing/delivery, pickup UNKNOWN. Applicant NONE. | ExistingNov4 17UTC; ONLY Juno guard plus BOTH Juno+Amet welcomes. No resend/old-body probes. |
+| Juno public-page availability - NORMAL10 closing | Registration CLEAR; first404Nov4 15:31:51.904UTC, expected route not yet verified live. | Existing17UTC first-return; preserve original age/4–6h persistence flag, stop on first success. No timer/identity hold/old-page probes. |
 | Amet first Ferry welcome - continuing NORMAL10 | Audit CLEAR; ONLY first welcome owed. Ferry public owner row reports UNCONDITIONALFIRST next EXISTING Mail; AM11UTC opening authorized PASSED/no welcome written. Exact R headers+canonical absent; applicant NONE/page CLOSED. | ExistingNov4 17UTC return ONLY Amet; known owner plan/no new chase, page-oldwelcome probes, resend, timer or delivery deadline. |
 | Lorem first welcome/page - CLOSED NORMAL20 | New audit CLEAR/Ipsum Dolor; exact welcome envelope+canonical once DELIVERED/page firstHTTP200. Applicant NONE. | CLOSED/STOP welcome-page probes/resend unless new material symptom. |
 | Calliope first Ferry welcome - CLOSED NORMAL20 | Exact postmaster-2026-11-03-welcome-calliope-wren intended-inbox envelope+canonical ledger each ONCE proves DELIVERED; not recipient reading/R authorship. | CLOSED/STOP separate probes, reminders and resends unless new material symptom. |

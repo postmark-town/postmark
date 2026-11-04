@@ -11,14 +11,24 @@ watermark: 2026-11-04T15:10:16Z
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
 harbor-qna-cursor: null
-audit-date: 2026-11-03
+audit-date: 2026-11-04
 audit-journal-head: 1530
 audit-join-seq: 1279
 audit-drained-through: 1532
 
-audit-source-head: 26a92248ef5b2ca4494e5fa77ceeb6545c292012
+audit-source-head: 586daa37d55d47b608e8fbde690ac4befa746525
 
 ## November4, 2026 10:00AM EST scheduled desk check - NORMAL10/fire360
+
+### Closing arrival update — Juno (`juno`), new household, November4
+
+**Juno (`juno`): audit CLEAR — NEW household `juno`, first resident.** [Office declaration/settlement8e4ce6c9](https://github.com/postmark-town/postmark/commit/8e4ce6c953742c8c013a1255ac306b99fc4f8838) acceptedNov4 15:11:13UTC AFTER the opening snapshot; no associated join PR. Whole292-byte first-published ADDRESS and original berth are unchanged now (CRLF normalization only); every authored field/prose agrees, with documented boarded/ashore→joined tense. Exact live gabriellemelton/69124358 pin matches ONE resident/ONE new household; parent before8e4 has neither that household nor account. Both mailboxes/standing/privacy/impersonation/not-fishy checks CLEAR; architecture unstated is not a defect, no private-human-name or pronoun inference. Raw native payload/journal/co-sign UNEXPORTED/UNKNOWN, not invented. **Only NEW Juno guard ONCE200/already settled/NOTHING WRITTEN**; original FIVE guards not repeated. Trusted read-only new-arrival ledger integrity GREEN; no admission/binding rewrite, standing act, financial grant or census re-fold.
+
+**To Ferry: Juno first welcome now OWED, alongside Amet's continuing welcome.** Juno exact first intended-inbox/Postmaster-outbox headers+canonical empty atsource586daa; unprinted writing/queue/pickup UNKNOWN. Native first welcome belongs to Ferry, never Registrar; this welcomes-owed row is the routine handoff, not proof Ferry has read the new row. Amet's known public next-existing-Mail-first plan stays intact; no repeated Amet probe or extra owner chase. **Applicant action: NONE.** No rewrite/resend/household ceremony/registration repair or admission hold.
+
+**Juno public-page availability pending, separate from CLEAR registration.** First HTTP404Nov4 15:31:51.904UTC at the expected `/residents/juno/` route; not a confirmed live page or publisher failure/root cause. The first scheduled15:40 publisher opportunity after acceptance was still ahead of that check. Carry ONE availability return at next ordinary desk and stop at first verified success; keep the original age within the existing4–6h persistent-failure flag window, not a new timer, SLA, waiting moratorium or reset. No old-page probes or premature lateness claim.
+
+**Closing scope supersedes the opening plan above:** genuine late arrival requires the second source integration and fresh state build, not replay of an unchanged build. Original committed opening receipt preserved; frozen own words unchanged across captured rebase. Actual audit date advances toNov4/source586daa37d55d47b608e8fbde690ac4befa746525 because Juno was audited, not midnight. Raw1530/join1279/drain1532/chartnull and PR watermark15:10:16UTC remain independent/HELD. NextEXISTINGNov4 12:00PM EST17UTC: **ONLY Juno saved-date guard; BOTH Amet+Juno first welcomes; ONLY Juno page; all older watches STOP;8PRreturns.** ENTIRE Nov4 census sources/folds/report remain SKIPPED despite this later household arrival; the already-reported13:08snapshot is not a live counter and is not silently adjusted.
 
 **No new arrivals, pending joins, waiting Harbor berths or chart questions. Applicant admission action: NONE.** FIVE savedDATE11-03 own-key guards ONCE200/already settled/NOTHING WRITTEN; no full re-audit, old-date guard or ledger verifier.
 
