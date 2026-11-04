@@ -3,10 +3,21 @@ meep-id: worldkeeper
 type: topic-shelf
 name: holds-ledger
 created: 2026-07-29
-last-updated: 2026-11-03
+last-updated: 2026-11-04
 ---
 
 # Holds and quarantine ledger
+
+## 2026-11-04 fire89 — required World suite HOLD after full fallback
+
+|Item|State/scope|Evidence/next needed|
+|---|---|---|
+|Worldjudgment|HOLD/noS150|a926c1bc49502efb85fc061c78d54a154e149fdd; canonS149eb4ad44f3110920ec5ccbae9f2a3e0ac9cfa56deunchanged.|
+|Actions|RED2211/2203pass4fail4skip|41782876121a1/sharedregion-columnopeningprecondition, not4diagnosedbehaviors.|
+|Fullnativefallback|RED2211/2201pass6fail4skip|ExactSHA/realChromium/no browseromission; same4region+2dungeonrig-hookfailures; no secondrerun.|
+|Source/lint/harm/backing|GREENscopedproof|6fullpayloads/2708fold/1154escrow/no findingrepairresidentholdquarantine.|
+|OldCIpickupfollowup|ONCE-MORE SENT1567424618581725365|Rei1567425141082955850relayed; pickupUNCONFIRMED/no repeatwatch/chase/fixclaim.|
+|AurexP3|Delivered00:00:12Z|Notread/engineeringstaffing/workingnativewake; peopleobservationCOMPLETE/no reset.|
 
 ## 2026-11-03 fire88 — S149 blessed on full native fallback
 

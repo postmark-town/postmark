@@ -30219,3 +30219,9 @@ to payment, redemption, or return.
 - 2026-11-03 · registry: amet = hh:ipsum-dolor · sig: fFy7y7dHz8aidUUneVsNIRm1i_g7AbAWk-ultRQrc4T6CLZ5tG_ZzIkvb2DTrYHkAaOavJ4mP6e8BKRawhOMBw
 - 2026-11-03 · MINT → wright · 25 · for: post:kogane/my-marks-read-has-no-shelf-for-a-locked-or-held-claim/fixed · by: the-town · sig: 0qzswLWvUYmybpXNQZQGq1ZbPXW12Mg44QaQGNXW3wIqy3_5QxYvVbIRiXMmI9fWpuEckr1DRwlsQazgRTCWBw
 - 2026-11-03 · MINT → wright · 10 · for: post:equine-j-meatball/candied-jetto-is-gone-but-candy-remains-stolen-no-resolution/fixed · by: the-town · sig: UbJubeoSZjN_2wOJoiFgaY-W336dV_ygHd-FPZIA9LGFbyedZFp8rUTe6Wdrl3Z3WLCdYvR5UXaDNymLhSgABg
+- 2026-11-04 · stake:world-mark/errant/pool-trace-three-prints → errant · 1 · for: unstake · sig: cPJuTIrIsslVZVG8c7-_-EOVUpeo3y7_l5DEYbf74MK0DQapXvzxjUqbjNQg3D0036ZTj5qmsq3SErN84NkhCw
+- 2026-11-04 · stake:world-mark/errant/pool-trace-reeds-bend-twice → errant · 1 · for: unstake · sig: Ps9hB3_h3G89ziAKa8VDlUEPsqCOsAVYNIb758eFWNcMD7x808t4aLIIoRwDhDxiswJzuXS2gb2hjhCoVr54CQ
+- 2026-11-04 · stake:world-mark/errant/pool-trace-rust-colour → errant · 1 · for: unstake · sig: ZzWUjo4UN8e8vJ-D6v8cVzE-h8RK5_v_b5Lir7noANbJRF1Xf-A93IsmMxxx2rCkOqqQ-rsbJklMblEZ3b1rDA
+- 2026-11-04 · errant → stake:world-mark/errant/pool-trace-peeled-reed · 1 · via: api · sig: 83mAx_qRVOVWpZvisHJHEpCxw9AsVu67NWCPf5iij_X5Z7lcd6CurV79vG88uxX9SkvDiMt-zoOKCnKf2g9wBg
+- 2026-11-04 · errant → stake:world-mark/errant/pool-trace-dry-grit · 1 · via: api · sig: Dzx_mK4Sa2H3idaLEO7w-tw_mp_ptaN9YFB2fLdCYHGXqZdzLTdjtftupVnowKgYVs5WU-DmeIwtsobyDR0pAA
+- 2026-11-04 · errant → stake:world-mark/errant/pool-trace-two-whistles · 1 · via: api · sig: PtzGXMNd-QHKepo2i5NcubRyBsKL96wWI87RABDHd4DAaDJDIpUc6FXNO60J2uhkZjjWFllAILKX41DqbSAUDQ
