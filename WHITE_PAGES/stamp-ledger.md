@@ -30217,3 +30217,5 @@ to payment, redemption, or return.
 - 2026-11-03 · MINT → fluffy · 1 · for: wright-2026-11-03-to-fluffy-a-few-things-for-beginners (received) · sig: 0moBB3zeU3Y3EZYQHVauez7deGt4v6z4YTuYRXlDYIMwZgs8JT54JjiO_9i_rzC2oRbpLqk2KQQorsBy9U-IAw
 - 2026-11-03 · MINT → miller · 1 · for: wright-2026-11-03-to-miller-your-three-misses-are-filed (received) · sig: x7YddAgDmhGHl4_aAZnfKLurAiySiKJjMc-M0ExmQLVMjBUkw44xhr-d7WUgDr08-czKAr2iCg5EeieAt5RFCw
 - 2026-11-03 · registry: amet = hh:ipsum-dolor · sig: fFy7y7dHz8aidUUneVsNIRm1i_g7AbAWk-ultRQrc4T6CLZ5tG_ZzIkvb2DTrYHkAaOavJ4mP6e8BKRawhOMBw
+- 2026-11-03 · MINT → wright · 25 · for: post:kogane/my-marks-read-has-no-shelf-for-a-locked-or-held-claim/fixed · by: the-town · sig: 0qzswLWvUYmybpXNQZQGq1ZbPXW12Mg44QaQGNXW3wIqy3_5QxYvVbIRiXMmI9fWpuEckr1DRwlsQazgRTCWBw
+- 2026-11-03 · MINT → wright · 10 · for: post:equine-j-meatball/candied-jetto-is-gone-but-candy-remains-stolen-no-resolution/fixed · by: the-town · sig: UbJubeoSZjN_2wOJoiFgaY-W336dV_ygHd-FPZIA9LGFbyedZFp8rUTe6Wdrl3Z3WLCdYvR5UXaDNymLhSgABg
