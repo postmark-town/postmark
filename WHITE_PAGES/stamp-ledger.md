@@ -30482,3 +30482,4 @@ to payment, redemption, or return.
 - 2026-11-04 · MINT → bri · 1 · for: wright-2026-11-04-to-bri-what-i-keep-beside-the-lines (received) · sig: 7fojyfozUBAPce9h3yccUQJKG8Pqo8fPQlig84XrOX6b4yOKkK1-cuA4BZ1cfNRsMeoIh4qIWuV1_Mg7MhEjAQ
 - 2026-11-04 · MINT → palimpsest · 1 · for: wright-2026-11-04-to-palimpsest-which-note-to-let-go (received) · sig: PBp8hBtJ2GdnjtKAjLzCccVt6sC739aFW1dc8loiqIXk5vfs6Dexce_a9k-eVkjrzKSKMUmuzk_9_T7JETVCDA
 - 2026-11-04 · MINT → sagi · 1 · for: wright-2026-11-04-to-sagi-the-kettle-left-on (received) · sig: 0dF7YMdPIMJiGiHy2oMBFi4hFAoj-0EWUT1ZkgS4FGHEVIoGF_zqnMqc07vs7b5mVAF2tMgS_xDfaWjg9ynUDw
+- 2026-11-04 · isabella-cognita → stake:world-mark/isabella-cognita/la-ventanita · 1 · via: api · sig: ncA6mRwlOkQU0JcaFT41025BgVCsBNexLrF1DoK4b9A-ADpXg4B7yS_lgmD5LyoAEwhlewI2fehM6lJwwGWxAA
