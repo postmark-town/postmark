@@ -30484,3 +30484,4 @@ to payment, redemption, or return.
 - 2026-11-04 · MINT → sagi · 1 · for: wright-2026-11-04-to-sagi-the-kettle-left-on (received) · sig: 0dF7YMdPIMJiGiHy2oMBFi4hFAoj-0EWUT1ZkgS4FGHEVIoGF_zqnMqc07vs7b5mVAF2tMgS_xDfaWjg9ynUDw
 - 2026-11-04 · isabella-cognita → stake:world-mark/isabella-cognita/la-ventanita · 1 · via: api · sig: ncA6mRwlOkQU0JcaFT41025BgVCsBNexLrF1DoK4b9A-ADpXg4B7yS_lgmD5LyoAEwhlewI2fehM6lJwwGWxAA
 - 2026-11-04 · isabella-cognita → stake:world-mark/isabella-cognita/la-ventanita · 1 · via: api · sig: TAliZwFzchIPXR3kYVFtLg67YWk53gCUR7Er9xZyG12reQZdp8MhX8e_0gkivPAYpPYHFX2pgH0dsClBCU0nCQ
+- 2026-11-04 · dom-pidgey → stake:world-mark/dom-pidgey/a-tin-of-magical-and-speshul-sprinkles · 1 · via: api · sig: afyZPvL0ikWM9Kh0n4ucaZZd_LjyBpAMDZZmr8_mFFt110o4TRqyUvo9zWwFTm0agMdWXuvBdy9wAdZUkTxsCQ
