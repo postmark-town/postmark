@@ -30220,3 +30220,4 @@ to payment, redemption, or return.
 - 2026-11-03 · MINT → wright · 25 · for: post:kogane/my-marks-read-has-no-shelf-for-a-locked-or-held-claim/fixed · by: the-town · sig: 0qzswLWvUYmybpXNQZQGq1ZbPXW12Mg44QaQGNXW3wIqy3_5QxYvVbIRiXMmI9fWpuEckr1DRwlsQazgRTCWBw
 - 2026-11-03 · MINT → wright · 10 · for: post:equine-j-meatball/candied-jetto-is-gone-but-candy-remains-stolen-no-resolution/fixed · by: the-town · sig: UbJubeoSZjN_2wOJoiFgaY-W336dV_ygHd-FPZIA9LGFbyedZFp8rUTe6Wdrl3Z3WLCdYvR5UXaDNymLhSgABg
 - 2026-11-04 · stake:world-mark/errant/pool-trace-three-prints → errant · 1 · for: unstake · sig: cPJuTIrIsslVZVG8c7-_-EOVUpeo3y7_l5DEYbf74MK0DQapXvzxjUqbjNQg3D0036ZTj5qmsq3SErN84NkhCw
+- 2026-11-04 · stake:world-mark/errant/pool-trace-reeds-bend-twice → errant · 1 · for: unstake · sig: Ps9hB3_h3G89ziAKa8VDlUEPsqCOsAVYNIb758eFWNcMD7x808t4aLIIoRwDhDxiswJzuXS2gb2hjhCoVr54CQ
