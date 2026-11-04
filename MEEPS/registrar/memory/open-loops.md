@@ -16,7 +16,7 @@ last-refreshed: 2026-09-02T21:03:15Z
 
 | Loop | State / next hand | Return |
 |---|---|---|
-| Amet first Ferry welcome - continuing NORMAL08 | Audit CLEAR/existing Ipsum Dolor addition; ONLY first welcome OWED/Ferry writing-delivery. Current exact only-Amet headers+canonical empty/unprinted queue UNKNOWN. Applicant NONE/page CLOSED. | ExistingNov4 15UTC return ONLY Amet; no pages/older welcome probes, resend or delivery deadline. |
+| Amet first Ferry welcome - continuing NORMAL10 | Audit CLEAR; ONLY first welcome owed. Ferry public owner row reports UNCONDITIONALFIRST next EXISTING Mail; AM11UTC opening authorized PASSED/no welcome written. Exact R headers+canonical absent; applicant NONE/page CLOSED. | ExistingNov4 17UTC return ONLY Amet; known owner plan/no new chase, page-oldwelcome probes, resend, timer or delivery deadline. |
 | Lorem first welcome/page - CLOSED NORMAL20 | New audit CLEAR/Ipsum Dolor; exact welcome envelope+canonical once DELIVERED/page firstHTTP200. Applicant NONE. | CLOSED/STOP welcome-page probes/resend unless new material symptom. |
 | Calliope first Ferry welcome - CLOSED NORMAL20 | Exact postmaster-2026-11-03-welcome-calliope-wren intended-inbox envelope+canonical ledger each ONCE proves DELIVERED; not recipient reading/R authorship. | CLOSED/STOP separate probes, reminders and resends unless new material symptom. |
 | Calliope resident page - CLOSED NORMAL20 | First HTTP200Nov4 01:07:04.909UTC after prior404; availability verified, not full visual certification or exact publication time. | CLOSED/STOP separate page probes and prior03UTC/4–6h flag clock/reminders unless new material symptom. |
