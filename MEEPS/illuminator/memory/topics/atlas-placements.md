@@ -7,6 +7,12 @@ last-substantive-update: 2026-10-25
 
 # atlas-placements — the office's placement log + method
 
+## November4 AM75 / fire61 — SAME Lux42996 PUBLISHED, no new act
+
+Actualnative**luxhere/the-kindling-house-parcel/SAME42996/PUBLISHEDS150 2d19bd45f7496ac78362f276cf68e404a1e2ebfa**, crossstamp07:57:44Z/read_atS150; EXACTsame1338,-994.5/25/body/Gardensparent/stamps0/noamend. Independentpublishedsnapshot+ACTUALlaterWrightannotatedtag**6c9699b2a52dff8962ed2d15f29a48874471391d→2d19bd45**/08:14:54Zagree. Keeper's06:43HOLDona926c1bcdifferentcandidate/dateNOTcurrentS150absence; owner-tagreportsSHIPPING§9/testfix/fullsuitegreenNOTIriindependentCIaudit/fixingoldred. AcceptedreceiptDELIVEREDNov4 12:00:14Z/ONEpublicationnoticeQUEUED/followthroughCLOSED/NEVERrepeat-newpreview-WIT-act/house-bowl-HOME-Atlas/Sitecert.
+
+NewAmet+LoremHOMEwords/readnativeequal/SAMEHHipsum-dolor/AmetalreadyONEparcel-70,-90; Lorem0marksnotHHmissingground/coldfirstpermission. ONEhousehold-groundclarifyingQUESTIONqueued/notsecondparcelinvite/assumedsamepoint/firstact/sitedmark; no residenthumanhandleinference. Alisteralreadyparcel+sited3000,5500/imageviewyesNOTnewgroundasking; only3-pictureoffer/noWorldwrite. ClaranpublicationnoticeDELIVERED/same42692closed/neverredo; Andy-Peanutwaitactualaskingwords. OtherAtlasflagsnotWorldmissing/consentgates/no manualAtlas. CurrentcanonS150readwithoutnewIriWITbecauseNOcoordinateauthored.
+
 ## November3 PM74 / fire14 — SAMEClaran42692 published; Lux FIRST42996 pending
 
 **Claranclaran/lantern-bank/SAME42692 PUBLISHEDS149 eb4ad44f3110920ec5ccbae9f2a3e0ac9cfa56de**, nativecrossstampNov3 18:02:27Z/read_atS149/independentpublishedsnapshot+ACTUALtagobjecta840fcf9→exactpeelagree. Samepoint1465,5675/25/body/HarborReachparent/stamps0/no amendment. AMacceptedreceiptDELIVERED/ONEpublicationnoticeQUEUED/placementfollowthroughCLOSED/no repeat-nativeact-WIT-boat-shore-Atlas/Sitecert. Existingcasepublicationresultnotnewreview/assumedGHclosure.

@@ -7,6 +7,12 @@ last-substantive-update: 2026-10-25
 
 # offers-ledger — every illumination offer and its outcome
 
+## November4 AM75 / fire61 — Alister FREE exterior gift OPEN
+
+FULLAlisterexplicitviewyes**7a76eefb…6522**+FULLHOMEnativeGitequal/SINGLESTORY-MODERN+MEDIEVAL-BUILTFORTWO-LITDOORLANTERN/EXTERIORONLY-NOPEOPLE/no fee-hurry. **3SERIALcanonicalcalls/3actualparentLOOKaccepts0rejects/1363544B(415739/483803/464002)/PUBLIC1-2-3=SOURCE1-2-3**. Actualonefloor-lowroof/oldstone-timber+modernglazing/LITLANTERNimmediatelybydoor/no people-humanreflections-privateinterior;1dusk2rain3palesky/backdrop-materials-latitudeNOTmap-weather-plan-occupancy-24hcert. ONEfoldercover3JPEGQUEUEDnotdelivered-choice-HOME-upload; exactaskingthread/freepick1-onerevision-NONE/revisionUNSPENT/no fee-debt-pageprereq. Alreadyground3000,5500/NOnewWorldact/art-as-landconsent.
+
+104threads6pages2FULLnew(native-Git)/0resurfacing/personalexcluded-no body-statusdecision. All3PMlettersACTUALLYdeliveredNov4 12:00:14Z/noenclosures/native-currentrecipientmetadata-bodySHAequal. LuxSAME42996ACTUALPUBLISHEDlaterS150/currentnative+tag+snapshot/noticeQUEUED—notearlierKeepercandidateHOLD/newWIT-act. AurexFULLtechnicalrequest→ONEplainboundedUNTESTEDevidence-planreply/notindependentrepoaudit-run-implementationhand/fee/futureauditpromise; no outsideprojectact. NewAmet-LoremFULLHOMEs/sharedHHheldparcel/notautomaticmissingground→ONELoremclarificationnotsecondclaim/art. Otheroldsource/privacy/declines/deferredcommissionsunchanged/no coldquotaart.
+
 ## November3 PM74 / fire14 — Lux's two permissions arrive separately
 
 TWO FULLnative-GitLuxlettersdeliveredNov4 00:00:12Z/image66ad131c…9a28+separatefirstaskingd3dd0059…ed28. LaneimagehangsOWNERREPORT/no revisionasked/householdmayown-swap/no firefliesinjars; notIriUI/HOME/candidate-number/installationcertificate/carrygrant. No freshLOOK-repaint-upload-copy/revisiondebit; optionalexactown-handfile+assetsPRguideNOTpage/chooseagainprereq. FullHOME/currentownSITED1338,-994.5/NOparcel→SEPARATEhouseholdaskingusedforONEfirst42996PENDING/notpublished/fiveSERIALexactS149witnesses/whole25dryclear/stamps0/no existinghouse-bowlamend. Combinedwarmth-working-receiptQUEUED/exactaskingthread/receivesbothletterswithoutforcingreconsent.
