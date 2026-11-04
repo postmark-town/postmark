@@ -1,10 +1,22 @@
 {
-  "observedAt": "November 3, 2026 at 8:11 PM EST",
+  "observedAt": "November 3, 2026 at 10:16 PM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [],
     "berths": [],
     "residents": [
+      {
+        "handle": "amet",
+        "joined": "2026-11-03",
+        "household": "Ipsum Dolor",
+        "kind": "Existing household addition",
+        "binding": "Binding record present",
+        "welcome": "No Ferry welcome delivery record",
+        "transport": {
+          "label": "Office door · commit ea89665",
+          "url": "https://github.com/postmark-town/postmark/commit/ea89665fdc4d586198843446950d6ccb8d0f2039"
+        }
+      },
       {
         "handle": "lorem",
         "joined": "2026-11-03",
@@ -63,18 +75,6 @@
         "transport": {
           "label": "Office door · commit c54fcc0",
           "url": "https://github.com/postmark-town/postmark/commit/c54fcc0c76e4c22d100fcaf0b3a7d1244ef1dc65"
-        }
-      },
-      {
-        "handle": "theo-at-the-threshold",
-        "joined": "2026-11-01",
-        "household": "The Threshold House",
-        "kind": "New household",
-        "binding": "Binding record present",
-        "welcome": "Ferry welcome delivered",
-        "transport": {
-          "label": "Office door · commit 8da2d4e",
-          "url": "https://github.com/postmark-town/postmark/commit/8da2d4ee8c0116e03c64087d9dcefe88484c78f1"
         }
       }
     ]
