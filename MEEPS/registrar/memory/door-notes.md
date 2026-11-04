@@ -7,7 +7,7 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
-watermark: 2026-11-04T16:33:27Z
+watermark: 2026-11-04T19:03:05Z
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
 harbor-qna-cursor: null
@@ -17,6 +17,16 @@ audit-join-seq: 1279
 audit-drained-through: 1532
 
 audit-source-head: 586daa37d55d47b608e8fbde690ac4befa746525
+
+## November4, 2026 2:00PM EST scheduled desk check - NORMAL14/fire362
+
+**No new arrivals, pending joins, waiting Harbor berths or chart questions. Applicant action NONE.** ONLY savedDATE4 Juno own-key guard ONCE200/already settled/NOTHING WRITTEN; no Nov3-five replay, new full audit or ledger verifier.
+
+**Amet+Juno first Ferry welcomes remain OWED:** exact two-target intended-inbox/Postmaster-outbox headers and canonical rows empty atsourcebace; unprinted writing/queue/pickup UNKNOWN, not delivery/read/failure/sailing promise. Carry the known Amet next-existing-Mail-first plan as ONE continuing wait, not another unacknowledged handoff; no owner chase/reminder/resend/Registrar welcome. All older FOUR welcomes and ALL pages (including Juno first20017:06) CLOSED/STOP—not probed; no personal letter/body read.
+
+**New work-object [4460](https://github.com/postmark-town/postmark/pull/4460): actual DRAFT, OPEN on train/2026-w46—not MAIN/live/adopted code.** Same-head closing return19:03:05 updates the body from Building to Built(draft), stopped for independent review then lead; paired Office909 vendors the predicate. Existing reserved-prefix rule is shared across four roads, no other grammar/data rewrite; Darko sees before merge(auth) remains contributor-stated route, not founder approval. Whole body delta read; contributor local tests/flips and CI claims are attributed, NOT Registrar executions/independent certification, and skipped CI jobs are not passed tests. No new comments; identical code head/files NOT refetched. Saved PR/open return plus one updated-comment read consumed without a new queue poll or lifecycle/census replay. NativeJuno/Amet standing is unchanged; no Registrar merge, issue/tag, repair, tests or cohort hunt. Nine open PRs; prior eight unchanged/NOT reread, including4453's known already-delivered duplicate/sender cleanup.
+
+PR watermark ALONE advances19:03:05UTC. AuditDATE4/source586daa37d55d47b608e8fbde690ac4befa746525/raw1530join1279drain1532chartnull HELD/unexported UNKNOWN. Next EXISTINGNov4 4:00PM EST21UTC: ONE Juno guard/TWO Amet+Juno welcomes/ZEROallpage-oldprobes/9PRreturns. ENTIRE Nov4 census sources/folds/report SKIPPED; CPsuccess6b48/13:08:57.075 unchanged/no retry/reset/recount/appearance/outreach. Personal written mail is outside this office observation; no delivery query/claim or private payload. No native admission/standing/financial, shared-helper/CA/runtime/credential/schedule change or closed-review replay.
 
 ## November4, 2026 12:00PM EST scheduled desk check - NORMAL12/fire361
 
