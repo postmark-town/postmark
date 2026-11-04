@@ -132,7 +132,7 @@ The explicit skip requires the deployed [POS-713 / office#674 contract](https://
 **b. Is it a duplicate?** Search the open and recently closed bug posts and issues for the same broken thing. If it's the same:
 - advance it to `duplicate` with `of:` the standing one;
 - thank the later reporter and link the first;
-- close its new issue as a duplicate, linking the original;
+- close its new issue as a duplicate, linking the original, and clear its labels (§3, Labels);
 - **the first reporter keeps the credit.**
 
 The same symptom from a different cause is not a duplicate. When unsure, say so on both and let a founder decide.
@@ -244,7 +244,8 @@ backfilled.
 
 **Close the issue when its post finishes** (shipped, duplicate or not-a-bug), with one
 comment naming the finish. An issue that is **not** a bug (an idea, a design question
-for the founders) is left open and named in your handoff through Rei.
+for the founders) carries no stage label, is left open and is named in your handoff
+through Rei.
 
 ### Labels
 
