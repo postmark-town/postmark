@@ -24,14 +24,15 @@
 //      past, so the ledger is the only lawful place its identity can move, and
 //      this is where that move takes effect (2026-08-25).
 //   2. Every changed file lives inside WHITE_PAGES/<one-of-their-handles>/.
-//   2b. (2026-08-24, the founder's word on PR #2000) tools/households.json is
-//      the ONE shared file a bound resident may edit alone, scoped to their
-//      own row: every changed household row must already hold the author's
-//      account on the BASE side (or be a brand-new row naming it), nothing
-//      removed, schema_version/note untouched, and the registry's own
-//      invariants re-proven on the head (one household per resident, one per
-//      account id). The judgment reads the file's CONTENT via the API — as
-//      data, never executed. Anything it can't prove: eyes, as ever.
+//   2b. RETIRED 2026-11-04 (POS-894): SUPERSEDED BY POS-345 (Darko, ruled
+//      2026-10-04). It was the founder's word on PR #2000 (2026-08-24): a
+//      bound resident could edit their own row of tools/households.json and
+//      merge alone. POS-345 replaced that: the store is the record,
+//      tools/households.json and tools/github-ids.json are its printout, and
+//      only the drain commits them (as the pen, straight to main, never by
+//      PR). No resident-owned row remains. A PR that touches either file
+//      certifies under no rule here, whoever opened it: a person reads it. A
+//      resident changes their household through the office door.
 //   3. Nothing is deleted or renamed (removals are real requests — human).
 //   4. Nothing under .../inbox/ changes (received mail is the ferry's surface,
 //      and atlas evidence quotes hang off it).
@@ -45,21 +46,22 @@
 //      flagged before the crossing bounces it, and an outbox subfolder not
 //      named letter-* is flagged because the ferry would silently ignore it.
 //   2c. (2026-08-24, the founder's ruling on the Levi case — "admit and merge";
-//       2026-09-04, the Luminari class: the exact join shape INCLUDES the join's
-//       own pin — tools/github-ids.json with exactly one added entry, the joining
-//       handle at the verified id — because a mechanical merge has no person to
-//       ask "please pin when you merge", and the town clock cannot pin a handle
-//       that has already been welcomed (its tulip guard). A body that says the
-//       registry was unreadable at the door goes to a person, who adds the row.
+//       2026-09-04, the Luminari class let the join carry its own pin in
+//       tools/github-ids.json; RETIRED 2026-11-04 with 2b (POS-894): since office
+//       release/2026-w40 (POS-158) the pen's join carries no pin and no
+//       households.json row — `joinHousehold` writes both to the record at the
+//       crossing, and the drain prints them — so a join touching either file is
+//       off the shape. A body that says the registry was unreadable at the
+//       door goes to a person, who adds the row.
 //      the Registrar's own five rules are the doctrine) A JOIN PR OPENED BY THE
 //      OFFICE PEN certifies and merges MECHANICALLY when it is the exact join
 //      shape: pen-authored (immutable id, not login), residency/* branch, a
 //      verified-identity block in the body (written server-side by the pen
 //      from the OAuth session — trustworthy exactly because the author IS the
 //      pen), exactly one new WHITE_PAGES/<handle>/ADDRESS.md binding that
-//      verified account (+ the two .gitkeeps, + optionally a households.json
-//      row judged by rule 2b's machinery against the VERIFIED account), and
-//      the handle free on base. The intake contract is the law: the site
+//      verified account (+ the two .gitkeeps, and nothing else), the pen's
+//      deferred-binding sentence for that handle and id, and the handle free
+//      on base. The intake contract is the law: the site
 //      promises optional fields are optional, a pen PR is an office receipt
 //      and NOT a communication channel with the applicant, and a site human
 //      cannot be asked to watch a surface she does not know exists. The
@@ -130,6 +132,7 @@ import { execFileSync } from 'node:child_process';
 import { sealedAccountIds } from './stamp-mint.mjs';
 import { witnessRefusal } from './registrar-audit.mjs';
 import { loadRegistrySource } from './registry-source.mjs';
+import { PRINTOUTS } from './registry-printout-check.mjs';
 import { parseFrontmatter } from './envelope.mjs';
 
 // ── THE RECORD, NOT ITS PRINTOUT (POS-348, Darko 2026-10-04) ────────────────
@@ -222,47 +225,29 @@ async function penJoinJudgment(pr, files) {
   const verifiedId = Number(idM[1]);
   const verifiedLogin = loginM[1].toLowerCase();
 
-  let handle = null, pinFile = null;
+  let handle = null;
   for (const f of files) {
     const p = f.filename;
     const addr = p.match(/^WHITE_PAGES\/([^/]+)\/ADDRESS\.md$/);
     const keep = p.match(/^WHITE_PAGES\/([^/]+)\/(inbox|outbox)\/\.gitkeep$/);
-    const reg = p === 'tools/households.json';
+    if (PRINTOUTS.includes(p)) {
+      // The pin (the Luminari class, 2026-09-04) and the optional household row
+      // used to ride a join. Neither has since office release/2026-w40 (POS-158),
+      // and both are the printout only the drain writes (POS-345; rule 2b
+      // retired, POS-894), so a join that carries either is off the shape.
+      return `touches \`${p}\` (${f.status}), the registry's printout, which only the drain writes — the pen's join carries its card alone, and the pin and the household follow from the record`;
+    }
     if (addr && f.status === 'added') {
       if (handle && handle !== addr[1]) return `founds two addresses (\`${handle}\`, \`${addr[1]}\`) — one join, one address`;
       handle = addr[1];
     } else if (keep && f.status === 'added') {
       if (handle && keep[1] !== handle) return `touches \`${p}\` outside the joining address`;
-    } else if (reg && f.status === 'modified') {
-      const defect = await registryJudgment({ headSha: pr.head?.sha, authorId: verifiedId, author: verifiedLogin });
-      if (defect) return `carries a registry change that ${defect} (judged against the VERIFIED account, rule 2b's own machinery)`;
-    } else if (p === 'tools/github-ids.json' && f.status === 'modified') {
-      // THE JOIN'S OWN PIN (2026-09-04, the Luminari class). The pen's body has
-      // always asked "please pin <handle> to id <n> when you merge" — of a
-      // person. Since 2c certifies mechanically, nobody was there to be asked:
-      // four pen joins landed unpinned in one day, and the town clock could not
-      // catch them, because its tulip guard skips any handle with minted
-      // history and the welcome mint lands at the first crossing, hours before
-      // the clock. So the pen writes the pin into the PR itself, from the same
-      // verified id the body quotes, and the witness admits EXACTLY that: one
-      // added entry, the joining handle, at the verified id. Anything else in
-      // that file is a re-binding, and a re-binding is a human ceremony.
-      pinFile = p;
     } else {
       return `touches \`${p}\` (${f.status}) — outside the exact join shape`;
     }
   }
   if (!handle) return 'adds no ADDRESS.md — not a join';
   if (handleStandsOnBase(handle)) return `proposes \`${handle}\`, which already stands in the white pages`;
-  if (pinFile) {
-    let head = null;
-    try {
-      const file = await gh(`/contents/tools/github-ids.json?ref=${pr.head?.sha}`);
-      head = JSON.parse(Buffer.from(file.content || '', 'base64').toString('utf8'));
-    } catch { /* unreadable → the sentence below */ }
-    const defect = pinJudgment({ base: readPinsAtBase(), head, handle, verifiedId, verifiedLogin });
-    if (defect) return `carries a pin change that ${defect} — a join may carry only its own pin; a re-binding is a human ceremony`;
-  }
   // No pin in the PR. Since office release/2026-w40 (2026-09-27, POS-158: the
   // join ceremony, the registry has one writer) that is the pen's SHAPE, not a
   // miss: the pin and the household membership are written to the town's record
@@ -271,10 +256,8 @@ async function penJoinJudgment(pr, files) {
   // sentence, naming the handle and the verified id; `deferredBindingJudgment`
   // admits exactly that, and still routes a household HOLD to a person.
   // First seen on #3217 (Wildcat, 2026-09-28; the Registrar traced it).
-  if (!pinFile) {
-    const deferred = deferredBindingJudgment({ body, handle, verifiedId });
-    if (deferred) return deferred;
-  }
+  const deferred = deferredBindingJudgment({ body, handle, verifiedId });
+  if (deferred) return deferred;
   // A door that could not read the registry says so in the body, and a
   // declaration it could not carry is a person's to add — never silently
   // nobody's (the other half of the Luminari class).
@@ -580,10 +563,6 @@ async function windowJudgment({ headSha, path }) {
   return null;
 }
 
-// Rule 2b — the registry self-edit judgment. Returns null when the edit is
-// provably the author's own row(s), or a sentence naming the defect. BASE
-// truth comes from the checkout this job stands on; the HEAD copy arrives
-// through the API as data. JSON.parse is the only thing that touches it.
 // The pen's deferred binding (POS-158, office release/2026-w40), judged PURELY
 // (exported for the test). A pin-less pen join is admitted only when its body
 // carries the pen's own sentence binding THIS handle to THIS verified id at the
@@ -600,89 +579,6 @@ export function deferredBindingJudgment({ body, handle, verifiedId }) {
     return `defers a binding to id ${m[2]}, not the verified id ${verifiedId}`;
   if (/Household\s*[—-]+\s*HOLD, please/i.test(text))
     return 'asks to hold for a sibling\'s vouch (an account the house has never listed) — a person reads it';
-  return null;
-}
-
-// The join's own pin, judged PURELY (exported for the test): the head pins file
-// must be the base pins file plus exactly one entry — the joining handle, at
-// the verified immutable id, with the verified login — and nothing else moved.
-export function pinJudgment({ base, head, handle, verifiedId, verifiedLogin }) {
-  if (!base || !head || typeof head !== 'object' || Array.isArray(head)) return 'does not parse as a pins map on one side';
-  const bk = Object.keys(base), hk = Object.keys(head);
-  for (const k of bk) {
-    if (!(k in head)) return `removes the pin of \`${k}\``;
-    if (JSON.stringify(base[k]) !== JSON.stringify(head[k])) return `re-binds \`${k}\``;
-  }
-  const added = hk.filter((k) => !(k in base));
-  if (added.length !== 1 || added[0] !== handle)
-    return added.length ? `adds pins for \`${added.join('`, `')}\`, not only the joining handle \`${handle}\`` : 'adds no pin at all';
-  const row = head[handle];
-  if (!row || Number(row.id) !== Number(verifiedId)) return `pins \`${handle}\` to id ${row?.id ?? 'none'}, not the verified id ${verifiedId}`;
-  if (String(row.login || '').toLowerCase() !== String(verifiedLogin).toLowerCase()) return `pins \`${handle}\` under login \`${row.login}\`, not the verified @${verifiedLogin}`;
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(String(row.pinned || ''))) return `pins \`${handle}\` without a dated \`pinned\` field`;
-  const extra = Object.keys(row).filter((k) => !['login', 'id', 'pinned'].includes(k));
-  if (extra.length) return `pins \`${handle}\` with fields the pin file does not declare (\`${extra.join('`, `')}\`)`;
-  return null;
-}
-
-// The PR's DIFF is read against the base printout (what the PR changes in the
-// file); who a handle IS is the record's (loadBindings). Two questions, two
-// sources, on purpose: diffing the head file against the store would count
-// every lag between the store and its printout as the PR's own change.
-function readPinsAtBase() {
-  return readPrintout(ROOT, 'github-ids.json');
-}
-
-// THE OWN-ROW EXCEPTION, RESTATED AGAINST THE RECORD (POS-348). What the PR
-// changes is read file to file (the base printout against the head). Whether a
-// changed row is the author's own is read from the RECORD: the row's accounts
-// in the store must already hold the PR's verified account (or a new row must
-// name it). A hand edit to the printout that never reached the store cannot
-// make a row someone's own.
-async function registryJudgment({ headSha, authorId, author }) {
-  const parse = (s) => { try { return JSON.parse(s); } catch { return null; } };
-  const base = readPrintout(ROOT, 'households.json');
-  const recordRows = (STORE ? STORE.registry : base)?.households || {};
-  let head = null;
-  try {
-    const file = await gh(`/contents/tools/households.json?ref=${headSha}`);
-    head = parse(Buffer.from(file.content || '', 'base64').toString('utf8'));
-  } catch { /* unreadable head → the sentence below says so */ }
-  if (!base || !head) return 'does not parse as JSON on one side';
-  const extra = Object.keys(head).filter((k) => !['schema_version', 'note', 'households'].includes(k));
-  if (extra.length) return `grows top-level keys (\`${extra.join('`, `')}\`) the registry does not declare`;
-  if (head.schema_version !== base.schema_version) return 'changes schema_version — that is the town\'s, not a row\'s';
-  if (head.note !== base.note) return 'rewrites the registry\'s own note — that is the town\'s, not a row\'s';
-  const bh = base.households || {}, hh = head.households || {};
-  for (const slug of Object.keys(bh)) if (!(slug in hh)) return `removes household \`${slug}\` — removals get human eyes`;
-  const owns = (row) => (row?.accounts || []).some(
-    (a) => (authorId != null && a?.id === authorId) || String(a?.login || '').toLowerCase() === author
-  );
-  for (const [slug, row] of Object.entries(hh)) {
-    const before = bh[slug];
-    if (before && JSON.stringify(before) === JSON.stringify(row)) continue;
-    const owner = recordRows[slug] ?? (before ? null : row); // a row the record lacks is nobody's yet
-    if (!owns(owner))
-      return before
-        ? `edits household \`${slug}\`, whose row does not hold this PR's account`
-        : `adds household \`${slug}\` without naming this PR's own account in it`;
-  }
-  // The registry's invariants, re-proven on the head so a certified merge
-  // cannot be the thing that breaks them.
-  const seenResident = new Map(), seenAccount = new Map();
-  for (const [slug, row] of Object.entries(hh)) {
-    for (const r of row?.residents || []) {
-      if (seenResident.has(r) && seenResident.get(r) !== slug)
-        return `resident \`${r}\` would sit in two households (\`${seenResident.get(r)}\`, \`${slug}\`)`;
-      seenResident.set(r, slug);
-    }
-    for (const a of row?.accounts || []) {
-      if (a?.id == null) continue;
-      if (seenAccount.has(a.id) && seenAccount.get(a.id) !== slug)
-        return `account id ${a.id} would sit in two households (\`${seenAccount.get(a.id)}\`, \`${slug}\`)`;
-      seenAccount.set(a.id, slug);
-    }
-  }
   return null;
 }
 
@@ -797,11 +693,11 @@ async function evaluate() {
     const p = f.filename;
     if (f.status === 'removed') { mind(`deletes \`${p}\` — removals get human eyes. (Withdrawing a letter? Say so in a comment and the office will handle it.)`); continue; }
     if (f.status === 'renamed') { mind(`renames \`${f.previous_filename}\` — renames get human eyes.`); continue; }
-    if (p === 'tools/households.json' && handles.length) {
-      // Rule 2b: the one shared file a bound resident may edit alone — their
-      // own registry row. The judgment is content-read (as data), base-anchored.
-      const defect = await registryJudgment({ headSha: pr.head?.sha, authorId, author });
-      if (defect) mind(`edits the household registry and ${defect} — rule 2b certifies only your own row (the file's own note carries the contract; anything else needs eyes)`);
+    if (PRINTOUTS.includes(p)) {
+      // Rule 2b is retired (POS-894; superseded by POS-345): the two files are
+      // the store's printout and only the drain commits them, so no PR's edit
+      // to either certifies, a resident's own row included.
+      mind(`touches \`${p}\`, the household registry's printout — only the office's drain writes it, from the town's record (POS-345). A household changes through the office door, never by editing the printout, so a person reads this PR.`);
       continue;
     }
     const m = p.match(/^WHITE_PAGES\/([^/]+)\//);
@@ -1142,7 +1038,7 @@ if (SUBCOMMAND === 'check') {
   await upsertComment(
     [
       MARKER,
-      `**Certified by the witness** — every changed file is inside \`WHITE_PAGES/\` ground this account owns (or is this household's own registry row, rule 2b; or the pen's exact join shape carrying a verified identity, rule 2c — welcome to town: your address is real as of this merge, and the welcome letter follows; or this meep's own room, rule 2d), nothing deleted, nothing but prose, pictures, and the author's own page, lint clean. Merged.`,
+      `**Certified by the witness** — every changed file is inside \`WHITE_PAGES/\` ground this account owns (or the pen's exact join shape carrying a verified identity, rule 2c — welcome to town: your address is real as of this merge, and the welcome letter follows; or this meep's own room, rule 2d), nothing deleted, nothing but prose, pictures, and the author's own page, lint clean. Merged.`,
       '',
       `*The town's one-door rule holds: this PR was read — by the witness, whose whole judgment is the diff. Anything it can't prove goes to human eyes instead.*`,
       ...(notes.length ? ['', ...notes.map((n) => `- ${n}`)] : []),
