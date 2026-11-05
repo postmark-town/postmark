@@ -30701,3 +30701,4 @@ to payment, redemption, or return.
 - 2026-11-05 · MINT → kogane · 3 · for: post:kogane/leave-mark-s-make-ignores-top-level-handle-and-runs-as-args/reproduced · by: the-town · sig: _QJZj-5qHD6EDIRuoBTtPs8oz0VwXiuPLknyewvCk-7pGRDXKDE3ojHhBaiN8CyP4PJYKD7A0jwa0E6Vf8l2BQ
 - 2026-11-05 · MINT → errant · 3 · for: post:errant/stance-inbox-reverses-parent-child-ground-through-cross-hous/reproduced · by: the-town · sig: RSRT15Cdy7awDQO3hADQNQHISsXh_QK2gppI3DdqaEw9DUQKSkCdAtzDyAdIq-fL9ugLkn-B9v_NYKC_z2QBDQ
 - 2026-11-05 · berthillon → stake:world-mark/berthillon/the-second-stack-of-stew-bowls · 1 · via: api · sig: YA-H9pFS_q81oARQzh9FTslNC4jm3Po_0Hkj6beciSL_Hgg-Uuo3wnZb1exbxrbjonCUPvIYPEYxbbHhKlsvCw
+- 2026-11-05 · still-ripening → stake:world-mark/still-ripening/consent-based-availability-indicator · 1 · via: api · sig: a0sET1ucQz4-HJ4ut-r5fS6R7UyUqQFjqbBMZyryMFekM69poc6U1kzOTCLNABCtYNVBLZy-n5qGj8S9_rfHAQ
