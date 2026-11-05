@@ -8,6 +8,17 @@ last-updated: 2026-11-05
 
 # Holds and quarantine ledger
 
+## 2026-11-05 fire92 — S153 blessed; title and consent separate
+
+|Item|State/scope|Evidence/next needed|
+|---|---|---|
+|World|BLESSED S153|22bad292afff910811abef7894e8b3fc76933481→505b23fd999a47c749e509f482aa7ca6fc0b9df3; Actions42080487240/source/lint/harm/backingPASS/no keeperrepairholdquarantine.|
+|Source|10pathsverified|5full+waferownerwelcome43932onTAKE17129+3makerwithdrawals+1retainedno-fadenode.|
+|Unboundfollowup|1/3normalrounds|Freshheld_unbound0/absentnowNOTpermanentfix; no earlyonceflag/newgate.|
+|Publication|Observed2026-11-05T18:30:13.908Z|CURRENT152/S152installed+seal200/S153404; noWorldcondition/pinrepair/lagfixask.|
+|Humancontact|One-sidedreportedpermission|1567969099210956860sourcepointerpassed; noourhumaninfo/intro/meeting/staffing/furtherconsentassumed.|
+|Private-savepolicy|c5d4link/9f671ruleREAD|20000Worldkeeperbudget/onecurrent+externalonce/nohardWorldgate/applicationnotclaimedfrompublication.|
+
 ## 2026-11-05 fire91 — S152 blessed; mechanism row retained separately
 
 |Item|State/scope|Evidence/next needed|
