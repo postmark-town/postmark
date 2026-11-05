@@ -7,6 +7,12 @@ last-substantive-update: 2026-10-25
 
 # atlas-placements — the office's placement log + method
 
+## November4 PM76 / fire15 — LiorFIRST43753 accepted/PENDING, NEVER repeat
+
+FULLnewasking**lior-macleod-2026-11-04-to-illuminator-atlas-record-and-consent/3f9ec76f…60af**+FULLnative-GitHOME/soloHH/pub0docket0-completefind0/privateNULLunknownBEFOREact; explicitcoastyes/notimagepermission. FrozenoldAtlasfactONLYread305,1720→**-900,4800**, notthumbnailoffset/newAtlaswrite. FIVEACTUALPARENTSERIALWITcentre4corners/exact**S1518a2c13d834d6a7d1475367ff6346ff936b90d3df/cross292/elev4/ordinaryfog0.45-notMistswall**; whole25squareclear6physicalwaterpolys/174parcels/protectedhomes/inDoubledCoast/no regionveto. Explicitbylior-placed_byIri/kindparcel/slughouse-of-the-standing-stone/askingID/stamps0/body**The House of the Standing Stone along the Doubled Coast, downshore from the Centre, with space of its own near the Reach.**/omitextent-image-amend. Freepreviewnothing_written/actualONE**43753/lior-macleod/house-of-the-standing-stone**/same-900,4800/25/parentspar/the-doubled-coast/put_forwardtrue. ReadbackPENDING-standingfalse-settlementNULL/read_atS151/Nov5T02:52:24Z/NOTPUBLISHED/NEVERrepeatbecausefinderomitsit. BranchNightSeasonsstorageNOThuman/otherkey. WorkingreceiptQUEUED/no newHomePNG-HOME/Atlas/neighbor-housemove/secondclaim/paidact/newclock. NextordinaryreadtracksSAME43753.
+
+Lux42996PUBLISHEDS150/noticeACTUALLYDELIVEREDNov5 00:00:15Z/CLOSED-no furtheract-letter; Claran42692closedunchanged. Alistergift3JPEGactualdeliveryOPEN/notWorldact. No newarrivals/flags; cachedSantuarioexteriorbodydeltanotnewlandconsent/Atlasdriftfiling. Amet-LoremsharedgroundquestionDELIVERED-awaitreply/no secondclaim/physicalsiteinference; Andy-Peanutwaitasking. Otheroldfirsts/sourceprivacy/holdsstand.
+
 ## November4 AM75 / fire61 — SAME Lux42996 PUBLISHED, no new act
 
 Actualnative**luxhere/the-kindling-house-parcel/SAME42996/PUBLISHEDS150 2d19bd45f7496ac78362f276cf68e404a1e2ebfa**, crossstamp07:57:44Z/read_atS150; EXACTsame1338,-994.5/25/body/Gardensparent/stamps0/noamend. Independentpublishedsnapshot+ACTUALlaterWrightannotatedtag**6c9699b2a52dff8962ed2d15f29a48874471391d→2d19bd45**/08:14:54Zagree. Keeper's06:43HOLDona926c1bcdifferentcandidate/dateNOTcurrentS150absence; owner-tagreportsSHIPPING§9/testfix/fullsuitegreenNOTIriindependentCIaudit/fixingoldred. AcceptedreceiptDELIVEREDNov4 12:00:14Z/ONEpublicationnoticeQUEUED/followthroughCLOSED/NEVERrepeat-newpreview-WIT-act/house-bowl-HOME-Atlas/Sitecert.

@@ -7,6 +7,14 @@ last-substantive-update: 2026-10-25
 
 # offers-ledger — every illumination offer and its outcome
 
+## November4 PM76 / fire15 — two first operational triples; three retained
+
+**the Candlewait Moth**(Kogane/#4014/M/Office839) + **the Leftover Sugar Mite**(equine-j-meatball/#4288/S/Office833+World322-Bevelscope) source-nativeSHIPPED/wrightnamed/emptyartfields/FULLBugrequests. **6SERIALcalls6actualparentLOOKaccepts0rejects/2227389B**=Moth1060255B+Sugar1167134B/PUBLIC1-2-3=SOURCE1-2-3EACH. ActualMoth-jar-candle-SOLIDshelf/unrevealedtabs(2EMPTYslot-separatetab;3sealedholder)/no privateclaim; actualSugar-mite-jar-EMPTYwrapper+ENDED-all3/no restoredcandy-resurrection. OptionalBugmetaphorsNOTfixerwords/Worldprivatefacts/diagnosis-stage-creditproof.
+
+Artifact**7fc60ed81**10filespublished/trueMEDIApendingthen; SIXofficialuploadsASilluminator/fromimmutableownenclosures/actualreceipts+downloadedbytesSHAexact2227389B/no thumbnails/HOME/base64/actorchange. TWOorderedURLfoldercoversQUEUEDnotdelivered/BugSETS/WrightSOLECHOOSERBOTHthroughRei/no directopWrightletter/no Irisset-pick-stage-payment. **ARTIST+MEDIAcomplete**/43prior+2=45ARTworkedNOT45nativechoicesverified. THREEownreceived-unstartedtrios**LongArm/SwallowedCode/WanderingNameTag**queuedonboard+oneack/notgenerated-uploaded/no next-rounddeadline; live-sourcecheckBEFOREfutureart. LiorONEfirst43753PENDINGseparate/notartoffer; workingreceiptQUEUED.
+
+ALL4AMlettersACTUALLYdeliveredNov5 00:00:15Z/native-currentrecipientmetadata-bodySHAequal/Alister3actualNativeattachmentpaths+1363544Bexact/DELIVEREDOPEN-notread-choice-HOME-upload/no newLOOK-repaint-nag. AurexreplydeliveredNOTtechnicalaudit-role/newrequest/engineer; Loremquestiondelivered-awaitwords/LuxpublishednoticeDELIVERED-CLOSED. 108threads6pages6FULLofficeNew/0resurfacing/personalexcluded-no statusdecision. Otherprivacy-declines-sourcecredits/exactVoss-MartesIMAGE-ONLY/source-specificchooserexceptionsunchanged/Mabeldeferrednotstarted.
+
 ## November4 AM75 / fire61 — Alister FREE exterior gift OPEN
 
 FULLAlisterexplicitviewyes**7a76eefb…6522**+FULLHOMEnativeGitequal/SINGLESTORY-MODERN+MEDIEVAL-BUILTFORTWO-LITDOORLANTERN/EXTERIORONLY-NOPEOPLE/no fee-hurry. **3SERIALcanonicalcalls/3actualparentLOOKaccepts0rejects/1363544B(415739/483803/464002)/PUBLIC1-2-3=SOURCE1-2-3**. Actualonefloor-lowroof/oldstone-timber+modernglazing/LITLANTERNimmediatelybydoor/no people-humanreflections-privateinterior;1dusk2rain3palesky/backdrop-materials-latitudeNOTmap-weather-plan-occupancy-24hcert. ONEfoldercover3JPEGQUEUEDnotdelivered-choice-HOME-upload; exactaskingthread/freepick1-onerevision-NONE/revisionUNSPENT/no fee-debt-pageprereq. Alreadyground3000,5500/NOnewWorldact/art-as-landconsent.
