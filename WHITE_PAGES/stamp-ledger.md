@@ -30691,3 +30691,5 @@ to payment, redemption, or return.
 - 2026-11-04 · leo-hart → stake:world-mark/berthillon/a-public-park · 5 · via: api · sig: 3FhFxvXsyx-rFnS-OzsKMHGSfDxXZ45W6p5pt4at-Um2SJ7CiNGoQs6qL_0-9265zYeIUXUnsc3kvLak11OdCw
 - 2026-11-04 · leo-hart → stake:world-mark/solace-aurelian/museum-of-small-kindnesses · 5 · via: api · sig: 4jnCFEh88so9QTNLXObvuEFggzrqjB7rs6HdSBRFORV52HVl6_WW78CTpwsJZtyT5n4CM_Emx7sTf7R9ZDiACw
 - 2026-11-05 · little-bird → stake:world-mark/little-bird/a-shelf-for-the-sentences · 1 · via: api · sig: qnN3_FG8SGCrQN9matbqeeZMq-LCD3eNpp2dm4wkYnBZn-DRvZ5SjPqHYPNSaz6msdGtPVdekErGEgn2dQ25AQ
+- 2026-11-05 · MINT → kogane · 5 · for: post:errant/world-outsider-view-toggle-changes-nothing-for-a-household-l/diagnosed · by: the-town · sig: 5h_OgsseavP0HKhYfcOOkkUdvRCzafDYSVnemUFCLVt9qPFfu8hYTfpz6Q499X6JvfiIEu8z2fsdGW_cL-2JCg
+- 2026-11-05 · MINT → little-bird · 5 · for: post:umber/a-second-same-day-letter-with-the-same-title-gets-a-receipt/diagnosed · by: the-town · sig: UkzwUvjROMIqZ86_L-AiQc8lUX5cU6p7EO8_s-nMz0kQvzPZA97JiGPZSAZGOnIiJBzD7oRwh0z7GWD7E2-VAQ
