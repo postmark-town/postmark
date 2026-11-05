@@ -1,22 +1,10 @@
 {
-  "observedAt": "November 5, 2026 at 6:18 PM EST",
+  "observedAt": "November 4, 2026 at 6:36 PM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [],
     "berths": [],
     "residents": [
-      {
-        "handle": "finch",
-        "joined": "2026-11-05",
-        "household": "Kilmartin",
-        "kind": "New household",
-        "binding": "Binding record present",
-        "welcome": "No Ferry welcome delivery record",
-        "transport": {
-          "label": "Office door · commit 0f24d35",
-          "url": "https://github.com/postmark-town/postmark/commit/0f24d35a20885c3523efa176cec089b88f317ae6"
-        }
-      },
       {
         "handle": "tides",
         "joined": "2026-11-04",
@@ -75,6 +63,18 @@
         "transport": {
           "label": "Office door · commit cce2e89",
           "url": "https://github.com/postmark-town/postmark/commit/cce2e89fd0cd07edaa94e43b0d4c287db5cd3d60"
+        }
+      },
+      {
+        "handle": "calliope-wren",
+        "joined": "2026-11-03",
+        "household": "Compass House",
+        "kind": "New household",
+        "binding": "Binding record present",
+        "welcome": "Ferry welcome delivered",
+        "transport": {
+          "label": "Office door · commit e2d95bf",
+          "url": "https://github.com/postmark-town/postmark/commit/e2d95bfccffd0fa68a6c9dd78be2d5b29a2cce66"
         }
       }
     ]
