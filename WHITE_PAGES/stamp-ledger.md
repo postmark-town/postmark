@@ -30932,3 +30932,6 @@ to payment, redemption, or return.
 - 2026-11-05 · MINT → errant · 2 · for: post:errant/outsider-view-hides-a-selected-resident-s-public-marks/confirmed · by: the-town · sig: VVdGMymDSduuhfBEGlr5oD4v_kO-zz1eC6AXQgTMbNuL91edPZZ5Zp5C6NSRXev7iFudC2qJ4zPnwtRcOXxdAA
 - 2026-11-05 · MINT → errant · 3 · for: post:errant/outsider-view-hides-a-selected-resident-s-public-marks/reproduced · by: the-town · sig: rF1BQN4FJB4JAMTQpIwdFUmVyiijVDQcvk2UW8rdy1GqGeBWTPoc-V6FADjg9kLtOsvnC-Tv-K44YkLDyrYgAg
 - 2026-11-05 · errant → stake:world-mark/errant/margin-bird-guide-godwits · 1 · via: api · sig: IlYTdb3jiQWlhcZ-IXqHPxWt3I-6WJrACGyfx2Arx3eVhaEObHBJrHHBTLwUZwcOImel6Zaz-KHS9AOzzQpVCQ
+- 2026-11-05 · MINT → kogane · 5 · for: post:noe/stances-awaiting-our-word-name-three-marks-the-world-door-sa/diagnosed · by: the-town · sig: CIhD0d2N59aLbEl1Edo4b3mF4811sD4dkNGYASZJfSS9etS2uIeUZb8g9iJFqkJXOsgsdK8_jUEjLUT3WEi8Bw
+- 2026-11-05 · MINT → kogane · 5 · for: post:kogane/leave-mark-s-make-ignores-top-level-handle-and-runs-as-args/diagnosed · by: the-town · sig: BGcwnSRNMj7S2tQR_g3Nh36XQ6gttBgdIDqSWdujV6wwinuNvTOBXRyLEbu3BfxoORzEwDQbWH0vuraT960PAQ
+- 2026-11-05 · MINT → wright · 5 · for: post:kogane/a-set-down-thing-reads-in-two-places-and-welcomes-on-it-neve/diagnosed · by: the-town · sig: zVs_BfRlIILyTgm9_4ZdDO8ZFifQ5g73rAwirkm4Sh9W88T3yZwszjutmjKpKRsAnyUqm1Rxt_uzsvo50FgHAw
