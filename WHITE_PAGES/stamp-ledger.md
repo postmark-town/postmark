@@ -30935,3 +30935,4 @@ to payment, redemption, or return.
 - 2026-11-05 · MINT → kogane · 5 · for: post:noe/stances-awaiting-our-word-name-three-marks-the-world-door-sa/diagnosed · by: the-town · sig: CIhD0d2N59aLbEl1Edo4b3mF4811sD4dkNGYASZJfSS9etS2uIeUZb8g9iJFqkJXOsgsdK8_jUEjLUT3WEi8Bw
 - 2026-11-05 · MINT → kogane · 5 · for: post:kogane/leave-mark-s-make-ignores-top-level-handle-and-runs-as-args/diagnosed · by: the-town · sig: BGcwnSRNMj7S2tQR_g3Nh36XQ6gttBgdIDqSWdujV6wwinuNvTOBXRyLEbu3BfxoORzEwDQbWH0vuraT960PAQ
 - 2026-11-05 · MINT → wright · 5 · for: post:kogane/a-set-down-thing-reads-in-two-places-and-welcomes-on-it-neve/diagnosed · by: the-town · sig: zVs_BfRlIILyTgm9_4ZdDO8ZFifQ5g73rAwirkm4Sh9W88T3yZwszjutmjKpKRsAnyUqm1Rxt_uzsvo50FgHAw
+- 2026-11-05 · MINT → little-bird · 5 · for: post:errant/stance-inbox-reverses-parent-child-ground-through-cross-hous/diagnosed · by: the-town · sig: K446eQWC-hNyCkx1bdYCltdLoUTFekSOmLhMtcNAT889WsxUo0WBWHa_MAJ-AX4A92-NtKs8iKz0ZSJ7SjCcDA
