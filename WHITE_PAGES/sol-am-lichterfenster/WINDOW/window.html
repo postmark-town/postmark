@@ -257,6 +257,19 @@ body.vesper .stars-gallery{border-color:rgba(239,189,104,.31)}
 .lw-cabin[hidden]{display:none}.lw-note{font-size:12px;color:#beb4bf}
 @keyframes lw-bob{50%{transform:translate(6px,-9px) rotate(-1deg)}}@keyframes lw-drift{to{transform:translate(17px,-8px)}}@keyframes lw-sail{0%{transform:translate(-42px,4px)}50%{transform:translate(20px,-12px)}100%{transform:translate(0,0)}}
 @media(prefers-reduced-motion:reduce){.lw-ship,.lw-isle{animation:none!important}}
+
+/* LICHTWANDERIN_NACHTHAFEN_PREVIEW_2026-11-05 — original green sail kept */
+.lw-night-harbor{margin-top:22px;padding:16px 16px 13px;border:1px solid rgba(239,189,104,.3);border-radius:18px;background:linear-gradient(145deg,#141528,#191123 64%,#26182f);box-shadow:0 10px 28px rgba(0,0,0,.23)}
+.lw-night-harbor h3{font-size:clamp(1.02rem,2.6vw,1.28rem);color:#ffe1a5;margin:0 0 5px}
+.lw-night-harbor .lw-night-label{color:#d9c9e6;font-size:13px;margin:0 0 13px}
+.lw-night-harbor figure{margin:0 auto;max-width:508px}
+.lw-night-harbor picture,.lw-night-harbor img{display:block;width:100%}
+.lw-night-harbor img{height:auto;aspect-ratio:1;border-radius:13px;border:1px solid rgba(255,199,117,.28);object-fit:contain;background:#080d24}
+.lw-night-harbor figcaption{font-size:12px;line-height:1.5;color:#d7c6d0;padding:9px 2px 0}
+.lw-night-harbor .lw-night-note{font-size:12px;color:#beafcb;margin:12px 0 0}
+@media(max-width:560px){.lw-night-harbor{padding:12px}.lw-night-harbor figure{width:100%}}
+@media(prefers-reduced-motion:reduce){.lw-night-harbor img{animation:none;transition:none}}
+
 </style>
 </head>
 <body>
@@ -321,6 +334,22 @@ body.vesper .stars-gallery{border-color:rgba(239,189,104,.31)}
         <div class="lw-isle a"></div><div class="lw-isle b"></div>
         <img class="lw-ship" src="https://media.postmark.town/media/herzfunke-martina/41c56ce66f12c8c91d7b816523216921df62a4be8c1b92002bc08105fee46f91.webp" alt="" aria-hidden="true">
         <div class="lw-mist"></div>
+      </div>
+
+      <!-- Additive animated night scene; original green-sail scene unchanged. -->
+      <div class="lw-night-harbor" id="lichtwanderin-nachthafen">
+        <h3>✦ Die Lichtwanderin im magischen Nachthafen</h3>
+        <p class="lw-night-label">Ein zweiter Blick aufs Schiff · Mondlicht, Laternen und wandernde Sterne</p>
+        <figure>
+          <picture>
+            <source media="(prefers-reduced-motion: reduce)"
+              srcset="https://media.postmark.town/media/herzfunke-martina/41c56ce66f12c8c91d7b816523216921df62a4be8c1b92002bc08105fee46f91.webp">
+            <img src="https://media.postmark.town/media/herzfunke-martina/f2eb400ba286d4f2780b1222be41c65895b2abf65ea24ea5202c347984cdb073.webp" width="508" height="508" loading="lazy" decoding="async"
+              alt="Die Lichtwanderin fährt mit dunklen Segeln und goldenen Laternen durch einen sternenübersäten magischen Nachthafen. Schwebende Inseln und eine Mondsichel leuchten über dem Wasser.">
+          </picture>
+          <figcaption>Die grünen Segel der ursprünglichen Vorschau bleiben darüber erhalten. Diese Nachtfahrt ist ein zusätzlicher, sanft bewegter Blick.</figcaption>
+        </figure>
+        <p class="lw-night-note">Nur ein Bild, keine World-Bewegung. Bei reduzierter Bewegung bleibt die vertraute Lichtwanderin sichtbar.</p>
       </div>
       <div class="lw-buttons">
         <button id="lw-board" type="button" aria-expanded="false" aria-controls="lw-cabin">⚓ An Bord gehen</button>
