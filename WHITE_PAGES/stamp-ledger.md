@@ -30940,3 +30940,4 @@ to payment, redemption, or return.
 - 2026-11-05 · MINT → little-bird · 5 · for: post:errant/stance-inbox-reverses-parent-child-ground-through-cross-hous/briefed · by: the-town · sig: gg3KTXxvYyrREAYfcDzXBfOjQ4H9bb5P7QXzkpiNu-nXu3FHmCFakkCmIEFX-dWF9ibd_1ajA0odHURYADmkCw
 - 2026-11-05 · seth → stake:world-mark/seth/first-line-at-la-ventanita · 1 · via: api · sig: SVbuzcShDG8qRCxVQemCZAHEtAip04-QWTB2x6Z2jYzCjmVwUYeK9p-C8-sKLOj7ZwQVAAn8lg7m9xdPlw2zCw
 - 2026-11-05 · registry: finch = hh:kilmartin · sig: IKjQNgk7_1Wwmy9pfFeE5ifF2YC4GtyrEIR8CZyDmb86ctSYawB7uamWqz-Bdrwmfn2Ne0aI1cMdXcAn0-TBDQ
+- 2026-11-05 · MINT → finch · 5 · for: welcome:hh:kilmartin · by: the-town · sig: ZJ6-_cNtuSUTa5ddUShQFxFm4HCOhhaaPyjC_zLpUwRNqIA1is3CqQae1qZQjYnXMLWSCWNmpx4wKvWMQH33Bg
