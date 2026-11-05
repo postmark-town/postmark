@@ -126,6 +126,32 @@ test("a berth- handle is skipped by name: the office hears berth-* as a visitor,
   rmSync(empty, { recursive: true, force: true });
 });
 
+test("POS-884: each reserved prefix is skipped by the one rule's sentence and lands NOTHING, beside an ordinary berth that settles", () => {
+  // Both handles pass the grammar (lowercase-hyphenated, 2-40), so the refusal is the prefix rule's
+  // (tools/reserved-handles.mjs), not a malformed-handle skip.
+  const root = town({ state: "open", berths: [
+    { handle: "berth-inv-tide", boarded: "2026-08-01" },
+    { handle: "human-of-inv-reed", boarded: "2026-08-02" },
+    { handle: "inv-moss", boarded: "2026-08-03" },
+  ]});
+  const before = Object.fromEntries(["berth-inv-tide", "human-of-inv-reed"].map((h) =>
+    [h, readFileSync(join(root, "HARBOR", "berths", `${h}.md`), "utf8")]));
+  const r = settle({ execute: true, root });
+  assert.deepEqual(r.admitted.map((a) => a.handle), ["inv-moss"], "the ordinary berth is admitted");
+  assert.deepEqual(r.skipped.map((s) => s.file).sort(), ["berth-inv-tide.md", "human-of-inv-reed.md"]);
+  for (const [h, prefix] of [["berth-inv-tide", "berth-"], ["human-of-inv-reed", "human-of-"]]) {
+    const skip = r.skipped.find((s) => s.file === `${h}.md`);
+    assert.ok(skip, `${h} is skipped`);
+    assert.match(skip.reason, new RegExp(`wears the ${prefix} reserved prefix \\(the reserved-prefix rule: no resident handle begins with berth- or human-of-\\)`));
+    assert.ok(!existsSync(join(root, "WHITE_PAGES", h)), `${h}: no address is born`);
+    assert.equal(readFileSync(join(root, "HARBOR", "berths", `${h}.md`), "utf8"), before[h], `${h}: the berth is not stamped ashore`);
+    assert.deepEqual(housesHolding(registryOf(root), h), [], `${h}: no household row`);
+  }
+  assert.ok(existsSync(join(root, "WHITE_PAGES", "inv-moss", "ADDRESS.md")));
+  assert.deepEqual(housesHolding(registryOf(root), "inv-moss"), ["house-of-inv-moss"]);
+  rmSync(root, { recursive: true, force: true });
+});
+
 test("dry run computes everything and writes NOTHING", () => {
   const root = town({ state: "open", berths: [{ handle: "ada", boarded: "2026-08-01" }] });
   const before = readFileSync(join(root, "HARBOR", "berths", "ada.md"), "utf8");

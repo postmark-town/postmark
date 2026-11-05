@@ -137,6 +137,7 @@ import { sealedAccountIds } from './stamp-mint.mjs';
 import { witnessRefusal } from './registrar-audit.mjs';
 import { loadRegistrySource } from './registry-source.mjs';
 import { parseFrontmatter } from './envelope.mjs';
+import { reservedHandleRefusal } from './reserved-handles.mjs';
 
 // ── THE RECORD, NOT ITS PRINTOUT (POS-348, Darko 2026-10-04) ────────────────
 //
@@ -259,6 +260,9 @@ async function penJoinJudgment(pr, files) {
     }
   }
   if (!handle) return 'adds no ADDRESS.md — not a join';
+  // berth-* and human-of-*: the town's one reserved-prefix rule (tools/reserved-handles.mjs, POS-884)
+  const reservedPrefix = reservedHandleRefusal(handle);
+  if (reservedPrefix) return `proposes a handle the town reserves: ${reservedPrefix}`;
   if (handleStandsOnBase(handle)) return `proposes \`${handle}\`, which already stands in the white pages`;
   if (pinFile) {
     let head = null;
