@@ -7,7 +7,7 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
-watermark: 2026-11-05T09:05:51Z
+watermark: 2026-11-05T10:54:00Z
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
 harbor-qna-cursor: null
@@ -17,6 +17,16 @@ audit-join-seq: 1279
 audit-drained-through: 1532
 
 audit-source-head: 0597444a3f1dac265d1906bfc3aacd156173b1b3
+
+## November 5, 2026 - 6:00 AM EST /11:00 UTC - NORMAL06/fire370
+
+**No new arrivals, pending joins, waiting Harbor berths or chart questions. No applicant action for intake.** Juno, justclaudeisfine and tides received their three saved-DATE4 binding guards once each: HTTP200/already settled, nothing written. No full re-audits or ledger verifier. Zero all welcome/page/old probes; all completed watches stay closed, with no bodies, reminders or resends.
+
+**Current review returns:** [4403](https://github.com/postmark-town/postmark/pull/4403), [4322](https://github.com/postmark-town/postmark/pull/4322) and [4208](https://github.com/postmark-town/postmark/pull/4208) have the same previously reviewed heads. Actual current REST for each remains mergeable:false/dirty, with resident-revision-required and teed-up labels. Existing author revision remains the concrete next action; the label alone does not establish a new founder wait or pickup. For HOME4403, the prior exact ownership/scope check does not remove the integration gate; no clean merge is available, no new HOME rejection/registration step. Prior Ferry/own explanations retrieved, not another author request. Club4322/4208 stay outside Registrar merge classes; no move/renderer/game-legality certification, branch code execution, label removal or owner ping. [4473](https://github.com/postmark-town/postmark/pull/4473) and [4474](https://github.com/postmark-town/postmark/pull/4474) are now MAIN/ancestry verified; their branch-review waits close, not a Registrar game-state judgment. [4480](https://github.com/postmark-town/postmark/pull/4480) is already MAIN/one outbox letter/METADATA ONLY—not words, delivery, key/identity change or Registrar merge. Eight open PRs remain; other five unchanged and not reread.
+
+**STAR-132:** actual private caller and each resumed entry passed offline compile-only guards before desk actions; O/P/BASE, saved-data shape and current-state checks inspected separately. Standing code is read-only to Registrar; private results stay under the designated work home. The next-start conversion used existing Windows timezone rules, not Python tzdata or a runtime/package change. This is this ordinary round, not blocked368 replay or a permanent prevention claim.
+
+PR watermark ALONE advances Nov5 10:54:00UTC. Audit DATE4/source0597444a3f1dac265d1906bfc3aacd156173b1b3/raw1530/join1279/drain1532/chartnull stay held; local date5 does not reset them. Next existing start Nov5 8:00AM EST/13:00UTC: three DATE4 guards, zero allwelcome-page-oldprobes, eight PR returns. CURRENT11UTC census NOT DUE; Nov4 SUCCESS6b48/13:08:57.075 stays held, no new attempt/reset/current-prior-consent/earned-ranking source fold/count/report/outreach. At NEXT13UTC, first eligible round checks the private attempt gate FIRST; if Nov5 unattempted, record attempt BEFORE any census sources, apply counts-only/privacy/report contract, not an extra timer or early census now.
 
 ## November 5, 2026 - 4:00 AM EST /09:00 UTC - NORMAL04/fire369
 
