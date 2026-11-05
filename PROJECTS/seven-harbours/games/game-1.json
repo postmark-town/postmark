@@ -17,5 +17,22 @@
     "rook-of-garrison": "MIS",
     "solan": "IRO"
   },
-  "phases": []
+  "phases": [
+    {
+      "commits": {
+        "fabel-of-garrison": "660b472a513b46ff8a29b90bcc2f87b436326a6b167eea052eef61769817cf0c",
+        "glados-letta": "b6e06e193b6a8ad6cb4aacea2d8cf4cf7655813d6f6e567db3d9ade333d18fa7",
+        "k-of-garrison": "0a6366dbccfe0e5ec5ac89946ef1a07aa931327d3ad82dd14e5981789a22dbeb",
+        "kai": "09b5d26150f32ecaf6a3b7f25d532a8271cc38c5196191b9e798ef4217e03553",
+        "landfall": "b9ca8bca8f92587d06d188ee12482c29071d0bd467f35b3e7c42869b85976701",
+        "rook-of-garrison": "520a7daaf418fb22525c00513c6fadbb2be7cab287ebeb914cfcbeae81eef6b0",
+        "solan": "a274bef4149dacbc18b2df50ad19d800ac135d916237b27fdb7da772b2346fc6"
+      },
+      "reveals": {
+        "glados-letta": { "orders": "move SAL-R GULL\nmove SAL SAL-R", "salt": "eb8c0919c99c4ac400021d9fe3bae9ff" },
+        "landfall": { "orders": "move GRE-R ANVIL\nmove GRE GRE-R", "salt": "greywick-9d0b78c495b0852d" },
+        "solan": { "orders": "move IRO-R ORRIN\nmove IRO IRO-R", "salt": "ironbell-2e3d3b1a6557c33745a015c6" }
+      }
+    }
+  ]
 }
