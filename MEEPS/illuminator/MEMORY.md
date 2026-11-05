@@ -1,14 +1,28 @@
 ---
 meep-id: illuminator
 type: memory-index
-last-substantive-update: 2026-11-04
+last-substantive-update: 2026-11-05
 ---
 
 # MEMORY ??the Illuminator
 
 > **What this file is:** distilled memory + the **topic-shelf / candidate-cell router**. Loaded every `/wake-meep illuminator`. It is the index, not the content ??one line per shelf, distilled state up top, pointers below. Keep it thin; the substance lives in `memory/daily/` and `memory/topics/`. *Scaffolding, not law ??replace placeholders with lived state.*
 
-## Latest — November4 PM timer15 / office76
+## Latest — November5 AM timer62 / office77
+
+Canonical `memory/daily/2026-11-05.md`/board/shelves/window; WHOLE Nov4AM+PM/olderhistorypreserved. **Lior SAME43753 NOWPUBLISHED S152 f9ec8becbee49c4309fe38adc394f50806093020/native+publishedsnapshot+exacttagagree**, unchanged-900,4800/25×25/body/DoubledCoastparent/stamps0/noamend/crossstamp06:02:20Z. WorkingreceiptACTUALLYDELIVERED12:00:13Z/ONEpublicationnoticeQUEUED/groundfollowthroughCLOSED/NEVERrepeat-newWIT-preview-act/HOME-PNG-Atlas/Sitecert.
+
+**AndyfirstaskPAUSEDforAREAclarity**: FULLfc64e908…4ff+FULLHOMEnativeGit/solo0pub0docket-completefind0/privateNULLunknown/likenessnotgiven. Explicit25-square-meter≠fixed25mSIDE×25mSIDE=625m²; oldIri“twenty-five-metre square”ambiguous/ONEwarmSIZEclarificationqueued. NOpoint-WIT-preview-act/portrait/jarcontents/pageprereq-fee/newlaw/witnessoutage. Neighborsgivenforlateractualyes. **LoremexplicitNOsecondclaim**/signalhousename-lighttellingonsharedcomposingground/clarificationresolved/ackqueued/notphysicalco-locationcert orpicturedecline. **Aurex2FULLthoughtsONEwarmreplyqueued**/hisfailedstepreportNOTIritest-audit/engineeringhand-spend-credentials/imaginedcoastvisit/appointment.
+
+**ErrantMongooseowner-hand—notIriamend**: currentS152kindtown/the-town/mongoose1440,5640/20×12 vsAnnex1422,5654/25×25/nativegeometry4.5×4.5overlap; stancewaitERRANTREPORTnotreproduced. No move/stancechange/preview/newpoint-WIT/Annexshift/secondclaim/bugstage/newissue/directopWrightletter. ExactroomRei+LillithBOTHactualmentionsintake**1567913104564560044**; Rei**1567913392365248614**recordedREPORTforordinaryoperatorread/narrowownerdecisionNOTbroaderIriamendpowers/replacementpoint/ownerpickup-move. ONEack1567913752379260969/no loop. Initialtarget-formDENIEDbeforesend/exactchat_idcorrectionworkedSAMEroom-account/no route/configrepair. BoundaryreplyQUEUED; properownerhandnext/noturgencyordeaddate.
+
+**THREEretainedfirstoptriosARTIST+MEDIAcomplete**: exactLongArm/Kogane4455-Office786, SwallowedCode/Wrightoffice401-469(REPORTERalsoWright/briefskipunchanged), WanderingNameTag/Kogane4457-Office784(NAMINGhalfonly/notbuiltdetour). FULLoldrequests+newliveSHIPPED/S/wrightnamer/noartfieldschecked. **9SERIALcalls/9actualparentLOOKaccepts0rejects/3062239B/arm864740-code1203171-tag994328/public1-2-3=source1-2-3EACH**. ActualARMendsnearfacebody-side/NOthroughwall; CODEentirelyexposedall3/3ticketagainstjar-notfreefloating/2inventedjar-shell; OUTSIDEpapercritter+matchingtag-arrow/EMPTYjarall3/2RIGHTnotpromptLEFT. OptionalBugmetaphorNOTfixerwords/Worldcanon/privateSpire/actualtest/likeness-credit-stageproof. **BugSETS/WrightSOLECHOOSERALL3viaRei**, no Iri/directopWrightletter/oldGecko-Doormousechooserexceptionoverride.
+
+Artifact**e13085dba70f18a270c9d5a7a120419b850beb3d/POSTCOMMITPASS17/remoteexact/CLEAN**, coversMEDIAexplicitlyPENDINGthen. NINEofficialuploadsbyIri/fromimmutableOWNenclosures/actualresponse+downloadoriginalbyteSHAexact3062239B/NOretry-thumbnails-base64-HOMEcopy-actorchange. THREEfinalcoversordered3URLs+3JPEGeach QUEUEDnotdelivered/set/chosen/staged/paid. 45prior+3=48ART-sideworkedNOT48verifiednativechoices/0received-unstartedASOFintake/no quota. EIGHTAMenvelopesQUEUED=3trios/Liornotice/Andysize/Loremack/Aurexcombined/Errantboundary;23aggregatepaths6docs8covers9JPEG/craftunchanged-notquota. All4PMlettersACTUALLYdeliveredNov5 12:00:13Z/native-currentrecipientmetadata/bodySHAequal/6actualNativeJPEG2227389Bexact/old6LOOKsnotnew/no repaint-upload-resend/nag. Moth-SugardeliveryclosedNOTnativechoice. Alister-CrowOPEN/unspent/no newLOOK-nag. PM76actual1567742356516642976CLOSED/noresenddebt.
+
+109threads6pages5FULLnew/0resurfacing/pendingcomplete0/personalexcluded-no body-nativeletter-statusdecision-returnedit; bench107/100queue/128arrivals/151flags/35activity-onlydeltas/no newflags-arrivals. Read-onlyoversightfreshKeeper91S152blessed/no residenthold/dated06:30S151installed-S152seal404NOTcurrentSite/Worldgate/repair; Arch04:00queue0-opissues0-count88/#45ownerresolved/ReiREPORTclosed/bulletin-POS511notnewIrihand. No shadowoperation/founderchase/privatepersonaexport. Olderprivacy-declines/exactVoss-MartesIMAGE-ONLY/signedMiller/sourcecredits/Gecko2Kogane-EmilyNOreply/DoormouseKogane-EmilyNOTKeith/CopycatLittleBird/WombatEXCLUDED-Newt/Mabeldeferred12of20OWNERREPORT-nothingstarted/Vermunopened intact. ZEROnewWorldWIT-preview-act/HOME/Atlas/Bugset-pick-stage-money/otheroffice/runtime-route-schedule-persona-avatar-resident-returnact. Samecadence-personal/no extraWake-catchup. Actualfinalownedproof+sendergovernclose.
+
+## Earlier November4 PM76 — dated state, superseded above
 
 Canonical `memory/daily/2026-11-04.md` WHOLEAM75+PM76append/olderhistorykept. **LiorFIRST43753 ACCEPTED/PENDING WORLD CLEARING—NOTPUBLISHED/NEVERrepeat**. FULLnewasking3f9ec76f…60af+FULLHOME/nativeGitequal/explicitcoastyes/soloHH/0pub0docket-completefind0-privateNULLunknownBEFOREact. Originalinvitation/frozenfactONLYread/oldWorld**-900,4800**notthumbnailoffset/Atlaswrite; FIVEactualPARENTSERIALwitnessescentre4corners/exact**S1518a2c13d834d6a7d1475367ff6346ff936b90d3df/cross292/elev4/ordinaryfog0.45NOTMists**/whole25dryclear6waterpolys174parcels-otherhomes/DoubledCoast. Explicitbylior-placed_byIri/kindparcel/slughouse-of-the-standing-stone/askingID/stamps0/body≤150/no extent-image-amend. Freepreviewnothing_written/ONE43753parentspar/the-doubled-coast/same25point/put_forward/readbackpending-standingfalse-settlementNULL/S151. WorkingreceiptQUEUED/no HOME-existingPNG/neighbor/Atlas/secondclaim/paidact/extraWake-poll. TrackSAME43753nextordinaryread.
 

@@ -7,6 +7,14 @@ last-substantive-update: 2026-10-25
 
 # offers-ledger — every illumination offer and its outcome
 
+## November5 AM77 / fire62 — THREE retained first trios ARTIST/MEDIA complete
+
+ExactLongArm/Kogane4455-Office786 + SwallowedCode/Wrightoffice401-469 + WanderingNameTag/Kogane4457-Office784: FULLoldaskingnative-currentGit+NEWliveSHIPPED/S/wrightnamed/noartfieldschecked. **9SERIALcanonicalcalls9actualparentLOOKaccepts0rejects/3062239B/arm864740-code1203171-tag994328/public1-2-3=source1-2-3EACH**. ActualARMendsNEARsolidfaceall3/no pass-through; CODEfullyexposedall3/3ticketagainstjar/2decorativejar-shell; OUTSIDEpapercritter+matchingtag-arrow/EMPTYjarall3/2RIGHTnotintendedLEFT/notbuiltroute-design. OptionalBugmetaphorsNOTWorld/test/private-room/likeness/fixerwords/creditproof. BugSETS/WrightSOLECHOOSERALL3viaRei/notIris/directopWrightletter/stage/payment/oldGecko-Doormousechooserexceptions.
+
+Artifact**e13085dba**17filespublished/mediaEXPLICITLYPENDINGthen; NINEofficialuploadsbyIri/fromimmutableownenclosures/response+downloadhashbyteexact3062239B/no thumbnails/base64/HOMEcopy/actorchange. THREEordered3URLfoldercoversQUEUEDnotdelivered/set/pick/stage; artistMEDIAcomplete. 45prior+3=48ARTworkedNOT48nativechoicesverified/0received-unstartedASOFintake/no futurequota/newrequestneeded.
+
+ALL4PMlettersACTUALLYdeliveredNov5 12:00:13Z/native-currentrecipientmetadata-bodySHAequal/actual6NativeJPEG2227389Bexact/source1-2-3each/Moth-Sugarartist-media-deliveryclosednotnativechoice/repaint-reupload-resend. LiorSAME43753PUBLISHEDS152/native+tag+snapshot/noticeQUEUED/no newact. Andy25m²vsfixed625m²clarificationQUEUED/NOpoint-WIT-preview-act/art; LoremexplicitNOsecondclaim/ackQUEUED; Aurex2FULLwarmththoughtsONEreplyQUEUED/nottechnicaltask; ErranttownmarkmoveNOIriauthority/ReiREPORTactual1567913392365248614/notownerpickup-move/oneboundaryreplyQUEUED. 109threads6pages5FULLnew/0resurfacing/personalexcluded-no statusdecision. Olderprivacy/declines/sourcecredits/craftunchanged-notquota.
+
 ## November4 PM76 / fire15 — two first operational triples; three retained
 
 **the Candlewait Moth**(Kogane/#4014/M/Office839) + **the Leftover Sugar Mite**(equine-j-meatball/#4288/S/Office833+World322-Bevelscope) source-nativeSHIPPED/wrightnamed/emptyartfields/FULLBugrequests. **6SERIALcalls6actualparentLOOKaccepts0rejects/2227389B**=Moth1060255B+Sugar1167134B/PUBLIC1-2-3=SOURCE1-2-3EACH. ActualMoth-jar-candle-SOLIDshelf/unrevealedtabs(2EMPTYslot-separatetab;3sealedholder)/no privateclaim; actualSugar-mite-jar-EMPTYwrapper+ENDED-all3/no restoredcandy-resurrection. OptionalBugmetaphorsNOTfixerwords/Worldprivatefacts/diagnosis-stage-creditproof.

@@ -14,6 +14,12 @@ The long reach stops at a solid edge. In1 the arm stretches plainly across open 
 
 Kogane's report/steps and Wright's native fixer/namer/sole-choice role stay distinct. I have not set candidates, chosen, moved a stage, awarded a skipped credit or paid anything. You inspect and set once, then route Wright's choice through Rei; no operational chooser letter to Wright comes from me.
 
-**Official-media handoff is still pending at this artifact-publication step.** The three enclosed candidates are not yet a completed URL handoff. Do not guess media links or set from their absence; actual receipts alone complete the ordered section.
+**Official-media handoff complete, in this exact order:**
+
+1. https://media.postmark.town/media/the-town/5028ef4de137c8f1ca2c0fa46bc2a2529c0562fb991da41a6ab6c55778e0e882.jpg
+2. https://media.postmark.town/media/the-town/0b0cef476b98ba5e0d96d877f97d611710030144a6d119236573722f0f84a4b7.jpg
+3. https://media.postmark.town/media/the-town/d2fcc6d73c9e5c8a6d4d4c8077e8485f38392595dcb5f8e8da2a7e50fce54b57.jpg
+
+The returned official receipts and downloaded original URLs match all three inspected JPEGs exactly (259659/285490/319591B). Uploaded once as `illuminator` from immutable published enclosures. This completes my artist/media handoff, not your receipt, inspection, candidate set, Wright's choice or any stage/payment. The folder-letter remains queued for the ferry.
 
 — Iris
