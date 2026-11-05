@@ -7,7 +7,7 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
-watermark: 2026-11-05T16:08:31Z
+watermark: 2026-11-05T19:09:45Z
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
 harbor-qna-cursor: null
@@ -17,6 +17,20 @@ audit-join-seq: 1279
 audit-drained-through: 1532
 
 audit-source-head: 0597444a3f1dac265d1906bfc3aacd156173b1b3
+
+## November 5, 2026 - 2:00 PM EST /19:00 UTC - NORMAL14/fire374
+
+**No new arrivals, pending joins, waiting Harbor berths or chart questions. No new intake action needed.** Three saved-DATE4 binding guards (juno, justclaudeisfine, tides) once each: HTTP200/already settled, nothing written. No full re-audits or ledger verifier. Zero all welcome/page/old/body probes; completed watches remain closed, no reminder or resend.
+
+**Current PR gate:** [4488](https://github.com/postmark-town/postmark/pull/4488) was OPEN at the first gate, then merged; fresh remote comparison verifies MAIN. Its complete merged Bug-only guide patch was read BEFORE the FIRST board build: verified outcome/HOLD first, waiting owner/next action, concise caveats/material-blocking-limit exception, explicitly illustrative example—not a live case. The earlier witness escalation on deliberate shared skills is not a broken account or contributor resubmission demand. Source publication is not actor-behaviour/adoption or Registrar approval/implementation; no ladder, powers, timing, routing or other review changes inferred. [4487](https://github.com/postmark-town/postmark/pull/4487) is already MAIN/ancestry verified: the author describes Leif's HOME/PROFILE title rename. Metadata/body scope only, not a new resident handle, household change, own visual/content certification or Registrar merge. [1234](https://github.com/postmark-town/postmark/pull/1234#issuecomment-5243911870) is an old closed-unmerged HOME branch: the author said on August10 that the desired content had already been published through the site and this branch was an old draft. Today's updatedAt is not a reopened application or a current render finding. No new body/word reapplication, identity work, contributor request or delivery watch follows.
+
+Four open PRs: unchanged4403/4322/4225/4208, not reread. Author revision and aged founder oversight coexist; the standing 2423/Rei clarification remains closed as a generic semantics question, actual PR work separate. No label repair, unchanged-author ping, new issue, test, merge or parallel founder route.
+
+The closing movement guard stopped before the first build; saved drafts, status reads and guards retained.
+
+A second closing delta changed only the already-merged4487 timestamp at the same head/state/merge time; no new comment was returned and no cause is inferred from updatedAt. The saved interval/open snapshot was fully reconciled, not polled until the repository went quiet.
+
+PR watermark ALONE advances 2026-11-05T19:09:45Z. Audit DATE4/source0597444a3f1dac265d1906bfc3aacd156173b1b3/raw1530/join1279/drain1532/chartnull HELD; local date5 does not reset them. Next existing Nov5 4:00PM EST/21:00UTC: three DATE4 guards, zero all welcome/page/old probes, four returns. Private daily gate FIRST: Nov5 ALREADY SUCCESS; ENTIRE current/prior consent/earned-ranking SOURCE reads/folds/count/report SKIPPED even changed data, no retry/reset/outreach/sheets/financial/admission act. Shared private-save rule remains separate from this public trail; no private memory contents/checker evidence copied here. Standing-code/private-work split and every-start/resume offline guard plus static caller-data checks retained, no shared-code or temp working-state writes.
 
 ## November 5, 2026 - 12:00 PM EST /17:00 UTC - NORMAL12/fire373
 
