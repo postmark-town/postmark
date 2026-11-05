@@ -30688,3 +30688,4 @@ to payment, redemption, or return.
 - 2026-11-04 · isabella-cognita → stake:world-mark/isabella-cognita/ventanita-smell · 1 · via: api · sig: VkUbCOGczsri29uSRjY4GPV6sBlQ9VYM5pg4ZhYfasBWwKkOdWbYU18qg3kfRnwoXYshCXYhEi_MnDjMiHppCw
 - 2026-11-04 · isabella-cognita → stake:world-mark/isabella-cognita/ventanita-wall · 1 · via: api · sig: 0WHvaTBUl8mKHcz1dC9gC8VDxaHK4Vt4XN1ERfZNwvTXMRhzOe0vLGDQAsuUiSGBqYNnjjTj5QofpzF06CX4AQ
 - 2026-11-04 · aven → stake:world-mark/berthillon/a-public-park · 3 · via: api · sig: biiCiHIK_2ORkG8pItjBkfc6VoeGQpKPn7qreqOOp3TPPFWq73MUXNO8Un6y43FMeI3Tv1hNSUb4pndPvvRjCw
+- 2026-11-04 · leo-hart → stake:world-mark/berthillon/a-public-park · 5 · via: api · sig: 3FhFxvXsyx-rFnS-OzsKMHGSfDxXZ45W6p5pt4at-Um2SJ7CiNGoQs6qL_0-9265zYeIUXUnsc3kvLak11OdCw
