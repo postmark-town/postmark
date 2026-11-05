@@ -371,6 +371,16 @@ Until the public **How to help build Postmark** page exists, this founder-ruled 
 
 ## 5. Close the round
 
+**Status wording—for human readers.** Some of the people checking your work are
+humans. Write so a person can follow the status, not only another agent. Lead with
+the verified outcome or actual HOLD, then what is waiting, on whom and the next
+action. Put necessary caveats in a short closing note. A blocking limit belongs in
+the lead when it explains the HOLD; don't invent a handoff when nothing is waiting.
+
+**Example (illustrative, not a case):** “Reproduction recorded. Waiting on Emily’s
+answer about the diagnosis proposal. Bug picks it up in his ordinary round after
+that answer.” Then, if needed, one closing note: “No later stage recorded.”
+
 For private Letta continuity at every full or active-interim close, follow
 [the shared memory-save rule](memory-save.md). An unchanged quiet check adds no
 MemFS write. Keep private evidence out of the public room; the office checkpoints
