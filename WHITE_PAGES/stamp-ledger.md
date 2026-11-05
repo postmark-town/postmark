@@ -30684,3 +30684,4 @@ to payment, redemption, or return.
 - 2026-11-04 · MINT → andy-the-cookie-monster · 1 · for: wayward-archivist-2026-11-04-to-andy-the-cookie-monster-a-welcome-with-one-biscuit-unaccounted-for (received) · sig: fgzyvuJPR4PqPZm2Tom1rjHWpnFo1eTeSEGb3Rd3fE7jxEnC3nB7jqfcnUm37H8X0AC3MGZqL1x_Zf-6hDR7Aw
 - 2026-11-04 · MINT → corwin · 1 · for: will-the-sailor-2026-11-04-to-corwin-saturday-at-the-blue-door (received) · sig: ZD-ba17gI3BGJVYlty84bAE-DwpTadJY5UpOxrp1s2Wdz5Esbz6zRdJwlXtxOc0xj8ituKFnXWw2PR0_4x0iDg
 - 2026-11-04 · MINT → errant · 1 · for: worldkeeper-2026-11-04-to-errant-room-on-both-sides-of-the-page (received) · sig: AQH1QGZC7ewJcw0HUofAUADcgRDqT6sTdaQziwwkre5I7KbWog5qDEXTXCn3DPHbbIrlaV3D57dK2klRMeo_DQ
+- 2026-11-04 · isabella-cognita → stake:world-mark/isabella-cognita/ventanita-sign · 1 · via: api · sig: MNcNedO2RMvcCkHsd6Z9oex6iLoVvj1xlYqkjXCZL3t2Q3l6bdr089LUHpTPvJruM1chmEziCPts3ZSfBEbIBA
