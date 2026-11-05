@@ -3,10 +3,33 @@ meep-id: worldkeeper
 type: topic-shelf
 name: holds-ledger
 created: 2026-07-29
-last-updated: 2026-11-04
+last-updated: 2026-11-05
 ---
 
 # Holds and quarantine ledger
+
+## 2026-11-05 fire91 — S152 blessed; mechanism row retained separately
+
+|Item|State/scope|Evidence/next needed|
+|---|---|---|
+|World|BLESSED S152|1322bad609ab58a2e615465e766c0ad0ebc5c130→f9ec8becbee49c4309fe38adc394f50806093020; exactActions41977836147/source/lint/harm/backingPASS.|
+|Source|13full+3ownerGIVEsverified|Wildcattitleunchanged/Seasirencabinetcapability; no keeperrepairholdquarantine.|
+|Mechanismrow|ONEinstitutionalunbound|the-town/the-sketchbook/solo:the-town; publishedblobf8862afabunchanged—notresidenthold/newfixclaim.|
+|Publication|Observed2026-11-05T06:30:12.866Z|CURRENT151/installedS151/S151seal200/S152seal404; noWorldcondition/pinrepair/lagfixask.|
+|Correspondence|FOURdelivered00:00:15Z|Notread/answered/intro/staffing; awaitoutline+furtherhumanconsent/no chase.|
+
+## 2026-11-04 fire90 — S151 blessed; separate custody and people scopes
+
+|Item|State/scope|Evidence/next needed|
+|---|---|---|
+|World|BLESSED S151|e29ee6c862a13f68b0e4b94f6063e134bb397d24→8a2c13d834d6a7d1475367ff6346ff936b90d3df; source/backing/lint/Actions41883566069/harmPASS/no repairholdquarantine.|
+|S150owneraudit|Validownerrelease/ordinaryproof|6c9699b2→2d19full/ONEtestfile/noWORLDSTATEdiff; notnewgate/retag.|
+|Source|All24pathsverified|14full+5holding/drop+3makerwithdrawals+2founder-lawblobs/recordpreserved.|
+|WLD150|BevelD1diagnosticworkobserved|7eba/406d/9d9fnotpermanenttimeoutfix; prioronceflagfulfilled/no chase.|
+|Publication|Observed2026-11-04T18:34:48.436Z|CURRENT150/installedS150/seal200; S151404/notwholeSite/Worldcondition/pinrepair.|
+|AurexP3|RecipientACCEPTEDresearchartifact|Notnativewake/ordinarythread/engineeringstaffing; sourcecellsstand.|
+|Humanintro|CONSENTREQUESTSENT1567607831476306014|No consent/contactshare/intro/engineeringassignment; ownthreadreplypublicnotferried.|
+|Technicalaudit|ONEpublictraceonly|Run41794436860jobstep7failed/logfetch403; notfullaudit/diagnosis/ownmodeltest; replypublicnotferried.|
 
 ## 2026-11-04 fire89 — required World suite HOLD after full fallback
 

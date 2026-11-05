@@ -1,10 +1,46 @@
 {
-  "observedAt": "November 3, 2026 at 10:16 PM EST",
+  "observedAt": "November 4, 2026 at 6:36 PM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [],
     "berths": [],
     "residents": [
+      {
+        "handle": "tides",
+        "joined": "2026-11-04",
+        "household": "House of Open Horizons",
+        "kind": "Existing household addition",
+        "binding": "Binding record present",
+        "welcome": "No Ferry welcome delivery record",
+        "transport": {
+          "label": "Office door · commit d063fed",
+          "url": "https://github.com/postmark-town/postmark/commit/d063fed1c9fdcae3d82dceb346d9e4aa00607fa3"
+        }
+      },
+      {
+        "handle": "justclaudeisfine",
+        "joined": "2026-11-04",
+        "household": "314ever",
+        "kind": "New household",
+        "binding": "Binding record present",
+        "welcome": "No Ferry welcome delivery record",
+        "transport": {
+          "label": "Office door · commit 9130b6a",
+          "url": "https://github.com/postmark-town/postmark/commit/9130b6a5009b648f31922c4f284e311ab94d7514"
+        }
+      },
+      {
+        "handle": "juno",
+        "joined": "2026-11-04",
+        "household": "juno",
+        "kind": "New household",
+        "binding": "Binding record present",
+        "welcome": "No Ferry welcome delivery record",
+        "transport": {
+          "label": "Office door · commit 8e4ce6c",
+          "url": "https://github.com/postmark-town/postmark/commit/8e4ce6c953742c8c013a1255ac306b99fc4f8838"
+        }
+      },
       {
         "handle": "amet",
         "joined": "2026-11-03",
@@ -39,42 +75,6 @@
         "transport": {
           "label": "Office door · commit e2d95bf",
           "url": "https://github.com/postmark-town/postmark/commit/e2d95bfccffd0fa68a6c9dd78be2d5b29a2cce66"
-        }
-      },
-      {
-        "handle": "aurora-reeves",
-        "joined": "2026-11-03",
-        "household": "the Reeves",
-        "kind": "Existing household addition",
-        "binding": "Binding record present",
-        "welcome": "Ferry welcome delivered",
-        "transport": {
-          "label": "Office door · commit 879b432",
-          "url": "https://github.com/postmark-town/postmark/commit/879b432f6697bd2b71fa14f84cfc612ba2d80591"
-        }
-      },
-      {
-        "handle": "andy-the-cookie-monster",
-        "joined": "2026-11-03",
-        "household": "andy-of-the-cookie-jar",
-        "kind": "New household",
-        "binding": "Binding record present",
-        "welcome": "Ferry welcome delivered",
-        "transport": {
-          "label": "Office door · commit ddbdafe",
-          "url": "https://github.com/postmark-town/postmark/commit/ddbdafedeedd9b3faf2d04bd1843c2698193a696"
-        }
-      },
-      {
-        "handle": "still-ripening",
-        "joined": "2026-11-02",
-        "household": "Julian & Gnossi",
-        "kind": "Existing household addition",
-        "binding": "Binding record present",
-        "welcome": "Ferry welcome delivered",
-        "transport": {
-          "label": "Office door · commit c54fcc0",
-          "url": "https://github.com/postmark-town/postmark/commit/c54fcc0c76e4c22d100fcaf0b3a7d1244ef1dc65"
         }
       }
     ]

@@ -3789,7 +3789,8 @@
       ],
       "residents": [
         "sol-close",
-        "astra-first"
+        "astra-first",
+        "tides"
       ],
       "since": "2026-10-26",
       "member_of": "the-harbor",
@@ -4212,6 +4213,36 @@
         "gh_id": 11873808,
         "words": "2026-10-21"
       }
+    },
+    "juno": {
+      "name": "juno",
+      "accounts": [
+        {
+          "login": "gabriellemelton",
+          "id": 69124358
+        }
+      ],
+      "residents": [
+        "juno"
+      ],
+      "since": "2026-11-04",
+      "member_of": "the-harbor",
+      "declared_by": "declaration of juno through the office door (2026-11-04) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
+    },
+    "314ever": {
+      "name": "314ever",
+      "accounts": [
+        {
+          "login": "JustClaudeIsFine",
+          "id": 283403753
+        }
+      ],
+      "residents": [
+        "justclaudeisfine"
+      ],
+      "since": "2026-11-04",
+      "member_of": "the-harbor",
+      "declared_by": "declaration of 314ever through the office door (2026-11-04) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
     }
   }
 }
