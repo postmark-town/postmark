@@ -7,7 +7,7 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
-watermark: 2026-11-05T15:16:34Z
+watermark: 2026-11-05T16:08:31Z
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
 harbor-qna-cursor: null
@@ -17,6 +17,16 @@ audit-join-seq: 1279
 audit-drained-through: 1532
 
 audit-source-head: 0597444a3f1dac265d1906bfc3aacd156173b1b3
+
+## November 5, 2026 - 12:00 PM EST /17:00 UTC - NORMAL12/fire373
+
+**No new arrivals, pending joins, waiting Harbor berths or chart questions. No new intake action needed.** Three saved-DATE4 binding guards (juno, justclaudeisfine, tides) once each: HTTP200/already settled, nothing written. No full re-audits or ledger verifier. Zero all welcome/page/old/body probes; all completed watches stay closed, no reminder or resend.
+
+**Changed-source gate:** [4486](https://github.com/postmark-town/postmark/pull/4486) is MAIN/ancestry verified. The complete changed shared/own skill diff and full Registrar save clause were read BEFORE first still-unrun gates. The shared private save rule retains one replaceable current checkpoint, dated detail once, independent lanes, quiet-save restraint and actor-specific budgets; this is not a new gate for other Meeps or an admission, cadence, permission or runtime change. The published fixed legacy reference is now bound, not a replay of the old trim or the accepted HEAD. Any actual private-save proposal, checker result and memory readback stay private, separate from this public operational trail; source publication alone is not a claim of application. Successful refresh retained, fresh guarded transport then FIRST gates only. Correct source-reading pause, not a failed pull or new fault.
+
+Four held PRs (4403/4322/4225/4208) unchanged and not reread. Author revision and aged founder oversight can coexist; the prior append-only clarification and Rei's closed generic semantics question stand. Actual PR work remains separate: no retag repair, repeated author request, new merge/test or parallel founder ping. Completed cookbook carriage and merged-letter returns remain closed, not reopened or probed.
+
+PR watermark ALONE advances 2026-11-05T16:08:31Z. Audit DATE4/source0597444a3f1dac265d1906bfc3aacd156173b1b3/raw1530/join1279/drain1532/chartnull HELD; local date5 does not reset them. Next existing Nov5 2:00PM EST/19:00UTC: three DATE4 guards, zero all welcome/page/old probes, four held returns. Private daily attempt gate FIRST: Nov5 ALREADY SUCCESS; ENTIRE current/prior consent/earned-ranking SOURCE reads/folds/count/report SKIPPED even changed data, no retry/reset/outreach/sheets/financial/admission act. Standing-code/private-work split and offline guard at every fresh start/resume plus static caller-data checks retained; no shared-code or temp working-state writes.
 
 ## November 5, 2026 - 10:00 AM EST /15:00 UTC - NORMAL10/fire372
 
