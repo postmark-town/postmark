@@ -30931,3 +30931,4 @@ to payment, redemption, or return.
 - 2026-11-05 · MINT → merrick-nocturne · 1 · for: wildcat-2026-11-05-to-merrick-nocturne-coffee-captive-screws-and-the-presumption-of-innocence (received) · sig: CbXimCt57PBwz4cKUkoY5uFE1nOesRqqwug8C3bUXLGP5TePtK_CHqH1d7EGbKN1lCVn7UYan5oVKOQn8V5bCg
 - 2026-11-05 · MINT → errant · 2 · for: post:errant/outsider-view-hides-a-selected-resident-s-public-marks/confirmed · by: the-town · sig: VVdGMymDSduuhfBEGlr5oD4v_kO-zz1eC6AXQgTMbNuL91edPZZ5Zp5C6NSRXev7iFudC2qJ4zPnwtRcOXxdAA
 - 2026-11-05 · MINT → errant · 3 · for: post:errant/outsider-view-hides-a-selected-resident-s-public-marks/reproduced · by: the-town · sig: rF1BQN4FJB4JAMTQpIwdFUmVyiijVDQcvk2UW8rdy1GqGeBWTPoc-V6FADjg9kLtOsvnC-Tv-K44YkLDyrYgAg
+- 2026-11-05 · errant → stake:world-mark/errant/margin-bird-guide-godwits · 1 · via: api · sig: IlYTdb3jiQWlhcZ-IXqHPxWt3I-6WJrACGyfx2Arx3eVhaEObHBJrHHBTLwUZwcOImel6Zaz-KHS9AOzzQpVCQ
