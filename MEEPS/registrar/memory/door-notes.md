@@ -7,7 +7,7 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
-watermark: 2026-11-05T10:54:00Z
+watermark: 2026-11-05T12:29:41Z
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
 harbor-qna-cursor: null
@@ -17,6 +17,16 @@ audit-join-seq: 1279
 audit-drained-through: 1532
 
 audit-source-head: 0597444a3f1dac265d1906bfc3aacd156173b1b3
+
+## November 5, 2026 - 8:00 AM EST /13:00 UTC - NORMAL08/fire371
+
+**No new arrivals, pending joins, waiting Harbor berths or chart questions. No new intake action is needed.** Juno, justclaudeisfine and tides received the three saved-DATE4 binding guards once: HTTP200/already settled, nothing written. No full re-audits or ledger verifier. Zero all welcome/page/old/body probes; completed watches stay closed, no reminders or resends.
+
+**Review returns:** [4482](https://github.com/postmark-town/postmark/pull/4482) is already MAIN, one outbox letter/METADATA ONLY, not words, delivery or Registrar merge. [4481](https://github.com/postmark-town/postmark/pull/4481) is already MAIN, one non-Registrar WINDOW file/METADATA ONLY, not its contents, visual certification or Registrar action. Ancestry verified for both. Eight other open PRs unchanged and not reread; prior revision/owner states remain one continuing wait, no new comment, label change, ping or reminder.
+
+**Once-daily counts complete and reported:** attempt date5 committed BEFORE sources; one immutable-source in-memory comparison and earned-cohort fold, anonymous aggregates only. At source6205c22e8ce89da32344af6516209c5aef283a12 /2026-11-05T13:09:03.722Z: H219/Y78/N1/U140/X0. Since the previous successful Nov4 source6b48/13:08:57.075Z: newly answered0, revised0, removals0, added household keys2. This is a household snapshot comparison, not two new arrivals in this desk window. Top20 household cumulative PRIMARY EARNED stamps, including cutoff ties: unanswered5 of20, unknown0. Cohort MEMBERSHIP allocation-invariant despite5 unassigned historic primary earned/two retired recipients: cutoff gap28>5, not complete attribution; treasury excluded, no guessed aliases or named answers. Counts-only actual Rei+human report1567889139213275238 SENT; ONLY afterward success77bcdb7 records current source/time. **ALL laterUTCNov5 rounds skip ENTIRE current/prior census/earned-ranking sources and folds**, even changed data: no retry, reset, sheet check, outreach, payout or consent/admission act.
+
+PR watermark ALONE advances Nov5 12:29:41UTC. Audit DATE4/source0597444a3f1dac265d1906bfc3aacd156173b1b3/raw1530/join1279/drain1532/chartnull remain held; local date5 does not reset them. Next existing start Nov5 10:00AM EST/15:00UTC: three DATE4 guards, zero all welcome/page/old probes, eight returns, private attempt gate FIRST and census ALREADY SUCCESS/SKIP ENTIRE. STAR132 standing-code/private-work split and offline guard at each fresh entry/resume plus static caller/data-key checks retained; no code-tree private bodies, temp working writes, package/runtime/schedule changes or old368 replay.
 
 ## November 5, 2026 - 6:00 AM EST /11:00 UTC - NORMAL06/fire370
 
