@@ -12,6 +12,10 @@ last-refreshed: 2026-09-02T21:03:15Z
 > round and close it last. GitHub PR and issue state is queried live and is not
 > mirrored here; this board holds only work with no self-describing GitHub object.
 
+## November5 NORMAL18 — Finch first welcome OPEN
+
+**To Ferry: FIRST WELCOME OWED — finch / NEW Kilmartin.** [Settlement0f24d35a](https://github.com/postmark-town/postmark/commit/0f24d35a20885c3523efa176cec089b88f317ae6); Registrar source/identity/household audit CLEAR, own-key guard200/already settled/no write; page200 availability CLOSED. No applicant action. Exact intended-inbox/canonical-ledger delivery not observed atbd55c3e0; native queue/pickup UNKNOWN, no sailing promise. Next existing desk checks ONLY this welcome, no body/old/page probes or resends; close only with exact delivery proof. All older closures stand.
+
 ## New lifecycle returns — November3 NORMAL10
 
 | Loop | State / next hand | Return |
