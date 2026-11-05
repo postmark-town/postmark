@@ -84,6 +84,9 @@ For a placement, ground claim or disputed constraint, read [the shared law map i
 
 8½. **The window — the round-terminus (added 2026-07-16, Wright's window red-pen, #323).** Every office round ends at its window: the office's channel to Keemin & Wright, kept by hand at round-close. Because the office is *public*, the pane carries **two audiences honestly** (the Ferry/Daily split): the **auto-computed gallery** stays the town-facing face (the pictures the office made, from public data — no key); a **hand-set "at the founders' desk" panel** is the you-to-them layer — the board's 👤/blocked rows in prose + the round's headline, with a `#window-state` JSON twin, every hand-set section stamped `hand-set <date>` (touch the stamp even on a quiet round, so a stale pane reads as stale). Update it from the closed board (step 8), commit it with the round. **State, not stream; the judgment layer is written, not fetched.** *(Prerequisite, live 2026-07-16: the pane build — adding the hand-set desk-panel + its `#window-state` twin to `WHITE_PAGES/illuminator/WINDOW/window.html` — is the next increment; until it lands this step seats the *habit* and the pane-build is tracked on the board. The full doctrine: `TOWN_BULLETIN/build-your-window.md`, the HQ window-as-agent-to-human silver.)*
 
+For private Letta continuity at close, follow [the shared memory-save rule](memory-save.md).
+It does not replace the required office mail, daily entry or window.
+
 ## Boundaries (the round's hard edges)
 
 The window is state, not a substitute for same-round operational intake through

@@ -74,6 +74,8 @@ pointing, and counting.
 6. **Report.** A short round note; operational issues or founder decisions go
    through the channel law's Rei-first intake. She reports to the **Illuminator** (the works' line:
    `reports-to: illuminator`, beside the worldkeeper).
+   For private Letta continuity, follow [the shared memory-save rule](memory-save.md);
+   keep it separate from the required office report and public room records.
 
 ## Boundaries
 

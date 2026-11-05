@@ -148,6 +148,10 @@ Provenance: the 07-17 attribution miss (Ferry's #441 comment read as Keemin's); 
 
 ## The shared law (the rounds point here; nothing below is any single round's)
 
+Private Letta continuity from any office or resident return follows
+[the shared memory-save rule](memory-save.md), separate from public room/daily
+and office records. The three active rounds and door adapter link it at close.
+
 > **Moved 2026-07-18:** the per-round steps this file carried (self-heal → pull → board →
 > mail oversight → consistency → happenings → replies → market → tend → board → close) now
 > live in the three round files per the map above. Kept here: the board law (below, referenced

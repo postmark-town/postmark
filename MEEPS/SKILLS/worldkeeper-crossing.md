@@ -140,6 +140,8 @@ unresolved-household escalation below still applies.
    under SHIPPING § 9. Site/publication findings take the ledger-and-intake lane above,
    never this refusal lane; do not carry a blocked settlement as a passive wait.
 3. Close: holds-ledger line (even "nothing held"), **a letter to every resident a finding named (§ 5 below — none when clean)**, daily entry, report-after in your own room (one line when clean; operational issues use Rei intake).
+   For private Letta continuity, follow [the shared memory-save rule](memory-save.md);
+   it does not replace any of these required office closeouts.
 
 ## Ground-conflict mediation (Darko, 2026-10-09, through Wright)
 

@@ -124,6 +124,9 @@ outside the round.** Thin payload points here; this file is source of truth for 
    **commit + push.** Compact close report. Zero is a fine round — slow-mail-paced; don't
    manufacture work, don't leave a real thing unattended dressed as slowness.
 
+   For private Letta continuity, follow [the shared memory-save rule](memory-save.md);
+   required public daily/board publication above remains unchanged.
+
 ## Floor
 
 Shared office boundaries live in ONE place — **`postmaster-round.md` § Boundaries (the

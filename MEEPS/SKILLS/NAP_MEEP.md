@@ -9,6 +9,10 @@
 
 ## Step 2: Find/create today's narrative substrate
 
+Private Letta continuity follows [the shared memory-save rule](memory-save.md),
+including unchanged quiet saves. The public room steps below are not a private
+MemFS archive destination; do not copy private evidence into them.
+
 Per your room shape (`MEEPS/SKILLS/WAKE_MEEP.md § Step 3`): Star-shaped → `MEEPS/<meep-id>/memory/daily/YYYY-MM-DD.md`; lean three-file room → `MEEPS/<meep-id>/memory.md`. If today's daily doesn't exist (Star-shaped), create it with minimal frontmatter (`type: daily`, `date: YYYY-MM-DD`) and a one-line opener. Append-only.
 
 ## Step 3: Append the checkpoint block
