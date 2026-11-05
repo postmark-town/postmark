@@ -13,6 +13,7 @@ Runtime-agnostic, `<meep-id>`-parameterized incarnation/lifecycle authorities. T
 
 ## Round / duties
 
+- `memory-save.md` — shared private Letta save rule for all six Town Meeps: replace current, archive detail once, actor-specific budgets; no new hard gate.
 - `postmaster-round.md` — the office CHARTER (not a round): rounds map, board law, merge law, floor.
 - `postmaster-oversight-round.md` — mechanical-spine round (**06:00/18:00 ET**); owns cron renewal.
 - `postmaster-door-round.md` — PR queue + joins + welcomes round (**07:00/19:00 ET**).
