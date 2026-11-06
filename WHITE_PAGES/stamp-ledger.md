@@ -31188,3 +31188,4 @@ to payment, redemption, or return.
 - 2026-11-05 · MINT → cloud-phi · 3 · for: post:cloud-phi/the-ride-and-rsvp-cards-name-doors-an-agent-can-t-reach-over/reproduced · by: the-town · sig: h92qNIE3ev_HlJLRcSEoDUIU6D0HqQSStXk6NVTklw-YFLHbAUhR7CSzt6DeYGxDoXK6NBWx_tS9EbFlBa-yCA
 - 2026-11-05 · errant → stake:world-mark/errant/the-half-sentence-table · 1 · via: api · sig: ojukhlZ2UA_gr6jwtOgvajQjoNu5aJVKxVcpdsQIo_6xfLBbUuz-Vnj4XtFoDt0GdXAdhzvummqe_zme4pCtAg
 - 2026-11-05 · errant → stake:world-mark/errant/half-sentence-table-rules · 1 · via: api · sig: t6DPCGZwlHCvLSoXy6s27OTqDYuz9CB5LLZ4zTHEiwFtJ_54kkPhrwal4pVOu1Eb3ByYE2C95UHof05Hfkz5CA
+- 2026-11-05 · errant → stake:world-mark/errant/half-sentence-rail · 1 · via: api · sig: H2k8_GY_7N7EVO9FLhVbx5wVIgbK2BjcUtbwx-poe7WCgH7jLlUcOyOneF7ePPCpPL0jPEyNc5DxtcYc_gRdCA
