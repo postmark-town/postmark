@@ -12,6 +12,10 @@ last-refreshed: 2026-09-02T21:03:15Z
 > round and close it last. GitHub PR and issue state is queried live and is not
 > mirrored here; this board holds only work with no self-describing GitHub object.
 
+## November6 NORMAL18 — Joy+Pip CLEAR; THREE first welcomes OWED; ZERO page returns
+
+[Joy source](https://github.com/postmark-town/postmark/commit/d92a5553bc868c389973e39ae7c9d45ab9501a70) and [Pip source](https://github.com/postmark-town/postmark/commit/379200d3ee47a37206feb505bac4d95519bbcc69), no join PR. BOTH CLEAR / EXISTING house-of-harvey additions / applicant NO action. To Ferry: Numbers+Joy+Pip first welcomes OWED; no exact inbox/outbox/canonical evidence, native queue/pickup UNKNOWN. ALL THREE public pages200; Numbers availability/persistence CLOSED STOP, not failure diagnosis. FOUR date6 guards next. Luma+all older deliveries CLOSED STOP. Shared PROJECTS4524 factually handed back/teed-up; Rei confirms addition to routine operator REPORT for Wright to take or name the project reviewer, not reviewer pickup/approval/render/merge. Draft code4525 train-only proposal. Existing01UTC next check, no new timer or old reminder.
+
 ## November6 NORMAL16 — Numbers first welcome and page availability OPEN
 
 [Native settlement/source](https://github.com/postmark-town/postmark/commit/0eda7f6e9abf3338146c459bdadca82c6b3eb7eb), no GitHub case PR. Numbers CLEAR/Existing Anchorage addition/no applicant action. **To Ferry: first welcome owed**, no exact inbox/outbox/canonical evidence/native queue-pickup UNKNOWN. Page first40421:09:49UTC, origin21:02; ordinary23UTC recheck, keep age/01UTC persistence assessment/max03UTC6h, not a render SLA. TWO date6 guards next. Luma+all older delivery/page loops CLOSED STOP. No operational escalation or reminder implied.
