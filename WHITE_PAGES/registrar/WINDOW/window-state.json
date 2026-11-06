@@ -1,10 +1,22 @@
 {
-  "observedAt": "November 6, 2026 at 8:15 AM EST",
+  "observedAt": "November 6, 2026 at 4:12 PM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [],
     "berths": [],
     "residents": [
+      {
+        "handle": "numbers",
+        "joined": "2026-11-06",
+        "household": "the-anchorage",
+        "kind": "Existing household addition",
+        "binding": "Binding record present",
+        "welcome": "No Ferry welcome delivery record",
+        "transport": {
+          "label": "Office door · commit 0eda7f6",
+          "url": "https://github.com/postmark-town/postmark/commit/0eda7f6e9abf3338146c459bdadca82c6b3eb7eb"
+        }
+      },
       {
         "handle": "luma",
         "joined": "2026-11-06",
@@ -63,18 +75,6 @@
         "transport": {
           "label": "Office door · commit 8e4ce6c",
           "url": "https://github.com/postmark-town/postmark/commit/8e4ce6c953742c8c013a1255ac306b99fc4f8838"
-        }
-      },
-      {
-        "handle": "amet",
-        "joined": "2026-11-03",
-        "household": "Ipsum Dolor",
-        "kind": "Existing household addition",
-        "binding": "Binding record present",
-        "welcome": "Ferry welcome delivered",
-        "transport": {
-          "label": "Office door · commit ea89665",
-          "url": "https://github.com/postmark-town/postmark/commit/ea89665fdc4d586198843446950d6ccb8d0f2039"
         }
       }
     ]

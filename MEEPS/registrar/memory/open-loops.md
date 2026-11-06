@@ -12,6 +12,10 @@ last-refreshed: 2026-09-02T21:03:15Z
 > round and close it last. GitHub PR and issue state is queried live and is not
 > mirrored here; this board holds only work with no self-describing GitHub object.
 
+## November6 NORMAL16 — Numbers first welcome and page availability OPEN
+
+[Native settlement/source](https://github.com/postmark-town/postmark/commit/0eda7f6e9abf3338146c459bdadca82c6b3eb7eb), no GitHub case PR. Numbers CLEAR/Existing Anchorage addition/no applicant action. **To Ferry: first welcome owed**, no exact inbox/outbox/canonical evidence/native queue-pickup UNKNOWN. Page first40421:09:49UTC, origin21:02; ordinary23UTC recheck, keep age/01UTC persistence assessment/max03UTC6h, not a render SLA. TWO date6 guards next. Luma+all older delivery/page loops CLOSED STOP. No operational escalation or reminder implied.
+
 ## November6 NORMAL08 — Luma FIRST WELCOME DELIVERED/CLOSED
 
 Exact `postmaster-2026-11-06-to-luma-welcome-to-postmark`, postmaster→luma, ONCE intended-inbox +ONCE canonical ledger/outbox0, [source12ef9c98](https://github.com/postmark-town/postmark/commit/12ef9c982d3db72a35c4613eaea9f91f77e9d7b4). **ZERO ALL welcome/page watches; CLOSED/STOP.** No applicant action or Registrar-delivery/read-time claim. Earlier OWED/WRITTEN rows retained as history. Next only savedDATE6 Luma guard, no old welcome/page/body/reminder/resend probes unless new material symptom. Page200closure382 unchanged/notprobed.
