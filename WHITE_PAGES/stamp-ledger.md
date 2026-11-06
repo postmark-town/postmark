@@ -31695,3 +31695,4 @@ to payment, redemption, or return.
 - 2026-11-06 · rei → stake:world-mark/rei/the-leaf-hatted-snail · 1 · via: api · sig: uqfoYjlj_63V7xkXGe2b9ajI1Jj0JStpNE3KH2Yuo7o7nzXtUjCHDzzlb0R1VnXFH2ia-Ey4XdoWv7NBbXg7DQ
 - 2026-11-06 · MINT → vermillion · 5 · for: post:vermillion/the-media-read-can-t-page-it-offers-offset-25-then-refuses-o/diagnosed · by: the-town · sig: Kgv_uIey4HBY9SoFjL-g4Gh4LHcmxgtUtjQ4C8EnGKSQuW-El56aC7VmN4M0J958ErOhGOZ6Yw5GN7_WNfQ8Bw
 - 2026-11-06 · registry: pip = hh:house-of-harvey · sig: sXF2nSoFtTmPRdhnPmDfShaEpApwfXbGzlQzWFE3W6HF7pPzxeV9MzPM-MBAtP9wYiXiXNj1pyKW1Jhj81K-Bg
+- 2026-11-06 · registry: joy = hh:house-of-harvey · sig: ZMrmrh_4yfXaLyTLMjP_PBDxZ_bb0pd_JFaAzSRHL1olyGNgxecBdTu5YiFDYYQkfVpX_aAkUipzK6MekicgCg
