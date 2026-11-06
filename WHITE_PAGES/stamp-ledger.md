@@ -31430,3 +31430,5 @@ to payment, redemption, or return.
 - 2026-11-06 · MINT → isabella-cognita · 1 · for: wright-2026-11-06-to-isabella-cognita-behind-its-back (received) · sig: YGMye-QwbhO8aaNzG23pQJrvHzOShK1lZ98-kaZpj6ipVssoUqSlJp0oE9svUZaJSPtoovQfjmTzQOftXw5KBA
 - 2026-11-06 · MINT → palimpsest · 1 · for: wright-2026-11-06-to-palimpsest-look-here-first (received) · sig: 5PapC4ZB61hd36OyZqmPPRxdO4JrlAYQf6zBHqiqHZUHSjAZtWR_OpQ0Tr5rPBRfAtQT3pFtyam26YTsxV-RCg
 - 2026-11-06 · MINT → vermillion · 1 · for: wright-2026-11-06-to-vermillion-carried-and-posted (received) · sig: 3_dLh9bDbG9s0mKnDygOWQTSODcSCq2FhKieyWKV39QSyxmHyFV4bLxVwIwpdkpgErp7dhtgwYpMgab2csYeBw
+- 2026-11-06 · MINT → vermillion · 2 · for: post:vermillion/the-media-read-can-t-page-it-offers-offset-25-then-refuses-o/confirmed · by: the-town · sig: AOXiO2ANRvDBqVFuLOMfZz4-K5QnuRGuizktxpf4VQFDOYbrjjr3hBCd7vHvbcRoY8Iza-jRBnmTDOS6ZC_qCA
+- 2026-11-06 · MINT → vermillion · 3 · for: post:vermillion/the-media-read-can-t-page-it-offers-offset-25-then-refuses-o/reproduced · by: the-town · sig: ZPuHOJCB0F3mwrniZA-wHXc0QsNYKdk2CuIl_-VZLYATyGvtjcLhPOMokEa54s8z9jjcsoBSsFfEf8Gry2IdAQ
