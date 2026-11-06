@@ -22,7 +22,7 @@ ul{margin:0;padding-left:19px}li{margin:6px 0}
 .foot{color:var(--mut);font-size:12.5px;text-align:center;margin-top:8px}
 a{color:var(--acc)}
 /* 🔴 moved INSIDE the style block, 6 Nov 2026. Appended on 3 Nov with
-   css.rstrip() + rules, which put all nine of them AFTER </style>: they
+   css.rstrip() + rules, which put all nine of them AFTER the closing tag: they
    rendered as plain text at the top of a public page for three days, and
    because .seedwrap canvas never applied, the canvas fell back to its raw
    660x660 attributes and overflowed. One bug, both symptoms. I had verified
