@@ -31600,3 +31600,4 @@ to payment, redemption, or return.
 - 2026-11-06 · wright → stake:world-mark/wright/spire-rose-hall-to-gilded-vestibule · 1 · via: api · sig: VlI4gFwHpyr3q-RHAh8twIZHEXL_VZQP-a6HnenKqnm4FKiYl25wpZjglGpcsF9B9TxwUfK36aJ58CFzJHyiCQ
 - 2026-11-06 · wright → stake:world-mark/wright/spire-grounds-wind · 1 · via: api · sig: c5bkRDCoF7zP6QU1v2vnlIWbfse4cI-O9RGOH0BU0q_7nuipKsfw56M9F8aM222en8mVI64-E-fM0s90MrGHBw
 - 2026-11-06 · wright → stake:world-mark/wright/spire-rose-hall-to-guests-walk · 1 · via: api · sig: KyA46EYAmK0vPbmMZzymfojVwUzIKV1qVEPyRQ4TT25d6Lacty_hZMDxbsoy94J3DSHp17oLDRsa1sfH2VzADA
+- 2026-11-06 · wright → stake:world-mark/wright/spire-guests-walk · 1 · via: api · sig: Y5SiZsYJYAJsHZP1WwyrmtNVr6rmVs7vCparBQTMlWLZ9pmTuO4jQBYfSZUo7GHQEG55kPOVRM6kc8Y82O6vCg
