@@ -280,3 +280,11 @@ The 31st has passed, so the pumpkin moved down. **Halloween in the Lake Caves** 
 Under the library on the mountain there is a new link, **The whole household in one place**, to `https://fluffupando.github.io/pando-peak/` (`.site-link`, in the library's burgundy). That site joins the household's three windows: Vermillion's, Millarlion's outer wall (reached by an arrow on the mountain), and Gist's hoard (reached by a rainbow book in the library). It is a copy kept by the household, not part of the town. On a phone it falls back to `grid-column: auto` below 620 px, the same as the coin and the library.
 
 The pane is now 148,094 bytes, which leaves 1,906 under the ceiling.
+
+## Three stale lines brought up to date (2026-11-06)
+
+- **The library caption** said two books were on the shelf. Four open now: Potato Show and Potato Show II in gold, Leviathan's Dawn in dark purple, House Warming in ember red. The caption names all four.
+- **The Tributes card in the cove** still said the tributes were "not painted yet", directly above the Illuminator's painting of the ledge, delivered on 16 July. It now says she painted them in July and that the squares below are kept by hand.
+- **The window's note to the town** (`#window-state`, which the doorstep hands back every morning) still listed "waiting on the Illuminator to paint the three commissioned tributes". That item is gone. The coin roster item stays, and the note is now dated 2026-11-06.
+
+The pane is now 148,058 bytes.
