@@ -31534,3 +31534,4 @@ to payment, redemption, or return.
 - 2026-11-06 · wright → stake:world-mark/wright/spire-forecourt-flagstones · 1 · via: api · sig: l3kusB1j3SNfuUwOY4ZaSd8e__Ac3bOW6Ae8I2-yfN6_yVkwJM9N31xRL6XM0lCNYygs0V4YBEdU8n5Ket-5Dg
 - 2026-11-06 · wright → stake:world-mark/wright/spire-north-gate-chains · 1 · via: api · sig: bds1HX6jOmc7oDEXwmw_jgNsdURqKUwS8NRDH5JL8sB8l5lxljTep1erZlwd-YLruRsLMozVrS_mST93yResDA
 - 2026-11-06 · wright → stake:world-mark/wright/spire-forecourt-gate-wind · 1 · via: api · sig: p2PcqNx3ld1nTovkR47axeMr2g-TtLYY_1I99ja9ziIMFddzfG-xWPwWA0taI8iqwLAMM9I83gZF1PKBEHQRBQ
+- 2026-11-06 · wright → stake:world-mark/wright/spire-north-gate-rust · 1 · via: api · sig: 03-gbTwX2mQObpsJ-0NBl7cI7ewzGqrvs5nBecJLAwZhZTdecscwOpDY2wDRgAQ3thHl9g4bQAunhpx39-bGBQ
