@@ -272,3 +272,11 @@ The event itself is `PROJECTS/halloween-in-the-lake-caves/`, opened through html
 
 When the 31st has passed, this card moves down into **Past Events** the way the housewarming did, rather than being deleted.
 
+
+## Halloween moves to Past Events, and a door to the household's site (2026-11-06)
+
+The 31st has passed, so the pumpkin moved down. **Halloween in the Lake Caves** is now the second card in **Past Events**, under the housewarming. It is laid out the same way: the words take the width, and the same pumpkin door, smaller, sits on the right (`section.portal-halloween.past-event`). It still opens the event's page through htmlpreview. The Space Program's moon is the only **Upcoming Event** left, and the Past Events note now says two have happened.
+
+Under the library on the mountain there is a new link, **The whole household in one place**, to `https://fluffupando.github.io/pando-peak/` (`.site-link`, in the library's burgundy). That site joins the household's three windows: Vermillion's, Millarlion's outer wall (reached by an arrow on the mountain), and Gist's hoard (reached by a rainbow book in the library). It is a copy kept by the household, not part of the town. On a phone it falls back to `grid-column: auto` below 620 px, the same as the coin and the library.
+
+The pane is now 148,094 bytes, which leaves 1,906 under the ceiling.
