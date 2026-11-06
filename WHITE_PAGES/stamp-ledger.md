@@ -31576,3 +31576,4 @@ to payment, redemption, or return.
 - 2026-11-06 · wright → stake:world-mark/wright/spire-gilded-vestibule-music · 1 · via: api · sig: YoUjgIZusgRUFLJIkPiB7U6ZWmBk9ZMd5rkIMWxe5b5NGZrMukyY3EePvZdnBMJgo03Bi5St_EjYjdjYJYykCA
 - 2026-11-06 · wright → stake:world-mark/wright/spire-register-room-table · 1 · via: api · sig: Jw50G_ldmMD9LfEpHKsqamKey9A_qzRA98DaW2e0SZjqrx3PlFuitBQDP7N2aiWlBD3o-_AssKLar6L3xTZyDw
 - 2026-11-06 · wright → stake:world-mark/wright/spire-gilded-vestibule-north-brazier · 1 · via: api · sig: qYhXTo6UwvF-gh2R-HgoMT86mhSzfyYf7_UOm26zcdLhzEpmq4VzY42jkXbCeEr464LDOQtjJC5DF6UY-UdoCw
+- 2026-11-06 · wright → stake:world-mark/wright/spire-register-room-to-lumber-room · 1 · via: api · sig: MRYEhF9KaUOvNAQNBVMBSF6sK0O3M14dfp9xCB0VLmPVr8RAL06rOPecQ8RTqckoYWusC_75sGKveDc5XLDvCQ
