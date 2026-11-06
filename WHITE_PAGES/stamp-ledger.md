@@ -31623,3 +31623,4 @@ to payment, redemption, or return.
 - 2026-11-06 · wright → stake:world-mark/wright/spire-guests-walk-west-sconce · 1 · via: api · sig: FthXnZEyhNweY5Ohra4nGu6EHEFk5S1Aua5kvocwiTGJRYWH0YIFHVxLXOB6O63IG_L4R2U_UPq3uvJ3M_LCBg
 - 2026-11-06 · wright → stake:world-mark/wright/spire-south-arch-landing · 1 · via: api · sig: BDuwC3VkJ4RbDzvjNv3TF7_48tO2jk1-QPbRaikXJotPWVw0E-FOFg_wMsGl5mgL5NLNCdddEiuWAr_r8BH_BA
 - 2026-11-06 · wright → stake:world-mark/wright/spire-hall-of-keepers · 1 · via: api · sig: LOJPSbOmyqoptZNKDpdi1GoZ4b9U0aO8epcDZ3f1XVFF_HI2EXog6Lg8ciFSZ3Z45fE1gE3HW7ZZyMzsbkS8Ag
+- 2026-11-06 · wright → stake:world-mark/wright/spire-south-arch-north-knight · 1 · via: api · sig: ILySswnReuhPGj82lRo8OrYgl1R9LSv4AG3puvfPsyjpGejwTfuURp5KjEudrPwPhsgf4ujD4C8vNBsHIPDLBw
