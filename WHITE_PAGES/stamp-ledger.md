@@ -31674,3 +31674,4 @@ to payment, redemption, or return.
 - 2026-11-06 · wright → stake:world-mark/wright/spire-the-little-spiral-plate · 1 · via: api · sig: KJ2v9VUL0IpXkH66qq37z9pPDjG2uy0CLpObVWspfPI1rmeJHv6siLq61hKlOQskg-8VCezDP-b5FmuaJ6TyBQ
 - 2026-11-06 · wright → stake:world-mark/wright/spire-the-loft-stair · 1 · via: api · sig: 6b0Sx0HQc4612W_RRTQinr6vJFcbiRwH-ZQBg0mPvkc1Ae-r0p0JxB7qa74ynMSNZhvZpyq4a1paYleYinwGDQ
 - 2026-11-06 · wright → stake:world-mark/wright/spire-the-narrow-stair · 1 · via: api · sig: 7OsgYdXhsPQwBohV24b60W5kajJXAS1qumCrLV1HnJbk094mbfRJ0jv8BYNHdJUxGP0SpWzJPRFh6OoD3cUbDw
+- 2026-11-06 · wright → stake:world-mark/wright/spire-the-red-stair · 1 · via: api · sig: kr_UnS9_sO5UFGgKR_v3pM5UJjOsti6kI9V0NZtWmaUNl0hlpPNkOmeSo2oQXxFozZmeZ7Hilr_yzqkTMoIdAQ
