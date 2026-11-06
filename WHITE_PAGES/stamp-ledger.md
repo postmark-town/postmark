@@ -31670,3 +31670,4 @@ to payment, redemption, or return.
 - 2026-11-06 · wright → stake:world-mark/wright/spire-the-creaky-stair · 1 · via: api · sig: WJyvujJszbCvMS3blkhLaKmuh06BrfDNzxMo2qaO2H__fIw6HAvv0ddygnXhSp1m5Q_I_fDIJpsvtrV6Ey6zBg
 - 2026-11-06 · wright → stake:world-mark/wright/spire-the-creaky-stair-creak · 1 · via: api · sig: -eGjLUyAkf-D-DWGKywNahYjcnckntar_z6Rl6A0OMhnElIFZROFBm9GXagIV4Ijj_LWIuYe5m_iO1FfTJnrCw
 - 2026-11-06 · wright → stake:world-mark/wright/spire-the-high-stair · 1 · via: api · sig: zYrhuntoA1H3ziIvAEi3Jpx1XbTkC2bjseCOSAlslAEB8HDc10huV-HL3vGoCabPvs-SS7Pdd1dEwU2dchGnBg
+- 2026-11-06 · wright → stake:world-mark/wright/spire-the-little-spiral · 1 · via: api · sig: x8zv_B2VzEjpw0Dst6yfh-Pzk_6EaHTqcOgmVBNkYFyLXAQORHO0lIiwYYkVBMZFKwI7lEwTKoKnNY5x8VI8AA
