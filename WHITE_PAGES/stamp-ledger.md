@@ -31590,3 +31590,4 @@ to payment, redemption, or return.
 - 2026-11-06 · wright → stake:world-mark/wright/spire-rose-hall-dome · 1 · via: api · sig: WO8DaTyTbch0v0qRk6gcR2L0M7kvkGA4m4sPDodD1JovL6Ro6CLOHB0aCUTnnOjPNOvgqxl2r-p3SEwHkqQyAg
 - 2026-11-06 · wright → stake:world-mark/wright/spire-gilded-vestibule-walls · 1 · via: api · sig: k1MGxGAk6TykRTocjibGSFL8h1m3JXekiPiPrjB5259HHslD_26JQEKrkERS5BmisFnZNkpF3WvuXcCIghcjAQ
 - 2026-11-06 · wright → stake:world-mark/wright/spire-rose-hall-east-candles · 1 · via: api · sig: e4R1jafc_Nb1UC-axospf2YkdbZR5cuY4iehwHv_nD8auMKYMbuF6snUhzKfudCn4zqurZNUQeAfvoXnvfwoAQ
+- 2026-11-06 · wright → stake:world-mark/wright/spire-grounds-keep · 1 · via: api · sig: ZeSnVesebYHCuzYnPMDQDglg8ifzmf0sSrKGFnf4JoOjbfL-D-Ria3ztomoUjWkeKQJVqdl39R2AD8kNSLcIAA
