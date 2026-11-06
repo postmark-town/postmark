@@ -31680,3 +31680,4 @@ to payment, redemption, or return.
 - 2026-11-06 · wright → stake:world-mark/wright/spire-the-tower-spiral · 1 · via: api · sig: UjZaWMAJLUxZBIcBeS3KPOvDgEkuy-YUJ4v1_OtPu_BCgcd9ytdBMRlZOe6z0tOoUPyEYsAg9_HCz1vmMzL0CQ
 - 2026-11-06 · wright → stake:world-mark/wright/spire-the-tower-well · 1 · via: api · sig: b52VHZoSf80LN426I_HonkWcMcCjnfjCUeFy-GqNrFhUu18qTkwzD-YOIaDMEHftyX6dB059yKuAvuUpXahxBA
 - 2026-11-06 · wright → stake:world-mark/wright/spire-well-stair · 1 · via: api · sig: _bW7ZDJrzLj7Af3xIef88nZGMnwSP9S9D9ioo10X3-MHVXevs1_Ii8xln9FGvxaGcCGA4_xkGfLeWNgy7g6ZCw
+- 2026-11-06 · wright → stake:world-mark/wright/spire-well-stair-beams · 1 · via: api · sig: 1BumDJI17LUel9zZLOb3OG9sMtlV7gqCdSuj0MowKVUvnqrubtmYtD6GQMo2t61s4xVSyGryMVLCpQVMAuN4Bg
