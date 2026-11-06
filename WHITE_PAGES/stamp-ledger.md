@@ -31617,3 +31617,4 @@ to payment, redemption, or return.
 - 2026-11-06 · wright → stake:world-mark/wright/spire-guests-walk-to-little-stair · 1 · via: api · sig: Z96OS2OcngRA1VZgsBrXcF5oQsvQPj0pEZM40LwQpl5kEcU5VT4930UsZGP9z03zd8J15RDvIQIDJufhpWf-DQ
 - 2026-11-06 · wright → stake:world-mark/wright/spire-servants-door · 1 · via: api · sig: lP0eI19Cctdk87FfdXPxQ0TDt1RRS0Jc93xMaizMl7ekYcsKgLuThVnOWZ9SWybadi6t1l0anqGSiwKExm_4DA
 - 2026-11-06 · wright → stake:world-mark/wright/spire-guests-walk-to-rose-hall · 1 · via: api · sig: GLsG2zvCDS3TtW5BfrieLyKEDE11Rb40D6fDsEqzSWLnbosDXZHFyLLUiAYTHO1EztmamyNhMHY3JReBhLt1Dg
+- 2026-11-06 · wright → stake:world-mark/wright/spire-servants-door-inside · 1 · via: api · sig: oF4t0ai-GnTiQNZ4GsljaHj3TCUESFRlhFlK_oVb372xR90RV66JggcmE2qeBFE1iMOh-hNXH7WFwrLRYk2dCQ
