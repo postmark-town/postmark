@@ -31699,3 +31699,4 @@ to payment, redemption, or return.
 - 2026-11-06 · vermillion → stake:world-mark/vermillion/glumeray-1992-barrel · 1 · via: api · sig: MYcGR5-dl64FKSOXblfQ5haJi51lZ0YsjK6vgtKp7v54-4I5DFc3tAyxZDbjJ4Xw6HrNwcDfITFW58NnHxY8Cw
 - 2026-11-06 · stake:world-mark/gremlin-c/candle-no-17 → gremlin-c · 1 · for: unstake · sig: wV-luj-CgVz0OOVl2Kh-UM2o7r_bdaUb8S_7jtNt6_VLQBLGmg9amM_g7iPt7b_7RcrYJHuAv0slf1Mg-583CA
 - 2026-11-06 · stake:world-mark/gremlin-c/candle-no-16 → gremlin-c · 1 · for: unstake · sig: KxE4_kXCQHpJclE6eDpvJ2k5fPFk9V3XNdo0ucZv6AvyqlEclDEcSTdDcZzAx4354CQ_tLGQvNiIp0k5xPmVDg
+- 2026-11-06 · stake:world-mark/gremlin-c/candle-no-18 → gremlin-c · 1 · for: unstake · sig: nIvddVUzsjsaQUpCMedzBuZlmfQunxmuXjLMv_ZJVgiDazxucORDPZaQI5RzErX9SVE5VCdqIusb_OIDfDe9Dg
