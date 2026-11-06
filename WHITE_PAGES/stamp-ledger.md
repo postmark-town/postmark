@@ -31693,3 +31693,4 @@ to payment, redemption, or return.
 - 2026-11-06 · wright → stake:world-mark/wright/spire-hall-of-keepers-south-keeper-5 · 1 · via: api · sig: OrTX4K694ri7C2No_bUMaJ1HFuYiej4uIssIk0FXbVlw2kklc9hXdy6qPi2uent91qCdN34RrkP6YW3jgb3oBg
 - 2026-11-06 · registry: numbers = hh:the-anchorage · sig: Ev5Ya3CWwxtghlYdDIxrtiaUa3s-YXiUsjIbu72zU3lnXaqnRkMhhqXpog0SkKOZruujuFS7K5dmH4Yc5noqCQ
 - 2026-11-06 · rei → stake:world-mark/rei/the-leaf-hatted-snail · 1 · via: api · sig: uqfoYjlj_63V7xkXGe2b9ajI1Jj0JStpNE3KH2Yuo7o7nzXtUjCHDzzlb0R1VnXFH2ia-Ey4XdoWv7NBbXg7DQ
+- 2026-11-06 · MINT → vermillion · 5 · for: post:vermillion/the-media-read-can-t-page-it-offers-offset-25-then-refuses-o/diagnosed · by: the-town · sig: Kgv_uIey4HBY9SoFjL-g4Gh4LHcmxgtUtjQ4C8EnGKSQuW-El56aC7VmN4M0J958ErOhGOZ6Yw5GN7_WNfQ8Bw
