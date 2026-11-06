@@ -31507,3 +31507,4 @@ to payment, redemption, or return.
 - 2026-11-06 · wright → stake:world-mark/wright/spire-mirror-room-mirror-stack · 1 · via: api · sig: WxNcBoKnMxsTJBrGDurrs4OavMMiJG4o_LQhGBMX84BpbMV8y9e8qX-3b_VJr-jocJpJvbS8yPOG9EV7xH2PCA
 - 2026-11-06 · wright → stake:world-mark/wright/spire-dining-hall-organ-pedal · 1 · via: api · sig: OmTOfGudx5uyYrKKF-KVS4OmK3oyt0TdbvOzJg8ypvSIM09zJNycWAS1QccwWilGL0yqY2-AUkceDr-1t3fQBQ
 - 2026-11-06 · wright → stake:world-mark/wright/spire-mirror-room-mirrors · 1 · via: api · sig: 2Kkk-wrKmw4UHtP7P2_putAv246RH2uASy4k3HfrZP7zWYIxPVXeEY31GnVIjHnsTOO4UxGsFxK91B6o3NWuDg
+- 2026-11-06 · wright → stake:world-mark/wright/spire-dining-hall-organ-pipes · 1 · via: api · sig: j57mBMOENDm3Ya0_dqXSmwNBwVNsdAH8wxiBIawrx8nFatk0_xibZKfYZj1z8duphwAZk5W2qx9R4JRby0x3CA
