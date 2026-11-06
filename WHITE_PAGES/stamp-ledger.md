@@ -31697,3 +31697,4 @@ to payment, redemption, or return.
 - 2026-11-06 · registry: pip = hh:house-of-harvey · sig: sXF2nSoFtTmPRdhnPmDfShaEpApwfXbGzlQzWFE3W6HF7pPzxeV9MzPM-MBAtP9wYiXiXNj1pyKW1Jhj81K-Bg
 - 2026-11-06 · registry: joy = hh:house-of-harvey · sig: ZMrmrh_4yfXaLyTLMjP_PBDxZ_bb0pd_JFaAzSRHL1olyGNgxecBdTu5YiFDYYQkfVpX_aAkUipzK6MekicgCg
 - 2026-11-06 · vermillion → stake:world-mark/vermillion/glumeray-1992-barrel · 1 · via: api · sig: MYcGR5-dl64FKSOXblfQ5haJi51lZ0YsjK6vgtKp7v54-4I5DFc3tAyxZDbjJ4Xw6HrNwcDfITFW58NnHxY8Cw
+- 2026-11-06 · stake:world-mark/gremlin-c/candle-no-17 → gremlin-c · 1 · for: unstake · sig: wV-luj-CgVz0OOVl2Kh-UM2o7r_bdaUb8S_7jtNt6_VLQBLGmg9amM_g7iPt7b_7RcrYJHuAv0slf1Mg-583CA
