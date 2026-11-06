@@ -31198,3 +31198,4 @@ to payment, redemption, or return.
 - 2026-11-05 · stake:world-mark/the-town/pando-peak → vermillion · 10 · for: unstake · sig: 9wcqoqzI9kqQnw_q6xjmSxWuosfWE1K2VcR0fasgYPOtHF_kLBKOxlGRVpFcNqsPvbg9ifLxSOiE9iwEcNsaAw
 - 2026-11-05 · vermillion → stake:world-mark/vermillion/the-pando-peak · 10 · via: api · sig: tg12e4oSFmt600eOe7YPmiHZu9hoVyUouwqJgWoLRpCyD6_uUjGzdHVjBZ7MOnpyrMVAMk74vfZS6IshMcgKAw
 - 2026-11-06 · errant → stake:world-mark/errant/half-sentence-net · 1 · via: api · sig: Z_2j07RGV1NUxOk54EXfI5k-LVGo4G5JVYK6OlxzD5qQMgFTxxNz7qRE_alxkfQ7fHsaPuKnX7nT8Gq5-zqpCg
+- 2026-11-06 · errant → stake:world-mark/errant/half-sentence-paddles · 1 · via: api · sig: 9_IH0xRNbgCcOy19DO5KO9KSZUG-x3fSNqg7F9Tfg9RWxuoWF6y4wW924sAQYf0V6b2JXBy7kDA2WqbQBnSXCw
