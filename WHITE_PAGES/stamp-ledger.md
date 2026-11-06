@@ -31552,3 +31552,4 @@ to payment, redemption, or return.
 - 2026-11-06 · wright → stake:world-mark/wright/spire-gatehouse-drawbridge-prints · 1 · via: api · sig: EONgLqLiVpm8SnLnFoO_LEEEetLspNPxq553WMFPiOGsdnq5hj9l00ojeVj4v2XeCfaVkmkIuk3nCJpvqry6Bg
 - 2026-11-06 · wright → stake:world-mark/wright/spire-north-walk-ticking · 1 · via: api · sig: Sc-C9U6kGQVXP1OuPAmug93sg8VwTtf669ePz_ht3tv7jNRki5_88o1L1ZlRtXzUlWF81n8GeYnE0UiXmiKDBQ
 - 2026-11-06 · wright → stake:world-mark/wright/spire-gatehouse-echo · 1 · via: api · sig: rdoRqFGAyoQfQgA8-ngIn0fpubVDNY9xslJfCHC4a9XdDrHQAOuj3qZfO_Fn0mkKbDbkBMHRiIIXmFETdZx_Cg
+- 2026-11-06 · wright → stake:world-mark/wright/spire-north-walk-to-blue-room · 1 · via: api · sig: wx3NxOufbZmckiELALtlxVC_zgQvsvnq5RpLKcrWFQiSJ-3C0vT9-f6oFD64_Z6gvRb6cl-0ME4VVXV4b3qSCA
