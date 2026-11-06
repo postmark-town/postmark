@@ -99,6 +99,19 @@ test('DROPPED: a record removed from the middle fails, and one removed from the 
   assert.match(r.failures[0], /does not reach your checkpoint/);
 });
 
+test('SPLICED: a validly signed record from another history, at the right number, fails on its link', (t) => {
+  const town = publishedTown(t);
+  const keyId = keyIdOf(town.witnessKey.publicPem);
+  const at = sideChain(town, 'spliced', (f) => {
+    const other1 = makeRecord({ seq: 1, prev: GENESIS, decided: { ...f[1].body.decided, attempt: 'elsewhere' }, privateKeyPem: town.witnessKey.privatePem, keyId });
+    const other2 = makeRecord({ seq: 2, prev: other1.hash, decided: f[2].body.decided, privateKeyPem: town.witnessKey.privatePem, keyId });
+    return { 1: f[1], 2: other2, 3: f[3] };
+  });
+  const r = verify(town, at);
+  assert.equal(r.verdict, 'fail');
+  assert.match(r.failures[0], /record #2: prev is .*the link to the record before is broken/);
+});
+
 test('ANOTHER HISTORY: a whole chain re-signed by the same key fails against a checkpoint taken from the real one', (t) => {
   const town = publishedTown(t);
   const real = verify(town, 'origin/main');
