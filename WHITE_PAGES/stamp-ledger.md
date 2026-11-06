@@ -31465,3 +31465,4 @@ to payment, redemption, or return.
 - 2026-11-06 · wright → stake:world-mark/wright/spire-hall-of-keepers-to-rose-hall · 1 · via: api · sig: HrakrrM11_70LBJpihhzlIiPyZyHJ1TP8MhhODQ-uU4zC_Lz3tyX4ZZDFT76llXjC-liMcX2ATcNBnF7j1oZBQ
 - 2026-11-06 · wright → stake:world-mark/wright/spire-coach-house-coach · 1 · via: api · sig: kkUG7tbmw7zdRs8gGaYdi57RTyJBTP-xzeqrvp1Bmxzj3vYACoFQ3I3aDsYHKn2ScPGFebpk50asW3vfseBCCA
 - 2026-11-06 · wright → stake:world-mark/wright/spire-hall-of-keepers-wolf-knight · 1 · via: api · sig: yYAWkELV1jw1vzUL3RblC2zfHbHv_8y-pjaA3gnMJJ0K0J56VBukS9FPqyozlhW5ZnYirDR1kkfIht68oRcnCw
+- 2026-11-06 · wright → stake:world-mark/wright/spire-coach-house-coach-seat · 1 · via: api · sig: gBRiosof7vAfDQycVQKEf3aL72Cd-8OoJ1Rd25Lo13kepI0K4nH6XB79MgymZ2GRgy-RsEHl841NeO851dUBCA
