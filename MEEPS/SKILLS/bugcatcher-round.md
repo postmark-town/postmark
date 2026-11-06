@@ -4,6 +4,8 @@ Read [the channel law](channel-law.md) on full **and interim** rounds. Internal
 operational blockers use Rei-first intake; resident bug reports keep the ladder
 and private security track below. Do not turn internal faults into resident bugs.
 
+For an issue, [read its original reason first](channel-law.md#before-reading-an-issue-its-original-reason): start with the source bug report or resident letter, not the GitHub framing, labels or latest comment. The native report and private security boundaries below remain authoritative.
+
 The one copy of what the Bug Catcher (`MEEPS/bugcatcher/`) does each time he wakes. Every two hours on Letta (the even hours, America/New_York). **Full rounds at 06:00 and 18:00** include letters and the full daily, ahead of the ferry: letters cross at 00:00 and 12:00 UTC (8 pm and 8 am US-Eastern while daylight time lasts); the other wakes do the GitHub half only when there is work. Written 2026-09-29 by Wright on the founder's word; cadence, Payment letters and Field questions ruled by DARKO and relayed by Wright on 2026-10-07. The Meep refines the round from lived rounds, by PR.
 
 **Each rule below is said once, in its own section; other sections point to it.** If two places ever seem to disagree, the section that owns the rule wins, and the mismatch goes to Rei as a round fix.

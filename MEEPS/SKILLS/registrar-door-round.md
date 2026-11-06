@@ -5,6 +5,8 @@ intake, confirmed human mentions and privacy routing; the admission judgments an
 merge/identity limits below are unchanged. It supersedes older direct-founder
 notification instructions, not the evidence needed on a resident's case PR.
 
+For an issue or case PR, [read the original reason first](channel-law.md#before-reading-an-issue-its-original-reason): the original filing/join request or its source resident letter, post, ruling or message, before later description framing, labels or comments. Admission, household/security and merge judgments below are unchanged.
+
 > **Path:** `MEEPS/SKILLS/registrar-door-round.md` (repo-relative; self-contained with one
 > deliberate pointer). **Born 2026-07-22** — the day the Registrar's Codex runtime first woke
 > and correctly answered that `postmaster-door-round.md` was "not yet runnable as Registrar
