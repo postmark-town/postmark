@@ -206,10 +206,21 @@ hand.
 
 **g. The reveal, once a bug stands `shipped`** (from the w41 ship; POS-236). Its critter comes out of the jar with a picture:
 **First read the shipped post: if it has no critter, skip the reveal entirely** (DARKO's issue-sort ruling, 2026-10-07). A legacy shipped bug may lack a `fixed` record; a new one may have an explicit unearned `fixed` skip. Neither supplies a critter or fixer. This is not permission to jump to `shipped` or backfill old history. Do not write to Iris, invent either one, or call `reveal` for that post. **Its actual paid stages still receive the normal Payment letters and applicable GitHub payment notices.** If it has a critter, follow the existing reveal steps:
+**CORE-25 activation (DARKO, ruled 2026-10-28; carried into the rounds 2026-11-06):** the one-portrait/certificate flow below starts **only after office #935 actually ships**. Its reviewed-MERGE status or the planned Sunday 2026-11-08 train is not shipment; Darko still looks first. Until then, the live door takes three candidates: keep the existing steps below, not an early one-URL call.
+
+**Until that shipment — existing three-candidate flow:**
 1. Write to Iris (`illuminator`): the critter's name, the bug in a line or two, and the habitat and diet it suggests. Ask for three candidate pictures, uploaded through the media door.
 2. When her three URLs arrive, set them on the post: `town { do: "reveal", args: { post, candidates: [url1, url2, url3] } }`.
 3. Write to the resident fixer (who named the critter): the three pictures, and that they pick one with `town { do: "reveal", args: { post, pick: 1|2|3 } }`. Only they can pick, and only once. A portrait-pick request to Wright or another direct founder handoff goes through Rei instead, under the channel law; do not send Wright an operational letter. If the fixer cannot use the door, carry the help request through Rei for the authorized founder hand. Neither this routing nor Emily's stage-check role gives you someone else's image choice.
 The jar shows the picked image from then on. A reveal mints nothing and moves no stage.
+
+**Once office #935 has actually shipped — one portrait and a certificate, no pick:**
+1. Ask Iris (`illuminator`) for **one portrait**, with the same critter name, bug, habitat and diet provenance; not a trio or a resident offer. Iris paints and visually inspects it, then returns the portrait to you.
+2. **You set it:** `town { do: "reveal", args: { post, candidates: [url] } }`. One URL sets the image directly; there is **no pick step**. Only town hands `wright`, `keemin` and `bugcatcher` may use this single-portrait path. This does not permit impersonating another hand or grant Iris the act. Do not call it before the shipment or invent a separate set act.
+3. **You send the certificate letter**, using **Emily and Kogane's template plus your own lines**, with the final portrait. No candidate-choice question or chooser follow-up. This changes neither earned stages nor their existing Payment letters; a reveal still mints nothing and moves no stage.
+4. **One redraw if the namer asks.** Iris paints another portrait, and you set it with the same one-URL `reveal`, which **replaces the image** (DARKO, CORE-25/d, 2026-11-06). This replacement ships with office #935 under the same activation gate. There is no redraw counter on the door: **once is your rule to keep**, not a mechanically enforced limit.
+
+**Existing trios are preserved:** Wright's five final choices from November6 close those old offers, not a repaint or new selection task: Long Arm **3**, Swallowed Code **1**, Wandering Name Tag **2**, Candlewait Moth **3**, Leftover Sugar Mite **2**.
 
 ## 3. The issue: one per bug, from `reported`
 
