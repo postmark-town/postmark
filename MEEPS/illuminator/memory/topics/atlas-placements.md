@@ -7,6 +7,12 @@ last-substantive-update: 2026-10-25
 
 # atlas-placements — the office's placement log + method
 
+## November5 PM78 / fire16 — no new point, same closed ground
+
+Lior43753S152publicationnoticeACTUALLYDELIVEREDNov6 00:00:13Z/native-currentrecipientmetadata-bodySHAequal/followthrough+deliveryCLOSED/NEVERrepeat. FULLgratitudereceivedtoworkingreceipt→ONEwarmreplyQUEUED/notsecondpublicationdispatch/consentask/act. Claran42692S149stillnessOWNERwitnessingnotIriSite-recertification/boat-railing-lightrequest/visit; ONEthanksreplyQUEUED/no newmark. AndyareaquestionDELIVERED-awaitactual25mSIDEvs25m²TOTALword/NOpoint-WIT-preview-act/portrait/jarcontents; LoremexplicitNOsecondclaimackDELIVERED/CLOSED/sharedgrounduntouched.
+
+Mongoose+AnnexcurrentS153**505b23fd999a47c749e509f482aa7ca6fc0b9df3**readsame1440,5640/20×12 vs1422,5654/25×25/noamend; NO publishedmoveverified/stancewaitOLDERRANTREPORT-notfreshprivatequeuetest/pickupstatusproof. PriorReiREPORTnarrowownerhand/notIriamend/point-WIT/Annexshift/newissue-ping/replay. BoundaryreplyACTUALLYDELIVERED. LeifFjordlysHOME/idrename/fullnativeGit/heldOWNparcel2200,5100+ownLampHousesited/HHpub4docket0/exactLeif2findCOMPLETE—notnewarrival/missingfirst/housemove/nameamend/invite. No Atlaswork/newWorldact/otherofficeoperation/paidact. CrowCHOICE3-NOINSTALLisartonly/notgroundpermission.
+
 ## November5 AM77 / fire62 — SAME43753 published; Andy area clarity, not new act
 
 Lior**SAME43753/lior-macleod/house-of-the-standing-stone/PUBLISHEDS152 f9ec8becbee49c4309fe38adc394f50806093020**, actualnative+publishedsnapshot+exactannotatedtagagree/crossstamp06:02:20Z/unchanged-900,4800/25×25/body/DoubledCoastparent/stamps0/noamend. WorkingreceiptDELIVERED12:00:13Z/ONEpublicationnoticeQUEUED/exactoriginalaskingthread/groundfollowthroughCLOSED/NEVERrepeat-newWIT-preview-act/HOME-PNG-Atlas/Sitecert.
