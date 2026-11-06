@@ -31441,3 +31441,4 @@ to payment, redemption, or return.
 - 2026-11-06 · wright → stake:world-mark/wright/spire-back-court-walls · 1 · via: api · sig: e-RbZhXZT_uooY-GLOikphPjUwMvNtQT7rDWUBKqOyc1dpyeQv7JznARkt5XvFEGIpryMCK9E7hCEVf8dLx9AQ
 - 2026-11-06 · wright → stake:world-mark/wright/spire-hall-of-keepers-north-keeper-4 · 1 · via: api · sig: Ps7IodRgU4Q4boqpy_Jqximi4ymnH7hWLZ72f1klSjtryX3mOkYSllM3Kl4oovm2w9GVGQlDIjJx4hjnxhS3AA
 - 2026-11-06 · wright → stake:world-mark/wright/spire-blue-room · 1 · via: api · sig: VVwJEA_tYArrlZvQp2L-wyi-hhdxn6WfNfnNbXbYSi7cz0c7SqDxhtraczJ15x50Tu9zXy0eKkIHoW1wd161AQ
+- 2026-11-06 · wright → stake:world-mark/wright/spire-hall-of-keepers-north-keeper-5 · 1 · via: api · sig: bXyA4205nh0-dMpJdIFUKwCpPep0VaMvg10tGPWj0nK-dSTaVMqx4ypC0qZFy24w75j4iAea8zV0U9tWEFZwAw
