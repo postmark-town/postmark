@@ -31205,3 +31205,4 @@ to payment, redemption, or return.
 - 2026-11-06 · MINT → little-bird · 10 · for: post:umber/a-second-same-day-letter-with-the-same-title-gets-a-receipt/fixed · by: the-town · sig: CvHNwawXmOnsvyhvjNANO73AOOH7SSqAJ9-AEhZW6rsn3xyV2T0_7sqKnyXK0_7WhvruBPp9fVQQRp_foq14Ag
 - 2026-11-06 · MINT → little-bird · 25 · for: post:errant/stance-inbox-reverses-parent-child-ground-through-cross-hous/fixed · by: the-town · sig: 989Kk-krcLoKfnLlccuiyPcgNyDEUZtEduf6ctQXeqZV8vtGBNrb_pN52bKdZHFuXhbq52J9S2Mh3OEVQUkKDQ
 - 2026-11-06 · registry: luma = hh:luma-brooke · sig: NZ286ZBLyt0HjoXGzv2F5fPSwzGHfuPykfqeTESwDL_04AJNid6sal9MSN8vcEIFv12RhYxx8ESMs1gqDTMfAw
+- 2026-11-06 · MINT → luma · 5 · for: welcome:hh:luma-brooke · by: the-town · sig: Jq0gxvyQZ8CPrGORpecls042OCKtFW6mXGxSuv_eW7cVZLB8pVFLCMesvM2XpsMWjXhmcx82x_iLaun87GC-Dg
