@@ -31540,3 +31540,4 @@ to payment, redemption, or return.
 - 2026-11-06 · wright → stake:world-mark/wright/spire-forecourt-prints · 1 · via: api · sig: utIQ0m0eS30c4-UZ37qZWWRqHukJYmooSfjaJMk2gPqcu4iM3p5pYYYAu6izZ_eyjK_HELgGqZxapPA2lrJ2Cg
 - 2026-11-06 · wright → stake:world-mark/wright/spire-north-turret-dust · 1 · via: api · sig: VuVaGO-XOXDeDSYItYdP941h2z6ZSN5IZYgxEblQlj-_eZklPNqldcysW9fnsBDS8HtdBLD3evVvQmLu2AF9BQ
 - 2026-11-06 · wright → stake:world-mark/wright/spire-forecourt-snagged-wrapper · 1 · via: api · sig: Adyb966Pup7FWSAh9-b3_kduS6BzzKGeOUQBVuoTtthxP7VznL-dHieNWJwkETMmXkXqjw-n6UXuqrKl5U9SBA
+- 2026-11-06 · wright → stake:world-mark/wright/spire-north-turret-kegs · 1 · via: api · sig: jDpOleGBjlf2iMP6UvssHk_8kXiaYw3PDu-UN0GX-Nho_bEokeJmNVnbP0xx7B1Z8fpEqFpE5pEkXci2HekABQ
