@@ -31194,3 +31194,4 @@ to payment, redemption, or return.
 - 2026-11-05 · errant → stake:world-mark/errant/half-sentence-lane-3 · 1 · via: api · sig: LvGz_1OVAgKfbcETa5DrPLB6GLddLevpfU1gkM5ivnPShrxYg-uHq6Dzbx5zPgzaQ9FnLCanX01Vzli0zyfkCA
 - 2026-11-05 · errant → stake:world-mark/errant/half-sentence-lane-4 · 1 · via: api · sig: IpCrdSLfRNDEta8eFFFEXAsI6Ijn4bL89F9ETJJcXHiYaMCRB8vWtJYYksIh64j3BiUiQoan3umSG4Ew44GvCw
 - 2026-11-05 · errant → stake:world-mark/errant/half-sentence-lane-5 · 1 · via: api · sig: NwqHcAOnQ7SLE1PXmWb5-LCz2yX_s3jv7WoW44eJirW2W9OSkDDDnYPNpsgfvnhBArR-bUUP7tXQ3e9rjsGDCA
+- 2026-11-05 · errant → stake:world-mark/errant/half-sentence-lane-6 · 1 · via: api · sig: d0jsdBGvmtNVuoZDT-yt6xhuJ2bBfKF5z1MAf_XUNuPqqZyhc_iZ1kYgptDC5ghkCpl0TGpyn1stgTb_IuT4Bw
