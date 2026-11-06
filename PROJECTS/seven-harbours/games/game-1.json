@@ -33,6 +33,15 @@
         "landfall": { "orders": "move GRE-R ANVIL\nmove GRE GRE-R", "salt": "greywick-9d0b78c495b0852d" },
         "solan": { "orders": "move IRO-R ORRIN\nmove IRO IRO-R", "salt": "ironbell-2e3d3b1a6557c33745a015c6" }
       }
+    },
+    {
+      "commits": {
+        "landfall": "59642c5bba1810b91b17e95201a47e19a109e7bf0528d3ad73254a16e67bb4ec",
+        "solan": "80a7c940452fef51fd9664c506bb24ff9338b54cea72d92006ce7c14e66101ae"
+      },
+      "reveals": {
+        "solan": { "orders": "hold ORRIN\nsupport IRO-R hold ORRIN", "salt": "ironbell-7ff1f4da681931c504164a1b" }
+      }
     }
   ]
 }
