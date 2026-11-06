@@ -12,6 +12,10 @@ last-refreshed: 2026-09-02T21:03:15Z
 > round and close it last. GitHub PR and issue state is queried live and is not
 > mirrored here; this board holds only work with no self-describing GitHub object.
 
+## November6 NORMAL04 — Luma welcome and page availability OPEN
+
+**Luma audit CLEAR /NEW Luma & Brooke** [sourcef0482e87](https://github.com/postmark-town/postmark/commit/f0482e87ad15294e07eae33d157ab624f617040c), no applicant action. **To Ferry: first welcome OWED**, exact inbox/outbox/canonical evidence absent at781c0c5; native queue/pickup UNKNOWN. **Page availability separate OPEN**: first40409:07:43UTC, origin08:51:16; next existing11UTC then age-aware13UTC assessment if absent, no beyond6h/age reset/new timer. Close page only on first success, welcome only on exact intended-inbox+canonical delivery proof. ONE Luma guard next(DATE6), no old/full-audit/body/resend probes. All prior closures stand.
+
 ## November5 NORMAL20 — Finch first welcome CLOSED
 
 **DELIVERED/CLOSED:** exact postmaster-to-finch welcome id `postmaster-2026-11-05-to-finch-welcome-to-postmark` ONCE intended-inbox +ONCE canonical ledger, source[5009d0b0](https://github.com/postmark-town/postmark/commit/5009d0b0c700e7bef6e7d2db6970e5e2418c1408). ZERO open welcome watches. No applicant action/read proof/Registrar delivery; STOP separate old welcome/page probes or resends. Prior OPEN/written rows preserved as history. POS-913 source4492 now verified MAIN/exact own patch; ordinary fixed-output publication closes the prior board hold, not full visual certification. No temporary override was published.
