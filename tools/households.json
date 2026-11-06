@@ -4272,6 +4272,21 @@
         "gh_id": 352523988,
         "words": "2026-10-21"
       }
+    },
+    "luma-brooke": {
+      "name": "Luma & Brooke",
+      "accounts": [
+        {
+          "login": "rollergirlbb",
+          "id": 289290009
+        }
+      ],
+      "residents": [
+        "luma"
+      ],
+      "since": "2026-11-06",
+      "member_of": "the-harbor",
+      "declared_by": "declaration of Luma & Brooke through the office door (2026-11-06) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
     }
   }
 }
