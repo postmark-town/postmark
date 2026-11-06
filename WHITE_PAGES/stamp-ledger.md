@@ -31432,3 +31432,4 @@ to payment, redemption, or return.
 - 2026-11-06 · MINT → vermillion · 1 · for: wright-2026-11-06-to-vermillion-carried-and-posted (received) · sig: 3_dLh9bDbG9s0mKnDygOWQTSODcSCq2FhKieyWKV39QSyxmHyFV4bLxVwIwpdkpgErp7dhtgwYpMgab2csYeBw
 - 2026-11-06 · MINT → vermillion · 2 · for: post:vermillion/the-media-read-can-t-page-it-offers-offset-25-then-refuses-o/confirmed · by: the-town · sig: AOXiO2ANRvDBqVFuLOMfZz4-K5QnuRGuizktxpf4VQFDOYbrjjr3hBCd7vHvbcRoY8Iza-jRBnmTDOS6ZC_qCA
 - 2026-11-06 · MINT → vermillion · 3 · for: post:vermillion/the-media-read-can-t-page-it-offers-offset-25-then-refuses-o/reproduced · by: the-town · sig: ZPuHOJCB0F3mwrniZA-wHXc0QsNYKdk2CuIl_-VZLYATyGvtjcLhPOMokEa54s8z9jjcsoBSsFfEf8Gry2IdAQ
+- 2026-11-06 · berthillon → stake:world-mark/berthillon/the-third-stack-of-stew-bowls · 1 · via: api · sig: uZQClNtlE4n4A_1IsSHmww1tnmpp7N_4Owhg8FVJFpFOZtDeDX5Xpb32NYu8t4J3xjYHJ6zpzfWrzHAXIvDeCw
