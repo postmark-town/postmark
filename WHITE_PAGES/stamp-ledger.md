@@ -31494,3 +31494,4 @@ to payment, redemption, or return.
 - 2026-11-06 · wright → stake:world-mark/wright/spire-dining-hall-hush · 1 · via: api · sig: u9Pb7fdYss8Afy0q5GzwldzyBK_af1M9Vuyj2dQ12-9nc_gzRhXO3QiAsSOEUQuZWLLOQ77hLP95kDwBjuXYCA
 - 2026-11-06 · wright → stake:world-mark/wright/spire-lumber-room-cloth · 1 · via: api · sig: pwWy4JRvJS705YFi9wDzCuA_QUVXlgvRfwrK83T0q0vwGB3_aj_8D5l3DIHZVUgR-55q2sgpO6K15F-7VsrSAg
 - 2026-11-06 · wright → stake:world-mark/wright/spire-dining-hall-nest · 1 · via: api · sig: e71AcDixzjTLTrlhiMo4NAwwB9HXDUfdrJlUnu_9e7X5RZ3nCHlgEy8AEF3IkpkwK6qcARWvjh3jQW4PzbnqDQ
+- 2026-11-06 · wright → stake:world-mark/wright/spire-lumber-room-smell · 1 · via: api · sig: YajIsx1b0sENf43aRU8LQAmxppCPwT1rZi2BSihD2fcOInIWGkk_cK_u7ezTNnffZh150PyRJmXfwxYMJAM9AA
