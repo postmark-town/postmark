@@ -57,9 +57,9 @@ import {
   closeSync, existsSync, fsyncSync, mkdirSync, openSync, readdirSync, readFileSync,
   realpathSync, renameSync, rmSync, writeSync,
 } from 'node:fs';
-import { join, resolve } from 'node:path';
+import { basename, join, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
-import { tmpdir } from 'node:os';
+import { hostname, tmpdir } from 'node:os';
 
 import { parseLedger as parseMailLedger, sealLedger } from '../PROJECTS/the-town-seal/seal.mjs';
 import { parseStampLedger, sealChain } from './stamp-mint.mjs';
@@ -71,8 +71,14 @@ export const RECORDS_DIR = 'WITNESS/records';
 export const PUBKEY_PATH = 'WITNESS/witness-pubkey.pem';
 export const STAMP_PUBKEY_PATH = 'tools/stamp-pubkey.pem';
 export const KINDS = Object.freeze(['mail-crossing', 'settlement']);
-export const MAIL_STATUSES = Object.freeze(['delivered', 'quiet', 'refused']);
-export const SETTLEMENT_STATUSES = Object.freeze(['published', 'quiet', 'refused', 'starving', 'race']);
+// `incomplete`: the run began and its outcome was never decided in full: it died
+// before its witness step, or its outcome could not be composed. The record says
+// so rather than leave a hole the next record would paper over.
+export const MAIL_STATUSES = Object.freeze(['delivered', 'quiet', 'refused', 'incomplete']);
+export const SETTLEMENT_STATUSES = Object.freeze(['published', 'quiet', 'refused', 'starving', 'race', 'incomplete']);
+// An open entry whose holder is still alive is still deciding; past this age it
+// is published as incomplete whatever the process table says.
+export const OPEN_MAX_AGE_MS = 12 * 3600 * 1000;
 // The public files a mail record binds by digest, besides the letters it moved.
 export const MAIL_ARTIFACTS = Object.freeze([
   'WHITE_PAGES/mail-ledger.md',
@@ -152,44 +158,142 @@ export function checkDecided(d) {
 
 // ── the owed directory ──────────────────────────────────────────────────────
 
-const owedName = (decided) =>
-  `${decided.decided_at.replace(/[^0-9TZ]/g, '')}-${outcomeId(decided).slice(0, 16)}.json`;
+//
+// Two kinds of entry, one file each, kept in the order they were first written
+// (the file name begins with that instant):
+//
+//   OPEN      written BEFORE a run does anything, naming the run (kind, event,
+//             attempt) and the process holding it. It is the obligation: if the
+//             run dies before its witness step, the open entry is still here.
+//   DECIDED   the outcome. Owing it replaces the run's open entry IN PLACE, so
+//             it keeps the run's place in the queue.
+//
+// A publisher meeting an open entry whose holder is gone (or older than
+// OPEN_MAX_AGE_MS) publishes it as INCOMPLETE: the run began and never said what
+// it did. One whose holder is still running is still deciding, and the records
+// after it wait for it; the crossing itself never does.
 
-/** Write a decided outcome to the owed directory, durably. The same outcome twice is one file. */
-export function owe(owedDir, decided) {
-  const problems = checkDecided(decided);
-  if (problems.length) throw new Error(`not a decided outcome: ${problems.join('; ')}`);
+const stamp = (iso) => new Date(Date.parse(iso)).toISOString().replace(/[^0-9TZ]/g, '');
+const runKey = (kind, attempt) => createHash('sha256').update(`${kind}\n${attempt}`, 'utf8').digest('hex').slice(0, 16);
+
+function writeDurably(owedDir, name, text) {
   mkdirSync(owedDir, { recursive: true });
-  const name = owedName(decided);
   const path = join(owedDir, name);
-  if (existsSync(path)) return { path, fresh: false };
   const tmp = join(owedDir, `.${name}.${process.pid}.tmp`);
   const fd = openSync(tmp, 'w');
-  try { writeSync(fd, `${canonicalJson(decided)}\n`); fsyncSync(fd); } finally { closeSync(fd); }
+  try { writeSync(fd, text); fsyncSync(fd); } finally { closeSync(fd); }
   renameSync(tmp, path);
   const dfd = openSync(owedDir, 'r');
   try { fsyncSync(dfd); } catch { /* not every filesystem syncs a directory */ } finally { closeSync(dfd); }
-  return { path, fresh: true };
+  return path;
 }
 
-/** The owed outcomes, oldest decision first. A file that does not parse is reported, never skipped. */
+/** A process's start time from /proc (clock ticks since boot), or null where there is no /proc. */
+export function processStart(pid) {
+  try {
+    const stat = readFileSync(`/proc/${pid}/stat`, 'utf8');
+    const fields = stat.slice(stat.lastIndexOf(')') + 2).split(' ');
+    return fields[19] ?? null; // field 22 of stat; the slice starts at field 3
+  } catch { return null; }
+}
+
+/** Is the process that holds an open entry still the one running? Same host, alive, same start. */
+export function holderAlive(holder) {
+  if (!holder || holder.host !== hostname() || !Number.isSafeInteger(holder.pid)) return false;
+  try { process.kill(holder.pid, 0); } catch (e) { if (e.code !== 'EPERM') return false; }
+  return holder.start == null || processStart(holder.pid) === holder.start;
+}
+
+export function checkOpen(o) {
+  const p = [];
+  if (!o || o.state !== 'open') return ['not an open entry'];
+  if (!KINDS.includes(o.kind)) p.push(`kind must be one of ${KINDS.join(', ')}`);
+  for (const f of ['event', 'attempt', 'opened_at']) if (typeof o[f] !== 'string' || !o[f]) p.push(`${f} must be a non-empty string`);
+  if (o.opened_at && Number.isNaN(Date.parse(o.opened_at))) p.push('opened_at must be an ISO instant');
+  if (!o.holder || !Number.isSafeInteger(o.holder.pid)) p.push('holder.pid must be a process id');
+  return p;
+}
+
+/**
+ * Open a run before it does anything. `pid` is the process whose death means
+ * the run ended (the long-lived shell of a unit, not a short-lived helper).
+ */
+export function owePending(owedDir, { kind, event, attempt, openedAt = new Date().toISOString(), pid = process.ppid }) {
+  const open = { v: 1, state: 'open', kind, event, attempt, opened_at: openedAt, holder: { pid, start: processStart(pid), host: hostname() } };
+  const problems = checkOpen(open);
+  if (problems.length) throw new Error(`not an open entry: ${problems.join('; ')}`);
+  const existing = findOpen(owedDir, kind, attempt);
+  if (existing) return { path: existing.path, fresh: false };
+  return { path: writeDurably(owedDir, `${stamp(openedAt)}-o${runKey(kind, attempt)}.json`, `${canonicalJson(open)}\n`), fresh: true };
+}
+
+function findOpen(owedDir, kind, attempt) {
+  const { entries } = listOwed(owedDir);
+  return entries.find((e) => e.open && e.open.kind === kind && e.open.attempt === attempt) ?? null;
+}
+
+/** Write a decided outcome, durably. It replaces its run's open entry in place; the same outcome twice is one file. */
+export function owe(owedDir, decided) {
+  const problems = checkDecided(decided);
+  if (problems.length) throw new Error(`not a decided outcome: ${problems.join('; ')}`);
+  const text = `${canonicalJson(decided)}\n`;
+  const open = existsSync(owedDir) ? findOpen(owedDir, decided.kind, decided.attempt) : null;
+  if (open) return { path: writeDurably(owedDir, basename(open.path), text), fresh: true, replaced: true };
+  const name = `${stamp(decided.decided_at)}-${outcomeId(decided).slice(0, 16)}.json`;
+  if (existsSync(join(owedDir, name))) return { path: join(owedDir, name), fresh: false };
+  return { path: writeDurably(owedDir, name, text), fresh: true };
+}
+
+/** What a run that never decided is recorded as. */
+export function incompleteDecided(open, why) {
+  return {
+    v: 1, kind: open.kind, event: open.event, attempt: open.attempt, decided_at: open.opened_at,
+    outcome: { status: 'incomplete', stage: 'unknown', why: String(why).slice(0, 500) },
+    inputs: {}, results: {}, heads: {}, artifacts: [],
+  };
+}
+
+/** A run that could not compose its outcome: its open entry becomes an incomplete outcome now, with the reason. */
+export function oweIncomplete(owedDir, { kind, attempt, event = null, why }) {
+  const found = existsSync(owedDir) ? findOpen(owedDir, kind, attempt) : null;
+  const open = found?.open ?? { kind, attempt, event: event ?? 'unknown', opened_at: new Date().toISOString() };
+  return owe(owedDir, incompleteDecided(open, why));
+}
+
+/** A run that turned out not to be a decision (a lost race inside the retry): its open entry is withdrawn. */
+export function closePending(owedDir, { kind, attempt }) {
+  const found = existsSync(owedDir) ? findOpen(owedDir, kind, attempt) : null;
+  if (found) rmSync(found.path, { force: true });
+  return { closed: Boolean(found) };
+}
+
+/**
+ * The owed queue in order. `entries` holds every readable entry, open or
+ * decided; `owed` the decided ones (with their ids). A file that does not parse
+ * is reported, never skipped.
+ */
 export function listOwed(owedDir) {
-  if (!existsSync(owedDir)) return { owed: [], unreadable: [] };
-  const owed = [];
+  if (!existsSync(owedDir)) return { owed: [], entries: [], unreadable: [] };
+  const entries = [];
   const unreadable = [];
   for (const name of readdirSync(owedDir).filter((n) => !n.startsWith('.') && n.endsWith('.json')).sort()) {
     const path = join(owedDir, name);
     try {
-      const decided = JSON.parse(readFileSync(path, 'utf8'));
-      const problems = checkDecided(decided);
-      if (problems.length) unreadable.push({ path, why: problems.join('; ') });
-      else owed.push({ path, decided, id: outcomeId(decided) });
+      const value = JSON.parse(readFileSync(path, 'utf8'));
+      if (value?.state === 'open') {
+        const problems = checkOpen(value);
+        if (problems.length) unreadable.push({ path, why: problems.join('; ') });
+        else entries.push({ path, open: value });
+      } else {
+        const problems = checkDecided(value);
+        if (problems.length) unreadable.push({ path, why: problems.join('; ') });
+        else entries.push({ path, decided: value, id: outcomeId(value) });
+      }
     } catch (e) {
       unreadable.push({ path, why: e.message });
     }
   }
-  owed.sort((a, b) => Date.parse(a.decided.decided_at) - Date.parse(b.decided.decided_at) || (a.path < b.path ? -1 : 1));
-  return { owed, unreadable };
+  return { owed: entries.filter((e) => e.decided), entries, unreadable };
 }
 
 // ── records ─────────────────────────────────────────────────────────────────
@@ -361,15 +465,32 @@ function isRejection(text) {
  * published stays owed, and `why` says why.
  */
 export function publish({
-  repo, owedDir, privateKeyPem, remote = 'origin', branch = 'main', attempts = 5, log = () => {},
+  repo, owedDir, privateKeyPem, keyProblem = null, remote = 'origin', branch = 'main', attempts = 5, log = () => {},
+  now = Date.now(),
 }) {
-  const { owed, unreadable } = listOwed(owedDir);
+  const { entries, unreadable } = listOwed(owedDir);
   for (const u of unreadable) log(`witness: an owed file does not read and blocks the queue: ${u.path} (${u.why})`);
   if (unreadable.length) {
-    return { status: 'owed', published: [], owed: owed.length + unreadable.length, why: 'an owed file does not read; the queue waits for a person rather than skip it' };
+    return { status: 'owed', published: [], owed: entries.length + unreadable.length, why: 'an owed file does not read; the queue waits for a person rather than skip it' };
   }
-  if (!owed.length) return { status: 'nothing-owed', published: [], owed: 0 };
-  if (!privateKeyPem) return { status: 'owed', published: [], owed: owed.length, why: 'no witness key is configured (WITNESS_KEY)' };
+
+  // THE QUEUE, IN ORDER, UP TO THE FIRST RUN STILL DECIDING. An open entry whose
+  // holder is gone (or too old) is published as incomplete, in its place; one
+  // still running stops the queue there, so nothing decided after it is placed
+  // ahead of it. The crossing it belongs to is not held: only these records wait.
+  const owed = [];
+  let waiting = null;
+  for (const e of entries) {
+    if (e.decided) { owed.push(e); continue; }
+    const o = e.open;
+    if (holderAlive(o.holder) && now - Date.parse(o.opened_at) < OPEN_MAX_AGE_MS) { waiting = o; break; }
+    const decided = incompleteDecided(o, `the run (pid ${o.holder.pid} on ${o.holder.host ?? 'an unnamed host'}) began at ${o.opened_at} and ended without recording its outcome: it died, or was stopped, before its witness step. What it did is bound by the records after this one.`);
+    owed.push({ path: e.path, decided, id: outcomeId(decided) });
+  }
+  const waitWhy = waiting ? `${waiting.kind} ${waiting.event} (attempt ${waiting.attempt}, pid ${waiting.holder.pid}) is still deciding; the records after it wait for it` : null;
+  const finish = (r) => (waiting && r.status !== 'owed' ? { ...r, status: 'owed', owed: entries.length - owed.length, why: waitWhy } : r);
+  if (!owed.length) return waiting ? { status: 'owed', published: [], owed: entries.length, why: waitWhy } : { status: 'nothing-owed', published: [], owed: 0 };
+  if (!privateKeyPem) return { status: 'owed', published: [], owed: entries.length, why: keyProblem ?? 'no witness key is configured (WITNESS_KEY)' };
 
   let keyId;
   let publicPem;
@@ -421,7 +542,7 @@ export function publish({
     const fresh = owed.filter((o) => !ids.has(o.id));
     if (!fresh.length) {
       for (const o of already) rmSync(o.path, { force: true });
-      return { status: 'published', published: [], owed: 0 };
+      return finish({ status: 'published', published: [], owed: 0 });
     }
 
     const added = [];
@@ -462,7 +583,7 @@ export function publish({
       // Best effort: let the clone's remote-tracking ref see what it pushed.
       git(repo, ['update-ref', `refs/remotes/${remote}/${branch}`, commit, base]);
       log(`witness: published ${added.map((a) => `#${a.seq}`).join(', ')} at ${commit.slice(0, 8)}`);
-      return { status: 'published', published: added.map((a) => a.seq), owed: 0, commit };
+      return finish({ status: 'published', published: added.map((a) => a.seq), owed: 0, commit });
     }
     lastWhy = `push refused: ${(push.stderr || push.stdout).trim()}`;
     if (!isRejection(push.stderr + push.stdout)) break;
@@ -471,13 +592,15 @@ export function publish({
   return { status: 'owed', published: [], owed: owed.length, why: lastWhy || 'publication did not complete' };
 }
 
-/** What is owed, for a person: count, oldest decision, and anything unreadable. */
+/** What is owed, for a person: decided and open counts, the oldest entry, and anything unreadable. */
 export function owedStatus(owedDir) {
-  const { owed, unreadable } = listOwed(owedDir);
+  const { owed, entries, unreadable } = listOwed(owedDir);
+  const first = entries[0];
   return {
     owed: owed.length,
+    open: entries.length - owed.length,
     unreadable: unreadable.length,
-    oldest: owed[0] ? { event: owed[0].decided.event, decided_at: owed[0].decided.decided_at } : null,
+    oldest: first ? { event: (first.decided ?? first.open).event, at: first.decided?.decided_at ?? first.open.opened_at } : null,
   };
 }
 
@@ -485,10 +608,17 @@ export function owedStatus(owedDir) {
 
 const USAGE = `witness-chain.mjs — the town's witness chain (WITNESS.md)
 
-  owe-mail  --repo <town clone> --owed <dir> --attempt <id> --exit <n> [--stage <s>] [--ferry-report <json>] [--decided-at <iso>] [--no-fetch]
-  owe       --owed <dir> --decided <json file, or - for stdin>
-  publish   --repo <town clone> --owed <dir> --key <witness private key pem> [--remote origin] [--branch main]
-  status    --owed <dir>
+  owe-open       --owed <dir> --kind <k> --attempt <id> [--event <e>] [--pid <holder>]
+                 before a run does anything (a mail crossing's event defaults to this
+                 crossing; the holder defaults to the caller's parent process)
+  owe-mail       --repo <town clone> --owed <dir> --attempt <id> --exit <n> [--stage <s>] [--ferry-report <json>] [--decided-at <iso>] [--no-fetch]
+  owe            --owed <dir> --decided <json file, or - for stdin>
+  owe-incomplete --owed <dir> --kind <k> --attempt <id> --why <text> [--event <e>]
+                 a run whose outcome could not be composed
+  owe-close      --owed <dir> --kind <k> --attempt <id>
+                 a run that turned out not to be a decision
+  publish        --repo <town clone> --owed <dir> --key <witness private key pem> [--remote origin] [--branch main]
+  status         --owed <dir>
 
 Every verb but status exits 0 when it did its part and 3 when an outcome is
 left OWED (the town keeps running; the next publish pays it). 2 is a usage
@@ -529,6 +659,28 @@ function main(argv) {
     log(`${fresh ? 'owed' : 'already owed'}: ${decided.kind} ${decided.event} (${decided.outcome.status}) → ${path}`);
     return 0;
   }
+  if (verb === 'owe-open') {
+    if (!o.owed || !o.kind || !o.attempt) { log('owe-open needs --owed, --kind and --attempt'); return 2; }
+    const openedAt = new Date().toISOString();
+    const event = o.event ?? (o.kind === 'mail-crossing' ? `crossing:${crossingAt(Date.parse(openedAt))}` : null);
+    if (!event) { log('owe-open needs --event for a settlement'); return 2; }
+    const pid = o.pid !== undefined ? Number(o.pid) : process.ppid;
+    const { path, fresh } = owePending(resolve(o.owed), { kind: o.kind, event, attempt: o.attempt, openedAt, pid });
+    log(`${fresh ? 'opened' : 'already open'}: ${o.kind} ${event} (attempt ${o.attempt}, held by pid ${pid}) → ${path}`);
+    return 0;
+  }
+  if (verb === 'owe-incomplete') {
+    if (!o.owed || !o.kind || !o.attempt || !o.why) { log('owe-incomplete needs --owed, --kind, --attempt and --why'); return 2; }
+    const { path } = oweIncomplete(resolve(o.owed), { kind: o.kind, attempt: o.attempt, event: o.event ?? null, why: o.why });
+    log(`owed as incomplete: ${o.kind} attempt ${o.attempt} (${o.why}) → ${path}`);
+    return 0;
+  }
+  if (verb === 'owe-close') {
+    if (!o.owed || !o.kind || !o.attempt) { log('owe-close needs --owed, --kind and --attempt'); return 2; }
+    const { closed } = closePending(resolve(o.owed), { kind: o.kind, attempt: o.attempt });
+    log(closed ? `withdrawn: ${o.kind} attempt ${o.attempt} decided nothing` : `nothing open for ${o.kind} attempt ${o.attempt}`);
+    return 0;
+  }
   if (verb === 'owe') {
     if (!o.owed || !o.decided) { log('owe needs --owed and --decided'); return 2; }
     const text = o.decided === '-' ? readFileSync(0, 'utf8') : readFileSync(o.decided, 'utf8');
@@ -539,9 +691,13 @@ function main(argv) {
   }
   if (verb === 'publish') {
     if (!o.repo || !o.owed) { log('publish needs --repo and --owed'); return 2; }
-    const pem = o.key && existsSync(o.key) ? readFileSync(o.key, 'utf8') : null;
+    let pem = null;
+    let keyProblem = null;
+    if (o.key) {
+      try { pem = readFileSync(o.key, 'utf8'); } catch (e) { keyProblem = `the witness key file ${o.key} (WITNESS_KEY) cannot be read: ${e.code ?? e.message}`; }
+    }
     const r = publish({
-      repo: resolve(o.repo), owedDir: resolve(o.owed), privateKeyPem: pem,
+      repo: resolve(o.repo), owedDir: resolve(o.owed), privateKeyPem: pem, keyProblem,
       remote: o.remote ?? 'origin', branch: o.branch ?? 'main', log,
     });
     if (r.status === 'owed') { log(`${r.owed} record(s) OWED, not published: ${r.why}`); return 3; }

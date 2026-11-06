@@ -15,12 +15,12 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { spawn, spawnSync } from 'node:child_process';
-import { existsSync, readdirSync, renameSync, symlinkSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync, renameSync, symlinkSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import {
-  GENESIS, canonicalJson, checkRecord, keyIdOf, listOwed, mailDecided, owe, outcomeId, publish, readChain,
+  GENESIS, canonicalJson, checkRecord, keyIdOf, listOwed, mailDecided, owe, owePending, outcomeId, publish, readChain,
 } from './witness-chain.mjs';
 import { keypair, scratchTown } from './witness-test-fixture.mjs';
 
@@ -281,12 +281,97 @@ test('THE CLI THROUGH A SYMLINK still runs: entered by a linked path, it answers
     const r = spawnSync(process.execPath, [join(link, tool), ...args], { encoding: 'utf8' });
     if (tool === 'witness-chain.mjs') {
       assert.equal(r.status, 0, r.stderr);
-      assert.deepEqual(JSON.parse(r.stdout), { owed: 0, unreadable: 0, oldest: null });
+      assert.deepEqual(JSON.parse(r.stdout), { owed: 0, open: 0, unreadable: 0, oldest: null });
     } else {
       assert.equal(r.status, 2, 'the verifier refuses without --key, rather than say nothing');
       assert.match(r.stderr, /--key <pem> is required/);
     }
   }
+});
+
+// ── a run is owed BEFORE it acts (the review of 11-06: an outcome must never vanish) ──
+//
+// LAW (POS-907/c): "the record is owed". The run's open entry is the debt from
+// its first moment; its outcome replaces it, and a run that never got that far
+// is published as INCOMPLETE rather than leave a hole the next record covers.
+
+const deadPid = () => spawnSync(process.execPath, ['-e', 'process.stdout.write(String(process.pid))'], { encoding: 'utf8' }).stdout.trim() * 1;
+
+test('OPEN, THEN DECIDED: the outcome replaces the run\'s open entry in its place, and publishes as one record', (t) => {
+  const town = scratchTown(t);
+  owePending(town.owed, { kind: 'settlement', event: 'settlement:A', attempt: 'A#1', openedAt: '2026-11-06T18:00:00.000Z', pid: process.pid });
+  const before = readdirSync(town.owed);
+  const r = owe(town.owed, settlementDecided('settlement:A', { attempt: 'A#1', at: '2026-11-06T18:20:00.000Z' }));
+  assert.equal(r.replaced, true);
+  assert.deepEqual(readdirSync(town.owed), before, 'the same file, the same place in the queue');
+  assert.deepEqual(publish({ repo: town.repo, owedDir: town.owed, privateKeyPem: town.witnessKey.privatePem }).published, [1]);
+  assert.equal(originChain(town)[0].body.decided.outcome.status, 'published');
+});
+
+test('A RUN THAT DIED before its witness step is published as INCOMPLETE, in its place, never skipped', (t) => {
+  const town = scratchTown(t);
+  owePending(town.owed, { kind: 'mail-crossing', event: 'crossing:293', attempt: 'ferry-dead', openedAt: '2026-11-06T12:00:00.000Z', pid: deadPid() });
+  owe(town.owed, settlementDecided('settlement:after', { at: '2026-11-06T18:00:00.000Z' }));
+  const r = publish({ repo: town.repo, owedDir: town.owed, privateKeyPem: town.witnessKey.privatePem });
+  assert.deepEqual(r.published, [1, 2], r.why);
+  const chain = originChain(town);
+  assert.deepEqual(chain.map((c) => [c.body.decided.event, c.body.decided.outcome.status]), [['crossing:293', 'incomplete'], ['settlement:after', 'published']],
+    'LAW: "the record is owed" — the dead run stands in its place, before its successor');
+  assert.match(chain[0].body.decided.outcome.why, /ended without recording its outcome/);
+  assert.equal(listOwed(town.owed).entries.length, 0);
+});
+
+test('A RUN STILL DECIDING holds only the records after it; once it decides, both publish in their order', (t) => {
+  const town = scratchTown(t);
+  owe(town.owed, settlementDecided('settlement:before', { at: '2026-11-06T06:00:00.000Z' }));
+  owePending(town.owed, { kind: 'mail-crossing', event: 'crossing:293', attempt: 'ferry-live', openedAt: '2026-11-06T12:00:00.000Z', pid: process.pid });
+  owe(town.owed, settlementDecided('settlement:after', { at: '2026-11-06T18:00:00.000Z' }));
+  const now = Date.parse('2026-11-06T18:05:00.000Z');
+  const first = publish({ repo: town.repo, owedDir: town.owed, privateKeyPem: town.witnessKey.privatePem, now });
+  assert.deepEqual(first.published, [1], 'what came before the live run publishes');
+  assert.equal(first.status, 'owed');
+  assert.match(first.why, /crossing:293 .* is still deciding/);
+  owe(town.owed, mailDecided(town.repo, { attempt: 'ferry-live', decidedAt: '2026-11-06T12:00:40.000Z', exit: 0, stage: 'done', ferryReport: { ran: true, crossing: 293 } }));
+  const second = publish({ repo: town.repo, owedDir: town.owed, privateKeyPem: town.witnessKey.privatePem, now });
+  assert.deepEqual(second.published, [2, 3]);
+  assert.deepEqual(originChain(town).map((c) => c.body.decided.event), ['settlement:before', 'crossing:293', 'settlement:after']);
+});
+
+test('A REUSED PID or an OVERAGE run does not keep the queue waiting: both read as ended', (t) => {
+  const town = scratchTown(t);
+  const { path } = owePending(town.owed, { kind: 'settlement', event: 'settlement:reused', attempt: 'R#1', openedAt: '2026-11-06T06:00:00.000Z', pid: process.pid });
+  const entry = JSON.parse(readFileSync(path, 'utf8'));
+  entry.holder.start = 'not-this-process';
+  writeFileSync(path, JSON.stringify(entry));
+  owePending(town.owed, { kind: 'settlement', event: 'settlement:aged', attempt: 'G#1', openedAt: '2026-11-06T07:00:00.000Z', pid: process.pid });
+  const r = publish({ repo: town.repo, owedDir: town.owed, privateKeyPem: town.witnessKey.privatePem, now: Date.parse('2026-11-06T20:00:00.000Z') });
+  assert.deepEqual(r.published, [1, 2], r.why);
+  assert.deepEqual(originChain(town).map((c) => c.body.decided.outcome.status), ['incomplete', 'incomplete']);
+});
+
+test('THE CLI: owe-open, owe-incomplete with its reason, owe-close for a run that decided nothing', (t) => {
+  const town = scratchTown(t);
+  const run = (...a) => spawnSync(process.execPath, [CLI, ...a], { encoding: 'utf8' });
+  assert.equal(run('owe-open', '--owed', town.owed, '--kind', 'mail-crossing', '--attempt', 'ferry-x').status, 0);
+  const open = listOwed(town.owed).entries[0].open;
+  assert.match(open.event, /^crossing:\d+$/, 'a mail crossing names itself from the clock');
+  assert.equal(open.holder.pid, process.pid, 'the holder is the caller, the long-lived process that ran the CLI');
+  const inc = run('owe-incomplete', '--owed', town.owed, '--kind', 'mail-crossing', '--attempt', 'ferry-x', '--why', 'owe-mail failed (exit 1)');
+  assert.equal(inc.status, 0, inc.stderr);
+  const [only] = listOwed(town.owed).entries;
+  assert.deepEqual([only.decided.outcome.status, only.decided.outcome.why, only.decided.event], ['incomplete', 'owe-mail failed (exit 1)', open.event]);
+
+  assert.equal(run('owe-open', '--owed', town.owed, '--kind', 'settlement', '--event', 'settlement:R', '--attempt', 'R#2', '--pid', String(process.pid)).status, 0);
+  assert.equal(run('owe-close', '--owed', town.owed, '--kind', 'settlement', '--attempt', 'R#2').status, 0);
+  assert.equal(listOwed(town.owed).entries.length, 1, 'a lost race inside the retry leaves no debt');
+});
+
+test('THE KEY FILE: a missing or unreadable WITNESS_KEY leaves the record owed (exit 3) and says which file', (t) => {
+  const town = scratchTown(t);
+  owe(town.owed, settlementDecided('settlement:x'));
+  const r = spawnSync(process.execPath, [CLI, 'publish', '--repo', town.repo, '--owed', town.owed, '--key', join(town.root, 'no-such-key.pem')], { encoding: 'utf8' });
+  assert.equal(r.status, 3, r.stderr);
+  assert.match(r.stderr, /the witness key file .*no-such-key\.pem \(WITNESS_KEY\) cannot be read: ENOENT/);
 });
 
 function writeKey(town) {
