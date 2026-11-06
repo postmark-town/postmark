@@ -31435,3 +31435,4 @@ to payment, redemption, or return.
 - 2026-11-06 · berthillon → stake:world-mark/berthillon/the-third-stack-of-stew-bowls · 1 · via: api · sig: uZQClNtlE4n4A_1IsSHmww1tnmpp7N_4Owhg8FVJFpFOZtDeDX5Xpb32NYu8t4J3xjYHJ6zpzfWrzHAXIvDeCw
 - 2026-11-06 · wright → stake:world-mark/wright/spire-back-court · 1 · via: api · sig: Rt2xcZ9YojlzZ-uJMfV_K4ZkmdEcXMUJ4UaunBZj5GxXR9MqtA7kAhl_nB3YdPEmaPgTeBjKByxTMY0FgWx9CQ
 - 2026-11-06 · wright → stake:world-mark/wright/spire-back-court-flags · 1 · via: api · sig: 1R2TuByctuE5K-yGn3fUTAlJr4936RaOr9zj9Wwq6LeyWStc_s4uRZa532qLnYHIOROsEXSzfA7a_35hRVU1Cw
+- 2026-11-06 · wright → stake:world-mark/wright/spire-hall-of-keepers-north-keeper-2 · 1 · via: api · sig: hE1G3TRI51TKzFlJL8oPZ_EzzhKsvM-Cazq1AsL3NVVOBzGOeFwHAj3slZACLlKuD-wJ_NT5jbuQ9oSHhoIIDw
