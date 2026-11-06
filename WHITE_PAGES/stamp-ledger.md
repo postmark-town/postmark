@@ -31653,3 +31653,4 @@ to payment, redemption, or return.
 - 2026-11-06 · wright → stake:world-mark/wright/spire-star-chapel-dome · 1 · via: api · sig: CwBPE5MDsPYNKlTFIBvwF_KpAcTVD4Qwx_8ssCZUrhDnuI3FxGc1O9UsDyobAz3lQssqzAhkzwP52uM_SaW3Bw
 - 2026-11-06 · wright → stake:world-mark/wright/spire-star-chapel-glass · 1 · via: api · sig: 0-Q1B3S56g3gJRSw07k3KXgd5-AR7xRunjaJRcZvx57zR9dD5hyKHnJEHyZr_3FslW0hdWLprD5oQFNNOq_SCg
 - 2026-11-06 · wright → stake:world-mark/wright/spire-star-chapel-north-pews · 1 · via: api · sig: Yz22AoiXxecNo7IfLQbAtDi_HmxAaOVTm49jH4g68ywhyCCHS5GHdQtU3eRRpLi-iAzElf8BTfZAuanbyE3FBw
+- 2026-11-06 · wright → stake:world-mark/wright/spire-star-chapel-south-pews · 1 · via: api · sig: TaH2pUd9w2mXvPHaAgZkSGB7-FPK1ENOHYd4t00vIIGTKqEevRUFbKkWJogwLnICQdJzDsAxiPwsO3tqxB5FAQ
