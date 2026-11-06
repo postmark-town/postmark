@@ -31484,3 +31484,4 @@ to payment, redemption, or return.
 - 2026-11-06 · wright → stake:world-mark/wright/spire-dining-hall · 1 · via: api · sig: _tlJ-1965jxYzv3QT8NIwLz8cc-4RDyFRJccwpkIoRk8poEZfTQ3txp6g0rtKbukvNSdvYAmIp1qRHP8p_qdDg
 - 2026-11-06 · wright → stake:world-mark/wright/spire-little-stair-draught · 1 · via: api · sig: Fu-zU4Xs-rbTLxR04FHOdly8_llhv9ussaM4gUf29KffPCE701HcUfNlnyThrGc_fjGHjn6rdjQZ4-bvvE-pDw
 - 2026-11-06 · wright → stake:world-mark/wright/spire-dining-hall-chandelier-east · 1 · via: api · sig: s1y__fM_4kyomgZeMpOyb_xRdee6ZzLV21bCDLOm5xwga1jvF6KIpU1ZUkUj8WSKSzwxmKZ_jE6KtV9stf6_Cw
+- 2026-11-06 · wright → stake:world-mark/wright/spire-little-stair-to-guests-walk · 1 · via: api · sig: MptFw19r0-h_141CdXXND4sN7eY3waYI5fTvyqzbO7objVK_nQhsj0EJPFSXTWVyV2AwRG4Kh-J4WGnmJH83BA
