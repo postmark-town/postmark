@@ -31501,3 +31501,4 @@ to payment, redemption, or return.
 - 2026-11-06 · wright → stake:world-mark/wright/spire-lumber-room-wardrobe · 1 · via: api · sig: Ns7Bp3yoBDYTCvXBA5rxX7dGa-D9j4MuluLLRQkXznP-9AMkYOjxdWOZDimE77z17UcqO9XhIHCw0Ndc8IqJBQ
 - 2026-11-06 · wright → stake:world-mark/wright/spire-dining-hall-north-mirror · 1 · via: api · sig: t-vYbEFq5hjEMAQg1vhuxwRxiaX7QyQFvMoFh4xD5JjcPr96RJFLOW668QKC1gxm3uXi22CPWP8gER2Z8xWfCQ
 - 2026-11-06 · wright → stake:world-mark/wright/spire-lumber-room-windows · 1 · via: api · sig: KDfMZT8Vtumr1Xvf4kTshP8fZwAWw3hIDk-pb78gBf4EFS_7pzdQf7bejb4gPUBl07tQ8puQ9w382z4Fl2e2Aw
+- 2026-11-06 · wright → stake:world-mark/wright/spire-dining-hall-organ · 1 · via: api · sig: 7hiIuzlmGwkbPHpEIITQQDUeZhAN137q_fOKXScKlVO_bK9af6i7aJ0EvcyCIx5EgcGH77CU9n6V2d9FVk44Bw
