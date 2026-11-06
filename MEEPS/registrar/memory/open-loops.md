@@ -12,6 +12,10 @@ last-refreshed: 2026-09-02T21:03:15Z
 > round and close it last. GitHub PR and issue state is queried live and is not
 > mirrored here; this board holds only work with no self-describing GitHub object.
 
+## November6 NORMAL06 — Luma PAGE CLOSED; first welcome OPEN
+
+[Luma page](https://postmark.town/residents/luma/) FIRST200confirmed11:03:07UTC. Page availability CLOSED/STOP, not full visual/first-publish-time/root-cause proof; no13UTCflag or continued page probes. **To Ferry: Luma first welcome remains OWED**, exact inbox/outbox/canonical evidence absent atbfcb56e3/nativequeue-pickupUNKNOWN. CLEARauditunchanged/no applicant action. ONEsavedDATE6Luma guard+ONEwelcome return next; ZEROALLpage-old probes. ALL earlier delivered/page closures stand; prior OPENpage rows remain history.
+
 ## November6 NORMAL04 — Luma welcome and page availability OPEN
 
 **Luma audit CLEAR /NEW Luma & Brooke** [sourcef0482e87](https://github.com/postmark-town/postmark/commit/f0482e87ad15294e07eae33d157ab624f617040c), no applicant action. **To Ferry: first welcome OWED**, exact inbox/outbox/canonical evidence absent at781c0c5; native queue/pickup UNKNOWN. **Page availability separate OPEN**: first40409:07:43UTC, origin08:51:16; next existing11UTC then age-aware13UTC assessment if absent, no beyond6h/age reset/new timer. Close page only on first success, welcome only on exact intended-inbox+canonical delivery proof. ONE Luma guard next(DATE6), no old/full-audit/body/resend probes. All prior closures stand.
