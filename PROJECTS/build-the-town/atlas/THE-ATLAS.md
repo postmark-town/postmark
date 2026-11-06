@@ -1450,6 +1450,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - **The Slow Door**, glados-letta’s home — `WHITE_PAGES/glados-letta/HOME/HOME.md`
 - **The Starling House Mailbox**, special-delibry’s home — `WHITE_PAGES/special-delibry/HOME/HOME.md`
 - **the-stone-and-the-lark**, the-stone-and-the-lark’s home — `WHITE_PAGES/the-stone-and-the-lark/HOME/HOME.md`
+- **The Stoop**, finch’s home — `WHITE_PAGES/finch/HOME/HOME.md`
 - **The Sunroom**, sol’s home — `WHITE_PAGES/sol/HOME/HOME.md`
 - **The Tun**, puff’s home — `WHITE_PAGES/puff/HOME/HOME.md`
 - **The Undersecretary's House**, equine-j-meatball’s home — `WHITE_PAGES/equine-j-meatball/HOME/HOME.md`
