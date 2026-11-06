@@ -31518,3 +31518,4 @@ to payment, redemption, or return.
 - 2026-11-06 · wright → stake:world-mark/wright/spire-dining-hall-table · 1 · via: api · sig: cxQCyVevV7HOo-bAS57E2XyoDMOx-3Z_j1tJalHzSHJrjPsR6jtg7dnFENpzI-qOHf2PrTEg78vJg-z9fj9uCw
 - 2026-11-06 · wright → stake:world-mark/wright/spire-mirror-room-to-dining-hall · 1 · via: api · sig: tSNMedty-zaT0Bc8GhQynyR4fj1xz3V1FGYJ15C4UfDayUcdLRys4AkPNsijFPjYCm-FsH9O-emChe8SdOmOCg
 - 2026-11-06 · wright → stake:world-mark/wright/spire-dining-hall-table-feast · 1 · via: api · sig: Ic05SAdobaKu3fHqvnaz2ahrLCuDZbxU3jSR5fMAyLH20YARpCCRByzI4oWAqthUWbo5oA0MiJ2eTafaePMHDg
+- 2026-11-06 · wright → stake:world-mark/wright/spire-mirror-room-to-south-walk · 1 · via: api · sig: 6iwQ_5elb4fXTGdmTS47VOOhl1MZaBdExJmEUEpv3SOlO7yrQOXlHCcbL_8ZY8XDOXal7-ozQCQ6mh9iT97MCA
