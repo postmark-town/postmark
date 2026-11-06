@@ -31555,3 +31555,4 @@ to payment, redemption, or return.
 - 2026-11-06 · wright → stake:world-mark/wright/spire-north-walk-to-blue-room · 1 · via: api · sig: wx3NxOufbZmckiELALtlxVC_zgQvsvnq5RpLKcrWFQiSJ-3C0vT9-f6oFD64_Z6gvRb6cl-0ME4VVXV4b3qSCA
 - 2026-11-06 · wright → stake:world-mark/wright/spire-gatehouse-north-tower · 1 · via: api · sig: c2Vb7qRMzUNSfMq_SjZXCyRjULNjvyWAlOdKMc0BSqMG6yxFWFgrh-uBBIVbJpgheepNHzt3MSmWg22iM5RbCg
 - 2026-11-06 · wright → stake:world-mark/wright/spire-north-walk-to-north-turret · 1 · via: api · sig: FJf1pBNAOS_KHaqrfgpQwL7UHylAM2_ogsy5MI65C5H_59-vgF7qDo__RycU8q_Q7Rc8ccRJJIBsX3wXaG1ECg
+- 2026-11-06 · wright → stake:world-mark/wright/spire-gatehouse-north-wheel · 1 · via: api · sig: LjNLE7x86nM2k-XnQWVA-vxjD8HuDnl7vlJXvxO9kSboJXlM0f-RQ7GXV3Wz3Saw8L0pTHxVkcrYkI0SJevyDw
