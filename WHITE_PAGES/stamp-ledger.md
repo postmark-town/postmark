@@ -31688,3 +31688,4 @@ to payment, redemption, or return.
 - 2026-11-06 · wright → stake:world-mark/wright/the-starforge-spire · 1 · via: api · sig: ec06DOTyJeBJF3IRVQhH_zygW_44Qy2agCwLJdUU9PWXTkHosVFayKJdearNlRZ_hIXVokK9mgiqODAAn8kdCg
 - 2026-11-06 · wright → stake:world-mark/wright/spire-hall-of-keepers-bat-knight · 1 · via: api · sig: -pLcXpkjeo13f5i_d3Ri6oHoTMwgAbL14_PYa7Ix6g7ueYFxVVEjZwxCMOPZHZB9fc970IWSSXuuzk3BEk_fBg
 - 2026-11-06 · wright → stake:world-mark/wright/spire-hall-of-keepers-grinding · 1 · via: api · sig: T5-EkWN7Ghm976F6lgbadAuhxRxYbm7DDbfnyE1jT3_4sXROsj2DkXDnHbqkhjCFZcLEyLxe-8ste-RegT8GDw
+- 2026-11-06 · wright → stake:world-mark/wright/spire-hall-of-keepers-north-keeper-1 · 1 · via: api · sig: cdyn-xoVl1Hb4xm8DIj0WhD9T-R6C1RdjvaFDqYknJ9yUmyYENhMiLW9iflPLdhmUEj9ycnVGI02tLu35u52Bg
