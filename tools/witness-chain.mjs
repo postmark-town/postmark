@@ -55,10 +55,10 @@ import { createHash, createPrivateKey, createPublicKey, sign as edSign, verify a
 import { spawnSync } from 'node:child_process';
 import {
   closeSync, existsSync, fsyncSync, mkdirSync, openSync, readdirSync, readFileSync,
-  renameSync, rmSync, writeSync,
+  realpathSync, renameSync, rmSync, writeSync,
 } from 'node:fs';
 import { join, resolve } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import { tmpdir } from 'node:os';
 
 import { parseLedger as parseMailLedger, sealLedger } from '../PROJECTS/the-town-seal/seal.mjs';
@@ -552,7 +552,15 @@ function main(argv) {
   return 2;
 }
 
-if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+// Entered through a symlink, argv[1] is the link and import.meta.url the
+// target: compare real paths, or the CLI does nothing and exits 0.
+const isMain = (() => {
+  if (!process.argv[1]) return false;
+  try { return realpathSync(process.argv[1]) === realpathSync(fileURLToPath(import.meta.url)); }
+  catch { return pathToFileURL(process.argv[1]).href === import.meta.url; }
+})();
+
+if (isMain) {
   try { process.exitCode = main(process.argv.slice(2)); } catch (e) {
     process.stderr.write(`[witness] ${e.message}\n`);
     process.exitCode = 1;

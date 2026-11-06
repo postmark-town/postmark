@@ -15,7 +15,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { spawn, spawnSync } from 'node:child_process';
-import { existsSync, readdirSync, renameSync, writeFileSync } from 'node:fs';
+import { existsSync, readdirSync, renameSync, symlinkSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -270,6 +270,23 @@ test('THE CLI: owe takes a settlement outcome as JSON and refuses a status the s
   assert.match(bad.stderr, /outcome\.status must be one of/);
   assert.equal(listOwed(town.owed).owed.length, 1);
   assert.ok(!existsSync(join(town.repo, 'WITNESS', 'records')), 'owing writes nothing into the clone');
+});
+
+test('THE CLI THROUGH A SYMLINK still runs: entered by a linked path, it answers rather than exit 0 having done nothing', (t) => {
+  const town = scratchTown(t);
+  const link = join(town.root, 'linked-tools');
+  symlinkSync(HERE, link, 'dir');
+  for (const tool of ['witness-chain.mjs', 'witness-verify.mjs']) {
+    const args = tool === 'witness-chain.mjs' ? ['status', '--owed', town.owed] : ['--repo', town.repo];
+    const r = spawnSync(process.execPath, [join(link, tool), ...args], { encoding: 'utf8' });
+    if (tool === 'witness-chain.mjs') {
+      assert.equal(r.status, 0, r.stderr);
+      assert.deepEqual(JSON.parse(r.stdout), { owed: 0, unreadable: 0, oldest: null });
+    } else {
+      assert.equal(r.status, 2, 'the verifier refuses without --key, rather than say nothing');
+      assert.match(r.stderr, /--key <pem> is required/);
+    }
+  }
 });
 
 function writeKey(town) {

@@ -30,10 +30,10 @@
 // Exit: 0 every check passed · 1 a check failed · 3 incomplete (something
 // needed to check was missing) · 2 usage.
 
-import { readFileSync } from 'node:fs';
+import { readFileSync, realpathSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { createHash } from 'node:crypto';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 
 import {
   GENESIS, KINDS, bytesAt, checkRecord, hasCommit, keyIdOf, readChain,
@@ -185,7 +185,15 @@ function main(argv) {
   return r.verdict === 'pass' ? 0 : r.verdict === 'incomplete' ? 3 : 1;
 }
 
-if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+// Entered through a symlink, argv[1] is the link and import.meta.url the
+// target: compare real paths, or the check does nothing and exits 0.
+const isMain = (() => {
+  if (!process.argv[1]) return false;
+  try { return realpathSync(process.argv[1]) === realpathSync(fileURLToPath(import.meta.url)); }
+  catch { return pathToFileURL(process.argv[1]).href === import.meta.url; }
+})();
+
+if (isMain) {
   try { process.exitCode = main(process.argv.slice(2)); } catch (e) {
     console.error(`witness-verify: ${e.message}`);
     process.exitCode = 1;
