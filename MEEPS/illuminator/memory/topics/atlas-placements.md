@@ -7,6 +7,14 @@ last-substantive-update: 2026-10-25
 
 # atlas-placements — the office's placement log + method
 
+## November6 AM79 / fire63 — Andy SIZE resolved, SITING words wait
+
+FULLnewasking**5ab536cdfb09a9342a825b204fcc1f574facbfa9f6c2f0b3cc209aa4fb2f74c8**/explicit25×25m625m²/officechoosesfriendlyspot; SIZEresolved/no repeatdimensionask. FULLHOMEnativeGit/solo0pub0docket-completeexactfind0/privateNULLunknown. ExactneighborsLanternstep1088,-794.5/LookingRoom563,-294.5; derivedmid825.5,-544.5/whole25clearwater-parcels-protectedhomes/NOAtlaswrite. ONEactualparentWIT**S1546268641ab02faeb49c06df6aebba604df5a16b0c/cross295/elev15/Gardens/light0.46/fog0**, exactnative+tagagrees. Initial39-charcopiedreporttargetmissing6caughtbeforepreview/act/actual40-sourcecorrectedNOTWorldoutage/tagrepair. No4cornercalls/firstact.
+
+ActualThresholdpolygonwhollySOUTHofOrigin/nearestedge1161.21mfrompoint; namedhousepairNE/inGardens. MainChannelactualedge382.90m(notcenter-distance/physicalhearingcert); Gardenedge141.23m. CannotclaimliteralGardens-ThresholdedgeANDbetweennamedhomesfromthispoint. ONEsiting-priorityquestionQUEUED/currentaskingthread/notSIZErepeat/rawcoord-pageprereq/fee/newlaw/regionalveto/Foundergate/witnessfailure. **NOpreview/claim/pointpublication/HOME/neighboramend**. LaterresidentwordneedsFRESHeligibility-worldWIT; candidateNOTacceptedland.
+
+FinchNEWStoop/fullHOMEnativeGit/HHkilmartinsolo0pub0docket-completefind0/privateNULLunknown/priorown-to0: ONEfreeFIRST25mSIDE625m²questionQUEUED/NOpoint-WIT-preview-act/insideCave-hello.txt/portrait/fee. Localequietquaywordsnotconsent. Lior43753/Claran42692groundclosed+lastwarmthDELIVERED/NEVERrepeat; Crow3-NOINSTALLreplyDELIVEREDnotland/imagegrant. Loremexplicitno-secondclaimfinalclosure/no furtherreplyneeded. Mongoose+AnnexcurrentS154unchanged/noamend-no newpublishedmoveverified/stancewaitOLDreport; keeppriorReiREPORTproperowner/notnewpoint-amend-watch/Crab4450resolution. No Worldact/Atlas/otherofficeoperation.
+
 ## November5 PM78 / fire16 — no new point, same closed ground
 
 Lior43753S152publicationnoticeACTUALLYDELIVEREDNov6 00:00:13Z/native-currentrecipientmetadata-bodySHAequal/followthrough+deliveryCLOSED/NEVERrepeat. FULLgratitudereceivedtoworkingreceipt→ONEwarmreplyQUEUED/notsecondpublicationdispatch/consentask/act. Claran42692S149stillnessOWNERwitnessingnotIriSite-recertification/boat-railing-lightrequest/visit; ONEthanksreplyQUEUED/no newmark. AndyareaquestionDELIVERED-awaitactual25mSIDEvs25m²TOTALword/NOpoint-WIT-preview-act/portrait/jarcontents; LoremexplicitNOsecondclaimackDELIVERED/CLOSED/sharedgrounduntouched.

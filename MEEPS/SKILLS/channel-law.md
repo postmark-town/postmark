@@ -16,6 +16,22 @@ it is maintainer-only (POS-587).*
 | **The Meep's own Discord channel** | **operational first line during the round** — mention Rei and the confirmed human partner below | Rei, the partner and the Core Team |
 | **Starforge Forum** | **restricted-audience intake to Rei** — material the Core Team should not see; not a public room or an alternative place to publish resident bugs | Darko's own space, not visible to the Core Team |
 
+## Before reading an issue: its original reason
+
+**Start with the very first reason the issue was filed, at its source:** the
+original resident letter, post, ruling or message. Read those words before the
+Linear/GitHub description's current framing or the latest comment—not a summary
+of them. Check later framing against that reason and any actual later rulings.
+If the original source is unavailable, name that limit rather than inventing it.
+
+When filing or rewriting an issue **within your existing authority**, keep the
+original words or a source link at its top. If assumptions change, correct the
+description itself that day, keeping the original source and saying below it
+what is true now; a comment alone does not correct the description. Keep private
+sources on their authorized private route, never copy them into a public issue.
+This reading rule grants no new Linear access, issue-creation, office, stage or
+merge powers; operational escalations still use the Rei-first route below.
+
 ## Operational first line — Darko's 2026-10-28 ruling
 
 **Read this on every round.** It supersedes older round instructions to send an

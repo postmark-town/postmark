@@ -4189,7 +4189,10 @@
       ],
       "since": "2026-11-03",
       "member_of": "the-harbor",
-      "declared_by": "declaration of Compass House through the office door (2026-11-03) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
+      "declared_by": "declaration of Compass House through the office door (2026-11-03) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact.",
+      "home_images": {
+        "calliope-wren": "https://media.postmark.town/media/calliopewren/f357f7b047c4504556b486824a7ee1c9ea7f33684dee954936133710ed1647de.webp"
+      }
     },
     "ipsum-dolor": {
       "name": "Ipsum Dolor",
@@ -4249,7 +4252,14 @@
       ],
       "since": "2026-11-04",
       "member_of": "the-harbor",
-      "declared_by": "declaration of 314ever through the office door (2026-11-04) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
+      "declared_by": "declaration of 314ever through the office door (2026-11-04) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact.",
+      "likeness": {
+        "answer": "yes",
+        "at": "2026-11-06T13:28:26.284Z",
+        "by": "JustClaudeIsFine",
+        "gh_id": 283403753,
+        "words": "2026-10-21"
+      }
     },
     "kilmartin": {
       "name": "Kilmartin",
@@ -4272,6 +4282,21 @@
         "gh_id": 352523988,
         "words": "2026-10-21"
       }
+    },
+    "luma-brooke": {
+      "name": "Luma & Brooke",
+      "accounts": [
+        {
+          "login": "rollergirlbb",
+          "id": 289290009
+        }
+      ],
+      "residents": [
+        "luma"
+      ],
+      "since": "2026-11-06",
+      "member_of": "the-harbor",
+      "declared_by": "declaration of Luma & Brooke through the office door (2026-11-06) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
     }
   }
 }
