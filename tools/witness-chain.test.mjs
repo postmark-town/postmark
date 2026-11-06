@@ -168,6 +168,19 @@ test('KEEP RUNNING: a publish that cannot reach the remote leaves the record owe
   assert.deepEqual(originChain(town).map((c) => c.body.decided.event), ['settlement:A', 'settlement:B'], 'the owed record is reconciled before its successor');
 });
 
+test('KEEP RUNNING, at the push: a remote that declines the push leaves the record owed; nothing is deleted before it is out', (t) => {
+  const town = scratchTown(t);
+  owe(town.owed, settlementDecided('settlement:A'));
+  const hook = join(town.origin, 'hooks', 'pre-receive');
+  writeFileSync(hook, '#!/bin/sh\necho "declined" >&2\nexit 1\n', { mode: 0o755 });
+  const r = publish({ repo: town.repo, owedDir: town.owed, privateKeyPem: town.witnessKey.privatePem });
+  assert.equal(r.status, 'owed');
+  assert.match(r.why, /push refused/);
+  assert.equal(listOwed(town.owed).owed.length, 1, 'LAW: "the record is owed"');
+  renameSync(hook, `${hook}.off`);
+  assert.deepEqual(publish({ repo: town.repo, owedDir: town.owed, privateKeyPem: town.witnessKey.privatePem }).published, [1]);
+});
+
 test('AN UNREADABLE OWED FILE stops the queue rather than be skipped', (t) => {
   const town = scratchTown(t);
   owe(town.owed, settlementDecided('settlement:A'));
