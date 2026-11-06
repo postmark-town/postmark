@@ -30,6 +30,7 @@
 // Exit: 0 every check passed · 1 a check failed · 3 incomplete (something
 // needed to check was missing) · 2 usage.
 
+import { spawnSync } from 'node:child_process';
 import { readFileSync, realpathSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { createHash } from 'node:crypto';
@@ -42,6 +43,12 @@ import { parseLedger as parseMailLedger, sealLedger } from '../PROJECTS/the-town
 import { parseStampLedger, sealChain } from './stamp-mint.mjs';
 
 const sha256 = (b) => createHash('sha256').update(b).digest('hex');
+const HEX40 = /^[0-9a-f]{40}$/;
+// Every commit a settlement makes on World main begins with this subject (the
+// settlement sweep and its registry refresh; office world2/tools/marks-ingest.mjs
+// names the same pens). A settlement commit outside every recorded range is a
+// settlement the chain does not witness.
+export const SETTLEMENT_SUBJECT = 'settlement: ';
 
 /** Running seals of the mail ledger at <commit>, index i = seal after i+1 lines. */
 function mailSeals(repo, commit) {
@@ -111,6 +118,83 @@ export function verifyChain({ repo, at = 'HEAD', publicKeyPem, checkpoint = null
       const got = buf ? sha256(buf) : null;
       if (got !== a.sha256) {
         failures.push(`${label}: the record says ${a.sha256 ? a.sha256.slice(0, 16) + '…' : 'absent'}, the commit has ${got ? got.slice(0, 16) + '…' : 'nothing there'}`);
+      }
+    }
+  }
+
+  // 4b: GAPS INSIDE THE CHAIN. A valid chain of records can still leave events
+  // out, and a gap is never a pass (Rivet's FIX of 2026-11-06 on POS-907).
+  const settlements = good.filter((r) => r.body.decided.kind === 'settlement');
+  for (const r of good) {
+    const d = r.body.decided;
+    if (d.outcome.status === 'incomplete') {
+      incomplete.push(`record #${r.body.seq}: ${d.event} (attempt ${d.attempt}) never recorded its outcome — ${d.outcome.why ?? 'no reason given'}`);
+    }
+  }
+  //   every crossing between the first and the last mail record has a record
+  const crossings = new Set(good.filter((r) => r.body.decided.kind === 'mail-crossing')
+    .map((r) => Number(/^crossing:(\d+)$/.exec(r.body.decided.event)?.[1])).filter(Number.isSafeInteger));
+  if (crossings.size) {
+    const lo = Math.min(...crossings);
+    const hi = Math.max(...crossings);
+    const missing = [];
+    for (let n = lo; n <= hi; n++) if (!crossings.has(n)) missing.push(n);
+    if (missing.length) incomplete.push(`crossing${missing.length > 1 ? 's' : ''} ${missing.slice(0, 20).join(', ')}${missing.length > 20 ? ` (+${missing.length - 20})` : ''} between ${lo} and ${hi} ha${missing.length > 1 ? 've' : 's'} no record: the ferry did not run, or its record is missing`);
+  }
+  //   a settlement that moved World says what it changed, all of it
+  const moved = settlements.filter((r) => {
+    const d = r.body.decided;
+    return HEX40.test(d.results?.world_to ?? '') && d.results.world_to !== d.inputs?.world_from;
+  });
+  for (const r of settlements) {
+    const d = r.body.decided;
+    if (d.outcome.status === 'published' && !HEX40.test(d.results?.world_to ?? '')) {
+      incomplete.push(`record #${r.body.seq}: a published settlement that names no world_to`);
+    }
+  }
+  for (const r of moved) {
+    const d = r.body.decided;
+    const label = `record #${r.body.seq} (${d.event})`;
+    if (d.inventory?.complete !== true) {
+      incomplete.push(`${label}: its World inventory was not read — ${d.inventory?.why ?? 'the record carries no inventory'}`);
+      continue;
+    }
+    if (!worldRepo) continue; // its World artifacts are already incomplete above
+    if (!HEX40.test(d.inputs?.world_from ?? '') || !hasCommit(worldRepo, d.inputs.world_from) || !hasCommit(worldRepo, d.results.world_to)) {
+      incomplete.push(`${label}: its World range is not in your --world checkout`);
+      continue;
+    }
+    const diff = spawnSync('git', ['-C', worldRepo, 'diff', '--name-only', '--no-renames', '-z', d.inputs.world_from, d.results.world_to], { encoding: 'utf8' });
+    const changed = new Set(diff.stdout.split('\0').filter(Boolean));
+    const bound = new Set(d.artifacts.filter((a) => a.repo === 'world').map((a) => a.path));
+    const omitted = [...changed].filter((p) => !bound.has(p));
+    const extra = [...bound].filter((p) => !changed.has(p));
+    if (omitted.length || extra.length) {
+      failures.push(`${label}: its World inventory is not the change it names — ${omitted.length} file(s) changed and not bound${omitted.length ? ` (${omitted.slice(0, 3).join(', ')}…)` : ''}, ${extra.length} bound and not changed`);
+    }
+  }
+  //   no settlement commit on World falls between the records
+  if (moved.length) {
+    if (!worldRepo) {
+      incomplete.push('World continuity unchecked: settlement records name World commits, and no --world checkout was given');
+    } else {
+      const firstFrom = moved[0].body.decided.inputs?.world_from;
+      const lastTo = moved.at(-1).body.decided.results.world_to;
+      if (HEX40.test(firstFrom ?? '') && hasCommit(worldRepo, firstFrom) && hasCommit(worldRepo, lastTo)) {
+        const covered = new Set();
+        for (const r of moved) {
+          const d = r.body.decided;
+          if (!HEX40.test(d.inputs?.world_from ?? '')) continue;
+          const list = spawnSync('git', ['-C', worldRepo, 'rev-list', d.results.world_to, `^${d.inputs.world_from}`], { encoding: 'utf8' });
+          for (const sha of list.stdout.split('\n').filter(Boolean)) covered.add(sha);
+        }
+        const log = spawnSync('git', ['-C', worldRepo, 'log', '--format=%H%x09%s', `--grep=^${SETTLEMENT_SUBJECT}`, lastTo, `^${firstFrom}`], { encoding: 'utf8' });
+        for (const line of log.stdout.split('\n').filter(Boolean)) {
+          const [sha, subject] = line.split('\t');
+          if (!covered.has(sha)) incomplete.push(`World commit ${sha.slice(0, 8)} ("${subject.slice(0, 60)}") is a settlement's, and no record binds it`);
+        }
+      } else {
+        incomplete.push('World continuity unchecked: the settlement records\' World range is not in your --world checkout');
       }
     }
   }

@@ -19,13 +19,14 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { GENESIS, keyIdOf, mailDecided, makeRecord, owe, publish, recordPath, recordText } from './witness-chain.mjs';
+import { GENESIS, keyIdOf, mailDecided, makeRecord, owe, owePending, publish, recordPath, recordText } from './witness-chain.mjs';
 import { verifyChain } from './witness-verify.mjs';
 import { GIT_ENV, keypair, scratchTown } from './witness-test-fixture.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const CLI = join(HERE, 'witness-verify.mjs');
 const sha256 = (s) => createHash('sha256').update(s).digest('hex');
+const deadPid = () => Number(spawnSync(process.execPath, ['-e', 'process.stdout.write(String(process.pid))'], { encoding: 'utf8' }).stdout.trim());
 
 const ferryReport = (crossing) => ({ ran: true, crossing, delivered: 1, bounced: 0, committed: true, pushed: true, files: ['WHITE_PAGES/mail-ledger.md'] });
 
@@ -197,6 +198,100 @@ test('THE LEDGERS: an earlier mail line rewritten after its record was published
   assert.equal(r.verdict, 'fail');
   assert.equal(r.failures.length, 3);
   for (const f of r.failures) assert.match(f, /the mail ledger at the newest record's commit \(#4\) no longer begins with/);
+});
+
+// ── gaps inside a valid chain are never green (Rivet's FIX, 2026-11-06) ─────
+//
+// LAW (POS-907/c): "the record is owed … before the next one counts as complete".
+
+/** A scratch World: c0 → c1 (settlement A) → c2 (a photograph) → c3 (settlement S, unrecorded) → c4 (settlement B). */
+function scratchWorld(t, town) {
+  const world = join(town.root, 'world');
+  const g = (...a) => execFileSync('git', ['-C', world, ...a], { env: GIT_ENV, encoding: 'utf8' });
+  execFileSync('git', ['init', '-q', '-b', 'main', world]);
+  const commit = (path, body, subject) => {
+    mkdirSync(dirname(join(world, path)), { recursive: true });
+    writeFileSync(join(world, path), body);
+    g('add', '-A'); g('commit', '-q', '-m', subject);
+    return g('rev-parse', 'HEAD').trim();
+  };
+  const c0 = commit('WORLD/base.md', 'base\n', 'the world');
+  const c1 = commit('WORLD/a.md', 'a\n', 'settlement: sweep 1 published');
+  const c2 = commit('STATE/log/1.jsonl', '{}\n', 'photograph: windows 1');
+  const c3 = commit('WORLD/s.md', 's\n', 'settlement: sweep 2 published');
+  const c4 = commit('WORLD/b.md', 'b\n', 'settlement: sweep 3 published');
+  const inventory = (from, to) => g('diff', '--name-only', '--no-renames', from, to).split('\n').filter(Boolean)
+    .map((path) => ({ repo: 'world', commit: to, path, sha256: sha256(execFileSync('git', ['-C', world, 'cat-file', 'blob', `${to}:${path}`])) }));
+  return { world, c0, c1, c2, c3, c4, inventory };
+}
+const settled = (event, at, from, to, artifacts, inventory = { complete: true }) => ({
+  v: 1, kind: 'settlement', event, attempt: `${event}#1`, decided_at: at,
+  outcome: { status: 'published', detail: 'invented' }, inputs: { world_from: from }, results: { world_to: to },
+  heads: {}, artifacts, inventory,
+});
+function chainOf(t, decideds) {
+  const town = scratchTown(t);
+  for (const d of decideds(town)) owe(town.owed, d);
+  assert.equal(publish({ repo: town.repo, owedDir: town.owed, privateKeyPem: town.witnessKey.privatePem }).status, 'published');
+  town.git(town.repo, 'fetch', '-q', 'origin');
+  return town;
+}
+
+test('AN INCOMPLETE RECORD is a gap the chain admits: incomplete, never a pass', (t) => {
+  const town = chainOf(t, (tw) => [mailDecided(tw.repo, { attempt: 'a', decidedAt: '2026-11-06T00:00:30.000Z', exit: 0, stage: 'done', ferryReport: { ran: true, crossing: 291 } })]);
+  owePending(town.owed, { kind: 'mail-crossing', event: 'crossing:292', attempt: 'b', openedAt: '2026-11-06T12:00:00.000Z', pid: deadPid() });
+  publish({ repo: town.repo, owedDir: town.owed, privateKeyPem: town.witnessKey.privatePem });
+  const r = verify(town, 'origin/main');
+  assert.equal(r.verdict, 'incomplete');
+  assert.match(r.incomplete.join('\n'), /record #2: crossing:292 \(attempt b\) never recorded its outcome/);
+});
+
+test('A MISSING CROSSING between two records is incomplete, named by number', (t) => {
+  const town = chainOf(t, (tw) => [291, 293].map((n) => mailDecided(tw.repo, { attempt: `r${n}`, decidedAt: `2026-11-0${n - 290}T00:00:30.000Z`, exit: 0, stage: 'done', ferryReport: { ran: true, crossing: n } })));
+  const r = verify(town, 'origin/main');
+  assert.equal(r.verdict, 'incomplete');
+  assert.match(r.incomplete.join('\n'), /crossing 292 between 291 and 293 has no record/);
+});
+
+test('A SETTLEMENT\'S INVENTORY: unread is incomplete, a record with none is incomplete, a wrong one fails (the whole one is WORLD CONTINUITY\'s control)', (t) => {
+  let w;
+  const town = chainOf(t, (tw) => {
+    w = scratchWorld(t, tw);
+    return [
+      settled('settlement:A', '2026-11-06T06:00:00.000Z', w.c0, w.c1, [], { complete: false, why: 'no sweep clone was given' }),
+      settled('settlement:S', '2026-11-06T12:00:00.000Z', w.c2, w.c3, w.inventory(w.c2, w.c3).slice(1)),
+      { ...settled('settlement:B', '2026-11-06T18:00:00.000Z', w.c3, w.c4, w.inventory(w.c3, w.c4)), inventory: undefined },
+    ].map((d) => JSON.parse(JSON.stringify(d)));
+  });
+  const r = verify(town, 'origin/main', { world: w.world });
+  assert.equal(r.verdict, 'fail');
+  assert.match(r.incomplete.join('\n'), /record #1 \(settlement:A\): its World inventory was not read — no sweep clone was given/);
+  assert.match(r.incomplete.join('\n'), /record #3 \(settlement:B\): its World inventory was not read — the record carries no inventory/);
+  assert.match(r.failures.join('\n'), /record #2 \(settlement:S\): its World inventory is not the change it names — 1 file\(s\) changed and not bound/);
+});
+
+test('WORLD CONTINUITY: a settlement commit no record binds is incomplete; without --world it is unchecked, not green; recorded whole, it passes', (t) => {
+  let w;
+  const gap = chainOf(t, (tw) => {
+    w = scratchWorld(t, tw);
+    return [settled('settlement:A', '2026-11-06T06:00:00.000Z', w.c0, w.c1, w.inventory(w.c0, w.c1)),
+      settled('settlement:B', '2026-11-06T18:00:00.000Z', w.c3, w.c4, w.inventory(w.c3, w.c4))];
+  });
+  const r = verify(gap, 'origin/main', { world: w.world });
+  assert.deepEqual([r.verdict, r.failures], ['incomplete', []]);
+  assert.match(r.incomplete.join('\n'), new RegExp(`World commit ${w.c3.slice(0, 8)} \\("settlement: sweep 2 published"\\) is a settlement's, and no record binds it`));
+  assert.ok(!r.incomplete.join('\n').includes(w.c2.slice(0, 8)), 'a photograph is not a settlement');
+  assert.match(verify(gap, 'origin/main').incomplete.join('\n'), /World continuity unchecked/);
+
+  let w2;
+  const whole = chainOf(t, (tw) => {
+    w2 = scratchWorld(t, tw);
+    return [settled('settlement:A', '2026-11-06T06:00:00.000Z', w2.c0, w2.c1, w2.inventory(w2.c0, w2.c1)),
+      settled('settlement:S', '2026-11-06T12:00:00.000Z', w2.c2, w2.c3, w2.inventory(w2.c2, w2.c3)),
+      settled('settlement:B', '2026-11-06T18:00:00.000Z', w2.c3, w2.c4, w2.inventory(w2.c3, w2.c4))];
+  });
+  const ok = verify(whole, 'origin/main', { world: w2.world });
+  assert.deepEqual([ok.verdict, ok.failures, ok.incomplete], ['pass', [], []], 'the control: every settlement recorded, every inventory whole');
 });
 
 test('THE CLI: --key is required, exit codes name the verdict, and the freshness limit is always said', (t) => {
