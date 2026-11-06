@@ -162,6 +162,29 @@ test('THE FILES: wrong bytes fail; bytes you do not have are INCOMPLETE, never g
   assert.match(r.incomplete.join('\n'), /record #3 .*no --world checkout was given/);
 });
 
+test('INCOMPLETE ALONE: a chain whose only gap is bytes you do not have is incomplete (exit 3), not a pass', (t) => {
+  const town = publishedTown(t);
+  const at = sideChain(town, 'only-missing', (f) => {
+    const keyId = keyIdOf(town.witnessKey.publicPem);
+    let prev = GENESIS;
+    const out = {};
+    for (const seq of [1, 2, 3]) {
+      const d = structuredClone(f[seq].body.decided);
+      if (seq === 2) d.artifacts.push({ repo: 'world', commit: 'f'.repeat(40), path: 'STATE/log/1.jsonl', sha256: sha256('y') });
+      out[seq] = makeRecord({ seq, prev, decided: d, privateKeyPem: town.witnessKey.privatePem, keyId });
+      prev = out[seq].hash;
+    }
+    return out;
+  });
+  const r = verify(town, at);
+  assert.deepEqual([r.verdict, r.failures], ['incomplete', []]);
+  const keyFile = join(town.root, 'pub.pem');
+  writeFileSync(keyFile, town.witnessKey.publicPem);
+  const cli = spawnSync(process.execPath, [CLI, '--repo', town.repo, '--at', at, '--key', keyFile], { encoding: 'utf8' });
+  assert.equal(cli.status, 3, cli.stdout);
+  assert.match(cli.stdout, /INCOMPLETE .*not a pass/);
+});
+
 test('THE LEDGERS: an earlier mail line rewritten after its record was published fails every record that bound it', (t) => {
   const town = publishedTown(t);
   town.ledgers.mail[0] = '- 2026-11-01 · rewritten-2026-11-01-note · writer-1 → reader-1 · thread: t1';

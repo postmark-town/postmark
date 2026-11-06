@@ -223,6 +223,30 @@ test('THE RACE, made certain: the other publisher lands between our fetch and ou
   assert.deepEqual(chain.map((c) => c.body.decided.event), ['settlement:landed-first', 'settlement:raced'], 'one chain, no fork, nothing skipped');
 });
 
+test('THE STALE TIP: the other publisher lands between our fetch and our push; we push fast-forward only, so ours is refused and rebuilt, never pushed over theirs', (t) => {
+  const town = scratchTown(t);
+  const keyFile = writeKey(town);
+  const second = town.clone('town-2');
+  const mailOwed = join(town.root, 'owed-mail');
+  const settleOwed = join(town.root, 'owed-settle');
+  owe(mailOwed, settlementDecided('settlement:landed-first', { at: '2026-11-06T12:00:00.000Z' }));
+  owe(settleOwed, settlementDecided('settlement:stale', { at: '2026-11-06T18:00:00.000Z' }));
+  town.crossing(9); // so the second clone's fetch really moves origin/main, and its hook fires there
+  // The second clone's first fetch of origin/main is followed at once, inside a
+  // reference-transaction hook, by the first clone publishing: the tip our
+  // publisher builds on is stale before its push even starts.
+  const marker = join(town.root, 'staled-once');
+  const hook = join(second, '.git', 'hooks', 'reference-transaction');
+  writeFileSync(hook, `#!/bin/sh\n[ "$1" = committed ] || exit 0\n[ -e "${marker}" ] && exit 0\ngrep -q 'refs/remotes/origin/main' || exit 0\n: > "${marker}"\n"${process.execPath}" "${CLI}" publish --repo "${town.repo}" --owed "${mailOwed}" --key "${keyFile}" >/dev/null 2>&1\nexit 0\n`, { mode: 0o755 });
+
+  const log = [];
+  const r = publish({ repo: second, owedDir: settleOwed, privateKeyPem: town.witnessKey.privatePem, log: (m) => log.push(m) });
+  assert.equal(r.status, 'published', r.why);
+  assert.ok(existsSync(marker), 'the stale tip was made');
+  assert.ok(log.some((m) => /someone published first/.test(m)), `our first push was refused:\n${log.join('\n')}`);
+  assert.deepEqual(originChain(town).map((c) => c.body.decided.event), ['settlement:landed-first', 'settlement:stale'], 'the record that landed first is still there');
+});
+
 test('THE CLI: owe takes a settlement outcome as JSON and refuses a status the settlement does not have', (t) => {
   const town = scratchTown(t);
   const ok = spawnSync(process.execPath, [CLI, 'owe', '--owed', town.owed, '--decided', '-'], { input: JSON.stringify(settlementDecided('settlement:x')), encoding: 'utf8' });
