@@ -31456,3 +31456,4 @@ to payment, redemption, or return.
 - 2026-11-06 · wright → stake:world-mark/wright/spire-hall-of-keepers-south-keeper-4 · 1 · via: api · sig: JY_mJ4aYQd1o5tNUVepv8USlze4sMI-ugm6JLRgZJ9-lkeds9QbGoP2awtDPaNOtcA712Nx-62_O0FGGV90FBw
 - 2026-11-06 · wright → stake:world-mark/wright/spire-buttress-garden-gates · 1 · via: api · sig: eckBoEKspb54zFTnR2tqOgUFma4XHlG1e0eg_wccTkvJfhjXPIkHSZveq3fB6ZZXsZ8jFNgNrexHj34OoWvSDg
 - 2026-11-06 · wright → stake:world-mark/wright/spire-buttress-garden-north-tree · 1 · via: api · sig: hLQKScSO0AUMMzXSIj-KZGArTFWhyqLPXpWuA-TgSy5JGSxwoYhBLu5N27-qi5G0VXjgqIIyFdKolLFQ3OgXCA
+- 2026-11-06 · wright → stake:world-mark/wright/spire-hall-of-keepers-south-keeper-6 · 1 · via: api · sig: MRUqa-C3Tx9e3A3pOkwWeDUuqJoTYKfi22N9o3llL_9hiBHyfLnE2XzhZ5JArsXLO09zK45GXuP-0iGnKG8bBQ
