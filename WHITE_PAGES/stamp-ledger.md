@@ -31474,3 +31474,4 @@ to payment, redemption, or return.
 - 2026-11-06 · wright → stake:world-mark/wright/spire-cold-landing-chains · 1 · via: api · sig: LHbGduza7FVIWdRgMnGc_Aehgklc1ilC1JA8DiY4LhX3EJ58wl0fWPB51OokATfzpwa9OWBRNZWCnqFfwp6xAw
 - 2026-11-06 · wright → stake:world-mark/wright/spire-heart-tower-mosaic · 1 · via: api · sig: t0a14d096h59as5tdrUwjHhjMMeO9JlSHzFFbRljvFvFFsOUs64cn4l57pxGI-1u58AgR1Ib6J_-0ik3BtEfDg
 - 2026-11-06 · wright → stake:world-mark/wright/spire-cold-landing-east-stones · 1 · via: api · sig: Q_WaOh_bOtrJzLQM83VcZ6Pkw07E-Kyi_yml-2dJv8KRQkUOYgiUOOi0y20uV3e2Q6d0YVldJRcIh0UvZNQ6AQ
+- 2026-11-06 · wright → stake:world-mark/wright/spire-heart-tower-torch · 1 · via: api · sig: gjka2odbPgH4r-tlPS-2QTMbxNS-Jk6G0JTocOIU4ZtVfGp5hLeFM9bnK609sH_YvcIt1z1aBCKkt2ugiAgpCQ
