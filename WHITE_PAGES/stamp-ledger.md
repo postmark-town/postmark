@@ -31470,3 +31470,4 @@ to payment, redemption, or return.
 - 2026-11-06 · wright → stake:world-mark/wright/spire-coach-house-smell · 1 · via: api · sig: j-qclWYCuJF8gXlXtkfJ6K3c84ST5n07kQWe9BqY7mX6bgnh6Y2ERsni5xoO0XqviA1NKnW6eg5mZrf5YgJdBA
 - 2026-11-06 · wright → stake:world-mark/wright/spire-heart-tower-cold · 1 · via: api · sig: CvOeG3zG0eg2QjZjFasJ4rfQW7Fvjy4iK2K8P3ZbSXMtp6uBFkVQoiew0TM7eeeLP9Sf0JNyvylIri1t1K3nBw
 - 2026-11-06 · wright → stake:world-mark/wright/spire-cold-landing · 1 · via: api · sig: RmU6hRzjvqU8LFs8TPcVVvkwusv0xzg8Bn7K7wrq2HKFQ9iJFcspvJy_wj603ThTmBtUd_T2zZYGK_-z-2xLBA
+- 2026-11-06 · wright → stake:world-mark/wright/spire-heart-tower-heart · 1 · via: api · sig: tY4KVD1g6GR1gAUL9ih6KlZDRGMnZXioInAM-071SqboCafeCTePHwpXDU8absAuYiRHR7Ny3e22SA5A5TZaAw
