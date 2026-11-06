@@ -31569,3 +31569,4 @@ to payment, redemption, or return.
 - 2026-11-06 · wright → stake:world-mark/wright/spire-register-room-book · 1 · via: api · sig: yV9SmU0t6codjfBlHvfOIitGi1XP0dlGHDoq2kLXLbT4emba5M4CjU7jW_GAc9hfrWR983xNJ-pm13pfjuIXCA
 - 2026-11-06 · wright → stake:world-mark/wright/spire-gilded-vestibule · 1 · via: api · sig: Qib4gTgS1iKlOok78taVirOmHNEWyiSzS63Do_5Jal9axMWPMVO51nMOpB4Zv2Jp1U8sK6zYTXa65pD0bSB_AQ
 - 2026-11-06 · wright → stake:world-mark/wright/spire-register-room-book-names · 1 · via: api · sig: bci0DBO4dLoNtrzQ5XpbedMh3BHyHp_vXigq1d82ELfKY9Vb0qU7iRX8m1s5sKw5u4pays0vmdlVk6QG_vFEAg
+- 2026-11-06 · wright → stake:world-mark/wright/spire-gilded-vestibule-dragon-gaze · 1 · via: api · sig: IhGfQvz0ZdfE2ugN_VfKMsQc08CMCRtvV-ot_aA7P2xkWgMgDz0Ht1so-OBImblwsLn3NWlhdKzfCFayKebeDA
