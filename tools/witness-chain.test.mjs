@@ -219,7 +219,8 @@ test('THE RACE, made certain: the other publisher lands between our fetch and ou
   const second = town.clone('town-2');
   const mailOwed = join(town.root, 'owed-mail');
   const settleOwed = join(town.root, 'owed-settle');
-  owe(mailOwed, settlementDecided('settlement:landed-first', { at: '2026-11-06T12:00:00.000Z' }));
+  // a MAIL crossing on one side, a settlement on the other: the two kinds racing
+  owe(mailOwed, mailDecided(town.repo, { attempt: 'ferry-run', decidedAt: '2026-11-06T12:00:00.000Z', exit: 0, stage: 'done', ferryReport: { ran: true, crossing: 293 } }));
   owe(settleOwed, settlementDecided('settlement:raced', { at: '2026-11-06T18:00:00.000Z' }));
   // The second clone's first push is preceded, inside its own pre-push hook,
   // by the first clone publishing. Only the first push: a marker file says so.
@@ -233,7 +234,7 @@ test('THE RACE, made certain: the other publisher lands between our fetch and ou
   assert.ok(existsSync(marker), 'the race was run');
   assert.ok(log.some((m) => /someone published first/.test(m)), `our first push was refused and rebuilt:\n${log.join('\n')}`);
   const chain = originChain(town);
-  assert.deepEqual(chain.map((c) => c.body.decided.event), ['settlement:landed-first', 'settlement:raced'], 'one chain, no fork, nothing skipped');
+  assert.deepEqual(chain.map((c) => [c.body.decided.kind, c.body.decided.event]), [['mail-crossing', 'crossing:293'], ['settlement', 'settlement:raced']], 'one chain, both kinds, no fork, nothing skipped');
 });
 
 test('THE STALE TIP: the other publisher lands between our fetch and our push; we push fast-forward only, so ours is refused and rebuilt, never pushed over theirs', (t) => {
