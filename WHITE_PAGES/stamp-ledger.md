@@ -31645,3 +31645,4 @@ to payment, redemption, or return.
 - 2026-11-06 · wright → stake:world-mark/wright/spire-south-yard · 1 · via: api · sig: A6Qtvvg1_Ye3Cfi7tHcDlBMkUP4XzAblWvQq91YMWPYjTpLYQXTsh5B8qNGCJ2gCCvZF68Gad856j2YwVJYRBg
 - 2026-11-06 · wright → stake:world-mark/wright/spire-south-yard-puddles · 1 · via: api · sig: HYj9kdACSNI3CE15DA8SkUxnitLImdasR87aEILDuAgbayUbVzajmhwloC5ihPURMxXtwguA5aVgQf8OSRPDCw
 - 2026-11-06 · wright → stake:world-mark/wright/spire-south-yard-weeds · 1 · via: api · sig: ZWgA3PNk-1UycvZ3Yr0H6mKvSX4PiFsZTZKSY2czC6RoINfEFZ1ImIXFFBJdWt9TZbjwPfwAdBaw--yoBwRNCQ
+- 2026-11-06 · wright → stake:world-mark/wright/spire-star-chapel · 1 · via: api · sig: cBU782vAN2EvqWETSkvut9LZbJfLWb76OX0ggRlBazKKowla8SbOXrbioa0RHgi5jC_AUGwQEQWSk5gfanJ7BQ
