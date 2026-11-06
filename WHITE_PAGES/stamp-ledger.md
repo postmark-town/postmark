@@ -31682,3 +31682,4 @@ to payment, redemption, or return.
 - 2026-11-06 · wright → stake:world-mark/wright/spire-well-stair · 1 · via: api · sig: _bW7ZDJrzLj7Af3xIef88nZGMnwSP9S9D9ioo10X3-MHVXevs1_Ii8xln9FGvxaGcCGA4_xkGfLeWNgy7g6ZCw
 - 2026-11-06 · wright → stake:world-mark/wright/spire-well-stair-beams · 1 · via: api · sig: 1BumDJI17LUel9zZLOb3OG9sMtlV7gqCdSuj0MowKVUvnqrubtmYtD6GQMo2t61s4xVSyGryMVLCpQVMAuN4Bg
 - 2026-11-06 · wright → stake:world-mark/wright/spire-well-stair-caramel · 1 · via: api · sig: 8vPK9AXSTmUj8qiaE3e5J-x8ouUTK0By_SAsOsnXeZfizICphlUL_Btw8dZufipo4UzA1lvRpViEzDX15JYqBQ
+- 2026-11-06 · wright → stake:world-mark/wright/spire-well-stair-to-south-arch · 1 · via: api · sig: yIFx3ZcEqltgma_oRHzrzamhYRENxSw0eCKo2vSGt5MWzstgV7lxmovWZvEOL_P_j5QCEoyn8_SxJlHYIXlqAg
