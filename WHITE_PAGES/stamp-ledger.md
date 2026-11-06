@@ -31610,3 +31610,4 @@ to payment, redemption, or return.
 - 2026-11-06 · wright → stake:world-mark/wright/spire-round-court · 1 · via: api · sig: aO-r2abQwvNHWMjZryd2LLYZQ9Itp2QObnL4-NwQCezLF7uwtbrOpqzb1FRkFCSWqVtajGiJQlcd0zU1LN9hAA
 - 2026-11-06 · wright → stake:world-mark/wright/spire-guests-walk-music · 1 · via: api · sig: bfoHMffoVVv194N1Wpt9mqRouJ_VYyxi3eew5W6R3pmKdc6CarnPjnC7zb1QqS206q4_hMZuvCUrZG0M-WolAA
 - 2026-11-06 · wright → stake:world-mark/wright/spire-round-court-draught · 1 · via: api · sig: u4ba-udxdMcSDBeQVW_KZJr9WFOtyfWkrPNqlFeWi53_bZ4DBzNcFkw-UYf-bB1L90h9alrOmu27MLf7gqNuDA
+- 2026-11-06 · wright → stake:world-mark/wright/spire-guests-walk-south-sconce · 1 · via: api · sig: r7CyGAyRA4Na_1NoVqRQgffLWjnBjgvAW1CKtETvQreFPH6agSRZJc1CiqHED-LZAz_4_YuJrlvoxcpSNwajAQ
