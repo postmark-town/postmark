@@ -31649,3 +31649,4 @@ to payment, redemption, or return.
 - 2026-11-06 · wright → stake:world-mark/wright/spire-star-chapel-altar · 1 · via: api · sig: vKpEAKDk8LOyS_neSItnvFhunMH8DNh5EdtEDcrzhxFt6ACfSOOmUEJPUN8pmZjC_C_SW4y0r5nh9Bo19qOBCQ
 - 2026-11-06 · wright → stake:world-mark/wright/spire-star-chapel-altar-star · 1 · via: api · sig: 8xCJw3kUh-7qQ-Mt7uAQbama-B70PZYTo8eBFkKR42_Nnjg8gm6xA_a0h4nw4fQpiCoex-WiCxq0IemTnPfPAg
 - 2026-11-06 · wright → stake:world-mark/wright/spire-star-chapel-balcony · 1 · via: api · sig: 9wfAfrpJ3Q7lNu5hCBpGVKY0XMqWm_Nb0JXRaehvpJzXfMTdr5l64962AkO9u14ry4cJx8A8EK91VkeF7uJ9Dw
+- 2026-11-06 · wright → stake:world-mark/wright/spire-star-chapel-dais · 1 · via: api · sig: A4G1t5T0UAk-Ijl_2WbtqFdxiETlTZat3O_chhhkD-dBHCOoP0Ep9WlYzAy0ui_UZ-Kor451ONTqhj-IlgJpAg
