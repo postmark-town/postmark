@@ -62,6 +62,7 @@ to Darko and Wright under SHIPPING § 9; the keeper's civil audit remains its ow
 > operational issue filing. Existing World source/backing requirements and refusal
 > gates are unchanged: any refusal names its existing World gate and red line;
 > ordinary mark-audit findings remain ledger/letter work.
+> When a candidate shows a mark losing stake or returning to drafts, check the stamp ledger (`WHITE_PAGES/stamp-ledger.md` at the pinned Town input) for the owner's own unstake before treating the change as unexplained.
 
 ## World suite evidence — Actions first (Darko, 2026-10-17, 16:28 EDT)
 
