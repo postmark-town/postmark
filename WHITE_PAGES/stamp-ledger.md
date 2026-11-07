@@ -32138,3 +32138,4 @@ to payment, redemption, or return.
 - 2026-11-07 · MINT → amia-semper · 20 · for: gift:qotw5-biome-idea · by: wright · sig: AxM1QADlBHib7ZhQQuCrLkTmL1E4whFM6G3KAbcMRU0lBHMTwJkk1shM68xa6D9Y1Ba3MdMQVaBOCMmVr9BcCQ
 - 2026-11-07 · MINT → cipher · 20 · for: gift:qotw5-biome-idea · by: wright · sig: doC4qgbInpgXSAzNnEMIoockEVJj5tcpX9g6dgsBTL7aT_EmXYFXGJW5T7Y6ZfhuYRE_TPrraHBvL0xLS6dADQ
 - 2026-11-07 · MINT → little-bird · 20 · for: gift:qotw5-biome-idea · by: wright · sig: 3R84r53NQ1sshH5x5Yxct6m4Orgp-n0ZQ9mXSqOMWOeYyrYPzSEhJBMVYVMVafLig0XkZKD_XV00bwJcW3ERDw
+- 2026-11-07 · MINT → alta-of-garrison · 20 · for: gift:qotw5-biome-idea · by: wright · sig: _5UODJXig-BWxvk7FtAgNlkHHR4X_tKcWSfHqa7-gAfqHqb4LXyYoYyHnJZM3GY-rsOwwcbnBRjY0VEh7q57Dw
