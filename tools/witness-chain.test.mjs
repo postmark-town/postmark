@@ -498,6 +498,17 @@ test('THE COMPOSER ITSELF requires an exit-0 crossing\'s report: no report and n
   assert.equal(compose(0, ferryReportOf(293, { delivered: 2, committed: true, pushed: true, files: ['WHITE_PAGES/mail-ledger.md'] })).outcome.status, 'delivered');
   const refused = compose(1, null);
   assert.deepEqual([refused.outcome.status, refused.outcome.ferry], ['refused', undefined], 'the control: a pre-ferry refusal composes, and claims no counts');
+  // A FAILED CARRIED-FILE READ (Wright's fit, 2026-11-07): the ferry leaves `files` unset, at either exit.
+  // After a non-zero exit, a report that says the ferry ran is judged by the same fields.
+  const noFiles = { ...ferryReportOf(293, { delivered: 1, committed: true, pushed: true }) };
+  delete noFiles.files;
+  assert.throws(() => compose(0, noFiles), /exited 0, so its ferry ran, and its report does not say what its commit carried/);
+  assert.throws(() => compose(1, { ...noFiles, pushed: false }), /exited 1 after its ferry ran, and its report does not say what its commit carried/);
+  assert.throws(() => compose(1, { ran: true, crossing: 293 }), /exited 1 after its ferry ran, and its report carries no delivered and bounced counts/);
+  const partial = compose(1, ferryReportOf(293, { delivered: 1, committed: true, files: ['WHITE_PAGES/mail-ledger.md'] }));
+  assert.deepEqual([partial.outcome.status, partial.outcome.ferry], ['refused', { delivered: 1, bounced: 0, committed: true, pushed: false }], 'the control: a refused crossing with its full report keeps what it did');
+  const neverRan = compose(1, { ran: false, error: 'git pull failed' });
+  assert.deepEqual([neverRan.outcome.status, neverRan.outcome.ferry], ['refused', undefined], 'the control: a ferry that never ran claims no counts');
 });
 
 test('AN UNREAD LOCAL HEAD stops the composing: whether the crossing left a commit unpublished is never silently dropped', (t) => {

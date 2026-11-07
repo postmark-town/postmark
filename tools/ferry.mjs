@@ -825,9 +825,14 @@ function main() {
     if (committed) {
       REPORT.committed = true;
       // The files the commit carried, by path: they survive the push retry's
-      // rebase, which can move the commit but not what it delivered.
+      // rebase, which can move the commit but not what it delivered. A read
+      // that FAILED is no "no files" (Wright's fit, POS-907, 2026-11-07): the
+      // field is left unset, never the `[]` a commit that carried nothing would
+      // say, so the witness's report check owes the crossing as incomplete
+      // rather than sign it without its letters' digests.
       const carried = git(repo, ['diff-tree', '--no-commit-id', '-r', '--name-only', '--diff-filter=AM', 'HEAD']);
       if (carried.status === 0) REPORT.files = carried.stdout.split('\n').filter(Boolean);
+      else delete REPORT.files;
       gitPushRetry(repo);
       REPORT.pushed = true;
     }

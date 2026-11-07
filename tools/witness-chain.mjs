@@ -465,11 +465,20 @@ const artifactAt = (repo, repoName, commit, path) => {
  * step once it runs (`ran`, the counts, `committed`, `pushed`, `files`) is an
  * outcome nobody read, never a quiet one. It throws: composing stops, and the
  * unit owes the run as incomplete. A written report with zero movement is the
- * quiet crossing. A non-zero exit is not judged here: it is refused, whatever
- * report it left, and without one it claims no counts at all.
+ * quiet crossing.
+ *
+ * A NON-ZERO EXIT is refused, and is judged here only when its report says the
+ * ferry ran (`ran: true`): the same fields then bind what it did before it
+ * failed, and one the ferry could not read (its carried-file list, left unset
+ * when `diff-tree` failed: Wright's fit, 2026-11-07) stops the composing too,
+ * rather than read as "no files". A non-zero exit with no report, or one that
+ * says the ferry never ran, is a crossing refused before its ferry: it is
+ * composed as refused and claims no counts at all.
  */
-function ferryRan(report) {
-  const unread = (why) => new Error(`the crossing exited 0, so its ferry ran, and its report ${why}: what it delivered is unknown`);
+function ferryRan(report, exit = 0) {
+  const unread = (why) => new Error(exit === 0
+    ? `the crossing exited 0, so its ferry ran, and its report ${why}: what it delivered is unknown`
+    : `the crossing exited ${exit} after its ferry ran, and its report ${why}: what it delivered before it failed is unknown`);
   if (report === null || report === undefined) throw unread('is missing or empty');
   if (typeof report !== 'object' || Array.isArray(report) || report.ran !== true) throw unread('does not say the ferry ran');
   const count = (n) => Number.isSafeInteger(n) && n >= 0;
@@ -491,7 +500,7 @@ function ferryRan(report) {
 export function mailDecided(repo, {
   attempt, decidedAt, exit, stage, ferryReport = null, remote = 'origin', branch = 'main', fetch = true,
 }) {
-  if (exit === 0) ferryRan(ferryReport);
+  if (exit === 0 || ferryReport?.ran === true) ferryRan(ferryReport, exit);
   // A fetch that failed would bind a stale "public" head as if it were today's:
   // composing stops, and the run is owed as incomplete with the reason.
   if (fetch) {
@@ -764,7 +773,9 @@ function main(argv) {
     // non-zero exit, missing or empty is a crossing refused before its ferry
     // wrote one. With exit 0 the ferry ran, and missing or empty is a report
     // that was not written: what the crossing did is unknown, never quiet. A
-    // report that is there and cannot be read or parsed is unknown at any exit.
+    // report that is there and cannot be read or parsed is unknown at any exit,
+    // and so is a report that says the ferry ran without the fields it writes
+    // (its carried-file list left unset by a failed read, at either exit).
     // Each unknown stops the composing, and the unit owes the run as
     // incomplete with this reason. Only ENOENT is "missing".
     const exit = Number(o.exit);
