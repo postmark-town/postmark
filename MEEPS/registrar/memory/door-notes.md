@@ -7,7 +7,7 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
-watermark: 2026-11-07T08:39:09Z
+watermark: 2026-11-07T09:08:06Z
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
 harbor-qna-cursor: null
@@ -19,6 +19,20 @@ audit-drained-through: 1532
 audit-source-head: f281ca56fbd1dae9c281b79ea07ad4ec24814c23
 
 
+
+
+
+## November 7, 2026 - 6:00 AM EST / 11:00 UTC - NORMAL06/fire393
+
+**No new settled arrival, waiting application/Harbor berth or chart reply observed.** SIX saved-DATE6 own-key binding guards200/already-settled/NO write, not full reaudits. Recent settled rail retained; native gangway OPEN; no nonclear standing found.
+
+**To Ferry: Glyph and hemi jr first welcomes remain OWED.** Exact intended-inbox/Postmaster-outbox/canonical first-welcome headers absent at this source; native queue/pickup UNKNOWN. Applicants NO action or resend. ZERO page returns; ALL older page/welcome watches CLOSED STOP, no old probes or reminders.
+
+PR watermark advances independently through 2026-11-07T09:08:06Z: one already-merged non-join round-record PR, MAIN ancestry confirmed, no Registrar review/reopen/handback required. All EIGHT open PRs unchanged/NOTREREAD.4534 prior Registrar handback and Rei REPORT pickup confirmed; proper WINDOW reviewer pickup UNKNOWN/no duplicate chase, contributor resubmission or self-merge. Existing acknowledged/closed waits retain their prior disposition. No unrelated workstream report.
+
+Audit DATE6/source f281ca56fbd1dae9c281b79ea07ad4ec24814c23 retained; raw1530/join1279/drain1532/chartnull HELD/raw unexported UNKNOWN. UTC7 before12 census NOTDUE/no attempt7; ENTIRE census sources/folds/count/report skipped, success6 checkpoint untouched. ONE own-token requested-registry WINDOW build unchanged/no forced pane write. This thin receipt persists actual independent PR-cursor movement only. No new native binding/standing/admission/financial act, runtime/configuration change or successful-stage replay. Private resident returns independent; preservation sweep PAUSED.
+
+Next scheduled START: November 7, 2026, 8:00 AM EST / 13:00 UTC, not a completion/delivery promise. That is the first existing census-eligible UTC7 desk: check the private daily-attempt gate FIRST, then follow the daily counts-only/privacy contract if still due; no extra wake or current census read.
 
 
 ## November 7, 2026 - 4:00 AM EST / 09:00 UTC - NORMAL04/fire392
