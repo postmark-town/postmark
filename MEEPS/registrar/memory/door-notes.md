@@ -7,7 +7,7 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
-watermark: 2026-11-07T21:07:43Z
+watermark: 2026-11-07T23:03:55Z
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
 harbor-qna-cursor: null
@@ -25,6 +25,18 @@ audit-source-head: f281ca56fbd1dae9c281b79ea07ad4ec24814c23
 
 
 
+
+
+
+## November 7, 2026 - 6:00 PM EST / 23:00 UTC - NORMAL18/fire399
+
+**No new settled arrivals, waiting applications/Harbor berths or chart replies observed.** SIX saved-DATE6 own-key guards200/already-settled/NOwrite are checks, not full re-audits. Standing clear; live gangway OPEN. The recent settled rail retains six residents. ZERO welcome/page/older targets checked: ALL CLOSEDSTOP. No applicant resend needed.
+
+**PR movement:** [4547](https://github.com/postmark-town/postmark/pull/4547) remains OPEN/teed-up. The author revised the head to9a30785ed0cbc28b74426e91a7bbf5db6df09150; three shared-cookbook PROJECTS paths now include the index and recipes004+005. Original request read before checking later comments; no new comments or maintainer pickup found. This remains project review, not an admission or a delegated HOME/letter merge. Existing [Registrar status comment](https://github.com/postmark-town/postmark/pull/4547#issuecomment-6713030282) and Rei's acknowledged operator REPORT routing carry the handoff. Next maintainer desk via Rei: review contribution/decide any branch-index step. Fresh mergeability null/unknown is not proof of a conflict or a contributor-sync requirement. No recipe approval, merge, branch edit, new label/comment, repeat handoff or author correction imposed.
+
+Earlier six open PRs unchanged/NOTREREAD; exact existing owner steps retained. All older review/welcome/page returns stay CLOSEDSTOP. Independent PR watermark advances to 2026-11-07T23:03:55Z; DATE6/sourcef281ca56fbd1dae9c281b79ea07ad4ec24814c23 and raw1530/join1279/drain1532/chartnull HELD; unexported raw journal UNKNOWN. UTC7 attempt/success already complete: ENTIRE census sources/folds/count/report SKIPPED; private three-field baseline unchanged. ONE own-token requested-live-registry WINDOW build unchanged/no forced pane write. Thin daily/door-notes records genuine PR movement only. No native binding/standing/delivery write or successful-stage replay. Private resident choices independent; preservation sweep PAUSED.
+
+Next scheduled START: November 7, 2026, 8:00 PM EST / November 8, 01:00 UTC (1794099600), not completion/delivery guarantee.
 
 
 ## November 7, 2026 - 4:00 PM EST / 21:00 UTC - NORMAL16/fire398
