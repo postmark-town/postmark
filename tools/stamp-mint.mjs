@@ -37,7 +37,7 @@
 //   - <date> · stake:post/<author>/<slug> → <handle> · <n> · for: unstake · via: <channel>   (the staker's own way out, clipped to their OWN position)
 //   - <date> · stake:post/<author>/<slug> → <handle> · <n> · for: post-return   (the post finished: the open position comes home whole, once per (post, handle))
 //   THE BUG STAGE CORRECTION (POS-649, Darko 2026-10-15: "the mint to kino to give them the 10 … burning the 10 that you mistakenly got"):
-//   - <date> · MINT → <handle> · <n> · for: post:<author>/<slug>/<stage>-recredit · by: the-town   (the stage paid to the right resident: diagnosed, briefed or fixed only, the SAME amount its stage line paid, never to that line's own recipient, never a meep, ONE per post and stage, and always immediately followed by its burn)
+//   - <date> · MINT → <handle> · <n> · for: post:<author>/<slug>/<stage>-recredit · by: the-town   (the stage paid to the right resident: diagnosed, briefed or fixed only, the SAME amount its stage line paid, never to that line's own recipient, never a meep, ONE per post and stage, and always immediately followed by its burn. OR, for a stage the ledger never paid (POS-931/a, Darko 2026-11-06 "Extend the door": a stage the office recorded skipped by mistake), the stage's first and only payment, at diagnosed or briefed ONLY (never fixed): an amount on its ladder, by: the-town, never a meep, ONE per post and stage, with NO burn, and no stage line for that post and stage ever after. Appended alone by --stage-recredit --skipped)
 //   - <date> · <handle> → BURN · <n> · for: correction:<sig> · by: <hand>   (the wrong stage mint, burned exactly: <sig> is that post:<id>/<stage> line's full signature, <handle> its recipient, <n> its amount, out of liquid stamps only, ONCE per mint, by: one of CORRECTION_HANDS, and always immediately after its recredit. The two are appended together by --stage-recredit or not at all)
 //   PARCELS FROM 11-01 (POS-762, Darko 2026-10-22: "1 parcel per household with extra parcels purchasable with stamps"; "50 stamps per parcel you already have"; paid to the town, never returned):
 //   - <date> · <handle> → BURN · <n> · for: parcel:<nth>/<household-key>   (a household whose declaration is dated after 2026-10-31 (town time) buys room ahead for its <nth> parcel, 2 or 3: <n> is exactly 50 × (<nth> − 1), 50 × the room it already has (Darko 2026-10-23, POS-762/f "Room bought"), out of the payer's liquid stamps, never a meep, the key IS the payer's household at the line's date, dated 2026-11-01 or later, and ONE line per household and <nth>, in order (the 2nd before the 3rd). The world's fold counts these lines as the household's room (postmark-world tools/marks-fold.mjs § parcels from 11-01))
@@ -105,6 +105,7 @@
 //   node tools/stamp-mint.mjs --town-issuance <treasury> --amount N --purpose <kebab> --by <who> --provenance TEXT --date YYYY-MM-DD --key FILE
 //   node tools/stamp-mint.mjs --stage-mint <handle> --post <author>/<slug> --stage <stage> --amount N --date YYYY-MM-DD --key FILE
 //   node tools/stamp-mint.mjs --stage-recredit <handle> --post <author>/<slug> --stage <stage> --by <hand> --date YYYY-MM-DD --key FILE [--amount N --from <handle>]
+//   node tools/stamp-mint.mjs --stage-recredit <handle> --post <author>/<slug> --stage <stage> --by <hand> --amount N --skipped --date YYYY-MM-DD --key FILE
 //   node tools/stamp-mint.mjs --award-mint <handle> --post <author>/<slug> --label <label> --amount N --by <hand> --date YYYY-MM-DD --key FILE
 //
 // Locking: appenders must hold the town lock (the ferry's flock) — this tool
@@ -631,7 +632,22 @@ const POST_ID = String.raw`[a-z0-9][a-z0-9._-]*\/[a-z0-9][a-z0-9-]*`;
 // the pairing, the amount, the recipient, the stage, the hand, ONE recredit per
 // post and stage and ONE burn per mint. The general `<handle> → BURN` stays
 // reserved and dormant; only `for: correction:` is live.
+//
+// A STAGE NEVER PAID (POS-931/a, RULED Darko 2026-11-06 21:32 EST, "Extend the
+// door"). The office recorded a stage skipped, and someone had earned it: there
+// is no wrong mint, so its correction is the recredit line ALONE, the stage's
+// first and only payment, appended by --stage-recredit --skipped. Its amount is
+// on the stage's ladder (the office's plan names which, from its own act), and
+// the rest is the recredit's law: by: the-town, never a meep, ONE per post and
+// stage. Which of the two a recredit is, the ledger says: a stage line before
+// it means a correction, followed by its burn; none means a skipped stage's
+// credit, followed by no burn, and no stage line for it may ever come after.
+// Only diagnosed and briefed are credited this way (SKIPPED_CREDIT_STAGES, the
+// office's coverage too): a fixed carries its size, the critter its fixer
+// names and the merge guard, none of which a credit carries, so a never-paid
+// fixed is no lawful line. A PAID fixed is still corrected, mint and burn.
 export const RECREDIT_STAGES = Object.freeze(['diagnosed', 'briefed', 'fixed']);
+export const SKIPPED_CREDIT_STAGES = Object.freeze(['diagnosed', 'briefed']);
 export const CORRECTION_HANDS = AWARD_HANDS;
 /** An ed25519 signature in base64url: 64 bytes, 86 characters. */
 export const SIG_RE = /^[A-Za-z0-9_-]{86}$/;
@@ -1462,6 +1478,21 @@ export const stageRecreditLines = ({ date, handle, wrong, by }) => {
     `- ${date} · MINT → ${handle} · ${n} · for: post:${post}/${stage}-recredit · by: the-town`,
     `- ${date} · ${wrong.handle} → BURN · ${n} · for: correction:${sig} · by: ${by}`,
   ];
+};
+
+/**
+ * A skipped stage's credit, its one line (POS-931/a): the recredit line with
+ * no burn, for a stage the ledger never paid. Refuses what would forge or
+ * misfile it; whether the ledger holds a line for the stage is the verb's.
+ */
+export const stageSkippedCreditLine = ({ date, handle, n, post, stage }) => {
+  if (!STAGE_POST_ID_RE.test(String(post ?? '')))
+    throw new Error(`skipped stage credit: the post must be a post id, <author>/<slug>, got ${JSON.stringify(post)}`);
+  if (!SKIPPED_CREDIT_STAGES.includes(stage))
+    throw new Error(`skipped stage credit: only ${SKIPPED_CREDIT_STAGES.join(' and ')} are credited when never paid, not ${JSON.stringify(stage)} (a fixed carries its size, critter and merge, which a credit does not)`);
+  if (!(STAGE_LADDER[stage] ?? []).includes(n)) throw new Error(`skipped stage credit: ${stage} pays ${STAGE_LADDER[stage].join(' or ')}, not ${n}`);
+  if (!/^[^\s·]+$/.test(String(handle ?? ''))) throw new Error('skipped stage credit: a handle is one token with no "·"');
+  return `- ${date} · MINT → ${handle} · ${n} · for: post:${post}/${stage}-recredit · by: the-town`;
 };
 
 /**
@@ -2950,6 +2981,10 @@ function main(registrySource = null) {
       if (c.kind === 'post-stage' && c.post === post && c.stage === stage) {
         console.error(`FATAL: post:${post}/${stage} is already paid (${c.date}, ${c.n} to ${c.handle}) — one line per post and stage, ever`); process.exit(1);
       }
+      // A skipped stage's credit (POS-931/a) was that stage's payment: no stage line may follow it.
+      if (c.kind === 'post-recredit' && c.post === post && c.stage === stage) {
+        console.error(`FATAL: post:${post}/${stage} is already paid by its recredit (${c.date}, ${c.n} to ${c.handle}) — one payment per post and stage, ever`); process.exit(1);
+      }
     }
     const recorded = existing.map((e) => e.canonical);
     const { problems, owed } = walkLedger(recorded.slice(1), mints, 1);
@@ -2992,6 +3027,16 @@ function main(registrySource = null) {
     }
     if (!STAGE_POST_ID_RE.test(post)) { console.error(`--post must be a post id, <author>/<slug> (got "${post}")`); process.exit(1); }
     if (!RECREDIT_STAGES.includes(stage)) { console.error(`FATAL: only ${RECREDIT_STAGES.join(', ')} are re-credited, not "${stage}"`); process.exit(1); }
+    // --skipped (POS-931/a): a stage the office recorded skipped and someone
+    // earned. No wrong mint, so nothing to burn: ONE line, the stage's lawful
+    // amount, and only when this ledger holds no line for the stage.
+    const skipped = has('--skipped');
+    if (skipped && arg('--from') != null) { console.error('FATAL: --skipped names no wrong recipient — a stage never paid has no mint to burn'); process.exit(1); }
+    if (skipped && arg('--amount') == null) { console.error('FATAL: --skipped needs --amount — the stage\'s lawful amount, as the office\'s plan read it'); process.exit(1); }
+    if (skipped && !CORRECTION_HANDS.includes(by)) { console.error(`FATAL: by: must be one of the hands (${CORRECTION_HANDS.join(', ')}), got "${by}"`); process.exit(1); }
+    if (skipped && !SKIPPED_CREDIT_STAGES.includes(stage)) {
+      console.error(`FATAL: only ${SKIPPED_CREDIT_STAGES.join(' and ')} are credited when never paid, not "${stage}" — a fixed carries its size, the critter its fixer names and the merge, which a credit does not; a paid fixed is corrected without --skipped`); process.exit(1);
+    }
     let wrong = null;
     for (const e of existing) {
       const c = classifyEntry(e.canonical);
@@ -3000,29 +3045,39 @@ function main(registrySource = null) {
         console.error(`FATAL: post:${post}/${stage} was already re-credited (${c.date}, ${c.n} to ${c.handle}) — one correction per post and stage, ever`); process.exit(1);
       }
     }
-    if (!wrong) { console.error(`FATAL: post:${post}/${stage} was never paid — there is no stage line to correct`); process.exit(1); }
-    for (const e of existing) {
-      const c = classifyEntry(e.canonical);
-      if (c.kind === 'correction-burn' && c.sig === wrong.sig) {
-        console.error(`FATAL: the mint post:${post}/${stage} (${wrong.sig.slice(0, 16)}…) was already burned (${c.date}) — one burn per mint, ever`); process.exit(1);
-      }
-    }
-    if (arg('--amount') != null && Number(arg('--amount')) !== wrong.n) {
-      console.error(`FATAL: the plan expects ${arg('--amount')} and post:${post}/${stage} paid ${wrong.n} — refusing to correct a line the plan did not read`); process.exit(1);
-    }
-    if (arg('--from') != null && arg('--from') !== wrong.handle) {
-      console.error(`FATAL: the plan expects the wrong mint to be ${arg('--from')}'s and post:${post}/${stage} paid ${wrong.handle} — refusing to correct a line the plan did not read`); process.exit(1);
-    }
     let lines;
-    try { lines = stageRecreditLines({ date, handle, wrong, by }); }
-    catch (e) { console.error(`FATAL: ${e.message}`); process.exit(1); }
+    if (skipped) {
+      if (wrong) {
+        console.error(`FATAL: post:${post}/${stage} was paid (${wrong.date}, ${wrong.n} to ${wrong.handle}) — a skipped stage's credit is for a stage this ledger never paid; correct a paid stage without --skipped`); process.exit(1);
+      }
+      try { lines = [stageSkippedCreditLine({ date, handle, n: Number(arg('--amount')), post, stage })]; }
+      catch (e) { console.error(`FATAL: ${e.message}`); process.exit(1); }
+    } else {
+      if (!wrong) { console.error(`FATAL: post:${post}/${stage} was never paid — there is no stage line to correct (a stage recorded skipped and never paid is credited with --skipped)`); process.exit(1); }
+      for (const e of existing) {
+        const c = classifyEntry(e.canonical);
+        if (c.kind === 'correction-burn' && c.sig === wrong.sig) {
+          console.error(`FATAL: the mint post:${post}/${stage} (${wrong.sig.slice(0, 16)}…) was already burned (${c.date}) — one burn per mint, ever`); process.exit(1);
+        }
+      }
+      if (arg('--amount') != null && Number(arg('--amount')) !== wrong.n) {
+        console.error(`FATAL: the plan expects ${arg('--amount')} and post:${post}/${stage} paid ${wrong.n} — refusing to correct a line the plan did not read`); process.exit(1);
+      }
+      if (arg('--from') != null && arg('--from') !== wrong.handle) {
+        console.error(`FATAL: the plan expects the wrong mint to be ${arg('--from')}'s and post:${post}/${stage} paid ${wrong.handle} — refusing to correct a line the plan did not read`); process.exit(1);
+      }
+      try { lines = stageRecreditLines({ date, handle, wrong, by }); }
+      catch (e) { console.error(`FATAL: ${e.message}`); process.exit(1); }
+    }
     const rooms = householdKeys(repo);
     if (!rooms.has(handle)) { console.error(`FATAL: no WHITE_PAGES room for "${handle}" — a recredit needs a resident to receive it`); process.exit(1); }
     const { laws } = parseLaws(existing);
     if (meepChecker(laws)(handle, date)) { console.error(`FATAL: "${handle}" is a meep at ${date} — meeps stay outside the currency`); process.exit(1); }
-    const liquid = foldBalances(existing).get(wrong.handle) ?? 0;
-    if (liquid < wrong.n) {
-      console.error(`FATAL: ${wrong.handle} holds ${liquid} liquid stamp(s) and the wrong mint was ${wrong.n} — a correction burns liquid stamps only, never escrow; nothing written`); process.exit(1);
+    if (!skipped) {
+      const liquid = foldBalances(existing).get(wrong.handle) ?? 0;
+      if (liquid < wrong.n) {
+        console.error(`FATAL: ${wrong.handle} holds ${liquid} liquid stamp(s) and the wrong mint was ${wrong.n} — a correction burns liquid stamps only, never escrow; nothing written`); process.exit(1);
+      }
     }
     const recorded = existing.map((e) => e.canonical);
     const { problems, owed } = walkLedger(recorded.slice(1), mints, 1);
@@ -3044,7 +3099,9 @@ function main(registrySource = null) {
     }, '0000-00-00');
     if (date < maxDate) { console.error(`FATAL: recredit date ${date} precedes the ledger tail (${maxDate}) — the ledger is append-only, forward-dated`); process.exit(1); }
     appendSigned(repo, lines, readFileSync(keyPath, 'utf8'));
-    console.log(`stamp-ledger: stage re-credited, the wrong mint burned\n  ${lines.join('\n  ')}`);
+    console.log(skipped
+      ? `stamp-ledger: a skipped stage credited, nothing burned\n  ${lines.join('\n  ')}`
+      : `stamp-ledger: stage re-credited, the wrong mint burned\n  ${lines.join('\n  ')}`);
     return;
   }
 
