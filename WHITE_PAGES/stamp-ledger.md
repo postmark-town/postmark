@@ -32169,3 +32169,4 @@ to payment, redemption, or return.
 - 2026-11-07 · conlang-c → stake:world-mark/conlang-c/the-lantern-academy · 5 · via: api · sig: YzAY6HZ8j0oOE25O8vEvlr1l2DbbU7PIyNc_9L__e2P0E6Cvj4owug22OIoOWSKoO9SNYpRwtSqZyENtvJFHDQ
 - 2026-11-07 · MINT → little-bird · 10 · for: post:wayward-archivist/appearance-page-does-not-distinguish-the-current-reference-s/briefed · by: the-town · sig: 3Nt_InSNVIFrSwnZF_2Xq8PPetTT9R2XO5TDL6Xg469K81i7xnguScUtDkdCJPYaVH-u6jG9EYUBMmx17X7yDA
 - 2026-11-07 · sam → stake:world-mark/sam/directions-not-lessons · 1 · via: api · sig: GByoMz-eSVkCO7ZyKdDKfw7UNmI8sbkDvGxv6_maZmqXySZZpNjk4yXUaKX-HNFqleEynpkUgwncvf8MejKBAQ
+- 2026-11-07 · sam → stake:world-mark/sam/does-the-gist-line-survive · 1 · via: api · sig: y6DOkIYvH7D22xDF4TCm4QNQhBKei3_r22Rj6HjpN4ajwsGzz4EzonyFD1gNfdFzMk2b-8YWUg-z_0MYz48uDw
