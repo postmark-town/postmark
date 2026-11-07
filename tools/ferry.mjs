@@ -829,10 +829,13 @@ function main() {
       // that FAILED is no "no files" (Wright's fit, POS-907, 2026-11-07): the
       // field is left unset, never the `[]` a commit that carried nothing would
       // say, so the witness's report check owes the crossing as incomplete
-      // rather than sign it without its letters' digests.
+      // rather than sign it without its letters' digests. It is unset BEFORE
+      // the read and set only by a read that succeeded, so a read that throws
+      // (git() throws on a spawn error or an output overflow, ENOBUFS) leaves
+      // it unset too, never the [] the crossing began with.
+      delete REPORT.files;
       const carried = git(repo, ['diff-tree', '--no-commit-id', '-r', '--name-only', '--diff-filter=AM', 'HEAD']);
       if (carried.status === 0) REPORT.files = carried.stdout.split('\n').filter(Boolean);
-      else delete REPORT.files;
       gitPushRetry(repo);
       REPORT.pushed = true;
     }

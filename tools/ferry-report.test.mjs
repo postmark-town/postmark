@@ -114,13 +114,20 @@ test('without --report the ferry writes no report, as before', (t) => {
 const WITNESS_CLI = resolve(dirname(fileURLToPath(import.meta.url)), 'witness-chain.mjs');
 const { listOwed } = await import('./witness-chain.mjs');
 
-/** A PATH whose `git` fails `diff-tree` (exit 128, git's fatal) and is the real git otherwise. */
-function failingDiffTree(t) {
+/**
+ * A PATH whose `git` fails `diff-tree` and is the real git otherwise. `exit`:
+ * git's fatal exit 128. `overflow`: more output than the ferry's git() buffer
+ * holds (64 MiB), so its spawnSync fails with ENOBUFS and the helper THROWS.
+ */
+function failingDiffTree(t, how = 'exit') {
   const real = process.env.PATH.split(':').map((d) => join(d, 'git')).find((p) => existsSync(p));
   assert.ok(real, 'no git on PATH');
   const dir = mkdtempSync(join(tmpdir(), 'ferry-report-git-'));
   t.after(() => rmSync(dir, { recursive: true, force: true }));
-  writeFileSync(join(dir, 'git'), `#!/bin/sh\nfor a in "$@"; do [ "$a" = diff-tree ] && { echo "fatal: unable to read tree (the read under test)" >&2; exit 128; }; done\nexec "${real}" "$@"\n`, { mode: 0o755 });
+  const fail = how === 'overflow'
+    ? 'head -c 70000000 /dev/zero | tr "\\000" "a"; exit 0'
+    : 'echo "fatal: unable to read tree (the read under test)" >&2; exit 128';
+  writeFileSync(join(dir, 'git'), `#!/bin/sh\nfor a in "$@"; do [ "$a" = diff-tree ] && { ${fail}; }; done\nexec "${real}" "$@"\n`, { mode: 0o755 });
   return `${dir}:${process.env.PATH}`;
 }
 const ferryWith = (fx, env, extra = []) => spawnSync(process.execPath, [FERRY, '--repo', fx.repo, '--report', fx.report, ...extra], { encoding: 'utf8', env: { ...process.env, ...env } });
@@ -155,6 +162,21 @@ test('the same failed read on a crossing that then fails (its push refused): fil
   assert.equal(w.status, 1, w.stderr);
   assert.match(w.stderr, /exited 1 after its ferry ran, and its report does not say what its commit carried/);
   assert.equal(listOwed(owed).owed.length, 0);
+});
+
+test('a carried-file read that THROWS (git() overflows its buffer: ENOBUFS) leaves no files list either, never the [] the crossing began with; the witness owes it incomplete', (t) => {
+  const fx = town(t);
+  const r = ferryWith(fx, { PATH: failingDiffTree(t, 'overflow') });
+  assert.equal(r.status, 1, 'the throw ends the crossing, as any thrown step does');
+  assert.match(r.stderr, /ENOBUFS/, 'the helper threw: the read under test, not some other failure');
+  const rep = JSON.parse(readFileSync(fx.report, 'utf8'));
+  assert.deepEqual([rep.ran, rep.delivered, rep.committed, rep.pushed], [true, 1, true, false], 'the mail moved and committed here; the push never ran');
+  assert.equal(Object.hasOwn(rep, 'files'), false, `a thrown read is no "no files": ${JSON.stringify(rep.files)}`);
+  const owed = mkdtempSync(join(fx.root, 'owed-'));
+  const w = oweMail(fx, owed, 1, 'ferry');
+  assert.equal(w.status, 1, w.stderr);
+  assert.match(w.stderr, /exited 1 after its ferry ran, and its report does not say what its commit carried/);
+  assert.equal(listOwed(owed).owed.length, 0, 'no refused record that says its commit carried no files');
 });
 
 test('the controls through the same owe-mail: a crossing whose read worked binds its files; a refused one with its full report is refused with its counts; one refused before its ferry claims none', (t) => {
