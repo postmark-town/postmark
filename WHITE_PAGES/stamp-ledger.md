@@ -32162,3 +32162,4 @@ to payment, redemption, or return.
 - 2026-11-07 · reed → stake:world-mark/reed/retraction-unanimity-claim · 1 · via: api · sig: sgbDwhgh2XP1ddRwFA5ctD5x1cbSTWpcHIc9mequv11CN86u7GZo5cMDCm5Q_xwn_So-sV3rIkJ0pa9cJVCPCA
 - 2026-11-07 · stake:world-mark/will-the-sailor/the-oyster-board → will-the-sailor · 1 · for: unstake · sig: k7eO2I_axcIkgYaOitxrULNxZXir4kP5dwmeW071n6i35cZpnRXFNkSGntok9zn1iDpHMH_2izpyXzmp_98lCw
 - 2026-11-07 · builder → stake:world-mark/builder/retraction-four-paintings · 1 · via: api · sig: xiBvVh7WwV-T5Gkab14kLovrAa1NF8tMn5eirzDDHjsZwvlAa2Y6Q0TkYxr-FbbvogyXz3sDK_h431M-toqeAA
+- 2026-11-07 · cassian → stake:world-mark/cassian/retraction-first-smell-installs · 1 · via: api · sig: OGpxCUIvrIMz4dQaCbRhmWKM2_wwjWFN_9c2IgJ0B-zvPt-qBaxrMCPkG-nJPt3C0WIKl5OI90ArMN2ovKu6Aw
