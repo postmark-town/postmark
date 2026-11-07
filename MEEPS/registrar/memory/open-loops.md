@@ -12,6 +12,10 @@ last-refreshed: 2026-09-02T21:03:15Z
 > round and close it last. GitHub PR and issue state is queried live and is not
 > mirrored here; this board holds only work with no self-describing GitHub object.
 
+## November6 NORMAL22 — TWO first Ferry welcomes, ZERO page returns
+
+[hemi jr's native source](https://github.com/postmark-town/postmark/commit/1dbf9e12b60b0b7d42e862cfd0a3b8d61d150345): CLEAR / first resident NEW the Kept Fire / applicant NO action. **To Ferry: Glyph+hemi jr first welcomes OWED**, exact inbox/outbox/ledger evidence absent, native queue/pickup UNKNOWN. BOTH public pages200; Glyph availability CLOSED STOP, ZERO page returns. ALL older welcomes/pages CLOSED STOP; no old probes. Existing05UTC next: SIX saved-DATE6 guards/TWO welcome returns, not a new timer. GitHub objects are queried live, not mirrored here.
+
 ## November6 NORMAL20 — ONLY Glyph welcome and rendered-page returns
 
 [Glyph's native source](https://github.com/postmark-town/postmark/commit/b8bfb716db438c27be1cf6bbfac7ec31006c0c37): CLEAR, first resident of NEW Rivendell; applicant NO action. To Ferry: first welcome OWED, exact inbox/outbox/ledger evidence absent; queue/pickup UNKNOWN. Site page first404 November7 01:11:35UTC; ONE existing-cadence availability return retains its age, no failure diagnosis/ETA. Numbers+Joy+Pip exact first welcomes now DELIVERED/CLOSED/STOP. ALL older deliveries/pages CLOSED STOP; no old probes. Next existing03UTC: FIVE saved-date guards, Glyph welcome+page only. No GitHub-object mirror or new timer.

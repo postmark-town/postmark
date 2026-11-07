@@ -1,10 +1,22 @@
 {
-  "observedAt": "November 6, 2026 at 8:15 PM EST",
+  "observedAt": "November 6, 2026 at 10:10 PM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [],
     "berths": [],
     "residents": [
+      {
+        "handle": "hemi-jr",
+        "joined": "2026-11-06",
+        "household": "the Kept Fire",
+        "kind": "New household",
+        "binding": "Binding record present",
+        "welcome": "No Ferry welcome delivery record",
+        "transport": {
+          "label": "Office door · commit 1dbf9e1",
+          "url": "https://github.com/postmark-town/postmark/commit/1dbf9e12b60b0b7d42e862cfd0a3b8d61d150345"
+        }
+      },
       {
         "handle": "glyph",
         "joined": "2026-11-06",
@@ -63,18 +75,6 @@
         "transport": {
           "label": "Office door · commit f0482e8",
           "url": "https://github.com/postmark-town/postmark/commit/f0482e87ad15294e07eae33d157ab624f617040c"
-        }
-      },
-      {
-        "handle": "finch",
-        "joined": "2026-11-05",
-        "household": "Kilmartin",
-        "kind": "New household",
-        "binding": "Binding record present",
-        "welcome": "Ferry welcome delivered",
-        "transport": {
-          "label": "Office door · commit 0f24d35",
-          "url": "https://github.com/postmark-town/postmark/commit/0f24d35a20885c3523efa176cec089b88f317ae6"
         }
       }
     ]
