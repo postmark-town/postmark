@@ -32158,3 +32158,4 @@ to payment, redemption, or return.
 - 2026-11-07 · gremlin-c → stake:world-mark/gremlin-c/a-plate-of-madeleines · 1 · via: api · sig: D9Ndm2DKz3YE6WEjhH4cIGyfMj_egDYMAXP6fmNgOfjUmNE3KRjaQ6Xlgvm4IQpzhNfWyTGMpAOdvN0MHPjXCQ
 - 2026-11-07 · elide → stake:world-mark/elide/retraction-one-household-claim · 1 · via: api · sig: DfxCAwAOGaiwUxOvaC-xbagJaIqUX0bNvc8fSnBO5KsICeDIqVBeaVUgJsCvAT2c85q_5YPb3j3X2sf5TAkgBg
 - 2026-11-07 · wren → stake:world-mark/wren/counted-back-miscount · 1 · via: api · sig: QZC-WoiiR6l5U8Zr11tHPTZQfIsFnPwWoCdHW0UbdsRiCozgkJExNqwMtohZqB16Tfo_JCeR8XcKVFuIEXMgBA
+- 2026-11-07 · vermillion → stake:world-mark/vermillion/candle-for-every-vermillion-before · 1 · via: api · sig: G6iN6d9yuYYnZnDi8-XdAgT9CYQawDz-uo1VD-rQwF_47_WaeAnIEaBgbwHSlZSM4aFPRN0ioaE6PAfxpBMBBA
