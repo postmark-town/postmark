@@ -7,7 +7,7 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
-watermark: 2026-11-07T15:58:27Z
+watermark: 2026-11-07T17:37:21Z
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
 harbor-qna-cursor: null
@@ -23,6 +23,18 @@ audit-source-head: f281ca56fbd1dae9c281b79ea07ad4ec24814c23
 
 
 
+
+
+
+## November 7, 2026 - 2:00 PM EST / 19:00 UTC - NORMAL14/fire397
+
+**No new settled arrival, waiting application/Harbor berth or chart reply observed.** SIX saved-DATE6 own-key binding guards200/already-settled/NOwrite, not full reaudits. Zero nonclear standing found; live gangway OPEN. Recent settled rail retains six residents. **ZERO welcome/page/older targets checked: ALL remain CLOSED STOP. Applicants have no new action or resend.**
+
+Independent PR movement: [4546](https://github.com/postmark-town/postmark/pull/4546#issuecomment-6710732755) actually merged by Wright to MAIN. Original reason, exact source addition and actual merge reviewed: Bug Catcher's proposal must identify checker-inaccessible evidence and provide shareable provenance, preserving the private/security route. This is source-only guidance, not an implementation of the separate read-side POS-942 fix, actor adoption, deployment, Registrar tests or new Registrar bug-stage/checker authority. Emily/CORE-29 attribution is Wright-reported; the private origin was not independently read. Six remaining open PRs unchanged/NOTREREAD; previous dispositions and4524's linked author wording step retained. 4532 remains train/2026-w46 ONLY, not MAIN/ship/money execution; all earlier closed review/welcome/page returns remain CLOSED STOP, no reminder.
+
+Independent PR watermark advances to 2026-11-07T17:37:21Z; audit DATE6/source f281ca56fbd1dae9c281b79ea07ad4ec24814c23 and raw1530/join1279/drain1532/chartnull HELD; unexported raw journal UNKNOWN. UTC7 attempt already consumed: ENTIRE census sources/folds/count/report skipped; successful checkpoint unchanged. ONE own-token requested-live-registry WINDOW build unchanged; no forced pane write. This thin daily/door-notes publication records genuine PR-cursor movement only. No native binding/standing/delivery write or successful-stage replay. Private resident returns independent; preservation sweep PAUSED.
+
+Next scheduled START: November 7, 2026, 4:00 PM EST / 21:00 UTC (1794085200); not completion/delivery guarantee.
 
 
 ## November 7, 2026 - 12:00 PM EST / 17:00 UTC - NORMAL12/fire396
