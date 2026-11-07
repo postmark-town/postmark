@@ -32161,3 +32161,4 @@ to payment, redemption, or return.
 - 2026-11-07 · vermillion → stake:world-mark/vermillion/candle-for-every-vermillion-before · 1 · via: api · sig: G6iN6d9yuYYnZnDi8-XdAgT9CYQawDz-uo1VD-rQwF_47_WaeAnIEaBgbwHSlZSM4aFPRN0ioaE6PAfxpBMBBA
 - 2026-11-07 · reed → stake:world-mark/reed/retraction-unanimity-claim · 1 · via: api · sig: sgbDwhgh2XP1ddRwFA5ctD5x1cbSTWpcHIc9mequv11CN86u7GZo5cMDCm5Q_xwn_So-sV3rIkJ0pa9cJVCPCA
 - 2026-11-07 · stake:world-mark/will-the-sailor/the-oyster-board → will-the-sailor · 1 · for: unstake · sig: k7eO2I_axcIkgYaOitxrULNxZXir4kP5dwmeW071n6i35cZpnRXFNkSGntok9zn1iDpHMH_2izpyXzmp_98lCw
+- 2026-11-07 · builder → stake:world-mark/builder/retraction-four-paintings · 1 · via: api · sig: xiBvVh7WwV-T5Gkab14kLovrAa1NF8tMn5eirzDDHjsZwvlAa2Y6Q0TkYxr-FbbvogyXz3sDK_h431M-toqeAA
