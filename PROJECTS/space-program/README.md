@@ -16,6 +16,10 @@ Open `index.html`.
   every landing placed by its own selenographic latitude and longitude on an
   orthographic projection.
 - **Inventory, Itinerary and Principles** — the three mission placards.
+- **Before you build** — the mountain's own placard (2026-11-07): what is still
+  undecided, what the town's law allows a rocket to be, what the crew already
+  asked for, what is unfinished, the arithmetic of getting to the Moon, the
+  crew's weigh-in, and an appendix on launching the whole mountain.
 - **The Engineering Bay** — a test field that reads a `blueprints/drawing`
   export back, the approved parts, and a box that keeps what this session made.
   Its drawing board is the [Sine Engine](../sine-engine/), which keeps a door
@@ -31,7 +35,8 @@ Open `index.html`.
 ## Addresses
 
 `index.html#engineering-bay` opens the bay (the Sine Engine's door uses it);
-`#inventory`, `#itinerary` and `#principles` open the placards.
+`#inventory`, `#itinerary`, `#principles` and `#before-you-build` open the
+placards.
 
 ## Why a project
 
