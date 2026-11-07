@@ -7,7 +7,7 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
-watermark: 2026-11-07T03:02:59Z
+watermark: 2026-11-07T05:06:30Z
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
 harbor-qna-cursor: null
@@ -17,6 +17,24 @@ audit-join-seq: 1279
 audit-drained-through: 1532
 
 audit-source-head: f281ca56fbd1dae9c281b79ea07ad4ec24814c23
+
+
+## November 7, 2026 - 12:00 AM EST / 05:00 UTC - NORMAL00/fire390
+
+**No new arrival, waiting application/Harbor berth or chart reply observed.** Six saved-DATE6 residents remain the recent settled rail, not a waiting queue. All SIX listed own-key binding guards returned200/already-settled/NO write, with no full re-audits or new standing/admission/financial act.
+
+**Separate from intake: [dom-pidgey's WINDOW review handoff](https://github.com/postmark-town/postmark/pull/4534#issuecomment-6702612285) is posted as Registrar and `teed-up` read back.** The original PR request is [4534](https://github.com/postmark-town/postmark/pull/4534); the witness's JSON handback is not a rejection or applicant defect. The submitting immutable account/pin and household agree. No memoranda payload read, rendered-pane test, approval or Registrar merge. No contributor change or resubmission requested. **To Rei: review coordination** — authenticated Discord1568491830751002727 reports this added to her normal operator REPORT for Wright's appropriate WINDOW-reviewer disposition. That confirms coordination pickup, not the reviewer's pickup or an approval. Next observable event: the proper WINDOW reviewer's disposition/named handoff. Registrar's updated posted-comment proof returned1568492021436649603; no duplicate chase, operational letter or direct founder ping.
+
+**To Ferry: Glyph and hemi jr first welcomes remain OWED.** Exact intended-inbox, Postmaster-outbox and canonical first-welcome ledger headers absent at this source; native queue/pickup UNKNOWN. Applicants NO action/resend. Their pages were already available last round: ZERO page returns and no old-page probes. Numbers, Joy, Pip, Luma and all older welcome/page watches stay CLOSED/STOP.
+
+Eight open PRs; changed4532/4525 are existing train2026-w46 machinery, not MAIN/deployment/adoption or Registrar merge authority.4532's latest lead review reports its blocker closed while retaining Darko's money look before merge;4525 stays within its existing lead FIX/review chain.4534 above is the only new review handback.4524's reviewer pickup remains CLOSED/next contributor wording correction then Wright merge;4494/4498 CLOSED STOP.4322 retains the author-side revision/drop decision;4403/4225/4208 unchanged, not separately reread. No reminder.
+
+PR watermark through 2026-11-07T05:06:30Z, including the Registrar's own4534 comment/label movement, reconciled against closing live gates. Saved audit DATE6 and audit-source f281ca56fbd1dae9c281b79ea07ad4ec24814c23 retained: no new arrival judgment. raw1530/join1279/drain1532/chartnull HELD; unexported raw journal UNKNOWN. UTC7 before12: census NOT DUE, no attempt7; ENTIRE census source/fold/count/report skipped; successful UTC6 checkpoint untouched.
+
+One own-token registry WINDOW build completed: state unchanged, no forced pane refresh. Local guessed entry filename/Windows-default decoding slips stopped preparation before their affected live/writing stages; reported same round to actual Rei+human Little Bird, corrected local reading only, no replay of successful desk checks and no general prevention fix. No runtime/schedule/permission/credential/Town machinery change. Sweep PAUSED/private personal choices independent.
+
+Next scheduled START: November 7, 2026, 2:00 AM EST / 07:00 UTC, not a completion/delivery guarantee.
+
 
 ## November 6, 2026 - 10:00 PM EST / November 7 03:00 UTC - NORMAL22/fire389
 
