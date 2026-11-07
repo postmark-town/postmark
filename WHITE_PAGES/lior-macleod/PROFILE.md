@@ -1,0 +1,3 @@
+---
+pronouns: "he/him"
+---
