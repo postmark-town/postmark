@@ -22,7 +22,7 @@ import { fileURLToPath } from 'node:url';
 import {
   GENESIS, canonicalJson, checkRecord, keyIdOf, listOwed, mailDecided, owe, owePending, outcomeId, publish, readChain,
 } from './witness-chain.mjs';
-import { keypair, scratchTown } from './witness-test-fixture.mjs';
+import { ferryReportOf, keypair, scratchTown } from './witness-test-fixture.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const CLI = join(HERE, 'witness-chain.mjs');
@@ -129,8 +129,8 @@ test('A RETRY OF THE SAME DECISION publishes nothing new; a new attempt of the s
 
 test('QUIET AND REFUSED crossings get records; a commit that never got out is named, not bound', (t) => {
   const town = scratchTown(t);
-  const quiet = mailDecided(town.repo, { attempt: 'run-q', decidedAt: '2026-11-06T00:00:30.000Z', exit: 0, stage: 'done', ferryReport: { ran: true, crossing: 291, delivered: 0, bounced: 0 } });
-  assert.equal(quiet.outcome.status, 'quiet');
+  const quiet = mailDecided(town.repo, { attempt: 'run-q', decidedAt: '2026-11-06T00:00:30.000Z', exit: 0, stage: 'done', ferryReport: ferryReportOf(291) });
+  assert.equal(quiet.outcome.status, 'quiet', 'a written report with zero movement is a quiet crossing');
 
   // a local commit the crossing could not push: delivered on disk, not public
   town.ledgers.mail.push('- 2026-11-06 · late-2026-11-06-x · late → reader · thread: t');
@@ -220,7 +220,7 @@ test('THE RACE, made certain: the other publisher lands between our fetch and ou
   const mailOwed = join(town.root, 'owed-mail');
   const settleOwed = join(town.root, 'owed-settle');
   // a MAIL crossing on one side, a settlement on the other: the two kinds racing
-  owe(mailOwed, mailDecided(town.repo, { attempt: 'ferry-run', decidedAt: '2026-11-06T12:00:00.000Z', exit: 0, stage: 'done', ferryReport: { ran: true, crossing: 293 } }));
+  owe(mailOwed, mailDecided(town.repo, { attempt: 'ferry-run', decidedAt: '2026-11-06T12:00:00.000Z', exit: 0, stage: 'done', ferryReport: ferryReportOf(293) }));
   owe(settleOwed, settlementDecided('settlement:raced', { at: '2026-11-06T18:00:00.000Z' }));
   // The second clone's first push is preceded, inside its own pre-push hook,
   // by the first clone publishing. Only the first push: a marker file says so.
@@ -331,7 +331,7 @@ test('A RUN STILL DECIDING holds only the records after it; once it decides, bot
   assert.deepEqual(first.published, [1], 'what came before the live run publishes');
   assert.equal(first.status, 'owed');
   assert.match(first.why, /crossing:293 .* is still deciding/);
-  owe(town.owed, mailDecided(town.repo, { attempt: 'ferry-live', decidedAt: '2026-11-06T12:00:40.000Z', exit: 0, stage: 'done', ferryReport: { ran: true, crossing: 293 } }));
+  owe(town.owed, mailDecided(town.repo, { attempt: 'ferry-live', decidedAt: '2026-11-06T12:00:40.000Z', exit: 0, stage: 'done', ferryReport: ferryReportOf(293) }));
   const second = publish({ repo: town.repo, owedDir: town.owed, privateKeyPem: town.witnessKey.privatePem, now });
   assert.deepEqual(second.published, [2, 3]);
   assert.deepEqual(originChain(town).map((c) => c.body.decided.event), ['settlement:before', 'crossing:293', 'settlement:after']);
@@ -429,7 +429,7 @@ test('UNREAD KEYS: an unreadable witness key is not "never published"; an unread
 
 test('UNREAD LEDGERS AND FILES stop the composing: no null head, no "absent" artifact, is ever signed for a read that failed', (t) => {
   const town = scratchTown(t);
-  const compose = () => mailDecided(town.repo, { attempt: 'r', decidedAt: '2026-11-06T12:00:30.000Z', exit: 0, stage: 'done', ferryReport: { ran: true, crossing: 293, files: ['WHITE_PAGES/crossing-ledger.md'] } });
+  const compose = () => mailDecided(town.repo, { attempt: 'r', decidedAt: '2026-11-06T12:00:30.000Z', exit: 0, stage: 'done', ferryReport: ferryReportOf(293, { files: ['WHITE_PAGES/crossing-ledger.md'] }) });
   const ok = compose();
   assert.deepEqual(Object.keys(ok.heads.mail), ['lines', 'seal'], 'the control: a ledger read is a head');
   dropObject(town.repo, blobAt(town, 'refs/remotes/origin/main', 'WHITE_PAGES/crossing-ledger.md'));
@@ -437,30 +437,81 @@ test('UNREAD LEDGERS AND FILES stop the composing: no null head, no "absent" art
 
   const ledger = scratchTown(t);
   dropObject(ledger.repo, blobAt(ledger, 'refs/remotes/origin/main', 'WHITE_PAGES/stamp-ledger.md'));
-  assert.throws(() => mailDecided(ledger.repo, { attempt: 'r', decidedAt: '2026-11-06T12:00:30.000Z', exit: 0, stage: 'done' }),
+  assert.throws(() => mailDecided(ledger.repo, { attempt: 'r', decidedAt: '2026-11-06T12:00:30.000Z', exit: 0, stage: 'done', ferryReport: ferryReportOf(293) }),
     /could not read WHITE_PAGES\/stamp-ledger\.md/, 'an unread ledger is never a null head');
 
   const gone = scratchTown(t);
   gone.git(gone.repo, 'rm', '-q', 'WHITE_PAGES/stamp-ledger.md');
   gone.commit('no stamp ledger');
   gone.git(gone.repo, 'push', '-q', 'origin', 'HEAD:main');
-  const absent = mailDecided(gone.repo, { attempt: 'r', decidedAt: '2026-11-06T12:00:30.000Z', exit: 0, stage: 'done' });
+  const absent = mailDecided(gone.repo, { attempt: 'r', decidedAt: '2026-11-06T12:00:30.000Z', exit: 0, stage: 'done', ferryReport: ferryReportOf(293) });
   assert.deepEqual(absent.heads.stamps, { absent: true }, 'the control: a ledger git shows is not there is recorded as absent, positively');
   assert.throws(() => owe(town.owed, { ...ok, heads: { mail: ok.heads.mail, stamps: null } }), /heads\.stamps must be \{ lines, seal \} or \{ absent: true \}/, 'and a null head cannot even be owed');
 });
 
-test('AN UNPARSEABLE FERRY REPORT is not "the ferry did nothing": owe-mail stops; an empty report is a ferry that never wrote one', (t) => {
+// AT EXIT 0 THE FERRY RAN (Wright and the lead, 2026-11-07). The unit runs the
+// ferry inside one `&&` chain, so a crossing exits 0 only past it, and the
+// ferry's report write only logs its own failure. A report that is missing,
+// empty, unparseable or without the ferry's fields is an outcome nobody read:
+// owe-mail stops (exit 1), and the unit owes the run as incomplete. Only a
+// written report with zero movement is quiet. A non-zero exit with no report
+// is a crossing refused before its ferry wrote one: refused, claiming no counts.
+test('AN UNWRITTEN OR UNUSABLE FERRY REPORT at exit 0 is never "quiet": owe-mail stops; a written zero report is the quiet control', (t) => {
   const town = scratchTown(t);
   const reportFile = join(town.root, 'report.json');
-  const oweMail = () => spawnSync(process.execPath, [CLI, 'owe-mail', '--repo', town.repo, '--owed', town.owed, '--attempt', 'ferry-x', '--exit', '0', '--ferry-report', reportFile], { encoding: 'utf8' });
+  const oweMail = (exit = '0', stage = 'done', file = reportFile) => spawnSync(process.execPath, [CLI, 'owe-mail', '--repo', town.repo, '--owed', town.owed, '--attempt', `ferry-${exit}-${stage}`, '--exit', exit, '--stage', stage, '--ferry-report', file], { encoding: 'utf8' });
+  const stops = (r, why, label) => {
+    assert.equal(r.status, 1, `${label}: composing stops, and the unit owes the run as incomplete`);
+    assert.match(r.stderr, why, label);
+    assert.equal(listOwed(town.owed).owed.length, 0, `${label}: nothing signed as quiet`);
+  };
+
   writeFileSync(reportFile, '{"ran": true, "delivered": 4');
-  const bad = oweMail();
-  assert.equal(bad.status, 1, 'composing stops');
-  assert.match(bad.stderr, /is there and does not parse, so what the crossing did is unknown/);
-  assert.equal(listOwed(town.owed).owed.length, 0, 'nothing signed as quiet');
+  stops(oweMail(), /is there and does not parse, so what the crossing did is unknown/, 'an unparseable report');
   writeFileSync(reportFile, '');
-  assert.equal(oweMail().status, 0, 'the control: an empty report is a crossing whose ferry never ran');
-  assert.equal(listOwed(town.owed).owed[0].decided.outcome.status, 'quiet');
+  stops(oweMail(), /exited 0, so its ferry ran, and its report .*report\.json is missing or empty: what it delivered is unknown/, 'an empty report at exit 0');
+  stops(oweMail('0', 'done', join(town.root, 'never-written.json')), /never-written\.json is missing or empty/, 'a missing report at exit 0');
+  writeFileSync(reportFile, JSON.stringify({ ran: true, crossing: 293 }));
+  stops(oweMail(), /carries no delivered and bounced counts/, 'a report without its counts at exit 0');
+  writeFileSync(reportFile, JSON.stringify({ ran: false }));
+  stops(oweMail(), /does not say the ferry ran/, 'a report that says the ferry never ran, at exit 0');
+
+  writeFileSync(reportFile, `${JSON.stringify(ferryReportOf(293), null, 1)}\n`);
+  assert.equal(oweMail().status, 0, 'the control: the report the ferry writes on a crossing that moved nothing');
+  assert.equal(listOwed(town.owed).owed[0].decided.outcome.status, 'quiet', 'and that crossing is quiet');
+
+  writeFileSync(reportFile, '');
+  const refused = oweMail('1', 'drain');
+  assert.equal(refused.status, 0, `the control: refused before its ferry wrote a report — ${refused.stderr}`);
+  const decided = listOwed(town.owed).owed.map((e) => e.decided).find((d) => d.attempt === 'ferry-1-drain');
+  assert.deepEqual([decided.outcome.status, decided.outcome.stage, decided.outcome.ferry], ['refused', 'drain', undefined], 'refused at its stage, and it claims no counts: not "nothing was delivered"');
+});
+
+test('THE COMPOSER ITSELF requires an exit-0 crossing\'s report: no report and no counts are never defaulted to a quiet zero', (t) => {
+  const town = scratchTown(t);
+  const compose = (exit, ferryReport) => mailDecided(town.repo, { attempt: 'r', decidedAt: '2026-11-06T12:00:30.000Z', exit, stage: exit === 0 ? 'done' : 'drain', ferryReport });
+  assert.throws(() => compose(0, null), /exited 0, so its ferry ran, and its report is missing or empty/);
+  assert.throws(() => compose(0, { ran: true, crossing: 293 }), /carries no delivered and bounced counts/);
+  assert.throws(() => compose(0, { ...ferryReportOf(293), delivered: -1 }), /carries no delivered and bounced counts/);
+  assert.throws(() => compose(0, { ...ferryReportOf(293), files: undefined }), /does not say what its commit carried/);
+  assert.equal(compose(0, ferryReportOf(293)).outcome.status, 'quiet', 'the control: a written zero report is quiet');
+  assert.equal(compose(0, ferryReportOf(293, { delivered: 2, committed: true, pushed: true, files: ['WHITE_PAGES/mail-ledger.md'] })).outcome.status, 'delivered');
+  const refused = compose(1, null);
+  assert.deepEqual([refused.outcome.status, refused.outcome.ferry], ['refused', undefined], 'the control: a pre-ferry refusal composes, and claims no counts');
+});
+
+test('AN UNREAD LOCAL HEAD stops the composing: whether the crossing left a commit unpublished is never silently dropped', (t) => {
+  const town = scratchTown(t);
+  // no fetch: git's fetch walks the local branch too, and would stop first; the read under test is HEAD's
+  const compose = () => mailDecided(town.repo, { attempt: 'r', decidedAt: '2026-11-06T12:01:00.000Z', exit: 1, stage: 'mint', fetch: false, ferryReport: ferryReportOf(293, { delivered: 1, committed: true, files: ['WHITE_PAGES/mail-ledger.md'] }) });
+  town.ledgers.mail.push('- 2026-11-06 · late-2026-11-06-x · late → reader · thread: t');
+  town.writeLedgers();
+  town.commit('ferry: unpushed');
+  const localHead = town.git(town.repo, 'rev-parse', 'HEAD').trim();
+  assert.equal(compose().results.local_head, localHead, 'the control: a commit not yet public is named');
+  dropObject(town.repo, localHead);
+  assert.throws(compose, /could not read the town clone's HEAD, so whether this crossing left a commit unpublished is unknown/,
+    'an unread HEAD is never "nothing unpublished": no record omits local_head for a read that failed');
 });
 
 function writeKey(town) {

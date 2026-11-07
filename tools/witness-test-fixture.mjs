@@ -27,6 +27,10 @@ export function keypair() {
 
 export const mailLine = (n) => `- 2026-11-0${1 + (n % 5)} · writer-${n}-2026-11-01-note · writer-${n} → reader-${n} · thread: t${n}`;
 export const stampLine = (n) => `- 2026-11-01 · MINT → writer-${n} · 1 · for: letter · sig: invented${n}`;
+/** A ferry report as tools/ferry.mjs writes it once it runs (§ the crossing's report): by default a crossing that moved nothing. */
+export const ferryReportOf = (crossing, over = {}) => ({
+  ran: true, crossing, delivered: 0, bounced: 0, committed: false, pushed: false, files: [], ...over,
+});
 
 export function scratchTown(t, { witnessKey = keypair(), stampKey = keypair(), publishKey = true } = {}) {
   const root = mkdtempSync(join(tmpdir(), 'witness-town-'));

@@ -457,6 +457,29 @@ const artifactAt = (repo, repoName, commit, path) => {
 };
 
 /**
+ * THE SUCCESS EVIDENCE OF AN EXIT-0 CROSSING (Wright, 2026-11-07). Exit 0 means
+ * the ferry ran: the unit runs it inside one `&&` chain, and the crossing exits
+ * 0 only past it. The ferry writes its report on success, but its write only
+ * logs its own failure (tools/ferry.mjs § the crossing's report). So at exit 0
+ * a report that is missing, empty or without the fields the ferry sets in one
+ * step once it runs (`ran`, the counts, `committed`, `pushed`, `files`) is an
+ * outcome nobody read, never a quiet one. It throws: composing stops, and the
+ * unit owes the run as incomplete. A written report with zero movement is the
+ * quiet crossing. A non-zero exit is not judged here: it is refused, whatever
+ * report it left, and without one it claims no counts at all.
+ */
+function ferryRan(report) {
+  const unread = (why) => new Error(`the crossing exited 0, so its ferry ran, and its report ${why}: what it delivered is unknown`);
+  if (report === null || report === undefined) throw unread('is missing or empty');
+  if (typeof report !== 'object' || Array.isArray(report) || report.ran !== true) throw unread('does not say the ferry ran');
+  const count = (n) => Number.isSafeInteger(n) && n >= 0;
+  if (!count(report.delivered) || !count(report.bounced)) throw unread('carries no delivered and bounced counts');
+  if (typeof report.committed !== 'boolean' || typeof report.pushed !== 'boolean' || !Array.isArray(report.files)) {
+    throw unread('does not say what its commit carried (committed, pushed, files)');
+  }
+}
+
+/**
  * A mail crossing's decided outcome, read from the town clone.
  *
  * It binds what is PUBLIC at the moment of decision: `town_head` is the
@@ -468,6 +491,7 @@ const artifactAt = (repo, repoName, commit, path) => {
 export function mailDecided(repo, {
   attempt, decidedAt, exit, stage, ferryReport = null, remote = 'origin', branch = 'main', fetch = true,
 }) {
+  if (exit === 0) ferryRan(ferryReport);
   // A fetch that failed would bind a stale "public" head as if it were today's:
   // composing stops, and the run is owed as incomplete with the reason.
   if (fetch) {
@@ -477,15 +501,19 @@ export function mailDecided(repo, {
   const publicRef = `refs/remotes/${remote}/${branch}`;
   const townHead = git(repo, ['rev-parse', '--verify', '--quiet', `${publicRef}^{commit}`]).stdout.trim();
   if (!HEX40.test(townHead)) throw new Error(`no public head at ${publicRef}`);
-  const local = git(repo, ['rev-parse', '--verify', '--quiet', 'HEAD^{commit}']).stdout.trim();
+  // The clone's own HEAD decides whether this crossing left a commit that is
+  // not public yet (`local_head`). The clone always has one; a read that
+  // failed is not "nothing unpublished" (Wright, 2026-11-07), so composing stops.
+  const head = git(repo, ['rev-parse', '--verify', '--quiet', 'HEAD^{commit}']);
+  const local = String(head.stdout ?? '').trim();
+  if (head.status !== 0 || !HEX40.test(local)) {
+    throw new Error(`could not read the town clone's HEAD, so whether this crossing left a commit unpublished is unknown: ${String(head.stderr ?? '').trim().slice(0, 160) || `exit ${head.status}`}`);
+  }
   // merge-base --is-ancestor answers 0 (is) or 1 (is not); anything else is a
   // failed read, which is not "unpublished".
-  let localUnpublished = false;
-  if (HEX40.test(local)) {
-    const anc = git(repo, ['merge-base', '--is-ancestor', local, townHead]);
-    if (anc.status !== 0 && anc.status !== 1) throw new Error(`could not tell whether ${local.slice(0, 8)} is public: ${String(anc.stderr).trim().slice(0, 160)}`);
-    localUnpublished = anc.status === 1;
-  }
+  const anc = git(repo, ['merge-base', '--is-ancestor', local, townHead]);
+  if (anc.status !== 0 && anc.status !== 1) throw new Error(`could not tell whether ${local.slice(0, 8)} is public: ${String(anc.stderr).trim().slice(0, 160)}`);
+  const localUnpublished = anc.status === 1;
 
   const report = ferryReport ?? {};
   const delivered = Number.isSafeInteger(report.delivered) ? report.delivered : 0;
@@ -732,21 +760,29 @@ function main(argv) {
   }
   if (verb === 'owe-mail') {
     if (!o.repo || !o.owed || !o.attempt || o.exit === undefined) { log('owe-mail needs --repo, --owed, --attempt and --exit'); return 2; }
-    // The ferry's report: an empty or missing file is a ferry that never wrote
-    // one (the unit empties it before each crossing); a report that is there
-    // and cannot be read or parsed is NOT "the ferry did nothing", which would
-    // sign a crossing that moved mail as quiet. It stops the composing, and the
-    // unit owes the run as incomplete with this reason.
+    // The ferry's report. The unit empties it before each crossing, so with a
+    // non-zero exit, missing or empty is a crossing refused before its ferry
+    // wrote one. With exit 0 the ferry ran, and missing or empty is a report
+    // that was not written: what the crossing did is unknown, never quiet. A
+    // report that is there and cannot be read or parsed is unknown at any exit.
+    // Each unknown stops the composing, and the unit owes the run as
+    // incomplete with this reason. Only ENOENT is "missing".
+    const exit = Number(o.exit);
     let report = null;
-    if (o['ferry-report'] && existsSync(o['ferry-report'])) {
-      let text;
-      try { text = readFileSync(o['ferry-report'], 'utf8'); } catch (e) { throw new Error(`could not read the ferry report ${o['ferry-report']}: ${e.code ?? 'unreadable'}`); }
+    if (o['ferry-report']) {
+      let text = '';
+      try { text = readFileSync(o['ferry-report'], 'utf8'); } catch (e) {
+        if (e.code !== 'ENOENT') throw new Error(`could not read the ferry report ${o['ferry-report']}: ${e.code ?? 'unreadable'}`);
+      }
       if (text.trim()) {
         try { report = JSON.parse(text); } catch { throw new Error(`the ferry report ${o['ferry-report']} is there and does not parse, so what the crossing did is unknown`); }
       }
     }
+    if (exit === 0 && report === null) {
+      throw new Error(`the crossing exited 0, so its ferry ran, and its report ${o['ferry-report'] ? `${o['ferry-report']} is missing or empty` : 'was not named (--ferry-report)'}: what it delivered is unknown`);
+    }
     const decided = mailDecided(resolve(o.repo), {
-      attempt: o.attempt, decidedAt: o['decided-at'] ?? new Date().toISOString(), exit: Number(o.exit),
+      attempt: o.attempt, decidedAt: o['decided-at'] ?? new Date().toISOString(), exit,
       stage: o.stage, ferryReport: report, fetch: !o.noFetch,
     });
     const { path, fresh } = owe(resolve(o.owed), decided);

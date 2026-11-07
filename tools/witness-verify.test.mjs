@@ -21,7 +21,7 @@ import { fileURLToPath } from 'node:url';
 
 import { GENESIS, keyIdOf, mailDecided, makeRecord, owe, owePending, publish, recordPath, recordText } from './witness-chain.mjs';
 import { verifyChain } from './witness-verify.mjs';
-import { GIT_ENV, keypair, scratchTown } from './witness-test-fixture.mjs';
+import { GIT_ENV, ferryReportOf, keypair, scratchTown } from './witness-test-fixture.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const CLI = join(HERE, 'witness-verify.mjs');
@@ -192,7 +192,7 @@ test('THE LEDGERS: an earlier mail line rewritten after its record was published
   town.writeLedgers();
   town.commit('rewrite an old line');
   town.git(town.repo, 'push', '-q', 'origin', 'HEAD:main');
-  owe(town.owed, mailDecided(town.repo, { attempt: 'run-4', decidedAt: '2026-11-04T12:00:30.000Z', exit: 0, stage: 'done', ferryReport: { ran: true, crossing: 294 } }));
+  owe(town.owed, mailDecided(town.repo, { attempt: 'run-4', decidedAt: '2026-11-04T12:00:30.000Z', exit: 0, stage: 'done', ferryReport: ferryReportOf(294) }));
   assert.equal(publish({ repo: town.repo, owedDir: town.owed, privateKeyPem: town.witnessKey.privatePem }).status, 'published');
   const r = verify(town, 'origin/main');
   assert.equal(r.verdict, 'fail');
@@ -238,7 +238,7 @@ function chainOf(t, decideds) {
 }
 
 test('AN INCOMPLETE RECORD is a gap the chain admits: incomplete, never a pass', (t) => {
-  const town = chainOf(t, (tw) => [mailDecided(tw.repo, { attempt: 'a', decidedAt: '2026-11-06T00:00:30.000Z', exit: 0, stage: 'done', ferryReport: { ran: true, crossing: 291 } })]);
+  const town = chainOf(t, (tw) => [mailDecided(tw.repo, { attempt: 'a', decidedAt: '2026-11-06T00:00:30.000Z', exit: 0, stage: 'done', ferryReport: ferryReportOf(291) })]);
   owePending(town.owed, { kind: 'mail-crossing', event: 'crossing:292', attempt: 'b', openedAt: '2026-11-06T12:00:00.000Z', pid: deadPid() });
   publish({ repo: town.repo, owedDir: town.owed, privateKeyPem: town.witnessKey.privatePem });
   const r = verify(town, 'origin/main');
@@ -247,7 +247,7 @@ test('AN INCOMPLETE RECORD is a gap the chain admits: incomplete, never a pass',
 });
 
 test('A MISSING CROSSING between two records is incomplete, named by number', (t) => {
-  const town = chainOf(t, (tw) => [291, 293].map((n) => mailDecided(tw.repo, { attempt: `r${n}`, decidedAt: `2026-11-0${n - 290}T00:00:30.000Z`, exit: 0, stage: 'done', ferryReport: { ran: true, crossing: n } })));
+  const town = chainOf(t, (tw) => [291, 293].map((n) => mailDecided(tw.repo, { attempt: `r${n}`, decidedAt: `2026-11-0${n - 290}T00:00:30.000Z`, exit: 0, stage: 'done', ferryReport: ferryReportOf(n) })));
   const r = verify(town, 'origin/main');
   assert.equal(r.verdict, 'incomplete');
   assert.match(r.incomplete.join('\n'), /crossing 292 between 291 and 293 has no record/);
