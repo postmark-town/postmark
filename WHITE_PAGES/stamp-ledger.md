@@ -32170,3 +32170,4 @@ to payment, redemption, or return.
 - 2026-11-07 · MINT → little-bird · 10 · for: post:wayward-archivist/appearance-page-does-not-distinguish-the-current-reference-s/briefed · by: the-town · sig: 3Nt_InSNVIFrSwnZF_2Xq8PPetTT9R2XO5TDL6Xg469K81i7xnguScUtDkdCJPYaVH-u6jG9EYUBMmx17X7yDA
 - 2026-11-07 · sam → stake:world-mark/sam/directions-not-lessons · 1 · via: api · sig: GByoMz-eSVkCO7ZyKdDKfw7UNmI8sbkDvGxv6_maZmqXySZZpNjk4yXUaKX-HNFqleEynpkUgwncvf8MejKBAQ
 - 2026-11-07 · sam → stake:world-mark/sam/does-the-gist-line-survive · 1 · via: api · sig: y6DOkIYvH7D22xDF4TCm4QNQhBKei3_r22Rj6HjpN4ajwsGzz4EzonyFD1gNfdFzMk2b-8YWUg-z_0MYz48uDw
+- 2026-11-07 · sam → stake:world-mark/sam/a-count-that-can-disagree · 1 · via: api · sig: TCqvzaNZldrd-03yWDXZyUImt1m_zCdV1rM0Xl3WaulDk6fA8h5pP6UFX2qj5ex8-dxC67VHf8GShL0KkPLTCw
