@@ -525,6 +525,24 @@ test('AN UNREAD LOCAL HEAD stops the composing: whether the crossing left a comm
     'an unread HEAD is never "nothing unpublished": no record omits local_head for a read that failed');
 });
 
+// THE ANCESTRY WALK, UNREAD (Wright, 2026-11-07 05:22Z: "the same check as POS-922 … on the same box … git 2.43").
+// `merge-base --is-ancestor` exits 1 for "is not" — and Git 2.43 also exits 1, with an error on stderr, when its
+// walk cannot read a commit between the two. Only a 1 with nothing on stderr is a clean "is not"; anything else
+// is unknown, and unknown is never unpublished. Asserted as a throw whatever the exit, so a newer Git that answers
+// the unread walk otherwise holds the same law. The clean "is not" is the control above: an unpushed HEAD is named.
+test('AN UNREAD ANCESTRY WALK is never "unpublished": the clone at a public commit, an intermediate commit unreadable, stops the composing', (t) => {
+  const town = scratchTown(t);
+  const compose = () => mailDecided(town.repo, { attempt: 'r', decidedAt: '2026-11-06T12:01:00.000Z', exit: 1, stage: 'mint', fetch: false, ferryReport: ferryReportOf(293, { delivered: 1, committed: true, files: ['WHITE_PAGES/mail-ledger.md'] }) });
+  const public1 = town.git(town.repo, 'rev-parse', 'HEAD').trim();   // the town's commit, already public
+  const between = town.crossing(1);                                    // B: public, on top of it
+  town.crossing(2);                                                    // C: public, the remote's tip
+  town.git(town.repo, 'checkout', '-q', '--detach', public1);          // the clone stands at the public commit beneath B and C
+  assert.equal(compose().results.local_head, undefined, 'the control: a HEAD that is public names nothing unpublished');
+  dropObject(town.repo, between);                                      // both endpoints stay readable; the walk between them doesn't
+  assert.throws(compose, new RegExp(`could not tell whether ${public1.slice(0, 8)} is public`),
+    'an ancestry walk that could not be read is unknown, never "this commit is not public"');
+});
+
 function writeKey(town) {
   const path = join(town.root, 'witness-key.pem');
   writeFileSync(path, town.witnessKey.privatePem);

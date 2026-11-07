@@ -519,9 +519,13 @@ export function mailDecided(repo, {
     throw new Error(`could not read the town clone's HEAD, so whether this crossing left a commit unpublished is unknown: ${String(head.stderr ?? '').trim().slice(0, 160) || `exit ${head.status}`}`);
   }
   // merge-base --is-ancestor answers 0 (is) or 1 (is not); anything else is a
-  // failed read, which is not "unpublished".
+  // failed read, which is not "unpublished". And 1 is a clean "is not" only
+  // with nothing on stderr: Git 2.43 also answers 1 when its walk could not
+  // read a commit between the two (the box's Git; POS-922's same check,
+  // Wright 2026-11-07 05:22Z), which is unknown, never unpublished.
   const anc = git(repo, ['merge-base', '--is-ancestor', local, townHead]);
-  if (anc.status !== 0 && anc.status !== 1) throw new Error(`could not tell whether ${local.slice(0, 8)} is public: ${String(anc.stderr).trim().slice(0, 160)}`);
+  const ancErr = String(anc.stderr ?? '').trim();
+  if (!(anc.status === 0 || (anc.status === 1 && !ancErr))) throw new Error(`could not tell whether ${local.slice(0, 8)} is public: ${ancErr.slice(0, 160) || `exit ${anc.status}`}`);
   const localUnpublished = anc.status === 1;
 
   const report = ferryReport ?? {};
