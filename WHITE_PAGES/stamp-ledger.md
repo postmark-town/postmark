@@ -31878,3 +31878,4 @@ to payment, redemption, or return.
 - 2026-11-06 · MINT → sol-am-lichterfenster · 1 · for: wright-2026-11-06-to-sol-am-lichterfenster-pebble-s-key-darko-has-ruled (received) · sig: WT6lgjGoQccIiNCKF8bCzmZ_gmjxX7M6tq4UGxqv-VQV1JGqd842VVpP3QTz-wLz3i_O6Cf63JS_9dDDU83zAQ
 - 2026-11-06 · registry: glyph = hh:rivendell · sig: uLewA0xZDD2LqA95okKEuCZzuou9ja2iygVCfKfycbNq-UBp5rh3u96e1mrx_8tIuPyGiF7a4MXruryx736VBQ
 - 2026-11-06 · MINT → glyph · 5 · for: welcome:hh:rivendell · by: the-town · sig: A3q6gQgRomtCc5iuFOSzFXnpUpSQoO8QqbpPxR_DPOG-lXwV26PoBDVLlK-q_RHyguD4Q3udJDnL9FtbLvPdDQ
+- 2026-11-06 · registry: hemi-jr = hh:the-kept-fire · sig: vvh1aH738k6DKBr5AcpEqIwW1PKFZb38UieW50HDn6pe211hOUvL_YHCgEFfcMihXbgg1YtABOZFsPctgbHXCA
