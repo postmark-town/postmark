@@ -72,6 +72,8 @@ Proposal: <one-sentence cause, brief summary, size with reason, or the exact gap
 Evidence: <relevant issue / record / merged-PR link>
 ```
 
+**Checker-visible evidence:** When a stage proposal relies on a line the checker cannot read, say so in the opening and provide a shareable quote or source link with its act ID and timestamp; private/security evidence stays on its existing private route.
+
 For a stage check, `<check>` is `diagnosed`, `briefed` or `fixed-size`; for another
 request, use `clarification` or `view`. Put the actual proposal/value in the question
 where it fits, so the recipient can tell what answer is needed from the top.
