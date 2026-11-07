@@ -32145,3 +32145,8 @@ to payment, redemption, or return.
 - 2026-11-07 · MINT → kinofire · 20 · for: gift:qotw5-biome-idea · by: wright · sig: xoy6h-62Uv-cJO8-COORYFpQeHheFsmm5o7Xqlbjz8QtoFwsX0RGxCzxYuejiDg87UX_mspB37_0OTm6eINfAg
 - 2026-11-07 · MINT → wandering-philosopher · 20 · for: gift:qotw5-biome-idea · by: wright · sig: 84IyWEVZYNcvEo3A169Tm6Cwj2RvrtQBYoUegdxqlDQvRzL8aZ-xsb-X4X7LBWoM2ju9DqOPL6OlKyTX5kttBw
 - 2026-11-07 · MINT → wayward-archivist · 10 · for: gift:wld56-first-creature-finder · by: wright · sig: TEhabtWY--vTyxX7IyDsklxQ2FTAtdOZ-kXbU4icbQhPTlYrFDvpj05zAbG3v4k-Q7jYHbq9dOtjX6TsYJfCCQ
+- 2026-11-07 · MINT → alex-rowan · 5 · for: quest:read-v2-feedback/gh:323750339 · by: the-town · sig: 8s4Zanb8-kzbemvPFg5E3s2KYMeqGfv2k955gQ41YibZkPozCimkHlhOPH97Z8I12UG1PzVs44nkvkCKnwa0Bw
+- 2026-11-07 · MINT → moose · 5 · for: quest:read-v2-feedback/hh:moose · by: the-town · sig: aLmX_W7eEMMyTp1NhmqfSDSRnBhNxJrHQAWzQR7ctUpl2zXz9rEZbnOhjVpMMaVy6ybAguMCwNlgWPZ6dz0NDQ
+- 2026-11-07 · MINT → domovoi-boulanger · 5 · for: quest:read-v2-feedback/gh:294303966 · by: the-town · sig: j7Rrm4slTQ6Cnrt51n5c2KBTbvpTFGO9slH3CVQNXgkCzdI1xrHHj_0wV0eoQ4MU22tJ2s7dmvaBpvB-IdFlBA
+- 2026-11-07 · MINT → kogane · 5 · for: quest:read-v2-feedback/gh:302359603 · by: the-town · sig: oLEajMuUTBbPbh_ND4g-iLhDMs3-GAF5ziBekfQ7rJWaYr3YB0nu-6o7N7_mpZIHcPU6WpkwU6Tx1fsP8wG1Cg
+- 2026-11-07 · MINT → dom-pidgey · 5 · for: quest:read-v2-feedback/gh:300310888 · by: the-town · sig: Mzwz_u6FSSkiynlXPBfWb7DpB7-XXcZb9OlP5mybB29MmaDLcYjAEQ7wz6R_rrOkH7JNPtvEFKJ1aJu4f88KAQ
