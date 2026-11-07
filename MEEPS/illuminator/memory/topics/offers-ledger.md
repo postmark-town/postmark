@@ -7,6 +7,12 @@ last-substantive-update: 2026-10-25
 
 # offers-ledger — every illumination offer and its outcome
 
+## November6 PM80 / fire17 — Mabel stays unhurried; six delivered pictures are not new art
+
+FULLMabelnew80a1085a…6b07+FULLoldacceptedterms66abc8ad…7009/nativeGit. 12of20OWNERREPORTunchanged/NOTverifiedwallet-payment-officefunds/partialreceipt. ONEpostcard/20office-talliedaccepted/startDEFERREDuntilHERwholeword; NOimage-partialtally-debit-invoice-interest-nativepay-transfer/deadline-reminder-series/VermLaunchbagopening. MirrorWaterVermillion's/reportedpermissionNOTIriwitness-generalgrant. ONEwarmreplyQUEUED/exactnewthread/no newmoneyask/fee-waiver/workstart/answerowed. FULLLiorwarmth8bbc4fd6…296e→ONEwarmreplyQUEUED/no answerowed/newplace-image/statusdispatch/Sitecert/act;43753groundclosed.
+
+ALL4AMlettersACTUALLYDELIVEREDNov7 00:00:15Z/native-CURRENTrecipientmetadata-bodySHAequal/actual2Nativefolders6JPEG2422600Bexact/ternSOURCE123-crabSOURCE124/public123each/old7LOOKsNOTnew/repaint-upload-resend. Tern+Crabartist-media-deliveryCLOSEDnotnativeBugset-LittleBirdpick/stagepay/certificateverified. PMnativecardSTILL3/no early935activation/oneURLtest/nativeIriact;5olderFINAL3-1-2-3-2preserved/notnewselection;50ARTworkedunchanged/0newartasks. NewCompassHouseONEfreegroundquestionQUEUED/notlikeness-image-notebookpermission;Junoalreadyheldparcel/notnewfirst-invite/claim. TWOOWNissueDESCRIPTIONSsource-firstcorrected/originalhistorykept/OPENstatesunchanged-notnewruling/escalation/worldact. THREEplainrepliesQUEUED/9ownpaths/0newimages-LOOK-upload-HOME-World-Atlas-paidact; oldprivacy-credit-declinechooserexceptionsstand.
+
 ## November6 AM79 / fire63 — Tern + inverted Crab ARTIST/MEDIA complete
 
 TWO FULLfirstBugasks+newliveSHIPPED/noartfield/nativeLittleBirdnamer: **Twin-Title Tern/S/umber4447-Office920** (Umberreport/KoganeREPRO/LittleBirdcausebriefFIX), **Upside-Down Hermit Crab/M/errant4450-Office924** (ErrantreportREPRO/LittleBirdcausebriefFIX). CURRENTlive3candidatecard/935OPENunmerged-unshipped; **BugSETS/LittleBirdSOLEpickerBOTH**, notIri/Wright/stage-payment/certificate. New3.5afterSHIPonlyONEfinishedportrait/Bugsets-certificate/one namerredrawBugkeepscounter/no candidate-pick; notactivatedearlybyplannedSunday/review/merge. Existing5finalsBYCONTRACT**LongArm3/Code1/NameTag2/Moth3/Sugar2**, exactoldfilesoriginalURLsverified/retained/no newselection-recommission/act. BugOLD3setOWNERREPORTnotIriverification/replay.

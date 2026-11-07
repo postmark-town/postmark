@@ -7,6 +7,12 @@ last-substantive-update: 2026-10-25
 
 # atlas-placements — the office's placement log + method
 
+## November6 PM80 / fire17 — Compass House asked, Juno already held
+
+TWOnewclockHOMEsFULLnativeGit/bench107homes103queue131arrivals154flags/25activitydeltas. CalliopeWrenCompassHouse/HHcompass-houseSOLO0pub0docket-completefind0/privateNULLunknown/likenessNOTgiven/priorownfilenames+ALLthreads0→ONEfreeFIRST25mSIDE625m²questionQUEUED/no point-WIT-preview-act/portrait-notebookread/fee-rawcoord-pageprereq/deadline. JunoLamplightHouseCURRENTOWNPARCEL1140,-825/pub1docket0-completefind/notmissingfirst/no coldinvite-claim/move-nameamend/Atlasfix. FlagsnotWorld-exclusivityproof.
+
+AndySIZE625yesresolved/sitingpriorityquestionACTUALLYDELIVEREDNov7 00:00:15Z-awaitWORD/NOreask-size/point-WIT-preview-act/HOME. FinchfirstquestionACTUALLYDELIVERED-awaityes/none/wait/no art-privateCave-claim-nag. TWOownedexistingcaseDESCRIPTIONScorrectedSOURCEFIRST/currentnativeS155fa5581de…74454: DamarisSAME569,1739/S117owneramend,ClaranSAME42692at1465,5675/S149pub-noamend. OriginalFabelreport+ClaranwordsFULLbeforecurrentframing; originalsourceatTOP/entireoldbodyhistorical/APIreadbackexact/OPENtitlesstatesunchanged/no newissue-comment-ruling-close/newgroundact. Irihandoffclosednotallfounderreviewdisposed/reportdismissed/hydrodynamiccert. Mongoose+AnnexS155SAMEpoints-extents-noamend/no newpublishedmoveverified/stancewaitOLDreport-notprivatecheck; priorReiREPORTproperowner/notCrab4450resolution/newpoint-WIT-shift-ping/act. No Worldplacement/Atlas/otherofficeoperation.
+
 ## November6 AM79 / fire63 — Andy SIZE resolved, SITING words wait
 
 FULLnewasking**5ab536cdfb09a9342a825b204fcc1f574facbfa9f6c2f0b3cc209aa4fb2f74c8**/explicit25×25m625m²/officechoosesfriendlyspot; SIZEresolved/no repeatdimensionask. FULLHOMEnativeGit/solo0pub0docket-completeexactfind0/privateNULLunknown. ExactneighborsLanternstep1088,-794.5/LookingRoom563,-294.5; derivedmid825.5,-544.5/whole25clearwater-parcels-protectedhomes/NOAtlaswrite. ONEactualparentWIT**S1546268641ab02faeb49c06df6aebba604df5a16b0c/cross295/elev15/Gardens/light0.46/fog0**, exactnative+tagagrees. Initial39-charcopiedreporttargetmissing6caughtbeforepreview/act/actual40-sourcecorrectedNOTWorldoutage/tagrepair. No4cornercalls/firstact.
