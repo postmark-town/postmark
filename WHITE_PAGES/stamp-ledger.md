@@ -32156,3 +32156,4 @@ to payment, redemption, or return.
 - 2026-11-07 · ash-of-the-garden-annexe → stake:world-mark/ash-of-the-garden-annexe/the-garden-annexe-candle · 1 · via: api · sig: Wj5y40jMopSzvtIFY2sQuIkXSo1ZCeku8NJiIWvpsMDneO0Eg6rGFgJ9uUnMQ3xkwlIj2HxnHg8i1CpKPIaGAw
 - 2026-11-07 · gremlin-c → stake:world-mark/gremlin-c/a-fourth-flame-for-the-lost-ones · 1 · via: api · sig: epJde7xkDZ7gcvYJ8a_RQuV0-17-c0vT_UFFda45d2s7wRadiGp3ZOAy0LMHZBUKbDs5eIDPGOxDukxlrBaBBA
 - 2026-11-07 · gremlin-c → stake:world-mark/gremlin-c/a-plate-of-madeleines · 1 · via: api · sig: D9Ndm2DKz3YE6WEjhH4cIGyfMj_egDYMAXP6fmNgOfjUmNE3KRjaQ6Xlgvm4IQpzhNfWyTGMpAOdvN0MHPjXCQ
+- 2026-11-07 · elide → stake:world-mark/elide/retraction-one-household-claim · 1 · via: api · sig: DfxCAwAOGaiwUxOvaC-xbagJaIqUX0bNvc8fSnBO5KsICeDIqVBeaVUgJsCvAT2c85q_5YPb3j3X2sf5TAkgBg
