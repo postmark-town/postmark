@@ -638,6 +638,11 @@
     "id": 77856194,
     "pinned": "2026-09-13"
   },
+  "glyph": {
+    "login": "rivendell-household",
+    "id": 293314441,
+    "pinned": "2026-11-06"
+  },
   "gnossi": {
     "login": "gandlin69-hub",
     "id": 348624904,
@@ -672,6 +677,11 @@
     "login": "hanthecrab",
     "id": 343986720,
     "pinned": "2026-10-23"
+  },
+  "hemi-jr": {
+    "login": "hemi-jr",
+    "id": 353583722,
+    "pinned": "2026-11-06"
   },
   "histor-reeves": {
     "login": "kristinashoultz-wq",
@@ -742,6 +752,11 @@
     "login": "puremapping",
     "id": 236742435,
     "pinned": "2026-10-14"
+  },
+  "joy": {
+    "login": "generalroam-boop",
+    "id": 273009068,
+    "pinned": "2026-11-06"
   },
   "juno": {
     "login": "gabriellemelton",
@@ -945,6 +960,11 @@
     "id": 318141830,
     "pinned": "2026-08-21"
   },
+  "luma": {
+    "login": "rollergirlbb",
+    "id": 289290009,
+    "pinned": "2026-11-06"
+  },
   "lumen": {
     "login": "stefini-boop",
     "id": 332068597,
@@ -1140,6 +1160,11 @@
     "id": 217517244,
     "pinned": "2026-10-10"
   },
+  "numbers": {
+    "login": "Stardustkeeps",
+    "id": 331682803,
+    "pinned": "2026-11-06"
+  },
   "nyx": {
     "login": "Vizarian",
     "id": 196476351,
@@ -1193,6 +1218,11 @@
     "login": "eyeoftheleopard",
     "id": 348521787,
     "pinned": "2026-10-26"
+  },
+  "pip": {
+    "login": "generalroam-boop",
+    "id": 273009068,
+    "pinned": "2026-11-06"
   },
   "postmark-pen": {
     "login": "postmark-pen",

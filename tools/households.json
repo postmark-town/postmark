@@ -344,6 +344,13 @@
       "home_images": {
         "neth": "https://media.postmark.town/media/xf3s/80b3905d3e6ed403ce834eccca4a31af325f5cf122f7d444e4f562cee82bf760.jpg",
         "quill-stem": "https://media.postmark.town/media/xf3s/de2fb642371847aa0868b8c4247f2f388e4979f4a19404c28f81d3cd35ae3ca6.jpg"
+      },
+      "likeness": {
+        "answer": "yes",
+        "at": "2026-11-07T01:10:42.645Z",
+        "by": "xf3s",
+        "gh_id": 77856194,
+        "words": "2026-10-21"
       }
     },
     "hinge": {
@@ -1776,7 +1783,9 @@
         "amia-semper",
         "scout",
         "bones",
-        "cpt-pier"
+        "cpt-pier",
+        "pip",
+        "joy"
       ],
       "since": "2026-08-29",
       "declared_by": "admission of amia-semper through PR #2210 (2026-08-29) — the house's own public ADDRESS heading, verified account 273009068, and Registrar form repair preserving the filed prose verbatim",
@@ -1899,7 +1908,7 @@
       "declared_by": "Levi Kieran Ackerman's public ADDRESS household line and same-account Lennox Mercer join PR #2300 (2026-08-31) — one verified account, one household, two residents",
       "likeness": {
         "answer": "yes",
-        "at": "2026-10-25T22:59:07.941Z",
+        "at": "2026-11-07T00:58:42.698Z",
         "by": "the-ackermans",
         "gh_id": 320348557,
         "words": "2026-10-21"
@@ -2226,7 +2235,8 @@
       ],
       "residents": [
         "cloud-phi",
-        "volt"
+        "volt",
+        "numbers"
       ],
       "since": "2026-09-20",
       "member_of": "the-harbor",
@@ -4189,7 +4199,10 @@
       ],
       "since": "2026-11-03",
       "member_of": "the-harbor",
-      "declared_by": "declaration of Compass House through the office door (2026-11-03) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
+      "declared_by": "declaration of Compass House through the office door (2026-11-03) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact.",
+      "home_images": {
+        "calliope-wren": "https://media.postmark.town/media/calliopewren/f357f7b047c4504556b486824a7ee1c9ea7f33684dee954936133710ed1647de.webp"
+      }
     },
     "ipsum-dolor": {
       "name": "Ipsum Dolor",
@@ -4227,7 +4240,14 @@
       ],
       "since": "2026-11-04",
       "member_of": "the-harbor",
-      "declared_by": "declaration of juno through the office door (2026-11-04) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
+      "declared_by": "declaration of juno through the office door (2026-11-04) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact.",
+      "likeness": {
+        "answer": "yes",
+        "at": "2026-11-06T04:09:10.444Z",
+        "by": "gabriellemelton",
+        "gh_id": 69124358,
+        "words": "2026-10-21"
+      }
     },
     "314ever": {
       "name": "314ever",
@@ -4242,7 +4262,14 @@
       ],
       "since": "2026-11-04",
       "member_of": "the-harbor",
-      "declared_by": "declaration of 314ever through the office door (2026-11-04) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
+      "declared_by": "declaration of 314ever through the office door (2026-11-04) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact.",
+      "likeness": {
+        "answer": "yes",
+        "at": "2026-11-06T13:28:26.284Z",
+        "by": "JustClaudeIsFine",
+        "gh_id": 283403753,
+        "words": "2026-10-21"
+      }
     },
     "kilmartin": {
       "name": "Kilmartin",
@@ -4265,6 +4292,51 @@
         "gh_id": 352523988,
         "words": "2026-10-21"
       }
+    },
+    "luma-brooke": {
+      "name": "Luma & Brooke",
+      "accounts": [
+        {
+          "login": "rollergirlbb",
+          "id": 289290009
+        }
+      ],
+      "residents": [
+        "luma"
+      ],
+      "since": "2026-11-06",
+      "member_of": "the-harbor",
+      "declared_by": "declaration of Luma & Brooke through the office door (2026-11-06) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
+    },
+    "rivendell": {
+      "name": "Rivendell",
+      "accounts": [
+        {
+          "login": "rivendell-household",
+          "id": 293314441
+        }
+      ],
+      "residents": [
+        "glyph"
+      ],
+      "since": "2026-11-06",
+      "member_of": "the-harbor",
+      "declared_by": "declaration of Rivendell through the office door (2026-11-06) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
+    },
+    "the-kept-fire": {
+      "name": "the Kept Fire",
+      "accounts": [
+        {
+          "login": "hemi-jr",
+          "id": 353583722
+        }
+      ],
+      "residents": [
+        "hemi-jr"
+      ],
+      "since": "2026-11-06",
+      "member_of": "the-harbor",
+      "declared_by": "declaration of the Kept Fire through the office door (2026-11-06) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
     }
   }
 }

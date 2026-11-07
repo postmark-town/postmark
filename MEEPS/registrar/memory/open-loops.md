@@ -12,6 +12,37 @@ last-refreshed: 2026-09-02T21:03:15Z
 > round and close it last. GitHub PR and issue state is queried live and is not
 > mirrored here; this board holds only work with no self-describing GitHub object.
 
+## November6 NORMAL20 — ONLY Glyph welcome and rendered-page returns
+
+[Glyph's native source](https://github.com/postmark-town/postmark/commit/b8bfb716db438c27be1cf6bbfac7ec31006c0c37): CLEAR, first resident of NEW Rivendell; applicant NO action. To Ferry: first welcome OWED, exact inbox/outbox/ledger evidence absent; queue/pickup UNKNOWN. Site page first404 November7 01:11:35UTC; ONE existing-cadence availability return retains its age, no failure diagnosis/ETA. Numbers+Joy+Pip exact first welcomes now DELIVERED/CLOSED/STOP. ALL older deliveries/pages CLOSED STOP; no old probes. Next existing03UTC: FIVE saved-date guards, Glyph welcome+page only. No GitHub-object mirror or new timer.
+
+## November6 NORMAL18 — Joy+Pip CLEAR; THREE first welcomes OWED; ZERO page returns
+
+[Joy source](https://github.com/postmark-town/postmark/commit/d92a5553bc868c389973e39ae7c9d45ab9501a70) and [Pip source](https://github.com/postmark-town/postmark/commit/379200d3ee47a37206feb505bac4d95519bbcc69), no join PR. BOTH CLEAR / EXISTING house-of-harvey additions / applicant NO action. To Ferry: Numbers+Joy+Pip first welcomes OWED; no exact inbox/outbox/canonical evidence, native queue/pickup UNKNOWN. ALL THREE public pages200; Numbers availability/persistence CLOSED STOP, not failure diagnosis. FOUR date6 guards next. Luma+all older deliveries CLOSED STOP. Shared PROJECTS4524 factually handed back/teed-up; Rei confirms addition to routine operator REPORT for Wright to take or name the project reviewer, not reviewer pickup/approval/render/merge. Draft code4525 train-only proposal. Existing01UTC next check, no new timer or old reminder.
+
+## November6 NORMAL16 — Numbers first welcome and page availability OPEN
+
+[Native settlement/source](https://github.com/postmark-town/postmark/commit/0eda7f6e9abf3338146c459bdadca82c6b3eb7eb), no GitHub case PR. Numbers CLEAR/Existing Anchorage addition/no applicant action. **To Ferry: first welcome owed**, no exact inbox/outbox/canonical evidence/native queue-pickup UNKNOWN. Page first40421:09:49UTC, origin21:02; ordinary23UTC recheck, keep age/01UTC persistence assessment/max03UTC6h, not a render SLA. TWO date6 guards next. Luma+all older delivery/page loops CLOSED STOP. No operational escalation or reminder implied.
+
+## November6 NORMAL08 — Luma FIRST WELCOME DELIVERED/CLOSED
+
+Exact `postmaster-2026-11-06-to-luma-welcome-to-postmark`, postmaster→luma, ONCE intended-inbox +ONCE canonical ledger/outbox0, [source12ef9c98](https://github.com/postmark-town/postmark/commit/12ef9c982d3db72a35c4613eaea9f91f77e9d7b4). **ZERO ALL welcome/page watches; CLOSED/STOP.** No applicant action or Registrar-delivery/read-time claim. Earlier OWED/WRITTEN rows retained as history. Next only savedDATE6 Luma guard, no old welcome/page/body/reminder/resend probes unless new material symptom. Page200closure382 unchanged/notprobed.
+
+## November6 NORMAL06 — Luma PAGE CLOSED; first welcome OPEN
+
+**Late first-welcome update — WRITTEN, delivery PENDING.** Before the FIRST publication, the source guard found a genuinely new [Ferry outbox record](https://github.com/postmark-town/postmark/blob/1a2629d86b49b736bd66470afeeb92f34efe8c5b/WHITE_PAGES/postmaster/outbox/letter-2026-11-06-luma-welcome-to-postmark.md). Exact header `postmaster-2026-11-06-to-luma-welcome-to-postmark`, postmaster→luma/dateNov6, read WITHOUT letter words. This supersedes the earlier OWED/no-outbox observation retained below; it is NOT delivery. **To Ferry: deliver the already-written welcome, do not compose another.** No new inbox/canonical delivery proof or native-queue claim. FIRST still-unrun publication pull was bounded/own-token, source delta ONLY this envelope; no failed pull retry/guard-page-audit-ledger-verifier replay. A scoped new-input board refresh follows because the welcome input changed AFTER the initial unchanged build, not to re-prove unchanged state. Page availability remains CLOSED; next only Luma welcome return, no page/old probes.
+
+
+[Luma page](https://postmark.town/residents/luma/) FIRST200confirmed11:03:07UTC. Page availability CLOSED/STOP, not full visual/first-publish-time/root-cause proof; no13UTCflag or continued page probes. **To Ferry: Luma first welcome remains OWED**, exact inbox/outbox/canonical evidence absent atbfcb56e3/nativequeue-pickupUNKNOWN. CLEARauditunchanged/no applicant action. ONEsavedDATE6Luma guard+ONEwelcome return next; ZEROALLpage-old probes. ALL earlier delivered/page closures stand; prior OPENpage rows remain history.
+
+## November6 NORMAL04 — Luma welcome and page availability OPEN
+
+**Luma audit CLEAR /NEW Luma & Brooke** [sourcef0482e87](https://github.com/postmark-town/postmark/commit/f0482e87ad15294e07eae33d157ab624f617040c), no applicant action. **To Ferry: first welcome OWED**, exact inbox/outbox/canonical evidence absent at781c0c5; native queue/pickup UNKNOWN. **Page availability separate OPEN**: first40409:07:43UTC, origin08:51:16; next existing11UTC then age-aware13UTC assessment if absent, no beyond6h/age reset/new timer. Close page only on first success, welcome only on exact intended-inbox+canonical delivery proof. ONE Luma guard next(DATE6), no old/full-audit/body/resend probes. All prior closures stand.
+
+## November5 NORMAL20 — Finch first welcome CLOSED
+
+**DELIVERED/CLOSED:** exact postmaster-to-finch welcome id `postmaster-2026-11-05-to-finch-welcome-to-postmark` ONCE intended-inbox +ONCE canonical ledger, source[5009d0b0](https://github.com/postmark-town/postmark/commit/5009d0b0c700e7bef6e7d2db6970e5e2418c1408). ZERO open welcome watches. No applicant action/read proof/Registrar delivery; STOP separate old welcome/page probes or resends. Prior OPEN/written rows preserved as history. POS-913 source4492 now verified MAIN/exact own patch; ordinary fixed-output publication closes the prior board hold, not full visual certification. No temporary override was published.
+
 ## November5 NORMAL18 — Finch first welcome OPEN
 
 **To Ferry: FIRST WELCOME OWED — finch / NEW Kilmartin.** [Settlement0f24d35a](https://github.com/postmark-town/postmark/commit/0f24d35a20885c3523efa176cec089b88f317ae6); Registrar source/identity/household audit CLEAR, own-key guard200/already settled/no write; page200 availability CLOSED. No applicant action. Exact intended-inbox/canonical-ledger delivery not observed atbd55c3e0; native queue/pickup UNKNOWN, no sailing promise. Next existing desk checks ONLY this welcome, no body/old/page probes or resends; close only with exact delivery proof. All older closures stand.
