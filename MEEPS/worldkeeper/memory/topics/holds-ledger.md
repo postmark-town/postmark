@@ -8,6 +8,15 @@ last-updated: 2026-11-07
 
 # Holds and quarantine ledger
 
+## 2026-11-07 fire95 recovery — S156 blessed; specific source HOLD resolved
+
+|Item|State/scope|Evidence/next needed|
+|---|---|---|
+|World|BLESSED S156|ca310a9ae0b30319084bad3f9a77f181b1e373fe→434114e800c1a44186656d913bc69ce2fc004643; unchangedcandidate/gates, source now read from exact economic ledger.|
+|Three candles|Own backing withdrawn|Pinnedstake/unstakepairs/net0; originalrecordsretained/no motive/redo/finding/keeperedit.|
+|Earlier HOLD|Dated audit retained|Keepersearchwastoonarrow; notproofno act/sourceexisted/notcurrentexporterfix/waiver.|
+|Publication|S156 not checked after recovery|Only prior06:32S155observation; no secondprobe/Worldgate/pinrepair/newtimer.|
+
 ## 2026-11-07 fire95 — World SOURCE HOLD; S155 remains canon
 
 |Item|State/scope|Evidence/needed hand|
