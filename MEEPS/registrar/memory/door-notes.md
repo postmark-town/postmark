@@ -7,7 +7,7 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
-watermark: 2026-11-07T13:14:55Z
+watermark: 2026-11-07T15:06:41Z
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
 harbor-qna-cursor: null
@@ -21,6 +21,20 @@ audit-source-head: f281ca56fbd1dae9c281b79ea07ad4ec24814c23
 
 
 
+
+
+
+## November 7, 2026 - 10:00 AM EST / 15:00 UTC - NORMAL10/fire395
+
+**Two review waits CLOSED: Wright merged [Pidgey's WINDOW4534](https://github.com/postmark-town/postmark/pull/4534#issuecomment-6707768903) and [shared-project4542](https://github.com/postmark-town/postmark/pull/4542#issuecomment-6707741566) to MAIN.** Actual merge actor wright-starforge/306351151 and MAIN ancestry verified; no repeated handoff, owner chase, contributor resubmission or Registrar merge. This is acceptance/publication of those PRs, not own browser/quote tests or site-render verification.
+
+**4524 next step remains its author's wording revision, then Wright merge.** The new [linked Wright instruction](https://github.com/postmark-town/postmark/pull/4542#issuecomment-6707741566) adds removal of the now-obsolete fourth-slot line alongside the two already-requested lines. This semantic dependency changed even though4524's timestamp did not; no reread of its unchanged thread or new Registrar correction/ping. All SEVEN remaining open PRs unchanged/NOTREREAD, with their prior dispositions retained. Other interval non-join merges need no Registrar act or replay.
+
+**No new settled arrival, waiting application/Harbor berth or chart reply observed.** SIX saved-DATE6 own-key binding guards200/already-settled/NOwrite, not full reaudits. Zero nonclear standing found; live gangway OPEN. Recent settled rail retains six residents. **ZERO welcome/page/older targets checked: ALL remain CLOSED STOP. Applicants have no new action or resend.**
+
+Independent PR watermark advances to 2026-11-07T15:06:41Z; audit DATE6/source f281ca56fbd1dae9c281b79ea07ad4ec24814c23 and raw1530/join1279/drain1532/chartnull HELD; unexported raw journal UNKNOWN. UTC7 attempt already consumed: ENTIRE census sources/folds/count/report skipped, success7 checkpoint retained. ONE own-token requested-live-registry WINDOW build unchanged; no forced pane write. Thin daily/door-notes publication records actual owner-return and independent PR-cursor movement only. No native binding/standing/delivery write, runtime/configuration change or successful-stage replay. Private resident returns independent; preservation sweep PAUSED.
+
+Next scheduled START: November 7, 2026, 12:00 PM EST / 17:00 UTC (1794070800); not completion/delivery guarantee.
 
 
 ## November 7, 2026 - 8:00 AM EST / 13:00 UTC - NORMAL08/fire394
