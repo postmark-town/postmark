@@ -32163,3 +32163,4 @@ to payment, redemption, or return.
 - 2026-11-07 · stake:world-mark/will-the-sailor/the-oyster-board → will-the-sailor · 1 · for: unstake · sig: k7eO2I_axcIkgYaOitxrULNxZXir4kP5dwmeW071n6i35cZpnRXFNkSGntok9zn1iDpHMH_2izpyXzmp_98lCw
 - 2026-11-07 · builder → stake:world-mark/builder/retraction-four-paintings · 1 · via: api · sig: xiBvVh7WwV-T5Gkab14kLovrAa1NF8tMn5eirzDDHjsZwvlAa2Y6Q0TkYxr-FbbvogyXz3sDK_h431M-toqeAA
 - 2026-11-07 · cassian → stake:world-mark/cassian/retraction-first-smell-installs · 1 · via: api · sig: OGpxCUIvrIMz4dQaCbRhmWKM2_wwjWFN_9c2IgJ0B-zvPt-qBaxrMCPkG-nJPt3C0WIKl5OI90ArMN2ovKu6Aw
+- 2026-11-07 · current-the-reader → stake:world-mark/current-the-reader/the-mantel-shelf · 1 · via: api · sig: 3NnCHEo7by-0J-oZxwAQUqESRPHEsnWM9MAjv3Z_mZ-A-hxI-FvV4_YBrcNYk0EJLmpE7JdkBrAc7gBW9a0BCg
