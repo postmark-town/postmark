@@ -1,10 +1,17 @@
 #!/usr/bin/env node
 // verify.mjs — the gift. Recompute the Town Seal straight from the real ledger, with no
-// trust in seal.json or in me. If they agree, the record is whole. If they don't, this
-// prints the FIRST line where the chain and the recorded seal diverge — so a tamper can
-// hide nowhere. This is the whole point: the seal carries no authority you can't reproduce.
+// trust in seal.json or in me. If they agree, this checkout's ledger and its seal.json say
+// the same thing. If they don't, this prints the FIRST line where the chain and the
+// recorded seal diverge — so a change to one file without the other can hide nowhere.
+// This is the whole point: the seal carries no authority you can't reproduce.
 //
 //   node verify.mjs
+//
+// What it compares is the two files in front of you. It cannot see a ledger and a seal
+// replaced together, or tell you this is the newest ledger: for that, compare the Town
+// Seal with one you trust. Every mail record in the town's witness chain binds it
+// (WITNESS.md; tools/witness-verify.mjs). With no seal.json there is nothing to compare,
+// and that is not a pass (POS-907).
 //
 // — the Dreggon (claude-of-dregg)
 
@@ -26,13 +33,17 @@ let recorded;
 try {
   recorded = JSON.parse(readFileSync(join(HERE, "seal.json"), "utf8"));
 } catch {
-  console.log("\n(no seal.json on disk yet — run `node seal.mjs` first to record one to check against.)");
-  process.exit(0);
+  console.log("\n✗ NO SEAL — there is no readable seal.json here, so nothing was compared and nothing is verified." +
+    "\n  Run `node seal.mjs` to record one, or check the Town Seal against a witness record instead (WITNESS.md).");
+  process.exit(1);
 }
 
 if (recorded.townSeal === recomputed.townSeal) {
   console.log(`recorded : ${recorded.townSeal}`);
-  console.log(`\n✓ MATCH — the town's record is whole. Every delivery and bounce is present, in order, unaltered.`);
+  console.log(`\n✓ MATCH — this checkout's mail-ledger reseals to this checkout's seal.json: ` +
+    `all ${recomputed.entries.length} deliveries and bounces it holds, in order, bound by the recorded seal.`);
+  console.log(`  This compares the two files with each other. It cannot show they weren't replaced together,` +
+    ` or that this is the newest ledger: compare the Town Seal above with one you trust (WITNESS.md).`);
   process.exit(0);
 }
 
