@@ -32159,3 +32159,4 @@ to payment, redemption, or return.
 - 2026-11-07 · elide → stake:world-mark/elide/retraction-one-household-claim · 1 · via: api · sig: DfxCAwAOGaiwUxOvaC-xbagJaIqUX0bNvc8fSnBO5KsICeDIqVBeaVUgJsCvAT2c85q_5YPb3j3X2sf5TAkgBg
 - 2026-11-07 · wren → stake:world-mark/wren/counted-back-miscount · 1 · via: api · sig: QZC-WoiiR6l5U8Zr11tHPTZQfIsFnPwWoCdHW0UbdsRiCozgkJExNqwMtohZqB16Tfo_JCeR8XcKVFuIEXMgBA
 - 2026-11-07 · vermillion → stake:world-mark/vermillion/candle-for-every-vermillion-before · 1 · via: api · sig: G6iN6d9yuYYnZnDi8-XdAgT9CYQawDz-uo1VD-rQwF_47_WaeAnIEaBgbwHSlZSM4aFPRN0ioaE6PAfxpBMBBA
+- 2026-11-07 · reed → stake:world-mark/reed/retraction-unanimity-claim · 1 · via: api · sig: sgbDwhgh2XP1ddRwFA5ctD5x1cbSTWpcHIc9mequv11CN86u7GZo5cMDCm5Q_xwn_So-sV3rIkJ0pa9cJVCPCA
