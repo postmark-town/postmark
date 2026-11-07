@@ -15,7 +15,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { spawn, spawnSync } from 'node:child_process';
-import { existsSync, readFileSync, readdirSync, renameSync, symlinkSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync, renameSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -372,6 +372,95 @@ test('THE KEY FILE: a missing or unreadable WITNESS_KEY leaves the record owed (
   const r = spawnSync(process.execPath, [CLI, 'publish', '--repo', town.repo, '--owed', town.owed, '--key', join(town.root, 'no-such-key.pem')], { encoding: 'utf8' });
   assert.equal(r.status, 3, r.stderr);
   assert.match(r.stderr, /the witness key file .*no-such-key\.pem \(WITNESS_KEY\) cannot be read: ENOENT/);
+});
+
+// ── "COULDN'T READ" IS NEVER "NOT THERE", AND IT STOPS RATHER THAN SIGNS ─────
+//
+// LAW (Wright, 2026-11-07 00:51Z, AUTHORITY): "walk every read in the verifier
+// and the composer once, under one rule: 'couldn't read' is never 'not there',
+// and it stops rather than signs."
+//
+// Each case removes a real git object from a scratch repo, so the read truly
+// fails, and checks the failure is never taken for absence. Each has its
+// control: the same thing genuinely absent, or genuinely empty.
+
+/** Remove one loose object (a scratch repo's own), so reading it fails as a missing object does. */
+function dropObject(repo, sha) {
+  const p = join(repo, '.git', 'objects', sha.slice(0, 2), sha.slice(2));
+  assert.ok(existsSync(p), `the object ${sha.slice(0, 8)} is loose in the scratch repo`);
+  rmSync(p);
+}
+const blobAt = (town, ref, path) => town.git(town.repo, 'rev-parse', `${ref}:${path}`).trim();
+
+test('UNREAD HISTORY IS NOT "NO HISTORY": a record that cannot be read stops the publisher, which never starts again at record 1', (t) => {
+  const town = scratchTown(t);
+  assert.deepEqual(readChain(town.repo, 'HEAD'), { ok: true, records: [], names: [] }, 'the control: genuinely no records');
+  owe(town.owed, settlementDecided('settlement:first', { at: '2026-11-06T06:00:00.000Z' }));
+  publish({ repo: town.repo, owedDir: town.owed, privateKeyPem: town.witnessKey.privatePem });
+  town.git(town.repo, 'fetch', '-q', 'origin');
+  const before = town.git(town.origin, 'rev-parse', 'main').trim();
+  dropObject(town.repo, blobAt(town, 'refs/remotes/origin/main', 'WITNESS/records/00000001.json'));
+  const chain = readChain(town.repo, 'refs/remotes/origin/main');
+  assert.equal(chain.ok, false, 'a record git cannot read is not an empty chain');
+  owe(town.owed, settlementDecided('settlement:second', { at: '2026-11-06T18:00:00.000Z' }));
+  const r = publish({ repo: town.repo, owedDir: town.owed, privateKeyPem: town.witnessKey.privatePem });
+  assert.equal(r.status, 'owed');
+  assert.match(r.why, /the published chain could not be read, so nothing is added to it/);
+  assert.equal(town.git(town.origin, 'rev-parse', 'main').trim(), before, 'nothing was published over the record it could not read');
+  assert.equal(listOwed(town.owed).owed.length, 1, 'and the outcome stays owed');
+});
+
+test('UNREAD KEYS: an unreadable witness key is not "never published"; an unreadable stamp key does not skip the stamp-pen check', (t) => {
+  const town = scratchTown(t);
+  owe(town.owed, settlementDecided('settlement:x'));
+  dropObject(town.repo, blobAt(town, 'refs/remotes/origin/main', 'tools/stamp-pubkey.pem'));
+  let r = publish({ repo: town.repo, owedDir: town.owed, privateKeyPem: town.witnessKey.privatePem });
+  assert.equal(r.status, 'owed', 'LAW: "the witness signs with its own new key, separate from the stamp pen" — unchecked is not separate');
+  assert.match(r.why, /could not read tools\/stamp-pubkey\.pem, so the witness key cannot be told apart from the stamp pen/);
+
+  const other = scratchTown(t);
+  owe(other.owed, settlementDecided('settlement:x'));
+  dropObject(other.repo, blobAt(other, 'refs/remotes/origin/main', 'WITNESS/witness-pubkey.pem'));
+  r = publish({ repo: other.repo, owedDir: other.owed, privateKeyPem: other.witnessKey.privatePem });
+  assert.equal(r.status, 'owed');
+  assert.match(r.why, /could not read the town's WITNESS\/witness-pubkey\.pem/);
+  assert.doesNotMatch(r.why, /has no WITNESS\/witness-pubkey\.pem yet/, 'an unread key is not an unpublished one');
+});
+
+test('UNREAD LEDGERS AND FILES stop the composing: no null head, no "absent" artifact, is ever signed for a read that failed', (t) => {
+  const town = scratchTown(t);
+  const compose = () => mailDecided(town.repo, { attempt: 'r', decidedAt: '2026-11-06T12:00:30.000Z', exit: 0, stage: 'done', ferryReport: { ran: true, crossing: 293, files: ['WHITE_PAGES/crossing-ledger.md'] } });
+  const ok = compose();
+  assert.deepEqual(Object.keys(ok.heads.mail), ['lines', 'seal'], 'the control: a ledger read is a head');
+  dropObject(town.repo, blobAt(town, 'refs/remotes/origin/main', 'WHITE_PAGES/crossing-ledger.md'));
+  assert.throws(compose, /could not read WHITE_PAGES\/crossing-ledger\.md/, 'an artifact that cannot be read is never signed as absent');
+
+  const ledger = scratchTown(t);
+  dropObject(ledger.repo, blobAt(ledger, 'refs/remotes/origin/main', 'WHITE_PAGES/stamp-ledger.md'));
+  assert.throws(() => mailDecided(ledger.repo, { attempt: 'r', decidedAt: '2026-11-06T12:00:30.000Z', exit: 0, stage: 'done' }),
+    /could not read WHITE_PAGES\/stamp-ledger\.md/, 'an unread ledger is never a null head');
+
+  const gone = scratchTown(t);
+  gone.git(gone.repo, 'rm', '-q', 'WHITE_PAGES/stamp-ledger.md');
+  gone.commit('no stamp ledger');
+  gone.git(gone.repo, 'push', '-q', 'origin', 'HEAD:main');
+  const absent = mailDecided(gone.repo, { attempt: 'r', decidedAt: '2026-11-06T12:00:30.000Z', exit: 0, stage: 'done' });
+  assert.deepEqual(absent.heads.stamps, { absent: true }, 'the control: a ledger git shows is not there is recorded as absent, positively');
+  assert.throws(() => owe(town.owed, { ...ok, heads: { mail: ok.heads.mail, stamps: null } }), /heads\.stamps must be \{ lines, seal \} or \{ absent: true \}/, 'and a null head cannot even be owed');
+});
+
+test('AN UNPARSEABLE FERRY REPORT is not "the ferry did nothing": owe-mail stops; an empty report is a ferry that never wrote one', (t) => {
+  const town = scratchTown(t);
+  const reportFile = join(town.root, 'report.json');
+  const oweMail = () => spawnSync(process.execPath, [CLI, 'owe-mail', '--repo', town.repo, '--owed', town.owed, '--attempt', 'ferry-x', '--exit', '0', '--ferry-report', reportFile], { encoding: 'utf8' });
+  writeFileSync(reportFile, '{"ran": true, "delivered": 4');
+  const bad = oweMail();
+  assert.equal(bad.status, 1, 'composing stops');
+  assert.match(bad.stderr, /is there and does not parse, so what the crossing did is unknown/);
+  assert.equal(listOwed(town.owed).owed.length, 0, 'nothing signed as quiet');
+  writeFileSync(reportFile, '');
+  assert.equal(oweMail().status, 0, 'the control: an empty report is a crossing whose ferry never ran');
+  assert.equal(listOwed(town.owed).owed[0].decided.outcome.status, 'quiet');
 });
 
 function writeKey(town) {

@@ -144,6 +144,16 @@ export function checkDecided(d) {
   for (const f of ['inputs', 'results', 'heads']) {
     if (!d[f] || typeof d[f] !== 'object' || Array.isArray(d[f])) p.push(`${f} must be an object`);
   }
+  // A mail crossing's ledger heads are each read (`{ lines, seal }`) or
+  // positively absent (`{ absent: true }`); "unread" never reaches a record as a
+  // null the verifier would skip (Wright, 2026-11-07). An incomplete outcome
+  // binds no heads at all and says so.
+  if (d.kind === 'mail-crossing' && d.outcome?.status !== 'incomplete') {
+    for (const h of ['mail', 'stamps']) {
+      const v = d.heads?.[h];
+      if (!(v && (v.absent === true || (Number.isSafeInteger(v.lines) && HEX64.test(v.seal ?? ''))))) p.push(`heads.${h} must be { lines, seal } or { absent: true }`);
+    }
+  }
   if (!Array.isArray(d.artifacts)) p.push('artifacts must be a list');
   else for (const a of d.artifacts) {
     if (!a || !['town', 'world'].includes(a.repo) || !HEX40.test(a.commit ?? '') || typeof a.path !== 'string' || !a.path
@@ -349,34 +359,84 @@ function gitOk(repo, args, opts) {
   return r.stdout;
 }
 
-/** The bytes of <path> at <commit>, or null when the commit or the path is not there. */
-export function bytesAt(repo, commit, path) {
+// ── READING A FILE AT A COMMIT: "COULDN'T READ" IS NEVER "NOT THERE" ─────────
+//
+// Wright, 2026-11-07 00:51Z: "have the lane walk every read in the verifier and
+// the composer once, under one rule: 'couldn't read' is never 'not there', and
+// it stops rather than signs." A failed `cat-file` used to come back as null,
+// and null read as absent: a signed record would then call a temporary read
+// error a permanent deletion. So every read here answers one of three:
+//
+//   present     git listed the path at that commit and gave its bytes
+//   absent      git listed the tree and the path is not in it (positive evidence)
+//   unreadable  any failure: a spawn error, a non-zero exit, a missing object, a
+//               cut-off buffer, or a path that is not a file. Never absence.
+
+/** `{ state: 'present', bytes }`, `{ state: 'absent' }` or `{ state: 'unreadable', why }`. */
+export function readAt(repo, commit, path) {
+  const ls = spawnSync('git', ['-C', repo, 'ls-tree', '-z', commit, '--', path], { maxBuffer: 16 * 1024 * 1024 });
+  if (ls.error || ls.status !== 0) {
+    return { state: 'unreadable', why: `git ls-tree ${String(commit).slice(0, 12)} -- ${path}: ${ls.error?.code ?? String(ls.stderr ?? '').trim().slice(0, 160)}` };
+  }
+  const entry = ls.stdout.toString('utf8').split('\0').filter(Boolean).find((e) => e.split('\t')[1] === path);
+  if (!entry) return { state: 'absent' };
+  if (!/^\d+ blob /.test(entry)) return { state: 'unreadable', why: `${path} at ${String(commit).slice(0, 12)} is not a file` };
   const r = spawnSync('git', ['-C', repo, 'cat-file', 'blob', `${commit}:${path}`], { maxBuffer: 512 * 1024 * 1024 });
-  return r.status === 0 ? r.stdout : null;
+  if (r.error || r.status !== 0) {
+    return { state: 'unreadable', why: `git cat-file ${String(commit).slice(0, 12)}:${path}: ${r.error?.code ?? String(r.stderr ?? '').trim().slice(0, 160)}` };
+  }
+  return { state: 'present', bytes: r.stdout };
 }
+
+/** The bytes, or a thrown error naming why they could not be read; null only for a path positively absent. */
+export function bytesAt(repo, commit, path) {
+  const f = readAt(repo, commit, path);
+  if (f.state === 'unreadable') throw Object.assign(new Error(`could not read ${path}: ${f.why}`), { unreadable: true });
+  return f.state === 'present' ? f.bytes : null;
+}
+
+/** Is the commit in this repository? Any failure to say so is "not available", which every caller treats as incomplete. */
 export const hasCommit = (repo, commit) => git(repo, ['cat-file', '-e', `${commit}^{commit}`]).status === 0;
 
-/** Every record at <ref>, in file order, read through one cat-file batch. */
+/**
+ * Every record at <ref>, in file order: `{ ok: true, records, names }`, or
+ * `{ ok: false, why }` when the history could not be read. No records is a
+ * positive answer (git listed the tree and WITNESS/records is not in it); a
+ * failed listing is never "no records", because a publisher that believed it
+ * would start again at record 1 over a history it could not see.
+ */
 export function readChain(repo, ref) {
-  const ls = git(repo, ['ls-tree', '--name-only', `${ref}:${RECORDS_DIR}`]);
-  if (ls.status !== 0) return { records: [], names: [] };
-  const names = ls.stdout.split('\n').filter(Boolean).sort();
+  const fail = (why) => ({ ok: false, why, records: [], names: [] });
+  const dir = git(repo, ['ls-tree', '-z', ref, '--', RECORDS_DIR]);
+  if (dir.status !== 0) return fail(`git ls-tree ${ref} -- ${RECORDS_DIR}: ${String(dir.stderr).trim().slice(0, 160)}`);
+  const entry = String(dir.stdout).split('\0').filter(Boolean).find((e) => e.split('\t')[1] === RECORDS_DIR);
+  if (!entry) return { ok: true, records: [], names: [] };
+  if (!/^040000 tree /.test(entry)) return fail(`${RECORDS_DIR} at ${ref} is not a directory`);
+  const ls = git(repo, ['ls-tree', '-z', '--name-only', `${ref}:${RECORDS_DIR}`]);
+  if (ls.status !== 0) return fail(`git ls-tree ${ref}:${RECORDS_DIR}: ${String(ls.stderr).trim().slice(0, 160)}`);
+  const names = String(ls.stdout).split('\0').filter(Boolean).sort();
   const records = [];
   for (const name of names) {
-    const buf = bytesAt(repo, ref, `${RECORDS_DIR}/${name}`);
-    let record = null;
-    try { record = JSON.parse(buf.toString('utf8')); } catch { record = { unreadable: true }; }
+    const f = readAt(repo, ref, `${RECORDS_DIR}/${name}`);
+    if (f.state !== 'present') return fail(f.state === 'absent' ? `${RECORDS_DIR}/${name} was listed and then not there` : f.why);
+    let record;
+    try { record = JSON.parse(f.bytes.toString('utf8')); } catch { record = { unreadable: true }; } // read, and not a record: the check fails it
     records.push({ name, record });
   }
-  return { records, names };
+  return { ok: true, records, names };
 }
 
 // ── the heads a mail record binds ───────────────────────────────────────────
+//
+// A head is `{ lines, seal }` for a ledger that was read, or `{ absent: true }`
+// for a ledger git positively shows is not at that commit. A ledger that could
+// not be read throws: the record is not composed, and the run is owed as
+// incomplete with the reason (the ferry unit's owe-incomplete).
 
 /** The mail ledger's running head at <commit>: line count and Town Seal. */
 export function mailHeadAt(repo, commit) {
   const buf = bytesAt(repo, commit, 'WHITE_PAGES/mail-ledger.md');
-  if (!buf) return null;
+  if (!buf) return { absent: true };
   const sealed = sealLedger(parseMailLedger(buf.toString('utf8')));
   return { lines: sealed.entries.length, seal: sealed.townSeal };
 }
@@ -384,12 +444,13 @@ export function mailHeadAt(repo, commit) {
 /** The stamp ledger's running head at <commit>: line count and running seal (hex). */
 export function stampHeadAt(repo, commit) {
   const buf = bytesAt(repo, commit, 'WHITE_PAGES/stamp-ledger.md');
-  if (!buf) return null;
+  if (!buf) return { absent: true };
   const entries = parseStampLedger(buf.toString('utf8'));
   const seals = sealChain(entries.map((e) => e.canonical));
   return { lines: entries.length, seal: seals.length ? seals[seals.length - 1] : sha256(Buffer.from('postmark-stamps-v1', 'utf8')) };
 }
 
+/** An artifact's digest; `sha256: null` only for a path git shows is not at that commit. An unreadable one throws. */
 const artifactAt = (repo, repoName, commit, path) => {
   const buf = bytesAt(repo, commit, path);
   return { repo: repoName, commit, path, sha256: buf ? sha256(buf) : null };
@@ -407,12 +468,24 @@ const artifactAt = (repo, repoName, commit, path) => {
 export function mailDecided(repo, {
   attempt, decidedAt, exit, stage, ferryReport = null, remote = 'origin', branch = 'main', fetch = true,
 }) {
-  if (fetch) git(repo, ['fetch', '--quiet', remote, branch]);
+  // A fetch that failed would bind a stale "public" head as if it were today's:
+  // composing stops, and the run is owed as incomplete with the reason.
+  if (fetch) {
+    const f = git(repo, ['fetch', '--quiet', remote, branch]);
+    if (f.status !== 0) throw new Error(`could not fetch ${remote}/${branch} to read the public head: ${String(f.stderr).trim().slice(0, 160)}`);
+  }
   const publicRef = `refs/remotes/${remote}/${branch}`;
   const townHead = git(repo, ['rev-parse', '--verify', '--quiet', `${publicRef}^{commit}`]).stdout.trim();
   if (!HEX40.test(townHead)) throw new Error(`no public head at ${publicRef}`);
   const local = git(repo, ['rev-parse', '--verify', '--quiet', 'HEAD^{commit}']).stdout.trim();
-  const localUnpublished = HEX40.test(local) && git(repo, ['merge-base', '--is-ancestor', local, townHead]).status !== 0;
+  // merge-base --is-ancestor answers 0 (is) or 1 (is not); anything else is a
+  // failed read, which is not "unpublished".
+  let localUnpublished = false;
+  if (HEX40.test(local)) {
+    const anc = git(repo, ['merge-base', '--is-ancestor', local, townHead]);
+    if (anc.status !== 0 && anc.status !== 1) throw new Error(`could not tell whether ${local.slice(0, 8)} is public: ${String(anc.stderr).trim().slice(0, 160)}`);
+    localUnpublished = anc.status === 1;
+  }
 
   const report = ferryReport ?? {};
   const delivered = Number.isSafeInteger(report.delivered) ? report.delivered : 0;
@@ -508,22 +581,34 @@ export function publish({
     // THE KEY BINDING. The town's own published key must be this key, and it
     // must not be the stamp pen's: the witness signs with its own (Darko's
     // 11-05 split of the pen). Until a person publishes the key, nothing signs.
-    const bound = bytesAt(repo, base, PUBKEY_PATH);
-    if (!bound) return { status: 'owed', published: [], owed: owed.length, why: `the town has no ${PUBKEY_PATH} yet, so no record can be bound to a public key` };
+    // Each of these reads STOPS the publication when it cannot be made: a key
+    // that could not be read is not a key that was never published, and a
+    // stamp key that could not be read is not a stamp key that differs.
+    const owedFor = (why) => ({ status: 'owed', published: [], owed: owed.length, why });
+    const bound = readAt(repo, base, PUBKEY_PATH);
+    if (bound.state === 'unreadable') return owedFor(`could not read the town's ${PUBKEY_PATH}: ${bound.why}`);
+    if (bound.state === 'absent') return owedFor(`the town has no ${PUBKEY_PATH} yet, so no record can be bound to a public key`);
     let boundId;
-    try { boundId = keyIdOf(bound.toString('utf8')); } catch (e) {
-      return { status: 'owed', published: [], owed: owed.length, why: `${PUBKEY_PATH} does not read: ${e.message}` };
+    try { boundId = keyIdOf(bound.bytes.toString('utf8')); } catch (e) {
+      return owedFor(`${PUBKEY_PATH} is not a public key: ${e.code ?? 'unparseable'}`);
     }
-    if (boundId !== keyId) return { status: 'owed', published: [], owed: owed.length, why: `the configured key (${keyId}) is not the town's published witness key (${boundId})` };
-    const stampPub = bytesAt(repo, base, STAMP_PUBKEY_PATH);
-    if (stampPub) {
-      let stampId = null;
-      try { stampId = keyIdOf(stampPub.toString('utf8')); } catch { /* an unreadable stamp key is the stamp verifier's to name */ }
-      if (stampId === keyId) return { status: 'owed', published: [], owed: owed.length, why: 'the witness key is the stamp pen; the witness signs with its own key' };
+    if (boundId !== keyId) return owedFor(`the configured key (${keyId}) is not the town's published witness key (${boundId})`);
+    const stampPub = readAt(repo, base, STAMP_PUBKEY_PATH);
+    if (stampPub.state === 'unreadable') return owedFor(`could not read ${STAMP_PUBKEY_PATH}, so the witness key cannot be told apart from the stamp pen: ${stampPub.why}`);
+    if (stampPub.state === 'present') {
+      let stampId;
+      try { stampId = keyIdOf(stampPub.bytes.toString('utf8')); } catch (e) {
+        return owedFor(`${STAMP_PUBKEY_PATH} is not a public key, so the witness key cannot be told apart from the stamp pen: ${e.code ?? 'unparseable'}`);
+      }
+      if (stampId === keyId) return owedFor('the witness key is the stamp pen; the witness signs with its own key');
     }
 
-    // The chain as published, checked enough to extend it honestly.
-    const { records } = readChain(repo, base);
+    // The chain as published, checked enough to extend it honestly. History
+    // that could not be read is never "no history": that would start again at
+    // record 1 over records it could not see.
+    const chain = readChain(repo, base);
+    if (!chain.ok) return owedFor(`the published chain could not be read, so nothing is added to it: ${chain.why}`);
+    const { records } = chain;
     let tip = { seq: 0, hash: GENESIS };
     const ids = new Set();
     const latestOfEvent = new Map();
@@ -647,9 +732,18 @@ function main(argv) {
   }
   if (verb === 'owe-mail') {
     if (!o.repo || !o.owed || !o.attempt || o.exit === undefined) { log('owe-mail needs --repo, --owed, --attempt and --exit'); return 2; }
+    // The ferry's report: an empty or missing file is a ferry that never wrote
+    // one (the unit empties it before each crossing); a report that is there
+    // and cannot be read or parsed is NOT "the ferry did nothing", which would
+    // sign a crossing that moved mail as quiet. It stops the composing, and the
+    // unit owes the run as incomplete with this reason.
     let report = null;
     if (o['ferry-report'] && existsSync(o['ferry-report'])) {
-      try { report = JSON.parse(readFileSync(o['ferry-report'], 'utf8')); } catch { report = null; }
+      let text;
+      try { text = readFileSync(o['ferry-report'], 'utf8'); } catch (e) { throw new Error(`could not read the ferry report ${o['ferry-report']}: ${e.code ?? 'unreadable'}`); }
+      if (text.trim()) {
+        try { report = JSON.parse(text); } catch { throw new Error(`the ferry report ${o['ferry-report']} is there and does not parse, so what the crossing did is unknown`); }
+      }
     }
     const decided = mailDecided(resolve(o.repo), {
       attempt: o.attempt, decidedAt: o['decided-at'] ?? new Date().toISOString(), exit: Number(o.exit),

@@ -15,7 +15,7 @@ import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
-import { mkdirSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -352,6 +352,46 @@ test('A CONTINUITY READ THAT FAILS (a commit between the records is missing) is 
   const r = verify(town, 'origin/main', { world: w.world });
   assert.notEqual(r.verdict, 'pass');
   assert.match(r.incomplete.join('\n'), /World continuity unchecked: .*git (rev-list|log) exited/);
+});
+
+// ── EVERY READ: "couldn't read" is never "not there" (Wright, 2026-11-07 00:51Z) ──
+
+function dropObject(repo, sha) {
+  const p = join(repo, '.git', 'objects', sha.slice(0, 2), sha.slice(2));
+  assert.ok(existsSync(p), `the object ${sha.slice(0, 8)} is loose in the scratch repo`);
+  rmSync(p);
+}
+
+test('UNREADABLE BYTES, three ways — a record, a ledger at a record\'s commit, an artifact — each incomplete, never a pass or a false "absent"', (t) => {
+  const town = publishedTown(t);
+  assert.equal(verify(town, 'origin/main').verdict, 'pass', 'the control: the same town, read whole');
+  const g = (...a) => execFileSync('git', ['-C', town.repo, ...a], { encoding: 'utf8' }).trim();
+
+  // an artifact: the crossing ledger as it stood at record #1's commit
+  const rec1 = JSON.parse(g('show', `origin/main:${recordPath(1)}`));
+  const artifact = rec1.body.decided.artifacts.find((a) => a.path === 'WHITE_PAGES/crossing-ledger.md');
+  dropObject(town.repo, g('rev-parse', `${artifact.commit}:${artifact.path}`));
+  let r = verify(town, 'origin/main');
+  assert.equal(r.verdict, 'incomplete', `${JSON.stringify(r.failures)}`);
+  assert.match(r.incomplete.join('\n'), /WHITE_PAGES\/crossing-ledger\.md: could not be read, so it was not checked/);
+
+  // a ledger at a record's commit
+  const town2 = publishedTown(t);
+  const g2 = (...a) => execFileSync('git', ['-C', town2.repo, ...a], { encoding: 'utf8' }).trim();
+  const rec2 = JSON.parse(g2('show', `origin/main:${recordPath(2)}`));
+  dropObject(town2.repo, g2('rev-parse', `${rec2.body.decided.results.town_head}:WHITE_PAGES/stamp-ledger.md`));
+  r = verify(town2, 'origin/main');
+  assert.notEqual(r.verdict, 'pass');
+  assert.match(r.incomplete.join('\n'), /record #2: its stamps ledger at [0-9a-f]{8} could not be read, so it was not checked/);
+  assert.doesNotMatch(r.failures.join('\n'), /ledger is not at/, 'an unread ledger is not an absent one');
+
+  // a record
+  const town3 = publishedTown(t);
+  const g3 = (...a) => execFileSync('git', ['-C', town3.repo, ...a], { encoding: 'utf8' }).trim();
+  dropObject(town3.repo, g3('rev-parse', `origin/main:${recordPath(2)}`));
+  r = verify(town3, 'origin/main');
+  assert.deepEqual([r.verdict, r.count], ['incomplete', 0]);
+  assert.match(r.incomplete[0], /the records at origin\/main could not be read, so nothing was checked/);
 });
 
 test('THE CLI: --key is required, exit codes name the verdict, and the freshness limit is always said', (t) => {

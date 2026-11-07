@@ -37,7 +37,7 @@ import { createHash } from 'node:crypto';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
 import {
-  GENESIS, KINDS, bytesAt, checkRecord, hasCommit, keyIdOf, readChain,
+  GENESIS, KINDS, checkRecord, hasCommit, keyIdOf, readAt, readChain,
 } from './witness-chain.mjs';
 import { parseLedger as parseMailLedger, sealLedger } from '../PROJECTS/the-town-seal/seal.mjs';
 import { parseStampLedger, sealChain } from './stamp-mint.mjs';
@@ -50,16 +50,20 @@ const HEX40 = /^[0-9a-f]{40}$/;
 // settlement the chain does not witness.
 export const SETTLEMENT_SUBJECT = 'settlement: ';
 
-/** Running seals of the mail ledger at <commit>, index i = seal after i+1 lines. */
-function mailSeals(repo, commit) {
-  const buf = bytesAt(repo, commit, 'WHITE_PAGES/mail-ledger.md');
-  if (!buf) return null;
-  return sealLedger(parseMailLedger(buf.toString('utf8'))).entries.map((e) => e.seal);
-}
-function stampSeals(repo, commit) {
-  const buf = bytesAt(repo, commit, 'WHITE_PAGES/stamp-ledger.md');
-  if (!buf) return null;
-  return sealChain(parseStampLedger(buf.toString('utf8')).map((e) => e.canonical));
+/**
+ * A ledger's running seals at <commit> (index i = seal after i+1 lines), read
+ * three ways (witness-chain.mjs § readAt): `{ state: 'present', seals }`,
+ * `{ state: 'absent' }` or `{ state: 'unreadable', why }`. "Couldn't read" is
+ * never "not there" (Wright, 2026-11-07).
+ */
+function ledgerSeals(repo, commit, which) {
+  const f = readAt(repo, commit, which === 'mail' ? 'WHITE_PAGES/mail-ledger.md' : 'WHITE_PAGES/stamp-ledger.md');
+  if (f.state !== 'present') return f;
+  const text = f.bytes.toString('utf8');
+  const seals = which === 'mail'
+    ? sealLedger(parseMailLedger(text)).entries.map((e) => e.seal)
+    : sealChain(parseStampLedger(text).map((e) => e.canonical));
+  return { state: 'present', seals };
 }
 const MAIL_GENESIS = sha256(Buffer.from('postmark-ledger-v1', 'utf8'));
 const STAMP_GENESIS = sha256(Buffer.from('postmark-stamps-v1', 'utf8'));
@@ -85,7 +89,12 @@ export function verifyChain({ repo, at = 'HEAD', publicKeyPem, checkpoint = null
   const failures = [];
   const incomplete = [];
   const keyId = keyIdOf(publicKeyPem);
-  const { records, names } = readChain(repo, at);
+  const chain = readChain(repo, at);
+  if (!chain.ok) {
+    incomplete.push(`the records at ${at} could not be read, so nothing was checked — ${chain.why}`);
+    return { verdict: 'incomplete', failures, incomplete, count: 0, latest: null };
+  }
+  const { records, names } = chain;
   if (!records.length) {
     incomplete.push(`no records under WITNESS/records at ${at}: there is nothing to check`);
     return { verdict: 'incomplete', failures, incomplete, count: 0, latest: null };
@@ -126,8 +135,9 @@ export function verifyChain({ repo, at = 'HEAD', publicKeyPem, checkpoint = null
       const label = `record #${r.body.seq} ${a.repo}:${a.commit.slice(0, 8)}:${a.path}`;
       if (!where) { incomplete.push(`${label}: a World file, and no --world checkout was given`); continue; }
       if (!hasCommit(where, a.commit)) { incomplete.push(`${label}: that commit is not in your ${a.repo} checkout (fetch it, or the record names bytes nobody published)`); continue; }
-      const buf = bytesAt(where, a.commit, a.path);
-      const got = buf ? sha256(buf) : null;
+      const f = readAt(where, a.commit, a.path);
+      if (f.state === 'unreadable') { incomplete.push(`${label}: could not be read, so it was not checked — ${f.why}`); continue; }
+      const got = f.state === 'present' ? sha256(f.bytes) : null;
       if (got !== a.sha256) {
         failures.push(`${label}: the record says ${a.sha256 ? a.sha256.slice(0, 16) + '…' : 'absent'}, the commit has ${got ? got.slice(0, 16) + '…' : 'nothing there'}`);
       }
@@ -228,29 +238,46 @@ export function verifyChain({ repo, at = 'HEAD', publicKeyPem, checkpoint = null
   for (const r of mails) {
     const d = r.body.decided;
     const commit = d.results?.town_head;
+    if (d.outcome?.status === 'incomplete') continue; // binds no heads, and is already incomplete above
     if (!commit || !hasCommit(repo, commit)) { incomplete.push(`record #${r.body.seq}: its town head ${String(commit).slice(0, 8)} is not in your checkout`); continue; }
-    for (const [name, seals, genesis] of [['mail', mailSeals(repo, commit), MAIL_GENESIS], ['stamps', stampSeals(repo, commit), STAMP_GENESIS]]) {
+    for (const [name, genesis] of [['mail', MAIL_GENESIS], ['stamps', STAMP_GENESIS]]) {
       const head = d.heads?.[name];
-      if (!head) continue;
-      if (!seals) { failures.push(`record #${r.body.seq}: binds a ${name} head, but the ${name} ledger is not at ${commit.slice(0, 8)}`); continue; }
+      // A record that binds no head is not checked, and an unchecked record is never a pass.
+      if (!head) { incomplete.push(`record #${r.body.seq}: binds no ${name} head, so its ${name} ledger was not checked`); continue; }
+      const l = ledgerSeals(repo, commit, name);
+      if (l.state === 'unreadable') { incomplete.push(`record #${r.body.seq}: its ${name} ledger at ${commit.slice(0, 8)} could not be read, so it was not checked — ${l.why}`); continue; }
+      if (head.absent === true) {
+        if (l.state !== 'absent') failures.push(`record #${r.body.seq}: says there is no ${name} ledger at ${commit.slice(0, 8)}, and there is one`);
+        continue;
+      }
+      if (l.state === 'absent') { failures.push(`record #${r.body.seq}: binds a ${name} head, but the ${name} ledger is not at ${commit.slice(0, 8)}`); continue; }
+      const { seals } = l;
       if (seals.length !== head.lines || sealAt(seals, genesis, head.lines) !== head.seal) {
         failures.push(`record #${r.body.seq}: its ${name} head (${head.lines} lines, ${String(head.seal).slice(0, 12)}…) does not recompute at ${commit.slice(0, 8)} (${seals.length} lines, ${sealAt(seals, genesis, seals.length).slice(0, 12)}…)`);
       }
     }
   }
-  const newest = mails.at(-1);
+  const decidedMails = mails.filter((r) => r.body.decided.outcome?.status !== 'incomplete');
+  const newest = decidedMails.at(-1);
   const tip = newest?.body.decided.results?.town_head;
   if (tip && hasCommit(repo, tip)) {
-    const ledgers = [['mail', mailSeals(repo, tip), MAIL_GENESIS], ['stamps', stampSeals(repo, tip), STAMP_GENESIS]];
-    for (const r of mails) {
-      for (const [name, seals, genesis] of ledgers) {
+    for (const [name, genesis] of [['mail', MAIL_GENESIS], ['stamps', STAMP_GENESIS]]) {
+      const l = ledgerSeals(repo, tip, name);
+      if (l.state === 'unreadable') { incomplete.push(`the ${name} ledger at the newest record's commit (#${newest.body.seq}) could not be read, so no earlier ${name} head was checked against it — ${l.why}`); continue; }
+      for (const r of decidedMails) {
         const head = r.body.decided.heads?.[name];
-        if (!head || !seals) continue;
-        if (head.lines > seals.length || sealAt(seals, genesis, head.lines) !== head.seal) {
+        if (!head || head.absent === true) continue; // checked per record above
+        if (l.state === 'absent') {
+          failures.push(`record #${r.body.seq}: bound a ${name} head, and the newest record's commit (#${newest.body.seq}) has no ${name} ledger at all`);
+          continue;
+        }
+        if (head.lines > l.seals.length || sealAt(l.seals, genesis, head.lines) !== head.seal) {
           failures.push(`record #${r.body.seq}: the ${name} ledger at the newest record's commit (#${newest.body.seq}) no longer begins with the ${head.lines} lines record #${r.body.seq} bound — an earlier line was changed, dropped or reordered`);
         }
       }
     }
+  } else if (tip) {
+    incomplete.push(`the newest mail record's town head ${tip.slice(0, 8)} is not in your checkout, so no earlier head was checked against it`);
   }
 
   const verdict = failures.length ? 'fail' : incomplete.length ? 'incomplete' : 'pass';
