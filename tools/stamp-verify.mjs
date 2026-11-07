@@ -37,7 +37,7 @@ import {
   parseStampLedger, sealChain, foldBalances, parseLaws, classifyEntry, walkLedger,
   townIssuanceDial,
   keepingDial, potFile, deriveEpochClose, keepingLine, TREASURY_POT, STAGE_LADDER,
-  AWARD_MAX, AWARD_HANDS, QUEST_PAY, RECREDIT_STAGES, CORRECTION_HANDS,
+  AWARD_MAX, AWARD_HANDS, QUEST_PAY, RECREDIT_STAGES, SKIPPED_CREDIT_STAGES, CORRECTION_HANDS,
   PARCEL_PRICE, PARCEL_SETTLED_BY_DAY, PARCEL_ROOM_FROM,
   houseCanonOf, invitationOf, inviteState, judgeInviteLine, foldInviteLine,
 } from './stamp-mint.mjs';
@@ -560,6 +560,10 @@ export function verifyStampLedger(repo, { pubkeyPem, registry = null } = {}) {
         // ladder, never a meep, once per post and stage, and NO burn after it
         // (there is no wrong mint); a stage line after it is red above.
         if (!wrong) {
+          // diagnosed and briefed only: a never-paid fixed carries no size, critter or merge, so it is no lawful credit
+          if (!SKIPPED_CREDIT_STAGES.includes(cls.stage)) {
+            problems.push(`line ${lineNo}: LAWFUL fails — post:${k}-recredit credits a ${cls.stage} that was never paid, and only ${SKIPPED_CREDIT_STAGES.join(' and ')} are credited when never paid`); break;
+          }
           if (!(STAGE_LADDER[cls.stage] ?? []).includes(cls.n)) {
             problems.push(`line ${lineNo}: LAWFUL fails — post:${k}-recredit pays a stage never paid ${cls.n}, and ${cls.stage} pays ${(STAGE_LADDER[cls.stage] ?? []).join(' or ')}`); break;
           }

@@ -37,7 +37,7 @@
 //   - <date> · stake:post/<author>/<slug> → <handle> · <n> · for: unstake · via: <channel>   (the staker's own way out, clipped to their OWN position)
 //   - <date> · stake:post/<author>/<slug> → <handle> · <n> · for: post-return   (the post finished: the open position comes home whole, once per (post, handle))
 //   THE BUG STAGE CORRECTION (POS-649, Darko 2026-10-15: "the mint to kino to give them the 10 … burning the 10 that you mistakenly got"):
-//   - <date> · MINT → <handle> · <n> · for: post:<author>/<slug>/<stage>-recredit · by: the-town   (the stage paid to the right resident: diagnosed, briefed or fixed only, the SAME amount its stage line paid, never to that line's own recipient, never a meep, ONE per post and stage, and always immediately followed by its burn. OR, for a stage the ledger never paid (POS-931/a, Darko 2026-11-06 "Extend the door": a stage the office recorded skipped by mistake), the stage's first and only payment: an amount on its ladder, by: the-town, never a meep, ONE per post and stage, with NO burn, and no stage line for that post and stage ever after. Appended alone by --stage-recredit --skipped)
+//   - <date> · MINT → <handle> · <n> · for: post:<author>/<slug>/<stage>-recredit · by: the-town   (the stage paid to the right resident: diagnosed, briefed or fixed only, the SAME amount its stage line paid, never to that line's own recipient, never a meep, ONE per post and stage, and always immediately followed by its burn. OR, for a stage the ledger never paid (POS-931/a, Darko 2026-11-06 "Extend the door": a stage the office recorded skipped by mistake), the stage's first and only payment, at diagnosed or briefed ONLY (never fixed): an amount on its ladder, by: the-town, never a meep, ONE per post and stage, with NO burn, and no stage line for that post and stage ever after. Appended alone by --stage-recredit --skipped)
 //   - <date> · <handle> → BURN · <n> · for: correction:<sig> · by: <hand>   (the wrong stage mint, burned exactly: <sig> is that post:<id>/<stage> line's full signature, <handle> its recipient, <n> its amount, out of liquid stamps only, ONCE per mint, by: one of CORRECTION_HANDS, and always immediately after its recredit. The two are appended together by --stage-recredit or not at all)
 //   PARCELS FROM 11-01 (POS-762, Darko 2026-10-22: "1 parcel per household with extra parcels purchasable with stamps"; "50 stamps per parcel you already have"; paid to the town, never returned):
 //   - <date> · <handle> → BURN · <n> · for: parcel:<nth>/<household-key>   (a household whose declaration is dated after 2026-10-31 (town time) buys room ahead for its <nth> parcel, 2 or 3: <n> is exactly 50 × (<nth> − 1), 50 × the room it already has (Darko 2026-10-23, POS-762/f "Room bought"), out of the payer's liquid stamps, never a meep, the key IS the payer's household at the line's date, dated 2026-11-01 or later, and ONE line per household and <nth>, in order (the 2nd before the 3rd). The world's fold counts these lines as the household's room (postmark-world tools/marks-fold.mjs § parcels from 11-01))
@@ -642,7 +642,12 @@ const POST_ID = String.raw`[a-z0-9][a-z0-9._-]*\/[a-z0-9][a-z0-9-]*`;
 // stage. Which of the two a recredit is, the ledger says: a stage line before
 // it means a correction, followed by its burn; none means a skipped stage's
 // credit, followed by no burn, and no stage line for it may ever come after.
+// Only diagnosed and briefed are credited this way (SKIPPED_CREDIT_STAGES, the
+// office's coverage too): a fixed carries its size, the critter its fixer
+// names and the merge guard, none of which a credit carries, so a never-paid
+// fixed is no lawful line. A PAID fixed is still corrected, mint and burn.
 export const RECREDIT_STAGES = Object.freeze(['diagnosed', 'briefed', 'fixed']);
+export const SKIPPED_CREDIT_STAGES = Object.freeze(['diagnosed', 'briefed']);
 export const CORRECTION_HANDS = AWARD_HANDS;
 /** An ed25519 signature in base64url: 64 bytes, 86 characters. */
 export const SIG_RE = /^[A-Za-z0-9_-]{86}$/;
@@ -1483,7 +1488,8 @@ export const stageRecreditLines = ({ date, handle, wrong, by }) => {
 export const stageSkippedCreditLine = ({ date, handle, n, post, stage }) => {
   if (!STAGE_POST_ID_RE.test(String(post ?? '')))
     throw new Error(`skipped stage credit: the post must be a post id, <author>/<slug>, got ${JSON.stringify(post)}`);
-  if (!RECREDIT_STAGES.includes(stage)) throw new Error(`skipped stage credit: only ${RECREDIT_STAGES.join(', ')} are credited, not ${JSON.stringify(stage)}`);
+  if (!SKIPPED_CREDIT_STAGES.includes(stage))
+    throw new Error(`skipped stage credit: only ${SKIPPED_CREDIT_STAGES.join(' and ')} are credited when never paid, not ${JSON.stringify(stage)} (a fixed carries its size, critter and merge, which a credit does not)`);
   if (!(STAGE_LADDER[stage] ?? []).includes(n)) throw new Error(`skipped stage credit: ${stage} pays ${STAGE_LADDER[stage].join(' or ')}, not ${n}`);
   if (!/^[^\s·]+$/.test(String(handle ?? ''))) throw new Error('skipped stage credit: a handle is one token with no "·"');
   return `- ${date} · MINT → ${handle} · ${n} · for: post:${post}/${stage}-recredit · by: the-town`;
@@ -3028,6 +3034,9 @@ function main(registrySource = null) {
     if (skipped && arg('--from') != null) { console.error('FATAL: --skipped names no wrong recipient — a stage never paid has no mint to burn'); process.exit(1); }
     if (skipped && arg('--amount') == null) { console.error('FATAL: --skipped needs --amount — the stage\'s lawful amount, as the office\'s plan read it'); process.exit(1); }
     if (skipped && !CORRECTION_HANDS.includes(by)) { console.error(`FATAL: by: must be one of the hands (${CORRECTION_HANDS.join(', ')}), got "${by}"`); process.exit(1); }
+    if (skipped && !SKIPPED_CREDIT_STAGES.includes(stage)) {
+      console.error(`FATAL: only ${SKIPPED_CREDIT_STAGES.join(' and ')} are credited when never paid, not "${stage}" — a fixed carries its size, the critter its fixer names and the merge, which a credit does not; a paid fixed is corrected without --skipped`); process.exit(1);
+    }
     let wrong = null;
     for (const e of existing) {
       const c = classifyEntry(e.canonical);

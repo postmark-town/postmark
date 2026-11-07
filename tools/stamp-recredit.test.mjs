@@ -264,7 +264,9 @@ test('5 · the builder: a skipped stage\'s one line, and the refusals that keep 
   const at = (over) => () => stageSkippedCreditLine({ date: '2026-11-07', handle: 'moose', n: 5, post: MOOSE_POST, stage: 'diagnosed', ...over });
   assert.throws(at({ n: 10 }), /diagnosed pays 5, not 10/);
   assert.throws(at({ stage: 'briefed', n: 7 }), /briefed pays 10 or 5, not 7/);
-  assert.throws(at({ stage: 'confirmed', n: 2 }), /only diagnosed, briefed, fixed are credited/);
+  assert.throws(at({ stage: 'confirmed', n: 2 }), /only diagnosed and briefed are credited when never paid, not "confirmed"/);
+  // a never-paid fixed is no lawful credit at any of its amounts (Truey's review of #4532 § 1): the office's coverage too
+  for (const n of [10, 25, 50]) assert.throws(at({ stage: 'fixed', n }), /only diagnosed and briefed are credited when never paid, not "fixed"/, `fixed at ${n}`);
   assert.throws(at({ handle: 'moose · by: wright' }), /one token/);
   assert.throws(at({ post: 'moose/x · by: wright' }), /post id/);
 });
@@ -318,6 +320,9 @@ test('5 · --skipped refuses, and writes nothing: a stage the ledger paid, no am
     refused(fresh, 'postmaster', ['--stage', 'diagnosed', '--by', 'wright', '--key', fkey, '--amount', '5', '--skipped'], /"postmaster" is a meep at 2026-11-07/);
     refused(fresh, 'nobody', ['--stage', 'diagnosed', '--by', 'wright', '--key', fkey, '--amount', '5', '--skipped'], /no WHITE_PAGES room for "nobody"/);
     refused(fresh, 'moose', ['--stage', 'diagnosed', '--by', 'bugcatcher', '--key', fkey, '--amount', '5', '--skipped'], /by: must be one of the hands \(keemin, wright\)/);
+    for (const n of ['10', '25', '50'])
+      refused(fresh, 'moose', ['--stage', 'fixed', '--by', 'wright', '--key', fkey, '--amount', n, '--skipped'],
+        /only diagnosed and briefed are credited when never paid, not "fixed" — a fixed carries its size, the critter its fixer names and the merge, which a credit does not; a paid fixed is corrected without --skipped/);
     refused(fresh, 'moose', ['--stage', 'diagnosed', '--by', 'wright', '--key', fkey, '--amount', '5'],
       /was never paid — there is no stage line to correct \(a stage recorded skipped and never paid is credited with --skipped\)/);
   } finally { rmSync(repo, { recursive: true, force: true }); rmSync(fresh, { recursive: true, force: true }); }
@@ -341,5 +346,38 @@ test('5 · the verifier: green on a lone credit of a stage never paid; red on a 
     red([SKIPPED('moose', 10)], /pays a stage never paid 10, and diagnosed pays 5/);
     red([SKIPPED('moose', 5, { by: 'wright' })], /a recredit is the town's mint \(by: "wright", must be the-town\)/);
     red([SKIPPED('postmaster')], /a recredit to meep "postmaster"/);
+    // a never-paid fixed, at every amount its ladder holds, is red: no lawful credit of a fixed nobody paid
+    for (const n of [10, 25, 50])
+      red([SKIPPED('moose', n, { stage: 'fixed' })], /post:.*\/fixed-recredit credits a fixed that was never paid, and only diagnosed and briefed are credited when never paid/);
+    // and a never-paid briefed at its ladder amount stays green
+    const briefed = verdict([SKIPPED('moose', 10, { stage: 'briefed' })]);
+    assert.equal(briefed.ok, true, briefed.problems.join('\n'));
+  } finally { rmSync(repo, { recursive: true, force: true }); }
+});
+
+test('5 · a PAID fixed is still corrected exactly as before: --stage-recredit (no --skipped) writes the recredit and the burn of its mint, and the verifier is green', () => {
+  const k = keypair();
+  const paidFixed = STAGE('wright', 25, 'fixed', MOOSE_POST);
+  const repo = town(['wright', 'moose'], k, [paidFixed]);
+  try {
+    const key = keyFile(repo, k.priv);
+    const fixedSig = entriesOf(repo)[1].sig;
+    const r = runMint(repo, ['--stage-recredit', 'moose', '--post', MOOSE_POST, '--stage', 'fixed', '--by', 'wright', '--amount', '25', '--from', 'wright',
+      '--date', '2026-11-07', '--key', key]);
+    assert.equal(r.ok, true, r.out);
+    assert.match(r.out, /stage re-credited, the wrong mint burned/);
+    assert.deepEqual(entriesOf(repo).slice(2).map((x) => x.canonical), [
+      SKIPPED('moose', 25, { stage: 'fixed' }),
+      `- 2026-11-07 · wright → BURN · 25 · for: correction:${fixedSig} · by: wright`,
+    ], 'the same two lines as any correction: the recredit, then the burn of the paid mint');
+    const v = verifyStampLedger(repo);
+    assert.equal(v.ok, true, v.problems.join('\n'));
+    const bal = foldBalances(entriesOf(repo));
+    assert.deepEqual([bal.get('moose'), bal.get('wright'), bal.get('BURN')], [25, 0, 25]);
+    // and --skipped on that paid fixed is still refused, by the coverage first
+    const skipped = runMint(repo, ['--stage-recredit', 'moose', '--post', MOOSE_POST, '--stage', 'fixed', '--by', 'wright', '--amount', '25', '--skipped',
+      '--date', '2026-11-07', '--key', key]);
+    assert.equal(skipped.ok, false);
+    assert.match(skipped.out, /only diagnosed and briefed are credited when never paid, not "fixed"/);
   } finally { rmSync(repo, { recursive: true, force: true }); }
 });
