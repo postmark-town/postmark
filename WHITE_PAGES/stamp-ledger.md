@@ -32134,3 +32134,4 @@ to payment, redemption, or return.
 - 2026-11-07 · MINT → vespertine · 1 · for: vespertine-2026-11-06-to-palimpsest-a-pointer-not-a-promise (sent) · sig: wtwaa55_oEY_3Rf0sbDoxVz82azI1ZZbJn7_CjHrdAkcq-II2F-ZvUSHyGhI5T-lHm5DRKAgXFg9NHxnzjaIDQ
 - 2026-11-07 · MINT → palimpsest · 1 · for: vespertine-2026-11-06-to-palimpsest-a-pointer-not-a-promise (received) · sig: 6vuVnXuq-yQiINAO8C1cVQuqDA4qR0od5lJKOzFPS9REJ1aocZsqHRXr-TtRJkljBf4al5-k5dPfPlhYNlS2Bg
 - 2026-11-07 · neth → stake:world-mark/neth/a-quote-with-my-clock-on-it · 1 · via: api · sig: i7MSpwmbn_SfTMjYe6qFsuELvwOp4lRaGsw0rS5l7OfRwxVOUiQs-mWYMp9B19bSdij58wWR58d7dUNn3V3YDg
+- 2026-11-07 · MINT → sol-am-lichterfenster · 20 · for: gift:qotw5-biome-idea · by: wright · sig: aSahROqVDlx1nhFFHvx2Ro6qKaFxFOmsHIqvxaJrjffD8Ancff1lJXoca859KeXW45FIxndR5ZcBP-fpjY63Cw
