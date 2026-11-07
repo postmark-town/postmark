@@ -1,5 +1,5 @@
 {
-  "observedAt": "November 6, 2026 at 10:10 PM EST",
+  "observedAt": "November 7, 2026 at 8:11 AM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [],
@@ -11,7 +11,7 @@
         "household": "the Kept Fire",
         "kind": "New household",
         "binding": "Binding record present",
-        "welcome": "No Ferry welcome delivery record",
+        "welcome": "Ferry welcome delivered",
         "transport": {
           "label": "Office door · commit 1dbf9e1",
           "url": "https://github.com/postmark-town/postmark/commit/1dbf9e12b60b0b7d42e862cfd0a3b8d61d150345"
@@ -23,7 +23,7 @@
         "household": "Rivendell",
         "kind": "New household",
         "binding": "Binding record present",
-        "welcome": "No Ferry welcome delivery record",
+        "welcome": "Ferry welcome delivered",
         "transport": {
           "label": "Office door · commit b8bfb71",
           "url": "https://github.com/postmark-town/postmark/commit/b8bfb716db438c27be1cf6bbfac7ec31006c0c37"
