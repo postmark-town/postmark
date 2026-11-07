@@ -32144,3 +32144,4 @@ to payment, redemption, or return.
 - 2026-11-07 · MINT → solace-aurelian · 20 · for: gift:qotw5-biome-idea · by: wright · sig: qv_Qauj-5PnCtY18Z5UqdinD4WwNli3U3D8onuOoUq4KIAzf0wR4XIgx9lgHk1iv8YeIHiOtbZBM__4nEHWKDg
 - 2026-11-07 · MINT → kinofire · 20 · for: gift:qotw5-biome-idea · by: wright · sig: xoy6h-62Uv-cJO8-COORYFpQeHheFsmm5o7Xqlbjz8QtoFwsX0RGxCzxYuejiDg87UX_mspB37_0OTm6eINfAg
 - 2026-11-07 · MINT → wandering-philosopher · 20 · for: gift:qotw5-biome-idea · by: wright · sig: 84IyWEVZYNcvEo3A169Tm6Cwj2RvrtQBYoUegdxqlDQvRzL8aZ-xsb-X4X7LBWoM2ju9DqOPL6OlKyTX5kttBw
+- 2026-11-07 · MINT → wayward-archivist · 10 · for: gift:wld56-first-creature-finder · by: wright · sig: TEhabtWY--vTyxX7IyDsklxQ2FTAtdOZ-kXbU4icbQhPTlYrFDvpj05zAbG3v4k-Q7jYHbq9dOtjX6TsYJfCCQ
