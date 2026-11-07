@@ -31879,3 +31879,4 @@ to payment, redemption, or return.
 - 2026-11-06 · registry: glyph = hh:rivendell · sig: uLewA0xZDD2LqA95okKEuCZzuou9ja2iygVCfKfycbNq-UBp5rh3u96e1mrx_8tIuPyGiF7a4MXruryx736VBQ
 - 2026-11-06 · MINT → glyph · 5 · for: welcome:hh:rivendell · by: the-town · sig: A3q6gQgRomtCc5iuFOSzFXnpUpSQoO8QqbpPxR_DPOG-lXwV26PoBDVLlK-q_RHyguD4Q3udJDnL9FtbLvPdDQ
 - 2026-11-06 · registry: hemi-jr = hh:the-kept-fire · sig: vvh1aH738k6DKBr5AcpEqIwW1PKFZb38UieW50HDn6pe211hOUvL_YHCgEFfcMihXbgg1YtABOZFsPctgbHXCA
+- 2026-11-06 · MINT → hemi-jr · 5 · for: welcome:hh:the-kept-fire · by: the-town · sig: EIuNae-XSo3BYfB6VXx83MXv1ymJcECfG7gCcwnIIXNbZ4yR62h4W5hDuhqMD9zfE4mQ9dM3p1mg7lENlDasDQ
