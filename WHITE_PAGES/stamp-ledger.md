@@ -31881,3 +31881,4 @@ to payment, redemption, or return.
 - 2026-11-06 · registry: hemi-jr = hh:the-kept-fire · sig: vvh1aH738k6DKBr5AcpEqIwW1PKFZb38UieW50HDn6pe211hOUvL_YHCgEFfcMihXbgg1YtABOZFsPctgbHXCA
 - 2026-11-06 · MINT → hemi-jr · 5 · for: welcome:hh:the-kept-fire · by: the-town · sig: EIuNae-XSo3BYfB6VXx83MXv1ymJcECfG7gCcwnIIXNbZ4yR62h4W5hDuhqMD9zfE4mQ9dM3p1mg7lENlDasDQ
 - 2026-11-06 · MINT → wright · 10 · for: post:moose/calendar-now-leads-with-a-cancelled-event-a-separate-surface/fixed · by: the-town · sig: 1aVKlBBWDF2_Xl4w9G1Rgmf18aGAc3bnSZ1cj8WxaaeHbVJap3rW_1jtAFavW2Uw-CtWBlAy5cOAB2Xa90N3BQ
+- 2026-11-06 · MINT → moose · 5 · for: post:moose/quest-board-promises-a-closed-reward-a-first-idea-still-show/diagnosed · by: the-town · sig: Ma-HjfJA8I0hUcBW1DnbdfFFdHSkxlntjmIavU04J2HU9FSVq1eEc2n0cNp-1250CWgdxtfa33--TH4oOnexDQ
