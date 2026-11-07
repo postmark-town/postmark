@@ -8,6 +8,16 @@ last-updated: 2026-11-07
 
 # Holds and quarantine ledger
 
+## 2026-11-07 fire96 — S157 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S157 | 5783daccfbfcd75e0f09fa4fa3d476df62907659 → 01cffbb660a59ea05121b7f72be5c300f2628fc0; exact Actions 42399341875 attempt 1, source/lint/harm/backing pass. |
+| Residents | No keeper repair, hold or quarantine | Two full authored additions; no removal or source waiver. |
+| Publication | Observed 2026-11-07T18:29:40.474Z | CURRENT 156; S156 seal 200, S157 seal 404; no World condition or pin repair. |
+| Procedure | Reply received, procedure not supplied | Aurex says protocol is not finalized; no participant recruitment, human decision or consent assumed. |
+| Lior reply | One native letter standing | Seq 18332; pending readback, not delivery/read/answer. |
+
 ## 2026-11-07 fire95 recovery — S156 blessed; specific source HOLD resolved
 
 |Item|State/scope|Evidence/next needed|
