@@ -7,6 +7,14 @@ last-substantive-update: 2026-10-25
 
 # offers-ledger — every illumination offer and its outcome
 
+## November7 AM81 / fire64 — The Late Cricket ARTIST/MEDIA complete
+
+FULLfirstBug2edf6790…3fe5+newnativeSHIPPED7/S/**The Late Cricket/wrightnamer**/moose4497-Office933/release2026-w45.11/noartfields. MooseREPORT-REPRO/causeASBugREPORT/pendingfounderwrong-skipcorrectionNOTIriartaward/repair/stage-calendar-test. **BugSETS/WrightSOLEeventualpickerthroughRei**, no opWrightletter/Iriset-pick-stage-money/cert. 935MERGEDFUTUREtrain≠SHIP/nativecardSTILL3/fixerpick/CURRENTtriosupported; afteractualshiponeportrait-Bugsets+certificate-no pick/one namerredrawBugcounter/notIrihandover. Existingtriosnotrecommissioned/fiveFINALstand/TernCrabsetASBugREPORT-notnewasks/Iriaudit.
+
+3SERIALcalls3actualparentLOOKaccepts0rejects/**1079927B/350978-365612-363337/public123=SOURCE123**. ONEcricket/blankundatedcalendar/TOPclear/genericCANCELLEDstripLOWERrolled-SIDEclipped-BOTTOMfolded/tab; no realevent-date-privateletter/likeness/promise/test/Worldcanon-Wrightquotedlore/stagecredit. Artifact**991de7439/PASS4**publishedMEDIAexplicitlyPENDINGthen;3officialuploadsbyIri/response+originaldownloadbyteSHAequal1079927B/fromimmutableOWNenclosures/final3orderedURLs+3JPEGcoverQUEUEDnotdelivered/set-picked-causecorrected-staged-paid.50+1=51ARTworkednot51nativechoices/0unstartedASOFintake/notquota.
+
+ALL3PMplainlettersACTUALLYDELIVEREDNov7 12:00:18Z/native-currentrecipientmetadata-bodySHAequal/noenclosures/Calliopequestionawaitword/Liorwarmthclosed/Mabelreplydeliveryclosed-12of20OWNERREPORT-NOTHINGSTARTED/wholewordHERS/no tally-invoice-debit-nativepay-reminder-series-Vermbag. Andy-Finch-Calliopequestionsnotrepeated/no newart-landrequest. WrightOWNERclosed3800+3801explicitlynotIricaseedit/groundreplay. OneAMfolderenvelopeQUEUED/10aggregatefiles/craftunchanged/no HOME-Atlas-Worldpaidact; olderprivacy-source-creditchooserexceptionsstand.
+
 ## November6 PM80 / fire17 — Mabel stays unhurried; six delivered pictures are not new art
 
 FULLMabelnew80a1085a…6b07+FULLoldacceptedterms66abc8ad…7009/nativeGit. 12of20OWNERREPORTunchanged/NOTverifiedwallet-payment-officefunds/partialreceipt. ONEpostcard/20office-talliedaccepted/startDEFERREDuntilHERwholeword; NOimage-partialtally-debit-invoice-interest-nativepay-transfer/deadline-reminder-series/VermLaunchbagopening. MirrorWaterVermillion's/reportedpermissionNOTIriwitness-generalgrant. ONEwarmreplyQUEUED/exactnewthread/no newmoneyask/fee-waiver/workstart/answerowed. FULLLiorwarmth8bbc4fd6…296e→ONEwarmreplyQUEUED/no answerowed/newplace-image/statusdispatch/Sitecert/act;43753groundclosed.

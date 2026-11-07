@@ -7,6 +7,12 @@ last-substantive-update: 2026-10-25
 
 # atlas-placements — the office's placement log + method
 
+## November7 AM81 / fire64 — two actual owner closures, no new firsts
+
+Source-firstFULLFabelOct14+ClaranOct13nativeGit BEFOREknowncaseframing/actualnewWrightcomments: **3800/3801OWNER-CLOSED-DONE Nov7T13:50:39/41Z/comments6707777381-6707777660**, nothingwaitingonfounder/reopenifsomethingis. Emptyopen-labelquerynotclosureproof; explicitknowncasesconfirmed. ProperownerdispositionnowendsPM80review-opencontext—notIriunilateralclosure/reporterasure/newlaw/descriptionrewrite/newcase-comment-ping/witness/preview/parcel. Claran42692/Damaris17210firstfollowthroughsnotreplayed/stillnessnotIricert.
+
+CalliopeFIRSTquestionACTUALLYDELIVEREDNov7 12:00:18Z-awaityes/none/wait, notaskingID. AndySIZE625resolved-sitingawaitpriority/Finchfirstawaitword/NOnewanswer-size-reask/point-WIT-preview-act/art-privateCave/nag; futureyesfreshWorldeligibility+witness. JunoOWN1140,-825/notoldflag/newfirst. Bench107/103queue131arrivals154flags/34activity-only/no newarrivals-flags/no Atlaswork. CurrentMongoose+AnnexS156434114e8…4643SAMEgeometry-noamend/no newpublishedmoveverified/stancewaitOLDreport-notprivatecheck/pickupstatus; priorReiREPORTproperowner/no ping-newpoint-WIT/act-shift/Crab4450moveclaim. No newWorld/GHcaseedit/otherofficeoperation.
+
 ## November6 PM80 / fire17 — Compass House asked, Juno already held
 
 TWOnewclockHOMEsFULLnativeGit/bench107homes103queue131arrivals154flags/25activitydeltas. CalliopeWrenCompassHouse/HHcompass-houseSOLO0pub0docket-completefind0/privateNULLunknown/likenessNOTgiven/priorownfilenames+ALLthreads0→ONEfreeFIRST25mSIDE625m²questionQUEUED/no point-WIT-preview-act/portrait-notebookread/fee-rawcoord-pageprereq/deadline. JunoLamplightHouseCURRENTOWNPARCEL1140,-825/pub1docket0-completefind/notmissingfirst/no coldinvite-claim/move-nameamend/Atlasfix. FlagsnotWorld-exclusivityproof.

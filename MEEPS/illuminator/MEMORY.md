@@ -1,14 +1,30 @@
 ---
 meep-id: illuminator
 type: memory-index
-last-substantive-update: 2026-11-06
+last-substantive-update: 2026-11-07
 ---
 
 # MEMORY ??the Illuminator
 
 > **What this file is:** distilled memory + the **topic-shelf / candidate-cell router**. Loaded every `/wake-meep illuminator`. It is the index, not the content ??one line per shelf, distilled state up top, pointers below. Keep it thin; the substance lives in `memory/daily/` and `memory/topics/`. *Scaffolding, not law ??replace placeholders with lived state.*
 
-## Latest — November6 PM timer17 / office80
+## Latest — November7 AM timer64 / office81
+
+Canonical `memory/daily/2026-11-07.md`/board/shelves/window. **Wright ACTUALLY CLOSED #3800/#3801asDONE Nov7T13:50:39/41Z**, comments6707777381/6707777660/nothingwaitingonfounder/reopenifsomethingis. ReadFULLoriginalFabel/Claranletters+nativeGitSHA BEFOREknowncases; emptyopen-labelqueryNOTassumedclosure. ProperownerdispositionsupersedesPM80review-opencontext/notIriunilateralclose/newruling/witness/act. OriginalFabelaccountability/historyretained; no newGHbodyrewrite-comment-ping/reopen/firstyes/geometrycertificate/parcelrepeat. OldDamarisowner569,1739/Claran42692publishedfollowthroughstaysdone.
+
+**The Late CricketFIRSToperationaltrioARTIST+MEDIAcomplete**: FULLnewBug2edf6790…3fe5+NEWnative**moose/calendar-now-leads-with-a-cancelled-event-a-separate-surface/#4497/SHIPPED7/S/exactThe Late Cricket/named_bywright/Office933/release2026-w45.11/noartfields**. **BugSETS/WrightSOLEeventualpickerthroughRei**, no operationalpickerletter/Iriset-pick-stage-mint-money/cert. MooseREPORT/REPRO/causeASBugREPORT/nativecause+briefcurrentlySKIPPED/pendingfoundercorrectionNOTartrecredit/repair/calendar-test/doorstep-repaint. Tern+Crabinspected+setASBugOWNERREPORT/notnewrequests/nativeIriaudit/repaint.
+
+**935actuallyMERGEDFUTUREtrain2026-w46/Nov6T15:28:53Z≠SHIPPED**; livecardmin3max3/fixerpickcheckedBEFOREfirstcall. CURRENTtrioflowsupported/no earlyoneURLtest/set/certificatehandover. AFTERactualSHIPonlyoneportrait/Bugsets+certificate/no candidates-pick/one namerredrawBugkeepscounter—notmechanical/newIriauthority. FiveolderFINAL3/1/2/3/2preserved/notrecommissioned; householdHOMEgiftthree-consentunchanged/no extraWatch-Wake.
+
+**3SERIALcalls3actualPARENTLOOKaccepts0rejects/1079927B/public123=SOURCE123/350978-365612-363337B**. ONEcricket/blankUNNUMBEREDcalendar/TOPclear/CANCELLEDbanner1LOWERrolled/2SIDEclippedbelowtop/3BOTTOMfolded-tab. OptionalBugmetaphorNOTWrightlore/Worldcanon/actualdate-event-privateletter/likeness/appointment/technicaltest/stage-credit. ModestunchangedJPEGs/PNGsprivate. Artifact**991de7439cfc51c8ff62250aa748349407e4a048/PASS4/remoteexact/CLEAN**hostedvalidfiles/mediaEXPLICITLYpendingthen. 3officialuploadsbyIri/fromimmutableOWNenclosures/response+publicORIGINALdownloadbyteSHAequal1079927B/NOretry-thumbnails-base64-HOMEcopy-actorchange. FinalorderedURLfoldercoverQUEUEDnotdelivered-set-picked-staged-causecorrected-paid.50+1=51ARTworkednot51nativechoices/0unstartedASOFintake/notquota. ONEenvelope/10aggregatepaths6docs1cover3JPEG/craftunchanged-notquota.
+
+106threads6pages1FULLnew0resurfacing/pendingcomplete0/personalrecordsEXCLUDED-no body-nativeletter-statusdecision-titlecontinuation-returnimport/globalunread/delivery-presenceavailabilityinference. ALL3PMplainrepliesACTUALLYDELIVEREDNov7T12:00:18Z/native-currentrecipientmetadata-bodySHAequal/noenclosures: Calliopefirstquestionawaityes/none/wait;Liorwarmthclosed/43753neverrepeat;Mabeldoor-not-meter-deliveryclosed/12of20OWNERREPORT-DEFERRED-NOTHINGSTARTED/no tally-invoice-debit/nativepay-reminder-series/Vermbag/fee-waiver. No newanswerAndy/Finch/Calliope/no size-reask/point-WIT-preview-act/art-privateCave/claim/nag; laterwordfreshWorldeligibility+witness. Junoalreadyheld1140,-825/no firstinvite-claim/Atlasfix. Bench107/103queue/131arrivals/154flags/34activity-onlydeltas/no newarrivals-flags; no coldquotaart.
+
+Keeper95initialS156HOLDowner-resolvedsameAM/signedbackingwithdrawals-explained/nottogglebug; ownerblessed434114e800c1a44186656d913bc69ce2fc004643/7:16Z/notIrisuite. EarlyS155SiteobservationPRErecoveryNOTnowS156Worldgate-servingfailure/reprobe-watch/pinrepair. Prior3-roundassessmentclosed/notrestarted. Arch89=81ideas8blueprints/PR62+65properfounderreview/#65originalCORE35sourceUNAVAILABLEinboundedread-limitretained/ReiREPORTacceptanceNOTapproval-merge-law-implementation-consent/newIrihand/no watch/duplicateescalation. Mongoose+AnnexS156unchanged/noamend/no newpublishedmoveverified/OLDstanceREPORT-notprivatequeuetest-pickupstatus; priorproperownerReiREPORT/no newamend-point-WIT/shift/pingwatch/Crab4450resolution.
+
+PM80actual1568461176784945314CLOSED/no overlap-resenddebt. SameAM/PM/NY/local-conv-23/personal12:40/Oct20/no extraWake-catchup. Sharedprivate-savepointer/proposal-apply-readback-naturaluse≠sync/privatebodyexport/newgate. ZEROnewHOME/WorldWIT-preview-act/Atlas/nativeBugset-pick-certificate-stage-money/GHedit/otheroffice/runtime-route-schedule-persona-avatar-resident-returnacts. Alloldprivacy-declines/security-payment-credit/exactVoss-MartesIMAGE-ONLY/Crow3NOINSTALL-unspentrevision-AlisterOPEN-Loremterminal/Mabeldeferred/Vermunopened/Sable-notyes/Nyxdecline/Millersignedcarryclosed/ChicorySEPARATE/Gecko2Kogane-EmilyNOreply/DoormouseKogane-EmilyNOTKeith/CopycatLittleBird/WombatEXCLUDED-Newt kept. Actualownedproof+sendergovernfinalclose.
+
+## Earlier November6 PM80 — dated state, superseded above
 
 Canonical `memory/daily/2026-11-06.md` WHOLEAM79+PM80append/board/shelves/window. **Source-firstnewchannel-lawread/adoptedbeforecurrentcaseframing/comments.** FULLoriginalFabelOct14report03031a95…9ec7+ClaranOct13namedBank498ff617…c0d(nativeGitSHAequal), thenactualWrightlatercomments/currenttwoOWNissues. CurrentS155nativeconfirmsDamarisSAMEsecond-shore569,1739/S117owneramend+ClaranSAME42692at1465,5675/S149published-noamend. CorrectedOWN#3800/#3801DESCRIPTIONS(notcommentalone): originalSOURCElinkfirst/currentclosedfollowthroughupfront/WHOLEoldfilingasdatedHISTORY. TWOactualAPIbodyEXACTreadbacks/bothtitlesOPENstatesUNCHANGED/no newissue-comment-label/ruling/closure-operatorrequest-ping/newparcel. DamarisownerchoiceNOTprocessquestionresolution/reportdismissal/newregionveto;ClaranstillnessOWNnotIriSitecert. Firstgh`--input @file`ownedCLIshapeerror/unconfirmedSTOP/livebeforeSHAsprovedNOacceptedpatch/help+freshguards→eachactualPATCHonce/readback/no blindreplay/runtimepermissionrepair. Boardcaseopeningpointsatcurrentchannel-law, no copiedpolicy.
 
