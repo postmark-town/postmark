@@ -65,11 +65,23 @@ const MAIL_GENESIS = sha256(Buffer.from('postmark-ledger-v1', 'utf8'));
 const STAMP_GENESIS = sha256(Buffer.from('postmark-stamps-v1', 'utf8'));
 const sealAt = (seals, genesis, lines) => (lines === 0 ? genesis : seals[lines - 1]);
 
+// A git read is evidence only when git SUCCEEDED: no spawn error, no signal, exit
+// 0, and its output not cut off at the buffer (Node then sets `error`, ENOBUFS).
+// A read that failed answers `{ ok: false, why }`, which the checks below turn
+// into incomplete; an empty answer from a read that succeeded is a real "none".
+export const GIT_READ_MAX_BUFFER = 256 * 1024 * 1024;
+function gitRead(repo, args, maxBuffer) {
+  const r = spawnSync('git', ['-C', repo, ...args], { encoding: 'utf8', maxBuffer });
+  if (r.error) return { ok: false, why: `git ${args[0]} failed: ${r.error.code ?? r.error.message}` };
+  if (r.status !== 0 || r.signal) return { ok: false, why: `git ${args[0]} exited ${r.status ?? r.signal}: ${String(r.stderr ?? '').trim().slice(0, 160)}` };
+  return { ok: true, out: r.stdout };
+}
+
 /**
  * The whole verification, pure over git reads.
  *   { verdict: 'pass' | 'fail' | 'incomplete', failures: [], incomplete: [], count, latest }
  */
-export function verifyChain({ repo, at = 'HEAD', publicKeyPem, checkpoint = null, world = null }) {
+export function verifyChain({ repo, at = 'HEAD', publicKeyPem, checkpoint = null, world = null, maxBuffer = GIT_READ_MAX_BUFFER }) {
   const failures = [];
   const incomplete = [];
   const keyId = keyIdOf(publicKeyPem);
@@ -164,8 +176,12 @@ export function verifyChain({ repo, at = 'HEAD', publicKeyPem, checkpoint = null
       incomplete.push(`${label}: its World range is not in your --world checkout`);
       continue;
     }
-    const diff = spawnSync('git', ['-C', worldRepo, 'diff', '--name-only', '--no-renames', '-z', d.inputs.world_from, d.results.world_to], { encoding: 'utf8' });
-    const changed = new Set(diff.stdout.split('\0').filter(Boolean));
+    const diff = gitRead(worldRepo, ['diff', '--name-only', '--no-renames', '-z', d.inputs.world_from, d.results.world_to], maxBuffer);
+    if (!diff.ok) {
+      incomplete.push(`${label}: the World change could not be read, so its inventory was not measured — ${diff.why}`);
+      continue;
+    }
+    const changed = new Set(diff.out.split('\0').filter(Boolean));
     const bound = new Set(d.artifacts.filter((a) => a.repo === 'world').map((a) => a.path));
     const omitted = [...changed].filter((p) => !bound.has(p));
     const extra = [...bound].filter((p) => !changed.has(p));
@@ -182,16 +198,23 @@ export function verifyChain({ repo, at = 'HEAD', publicKeyPem, checkpoint = null
       const lastTo = moved.at(-1).body.decided.results.world_to;
       if (HEX40.test(firstFrom ?? '') && hasCommit(worldRepo, firstFrom) && hasCommit(worldRepo, lastTo)) {
         const covered = new Set();
+        let unread = null;
         for (const r of moved) {
           const d = r.body.decided;
           if (!HEX40.test(d.inputs?.world_from ?? '')) continue;
-          const list = spawnSync('git', ['-C', worldRepo, 'rev-list', d.results.world_to, `^${d.inputs.world_from}`], { encoding: 'utf8' });
-          for (const sha of list.stdout.split('\n').filter(Boolean)) covered.add(sha);
+          const list = gitRead(worldRepo, ['rev-list', d.results.world_to, `^${d.inputs.world_from}`], maxBuffer);
+          if (!list.ok) { unread = `record #${r.body.seq}'s range: ${list.why}`; break; }
+          for (const sha of list.out.split('\n').filter(Boolean)) covered.add(sha);
         }
-        const log = spawnSync('git', ['-C', worldRepo, 'log', '--format=%H%x09%s', `--grep=^${SETTLEMENT_SUBJECT}`, lastTo, `^${firstFrom}`], { encoding: 'utf8' });
-        for (const line of log.stdout.split('\n').filter(Boolean)) {
-          const [sha, subject] = line.split('\t');
-          if (!covered.has(sha)) incomplete.push(`World commit ${sha.slice(0, 8)} ("${subject.slice(0, 60)}") is a settlement's, and no record binds it`);
+        const log = unread ? null : gitRead(worldRepo, ['log', '--format=%H%x09%s', `--grep=^${SETTLEMENT_SUBJECT}`, lastTo, `^${firstFrom}`], maxBuffer);
+        if (log && !log.ok) unread = `World's settlement commits: ${log.why}`;
+        if (unread) {
+          incomplete.push(`World continuity unchecked: ${unread}`);
+        } else {
+          for (const line of log.out.split('\n').filter(Boolean)) {
+            const [sha, subject] = line.split('\t');
+            if (!covered.has(sha)) incomplete.push(`World commit ${sha.slice(0, 8)} ("${subject.slice(0, 60)}") is a settlement's, and no record binds it`);
+          }
         }
       } else {
         incomplete.push('World continuity unchecked: the settlement records\' World range is not in your --world checkout');

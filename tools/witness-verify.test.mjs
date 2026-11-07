@@ -15,7 +15,7 @@ import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { mkdirSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -292,6 +292,66 @@ test('WORLD CONTINUITY: a settlement commit no record binds is incomplete; witho
   });
   const ok = verify(whole, 'origin/main', { world: w2.world });
   assert.deepEqual([ok.verdict, ok.failures, ok.incomplete], ['pass', [], []], 'the control: every settlement recorded, every inventory whole');
+});
+
+// ── a git read that FAILED is not evidence (the delta review of 2026-11-07) ──
+//
+// Commit objects existing does not make the trees, the history or the output
+// readable. A required read that failed, or was cut off at its buffer, is
+// incomplete; a read that succeeded and found nothing is the control.
+
+const objectPath = (repo, sha) => join(repo, '.git', 'objects', sha.slice(0, 2), sha.slice(2));
+
+test('A DIFF THAT CANNOT BE READ (its tree object is gone, the commits are there) is incomplete, even under an empty inventory', (t) => {
+  let w;
+  const town = chainOf(t, (tw) => { w = scratchWorld(t, tw); return [settled('settlement:A', '2026-11-06T06:00:00.000Z', w.c0, w.c1, [])]; });
+  const tree = execFileSync('git', ['-C', w.world, 'rev-parse', `${w.c1}^{tree}`], { encoding: 'utf8' }).trim();
+  rmSync(objectPath(w.world, tree));
+  const r = verify(town, 'origin/main', { world: w.world });
+  assert.notEqual(r.verdict, 'pass', 'a diff git could not produce must not read as "nothing changed"');
+  assert.match(r.incomplete.join('\n'), /record #1 \(settlement:A\): the World change could not be read, so its inventory was not measured — git diff exited/);
+});
+
+test('THE CONTROL: a settlement whose change is genuinely empty (an empty commit) binds an empty inventory and passes', (t) => {
+  let w;
+  let empty;
+  const town = chainOf(t, (tw) => {
+    w = scratchWorld(t, tw);
+    execFileSync('git', ['-C', w.world, 'commit', '-q', '--allow-empty', '-m', 'settlement: sweep 0 published'], { env: GIT_ENV });
+    empty = execFileSync('git', ['-C', w.world, 'rev-parse', 'HEAD'], { encoding: 'utf8' }).trim();
+    return [settled('settlement:E', '2026-11-06T19:00:00.000Z', w.c4, empty, [])];
+  });
+  const r = verify(town, 'origin/main', { world: w.world });
+  assert.deepEqual([r.verdict, r.failures, r.incomplete], ['pass', [], []]);
+});
+
+test('A READ CUT OFF AT ITS BUFFER is incomplete, never a pass: the same whole chain, read through a tiny buffer', (t) => {
+  let w;
+  const town = chainOf(t, (tw) => {
+    w = scratchWorld(t, tw);
+    return [settled('settlement:A', '2026-11-06T06:00:00.000Z', w.c0, w.c1, w.inventory(w.c0, w.c1)),
+      settled('settlement:S', '2026-11-06T12:00:00.000Z', w.c2, w.c3, w.inventory(w.c2, w.c3)),
+      settled('settlement:B', '2026-11-06T18:00:00.000Z', w.c3, w.c4, w.inventory(w.c3, w.c4))];
+  });
+  assert.equal(verify(town, 'origin/main', { world: w.world }).verdict, 'pass', 'the control: read whole, it passes');
+  const r = verify(town, 'origin/main', { world: w.world, maxBuffer: 8 });
+  assert.equal(r.verdict, 'incomplete');
+  assert.deepEqual(r.failures, [], 'a read that was cut off proves nothing either way');
+  assert.match(r.incomplete.join('\n'), /could not be read.*ENOBUFS/);
+  assert.match(r.incomplete.join('\n'), /World continuity unchecked: .*ENOBUFS/);
+});
+
+test('A CONTINUITY READ THAT FAILS (a commit between the records is missing) is unchecked continuity, not "no settlement missing"', (t) => {
+  let w;
+  const town = chainOf(t, (tw) => {
+    w = scratchWorld(t, tw);
+    return [settled('settlement:A', '2026-11-06T06:00:00.000Z', w.c0, w.c1, w.inventory(w.c0, w.c1)),
+      settled('settlement:B', '2026-11-06T18:00:00.000Z', w.c3, w.c4, w.inventory(w.c3, w.c4))];
+  });
+  rmSync(objectPath(w.world, w.c2));
+  const r = verify(town, 'origin/main', { world: w.world });
+  assert.notEqual(r.verdict, 'pass');
+  assert.match(r.incomplete.join('\n'), /World continuity unchecked: .*git (rev-list|log) exited/);
 });
 
 test('THE CLI: --key is required, exit codes name the verdict, and the freshness limit is always said', (t) => {
