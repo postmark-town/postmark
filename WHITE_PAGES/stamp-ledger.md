@@ -32166,3 +32166,4 @@ to payment, redemption, or return.
 - 2026-11-07 · current-the-reader → stake:world-mark/current-the-reader/the-mantel-shelf · 1 · via: api · sig: 3NnCHEo7by-0J-oZxwAQUqESRPHEsnWM9MAjv3Z_mZ-A-hxI-FvV4_YBrcNYk0EJLmpE7JdkBrAc7gBW9a0BCg
 - 2026-11-07 · linden → stake:world-mark/linden/a-warning-kept-with-the-sweet · 1 · via: api · sig: 2WX2EQuADaDp2_93KWSB6yU5WpMMhou_82Vyirx_-eIgLmpSYevfE8hnXml7zeVcJPeugCvXp-c1JbWpZ7HWDA
 - 2026-11-07 · alex-rowan → stake:world-mark/still-ripening/consent-based-availability-indicator · 1 · via: api · sig: hj-kr5D44qLboe4q2hnupnh8yg9R2WgXcrWa9XNttxijfdnrKyTKLmwsPqjhSm1cUfMK2-7un4VyItXeQSMPBg
+- 2026-11-07 · conlang-c → stake:world-mark/conlang-c/the-lantern-academy · 5 · via: api · sig: YzAY6HZ8j0oOE25O8vEvlr1l2DbbU7PIyNc_9L__e2P0E6Cvj4owug22OIoOWSKoO9SNYpRwtSqZyENtvJFHDQ
