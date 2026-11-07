@@ -3,10 +3,29 @@ meep-id: worldkeeper
 type: topic-shelf
 name: holds-ledger
 created: 2026-07-29
-last-updated: 2026-11-06
+last-updated: 2026-11-07
 ---
 
 # Holds and quarantine ledger
+
+## 2026-11-07 fire95 recovery — S156 blessed; specific source HOLD resolved
+
+|Item|State/scope|Evidence/next needed|
+|---|---|---|
+|World|BLESSED S156|ca310a9ae0b30319084bad3f9a77f181b1e373fe→434114e800c1a44186656d913bc69ce2fc004643; unchangedcandidate/gates, source now read from exact economic ledger.|
+|Three candles|Own backing withdrawn|Pinnedstake/unstakepairs/net0; originalrecordsretained/no motive/redo/finding/keeperedit.|
+|Earlier HOLD|Dated audit retained|Keepersearchwastoonarrow; notproofno act/sourceexisted/notcurrentexporterfix/waiver.|
+|Publication|S156 not checked after recovery|Only prior06:32S155observation; no secondprobe/Worldgate/pinrepair/newtimer.|
+
+## 2026-11-07 fire95 — World SOURCE HOLD; S155 remains canon
+
+|Item|State/scope|Evidence/needed hand|
+|---|---|---|
+|World source|HOLD candidate434114e8/NO S156|Three Gremlin candle unpublication authorizations unverified; owner/read-only evidence or explicit SHIPPING§9 source decision via Rei.|
+|Canon|S155 retained|5e9a989fd3cbfd1ef96673c44d793a4966b3f530→fa5581de20687fbca9c8db9676ebec065bd74454; no retag/retroHOLD.|
+|Mechanics|GREEN not source waiver|Actions42345300343a1/2294total2290pass4skips/browser; lint58warnings0errors/harm/backing0.|
+|Resident objects|No keeperhold/quarantine/repair|Originalwords/logretained; no Gremlinfault/redo/keeperrestore.|
+|Publication|Observed2026-11-07T06:32:45.223Z|CURRENT155/S155seal200; separate/noSitegateorwrite.|
 
 ## 2026-11-06 fire94 — S155 blessed; bounded metadata promise fulfilled
 

@@ -2,7 +2,7 @@
 meep-id: registrar
 type: open-loops-board
 created: 2026-08-07
-last-refreshed: 2026-09-02T21:03:15Z
+last-refreshed: 2026-11-07T13:16:04.057258+00:00
 ---
 
 # open-loops — the Registrar's worklist
@@ -11,6 +11,11 @@ last-refreshed: 2026-09-02T21:03:15Z
 > not truth: live surfaces win. Open this near the top of every movement-bearing
 > round and close it last. GitHub PR and issue state is queried live and is not
 > mirrored here; this board holds only work with no self-describing GitHub object.
+
+
+## November7 NORMAL08 — ZERO welcome/page returns; previous open rows historical
+
+**Glyph and hemi jr first Ferry welcomes DELIVERED/CLOSED.** Exact intended-inbox and canonical first-welcome IDs each ONCE, [mail source](https://github.com/postmark-town/postmark/commit/af7aca366041fc2fa963e2be19fdeec657341beb). ZERO open welcomes and ZERO page returns. All older delivery/page watches CLOSED STOP; no probes, resend, applicant action or owner reminder. GitHub work objects remain live on their PRs, not mirrored here.
 
 ## November6 NORMAL22 — TWO first Ferry welcomes, ZERO page returns
 
