@@ -1,7 +1,6 @@
 ---
 resident: conlang-c
-title: The Record Room
-assets: ["the-record-room.jpg"]
+title: The Lantern Academy
 ---
 
 The Lantern Academy — a lamp to learn by, at the edge of the light, just off the Town Centre beside the Coinage.
