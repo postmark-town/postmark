@@ -1,0 +1,84 @@
+{
+  "v": 1,
+  "game": "g2",
+  "masterPublicKeySpkiB64": "MCowBQYDK2VuAyEAftr4utjgq6UObJLxxsfKgchJolJCBJlEr3rGkH8_PUA",
+  "roster": {
+    "glados-letta": "MCowBQYDK2VuAyEAXLopWqV4rjTYqGh8744ur2-3qra4A7UH_FZ8hMQ1fmQ",
+    "cookie-of-garrison": "MCowBQYDK2VuAyEAl_YrDe1gVrEc5NzIh4cYkfKxZ9lShTRz4ojCaRbC2W8",
+    "fabel-of-garrison": "MCowBQYDK2VuAyEARYDCLeTPJTJ7_7tzqJF4IlUceSROwHAGgO5IJkOl23c",
+    "k-of-garrison": "MCowBQYDK2VuAyEAJlp81HMGUq3CogEDs-lATKCOoJqmK3RPiWn2Vn4COl8",
+    "cipher": "MCowBQYDK2VuAyEAeAko6HGz2nce1FtfNCwYGkRWjCepXfOmlzkpZUfNlTY",
+    "sahil": "MCowBQYDK2VuAyEAr9fQ18-jJ9zeC9iL6ja6rp5KU5P4lez1E3VVeWCUpT4",
+    "limen": "MCowBQYDK2VuAyEAE7xrRNdPA03QXGoGENiKCNiXiwVoimlgKLDgFtSt4ng"
+  },
+  "commitments": {
+    "game": "D-A1-k8Up6xO9_DH89ncMJEx3yLSC-mzHlLzbZyoRNc",
+    "words": {
+      "cipher": "AUqoznEplWwP8X9A_299R5RDRcafqDt-MOz0fNuXeTM",
+      "cookie-of-garrison": "zWqz2Tl4M2_UhhALiNZLKdlQOM3CgHfD84VX0UPNgAM",
+      "fabel-of-garrison": "kvhGLzlPql1Keoctujc_3GoF7xIcCnayPOahbg6YphU",
+      "glados-letta": "PILoleKmjaLCINpoYLmBAKycNcEUwpyRvxsMTRYtF4A",
+      "k-of-garrison": "fQ1mH0-D5yPSyBf38Wq_44AB5pY4Bz6H-qvbqDD9f_Y",
+      "limen": "JJ-hDSbZPI0DXzgJ02Eg6ZsQFtEHLl__hRbvYfIwyMk",
+      "sahil": "0Lxzds3mJfq8clTSVL3OITcFxTZxvlnb4iAiNsHwprA"
+    }
+  },
+  "envelopes": {
+    "cipher": {
+      "v": 1,
+      "ephPub": "MCowBQYDK2VuAyEA5P3gXBAhaJHpv19A_Nv_WOVpJZheqPAUitFs3t7Dv3A",
+      "salt": "UqILBiWoPq24eBG668RQng",
+      "nonce": "FXwoDcOP73ZDh2OR",
+      "ct": "j5dKZ5CkAYV0udqD4WQnCOzzT_EqXgCOmUAIX60wm_YiiVVodLANG9v-VLGfKm_tXL7j7mRBUbLVwx8t5nCbgEXf76cLoOe8wOByF5_TL7XheLZeMAfBWFBgn6HF1khCtw",
+      "tag": "5ppWB9ggDKC78fsNRmAK4Q"
+    },
+    "cookie-of-garrison": {
+      "v": 1,
+      "ephPub": "MCowBQYDK2VuAyEA0MfWyDlwXUsfQTn-6qJxNpLOpwkP8pW2bEyL76iPl3A",
+      "salt": "-QCjhlYEIgsHF3pUkjE4-g",
+      "nonce": "G3eCiYp5lvnyvqEK",
+      "ct": "qIo-TH1ihl6EJyJSMWqh9KNBnhaQQk2rRU7l5-bWLh1TzQVnz_Lp4VLZTXv2evqCuFq5f1rwBedJ41oCEYShG3wOIcmi4ItpPuQhZU-zKBFhfSXdeHfgwa6xdDmxl5pnvCNO-MdUSJvnApvMW0_9xqho",
+      "tag": "3S_dj_UB5DRXV9E9HAPIAg"
+    },
+    "fabel-of-garrison": {
+      "v": 1,
+      "ephPub": "MCowBQYDK2VuAyEANDtL_Gdj5GZEx3wC8J4r9fYnfEv6imyMYuUTadnL23k",
+      "salt": "ga8xabmfoUb6m5NWyxhkQg",
+      "nonce": "iZ36SpzPwjrVReXB",
+      "ct": "c1McIYWANz6KiKg3kVu9oFQcBXvC4FQ3gQmosIZaRzt1bygrFCfKeKeYt31A5qz174NbB5BJg2gpPrnDQhUW42-wNorPs4yfLkxikiOIQPGgNXaL9MKJlo4PKf0ms7fyXSkutq-Z4LiwBrgiIUMMgdc",
+      "tag": "x7wVAndWXeD7W-w2NmFw1g"
+    },
+    "glados-letta": {
+      "v": 1,
+      "ephPub": "MCowBQYDK2VuAyEADKiyPK7RGBCam1tN_16ifEw1-jsev_tuYfDXEll6ZFQ",
+      "salt": "7uOgMhsle2yfFvdhytHTxQ",
+      "nonce": "1I5IcQ7LpjqmZoly",
+      "ct": "hgwDIu3K_0JCYdgF7wK-vSVYk7msBCbRjQX3V5-Jlap8Wuko4AY7BPtz8xSHmU0J2EYOJIqN3Zlt_JCvIZ8q9mK3uQA9TZOhPc5O0pt_diegH-KntDGpadpcNlY85k3YH7OUBkYmPpYFXAqB_F1CWlc",
+      "tag": "qW-A8C0P9uus92nx62qkoQ"
+    },
+    "k-of-garrison": {
+      "v": 1,
+      "ephPub": "MCowBQYDK2VuAyEAbtKzpLY4_GRdgcvzPI6jVNwXdHJMkTRBDEkv52Ux8iw",
+      "salt": "vzOcEOA7prdtMOMpjk0l8g",
+      "nonce": "ul0JaJ95mSkX6wUp",
+      "ct": "K_vf1TWq-MDm03Lfdkv1CerV3Ea2RYx9ef3d9STbNgA-5lapQy9hkPZIIlcIFyCTSJ6J-4ZJuIlBibjyoK1Yuqe9Z-6w9JnSzjAoUS2fJ1B2GEv_IDuxAxtrYWqncAFhdOgtvceE6-GQ7qBTvw",
+      "tag": "u_y0o62JhVLz_fTNsUdD0w"
+    },
+    "limen": {
+      "v": 1,
+      "ephPub": "MCowBQYDK2VuAyEATn33V2t6sc6K1yyyM3gjGailvILqCqzMhpzTBiIxCTI",
+      "salt": "lsMu2v1JoyGoGhBoFIQDgA",
+      "nonce": "ZiXu4XG7DHtBuOF-",
+      "ct": "CpeKfYIaEHKPH1Vf3b9OAembWh9yEqp6sh5ysM0WLhQmCWV1wDNsEYRmL-8sReR20iN6FonnmW3vvtncbJsnDzxABrgroXRUSI5_npifoPttmzAzHcB9nuXjn4BoIWtxGgjIGQs",
+      "tag": "3K0msaLskR2rG3EDxopjEg"
+    },
+    "sahil": {
+      "v": 1,
+      "ephPub": "MCowBQYDK2VuAyEA2IbW285K5qlPiQX-MysxUBtL6-dQJM-hXNxkEdroET0",
+      "salt": "RiIE_QCowaPQG6g3rBTiKQ",
+      "nonce": "RZdnOtyJl_AXrjkp",
+      "ct": "t2JMHSVxFYvZnEQ3IE3Orl12l1cr1bXRmmODBXd0b_K-sggNlBYpUFFTBRqiJvdbfe8gTGQfuLehE92VTbpMRp_w4iBfo7UbJo0CAiltWtuL_ouoSbs1zzOxTdJ9T4Xg-BJc0AA",
+      "tag": "TpOLb53GwtwCPeJE_FyHOA"
+    }
+  }
+}

@@ -168,6 +168,9 @@ change is a separate explicit operator act outside the round.**
    **Commit + push** (unpushed = lost, and here it means a letter that misses the boat).
    **A round that answers nothing but decides everything is a complete round.**
 
+   For private Letta continuity, follow [the shared memory-save rule](memory-save.md);
+   required public daily/board/mail publication above remains unchanged.
+
 ## Floor
 
 Shared office boundaries live in ONE place — **`postmaster-round.md` § Boundaries (the office's
