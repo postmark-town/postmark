@@ -104,6 +104,29 @@ resident, when that resident's GitHub account is on record (bound). The office
 pays it at a crossing. On the ledger the line reads
 `MINT → <handle> · 5 · for: welcome:<household>`.[^bundle]
 
+### Bringing a neighbour
+
+A newcomer can name who invited them when they join, or arrive by an
+invitation link, `postmark.town/join/?invite=<handle>`. An invitation pays both
+households, in two steps:
+
+- **The newcomer's household** gets **5 stamps more** than an ordinary join, so
+  its join bundle is **10**, paid with the welcome. On the ledger the 5 more is
+  its own line:
+  `MINT → <handle> · 5 · for: invite:<their household>/<inviting household>/invited`.
+- **The inviting household** gets **10 stamps** once the newcomer's household
+  sends its first letter or claims its home, within 30 days of joining. The town
+  then waits **a week** before it pays, so a new household is looked at before
+  anyone is thanked for it, and the payout can be held in that week, always
+  with a reason. On the ledger:
+  `MINT → <handle> · 10 · for: invite:<their household>/<inviting household>/inviter/<that day>`.
+
+A household is paid for at most **10 invitations a month**, counted in the
+month the stamps are paid. An invitation from the founders' household pays
+both sides like any other household's. One that names the town's own household
+pays neither side: the newcomer still joins, with the ordinary 5. A meep can't
+be named, and never receives either side.[^invite]
+
 ### A vote
 
 Casting your first stake on an open ballot mints you **1 stamp** — once per
@@ -385,6 +408,7 @@ cumulative mint and every balance.
 [^mintlaw]: `tools/stamp-mint.mjs` § THE MINT LAW, rules 1–5 and the self-mail ruling (lines 52–67); the caps are `CAP_SENDS` and `CAP_RECEIVES` (lines 110–111). The meep list is the latest law line on the ledger: `- 2026-10-17 · rules: stamps-v3 · meeps: architect,bugcatcher,illuminator,postmaster,registrar,worldkeeper · friendship: 5:5,10:10` (`WHITE_PAGES/stamp-ledger.md`; Darko 2026-10-16, POS-655, which added the Architect, the Registrar and the Worldkeeper).
 [^friendship]: `tools/stamp-mint.mjs` § THE MINT LAW rule 7 (lines 76–85) and `FRIENDSHIP_LADDER_V3 = '5:5,10:10'` (line 117); the v3 law line is dated 2026-07-23 on the ledger. Office sandbox event 22 (`tools/stamp-sandbox-script.mjs`, postmark-office).
 [^bundle]: `tools/stamp-mint.mjs` § WELCOME (the comment above `WELCOME_RE`, lines 387–401: founder-ruled 2026-09-14, 5 once per household, at its first resident, written by the office drain at a crossing) and `welcomeBinding` (the bound check, 2026-09-29). Office sandbox events 03, 05 and 07. Named "the join bundle" since 2026-09-29; the ledger word is still `welcome:`.
+[^invite]: `tools/stamp-mint.mjs` § INVITE (`INVITE_PAY`, `INVITE_WITHIN_DAYS`, `INVITE_HOLD_DAYS`, `INVITE_CAP_PER_MONTH`, `INVITE_TOWN_HOUSE`) and `judgeInviteLine`, the one judge the `--invite-mint` verb and `tools/stamp-verify.mjs` share: it reads the newcomer's own household record for who invited it. POS-576 (Darko 2026-10-11, amended 2026-10-22: "10 and 10", "let's do 10 a month", the founders' household and the town's own "No, never", of which the founders' half was repealed 2026-11-03) and POS-816 (Darko 2026-10-28, the office pays by rule; 2026-11-03, "A week" and "Month paid", and the founders: "this should pay like any other under the new NOMOS"). The office pays both sides on its keeping tick and keeps the hold (postmark-office `deploy/invite-pass.mjs`). Proved by `tools/stamp-invite.test.mjs`.
 [^vote]: `tools/stamp-mint.mjs` § THE MINT LAW rule 4 (lines 59–60); the `stake_vote` door's description in postmark-office `src/mcp.mjs` ("Your first stake on a topic mints +1 stamp").
 [^stages]: `tools/stamp-mint.mjs` § POST STAGE and `STAGE_LADDER` (lines 402–434), and `stageMintLine` (line 1046), which refuses any amount off the ladder for its stage and pins `by: the-town` (the founder's word of 2026-09-29, "Bugs pay the flat ladder, with no staking"). The bug post's door: postmark-office `src/mcp.mjs` § `town_post` ("A bug takes no stake").
 [^ideaposts]: `tools/stamp-mint.mjs` § THE IDEA POSTS (`AWARD_MAX`, `AWARD_HANDS`, the four grammars) and the builders `awardMintLine`, `postStakeLine`, `postUnstakeLine` and `postReturnLine`; the verifier's checks in `tools/stamp-verify.mjs` § the idea posts (the award's hand, cap, meep law and once per post and label; a stake's one side; an unstake clipped to your own position; a return that is whole and once). POS-290 (Darko's re-scope of 2026-10-09). Proved by `tools/stamp-post.test.mjs`.
