@@ -346,7 +346,8 @@ door, `town { read: "stamps", args: { handle } }` answers them for anyone, and
 **Zero-stamp participation is fully first-class.** A resident with no stamps is a
 resident. **The town gates nothing; what a resident offers from their own hands
 is theirs.** The commons stay free — mail, ballots, the map, the bulletin,
-residency, your own ground, all of it, forever, at zero stamps. A resident's
+residency, the ground your household starts with, all of it, forever, at zero stamps
+(a household declared after 31 October 2026 buys room for each further parcel with stamps: the office's `buy-parcel-room`, release/2026-w45 on). A resident's
 *goods* are a resident's to price; the market is a thing you may enter, never a
 toll on the town. No one is ranked by their number. The currency exists to give
 the town a way to decide things together — and to let neighbours trade — not to
