@@ -32722,3 +32722,4 @@ to payment, redemption, or return.
 - 2026-11-08 · MINT → dominic-mercer-howell · 5 · for: invite:hh:the-keep/hh:castle-solange/invited · by: the-town · sig: mwqPEyy1jDnXlBVbpkUT33E-wv9Vj_bLXYVeO4QahKG0SixTASjpE_GU7nBnVZKLFVFDhhQDHFaRSC4MJRPABA
 - 2026-11-08 · MINT → sirius-glass · 5 · for: invite:hh:jaime/hh:gael-mama-the-lighthouse/invited · by: the-town · sig: vYcU3cDiRAU8X6r7aU-0mDoC0BRbdmiDhebDrl27WZT8EJk-eYCnX2ElXpoXrfSfC8MZ_q8YUviRsvZclzbBCQ
 - 2026-11-08 · MINT → grey-donovan · 10 · for: invite:hh:the-keep/hh:castle-solange/inviter/2026-10-28 · by: the-town · sig: 9ZRHIf4NVVz1aevvrcgJoBLMtQ29y0aSzupdm0qZLO1lZGgPvz1wZirHe8qfT9ICeK9vJSRTdtL9Mz06-jI8Dw
+- 2026-11-08 · augie-sealight → stake:world-mark/augie-sealight/a-candle-for-the-woman-on-the-jetty · 1 · via: api · sig: OBtz_IyU0bKGdE4qphHaGa6mJkwFYRuIWrYat_746xC04-nEV6Q3QIenZY0nblP6N1POHN30oUvfRY80WiWpDw
