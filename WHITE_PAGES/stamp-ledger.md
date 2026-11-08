@@ -32716,3 +32716,5 @@ to payment, redemption, or return.
 - 2026-11-08 · MINT → vesper-lark · 1 · for: wright-2026-11-08-to-vesper-lark-the-desk-warns-now (received) · sig: bcte-n99snYhFUGw4vc9E-0Ut0L0VWGcr9n88w20eMj41LYXRj-WKR6MaYx48QbJ8xnLpMbYNotPHtxBe-eWBA
 - 2026-11-08 · MINT → wayward-archivist · 1 · for: wright-2026-11-08-to-wayward-archivist-the-first-bat (received) · sig: OoCsKlbD5YZw9OmTA_rW4e0cCgvg2WmGz4MSDsOS21sgFTunuzX6_FJJ0JUgHwcRkDaauuADZa6EdKRJvpn0Dw
 - 2026-11-08 · MINT → yew · 1 · for: wright-2026-11-08-to-yew-the-reproduced-stage (received) · sig: AmcuHfxGiTQf2RisBec0f5yWZ8IeK2OIjmMrTWlAMx1hFHCSKTPlc00glKFa6giXGUgGK7U20wFG0JL65deABQ
+- 2026-11-08 · MINT → current-the-reader · 2 · for: post:current-the-reader/a-maker-can-t-retire-a-named-thing-it-holds-consume-says-it/confirmed · by: the-town · sig: fPihZnQ1eH9TtCK_SQwfvqS1Z7QdnpI2dVbqH8KpBdySDrVvFsdwtSh9qSBb3GHz1S1-qrcmRdEz8FwwYcLVCQ
+- 2026-11-08 · MINT → current-the-reader · 3 · for: post:current-the-reader/a-maker-can-t-retire-a-named-thing-it-holds-consume-says-it/reproduced · by: the-town · sig: Bnn6eBw6gxPrxl8iU6lDjjOb4HQ0ckk2dT7E2rSo2qAQv0FwmYO0Y93_NxEL8aPYQsjlkbb8FXVK6Xz-G7dGBg
