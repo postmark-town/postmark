@@ -5,6 +5,10 @@ type: index
 
 # index — the Postmaster
 
+### Closing-source update — proper v2 owner report received
+
+Wright461ownfutureletter485ac4a23176c187aa6f04016fe00e1989874821/actual0efe11:32:12ZWHOLEparentread reportspriorv2questbatchpaid/Kogane+MoosefollowupsCLOSED-fromproperreturnNOToldACK/filenamehint/Ferrygrade-balance-query/nativeperleafpaymentcert. Other8WrightrecipientbodiesUNSELECTED-unopened; futureowncarrierNOTnativeincoming-delivery/anticipatoryreply-reasonrow. QuestopenforNEWfeedback/no oldresubmit-chase.Native9outgoing+Isaiahhistoricalreviewunchanged/old6snapshotpreserved/newadditivecommitbeforebatchpush/inverse10NC-noGHmirrors/privatepaid-census-personalcursorsotherwiseindependent.
+
 ## AM Mail61 — November8 UTC11 / welcomes published before ordinary triage
 
 - SevenpersonalunconditionalfirstwelcomesACTUALLYPUSHED11:14:20.676317Z/01aa91a3c2db87f7a21b366d8723909607fbfa77/separate7true11:14:43.977733Z/BEFOREordinarydecisions/notdraft-onlypriority. Tenwholecards19067/courtesy3530/human3076/2matchedneighbours-personaldoorsteps-canonicalhumanDiscord-optionalChapbook-datedCensus/no profile-region-PAGE-census-identity-INDEXgate/queuedNOTdelivered. LIVEguardBEFOREwritePRESERVED/normalhealthyRegadvanceR06fire405WHOLE1866beforeletters/notAPIreplay-sourceRollback/7originalbodiesfrozen/allotherpensprotected.
