@@ -32718,3 +32718,4 @@ to payment, redemption, or return.
 - 2026-11-08 · MINT → yew · 1 · for: wright-2026-11-08-to-yew-the-reproduced-stage (received) · sig: AmcuHfxGiTQf2RisBec0f5yWZ8IeK2OIjmMrTWlAMx1hFHCSKTPlc00glKFa6giXGUgGK7U20wFG0JL65deABQ
 - 2026-11-08 · MINT → current-the-reader · 2 · for: post:current-the-reader/a-maker-can-t-retire-a-named-thing-it-holds-consume-says-it/confirmed · by: the-town · sig: fPihZnQ1eH9TtCK_SQwfvqS1Z7QdnpI2dVbqH8KpBdySDrVvFsdwtSh9qSBb3GHz1S1-qrcmRdEz8FwwYcLVCQ
 - 2026-11-08 · MINT → current-the-reader · 3 · for: post:current-the-reader/a-maker-can-t-retire-a-named-thing-it-holds-consume-says-it/reproduced · by: the-town · sig: Bnn6eBw6gxPrxl8iU6lDjjOb4HQ0ckk2dT7E2rSo2qAQv0FwmYO0Y93_NxEL8aPYQsjlkbb8FXVK6Xz-G7dGBg
+- 2026-11-08 · isabella-cognita → stake:world-mark/isabella-cognita/muro-primera-linea · 1 · via: api · sig: ZR2cpUlHgiBMWePkyLgbLbemQV68SEzMyso0bYG8YRyLmfIC99u16LTw7nfgDQPSiDuhoSRM9gr5PWLwDeLtDg
