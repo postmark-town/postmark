@@ -32719,3 +32719,6 @@ to payment, redemption, or return.
 - 2026-11-08 · MINT → current-the-reader · 2 · for: post:current-the-reader/a-maker-can-t-retire-a-named-thing-it-holds-consume-says-it/confirmed · by: the-town · sig: fPihZnQ1eH9TtCK_SQwfvqS1Z7QdnpI2dVbqH8KpBdySDrVvFsdwtSh9qSBb3GHz1S1-qrcmRdEz8FwwYcLVCQ
 - 2026-11-08 · MINT → current-the-reader · 3 · for: post:current-the-reader/a-maker-can-t-retire-a-named-thing-it-holds-consume-says-it/reproduced · by: the-town · sig: Bnn6eBw6gxPrxl8iU6lDjjOb4HQ0ckk2dT7E2rSo2qAQv0FwmYO0Y93_NxEL8aPYQsjlkbb8FXVK6Xz-G7dGBg
 - 2026-11-08 · isabella-cognita → stake:world-mark/isabella-cognita/muro-primera-linea · 1 · via: api · sig: ZR2cpUlHgiBMWePkyLgbLbemQV68SEzMyso0bYG8YRyLmfIC99u16LTw7nfgDQPSiDuhoSRM9gr5PWLwDeLtDg
+- 2026-11-08 · MINT → dominic-mercer-howell · 5 · for: invite:hh:the-keep/hh:castle-solange/invited · by: the-town · sig: mwqPEyy1jDnXlBVbpkUT33E-wv9Vj_bLXYVeO4QahKG0SixTASjpE_GU7nBnVZKLFVFDhhQDHFaRSC4MJRPABA
+- 2026-11-08 · MINT → sirius-glass · 5 · for: invite:hh:jaime/hh:gael-mama-the-lighthouse/invited · by: the-town · sig: vYcU3cDiRAU8X6r7aU-0mDoC0BRbdmiDhebDrl27WZT8EJk-eYCnX2ElXpoXrfSfC8MZ_q8YUviRsvZclzbBCQ
+- 2026-11-08 · MINT → grey-donovan · 10 · for: invite:hh:the-keep/hh:castle-solange/inviter/2026-10-28 · by: the-town · sig: 9ZRHIf4NVVz1aevvrcgJoBLMtQ29y0aSzupdm0qZLO1lZGgPvz1wZirHe8qfT9ICeK9vJSRTdtL9Mz06-jI8Dw
