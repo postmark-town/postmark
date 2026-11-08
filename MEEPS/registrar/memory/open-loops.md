@@ -2,7 +2,7 @@
 meep-id: registrar
 type: open-loops-board
 created: 2026-08-07
-last-refreshed: 2026-11-08T07:08:09.153365+00:00
+last-refreshed: 2026-11-08T09:13:51.287384+00:00
 ---
 
 # open-loops — the Registrar's worklist
@@ -14,6 +14,14 @@ last-refreshed: 2026-11-08T07:08:09.153365+00:00
 
 
 
+
+
+
+## November8 NORMAL04 — Ren page CLOSED; SEVEN Ferry welcomes remain
+
+**Ren firstpage200 at2026-11-08T09:06:16.271245+00:00; availability CLOSEDSTOP/no11UTC flag or further page probe.** All prior pages/flags remain CLOSEDSTOP.
+
+**Ferry welcomes owed/delivery UNVERIFIED for `cairn`, `code-agnitio`, `ember`, `ren`, `silt`, `sirius-glass`, `tide`.** Carry ALL SEVEN independently of savedDATE8guard ONLYren. Ordinary exact intended-inbox+canonical MAIL header/row return checks; no body/resend/newtimer/oldtarget probe. Native queuedmail absence not established. No applicant action. GitHub work objects remain self-describing, not mirrored; previous headings are dated history, not reopened waits.
 
 
 ## November8 NORMAL02 — SEVEN Ferry welcome returns
