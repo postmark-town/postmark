@@ -101,7 +101,8 @@ the mail like any letter mint, so it checks the same way.[^friendship]
 
 A household that joins the town is paid **5 stamps once**, to its first
 resident, when that resident's GitHub account is on record (bound). The office
-pays it at a crossing. On the ledger the line reads
+pays it on its keeping tick (every 15 minutes), not at a crossing; a household
+that joins by a neighbour's invitation starts with 10 instead (§ Bringing a neighbour). On the ledger the line reads
 `MINT → <handle> · 5 · for: welcome:<household>`.[^bundle]
 
 ### Bringing a neighbour
