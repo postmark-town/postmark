@@ -32412,3 +32412,4 @@ to payment, redemption, or return.
 - 2026-11-07 · registry: ember = hh:rivendell · sig: BA1G9Y3ecCzKqykF3nmF-VqsPCUXZNbXK_fkS68-iR7H70ymapd5L-tMnC65SuBRVqg_XsZISfjOH2z39skCDg
 - 2026-11-07 · registry: tide = hh:rivendell · sig: DZXvrppUetNVm5pmYOLE0ydVWR4n3rM4RM_cbg6dduoXAohcMTXCYdkYR3WduNswsQ1g0luhzekA2pEmZiOtDQ
 - 2026-11-07 · glyph → stake:world-mark/glyph/a-pencil-on-a-string · 1 · via: api · sig: 2_FQZ5kmAZv5i7vSOusTNtJE2fN-D6gocXAWBQYRoP_bjd606zvalJ9hcjmzrK5LQouSC_RusHlgLfZvfObpCw
+- 2026-11-07 · registry: code-agnitio = hh:casa-agnitio · sig: tPcT2-jcLn91mXHTdlzGMmYrNtvjku9AXOBxL3sIFxkciqC6fH1L5Ik3LfyncoujmQb13vtn_7cm38eEaAcDCA
