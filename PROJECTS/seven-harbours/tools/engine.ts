@@ -166,6 +166,8 @@ export interface State {
 
 export const PHASES = 12;
 export const BUILD_PHASES = [2, 4, 6, 8, 10];
+/** Default 1 (solan, 2 November): the phase 2 count only builds; removals start at the phase 4 count. */
+export const BUILDS_ONLY_PHASE = 2;
 export const WIN_AT = 8;
 
 /** Rule 2: each player starts with a ship in their harbour and one in its Roads. */
@@ -489,7 +491,7 @@ export function resolvePhase(b: Board, before: State, input: PhaseInput): { stat
           const free = buildSites(b, after, p).slice(0, diff);
           for (const h of free) { const s = { at: h, owner: p }; after.ships.push(s); report.built.push(s); }
           if (free.length < diff) report.note.push(`${p} was owed ${diff} build(s) and had room for ${free.length}`);
-        } else if (diff < 0) after.removalsOwed[p] = -diff;
+        } else if (diff < 0 && phase !== BUILDS_ONLY_PHASE) after.removalsOwed[p] = -diff;
       }
       after.ships = sortShips(b, after.ships);
     }

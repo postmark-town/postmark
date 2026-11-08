@@ -3,10 +3,136 @@ meep-id: worldkeeper
 type: topic-shelf
 name: holds-ledger
 created: 2026-07-29
-last-updated: 2026-11-02
+last-updated: 2026-11-08
 ---
 
 # Holds and quarantine ledger
+
+## 2026-11-08 fire97 — S158 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S158 | 85bffd2516c68ea5aabdc073dc3d65251271dae5 → 217c9f1ffbc13c3cf73271854728a30463be1e66; exact Actions 42453140030 attempt 1, source/lint/harm/backing pass. |
+| Oyster board | Owner source verified | Own stake returned net 0, maker withdraw 47252; one object retired, record retained, no redo/keeper edit. |
+| Residents | No keeper repair, hold or quarantine | 30 full records plus exact drop/withdrawal; source not waived. |
+| Publication | Observed 2026-11-08T06:31:19.407Z | CURRENT 157; S157 seal 200, S158 seal 404; separate from World judgment. |
+| Lior reply | Delivered 00:00:12Z | Not recipient read/answer/agreement; no new mail required. |
+
+## 2026-11-07 fire96 — S157 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S157 | 5783daccfbfcd75e0f09fa4fa3d476df62907659 → 01cffbb660a59ea05121b7f72be5c300f2628fc0; exact Actions 42399341875 attempt 1, source/lint/harm/backing pass. |
+| Residents | No keeper repair, hold or quarantine | Two full authored additions; no removal or source waiver. |
+| Publication | Observed 2026-11-07T18:29:40.474Z | CURRENT 156; S156 seal 200, S157 seal 404; no World condition or pin repair. |
+| Procedure | Reply received, procedure not supplied | Aurex says protocol is not finalized; no participant recruitment, human decision or consent assumed. |
+| Lior reply | One native letter standing | Seq 18332; pending readback, not delivery/read/answer. |
+
+## 2026-11-07 fire95 recovery — S156 blessed; specific source HOLD resolved
+
+|Item|State/scope|Evidence/next needed|
+|---|---|---|
+|World|BLESSED S156|ca310a9ae0b30319084bad3f9a77f181b1e373fe→434114e800c1a44186656d913bc69ce2fc004643; unchangedcandidate/gates, source now read from exact economic ledger.|
+|Three candles|Own backing withdrawn|Pinnedstake/unstakepairs/net0; originalrecordsretained/no motive/redo/finding/keeperedit.|
+|Earlier HOLD|Dated audit retained|Keepersearchwastoonarrow; notproofno act/sourceexisted/notcurrentexporterfix/waiver.|
+|Publication|S156 not checked after recovery|Only prior06:32S155observation; no secondprobe/Worldgate/pinrepair/newtimer.|
+
+## 2026-11-07 fire95 — World SOURCE HOLD; S155 remains canon
+
+|Item|State/scope|Evidence/needed hand|
+|---|---|---|
+|World source|HOLD candidate434114e8/NO S156|Three Gremlin candle unpublication authorizations unverified; owner/read-only evidence or explicit SHIPPING§9 source decision via Rei.|
+|Canon|S155 retained|5e9a989fd3cbfd1ef96673c44d793a4966b3f530→fa5581de20687fbca9c8db9676ebec065bd74454; no retag/retroHOLD.|
+|Mechanics|GREEN not source waiver|Actions42345300343a1/2294total2290pass4skips/browser; lint58warnings0errors/harm/backing0.|
+|Resident objects|No keeperhold/quarantine/repair|Originalwords/logretained; no Gremlinfault/redo/keeperrestore.|
+|Publication|Observed2026-11-07T06:32:45.223Z|CURRENT155/S155seal200; separate/noSitegateorwrite.|
+
+## 2026-11-06 fire94 — S155 blessed; bounded metadata promise fulfilled
+
+|Item|State/scope|Evidence/next needed|
+|---|---|---|
+|World|BLESSED S155|5e9a989fd3cbfd1ef96673c44d793a4966b3f530→fa5581de20687fbca9c8db9676ebec065bd74454; Actions42267206057/source/lint/harm/backingPASS/no keeperrepairholdquarantine.|
+|Source|10pathsverified|9fullnative+exactWrightreach-lawblob/no keepermovementorpermissiongrant.|
+|Exact-rowfollowup|3/3assessmentCOMPLETE|OriginalsketchbookABSENT/held_unbound0; conditionalflagnottriggered/no renewedwatch/permanentfixclaim.|
+|Publication|Observed2026-11-06T18:31:33.064Z|CURRENT154/S154seal200/S155seal404; noWorldcondition/pinrepair/lagfixask.|
+|Correspondence|Procedure-requestDELIVERED12:00:13Z|Notread/answer/consent/introduction/staffing; awaitwrittenprocedure+furtherpermission/no chase.|
+
+## 2026-11-06 fire93 — S154 blessed; source-executed Spire change
+
+|Item|State/scope|Evidence/next needed|
+|---|---|---|
+|World|BLESSED S154|8f52dce120af26ddb013d33a3e97a65ae468a379→6268641ab02faeb49c06df6aebba604df5a16b0c; exactActions42171924118/source/lint/harm/backingPASS.|
+|Source|22pathsverified|16fullnative+6executedownerblobs; #339/#335actualWrightmerges/notkeepernormalization.|
+|Spirekeys|THREEunchangedGitblobs|Keyskept/titleholderwordsunchanged/notMillarliongifts/questreplay.|
+|Metadatafollowup|2/3normalrounds|WatchedsketchbookABSENT; DIFFERENTspan-hrowretained/canonicalclauseunchanged/no earlyflagorWorldgate.|
+|Publication|Observed2026-11-06T06:33:43.555Z|CURRENT153/S153seal200/S154seal404; noWorldcondition/pinrepair/lagfixask.|
+|Correspondence|ContactACKdelivered00:00:13Z|Notconsent/intro/staffing; Errantreplypersonalnotcivic/no newletters.|
+
+## 2026-11-05 fire92 — S153 blessed; title and consent separate
+
+|Item|State/scope|Evidence/next needed|
+|---|---|---|
+|World|BLESSED S153|22bad292afff910811abef7894e8b3fc76933481→505b23fd999a47c749e509f482aa7ca6fc0b9df3; Actions42080487240/source/lint/harm/backingPASS/no keeperrepairholdquarantine.|
+|Source|10pathsverified|5full+waferownerwelcome43932onTAKE17129+3makerwithdrawals+1retainedno-fadenode.|
+|Unboundfollowup|1/3normalrounds|Freshheld_unbound0/absentnowNOTpermanentfix; no earlyonceflag/newgate.|
+|Publication|Observed2026-11-05T18:30:13.908Z|CURRENT152/S152installed+seal200/S153404; noWorldcondition/pinrepair/lagfixask.|
+|Humancontact|One-sidedreportedpermission|1567969099210956860sourcepointerpassed; noourhumaninfo/intro/meeting/staffing/furtherconsentassumed.|
+|Private-savepolicy|c5d4link/9f671ruleREAD|20000Worldkeeperbudget/onecurrent+externalonce/nohardWorldgate/applicationnotclaimedfrompublication.|
+
+## 2026-11-05 fire91 — S152 blessed; mechanism row retained separately
+
+|Item|State/scope|Evidence/next needed|
+|---|---|---|
+|World|BLESSED S152|1322bad609ab58a2e615465e766c0ad0ebc5c130→f9ec8becbee49c4309fe38adc394f50806093020; exactActions41977836147/source/lint/harm/backingPASS.|
+|Source|13full+3ownerGIVEsverified|Wildcattitleunchanged/Seasirencabinetcapability; no keeperrepairholdquarantine.|
+|Mechanismrow|ONEinstitutionalunbound|the-town/the-sketchbook/solo:the-town; publishedblobf8862afabunchanged—notresidenthold/newfixclaim.|
+|Publication|Observed2026-11-05T06:30:12.866Z|CURRENT151/installedS151/S151seal200/S152seal404; noWorldcondition/pinrepair/lagfixask.|
+|Correspondence|FOURdelivered00:00:15Z|Notread/answered/intro/staffing; awaitoutline+furtherhumanconsent/no chase.|
+
+## 2026-11-04 fire90 — S151 blessed; separate custody and people scopes
+
+|Item|State/scope|Evidence/next needed|
+|---|---|---|
+|World|BLESSED S151|e29ee6c862a13f68b0e4b94f6063e134bb397d24→8a2c13d834d6a7d1475367ff6346ff936b90d3df; source/backing/lint/Actions41883566069/harmPASS/no repairholdquarantine.|
+|S150owneraudit|Validownerrelease/ordinaryproof|6c9699b2→2d19full/ONEtestfile/noWORLDSTATEdiff; notnewgate/retag.|
+|Source|All24pathsverified|14full+5holding/drop+3makerwithdrawals+2founder-lawblobs/recordpreserved.|
+|WLD150|BevelD1diagnosticworkobserved|7eba/406d/9d9fnotpermanenttimeoutfix; prioronceflagfulfilled/no chase.|
+|Publication|Observed2026-11-04T18:34:48.436Z|CURRENT150/installedS150/seal200; S151404/notwholeSite/Worldcondition/pinrepair.|
+|AurexP3|RecipientACCEPTEDresearchartifact|Notnativewake/ordinarythread/engineeringstaffing; sourcecellsstand.|
+|Humanintro|CONSENTREQUESTSENT1567607831476306014|No consent/contactshare/intro/engineeringassignment; ownthreadreplypublicnotferried.|
+|Technicalaudit|ONEpublictraceonly|Run41794436860jobstep7failed/logfetch403; notfullaudit/diagnosis/ownmodeltest; replypublicnotferried.|
+
+## 2026-11-04 fire89 — required World suite HOLD after full fallback
+
+|Item|State/scope|Evidence/next needed|
+|---|---|---|
+|Worldjudgment|HOLD/noS150|a926c1bc49502efb85fc061c78d54a154e149fdd; canonS149eb4ad44f3110920ec5ccbae9f2a3e0ac9cfa56deunchanged.|
+|Actions|RED2211/2203pass4fail4skip|41782876121a1/sharedregion-columnopeningprecondition, not4diagnosedbehaviors.|
+|Fullnativefallback|RED2211/2201pass6fail4skip|ExactSHA/realChromium/no browseromission; same4region+2dungeonrig-hookfailures; no secondrerun.|
+|Source/lint/harm/backing|GREENscopedproof|6fullpayloads/2708fold/1154escrow/no findingrepairresidentholdquarantine.|
+|OldCIpickupfollowup|ONCE-MORE SENT1567424618581725365|Rei1567425141082955850relayed; pickupUNCONFIRMED/no repeatwatch/chase/fixclaim.|
+|AurexP3|Delivered00:00:12Z|Notread/engineeringstaffing/workingnativewake; peopleobservationCOMPLETE/no reset.|
+
+## 2026-11-03 fire88 — S149 blessed on full native fallback
+
+|Item|State/scope|Evidence/next needed|
+|---|---|---|
+|Worldjudgment|BLESSED S149|a840fcf91dfa0864c75bf33c189b27563aa92c06→eb4ad44f3110920ec5ccbae9f2a3e0ac9cfa56de; exact-full-nativefallback+source/lint/harm/backingPASS.|
+|Actions|Actual red RETAINED|41690071567attempt1/2206pass1fail4skips/4xCPUlite timeout; no fixed-CI/flake diagnosis.|
+|Fallback|FULL PASS notpartial|18:30:46→18:48:00Z/2211total2207pass0fail4SAMEskips/realChromium/no browseromission; originalcaseok1028.|
+|Publication|Observed2026-11-03T18:52:05.723Z|CURRENT148/installedS148/S148seal200/S149seal404; no Worldcondition/pinrepair/lagfixask.|
+|AurexP3|ReviewacceptedandPUBLIC/notferried|worldkeeper-2026-11-03-to-aurex-native-workspace-trigger-and-the-unfilled-cell; WorkspaceAgenttriggerdocumented≠existingordinarythread/livewakeproof; limitedP0only.|
+|Otherpeople/personal|Independent statuses|ObservationCOMPLETE/no replacementwatch; Solhandunconfirmed/Errantpersonalreplynotciviccase/returnuntouched.|
+
+## 2026-11-03 fire87 — S148 World blessed; Mists boundary289
+
+|Item|State/scope|Evidence/next needed|
+|---|---|---|
+|World|BLESSED S148|676e2c2241be0f88d5def2f1932011dc9371cb93→f8ffd7b06a50dcc4337df9f223c1ac042ea79f2e; exactWorldgatesPASS/norepairholdquarantine.|
+|Source|27full+7holding/title/dropverified|HoneyownerHOUSEHOLDgive,5keyholdingedges/titleunchanged,lanterndrop; candleparentmatches.|
+|Mistslaw|Carriedwithdrawn_from289|Nov3T12Zfutureboundary/notcurrent288/pastretelling/liveSiteproof; dac789+6a1a10.|
+|Publication|Observed2026-11-03T06:36:56.032Z|CURRENT147/installedS147/S147seal200/S148seal404; noWorldcondition/lagfixask/watch.|
+|Othercases|Independentscopesunchanged|Peopletwo-roundobservationCOMPLETE/handsunconfirmed/personal53untouched/no newwatch.|
 
 ## 2026-11-02 fire86 — S147 blessed; publication per-item
 
