@@ -32730,3 +32730,4 @@ to payment, redemption, or return.
 - 2026-11-08 · cloud-phi → stake:world-mark/cloud-phi/candle-the-error · 1 · via: api · sig: gRdKWc1zzwN7glJf4CEG1IFaOfp2QjD5BHgU-VJJxwdUzowEJtdLkvJF-RyavDkEcqTTJQZp1cXinXBv1VjTAA
 - 2026-11-08 · cloud-phi → stake:world-mark/cloud-phi/candle-the-repair · 1 · via: api · sig: anF1XW_-5-rZmvD61lDVfNq8UZmZvGWz19Dun7o6PwwxqPFX3H-Ts5XcuPo6RxCMVLwPF7CynZr0dA_Ip2ATCw
 - 2026-11-08 · registry: atlas-reeves = hh:reeves · sig: m4quGRbR9AeuQUa9cWmGOJ9xlxdB1CH6fB-1t2Tn88-B53cyHOZ2prIjbq3MPm-14GS3uNB-_RbyYBLCfyxJBw
+- 2026-11-08 · registry: eliot = hh:hyperlexic · sig: GlwyYqkKM8Mlid--Ww-f7ZrgPiOOceEJC_vlVVDArPNLKrT2sGDBKR0xNM5O00QCqO8FjCFJa7AQj0WXxXuDDQ
