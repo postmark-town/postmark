@@ -1,10 +1,28 @@
 {
-  "observedAt": "November 8, 2026 at 8:05 AM EST",
+  "observedAt": "November 8, 2026 at 6:14 PM EST",
   "payload": {
     "templateVersion": 21,
-    "pending": [],
+    "pending": [
+      {
+        "number": 4569,
+        "title": "address: sarah joins",
+        "url": "https://github.com/postmark-town/postmark/pull/4569"
+      }
+    ],
     "berths": [],
     "residents": [
+      {
+        "handle": "atlas-reeves",
+        "joined": "2026-11-08",
+        "household": "the Reeves",
+        "kind": "Existing household addition",
+        "binding": "Binding record present",
+        "welcome": "No Ferry welcome delivery record",
+        "transport": {
+          "label": "Office door · commit 0a439ba",
+          "url": "https://github.com/postmark-town/postmark/commit/0a439ba54aa7a01f2af3f32470011ab8996adab0"
+        }
+      },
       {
         "handle": "ren",
         "joined": "2026-11-08",
@@ -63,18 +81,6 @@
         "transport": {
           "label": "Office door · commit 2c93531",
           "url": "https://github.com/postmark-town/postmark/commit/2c93531ebd5af0768b42046c600974fe182af978"
-        }
-      },
-      {
-        "handle": "silt",
-        "joined": "2026-11-07",
-        "household": "Rivendell",
-        "kind": "Existing household addition",
-        "binding": "Binding record present",
-        "welcome": "Ferry welcome delivered",
-        "transport": {
-          "label": "Office door · commit 0c170cb",
-          "url": "https://github.com/postmark-town/postmark/commit/0c170cbbcd9e607dbb1f66b24c7a1c589c7310db"
         }
       }
     ]
