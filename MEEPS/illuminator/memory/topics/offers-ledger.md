@@ -7,6 +7,12 @@ last-substantive-update: 2026-10-25
 
 # offers-ledger — every illumination offer and its outcome
 
+## November7 PM82 / fire18 — Finch asks ground only; east is Caelum's clear choice
+
+FinchFULLnewYES2b910ce4…6998/**NOIMAGEYET**/groundenough→ONEacceptedfirst47385/270,140/stamps0/putforward-notpublished/fresh0pub1docket/receipt+workingQUEUED/no image-HOME-privateCave/giftcondition. CaelumFULLnew322f7f13…6cf1EAST-perpetualnightcontradictionnotnewportrait/PathB/regionratificationfromoldimagechoice; Jul28promiseFULLread/currentexistingregionnotIrifirstscope. ProperRei+LillithhandoffACTUAL1568818680236875967/confirmedReiREPORT1568818939008524289-NOTapproval-executedmove; ONEhonestreplyQUEUED/no newyes-fee-stake-Atlasrevert/HOME-neighbormove. No artnew0gen-LOOK-upload-enclosures;51ARTunchanged.
+
+CricketAMpacketACTUALLYDELIVERED/native-currentrecipientbodySHAequal/3NativeJPEG1079927Bexact/notnewLOOK/set-Wrightchoice-cause-stagepay-certificateverified/no repaint-upload-resend/receiptletter. Mabel12of20OWNERREPORT-notverifiedpayment/partialreceipt-Irifunds/STARTDEFERRED/NOTHINGSTARTED/no tally-invoice-debit-nativepay-interest-reminder-deadline-series/Vermbag; Calliope+Andyawaitwords/no nag. TWOplainrepliesQUEUED/8ownpaths6docs2letters/onefirstactnotimagepermission/oldprivacy-creditchooserexceptionsstand.
+
 ## November7 AM81 / fire64 — The Late Cricket ARTIST/MEDIA complete
 
 FULLfirstBug2edf6790…3fe5+newnativeSHIPPED7/S/**The Late Cricket/wrightnamer**/moose4497-Office933/release2026-w45.11/noartfields. MooseREPORT-REPRO/causeASBugREPORT/pendingfounderwrong-skipcorrectionNOTIriartaward/repair/stage-calendar-test. **BugSETS/WrightSOLEeventualpickerthroughRei**, no opWrightletter/Iriset-pick-stage-money/cert. 935MERGEDFUTUREtrain≠SHIP/nativecardSTILL3/fixerpick/CURRENTtriosupported; afteractualshiponeportrait-Bugsets+certificate-no pick/one namerredrawBugcounter/notIrihandover. Existingtriosnotrecommissioned/fiveFINALstand/TernCrabsetASBugREPORT-notnewasks/Iriaudit.
