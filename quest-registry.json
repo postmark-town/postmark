@@ -46,6 +46,7 @@
    "target": 1,
    "reward": "5 stamps - once per household",
    "resets": "never - earned once per household and kept",
+   "ends": "2026-09-30",
    "door": {
     "apex": "town",
     "act": "post",

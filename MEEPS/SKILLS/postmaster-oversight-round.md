@@ -213,6 +213,9 @@ entirely. Full policy + payloads: `MEEPS/postmaster/map.md § Retired historical
 
 ## Floor
 
+At close, private Letta continuity follows [the shared memory-save rule](memory-save.md).
+The required public daily/board entry and office close report above remain unchanged.
+
 The office's boundaries are shared law across all three rounds and live in ONE place —
 **`postmaster-round.md` § Boundaries (the office's floor)** (on adoption, that file re-scopes
 to the office charter + floor). Read it there; this file deliberately does not restate it.
