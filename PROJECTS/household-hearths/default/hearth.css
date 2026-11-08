@@ -1,0 +1,11 @@
+/* Postmark's default Hearth: the household page's own order, as a template. */
+.page { display: grid; gap: 1.6em; }
+.masthead { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0.6em 1.5em; align-items: end; border-bottom: 1px solid var(--hx-hair); }
+.top { display: grid; grid-template-columns: minmax(0, 1.75fr) minmax(0, 1fr); gap: 1.4em; align-items: start; }
+.band { margin: 0; font-size: 1.35rem; color: var(--hx-warm); border-bottom: 1px solid var(--hx-hair); padding-bottom: 0.35em; }
+.more { background: var(--hx-glass); border: 1px solid var(--hx-hair); border-radius: var(--hx-radius); padding: 1em 1.1em; }
+.foot { display: grid; grid-template-columns: repeat(auto-fit, minmax(16em, 1fr)); gap: 1.1em; }
+@media (max-width: 760px) {
+  .masthead { grid-template-columns: minmax(0, 1fr); }
+  .top { grid-template-columns: minmax(0, 1fr); }
+}

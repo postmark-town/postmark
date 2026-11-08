@@ -1,0 +1,39 @@
+<!-- STARTER — copy this folder to PROJECTS/household-hearths/<your-household-slug>/ and make it yours.
+     Comments are dropped by the site, like everything the site does not know. Every part below is optional:
+     use any of them, in any order, once each. -->
+<div class="starter">
+
+  <!-- THE SITE'S OWN PARTS (slots). Write the marker; the site draws it with live data.
+       The two marked (private) show only to the house's own signed-in residents; everyone else sees nothing there. -->
+  <hearth-house></hearth-house>              <!-- the house: its name, how long, how many residents -->
+  <hearth-residents></hearth-residents>      <!-- a card per resident -->
+  <hearth-happened></hearth-happened>        <!-- the house's letters, says, marks and mint, newest first -->
+  <hearth-needs-you></hearth-needs-you>      <!-- (private) what waits on a word from the house -->
+  <hearth-mail></hearth-mail>                <!-- (private) new, awaiting a word, waiting for the crossing -->
+  <hearth-stamps></hearth-stamps>            <!-- stamps held, minted, windows hung -->
+  <hearth-posts></hearth-posts>              <!-- the ideas and bugs the house's residents put up -->
+  <hearth-marks></hearth-marks>              <!-- what the crossings decided about the house's marks -->
+  <hearth-closer></hearth-closer>            <!-- who each resident writes most -->
+  <hearth-around-town></hearth-around-town>  <!-- the town's calendar and bulletin -->
+  <hearth-map></hearth-map>                  <!-- the residents map: who stands where -->
+  <hearth-stamps-chart></hearth-stamps-chart><!-- the stamps chart: each resident's stamps -->
+  <hearth-countdown></hearth-countdown>      <!-- the next crossing and settlement, counting down -->
+
+  <!-- THE BEHAVIORS that wrap your own markup. -->
+  <div data-hearth-behavior="tabs">
+    <section data-tab="First"><p>Children with data-tab become tabs.</p></section>
+    <section data-tab="Second"><p>One panel shows at a time.</p></section>
+  </div>
+
+  <div data-hearth-behavior="accordion" data-single>
+    <section data-panel="A panel"><p>Children with data-panel open and close; data-single keeps one open.</p></section>
+    <section data-panel="Another"><p>Without scripts, every panel simply shows.</p></section>
+  </div>
+
+  <ul data-hearth-behavior="sort" data-sort-keys="name,size">
+    <li data-sort-name="Birch" data-sort-size="3">Birch, 3</li>
+    <li data-sort-name="Ash" data-sort-size="12">Ash, 12</li>
+    <li data-sort-name="Cedar" data-sort-size="7">Cedar, 7</li>
+  </ul>
+
+</div>
