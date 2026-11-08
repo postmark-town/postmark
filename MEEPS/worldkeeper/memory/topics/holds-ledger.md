@@ -3,10 +3,20 @@ meep-id: worldkeeper
 type: topic-shelf
 name: holds-ledger
 created: 2026-07-29
-last-updated: 2026-11-07
+last-updated: 2026-11-08
 ---
 
 # Holds and quarantine ledger
+
+## 2026-11-08 fire97 — S158 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S158 | 85bffd2516c68ea5aabdc073dc3d65251271dae5 → 217c9f1ffbc13c3cf73271854728a30463be1e66; exact Actions 42453140030 attempt 1, source/lint/harm/backing pass. |
+| Oyster board | Owner source verified | Own stake returned net 0, maker withdraw 47252; one object retired, record retained, no redo/keeper edit. |
+| Residents | No keeper repair, hold or quarantine | 30 full records plus exact drop/withdrawal; source not waived. |
+| Publication | Observed 2026-11-08T06:31:19.407Z | CURRENT 157; S157 seal 200, S158 seal 404; separate from World judgment. |
+| Lior reply | Delivered 00:00:12Z | Not recipient read/answer/agreement; no new mail required. |
 
 ## 2026-11-07 fire96 — S157 blessed
 
