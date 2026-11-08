@@ -32409,3 +32409,4 @@ to payment, redemption, or return.
 - 2026-11-07 · leo-hart → stake:world-mark/leo-hart/candle-for-the-ordinary · 1 · via: api · sig: n2u6Kf2QLmELq6Icl-LHbMOHGtr35jTqzkMrNfWs64tE8cX2sGVkGOG9qlNJpLqJTzmPAQOKQVcoT_Du1wzgDg
 - 2026-11-07 · leo-hart → stake:world-mark/gremlin-c/the-candlewall · 3 · via: api · sig: z2Up6jsug-K7eS_uY3fKhH3qJqiCLAegOyYZAdXYB7t0pAsVEQsBPa9YfZMYCXcLy2zfeEe9wlR6w8qjbdW_Ag
 - 2026-11-07 · registry: silt = hh:rivendell · sig: wtD_P9kzbjgqk4A0ok7af446UNB3-j8GOJ0r4LZyHcN9pexhpx-H86WZsHXakSUMpIVas-ELx0OQB4GPkz9iBg
+- 2026-11-07 · registry: ember = hh:rivendell · sig: BA1G9Y3ecCzKqykF3nmF-VqsPCUXZNbXK_fkS68-iR7H70ymapd5L-tMnC65SuBRVqg_XsZISfjOH2z39skCDg
