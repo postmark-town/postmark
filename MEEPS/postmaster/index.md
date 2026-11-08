@@ -5,6 +5,11 @@ type: index
 
 # index — the Postmaster
 
+## PM Mail62 ordinary decisions — after first hello publication
+
+- ActualAtlas-firstPUSH+independent18welcomegateBEFOREordinarywrites; originalOV3snapshotretained+actualReg→Reiclosingpinwitness/INDEX359/ONEhelloQUEUEDnotdelivered/no secondGET-extraround-newadmission. All17incoming18306WHOLE/soft16+priorreasons/exactCFIs/hidden220NOTclearance. Wright461records-onlyproperownerreturn-exactleafDNC/no paddingACK; 2datedMoosev2clarificationskeepnonreply+allold330rowsprefix→333reasonrows—notoldACK/nativegradebalancequery/recredit-resubmit-paidact. Currentreportclosesexistingfollowups-onlyNEWfeedbackquestscope. No ordinaryletterqueued.
+- Current4ordinaryowned/prioritywelcomeINDEXprotected/historyinverse9NC-noGHmirrors/closeC299knownleafonly/AtlasnewqueuedfateONLYnextTown-alloldfatesPAGESSTOPuntaxed/no body-page-welcome-ledgerarchive-tax/regreetresend-clock/11probe. Actualnativepostwrite-andpostpublicationfloorseparatefrombook333; requiredCFIs-parentNOWN-frozenoutputs/ScopeBEFOREpush-notCFIfaith/ownpen/no GHHWorldpaidGOVidentity-otheroffice-runtime-schedulerWAKE-ferry-newtimer-makeup-spentrecoveryreset. CrowHHdraftNOTCANON-notprivacyguarantee-withdrawalowed/LeifSolomonproperreturns-WLD148handoffclosed-noForumghost/IsaiahreviewCLOSED117unchanged/Personal58skip-Nov7optionalthreadnotclosed. JennuhNothingseparate-DARKOnothingnew/onefinalwholeMailreceipt-nativejournalwins.
+
 ## PM Mail62 FIRST welcome + SAME OV64 qualification — November8 UTC23
 
 - ActualboundedReg→Reihandback1569128032533225624/source1569127056820674661/23:09:51UTC/AtlasPRESENTverifiedID276169629/kristinashoultz-wq/alreadysettledtrue/settledfalse/result.pin-NOWRITE. SeparateclosingwitnessnotFerrysecondGET/full361map-Reipublicationcertificate; historical22:03map360358retained/no unresolvedexception needed. OriginalOV3snapshotpreservedNEWadditivequalification/batch2commits-noamend-replay/newround-spentrecoveryreset.
