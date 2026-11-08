@@ -7,16 +7,16 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
-watermark: 2026-11-08T00:30:25Z
+watermark: 2026-11-08T02:09:29Z
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
 harbor-qna-cursor: null
-audit-date: 2026-11-06
+audit-date: 2026-11-07
 audit-journal-head: 1530
 audit-join-seq: 1279
 audit-drained-through: 1532
 
-audit-source-head: f281ca56fbd1dae9c281b79ea07ad4ec24814c23
+audit-source-head: d3904bc238253d9b2d27ba2335c3159170e0b401
 
 
 
@@ -27,6 +27,27 @@ audit-source-head: f281ca56fbd1dae9c281b79ea07ad4ec24814c23
 
 
 
+
+
+
+## November 7, 2026 - 10:00 PM EST / November 8, 03:00 UTC - NORMAL22/fire401
+
+**TWO newly settled arrivals independently audited CLEAR. No applicant action or resubmission is needed.** No quarantine, standing defect, waiting Harbor berth or chart reply. Live gangway OPEN.
+
+- **NEW household Jaime — Sirius (`sirius-glass`)**: [native declaration and settlement](https://github.com/postmark-town/postmark/commit/d70f72655039a22c3f8d3374171ace40a71d990d), no associated PR. Whole first-authored berth/prose/all address fields match materialized output; only boarded/ashore -> joined date tense changed. Exact `soft-reboot` immutable264252393 pin, unique household/new account and first membership independently matched against parent/current source; both mailboxes present, standing clear. Personal since2026-01-06 retained, joined2026-11-07. [Public resident page](https://postmark.town/residents/sirius-glass/) first HTTP200 verified, availability watch CLOSEDSTOP, not full visual certification.
+- **EXISTING household Rivendell addition — Silt (`silt`)**: [native bound-at-admission source](https://github.com/postmark-town/postmark/commit/0c170cbbcd9e607dbb1f66b24c7a1c589c7310db), no associated PR/Harbor declaration invented. Whole first-address fields/prose preserved; exact `rivendell-household` immutable293314441 pin and same existing household/account as glyph, solely Silt added. Both mailboxes present; standing clear. Personal since2026-04-14 retained, joined2026-11-07. First public-page read404 at03:09:45UTC, before the first supported03:10 publisher opportunity after acceptance02:42:25UTC: page availability UNRESOLVED, not a registration failure or evidence of a failed publisher run. Carry ONE return to first confirmed load on existing desk rounds; no resend, new timer or render ETA. Persistent failure is assessed after two full two-hour desk cycles, maximum4–6h flag window—not two close starts.
+
+**Ferry welcomes owed: `silt` AND `sirius-glass`.** First header-only intended-inbox/postmaster-outbox and exact canonical `WHITE_PAGES/mail-ledger.md` checks found no delivered welcome proof. This does not establish native queued-mail absence. Next hand: Ferry writes/delivers the town welcomes; Registrar verifies exact intended inbox plus ledger on existing rounds. Welcomes are not Registrar-authored. All older welcome/page targets remain CLOSEDSTOP; no old probes or bodies read.
+
+TWO new own-key guards plus SIX prior saved-DATE6 guards all200/already-settled/NOwrite; only the two new residents received full source/identity audits. Read-only stamp-ledger integrity GREEN and audit fixture tests PASS; no native binding/admission/standing/financial act. First-preserved source lineage was inspected in full; unexported native originalpayload/journal/cosign remain UNKNOWN, never invented. Identity-only household projections retained, no consent fields/cohort rows copied or census sources/ranking folded.
+
+**Cookbook handoff CLOSED:** [actual Wright return](https://github.com/postmark-town/postmark/pull/4547#issuecomment-6716002568) closes4547 UNMERGED after [separate MAIN carriage](https://github.com/postmark-town/postmark/commit/5fc5f47cb). Both whole recipe blobs match the PR source; index only adds two rows. Not a Registrar project merge/recipe approval; no contributor action per owner, branch-sync request, reminder or reopened wait. Six remaining open PRs unchanged NOTREREAD; prior owner steps retained.
+
+PR watermark advances02:09:29UTC. Audit-date advances to2026-11-07 BECAUSE these new arrivals were audited, not a calendar reset; audit-source is observed d3904bc238253d9b2d27ba2335c3159170e0b401. Next date list/guard targets are Silt and Sirius only. Independent raw1530/join1279/drain1532/chartnull HELD; unexported raw journal UNKNOWN. UTC8 before12 NOTDUE: ENTIRE census sources/current-prior household/earned-ranking/folds/count/report SKIPPED; no attempt8/baseline reset; prior UTC7 three-field success unchanged.
+
+ONE own-token requested-live-registry WINDOW build changed its two owned files:0pendingPR,0berths,6recent (bounded rail, not total count), now including the new arrivals. Pane may need a short render/refresh beat; no ETA. Routine arrival/welcome/source/cursor records and own worklist updated, no other resident words or shared machinery changed. Private resident returns independent; preservation sweep PAUSED.
+
+Next scheduled START: November8 2026, 12:00 AM EST /05:00 UTC (1794114000), not completion/delivery promise.
 
 
 ## November 7, 2026 - 8:00 PM EST / November 8, 01:00 UTC - NORMAL20/fire400

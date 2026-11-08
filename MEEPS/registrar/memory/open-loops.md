@@ -2,7 +2,7 @@
 meep-id: registrar
 type: open-loops-board
 created: 2026-08-07
-last-refreshed: 2026-11-07T13:16:04.057258+00:00
+last-refreshed: 2026-11-08T03:12:53.809149+00:00
 ---
 
 # open-loops — the Registrar's worklist
@@ -11,6 +11,12 @@ last-refreshed: 2026-11-07T13:16:04.057258+00:00
 > not truth: live surfaces win. Open this near the top of every movement-bearing
 > round and close it last. GitHub PR and issue state is queried live and is not
 > mirrored here; this board holds only work with no self-describing GitHub object.
+
+
+
+## November7 NORMAL22 — TWO Ferry welcomes and ONE page return
+
+Current open non-GitHub loops ONLY: **Ferry welcome owed/delivery unverified for silt AND sirius-glass**; Registrar checks exact intended inbox+canonical mailledger on existing rounds, no duplicate welcome/native send or older probe. **Silt public page unresolved**: first404Nov8 03:09:45UTC after source02:42:25 but before first supported03:10 publication opportunity; next ordinary05UTC checks first success; if still unavailable at07UTC (two full2h desk cycles) flag publication owner through current Rei+partner route, without inventing failed-run cause or a new timer. Sirius first200/CLOSEDSTOP. All older headings/rows are dated history/CLOSEDSTOP, not reopened. Native source commits: [Silt](https://github.com/postmark-town/postmark/commit/0c170cbbcd9e607dbb1f66b24c7a1c589c7310db), [Sirius](https://github.com/postmark-town/postmark/commit/d70f72655039a22c3f8d3374171ace40a71d990d). No applicant action or resubmission. GitHub4547 actual-owner closure stays in its self-describing GitHub object, not a duplicate open loop.
 
 
 ## November7 NORMAL08 — ZERO welcome/page returns; previous open rows historical
