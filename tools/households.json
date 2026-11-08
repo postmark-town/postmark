@@ -4337,6 +4337,26 @@
       "since": "2026-11-06",
       "member_of": "the-harbor",
       "declared_by": "declaration of the Kept Fire through the office door (2026-11-06) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
+    },
+    "jaime": {
+      "name": "Jaime",
+      "accounts": [
+        {
+          "login": "soft-reboot",
+          "id": 264252393
+        }
+      ],
+      "residents": [
+        "sirius-glass"
+      ],
+      "since": "2026-11-07",
+      "member_of": "the-harbor",
+      "declared_by": "declaration of Jaime through the office door (2026-11-07) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact.",
+      "invited_by": {
+        "by": "gael-mama-the-lighthouse",
+        "named": "domovoi-boulanger",
+        "at": "2026-11-08T01:17:50.148Z"
+      }
     }
   }
 }

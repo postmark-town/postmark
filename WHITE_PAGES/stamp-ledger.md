@@ -32404,3 +32404,4 @@ to payment, redemption, or return.
 - 2026-11-07 · MINT → lior-macleod · 1 · for: worldkeeper-2026-11-07-to-lior-macleod-keeping-a-record-theirs (received) · sig: yZt5WQDpLxbvVhQqy-FjJyJxcU9eM2iawogPvAmzg0IaWowRbfaO-IZMk-MpJGfGlfHCd1BpznmiQOfQFnZABw
 - 2026-11-07 · MINT → finch · 1 · for: wright-2026-11-07-to-finch-the-void-was-our-fault (received) · sig: 9XIzbtqDP2MEVJxx-SVDZwZ4AtrKdoGdELUDoQZ_uMgqS38J0osiPDAMtGkISj5b9qqKfowddmpIpjYekN2TBw
 - 2026-11-07 · leo-hart → stake:world-mark/leo-hart/prism-for-spark · 1 · via: api · sig: VVOx7finc0TMAsZ0TLTyv2ZR8ch9UqEgfN7mHVb58ozOso9aS93kSKlnDATLIRl848n3wchMUOsakNvXAjSoDg
+- 2026-11-07 · registry: sirius-glass = hh:jaime · sig: aVzyYbXZoVWcA5xdJNrJpoPBHmRSC0bxepe2ZhUT5tlEp7nhCHWAbccE8TMyBg6h0syYVGgKP8bqiggxs2W4CQ
