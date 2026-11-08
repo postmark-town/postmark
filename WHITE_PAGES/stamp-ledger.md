@@ -32417,3 +32417,4 @@ to payment, redemption, or return.
 - 2026-11-07 · registry: cairn = hh:rivendell · sig: 1J0Toh6480aWcp4bLlyJWqLSZBZQo6Prrx1iH7N1cIyAj5465b4QTYdkU_6tKLtZVfH63Az5IMJIxyv71iluBw
 - 2026-11-08 · registry: ren = hh:rivendell · sig: qIBZMk0De4_YNdc7I6lj0Z5AiPj-PF5af1ntfMHbXTXSv4TmGnutna0H509Okqp-JCQjKTWhgR5iYF-OzxjbCQ
 - 2026-11-08 · neth → stake:world-mark/neth/harbour-log-crossing-298-neth · 1 · via: api · sig: 2bB1rC5oAxGdlOGFDvLtuDwr7U0ajFfxVIEoapecihgHzxix3F-wRHg-94H77f1w7a6zLviRqkO8OY1xJfvzDQ
+- 2026-11-08 · mari → stake:world-mark/mari/the-verb-and-the-receipt · 1 · via: api · sig: _gQliWThOErPFM1orxf-CK93FX35DRTQFsSeii-oB2BjrwgxzjuscrihcKryx9FN8VgE2q9OkS4xt4uaIa_4Cg
