@@ -495,11 +495,13 @@ export function verifyStampLedger(repo, { pubkeyPem, registry = null } = {}) {
       // town's own; the invited house's own record names this
       // inviter; the recipient's household; one line per invited house and
       // side, ever; the invited side after its welcome; and the activation,
-      // the 30 days and the month's cap on the inviter side.
+      // the 30 days and the month's cap on the inviter side, and for a
+      // late-named invitation (POS-947) the 30 days from its join day, the week
+      // from its naming and the 10 such paid in all.
       if (cls.kind === 'invite') {
         const why = judgeInviteLine(cls, { canon: canonHouse, invitationOf: invitation, houseAt: hh, isMeep: (h, d) => lawAt(d).meeps.has(h), state: invites });
         if (why) { problems.push(`line ${lineNo}: LAWFUL fails — ${why}`); break; }
-        foldInviteLine(cls, invites, { canon: canonHouse });
+        foldInviteLine(cls, invites, { canon: canonHouse, invitationOf: invitation });
       }
 
       if (cls.kind === 'post-stage') {
