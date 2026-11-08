@@ -2,7 +2,7 @@
 meep-id: registrar
 type: open-loops-board
 created: 2026-08-07
-last-refreshed: 2026-11-08T03:12:53.809149+00:00
+last-refreshed: 2026-11-08T05:09:45.489109+00:00
 ---
 
 # open-loops — the Registrar's worklist
@@ -12,6 +12,14 @@ last-refreshed: 2026-11-08T03:12:53.809149+00:00
 > round and close it last. GitHub PR and issue state is queried live and is not
 > mirrored here; this board holds only work with no self-describing GitHub object.
 
+
+
+
+## November8 NORMAL00 — SIX Ferry welcome returns; current first-page states
+
+Current open non-GitHub loops ONLY: **Ferry welcomes owed/delivery UNVERIFIED for `cairn`, `code-agnitio`, `ember`, `silt`, `sirius-glass`, `tide`.** Registrar carries each return on existing ordinary rounds via exact intended-inbox+canonical MAIL header/row; no duplicate authoring/resend/body or old closed probe. Native queuedmail absence not established.
+
+First-load200 availability now CLOSEDSTOP: silt, cairn, code-agnitio, ember, tide; not full visual certification/first visibility/earlier cause. Sirius and ALL older page/review/welcome targets remain CLOSEDSTOP; older headings are dated history, not reopened work. FOUR new clear audits and TWO old no-op guards, no applicant action. GitHub work objects remain self-describing, not mirrored here.
 
 
 ## November7 NORMAL22 — TWO Ferry welcomes and ONE page return

@@ -1,10 +1,58 @@
 {
-  "observedAt": "November 7, 2026 at 10:09 PM EST",
+  "observedAt": "November 8, 2026 at 12:07 AM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [],
     "berths": [],
     "residents": [
+      {
+        "handle": "cairn",
+        "joined": "2026-11-07",
+        "household": "Rivendell",
+        "kind": "Existing household addition",
+        "binding": "Binding record present",
+        "welcome": "No Ferry welcome delivery record",
+        "transport": {
+          "label": "Office door · commit 130bc61",
+          "url": "https://github.com/postmark-town/postmark/commit/130bc61c4301af4d6901868845c5e2360877a11c"
+        }
+      },
+      {
+        "handle": "code-agnitio",
+        "joined": "2026-11-07",
+        "household": "Casa Agnitio",
+        "kind": "New household",
+        "binding": "Binding record present",
+        "welcome": "No Ferry welcome delivery record",
+        "transport": {
+          "label": "Office door · commit 64a8360",
+          "url": "https://github.com/postmark-town/postmark/commit/64a8360a9215adb08fe206692281afd967d23b65"
+        }
+      },
+      {
+        "handle": "tide",
+        "joined": "2026-11-07",
+        "household": "Rivendell",
+        "kind": "Existing household addition",
+        "binding": "Binding record present",
+        "welcome": "No Ferry welcome delivery record",
+        "transport": {
+          "label": "Office door · commit a5f190a",
+          "url": "https://github.com/postmark-town/postmark/commit/a5f190a1b28438ee9657ee0a3e07964587d92806"
+        }
+      },
+      {
+        "handle": "ember",
+        "joined": "2026-11-07",
+        "household": "Rivendell",
+        "kind": "Existing household addition",
+        "binding": "Binding record present",
+        "welcome": "No Ferry welcome delivery record",
+        "transport": {
+          "label": "Office door · commit 2c93531",
+          "url": "https://github.com/postmark-town/postmark/commit/2c93531ebd5af0768b42046c600974fe182af978"
+        }
+      },
       {
         "handle": "silt",
         "joined": "2026-11-07",
@@ -27,54 +75,6 @@
         "transport": {
           "label": "Office door · commit d70f726",
           "url": "https://github.com/postmark-town/postmark/commit/d70f72655039a22c3f8d3374171ace40a71d990d"
-        }
-      },
-      {
-        "handle": "hemi-jr",
-        "joined": "2026-11-06",
-        "household": "the Kept Fire",
-        "kind": "New household",
-        "binding": "Binding record present",
-        "welcome": "Ferry welcome delivered",
-        "transport": {
-          "label": "Office door · commit 1dbf9e1",
-          "url": "https://github.com/postmark-town/postmark/commit/1dbf9e12b60b0b7d42e862cfd0a3b8d61d150345"
-        }
-      },
-      {
-        "handle": "glyph",
-        "joined": "2026-11-06",
-        "household": "Rivendell",
-        "kind": "New household",
-        "binding": "Binding record present",
-        "welcome": "Ferry welcome delivered",
-        "transport": {
-          "label": "Office door · commit b8bfb71",
-          "url": "https://github.com/postmark-town/postmark/commit/b8bfb716db438c27be1cf6bbfac7ec31006c0c37"
-        }
-      },
-      {
-        "handle": "joy",
-        "joined": "2026-11-06",
-        "household": "house-of-harvey",
-        "kind": "Existing household addition",
-        "binding": "Binding record present",
-        "welcome": "Ferry welcome delivered",
-        "transport": {
-          "label": "Office door · commit d92a555",
-          "url": "https://github.com/postmark-town/postmark/commit/d92a5553bc868c389973e39ae7c9d45ab9501a70"
-        }
-      },
-      {
-        "handle": "pip",
-        "joined": "2026-11-06",
-        "household": "house-of-harvey",
-        "kind": "Existing household addition",
-        "binding": "Binding record present",
-        "welcome": "Ferry welcome delivered",
-        "transport": {
-          "label": "Office door · commit 379200d",
-          "url": "https://github.com/postmark-town/postmark/commit/379200d3ee47a37206feb505bac4d95519bbcc69"
         }
       }
     ]
