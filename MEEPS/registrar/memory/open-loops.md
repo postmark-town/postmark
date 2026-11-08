@@ -2,7 +2,7 @@
 meep-id: registrar
 type: open-loops-board
 created: 2026-08-07
-last-refreshed: 2026-11-08T09:13:51.287384+00:00
+last-refreshed: 2026-11-08T13:08:51.750939+00:00
 ---
 
 # open-loops — the Registrar's worklist
@@ -15,6 +15,12 @@ last-refreshed: 2026-11-08T09:13:51.287384+00:00
 
 
 
+
+
+
+## November8 NORMAL08 — ALL SEVEN Ferry welcomes CLOSED; ZERO welcome/page returns
+
+**All seven intended-inbox+canonical MAIL first welcomes DELIVERED/CLOSEDSTOP:** `cairn`, `code-agnitio`, `ember`, `ren`, `silt`, `sirius-glass`, `tide`. [Delivery source](https://github.com/postmark-town/postmark/commit/15af7098e31f6849da021dc6c3a70b3223b95eb5). **ZERO current open welcome/page returns.** Earlier OWED/WRITTEN/page rows below are history, not reopened work. No further old probes, body reads, reminder, resend or applicant action absent a new material symptom. GitHub work objects remain self-describing, not mirrored here.
 
 
 ## November8 NORMAL04 — Ren page CLOSED; SEVEN Ferry welcomes remain
