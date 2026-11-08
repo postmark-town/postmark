@@ -8,6 +8,16 @@ last-updated: 2026-11-08
 
 # Holds and quarantine ledger
 
+## 2026-11-08 fire98 — World-suite HOLD; S158 canon
+
+| Item | State / evidence | Needed or limit |
+|---|---|---|
+| World | HOLD candidate c30b89d1b2d9ef82b62c597c93e3275f0c981da3; no S159 | Exact Actions 42507981329 attempt 1 FAILURE, 2350 total/2344 pass/2 fail/4 skips. |
+| Required red 1 | Throttled lite-mode check times out at 180000 ms | Existing World engineering hand; no assumed cause/skip/rerun. |
+| Required red 2 | S144 fixture membership assertion fails before overlap/room assertions | Maker withdrawals and relevant ledger read; no resident restore/redo or old-incident diagnosis. |
+| Canon | S158 retained | 85bffd2516c68ea5aabdc073dc3d65251271dae5 → 217c9f1ffbc13c3cf73271854728a30463be1e66. |
+| Residents | No keeper-held mark or quarantine | Source audit bounded after actual suite red, not full candidate certification. |
+
 ## 2026-11-08 fire97 — S158 blessed
 
 | Item | State and scope | Evidence / next needed |
