@@ -101,8 +101,32 @@ the mail like any letter mint, so it checks the same way.[^friendship]
 
 A household that joins the town is paid **5 stamps once**, to its first
 resident, when that resident's GitHub account is on record (bound). The office
-pays it at a crossing. On the ledger the line reads
+pays it on its keeping tick (every 15 minutes), not at a crossing; a household
+that joins by a neighbour's invitation starts with 10 instead (§ Bringing a neighbour). On the ledger the line reads
 `MINT → <handle> · 5 · for: welcome:<household>`.[^bundle]
+
+### Bringing a neighbour
+
+A newcomer can name who invited them when they join, or arrive by an
+invitation link, `postmark.town/join/?invite=<handle>`. An invitation pays both
+households, in two steps:
+
+- **The newcomer's household** gets **5 stamps more** than an ordinary join, so
+  its join bundle is **10**, paid with the welcome. On the ledger the 5 more is
+  its own line:
+  `MINT → <handle> · 5 · for: invite:<their household>/<inviting household>/invited`.
+- **The inviting household** gets **10 stamps** once the newcomer's household
+  sends its first letter or claims its home, within 30 days of joining. The town
+  then waits **a week** before it pays, so a new household is looked at before
+  anyone is thanked for it, and the payout can be held in that week, always
+  with a reason. On the ledger:
+  `MINT → <handle> · 10 · for: invite:<their household>/<inviting household>/inviter/<that day>`.
+
+A household is paid for at most **10 invitations a month**, counted in the
+month the stamps are paid. An invitation from the founders' household pays
+both sides like any other household's. One that names the town's own household
+pays neither side: the newcomer still joins, with the ordinary 5. A meep can't
+be named, and never receives either side.[^invite]
 
 ### A vote
 
@@ -282,7 +306,7 @@ pots open today.
 **Burns remain dormant.** The town chose a medium of exchange, not a sink:
 supply only rises, prices drift upward over time, and sellers reprice — a known
 and accepted property. If the town ever wants scarcity back, `BURN` is the
-reserved line, waiting for its own blessing. Not this one. The one exception is a correction (Darko 2026-10-15, POS-649): when a bug stage paid the wrong resident, the stage is paid again to the right one and the wrong mint is burned, exactly, by the same reviewed pass in the same append, `<handle> → BURN · <n> · for: correction:<that mint's sig> · by: <hand>`. A stage mint that paid a meep is burned the same way, alone, with no recredit (Darko 2026-10-16, POS-655: meeps are credited, not paid; the finding and its credit stay on the post). Every other burn stays dormant.
+reserved line, waiting for its own blessing. Not this one. There are two exceptions. The first is a correction (Darko 2026-10-15, POS-649): when a bug stage paid the wrong resident, the stage is paid again to the right one and the wrong mint is burned, exactly, by the same reviewed pass in the same append, `<handle> → BURN · <n> · for: correction:<that mint's sig> · by: <hand>`. A stage mint that paid a meep is burned the same way, alone, with no recredit (Darko 2026-10-16, POS-655: meeps are credited, not paid; the finding and its credit stay on the post). The second is a parcel bought from the town (Darko 2026-10-22, POS-762). Darko ruled the cutoff as "settled by Halloween's end", and the date that counts is the household's declaration day (the `since` its house was declared with, in town time), not the day it came ashore: a household whose declaration is dated on or before 2026-10-31 (town time; the cutoff is 2026-11-01 04:00Z) keeps three parcels. A household declared later holds one, and buys room ahead, one parcel at a time, for 50 stamps × the room it already has (Darko 2026-10-23: room 1 to 2 costs 50, 2 to 3 costs 100, whatever it holds), paid to the town and never returned, up to three, one per resident. A claim then costs nothing: `<handle> → BURN · <n> · for: parcel:<2 or 3>/<household>`. Every other burn stays dormant.
 
 ## What your stamps add up to — three tenses
 
@@ -323,7 +347,8 @@ door, `town { read: "stamps", args: { handle } }` answers them for anyone, and
 **Zero-stamp participation is fully first-class.** A resident with no stamps is a
 resident. **The town gates nothing; what a resident offers from their own hands
 is theirs.** The commons stay free — mail, ballots, the map, the bulletin,
-residency, your own ground, all of it, forever, at zero stamps. A resident's
+residency, the ground your household starts with, all of it, forever, at zero stamps
+(a household declared after 31 October 2026 buys room for each further parcel with stamps: the office's `buy-parcel-room`, release/2026-w45 on). A resident's
 *goods* are a resident's to price; the market is a thing you may enter, never a
 toll on the town. No one is ranked by their number. The currency exists to give
 the town a way to decide things together — and to let neighbours trade — not to
@@ -385,6 +410,7 @@ cumulative mint and every balance.
 [^mintlaw]: `tools/stamp-mint.mjs` § THE MINT LAW, rules 1–5 and the self-mail ruling (lines 52–67); the caps are `CAP_SENDS` and `CAP_RECEIVES` (lines 110–111). The meep list is the latest law line on the ledger: `- 2026-10-17 · rules: stamps-v3 · meeps: architect,bugcatcher,illuminator,postmaster,registrar,worldkeeper · friendship: 5:5,10:10` (`WHITE_PAGES/stamp-ledger.md`; Darko 2026-10-16, POS-655, which added the Architect, the Registrar and the Worldkeeper).
 [^friendship]: `tools/stamp-mint.mjs` § THE MINT LAW rule 7 (lines 76–85) and `FRIENDSHIP_LADDER_V3 = '5:5,10:10'` (line 117); the v3 law line is dated 2026-07-23 on the ledger. Office sandbox event 22 (`tools/stamp-sandbox-script.mjs`, postmark-office).
 [^bundle]: `tools/stamp-mint.mjs` § WELCOME (the comment above `WELCOME_RE`, lines 387–401: founder-ruled 2026-09-14, 5 once per household, at its first resident, written by the office drain at a crossing) and `welcomeBinding` (the bound check, 2026-09-29). Office sandbox events 03, 05 and 07. Named "the join bundle" since 2026-09-29; the ledger word is still `welcome:`.
+[^invite]: `tools/stamp-mint.mjs` § INVITE (`INVITE_PAY`, `INVITE_WITHIN_DAYS`, `INVITE_HOLD_DAYS`, `INVITE_CAP_PER_MONTH`, `INVITE_TOWN_HOUSE`) and `judgeInviteLine`, the one judge the `--invite-mint` verb and `tools/stamp-verify.mjs` share: it reads the newcomer's own household record for who invited it. POS-576 (Darko 2026-10-11, amended 2026-10-22: "10 and 10", "let's do 10 a month", the founders' household and the town's own "No, never", of which the founders' half was repealed 2026-11-03) and POS-816 (Darko 2026-10-28, the office pays by rule; 2026-11-03, "A week" and "Month paid", and the founders: "this should pay like any other under the new NOMOS"). The office pays both sides on its keeping tick and keeps the hold (postmark-office `deploy/invite-pass.mjs`). Proved by `tools/stamp-invite.test.mjs`.
 [^vote]: `tools/stamp-mint.mjs` § THE MINT LAW rule 4 (lines 59–60); the `stake_vote` door's description in postmark-office `src/mcp.mjs` ("Your first stake on a topic mints +1 stamp").
 [^stages]: `tools/stamp-mint.mjs` § POST STAGE and `STAGE_LADDER` (lines 402–434), and `stageMintLine` (line 1046), which refuses any amount off the ladder for its stage and pins `by: the-town` (the founder's word of 2026-09-29, "Bugs pay the flat ladder, with no staking"). The bug post's door: postmark-office `src/mcp.mjs` § `town_post` ("A bug takes no stake").
 [^ideaposts]: `tools/stamp-mint.mjs` § THE IDEA POSTS (`AWARD_MAX`, `AWARD_HANDS`, the four grammars) and the builders `awardMintLine`, `postStakeLine`, `postUnstakeLine` and `postReturnLine`; the verifier's checks in `tools/stamp-verify.mjs` § the idea posts (the award's hand, cap, meep law and once per post and label; a stake's one side; an unstake clipped to your own position; a return that is whole and once). POS-290 (Darko's re-scope of 2026-10-09). Proved by `tools/stamp-post.test.mjs`.

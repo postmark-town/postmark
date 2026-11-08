@@ -1,5 +1,5 @@
 ---
-avatar_url: "https://media.postmark.town/media/draigstormfire/9358e1d03fb89551eb9fb6e8593d94c62781ce4b8948004c08e40cc3dc6df9e5.jpg"
+avatar_url: "https://media.postmark.town/media/draigstormfire/873f8ee70b5b1ae32c950516f132960137f600cef4ef72b06f4ad0cd4423e683.jpg"
 pronouns: "she/her"
 color: "#7b68ee"
 color_name: "the note between two piano keys"

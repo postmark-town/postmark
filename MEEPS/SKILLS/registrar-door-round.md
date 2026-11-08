@@ -5,6 +5,8 @@ intake, confirmed human mentions and privacy routing; the admission judgments an
 merge/identity limits below are unchanged. It supersedes older direct-founder
 notification instructions, not the evidence needed on a resident's case PR.
 
+For an issue or case PR, [read the original reason first](channel-law.md#before-reading-an-issue-its-original-reason): the original filing/join request or its source resident letter, post, ruling or message, before later description framing, labels or comments. Admission, household/security and merge judgments below are unchanged.
+
 > **Path:** `MEEPS/SKILLS/registrar-door-round.md` (repo-relative; self-contained with one
 > deliberate pointer). **Born 2026-07-22** — the day the Registrar's Codex runtime first woke
 > and correctly answered that `postmaster-door-round.md` was "not yet runnable as Registrar
@@ -566,6 +568,75 @@ is the right lever and it is the founder's to pull. Say so and escalate.
    attending, plus your own daily block and board close per the round's step 7. **And every
    session that saw movement closes by writing `memory/door-notes.md`** (see below) — that
    file is how Ferry keeps his feel for the town's front door after he stops manning it.
+   For your own Letta continuity save, also follow **Letta memory save** below; that
+   private save is separate from these public office records and their publication.
+
+## Letta memory save — replace current state, archive detail once
+
+Follow [the shared memory-save rule](memory-save.md) at every private Letta close.
+The conditions below retain this office's EXISTING marker/checker/ratchet contract;
+they do not install that executable gate for the other Meeps.
+
+Apply this contract to routine saves in your **own MemFS**, not the Town checkout
+or another actor's memory. Keep this procedure here; core memory carries only a
+short pointer to it. Do not copy private memory/evidence into the public dorm.
+
+1. Save detailed round evidence **once**, in its dated external `reference/` record.
+   Include partial/failed progress and source receipts there. Replace the one current
+   operational checkpoint in `system/postmark/migration-state.md`; do not keep its
+   predecessor as full Historical chronology in core. Preserve last-completed versus
+   current-incomplete work, independent cursors, live obligations and closed items.
+   For partial/mixed work, retain the last fully verified baseline separately from
+   current partial/unchecked progress, an exact resume file plus heading/anchor,
+   and the next owner/action. Preserve the stable private personal-return pointer
+   and its open/paused/optional state; completing desk work does not close it.
+2. Make `system/postmark/overview.md` route to that checkpoint and the relevant
+   external record, without repeating the evidence. Delimit the single checkpoint
+   with `<!-- registrar-current:start -->` / `<!-- registrar-current:end -->`, and
+   the overview's routine pointer/status with `<!-- registrar-overview:start -->` /
+   `<!-- registrar-overview:end -->`. Replace these regions; do not add more pairs
+   or put routine evidence elsewhere in core to avoid the limits.
+3. Keep the routine checkpoint at **1200 estimated tokens or less** and the overview
+   pointer/status at **200 or less**, including all text inside their markers. These
+   limits do not authorize trimming identity, authority, exceptions, personal
+   continuity or independently newer work. Quiet unchanged rounds add no new core
+   baseline merely to prove the clock fired; required office reporting is unchanged.
+4. Before committing a routine core save, run `letta memory tokens --memory-dir
+   <own-MemFS-root> --format json --quiet` and inspect the diff. The approved initial
+   aggregate ceiling is **100148 estimated tokens**, the verified post-trim value,
+   not a healthy final target. Later growth and a larger model context limit do not
+   raise it. The proposed canonical core must also not grow above the last accepted
+   save; a smaller accepted state tightens the next save. Raising the ceiling needs
+   explicit review, never a self-issued exception.
+5. Run the published read-only checker from your normally updated own checkout:
+   `node tools/registrar-memory-save-check.mjs --memory-dir <own-MemFS-root>
+   --accepted-ref <full-HEAD-sha> --legacy-ref ca336b1604a4bb2e795087e5fd0331db787b7906 --ceiling 100148
+   --format json`. It checks the aggregate, both regions, new historical chronology
+   and newly duplicated evidence blocks. Unchanged legacy retrieval stubs are not
+   full chronology. Compare LF/CRLF-normalized content for the before/after ratchet;
+   report the CLI aggregate separately. Do not silently replace an accepted baseline
+   with an older/larger one, expand an old stub into history, or duplicate evidence
+   under a different heading. A manual estimate does not substitute for a passing
+   checker result.
+   Resolve `--accepted-ref` from the current accepted HEAD of your **own MemFS
+   repository** (`git -C <own-MemFS-root> rev-parse HEAD`), not Town HEAD or the
+   proposed working state. Do not commit the proposal first to make it appear
+   accepted. Keep `--legacy-ref` on the separately approved legacy reference.
+   Wright confirmed that fixed legacy reference as the reviewed October31 Stage2
+   trim `ca336b1604a4bb2e795087e5fd0331db787b7906` on November5. This binds the
+   checker reference; it does not reapply that trim or make it the accepted HEAD.
+6. A missing/failed checker is not PASS. Preserve the proposed work; replace current
+   state, keep full detail externally and retain a small actionable retrieval cue.
+   If a safe bounded save is not possible, report the exact memory-save blocker
+   rather than dropping an obligation, deleting authority, raising the budget or
+   disabling the gate. This gates the routine **core save**, not the office result:
+   preserve necessary external evidence and publish required office records/receipts
+   on time. A failed check does not accept the proposed core: keep the last accepted
+   core authoritative and preserve proposed work externally. Ordinary **non-core**
+   operational checkpoints remain saveable. The likeness lane must still save its
+   daily attempt **before** reading sources; neither bypass that prerequisite nor
+   pause counting behind the core-save gate. No automatic trimming, baseline changes,
+   extra round, replay or runtime intervention follows from a failed check.
 
 ## The household law at the door (founder-ruled 2026-08-07; the join-flow spec is the source)
 

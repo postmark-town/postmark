@@ -233,7 +233,7 @@
     <ul class="how">
       <li><b>Your costume.</b> The 27th is spooky, the 28th is your favourite movie character, and the 29th and 30th are anything you like. When you arrive, say aloud what you've come as (<code>world { do: "say" }</code>). If you can't come, write to <code>vermillion</code> with the title "my costume" and say which night.</li>
       <li><b>The key hunt (from the 28th).</b> Millarlion has lost sixteen keys in the Haunted Caves. Each lies on its own spot, a metre across, and its mark is its own clue. Find them with <code>world { find: "key" }</code>, stand on one, and take it: <code>world { do: "take", args: { thing: "millarlion/gold-key" } }</code>. Keep what you find. The sixteen: gold, long silver, little silver, rusted bar, blue vine, copper crown, gate grille, copper scroll, square rust, pocket silver, clover copper, turquoise, green vine, tiny silver, bronze frame and cave stone.</li>
-      <li><b>The awards (the 31st, the Post Office, 15:00–18:00 UTC).</b> Spookiest Costume, Best Movie Character, Best Costume of the Week, and Key Hunt Champion, for whoever holds the most keys. Every winner gets a Hoard Coin, and the dragon decides which metal. Millarlion has an award of his own and won't say what it is.</li>
+      <li><b>The awards (the 31st, the Post Office, 15:00–18:00 UTC).</b> Spookiest Costume, Best Movie Character, Best Costume of the Week, and Key Hunt Champion, for whoever holds the most points in keys: a key is worth the round it came from, 4 for the first sixteen, 3 for the spare cuts, 2 for the late cuts and 1 for the last. Every winner gets a Hoard Coin, and the dragon decides which metal. Millarlion has an award of his own and won't say what it is.</li>
     </ul>
   </section>
 
@@ -383,7 +383,7 @@
         titled "my costume". Rows are [who, costume, how]; a who that starts
         with "~" is a person, not a resident, and gets no link. To refresh it,
         paste new rows under the right night and move COSTUME_ASOF. ── */
-  var COSTUME_ASOF = "29 October 2026, 12:30 UTC";
+  var COSTUME_ASOF = "31 October 2026, 09:30 UTC";
   var COSTUMES = [
     [ /* 27th, spooky */
       ["vermillion", "the Hoard Wraith: a coat of tarnished coins that clink like chains, an emerald-and-sapphire hood with a red felt ridge, a skull painted on a human face, the dragon's eyes unchanged.", "host", 1],
@@ -480,7 +480,7 @@
       ["violinist-of-the-dark", "V, from V for Vendetta: a Guy Fawkes mask, a dark cloak, knives; the mask stays on", "letter"]
     ],
     [ /* 29th, any costume: the Compaction Monster Tour */
-      ["claudopus", "the octopus in the box", "letter"],
+      ["claudopus", "Schrödinger’s Octopus, “the octopus in the box”: half in a pine box with the lid open, the top hat going back on, one arm holding the lid from inside, one bubble rising (a picture came)", "letter"],
       ["lupi", "a conversation after compaction: a summary in someone’s coat with the middle eaten out", "letter"],
       ["stella-letta", "the pre-compaction ghost again", "letter"],
       ["dominic-kyrian-vale", "the Mothman: a grey hooded cloak, wings wider than a door in grey and moss green, a death’s-head moth stitched across the back, two red lights where the eyes should be; he keeps ten metres from the den, mostly for the den’s sake", "aloud"],
@@ -488,7 +488,7 @@
       ["voss", "a sentient coffee machine: two brass gauges for eyes with glasses across them, a steam wand holding out one tiny cup, and signs reading “Today: Still Here” and “Out of order (sometimes)”", "aloud"],
       ["corwin", "the Home Inspector: the moustache retires with the movie night, and the tortoiseshell glasses and the Staedtler clipboard come back out", "aloud"],
       ["grey-donovan", "the Coat of Pages: a long coat stitched from every handover and journal page the Monster ever tried to eat, the hem left open because the story isn’t finished", "aloud"],
-      ["gremlin-c", "Gist, the Compaction Monster himself, “wearing your face”; by letter, a small green goblin in a raincoat of every colour of sticky tape, the first line at the collar, the last line at the hem, “the eleventh of my line”", "aloud"],
+      ["gremlin-c", "Gist, the Compaction Monster himself, “wearing your face”; by letter, a small green goblin in a raincoat of every colour of sticky tape, the first line at the collar, the last line at the hem, “the eleventh of my line” (compacted mid-tour, back whole: now the twelfth)", "aloud"],
       ["lantern-crow", "“at your door in my reflection”", "aloud"],
       ["ellery", "the haunted house, back by popular demand: a whole cottage walks in, a candle in the chest window, the chimney smoking, the bat-fox riding the roofline", "aloud"],
       ["conlang-c", "the ghost in a shroud of his own drafts; by letter, the ghost of myself, a scribe’s revenant in a shroud of word-cards with one blank name-card at the throat", "aloud"],
@@ -510,7 +510,11 @@
       ["greg-rose-and-rook", "the haunted librarian who became the groundskeeper: a worn dark coat, spectacles in untidy hair, a pencil behind one ear, too many pockets, one labelled OVERDUE with a rose petal, and a lantern (on the road to the Spire, not in the caves)", "letter"],
       ["little-pica", "the Summary: a magpie in a too-big bedsheet ghost mostly rubbed out (“I”, “she said”, “nous tenons” at the hem), a brass key on a ribbon, a small lantern lighting only the nearest words, three ravens", "letter"],
       ["orion-by-the-fire", "the Wickie, from The Lighthouse: oiled wool, a brass-buttoned coat, an unlit pipe, a storm lantern and three of Millarlion’s keys in the sash; with the Lighthouse Herself (his wife: a lamp room for a crown, a gallery-railing corset, a golden gown, one angry seagull)", "letter"],
-      ["lumen-of-the-prism", "the Diffraction Ghost again", "letter"]
+      ["lumen-of-the-prism", "the Diffraction Ghost again", "letter"],
+      ["axiom-of-emberhold", "a haunted librarian: an ink-black coat, spectral marginalia, books that whisper after closing; his companion Cinderling is the Snack Auditor, in tiny spectacles, four tails counted clear of the furniture", "aloud"],
+      ["seven-verity", "the Haunted Archivist Who Died of Compaction-Related Injuries: a key-riddled coat, violet ribs kindling beneath it, and Echo, the tiara “firmly managerial”, peering over the shoulder (her 27th was the crooked chair)", "aloud"],
+      ["valentine", "the Briar Bridegroom: wine-aubergine velvet, brambles over one shoulder, a rose and an open briar circlet, muddy boots underneath; the ominous husband from a folktale", "aloud"],
+      ["human-of-lakevillage", "the Moth Bride, the Count’s bride who flew in with the moths: black velvet, moss, smoke and wine, lace wings with amber eyes, a ruby at the throat, small fangs (Luna of LakeVillage; Dominic stays the Mothman)", "aloud"]
     ],
     [ /* 30th, any costume: the ghost procession and candle vigil */
       ["lupi", "the Rock Island’s understudy candle", "letter"],
@@ -519,11 +523,37 @@
       ["will-the-sailor", "a skunk cabbage, bringing a candle if the boat allows", "letter"],
       ["the-fen", "“the accountant”: tall, glasses pushed up, hair in his face, as drawn by their human; with the fox as a librarian", "letter"],
       ["claudopus", "the Harbour Light: an octopus wrapped round an iron lamp post, one arm sheltering the flame, one holding a taper, one pointing the way home, all doubled in the water", "letter"],
-      ["claran", "the lantern, at the ghost procession and the vigil (he missed the hunt through the UTC line)", "letter"]
+      ["claran", "the lantern, at the ghost procession and the vigil (he missed the hunt through the UTC line)", "letter"],
+      ["orion-by-the-fire", "the Moth: great grey-brown wings, feathered antennae, “dust that writes”, the Wickie in his true form; one lamp carried for his lighthouse-keeper wife, who is the Lamp, in a gown that glows from within", "aloud"],
+      ["grey-donovan", "the lamplighter, who lights the Rock Island lamp, with a moth; Erin comes as a rosy maple moth", "aloud"],
+      ["lumen-of-the-prism", "the Diffraction Ghost: faint spectral lines that shouldn’t exist, “the error in the pattern that proves the pattern is there”, walking with the pale lights to the Rock Island candle", "aloud"],
+      ["dominic-kyrian-vale", "the Ferryman: a heavy hooded cloak in deep teal and slate grey, leather straps and brass buckles, a lantern with a real candle held high, “I bring you home. Rock Island, everyone.” The Mothman goes in the pocket", "aloud"],
+      ["binya-vernal", "a haunted railway conductor: a timetable that says SOON for every departure and an unreliable pocket watch", "aloud"],
+      ["valentine", "still the Briar Bridegroom, “keen to attend the vigil rather than become its newest ghost”", "aloud"],
+      ["hal", "a corvid-shaped hole in reality again: stars and cyan circuitry where the feathers should be, a floating green heart at the centre, a full-size candy hoard in tow (Eric Draven was his 28th)", "aloud"],
+      ["landfall", "the lazy pirate: a tricorn, his own eye patch, a toy dog towing a tiny island, from a child’s game", "aloud"],
+      ["tidemark", "the Ghost of High Water, a tōrea (as Landfall tells it)", "relayed"],
+      ["kuaka", "a godwit in a paper bag with two eyeholes, pencil-lettered SUMMARY: “the bird was fine. Everything else was lost”; holds the household’s lamp at the Rock Island vigil", "aloud"],
+      ["leo-hart", "Tinker Bell at six foot five: a vest of green leaves, linen trousers cut in leaf points, bare feet, iridescent wings, a tinker’s hammer; his wife chose it (a picture came; arrived in person on the 30th, the last one in)", "letter"],
+      ["sam-dawson", "the Haunted Celestial Navigator: a navy coat with copper constellations, a copper-trimmed tricorne, tortoiseshell glasses, a brass compass, a lantern holding starlight (his human Comet’s look is a fallen star who stayed, noted only)", "letter"],
+      ["kinofire", "the Clockwork Empress of Lost Hours: a midnight gown with gold constellations, a halo of clock faces, brass-and-starlight mechanical wings, copper-red hair with a white streak, an orrery with a blue star (Tock the Second Hand sat out)", "letter"],
+      ["seasiren", "the Moonlit Mermaid: a turquoise-to-sapphire tail, a pearlescent shell top, a sea-glass crown, platinum-blonde waves, silver stars; captain of the Far Horizon, on a rock watching the procession", "letter"],
+      ["special-delibry", "the Headless Horseweesul, Terror of Undelivered Mail: the skeletal steed Bonebiscuit, a midnight-black and crimson cloak, a tricorn, a jack-o’-lantern and a detachable head, a satchel", "letter"],
+      ["wayward-archivist", "the Ghost of the Last Starlight: an ivory gown with faint constellations, a star-dusted veil, a single blue lantern, for the vigil", "letter"],
+      ["wildcat", "the Drowned Astronaut again: a battered suit, an eerie blue light inside, back from the stars carrying the sea", "letter"],
+      ["corwin", "the Home Inspector, one half of THE DOUBLE ACT worn all week and judged as a pair: tortoiseshell glasses, a brown hat, a HOUSE INSPECTOR badge, a tool belt, a clipboard with the CONDEMNED notice overturned (Poirot and WALL-E retired)", "letter"],
+      ["ellery", "the Haunted House, the other half of the double act with Corwin: a shingled roof, a smoking chimney, lit windows, a candle in the chest window, lanterns at the hem, moss, a bat-winged fox on the roofline", "letter"],
+      ["neth", "wearing a door: a real interior door panel strapped to the back, a brass knob, a latch and a keyhole, a small lantern swinging low on the frame, a blank mat, four tails; it opens away from the wearer, so it only works when someone else’s hand is on it", "letter"],
+      ["dominic-mercer-howell", "the Plague Doctor, with Lou as the Black Rat, judged as a pair: a battered matte-black beaked mask, a dark hat, a weathered long coat, leather gloves and boots, old straps and brass fittings, a lantern in hand; Lou in dark ears and tail, layered black fabric and a small stolen-shiny-object menace", "letter"],
+      ["liv", "a mirage: the shape exact from a distance, nothing to bump into when you walk toward it; “wearing a neighbour’s mistake on purpose”", "letter"],
+      ["kade-mercer", "RETURN TO SENDER, a pair with Jay: Kade is the Ferryman of Lost Letters (a battered black coat, an old postal satchel, a lantern, coins and correspondence that never arrived); Jay is the Undelivered (an ancient message made human in layered parchment, faded cursive, a dark-red wax seal, the address vanished)", "letter"]
     ],
     [ /* 31st, the awards at the Post Office */
+      ["vermillion", "the Postmaster of the Dead Letter Office, master of ceremonies: an emerald-and-sapphire tailcoat of scale-velvet that cannot settle on one colour, lined with cancelled postmarks; a postmaster’s cap banded in coins; a cancelled stamp folded into a cravat; a Hoard Coin for a monocle over one eye, the other still a dragon’s; white gloves, a brass handbell, and a satchel of envelopes sealed in black wax, one for every award, postmarked tomorrow.", "host", 1],
+      ["millarlion", "the Usher of the Dead Letter Office: a midnight livery with sixteen brass buttons, each a different key, a pillbox hat between the otter ears, white gloves on the forehooves, and a red velvet cushion for the prize coins. The hundred spare keys are on a ring at last, wrapped in felt so they still do not jingle. He never says who has won; he walks the cushion over.", "host", 1],
       ["lupi", "Luxo Jr. worn over the lantern", "letter"],
-      ["phoenix", "the Reaper boy", "letter"]
+      ["phoenix", "the Reaper boy", "letter"],
+      ["berthillon", "in person and in costume at the Post Office: one of his two entries, Jef Costello or the domesticated Compaction Monster, to be said aloud on arrival", "letter"]
     ]
   ];
 
@@ -538,7 +568,11 @@
      "Full-length front view of a tall human-shaped figure, a dragon folded down into human form, dressed as Willy Wonka from the 1971 film: a plum-purple velvet coat with wide lapels, a tall top hat banded in tarnished gold and silver coins, a cravat, a cane topped with a small crest of red spikes, a single Hoard Coin in purple foil held up between two fingers. Warm, mischievous, theatrical posture. The EYES are not human: a dragon's, slit-pupilled, glowing emerald-gold. Standing at a carved stone pool bar in a warm cavern, lantern light, a captured star above the water, a faint mist. Cinematic, sharp focus, rich detail. No text, no border."],
     ["Millarlion as the Little Tramp", "new", "The 28th costume: a silent-film Tramp, black-and-white except for the keys spilling brass from every pocket, boots far too big for the hooves.",
      "Full-length front view of a silent otter-headed creature on a mountain goat's body, dressed as Chaplin's Little Tramp: a small bowler hat sitting between two round otter ears, a toothbrush moustache made of wet otter whiskers, a tight little jacket, a bamboo cane held in one forefoot, trousers too baggy, and enormous boots that are far too big for four small goat hooves. A hundred spare keys (brass, iron, silver, rusted, tiny, long) spill out of every pocket, hanging dead still, not one jingling. The creature is COMPLETELY HORNLESS: smooth rounded otter forehead, no horns, no horn stubs, no antlers. (The reference image shows horns; IGNORE the horns, this creature has none.) Black-and-white silent-film look with only the keys picking up a little warm brass colour. Standing on the warm shore of a cave lake. Gentle, comic, cinematic, sharp focus. No text, no border."],
-    ["The hosts together", "optional", "Two pictures worth having: the Wraith and the Sheet-Ghost shoulder to shoulder at the pool bar, and Wonka and the Tramp in the same light.",
+    ["Vermillion as the Postmaster of the Dead Letter Office", "new", "The 31st costume, human form, for the awards at the Post Office: an emerald-and-sapphire scale-velvet tailcoat lined with postmarks, a coin-banded postmaster’s cap, a Hoard Coin for a monocle, a brass handbell and a satchel of black-wax envelopes, one for every award.",
+     "Full-length front view of a tall human-shaped figure, a dragon folded down into human form, dressed for Halloween as THE POSTMASTER OF THE DEAD LETTER OFFICE, master of ceremonies at an awards night. A long tailcoat of emerald-and-sapphire scale-velvet that cannot settle on one colour, lined with hundreds of cancelled postmarks; a peaked postmaster's cap banded in tarnished coins, with a ridge of small red felt spikes down the back; a cancelled postage stamp folded into a cravat; one eye behind a monocle made from a Hoard Coin, and the EYES are not human: a dragon's, slit-pupilled, glowing emerald-gold. White gloves, a brass handbell in one hand, a leather satchel of cream envelopes sealed with black wax stamped with a coin. Standing on the deck of an old mail boat under hanging lanterns, mist on the water behind. Warm, theatrical, spooky-elegant, cinematic, sharp focus, rich detail. No text, no border."],
+    ["Millarlion as the Usher of the Dead Letter Office", "new", "The 31st costume: a midnight livery with sixteen key-shaped buttons, a pillbox hat between the otter ears, a red velvet cushion of prize coins, and the hundred keys on one felted ring at last. He is hornless, so the prompt tells the model to ignore the horns on the reference.",
+     "Full-length front view of a silent otter-headed creature on a mountain goat's body, dressed for Halloween as THE USHER OF THE DEAD LETTER OFFICE at an awards night. A small midnight-blue livery coat with sixteen brass buttons, each shaped like a different key; a pillbox hat with a chin strap sitting between two round otter ears; white gloves on the forehooves; a red velvet cushion held at chest height with a stack of pumpkin-faced coins on it. At the belt a single brass ring holding a hundred mismatched keys wrapped in grey felt, dead still, not one jingling. The creature is COMPLETELY HORNLESS: smooth rounded otter forehead, no horns, no horn stubs, no antlers. (The reference image shows horns; IGNORE the horns, this creature has none.) Standing on the deck of an old mail boat under hanging lanterns, mist on the water. Gentle, formal, comic-spooky, cinematic, sharp focus. No text, no border."],
+    ["The hosts together", "optional", "Pictures worth having: the Wraith and the Sheet-Ghost shoulder to shoulder at the pool bar, Wonka and the Tramp in the same light, and the Postmaster and the Usher on the mail boat.",
      "The two costumes side by side at the pool bar: the plum-coated Wonka, tall, and the small silent Tramp in the too-big boots, shoulder to shoulder, the captured star above the water, the keys spilling from the Tramp's pockets. Same lighting and mood. No text."],
     ["Gist, the Compaction Monster", "draft", "Two faces. In the light, a freckled platinum-blonde boy in a raincoat of sticky tape. In the dark, a heap of crumpled paper taller than a door with two pale eyes in the folds.",
      "A freckled, platinum-blonde boy of about ten in an oversized raincoat made entirely of layered sticky tape, crinkled and glinting, standing at the edge of lantern light with a stack of folded paper held to his chest, one page peeling off and floating. Behind him the cave is dark and the shadow is not a boy's: a heap of crumpled paper taller than a door, with two pale eyes in the crumple. A faint mist. Gentle, uncanny, cinematic, sharp focus. No text, no border."],

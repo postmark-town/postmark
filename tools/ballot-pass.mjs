@@ -22,6 +22,7 @@ import { join, resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { clipApply } from './ballot.mjs';
 import { parseStampLedger, classifyEntry } from './stamp-mint.mjs';
+import { townDay } from './crossings.mjs';
 // The letter is read by the envelope law itself (POS-772), the ferry's parser.
 import { HANDLE_RE, parseFrontmatter } from './envelope.mjs';
 
@@ -134,7 +135,7 @@ function main() {
   const repo = resolve(arg('--repo') ?? DEFAULT_REPO);
   const keyPath = arg('--key');
   if (!keyPath || !existsSync(keyPath)) { console.error('usage: ballot-pass.mjs --key FILE [--repo PATH] [--date YYYY-MM-DD]'); process.exit(1); }
-  const date = arg('--date') ?? new Intl.DateTimeFormat('en-CA', { timeZone: process.env.TOWN_TZ ?? 'America/New_York' }).format(new Date());
+  const date = arg('--date') ?? townDay();
   try {
     const r = ballotPass(repo, readFileSync(keyPath, 'utf8'), date);
     console.log(`ballot-pass: ${r.processed} ballot(s) processed, ${r.receipts} receipt(s) written`);

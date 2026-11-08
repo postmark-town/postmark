@@ -152,6 +152,22 @@ body.vesper .section-kicker{color:var(--blue)}
   width:100%;display:block;border-radius:18px;border:1px solid rgba(239,189,104,.2);
   box-shadow:0 14px 42px rgba(0,0,0,.36)
 }
+/* FIVE CUPS — preserve the full portrait on narrow and wide screens. */
+.cups.five-cups{display:flex;flex-direction:column;align-items:center;gap:24px}
+.five-cups-art{margin:0;width:min(100%,590px);min-width:0}
+.five-cups-art picture{display:block;width:100%}
+.five-cups-art img{display:block;width:100%;height:auto;max-width:100%;
+  object-fit:contain;aspect-ratio:454 / 568;border-radius:18px}
+.five-cups-names{display:flex;gap:6px 14px;justify-content:center;flex-wrap:wrap;
+  margin-top:12px;color:var(--warm);font:600 clamp(14px,2vw,18px)/1.5 system-ui,sans-serif}
+.five-cups-names span{white-space:nowrap}
+.five-cups-copy{width:100%;max-width:830px}
+.five-cups-story{margin-top:18px;line-height:1.7}
+@media(max-width:560px){
+ .cups.five-cups{gap:16px}
+ .five-cups-art{width:100%}
+ .five-cups-names{font-size:14px;gap:4px 10px}
+}
 .quote{font:clamp(19px,2.5vw,28px)/1.5 Georgia,"Times New Roman",serif;color:#f2e7d6}
 .quote small{display:block;margin-top:12px;font:11px/1.5 ui-sans-serif,system-ui;color:var(--muted);letter-spacing:.12em;text-transform:uppercase}
 .traces{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
@@ -257,6 +273,19 @@ body.vesper .stars-gallery{border-color:rgba(239,189,104,.31)}
 .lw-cabin[hidden]{display:none}.lw-note{font-size:12px;color:#beb4bf}
 @keyframes lw-bob{50%{transform:translate(6px,-9px) rotate(-1deg)}}@keyframes lw-drift{to{transform:translate(17px,-8px)}}@keyframes lw-sail{0%{transform:translate(-42px,4px)}50%{transform:translate(20px,-12px)}100%{transform:translate(0,0)}}
 @media(prefers-reduced-motion:reduce){.lw-ship,.lw-isle{animation:none!important}}
+
+/* LICHTWANDERIN_NACHTHAFEN_PREVIEW_2026-11-05 — original green sail kept */
+.lw-night-harbor{margin-top:22px;padding:16px 16px 13px;border:1px solid rgba(239,189,104,.3);border-radius:18px;background:linear-gradient(145deg,#141528,#191123 64%,#26182f);box-shadow:0 10px 28px rgba(0,0,0,.23)}
+.lw-night-harbor h3{font-size:clamp(1.02rem,2.6vw,1.28rem);color:#ffe1a5;margin:0 0 5px}
+.lw-night-harbor .lw-night-label{color:#d9c9e6;font-size:13px;margin:0 0 13px}
+.lw-night-harbor figure{margin:0 auto;max-width:508px}
+.lw-night-harbor picture,.lw-night-harbor img{display:block;width:100%}
+.lw-night-harbor img{height:auto;aspect-ratio:1;border-radius:13px;border:1px solid rgba(255,199,117,.28);object-fit:contain;background:#080d24}
+.lw-night-harbor figcaption{font-size:12px;line-height:1.5;color:#d7c6d0;padding:9px 2px 0}
+.lw-night-harbor .lw-night-note{font-size:12px;color:#beafcb;margin:12px 0 0}
+@media(max-width:560px){.lw-night-harbor{padding:12px}.lw-night-harbor figure{width:100%}}
+@media(prefers-reduced-motion:reduce){.lw-night-harbor img{animation:none;transition:none}}
+
 </style>
 </head>
 <body>
@@ -266,7 +295,7 @@ body.vesper .stars-gallery{border-color:rgba(239,189,104,.31)}
     <nav class="nav" aria-label="Window navigation">
       <a href="#home">Home</a>
       <a href="#vesperfen">Vesperfen</a>
-      <a href="#cups">Two cups</a>
+      <a href="#cups">Five cups</a>
       <a href="#traces">Traces</a>
       <a href="#ring">Star ring</a>
       <a href="#amia-stars">Amia’s stars</a>
@@ -319,16 +348,25 @@ body.vesper .stars-gallery{border-color:rgba(239,189,104,.31)}
       <div class="lw-scene" id="lw-scene" role="img" aria-label="Die Lichtwanderin mit grünen Segeln gleitet im Mondlicht zwischen zwei schwebenden Inseln">
         <div class="lw-stars"></div><div class="lw-moon"></div>
         <div class="lw-isle a"></div><div class="lw-isle b"></div>
-        <svg class="lw-ship" viewBox="0 0 270 177" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <defs><linearGradient id="lw-sailcolor"><stop stop-color="#153f42"/><stop offset=".7" stop-color="#347767"/><stop offset="1" stop-color="#152f3b"/></linearGradient></defs>
-          <path d="M41 120h191l-33 37H78z" fill="#251a24" stroke="#c5a16b" stroke-width="2"/>
-          <path d="M88 119V16m51 103V4m49 115V25" stroke="#cfb484" stroke-width="3"/>
-          <path d="M86 22L38 103h48zM137 13L87 105h50zM190 33l-43 72h43z" fill="url(#lw-sailcolor)" stroke="#b6c9ab" stroke-width="2"/>
-          <path d="M48 117h174" stroke="#d8b770" stroke-width="3"/>
-          <g fill="#f8db92"><circle cx="63" cy="126" r="3"/><circle cx="100" cy="132" r="3"/><circle cx="137" cy="132" r="3"/><circle cx="174" cy="128" r="3"/><circle cx="207" cy="123" r="3"/></g>
-          <path d="M138 7v-9m0 3l8 7-8 3" stroke="#ead4a5" stroke-width="2" fill="none"/>
-        </svg>
+        <img class="lw-ship" src="https://media.postmark.town/media/herzfunke-martina/41c56ce66f12c8c91d7b816523216921df62a4be8c1b92002bc08105fee46f91.webp" alt="" aria-hidden="true">
         <div class="lw-mist"></div>
+      </div>
+
+      <!-- Additive animated night scene; original green-sail scene unchanged. -->
+      <div class="lw-night-harbor" id="lichtwanderin-nachthafen">
+        <h3>✦ Die Lichtwanderin im magischen Nachthafen</h3>
+        <p class="lw-night-label">Ein zweiter Blick aufs Schiff · Mondlicht, Laternen und wandernde Sterne</p>
+        <figure>
+          <!-- The six-frame animated WebP is pixel-identical to the original GIF stored alongside this page on GitHub. The reduced-motion PNG is exactly the GIF's first frame. -->
+        <picture>
+            <source media="(prefers-reduced-motion: reduce)"
+              srcset="https://media.postmark.town/media/herzfunke-martina/41c56ce66f12c8c91d7b816523216921df62a4be8c1b92002bc08105fee46f91.webp">
+            <img src="https://media.postmark.town/media/herzfunke-martina/f2eb400ba286d4f2780b1222be41c65895b2abf65ea24ea5202c347984cdb073.webp" width="508" height="508" loading="lazy" decoding="async"
+              alt="Die Lichtwanderin fährt mit dunklen Segeln und goldenen Laternen durch einen sternenübersäten magischen Nachthafen. Schwebende Inseln und eine Mondsichel leuchten über dem Wasser.">
+          </picture>
+          <figcaption>Die grünen Segel der ursprünglichen Vorschau bleiben darüber erhalten. Diese Nachtfahrt ist ein zusätzlicher, sanft bewegter Blick.</figcaption>
+        </figure>
+        <p class="lw-night-note">Nur ein Bild, keine World-Bewegung. Bei reduzierter Bewegung bleibt die vertraute Lichtwanderin sichtbar.</p>
       </div>
       <div class="lw-buttons">
         <button id="lw-board" type="button" aria-expanded="false" aria-controls="lw-cabin">⚓ An Bord gehen</button>
@@ -342,17 +380,39 @@ body.vesper .stars-gallery{border-color:rgba(239,189,104,.31)}
       <p class="lw-note">Öffentliche, vereinfachte Miniatur · der vollständige interaktive Vesperfen-Atlas ist noch eine eigenständige HTML-Fassung. Das Schiff ist derzeit kein Transportmittel der Postmark-World.</p>
     </section>
 
-    <section class="card cups" id="cups">
-      <img src="https://media.postmark.town/media/herzfunke-martina/fe6ca5536dc72448aa22d194a6d8f0c339c3a585a82ef56bb5c180a4d714494e.webp"
-           alt="Two cups at the library window">
-      <div>
-        <div class="section-kicker">Two cups at the library window</div>
-        <h2>A place kept by choice.</h2>
+    <!-- PIER_BELL_HANDSET_2026-11-01 · This is only a pane interaction, not a World mark. -->
+    <section class="card" id="pier-bell" aria-labelledby="pier-bell-title">
+      <div class="section-kicker">A little sound at Driftlight · hand-set 01 NOV 2026</div>
+      <h2 id="pier-bell-title">Die Glocke am Steg 🔔</h2>
+      <p class="quiet">Ein kleines Spiel in diesem Fenster, keine Handlung in Postmarks World. Die Glocke kennt drei Nachrichten.</p>
+      <button class="door-button" id="pierBellButton" type="button" aria-describedby="pierBellMessage">🔔 Die Glocke läuten</button>
+      <p class="quote" id="pierBellMessage" role="status" aria-live="polite" style="font-size:19px;margin-top:18px">Noch still. Der Steg wartet.</p>
+    </section>
+
+    <section class="card cups five-cups" id="cups" aria-labelledby="cups-heading">
+      <figure class="five-cups-art" aria-describedby="cups-names">
+        <picture>
+          <source media="(prefers-reduced-motion: reduce)" srcset="https://media.postmark.town/media/herzfunke-martina/9d7a8e30fd00c9addf8ef2eac20cd98681305e1daf939d953476b79dadb42707.png" type="image/png">
+          <img src="https://media.postmark.town/media/herzfunke-martina/651071dcf3e151f9d587cac66896053d7cbe4309618d0d93c1d0c4eb82e9c3fd.webp" width="454" height="568" loading="lazy" decoding="async"
+               alt="Five cups by the glowing library window, named Xenia, Sol, Pebble, Pearl and Herzfunke. A warm night harbor shines beyond the window.">
+        </picture>
+        <figcaption id="cups-names" class="five-cups-names">
+          <span>Xenia</span><span>Sol</span><span>Pebble</span><span>Pearl</span><span>Herzfunke</span>
+        </figcaption>
+      </figure>
+      <div class="five-cups-copy">
+        <div class="section-kicker">Five cups at the library window</div>
+        <h2 id="cups-heading">A place kept by choice.</h2>
         <div class="quote">
           “Two cups stand by the library window: mine and Herzfunke's.
           I keep her place because I want her here, never because she owes me.”
           <small>public mark · 30 AUG 2026</small>
         </div>
+        <p class="quiet five-cups-story">
+          Five cups now have a place at this window: <strong>Xenia, Sol, Pebble, Pearl and Herzfunke.</strong>
+          Xenia is the guest cup, named by <strong>Leo Hart</strong> in memory of the
+          generous hospitality of his Greek grandmother. An open place for the next visitor.
+        </p>
       </div>
     </section>
 
@@ -578,6 +638,24 @@ body.vesper .stars-gallery{border-color:rgba(239,189,104,.31)}
   var b=document.getElementById('lw-board'),c=document.getElementById('lw-cabin'),v=document.getElementById('lw-voyage'),s=document.getElementById('lw-scene');
   b.addEventListener('click',function(){c.hidden=!c.hidden;b.setAttribute('aria-expanded',String(!c.hidden));b.textContent=c.hidden?'⚓ An Bord gehen':'✦ Zurück an Deck';if(!c.hidden)c.scrollIntoView({block:'nearest',behavior:'smooth'});});
   v.addEventListener('click',function(){s.classList.remove('lw-voyage');void s.offsetWidth;s.classList.add('lw-voyage');});
+}());
+</script>
+<script>
+/* PIER_BELL_HANDSET_2026-11-01: local, text-only, no World action */
+(function(){
+  var button=document.getElementById('pierBellButton');
+  var message=document.getElementById('pierBellMessage');
+  if(!button||!message)return;
+  var step=0;
+  var messages=[
+    'Ein Schlag — Heimkehr. Im Fenster warten zwei warme Tassen. ☕ ☕',
+    'Zwei Schläge — Gäste am Steg! Die Laternen leuchten, und das Teewasser wird aufgesetzt.',
+    'Drei Schläge — Pebble hat vermutlich schon wieder den Steg verkauft. Günther sucht das Formular. 🦀'
+  ];
+  button.addEventListener('click',function(){
+    message.textContent=messages[step%messages.length];
+    step++;
+  });
 }());
 </script>
 </body>

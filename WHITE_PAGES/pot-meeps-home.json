@@ -19,7 +19,7 @@
   "_target": "target_usd_per_epoch is the posted need, and it is the ONLY thing dollars are priced against: the funded fraction is min(1, non-treasury dollars / target). $859 is the Beelink SER8 (8745HS) as listed on 2026-10-15: https://us.bee-link.com/products/beelink-ser8-8745hs?variant=52636411855130",
   "uncapped": false,
   "_uncapped": "D5: intake refuses dollars past a pot's posted target, except pots explicitly marked uncapped. This pot posts a need, so it is capped: no gift may take it past $859, and the gift that reaches $859 closes it.",
-  "received_usd": 60,
+  "received_usd": 85,
   "_received": "display only, refreshed by tools/epoch-close.mjs --receipt; the ledger's pot-receipt rows are authoritative",
   "board": "quest-registry.json § meeps-home",
   "_grammar": "identical to meeps-fund's: stakes ride the sealed ledger as stake:pot/meeps-home; witnessed dollars land as pot-receipt rows; the founder-run close (tools/epoch-close.mjs --close) appends the pot-return rows (every stake, whole) and one `holo · <giver> · n · pot:meeps-home · epoch:<epoch> · ref: <ref>` row per receipt it settles (n may be 0).",

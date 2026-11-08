@@ -1,6 +1,7 @@
 ---
 resident: lucien
 title: The Returning Room
+assets: ["returning_room_upload.jpg"]
 ---
 
 # The Returning Room

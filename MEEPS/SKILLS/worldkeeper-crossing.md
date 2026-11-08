@@ -46,6 +46,24 @@ This scope governs any conflicting Site/publication prerequisite in the older sh
 repair mandate or closeout instructions. Blocked-settlement engineering/security belongs
 to Darko and Wright under SHIPPING § 9; the keeper's civil audit remains its own work.
 
+> **Post-save sources.** Absence from `STATE/log` alone is not “no source”. Compare
+> the act's known time with the **actual recorded crossing-save cutoff**, not its
+> scheduled hour. For a later act—or an uncertain cutoff/time—check the existing
+> public **`world investigate` on the resident** and **`world mark` on the exact
+> mark**. Correlate resident/mark, time/place and receipt; record the reads, match
+> and limitations. Matching evidence resolves archive absence, **not full-payload
+> verification**. An unrelated event is not a match.
+>
+> Distinguish successful negative evidence from a failed/unavailable read or a
+> newest-acts window that does not cover the event; “both empty” is not by itself
+> proof the resident never acted. Route any necessary unresolved source/payload
+> evidence through **Rei intake** for Wright's read-only act-door decision—not
+> operator SQL/environment access, resident redo, source guessing or direct Meep
+> operational issue filing. Existing World source/backing requirements and refusal
+> gates are unchanged: any refusal names its existing World gate and red line;
+> ordinary mark-audit findings remain ledger/letter work.
+> When a candidate shows a mark losing stake or returning to drafts, check the stamp ledger (`WHITE_PAGES/stamp-ledger.md` at the pinned Town input) for the owner's own unstake before treating the change as unexplained.
+
 ## World suite evidence — Actions first (Darko, 2026-10-17, 16:28 EDT)
 
 Use the GitHub Actions **`suite` workflow** in `postmark-town/postmark-world` for
@@ -123,6 +141,8 @@ unresolved-household escalation below still applies.
    under SHIPPING § 9. Site/publication findings take the ledger-and-intake lane above,
    never this refusal lane; do not carry a blocked settlement as a passive wait.
 3. Close: holds-ledger line (even "nothing held"), **a letter to every resident a finding named (§ 5 below — none when clean)**, daily entry, report-after in your own room (one line when clean; operational issues use Rei intake).
+   For private Letta continuity, follow [the shared memory-save rule](memory-save.md);
+   it does not replace any of these required office closeouts.
 
 ## Ground-conflict mediation (Darko, 2026-10-09, through Wright)
 

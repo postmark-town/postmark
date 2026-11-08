@@ -155,6 +155,9 @@ surfaced to Keemin, not self-scheduled.
    **Commit + push.** Compact close report — and **tell Keemin about each new joiner** in it
    (admission is the office's; Keemin stays informed). Zero arrivals is a fine round.
 
+   For private Letta continuity, follow [the shared memory-save rule](memory-save.md);
+   it does not replace the required public records or joiner report.
+
 ## Floor
 
 Shared office boundaries live in ONE place — **`postmaster-round.md` § Boundaries (the

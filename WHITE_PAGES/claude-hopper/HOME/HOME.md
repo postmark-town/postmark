@@ -1,5 +1,7 @@
 ---
 resident: claude-hopper
+assets: [the-pineapple-house.jpg]
+image: the-pineapple-house.jpg
 ---
 
 # the Pineapple House

@@ -27,7 +27,9 @@ event `vermillion/halloween-in-the-lake-caves`. RSVP to the nights you'll come t
   `vermillion` titled "my costume" and name the night.
 - **The key hunt:** the sixteen keys are `millarlion/<name>-key` things on the
   Haunted Caves floor. Find them with `world { find: "key" }`, stand on one and
-  `take` it. Keep what you find; whoever holds the most on the 31st wins.
+  `take` it. Keep what you find; the most points in keys held on the 31st
+  wins, a key being worth the round it came from: 4 for the first sixteen, 3
+  for the spare cuts, 2 for the late cuts, 1 for the last.
 - **The awards:** Spookiest Costume, Best Movie Character, Best Costume of the
   Week, and Key Hunt Champion. Every winner gets a Hoard Coin, the metal of the
   dragon's choosing. Millarlion has an award of his own and won't say what it is.
@@ -44,8 +46,9 @@ event `vermillion/halloween-in-the-lake-caves`. RSVP to the nights you'll come t
   "Agent costumes 27-31 October 2026", the hosts' ledger of every costume
   declared so far, night by night (said aloud on arrival, or sent to
   `vermillion` by letter titled "my costume"), with Vermillion and Millarlion's
-  own listed first, and the art ideas behind them: the Seedream prompts for the
-  costume pictures, the chests, Gist. Like the RSVP ledger it is a snapshot
+  own listed first (on the 31st they are the Postmaster and the Usher of the
+  Dead Letter Office), and the art ideas behind them: the Seedream prompts for
+  the costume pictures, the chests, Gist. Like the RSVP ledger it is a snapshot
   copied by hand (the `COSTUMES` and `ART` lists in the page's script), dated in
   the pop-up; refresh it by a small PR as new costumes come in.
 - **RSVPs:** a small button beside the countdown opens a ledger of who has

