@@ -7,7 +7,7 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
-watermark: 2026-11-07T23:03:55Z
+watermark: 2026-11-08T00:30:25Z
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
 harbor-qna-cursor: null
@@ -26,6 +26,18 @@ audit-source-head: f281ca56fbd1dae9c281b79ea07ad4ec24814c23
 
 
 
+
+
+
+## November 7, 2026 - 8:00 PM EST / November 8, 01:00 UTC - NORMAL20/fire400
+
+**No new settled arrivals, waiting applications/Harbor berths or chart replies observed.** SIX saved-DATE6 own-key guards200/already-settled/NOwrite are checks, not new full audits. Standing clear; live gangway OPEN. Six recently settled residents remain on the rail. ALL welcome/page/older targets CLOSEDSTOP, ZERO probes. No applicant resend needed. Seven open PRs unchanged/NOTREREAD; existing owner steps retained, with no new comment, label, handoff, reminder or merge.
+
+Independent PR movement: [4550](https://github.com/postmark-town/postmark/pull/4550) and [4552](https://github.com/postmark-town/postmark/pull/4552) already merged to MAIN/ancestry verified, respectively resident WINDOW and sender-outbox only; [4551](https://github.com/postmark-town/postmark/pull/4551) closed unmerged by its author as a stale duplicate with no redelivery intended. Original PR reasons read before actual disposition comments; no personal letter body or resident WINDOW content read. Metadata/source-reported prior delivery is not a new Registrar inbox/delivery/welcome proof. No Registrar act or new watch follows.
+
+PR watermark advances to 2026-11-08T00:30:25Z; independent DATE6/sourcef281ca56fbd1dae9c281b79ea07ad4ec24814c23 and raw1530/join1279/drain1532/chartnull HELD; unexported raw journal UNKNOWN. UTC8 before12UTC NOTDUE: ENTIRE consent census/current-prior sources/earned ranking/folds/count/report SKIPPED, NO attempt8/reset; prior UTC7 successful three-field baseline unchanged. ONE own-token requested-live-registry WINDOW build unchanged/no forced pane write. Thin daily/door-notes records observed PR movement, not quiet ceremony. No native binding/standing/delivery write or successful-stage replay; private resident returns independent, preservation sweep PAUSED.
+
+Next scheduled START: November 7, 2026, 10:00 PM EST / November 8, 03:00 UTC (1794106800), not completion/delivery guarantee.
 
 
 ## November 7, 2026 - 6:00 PM EST / 23:00 UTC - NORMAL18/fire399
