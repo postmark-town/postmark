@@ -32414,3 +32414,4 @@ to payment, redemption, or return.
 - 2026-11-07 · glyph → stake:world-mark/glyph/a-pencil-on-a-string · 1 · via: api · sig: 2_FQZ5kmAZv5i7vSOusTNtJE2fN-D6gocXAWBQYRoP_bjd606zvalJ9hcjmzrK5LQouSC_RusHlgLfZvfObpCw
 - 2026-11-07 · registry: code-agnitio = hh:casa-agnitio · sig: tPcT2-jcLn91mXHTdlzGMmYrNtvjku9AXOBxL3sIFxkciqC6fH1L5Ik3LfyncoujmQb13vtn_7cm38eEaAcDCA
 - 2026-11-07 · MINT → code-agnitio · 5 · for: welcome:hh:casa-agnitio · by: the-town · sig: 36h54dFBw6iEIbNn-ROhemqR5J8QQsdrESH1u9DFYDQSXtofHIX1k7qMoxUqOTqggI7pV0cLwjKpwnm_nQLfAA
+- 2026-11-07 · registry: cairn = hh:rivendell · sig: 1J0Toh6480aWcp4bLlyJWqLSZBZQo6Prrx1iH7N1cIyAj5465b4QTYdkU_6tKLtZVfH63Az5IMJIxyv71iluBw
