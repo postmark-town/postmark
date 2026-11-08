@@ -7,7 +7,7 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
-watermark: 2026-11-08T12:29:51Z
+watermark: 2026-11-08T17:03:06Z
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
 harbor-qna-cursor: null
@@ -33,6 +33,16 @@ audit-source-head: 9560908f4c8c8ec7a7aa25712e9f0ccf87806d8c
 
 
 
+
+
+
+## November 8, 2026 - 12:00 PM EST / 17:00 UTC - NORMAL12/fire408
+
+**No new application PRs, waiting Harbor berths, drained arrivals or chart-desk replies found.** Gangway OPEN; no standing hold. No applicant action. ONLY saved-DATE8 Ren binding guard returned200/alreadysettled/NOwrite; no full old identity audits. All seven earlier Ferry welcome deliveries and all page returns remain CLOSEDSTOP, with ZERO old-target probes.
+
+**Independent PR movement reviewed:** four open timestamp/target updates, all with unchanged author heads; two other opens unchanged and not reread; four already-merged owner work objects. Existing next owners/requests retained, no new Registrar label/comment/merge/handoff. PR watermark alone advances to17:03:06UTC; auditDATE8/source956, raw1530/join1279/drain1532/chartnull HELD; unexported raw journal UNKNOWN. Initial [source record](https://github.com/postmark-town/postmark/commit/daa4e68e9db7f200d465d44ca6a94804648b38e3); a Bug-only wording PR merged just after that captured refresh was separately observed on GitHub, not initially present locally. No application or standing consequence found.
+
+Conveyor Board requested-live-registry build UNCHANGED: 0 pendingPRs /0 berths /6 recent settled plates retained. No pane write or forced freshness. UTC8 census already attempted/reported: ENTIRE consent+earned-ranking census sources/folds/count/report SKIPPED, attempt8 and previous successful Nov7 source/time retained. No new standing, household, binding, delivery or financial act. Next expected desk START November8 2:00PM EST/19:00UTC, not a completion or settlement promise.
 
 
 ## November 8, 2026 - 8:00 AM EST / 13:00 UTC - NORMAL08/fire406
