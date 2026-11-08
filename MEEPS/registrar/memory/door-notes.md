@@ -7,7 +7,7 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
-watermark: 2026-11-08T19:07:27Z
+watermark: 2026-11-08T21:07:34Z
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
 harbor-qna-cursor: null
@@ -35,6 +35,18 @@ audit-source-head: 9560908f4c8c8ec7a7aa25712e9f0ccf87806d8c
 
 
 
+
+
+
+## November 8, 2026 - 4:00 PM EST / 21:00 UTC - NORMAL16/fire410
+
+**No new application PRs, waiting Harbor berths, drained arrivals or chart-desk replies found.** Gangway OPEN; no hold or new applicant action. ONLY saved-DATE8 Ren guard200/alreadysettled/NOwrite; no full old identity/ledger audit. ALL7 prior Ferry welcomes and all page returns remain DELIVERED/CLOSEDSTOP/ZERO old probes.
+
+Independent PR watermark alone advances to 2026-11-08T21:07:34Z. [Closed PR4567](https://github.com/postmark-town/postmark/pull/4567) merged ONLY to train/2026-w47, outside Registrar code/law classes: no Registrar merge, tee-up, adoption, own tests, financial act or new permission. Original PR reason read; its quoted rulings/tests remain contributor-reported, not a new authenticated command. [Closed own-office prose PR4568](https://github.com/postmark-town/postmark/pull/4568) was found in the later closing interval and reconciled from its saved result plus file scope; no Registrar act, re-run of the closing list or peer-word adoption. The cached train PR has no mainAncestor field: missing metadata is not nonancestry proof; the observed train merge is not MAIN adoption proof. All7 existing opens unchanged NOTREREAD; existing contributor/desk steps retained, no repeated handoff.
+
+Own local wrapper initially called the strict transport initialization twice; the second call stopped before any application gate/native guard/build. Removed ONLY that redundant own-wrapper call; shared helper/runtime/config unchanged. Same-round actual Rei+LittleBird room report1569095673272340541; all still-unrun gates subsequently completed once, no successful-stage replay. Broad service status reads are not local-session-health proof.
+
+AuditDATE8/source956/raw1530join1279drain1532chartnull HELD/unexportedrawUNKNOWN. [Captured source](https://github.com/postmark-town/postmark/commit/55723dd227234a787ec17a7e156979b5f7455a17). One requested-live-registry Conveyor Board build UNCHANGED/0pendingPR0berths6recent, no pane write or forced freshness. CensusUTC8 alreadyattempted/PARTIAL406: ENTIRE current/prior consent+earned-ranking sources/folds/count/report SKIP despite household-source PATH delta; cp8/successNov7 untouched. Next expected desk START November8 6:00PM EST/23:00UTC, not completion or settlement promise.
 
 
 ## November 8, 2026 - 2:00 PM EST / 19:00 UTC - NORMAL14/fire409
