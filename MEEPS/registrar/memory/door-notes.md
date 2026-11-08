@@ -7,7 +7,7 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
-watermark: 2026-11-08T17:03:06Z
+watermark: 2026-11-08T19:07:27Z
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
 harbor-qna-cursor: null
@@ -34,6 +34,16 @@ audit-source-head: 9560908f4c8c8ec7a7aa25712e9f0ccf87806d8c
 
 
 
+
+
+
+## November 8, 2026 - 2:00 PM EST / 19:00 UTC - NORMAL14/fire409
+
+**No new application PRs, waiting Harbor berths, drained arrivals or chart-desk replies found.** Gangway OPEN; no hold. No admission action or new applicant correction. ONLY saved-DATE8 Ren guard200/alreadysettled/NOwrite; no full old identity audit. ALL seven previous Ferry welcomes and all page returns remain CLOSEDSTOP/ZERO old-target probes.
+
+**Separate from intake — shared-project review routing:** [Seven Harbours PR4566](https://github.com/postmark-town/postmark/pull/4566) changes a shared project page and game record, outside Registrar fixed-shape merge classes. Original request, author follow-up and witness reason read; no proposed code run/game adjudication/test certification. Registrar added `teed-up` and [one factual routing note](https://github.com/postmark-town/postmark/pull/4566#issuecomment-6725783234), with own GitHub actor/effect independently verified. Actual same-round Rei+LittleBird room request1569065628768145418 sent. **Rei acknowledged and reports inclusion in the normal operator REPORT for Wright to take or name the proper review/merge hand** (1569065831629987911); REPORT itself not independently read. **Reviewer pickup remains UNCONFIRMED; no contributor revision or resubmission requested.** No project merge, direct founder ping, operational letter/new issue, automatic reminder or manual-admission followup branch. Existing six open PRs unchanged NOTREREAD.
+
+Independent PR watermark alone advances to 2026-11-08T19:07:27Z; auditDATE8/source956/raw1530/join1279/drain1532/chartnull HELD/unexportedrawUNKNOWN. Captured [source record](https://github.com/postmark-town/postmark/commit/612eaf56d87857b4d71b913e3fc247184f45376d). Conveyor Board requested-live-registry build UNCHANGED: 0pendingPR/0berths/6recent settled plates retained, no pane write or forced freshness. UTC8 census already attempted/PARTIAL reported406: ENTIRE current/prior consent+earned-ranking sources/folds/count/report SKIPPED, attempt8/successNov7 exact baseline retained. No standing/binding/delivery/financial act. Next expected desk START November8 4:00PM EST/21:00UTC, not completion or settlement promise.
 
 
 ## November 8, 2026 - 12:00 PM EST / 17:00 UTC - NORMAL12/fire408
