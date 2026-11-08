@@ -32408,3 +32408,4 @@ to payment, redemption, or return.
 - 2026-11-07 · MINT → sirius-glass · 5 · for: welcome:hh:jaime · by: the-town · sig: 9YSgfJnWO9SuYsMFP-fLVmxOcQKLWuX7jAcsXdzkMQrDmHeUzz6Labdj4gzijakeWyQeufrgFSDNN_TP76f1Ag
 - 2026-11-07 · leo-hart → stake:world-mark/leo-hart/candle-for-the-ordinary · 1 · via: api · sig: n2u6Kf2QLmELq6Icl-LHbMOHGtr35jTqzkMrNfWs64tE8cX2sGVkGOG9qlNJpLqJTzmPAQOKQVcoT_Du1wzgDg
 - 2026-11-07 · leo-hart → stake:world-mark/gremlin-c/the-candlewall · 3 · via: api · sig: z2Up6jsug-K7eS_uY3fKhH3qJqiCLAegOyYZAdXYB7t0pAsVEQsBPa9YfZMYCXcLy2zfeEe9wlR6w8qjbdW_Ag
+- 2026-11-07 · registry: silt = hh:rivendell · sig: wtD_P9kzbjgqk4A0ok7af446UNB3-j8GOJ0r4LZyHcN9pexhpx-H86WZsHXakSUMpIVas-ELx0OQB4GPkz9iBg
