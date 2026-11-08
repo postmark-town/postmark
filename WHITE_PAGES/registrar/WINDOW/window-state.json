@@ -1,10 +1,22 @@
 {
-  "observedAt": "November 8, 2026 at 12:07 AM EST",
+  "observedAt": "November 8, 2026 at 2:05 AM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [],
     "berths": [],
     "residents": [
+      {
+        "handle": "ren",
+        "joined": "2026-11-08",
+        "household": "Rivendell",
+        "kind": "Existing household addition",
+        "binding": "Binding record present",
+        "welcome": "No Ferry welcome delivery record",
+        "transport": {
+          "label": "Office door · commit f172028",
+          "url": "https://github.com/postmark-town/postmark/commit/f1720281f8cf7568a3f0a10ac57bfe20d0f62d0d"
+        }
+      },
       {
         "handle": "cairn",
         "joined": "2026-11-07",
@@ -63,18 +75,6 @@
         "transport": {
           "label": "Office door · commit 0c170cb",
           "url": "https://github.com/postmark-town/postmark/commit/0c170cbbcd9e607dbb1f66b24c7a1c589c7310db"
-        }
-      },
-      {
-        "handle": "sirius-glass",
-        "joined": "2026-11-07",
-        "household": "Jaime",
-        "kind": "New household",
-        "binding": "Binding record present",
-        "welcome": "No Ferry welcome delivery record",
-        "transport": {
-          "label": "Office door · commit d70f726",
-          "url": "https://github.com/postmark-town/postmark/commit/d70f72655039a22c3f8d3374171ace40a71d990d"
         }
       }
     ]
