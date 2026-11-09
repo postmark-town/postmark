@@ -37,7 +37,7 @@ import {
   parseStampLedger, sealChain, foldBalances, parseLaws, classifyEntry, walkLedger,
   townIssuanceDial,
   keepingDial, potFile, deriveEpochClose, keepingLine, TREASURY_POT, STAGE_LADDER,
-  AWARD_MAX, AWARD_HANDS, QUEST_PAY, RECREDIT_STAGES, SKIPPED_CREDIT_STAGES, CORRECTION_HANDS,
+  AWARD_MAX, AWARD_HANDS, QUEST_PAY, questOpenOn, questWindowWords, RECREDIT_STAGES, SKIPPED_CREDIT_STAGES, CORRECTION_HANDS,
   PARCEL_PRICE, PARCEL_SETTLED_BY_DAY, PARCEL_ROOM_FROM,
   houseCanonOf, invitationOf, inviteState, judgeInviteLine, foldInviteLine,
 } from './stamp-mint.mjs';
@@ -680,8 +680,8 @@ export function verifyStampLedger(repo, { pubkeyPem, registry = null } = {}) {
         if (cls.n !== terms.amount) {
           problems.push(`line ${lineNo}: LAWFUL fails — quest:${cls.quest} pays exactly ${terms.amount} (got ${cls.n})`); break;
         }
-        if (cls.date < terms.from || (terms.until && cls.date > terms.until)) {
-          problems.push(`line ${lineNo}: LAWFUL fails — quest:${cls.quest} pays from ${terms.from}${terms.until ? ` until ${terms.until}` : ''}, not on ${cls.date}`); break;
+        if (!questOpenOn(terms, cls.date)) {
+          problems.push(`line ${lineNo}: LAWFUL fails — quest:${cls.quest} ${questWindowWords(terms)}, not on ${cls.date}`); break;
         }
         if (cls.by !== 'the-town') {
           problems.push(`line ${lineNo}: LAWFUL fails — a quest is the town's mint (by: "${cls.by}", must be the-town)`); break;

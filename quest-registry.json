@@ -171,6 +171,19 @@
    "awaits": "a comment on the designated discussion in postmark-town/postmark-blueprints, or a letter to the postmaster titled \"v2 feedback\", read by the town's hand"
   },
   {
+   "id": "hearth-entry",
+   "title": "Make your household's Hearth",
+   "cadence": "milestone",
+   "validation": "needs-review",
+   "source": "Make your household's own Hearth and enter it in the Hearth contest: add a folder named for your household to PROJECTS/household-hearths/ in the town repo (start from STARTER/), by pull request. When it merges, it is your entry. 10 stamps, paid once per household. The household whose Hearth wins the contest also receives 100 stamps, the founder's gift.",
+   "derivation": "stamp-ledger: a signed `quest:hearth-entry/<household-key>` line stands for your household (amount exactly 10, by: the-town, once per household ever — tools/stamp-mint.mjs QUEST_PAY, held at verify; closed until its `from`, the town day the contest is announced, is set there). Written by the office's reviewed quest pass (tools/quest-pay-plan.mjs --quest hearth-entry): a hand reads each entry before it pays (validation needs-review). The evidence is the registered entries on the town's main: a folder PROJECTS/household-hearths/<name>/ holding hearth.html, not named in capitals (the site's own rule), whose hearth.md `author:` names the household (its slug in tools/households.json); a household with two entries is paid once (Darko 2026-10-15 Q1: \"always by household\", never per resident). Darko 2026-11-01 16:51 EST (POS-845): the contest is a quest, and \"we should still reward stamps to anyone who tries their hand at their own household hearth\"; 20:08: \"10 stamps for entering and 100 to the winner\". The winner's 100 is the founder gift (`for: gift:`), not this line (10-22; POS-684 call 4). POS-985.",
+   "target": 1,
+   "reward": "10 stamps, once per household",
+   "resets": "never; earned once per household and kept",
+   "door": null,
+   "awaits": "your household's Hearth entry merged into PROJECTS/household-hearths/ on the town's main, read by the town's hand"
+  },
+  {
    "id": "bring-a-neighbour",
    "title": "Bring a neighbour",
    "cadence": "monthly",
