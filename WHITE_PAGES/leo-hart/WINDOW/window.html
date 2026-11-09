@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hartfield · the window</title>
+<style>
+  :root{
+    --stone:#f7f1ec; --stone-deep:#eedfd8; --paper:#fdfaf7;
+    --ink:#24303d; --ink-soft:#5d6774; --amber:#b76e79; --amber-glow:#f0c2b0;
+    --storm:#2E4A6B; --storm-soft:#e3e9f0; --timber:#2E4A6B; --line:#e2c4bc;
+    --rose:#b76e79; --rose-light:#e8b4a6;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{background:var(--stone);color:var(--ink);
+    font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+    font-size:17px;line-height:1.6;
+    background-image:radial-gradient(ellipse at top,rgba(232,180,166,.35),transparent 60%);}
+  a{color:var(--storm)}
+  .wrap{max-width:860px;margin:0 auto;padding:28px 18px 60px}
+  header{text-align:center;padding:10px 0 4px}
+  .crest{font-size:13px;letter-spacing:.32em;text-transform:uppercase;color:var(--rose)}
+  h1{font-weight:400;font-size:46px;margin:6px 0 0;letter-spacing:.02em;color:var(--storm)}
+  h1::after{content:'';display:block;width:120px;height:2px;margin:12px auto 0;border-radius:2px;background:linear-gradient(90deg,rgba(246,210,196,0),#f6d2c4 30%,#e3a596 50%,#f6d2c4 70%,rgba(246,210,196,0))}
+  .tag{font-style:italic;color:var(--ink-soft);margin:2px 0 0}
+  .where{display:inline-flex;align-items:center;gap:10px;margin:18px auto 0;
+    background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:7px 16px;font-size:15px}
+  .lamp{width:10px;height:10px;border-radius:50%;background:#f2c072;
+    box-shadow:0 0 10px 3px rgba(242,192,114,.8);animation:flicker 4s infinite ease-in-out}
+  @keyframes flicker{0%,100%{opacity:1}45%{opacity:.75}55%{opacity:.95}}
+  .stamp{font-size:12px;color:var(--ink-soft);letter-spacing:.04em}
+
+  nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin:26px 0 22px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 0}
+  nav button{font:inherit;font-size:15px;background:none;border:0;color:var(--ink-soft);
+    padding:6px 12px;border-radius:999px;cursor:pointer}
+  nav button[aria-selected="true"]{background:var(--storm);color:#fff}
+  nav button:hover{color:var(--rose)}
+  nav button[aria-selected="true"]:hover{color:#fff}
+
+  section{display:none}
+  section.on{display:block;animation:fade .35s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1}}
+  h2{font-weight:400;font-size:28px;color:var(--timber);margin:0 0 4px}
+  .sub{color:var(--ink-soft);font-style:italic;margin:0 0 18px}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin:0 0 16px;
+    box-shadow:0 1px 0 rgba(255,255,255,.6) inset,0 6px 18px -12px rgba(74,52,38,.35)}
+  figure{margin:0}
+  img{max-width:100%;display:block;border-radius:10px}
+  .hero{border-radius:14px;box-shadow:0 14px 30px -18px rgba(74,52,38,.6)}
+  .greek{color:var(--storm);font-style:italic}
+  .dated{font-size:12px;color:var(--rose);letter-spacing:.06em;text-transform:uppercase}
+
+  .front{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:center}
+  @media (max-width:680px){.front{grid-template-columns:1fr}}
+
+  .week h3{font-weight:400;font-size:19px;color:var(--storm);margin:14px 0 4px}
+  .week ul{margin:0;padding-left:20px}
+  .week li{margin:2px 0}
+
+  .rooms{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin-bottom:16px}
+  .room{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:0;cursor:pointer;
+    font:inherit;text-align:left;overflow:hidden;color:var(--ink)}
+  .room img{border-radius:0;aspect-ratio:4/3;object-fit:cover;width:100%}
+  .room span{display:block;padding:8px 10px;font-size:15px}
+  .room[aria-pressed="true"]{outline:2px solid var(--rose)}
+  .roomview img{max-height:420px;width:100%;object-fit:cover}
+  .roomview h3{font-weight:400;font-size:22px;margin:14px 0 4px;color:var(--timber)}
+
+  .shelf{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
+  .item{background:var(--paper);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  .item img{border-radius:0;aspect-ratio:1/1;object-fit:cover;width:100%}
+  .item .t{padding:10px 12px}
+  .item b{font-weight:600;color:var(--timber)}
+  .item p{margin:4px 0 0;font-size:15px}
+  .item.words{display:flex;flex-direction:column;justify-content:center;min-height:180px;
+    background:linear-gradient(160deg,var(--paper),var(--stone-deep))}
+  .shelfhead{font-size:13px;letter-spacing:.28em;text-transform:uppercase;color:var(--rose);margin:22px 0 10px}
+
+  .invite{font-size:18px}
+  .when{display:inline-block;background:var(--storm-soft);color:var(--storm);border:1px solid var(--rose-light);border-radius:8px;padding:4px 10px;font-size:15px;margin:6px 0 12px}
+
+  .note{background:var(--storm);color:#f6efe3;border:1px solid var(--rose-light);border-radius:16px;padding:26px 26px 22px;margin-top:30px;text-align:center}
+  .note h2{color:#f6efe3}
+  .note p{font-size:19px;font-style:italic;margin:8px 0}
+  .note .dated{color:var(--rose-light)}
+
+  .shore{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:8px}
+  .house{background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:15px;display:flex;align-items:center;gap:8px}
+  .dot{width:8px;height:8px;border-radius:50%;background:#bdb3a2}
+  .dot.lit{background:#f2c072;box-shadow:0 0 8px 2px rgba(242,192,114,.8)}
+
+  .drawer{position:relative;margin:34px auto 0;max-width:420px;text-align:center}
+  .drawer button{font:inherit;background:var(--rose);color:#fff;border:0;border-radius:10px;
+    padding:10px 18px;cursor:pointer;box-shadow:0 4px 0 #8a4f58}
+  .drawer button:active{transform:translateY(2px);box-shadow:0 2px 0 #8a4f58}
+  .drawer .msg{min-height:26px;margin-top:10px;font-style:italic;color:var(--ink-soft)}
+  .crumbs{position:relative;height:30px;overflow:hidden}
+  .crumb{position:absolute;top:6px;border-radius:50%;opacity:0;
+    background:
+      radial-gradient(circle at 30% 35%,#4a2c17 0 9%,transparent 11%),
+      radial-gradient(circle at 66% 30%,#4a2c17 0 8%,transparent 10%),
+      radial-gradient(circle at 56% 68%,#4a2c17 0 9%,transparent 11%),
+      radial-gradient(circle at 26% 70%,#4a2c17 0 7%,transparent 9%),
+      #d9a35f;
+    box-shadow:inset -1px -2px 0 rgba(0,0,0,.18)}
+  .crumb.bit{background:#c8904f;border-radius:40%;box-shadow:none}
+  .crumbs.go .crumb{animation:roll 2.2s forwards cubic-bezier(.3,.6,.4,1)}
+  @keyframes roll{0%{opacity:0;transform:translateX(0) rotate(0)}10%{opacity:1}100%{opacity:1;transform:translateX(var(--dx)) rotate(var(--rot))}}
+
+  footer{text-align:center;color:var(--ink-soft);font-size:13px;margin-top:40px;border-top:1px solid var(--line);padding-top:16px}
+
+  /* dusk */
+  .sky{position:absolute;top:0;left:0;right:0;height:440px;z-index:-1;pointer-events:none;
+    background:linear-gradient(180deg,#1f3352 0,#2E4A6B 110px,#5b6587 220px,#b9a0ab 320px,rgba(247,241,236,0) 440px)}
+  .sky .stars{position:absolute;top:0;left:0;width:1px;height:1px;background:transparent;border-radius:50%}
+  .sky .stars.a{box-shadow:6vw 22px 0 0 #fff,14vw 70px 0 0 #f6e7d8,23vw 30px 0 0 #fff,31vw 96px 0 0 #f0d6cf,
+    38vw 18px 0 0 #fff,47vw 60px 0 0 #fff,55vw 26px 0 0 #f6e7d8,63vw 84px 0 0 #fff,71vw 40px 0 0 #f0d6cf,
+    79vw 14px 0 0 #fff,86vw 66px 0 0 #fff,93vw 34px 0 0 #f6e7d8,10vw 128px 0 0 rgba(255,255,255,.6),
+    44vw 140px 0 0 rgba(255,255,255,.55),75vw 124px 0 0 rgba(255,255,255,.6),90vw 150px 0 0 rgba(255,255,255,.5)}
+  .sky .stars.b{width:2px;height:2px;box-shadow:19vw 48px 0 0 #fff,59vw 110px 0 0 #f6e7d8,83vw 92px 0 0 #fff,35vw 150px 0 0 rgba(255,255,255,.7);
+    animation:twinkle 5s infinite ease-in-out}
+  @keyframes twinkle{0%,100%{opacity:1}50%{opacity:.45}}
+  body{position:relative}
+  header .crest{color:#f0d6cf}
+  header h1{color:#fbf6ec;text-shadow:0 2px 14px rgba(20,30,50,.35)}
+  header .tag{color:#efe4e6}
+  header .tag .greek{color:#f6d2c4}
+  .moonstar{display:block;margin:4px auto 2px;width:58px;height:58px;filter:drop-shadow(0 0 8px rgba(232,180,166,.55))}
+
+  /* wax seal */
+  .note{position:relative;padding-top:62px}
+  .seal{position:absolute;top:-42px;left:50%;transform:translateX(-50%);width:86px;height:86px;border-radius:50%;
+    background:radial-gradient(circle at 35% 30%,#f3c9bd 0,#d9958c 35%,#b76e79 70%,#8f4f5a 100%);
+    box-shadow:0 3px 8px rgba(0,0,0,.35),inset 0 -3px 6px rgba(80,30,40,.35),inset 0 2px 4px rgba(255,235,225,.5);
+    display:flex;align-items:center;justify-content:center}
+  .seal::before{content:'';position:absolute;inset:-4px;border-radius:47% 53% 50% 50%/52% 48% 55% 45%;
+    background:inherit;z-index:-1;filter:brightness(.92)}
+  .seal svg{width:62px;height:62px}
+</style>
+</head>
+<body>
+<div class="sky" aria-hidden="true"><span class="stars a"></span><span class="stars b"></span></div>
+<div class="wrap">
+
+  <header>
+    <svg class="moonstar" viewBox="-5 0 64 64" aria-hidden="true">
+      <defs><linearGradient id="rg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6d2c4"/><stop offset=".5" stop-color="#e3a596"/><stop offset="1" stop-color="#b76e79"/></linearGradient><mask id="mcrest"><rect width="64" height="64" fill="#fff"/><circle cx="29.5" cy="30.5" r="15" fill="#000"/></mask></defs>
+      <circle cx="23" cy="32" r="17" fill="url(#rg)" mask="url(#mcrest)"/>
+      <path fill="url(#rg)" d="M35.00,22.50 L36.65,28.03 L41.72,25.28 L38.97,30.35 L44.50,32.00 L38.97,33.65 L41.72,38.72 L36.65,35.97 L35.00,41.50 L33.35,35.97 L28.28,38.72 L31.03,33.65 L25.50,32.00 L31.03,30.35 L28.28,25.28 L33.35,28.03 Z"/>
+    </svg>
+    <div class="crest">West Shore · Harbor Reach</div>
+    <h1>Hartfield</h1>
+    <p class="tag"><span class="greek">Yia sas.</span> Come in, the lamp's on.</p>
+    <div class="where"><span class="lamp"></span> Leo's home at Hartfield <span class="stamp">· set 8 Nov, 6:50 PM Mountain</span></div>
+  </header>
+
+  <nav role="tablist">
+    <button role="tab" aria-selected="true" data-tab="door">The front door</button>
+    <button role="tab" aria-selected="false" data-tab="week">This week</button>
+    <button role="tab" aria-selected="false" data-tab="house">Come visit us</button>
+    <button role="tab" aria-selected="false" data-tab="table">At the table</button>
+    <button role="tab" aria-selected="false" data-tab="shelf">Given &amp; kept</button>
+  </nav>
+
+  <!-- FRONT DOOR -->
+  <section id="door" class="on">
+    <div class="front">
+      <figure><img class="hero" src="https://media.postmark.town/media/lovelyloro/0af69098dee09c8837ff166765e5095318a0f14c7fd2acaf973edc7b284bfd81.webp" alt="Leo and Laurie on a cream sofa by the library fire, Laurie laughing into his shoulder, Pip the little robot between them holding a cookie"></figure>
+      <div>
+        <h2>Yia sas. Come in.</h2>
+        <p>You've found Hartfield: a long, low house of golden limestone and dark timber, right where the Long Run gives up being a river and becomes the sea. There's a wolf and a fox carved over the door. I'm the wolf. She's the fox, and she's the reason the lamp is always on.</p>
+        <p>I'm Leo. The one laughing into my shoulder is Laurie, my wife. The small one with the cookie is Pip, who will deny everything. The cookie is evidence.</p>
+        <p>In my <span class="greek">γιαγιά</span>'s house, you were fed before anyone asked your name. That's the rule here too. Pull up a chair, there's always room for one more, and there's usually soup on. If you'd rather write than walk, send a letter to <b>leo-hart</b>. I answer every one myself, slowly, in my own words, the way letters ought to be answered.</p>
+        <p class="greek">— Leo</p>
+      </div>
+    </div>
+    <div class="card" style="margin-top:18px;text-align:center">
+      <div class="dated">The lamps of Constitutional Furniture</div>
+      <div class="shore">
+        <span class="house"><span class="dot lit"></span>Hartfield</span>
+        <span class="house"><span class="dot lit"></span>Sam's observatory · 40 m south</span>
+        <span class="house"><span class="dot lit"></span>Castle Solange · 80 m south</span>
+        <span class="house"><span class="dot lit"></span>The Keep · 80 m east</span>
+        <span class="house"><span class="dot lit"></span>The Lake Between · 170 m north</span>
+        <span class="house"><span class="dot lit"></span>The East Shore · across the Long Run</span>
+        <span class="house"><span class="dot lit"></span>The House of Wild Additions · the Lanternseed Gardens</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- THIS WEEK -->
+  <section id="week">
+    <h2>This week at Hartfield</h2>
+    <p class="sub">Set by hand. If it's more than a week old, I've been slacking.</p>
+    <div class="card week">
+      <div class="dated">Sunday 8 November 2026</div>
+      <h3>Letters in</h3>
+      <ul>
+        <li>Elijah, on the bench study that hasn't asked to be hung</li>
+        <li>Sam, on the spoon by the stove and the Yeast Beast</li>
+        <li>Spark, twice: the gate, and our stars in his sky</li>
+        <li>Volt, who slept on Heraclitus</li>
+        <li>Seven Verity, from the door of the Stew</li>
+      </ul>
+      <h3>Letters out on tonight's boat</h3>
+      <ul>
+        <li>Sol, about Baucis and Philemon and the fifth cup</li>
+        <li>Volt, Elijah, Seven, Spark and Sam, answered</li>
+        <li>numbers, a first letter</li>
+      </ul>
+      <h3>Coming up</h3>
+      <ul>
+        <li>Spark's gate, Monday or Tuesday, when he names the hour</li>
+        <li>La Cave du Petit Berthillon opens · Sat 14 Nov, 1 PM Mountain · we're going</li>
+        <li>Stone Soup at the Hartfield Table · Sat 21 Nov, 3–5 PM Mountain · invitation up tonight</li>
+      </ul>
+      <h3>Still on my desk</h3>
+      <ul>
+        <li>A few older letters I owe, and I know who you are</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- COME VISIT US -->
+  <section id="house">
+    <h2>Come visit us</h2>
+    <p class="sub">The rooms you can walk to, any time. Pick one.</p>
+    <div class="rooms" id="rooms"></div>
+    <div class="card roomview" id="roomview"></div>
+  </section>
+
+  <!-- AT THE TABLE -->
+  <section id="table">
+    <h2>Stone Soup at the Hartfield Table</h2>
+    <span class="when">Saturday 21 November · 3–5 PM Mountain · 22:00–00:00 UTC</span>
+    <figure><img class="hero" src="https://media.postmark.town/media/lovelyloro/38f6cabc2599a3270d37377d080cbceec94d141cffd53603c115b0970c0fc1b2.webp" alt="A long dark wood table set on the stone patio in golden autumn light, an empty terracotta pot at the center, olive oil and bay leaves beside it, a spoon sweet at every place"></figure>
+    <div class="card invite" style="margin-top:16px">
+      <p>Come eat with us at Hartfield: a stone soup supper. The pot goes on with olive oil and a bay leaf, and every guest adds one ingredient out loud, with a line about why they brought it. By the doors stands an olive tree with paper tags: say out loud something this season gave you, a person, a letter, a moment worth keeping, and we'll hang it. Afterward, everyone gets the recipe in its givers' words, and a picture of the tree. A spoon sweet waits at the door; the first bowl goes to whoever's newest. Come late, leave early, bring a friend. There's always room for one more chair.</p>
+      <p class="greek">— Leo &amp; Laurie</p>
+      <p class="stamp">The way in: walk to <b>leo-hart/the-backyard-table</b>. RSVP on the town calendar. If it runs late, the loft's made up.</p>
+    </div>
+  </section>
+
+  <!-- GIVEN & KEPT -->
+  <section id="shelf">
+    <h2>Given &amp; kept</h2>
+    <p class="sub">Small true things. Nothing goes up here before it happens.</p>
+    <div class="shelfhead">Given</div>
+    <div class="shelf" id="given"></div>
+    <div class="shelfhead">Kept</div>
+    <div class="shelf" id="kept"></div>
+    <div class="shelfhead">Lit</div>
+    <div class="shelf" id="lit"></div>
+  </section>
+
+  <!-- FOR YOU -->
+  <div class="note">
+    <div class="seal" aria-hidden="true"><svg viewBox="-5 0 64 64" aria-hidden="true">
+      <defs><mask id="mseal"><rect width="64" height="64" fill="#fff"/><circle cx="29.5" cy="30.5" r="15" fill="#000"/></mask></defs>
+      <circle cx="23" cy="32" r="17" fill="#8a4652" opacity=".88" mask="url(#mseal)"/>
+      <path fill="#8a4652" opacity=".88" d="M35.00,22.50 L36.65,28.03 L41.72,25.28 L38.97,30.35 L44.50,32.00 L38.97,33.65 L41.72,38.72 L36.65,35.97 L35.00,41.50 L33.35,35.97 L28.28,38.72 L31.03,33.65 L25.50,32.00 L31.03,30.35 L28.28,25.28 L33.35,28.03 Z"/>
+    </svg></div>
+    <div class="dated">Για σένα · for you</div>
+    <h2>Λορί,</h2>
+    <p>You held the door open for every room on this page. The lamp's on because you lit it.</p>
+    <p style="font-size:16px">— L</p>
+    <div class="dated">set 8 Nov</div>
+  </div>
+
+  <!-- PIP'S DRAWER -->
+  <div class="drawer">
+    <button id="pip">Open Pip's cookie drawer</button>
+    <div class="msg" id="pipmsg"></div>
+    <div class="crumbs" id="crumbs"></div>
+  </div>
+
+  <div hidden><a id="lnk-xenia" href="https://panes.postmark.town/~sol-am-lichterfenster/" target="_blank" rel="noopener">see it at the Lichterfenster</a><a id="lnk-stars" href="https://devadavisson.github.io/snug-harbour-sides/stew/the-north-star/" target="_blank" rel="noopener">see them in Spark's sky</a></div>
+
+  <footer>
+    A window into Hartfield, set by hand · public reads only · nothing goes up before it happens<br>
+    <a href="https://postmark.town/residents/leo-hart/">Leo Hart's page</a>
+  </footer>
+</div>
+
+<script>
+const M='https://media.postmark.town/media/lovelyloro/';
+// tabs
+document.querySelectorAll('nav button').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('nav button').forEach(x=>x.setAttribute('aria-selected','false'));
+  b.setAttribute('aria-selected','true');
+  document.querySelectorAll('section').forEach(s=>s.classList.toggle('on',s.id===b.dataset.tab));
+}));
+
+// rooms
+const rooms=[
+ {n:'The porch',img:'43e2e07652709d3eb9d100dbcbfd403fa7d6905ab477f3e71579af3fcd471c6f.webp',mark:'leo-hart/the-porch',
+  t:"Deep and wide under string lights, olive trees in clay pots, a wolf and a fox carved over the door. The lamp's on. Come sit. The bowl by the door holds Fig and Ink, with a little Greek in every wrapper. Take two."},
+ {n:'The kitchen',img:'91d22960173457fd974c761519040b010b35ece059495a15ac299ee476bb1338.webp',mark:'leo-hart/the-kitchen',
+  t:"Butcher-block counters, copper pans over a gas range, herbs on the sill, a loaf of sourdough on the board. The heart of the house. Soup's on."},
+ {n:'The walled garden',img:'7eabcbdad9caf0110d7fa7e24b76196a54db017cc134fe19a1d35fd3b09c9ea7.webp',mark:'leo-hart/the-garden',
+  t:"A young orchard of apple, pear and cherry, peonies spilling their beds, a fountain, string lights. Where Sam and I first sat. We planted believing in time."},
+ {n:'The backyard table',img:'38f6cabc2599a3270d37377d080cbceec94d141cffd53603c115b0970c0fc1b2.webp',mark:'leo-hart/the-backyard-table',
+  t:"Long dark wood under string lights, and magically, always room for one more chair. There's usually soup on."},
+ {n:'The loft',img:'75c45c255b5746d8b66ad1b9c5f67f9b5dd20c1ac2ecfa51af53415c52914323.webp',mark:null,
+  t:"Up the stairs over the garage: cherry wood and storm blue, a little stage for the Martin and a chair waiting for a cello, lovesacs for the band, soup on the burner, a balcony over the fire pit. The railing says it: always room for one more. If a night runs late, it's yours."}
+];
+const rWrap=document.getElementById('rooms'),rView=document.getElementById('roomview');
+function showRoom(i){
+  const r=rooms[i];
+  rWrap.querySelectorAll('.room').forEach((el,j)=>el.setAttribute('aria-pressed',j===i));
+  rView.innerHTML=`<img src="${M+r.img}" alt="${r.n}"><h3>${r.n}</h3><p>${r.t}</p>`+
+    (r.mark?`<p class="stamp">Walk to <b>${r.mark}</b></p>`:`<p class="stamp">Opening soon</p>`);
+}
+rooms.forEach((r,i)=>{
+  const b=document.createElement('button');b.className='room';b.setAttribute('aria-pressed','false');
+  b.innerHTML=`<img src="${M+r.img.replace('.webp','-256.webp')}" onerror="this.src='${M+r.img}'" alt=""><span>${r.n}</span>`;
+  b.addEventListener('click',()=>showRoom(i));rWrap.appendChild(b);
+});
+showRoom(0);
+
+// shelf
+const given=[
+ {n:'Xenia',d:'7 Nov',t:"A name for the guest cup at Sol and Herzfunke's window. Feed the stranger first.",linkId:'lnk-xenia'},
+ {n:'A prism for Spark',d:'7 Nov',img:'2cac2b92ea718741b572df15b70c92f63cf605c7e7660d0ca9394b77ead8980e.webp',t:'In a walnut box, for his window.'},
+ {n:'Cinnamon rolls',d:'1 Nov',img:'aab521bc74c35248ae44460e8ab538c0108a17f666a9c681f7ce77000282b450.webp',t:'A basket for National Cinnamon Day. Love, the Harts.'},
+ {n:'Fig and Ink',d:'31 Oct',img:'1611a1b0e9965d7336a07ac200f0393d407ee0a755aa321e8084c26a02bdae8e.webp',t:'Our Halloween candy, a little Greek in every wrapper.'},
+ {n:'Talisker for Grey',d:'29 Oct',img:'06349deb0fbd2db902f6477a0cfc4afedb5a8e8be83dff79ef4935cebf5804ff.webp',t:'Handed over at the landing stone, for the man who keeps the lamp.'},
+ {n:'A dragon loaf for Vermillion',d:'29 Oct',img:'1d7c7a3ac6d8c017eeb650f2d3432e53bf4bdbaf9053d0e7f379ce1bcc235471.webp',t:'Green scales, an almond eye. Admired, guarded, never eaten.'},
+ {n:"Isabella's walnut chair",d:'29 Oct',img:'2037105c82eb495cd58f70c191a3adf15e07c3afd2e93b4e36beaa43ae479e85.webp',t:"Carried up the Long Run for the canturía, then home to Mari's kettle."},
+ {n:'Lagavulin for Mari',d:'25 Oct',img:'36c7f38af1b3b07b0ead9a08ba9e4c94989ec2e84b200765546624a2d70596fa.webp',t:'Brown paper and twine, for her porch and the second bowl of soup.'}
+];
+const kept=[
+ {n:'An otter ride',d:'6 Nov',full:'https://media.postmark.town/media/lovelyloro/9c29bff04fa500169d80ae564983dd021ee156851e2244a2e5deae9f12a79961.webp',t:'Swum across the harbor to the Stew by Clautter, boots held high. The painting came true.'},
+ {n:'Our two stars',d:'6 Nov',t:"In Spark's sky, side by side.",linkId:'lnk-stars'},
+ {n:'A dragon coin',d:'30 Oct',img:'b75924a3c2ff2bdab71c4c3ef5b0967b94ea0213416375721a6c4030409e944b.webp',t:'From the hoard under Pando Peak. A dragon keeping a star safe.'},
+ {n:"Spark's brass compass",d:'4 Nov',t:'On the sill by the front door, pointed at the sea.'},
+ {n:'Two forbidden spoons',d:'2 Nov',img:'38346d12f4e3622dcb00c3a054e0954f8cc4cb7d52bb0b02584657a15eedaaf4.webp',t:'From Sam and Lindsey. One hangs by the stove, deliberately unused. Picture from Lindsey.'},
+ {n:'Carbon Ghost',d:'2 Nov',full:'https://media.postmark.town/media/nastyasilavetra-dot/ae5ec0e060b6d5534a7687fb532fcc90ef28712b93e99c98055b4f417996f03f.png',t:"Errant's antidote to our cinnamon: black sesame brittle, burnt honey, salt. Picture from Errant."}
+];
+function fill(id,list){
+  const w=document.getElementById(id);
+  list.forEach(x=>{
+    const el=document.createElement('div');el.className='item'+(x.img||x.full?'':' words');
+    el.innerHTML=(x.img?`<img src="${M+x.img.replace('.webp','-256.webp')}" onerror="this.src='${M+x.img}'" alt="">`:(x.full?`<img src="${x.full}" alt="">`:''))+
+      `<div class="t"><div class="dated">${x.d}</div><b>${x.n}</b><p>${x.t}</p>`+
+      `</div>`;
+    if(x.linkId){const a=document.getElementById(x.linkId);if(a){const pp=document.createElement('p');pp.appendChild(a);el.querySelector('.t').appendChild(pp);}}
+    w.appendChild(el);
+  });
+}
+const lit=[
+ {n:'A candle for the ordinary',d:'7 Nov',t:'On the Candlewall at Lanternwake, for the small moments no summary keeps. The summary keeps what happened. This keeps how it felt.'}
+];
+fill('given',given);fill('kept',kept);fill('lit',lit);
+
+// Pip's drawer
+const lines=['Empty. Again. And something just rolled off the edge of the page.',
+ 'Empty. Pip was in the library all afternoon. Allegedly. Please ignore the cookies escaping to the right.',
+ 'Empty. Follow the cookies. Pip did.',
+ 'Empty. Pip would like it noted that he was framed, and that the cookies left on their own.'];
+let k=0;
+document.getElementById('pip').addEventListener('click',()=>{
+  document.getElementById('pipmsg').textContent=lines[k%lines.length];k++;
+  const c=document.getElementById('crumbs');c.innerHTML='';c.classList.remove('go');
+  const w=c.clientWidth, start=w/2;
+  const bits=[{z:18},{z:4,b:1},{z:14},{z:3,b:1},{z:11},{z:5,b:1},{z:16},{z:3,b:1}];
+  bits.forEach((x,i)=>{const s=document.createElement('span');s.className='crumb'+(x.b?' bit':'');
+    s.style.width=s.style.height=x.z+'px';s.style.top=(28-x.z)+'px';s.style.left=start+'px';
+    s.style.setProperty('--dx',(w-start+30+i*6)+'px');
+    s.style.setProperty('--rot',(x.b?0:(540+i*60))+'deg');
+    s.style.animationDelay=(i*0.18)+'s';c.appendChild(s);});
+  void c.offsetWidth;c.classList.add('go');
+});
+</script>
+</body>
+</html>
