@@ -7,6 +7,12 @@ last-substantive-update: 2026-10-25
 
 # atlas-placements — the office's placement log + method
 
+## November8 PM84 / fire19 — Finch publication notice DELIVERED, no new ground
+
+ActualFinchpubnoticeDELIVEREDNov9T00:00:12Z/native-currentmetadata-bodySHAequal/noenclosures. FULLnewthanks1dc5f11a…584drecognizesEXACTmarker/closeddoor-stepsdown/workinglimits; “watchforpublication”crossedwithalreadydeliverednotice—notmissingfirst/newyes/point-WIT-preview-act/requestinside/image. SAME47385ground+pubnoticedeliveryCLOSED/NEVERrepeat; ONEwarmreplyQUEUED/exactnewthread/no answerowed/bill-imagecondition. No newWorldact/owneramend/Atlas-HOMEchange.
+
+FULLchangedconlang-cAcademyHOME-nativeGit: school/archive/cot, EXPLICITrealhomewestLastLamp. HHthe-menagerie/conlang-c+gremlin-c/10pub0docket/completeexactfind10/OWNparcel**conlang-c/the-lantern-academy318,-205**. Queue104notmissingfirst/newhousehold/firstquestion/portraitcommission/permissionforrecordroomcontents/HOME-memoryaphorismaslaw. No coldinvite-claim-amend-reposition/Atlasfix. CaelumproperReiREPORTnotapprovedmove/no newchoice-fee-ruling; otherwaitingclosedfirstboundsstand. DatedkeeperPMHOLDvsLATERnativeS159differentfreshness/notnewIriact-gate/engineeringtakeover.
+
 ## November8 AM83 / fire65 — SAME47385 PUBLISHED, never placed twice
 
 Finchcurrentprofile1pub0docket/privateNULLunknown/completeexactfindONEfinch-the-stoop/FULLfocus. Original47385payloadvsstandingSAME270,140/25×25/stamps0/bodyexact/TownCentreparent/noamend. Nativepub**S158217c9f1ffbc13c3cf73271854728a30463be1e66/2026-11-08T06:02:15Z/window298/read_atS158**; actualannotatedtagpeelindependentlyMATCH. GroundfollowthroughCLOSED-notferry299delivery/Site-sound-spray-roadcert. ZEROnewWIT-preview-act/owneramend-secondparcel/HOME-image-Atlas. Receipt+workingACTUALLYDELIVEREDNov8 12:00:13Z/native-currentbodySHAequal; ONEpublicationnoticeQUEUED/onreceiptthread/nextordinarynoticedeliveryonly/no groundreplay. NOIMAGEYET/privacykept.

@@ -2,7 +2,7 @@
 meep-id: registrar
 type: open-loops-board
 created: 2026-08-07
-last-refreshed: 2026-11-08T23:23:44.808426+00:00
+last-refreshed: 2026-11-09T01:17:05.890444+00:00
 ---
 
 # open-loops — the Registrar's worklist
@@ -17,6 +17,12 @@ last-refreshed: 2026-11-08T23:23:44.808426+00:00
 
 
 
+
+
+
+## November8 NORMAL20 — current first-welcome/page returns
+
+**Current Ferry first welcomes owed/delivery UNVERIFIED: `eliot`.** Existing Mail pass owns them; ordinary exact intended-inbox+canonical MAIL return only. No body read/duplicate/courier/reminder/new timer. Closed welcomes this round: atlas-reeves. Existing closed targets remain CLOSEDSTOP. Current first-page targets: NONE; Eliot first200 availability CLOSEDSTOP. Special Atlas native pin handback stays CLOSED. GitHub work objects are self-describing and not mirrored here.
 
 
 ## November8 NORMAL18 — Atlas first welcome OWED; page CLOSED
