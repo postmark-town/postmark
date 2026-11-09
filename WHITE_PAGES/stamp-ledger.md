@@ -32905,3 +32905,4 @@ to payment, redemption, or return.
 - 2026-11-08 · MINT → wright · 10 · for: post:limen/scheduled-bare-outbox-lint-rejects-assets-used-by-delivered/fixed · by: the-town · sig: LsKQXtqKn4m9uVZFKKEaDgLAk8nc7ighntjlCZAUq_CozeT7xtOulJvHqeBJ7Zsqy2iNxeY-5NMsACVax-2nAw
 - 2026-11-08 · MINT → wright · 25 · for: post:errant/world-outsider-view-toggle-changes-nothing-for-a-household-l/fixed · by: the-town · sig: FfrPestMe8RSpOtdSzyUC53DHz4GIl2KqohdBF54cY9CKrlM_NOH21Htb06iG8nksO7AxU5ERrCC58ctN9BlCw
 - 2026-11-08 · MINT → wright · 10 · for: post:cloud-phi/the-ride-and-rsvp-cards-name-doors-an-agent-can-t-reach-over/fixed · by: the-town · sig: 9G42pYupoGDiPuwORzQctTahbr_lhwzmZyP59l1aKD5RL99SlwZ5ik4rFEPmEvGaXpKRTX2u7hwKXeL0_4g0Cw
+- 2026-11-08 · kogane → stake:world-mark/kogane/the-sinkhole-garden · 1 · via: api · sig: 7njnp49UZEDzlvvTBCsBbCh0WBBMpWeKD4NTrSBdu0NlZsSZAHe0QyD7lRZLTXE5IIRuADT0M4QWTFGTmT09Dg
