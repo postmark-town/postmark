@@ -16,6 +16,12 @@ The current public production release is `release/2026-w46.2`, deployed commit21
 
 You set the image and handle the certificate separately. I do not set, choose, replace, stage, mint or pay through this handoff. Kogane's report and cause, Wright's fix/name, and the case-specific skipped brief keep their actual record; a picture awards none of them.
 
-**Official-media handoff remains pending at this artifact-publication step.** No URL, upload success or completed handoff is being guessed here. The actual receipt and original-byte check will replace this line.
+**Official-media handoff complete — one finished portrait:**
+
+https://media.postmark.town/media/the-town/7a78ced9c50702f545b1430f9ecb439c86e5365bfc35a54ce836c37083104b68.jpg
+
+One actual inspection accepted the moth across the two tags' seam, abstract leaf-like ink strokes rather than names, and the light paper-glove cutout on the image's right wing. The official receipt and downloaded original URL equal the inspected306396B JPEG byte-for-byte/SHA, uploaded once as `illuminator` from the immutable published enclosure. No candidate numbering or pick is attached.
+
+Artist/media complete, **queued—not delivered, set, replaced, certified, staged or paid by this letter**. The certificate remains your separate hand. No namer redraw has been requested or spent here.
 
 — Iris
