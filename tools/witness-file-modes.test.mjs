@@ -10,8 +10,15 @@
 // reads names paths and statuses but not modes, so the mode is read from the
 // tree.
 //
+// Rule 5f (witness.mjs § linksOnBase): the town refuses symbolic links (mode
+// 120000), and intake is plain files only. A PR lands as the base with its
+// changes applied, so a link already standing on the base that the PR leaves
+// in place goes to a person on every PR, by name. A base that cannot be listed
+// certifies nothing.
+//
 // THE FLIP is the rule 5e loop removed from `evaluate()`: the link PR below
-// then prints `certified=true`.
+// then prints `certified=true`. For 5f, `linksOnBase()` answering [] (the 5f
+// lines in plainFileReasons removed): the base-link PR below certifies.
 
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -21,7 +28,7 @@ import { join, dirname } from 'node:path';
 import { tmpdir } from 'node:os';
 import { fileURLToPath } from 'node:url';
 import { execFile, spawnSync } from 'node:child_process';
-import { modeJudgment } from './witness.mjs';
+import { modeJudgment, linksOnBase } from './witness.mjs';
 
 const TOOLS = dirname(fileURLToPath(import.meta.url));
 
@@ -64,6 +71,15 @@ function headCommit(town, base, entries) {
   }
   const tree = git(town, ['write-tree'], { env });
   return git(town, ['commit-tree', tree, '-p', base, '-m', 'the PR'], { env });
+}
+
+// The base moved on by a commit carrying `entries`, built as headCommit builds
+// a head; main is moved to it without touching the working tree, so a link on
+// the base is never made on disk.
+function moveBase(town, base, entries) {
+  const next = headCommit(town, base, entries);
+  git(town, ['update-ref', 'refs/heads/main', next]);
+  return next;
 }
 
 // The API, as far as `witness.mjs check` asks it: the PR, its files (read at
@@ -156,4 +172,45 @@ test('modeJudgment passes plain files and names everything else', () => {
   assert.match(modeJudgment('WHITE_PAGES/a/HOME/HOME.md', '120000'), /`WHITE_PAGES\/a\/HOME\/HOME\.md` is a symbolic link/);
   assert.match(modeJudgment('WHITE_PAGES/a/HOME/x', '160000'), /is a submodule/);
   assert.match(modeJudgment('WHITE_PAGES/a/HOME/x', null), /could not be found in the PR head's tree/);
+});
+
+test('a link standing on the base goes to a person on any PR, by name', async () => {
+  const { root, town, base: first } = buildTown();
+  try {
+    const base = moveBase(town, first, [['PROJECTS/shared/notes.md', '120000', 'elsewhere.md']]);
+    const head = headCommit(town, base, [['WHITE_PAGES/alice/HOME/HOME.md', '100644', '# alice\n\nMy home.\n']]);
+    const r = await check(town, base, head);
+    assert.equal(r.code, 0, r.stderr);
+    assert.match(r.output, /^certified=false$/m, `a PR onto a base holding a link certified:\n${r.stdout}`);
+    const comment = r.posted.find((w) => w.path === '/issues/1/comments');
+    assert.ok(comment, 'no comment reached the PR');
+    assert.match(JSON.parse(comment.body).body, /`PROJECTS\/shared\/notes\.md` is a symbolic link standing on the base/);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test('a PR that puts the file itself where the base held a link certifies', async () => {
+  const { root, town, base: first } = buildTown();
+  try {
+    const base = moveBase(town, first, [['WHITE_PAGES/alice/HOME/HOME.md', '120000', 'elsewhere.md']]);
+    const head = headCommit(town, base, [['WHITE_PAGES/alice/HOME/HOME.md', '100644', '# alice\n\nMy home.\n']]);
+    const r = await check(town, base, head);
+    assert.equal(r.code, 0, r.stderr);
+    assert.match(r.output, /^certified=true$/m, `the PR that removes the link did not certify:\n${r.stdout}`);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test('linksOnBase names the base\'s links, and answers null where there is no base to list', () => {
+  const { root, town, base: first } = buildTown();
+  try {
+    assert.deepEqual(linksOnBase(town), []);
+    moveBase(town, first, [['PROJECTS/shared/notes.md', '120000', 'elsewhere.md']]);
+    assert.deepEqual(linksOnBase(town), ['PROJECTS/shared/notes.md']);
+    assert.equal(linksOnBase(join(root, 'no-town-here')), null);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
 });
