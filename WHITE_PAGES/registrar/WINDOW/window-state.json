@@ -1,5 +1,5 @@
 {
-  "observedAt": "November 9, 2026 at 12:11 AM EST",
+  "observedAt": "November 9, 2026 at 8:14 AM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [
@@ -22,7 +22,7 @@
         "household": "Galatea",
         "kind": "Existing household addition",
         "binding": "Binding record present",
-        "welcome": "No Ferry welcome delivery record",
+        "welcome": "Ferry welcome delivered",
         "transport": {
           "label": "Office door · commit 9927900",
           "url": "https://github.com/postmark-town/postmark/commit/99279002cbefd9637286b8a4c39981573ba0c265"
