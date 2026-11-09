@@ -883,7 +883,7 @@ function roomsThisPrAdds(townRoot, env = process.env) {
     const base = parents[0];
     try { git('cat-file', '-e', `${base}^{tree}`); } catch { git('fetch', '--no-tags', '--no-recurse-submodules', '--depth=1', 'origin', base); }
     const added = git('diff', '--name-only', '-z', '-M', '--diff-filter=A', base, head, '--', 'WHITE_PAGES').split('\0');
-    return { rooms: added.map((p) => p.match(/^WHITE_PAGES\/([^/]+)\/ADDRESS\.md$/)?.[1]).filter(Boolean) };
+    return { rooms: added.map((p) => p.match(/^WHITE_PAGES\/([^/]+)\/ADDRESS\.md$/)?.[1]).filter(Boolean), base };
   } catch (e) {
     return { rooms: [], why: `the PR's base could not be read: ${String(e.message).split('\n')[0]}` };
   }
@@ -893,7 +893,8 @@ test('LIVE registry roll: every resident with a room stands in exactly one house
   const pr = roomsThisPrAdds(join(HERE, '..'));
   const roll = registryRoll(join(HERE, '..'), pr.rooms);
   assert.ok(roll.rooms.length > 100, `the roll read ${roll.rooms.length} rooms — the positive control`);
-  if (roll.joining.length) t.diagnostic(`rooms this PR adds, housed after admission: ${roll.joining.join(', ')}`);
+  t.diagnostic(pr.why ? `no join exception: ${pr.why}`
+    : `rooms this PR adds against base ${pr.base}, housed after admission: ${roll.joining.join(', ') || 'none'}`);
   assert.deepEqual(roll.unhoused, [], `residents with a room and no household: ${roll.unhoused.join(', ')}${pr.why ? ` (no join exception: ${pr.why})` : ''}`);
   assert.deepEqual(roll.twice, [], `residents in two households: ${roll.twice.join(', ')}`);
 });
@@ -945,7 +946,7 @@ test('registry roll on a PR: the room the PR adds is excepted, and an orphan on 
   const hasBase = () => { try { execFileSync('git', ['-C', pr.checkout, 'cat-file', '-e', `${pr.baseSha}^{tree}`], { stdio: 'ignore' }); return true; } catch { return false; } };
   assert.equal(hasBase(), false, 'the checkout is depth 1 at the merge: the base is not there until the exception fetches it');
   const adds = roomsThisPrAdds(pr.checkout, pr.env);
-  assert.deepEqual(adds, { rooms: ['venice'] });
+  assert.deepEqual(adds, { rooms: ['venice'], base: pr.baseSha }, 'read against the merge\'s own base');
   assert.equal(hasBase(), true, 'and the exception fetched it');
   const roll = registryRoll(pr.checkout, adds.rooms);
   assert.deepEqual(roll.joining, ['venice']);
@@ -987,7 +988,7 @@ test('registry roll on a PR whose evidence does not line up: nothing is excepted
 test('registry roll on a PR: a room the PR renames is not an added room, and is not excepted', () => {
   const pr = prTown({ base: ['alice', 'bob'], rename: [['bob', 'bobby']], households: housed('alice', 'bob') });
   const adds = roomsThisPrAdds(pr.checkout, pr.env);
-  assert.deepEqual(adds, { rooms: [] });
+  assert.deepEqual(adds, { rooms: [], base: pr.baseSha });
   assert.deepEqual(registryRoll(pr.checkout, adds.rooms).unhoused, ['bobby']);
   rmSync(pr.root, { recursive: true, force: true });
 });
@@ -996,7 +997,7 @@ test('registry roll on a PR: the exception never hides a resident in two househo
   const pr = prTown({ base: ['alice', 'bob'], add: ['venice'],
     households: { ...housed('bob'), one: { residents: ['alice', 'venice'] }, two: { residents: ['alice', 'venice'] } } });
   const adds = roomsThisPrAdds(pr.checkout, pr.env);
-  assert.deepEqual(adds, { rooms: ['venice'] });
+  assert.deepEqual(adds, { rooms: ['venice'], base: pr.baseSha });
   const roll = registryRoll(pr.checkout, adds.rooms);
   assert.deepEqual(roll.unhoused, []);
   assert.deepEqual(roll.twice, ['alice', 'venice']);
