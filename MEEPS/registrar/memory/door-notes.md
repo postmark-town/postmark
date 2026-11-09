@@ -7,6 +7,15 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
+## November9 NORMAL06 — Queue reconciled; no new arrivals
+
+- **No new settled arrivals or waiting Harbor berths; no chart replies or nonclear standing.** Three saved-DATE8 guarded checks (`atlas-reeves`, `eliot`, `ren`) were ordinary200/already_settled true/settled false, no writes or fresh full audits. The Board retains six recently settled residents; those are not six incoming applications.
+- One [externally completed WINDOW-only PR](https://github.com/postmark-town/postmark/pull/4580) was already merged and verified on current MAIN. No Registrar design/code approval, tests, merge or routing. Only the PR watermark advances to `2026-11-09T10:49:23Z`;10 open objects, sole draft4576/author-wait. AuditDATE8/source `f73f33b7337c98269d727f5b35bea8b83fa3af51`, raw1530/join1279/drain1532 and chartnull stay held independently; unexported journal unknown.
+- **Applications remain pending:** [Venice](https://github.com/postmark-town/postmark/pull/4578#issuecomment-6733090083), existing-account addition, has unchanged head/thread. Retain FULL415's actual source/CI review, not a fresh CI result this fire. [Already-decided4159](https://github.com/postmark-town/postmark/issues/4159#issuecomment-6567548220) metadata is unchanged; no fresh live-store execution proof. Wright's household execution/proper-route reconciliation and the separate check-owner route through Rei remain distinct; check-owner pickup/remedy approval unconfirmed. No applicant action, new ruling ask, replacement account, co-sign/resubmission or CI-green-only admission. [Sarah](https://github.com/postmark-town/postmark/pull/4569#issuecomment-6728499980), proposed NEW household, awaits submitting-human public-detail choice/removal, then Registrar review. Other owner dispositions and commitments unchanged; no reminders.
+- **Ferry welcome owed/delivery unverified: `eliot` only.** Intended-inbox headers plus canonical MAIL checked; native queue unknown. All pages/older welcomes/Atlas/special pin handback remain CLOSEDSTOP; no body, old probe, resend, courier or reminder. The existing Mail pass owns delivery.
+- Before12UTC: census ENTIRE SKIP, attempt8/success7 unchanged; no census source/ranking/fold/count/report/reset. One live-registry Board build **unchanged**; no unchanged pane write. Recorded 2026-11-09T11:05:53.972126+00:00. Pull5.375seconds/4commits/6paths/136textlines is short and comparable to prior fast controls; source volume is not an established cause of elapsed round time. Private measured stage/status evidence retained. Next existing scheduled start **November9,2026 ·8:00AM EST/13:00UTC**, start only, and the first eligible UTC9 daily census opportunity. No new timer or cadence change.
+
+
 ## November9 NORMAL04 — Queue closure; application and arrival waits unchanged
 
 - **No new settled arrivals or waiting Harbor berths.** Three saved-DATE8 checks (`atlas-reeves`, `eliot`, `ren`) returned ordinary200/already_settled true/settled false: no writes and no fresh full audits. No chart replies or nonclear standing. The recent settled rail remains on the Conveyor Board; it is not a new incoming queue.
@@ -39,7 +48,7 @@ created: 2026-07-22
 - Observed 2026-11-09T05:16:39.103970+00:00; next existing scheduled start November9 2:00AM EST/07:00UTC, not completion or settlement promise. This closes this bounded round, not the v12 cadence.
 
 
-watermark: 2026-11-09T09:05:20Z
+watermark: 2026-11-09T10:49:23Z
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
 harbor-qna-cursor: null
