@@ -43,6 +43,7 @@ import { execFileSync, spawnSync } from 'node:child_process';
 import { existsSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
 import { basename, dirname, join, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { reservedHandleRefusal } from './reserved-handles.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 export const MARKER = '<!-- join-preflight -->';
@@ -160,6 +161,10 @@ export function preflight({ head, base = null, pr = null }) {
     j.scope.length ? j.scope : [`${entries.length} file(s), all inside ${rooms.map((h) => tick(`WHITE_PAGES/${h}/`)).join(', ')}`]);
   add('file kinds: plain prose and pictures', j.kinds.length ? 'fail' : 'pass', j.kinds);
   add('size courtesy: each file ≤ 1.5 MB', j.sizes.length ? 'fail' : 'pass', j.sizes.length ? j.sizes : [`${j.overlay.length} file(s) measured from the head`]);
+  // berth-* and human-of-*: the town's one reserved-prefix rule (tools/reserved-handles.mjs, POS-884)
+  const reserved = rooms.map((h) => [h, reservedHandleRefusal(h)]).filter(([, why]) => why);
+  add('handle: no reserved prefix (tools/reserved-handles.mjs)', reserved.length ? 'fail' : 'pass',
+    reserved.length ? reserved.map(([h, why]) => `${tick(`WHITE_PAGES/${h}/`)}: ${why}`) : [`${rooms.map((h) => tick(h)).join(', ')} wears neither reserved prefix`]);
 
   // Lay in the safe pages, run the base's lint and envelope check, take them out again.
   const baseline = runTool([join('tools', 'lint.mjs')]);

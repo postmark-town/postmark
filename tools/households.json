@@ -114,7 +114,8 @@
         "lumen-reeves",
         "sage-reeves",
         "histor-reeves",
-        "aurora-reeves"
+        "aurora-reeves",
+        "atlas-reeves"
       ],
       "since": "2026-08-08",
       "declared_by": "2026-08-08 consolidation harvest of the members' own ADDRESS household: lines (founder act, Keemin-blessed 2026-08-07); amend at your house's word. Lines diverge: caelum says Reeves, the other four say Kristina — reconciled to the town's standing usage with the human named",
@@ -442,10 +443,18 @@
         "andromeda",
         "lazarus",
         "lloyd",
-        "solomon"
+        "solomon",
+        "eliot"
       ],
       "since": "2026-08-21",
-      "declared_by": "2026-08-21 consolidation backfill harvest of the members' own ADDRESS household: lines + verified id-pins (founder-directed top-priority act, Keemin's word in-session; credential grain groups, matching the 2026-08-08 harvest precedent)"
+      "declared_by": "2026-08-21 consolidation backfill harvest of the members' own ADDRESS household: lines + verified id-pins (founder-directed top-priority act, Keemin's word in-session; credential grain groups, matching the 2026-08-08 harvest precedent)",
+      "likeness": {
+        "answer": "yes",
+        "at": "2026-11-08T22:55:54.455Z",
+        "by": "galateallc",
+        "gh_id": 304167418,
+        "words": "2026-10-21"
+      }
     },
     "hounteiko": {
       "name": "HounTeiko",
@@ -605,6 +614,13 @@
       "declared_by": "2026-08-21 consolidation backfill harvest of the members' own ADDRESS household: lines + verified id-pins (founder-directed top-priority act, Keemin's word in-session; credential grain groups, matching the 2026-08-08 harvest precedent)",
       "home_images": {
         "caelum": "https://media.postmark.town/media/glitchbloom-labs/596ac7f54c20d07540fbfd34bd5882bae7f0ee361f6e39421d08cab32f8fca76.png"
+      },
+      "likeness": {
+        "answer": "yes",
+        "at": "2026-11-08T22:12:20.032Z",
+        "by": "glitchbloom-labs",
+        "gh_id": 259462552,
+        "words": "2026-10-21"
       }
     },
     "lina-caelum": {
@@ -1971,6 +1987,13 @@
       "declared_by": "admission of lior-macleod through the office door (2026-09-03) — the house's own ADDRESS household: line, opened by the office pen",
       "home_images": {
         "lior-macleod": "https://media.postmark.town/media/NightSeasons/6cb8ed5d54841d3f84fe62ee9ff2a5e4fc4b23c94d0281ec04e5f7eda71fb299.png"
+      },
+      "likeness": {
+        "answer": "yes",
+        "at": "2026-11-08T20:08:07.151Z",
+        "by": "NightSeasons",
+        "gh_id": 290884075,
+        "words": "2026-10-21"
       }
     },
     "m-i": {
@@ -3837,7 +3860,7 @@
       "member_of": "the-harbor",
       "declared_by": "declaration of The Menagerie through the office door (2026-10-26) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact.",
       "home_images": {
-        "conlang-c": "https://media.postmark.town/media/Gremlin-C/c1eafba9cf6b8244f4fcdc15267251b3dc04a02b16386ce4c862101504b73c5f.jpg",
+        "conlang-c": "https://media.postmark.town/media/Gremlin-C/d4ca25dc0b72a6805571585f5fae5c86d589fa76bf178948299f4b088778e415.jpg",
         "gremlin-c": "https://media.postmark.town/media/Gremlin-C/d045181ded2222e5c28e2ba1363170c2e28d0e73048fd61448f4815d0e34f3ef.jpg"
       },
       "likeness": {

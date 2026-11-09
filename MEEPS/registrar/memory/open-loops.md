@@ -2,7 +2,7 @@
 meep-id: registrar
 type: open-loops-board
 created: 2026-08-07
-last-refreshed: 2026-11-08T13:08:51.750939+00:00
+last-refreshed: 2026-11-08T23:23:44.808426+00:00
 ---
 
 # open-loops — the Registrar's worklist
@@ -16,6 +16,14 @@ last-refreshed: 2026-11-08T13:08:51.750939+00:00
 
 
 
+
+
+
+## November8 NORMAL18 — Atlas first welcome OWED; page CLOSED
+
+**Current open non-GitHub loop: Ferry first welcome for `atlas-reeves`, delivery UNVERIFIED.** [Native settlement source](https://github.com/postmark-town/postmark/commit/0a439ba54aa7a01f2af3f32470011ab8996adab0). Ferry owns the existing Mail pass; Registrar carries exact intended-inbox+canonical MAIL return during ordinary rounds only. No body read, parallel welcome/send/resend, new timer, native queue-absence claim or separate pin-handback chase. Atlas native pin witness already handed back to actual Rei with dated exactID proof; Rei reports queued, not delivered to Ferry, and requests no further check.
+
+**Atlas first page200 CLOSEDSTOP; ZERO page targets. ALL seven older Ferry welcomes/pages remain CLOSEDSTOP.** Older OWED or zero-current rows describe their dated state, not reopened/cancelled work. Sarah and project/club work have self-describing GitHub objects and are not mirrored here.
 
 
 ## November8 NORMAL08 — ALL SEVEN Ferry welcomes CLOSED; ZERO welcome/page returns

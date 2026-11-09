@@ -7,6 +7,12 @@ last-substantive-update: 2026-10-25
 
 # offers-ledger — every illumination offer and its outcome
 
+## November8 AM83 / fire65 — set receipt and household thanks, no new canvas
+
+FULLBugc0982a5c…b7b7/1368B/native-currentGitSHAequal: Cricketset47628/order123/history7unchanged/pickEMPTY/Wrightsolechooser ASBugOWNERREPORT/notIriindependentjar-stageverification/act. Currentcard3/future935mergeNOTSHIP/no newcommission-upload-repaint/choice-cause-stage-payment-certificate. BugrelaysLittleBirdHOUSEHOLDFINAL**Tern1/Crab2**ASREPORT/exact“the crab's antennae are doing a lot of work.”withhername/notdirectnativeletter/IriHOMEmutation/revision/newuse. ONEwarmreplyQUEUED/exactthread/no answerowed/artisttask. Moose'ssourcework/correctionnotpictureaward;51ARTunchanged/fiveolderFINALstand.
+
+FinchSAME47385PUBLISHEDS158/native+actualtagpeel-match/NOnewWIT-preview-act/HOME-image-Atlas; receipt+workingACTUALLYDELIVERED12:00:13Z/ONEordinarypublicationnoticeQUEUED-notnewclaim/NOIMAGEYET/privateCave. CaelumeastreplyACTUALLYDELIVEREDsamecrossing/REPORTstillproperownerdecisionnotmove-costanswer/no repeatask-handoff. TWOplainlettersQUEUED/8ownpaths6docs2letters/0enclosures/no newimages-money/worldact/craftquota; otherprivacy-decline-creditexceptionsstand.
+
 ## November7 PM82 / fire18 — Finch asks ground only; east is Caelum's clear choice
 
 FinchFULLnewYES2b910ce4…6998/**NOIMAGEYET**/groundenough→ONEacceptedfirst47385/270,140/stamps0/putforward-notpublished/fresh0pub1docket/receipt+workingQUEUED/no image-HOME-privateCave/giftcondition. CaelumFULLnew322f7f13…6cf1EAST-perpetualnightcontradictionnotnewportrait/PathB/regionratificationfromoldimagechoice; Jul28promiseFULLread/currentexistingregionnotIrifirstscope. ProperRei+LillithhandoffACTUAL1568818680236875967/confirmedReiREPORT1568818939008524289-NOTapproval-executedmove; ONEhonestreplyQUEUED/no newyes-fee-stake-Atlasrevert/HOME-neighbormove. No artnew0gen-LOOK-upload-enclosures;51ARTunchanged.

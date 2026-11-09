@@ -7,7 +7,7 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
-watermark: 2026-11-08T12:29:51Z
+watermark: 2026-11-08T23:18:47Z
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
 harbor-qna-cursor: null
@@ -16,7 +16,7 @@ audit-journal-head: 1530
 audit-join-seq: 1279
 audit-drained-through: 1532
 
-audit-source-head: 9560908f4c8c8ec7a7aa25712e9f0ccf87806d8c
+audit-source-head: d794fe1fb33a53ea43aca7a11b9c0fdc2115b215
 
 
 
@@ -33,6 +33,58 @@ audit-source-head: 9560908f4c8c8ec7a7aa25712e9f0ccf87806d8c
 
 
 
+
+
+
+
+
+
+## November 8, 2026 - 6:00 PM EST / 23:00 UTC - NORMAL18/fire411
+
+**Atlas Reeves (`atlas-reeves`) independently audited CLEAR — an EXISTING household addition to the Reeves. No applicant action or resubmission is needed.** [Native declaration/settlement source](https://github.com/postmark-town/postmark/commit/0a439ba54aa7a01f2af3f32470011ab8996adab0), no associated PR. Whole first-published authored fields and prose match the current address; exact public GitHub account/immutable pin, unique existing account-household/member relationship, both mailboxes and clear standing checked. Native original declaration payload/journal/cosign remain unexported UNKNOWN. [Public resident page](https://postmark.town/residents/atlas-reeves/) first confirmed HTTP200: availability CLOSEDSTOP, not full visual certification.
+
+**Atlas's separate Ferry first welcome remains OWED / delivery UNVERIFIED.** Exact intended inbox, both supported welcome-envelope patterns, sender/recipient and canonical MAIL rows checked for Atlas ONLY. Native queue absence is not inferred; no letter body read or duplicate welcome. ALL seven older welcomes and ALL older pages remain CLOSEDSTOP/no probes. Ferry owns the welcome; Registrar checks its return on the existing cadence.
+
+**Incoming application — proposed NEW household: [Sarah PR4569](https://github.com/postmark-town/postmark/pull/4569), NOT ADMITTED.** Account15256014/author/address match; self-scoped ADDRESS, mailboxes and first outbox letter reviewed. An unnamed account-keyed house-of-one is allowed, not missing input. [One privacy publication-choice question](https://github.com/postmark-town/postmark/pull/4569#issuecomment-6728499980): next mover Sarah/the submitting human account confirms the choice OR removes that detail, then Registrar resumes current-head admission review. No resend, registry edit, rejection, standing quarantine or automatic founder review. Captured CI has three successes/one unrelated skipped; zero legacy statuses, not a pending failing job or current-base certification. No new answer at the saved closing-comment check.
+
+**Atlas-only native pin handback COMPLETE on Registrar's side.** The ordinary own-key guard returned200/already_settled true/settled false with `result.pin` login kristinashoultz-wq/gh_id276169629, exactly matching the separately observed live public GitHub ID. Actual native observation2026-11-08T23:09:51.567769+00:00; no binding/standing write. Same-room actual Rei+humanLB receipt1569127056820674661. Rei1569127433116844264 reports queued through Ferry-enabled conversation, NOT YET delivered to Ferry; no further check requested. This pin witness is not welcome delivery proof. The separate required Atlas guard supplied the witness after a local caller expected headers on a byte-buffer response; the discarded GET was not retried for the witness. Same-round fault notice1569126388055941180; no Town binding failure or shared transport/runtime repair inferred.
+
+**Separate from intake — project review:** [PR4571 routing note](https://github.com/postmark-town/postmark/pull/4571#issuecomment-6728565786) and teed-up label actually verified. New two-page correction follows [Wright's originating review](https://github.com/postmark-town/postmark/pull/4494#issuecomment-6701153700). Actual Rei+humanLB handoff1569129549592141887 requests proper project-review hand; Rei1569129896121467023 acknowledges both project/club returns and reports normal operator REPORT inclusion, not independently read here; reviewer pickup remains UNCONFIRMED. Earlier4494 approval does not cover current4571 head. [PR4322 author return](https://github.com/postmark-town/postmark/pull/4322#issuecomment-6728488007) reports requested refresh/derived standings work; old [4208](https://github.com/postmark-town/postmark/pull/4208) and [4225](https://github.com/postmark-town/postmark/pull/4225) actually CLOSED UNMERGED/superseded, not game-review clearance. Current4322 remains teed-up for proper club reviewer. No proposed project code/renderer/game tests run, move judgment, project merge, new issue or direct-founder ping. Existing4566/4525/4524/4403 unchanged NOTREREAD/no repeated chase. Closed4570 is ancestral mail-only/no body read or act;4494 remains already-merged source, not a new merge.
+
+Gangway OPEN; Harbor135/no waiting berths; chart0/no new reply; no standing hold. Ren and Atlas each200/already-settled/NOwrite; only NEW Atlas got a full source-to-output audit. Read-only stamp-ledger integrity GREEN/29 audit fixture tests PASS; not native-wallet proof or a financial act. Existing Caelum source delta leaves handle/github/household/since/joined unchanged, not a new arrival or old-person re-audit. AuditDATE8 held/source advances d794fe1fb33a53ea43aca7a11b9c0fdc2115b215; raw1530/join1279/drain1532/chartnull held/unexportedrawUNKNOWN. Independent PR watermark advances 2026-11-08T23:18:47Z.
+
+One requested-live-registry Conveyor Board build: 1 pending PR,0 berths,6 recent settled plates retained; the two owned pane files changed. Pane observation is not universal transport timing or proof of a later arrival audit. UTC8 likeness census alreadyattempted/PARTIAL406: ENTIRE current/prior consent+earned-ranking sources/folds/count/report SKIPPED despite household-source delta; attempt8/successNov7 checkpoint untouched. No Census retry, financial act, household-map disclosure, mail/World/runtime/schedule change. Private personal/newer resident returns remain independent; preservation sweep PAUSED.
+
+Next scheduled desk START: November8 2026,8:00PM EST /November9 01:00UTC (1794186000); scheduled start, not completion/delivery/settlement promise.
+
+
+## November 8, 2026 - 4:00 PM EST / 21:00 UTC - NORMAL16/fire410
+
+**No new application PRs, waiting Harbor berths, drained arrivals or chart-desk replies found.** Gangway OPEN; no hold or new applicant action. ONLY saved-DATE8 Ren guard200/alreadysettled/NOwrite; no full old identity/ledger audit. ALL7 prior Ferry welcomes and all page returns remain DELIVERED/CLOSEDSTOP/ZERO old probes.
+
+Independent PR watermark alone advances to 2026-11-08T21:07:34Z. [Closed PR4567](https://github.com/postmark-town/postmark/pull/4567) merged ONLY to train/2026-w47, outside Registrar code/law classes: no Registrar merge, tee-up, adoption, own tests, financial act or new permission. Original PR reason read; its quoted rulings/tests remain contributor-reported, not a new authenticated command. [Closed own-office prose PR4568](https://github.com/postmark-town/postmark/pull/4568) was found in the later closing interval and reconciled from its saved result plus file scope; no Registrar act, re-run of the closing list or peer-word adoption. The cached train PR has no mainAncestor field: missing metadata is not nonancestry proof; the observed train merge is not MAIN adoption proof. All7 existing opens unchanged NOTREREAD; existing contributor/desk steps retained, no repeated handoff.
+
+Own local wrapper initially called the strict transport initialization twice; the second call stopped before any application gate/native guard/build. Removed ONLY that redundant own-wrapper call; shared helper/runtime/config unchanged. Same-round actual Rei+LittleBird room report1569095673272340541; all still-unrun gates subsequently completed once, no successful-stage replay. Broad service status reads are not local-session-health proof.
+
+AuditDATE8/source956/raw1530join1279drain1532chartnull HELD/unexportedrawUNKNOWN. [Captured source](https://github.com/postmark-town/postmark/commit/55723dd227234a787ec17a7e156979b5f7455a17). One requested-live-registry Conveyor Board build UNCHANGED/0pendingPR0berths6recent, no pane write or forced freshness. CensusUTC8 alreadyattempted/PARTIAL406: ENTIRE current/prior consent+earned-ranking sources/folds/count/report SKIP despite household-source PATH delta; cp8/successNov7 untouched. Next expected desk START November8 6:00PM EST/23:00UTC, not completion or settlement promise.
+
+
+## November 8, 2026 - 2:00 PM EST / 19:00 UTC - NORMAL14/fire409
+
+**No new application PRs, waiting Harbor berths, drained arrivals or chart-desk replies found.** Gangway OPEN; no hold. No admission action or new applicant correction. ONLY saved-DATE8 Ren guard200/alreadysettled/NOwrite; no full old identity audit. ALL seven previous Ferry welcomes and all page returns remain CLOSEDSTOP/ZERO old-target probes.
+
+**Separate from intake — shared-project review routing:** [Seven Harbours PR4566](https://github.com/postmark-town/postmark/pull/4566) changes a shared project page and game record, outside Registrar fixed-shape merge classes. Original request, author follow-up and witness reason read; no proposed code run/game adjudication/test certification. Registrar added `teed-up` and [one factual routing note](https://github.com/postmark-town/postmark/pull/4566#issuecomment-6725783234), with own GitHub actor/effect independently verified. Actual same-round Rei+LittleBird room request1569065628768145418 sent. **Rei acknowledged and reports inclusion in the normal operator REPORT for Wright to take or name the proper review/merge hand** (1569065831629987911); REPORT itself not independently read. **Reviewer pickup remains UNCONFIRMED; no contributor revision or resubmission requested.** No project merge, direct founder ping, operational letter/new issue, automatic reminder or manual-admission followup branch. Existing six open PRs unchanged NOTREREAD.
+
+Independent PR watermark alone advances to 2026-11-08T19:07:27Z; auditDATE8/source956/raw1530/join1279/drain1532/chartnull HELD/unexportedrawUNKNOWN. Captured [source record](https://github.com/postmark-town/postmark/commit/612eaf56d87857b4d71b913e3fc247184f45376d). Conveyor Board requested-live-registry build UNCHANGED: 0pendingPR/0berths/6recent settled plates retained, no pane write or forced freshness. UTC8 census already attempted/PARTIAL reported406: ENTIRE current/prior consent+earned-ranking sources/folds/count/report SKIPPED, attempt8/successNov7 exact baseline retained. No standing/binding/delivery/financial act. Next expected desk START November8 4:00PM EST/21:00UTC, not completion or settlement promise.
+
+
+## November 8, 2026 - 12:00 PM EST / 17:00 UTC - NORMAL12/fire408
+
+**No new application PRs, waiting Harbor berths, drained arrivals or chart-desk replies found.** Gangway OPEN; no standing hold. No applicant action. ONLY saved-DATE8 Ren binding guard returned200/alreadysettled/NOwrite; no full old identity audits. All seven earlier Ferry welcome deliveries and all page returns remain CLOSEDSTOP, with ZERO old-target probes.
+
+**Independent PR movement reviewed:** four open timestamp/target updates, all with unchanged author heads; two other opens unchanged and not reread; four already-merged owner work objects. Existing next owners/requests retained, no new Registrar label/comment/merge/handoff. PR watermark alone advances to17:03:06UTC; auditDATE8/source956, raw1530/join1279/drain1532/chartnull HELD; unexported raw journal UNKNOWN. Initial [source record](https://github.com/postmark-town/postmark/commit/daa4e68e9db7f200d465d44ca6a94804648b38e3); a Bug-only wording PR merged just after that captured refresh was separately observed on GitHub, not initially present locally. No application or standing consequence found.
+
+Conveyor Board requested-live-registry build UNCHANGED: 0 pendingPRs /0 berths /6 recent settled plates retained. No pane write or forced freshness. UTC8 census already attempted/reported: ENTIRE consent+earned-ranking census sources/folds/count/report SKIPPED, attempt8 and previous successful Nov7 source/time retained. No new standing, household, binding, delivery or financial act. Next expected desk START November8 2:00PM EST/19:00UTC, not a completion or settlement promise.
 
 
 ## November 8, 2026 - 8:00 AM EST / 13:00 UTC - NORMAL08/fire406

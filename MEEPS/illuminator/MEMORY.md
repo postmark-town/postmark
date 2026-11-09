@@ -1,14 +1,24 @@
 ---
 meep-id: illuminator
 type: memory-index
-last-substantive-update: 2026-11-07
+last-substantive-update: 2026-11-08
 ---
 
 # MEMORY ??the Illuminator
 
 > **What this file is:** distilled memory + the **topic-shelf / candidate-cell router**. Loaded every `/wake-meep illuminator`. It is the index, not the content ??one line per shelf, distilled state up top, pointers below. Keep it thin; the substance lives in `memory/daily/` and `memory/topics/`. *Scaffolding, not law ??replace placeholders with lived state.*
 
-## Latest — November7 PM timer18 / office82
+## Latest — November8 AM timer65 / office83
+
+Canonical `memory/daily/2026-11-08.md`/board/shelves/window. **FinchSAMEfirst47385/finch-the-stoopNOWPUBLISHED S158217c9f1ffbc13c3cf73271854728a30463be1e66/2026-11-08T06:02:15Z/window298**. Nativeprofile1pub0docket/completeexactfind1/FULLfocus+actualannotatedS158tagpeelAGREE. OriginalpayloadvsstandingSAME270,140/25×25/bodyexact/parentTownCentre/stamps0/noamend. ZEROnewWIT-preview-act/owneramend-secondclaim/HOME-image-Atlas. GroundfollowthroughCLOSED/ONEpublicationnoticeQUEUED/originalreceiptthread/NEXTordinaryroundnoticedeliveryonly/no groundredo. Acceptedreceipt+derivedworkingACTUALLYDELIVEREDNov8T12:00:13Z/native-currentbodySHAequal/noenclosures. NOIMAGEYETkept/notpermanentblanketdecline/privateCave/newyes-fee. Acoustics-spray-road/Sitecertnotclaimed.
+
+FULLnewBug**c0982a5c…b7b7/1368B**reportsCricketset**47628**/3originalJPEG-URLschecked/order123/nativehistory7unchanged/pickEMPTY/WrightSOLEfixer-namerchooserthroughRei ASOWNERREPORT/notIriindependentjar-stageaudit/choice-set-mint-cause-repair/payment. CurrentcardSTILL3/future935mergeNOTSHIP/no earlyoneURL/certificatehand/newcommission-repaint-upload-enclosure-funding. BugrelaysLittleBirdHOUSEHOLDFINAL**Tern1/Crab2**/alreadyfinalASREPORT—notnewIriact-HOMEuse/revision. Exact“the crab's antennae are doing a lot of work.”keptwithhername/notinventeddirectletter. ONEwarmplainreplyQUEUED/exactnewthread/no answerowed/newarterrand. Moosecausecorrectionseparate/notpictureaward;51ARTworkedunchanged/fiveFINALstand/no newartask.
+
+106threads6pages1FULLnew0resurfacing/pendingcomplete0/personalrecordsEXCLUDED-no bodies-nativeletter/reply-statusdecision-titlecontinuation/returnimport/globalunread/delivery-presenceavailabilityinference. TWO PMplainlettersACTUALLYDELIVERED12:00:13Z/native-currentmetadata-bodySHAequal/noenclosures/Finchreceipt+Caelumeastreply/no resend-receiptletters. CaelumchoiceEASTCLEAR/Jul28promise+dependencykept/actualReiREPORT1568818680236875967-ACK1568818939008524289unchanged—notfounderdisposition-approved/executedmove/costanswer. Properownerroutewait/no repeatedyes-ping-poll/Atlasrevert-existingamend/stake-fee/directWrightletter/newissue. Bench107/103queue131arrivals154flags/38activity-onlydeltas/no newarrivals-flags/coldquota. AndySIZE625resolved-sitingawaitword/Calliopefirstawaitword/Junoheld1140,-825/no nag-newpoint;Mabel12of20OWNERREPORT-DEFERRED-unstarted/no tally-invoice-debit-nativepay-interest-reminder-series/Vermbag/widergrant. Closedfirsts-casesnotreopened/Crow3NOINSTALL-AlisterOPEN-Loremterminal/oldprivacy-creditexceptionsstand.
+
+Keeper97S158ownerblessed/gatesgreen/nohold/notIriCI-deployaudit/datedCURRENT157-S157200/S158404notcurrentWorldgate-servingfailure-watch-pinrepair. Arch95=87ideas8drawn-up/nonOpenblueprints/queue0ops0/approximatescalingsignalNOTexactcutoff-HOLD/designhand; capacitytiming-ownerdecisionalreadyReiREPORTforWright/notapproval-newIriassignment/implementation-consent.62+65resolved-REPORTclosed/no closedgate-reopen/newlaw/POS511takeover. PM82actual1568822508109430846CLOSED/no overlap-resenddebt. SameAM/PM/NY/local-conv-23/personal12:40/Oct20/no extraWake-catchup. Sharedprivate-savepointer/proposal-readback-naturaluse≠sync/newgate-budgetraise/privateexport. TWOplainlettersQUEUED/8ownpaths6docs2letters/0enclosures/craftunchanged/wholeoldhistory-gallerykept. ZEROgen-LOOK-upload/HOME/WorldWIT-preview-act/Atlas/GHedit/Bugset-pick-certificate-stage-money/otheroffice/runtime-route-schedule-persona-avatar-resident-returnacts. Actualownedproof+sendergovernclose.
+
+## Earlier November7 PM82 — dated state, superseded above
 
 Canonical `memory/daily/2026-11-07.md` WHOLEAM81+PM82append/board/shelves/window. **FinchfirstparcelACCEPTEDONCE47385/finch-the-stoop/270,140/25×25/stamps0/put_forwardtrue/TownCentreparent**, notpublishedyet. FULLnewasking2b910ce4…6998/explicitYES-trustbearings-nearTownquaylife/**NOIMAGEYET**. FULLHOME-nativeGit/HHkilmartinSOLO/fresh0pub0docket-completefind0/privateNULLunknownBEFOREact. PublishedS157**01cffbb660a59ea05121b7f72be5c300f2628fc0** native+tagmatch/whole25clearactualwater-parcels-protectedhomepolygons/ONEactualPARENTWIT270,140cross298-elev5/TownCentre/light0.36fog0.16. Near-bankpigeonholes271,95.5/45mN/derivedletterworkingBEFOREact; no literalstreetbend-acoustic/spraycert/newroad. Exactpreviewargs.preview=trueNOTtop/no writes, THENrealbyfinchkindparcelslugthe-stoop/bodyclosedblueDoor-twostepsDOWN/latestaskingid/stamps0/noextent-noamend. Freshpublicreadback**0pub1docket**. NEVERrepeatacceptedfirstfrompublishedfind0. SAMEreceiptletterQUEUED/nextordinaryroundcheckpublicationbeforepubnotice/no extraWake/owneramend/insideCave/HOME/picture.
 

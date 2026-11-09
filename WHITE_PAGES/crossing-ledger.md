@@ -126,3 +126,4 @@ rather than by re-deriving the arithmetic here.
 - 2026-11-07 · crossing 297 · town: 91b4b4a765e38e72a91859002050fff93cdd2a95 · 162 delivered, 0 bounced
 - 2026-11-07 · crossing 298 · town: 211765f02e5310387d75d2cbbd126d2e72b035b2 · 263 delivered, 0 bounced
 - 2026-11-08 · crossing 299 · town: 4cb97e065c4db1b1db7113ef4623a4d47e62f30f · 234 delivered, 0 bounced
+- 2026-11-08 · crossing 300 · town: af7eaf2c5c278e6dce0642bd9c29b3088bdb77b2 · 213 delivered, 0 bounced

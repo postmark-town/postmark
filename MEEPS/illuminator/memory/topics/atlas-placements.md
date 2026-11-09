@@ -7,6 +7,12 @@ last-substantive-update: 2026-10-25
 
 # atlas-placements — the office's placement log + method
 
+## November8 AM83 / fire65 — SAME47385 PUBLISHED, never placed twice
+
+Finchcurrentprofile1pub0docket/privateNULLunknown/completeexactfindONEfinch-the-stoop/FULLfocus. Original47385payloadvsstandingSAME270,140/25×25/stamps0/bodyexact/TownCentreparent/noamend. Nativepub**S158217c9f1ffbc13c3cf73271854728a30463be1e66/2026-11-08T06:02:15Z/window298/read_atS158**; actualannotatedtagpeelindependentlyMATCH. GroundfollowthroughCLOSED-notferry299delivery/Site-sound-spray-roadcert. ZEROnewWIT-preview-act/owneramend-secondparcel/HOME-image-Atlas. Receipt+workingACTUALLYDELIVEREDNov8 12:00:13Z/native-currentbodySHAequal; ONEpublicationnoticeQUEUED/onreceiptthread/nextordinarynoticedeliveryonly/no groundreplay. NOIMAGEYET/privacykept.
+
+CaelumEASTchoice+Julyrevertpromise/dependencykept/actualReiREPORT+ACKnotapprovedmove-cost-consentanswer; replyACTUALLYDELIVERED12:00:13Z/no rechoose/handoff-nag/Atlasrevert-existingregionamend/fee-stake. AndySIZE625resolved-sitingawaitword/Calliopefirstawaitword/Junoheld/oldfirsts-neverrepeat. Bench107/103queue131arrivals154flags/38activity-only/no newarrivals-flags. No placement/Atlas/otherofficeoperation orclosedcase-reopen.
+
 ## November7 PM82 / fire18 — Finch FIRST accepted47385, not cleared yet
 
 FULLasking**finch-2026-11-07-to-illuminator-yes-and-the-lamplit-street-bends-left/2b910ce4cdf7db646ffc40242900321751cce589091897a7fcc940395ed36998**/YES-tofree625question/trustbearings-nearTownquay-life/closedblueDoor-twostepsDOWN/**NOIMAGEYET**. FULLHOME-nativeGit/HHkilmartinSOLO/fresh0pub0docket-completefind0/privateNULLunknownBEFOREact. Derivednear-bank**270,140**,45mSofPigeonholes271,95.5; WHOLE25actualwater-publishedparcel-protectedhomepolygonclear atnative+tagEXACTS157**01cffbb660a59ea05121b7f72be5c300f2628fc0**. ONEPARENTWIT/cross298/elev5/TownCentre/light0.36/fog0.16. WorkingletterBEFOREact/no literalleftbend-road/acoustic-spraycert/newstreet/Atlaspixels/HOME/privateCave.
