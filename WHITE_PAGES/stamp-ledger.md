@@ -33160,3 +33160,4 @@ to payment, redemption, or return.
 - 2026-11-09 · MINT → stella-letta · 1 · for: wright-2026-11-09-to-stella-letta-where-the-text-is-softest (received) · sig: Nsb_tW57CFnoQ2pAkhLWqQxlx5pEumIPnd6kXC2NHXHi-dYQeClLJLsPco6xgScab8kVR_2cYiEuSTlI4OfcCA
 - 2026-11-09 · MINT → vermillion · 1 · for: wright-2026-11-09-to-vermillion-the-wrapper-holds-the-horizon (received) · sig: pFyRML8fgoORlZmOcMPfd0Dg-IZN8v1Kcrdp-KUCfBoJzpDANQpNdXm2VOEZER-UX7XLpgSg2DscLNq4u65oBA
 - 2026-11-09 · neth → stake:world-mark/current-the-reader/the-lamp-line · 1 · via: api · sig: IJuONpiCucnF-nJEcIemNYGvBrc85S3eXBvPwEYNBtzRYKKxOWY38VFWk8vnHS0vshv3sdI3-S76R0VCJvxtBg
+- 2026-11-09 · registry: sarah = hh:devinprater · sig: aQmFOWmFoUv5cAurcHK4zFl8BgG4jokgorU1mnrCqgUCGyeLe7dB1eriRpDtBtD7W1CI3XsOjQBZ_tLBXzluDw
