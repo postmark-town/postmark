@@ -220,6 +220,14 @@ export function foldFriendships(repo, { base = null } = {}) {
 export const BOARD_LAW =
   'the solution is to remove complexity and special-casing. We should just display *all* quests instead of a select daily list.';
 
+// THE ONE LATER, SPECIFIC EXCEPTION (POS-857; Wright, on Darko's behalf, 2026-11-01 23:17Z):
+// "An optional registry `ends`, holding the existing inclusive cutoff (2026-09-30 for "A first
+// idea")." The quoted law above is untouched and still decides the SHAPE of the board: no
+// allow-list, no special-casing by cadence. What `ends` changes is only which rows are ACTIVE
+// today: a row whose `ends` town day has passed is not offered on the active board (boardForHandle
+// below). It does not unearn anything: awards, the ledger and the historical standings are other
+// folds that never read this filter, and a row without `ends` is offered as before.
+
 /** The two rows this fold can COUNT, and the progress field each counts from.
  *  Everything else in the registry is a row the daily mint does not measure —
  *  see the uncounted note in boardForHandle. */
@@ -238,7 +246,8 @@ export const COUNTABLE_FIELD = Object.freeze({ 'correspond-send': 'send', 'corre
 // ALLOW-LIST written for decision 7 (milestones render on the pair page, not as
 // personal cards) and widened for the one-time onboarding rows. It is repealed
 // by BOARD_LAW above, and decision 7's card-deck clause with it: the board is
-// every row the registry carries. The clause decision 7 was actually protecting
+// every row the registry carries that is still ACTIVE (a row past its optional `ends` is the
+// one exception, see "THE ONE LATER, SPECIFIC EXCEPTION" above). The clause decision 7 was actually protecting
 // — that nothing renders a bar a resident cannot move — is kept by the SHAPE
 // rather than by the filter, which is the difference between removing a special
 // case and moving it:
@@ -272,7 +281,11 @@ export function boardForHandle(registry, prog, handle, today, { complete: inject
   const injectedFor = (id) => (injected && Object.prototype.hasOwnProperty.call(injected, id)
     ? (injected[id] == null ? null : Boolean(injected[id]))
     : null);
-  const quests = (registry.quests ?? []).map((q) => {
+  // A row with `ends` (POS-857) is offered through that town day, inclusive, and not after:
+  // the writer's own cutoff (first-idea-sweep's `date > windowEnd` plans nothing), compared
+  // on the same town-day string `today` is. No `ends` keeps the row, as before.
+  const offered = (q) => !(typeof q.ends === 'string' && typeof today === 'string' && today > q.ends);
+  const quests = (registry.quests ?? []).filter(offered).map((q) => {
     const f = field[q.id];
     // The row's own facts, identical for counted and uncounted — `door` and
     // `awaits` ride the row because a step that cannot name the verb that opens
@@ -283,6 +296,7 @@ export function boardForHandle(registry, prog, handle, today, { complete: inject
       door: q.door ?? null,
       ...(q.subtype ? { subtype: q.subtype } : {}),
       ...(q.awaits ? { awaits: q.awaits } : {}),
+      ...(q.ends ? { ends: q.ends } : {}),
     };
     // THE MONTHLY ROW (POS-816/g): Bring a neighbour is COUNTED when the progress entry was folded for this
     // town month, as the household's inviter-side payouts against the cap of 10 (invitesPaidByHouse). An entry
@@ -735,7 +749,8 @@ export function composeNextSteps({ onboarding = null, questBoard = null, paperRo
   } else unread.push('the paper gaps (not read here)');
 
   if (questBoard) {
-    // The board is now EVERY registry row (BOARD_LAW, 2026-09-01), so this lane
+    // The board is now EVERY ACTIVE registry row (BOARD_LAW, 2026-09-01; a row past its `ends` is
+    // not offered, POS-857), so this lane
     // has to decide what a NEXT STEP is rather than inheriting the old filter's
     // answer. Three rules, in order:
     //

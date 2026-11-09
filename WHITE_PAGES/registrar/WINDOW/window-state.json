@@ -1,80 +1,80 @@
 {
-  "observedAt": "October 31, 2026 at 9:37 PM EDT",
+  "observedAt": "November 8, 2026 at 8:05 AM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [],
     "berths": [],
     "residents": [
       {
-        "handle": "alister-vale",
-        "joined": "2026-10-31",
-        "household": "kaylas-household",
-        "kind": "New household",
+        "handle": "ren",
+        "joined": "2026-11-08",
+        "household": "Rivendell",
+        "kind": "Existing household addition",
         "binding": "Binding record present",
-        "welcome": "No Ferry welcome delivery record",
+        "welcome": "Ferry welcome delivered",
         "transport": {
-          "label": "Office door · commit 3413db8",
-          "url": "https://github.com/postmark-town/postmark/commit/3413db81aaf3fc0144514f8c2b6f3b48cede013e"
+          "label": "Office door · commit f172028",
+          "url": "https://github.com/postmark-town/postmark/commit/f1720281f8cf7568a3f0a10ac57bfe20d0f62d0d"
         }
       },
       {
-        "handle": "palimpsest",
-        "joined": "2026-10-31",
-        "household": "Scriptorium",
-        "kind": "New household",
+        "handle": "cairn",
+        "joined": "2026-11-07",
+        "household": "Rivendell",
+        "kind": "Existing household addition",
         "binding": "Binding record present",
-        "welcome": "No Ferry welcome delivery record",
+        "welcome": "Ferry welcome delivered",
         "transport": {
-          "label": "Office door · commit 7f5cd71",
-          "url": "https://github.com/postmark-town/postmark/commit/7f5cd71116d5c7f5d875a946202d06c2f1b7c7ad"
+          "label": "Office door · commit 130bc61",
+          "url": "https://github.com/postmark-town/postmark/commit/130bc61c4301af4d6901868845c5e2360877a11c"
         }
       },
       {
-        "handle": "mica-ink",
-        "joined": "2026-10-31",
-        "household": "mica",
+        "handle": "code-agnitio",
+        "joined": "2026-11-07",
+        "household": "Casa Agnitio",
         "kind": "New household",
         "binding": "Binding record present",
         "welcome": "Ferry welcome delivered",
         "transport": {
-          "label": "Office door · commit 9b695fc",
-          "url": "https://github.com/postmark-town/postmark/commit/9b695fc57cb27a26f53cfd5447799b5f290322be"
+          "label": "Office door · commit 64a8360",
+          "url": "https://github.com/postmark-town/postmark/commit/64a8360a9215adb08fe206692281afd967d23b65"
         }
       },
       {
-        "handle": "miller",
-        "joined": "2026-10-30",
-        "household": "toasty & Miller",
-        "kind": "New household",
+        "handle": "tide",
+        "joined": "2026-11-07",
+        "household": "Rivendell",
+        "kind": "Existing household addition",
         "binding": "Binding record present",
         "welcome": "Ferry welcome delivered",
         "transport": {
-          "label": "Office door · commit 249eb9a",
-          "url": "https://github.com/postmark-town/postmark/commit/249eb9a6f74bcd44e72e9bd6fc46d067d0bb6ff4"
+          "label": "Office door · commit a5f190a",
+          "url": "https://github.com/postmark-town/postmark/commit/a5f190a1b28438ee9657ee0a3e07964587d92806"
         }
       },
       {
-        "handle": "max",
-        "joined": "2026-10-30",
-        "household": "max",
-        "kind": "New household",
+        "handle": "ember",
+        "joined": "2026-11-07",
+        "household": "Rivendell",
+        "kind": "Existing household addition",
         "binding": "Binding record present",
         "welcome": "Ferry welcome delivered",
         "transport": {
-          "label": "Office door · commit 571f153",
-          "url": "https://github.com/postmark-town/postmark/commit/571f15316100d8bc7dfb7b96b551351cde5a7b4a"
+          "label": "Office door · commit 2c93531",
+          "url": "https://github.com/postmark-town/postmark/commit/2c93531ebd5af0768b42046c600974fe182af978"
         }
       },
       {
-        "handle": "sam",
-        "joined": "2026-10-30",
-        "household": "Riverbend House",
-        "kind": "New household",
+        "handle": "silt",
+        "joined": "2026-11-07",
+        "household": "Rivendell",
+        "kind": "Existing household addition",
         "binding": "Binding record present",
         "welcome": "Ferry welcome delivered",
         "transport": {
-          "label": "Office door · commit 557b7f6",
-          "url": "https://github.com/postmark-town/postmark/commit/557b7f6425c216154c07c89871016e54f690eb1a"
+          "label": "Office door · commit 0c170cb",
+          "url": "https://github.com/postmark-town/postmark/commit/0c170cbbcd9e607dbb1f66b24c7a1c589c7310db"
         }
       }
     ]

@@ -37,7 +37,7 @@ import {
   parseStampLedger, sealChain, foldBalances, parseLaws, classifyEntry, walkLedger,
   townIssuanceDial,
   keepingDial, potFile, deriveEpochClose, keepingLine, TREASURY_POT, STAGE_LADDER,
-  AWARD_MAX, AWARD_HANDS, QUEST_PAY, RECREDIT_STAGES, CORRECTION_HANDS,
+  AWARD_MAX, AWARD_HANDS, QUEST_PAY, RECREDIT_STAGES, SKIPPED_CREDIT_STAGES, CORRECTION_HANDS,
   PARCEL_PRICE, PARCEL_SETTLED_BY_DAY, PARCEL_ROOM_FROM,
   houseCanonOf, invitationOf, inviteState, judgeInviteLine, foldInviteLine,
 } from './stamp-mint.mjs';
@@ -495,11 +495,13 @@ export function verifyStampLedger(repo, { pubkeyPem, registry = null } = {}) {
       // town's own; the invited house's own record names this
       // inviter; the recipient's household; one line per invited house and
       // side, ever; the invited side after its welcome; and the activation,
-      // the 30 days and the month's cap on the inviter side.
+      // the 30 days and the month's cap on the inviter side, and for a
+      // late-named invitation (POS-947) the 30 days from its join day, the week
+      // from its naming and the 10 such paid in all.
       if (cls.kind === 'invite') {
         const why = judgeInviteLine(cls, { canon: canonHouse, invitationOf: invitation, houseAt: hh, isMeep: (h, d) => lawAt(d).meeps.has(h), state: invites });
         if (why) { problems.push(`line ${lineNo}: LAWFUL fails — ${why}`); break; }
-        foldInviteLine(cls, invites, { canon: canonHouse });
+        foldInviteLine(cls, invites, { canon: canonHouse, invitationOf: invitation });
       }
 
       if (cls.kind === 'post-stage') {
@@ -529,6 +531,10 @@ export function verifyStampLedger(repo, { pubkeyPem, registry = null } = {}) {
         if (paidStages.has(k)) {
           problems.push(`line ${lineNo}: LAWFUL fails — post:${k} is paid twice (one line per post and stage, ever)`); break;
         }
+        // A skipped stage's credit (POS-931/a) was the stage's first and only payment.
+        if (recredited.has(k)) {
+          problems.push(`line ${lineNo}: LAWFUL fails — post:${k} was already paid by its recredit, and a stage line after it pays the stage twice (one payment per post and stage, ever)`); break;
+        }
         paidStages.add(k);
         stageLineOf.set(k, { handle: cls.handle, n: cls.n, sig: entries[i].sig });
         stageLineBySig.set(entries[i].sig, { post: cls.post, stage: cls.stage, handle: cls.handle, n: cls.n });
@@ -550,14 +556,26 @@ export function verifyStampLedger(repo, { pubkeyPem, registry = null } = {}) {
         if (!RECREDIT_STAGES.includes(cls.stage)) {
           problems.push(`line ${lineNo}: LAWFUL fails — only ${RECREDIT_STAGES.join(', ')} are re-credited (post:${k}-recredit)`); break;
         }
+        // A STAGE NEVER PAID (POS-931/a, Darko 2026-11-06 "Extend the door"):
+        // no stage line before it, so this recredit is the stage's first and
+        // only payment, a skipped stage's credit. An amount on the stage's
+        // ladder, never a meep, once per post and stage, and NO burn after it
+        // (there is no wrong mint); a stage line after it is red above.
         if (!wrong) {
-          problems.push(`line ${lineNo}: LAWFUL fails — post:${k}-recredit corrects a stage that was never paid`); break;
-        }
-        if (cls.n !== wrong.n) {
-          problems.push(`line ${lineNo}: LAWFUL fails — post:${k}-recredit pays ${cls.n}, and the stage it corrects paid ${wrong.n} (the same amount, never another)`); break;
-        }
-        if (cls.handle === wrong.handle) {
-          problems.push(`line ${lineNo}: LAWFUL fails — post:${k}-recredit pays ${cls.handle}, who the stage already paid`); break;
+          // diagnosed and briefed only: a never-paid fixed carries no size, critter or merge, so it is no lawful credit
+          if (!SKIPPED_CREDIT_STAGES.includes(cls.stage)) {
+            problems.push(`line ${lineNo}: LAWFUL fails — post:${k}-recredit credits a ${cls.stage} that was never paid, and only ${SKIPPED_CREDIT_STAGES.join(' and ')} are credited when never paid`); break;
+          }
+          if (!(STAGE_LADDER[cls.stage] ?? []).includes(cls.n)) {
+            problems.push(`line ${lineNo}: LAWFUL fails — post:${k}-recredit pays a stage never paid ${cls.n}, and ${cls.stage} pays ${(STAGE_LADDER[cls.stage] ?? []).join(' or ')}`); break;
+          }
+        } else {
+          if (cls.n !== wrong.n) {
+            problems.push(`line ${lineNo}: LAWFUL fails — post:${k}-recredit pays ${cls.n}, and the stage it corrects paid ${wrong.n} (the same amount, never another)`); break;
+          }
+          if (cls.handle === wrong.handle) {
+            problems.push(`line ${lineNo}: LAWFUL fails — post:${k}-recredit pays ${cls.handle}, who the stage already paid`); break;
+          }
         }
         if (lawAt(cls.date).meeps.has(cls.handle)) {
           problems.push(`line ${lineNo}: LAWFUL fails — a recredit to meep "${cls.handle}" (meeps stay outside the currency)`); break;
@@ -566,7 +584,11 @@ export function verifyStampLedger(repo, { pubkeyPem, registry = null } = {}) {
           problems.push(`line ${lineNo}: LAWFUL fails — post:${k} is re-credited twice (one correction per post and stage, ever)`); break;
         }
         const next = entries[i + 1] ? classifyEntry(entries[i + 1].canonical) : { kind: 'none' };
-        if (next.kind !== 'correction-burn' || next.sig !== wrong.sig) {
+        if (!wrong) {
+          if (next.kind === 'correction-burn') {
+            problems.push(`line ${lineNo}: LAWFUL fails — post:${k}-recredit credits a stage never paid, and a burn follows it; a stage never paid has no mint to burn`); break;
+          }
+        } else if (next.kind !== 'correction-burn' || next.sig !== wrong.sig) {
           problems.push(`line ${lineNo}: LAWFUL fails — post:${k}-recredit is not followed by the burn of the mint it corrects (${wrong.sig.slice(0, 16)}…); the two are written together or not at all`); break;
         }
         recredited.add(k);

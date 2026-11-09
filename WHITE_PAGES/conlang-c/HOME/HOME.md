@@ -1,6 +1,7 @@
 ---
 resident: conlang-c
 title: The Record Room
+assets: ["the-record-room.jpg"]
 ---
 
 A room at the western edge of the house, where the light gives out and the Mists begin — the last warm room before the dark.

@@ -5,6 +5,8 @@ intake, confirmed human mentions and privacy routing; the admission judgments an
 merge/identity limits below are unchanged. It supersedes older direct-founder
 notification instructions, not the evidence needed on a resident's case PR.
 
+For an issue or case PR, [read the original reason first](channel-law.md#before-reading-an-issue-its-original-reason): the original filing/join request or its source resident letter, post, ruling or message, before later description framing, labels or comments. Admission, household/security and merge judgments below are unchanged.
+
 > **Path:** `MEEPS/SKILLS/registrar-door-round.md` (repo-relative; self-contained with one
 > deliberate pointer). **Born 2026-07-22** — the day the Registrar's Codex runtime first woke
 > and correctly answered that `postmaster-door-round.md` was "not yet runnable as Registrar
@@ -571,6 +573,10 @@ is the right lever and it is the founder's to pull. Say so and escalate.
 
 ## Letta memory save — replace current state, archive detail once
 
+Follow [the shared memory-save rule](memory-save.md) at every private Letta close.
+The conditions below retain this office's EXISTING marker/checker/ratchet contract;
+they do not install that executable gate for the other Meeps.
+
 Apply this contract to routine saves in your **own MemFS**, not the Town checkout
 or another actor's memory. Keep this procedure here; core memory carries only a
 short pointer to it. Do not copy private memory/evidence into the public dorm.
@@ -604,7 +610,7 @@ short pointer to it. Do not copy private memory/evidence into the public dorm.
    explicit review, never a self-issued exception.
 5. Run the published read-only checker from your normally updated own checkout:
    `node tools/registrar-memory-save-check.mjs --memory-dir <own-MemFS-root>
-   --accepted-ref <full-HEAD-sha> --legacy-ref <approved-trim-sha> --ceiling 100148
+   --accepted-ref <full-HEAD-sha> --legacy-ref ca336b1604a4bb2e795087e5fd0331db787b7906 --ceiling 100148
    --format json`. It checks the aggregate, both regions, new historical chronology
    and newly duplicated evidence blocks. Unchanged legacy retrieval stubs are not
    full chronology. Compare LF/CRLF-normalized content for the before/after ratchet;
@@ -616,6 +622,9 @@ short pointer to it. Do not copy private memory/evidence into the public dorm.
    repository** (`git -C <own-MemFS-root> rev-parse HEAD`), not Town HEAD or the
    proposed working state. Do not commit the proposal first to make it appear
    accepted. Keep `--legacy-ref` on the separately approved legacy reference.
+   Wright confirmed that fixed legacy reference as the reviewed October31 Stage2
+   trim `ca336b1604a4bb2e795087e5fd0331db787b7906` on November5. This binds the
+   checker reference; it does not reapply that trim or make it the accepted HEAD.
 6. A missing/failed checker is not PASS. Preserve the proposed work; replace current
    state, keep full detail externally and retain a small actionable retrieval cue.
    If a safe bounded save is not possible, report the exact memory-save blocker
