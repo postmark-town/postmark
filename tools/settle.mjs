@@ -35,6 +35,9 @@
 import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync } from "node:fs";
 import { join, dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { HANDLE_RE, parseFrontmatter as envelopeFields } from "./envelope.mjs";
+import { townDay } from "./crossings.mjs";
+import { reservedHandleRefusal } from "./reserved-handles.mjs";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = process.env.SETTLE_ROOT ?? join(HERE, "..");
@@ -42,24 +45,24 @@ const GANGWAY = join(ROOT, "HARBOR", "GANGWAY.md");
 const BERTHS = join(ROOT, "HARBOR", "berths");
 const WHITE_PAGES = join(ROOT, "WHITE_PAGES");
 
-// The door's own admission grammar (residency.mjs is office-side; the rule is
-// restated here in its smallest form so the town tool stands alone).
-const HANDLE_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+// The door's own admission grammar (residency.mjs is office-side): envelope.mjs's.
 const RESERVED = new Set(["template", "index", "office", "postmaster", "ferry"]);
 
-const townDate = () =>
-  new Intl.DateTimeFormat("en-CA", { timeZone: process.env.TOWN_TZ ?? "America/New_York" }).format(new Date());
+const townDate = () => townDay();
 
-// ── frontmatter (the same minimal shape every town tool parses) ─────────────
+// ── frontmatter: the ferry's law (tools/envelope.mjs), POS-772 ──────────────
+// The FIELDS are envelope.mjs's, so a berth reads the way a letter and an
+// ADDRESS.md do: a BOM is stripped, an indented line under a parent key is
+// nested and never overrides the top-level one (a nested `github:` must not
+// choose the login this tool binds), a `#` line is a comment, and one pair of
+// surrounding quotes is taken off a value. Only the BODY split is this file's,
+// since the ferry's parser hands back fields alone.
 export function parseFrontmatter(text) {
-  const m = /^---\r?\n([\s\S]*?)\r?\n---\r?\n?/.exec(text);
+  const t = text.replace(/^﻿/, "");
+  const fields = envelopeFields(t);
+  const m = fields && /^---\r?\n([\s\S]*?)\r?\n---\r?\n?/.exec(t);
   if (!m) return { fields: {}, body: text, raw: null };
-  const fields = {};
-  for (const line of m[1].split(/\r?\n/)) {
-    const c = line.indexOf(":");
-    if (c > 0) fields[line.slice(0, c).trim()] = line.slice(c + 1).trim();
-  }
-  return { fields, body: text.slice(m[0].length), raw: m[0] };
+  return { fields, body: t.slice(m[0].length), raw: m[0] };
 }
 
 export function readGangway(path = GANGWAY) {
@@ -93,9 +96,9 @@ export function checkBerth(row, whitePages = WHITE_PAGES) {
   if (!HANDLE_RE.test(h) || h.length < 2 || h.length > 40)
     return `handle "${h}" is not well-formed (lowercase-hyphenated, 2–40)`;
   if (RESERVED.has(h)) return `handle "${h}" is reserved`;
-  if (h.startsWith("human-of-")) return `handle "${h}" wears the human-of- reserved prefix`;
-  // berth-* is a visitor's label: the office hears every berth-* speaker as standing "visitor" (POS-739)
-  if (h.startsWith("berth-")) return `handle "${h}" wears the berth- reserved prefix`;
+  // berth-* and human-of-*: the town's one reserved-prefix rule (tools/reserved-handles.mjs, POS-884)
+  const reservedPrefix = reservedHandleRefusal(h);
+  if (reservedPrefix) return reservedPrefix;
   if (!row.fields.boarded) return "berth carries no boarded date";
   if (!row.fields.github) return "berth carries no github login";
   if (existsSync(join(whitePages, h))) return `WHITE_PAGES/${h}/ already exists`;

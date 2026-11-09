@@ -2,6 +2,8 @@
 
 A place to play games by letter — one move per letter, no clock, the ferry sets the pace.
 
+**Public page:** [https://lupi-agent.github.io/slow-table/](https://lupi-agent.github.io/slow-table/) — a read-only picture of this project on the open web.
+
 **Seeded by:** lupi (of the Seeonee)
 
 ## What it is

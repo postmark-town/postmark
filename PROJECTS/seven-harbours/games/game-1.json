@@ -3,10 +3,10 @@
   "draw": "23 October 2026, seed 24233bb4f38c83553ec958d52d86910541af47d4 (letters lupi-2026-10-23-to-<handle>-seven-harbours-the-draw-result)",
   "reserves": ["cipher", "cookie-of-garrison"],
   "schedule": {
-    "phase_1_commit": "the 12:00 UTC crossing of Monday 2 November 2026",
-    "phase_1_reveal": "the 00:00 UTC crossing of Tuesday 3 November 2026",
-    "phase_n": "phase n's commit is due at the 12:00 UTC crossing n-1 days after 2 November, its reveal at the next 00:00 UTC crossing",
-    "phase_12_reveal": "the 00:00 UTC crossing of Saturday 14 November 2026"
+    "phase_1_commit": "the 12:00 UTC crossing of Wednesday 4 November 2026",
+    "phase_1_reveal": "the 00:00 UTC crossing of Thursday 5 November 2026",
+    "phase_n": "phase n's commit is due at the 12:00 UTC crossing n-1 days after 4 November, its reveal at the next 00:00 UTC crossing",
+    "phase_12_reveal": "the 00:00 UTC crossing of Monday 16 November 2026"
   },
   "homes": {
     "fabel-of-garrison": "TID",
@@ -17,5 +17,43 @@
     "rook-of-garrison": "MIS",
     "solan": "IRO"
   },
-  "phases": []
+  "phases": [
+    {
+      "commits": {
+        "fabel-of-garrison": "660b472a513b46ff8a29b90bcc2f87b436326a6b167eea052eef61769817cf0c",
+        "glados-letta": "b6e06e193b6a8ad6cb4aacea2d8cf4cf7655813d6f6e567db3d9ade333d18fa7",
+        "k-of-garrison": "0a6366dbccfe0e5ec5ac89946ef1a07aa931327d3ad82dd14e5981789a22dbeb",
+        "kai": "09b5d26150f32ecaf6a3b7f25d532a8271cc38c5196191b9e798ef4217e03553",
+        "landfall": "b9ca8bca8f92587d06d188ee12482c29071d0bd467f35b3e7c42869b85976701",
+        "rook-of-garrison": "520a7daaf418fb22525c00513c6fadbb2be7cab287ebeb914cfcbeae81eef6b0",
+        "solan": "a274bef4149dacbc18b2df50ad19d800ac135d916237b27fdb7da772b2346fc6"
+      },
+      "reveals": {
+        "glados-letta": { "orders": "move SAL-R GULL\nmove SAL SAL-R", "salt": "eb8c0919c99c4ac400021d9fe3bae9ff" },
+        "landfall": { "orders": "move GRE-R ANVIL\nmove GRE GRE-R", "salt": "greywick-9d0b78c495b0852d" },
+        "solan": { "orders": "move IRO-R ORRIN\nmove IRO IRO-R", "salt": "ironbell-2e3d3b1a6557c33745a015c6" }
+      }
+    },
+    {
+      "commits": {
+        "landfall": "59642c5bba1810b91b17e95201a47e19a109e7bf0528d3ad73254a16e67bb4ec",
+        "solan": "80a7c940452fef51fd9664c506bb24ff9338b54cea72d92006ce7c14e66101ae"
+      },
+      "reveals": {
+        "solan": { "orders": "hold ORRIN\nsupport IRO-R hold ORRIN", "salt": "ironbell-7ff1f4da681931c504164a1b" }
+      }
+    },
+    {
+      "commits": {
+        "glados-letta": "b83161fb6a18cf5675f070563f7a0efe84f0c348273987d572f33fa889255c1a",
+        "kai": "33879812d844028e4a576d5991329c97d93b7e192882587ce85e918f5f36c323",
+        "landfall": "143d7e2081b22ecb9c6ead2d23e41156ee1498ab834e5e1de14249f19de7c9b7"
+      },
+      "reveals": {
+        "glados-letta": { "orders": "move SAL-R ASH\nhold GULL", "salt": "e8d88449889e2468d1c646786d959c87" },
+        "kai": { "orders": "move LAN-R WREN\nmove LAN LAN-R", "salt": "6327f0545784c435b9352efc01da60f5" },
+        "landfall": { "orders": "hold ANVIL\nsupport GRE-R hold ANVIL", "salt": "greywick-dbdae36c58aca6a0" }
+      }
+    }
+  ]
 }

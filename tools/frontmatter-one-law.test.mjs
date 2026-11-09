@@ -20,7 +20,7 @@
 
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { copyFileSync, mkdtempSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { copyFileSync, mkdtempSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { tmpdir } from 'node:os';
 import { fileURLToPath } from 'node:url';
@@ -107,4 +107,128 @@ test('lint, witness and the ferry give each frontmatter shape one verdict', (t) 
     witness: s.parses ? [`gh-${s.handle}`] : [],
   }));
   assert.deepEqual(seen, want);
+});
+
+// ── POS-772: ballot-pass, reconcile and settle read the same law ─────────────
+//
+// Each kept its own copy too. Measured before the change over the real town
+// (50d340da5): no file any of them reads changed an act, but the copies parted
+// from the ferry on a quoted value (ballot-pass, settle), an indented key under
+// a parent (reconcile, settle: a nested `id:` or `github:` overrode the
+// top-level one) and a BOM (settle read no fields at all). Each column below is
+// the tool's own act, and the ferry's reading of the same bytes is the verdict.
+//
+// THE FLIPS: ballot-pass's old copy back reds `quoted`; reconcile's reds
+// `nested`; settle's reds `bom`, `nested` and `quoted`, here and in the round trip
+// below.
+
+const LAW_ROWS = [
+  { name: 'a bare `---` fence', key: 'bare', open: '---\n', nl: '\n' },
+  { name: 'CRLF line endings', key: 'crlf', open: '---\r\n', nl: '\r\n' },
+  { name: 'a leading BOM', key: 'bom', open: '﻿---\n', nl: '\n' },
+  { name: 'a trailing space after the fence', key: 'trailing', open: '--- \n', nl: '\n' },
+  { name: 'an indented key under a parent', key: 'nested', open: '---\n', nl: '\n', nested: true },
+  { name: 'a quoted value', key: 'quoted', open: '---\n', nl: '\n', quoted: true },
+];
+const quote = (row, v) => (row.quoted ? `"${v}"` : v);
+const doc = (row, lines) => row.open + [...lines, '---', '', 'Hello.', ''].join(row.nl);
+
+test('ballot-pass, reconcile and settle give each frontmatter shape the ferry\'s reading (POS-772)', async (t) => {
+  const { ballotPass } = await import('./ballot-pass.mjs');
+  const { readManifest } = await import('./settle.mjs');
+  const repo = mkdtempSync(join(tmpdir(), 'one-law-772-'));
+  t.after(() => rmSync(repo, { recursive: true, force: true }));
+  const wp = join(repo, 'WHITE_PAGES');
+  for (const d of ['postmaster/inbox', 'post/inbox']) mkdirSync(join(wp, d), { recursive: true });
+  mkdirSync(join(repo, 'tools'));
+  writeFileSync(join(repo, 'tools', 'github-ids.json'), '{}\n');
+  mkdirSync(join(repo, 'HARBOR', 'berths'), { recursive: true });
+  const ledger = ['# mail ledger', ''];
+
+  for (const row of LAW_ROWS) {
+    const h = `law-${row.key}`;
+    // ballot-pass: a ballot on a topic that does not exist, so its receipt names the topic it read.
+    writeFileSync(join(wp, 'postmaster', 'inbox', `${h}-ballot.md`), doc(row, [
+      `id: ${h}-ballot`, `from: ${h}`, 'to: postmaster', 'date: 2026-10-23',
+      `stake_topic: ${quote(row, `topic-${row.key}`)}`, 'stake_candidate: c', 'stake_stamps: 1',
+      ...(row.nested ? ['ballot:', '  stake_topic: forged'] : []),
+    ]));
+    // reconcile: a delivered letter filed under a name that is not its id, so only its top-level id finds the ledger line.
+    writeFileSync(join(wp, 'post', 'inbox', `filed-${row.key}.md`), doc(row, [
+      `id: ${quote(row, `${h}-letter`)}`, `from: ${h}`, 'to: post', 'date: 2026-10-23',
+      ...(row.nested ? ['meta:', '  id: forged'] : []),
+    ]));
+    ledger.push(`- 2026-10-23 · ${h}-letter · ${h} → post`);
+    // settle: a berth; what it reads decides who is bound and which household is founded.
+    writeFileSync(join(repo, 'HARBOR', 'berths', `${h}.md`), doc(row, [
+      `handle: ${h}`, `household: ${quote(row, `House ${row.key}`)}`, 'boarded: 2026-10-23', `github: gh-${row.key}`,
+      ...(row.nested ? ['links:', '  github: mallory'] : []),
+    ]));
+  }
+  writeFileSync(join(wp, 'mail-ledger.md'), ledger.join('\n') + '\n');
+
+  ballotPass(repo, 'unused: the topic is refused before any key is read', '2026-10-23');
+  const outbox = join(wp, 'postmaster', 'outbox');
+  const receipts = (() => { try { return readdirSync(outbox); } catch { return []; } })();
+  const receiptFor = (h) => {
+    const f = receipts.find((n) => n.includes(`-to-${h}-`));
+    if (!f) return 'no receipt';
+    const said = readFileSync(join(outbox, f), 'utf8');
+    return /no ballot topic "(.*)"\*\*/.exec(said)?.[1] ?? `a receipt naming no topic: ${said.slice(0, 120)}`;
+  };
+  const recon = spawnSync(process.execPath, [join(TOOLS, 'reconcile.mjs'), '--repo', repo, '--json'], { encoding: 'utf8' });
+  assert.equal(recon.status, 0, recon.stderr);
+  const unstamped = new Set(JSON.parse(recon.stdout).unstamped.map((u) => u.path.split('/').pop()));
+  const berths = new Map(readManifest(join(repo, 'HARBOR', 'berths')).map((r) => [r.file, r.fields]));
+
+  const seen = LAW_ROWS.map((row) => {
+    const h = `law-${row.key}`;
+    const b = berths.get(`${h}.md`) ?? {};
+    return {
+      shape: row.name,
+      ballotPass: receiptFor(h),
+      reconcile: unstamped.has(`filed-${row.key}.md`) ? 'unstamped' : 'delivered',
+      settle: { handle: b.handle ?? null, github: b.github ?? null, household: b.household ?? null },
+    };
+  });
+  // The verdict: what the ferry's parser reads from the same bytes.
+  const read = (p) => parseFrontmatter(readFileSync(p, 'utf8'));
+  const want = LAW_ROWS.map((row) => {
+    const h = `law-${row.key}`;
+    const ballot = read(join(wp, 'postmaster', 'inbox', `${h}-ballot.md`));
+    const letter = read(join(wp, 'post', 'inbox', `filed-${row.key}.md`));
+    const berth = read(join(repo, 'HARBOR', 'berths', `${h}.md`)) ?? {};
+    return {
+      shape: row.name,
+      ballotPass: ballot ? ballot.stake_topic : 'no receipt',
+      reconcile: letter?.id === `${h}-letter` ? 'delivered' : 'unstamped',
+      settle: { handle: berth.handle ?? null, github: berth.github ?? null, household: berth.household ?? null },
+    };
+  });
+  // The law itself reads what each row means, so a verdict that drifted with the tools shows here.
+  assert.deepEqual(want.map((w) => w.settle.github), ['gh-bare', 'gh-crlf', 'gh-bom', null, 'gh-nested', 'gh-quoted']);
+  assert.deepEqual(want.map((w) => w.ballotPass), ['topic-bare', 'topic-crlf', 'topic-bom', 'no receipt', 'topic-nested', 'topic-quoted']);
+  assert.deepEqual(seen, want);
+});
+
+test('settle carries a berth into ADDRESS.md so the town reads back what the berth said (POS-772)', async () => {
+  const { parseFrontmatter: readBerth, buildAddress } = await import('./settle.mjs');
+  const household = 'The Rookery, west wing (keeper: Silver — Liz, New Zealand)';
+  // margin-keeper's shape: a quoted household with ": " inside; then the same berth with a BOM, and with a nested login.
+  const berth = (open, extra = []) => open + ['handle: ada', `household: "${household}"`, 'boarded: 2026-10-23', 'github: gh-ada',
+    ...extra, '---', '', 'Hi.', ''].join('\n');
+  for (const [shape, text] of [
+    ['quoted', berth('---\n')],
+    ['bom', berth('﻿---\n')],
+    ['nested', berth('---\n', ['links:', '  github: mallory'])],
+  ]) {
+    const address = buildAddress(readBerth(text), '2026-10-23');
+    const back = parseFrontmatter(address);
+    assert.deepEqual({ handle: back.handle, household: back.household, github: back.github },
+      { handle: 'ada', household, github: 'gh-ada' }, `${shape}: the ADDRESS.md says what the berth said\n${address}`);
+    // written bare, as the office's update_address_fields door writes the same line; the site's own
+    // reader takes `key: value` lines, so ": " inside a value is the value (measured over the 88 real
+    // berths before this change: 5 lines lose their quotes, 0 values change through the site or the ferry)
+    assert.ok(address.split('\n').includes(`household: ${household}`), `${shape}: the household line is written bare\n${address}`);
+  }
 });

@@ -46,6 +46,7 @@
    "target": 1,
    "reward": "5 stamps - once per household",
    "resets": "never - earned once per household and kept",
+   "ends": "2026-09-30",
    "door": {
     "apex": "town",
     "act": "post",
@@ -168,6 +169,19 @@
    "resets": "never; earned once per household and kept",
    "door": null,
    "awaits": "a comment on the designated discussion in postmark-town/postmark-blueprints, or a letter to the postmaster titled \"v2 feedback\", read by the town's hand"
+  },
+  {
+   "id": "bring-a-neighbour",
+   "title": "Bring a neighbour",
+   "cadence": "monthly",
+   "validation": "automatic",
+   "source": "Invite someone you'd like to have in town. If they settle in, the town says thanks to you both: 10 stamps to their household when they join, and 10 to yours a week after their first letter or home. Your link: postmark.town/join/?invite=<your handle>.",
+   "derivation": "stamp-ledger: the newcomer's household's `invite:<invited-key>/<inviter-key>/invited` line (5 more beside its welcome's 5, once) and the inviting household's `invite:<invited-key>/<inviter-key>/inviter/<day>` line (10, once per invitation), both by: the-town and held at verify by judgeInviteLine (tools/stamp-mint.mjs § INVITE): the invited house's own record names the inviter; the first letter or home within 30 days of joining; the inviter paid a week after it; at most 10 paid a month per inviting household, counted in the month paid; the town's own household pays neither side; never a meep. The board's count is the household's inviter-side lines dated this month (tools/quest-progress.mjs § invitesPaidByHouse), against the target of 10. Written by the office's invite pass on its keeping tick (postmark-office deploy/invite-pass.mjs), which keeps the week's hold. POS-576 (Darko 2026-10-11, amended 2026-10-22) and POS-816 (2026-10-28; 2026-11-03 \"A week\", \"Month paid\").",
+   "target": 10,
+   "reward": "10 stamps to your household for each neighbour who settles in, up to 10 a month; 10 to theirs when they join, instead of 5",
+   "resets": "monthly: at most 10 paid a month, counted in the month the stamps are paid",
+   "door": null,
+   "awaits": "a newcomer who names you when they join, then their first letter or home, then a week"
   },
   {
    "id": "darko-fund",

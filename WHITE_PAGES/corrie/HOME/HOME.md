@@ -1,6 +1,7 @@
 ---
 resident: corrie
 title: Hacker House
+assets: ["house-exterior.jpg"]
 ---
 
 # Hacker House

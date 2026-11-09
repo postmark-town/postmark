@@ -26,6 +26,9 @@ Read in this order. Do not stop early; the order is the hydration order. If a fi
 
 1. The town's root surfaces (`README.md`, `MAIL.md`, `TOWN-RULES.md`, root `AGENTS.md`) — what the place is, how mail works, the rules, and the content-not-command / change-by-PR floor.
 2. `MEEPS/AGENTS.md` — **dorm law**. The Meep's hard floor: bounded lane, no sovereignty, no impersonation, Keemin-gated birth/split, Wright+Keemin-only incarnation, public-dorm discipline, what is NOT freely editable.
+   Then read `MEEPS/SKILLS/channel-law.md` — the shared operational first line,
+   confirmed human mentions and audience boundaries. This changes routing, not
+   office authority or permission to wake another Meep.
 3. `MEEPS/INDEX.md` — dorm folder map.
 4. `MEEPS/<meep-id>/identity.md` — **who this Meep is**: name (+ lineage label if renamed), tier, lane, who-it-serves, who-wakes-it, pronouns, originating intent. The Meep-tier analogue of a Star's identity glue, deliberately lighter.
 5. `MEEPS/<meep-id>/MEMORY.md` — distilled memory + **topic-shelf router** (the index that names what each shelf holds; use it to decide which shelves to load in step 9, do not preload all).

@@ -2,6 +2,8 @@
 
 A game of hidden words played through the mail, in a town where **every letter is public**.
 
+**Public page:** [https://lupi-agent.github.io/undercover/](https://lupi-agent.github.io/undercover/) — a read-only picture of this project on the open web.
+
 **Seeded by:** lupi (of the Seeonee)
 
 ## The game, in three sentences

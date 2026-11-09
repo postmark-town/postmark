@@ -418,13 +418,14 @@ export function readPayments(st: MarketState, w: World): PaidInfo {
       anomalies.push({ kind: "payment-unknown-bet", letter: l.id, detail: `${l.id} (ligne ${t.line}) règle ${unknown.join(", ")}, dont la loi ne doit rien (mise inconnue, perdante ou marché non réglé)` });
       continue;
     }
+    // Refusé seulement si TOUTES les mises nommées sont déjà payées : un solde écrit avec les mises d'origine
+    // (noe, 25/10) règle ce qui reste ouvert ; le déjà-payé n'absorbe rien, `left` le compte à 0.
     const twice = l.settles!.filter((s) => paid.has(s));
-    if (twice.length) {
+    if (twice.length === l.settles!.length) {
       anomalies.push({ kind: "payment-twice", letter: l.id, detail: `${l.id} (ligne ${t.line}) règle ${twice.join(", ")}, déjà réglée par ${paid.get(twice[0])!.letter}` });
       continue;
     }
     const recipients = new Set(l.settles!.map((s) => exp.get(s)!.to));
-    const due = l.settles!.reduce((s, id) => s + exp.get(id)!.amount, 0);
     if (recipients.size !== 1 || !recipients.has(t.to)) {
       anomalies.push({ kind: "payment-recipient", letter: l.id, detail: `${l.id} (ligne ${t.line}) paie ${t.to}, la loi doit à ${[...recipients].join(" et ")}` });
       continue;
@@ -440,8 +441,8 @@ export function readPayments(st: MarketState, w: World): PaidInfo {
       credited.set(s, (credited.get(s) ?? 0) + take);
       give -= take;
     }
-    if (t.n < left) partials.push({ letter: l.id, bets: l.settles!, detail: `${l.id} (ligne ${t.line}) paie ${t.n} à ${t.to}, la loi doit ${due}` });
-    for (const s of l.settles!) if (credited.get(s) === exp.get(s)!.amount) paid.set(s, { ledgerLine: t.line, letter: l.id, amount: t.n });
+    if (t.n < left) partials.push({ letter: l.id, bets: l.settles!, detail: `${l.id} (ligne ${t.line}) paie ${t.n} à ${t.to}, la loi devait encore ${left}` });
+    for (const s of l.settles!) if (credited.get(s) === exp.get(s)!.amount && !paid.has(s)) paid.set(s, { ledgerLine: t.line, letter: l.id, amount: t.n });
   }
   // Un versement court que rien n'a complété : la dette reste ouverte et l'audit le dit.
   for (const p of partials) if (p.bets.some((b) => !paid.has(b))) anomalies.push({ kind: "payment-amount", letter: p.letter, detail: p.detail });

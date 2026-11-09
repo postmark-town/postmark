@@ -85,3 +85,88 @@ test('AN ALREADY-BOUNCED PAIR: known and quiet in the bare scan, still a defect 
   assert.match(mixed.out, /known-stuck/);
   done(repo);
 });
+
+// ── THE ONE NAMED DELIVERED-ENCLOSURES FOLDER (POS-817, bugpost #4273) ────────
+// The real folder holds images a delivered letter links by raw URL, so it stays
+// where it is. The checker knows it by NAME, paired with that letter's id, and
+// keeps it only while the LEDGER shows the id delivered. These fake towns state
+// the name and id as configuration; every address, ledger row, letter and file
+// below is new synthetic text (the recipient `crow` is the fixture's, not the
+// real letter's).
+const NAMED = 'WHITE_PAGES/merrick-nocturne/outbox/enclosures';
+const NAMED_ID = 'merrick-nocturne-2026-07-18-saturday-offering';
+const ASSET = `${NAMED}/synthetic-offering.png`;
+const DELIVERED = `- 2026-07-18 · ${NAMED_ID} · merrick-nocturne → crow\n`;
+const LETTER_FROM = (from, id, to) => `---\nid: ${id}\nfrom: ${from}\nto: ${to}\ndate: 2026-07-18\n---\n\nSynthetic fixture text.\n`;
+
+function namedTown(ledger) {
+  const repo = town();
+  mkdirSync(join(repo, 'WHITE_PAGES', 'merrick-nocturne'), { recursive: true });
+  writeFileSync(join(repo, 'WHITE_PAGES', 'merrick-nocturne', 'ADDRESS.md'), '---\nhandle: merrick-nocturne\n---\n');
+  mkdirSync(join(repo, NAMED), { recursive: true });
+  writeFileSync(join(repo, ASSET), 'synthetic placeholder bytes\n');
+  if (ledger == null) rmSync(join(repo, 'WHITE_PAGES', 'mail-ledger.md'));
+  else writeFileSync(join(repo, 'WHITE_PAGES', 'mail-ledger.md'), `# ledger\n\n${ledger}`);
+  return repo;
+}
+const flagged = (out, path) => new RegExp(`✗ ${path.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}: `).test(out);
+
+test('THE NAMED DELIVERED ENCLOSURES: with its letter delivered in the ledger, the folder is kept, in the bare scan and for the folder or a file in it', () => {
+  const repo = namedTown(DELIVERED);
+  for (const [mode, args] of [['bare', []], ['the folder', [NAMED]], ['a file in it', [ASSET]], ['the folder with a trailing slash', [`${NAMED}/`]]]) {
+    const r = scan(repo, ...args);
+    assert.equal(r.code, 0, `${mode}: ${r.out}`);
+    assert.ok(!flagged(r.out, NAMED) && !flagged(r.out, ASSET), `${mode}: not flagged\n${r.out}`);
+    assert.match(r.out, new RegExp(`kept in place: ${NAMED} — the enclosures of the delivered letter ${NAMED_ID}`), `${mode}: said\n${r.out}`);
+  }
+  done(repo);
+});
+
+test('THE NAMED FOLDER WITHOUT ITS DELIVERY still fails: no ledger row, a bounce, warn or archive line for the id, or no ledger at all', () => {
+  const lines = [
+    ['no row for the id', ''],
+    ['a bounce line', `- 2026-07-18 · BOUNCE · WHITE_PAGES/merrick-nocturne/outbox/letter-2026-07-18-x.md (from merrick-nocturne): duplicate id ${NAMED_ID}\n`],
+    ['a warn line', `- 2026-07-18 · WARN · ${NAMED_ID} · would overwrite WHITE_PAGES/crow/inbox/${NAMED_ID}.md\n`],
+    ['an archive line', `- 2026-08-18 · ARCHIVE · WHITE_PAGES/merrick-nocturne/outbox/letter-2026-07-18-x.md (from merrick-nocturne): ${NAMED_ID} untouched 30 days\n`],
+    ['another id delivered', `- 2026-07-18 · ${NAMED_ID}-two · merrick-nocturne → crow\n`],
+    ['no ledger file', null],
+  ];
+  for (const [what, ledger] of lines) {
+    const repo = namedTown(ledger);
+    const bare = scan(repo);
+    assert.equal(bare.code, 1, `${what}, bare: ${bare.out}`);
+    assert.ok(flagged(bare.out, NAMED), `${what}, bare: the folder is named\n${bare.out}`);
+    for (const p of [NAMED, ASSET]) assert.equal(scan(repo, p).code, 1, `${what}, explicit ${p}`);
+    done(repo);
+  }
+});
+
+test('THE EXCEPTION IS ONE NAME: a new non-letter folder, a sibling prefix, another room\'s enclosures and a ../ path out of the named folder all still fail beside it', () => {
+  const repo = namedTown(DELIVERED);
+  const others = ['WHITE_PAGES/merrick-nocturne/outbox/gallery', 'WHITE_PAGES/merrick-nocturne/outbox/enclosures-new', 'WHITE_PAGES/crow/outbox/enclosures'];
+  for (const d of others) { mkdirSync(join(repo, d), { recursive: true }); writeFileSync(join(repo, d, 'synthetic.png'), 'synthetic\n'); }
+  const bare = scan(repo);
+  assert.equal(bare.code, 1, bare.out);
+  for (const d of others) assert.ok(flagged(bare.out, d), `bare names ${d}\n${bare.out}`);
+  for (const d of others) {
+    for (const p of [d, `${d}/synthetic.png`]) assert.equal(scan(repo, p).code, 1, `explicit ${p}`);
+  }
+  const escape = scan(repo, `${NAMED}/../gallery/synthetic.png`);
+  assert.equal(escape.code, 1, `a ../ path out of the named folder: ${escape.out}`);
+  assert.ok(flagged(escape.out, 'WHITE_PAGES/merrick-nocturne/outbox/gallery/synthetic.png'), escape.out);
+  done(repo);
+});
+
+test('A LETTER ACCEPTED IN THIS SWEEP GRANTS NOTHING: a pending letter carrying the named id, checked first, does not keep the folder', () => {
+  const repo = namedTown('');
+  const pending = 'WHITE_PAGES/merrick-nocturne/outbox/letter-2026-07-18-saturday-offering.md';
+  writeFileSync(join(repo, pending), LETTER_FROM('merrick-nocturne', NAMED_ID, 'crow'));
+  const r = scan(repo, pending, ASSET);
+  assert.equal(r.code, 1, r.out);
+  assert.match(r.out, /1 item\(s\) sail clean\./, `the pending letter itself is deliverable\n${r.out}`);
+  assert.ok(flagged(r.out, ASSET), `the folder's file still fails\n${r.out}`);
+  const bare = scan(repo);
+  assert.equal(bare.code, 1, bare.out);
+  assert.ok(flagged(bare.out, NAMED), bare.out);
+  done(repo);
+});

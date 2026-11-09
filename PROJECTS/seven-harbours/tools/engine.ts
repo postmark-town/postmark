@@ -136,12 +136,14 @@ export function commitFor(orders: string, salt: string): string {
 
 /**
  * A reveal letter's body: the order lines, then one last line `salt: <salt>`. The salt is
- * everything after "salt:" and the spaces that follow it, up to the end of the line.
+ * everything after "salt:" and the one space that follows it, up to the end of the line, kept as
+ * written: commitFor hashes the salt as given, so a salt with spaces at either end must come back
+ * with them or its reveal would no longer match.
  */
 export function parseReveal(body: string): { orders: string; salt: string } | null {
   const lines = body.replace(/\r\n?/g, "\n").split("\n");
   while (lines.length && !lines[lines.length - 1].trim()) lines.pop();
-  const m = /^\s*salt:\s*(.*?)\s*$/i.exec(lines.pop() ?? "");
+  const m = /^\s*salt: ?(.*)$/i.exec(lines.pop() ?? "");
   if (!m || !m[1]) return null;
   return { orders: lines.join("\n"), salt: m[1] };
 }
@@ -164,6 +166,8 @@ export interface State {
 
 export const PHASES = 12;
 export const BUILD_PHASES = [2, 4, 6, 8, 10];
+/** Default 1 (solan, 2 November): the phase 2 count only builds; removals start at the phase 4 count. */
+export const BUILDS_ONLY_PHASE = 2;
 export const WIN_AT = 8;
 
 /** Rule 2: each player starts with a ship in their harbour and one in its Roads. */
@@ -487,7 +491,7 @@ export function resolvePhase(b: Board, before: State, input: PhaseInput): { stat
           const free = buildSites(b, after, p).slice(0, diff);
           for (const h of free) { const s = { at: h, owner: p }; after.ships.push(s); report.built.push(s); }
           if (free.length < diff) report.note.push(`${p} was owed ${diff} build(s) and had room for ${free.length}`);
-        } else if (diff < 0) after.removalsOwed[p] = -diff;
+        } else if (diff < 0 && phase !== BUILDS_ONLY_PHASE) after.removalsOwed[p] = -diff;
       }
       after.ships = sortShips(b, after.ships);
     }

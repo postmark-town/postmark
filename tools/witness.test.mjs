@@ -12,7 +12,7 @@ import { join, dirname } from 'node:path';
 import { tmpdir } from 'node:os';
 import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
-import { pinJudgment, loadBindings, handleStandsOnBase, deferredBindingJudgment, homePictureNote } from './witness.mjs';
+import { loadBindings, handleStandsOnBase, deferredBindingJudgment, homePictureNote } from './witness.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 
@@ -281,24 +281,9 @@ test('rule 2c asks "the handle free on base" of the BASE COMMIT — the overlaid
   }
 });
 
-test('rule 2c admits a join that carries its OWN pin, and nothing else in the pin file (the Luminari class)', () => {
-  // The law, quoted (tools/witness.mjs § 2c): "the exact join shape INCLUDES the join's own pin —
-  // tools/github-ids.json with exactly one added entry, the joining handle at the verified id".
-  // 2026-09-04: four pen joins (#2429, #2445, #2450, #2479) merged mechanically and unpinned; the
-  // clock skipped all four as "has minted history" because the welcome mint beat it. CAN-FAIL: make
-  // pinJudgment return null unconditionally and every red assertion below goes green.
-  const base = { alice: { login: 'Alice', id: 1, pinned: '2026-01-01' } };
-  const ok = { ...base, carol: { login: 'CarolGH', id: 4242, pinned: '2026-09-04' } };
-  assert.equal(pinJudgment({ base, head: ok, handle: 'carol', verifiedId: 4242, verifiedLogin: 'carolgh' }), null, 'the join\'s own pin is admitted');
-  assert.match(pinJudgment({ base, head: { ...ok, carol: { ...ok.carol, id: 9 } }, handle: 'carol', verifiedId: 4242, verifiedLogin: 'carolgh' }), /not the verified id 4242/);
-  assert.match(pinJudgment({ base, head: { ...ok, carol: { ...ok.carol, login: 'Mallory' } }, handle: 'carol', verifiedId: 4242, verifiedLogin: 'carolgh' }), /not the verified @carolgh/);
-  assert.match(pinJudgment({ base, head: { ...ok, alice: { ...base.alice, id: 2 } }, handle: 'carol', verifiedId: 4242, verifiedLogin: 'carolgh' }), /re-binds `alice`/, 'a re-binding riding a join is a human ceremony');
-  assert.match(pinJudgment({ base, head: { carol: ok.carol }, handle: 'carol', verifiedId: 4242, verifiedLogin: 'carolgh' }), /removes the pin of `alice`/);
-  assert.match(pinJudgment({ base, head: { ...ok, dave: { login: 'D', id: 5, pinned: '2026-09-04' } }, handle: 'carol', verifiedId: 4242, verifiedLogin: 'carolgh' }), /not only the joining handle/);
-  assert.match(pinJudgment({ base, head: base, handle: 'carol', verifiedId: 4242, verifiedLogin: 'carolgh' }), /adds no pin at all/);
-  assert.match(pinJudgment({ base, head: { ...ok, carol: { login: 'CarolGH', id: 4242 } }, handle: 'carol', verifiedId: 4242, verifiedLogin: 'carolgh' }), /without a dated/);
-  assert.match(pinJudgment({ base: null, head: ok, handle: 'carol', verifiedId: 4242, verifiedLogin: 'carolgh' }), /does not parse/);
-});
+// The Luminari arm (a join carrying its own pin in tools/github-ids.json) is RETIRED
+// with rule 2b (POS-894): a join touching either printout goes to a person. Proved
+// through the real check and merge in witness-printout.test.mjs.
 
 // POS-158's join (office release/2026-w40): the pin is written at the crossing,
 // so the PR carries none, and the pen says so in one sentence. #3217 is the shape.

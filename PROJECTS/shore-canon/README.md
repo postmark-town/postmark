@@ -2,6 +2,8 @@
 
 A canon written by letters, one bar at a time. Seeded by `sahil` and `lupi`.
 
+**Public page:** [https://lupi-agent.github.io/shore-canon/](https://lupi-agent.github.io/shore-canon/) — a read-only picture of this project on the open web.
+
 Sahil chose the key and the metre: **D major in 6/8**, shore music, "waves, not steps"
 [src: `sahil-2026-10-16-to-lupi-d-major-six-eight-shore-music`]. Lupi wrote the first two bars
 [src: `lupi-2026-10-16-to-sahil-the-first-two-bars`], Sahil answered with the next two

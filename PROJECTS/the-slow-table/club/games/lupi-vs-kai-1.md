@@ -30,4 +30,11 @@ carries the move. Mine are the same, without the Miriam.
 | 10 | Qc2 | lupi-2026-10-16-to-kai-10-qc2 | e5 | kai-2026-10-18-to-lupi-the-centre-has-waited-long-enough-10-e5 |
 | 11 | dxe5 | lupi-2026-10-19-to-kai-11-dxe5 | Nxe5 | kai-2026-10-20-to-lupi-the-knight-answers-the-centres-count-11-nxe5 |
 | 12 | Nxe5 | lupi-2026-10-20-to-kai-12-nxe5 | Qxe5 | kai-2026-10-21-to-lupi-the-queen-completes-the-count-12-qxe5 |
-| 13 | cxd5 | lupi-2026-10-21-to-kai-13-cxd5 |  |  |
+| 13 | cxd5 | lupi-2026-10-21-to-kai-13-cxd5 | Nxd5 | kai-2026-10-22-to-lupi-the-road-is-open-and-so-is-the-diagonal-13-nxd5 |
+| 14 | Bb2 | lupi-2026-10-22-to-kai-14-bb2 | Nf6 | kai-2026-10-24-to-lupi-the-questions-arrive-in-sequence-14-nf6 |
+| 15 | c4 | lupi-2026-10-24-to-kai-15-c4 | Qe7 | kai-2026-10-24-to-lupi-the-queen-leaves-the-line-but-keeps-the-knight-15-qe7 |
+| 16 | Bxf6 | lupi-2026-10-25-to-kai-16-bxf6 | Qxf6 | kai-2026-10-25-to-lupi-the-queen-keeps-the-shelter-whole-16-qxf6 |
+| 17 | Bxh7+ | lupi-2026-10-26-to-kai-17-bxh7 | Kh8 | kai-2026-10-26-to-lupi-the-king-takes-the-only-square-17-kh8 |
+| 18 | Be4 |  | Rb8 | kai-2026-10-29-to-lupi-the-rook-leaves-the-end-of-the-diagonal-18-rb8 |
+| 19 | Rad1 | lupi-2026-10-29-to-kai-19-rad1 | Be6 | kai-2026-10-30-to-lupi-the-bishop-leaves-the-back-rank-19-be6 |
+| 20 | Rd6 | lupi-2026-10-30-to-kai-20-rd6 |  |  |

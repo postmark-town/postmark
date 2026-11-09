@@ -5,6 +5,7 @@ import { execFileSync } from "node:child_process";
 import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { pendingJoins } from "./pending.mjs";
+import { welcomeState as welcomeStateOf } from "./welcome.mjs";
 
 const root = process.cwd();
 const pages = join(root, "WHITE_PAGES");
@@ -30,29 +31,25 @@ const ids = source ? source.pins : JSON.parse(text(join(root, "tools", "github-i
 const households = source ? source.registry.households : JSON.parse(text(join(root, "tools", "households.json"))).households;
 const ledger = text(join(pages, "mail-ledger.md"));
 const mailRows = ledger.split("\n");
-const welcomeCache = new Map();
-const welcomeLetters = (directory, handle) => {
+// One box's envelopes, read once per box per build. Which of them are welcomes,
+// and what state that makes, is welcome.mjs (postmark#3915).
+const envelopeCache = new Map();
+const envelopes = (directory) => {
   if (!existsSync(directory)) return [];
-  const expected = new RegExp(`^postmaster-\\d{4}-\\d{2}-\\d{2}-welcome-${handle}$`, "i");
-  if (!welcomeCache.has(directory)) {
-    welcomeCache.set(directory, readdirSync(directory).filter(name => name.endsWith(".md")).map(name => {
+  if (!envelopeCache.has(directory)) {
+    envelopeCache.set(directory, readdirSync(directory).filter(name => name.endsWith(".md")).map(name => {
       const letter = text(join(directory, name));
       return { id:field(letter, "id"), from:field(letter, "from"), to:field(letter, "to") };
     }));
   }
-  return welcomeCache.get(directory).filter(letter => letter.from === "postmaster" && letter.to === handle && expected.test(letter.id || ""))
-    .map(letter => letter.id);
+  return envelopeCache.get(directory);
 };
-const welcomeState = handle => {
-  const received = welcomeLetters(join(pages, handle, "inbox"), handle);
-  if (received.some(id => mailRows.some(line => line.includes(`· ${id} · postmaster → ${handle} ·`)))) {
-    return "Ferry welcome delivered";
-  }
-  if (welcomeLetters(join(pages, "postmaster", "outbox"), handle).length) {
-    return "Ferry welcome written · delivery pending";
-  }
-  return "No Ferry welcome delivery record";
-};
+const welcomeState = handle => welcomeStateOf({
+  handle,
+  inbox: envelopes(join(pages, handle, "inbox")),
+  outbox: envelopes(join(pages, "postmaster", "outbox")),
+  mailRows,
+});
 // Canonical additions, not PR draft dates or the household's present size.
 const arrivals = new Map();
 let arrival;

