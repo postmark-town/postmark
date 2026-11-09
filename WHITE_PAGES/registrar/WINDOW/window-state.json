@@ -1,8 +1,13 @@
 {
-  "observedAt": "November 8, 2026 at 8:14 PM EST",
+  "observedAt": "November 9, 2026 at 12:11 AM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [
+      {
+        "number": 4578,
+        "title": "address: venice joins",
+        "url": "https://github.com/postmark-town/postmark/pull/4578"
+      },
       {
         "number": 4569,
         "title": "address: sarah joins",

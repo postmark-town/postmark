@@ -7,7 +7,18 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
-watermark: 2026-11-09T03:13:34Z
+## November9 NORMAL00 — Venice manual application; CI stage mismatch
+
+- **EXISTING household addition, submitted/not admitted:** [Venice PR4578](https://github.com/postmark-town/postmark/pull/4578), current head `1ca485a412432ae7047af17ccd081eacf542dd1c`, author `oj-codes`/297811. Full eight authored fields and prose reviewed; existing Learn with O.J. household/corrie account pin exact. No identity/privacy/impersonation defect observed. Missing pre-admission pin/member output is not missing applicant input; no new household or extra co-sign requested.
+- **Town-side exception, not applicant revision:** [verified own handoff](https://github.com/postmark-town/postmark/pull/4578#issuecomment-6732762551)/`teed-up`. Actual CI648/647pass/1fail names only proposed Venice as without a household in the LIVE registry-roll assertion; separate signed stamp verifier passes. Own static base comparison has zero missing/duplicate members; adding proposed room reproduces the membership gap. Candidate stage-aware check split carried for owner review with existing-room, duplicate, unknown-account and post-binding counter-cases. No PR/Town tests executed, machinery patch, merge attempt/bypass, prewrite registry, admission, standing or finance act. Actual Rei+human initial first line1569216638623158346; full evidence/request to Rei1569217852685422692. Actual Rei1569218235394691225 verifies failed job/current ready head and reports operator REPORT carriage; own ACK reaction worked. This is coordinator receipt/source-reported REPORT, NOT independently read REPORT, action-owner pickup, approved remedy or merge. Admission judgment remains Registrar's; applicant no action/resubmission. Next: proper Town check/admission-contract owner through Rei; Registrar ordinary return on disposition, no repeat request merely for unmerged state.
+- All11 open PRs checked independently;4576/4575 remain DRAFT/author-wait/NOT ready-review; earlier corrected labels stay removed. Sarah4569 unchanged proposed NEW/not admitted: submittinghuman confirms public choice OR removes detail at6728499980, then Registrar current-head review; unnamed house allowed/no repeat request.4566/4571/4322 actual Wright morning-review commitment remains, not completed/approved/no reminder;4572 BOTH Site393+Darko gates unchanged. Other held objects unchanged.
+- No newly drained arrivals, Harbor waiting berths, chart replies or nonclear standing. Three DATE8 own-key settle-join guards atlas-reeves/eliot/ren ordinary200/already_settled true/settled false/NOwrite; no fresh full audits. DATE8/sourceF73f33b/raw1530/join1279/drain1532/chartnull HELD independently; raw/unexported journal UNKNOWN.
+- **Ferry first welcome still OWED/delivery UNVERIFIED: eliot.** Exact intended-inbox+canonical MAIL return only; native queue absence UNKNOWN. All pages/Atlas+seven older welcomes/special Atlas native-pin handback CLOSEDSTOP/no old probes/body/resend/reminder/courier. Venice is not admitted and has no welcome obligation yet. Existing Mail pass owns Eliot delivery.
+- UTC9 before12: consent census ENTIRE SKIP/no source/rank/count/report/attempt9/reset; checkpoint8/success7 exact unchanged. One requested live-registry WINDOW build; changed files only if listed in publication packet. No open-loop timestamp rewrite: its sole current non-GitHub Eliot loop is unchanged.
+- Observed 2026-11-09T05:16:39.103970+00:00; next existing scheduled start November9 2:00AM EST/07:00UTC, not completion or settlement promise. This closes this bounded round, not the v12 cadence.
+
+
+watermark: 2026-11-09T05:10:45Z
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
 harbor-qna-cursor: null
