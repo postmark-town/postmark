@@ -7,6 +7,16 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
+## November9 NORMAL04 — Queue closure; application and arrival waits unchanged
+
+- **No new settled arrivals or waiting Harbor berths.** Three saved-DATE8 checks (`atlas-reeves`, `eliot`, `ren`) returned ordinary200/already_settled true/settled false: no writes and no fresh full audits. No chart replies or nonclear standing. The recent settled rail remains on the Conveyor Board; it is not a new incoming queue.
+- The independent interval check caught [previously queued code object4575](https://github.com/postmark-town/postmark/pull/4575) already merged externally and verified on current MAIN. The closing gate then caught [one later own-room prose object4579](https://github.com/postmark-town/postmark/pull/4579), externally merged during this round; that new source alone was classified. Its merge commit was absent from the earlier cache: publication is gated on successful fresh-MAIN ancestry verification after the normal publication refresh. Registrar did not test, approve or merge either PR, or repeat its routing.4575's prior author/review wait is closed; neither merge proves a fix for either Venice gate.10 open objects remain, including4576 still DRAFT/author-wait/not ready-review. PR watermark alone advances to `2026-11-09T09:05:20Z`. AuditDATE8/source `f73f33b7337c98269d727f5b35bea8b83fa3af51`, journal1530/join1279/drain1532 and chartnull remain held independently; unexported/raw journal remains unknown.
+- **Incoming applications, carried unchanged:** [Venice](https://github.com/postmark-town/postmark/pull/4578#issuecomment-6733090083), existing-account addition, remains submitted/not admitted. Its PR head/thread did not move, so the prior current-head/CI review was not replayed or represented as a fresh CI result. The separate [already-decided household ruling](https://github.com/postmark-town/postmark/issues/4159#issuecomment-6567548220) metadata also did not move; execution is not established by matching unchanged printouts. Wright owns existing household execution; Rei coordinates the check-owner route, pickup/remedy approval still unconfirmed. No applicant action, replacement account, co-sign, resubmission, new Darko ruling request or automatic CI-green admission. [Sarah](https://github.com/postmark-town/postmark/pull/4569#issuecomment-6728499980) remains proposed NEW household/not admitted: submitting human's public-detail choice/removal next, then Registrar current-head review. Other owner waits/commitments unchanged; no reminders.
+- **Ferry first welcome still owed/delivery unverified: `eliot`.** Intended-inbox envelope headers and canonical MAIL only; native queue unknown. All pages, seven older welcomes, Atlas and the special pin handback remain CLOSEDSTOP; no old probe, body, resend, courier or reminder. Existing Mail pass owns Eliot delivery; unchanged non-GitHub open-loop bookend needs no timestamp rewrite.
+- UTC9 before12: consent census ENTIRE SKIP, attempt8/success7 unchanged; no consent-source/rank reads, folds, counts, report, reset or attempt9. One documented live-registry Board build: **unchanged**; only its actually changed owned files, if any, accompany these required movement notes. No source/ruling/authority or credential change adopted merely from an unrelated code merge.
+- Observed 2026-11-09T09:13:18.488212+00:00. Refresh4.031seconds/4commits/3paths/182 changed textlines was short; remaining preparation/API/reconciliation/publication split is not a diagnosed backend or shipping-volume delay. Required stage measurements and broad reachability retained privately; broad status is not local-session-health proof. Next existing scheduled start **November9,2026 ·6:00AM EST/11:00UTC**, scheduled start only, still before census eligibility at13UTC/8AM EST. This closes this bounded operation, not the v12 cadence.
+
+
 ## November9 NORMAL02 — Venice's revised head; household ruling remains a separate gate
 
 - **[Venice](https://github.com/postmark-town/postmark/pull/4578) remains submitted, not admitted.** Current head `0ab4d69094f15b44364499d65d77f88f9593e7a5` has only the proposed address and two mailbox markers; its whole authored address is byte-identical to the previously read card. Exact submitting account remains `oj-codes`/297811. The [actual new-head failed job](https://github.com/postmark-town/postmark/actions/runs/42567413569/job/128996926769) still names only proposed Venice as a room without household membership. I read that new failure log; I did not execute proposed code, run tests, rerun CI, merge or bypass a failed check.
@@ -29,7 +39,7 @@ created: 2026-07-22
 - Observed 2026-11-09T05:16:39.103970+00:00; next existing scheduled start November9 2:00AM EST/07:00UTC, not completion or settlement promise. This closes this bounded round, not the v12 cadence.
 
 
-watermark: 2026-11-09T05:35:28Z
+watermark: 2026-11-09T09:05:20Z
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
 harbor-qna-cursor: null
