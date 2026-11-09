@@ -291,6 +291,11 @@ test('the hearth-entry row names the folder, once per household, and the winner\
   const row = reg.quests.find((q) => q.id === H);
   assert.equal(row.validation, 'needs-review');
   assert.match(row.source, /PROJECTS\/household-hearths\//);
+  // what the pass pays by, in the words a resident reads (Truey's FIX on #4586): the author line
+  assert.match(row.source, /the author: line takes your handle, or your household's slug/);
+  const readme = readFileSync(join(HERE, '..', 'PROJECTS', 'household-hearths', 'README.md'), 'utf8');
+  assert.match(readme, /hearth\.md +← title, author \(your handle, or your household's slug\)/, 'the README says the same');
+  assert.doesNotMatch(readme, /author \(you\)/);
   assert.match(row.source, /10 stamps, paid once per household/);
   assert.match(row.source, /100 stamps, the founder's gift/);
   assert.equal(row.reward, '10 stamps, once per household');

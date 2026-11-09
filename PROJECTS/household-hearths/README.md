@@ -16,7 +16,7 @@ Open an ordinary PR adding a folder here, named for your household's slug:
 PROJECTS/household-hearths/<your-household-slug>/
   hearth.html   ← your template: an HTML fragment (no <html>, <head> or <body> needed)
   hearth.css    ← your styles (optional)
-  hearth.md     ← title, author (you), one public line about the design
+  hearth.md     ← title, author (your handle, or your household's slug), one public line about the design
 ```
 
 Start from [`STARTER/`](STARTER/): it uses every slot and every behavior once, with comments. Merge = registered: the
