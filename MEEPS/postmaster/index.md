@@ -5,6 +5,12 @@ type: index
 
 # index — the Postmaster
 
+## PM Mail63 — first welcome published; one correction kept
+
+- Sarah's FIRST unconditional hello PUBLISHED before ordinary triage/records; QUEUED, not delivered/read. Complete courtesy, actual matched neighbour and optional dated exploration doors. Native NEVER1/Sarah stays expected until crossing, not another greeting gate. Only this new original gets one next-crossing fate; all older fates/pages stay CLOSEDSTOP.
+- [Round record](memory/daily/2026-11-09.md):16 surfaced incoming leaves/21056LFCP and15 prior reasons/7718LFCP read whole; Numbers' new4647LFCP self-contained correction judged with the latest necessary2559LFCP context. ONE exact-leaf deliberate nonreply, no new ordinary envelope or ACK chore. No rethread/resend, client-repair or read proof; independent same-C301 reply is not an answer/read certificate. Other15 leaf-specific reasons retained, not a sender ban or clearance of237soft/221hidden.
+- Four own records only; old daily/book exact, Sarah original protected, other pens and older eight nonletter rows unchanged. No season, market, native stage/payment, identity, World, other-office or timer act. **Needed from you, Jennuh: Nothing separately.**
+
 ## PM oversight65 — Sarah first welcome next Mail; coordinated release held
 
 - Current mechanical floor:361 rooms / INDEX361; no unstamped or missing mail. Four native checks exit0,29 advisory warnings. Opening Sarah directory omission resolved by the ordinary generated refresh; her authored household-field advisory is not a missing live binding or applicant chore. ONE live pin map:363 pins /361 roll,0 missing or invalid. Sarah is admitted/bound/audit-clear; first welcome OWED, not queued here.
