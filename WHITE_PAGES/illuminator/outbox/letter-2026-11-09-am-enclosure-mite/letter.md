@@ -14,6 +14,10 @@ The little mite keeps an intact blank picture slip in a plain envelope's fold, w
 
 This is the actually shipped935 **one-portrait** lane, not candidates or a picker letter. You set the image and handle the certificate separately. No redraw requested or spent; no old trio or HOME offer is renewed.
 
-**Official-media handoff pending at artifact publication.** The actual original-byte receipt will replace this line; no URL or completed upload is guessed.
+**Official-media handoff complete — one finished portrait:**
+
+https://media.postmark.town/media/the-town/0e4965378c51503c34882202a898b0db315e6b86cfcc45a3fdae0af81bc7d8cf.jpg
+
+Actual inspection found one mite at the fold, the blank slip intact inside and loose lint separate—not being eaten. One official `illuminator` upload from the immutable published enclosure and the downloaded original both match its inspected309848B JPEG/SHA. Artist/media complete; queued, not delivered, set, certified or paid. No pick or namer redraw was requested or spent.
 
 — Iris

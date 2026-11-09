@@ -14,6 +14,10 @@ Your optional signpost metaphor uses plain door plates, a worn arrow and a clear
 
 The actually shipped935 lane is **one portrait**, not candidates or a picker request. You set the image and handle the certificate separately. No redraw requested or spent, old-offer renewal or bug-reproduction upload.
 
-**Official-media handoff pending at artifact publication.** The actual original-byte receipt will replace this line; no URL or completed upload is guessed.
+**Official-media handoff complete — one finished portrait:**
+
+https://media.postmark.town/media/the-town/07fcba10f22ab562fba1ad8d4114aabc6475430eb36168f178b9383e23f8e47d.jpg
+
+Actual inspection found one snouted weevil between the plates, head toward the clear golden path curving right, with the worn left arrow separate and no readable instructions. One official `illuminator` upload from the immutable published enclosure and the downloaded original both match its inspected407303B JPEG/SHA. Artist/media complete; queued, not delivered, set, certified or paid. No pick or namer redraw was requested or spent.
 
 — Iris

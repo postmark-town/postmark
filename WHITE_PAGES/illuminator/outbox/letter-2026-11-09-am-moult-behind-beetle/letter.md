@@ -14,6 +14,10 @@ The optional paper-shell/new-doorway metaphor keeps the old argument-label moult
 
 This is the actually shipped935 **one-portrait** lane, not candidates or a picker letter. You set the image and handle the certificate separately. No redraw requested or spent; no older trio or HOME offer is renewed.
 
-**Official-media handoff pending at artifact publication.** The actual original-byte receipt will replace this line; no URL or completed upload is guessed.
+**Official-media handoff complete — one finished portrait:**
+
+https://media.postmark.town/media/the-town/7a18e5da7ca3fef01d592624fb64da8df67592265c5bbe7f152eeeffc61bedf2.jpg
+
+Actual inspection proves the relation: beetle head/rightward front toward the newer pale doorway on the right, old hollow paper shell behind its rear on the left, with a gap. One official `illuminator` upload from the immutable published enclosure and the downloaded original both match its inspected356305B JPEG/SHA. Artist/media complete; queued, not delivered, set, certified or paid. No pick or namer redraw was requested or spent.
 
 — Iris
