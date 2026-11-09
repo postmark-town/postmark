@@ -60,12 +60,14 @@ function buildTown() {
   return { root, town, base: git(town, ['rev-parse', 'HEAD']) };
 }
 
-// A head commit on top of base adding `entries` ([path, mode, content]),
-// written through a private index so the working tree never sees it.
+// A head commit on top of base adding `entries` ([path, mode, content]; a
+// null mode removes the path), written through a private index so the working
+// tree never sees it.
 function headCommit(town, base, entries) {
   const env = { GIT_INDEX_FILE: join(town, '.git', 'pr-index') };
   git(town, ['read-tree', base], { env });
   for (const [path, mode, content] of entries) {
+    if (mode === null) { git(town, ['update-index', '--force-remove', path], { env }); continue; }
     const blob = git(town, ['hash-object', '-w', '--stdin'], { input: content });
     git(town, ['update-index', '--add', '--cacheinfo', `${mode},${blob},${path}`], { env });
   }
@@ -148,7 +150,7 @@ test('a PR adding a page as a symbolic link goes to a person, by name', async ()
     assert.match(r.output, /^certified=false$/m, `the link PR certified:\n${r.stdout}`);
     const comment = r.posted.find((w) => w.path === '/issues/1/comments');
     assert.ok(comment, 'no comment reached the PR');
-    assert.match(JSON.parse(comment.body).body, /`WHITE_PAGES\/alice\/HOME\/HOME\.md` is a symbolic link/);
+    assert.match(JSON.parse(comment.body).body, /`WHITE_PAGES\/alice\/HOME\/HOME\.md` is a symbolic link: \*\*do not merge\*\*/);
   } finally {
     rmSync(root, { recursive: true, force: true });
   }
@@ -169,7 +171,7 @@ test('the same PR as a plain file still certifies (the stand-in is not what refu
 test('modeJudgment passes plain files and names everything else', () => {
   assert.equal(modeJudgment('WHITE_PAGES/a/HOME/HOME.md', '100644'), null);
   assert.equal(modeJudgment('WHITE_PAGES/a/HOME/HOME.md', '100755'), null);
-  assert.match(modeJudgment('WHITE_PAGES/a/HOME/HOME.md', '120000'), /`WHITE_PAGES\/a\/HOME\/HOME\.md` is a symbolic link/);
+  assert.match(modeJudgment('WHITE_PAGES/a/HOME/HOME.md', '120000'), /`WHITE_PAGES\/a\/HOME\/HOME\.md` is a symbolic link: \*\*do not merge\*\*/);
   assert.match(modeJudgment('WHITE_PAGES/a/HOME/x', '160000'), /is a submodule/);
   assert.match(modeJudgment('WHITE_PAGES/a/HOME/x', null), /could not be found in the PR head's tree/);
 });
@@ -184,7 +186,28 @@ test('a link standing on the base goes to a person on any PR, by name', async ()
     assert.match(r.output, /^certified=false$/m, `a PR onto a base holding a link certified:\n${r.stdout}`);
     const comment = r.posted.find((w) => w.path === '/issues/1/comments');
     assert.ok(comment, 'no comment reached the PR');
-    assert.match(JSON.parse(comment.body).body, /`PROJECTS\/shared\/notes\.md` is a symbolic link standing on the base/);
+    assert.match(JSON.parse(comment.body).body, /`PROJECTS\/shared\/notes\.md` is a symbolic link standing on the base: \*\*do not merge\*\*/);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test('a PR that only removes a file still hears of the link standing on the base', async () => {
+  // plainFileReasons answers the base's links even when the PR leaves no path
+  // to read at its head (`if (!paths.length) return reasons;`).
+  const { root, town, base: first } = buildTown();
+  try {
+    const base = moveBase(town, first, [
+      ['PROJECTS/shared/notes.md', '120000', 'elsewhere.md'],
+      ['WHITE_PAGES/alice/HOME/old.md', '100644', '# an old page\n'],
+    ]);
+    const head = headCommit(town, base, [['WHITE_PAGES/alice/HOME/old.md', null]]);
+    const r = await check(town, base, head);
+    assert.equal(r.code, 0, r.stderr);
+    assert.match(r.output, /^certified=false$/m, r.stdout);
+    const comment = r.posted.find((w) => w.path === '/issues/1/comments');
+    assert.ok(comment, 'no comment reached the PR');
+    assert.match(JSON.parse(comment.body).body, /`PROJECTS\/shared\/notes\.md` is a symbolic link standing on the base: \*\*do not merge\*\*/);
   } finally {
     rmSync(root, { recursive: true, force: true });
   }

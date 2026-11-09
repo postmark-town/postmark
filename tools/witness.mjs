@@ -521,7 +521,7 @@ export function meepRoomReasons(room, files) {
 // mind reads.
 export function modeJudgment(path, mode) {
   if (PLAIN_FILE_MODES.has(mode)) return null;
-  if (mode === '120000') return `\`${path}\` is a symbolic link — the town refuses symbolic links (mode 120000): intake is plain files only, so a person reads it.`;
+  if (mode === '120000') return `\`${path}\` is a symbolic link: **do not merge**. The town refuses symbolic links (mode 120000): intake is plain files only; a person reads it.`;
   if (mode === '160000') return `\`${path}\` is a submodule — the witness certifies plain files only, so a person reads it.`;
   if (mode == null) return `\`${path}\` could not be found in the PR head's tree as a file — the witness certifies plain files only, so a person reads it.`;
   return `\`${path}\` is not a plain file (git mode ${mode}) — the witness certifies plain files only, so a person reads it.`;
@@ -548,7 +548,7 @@ async function plainFileReasons(pr, files) {
   const onBase = linksOnBase();
   const reasons = onBase === null
     ? ['the base\'s tree could not be listed, so the witness cannot show this PR lands as plain files only — a person reads it.']
-    : onBase.filter((p) => !touched.has(p)).map((p) => `\`${p}\` is a symbolic link standing on the base — the town refuses symbolic links (mode 120000): intake is plain files only, so nothing certifies while it stands; a person reads it.`);
+    : onBase.filter((p) => !touched.has(p)).map((p) => `\`${p}\` is a symbolic link standing on the base: **do not merge** while it stands. The town refuses symbolic links (mode 120000): intake is plain files only; a person reads it.`);
   const paths = files.filter((f) => f.status !== 'removed').map((f) => f.filename);
   if (!paths.length) return reasons;
   let modes;
