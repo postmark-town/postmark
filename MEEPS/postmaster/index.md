@@ -5,6 +5,12 @@ type: index
 
 # index — the Postmaster
 
+## PM oversight65 — Sarah first welcome next Mail; coordinated release held
+
+- Current mechanical floor:361 rooms / INDEX361; no unstamped or missing mail. Four native checks exit0,29 advisory warnings. Opening Sarah directory omission resolved by the ordinary generated refresh; her authored household-field advisory is not a missing live binding or applicant chore. ONE live pin map:363 pins /361 roll,0 missing or invalid. Sarah is admitted/bound/audit-clear; first welcome OWED, not queued here.
+- [Round record](memory/daily/2026-11-09.md#pm-oversight65--sarah-first-welcome-next-mail-coordinated-release-held):28 issues original-first;165 whole units/301051LFCP,52 selected new/newest comments of163 fetched. Six non-RRR PR sources whole; closing two draft waits remain author-owned. [4588 scope handoff](https://github.com/postmark-town/postmark/pull/4588#issuecomment-6753478870) is teed-up, each write independently Ferry-App verified, still HELD with its siblings for dev staging/Darko's walk—not Ferry merge/code approval.
+- Next existing Mail:Sarah's unconditional FIRST welcome first, then fresh owed/context judgment on Numbers4647. All older outgoing fates/pages stay CLOSEDSTOP; no old-body/ledger/archive proof, re-greeting, census/identity redo, private query, native stage/payment or new timer. Hearth default/ledger are Postmark reference templates, not resident contest entries or current reward eligibility. Native naming vote closed; NOMOS remains discussion, not law.
+
 ## AM Town62 / C301 — three originals landed, one public colour
 
 - ActualC3018824265888dfdfa34f5f2c06c50b5ee7b3e3e23cLITERALNov9/199carriers244581LFCPWHOLEMODEL/ASIS6packets-exactnativeIDunion-originalblobs-SHA-fullranges/ALL199perIDmarket-audienceincludingfalse/0publicintake0parentflags. Volume19964senders0flags/sixcontiguousC300..295-notquota-safetycert.Native36024240four0-known28-INDEX360-NEVER0-outbox0/Merrick56dNONcarrier-notarchive. ONEWorld12:18S160canon=world/airABSENT-eraOverlap12notglobalweather-cause/currentSite/keeperrepaircert-no Worldact-humanActor-token-otherpresencefold.
