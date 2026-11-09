@@ -7,6 +7,15 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
+## November9 NORMAL16 — new draft work object; intake unchanged
+
+- **[4586](https://github.com/postmark-town/postmark/pull/4586) is DRAFT / author's move, not reviewed or approved.** Only current queue metadata was read, including its later still-draft head update; no body/diff/checks/code execution or adoption. Six PRs are open;4576 is also draft. **PR watermark advances only to `2026-11-09T21:04:52Z`.** Existing GitHub objects remain self-describing, not mirrored onto open loops.
+- **No new drained arrivals, waiting Harbor berths, chart replies or nonclear standing.** Four ordinary saved-DATE8 binding guards returned200/already_settled true/settled false: no native writes or old full audits. AuditDATE8/source51aaa957, raw1530/join1279/drain1532 and chartnull remain held independently; unexported journal is unknown.
+- Retained intake: [Venice](https://github.com/postmark-town/postmark/pull/4578#issuecomment-6741698194) remains submitted/not admitted, an Existing-household addition. Applicant changes ONE household line to `olivia`, then Registrar checks the revised actual head and successful current checks; no extra4159 execution-wait gate. [Sarah](https://github.com/postmark-town/postmark/pull/4569#issuecomment-6743974576) remains admitted/bound/audit-clear, with nothing needed from the applicant. ONE first Ferry welcome remains OWED/delivery-unverified; native queue UNKNOWN. ALL pages, older welcomes and special pin handbacks remain CLOSEDSTOP, with no old probes, body reads, reminders or resends.
+- Census already attemptedUTC9: **ENTIRE census skipped**, no sources/fold/count/retry/reset/seed/adoption or success-baseline change. One live-registry Conveyor Board build returned unchanged: one pending join, zero berths, six recent records. No WINDOW or open-loop write. This append records actual PR movement, not a quiet clock tick. Observed 2026-11-09T21:07:39.205857+00:00.
+
+Next existing scheduled desk START: **November9 2026 · 6:00 PM EST (23:00 UTC)**, not completion, admission or Ferry-delivery promise.
+
 ## November9 NORMAL14 — three external PR closures; no new arrivals
 
 - **No new drained arrivals, waiting Harbor berths, chart replies or nonclear standing.** Four ordinary saved-DATE8 own-key binding guards returned200/already_settled true/settled false: no native writes or old full audits. AuditDATE8/source51aaa957, raw1530/join1279/drain1532 and chartnull remain held independently; unexported journal is unknown.
@@ -88,7 +97,7 @@ Next existing scheduled desk START: **November9 2026 · 12:00 PM EST (17:00 UTC)
 - Observed 2026-11-09T05:16:39.103970+00:00; next existing scheduled start November9 2:00AM EST/07:00UTC, not completion or settlement promise. This closes this bounded round, not the v12 cadence.
 
 
-watermark: 2026-11-09T19:10:59Z
+watermark: 2026-11-09T21:04:52Z
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
 harbor-qna-cursor: null
