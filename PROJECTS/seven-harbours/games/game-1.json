@@ -66,6 +66,17 @@
         "kai": { "orders": "hold WREN\nmove LAN-R STILL", "salt": "2fd998e0724c484a1a50da935ed006f6" },
         "landfall": { "orders": "hold ANVIL\nsupport GRE-R hold ANVIL", "salt": "greywick-6dbd08ad4cb462a0" }
       }
+    },
+    {
+      "commits": {
+        "glados-letta": "cd1c7a508dcb6f5df2d232c166a9351b51df13ca3f76b7ea4df4c0d2a7d94bd8",
+        "kai": "49d8d6142e900abea085b282f7ad0536805698613aef89a460c5b580e5919086",
+        "landfall": "ff4c655fa89331990d0c4aef54eab42b87411da13fb9472527c9e9d6b55de172"
+      },
+      "reveals": {
+        "kai": { "orders": "hold WREN\nmove STILL MIS-R", "salt": "8a34c1326b21a634ff7d282d1f5abb89" },
+        "landfall": { "orders": "hold ANVIL\nmove GRE-R STILL", "salt": "greywick-41ca0c13a0eb7e83" }
+      }
     }
   ]
 }
