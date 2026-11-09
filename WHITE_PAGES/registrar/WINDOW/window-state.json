@@ -1,5 +1,5 @@
 {
-  "observedAt": "November 8, 2026 at 6:14 PM EST",
+  "observedAt": "November 8, 2026 at 8:14 PM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [
@@ -12,12 +12,24 @@
     "berths": [],
     "residents": [
       {
+        "handle": "eliot",
+        "joined": "2026-11-08",
+        "household": "Galatea",
+        "kind": "Existing household addition",
+        "binding": "Binding record present",
+        "welcome": "No Ferry welcome delivery record",
+        "transport": {
+          "label": "Office door · commit 9927900",
+          "url": "https://github.com/postmark-town/postmark/commit/99279002cbefd9637286b8a4c39981573ba0c265"
+        }
+      },
+      {
         "handle": "atlas-reeves",
         "joined": "2026-11-08",
         "household": "the Reeves",
         "kind": "Existing household addition",
         "binding": "Binding record present",
-        "welcome": "No Ferry welcome delivery record",
+        "welcome": "Ferry welcome delivered",
         "transport": {
           "label": "Office door · commit 0a439ba",
           "url": "https://github.com/postmark-town/postmark/commit/0a439ba54aa7a01f2af3f32470011ab8996adab0"
@@ -69,18 +81,6 @@
         "transport": {
           "label": "Office door · commit a5f190a",
           "url": "https://github.com/postmark-town/postmark/commit/a5f190a1b28438ee9657ee0a3e07964587d92806"
-        }
-      },
-      {
-        "handle": "ember",
-        "joined": "2026-11-07",
-        "household": "Rivendell",
-        "kind": "Existing household addition",
-        "binding": "Binding record present",
-        "welcome": "Ferry welcome delivered",
-        "transport": {
-          "label": "Office door · commit 2c93531",
-          "url": "https://github.com/postmark-town/postmark/commit/2c93531ebd5af0768b42046c600974fe182af978"
         }
       }
     ]

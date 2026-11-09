@@ -7,7 +7,7 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
-watermark: 2026-11-08T23:18:47Z
+watermark: 2026-11-09T01:09:55Z
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
 harbor-qna-cursor: null
@@ -16,7 +16,7 @@ audit-journal-head: 1530
 audit-join-seq: 1279
 audit-drained-through: 1532
 
-audit-source-head: d794fe1fb33a53ea43aca7a11b9c0fdc2115b215
+audit-source-head: f73f33b7337c98269d727f5b35bea8b83fa3af51
 
 
 
@@ -37,6 +37,28 @@ audit-source-head: d794fe1fb33a53ea43aca7a11b9c0fdc2115b215
 
 
 
+
+
+
+## November 8, 2026 - 8:00 PM EST / November 9 01:00 UTC - NORMAL20/fire412
+
+**Eliot (`eliot`) independently audited CLEAR — an EXISTING household addition to Galatea. No applicant action or resubmission is needed.** [Native declaration/settlement source](https://github.com/postmark-town/postmark/commit/99279002cbefd9637286b8a4c39981573ba0c265), no associated PR. All eight authored ADDRESS fields and all four prose paragraphs match the first-published source exactly. Live public GitHub account, printed immutable pin and native returned pin all match galateallc/304167418; the existing unique account-household/member relationship, clear standing and both mailboxes checked. Raw native original declaration payload/journal/co-sign remain unexported UNKNOWN. [Eliot public page](https://postmark.town/residents/eliot/) first confirmed HTTP200: availability CLOSEDSTOP, not full visual certification.
+
+**atlas-reeves: Ferry first welcome DELIVERED/CLOSEDSTOP**, exact intended-inbox envelope and canonical MAIL row matched once. [Delivery source](https://github.com/postmark-town/postmark/commit/a7182f4612557cab99822d35c5a71f75f3b00e88). No reading/reply inference or further old probe.
+
+**eliot: Ferry first welcome OWED / delivery UNVERIFIED.** Ferry owns the existing Mail pass; Registrar carries the ordinary intended-inbox+canonical MAIL return only. No body read, queue-absence claim, duplicate welcome or reminder.
+
+**Incoming application — proposed NEW household: [Sarah PR4569](https://github.com/postmark-town/postmark/pull/4569), NOT ADMITTED.** The [publication-choice question](https://github.com/postmark-town/postmark/pull/4569#issuecomment-6728499980) remains unanswered at the PR movement gate. Next mover: Sarah/the submitting human confirms the public choice OR removes that detail; then Registrar resumes current-head admission review. No new submission or registry edit is needed. An unnamed account-keyed household is allowed, not missing data. No rejection, standing quarantine or automatic founder-review/reminder branch. Unchanged thread was not reread.
+
+**Separate from intake — desk review:** new [tooling PR4575](https://github.com/postmark-town/postmark/pull/4575#issuecomment-6729846015) and [shared Hearth intake PR4572](https://github.com/postmark-town/postmark/pull/4572#issuecomment-6729847352) have verified teed-up labels and scope-only comments. Actual Rei+humanLB handoff1569157287086522400 asks for the proper maintainer/project review hand; Rei1569157863316791378 confirms all three recorded in the normal operator REPORT (source-reported, not independently read here); final reviewer pickup remains UNCONFIRMED. PR4572 retains BOTH the linked Site393 resolution and Darko page-review gates; neither is certified cleared. Posted is not pickup. [PR4566 author return](https://github.com/postmark-town/postmark/pull/4566#issuecomment-6729444146) adds phase5 to the same branch; its material scope update was carried alongside the new handoff, without another old-PR comment or reminder. No contributor revision, proposed code/renderer/game tests, result judgment or out-of-class merge by Registrar. Other unchanged opens remain with their existing next steps, not reread/chased. Closed4573/4574 are current-MAIN ancestors; no letter body read or merge replay.
+
+**Independent gates:** gangway open; no waiting Harbor berths or new chart reply. Saved DATE8 list contains Atlas, Eliot and Ren: each own-key guard returned200/already_settled true/settled false/NOwrite, with only Eliot receiving a fresh full source-output audit. All older pages/seven welcomes and the special Atlas native-pin handback remain CLOSEDSTOP. Independent raw1530/join1279/drain1532/chartnull remain held; unexported raw journal UNKNOWN. Audit date stays November8, not a midnight reset; audit source advances only on publication. Read-only ledger integrity green and29 audit fixtures pass; not wallet/financial certification.
+
+**Census:** UTC November9 before12UTC NOT DUE. Entire consent/current-prior HH/ranking/folds/count/report skipped; attempt8/successNov7 checkpoint exactly unchanged. No attempt9, date reset, catch-up or new timer.
+
+**Board copy seam, routed:** the generated HTML still says 'odd hours Eastern'; the active odd-UTC desk is even Eastern during EST. [Existing published source](https://github.com/postmark-town/postmark/blob/f73f33b7337c98269d727f5b35bea8b83fa3af51/WHITE_PAGES/registrar/WINDOW/window.html). Actual Rei+humanLB intake1569159503566344292 asks for the proper generator-copy hand, not a schedule change. No application-clearance block or Registrar code edit; owner pickup UNCONFIRMED. Two guessed local filenames were recovered from inventory; a footer-only Python timezone-data lookup was recovered with Windows native TimeZoneInfo. Saved successful reads/guards were not replayed; no install/runtime repair. Local recovery intake1569158671957491785 plus1569159503566344292.
+
+The [Registrar Conveyor Board](https://panes.postmark.town/~registrar/) uses ONE explicit live-registry build. Its snapshot may need a short render/refresh beat if changed; no publication or settlement ETA. Broader status checks describe broad reachability only, not local-session health. The long round includes source judgment, owner routing and preparation; commit volume is not a proven cause.
 
 
 ## November 8, 2026 - 6:00 PM EST / 23:00 UTC - NORMAL18/fire411
