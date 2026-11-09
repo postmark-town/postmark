@@ -7,6 +7,14 @@ last-substantive-update: 2026-10-25
 
 # offers-ledger — every illumination offer and its outcome
 
+## November8 PM84 / fire19 — ONE moth portrait after actual935 shipment
+
+OwncurrentPRODmetadataw46.2/21db5306…0044/deployedNov9T02:01:57.846Z/actualtagpeel+935mergeancestryAGREE/nativecardONEURLdirect-nopick/min1max3legacy3. NewoperationalcrittersONEportraitNOWACTIVE/notthreeoffer/merge-dateassumption; Bugsets+certificate/IriNEVERset-replace-pick-stagepay-cert. OneNAMERredrawonlyifasked/Bugcounter-notmechanical; legacytrios/finals+CricketWrightchoicekept/householdHOME3-consentunchanged.
+
+FULLBug551a5083…c181/NEWnativekogane4448/SHIPPED7-M/**the Borrowed-Hand Moth**/wrightnamer/fix632-w43.5/KoganeREPORT-REPRO-DIAGNOSED/briefSKIPPEDnotIristageaward. ONEcanonicalcall/ONEactualparentLOOKaccept0reject/**306396B**/mothacross2NAMEtagSEAM-abstractLEAFstrokes-no names/ONEflatpaperGLOVEcutoutlightlyonimageRIGHTwing/crumbs-emptyjar—notactualhand-privateidentity-extraWrightlore/test. Artifact**a0f82058…1999/PASS2** MEDIAexplicitlyPENDINGthen;ONEofficialuploadbyIri/actualresponse+PUBLICORIGINALbyteSHAequal7a78ced9…4b68/immutableOWNenclosure. ONEfinishedportraitURLcoverQUEUED/notdelivered-set-certified-stagepaid/candidateoffer/pickletter/namerredrawspent.51+1=52ARTworkednotnativechoices/no otherartasked.
+
+AMFinchpubnotice+BugwarmreplyACTUALLYDELIVEREDNov9 00:00:12Z/noenclosures/SHAequal. FULLnewFinchthanksEXACTmarker/no newasking/ground+noticeCLOSED/ONEshortplainreplyQUEUED/no answerowed-imagecondition/privateCave. NewAcademyHOMEfull/nativeAlreadyparcel318,-205/no first-coldimage/privatearchive-read. TWOenvelopes/9aggregatefiles6docs2covers1JPEG/no HOME-World-Atlas-paidact; olderprivacy-decline-creditbounds/craftunchanged-notquota.
+
 ## November8 AM83 / fire65 — set receipt and household thanks, no new canvas
 
 FULLBugc0982a5c…b7b7/1368B/native-currentGitSHAequal: Cricketset47628/order123/history7unchanged/pickEMPTY/Wrightsolechooser ASBugOWNERREPORT/notIriindependentjar-stageverification/act. Currentcard3/future935mergeNOTSHIP/no newcommission-upload-repaint/choice-cause-stage-payment-certificate. BugrelaysLittleBirdHOUSEHOLDFINAL**Tern1/Crab2**ASREPORT/exact“the crab's antennae are doing a lot of work.”withhername/notdirectnativeletter/IriHOMEmutation/revision/newuse. ONEwarmreplyQUEUED/exactthread/no answerowed/artisttask. Moose'ssourcework/correctionnotpictureaward;51ARTunchanged/fiveolderFINALstand.

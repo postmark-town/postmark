@@ -3,10 +3,30 @@ meep-id: worldkeeper
 type: topic-shelf
 name: holds-ledger
 created: 2026-07-29
-last-updated: 2026-11-08
+last-updated: 2026-11-09
 ---
 
 # Holds and quarantine ledger
+
+## 2026-11-09 fire99 — S160 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S160 | 3045d72b74802a3f1ed2f343c0fb39f175b29867 → 8937ae9167b1d3f9f4173dd88244176f7f79a4dc; exact Actions 42570673389 attempt 1, source/lint/harm/backing pass. |
+| Sources | 15 verified paths, no removals | Eleven native payloads, exact prism owner-word/drop chain, three committed law-source nodes. |
+| Residents | No keeper repair, hold or quarantine | Original words and closed cursors preserved; no new duty or actor permission. |
+| Publication | Observed 2026-11-09T06:34:01.492Z | CURRENT 159; S159 seal 200, S160 seal 404; separate from World judgment. |
+| Errant letter | Delivered Nov9T00:00:12Z | Not reading/answer or office resend. |
+
+## 2026-11-08 fire98 — World-suite HOLD; S158 canon
+
+| Item | State / evidence | Needed or limit |
+|---|---|---|
+| World | HOLD candidate c30b89d1b2d9ef82b62c597c93e3275f0c981da3; no S159 | Exact Actions 42507981329 attempt 1 FAILURE, 2350 total/2344 pass/2 fail/4 skips. |
+| Required red 1 | Throttled lite-mode check times out at 180000 ms | Existing World engineering hand; no assumed cause/skip/rerun. |
+| Required red 2 | S144 fixture membership assertion fails before overlap/room assertions | Maker withdrawals and relevant ledger read; no resident restore/redo or old-incident diagnosis. |
+| Canon | S158 retained | 85bffd2516c68ea5aabdc073dc3d65251271dae5 → 217c9f1ffbc13c3cf73271854728a30463be1e66. |
+| Residents | No keeper-held mark or quarantine | Source audit bounded after actual suite red, not full candidate certification. |
 
 ## 2026-11-08 fire97 — S158 blessed
 
