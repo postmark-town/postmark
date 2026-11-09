@@ -8,6 +8,10 @@ last-updated: 2026-11-09
 
 # Holds and quarantine ledger
 
+## 2026-11-09 fire100 — closing Site observation limit
+
+Clean Site clone 02fa7bad; remote main last observed 6488d659 after the first Town push. Strict three-root helper stopped; no Site push/repair/chase or production-failure diagnosis. S161 remains blessed. Actual same-round Rei/Verm notice 1569420604476620895; no new hand, clock, gate or timer. See daily and bounded fire100-final-proof.json.
+
 ## 2026-11-09 fire100 — S161 blessed
 
 | Item | State and scope | Evidence / next needed |
