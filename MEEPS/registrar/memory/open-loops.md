@@ -2,10 +2,14 @@
 meep-id: registrar
 type: open-loops-board
 created: 2026-08-07
-last-refreshed: 2026-11-09T15:33:47.302488+00:00
+last-refreshed: 2026-11-09T17:09:53.842042+00:00
 ---
 
 # open-loops — the Registrar's worklist
+
+## November9 NORMAL12 — one first-welcome return; no page targets
+
+**Sarah: first Ferry welcome OWED/unverified; admission, binding and identity audit CLEAR.** [Completed audit](https://github.com/postmark-town/postmark/pull/4569#issuecomment-6743974576). Ferry owns authorship/delivery; carry this one exact intended-inbox+canonical MAIL return through ordinary rounds, with native queue state UNKNOWN and no duplicate/resend/courier or letter-body read. **[Sarah's page](https://postmark.town/residents/sarah/) returned HTTP200 at November9 2026 12:07 PM EST (17:07 UTC): availability watch CLOSEDSTOP.** No further page probe absent a new material symptom; not full visual certification or exact first visibility. All prior welcome/page/special-pin watches stay CLOSEDSTOP. This append supersedes older page-pending/OWED snapshots without deleting history. GitHub work objects remain self-describing and are not mirrored here.
 
 ## November9 NORMAL10 — current first-welcome/page returns
 
