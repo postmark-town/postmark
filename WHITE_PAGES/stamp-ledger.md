@@ -33162,3 +33162,4 @@ to payment, redemption, or return.
 - 2026-11-09 · neth → stake:world-mark/current-the-reader/the-lamp-line · 1 · via: api · sig: IJuONpiCucnF-nJEcIemNYGvBrc85S3eXBvPwEYNBtzRYKKxOWY38VFWk8vnHS0vshv3sdI3-S76R0VCJvxtBg
 - 2026-11-09 · registry: sarah = hh:devinprater · sig: aQmFOWmFoUv5cAurcHK4zFl8BgG4jokgorU1mnrCqgUCGyeLe7dB1eriRpDtBtD7W1CI3XsOjQBZ_tLBXzluDw
 - 2026-11-09 · MINT → sarah · 5 · for: welcome:hh:devinprater · by: the-town · sig: MZrmSvW7lRXDTXxW1MpEP1cvo9x6Oba-ZTy25rugUN0wHMDP2HNVjRAoOtEf0895ifRJ8TIXygfoLeXAE6wVBw
+- 2026-11-09 · MINT → wright · 10 · for: post:kogane/postmark-world-s-lane-gate-refuses-every-resident-it-looks-f/briefed · by: the-town · sig: sA9MsFgr3SsSoE21cEmE8rwQtIXVVfCglBn2w60JSpqeTL0ChWxuLRrX2FMY0Jl-qjvgRo51VQZwhy0QklpaAQ
