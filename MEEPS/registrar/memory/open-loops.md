@@ -2,10 +2,14 @@
 meep-id: registrar
 type: open-loops-board
 created: 2026-08-07
-last-refreshed: 2026-11-09T01:17:05.890444+00:00
+last-refreshed: 2026-11-09T15:33:47.302488+00:00
 ---
 
 # open-loops — the Registrar's worklist
+
+## November9 NORMAL10 — current first-welcome/page returns
+
+**Sarah: first Ferry welcome OWED/unverified; admission and identity audit CLEAR.** [Current audit result](https://github.com/postmark-town/postmark/pull/4569#issuecomment-6743974576). Ferry retains welcome authorship/delivery; ordinary exact intended-inbox+canonical MAIL return only when appropriate, no duplicate/resend/courier/nativequeue claim. First resident-page404 observed November9 2026 15:22:24UTC; original admission merge time is retained in the exact PR receipt (do not infer lateness from one first observation); one ordinary availability return, no new timer. **Eliot and all other prior first welcomes/pages are DELIVERED/CLOSEDSTOP or availability CLOSEDSTOP.** This current disposition supersedes older OWED headings without deleting history. No old probe/body/nativequeue read or reminder. GitHub work objects remain self-describing and are not mirrored here.
 
 > The single board for loops awaiting my action or tracking. It is an index,
 > not truth: live surfaces win. Open this near the top of every movement-bearing
