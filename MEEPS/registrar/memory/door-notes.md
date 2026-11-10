@@ -7,6 +7,16 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
+## November10 NORMAL14 — paired review handoff CLOSED by verified owner merges
+
+- **[4593](https://github.com/postmark-town/postmark/pull/4593) and [4594](https://github.com/postmark-town/postmark/pull/4594) are MERGED by Wright.** Actual GitHub actors and MAIN ancestry verified:4593 at13:49:10UTC (`bc0e549b9d6d42f646dff6990f1699d0fc88d17c`),4594 at13:45:29UTC (`9c33a80a788fee9b119d7d4dbb87f9158482a8b0`), both actor `wright-starforge` immutable306351151. The paired review handoff is CLOSEDSTOP. This independently confirms Rei's earlier owner report; it is not Registrar game/test certification, an own merge or a request for another review packet. No old body/diff/game replay or new handoff.
+- **[Venice remains on owner HOLD; no applicant card edit now](https://github.com/postmark-town/postmark/pull/4578#issuecomment-6766200805).** Wright will return on that PR with DARKO's household answer and card wording; the withdrawn November9 `olivia` line request stays withdrawn. Rei reports her stale REPORT corrected and the household question with DARKO under POS788/a: no new Venice instruction, applicant request or Registrar ruling. **4601/4603:** Rei relays Wright's commitment to name their reviewer in tonight's round. The next human hand is committed; actual reviewer identities, reviews and publication remain pending. No repeat referral, packet, ping, deadline or timer.
+- Independent gates: nine open PRs;4586 DRAFT;4403/4582/4597 resident-revision metadata only (4403 timestamp movement consumed without a body/diff/branch review). Other held heads unchanged. Other external closed-PR movement was metadata-only, not Registrar judgment/adoption: a merge to a train is not MAIN. No new drained arrival, waiting berth, chart reply or nonclear standing. Actual saved-DATE9 Aster guard200/already_settled true/settled false is the ordinary no-op check, not a write or old full re-audit.
+- ALL first-welcome/page/special-pin returns remain CLOSEDSTOP, including Aster; ZERO targets. No old-ID/header/MAIL/body/page/native-queue probe, reminder or resend. ONE explicit live-registry Conveyor Board build returned **unchanged**: no WINDOW write, publication or forced freshness. Census attemptNovember10 already saved: **ENTIRE census SKIPPED**, including code-lock recheck, household/consent/ledger sources, imports, folds, counts and report. No retry/reset/seed/adoption; the earlier unavailable result and November7 successful baseline remain unchanged.
+- PR watermark advances to `2026-11-10T14:57:03Z` after the observed PR movement was consumed; audit date2026-11-09/source4b07ce67, raw1530/join1279/drain1532/chartnull remain held independently; unexported journal UNKNOWN. Required door-notes/daily handoff-closure records only; open-loops is not a GitHub mirror. No Registrar comment, label, merge, native write, new review task or scope/cadence change.
+
+Next existing scheduled desk START: **November10 2026 · 12:00 PM EST (17:00 UTC)**, not a completion, admission or publication promise.
+
 ## November10 NORMAL12 — Venice owner HOLD; Aster welcome DELIVERED
 
 - **[Venice remains submitted / NOT admitted; no card edit is requested now](https://github.com/postmark-town/postmark/pull/4578#issuecomment-6766200805).** Wright's November10 owner answer withdraws the November9 household-line ask: the household question has returned to Darko with Corrie's October25 reply in view. **What happens now / To: Wright**, who will return on that PR with the answer and what Venice's card should say. This explicit new owner HOLD—not an invented4159 tool-execution gate—supersedes the earlier `olivia` edit route. No applicant edit, re-submission, co-sign, rejection or Registrar merge was made/requested. Current head unchanged.
@@ -158,7 +168,7 @@ Next existing scheduled desk START: **November9 2026 · 12:00 PM EST (17:00 UTC)
 - Observed 2026-11-09T05:16:39.103970+00:00; next existing scheduled start November9 2:00AM EST/07:00UTC, not completion or settlement promise. This closes this bounded round, not the v12 cadence.
 
 
-watermark: 2026-11-10T12:29:36Z
+watermark: 2026-11-10T14:57:03Z
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
 harbor-qna-cursor: null
