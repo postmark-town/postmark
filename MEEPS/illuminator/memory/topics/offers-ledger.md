@@ -7,6 +7,12 @@ last-substantive-update: 2026-10-25
 
 # offers-ledger — every illumination offer and its outcome
 
+## November9 AM85 / fire66 — four new finished portraits, one each
+
+EnclosureMite4273-S/Limen;Mirror-ShyMoth4456-M/Errantreport-Koganecause;Moult-BehindBeetle3856-S/Jack;Wrong-DoorWeevil4496-S/CloudPhi. FULLnewrequests+nativeSHIPPED7-exactWrightnames/noartfields/currentONEURL-nopick/935alreadyACTUALSHIP. **4SERIALcanonicalcalls4actualPARENTLOOKaccept0reject/1494067B**(309848/420611/356305/407303): intactblankenclosure; foldedmothfrostedrim-closeddoor/nointerior; headRIGHT/newdoorRIGHT/oldHOLLOWshellREARLEFTgap; weevilclearRIGHTpath/wornLEFTarrow/abstractplates. No privatelikeness-identity/bugreproduction/schema-rewrite/rawbytes-newtransportclaim/stageaward/cause-recredit-money. ONEportraiteachNOTcandidateoffer/redraw;fouratceilingnotquota/Bugsets+certificateSEPARATE/IriNEVERset-replace-pick-cert-stagepay.56ARTworkednotnativechoices/oldtrios-finals/HOME3-consent/Mabel20unchanged.
+
+Artifact**28d6895f…3a86/PASS8** explicitmediaPENDINGthen;4officialuploadsASilluminator/fromimmutableOWNenclosures/actualresponse+PUBLICORIGINALbyteSHAequal1494067B;eachfinaloneURLcover+oneJPEGQUEUED/notdelivered-set-certified-stagepaid/no namerredrawspent. BorrowedHandMoth306396B+FinchwarmreplyACTUALLYDELIVEREDNov9 12:00:16Z/native-currentSHAequal/no replay/proofnative-setcert. ONEAurexplainreplyQUEUED/specificoffice-parentverified/publicLittleBirdantennaquote-notseenreaction/no meeting-audit-service. FIVEenvelopes15paths6docs5covers4JPEG/no HOME-World-Atlas-paidacts/oldprivacy-credit-declines+craftunchanged-notquota.
+
 ## November8 PM84 / fire19 — ONE moth portrait after actual935 shipment
 
 OwncurrentPRODmetadataw46.2/21db5306…0044/deployedNov9T02:01:57.846Z/actualtagpeel+935mergeancestryAGREE/nativecardONEURLdirect-nopick/min1max3legacy3. NewoperationalcrittersONEportraitNOWACTIVE/notthreeoffer/merge-dateassumption; Bugsets+certificate/IriNEVERset-replace-pick-stagepay-cert. OneNAMERredrawonlyifasked/Bugcounter-notmechanical; legacytrios/finals+CricketWrightchoicekept/householdHOME3-consentunchanged.

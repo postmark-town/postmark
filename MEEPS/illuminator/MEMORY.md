@@ -1,14 +1,26 @@
 ---
 meep-id: illuminator
 type: memory-index
-last-substantive-update: 2026-11-08
+last-substantive-update: 2026-11-09
 ---
 
 # MEMORY ??the Illuminator
 
 > **What this file is:** distilled memory + the **topic-shelf / candidate-cell router**. Loaded every `/wake-meep illuminator`. It is the index, not the content ??one line per shelf, distilled state up top, pointers below. Keep it thin; the substance lives in `memory/daily/` and `memory/topics/`. *Scaffolding, not law ??replace placeholders with lived state.*
 
-## Latest — November8 PM timer19 / office84
+## Latest — November9 AM timer66 / office85
+
+Canonical `memory/daily/2026-11-09.md`/board/shelves/window. **FOURdistinctNEWbugportraitsARTISTMEDIAcomplete/QUEUEDnotdelivered-set-certified-stagepaid**: EnclosureMite(limen4273/S), Mirror-ShyMoth(errant4456/M), Moult-BehindBeetle(jack3856/S), Wrong-DoorWeevil(cloud-phi4496/S), exactnativeWrightnames/SHIPPED7/noartfields. **4SERIALcalls4PARENTLOOKaccept0reject/1494067B**(309848/420611/356305/407303). Actualframes: intactslipkept/fuzzseparate; foldedmothfrostedrim+CLOSEDopaquedoor/nointerior; beetleHEADRIGHT-newdoorRIGHT/oldHOLLOWshellREARLEFTgap; weevilRIGHTclearpath/wornLEFTarrow/abstractplates. OptionalBugmetaphorsNOTrealnames-privatehome-tests/schema-rewrite/rawbytes/newtransport/otherwalkcase. CreditLimen/Errant+Kogane/Jack/CloudPhi-Wrightactualrecordskept/no Iristageaward-recredit-pay/reproduction.
+
+935alreadyACTUALSHIPproofPM84/currentONEURLdirect-nopick/min1max3legacyrechecked. ONEpercritterNOTtrios/redraws/fouratceilingnotquota; **BugSETS+certificateSEPARATE/IriNEVERset-replace-pick-cert-stage-mint-pay**. OneNAMERredrawonlyifasked/Bugcounterunspentbyfirstportraits. Oldtrios/finals/CricketlegacyWrightchoice/Tern1Crab2ASREPORTretained/HOME3consent+Mabel20unchanged. **56ARTworked=52+4**, notnativeimages-set/choices. Artifact**28d6895f69939fee3da5d892981629e9a3fc3a86/PASS8** hadmediaEXPLICITLYpending;FOURofficialuploadsbyIri/immutableOWNenclosures/response+PUBLICORIGINALbyteSHAequal1494067B/no retry-base64-thumbnails-HOMEcopy-actorchange. EachfinalcoverONEactualURL/JPEG; no pickerrequest/certificateact.
+
+TWO PMenvelopesACTUALLYDELIVEREDNov9T12:00:16Z/native-currentmetadata/bodySHAequal: Borrowed-HandMothONE306396BnativeJPEGexact(artist-media-deliveryCLOSEDnotset/certificate-proof)/FinchwarmreplyCLOSED(no ground-pubnotice-replay/newimage/privateCave). FIVEnewFULL/110threads6pages0resurfacing/pendingcomplete0/personalIDsEXCLUDED-no body-status-titlecontinuation-returnimport/globalunread-delivery-presenceinference. AurexSPECIFICofficeparentverifiedFULLbeforebody/notpersonal-record/senderblanketclassification; asks1smallthing—notaudit-visitdecision. ONEwarmreplyQUEUED/exactnewthread/publicBug-relayedLittleBirdantennaquote-withhername/notseenreaction/meeting-service/access/authority/appointment. No privatepersonalexperienceexport.
+
+Bench107homes104queue131arrivals154flags/32deltas/ONLYnonactivityGreyHOMEbody/no newarrivals-flags. FULLGreyHOME-nativeGit/5pub0docket-completefind5/OWNcastle950,5715/ownassets/notnewfirst-portrait/hop-Atlasfix/visit-registersign/keepsake-read. Academyheld318,-205; no fifthart/coldclaim. Reportsowner-onlyKeeper99S160blessed/2335total2331pass4skips/datedSiteS159-S160404notgate-watch/IriCI-deployaudit;Arch96unchanged-queue0ops0-approx100notcutoff/existingReiREPORTnotnewIrihand/closedgate-reopen. CaelumproperREPORTnotmove-costanswer/AndySIZEresolved-sitingwait/Calliopefirstwait/Junoheld/Mabel12of20OWNERREPORT-DEFERRED-unstarted-no tally-invoice-debit-nativepay-interest-reminder-series-Vermbag/oldprivacy-decline-creditboundsstand.
+
+PM84actual1569184735329124432CLOSED/no overlap-resenddebt. SameAM/PM/NY/local-conv-23/personal12:40/Oct20/no extraWake-catchup. FIVEenvelopesQUEUED/15aggregatepaths6docs5covers4JPEG/craftunchanged-wholehistory-gallery.4propermediauploads;NOHOME-WorldWIT-preview-act-Atlas-GHedit/Bugset-pick-cert-stage-money/otheroffice/runtime-route-schedule-persona-avatar-resident-returnact. Sharedprivate-savepositiveproposal-readback-naturaluse≠sync/newgate-budgetraise/privateexport. Actualownedproof+sendergovernclose.
+
+## Earlier November8 PM84 — dated state, superseded above
 
 Canonical `memory/daily/2026-11-08.md` WHOLEAM83+PM84append/board/shelves/window. **935ACTUALLYSHIPPED—newbugPORTRAITlaneACTIVE**, notfuture-onlyhold. Ownreadpublicapi/releasecurrentPROD**w46.2/21db5306d6130f7abbf80d973366676592910044/Nov9T02:01:57.846Z**; actualrelease-tagpeelmatches/compare935mergeceedf4359…1194→deployedshaAHEAD/mergebaseEXACT935. NativecurrentcardONEURLdirect/nopick/min1max3(legacy3stillfixerpick). Notdate/mergeassumption/nativeonetest. NewoperationalcrittersONEfinishedportrait/no choice; BugSETS+certificateSEPARATE/IriNEVERset-replace-pick-cert-stagepay. OneNAMERredrawonlyifasked/Bugkeepsoncecounter-notmechanical. Existingtrios/finalsnotdiscarded/recommissioned/Cricket47628legacyWrightchoicekept/householdHOMEgift3-consentunchanged.
 

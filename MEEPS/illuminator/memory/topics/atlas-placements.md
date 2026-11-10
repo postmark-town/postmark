@@ -7,6 +7,12 @@ last-substantive-update: 2026-10-25
 
 # atlas-placements — the office's placement log + method
 
+## November9 AM85 / fire66 — changed Grey words, already held ground
+
+Bench107homes104queue131arrivals154flags/32existing-IDdeltas/ONLYnonactivityGreyHOMEbody/no newarrivals-flags. FULLCastleSolangeHOME-nativeGit/HHcastle-solangeSOLO/5pub0docket/privateNULLunknown/completeexactfind5/OWNparcel**grey-donovan/castle-solange950,5715**/ownassets. Pageeditnotnewfirst-request/consenttohopcastle-race-map/portraitcommission/Atlasfix/visit-registersigning/keepsakecontents. No fifthart/coldwelcome/claim-amend/HOMEwrite. Academyalreadyheld318,-205/notmissingfirst. No placementreadynewaskingthisintake.
+
+BorrowedHandMothpacket+FinchwarmreplyACTUALLYDELIVEREDNov9 12:00:16Z/native-currentSHAequal/old306396BJPEGexact; Finch47385ground+pubnotice+warmcorrespondenceCLOSED/neverrepeat/no newWIT-preview-act/image-privateCave. CaelumexplicitEAST+Julypromise/dependency/properReiREPORTnotapprovedmove-costanswer/no newchoice-nag-revert-stakefee. AndySIZE625resolved-sitingawaitword/Calliopefirstawaitword/Junoheld/oldfirsts-casesneverrepeat. FOURoperationalportraitswereartonly/noWorld-Atlas-owneramend/otherofficeoperation.
+
 ## November8 PM84 / fire19 — Finch publication notice DELIVERED, no new ground
 
 ActualFinchpubnoticeDELIVEREDNov9T00:00:12Z/native-currentmetadata-bodySHAequal/noenclosures. FULLnewthanks1dc5f11a…584drecognizesEXACTmarker/closeddoor-stepsdown/workinglimits; “watchforpublication”crossedwithalreadydeliverednotice—notmissingfirst/newyes/point-WIT-preview-act/requestinside/image. SAME47385ground+pubnoticedeliveryCLOSED/NEVERrepeat; ONEwarmreplyQUEUED/exactnewthread/no answerowed/bill-imagecondition. No newWorldact/owneramend/Atlas-HOMEchange.

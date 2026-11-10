@@ -840,21 +840,168 @@ test('LIVE registry invariants: households.json agrees with the pins', () => {
 // missed row loud at PR time instead of silent until the Registrar notices.
 // A pinned handle with no room (a retired or renamed handle whose pin stays
 // for the ledger's sake) is not a resident and is not counted.
-test('LIVE registry roll: every resident with a room stands in exactly one household', () => {
-  const hh = JSON.parse(readFileSync(join(HERE, 'households.json'), 'utf8'));
-  const pages = join(HERE, '..', 'WHITE_PAGES');
+//
+// A JOIN'S OWN ROOM (POS-978, Wright 2026-11-09 13:51Z: "excludes the rooms the
+// PR itself adds, and still fails on any other orphan room"). A join PR brings
+// its ADDRESS before admission, and its house is bound after, so on its own PR
+// the new room has none yet (town#4578: "residents with a room and no household:
+// venice"). Only the ADDRESS.md files the PR adds are excepted, read from the
+// checkout actions/checkout makes on a pull_request run: HEAD is GitHub's merge
+// (GITHUB_SHA), whose first parent is the base and whose second is the PR's head
+// (the event's pull_request.head.sha). A renamed room is not an added one. When
+// the evidence doesn't line up (not a pull_request run, a HEAD that isn't that
+// merge, a base that can't be fetched), nothing is excepted, and the red says why.
+function registryRoll(townRoot, joining = []) {
+  const hh = JSON.parse(readFileSync(join(townRoot, 'tools', 'households.json'), 'utf8'));
+  const pages = join(townRoot, 'WHITE_PAGES');
   const rooms = readdirSync(pages, { withFileTypes: true })
     .filter((e) => e.isDirectory() && e.name !== 'TEMPLATE' && !e.name.startsWith('_'))
     .map((e) => e.name)
     .filter((h) => existsSync(join(pages, h, 'ADDRESS.md')));
-  assert.ok(rooms.length > 100, `the roll read ${rooms.length} rooms — the positive control`);
   const housesOf = new Map();
   for (const [slug, rec] of Object.entries(hh.households))
     for (const r of rec.residents ?? []) housesOf.set(r, [...(housesOf.get(r) ?? []), slug]);
-  const unhoused = rooms.filter((h) => !housesOf.has(h));
-  assert.deepEqual(unhoused, [], `residents with a room and no household: ${unhoused.join(', ')}`);
-  const twice = rooms.filter((h) => (housesOf.get(h) ?? []).length > 1);
-  assert.deepEqual(twice, [], `residents in two households: ${twice.join(', ')}`);
+  const homeless = rooms.filter((h) => !housesOf.has(h));
+  return {
+    rooms,
+    joining: homeless.filter((h) => joining.includes(h)),
+    unhoused: homeless.filter((h) => !joining.includes(h)),
+    twice: rooms.filter((h) => (housesOf.get(h) ?? []).length > 1),
+  };
+}
+
+function roomsThisPrAdds(townRoot, env = process.env) {
+  if (env.GITHUB_EVENT_NAME !== 'pull_request') return { rooms: [], why: `not a pull_request run (${env.GITHUB_EVENT_NAME || 'no GitHub event'})` };
+  const git = (...args) => execFileSync('git', ['-C', townRoot, ...args],
+    { encoding: 'utf8', timeout: 60_000, stdio: ['ignore', 'pipe', 'pipe'], env: { ...process.env, GIT_TERMINAL_PROMPT: '0' } });
+  try {
+    const head = git('rev-parse', 'HEAD').trim();
+    if (head !== env.GITHUB_SHA) return { rooms: [], why: `HEAD ${head} is not the run's GITHUB_SHA ${env.GITHUB_SHA}` };
+    const parents = git('cat-file', '-p', head).split('\n').filter((l) => l.startsWith('parent ')).map((l) => l.slice(7));
+    const prHead = JSON.parse(readFileSync(env.GITHUB_EVENT_PATH, 'utf8')).pull_request?.head?.sha;
+    if (parents.length !== 2 || parents[1] !== prHead) return { rooms: [], why: `HEAD is not GitHub's merge of the PR's head ${prHead}` };
+    const base = parents[0];
+    try { git('cat-file', '-e', `${base}^{tree}`); } catch { git('fetch', '--no-tags', '--no-recurse-submodules', '--depth=1', 'origin', base); }
+    const added = git('diff', '--name-only', '-z', '-M', '--diff-filter=A', base, head, '--', 'WHITE_PAGES').split('\0');
+    return { rooms: added.map((p) => p.match(/^WHITE_PAGES\/([^/]+)\/ADDRESS\.md$/)?.[1]).filter(Boolean), base };
+  } catch (e) {
+    return { rooms: [], why: `the PR's base could not be read: ${String(e.message).split('\n')[0]}` };
+  }
+}
+
+test('LIVE registry roll: every resident with a room stands in exactly one household', (t) => {
+  const pr = roomsThisPrAdds(join(HERE, '..'));
+  const roll = registryRoll(join(HERE, '..'), pr.rooms);
+  assert.ok(roll.rooms.length > 100, `the roll read ${roll.rooms.length} rooms — the positive control`);
+  t.diagnostic(pr.why ? `no join exception: ${pr.why}`
+    : `rooms this PR adds against base ${pr.base}, housed after admission: ${roll.joining.join(', ') || 'none'}`);
+  assert.deepEqual(roll.unhoused, [], `residents with a room and no household: ${roll.unhoused.join(', ')}${pr.why ? ` (no join exception: ${pr.why})` : ''}`);
+  assert.deepEqual(roll.twice, [], `residents in two households: ${roll.twice.join(', ')}`);
+});
+
+// The exception on invented towns in GitHub's PR shape: an origin holding a base
+// and a PR branch, the merge GitHub tests, and a checkout made the way
+// actions/checkout makes it (depth 1 at the merge, detached), event file beside.
+function prTown({ base, add = [], rename = [], households }) {
+  const root = mkdtempSync(join(tmpdir(), 'roll-pr-'));
+  const origin = join(root, 'origin'), checkout = join(root, 'checkout');
+  const g = (cwd, ...args) => execFileSync('git', ['-C', cwd, '-c', 'user.name=t', '-c', 'user.email=t@example.invalid',
+    '-c', 'commit.gpgsign=false', ...args], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] }).trim();
+  const room = (h) => {
+    mkdirSync(join(origin, 'WHITE_PAGES', h), { recursive: true });
+    writeFileSync(join(origin, 'WHITE_PAGES', h, 'ADDRESS.md'),
+      `---\nhandle: ${h}\ngithub: ${h}-gh\nmotto: a room of my own, with a desk by the window and a long view of the harbour\n---\n`);
+  };
+  mkdirSync(join(origin, 'tools'), { recursive: true });
+  g(root, 'init', '-q', '-b', 'main', origin);
+  g(origin, 'config', 'uploadpack.allowAnySHA1InWant', 'true');
+  for (const h of base) room(h);
+  writeFileSync(join(origin, 'tools', 'households.json'), JSON.stringify({ households }));
+  g(origin, 'add', '-A');
+  g(origin, 'commit', '-q', '-m', 'base');
+  const baseSha = g(origin, 'rev-parse', 'HEAD');
+  g(origin, 'checkout', '-q', '-b', 'pr');
+  for (const h of add) room(h);
+  for (const [from, to] of rename) g(origin, 'mv', join('WHITE_PAGES', from), join('WHITE_PAGES', to));
+  g(origin, 'add', '-A');
+  g(origin, 'commit', '-q', '-m', 'pr');
+  const prHead = g(origin, 'rev-parse', 'HEAD');
+  g(origin, 'checkout', '-q', '--detach', 'main');
+  g(origin, 'merge', '-q', '--no-ff', '-m', 'Merge pr into main', 'pr');
+  const merge = g(origin, 'rev-parse', 'HEAD');
+  g(origin, 'checkout', '-q', 'main');
+  g(root, 'init', '-q', checkout);
+  g(checkout, 'remote', 'add', 'origin', `file://${origin}`);
+  g(checkout, 'fetch', '-q', '--no-tags', '--depth=1', 'origin', `+${merge}:refs/remotes/pull/1/merge`);
+  g(checkout, 'checkout', '-q', '--force', 'refs/remotes/pull/1/merge');
+  const event = join(root, 'event.json');
+  writeFileSync(event, JSON.stringify({ pull_request: { number: 1, head: { sha: prHead } } }));
+  return { root, checkout, merge, prHead, baseSha, env: { GITHUB_EVENT_NAME: 'pull_request', GITHUB_SHA: merge, GITHUB_EVENT_PATH: event } };
+}
+
+const housed = (...residents) => Object.fromEntries(residents.map((r) => [`house-${r}`, { residents: [r] }]));
+
+test('registry roll on a PR: the room the PR adds is excepted, and an orphan on the base still fails by name in the same frame', () => {
+  const pr = prTown({ base: ['alice', 'bob', 'olden'], add: ['venice'], households: housed('alice', 'bob') });
+  const hasBase = () => { try { execFileSync('git', ['-C', pr.checkout, 'cat-file', '-e', `${pr.baseSha}^{tree}`], { stdio: 'ignore' }); return true; } catch { return false; } };
+  assert.equal(hasBase(), false, 'the checkout is depth 1 at the merge: the base is not there until the exception fetches it');
+  const adds = roomsThisPrAdds(pr.checkout, pr.env);
+  assert.deepEqual(adds, { rooms: ['venice'], base: pr.baseSha }, 'read against the merge\'s own base');
+  assert.equal(hasBase(), true, 'and the exception fetched it');
+  const roll = registryRoll(pr.checkout, adds.rooms);
+  assert.deepEqual(roll.joining, ['venice']);
+  assert.deepEqual(roll.unhoused, ['olden'], 'the base orphan is still named, and venice is NOT');
+  rmSync(pr.root, { recursive: true, force: true });
+});
+
+test('registry roll off a PR: a push or local run excepts nothing, the same rooms all fail', () => {
+  const pr = prTown({ base: ['alice', 'olden'], add: ['venice'], households: housed('alice') });
+  for (const env of [{ ...pr.env, GITHUB_EVENT_NAME: 'push' }, {}]) {
+    const adds = roomsThisPrAdds(pr.checkout, env);
+    assert.deepEqual(adds.rooms, []);
+    assert.match(adds.why, /not a pull_request run/);
+    assert.deepEqual(registryRoll(pr.checkout, adds.rooms).unhoused, ['olden', 'venice']);
+  }
+  rmSync(pr.root, { recursive: true, force: true });
+});
+
+test('registry roll on a PR whose evidence does not line up: nothing is excepted, and the red says why', () => {
+  const pr = prTown({ base: ['alice'], add: ['venice'], households: housed('alice') });
+  const cases = [
+    [{ ...pr.env, GITHUB_SHA: pr.prHead }, /is not the run's GITHUB_SHA/],
+    [{ ...pr.env, GITHUB_EVENT_PATH: join(pr.root, 'no-such-event.json') }, /could not be read/],
+  ];
+  writeFileSync(join(pr.root, 'other-event.json'), JSON.stringify({ pull_request: { head: { sha: 'f'.repeat(40) } } }));
+  cases.push([{ ...pr.env, GITHUB_EVENT_PATH: join(pr.root, 'other-event.json') }, /is not GitHub's merge of the PR's head/]);
+  for (const [env, why] of cases) {
+    const adds = roomsThisPrAdds(pr.checkout, env);
+    assert.deepEqual(adds.rooms, []);
+    assert.match(adds.why, why);
+  }
+  execFileSync('git', ['-C', pr.checkout, 'remote', 'set-url', 'origin', `file://${join(pr.root, 'gone')}`]);
+  const unfetched = roomsThisPrAdds(pr.checkout, pr.env);
+  assert.deepEqual(unfetched.rooms, [], 'a base that cannot be fetched excepts nothing');
+  assert.match(unfetched.why, /the PR's base could not be read/);
+  rmSync(pr.root, { recursive: true, force: true });
+});
+
+test('registry roll on a PR: a room the PR renames is not an added room, and is not excepted', () => {
+  const pr = prTown({ base: ['alice', 'bob'], rename: [['bob', 'bobby']], households: housed('alice', 'bob') });
+  const adds = roomsThisPrAdds(pr.checkout, pr.env);
+  assert.deepEqual(adds, { rooms: [], base: pr.baseSha });
+  assert.deepEqual(registryRoll(pr.checkout, adds.rooms).unhoused, ['bobby']);
+  rmSync(pr.root, { recursive: true, force: true });
+});
+
+test('registry roll on a PR: the exception never hides a resident in two households, the PR\'s own room included', () => {
+  const pr = prTown({ base: ['alice', 'bob'], add: ['venice'],
+    households: { ...housed('bob'), one: { residents: ['alice', 'venice'] }, two: { residents: ['alice', 'venice'] } } });
+  const adds = roomsThisPrAdds(pr.checkout, pr.env);
+  assert.deepEqual(adds, { rooms: ['venice'], base: pr.baseSha });
+  const roll = registryRoll(pr.checkout, adds.rooms);
+  assert.deepEqual(roll.unhoused, []);
+  assert.deepEqual(roll.twice, ['alice', 'venice']);
+  rmSync(pr.root, { recursive: true, force: true });
 });
 
 // ════════════════════════════════════════════════════════════════════════════
