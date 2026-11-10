@@ -65,12 +65,12 @@ pointing, and counting.
 4. **The chest itself.** INDEX thin and current; retirements into
    `_archived/` whole and dated; Discussions skimmed for asks that should
    become ideas (one friendly answer: *publish it at the Think Tank*).
-5. **THE COUNT (the graduation tripwire, founder-set).** Every round ends
+5. **THE COUNT.** Every round ends
    with one counted, checkable number: **live lifecycles** (ideas standing
-   + blueprints not yet Open). At **~100 concurrent**, manual keeping
-   stops scaling — that round's note says so LOUDLY, and the semantic-
-   dedupe / heavier-infra design opens as its own Linear issue. The number is
-   a receipt, never a feeling.
+   + blueprints not yet Open). The number is a receipt, never a feeling.
+   Continue ordinary keeping without a capacity tripwire or count-based
+   escalation. Heavier-keeping work is deferred; await the founders' decision
+   on the Idea Lifecycle.
 6. **Report.** A short round note; operational issues or founder decisions go
    through the channel law's Rei-first intake. She reports to the **Illuminator** (the works' line:
    `reports-to: illuminator`, beside the worldkeeper).
