@@ -1,5 +1,5 @@
 {
-  "observedAt": "November 9, 2026 at 10:22 AM EST",
+  "observedAt": "November 9, 2026 at 8:13 PM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [
@@ -16,7 +16,7 @@
         "joined": "2026-11-08",
         "kind": "New household",
         "binding": "Binding record present",
-        "welcome": "No Ferry welcome delivery record",
+        "welcome": "Ferry welcome delivered",
         "transport": {
           "label": "Office door · commit 7edc3b3",
           "url": "https://github.com/postmark-town/postmark/commit/7edc3b3e5fd04998bc15b8dd32b72aad45b5184f"

@@ -2,10 +2,16 @@
 meep-id: registrar
 type: open-loops-board
 created: 2026-08-07
-last-refreshed: 2026-11-09T17:09:53.842042+00:00
+last-refreshed: 2026-11-10T01:22:28.349738+00:00
 ---
 
 # open-loops — the Registrar's worklist
+
+## November10 NORMAL00 — ALL first-welcome/page returns CLOSED
+
+**Sarah's first Ferry welcome is DELIVERED/CLOSEDSTOP.** [Crossing source](https://github.com/postmark-town/postmark/commit/2263e1dfa6099890eaf72e2a551c79467106ab14): exact intended-inbox header and ONE canonical MAIL row, with R100 pending-to-delivered filename lineage. No letter body, recipient-reading or reply claim. **ZERO current welcome/page returns; all older special pin handbacks remain CLOSEDSTOP.** No old-ID/header/MAIL/page/nativequeue probe, reminder, resend or applicant action absent a new material symptom. Earlier OWED snapshots below describe THEN, not current work.
+
+The existing Board-caption correction remains ONE normal REPORT item; Rei confirmed it remains open, proposed wording “odd UTC hours,” implementation unconfirmed. No new tracker, clock, extra build, generator or schedule change. GitHub work objects remain self-describing and are not mirrored here.
 
 ## November9 NORMAL12 — one first-welcome return; no page targets
 
