@@ -223,12 +223,17 @@ jobs:
       - name: Hand the change over as a patch
         id: handover
         run: |
-          if git diff --quiet -- PROJECTS/build-the-town/atlas/ WHITE_PAGES/INDEX.md; then
+          # The atlas job's outputs, named exactly: town-atlas.mjs writes the first
+          # three, render-town.mjs the two pages, whitepages-index.mjs the index. The
+          # generators share the atlas folder and are never handed over. The commit
+          # job accepts this same list and nothing else.
+          outputs="PROJECTS/build-the-town/atlas/town.json PROJECTS/build-the-town/atlas/THE-ATLAS.md PROJECTS/build-the-town/atlas/REGIONS.md PROJECTS/build-the-town/atlas/town.html PROJECTS/build-the-town/atlas/ground.html WHITE_PAGES/INDEX.md"
+          if git diff --quiet -- $outputs; then
             echo "atlas: no change"
             echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          git add PROJECTS/build-the-town/atlas/ WHITE_PAGES/INDEX.md
+          git add $outputs
           git diff --cached --binary > "$RUNNER_TEMP/atlas.patch"
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
@@ -268,10 +273,12 @@ jobs:
       - name: Apply, commit and push
         run: |
           git apply --index "$RUNNER_TEMP/handover/atlas.patch"
-          # The atlas folder and the white-pages index only, as plain files; anything else is refused.
-          bad=$(git diff --cached --raw --no-renames | awk -F'\t' '{ split($1, m, " "); if ((m[2] != "100644" && m[2] != "000000") || ($2 !~ /^PROJECTS\/build-the-town\/atlas\// && $2 != "WHITE_PAGES/INDEX.md")) print $2 }')
+          # The atlas job's outputs only, named exactly as the handover names them, as
+          # plain files; anything else is refused, the generators beside them included.
+          outputs="PROJECTS/build-the-town/atlas/town.json PROJECTS/build-the-town/atlas/THE-ATLAS.md PROJECTS/build-the-town/atlas/REGIONS.md PROJECTS/build-the-town/atlas/town.html PROJECTS/build-the-town/atlas/ground.html WHITE_PAGES/INDEX.md"
+          bad=$(git diff --cached --raw --no-renames | awk -F'\t' -v ok="$outputs" 'BEGIN { n = split(ok, o, " "); for (i = 1; i <= n; i++) allowed[o[i]] = 1 } { split($1, m, " "); if ((m[2] != "100644" && m[2] != "000000") || !($2 in allowed)) print $2 }')
           if [ -n "$bad" ]; then
-            echo "atlas: the patch reaches past the atlas and the index, refused: $bad"
+            echo "atlas: the patch reaches past the atlas outputs, refused: $bad"
             exit 1
           fi
           git commit -m "town-clock: atlas refresh"

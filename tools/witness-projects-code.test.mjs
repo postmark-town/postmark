@@ -54,12 +54,13 @@ function buildTown() {
   return { root, town, base: git(town, ['rev-parse', 'HEAD']) };
 }
 
-// A head commit on top of base changing `entries` ([path, content]), written
-// through a private index so the working tree never sees it.
+// A head commit on top of base changing `entries` ([path, content]; content null
+// removes the path), written through a private index so the working tree never sees it.
 function headCommit(town, base, entries) {
   const env = { GIT_INDEX_FILE: join(town, '.git', 'pr-index') };
   git(town, ['read-tree', base], { env });
   for (const [path, content] of entries) {
+    if (content === null) { git(town, ['update-index', '--force-remove', path], { env }); continue; }
     const blob = git(town, ['hash-object', '-w', '--stdin'], { input: content });
     git(town, ['update-index', '--add', '--cacheinfo', `100644,${blob},${path}`], { env });
   }
@@ -71,8 +72,12 @@ function headCommit(town, base, entries) {
 function fakeApi(town, base, head) {
   const posted = [];
   const status = { A: 'added', M: 'modified', D: 'removed' };
-  const files = git(town, ['diff', '--name-status', '--no-renames', base, head]).split('\n').filter(Boolean)
-    .map((l) => { const [s, filename] = l.split('\t'); return { filename, status: status[s[0]] ?? 'modified' }; });
+  // Renames as GitHub reports them: the new name, with the old one as previous_filename.
+  const files = git(town, ['diff', '--name-status', '-M', base, head]).split('\n').filter(Boolean)
+    .map((l) => {
+      const [s, a, b] = l.split('\t');
+      return s[0] === 'R' ? { filename: b, previous_filename: a, status: 'renamed' } : { filename: a, status: status[s[0]] ?? 'modified' };
+    });
   const server = createServer((req, res) => {
     let body = '';
     req.on('data', (c) => { body += c; });
@@ -139,6 +144,17 @@ test('a resident PR changing a project\'s data or prose goes to the office, with
     assert.equal(r.code, 0, r.stderr);
     assert.match(r.output, /^certified=false$/m, r.stdout);
     assert.deepEqual(r.labels, [], `${entries[0][0]} was labeled for a principal:\n${r.stdout}`);
+  }
+});
+
+test('a rename is read by both names: guarded code moved to a data name still waits for a principal', async () => {
+  // The flip for this one is witness.mjs reading f.filename alone: both renames then route without the label.
+  for (const [from, to] of [['PROJECTS/x/gen.mjs', 'PROJECTS/x/gen.json'], ['tools/README.md', 'WHITE_PAGES/alice/notes.md']]) {
+    const content = from.startsWith('tools/') ? readFileSync(join(TOOLS, 'README.md'), 'utf8') : 'console.log("drawn");\n';
+    const r = await check([[from, null], [to, content]]);
+    assert.equal(r.code, 0, r.stderr);
+    assert.match(r.output, /^certified=false$/m, r.stdout);
+    assert.deepEqual(r.labels, ['needs-principal'], `${from} renamed to ${to} was not labeled for a principal:\n${r.stdout}`);
   }
 });
 

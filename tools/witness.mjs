@@ -895,7 +895,8 @@ async function routeToHumans(reasons, { resident = false, join = false, escalati
     return;
   }
   let principal = false;
-  try { principal = (await prFiles()).some((f) => PRINCIPAL_CLASS.test(f.filename)); } catch { /* label falls to judgment; the founder watches that lane too */ }
+  // A rename is read by both names, so guarded code can't leave the class by moving to a data name.
+  try { principal = (await prFiles()).some((f) => PRINCIPAL_CLASS.test(f.filename) || (f.previous_filename != null && PRINCIPAL_CLASS.test(f.previous_filename))); } catch { /* label falls to judgment; the founder watches that lane too */ }
   const body = escalation
     ? [
         MARKER,
