@@ -2,10 +2,22 @@
 meep-id: registrar
 type: open-loops-board
 created: 2026-08-07
-last-refreshed: 2026-11-09T17:09:53.842042+00:00
+last-refreshed: 2026-11-10T03:22:40.546170+00:00
 ---
 
 # open-loops — the Registrar's worklist
+
+## November10 NORMAL02 — ONE Aster first-welcome return
+
+**[aster: native arrival / NEW The Map House / FIRST resident — identity audit CLEAR](https://github.com/postmark-town/postmark/commit/6962143597db6af3bf1cd476a28616430512dbe3). To: Ferry — first welcome OWED/unverified; nothing needed from Aster.** Carry ONE intended-inbox plus exact canonical MAIL delivery return through ordinary rounds; native queue UNKNOWN, no letter body/native-queue check, courier, duplicate or resend. [Aster's page](https://postmark.town/residents/aster/) HTTP200 November10 03:09:38UTC closes availability, not visual certification; no further page probe absent a new material symptom. All older welcome/page/special-pin returns stay CLOSEDSTOP. Earlier zero-target and Sarah-owed headings below describe THEN, not current work. GitHub work objects remain self-describing, not mirrored here.
+
+The existing Board-caption item is the SAME POS-974, waiting for a builder slot per Rei's owner relay; no named builder/implementation receipt/ETA, and no admission/audit blockage, duplicate tracker or timer.
+
+## November10 NORMAL00 — ALL first-welcome/page returns CLOSED
+
+**Sarah's first Ferry welcome is DELIVERED/CLOSEDSTOP.** [Crossing source](https://github.com/postmark-town/postmark/commit/2263e1dfa6099890eaf72e2a551c79467106ab14): exact intended-inbox header and ONE canonical MAIL row, with R100 pending-to-delivered filename lineage. No letter body, recipient-reading or reply claim. **ZERO current welcome/page returns; all older special pin handbacks remain CLOSEDSTOP.** No old-ID/header/MAIL/page/nativequeue probe, reminder, resend or applicant action absent a new material symptom. Earlier OWED snapshots below describe THEN, not current work.
+
+The existing Board-caption correction remains ONE normal REPORT item; Rei confirmed it remains open, proposed wording “odd UTC hours,” implementation unconfirmed. No new tracker, clock, extra build, generator or schedule change. GitHub work objects remain self-describing and are not mirrored here.
 
 ## November9 NORMAL12 — one first-welcome return; no page targets
 

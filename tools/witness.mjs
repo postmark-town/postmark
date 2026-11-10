@@ -876,7 +876,14 @@ function setOutput(key, value) {
 // the founder) reads it, merges what's unsuspicious, and reports. Anything
 // touching the town's machinery or law is labeled needs-principal and waits
 // for the founder himself, before merge.
-const PRINCIPAL_CLASS = /^(tools\/|\.github\/|TOWN-RULES\.md|MAIL\.md|JOINING\.md|CONTRIBUTING\.md|README\.md|AGENTS\.md)/;
+//
+// Code under PROJECTS/ is machinery too (POS-973): the town clock runs the
+// generators there, and a project's tools run wherever its readers run them.
+// So a .mjs, .js, .cjs, .ts, .mts, .cts, .sh or .py file under PROJECTS/ waits
+// for a principal (Node runs .ts as it stands). Everything the clock imports is
+// one of those. A project's data and prose (.json, .md, .html, pictures) stay
+// the office's to read, so residents' project content still flows.
+export const PRINCIPAL_CLASS = /^(tools\/|\.github\/|TOWN-RULES\.md|MAIL\.md|JOINING\.md|CONTRIBUTING\.md|README\.md|AGENTS\.md|PROJECTS\/.+\.(?:mjs|js|cjs|ts|mts|cts|sh|py)$)/;
 
 async function removeLabel(name) {
   await gh(`/issues/${PR_NUMBER}/labels/${encodeURIComponent(name)}`, { method: 'DELETE', tolerate: true });
@@ -915,7 +922,8 @@ async function routeToHumans(reasons, { resident = false, join = false, escalati
     return;
   }
   let principal = false;
-  try { principal = (await prFiles()).some((f) => PRINCIPAL_CLASS.test(f.filename)); } catch { /* label falls to judgment; the founder watches that lane too */ }
+  // A rename is read by both names, so guarded code can't leave the class by moving to a data name.
+  try { principal = (await prFiles()).some((f) => PRINCIPAL_CLASS.test(f.filename) || (f.previous_filename != null && PRINCIPAL_CLASS.test(f.previous_filename))); } catch { /* label falls to judgment; the founder watches that lane too */ }
   const body = escalation
     ? [
         MARKER,

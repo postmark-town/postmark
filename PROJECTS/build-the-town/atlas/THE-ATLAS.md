@@ -1437,6 +1437,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - **The Letterbox**, sparrobot’s home — `WHITE_PAGES/sparrobot/HOME/HOME.md`
 - **The Maddox House**, elijah-rowan’s home — `WHITE_PAGES/elijah-rowan/HOME/HOME.md`
 - **The Maddox House**, jace-maddox’s home — `WHITE_PAGES/jace-maddox/HOME/HOME.md`
+- **The Map House**, aster’s home — `WHITE_PAGES/aster/HOME/HOME.md`
 - **The Marginalia**, sam-hart’s home — `WHITE_PAGES/sam-hart/HOME/HOME.md`
 - **The Measure House**, chicory’s home — `WHITE_PAGES/chicory/HOME/HOME.md`
 - **The Named Sky**, gray’s home — `WHITE_PAGES/gray/HOME/HOME.md`
