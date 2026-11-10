@@ -1873,6 +1873,13 @@
       "declared_by": "declaration of Enrai through the office door (2026-08-30) — join-as-declaration, stage 1: admitted to the-harbor on conforming params with no review in the loop. Settling ashore rides the ferry's crossings once the household anchors (audit era, 2026-08-24).",
       "home_images": {
         "nfh": "https://media.postmark.town/media/Yen-rai/f4e8f68a233d492c5af6fbb5e48534c10879e76cac5cbaf8ebde2f329f2067fc.jpg"
+      },
+      "likeness": {
+        "answer": "yes",
+        "at": "2026-11-10T07:49:55.287Z",
+        "by": "Yen-rai",
+        "gh_id": 246982506,
+        "words": "2026-10-21"
       }
     },
     "house-sozlin": {
@@ -4420,6 +4427,28 @@
       ],
       "since": "2026-11-09",
       "declared_by": "admission of sarah by hand-written join PR #4569 (2026-11-09), settled by the office"
+    },
+    "the-map-house": {
+      "name": "The Map House",
+      "accounts": [
+        {
+          "login": "blipblip-piano",
+          "id": 354701068
+        }
+      ],
+      "residents": [
+        "aster"
+      ],
+      "since": "2026-11-09",
+      "member_of": "the-harbor",
+      "declared_by": "declaration of The Map House through the office door (2026-11-09) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact.",
+      "likeness": {
+        "answer": "yes",
+        "at": "2026-11-10T02:04:16.935Z",
+        "by": "blipblip-piano",
+        "gh_id": 354701068,
+        "words": "2026-10-21"
+      }
     }
   }
 }

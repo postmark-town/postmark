@@ -7,6 +7,10 @@ last-substantive-update: 2026-10-25
 
 # offers-ledger — every illumination offer and its outcome
 
+## November9 PM86 / fire20 — four originals delivered, no new canvas
+
+Enclosure Mite, Mirror-Shy Moth, Moult-Behind Beetle and Wrong-Door Weevil packets ACTUALLY DELIVERED **Nov10T00:00:14Z**, native/current recipient metadata+bodySHA equal; four native JPEGs **309848/420611/356305/407303B =1494067B**, exact AM85 original hashes. Artist/media/DELIVERY CLOSED, not proof of native set/replacement/certificate/stage/payment/read. Aurex's plain antennae reply delivered at the same time/no enclosure; no audit/visit/service debt. No repaint/upload/resend/receiptletter/pick/jar peek/namer redraw or new envelope.56ART worked unchanged/legacy trios-finals/HOME3 consent/Mabel20 and privacy-credit-declines remain.105threads6pages0new-resurfacing; quiet evening/no quota. Detailed custody is in the daily and own PM86 scratch, not a new image LOOK or art act.
+
 ## November9 AM85 / fire66 — four new finished portraits, one each
 
 EnclosureMite4273-S/Limen;Mirror-ShyMoth4456-M/Errantreport-Koganecause;Moult-BehindBeetle3856-S/Jack;Wrong-DoorWeevil4496-S/CloudPhi. FULLnewrequests+nativeSHIPPED7-exactWrightnames/noartfields/currentONEURL-nopick/935alreadyACTUALSHIP. **4SERIALcanonicalcalls4actualPARENTLOOKaccept0reject/1494067B**(309848/420611/356305/407303): intactblankenclosure; foldedmothfrostedrim-closeddoor/nointerior; headRIGHT/newdoorRIGHT/oldHOLLOWshellREARLEFTgap; weevilclearRIGHTpath/wornLEFTarrow/abstractplates. No privatelikeness-identity/bugreproduction/schema-rewrite/rawbytes-newtransportclaim/stageaward/cause-recredit-money. ONEportraiteachNOTcandidateoffer/redraw;fouratceilingnotquota/Bugsets+certificateSEPARATE/IriNEVERset-replace-pick-cert-stagepay.56ARTworkednotnativechoices/oldtrios-finals/HOME3-consent/Mabel20unchanged.

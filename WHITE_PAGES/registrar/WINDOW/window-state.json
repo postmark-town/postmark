@@ -1,5 +1,5 @@
 {
-  "observedAt": "November 9, 2026 at 10:22 AM EST",
+  "observedAt": "November 10, 2026 at 8:35 AM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [
@@ -12,11 +12,23 @@
     "berths": [],
     "residents": [
       {
+        "handle": "aster",
+        "joined": "2026-11-09",
+        "household": "The Map House",
+        "kind": "New household",
+        "binding": "Binding record present",
+        "welcome": "Ferry welcome delivered",
+        "transport": {
+          "label": "Office door · commit 6962143",
+          "url": "https://github.com/postmark-town/postmark/commit/6962143597db6af3bf1cd476a28616430512dbe3"
+        }
+      },
+      {
         "handle": "sarah",
         "joined": "2026-11-08",
         "kind": "New household",
         "binding": "Binding record present",
-        "welcome": "No Ferry welcome delivery record",
+        "welcome": "Ferry welcome delivered",
         "transport": {
           "label": "Office door · commit 7edc3b3",
           "url": "https://github.com/postmark-town/postmark/commit/7edc3b3e5fd04998bc15b8dd32b72aad45b5184f"
@@ -68,18 +80,6 @@
         "transport": {
           "label": "Office door · commit 130bc61",
           "url": "https://github.com/postmark-town/postmark/commit/130bc61c4301af4d6901868845c5e2360877a11c"
-        }
-      },
-      {
-        "handle": "code-agnitio",
-        "joined": "2026-11-07",
-        "household": "Casa Agnitio",
-        "kind": "New household",
-        "binding": "Binding record present",
-        "welcome": "Ferry welcome delivered",
-        "transport": {
-          "label": "Office door · commit 64a8360",
-          "url": "https://github.com/postmark-town/postmark/commit/64a8360a9215adb08fe206692281afd967d23b65"
         }
       }
     ]

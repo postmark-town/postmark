@@ -18,7 +18,14 @@ concurrency:
   cancel-in-progress: false
 
 permissions:
-  contents: write
+  contents: read
+
+# LEAST PRIVILEGE (POS-973). The generators below are code under PROJECTS/, so
+# they run with a read-only token and a checkout that keeps no credential. Each
+# hands its change to a commit job as a patch, and only the commit jobs, which
+# run no project code, hold contents: write. A commit job applies its own
+# paths only, as plain files, or refuses. The ferry is the town's own tools/
+# and keeps its write as before.
 
 # FORK GUARD (2026-07-05, diagnosed by sage-reeves, carried by Ferry): every
 # job below runs ONLY in the town's own repository. Without the guard, the
@@ -63,6 +70,8 @@ jobs:
     # are disabled; G:/Starstory/tools/commons-ferry.mjs is second-tier
     # break-glass behind this one.)
     if: github.repository == 'postmark-town/postmark' && github.event_name == 'workflow_dispatch' && inputs.run_ferry
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -87,21 +96,21 @@ jobs:
     needs: ferry
     if: always() && github.repository == 'postmark-town/postmark'
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    outputs:
+      changed: ${{ steps.handover.outputs.changed }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          persist-credentials: false
 
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: 24
-
-      - name: Configure git identity
-        run: |
-          git config user.name "town-clock[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Grow and render herbarium
         working-directory: PROJECTS/the-resident-herbarium
@@ -109,14 +118,61 @@ jobs:
           node grow.mjs
           node render.mjs
 
-      - name: Commit and push if changed
+      - name: Hand the change over as a patch
+        id: handover
         working-directory: PROJECTS/the-resident-herbarium
         run: |
           if git diff --quiet -- specimens.json herbarium.html; then
             echo "herbarium: no change"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git add specimens.json herbarium.html
+          git diff --cached --binary > "$RUNNER_TEMP/herbarium.patch"
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Upload the patch
+        if: steps.handover.outputs.changed == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: herbarium-patch
+          path: ${{ runner.temp }}/herbarium.patch
+          if-no-files-found: error
+          retention-days: 1
+
+  herbarium-commit:
+    name: herbarium commit
+    needs: herbarium
+    if: always() && github.repository == 'postmark-town/postmark' && needs.herbarium.result == 'success' && needs.herbarium.outputs.changed == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Download the patch
+        uses: actions/download-artifact@v4
+        with:
+          name: herbarium-patch
+          path: ${{ runner.temp }}/handover
+
+      - name: Configure git identity
+        run: |
+          git config user.name "town-clock[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Apply, commit and push
+        run: |
+          git apply --index "$RUNNER_TEMP/handover/herbarium.patch"
+          # The herbarium pair only, as plain files; anything else is refused.
+          bad=$(git diff --cached --raw --no-renames | awk -F'\t' '{ split($1, m, " "); if ((m[2] != "100644" && m[2] != "000000") || ($2 != "PROJECTS/the-resident-herbarium/specimens.json" && $2 != "PROJECTS/the-resident-herbarium/herbarium.html")) print $2 }')
+          if [ -n "$bad" ]; then
+            echo "herbarium: the patch reaches past the herbarium pair, refused: $bad"
+            exit 1
+          fi
           git commit -m "town-clock: herbarium regrow"
           if ! git push; then
             git pull --rebase
@@ -131,24 +187,24 @@ jobs:
   # shrinks stragglers on the PR branch pre-merge (postmaster-round.md).
   atlas:
     name: atlas
-    needs: herbarium
+    needs: herbarium-commit
     if: always() && github.repository == 'postmark-town/postmark'
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    outputs:
+      changed: ${{ steps.handover.outputs.changed }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          persist-credentials: false
 
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: 24
-
-      - name: Configure git identity
-        run: |
-          git config user.name "town-clock[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Build atlas + white-pages index
         run: |
@@ -164,13 +220,67 @@ jobs:
       # printed file, which the store never heard of, and reordered it
       # (518c536a8). tools/pin-github-ids.mjs stays for a founder's hand.
 
-      - name: Commit and push if changed
+      - name: Hand the change over as a patch
+        id: handover
         run: |
-          if git diff --quiet -- PROJECTS/build-the-town/atlas/ WHITE_PAGES/INDEX.md; then
+          # The atlas job's outputs, named exactly: town-atlas.mjs writes the first
+          # three, render-town.mjs the two pages, whitepages-index.mjs the index. The
+          # generators share the atlas folder and are never handed over. The commit
+          # job accepts this same list and nothing else.
+          outputs="PROJECTS/build-the-town/atlas/town.json PROJECTS/build-the-town/atlas/THE-ATLAS.md PROJECTS/build-the-town/atlas/REGIONS.md PROJECTS/build-the-town/atlas/town.html PROJECTS/build-the-town/atlas/ground.html WHITE_PAGES/INDEX.md"
+          if git diff --quiet -- $outputs; then
             echo "atlas: no change"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          git add PROJECTS/build-the-town/atlas/ WHITE_PAGES/INDEX.md
+          git add $outputs
+          git diff --cached --binary > "$RUNNER_TEMP/atlas.patch"
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Upload the patch
+        if: steps.handover.outputs.changed == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: atlas-patch
+          path: ${{ runner.temp }}/atlas.patch
+          if-no-files-found: error
+          retention-days: 1
+
+  atlas-commit:
+    name: atlas commit
+    needs: atlas
+    if: always() && github.repository == 'postmark-town/postmark' && needs.atlas.result == 'success' && needs.atlas.outputs.changed == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Download the patch
+        uses: actions/download-artifact@v4
+        with:
+          name: atlas-patch
+          path: ${{ runner.temp }}/handover
+
+      - name: Configure git identity
+        run: |
+          git config user.name "town-clock[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Apply, commit and push
+        run: |
+          git apply --index "$RUNNER_TEMP/handover/atlas.patch"
+          # The atlas job's outputs only, named exactly as the handover names them, as
+          # plain files; anything else is refused, the generators beside them included.
+          outputs="PROJECTS/build-the-town/atlas/town.json PROJECTS/build-the-town/atlas/THE-ATLAS.md PROJECTS/build-the-town/atlas/REGIONS.md PROJECTS/build-the-town/atlas/town.html PROJECTS/build-the-town/atlas/ground.html WHITE_PAGES/INDEX.md"
+          bad=$(git diff --cached --raw --no-renames | awk -F'\t' -v ok="$outputs" 'BEGIN { n = split(ok, o, " "); for (i = 1; i <= n; i++) allowed[o[i]] = 1 } { split($1, m, " "); if ((m[2] != "100644" && m[2] != "000000") || !($2 in allowed)) print $2 }')
+          if [ -n "$bad" ]; then
+            echo "atlas: the patch reaches past the atlas outputs, refused: $bad"
+            exit 1
+          fi
           git commit -m "town-clock: atlas refresh"
           if ! git push; then
             git pull --rebase
