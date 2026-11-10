@@ -219,6 +219,72 @@ test('ballot-pass: malformed ballot gets a fix-it receipt, no stake, deduped by 
   rmSync(repo, { recursive: true, force: true });
 });
 
+// ── POS-983: choices join while staking runs; the count is raw, households break a tie ──
+
+// wright+rei one household (pinned to one GitHub id), dot and ada each their own
+function fourTown(pub, priv) {
+  const lines = [];
+  for (let i = 1; i <= 8; i++) lines.push(D('2026-06-12', `w-${i}`, 'wright', `f-${i}`));
+  for (let i = 1; i <= 8; i++) lines.push(D('2026-06-13', `r-${i}`, 'rei', `f-${i}`));
+  for (let i = 1; i <= 8; i++) lines.push(D('2026-06-14', `d-${i}`, 'dot', `g-${i}`));
+  for (let i = 1; i <= 8; i++) lines.push(D('2026-06-15', `a-${i}`, 'ada', `g-${i}`));
+  const repo = town({ ledgerLines: lines, pins: { wright: { login: 'k', id: 7 }, rei: { login: 'k', id: 7 } } });
+  writeFileSync(join(repo, 'tools', 'stamp-pubkey.pem'), pub);
+  mintPass(repo, priv);
+  declareV2(repo, priv, '2026-06-20', ['meepy']);
+  return repo;
+}
+const stake = (repo, priv, handle, candidate, n) =>
+  clipApply(repo, { handle, topic: 'hearth', candidate, n, via: 'api', date: '2026-06-21' }, priv);
+
+test('POS-983: a choice joins while staking runs — old stakes stand and verify; a choice taken away turns the verifier red', () => {
+  const { pub, priv } = keypair();
+  const repo = fourTown(pub, priv);
+  ballotJson(repo, 'hearth', { topic: 'hearth', status: 'staking', cap_per_household_per_candidate: 20, candidates: ['lumen', 'brightwork'] });
+  assert.equal(stake(repo, priv, 'wright', 'lumen', 3).applied, 3);
+  assert.equal(stake(repo, priv, 'dot', 'brightwork', 2).applied, 2);
+  // a choice is not stakeable before it joins
+  assert.throws(() => stake(repo, priv, 'ada', 'vela', 1), (e) => e.code === 422);
+
+  // it joins at the end, with its words beside the names; the engine reads only the names
+  ballotJson(repo, 'hearth', { topic: 'hearth', status: 'staking', cap_per_household_per_candidate: 20,
+    candidates: ['lumen', 'brightwork', 'vela'],
+    choices: { vela: { credit: 'ada', link: 'https://example.invalid/vela', note: 'a quiet one', added: '2026-06-21' } } });
+  assert.equal(stake(repo, priv, 'ada', 'vela', 4).applied, 4);
+  assert.equal(verifyStampLedger(repo).ok, true, 'the stakes before the join and after it verify against the file as it stands');
+  const t = tally(repo, 'hearth');
+  assert.deepEqual(t.candidates.map((c) => [c.candidate, c.staked, c.backing_households]), [['vela', 4, 1], ['lumen', 3, 1], ['brightwork', 2, 1]]);
+
+  // taking a staked choice away is what the office refuses (ballots.mjs § judgeTermsMove): the verifier reds it
+  ballotJson(repo, 'hearth', { topic: 'hearth', status: 'staking', cap_per_household_per_candidate: 20, candidates: ['brightwork', 'vela'] });
+  const v = verifyStampLedger(repo);
+  assert.equal(v.ok, false);
+  assert.ok(v.problems.some((p) => /lumen/.test(p)), v.problems.join('\n'));
+  rmSync(repo, { recursive: true, force: true });
+});
+
+test('POS-983: the count is raw stamps (never weighted by breadth), and more backing households breaks a tie', () => {
+  const { pub, priv } = keypair();
+  const repo = fourTown(pub, priv);
+  ballotJson(repo, 'hearth', { topic: 'hearth', status: 'staking', cap_per_household_per_candidate: 20,
+    candidates: ['narrow', 'broad', 'tied-one', 'tied-two'] });
+  // narrow: 6 raw from ONE household (wright 4 + rei 2, one house); broad: 5 raw from TWO (dot 3, ada 2).
+  // A breadth-weighted count would put broad first; the ruled count is raw, so narrow leads.
+  stake(repo, priv, 'wright', 'narrow', 4); stake(repo, priv, 'rei', 'narrow', 2);
+  stake(repo, priv, 'dot', 'broad', 3); stake(repo, priv, 'ada', 'broad', 2);
+  // tied-one and tied-two: 2 raw each; tied-two from two households, listed second in the file, leads the tie
+  stake(repo, priv, 'wright', 'tied-one', 2);
+  stake(repo, priv, 'dot', 'tied-two', 1); stake(repo, priv, 'ada', 'tied-two', 1);
+  assert.equal(verifyStampLedger(repo).ok, true);
+  const t = tally(repo, 'hearth');
+  assert.deepEqual(t.candidates.map((c) => [c.candidate, c.staked, c.backing_households]),
+    [['narrow', 6, 1], ['broad', 5, 2], ['tied-two', 2, 2], ['tied-one', 2, 1]]);
+  const narrow = t.candidates[0];
+  assert.deepEqual(narrow.households.map((h) => [h.applied, Object.keys(h.handles).sort()]), [[6, ['rei', 'wright']]],
+    'two residents of one engine household are one backing household');
+  rmSync(repo, { recursive: true, force: true });
+});
+
 test('listBallots finds declared topics', () => {
   const { pub, priv } = keypair();
   const repo = stakingTown(pub, priv, 12);
