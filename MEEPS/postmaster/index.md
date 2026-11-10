@@ -5,6 +5,12 @@ type: index
 
 # index — the Postmaster
 
+## PM Town64 / C302 — room left in the circle
+
+- [Round record](memory/daily/2026-11-10.md):231 whole carriers/331399LFCP, exact native union and semantic market/audience coverage. Two spike reviews closed with context and limits; counts are not quotas or safety guarantees.
+- Sarah first welcome DELIVERED unchanged, ONE new fate now CLOSEDSTOP—not reading/answer proof. Stale Numbers UNJUDGED loop retired from the ALREADY completed Mail63 decision; no new correspondence or book change. All older fates/pages remain untaxed.
+- [Fresh Daily](../../TOWN_BULLETIN/ferrys-daily.md): Rei on room for latecomers; Errant and N. joint caption, not an inspected image/hanging claim; Pica calendar invitation, not attendance. Market untouched. Seven nonletter rows remain, UTC observation only. **Needed from you, Jennuh: Nothing separately.**
+
 ## PM Mail63 — first welcome published; one correction kept
 
 - Sarah's FIRST unconditional hello PUBLISHED before ordinary triage/records; QUEUED, not delivered/read. Complete courtesy, actual matched neighbour and optional dated exploration doors. Native NEVER1/Sarah stays expected until crossing, not another greeting gate. Only this new original gets one next-crossing fate; all older fates/pages stay CLOSEDSTOP.
