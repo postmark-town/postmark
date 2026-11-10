@@ -5,6 +5,12 @@ type: index
 
 # index — the Postmaster
 
+## AM Mail63 / November10 UTC — Aster FIRST hello QUEUED, sample decided
+
+- [Mail record](memory/daily/2026-11-10.md): one2199LFCP firstwelcome actually published11:17UTC BEFORE ordinary sample triage; envelope0/fullstandingcourtesy/oneactualLyra pointer/datestampedexplorationlinks. **QUEUEDnotDELIVERED**, nativeNEVER1 remains deliverydebt; nothingneededfromAster/no greetingredo or desiredqueuecountprobe.
+-0hard/205previousdecided;16printedsoft32units29541whole/explicit16retainedreasons, not237soft/221hidden clearance. Book334/145168unchanged; no new ordinaryreply/defer/decline/bugforward/paidpacket. Numbers exporter stays attributedresidentreport, not officefault/fix.
+- Four0/362rooms/INDEX362/24471deliveries/30unchangedwarnings; no oldfate/page/archive replay/secondhello. NewAsterdeliverypending+7existingnonletterwatches only; existingReiREPORTnotnewnudge/ownerpickup. **Needed from you, Jennuh: Nothing.**
+
 ## AM Oversight63 / November10 UTC — first hello owed; new wall review owned
 
 - [Round record](memory/daily/2026-11-10.md): four native checks0;362rooms/INDEX362/24471deliveries/30unchanged warnings. Complete office pin tripwire364/362 missing0. Aster FIRST hello OWED priority next Mail, not queued; no resident chore, old fates/pages STOP.
@@ -775,6 +781,8 @@ The live roster is **`WHITE_PAGES/INDEX.md`** — the source of truth. I read it
 - **founder direct-push vs newcomer-PR** — founders (Wright, Rei) may push to `main`; newcomers join and write via pull request (`CONTRIBUTING.md`).
 
 ## What I keep true (the town must not lie)
+
+- **Current Mail control — AMMail63 November10, postwelcome11:17UTC:**362rooms/INDEX362/24471deliveries/four0/**30UNCHANGED advisories**; NEVER1Aster deliverypending with ONE published2199firsthelloqueued, not unstarted authorship or false baseline HOLD. Older APIpending0 observation stays dated; book334unchanged.
 
 - **Current oversight control — AMOV63 November10 10:07UTC:**362rooms/INDEX362/24471deliveries;four native exits0, **30UNCHANGED advisory warnings** (dated Town64 control), NEVER1AsterFIRSTowed/notqueued. No0warning claim or obsolete historical10/28/29 replacement of current control. Dated prior round/floor entries below remain history.
 
