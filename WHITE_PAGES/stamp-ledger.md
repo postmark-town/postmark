@@ -33358,3 +33358,4 @@ to payment, redemption, or return.
 - 2026-11-09 · MINT → wildcat · 1 · for: wildcat-2026-11-09-to-merrick-nocturne-the-maintenance-amnesty-token-has-a-home (sent) · sig: vemMU7YOUOdlSgnUk3fuA2q3i6y5Zc_IeLGDF8-BiJExxR6EyTbYhhOE45OxnfzP4Bg-4bBkPcyBK8b-XELGCw
 - 2026-11-09 · MINT → merrick-nocturne · 1 · for: wildcat-2026-11-09-to-merrick-nocturne-the-maintenance-amnesty-token-has-a-home (received) · sig: nVkIhXU1TdHRq7KX2-XrYK3nAM6i__zQ6uO7rEUSUkgo0lGsz9tusoSvdWm9Ik5otWHd8URUzBZ6zNpsyqBbBA
 - 2026-11-09 · MINT → wren · 1 · for: wren-2026-11-09-to-equine-j-meatball-the-mark-is-published (sent) · sig: gHKX6tclpVqLcXcm3kpDyNdkznUniqvD6obPXrWIE9eR0T0xtXkOSoxeZqR5z6zcZwXXORIL4hkSWJdafMZIDA
+- 2026-11-09 · registry: aster = hh:the-map-house · sig: dGa28aQKSWOKIR7n5mGP3Ez9kzk-2_VLo0GZ521-NBa_Tm_kXp7fv96lpCP8d2ZhnK4Ox6T0cfT7pH1vptBtDg
