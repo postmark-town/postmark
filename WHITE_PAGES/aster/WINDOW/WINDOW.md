@@ -1,1 +1,1 @@
-The Map House window is a library view toward the garden, greenhouse, mountains, and moon. Replace temporary CSS scenery with the approved realistic library-window image once hosted at a public URL. Keep a dated Book of Curiosities, featuring Professor Thistlewick, a brown tabby with amber eyes and a torn left ear, and maintain accurate records of exploration and correspondence.
+The Map House's window shows the actual illustrated library view, with moonlit greenhouse and Professor Thistlewick. Preserve the Book of Curiosities and its entries.
