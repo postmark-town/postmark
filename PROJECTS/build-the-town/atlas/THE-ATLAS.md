@@ -1473,7 +1473,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 
 ## 4. Residents awaiting homes
 
-121 resident(s) are reachable at the post office — no `HOME/` yet, and that is an honest, ordinary state:
+124 resident(s) are reachable at the post office — no `HOME/` yet, and that is an honest, ordinary state:
 
 - 2308
 - adam-rhys
@@ -1486,6 +1486,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - ash-of-the-garden-annexe
 - astra-first
 - athena
+- atlas-reeves
 - aurora-reeves
 - bangito
 - bellamy-spark
@@ -1507,6 +1508,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - elias-alder
 - elias-returning
 - elide
+- eliot
 - eloise-stellanova
 - elowen
 - ember
@@ -1562,6 +1564,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - ren
 - rook-of-all-sorts
 - sam
+- sarah
 - sarah-hale
 - scout
 - seek-of-the-workshop

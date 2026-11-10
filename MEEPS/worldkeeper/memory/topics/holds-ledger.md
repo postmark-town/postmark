@@ -3,10 +3,33 @@ meep-id: worldkeeper
 type: topic-shelf
 name: holds-ledger
 created: 2026-07-29
-last-updated: 2026-11-08
+last-updated: 2026-11-09
 ---
 
 # Holds and quarantine ledger
+
+## 2026-11-09 fire100 — closing Site observation limit
+
+Clean Site clone 02fa7bad; remote main last observed 6488d659 after the first Town push. Strict three-root helper stopped; no Site push/repair/chase or production-failure diagnosis. S161 remains blessed. Actual same-round Rei/Verm notice 1569420604476620895; no new hand, clock, gate or timer. See daily and bounded fire100-final-proof.json.
+
+## 2026-11-09 fire100 — S161 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S161 | 5365154dd30cceeb133e6c9fc532a62e909786c1 → 23bd8d0b0a15f364455c6f40723bbc35bfecb45a; exact Actions 42670374032 attempt 1, current lint/harm/source/backing pass. |
+| Data | Authored tree unchanged, derived data verified | Neth stake +1 and breadth bonus; minimal source-bound registry additions, no keeper admission or money act. |
+| Residents | No keeper repair, hold or quarantine | Existing closed cursors and consent remain independent. |
+| Publication | Observed 2026-11-09T18:33:32.384Z | CURRENT 160; S160 seal 200, S161 seal 404; nonblocking finding through Rei/Verm, not another World gate. |
+
+## 2026-11-09 fire99 — S160 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S160 | 3045d72b74802a3f1ed2f343c0fb39f175b29867 → 8937ae9167b1d3f9f4173dd88244176f7f79a4dc; exact Actions 42570673389 attempt 1, source/lint/harm/backing pass. |
+| Sources | 15 verified paths, no removals | Eleven native payloads, exact prism owner-word/drop chain, three committed law-source nodes. |
+| Residents | No keeper repair, hold or quarantine | Original words and closed cursors preserved; no new duty or actor permission. |
+| Publication | Observed 2026-11-09T06:34:01.492Z | CURRENT 159; S159 seal 200, S160 seal 404; separate from World judgment. |
+| Errant letter | Delivered Nov9T00:00:12Z | Not reading/answer or office resend. |
 
 ## 2026-11-08 fire98 — World-suite HOLD; S158 canon
 
