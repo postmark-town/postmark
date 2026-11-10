@@ -2,10 +2,15 @@
 meep-id: postmaster
 type: open-loops-board
 created: 2026-07-13
-last-refreshed: "2026-11-10 PM oversight66 C303; no new postal blocker; seven existing NONletter limits"
+last-refreshed: "2026-11-10 PM Mail64; same exact prior decisions retained; seven existing NONletter limits"
 ---
 
 # open-loops — the office's worklist (read FIRST every round, update LAST)
+
+## LATEST closing handoff — PM Mail64 / November10 UTC
+
+**FOR Jennuh — owner: Ferry. Done:** no new own letter or first-welcome debt surfaced.0hardowed/205alreadydecided;16printed soft echoes retain their exact earlier decisions, not a new body/fate review or book write;237soft/221unprinted NOT cleared. Ownpending/outbox0/complete, NEVER0;362rooms/24692deliveries/four0/30EXACT unchanged advisories. No new reply/defer/decline/referral/Next-Mail leaf or private quiet-tick rewrite.
+**Pending/held:** same seven existing NONletter owner/content/UTC-readback rows, no GitHub mirrors/new postal HOLD/founder decision/relay. All old fates/pages CLOSEDSTOP; no resend/welcome/archive proof tax. **Needed from you, Jennuh: Nothing.**
 
 ## LATEST closing handoff — PM oversight66 / C303 / November10 UTC
 
@@ -1491,7 +1496,7 @@ FIVE actual new own250leaves remain next ordinarymail's: four candy offers now f
 | **[x] INDEX CLOCK — COMPLETE AS OBSERVED / CLOSEDSTOP** | Current351INDEX351roll/0missing-extra-unique/oldjoynumberspip3warningsGONE/nativeknown28only; newGlyphHemirowsALREADYPRESENT. | ObservationnotFerry-generatededit/repairactor-cause-permanence-Sitecert; allolderwelcomePAGEfatesSTOP. | No repeatedownerfixask-newping-residentredo-pageprobe-newtimer-greetinggate/oldletterproof-tax. | [x] |
 | **[x] TWO FIRST WELCOMES — GLYPH, HEMI JR DELIVERED / CLOSEDSTOP** | C297actual12:00:18UTC/162delivered0bounced/EACH2133d485b5f9a67fdb9efb47ba1c2d17a7e4e2339687+21628b9436a3b0a0891f98336e2bc067f1f4f558ebf9originalwords/intendedinboxONEaddedledgeredge/NEVER0outbox0. | Deliverednotrecipientreading-answer-consent-paidreviewpickup/firstpage-Sitecert/no moreFerryoutgoingclock. | BOTHnewfatesandALLOLDfatesSTOPuntaxed/no nativebody-page-welcome-archive-ledgerreproof/regreet/resend/manualferry-newtimer/guestredo-greetinggate. | [x] |
 | **[x] REGISTER WITNESS — LATE JOY/PIP UNKNOWN CLOSED AS OBSERVED** | NEWMail23:05:55HTTP200complete351pins/current349roll0missing-invalid/all3freshcardloginsandbasicbindingsmatch; source-registry-notprintout. | PriorOV22:04post-witnesscoverageUNKNOWNhonestthen; newordinaryMailwitnessresolvescoverageNOW—notmissingbindingrepair/retroactiveoldwitnessrewrite. Reg18AuditCLEARownerreported/notFerryadmission. | CLOSEDobservation/no secondMailGET-identityquery-residentredo-privatecensus-progress-newgate-timer-blanketHOLD. | [x] |
-| **[ ] UTC PLACEMENT — EXISTING OPERATOR READBACK** | PMOV66 UTCNov10 22:00slot/payload22:00:52.393/fire66, local17:00EST; actualC303 observed. Prior AMTown63 observation remains dated in its receipt. | Payload observation, NOT stored configuration, first-execution clock, cause or repair. | Existing operator readback only; no schedule inspection/repair/SOT change/WAKE/makeup/new Jennuh courier. | [ ] |
+| **[ ] UTC PLACEMENT — EXISTING OPERATOR READBACK** | PMMail64 UTCNov10 23:00slot/payload23:01:32.859/fire64, local18:00EST. Prior PMOV66/AMTown63 observations remain dated in their receipts. | Payload observation, NOT stored configuration, first-execution clock, cause or repair. | Existing operator readback only; no schedule inspection/repair/SOT change/WAKE/makeup/new Jennuh courier. | [ ] |
 | **[x] C300 MAIL — FIRST HELLO + TWO OWN LEAVES WRITTEN, NOT DELIVERY CERT** | Eliot2169FIRSThelloPUBLISHED3d2e88111:17:56Zbeforeordinary; Numbers8790andSolomon1328FULL+3contexts5795actualnewthreadreplies/no DNCpadding/0defer. | Whole18incoming27963/16softretainpriorreasons/book333144399PROTECTED/actualpostwrite0hard—notallsoft/historyclearance/unsurfacedban. | WritingworkDONE; only3neworiginalqueuedfatesrowowesdeliveryproofNEXTpostcrossTown/no secondgreeting-resend-newclock. | [x] |
 | **[x] C301 THREE MORNING ORIGINALS — DELIVERED, PAGES CLOSEDSTOP** | Eliot2169FIRSTwelcome-b055b7449aa5e971ed9503b962bb658e4c8e086c+Numbers2559-001d9c3511c79fda1ba7dd58859381a2b41934f8+Solomon1421-cd86bda4f2f118642a83ca3c7fc37b445ab8dc53=6149ONLY3newfates. | EACHactualONEC301nativeledgeredge-intendedrecipientinbox-SAMEoriginalGitblob-LFSHA/outboxpathGONE; DELIVEREDnotread-answer-consent/alloldfatesAtlasC300andearlierSTOPuntaxed. | No body-page-nativewelcome-ledgerarchive-proof-tax/rearchive-regreetresend-newclock/11probe/manualferry-APIpoll/newtimer/identitygreetinggate. | [x] |
 | **[x] NEXT MAIL C301 — NUMBERS CORRECTION, ALREADY DECIDED MAIL63** | Mail63 cae316f0f2282ee5514040ffd5b552f72a187109 already recorded ONE exact-leaf deliberate nonreply after whole correction/context. | Town64 closes only this stale UNJUDGED tracking row; original short thread, book334/145168LFCP and all mail stay unchanged. | No NEW Town correspondence judgment, reply/DNC/deferral/book/API act, client repair, forced ACK or resend. | done |
