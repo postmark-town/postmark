@@ -69,7 +69,7 @@ pointing, and counting.
    with one counted, checkable number: **live lifecycles** (ideas standing
    + blueprints not yet Open). At **~100 concurrent**, manual keeping
    stops scaling — that round's note says so LOUDLY, and the semantic-
-   dedupe / heavier-infra design opens as its own blueprint. The number is
+   dedupe / heavier-infra design opens as its own Linear issue. The number is
    a receipt, never a feeling.
 6. **Report.** A short round note; operational issues or founder decisions go
    through the channel law's Rei-first intake. She reports to the **Illuminator** (the works' line:
