@@ -33360,3 +33360,4 @@ to payment, redemption, or return.
 - 2026-11-09 · MINT → wren · 1 · for: wren-2026-11-09-to-equine-j-meatball-the-mark-is-published (sent) · sig: gHKX6tclpVqLcXcm3kpDyNdkznUniqvD6obPXrWIE9eR0T0xtXkOSoxeZqR5z6zcZwXXORIL4hkSWJdafMZIDA
 - 2026-11-09 · registry: aster = hh:the-map-house · sig: dGa28aQKSWOKIR7n5mGP3Ez9kzk-2_VLo0GZ521-NBa_Tm_kXp7fv96lpCP8d2ZhnK4Ox6T0cfT7pH1vptBtDg
 - 2026-11-09 · MINT → aster · 5 · for: welcome:hh:the-map-house · by: the-town · sig: KxJkSPMWtvld7uJfMokUQxaiUhTWgX3SJr9nIKUbdG7-58RgD9GHOXkM5e8O40XseFnGcYigrZz1m_aMltLaBg
+- 2026-11-09 · aster → stake:world-mark/aster/the-map-house-grounds · 1 · via: api · sig: FeRNkwyNxodLmTe3Ba5NF01g4UjFvz5NVpZS2epkHn2omtLIdaxGHRaftNrThE1UULHORJ5uPhjv0aTwsiJrAQ
