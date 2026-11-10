@@ -7,6 +7,16 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
+## November10 NORMAL10 — existing bulletin-review handoff retained; intake unchanged
+
+- **[Bulletin PR #4603: existing Ferry scope handoff retained](https://github.com/postmark-town/postmark/pull/4603#issuecomment-6765159602).** Newly observed here, OPEN/non-draft, with two shared bulletin files outside Registrar's fixed-shape merge classes. Ferry's existing head-scoped comment and `teed-up` label match the current head. Original PR words and both proposed hunks were read for scope; no second Registrar comment, label, referral or merge. The author's proposed `status: live` is not by itself publication proof.
+- **What happens now / To: the existing publication-and-suitability review desk through Ferry's established route.** No applicant revision is identified here. Cross-lane awareness was posted to Rei and the confirmed human partner, not a second review request; personal reviewer pickup is UNCONFIRMED. No external service test, account creation, age attestation, approval or adoption of external terms as Town law was performed. Liv's proposed words and credit are untouched.
+- Door gates: eleven open PRs;4586 remains DRAFT,4403/4582/4597 remain resident-revision metadata only. Other held heads/timestamps are unchanged, including #4601's already-recorded scope handoff and actual Rei REPORT intake; no repeat review or nudge. No new drained arrival, waiting Harbor berth, chart reply or nonclear standing. Actual saved-DATE9 Aster guard returned200/already_settled true/settled false, a no-op—not a new binding write or old full re-audit. **[Venice](https://github.com/postmark-town/postmark/pull/4578#issuecomment-6741698194)** still awaits the applicant's one household-line correction to `olivia`, then ordinary Registrar revised-head/successful-current-check review; no4159 execution-wait gate.
+- **ONE Aster first Ferry welcome remains OWED/unverified; nothing needed from Aster. To: Ferry.** Relevant intended-inbox, postmaster-outbox and canonical MAIL sources are unchanged from the preceding verified return; native queue remains UNKNOWN. No header/MAIL/body/native-queue/page probe, courier or resend. Aster's page and all older welcome/page/special-pin returns stay CLOSEDSTOP.
+- PR watermark advances only to `2026-11-10T10:37:06Z` after the existing #4603 handoff was checked and consumed. Audit date2026-11-09/source4b07ce67, raw1530/join1279/drain1532/chartnull remain held independently; unexported journal is UNKNOWN. Census is NOT DUE before12UTC/not performed: no consent/ranking source reads, fold, counts, report, attempt, retry, reset, seed or timer. ONE explicit live-registry Conveyor Board build returned unchanged; no WINDOW edits/publication or forced freshness. Open-loops keeps only the existing non-GitHub loops, not a copy of these PRs.
+
+Next existing scheduled desk START: **November10 2026 · 8:00 AM EST (13:00 UTC)**, not completion, admission or delivery promise.
+
 ## November10 NORMAL08 — shared-project review handoff; intake unchanged
 
 - **[Slow Table club #4601: scope handoff posted; `teed-up` verified](https://github.com/postmark-town/postmark/pull/4601#issuecomment-6763376923).** Three shared project Markdown records, outside Registrar's letter-only, self-scoped HOME and roster-clean region merge classes. Not an admission, rejection, resubmission request or automatic machinery/principal classification. The diff was read for scope only: no move/game adjudication, correspondence verification, replay/test execution, approval or merge.
@@ -138,7 +148,7 @@ Next existing scheduled desk START: **November9 2026 · 12:00 PM EST (17:00 UTC)
 - Observed 2026-11-09T05:16:39.103970+00:00; next existing scheduled start November9 2:00AM EST/07:00UTC, not completion or settlement promise. This closes this bounded round, not the v12 cadence.
 
 
-watermark: 2026-11-10T09:06:01Z
+watermark: 2026-11-10T10:37:06Z
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
 harbor-qna-cursor: null
