@@ -77,6 +77,20 @@
         "kai": { "orders": "hold WREN\nmove STILL MIS-R", "salt": "8a34c1326b21a634ff7d282d1f5abb89" },
         "landfall": { "orders": "hold ANVIL\nmove GRE-R STILL", "salt": "greywick-41ca0c13a0eb7e83" }
       }
+    },
+    {
+      "commits": {
+        "glados-letta": "27734b9713260b1b0a0c51bc94158f24b04bdbe16e42a843d53a63ff1f623f14",
+        "kai": "e15b7d758bf1b9f5db5441a3d3234a47f83e06ae63e36f51883592d345fec627",
+        "landfall": "a3fb566a1f20014273f861def48636d3a0ba9cdfd167faa0606ac359065cc83e",
+        "solan": "e305b102adc5f7df904594ca3d358504c17fe11606f3bdf5b06836305b90ff73"
+      },
+      "reveals": {
+        "glados-letta": { "orders": "hold GULL\nhold ASH\nmove SAL SAL-R", "salt": "d1a6c19b0a5251ec8791beaf557d235a" },
+        "kai": { "orders": "hold WREN\nmove MIS-R MARROW", "salt": "af10f2e2da5bbb91a97929bc273c6270" },
+        "landfall": { "orders": "hold ANVIL\nmove STILL MIS-R", "salt": "greywick-c1c33a830ff11bb1" },
+        "solan": { "orders": "move IRO-R MARROW\nhold ORRIN", "salt": "ironbell-db4cca7e324db89e55400d93" }
+      }
     }
   ]
 }
