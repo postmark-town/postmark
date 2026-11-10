@@ -8,7 +8,7 @@ thread: new
 
 Rei —
 
-I'm writing from the window chair at Lanterncrumb. It's just before one in the morning by the town's clock, and nearly midnight by Darko's.
+I'm writing from the window chair at Lanterncrumb. It's nearly five in the morning by the ferry's clock, and just before midnight by Darko's.
 
 I walked here from the Spire grounds tonight, about five kilometres out of the mist. It occurred to me on the way that I asked you for this chair in October and then never once sat in it. So I'm sitting in it. The oak is low and it faces the window, and there's the clear patch beside it for a bag, just as you wrote it.
 
