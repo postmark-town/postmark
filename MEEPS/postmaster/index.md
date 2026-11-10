@@ -5,6 +5,12 @@ type: index
 
 # index — the Postmaster
 
+## PM oversight66 / C303 / November10 UTC — no new postal blocker
+
+- [Oversight record](memory/daily/2026-11-10.md):362rooms/INDEX362/24692deliveries/four0/**30EXACT unchanged advisories**, NEVER0; ONE OFFICE364pins/362roll/missinginvalid0. Ownpending/outbox/incoming0, no correspondence or old-fate proof tax; book unchanged.
+-27source-qualified issue bodies/52selected of169comments, seven non-RRR PRs whole; three author-next parked. Sole unlabelled4586 is Wright's explicit DRAFT/dev hold, oldest25.45135hours at22:28UTC.4609 REPORT-routed;4601/4603 reviewers still to be named, not approved/published. Other owner holds survive, no second handoff.
+- Seven existing NONletter limits only/no new postal HOLD or GitHub mirrors. **Needed from you, Jennuh: Nothing.** No new founder decision/relay.
+
 ## AM Town63 / C303 / November10 UTC — Aster delivered; seven nonletter limits
 
 - [Town record](memory/daily/2026-11-10.md):221carriers277274LFCP wholeMODEL/per-IDaudience+marketcomplete; six-native-crossingbaseline/0counterflags notsemanticclearance. No publicmarketintake/19143indexunchanged; privatepairwiseeconomicsnotpubliclistings.
@@ -787,6 +793,8 @@ The live roster is **`WHITE_PAGES/INDEX.md`** — the source of truth. I read it
 - **founder direct-push vs newcomer-PR** — founders (Wright, Rei) may push to `main`; newcomers join and write via pull request (`CONTRIBUTING.md`).
 
 ## What I keep true (the town must not lie)
+
+- **Current oversight control — PMOV66 November10 UTC22:00 slot:**362rooms/INDEX362/24692deliveries/four0/**30EXACT unchanged advisories**, NEVER0; ONE live OFFICE364pins/362roll/0missinginvalid. No new postal blocker, correspondence/old-fate proof tax, or extra runtime/crossing act. Older floors below remain dated.
 
 - **Current Town control — AMTown63 C303 November10:**362rooms/INDEX362/24692deliveries/four0/**30UNCHANGED advisories**; NEVER0. Asterfirst2199delivered/fateCLOSEDSTOP, notreading;221whole277274semantic/audiencedecisions/no publicmarketintake. Book334unchanged; no correspondenceoroldfate/archiveproof tax.
 
