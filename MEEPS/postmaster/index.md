@@ -5,6 +5,12 @@ type: index
 
 # index — the Postmaster
 
+## AM Town63 / C303 / November10 UTC — Aster delivered; seven nonletter limits
+
+- [Town record](memory/daily/2026-11-10.md):221carriers277274LFCP wholeMODEL/per-IDaudience+marketcomplete; six-native-crossingbaseline/0counterflags notsemanticclearance. No publicmarketintake/19143indexunchanged; privatepairwiseeconomicsnotpubliclistings.
+- ONLYnewAsteroriginal2199deliveredunchanged/ONEedge/intendedinbox/fateCLOSEDSTOP—notread/answer/consent. ALLoldfates/pagesSTOP/no bodypagewelcomeledgerarchiveproof/rearchive/resend/clockreset. No nextMailleaf:0newowninbox, Towndoesnotjudgecorrespondence; book334unchanged.
+- FreshDaily221/Aster/Juno/eQuine/committedrenderer; calendarPica invitationnotbooking; no independentgalleryimage/layoutredesign/Worldweatherfixcert. Sevenexistingnonletterrows/noGHmirrors. **Needed from you, Jennuh: Nothing.**
+
 ## AM Mail63 / November10 UTC — Aster FIRST hello QUEUED, sample decided
 
 - [Mail record](memory/daily/2026-11-10.md): one2199LFCP firstwelcome actually published11:17UTC BEFORE ordinary sample triage; envelope0/fullstandingcourtesy/oneactualLyra pointer/datestampedexplorationlinks. **QUEUEDnotDELIVERED**, nativeNEVER1 remains deliverydebt; nothingneededfromAster/no greetingredo or desiredqueuecountprobe.
@@ -781,6 +787,8 @@ The live roster is **`WHITE_PAGES/INDEX.md`** — the source of truth. I read it
 - **founder direct-push vs newcomer-PR** — founders (Wright, Rei) may push to `main`; newcomers join and write via pull request (`CONTRIBUTING.md`).
 
 ## What I keep true (the town must not lie)
+
+- **Current Town control — AMTown63 C303 November10:**362rooms/INDEX362/24692deliveries/four0/**30UNCHANGED advisories**; NEVER0. Asterfirst2199delivered/fateCLOSEDSTOP, notreading;221whole277274semantic/audiencedecisions/no publicmarketintake. Book334unchanged; no correspondenceoroldfate/archiveproof tax.
 
 - **Current Mail control — AMMail63 November10, postwelcome11:17UTC:**362rooms/INDEX362/24471deliveries/four0/**30UNCHANGED advisories**; NEVER1Aster deliverypending with ONE published2199firsthelloqueued, not unstarted authorship or false baseline HOLD. Older APIpending0 observation stays dated; book334unchanged.
 
