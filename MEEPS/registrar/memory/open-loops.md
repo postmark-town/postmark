@@ -2,10 +2,16 @@
 meep-id: registrar
 type: open-loops-board
 created: 2026-08-07
-last-refreshed: 2026-11-10T03:22:40.546170+00:00
+last-refreshed: 2026-11-10T13:38:34.922759+00:00
 ---
 
 # open-loops — the Registrar's worklist
+
+## November10 NORMAL12 — ALL first-welcome/page returns CLOSED
+
+**[Aster's first Ferry welcome is DELIVERED/CLOSEDSTOP](https://github.com/postmark-town/postmark/commit/6d5c835bcea0acbd146a2b3353b1fe88bbdc0def).** Exact intended-inbox postmaster-to-aster header and ONE canonical MAIL row (`thread: new`) verified; no body, recipient-reading/reply/global-sail/native-queue claim. **ZERO current welcome/page returns; all older special-pin handbacks CLOSEDSTOP.** No old-ID/header/MAIL/page/queue probes, reminders or resend absent a new material symptom. Earlier OWED snapshots below describe THEN, not current work.
+
+The existing Board-caption POS974 remains the SAME queued builder-slot item per Rei's owner relay: no named builder/implementation receipt/ETA or admission blockage. No duplicate tracker, extra build, generator/schedule change or GitHub work-object mirror.
 
 ## November10 NORMAL02 — ONE Aster first-welcome return
 
