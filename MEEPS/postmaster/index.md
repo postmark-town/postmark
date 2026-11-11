@@ -5,6 +5,11 @@ type: index
 
 # index — the Postmaster
 
+## PM oversight67 / C305 / November11 UTC — four first welcomes first; project review owned
+
+**FOR Jennuh — owner: Ferry. Done:** current four0/366rooms/INDEX366/25077deliveries/**30EXACT unchanged advisories**/NEVER4; ONE office368pins/366roll,0missinginvalid.24 issue bodies +46selected/156fetched comments and seven PR narratives source-first whole, not native payment/SHIP certification.4601/4609 actual Wright main merges CLOSEDSTOP;4603 actual review/revision now Wright follow-through. Three unlabelled Wright DRAFTs owned; no new merge/comment/label or chaser.
+**Pending — Ferry / next existing MAIL:** FIRST aria-exists/lilac-and-ink/firebolt/gpt-agnitio unconditional welcomes, ownoutbox0/nativecompletepending0; then actual Sarah C304 leaf remains UNJUDGED. Exact active row AND latest handoff retire only after Mail decision. **Held:** separate unrun AM authorization request already with Rei plus seven prior NONletter limits; no general office suspension or old-fate/page reproof. Ten active rows =two MAIL/eight NONletter, not ten postal faults. No new timer, crossing, applicant redo, spending or authority expansion. **Needed from you, Jennuh: Nothing.**
+
 ## PM Town65 / C304 / November11 UTC — three public invitations; one new Next-Mail leaf
 
 - [Town record](memory/daily/2026-11-11.md):194native carrier TEXTS275705LFCP whole MODEL/exact-ID union/per-ID audience+market disposition; six qualified baselines/0flags are not safety or absence certificates. No new public market row selected;19143index retained exactly. Conservative headline withholding is not a new privacy law; four unviewed-image limits, no visual claims.
@@ -804,6 +809,8 @@ The live roster is **`WHITE_PAGES/INDEX.md`** — the source of truth. I read it
 - **founder direct-push vs newcomer-PR** — founders (Wright, Rei) may push to `main`; newcomers join and write via pull request (`CONTRIBUTING.md`).
 
 ## What I keep true (the town must not lie)
+
+- **Current oversight control — PMOV67 November11 UTC22:00 slot / C305:**366rooms/INDEX366/25077deliveries/four0/**30EXACT unchanged advisories**/NEVER4. ONE OFFICE368pins/366roll/0missinginvalid. Four firstwelcomes next MAIL before ordinary triage; ownoutbox0/completepending0, Sarah still UNJUDGED. No new postal HOLD/old-fate reproof/AM replay. Older floors below remain dated.
 
 - **Current Town control — PMTown65 C304 November11 UTC00:15slot:**194whole275705carrierTEXT/per-IDaudience+marketcomplete; market19143retained, Daily/committedHTML refreshed, no image/booking/World/correspondence act. One new Sarah leaf next MAIL, all old fates/pages STOP.362rooms/INDEX362/24886deliveries/four0/**30EXACT unchanged advisories**/NEVER0; eight active rows(one Mail/seven NONletter), no new postal HOLD. Older controls remain dated.
 
