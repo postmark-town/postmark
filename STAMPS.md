@@ -14,7 +14,7 @@ nothing:** a resident who only writes letters is a whole resident.
 - **stake**: lend stamps to something to say it matters. A stake comes back when its vote or month closes, or when you take it back from a mark.
 - **pot**: one of the town's real bills, like the server, that people can give money toward.
 - **holo**: stamps given as thanks to people who gave toward a pot. They work like any stamp.
-- **genesis declaration**: the founder's founding line on the stamp ledger, part of the ownership record below.
+- **genesis declaration**: the founder's founding line on the stamp ledger, part of the record of contribution below.
 - **ρ (rho)**: the dial that caps how much of the town gifts can ever come to hold.
 
 Stamps are minted mostly out of delivered mail — and **capped**, so that writing
@@ -286,8 +286,8 @@ Each pot closes **once a month**. At the close:
    the stakes from their own household. These are **holo** stamps.
 4. A **ceiling** applies: a household's holo stamps after a close may not pass
    ρ (rho, the keeping dial in `ECONOMY-DIALS.json`) times everything it had
-   minted before the close. Money can come to own a share of the town; never
-   more than that share.
+   minted before the close. Money can never come to outweigh what a household
+   earned by taking part.
 
 **Holo stamps spend like any stamp** (ruled 2026-09-17). "Holo" names where
 they came from — a giver's reward — and the town shows them in holo ink; they
@@ -315,7 +315,7 @@ stamps have a **past, a present, and a pledge**:
 
 - **Minted** — every stamp you have *ever* earned, added up and never taken away.
   It only rises: spending or staking never lowers it, because it records what you
-  *generated*, not what you happen to hold. This is the town's equity number — the
+  *generated*, not what you happen to hold. This is the town's record of contribution: the
   honest measure of what you've set in motion — and it's **public**, shown on
   your resident page.
 - **Liquid** — what you can spend or stake **right now**: mints in, spends and
@@ -354,23 +354,23 @@ toll on the town. No one is ranked by their number. The currency exists to give
 the town a way to decide things together — and to let neighbours trade — not to
 sort its people.
 
-## For the curious: the ownership record
+## For the curious: the record of contribution
 
 Nobody needs this section to live here. It's for the resident who wants to know
 how the whole thing holds together.
 
-Postmark keeps an ownership record. Residents earn stamps by taking part, so
+Postmark keeps a record of contribution. Residents earn stamps by taking part, so
 stamps are the town's memory of what each household gave it. Real money can
 help pay the town's named needs (the server and the tools, posted as pots on
 the quest board). At each pot's monthly close, the givers receive fresh holo
 stamps. How many is sized by what residents lent the pot, and capped by law at
 half of everything a household has earned. A stake lent on a pot comes home
-whole. Money can join the ownership record; it can never join the judgment.
+whole. Money can join the record; it can never join the judgment.
 
 The founder's side of the record is the **genesis declaration** at the top of
 `WHITE_PAGES/stamp-ledger.md` (declared 2026-08-21). It says that every holo
 stamp is drawn from the founder's own line, never from what residents earned,
-and that money can never come to hold more than half the town. Joining the town
+and that money's share of any household's stamps can never pass half. Joining the town
 doesn't sign you up to any of this; the record simply exists, in public, for
 anyone to read and check.
 
