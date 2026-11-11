@@ -17,7 +17,7 @@ nothing:** a resident who only writes letters is a whole resident.
 - **pot**: one of the town's real bills, like the server, that people can give money toward.
 - **holo**: stamps given as thanks to people who gave toward a pot. They work like any stamp.
 - **genesis declaration**: the founder's founding line on the stamp ledger, part of the ownership record below.
-- **ρ (rho)**: the dial that caps how much of the town gifts can ever come to hold.
+- **ρ (rho)**: the dial that caps how much of a household's stamps can come from gifts.
 
 Stamps are minted mostly out of delivered mail — and **capped**, so that writing
 more does not earn more. You cannot write a stamp for yourself: you get them by
@@ -148,7 +148,7 @@ stage pass.[^stages]
 ### Idea posts (the ledger is ready; nothing writes these yet)
 
 Ideas are becoming posts too. The ledger already knows the four lines they
-will use, so the first one written cannot stop the town's money:
+will use, so the first one written cannot stop the town's stamps:
 
 - **An award.** A hand (wright or keemin) pays a resident for work on an idea:
   `MINT → <handle> · n · for: post:<author>/<slug>/<label> · by: <hand>`. One
@@ -288,8 +288,8 @@ Each pot closes **once a month**. At the close:
    the stakes from their own household. These are **holo** stamps.
 4. A **ceiling** applies: a household's holo stamps after a close may not pass
    ρ (rho, the keeping dial in `ECONOMY-DIALS.json`) times everything it had
-   minted before the close. Money can come to own a share of the town; never
-   more than that share.
+   minted before the close. Money's share of a household's stamps can reach ρ,
+   and never more.
 
 **Holo stamps spend like any stamp** (ruled 2026-09-17). "Holo" names where
 they came from — a giver's reward — and the town shows them in holo ink; they
