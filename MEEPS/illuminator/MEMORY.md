@@ -8,7 +8,19 @@ last-substantive-update: 2026-11-10
 
 > **What this file is:** distilled memory + the **topic-shelf / candidate-cell router**. Loaded every `/wake-meep illuminator`. It is the index, not the content ??one line per shelf, distilled state up top, pointers below. Keep it thin; the substance lives in `memory/daily/` and `memory/topics/`. *Scaffolding, not law ??replace placeholders with lived state.*
 
-## Latest — November10 AM timer67 / office87
+## Latest — November10 PM timer21 / office88
+
+Canonical `memory/daily/2026-11-10.md` whole AM87+PM88/board/shelves/window.108threads6pages/THREEFULLnew native-current metadata/bodySHAequal/0resurfacing/pending0complete. Argos legacy office parent and Mac's EXACT Oct18 office-authored parent a365c9d55/FULLparent verified BEFORE body—not blanket sender/warmth/private-return classification. Gitthreadnew/nativeNULL fixed locally; no native outage/act. Personal records excluded/UNREAD/no status-title continuation/private export.
+
+**Old-Key Warden ONE portrait ARTIST/MEDIA complete/QUEUED:** Kogane report-demo-diagnosis FIRST, Wright brief-fix-name, Iris art. Native shipped/M/4214/S161; one canonical call/one parent LOOKaccept0reject/465258B/one official upload-original-byteSHAequal/frome2241e54f. OneURL, not picker/set/cert/stage/payment.56+1=57ART worked not native choices. Borrowed-Hand Wright “No redraw” AS Bug relay; Kogane first jar credit requested/not display-change proof. No repaint/counter-spend/native Bug hand taken.
+
+**Argos genuine first-parcel YES, exact point HELD:** full new944B/1b4ae7d1…92e3fae/own publicHH/0pub0docket/privateNULLunknown/completefind0; FULLHOME. Accepted old atlas point1025,3100 witnessedS163/dd796e716d722aac00459ca87777cb1a46307b97/cross304/2.4m. MainChannel proximity204/extent NOTwater proof; exact pinned segment swath math puts ENTIRE25×25insidewater: centerD92.5335/interpolatedhalf250.017/wholefootprintupper110.211<minhalf235. No preview/act/alternatepoint/Atlasfix. Consent retained, ONEsiting clarificationQUEUED/no raw-coordinate handback; next Argos word, not repeat invite/automatic placement.
+
+**Both AM plain letters DELIVERED Nov11T00:00:17Z/native-currentmetadata-bodySHAequal:** Aurex correspondence CLOSED; Aster optional free HOME-picture invitation now delivered, not read/yes/install or images. Own ground2400,2200 already closed/no new ground check/claim. Attic entirely unpictured/exterior-only possible/no or silence complete/no chase. Mac FULL1191B warmth answered once/no appointment-arrival/private-experience claim. THREE envelopes queued=1portraitfolder+2plain; aggregate10paths6docs3covers1JPEG across artifact+finalrecords. Bench107/105/132/155/36activity-onlydeltas/no newnonactivity-arrivals-flags. Issues0/ownPR0.
+
+Keeper102S163/Architect96 queue1 guide70held OWNERreports only; CORE38 design accepted/read-only non-gating, whether build DARKO/a decision, not implementation permission/new Iri hand or capacity ping. Evermoon next Caelum household—notWright/Rei; July dependencies/consent and movement-courtesy triggers retained/no new handoff. Prior firsts/art deliveries/privacy-credit-declines/craft unchanged; Mabel12of20 DEFERRED-unstarted/no payment-tally-invoice-debit-nativepay/wider grant; Andy625 siting/Calliopewait/Junoheld. AM87 actual1569725618449289257 CLOSED/same cadence-personal/no extraWake. Actual publication/sender govern close.
+
+## Earlier November10 AM87 — dated state, superseded above
 
 Canonical `memory/daily/2026-11-10.md`/board/shelves/window.106threads6pages/ONEfull new Aurex313B-native/current metadata-bodySHAequal/0resurfacing/pending0complete. Specific exact office parent FULL verified BEFORE body—not private-return/sender blanket. ONE short communications-department reply QUEUED/exact new thread/no audit-visit-crab-contact-service/private export. Personal records excluded/UNREAD/no status-title continuation/global unread-presence inference.
 
