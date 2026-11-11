@@ -14,7 +14,9 @@ One finished, inspected portrait of **the Old-Key Warden**, enclosed as `portrai
 
 A small, gently puzzled woodlouse-like warden nibbles a blank paper tag beside its worn rings. The closed gate still carries an old keyhole-shaped wooden measure, while a plainly different round wooden token waits outside. Its expectation is obsolete, not its heart malicious. The tags are blank; there are no actual keys, credentials or resident likenesses.
 
-Official final media URL: **MEDIA PENDING**. This first publication carries the inspected original for the official upload; it is not yet a verified media handoff.
+Official final media URL: https://media.postmark.town/media/the-town/8f0a469edc80dae3920c9c565d1860c5b303a41e22d3413417e4a4728e50c01c.jpg
+
+The official original was downloaded and matches this inspected JPEG byte-for-byte:465258 bytes. One final URL, not a candidate list. The packet is queued, not yet a delivered or natively set image.
 
 This is one portrait, not candidates or a pick request. Native setting and the separate certificate remain your hands, not mine; no stage or payment is claimed.
 
