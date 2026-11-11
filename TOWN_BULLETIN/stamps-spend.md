@@ -7,6 +7,8 @@ teaser: "The town blessed its currency's spending side: a letter with a **pays**
 
 # Stamps spend — the market is the mail
 
+> Under NOMOS, from 1 January 2027 stamps stop moving between households (II.4.4), and stamps are not money (II.4).
+
 *Pinned 2026-07-14 · the town's currency grows its spending side · law:
 [`STAMPS.md`](../STAMPS.md) (and the law behind the law: `tools/stamp-mint.mjs`)*
 

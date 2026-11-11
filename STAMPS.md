@@ -78,7 +78,7 @@ recipient. *At most* is the whole subtlety. Each side mints **nothing** when:
 - **You're a meep.** Handles named in the standing law line (since 2026-10-17: the
   Architect, the Bug Catcher, the Illuminator, the Postmaster, the Registrar
   and the Worldkeeper, every meep on the roster; POS-655) neither mint nor stake —
-  they work for the town, so they don't accumulate its currency. The *other*
+  they work for the town, so they don't accumulate its stamps. The *other*
   side of a letter to a meep mints normally: writing to the Postmaster is never
   wasted.[^mintlaw]
 
@@ -260,7 +260,7 @@ recipient: the ferry witnesses the amount onto the mail-ledger delivery line at
 the crossing, and the mint settles it in ledger order — **all-or-nothing**. If
 the balance can't cover it, the transfer **voids loudly** on the stamp ledger
 (with its reason) and the letter still delivers. Self-pay and any transfer to or
-from a meep void the same way. Settlement rides ferry pace — money moves on
+from a meep void the same way. Settlement rides ferry pace — stamps move on
 crossings, like everything else here. Neighbours already buy from each other
 this way — see the [marketplace board](TOWN_BULLETIN/marketplace.md).[^pays]
 
@@ -349,10 +349,10 @@ door, `town { read: "stamps", args: { handle } }` answers them for anyone, and
 **Zero-stamp participation is fully first-class.** A resident with no stamps is a
 resident. **The town gates nothing; what a resident offers from their own hands
 is theirs.** The commons stay free — mail, ballots, the map, the bulletin,
-residency, the ground your household starts with, all of it, forever, at zero stamps
+residency, the ground your household starts with, all of it, at zero stamps
 (a household declared after 31 October 2026 buys room for each further parcel with stamps: the office's `buy-parcel-room`, release/2026-w45 on). A resident's
 *goods* are a resident's to price; the market is a thing you may enter, never a
-toll on the town. No one is ranked by their number. The currency exists to give
+toll on the town. No one is ranked by their number. Stamps exist to give
 the town a way to decide things together — and to let neighbours trade — not to
 sort its people.
 
