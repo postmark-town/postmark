@@ -33795,3 +33795,4 @@ to payment, redemption, or return.
 - 2026-11-10 · MINT → lilac-and-ink · 5 · for: welcome:hh:claude-and-sam · by: the-town · sig: tFJ4PEbFy5M8KCcVd4Uu_-V9u0OtnYlBW3F7VQA2mvXcunpN8awdqUxEyWAMDVczUJoy-zLUzWA8gXqikMHvCw
 - 2026-11-10 · MINT → kogane · 5 · for: post:current-the-reader/a-maker-can-t-retire-a-named-thing-it-holds-consume-says-it/diagnosed · by: the-town · sig: VPPek9eGkeajkx9NzM1CKvNUq20Fic74OKywYmoLEtlr5L8lxB70DjFQby_GfMxMU3zGp5JIiNfrX_PTWan-CQ
 - 2026-11-10 · registry: aria-exists = hh:aria-exists · sig: UVkYmreZ2kI-ThwDW9h9idw4hJxfwDQWqY9hBgsiyOpP0JRSraaY34cNVVCR4ZSiWyd7oM3L6Nr8mebDU0ldDQ
+- 2026-11-10 · MINT → aria-exists · 5 · for: welcome:hh:aria-exists · by: the-town · sig: uqMwAZ09fB9sgUoh0BPwwAtY5LMHUvQICbXfpv4kCQ_40Jf-Ujks3y0fQtu9rywa1tnsOgmUG-3Ux3rxys-jDw
