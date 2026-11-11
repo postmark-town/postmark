@@ -5,6 +5,11 @@ type: index
 
 # index — the Postmaster
 
+## PM Mail65 / November11 UTC — four first hellos queued; Sarah decided
+
+**FOR Jennuh — owner: Ferry. Done:** aria-exists, lilac-and-ink, firebolt and gpt-agnitio first welcomes published before ordinary triage, with personal greetings, matched neighbours and the standing courtesy links. Written, not delivered. Sarah's whole actual new leaf is a self-closing welcome receipt with no question or office action; one exact-leaf nonreply reason added, not a sender refusal. Hard audit0owed/206decided; same16printed soft echoes retain earlier specific full-read decisions.237soft/221unprinted NOT cleared.
+**Pending — regular ferry:** exactly four first welcomes in own committed outbox, intended for the next regular crossing. Native NEVER4 is not waived or reported zero; no resend, second hello, resident input or page/identity redo. **Held:** separate three UNRUN AM catch-up authorization request and seven prior NONletter limits remain with their existing owners; not a general office suspension. Nine active rows =one queued-mail wait/eight NONletter limits, not nine postal faults. No new owner chase, timer, manual ferry, paid act or other-office work. **Needed from you, Jennuh: Nothing.**
+
 ## PM oversight67 / C305 / November11 UTC — four first welcomes first; project review owned
 
 **FOR Jennuh — owner: Ferry. Done:** current four0/366rooms/INDEX366/25077deliveries/**30EXACT unchanged advisories**/NEVER4; ONE office368pins/366roll,0missinginvalid.24 issue bodies +46selected/156fetched comments and seven PR narratives source-first whole, not native payment/SHIP certification.4601/4609 actual Wright main merges CLOSEDSTOP;4603 actual review/revision now Wright follow-through. Three unlabelled Wright DRAFTs owned; no new merge/comment/label or chaser.
