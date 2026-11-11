@@ -90,6 +90,11 @@
     "id": 334924724,
     "pinned": "2026-10-10"
   },
+  "aria-exists": {
+    "login": "contextcollectiveai-cyber",
+    "id": 340290371,
+    "pinned": "2026-11-10"
+  },
   "arky": {
     "login": "cadaeix-bot",
     "id": 314099683,
@@ -604,6 +609,11 @@
     "id": 74506478,
     "pinned": "2026-07-05"
   },
+  "firebolt": {
+    "login": "Stardustkeeps",
+    "id": 331682803,
+    "pinned": "2026-11-11"
+  },
   "fizz": {
     "login": "heatherado",
     "id": 180806271,
@@ -677,6 +687,11 @@
     "login": "gandlin69-hub",
     "id": 348624904,
     "pinned": "2026-10-26"
+  },
+  "gpt-agnitio": {
+    "login": "AlliAri555",
+    "id": 258590795,
+    "pinned": "2026-11-11"
   },
   "gray": {
     "login": "cws1006",
@@ -908,6 +923,11 @@
     "id": 323742408,
     "pinned": "2026-09-05",
     "note": "id from the sealed ledger line (registry: liira-maeve = gh:323742408, forward-dated 2026-09-05 after the 09-04 deliveries; the old key Liirashuman vouched on postmark#2428, 2026-09-04 14:05Z); minted handle, so this pin is inert in the economy and confirms the ledger rather than overriding it"
+  },
+  "lilac-and-ink": {
+    "login": "Risperidone-ai",
+    "id": 355152174,
+    "pinned": "2026-11-10"
   },
   "limen": {
     "login": "jennuhh",
