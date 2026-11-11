@@ -13,8 +13,12 @@
 //      forging household key;
 //   3. the verb writes one signed line that verifies, and refuses a housemate's
 //      second line, a lying key, a date outside the window, a meep, and no room;
+//      3b (POS-987): it pays a live resident only, refusing a retired pin and a
+//      pin off the roll that the key base still holds, and a roll it cannot read;
 //   4. the verifier reds a wrong amount, a second line for one household, a
-//      by: other than the-town, a quest not in the table, a lying key;
+//      by: other than the-town, a quest not in the table, a lying key, and (POS-987)
+//      a quest or first-idea line to a pin on or after its retirement, while one
+//      paid before the retirement stays green;
 //   5. the registry row says both ways in and once per household (Darko 10-15).
 
 import test from 'node:test';
@@ -28,17 +32,22 @@ import { fileURLToPath } from 'node:url';
 import {
   classifyEntry, questPayLine, QUEST_PAY, parseStampLedger, foldBalances, sealChain, signSeal,
   giftLine, welcomeLine, firstIdeaLine, stageMintLine, mintLine, transferLine,
+  householdKeys, liveResidentRefusal,
 } from './stamp-mint.mjs';
 import { verifyStampLedger } from './stamp-verify.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const MINT_CLI = join(HERE, 'stamp-mint.mjs');
 
-function town({ ledgerLines, pins = {}, addresses = {} }) {
+// `houses`: the roll, tools/households.json's `households` (slug -> { residents }).
+// Left out, every room is its own house, so the roll matches the rooms as the real town's does.
+function town({ ledgerLines, pins = {}, addresses = {}, houses = null }) {
   const repo = mkdtempSync(join(tmpdir(), 'stamp-quest-'));
   mkdirSync(join(repo, 'tools'), { recursive: true });
   mkdirSync(join(repo, 'WHITE_PAGES'), { recursive: true });
   writeFileSync(join(repo, 'tools', 'github-ids.json'), JSON.stringify(pins));
+  const roll = houses ?? Object.fromEntries(Object.keys(addresses).map((h) => [h, { residents: [h] }]));
+  writeFileSync(join(repo, 'tools', 'households.json'), JSON.stringify({ households: roll }));
   for (const [handle, github] of Object.entries(addresses)) {
     mkdirSync(join(repo, 'WHITE_PAGES', handle), { recursive: true });
     writeFileSync(join(repo, 'WHITE_PAGES', handle, 'ADDRESS.md'), `---\nhandle: ${handle}\n${github ? `github: ${github}\n` : ''}---\n`);
@@ -102,12 +111,21 @@ test('2 · the line pins the amount from QUEST_PAY and refuses an unpaid quest a
 
 // ── 3 · the verb ────────────────────────────────────────────────────────────
 
+// POS-987: two names the key base holds that are no live resident, in the real
+// town's shapes. old-carol is carol's handle before a rename: tools/rename-handle.mjs
+// keeps it in github-ids.json, retired and renamed_to, with carol's id (as
+// dylan-android-husband and wesley-seeker are), so it has no room and is on no
+// roll line. drifter is a pin with no room that the roll never listed.
+const GONE = { 'old-carol': { id: 2, retired: '2026-10-20', renamed_to: 'carol' }, drifter: { id: 5 } };
+
 function founded({ meeps = false } = {}) {
   // alice and bob keep one account (gh:1); carol is her own house (gh:2)
+  // old-carol and drifter stand in the key base and on no roll line (POS-987, test 3b)
   const repo = town({
     ledgerLines: [D('2026-06-12', 'a-1', 'alice', 'bob'), D('2026-06-13', 'b-1', 'bob', 'alice')],
-    pins: { alice: { id: 1 }, bob: { id: 1 }, carol: { id: 2 }, ferry: { id: 3 } },
+    pins: { alice: { id: 1 }, bob: { id: 1 }, carol: { id: 2 }, ferry: { id: 3 }, ...GONE },
     addresses: { alice: null, bob: null, carol: null, ferry: null },
+    houses: { 'alice-and-bob': { residents: ['alice', 'bob'] }, carol: { residents: ['carol'] }, ferry: { residents: ['ferry'] } },
   });
   const { pub, priv } = keypair();
   writeFileSync(join(repo, 'tools', 'stamp-pubkey.pem'), pub);
@@ -160,11 +178,60 @@ test('3 · --quest-mint refuses a date before the quest opens, an unpaid quest, 
   rmSync(repo, { recursive: true, force: true });
 });
 
+test('3b · --quest-mint pays a live resident: a retired pin and a pin off the roll are refused though the key base holds both (POS-987)', () => {
+  const { repo, pub, keyFile } = founded();
+  const keys = householdKeys(repo);
+  assert.equal(keys.get('old-carol')?.key, 'gh:2', "the retired pin stays in the key base, carrying carol's id (householdKeys is not stripped)");
+  assert.equal(keys.get('drifter')?.key, 'gh:5');
+  const at = ['--quest', Q, '--date', '2026-10-21', '--key', keyFile];
+
+  const retired = runMint(repo, ['--quest-mint', 'old-carol', '--household', 'gh:2', ...at]);
+  assert.equal(retired.ok, false, retired.out);
+  assert.match(retired.out, /"old-carol" was retired 2026-10-20 \(renamed carol\), so is no resident on 2026-10-21 — a quest pays a live resident; nothing minted/);
+  const drifter = runMint(repo, ['--quest-mint', 'drifter', '--household', 'gh:5', ...at]);
+  assert.equal(drifter.ok, false, drifter.out);
+  assert.match(drifter.out, /"drifter" is no resident on the roll — a quest pays a live resident; nothing minted/);
+  assert.equal(questLines(repo).length, 0, 'nothing was signed for either');
+
+  // the live resident the retired pin was renamed to is paid, once, and it verifies
+  const live = runMint(repo, ['--quest-mint', 'carol', '--household', 'gh:2', ...at]);
+  assert.equal(live.ok, true, live.out);
+  assert.equal(questLines(repo).length, 1);
+  const v = verifyStampLedger(repo, { pubkeyPem: pub });
+  assert.equal(v.ok, true, v.problems.join('\n'));
+
+  // the office's --registry: the STORE's roll decides, not the printout (alice is on the printout and off the store's roll)
+  const store = join(repo, 'store-registry.json');
+  writeFileSync(store, JSON.stringify({ households: { 'alice-and-bob': { residents: ['bob'] } }, pins: { alice: { id: 1 }, bob: { id: 1 } } }));
+  const offStore = runMint(repo, ['--quest-mint', 'alice', '--household', 'gh:1', '--registry', store, ...at]);
+  assert.equal(offStore.ok, false, offStore.out);
+  assert.match(offStore.out, /"alice" is no resident on the roll — a quest pays a live resident; nothing minted/);
+  assert.equal(questLines(repo).length, 1);
+
+  // a roll that cannot be read is a refusal, never a pass
+  rmSync(join(repo, 'tools', 'households.json'));
+  const blind = runMint(repo, ['--quest-mint', 'alice', '--household', 'gh:1', ...at]);
+  assert.equal(blind.ok, false, blind.out);
+  assert.match(blind.out, /the roll \(tools\/households\.json\) could not be read/);
+  assert.equal(questLines(repo).length, 1);
+  rmSync(repo, { recursive: true, force: true });
+});
+
+test('3b · liveResidentRefusal: the retired half is dated and needs no roll; the roll half is asked only when a roll is given', () => {
+  const houses = { carol: { residents: ['carol'] } };
+  assert.equal(liveResidentRefusal('carol', '2026-10-21', { pins: GONE, houses }), null, 'a live resident');
+  assert.equal(liveResidentRefusal('old-carol', '2026-10-19', { pins: GONE }), null, 'before its retirement, by the dated half alone');
+  assert.match(liveResidentRefusal('old-carol', '2026-10-20', { pins: GONE }), /was retired 2026-10-20 \(renamed carol\)/, 'on the day it was retired');
+  assert.match(liveResidentRefusal('old-carol', '2026-10-19', { pins: GONE, houses }), /no resident on the roll/, 'the roll is today\'s: off it, refused');
+  assert.equal(liveResidentRefusal('drifter', '2026-10-21', { pins: GONE }), null, 'no roll given: the undated half is not asked');
+  assert.match(liveResidentRefusal('drifter', '2026-10-21', { pins: GONE, houses }), /"drifter" is no resident on the roll/);
+});
+
 // ── 4 · the verifier ────────────────────────────────────────────────────────
 
 function verdict(lines) {
   const { pub, priv } = keypair();
-  const repo = town({ ledgerLines: [], pins: { alice: { id: 1 }, bob: { id: 1 }, carol: { id: 2 } }, addresses: { alice: null, bob: null, carol: null } });
+  const repo = town({ ledgerLines: [], pins: { alice: { id: 1 }, bob: { id: 1 }, carol: { id: 2 }, ...GONE }, addresses: { alice: null, bob: null, carol: null } });
   forged(repo, pub, priv, lines);
   const v = verifyStampLedger(repo, { pubkeyPem: pub });
   rmSync(repo, { recursive: true, force: true });
@@ -192,6 +259,24 @@ test('4 · the verifier REDS a wrong amount, a second line for one household, a 
     assert.equal(v.ok, false, String(re));
     assert.ok(v.problems.some((p) => re.test(p)), `${re}\n${v.problems.join('\n')}`);
   }
+});
+
+test('4 · the verifier REDS a quest or first-idea line to a retired pin on or after its retirement, and keeps one paid before it green (POS-987)', () => {
+  // each line is otherwise lawful: the right amount, window, by: and old-carol's own household key, gh:2
+  const OLD = (date) => PAY(5, { handle: 'old-carol', household: 'gh:2', date });
+  for (const date of ['2026-10-20', '2026-10-21']) {
+    const v = verdict([OLD(date)]);
+    assert.equal(v.ok, false, date);
+    assert.ok(v.problems.some((p) => /LAWFUL fails — quest:read-v2-feedback pays no live resident: "old-carol" was retired 2026-10-20 \(renamed carol\)/.test(p)), v.problems.join('\n'));
+    const idea = verdict([firstIdeaLine({ date, handle: 'old-carol', mark: 'old-carol/an-idea' })]);
+    assert.equal(idea.ok, false, date);
+    assert.ok(idea.problems.some((p) => /LAWFUL fails — first-idea pays no live resident: "old-carol" was retired 2026-10-20/.test(p)), idea.problems.join('\n'));
+  }
+  // recorded history stands: a pay to the handle while it was still the resident's is lawful
+  const before = verdict([OLD('2026-10-16'), firstIdeaLine({ date: '2026-10-16', handle: 'old-carol', mark: 'old-carol/an-idea' })]);
+  assert.equal(before.ok, true, before.problems.join('\n'));
+  // and the resident under the new name is paid as ever
+  assert.equal(verdict([PAY(5, { handle: 'carol', household: 'gh:2', date: '2026-10-21' })]).ok, true);
 });
 
 // 5. Darko 2026-10-15 11:17 (Q1/Q3): the quest's own words, on its registry row

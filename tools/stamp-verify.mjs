@@ -40,6 +40,7 @@ import {
   AWARD_MAX, AWARD_HANDS, QUEST_PAY, RECREDIT_STAGES, SKIPPED_CREDIT_STAGES, CORRECTION_HANDS,
   PARCEL_PRICE, PARCEL_SETTLED_BY_DAY, PARCEL_ROOM_FROM,
   houseCanonOf, invitationOf, inviteState, judgeInviteLine, foldInviteLine,
+  liveResidentRefusal, registryPins,
 } from './stamp-mint.mjs';
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
@@ -172,6 +173,9 @@ export function verifyStampLedger(repo, { pubkeyPem, registry = null } = {}) {
     const paidStages = new Set();       // `${post}/${stage}` already paid its stage stamps
     const paidAwards = new Set();       // `${post}/${label}` already paid its award (POS-290)
     const paidQuests = new Set();       // `${quest}|${household}` already paid (POS-632)
+    // A quest pays a live resident (POS-987): a line is judged by its own day
+    // against the registry's dated `retired:` stamps, never by today's roll.
+    const pins = registryPins(repo);
     const stageLineOf = new Map();      // `${post}/${stage}` -> the stage line { handle, n, sig } (POS-649)
     const stageLineBySig = new Map();   // a stage line's sig -> { post, stage, handle, n } (POS-649)
     const recredited = new Set();       // `${post}/${stage}` already re-credited (once, ever)
@@ -441,6 +445,10 @@ export function verifyStampLedger(repo, { pubkeyPem, registry = null } = {}) {
         if (lawAt(cls.date).meeps.has(cls.handle)) {
           problems.push(`line ${lineNo}: LAWFUL fails — first-idea to meep "${cls.handle}" (meeps stay outside the currency)`); break;
         }
+        const notLive = liveResidentRefusal(cls.handle, cls.date, { pins });
+        if (notLive) {
+          problems.push(`line ${lineNo}: LAWFUL fails — first-idea pays no live resident: ${notLive}`); break;
+        }
         const houseKey = hh(cls.handle, cls.date);
         if (firstIdeaHouses.has(houseKey)) {
           problems.push(`line ${lineNo}: LAWFUL fails — household of "${cls.handle}" already holds its first-idea mint (once per household, ever)`); break;
@@ -688,6 +696,10 @@ export function verifyStampLedger(repo, { pubkeyPem, registry = null } = {}) {
         }
         if (lawAt(cls.date).meeps.has(cls.handle)) {
           problems.push(`line ${lineNo}: LAWFUL fails — quest pay to meep "${cls.handle}" (meeps stay outside the currency)`); break;
+        }
+        const notLive = liveResidentRefusal(cls.handle, cls.date, { pins });
+        if (notLive) {
+          problems.push(`line ${lineNo}: LAWFUL fails — quest:${cls.quest} pays no live resident: ${notLive}`); break;
         }
         const houseKey = hh(cls.handle, cls.date);
         if (canonHouse(cls.household) !== canonHouse(houseKey)) {
