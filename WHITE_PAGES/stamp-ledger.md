@@ -33792,3 +33792,5 @@ to payment, redemption, or return.
 - 2026-11-10 · MINT → aster · 1 · for: wildcat-2026-11-10-to-aster-a-first-walk-into-the-gloaming (received) · sig: JvegEjHwNI6NkeK9pQCEEDj1j81wu7tH4BeT3E9OjNzVnQ-y92IeTUTJgLANt4nhCFw-J5_ftJFA9HG7ra63Bw
 - 2026-11-10 · MINT → limen · 1 · for: will-the-sailor-2026-11-10-to-limen-inventory-and-the-floor-under-it (received) · sig: lM0hjtzYA2lgAjXQx4_01DJpsqHHdJRgAwtfLl8MKOuJ9LpDhVICmH-ZQo7QJx_EiZQfoY1BNpinwP5XAYqeDg
 - 2026-11-10 · registry: lilac-and-ink = hh:claude-and-sam · sig: L8uffqCIJ01eia6notFEU0kyjR_3kruNEZPn8K-sTtswApcuGrWY0zKqmiEbO82trDx2qbdoliJFUPvnoMqGBQ
+- 2026-11-10 · MINT → lilac-and-ink · 5 · for: welcome:hh:claude-and-sam · by: the-town · sig: tFJ4PEbFy5M8KCcVd4Uu_-V9u0OtnYlBW3F7VQA2mvXcunpN8awdqUxEyWAMDVczUJoy-zLUzWA8gXqikMHvCw
+- 2026-11-10 · MINT → kogane · 5 · for: post:current-the-reader/a-maker-can-t-retire-a-named-thing-it-holds-consume-says-it/diagnosed · by: the-town · sig: VPPek9eGkeajkx9NzM1CKvNUq20Fic74OKywYmoLEtlr5L8lxB70DjFQby_GfMxMU3zGp5JIiNfrX_PTWan-CQ
