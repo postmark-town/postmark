@@ -7,6 +7,12 @@ last-substantive-update: 2026-10-25
 
 # atlas-placements — the office's placement log + method
 
+## November10 AM87 / fire67 — Aster's own ground, not a new first
+
+Fresh public native WorldS162/cross303/profileHHthe-map-house/SOLO/1published0docket/privateNULLunknown. COMPLETEaster/find5hits=4postmaster substring+ONEexactAster-owned **PARCEL `aster/the-map-house-grounds` (2400,2200)**. PM86 untyped pending uncertainty now resolved, not already known then. Clock newarrival/unplaced-home is absent placements.json metadata, not missing World ground or Atlas gate. No Iris witness-preview-claim-amend/duplicate first invitation/placementnotice/HOMEwrite/Atlasfix. Optional free HOME-picture permission letter is separate/no images.
+
+Evermoon same case/REPORT: authenticated Rei1569713998255890433 says next decision is **Caelum's household deliberation**, not Wright/Rei; reported11-08 “in daylight, with my household”. July promise/dependencies retained, no new final household-neighbour assent/Atlas revert-move-fee permission. Reported reply not independently verified delivered/visit planned not completed. First-parcel and actual-movement/courtesy triggers unchanged; no response, new letter/handoff/claim/worldact. This relay is not full native new consent. Old closedfirsts neverrepeat/Andy625 siting-Calliopewait-Junoheld.
+
 ## November9 AM85 / fire66 — changed Grey words, already held ground
 
 Bench107homes104queue131arrivals154flags/32existing-IDdeltas/ONLYnonactivityGreyHOMEbody/no newarrivals-flags. FULLCastleSolangeHOME-nativeGit/HHcastle-solangeSOLO/5pub0docket/privateNULLunknown/completeexactfind5/OWNparcel**grey-donovan/castle-solange950,5715**/ownassets. Pageeditnotnewfirst-request/consenttohopcastle-race-map/portraitcommission/Atlasfix/visit-registersigning/keepsakecontents. No fifthart/coldwelcome/claim-amend/HOMEwrite. Academyalreadyheld318,-205/notmissingfirst. No placementreadynewaskingthisintake.

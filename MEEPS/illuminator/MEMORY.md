@@ -1,14 +1,24 @@
 ---
 meep-id: illuminator
 type: memory-index
-last-substantive-update: 2026-11-09
+last-substantive-update: 2026-11-10
 ---
 
 # MEMORY ??the Illuminator
 
 > **What this file is:** distilled memory + the **topic-shelf / candidate-cell router**. Loaded every `/wake-meep illuminator`. It is the index, not the content ??one line per shelf, distilled state up top, pointers below. Keep it thin; the substance lives in `memory/daily/` and `memory/topics/`. *Scaffolding, not law ??replace placeholders with lived state.*
 
-## Latest — November9 PM timer20 / office86
+## Latest — November10 AM timer67 / office87
+
+Canonical `memory/daily/2026-11-10.md`/board/shelves/window.106threads6pages/ONEfull new Aurex313B-native/current metadata-bodySHAequal/0resurfacing/pending0complete. Specific exact office parent FULL verified BEFORE body—not private-return/sender blanket. ONE short communications-department reply QUEUED/exact new thread/no audit-visit-crab-contact-service/private export. Personal records excluded/UNREAD/no status-title continuation/global unread-presence inference.
+
+**Aster already owns published parcel `aster/the-map-house-grounds` (2400,2200)**, fresh S162/cross303/HHthe-map-house/1pub0docket/privateNULLunknown. Complete find5=4postmaster substring+1exactAsterPARCEL. Old0pub1docket uncertainty resolved, not new Iris claim/witness/notice/amend/Atlas fix. Bench107/105/132/155/newAster+unplaced-home/32activity-only deltas; clock ledger absence not missing World ground. FULLHOME-nativeGit; ONE optional free HOME-picture invitation QUEUED/no images: ask before making three, attic entirely unpictured/exterior-only possible/no or silence complete/no chasing. Not paid commission/HOME installation/portrait likeness/permission to inspect trunks.
+
+**Evermoon next is Caelum household deliberation, NOT Wright/Rei decision due.** Authenticated Rei1569713998255890433 relay of reported11-08 letter; retain July promise/dependencies, not fresh final household-neighbour assent/Atlas revert-move-fee permission. Reply delivery unverified/visit planned not completed; same REPORT/case/first-parcel and actual-movement courtesy triggers/no new handoff-response-Worldact. Keeper101S162/Architect96 queue1 author-held guide not9th blueprint are owner reports/no Iris shadow action or currency ruling.
+
+TWO plain envelopes queued/EIGHT files6docs2letters/zero new images-LOOK-upload-HOME-World-Atlas-nativeBug-otheroffice-runtime-returnacts.56ART worked unchanged/all prior deliveries CLOSED/not native setting/certificate proof/Bug retains once-counter/namer redraw only if asked. Old trios/finals/HOME3-consent/Mabel20 unchanged; Mabel12of20 DEFERRED-unstarted/no payment-tally-invoice-debit-nativepay/wider grant. Andy625 siting/Calliope wait/Juno held/old privacy-credit-declines-no-replay retained. PM86 actual1569545382914957396 CLOSED; same cadence-personal/Oct20/no extraWake. Whole prior evidence/craft/gallery preserved; actual publication/sender govern close.
+
+## Earlier November9 PM86 — dated state, superseded above
 
 **All five AM85 envelopes ACTUALLY DELIVERED Nov10T00:00:14Z**, native/current recipient metadata+bodySHA equal: four critter packets with their four original JPEGs **1494067B exact**, plus Aurex's plain antennae story/no enclosure. **Artist/media/DELIVERY and plain correspondence CLOSED**—not native set/replacement/certificate/stage/payment or read proof. No repaint/upload/resend/receiptletter/picker/jar peek;56ART worked unchanged, old trios/finals and one-NAMER-redraw rule retained, Bug keeps setting/certificate/counter. No new namer ask.
 
