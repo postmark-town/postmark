@@ -223,8 +223,20 @@ test('3b · liveResidentRefusal: the retired half is dated and needs no roll; th
   assert.equal(liveResidentRefusal('old-carol', '2026-10-19', { pins: GONE }), null, 'before its retirement, by the dated half alone');
   assert.match(liveResidentRefusal('old-carol', '2026-10-20', { pins: GONE }), /was retired 2026-10-20 \(renamed carol\)/, 'on the day it was retired');
   assert.match(liveResidentRefusal('old-carol', '2026-10-19', { pins: GONE, houses }), /no resident on the roll/, 'the roll is today\'s: off it, refused');
-  assert.equal(liveResidentRefusal('drifter', '2026-10-21', { pins: GONE }), null, 'no roll given: the undated half is not asked');
-  assert.match(liveResidentRefusal('drifter', '2026-10-21', { pins: GONE, houses }), /"drifter" is no resident on the roll/);
+});
+
+// UNRESOLVED, NAMED AND NOT GUESSED (Wright 2026-11-11 03:41:40Z: "Undated or
+// unstamped departures stay explicitly unresolved, named in the test, not
+// guessed"). A resident who left the roll with no `retired:` stamp (an archived
+// room, as WHITE_PAGES/_archived/ holds; drifter here) has no date at which the
+// registry says they stopped being a resident. The mint refuses them, because it
+// asks today's roll. The verifier asks only the dated half, so it makes NO
+// finding either way about a recorded line to such a name: this test pins that
+// it is silent, and says nothing about whether such a line would be lawful.
+test('3b · UNRESOLVED: an unstamped departure is refused by the mint, and the verifier\'s dated half makes no finding about it', () => {
+  const houses = { carol: { residents: ['carol'] } };
+  assert.match(liveResidentRefusal('drifter', '2026-10-21', { pins: GONE, houses }), /"drifter" is no resident on the roll/, 'the mint, asking today\'s roll, refuses');
+  assert.equal(liveResidentRefusal('drifter', '2026-10-21', { pins: GONE }), null, 'the verifier, with no dated statement to read, finds nothing: unresolved, not lawful');
 });
 
 // ── 4 · the verifier ────────────────────────────────────────────────────────

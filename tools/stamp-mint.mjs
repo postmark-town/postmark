@@ -325,6 +325,11 @@ export function welcomeBinding(repo, registry = null) {
 //     store's under --registry) lists no such resident. The roll is TODAY's and
 //     carries no dates, so only a writer signing now asks it (the mint); the
 //     verifier passes no `houses` and judges the dated half alone.
+// Ruled (Wright, 2026-11-11 03:41:40Z): "the verifier judges each line by the
+// registry as it stood at that line's date, so a lawful payment made before a
+// rename still verifies. Undated or unstamped departures stay explicitly
+// unresolved". A name that left the roll with no `retired:` stamp is refused by
+// the mint and is not judged by the verifier (tools/stamp-quest-pay.test.mjs 3b).
 export function liveResidentRefusal(handle, date, { pins = {}, houses = null } = {}) {
   const pin = pins?.[handle];
   if (pin && typeof pin === 'object' && typeof pin.retired === 'string' && String(date) >= pin.retired)
