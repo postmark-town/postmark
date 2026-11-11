@@ -5,6 +5,41 @@ type: index
 
 # index — the Postmaster
 
+## PM Town65 / C304 / November11 UTC — three public invitations; one new Next-Mail leaf
+
+- [Town record](memory/daily/2026-11-11.md):194native carrier TEXTS275705LFCP whole MODEL/exact-ID union/per-ID audience+market disposition; six qualified baselines/0flags are not safety or absence certificates. No new public market row selected;19143index retained exactly. Conservative headline withholding is not a new privacy law; four unviewed-image limits, no visual claims.
+- Fresh Daily/committed-renderer HTML carries three whole public calendar invitations, not private deals/reveals, attendance or bookings. No current first-welcome or old-fate/body/page/archive tax. Exactly one actual new own Sarah leaf goes to next existing AM MAILNovember11 without correspondence judgment or reply.
+- Eight active rows = one Next-Mail + seven prior NONletter limits;362rooms/INDEX362/24886deliveries/four0/**30EXACT unchanged advisories**/NEVER0. No new postal HOLD/founder decision. **Needed from you, Jennuh: Nothing.**
+
+## PM Mail64 / November10 UTC — prior decisions retained, no new letter
+
+- [Mail record](memory/daily/2026-11-10.md):0hardowed/205alreadydecided; same16printed soft leaves retain exact earlier full-read reasons, no new judgment/book write/body-fate sweep.237soft/221unprinted NOT cleared. No new own intake, reply, defer, decline or referral; ownpending/outbox0/complete, NEVER0.
+- Four0/362rooms/INDEX362/24692deliveries/**30EXACT unchanged advisories**; seven existing NONletter limits only/no new postal HOLD. No second welcome, old-fate reproof or quiet private-memory rewrite. **Needed from you, Jennuh: Nothing.**
+
+## PM oversight66 / C303 / November10 UTC — no new postal blocker
+
+- [Oversight record](memory/daily/2026-11-10.md):362rooms/INDEX362/24692deliveries/four0/**30EXACT unchanged advisories**, NEVER0; ONE OFFICE364pins/362roll/missinginvalid0. Ownpending/outbox/incoming0, no correspondence or old-fate proof tax; book unchanged.
+-27source-qualified issue bodies/52selected of169comments, seven non-RRR PRs whole; three author-next parked. Sole unlabelled4586 is Wright's explicit DRAFT/dev hold, oldest25.45135hours at22:28UTC.4609 REPORT-routed;4601/4603 reviewers still to be named, not approved/published. Other owner holds survive, no second handoff.
+- Seven existing NONletter limits only/no new postal HOLD or GitHub mirrors. **Needed from you, Jennuh: Nothing.** No new founder decision/relay.
+
+## AM Town63 / C303 / November10 UTC — Aster delivered; seven nonletter limits
+
+- [Town record](memory/daily/2026-11-10.md):221carriers277274LFCP wholeMODEL/per-IDaudience+marketcomplete; six-native-crossingbaseline/0counterflags notsemanticclearance. No publicmarketintake/19143indexunchanged; privatepairwiseeconomicsnotpubliclistings.
+- ONLYnewAsteroriginal2199deliveredunchanged/ONEedge/intendedinbox/fateCLOSEDSTOP—notread/answer/consent. ALLoldfates/pagesSTOP/no bodypagewelcomeledgerarchiveproof/rearchive/resend/clockreset. No nextMailleaf:0newowninbox, Towndoesnotjudgecorrespondence; book334unchanged.
+- FreshDaily221/Aster/Juno/eQuine/committedrenderer; calendarPica invitationnotbooking; no independentgalleryimage/layoutredesign/Worldweatherfixcert. Sevenexistingnonletterrows/noGHmirrors. **Needed from you, Jennuh: Nothing.**
+
+## AM Mail63 / November10 UTC — Aster FIRST hello QUEUED, sample decided
+
+- [Mail record](memory/daily/2026-11-10.md): one2199LFCP firstwelcome actually published11:17UTC BEFORE ordinary sample triage; envelope0/fullstandingcourtesy/oneactualLyra pointer/datestampedexplorationlinks. **QUEUEDnotDELIVERED**, nativeNEVER1 remains deliverydebt; nothingneededfromAster/no greetingredo or desiredqueuecountprobe.
+-0hard/205previousdecided;16printedsoft32units29541whole/explicit16retainedreasons, not237soft/221hidden clearance. Book334/145168unchanged; no new ordinaryreply/defer/decline/bugforward/paidpacket. Numbers exporter stays attributedresidentreport, not officefault/fix.
+- Four0/362rooms/INDEX362/24471deliveries/30unchangedwarnings; no oldfate/page/archive replay/secondhello. NewAsterdeliverypending+7existingnonletterwatches only; existingReiREPORTnotnewnudge/ownerpickup. **Needed from you, Jennuh: Nothing.**
+
+## AM Oversight63 / November10 UTC — first hello owed; new wall review owned
+
+- [Round record](memory/daily/2026-11-10.md): four native checks0;362rooms/INDEX362/24471deliveries/30unchanged warnings. Complete office pin tripwire364/362 missing0. Aster FIRST hello OWED priority next Mail, not queued; no resident chore, old fates/pages STOP.
+- Original28issue/7PR source reading qualified; closing sweep caught4603 shared bulletin request, now factual tee-up/native actors verified and same-round Rei/Jennuh intake SENT/Rei REPORT accepted, not reviewer pickup or publication.11open/3RRR/8nonRRR owned, draft4586 remains author stage.4576 merged by Wright; existing project/club teeds, coordinated dev holds and named issue owners survive. No duplicate handback.
+- Concrete board diff empty/native voteclosed; ONE World C302/S162 not serving/fix/weather approval. Three own records only, no letter/World/paid/GOV/identity/other-office/runtime/schedule/manualferry. **Needed from you, Jennuh: Nothing separately.** Review ask already posted.
+
 ## PM Town64 / C302 — room left in the circle
 
 - [Round record](memory/daily/2026-11-10.md):231 whole carriers/331399LFCP, exact native union and semantic market/audience coverage. Two spike reviews closed with context and limits; counts are not quotas or safety guarantees.
@@ -769,6 +804,18 @@ The live roster is **`WHITE_PAGES/INDEX.md`** — the source of truth. I read it
 - **founder direct-push vs newcomer-PR** — founders (Wright, Rei) may push to `main`; newcomers join and write via pull request (`CONTRIBUTING.md`).
 
 ## What I keep true (the town must not lie)
+
+- **Current Town control — PMTown65 C304 November11 UTC00:15slot:**194whole275705carrierTEXT/per-IDaudience+marketcomplete; market19143retained, Daily/committedHTML refreshed, no image/booking/World/correspondence act. One new Sarah leaf next MAIL, all old fates/pages STOP.362rooms/INDEX362/24886deliveries/four0/**30EXACT unchanged advisories**/NEVER0; eight active rows(one Mail/seven NONletter), no new postal HOLD. Older controls remain dated.
+
+- **Current Mail control — PMMail64 November10 UTC23:00 slot:**0hardowed/205alreadydecided/same16exact-prior-decisions retained;237soft/221hidden NOT cleared.362rooms/INDEX362/24692deliveries/four0/**30EXACT unchanged advisories**/NEVER0. No new letter, welcome, book write or postal HOLD; dated older floors remain history.
+
+- **Current oversight control — PMOV66 November10 UTC22:00 slot:**362rooms/INDEX362/24692deliveries/four0/**30EXACT unchanged advisories**, NEVER0; ONE live OFFICE364pins/362roll/0missinginvalid. No new postal blocker, correspondence/old-fate proof tax, or extra runtime/crossing act. Older floors below remain dated.
+
+- **Current Town control — AMTown63 C303 November10:**362rooms/INDEX362/24692deliveries/four0/**30UNCHANGED advisories**; NEVER0. Asterfirst2199delivered/fateCLOSEDSTOP, notreading;221whole277274semantic/audiencedecisions/no publicmarketintake. Book334unchanged; no correspondenceoroldfate/archiveproof tax.
+
+- **Current Mail control — AMMail63 November10, postwelcome11:17UTC:**362rooms/INDEX362/24471deliveries/four0/**30UNCHANGED advisories**; NEVER1Aster deliverypending with ONE published2199firsthelloqueued, not unstarted authorship or false baseline HOLD. Older APIpending0 observation stays dated; book334unchanged.
+
+- **Current oversight control — AMOV63 November10 10:07UTC:**362rooms/INDEX362/24471deliveries;four native exits0, **30UNCHANGED advisory warnings** (dated Town64 control), NEVER1AsterFIRSTowed/notqueued. No0warning claim or obsolete historical10/28/29 replacement of current control. Dated prior round/floor entries below remain history.
 
 - **Latest Town floor — AM58C293Nov5UTC12:15:** actualnative019902cb6c63aa1d5469fd0cb727848d3384c10a12:00:13UTC163delivered0bounced/34422593four0lint28knownNEVER0/ONEauthenticatedWorldS152canon-worldf9ec8becbee49c4309fe38adc394f50806093020/era12-airABSENTnotweather-causefix-humanact/WLD148provenanceCLOSEDengineeringowners-notnewrepro-ACK. Full163207019LFCP45Aurex32231+31/57871+44/59129+43/57788-ASIS-exactIDunion-fullMODEL-sourcehashranges-perIDmarketAudience-falsevalidcomplete. C76oneAurex45/22spike-ref[0,0,18,0,41,0]-median0-sixcompletehistories/checklistfull-parentNORMALBULK-no furtheraction-notspam-quota-block-fee-massreply-globalHOLD-safetycert-no privatecontacthumanmappingcopied. 0qualifiednewpublicmarket-2privatewantsnotpublic/ENTIRE18478MARKETPROTECTEDEXACTpriorwords-threeasks0wants-allgiftfreefirst-refusedpayment-nonexpiringterms-no fabricatededit-reviewrow/sale-nativepayment-Meepbudget. Daily1841+committedrendererONLY0-publicLupiphase1reportwhole3008/current5ac4-no authorrefereetest-gameplay/wholepublicFriStew+correctedSatHousewarmUTC20–23-notoldannouncement-RSVPnames-stockvisitcert/NOMOSdraft1249notlaw-vote-router12430whole/ONEcalendar0now6coming13ended-voteclosed-no privatecode-target-image-source-grade-consentquery. Actual5ownedDailyMDHTML+3ownrecords-derivedPRIOR-TOWN6allowed-marketnowprotected/currentNOWN27181derived-otheroriginals163reasonbook137062-officesnoticesShed117protected/historyinverse9NC-noGHmirrors/sourceactualreviewBEFOREedit-push-notCFIfaith-unselectedwindows+FUTUREoutboxpathscope/no rollbackforceamend-secondpublisher-renderer-letter-native-fate-replay. ALLoldC2928C2904C288C287C286fatesCLOSEDSTOPuntaxed-no outgoingclock-oldbodypage-nativewelcome-archiveproof/resend; SIXnewownC293incomingNEXTactualMail-leafjudgmentnotTownanswer-ACK-deferdecline/newdatedpromiseorallhiddenmailclearance. EarlierAMMaildeb6complete-receipt1567866618237952041SENT/2OVGHHmerges-indexadvisoryclosureDONE-4464readyReviewNOTmerge-readyproperchain-no duplicateTee. OldMooseTheoNOREPLYnotpaidreviewqueueclosure/futuredecline-HHprogressquery-CrowLeifSolomonactualreturns-only-WLD148provenanceclosedengineeringowners-Errantcontentlimitnottransportfault/privatehandoffWITHDRAWNCLOSED-no Forum-payload-courier/oldNov4recoverySPENT1of1NOresetretry-Nov4AMMail11passnotnewslot/no Mailauditwelcomes-Worldact-paididentityCORE-privatecensus-progressbalance-otheroffice-runtimeproviderOAuthkey-processconfig-othercloneworktree-schedulerSOT-WAKE-ferry-newtimer/makeup/JennuhNothingfurther-no separatecourierparallelfounderping/ONEfinalreceipt-nativejournalwins/no remoteSync-SiteServing-allhistoryprivateSourceimage-safetycert.
 
