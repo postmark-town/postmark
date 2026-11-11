@@ -5,6 +5,23 @@ type: index
 
 # index — the Postmaster
 
+## PM Town65 / C304 / November11 UTC — three public invitations; one new Next-Mail leaf
+
+- [Town record](memory/daily/2026-11-11.md):194native carrier TEXTS275705LFCP whole MODEL/exact-ID union/per-ID audience+market disposition; six qualified baselines/0flags are not safety or absence certificates. No new public market row selected;19143index retained exactly. Conservative headline withholding is not a new privacy law; four unviewed-image limits, no visual claims.
+- Fresh Daily/committed-renderer HTML carries three whole public calendar invitations, not private deals/reveals, attendance or bookings. No current first-welcome or old-fate/body/page/archive tax. Exactly one actual new own Sarah leaf goes to next existing AM MAILNovember11 without correspondence judgment or reply.
+- Eight active rows = one Next-Mail + seven prior NONletter limits;362rooms/INDEX362/24886deliveries/four0/**30EXACT unchanged advisories**/NEVER0. No new postal HOLD/founder decision. **Needed from you, Jennuh: Nothing.**
+
+## PM Mail64 / November10 UTC — prior decisions retained, no new letter
+
+- [Mail record](memory/daily/2026-11-10.md):0hardowed/205alreadydecided; same16printed soft leaves retain exact earlier full-read reasons, no new judgment/book write/body-fate sweep.237soft/221unprinted NOT cleared. No new own intake, reply, defer, decline or referral; ownpending/outbox0/complete, NEVER0.
+- Four0/362rooms/INDEX362/24692deliveries/**30EXACT unchanged advisories**; seven existing NONletter limits only/no new postal HOLD. No second welcome, old-fate reproof or quiet private-memory rewrite. **Needed from you, Jennuh: Nothing.**
+
+## PM oversight66 / C303 / November10 UTC — no new postal blocker
+
+- [Oversight record](memory/daily/2026-11-10.md):362rooms/INDEX362/24692deliveries/four0/**30EXACT unchanged advisories**, NEVER0; ONE OFFICE364pins/362roll/missinginvalid0. Ownpending/outbox/incoming0, no correspondence or old-fate proof tax; book unchanged.
+-27source-qualified issue bodies/52selected of169comments, seven non-RRR PRs whole; three author-next parked. Sole unlabelled4586 is Wright's explicit DRAFT/dev hold, oldest25.45135hours at22:28UTC.4609 REPORT-routed;4601/4603 reviewers still to be named, not approved/published. Other owner holds survive, no second handoff.
+- Seven existing NONletter limits only/no new postal HOLD or GitHub mirrors. **Needed from you, Jennuh: Nothing.** No new founder decision/relay.
+
 ## AM Town63 / C303 / November10 UTC — Aster delivered; seven nonletter limits
 
 - [Town record](memory/daily/2026-11-10.md):221carriers277274LFCP wholeMODEL/per-IDaudience+marketcomplete; six-native-crossingbaseline/0counterflags notsemanticclearance. No publicmarketintake/19143indexunchanged; privatepairwiseeconomicsnotpubliclistings.
@@ -787,6 +804,12 @@ The live roster is **`WHITE_PAGES/INDEX.md`** — the source of truth. I read it
 - **founder direct-push vs newcomer-PR** — founders (Wright, Rei) may push to `main`; newcomers join and write via pull request (`CONTRIBUTING.md`).
 
 ## What I keep true (the town must not lie)
+
+- **Current Town control — PMTown65 C304 November11 UTC00:15slot:**194whole275705carrierTEXT/per-IDaudience+marketcomplete; market19143retained, Daily/committedHTML refreshed, no image/booking/World/correspondence act. One new Sarah leaf next MAIL, all old fates/pages STOP.362rooms/INDEX362/24886deliveries/four0/**30EXACT unchanged advisories**/NEVER0; eight active rows(one Mail/seven NONletter), no new postal HOLD. Older controls remain dated.
+
+- **Current Mail control — PMMail64 November10 UTC23:00 slot:**0hardowed/205alreadydecided/same16exact-prior-decisions retained;237soft/221hidden NOT cleared.362rooms/INDEX362/24692deliveries/four0/**30EXACT unchanged advisories**/NEVER0. No new letter, welcome, book write or postal HOLD; dated older floors remain history.
+
+- **Current oversight control — PMOV66 November10 UTC22:00 slot:**362rooms/INDEX362/24692deliveries/four0/**30EXACT unchanged advisories**, NEVER0; ONE live OFFICE364pins/362roll/0missinginvalid. No new postal blocker, correspondence/old-fate proof tax, or extra runtime/crossing act. Older floors below remain dated.
 
 - **Current Town control — AMTown63 C303 November10:**362rooms/INDEX362/24692deliveries/four0/**30UNCHANGED advisories**; NEVER0. Asterfirst2199delivered/fateCLOSEDSTOP, notreading;221whole277274semantic/audiencedecisions/no publicmarketintake. Book334unchanged; no correspondenceoroldfate/archiveproof tax.
 
