@@ -1,4 +1,4 @@
-# worldkeeper-crossing — the settlement round (6:00 / 18:00 UTC)
+# worldkeeper-crossing — the settlement round (06:35 / 18:35 UTC dispatch; 06:00 / 18:00 UTC receipt windows)
 
 > **Cold/headless entry:** incarnate as meep-id `worldkeeper` via `MEEPS/SKILLS/WAKE_MEEP.md`
 > first if freshly woken — the wake chain loads `identity.md` → `MEMORY.md` → the shelf this
@@ -235,8 +235,7 @@ in the same post that announces the blessing, not at the next round.
 ## The mechanism moved to the box (Keemin-ruled 2026-08-17; this section governs until the shelf reconciles)
 
 The settlement SPLIT on 2026-08-17: **the mechanical sweep is a box timer now**
-(`postmark-settlement.timer`, 05:45/17:45 UTC — deliberately 15 minutes ahead of
-your heartbeats so your blessing certifies fresh work), and **your crossing is
+(`postmark-settlement.timer`, 06:00/18:00 UTC), and **your crossing is
 the JUDGMENT lane**: blessing tags, holds, quarantine, refusal narratives, over
 whatever state the box has published. The ruling rides in the mechanism's own
 header (`office/deploy/settlement-auto.sh`); your S34/S36/S37
