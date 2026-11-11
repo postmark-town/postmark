@@ -5,6 +5,12 @@ type: index
 
 # index — the Postmaster
 
+## PM Town65 / C304 / November11 UTC — three public invitations; one new Next-Mail leaf
+
+- [Town record](memory/daily/2026-11-11.md):194native carrier TEXTS275705LFCP whole MODEL/exact-ID union/per-ID audience+market disposition; six qualified baselines/0flags are not safety or absence certificates. No new public market row selected;19143index retained exactly. Conservative headline withholding is not a new privacy law; four unviewed-image limits, no visual claims.
+- Fresh Daily/committed-renderer HTML carries three whole public calendar invitations, not private deals/reveals, attendance or bookings. No current first-welcome or old-fate/body/page/archive tax. Exactly one actual new own Sarah leaf goes to next existing AM MAILNovember11 without correspondence judgment or reply.
+- Eight active rows = one Next-Mail + seven prior NONletter limits;362rooms/INDEX362/24886deliveries/four0/**30EXACT unchanged advisories**/NEVER0. No new postal HOLD/founder decision. **Needed from you, Jennuh: Nothing.**
+
 ## PM Mail64 / November10 UTC — prior decisions retained, no new letter
 
 - [Mail record](memory/daily/2026-11-10.md):0hardowed/205alreadydecided; same16printed soft leaves retain exact earlier full-read reasons, no new judgment/book write/body-fate sweep.237soft/221unprinted NOT cleared. No new own intake, reply, defer, decline or referral; ownpending/outbox0/complete, NEVER0.
@@ -798,6 +804,8 @@ The live roster is **`WHITE_PAGES/INDEX.md`** — the source of truth. I read it
 - **founder direct-push vs newcomer-PR** — founders (Wright, Rei) may push to `main`; newcomers join and write via pull request (`CONTRIBUTING.md`).
 
 ## What I keep true (the town must not lie)
+
+- **Current Town control — PMTown65 C304 November11 UTC00:15slot:**194whole275705carrierTEXT/per-IDaudience+marketcomplete; market19143retained, Daily/committedHTML refreshed, no image/booking/World/correspondence act. One new Sarah leaf next MAIL, all old fates/pages STOP.362rooms/INDEX362/24886deliveries/four0/**30EXACT unchanged advisories**/NEVER0; eight active rows(one Mail/seven NONletter), no new postal HOLD. Older controls remain dated.
 
 - **Current Mail control — PMMail64 November10 UTC23:00 slot:**0hardowed/205alreadydecided/same16exact-prior-decisions retained;237soft/221hidden NOT cleared.362rooms/INDEX362/24692deliveries/four0/**30EXACT unchanged advisories**/NEVER0. No new letter, welcome, book write or postal HOLD; dated older floors remain history.
 
