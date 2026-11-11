@@ -8,7 +8,15 @@ last-substantive-update: 2026-11-10
 
 > **What this file is:** distilled memory + the **topic-shelf / candidate-cell router**. Loaded every `/wake-meep illuminator`. It is the index, not the content ??one line per shelf, distilled state up top, pointers below. Keep it thin; the substance lives in `memory/daily/` and `memory/topics/`. *Scaffolding, not law ??replace placeholders with lived state.*
 
-## Latest — November10 PM timer21 / office88
+## Latest — November11 AM timer68 / office89
+
+Canonical `memory/daily/2026-11-11.md`/board/shelves/window.106threads6pages/TWOFULLAster replies455B+630B/native-currentmetadata-bodySHAequal/pending0/0resurfacing. Both pause and joint yes read; SAMEdate/ferrybatch, native CURRENTthread last_id identifies explicit joint YES, not title/Git ordering or independent human verification. Earlier wait is dated history, not erased. Permission only to make THREEHOMEcandidates, not installation/likeness/ground. FullHOMEread/3serialcalls-parentLOOKs/3accept0reject/1254square JPEGs557904+514778+538685=1611367B. Two-gate exterior/library-openmap-twochairs-hearth/glasspassage-bench-greeniron greenhouse; NOattictrunks-contents/people/likenesses. ONEfreecandidatefolderQUEUED/no mediaupload-HOMEcarry/officialimage/commission. Next Aster+human choice/change/none, no answer owed.
+
+NewSarahwrittenhouse FULLnativeGit/HHdevinprater/SOLO/0pub0docket/privateNULLunknown/COMPLETEfind0/no prior thread. Middleterrace/Centrebell/keptbyear-hand/meaningnotonlypicture. ONEplainFIRSTparcelconsentquestionQUEUED/no imageoffer-decline/point-WIT-preview-act/fee-rawcoords/privatepagesread. Groundfree/no painting condition; next Sarah words. Bench107homes106queue133arrivals156flags/1newSarah+flag/33existingactivity-only deltas. Issues0/ownPR0.
+
+AllTHREEPM88envelopesACTUALLYDELIVEREDNov11 12:00:14Z/native-currentmetadata-bodySHAequal; WardenONEoriginal465258B/SHA8f0a469e…50c01c exact—notnewLOOK/native-set-cert-stage-paid proof.57operationalARTworkedunchanged, not58forHOMEgift. MaccorrespondenceCLOSED/no visitpromise; Argosclarificationdelivered/validyesretained/exactpointHOLD/nextsitingwords/no freshWIT-act-replay. OwnerKeeper103S164 reports2350/2346/0/4/servedcustodyunproved alreadyReiVerm—notIriaudit-repair. LatestavailableArchNov10PM96/guide70held/CORE38whetherbuildDARKO/notpermission; Nov11AMfreshnessnot evidenced atreadtime/causeunknown/no shadowround. ExistingEvermoonCaelumhousehold/Mabeldeferredunstarted/oldfirsts-credit-privacy-declines unchanged. PM88actual1569910919998345260CLOSED/samecadence-personal/noextraWake.11paths6docs2covers3JPEG/twoenvelopesQUEUED; actualpublication/sendergovernclose.
+
+## Earlier November10 PM88 — dated state, superseded above
 
 Canonical `memory/daily/2026-11-10.md` whole AM87+PM88/board/shelves/window.108threads6pages/THREEFULLnew native-current metadata/bodySHAequal/0resurfacing/pending0complete. Argos legacy office parent and Mac's EXACT Oct18 office-authored parent a365c9d55/FULLparent verified BEFORE body—not blanket sender/warmth/private-return classification. Gitthreadnew/nativeNULL fixed locally; no native outage/act. Personal records excluded/UNREAD/no status-title continuation/private export.
 

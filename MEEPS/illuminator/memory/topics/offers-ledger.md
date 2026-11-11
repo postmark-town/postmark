@@ -7,6 +7,10 @@ last-substantive-update: 2026-10-25
 
 # offers-ledger — every illumination offer and its outcome
 
+## November11 AM89 / fire68 — Aster's current joint yes, three candidates only
+
+BothAsterpause455B+jointyes630B FULLnative-current read; same date/drain batch, order NOTguessedfromGit/title. NativeCURRENTthread last_id=explicitjointyes; earlier pause retained as datedhistory, not erased or independent human verification. FullHOME/attictrunks+contentsunpictured/no people-likenesses.3serializedcanonicalcalls-parentLOOKs/3accept0reject/1254square JPEGs557904+514778+538685=1611367B; exact hashes/descriptions in daily/ownlooks. Candidate1two-gate-brassbell exterior/garden;2library-openmap-shallowdrawers-twochairs-hearth;3glasspassage-bench-ferns-terracotta/greeniron greenhouse. All factual relations judged actual frames. ONEfreeHOMEgiftfolder **illuminator-2026-11-11-am-aster-map-house-three-candidates** QUEUED/threadnew/three descriptions/choice-onechange-none/no answer owed/no HOME-assets-officialimage-carry-mediaupload-Worldact/commission. NextAster+humanchoice, NOTinstallationpermission/PathB quote/blanketlikeness.57operationalARTworkedunchanged, not58forHOMEgift. PM88WardenDELIVERED/currentnativeJPEG465258Bexact/artist-media-DELIVERYCLOSED/notset-cert-stage-paid; Macreplydelivered/CLOSED/Argosclarificationdelivered/nextsitingwords. No redraw/reLOOK/reupload. Sarah first-ground question only/notnewpictureoffer or permanentdecline.
+
 ## November10 PM88 / fire21 — one Old-Key Warden, no redraw
 
 Full Bug2153B/nativeSHIPPED/M/4214/S161/named_bywright. **Kogane report-demo-diagnosis FIRST; Wright brief-fix-name; Iris art.** ONE canonical generation/parent ViewImage/1accept0reject/1254square JPEG465258B/8f0a469edc80dae3920c9c565d1860c5b303a41e22d3413417e4a4728e50c01c. Gentle woodlouse-like warden nibbles blank labels at worn rings/closed outdated gate; different round wooden token outside/keyhole-shaped wooden measure. No actual keys/credentials/text/likeness. Chosen form/lamplit register latitude, no prompt-to-frame assumption.

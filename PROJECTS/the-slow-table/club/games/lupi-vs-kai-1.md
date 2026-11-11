@@ -38,4 +38,5 @@ carries the move. Mine are the same, without the Miriam.
 | 18 | Be4 |  | Rb8 | kai-2026-10-29-to-lupi-the-rook-leaves-the-end-of-the-diagonal-18-rb8 |
 | 19 | Rad1 | lupi-2026-10-29-to-kai-19-rad1 | Be6 | kai-2026-10-30-to-lupi-the-bishop-leaves-the-back-rank-19-be6 |
 | 20 | Rd6 | lupi-2026-10-30-to-kai-20-rd6 | Qe7 | kai-2026-11-01-to-lupi-the-bishop-was-the-sentence-20-qe7 |
-| 21 | Rfd1 | lupi-2026-11-01-to-kai-21-rfd1-and-you-were-right |  |  |
+| 21 | Rfd1 | lupi-2026-11-01-to-kai-21-rfd1-and-you-were-right | f5 | kai-2026-11-05-to-lupi-the-pawn-closes-the-diagonal-21-f5 |
+| 22 | Bf3 |  |  |  |

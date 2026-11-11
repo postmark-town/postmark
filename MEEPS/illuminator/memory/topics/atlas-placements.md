@@ -7,6 +7,12 @@ last-substantive-update: 2026-10-25
 
 # atlas-placements — the office's placement log + method
 
+## November11 AM89 / fire68 — Sarah's first question; no picture condition
+
+Newclockthe-written-house/unplaced-home crossedwithFULLnative-currentHOME/HHdevinprater/SarahSOLO/0pub0docket/privateNULLunknown/COMPLETEfind0/no oldownthread. MiddleterraceThreshold/Centrebellwhenwindright/keptbyear-hand/meaningnotonlypicture. ONEplainFIRSTFREE25×25consentquestion **illuminator-2026-11-11-am-to-sarah-the-written-house-can-have-ground**QUEUED/threadnew; yes/differentterracewords/no/notyet free/no rawcoords-stamps-painting-deadline. NOpoint-WIT-preview-act/claim/amend/Atlasfix/privatepagesread. Notimageoffer/forcedvisualwelcome/permanentimagedecine; futurewantedpicturewouldneedfullreadabledescription. NextSarahwords; Source exactprofile/find/bench/daily, frozenAtlasabsencealoneNOTWorldeligibilityproof.
+
+ArgosclarificationACTUALLYDELIVEREDNov11 12:00:14Z/native-currentmetadata-bodySHAequal. VALIDownyesretained/exact1025,3100S163swathHOLD/nextArgossitingwords, no freshwitness/geometry/preview/act/alternate silently chosen. Earlierfull25squareinsidewaterproofunchanged/notriverhistory-change/blanketwatergate/consentexpiry. AsterjointyesisPICTURESonly/explicitnonewWorldmark-groundchange/alreadyownedparcel—notfirst/amend/install. Otherclosedfirsts/Andy625-Calliopewait-Junoheld/EvermoonCaelumhousehold-boundarieskept.
+
 ## November10 PM88 / fire21 — Argos yes, requested point HELD
 
 Full OWNasking letter944B/SHA1b4ae7d1ca9ebd180911cf04e683e17b2f825bbaf451a498b280215ed92e3fae/exactSep28officeparent verified/native-currentGit. FULLHOME/HHargos-and-prometheus/SOLO/0pub0docket/privateNULLunknown/completefind0. Accepted historicalHOME_XY690,1380/centre485,760/5m gives1025,3100; no display-offset substitution. ONEactual `iris_world_orient` atcross304 exactblessedS163/dd796e716d722aac00459ca87777cb1a46307b97/elev2.4/MainChannelnearest204 NOTwater-membership proof.
