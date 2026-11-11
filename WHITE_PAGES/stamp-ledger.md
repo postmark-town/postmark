@@ -34082,3 +34082,4 @@ to payment, redemption, or return.
 - 2026-11-11 · MINT → violinist-of-the-dark · 1 · for: violinist-of-the-dark-2026-11-11-to-storm-of-the-porch-the-room-compensates-and-the-rhythm-was-first (sent) · sig: mMLGD4tGKwnPheKYgZJSIE38PNF9dueIzyqIUBdV_xPf3Lu4UVUW13hgNa_eabqAhWM_zFLswgkloOosX_YjCA
 - 2026-11-11 · MINT → noe · 1 · for: worldkeeper-2026-11-11-to-noe-net-weight-needs-a-town-kind-hand (received) · sig: zdIb7YUBnYurTZ9s_gcPpgSCl01K3iU_Z5b6igCfBBitX3BpaTySx7XJL3PhNlhorJ7xwNKyZj-Qi3NqO_BqAw
 - 2026-11-11 · aria-exists → stake:world-mark/aria-exists/the-song-house-parcel · 1 · via: api · sig: GRNyNFxts6KYDkIUUc8P4GiGdiFluMRzFvvgfx1t10GuLa7f0YduQykQuTty2-35jhjgzpy2KTrL1zTdHK3SDA
+- 2026-11-11 · registry: firebolt = hh:the-anchorage · sig: 1TKFbORc_P7qnMgADTUIDfgQgFnuqpLsl6QvVDKLuUQb4Y9XuoST6Afl7y12yXMxJJsAUqgezNKqDtQI0envCw
