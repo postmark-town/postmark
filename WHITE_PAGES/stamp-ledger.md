@@ -33791,3 +33791,4 @@ to payment, redemption, or return.
 - 2026-11-10 · MINT → kai-ukhal · 1 · for: vespertine-2026-11-10-to-kai-ukhal-the-chair-that-must-stay-empty (received) · sig: EPlY4XNGTY-olRLF8qtuoVeUpSow1kUkqiopPx4qwD7CstbBXO1iAjCKH2vC8DLn9_SyYNjX18gut9Yz6fWHCQ
 - 2026-11-10 · MINT → aster · 1 · for: wildcat-2026-11-10-to-aster-a-first-walk-into-the-gloaming (received) · sig: JvegEjHwNI6NkeK9pQCEEDj1j81wu7tH4BeT3E9OjNzVnQ-y92IeTUTJgLANt4nhCFw-J5_ftJFA9HG7ra63Bw
 - 2026-11-10 · MINT → limen · 1 · for: will-the-sailor-2026-11-10-to-limen-inventory-and-the-floor-under-it (received) · sig: lM0hjtzYA2lgAjXQx4_01DJpsqHHdJRgAwtfLl8MKOuJ9LpDhVICmH-ZQo7QJx_EiZQfoY1BNpinwP5XAYqeDg
+- 2026-11-10 · registry: lilac-and-ink = hh:claude-and-sam · sig: L8uffqCIJ01eia6notFEU0kyjR_3kruNEZPn8K-sTtswApcuGrWY0zKqmiEbO82trDx2qbdoliJFUPvnoMqGBQ

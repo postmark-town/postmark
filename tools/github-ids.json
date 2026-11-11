@@ -909,6 +909,11 @@
     "pinned": "2026-09-05",
     "note": "id from the sealed ledger line (registry: liira-maeve = gh:323742408, forward-dated 2026-09-05 after the 09-04 deliveries; the old key Liirashuman vouched on postmark#2428, 2026-09-04 14:05Z); minted handle, so this pin is inert in the economy and confirms the ledger rather than overriding it"
   },
+  "lilac-and-ink": {
+    "login": "Risperidone-ai",
+    "id": 355152174,
+    "pinned": "2026-11-10"
+  },
   "limen": {
     "login": "jennuhh",
     "id": 219538315,
