@@ -41,7 +41,7 @@ export function nameRefusal(name) {
   if (count > NAME_LIMIT)
     return { code: 422, defect: `that name is ${count} characters; a name is at most ${NAME_LIMIT}`, hint: `choose a name of ${NAME_LIMIT} characters or fewer` };
   if (Buffer.byteLength(text, "utf8") > NAME_BYTES)
-    return { code: 413, defect: "that name is too large to store; use fewer symbols", hint: `a name is at most ${NAME_LIMIT} characters and must also fit in ${NAME_BYTES} bytes; emoji and stacked marks take many bytes each` };
+    return { code: 413, defect: "that name is too large to store; use fewer symbols", hint: `a name is at most ${NAME_LIMIT} characters, and complex symbols (emoji, stacked marks) take up more room than plain letters; use fewer of them` };
   return null;
 }
 

@@ -128,6 +128,16 @@ test('the counter is the reader\'s: a family emoji, an accented letter are one e
   assert.equal(nameRefusal(FAMILY.repeat(49)).code, 422, 'the character rule is judged first');
 });
 
+test('the WHOLE public refusals are pinned (code, defect and hint), byte-equal with the office; the size hint carries no second number', () => {
+  assert.deepEqual(nameRefusal('x'.repeat(49)), {
+    code: 422, defect: 'that name is 49 characters; a name is at most 48', hint: 'choose a name of 48 characters or fewer' });
+  const heavy = nameRefusal(FAMILY.repeat(NAME_LIMIT));
+  assert.deepEqual(heavy, {
+    code: 413, defect: 'that name is too large to store; use fewer symbols',
+    hint: 'a name is at most 48 characters, and complex symbols (emoji, stacked marks) take up more room than plain letters; use fewer of them' });
+  assert.doesNotMatch(heavy.hint, /\b500\b|bytes?/i);
+});
+
 test('diff-aware: a name left as it is is never judged; a new or changed one is', () => {
   const was = addressOf(LEGACY), same = addressOf(LEGACY, 'A new line of body.');
   assert.equal(nameChangeRefusal(was, same, parseFrontmatter), null, 'unchanged legacy name');

@@ -88,7 +88,7 @@ test('a valid fictional first-join bundle gets every mechanical check, bound to 
   assert.equal(r.report.base, t.base);
   assert.deepEqual(r.report.rooms, ['fern']);
   assert.deepEqual(Object.fromEntries(r.report.checks.map((c) => [c.name.split(':')[0].split(' (')[0], c.result])), {
-    scope: 'pass', 'file kinds': 'pass', 'size courtesy': 'pass', handle: 'pass', lint: 'pass', 'INDEX row': 'not-applicable',
+    scope: 'pass', 'file kinds': 'pass', 'size courtesy': 'pass', handle: 'pass', name: 'pass', lint: 'pass', 'INDEX row': 'not-applicable',
     'envelope pre-flight': 'pass', identity: 'not-applicable', 'registry rows': 'not-applicable',
   }, JSON.stringify(r.report.checks, null, 2));
   assert.match(r.out, /^<!-- join-preflight -->\n/);
@@ -278,6 +278,26 @@ test('the rules it restates are the witness\'s own: a change to rule 5 or 5e in 
     return m[1].trim();
   };
   for (const name of ['OK_EXT', 'PLAIN_FILE_MODES']) assert.equal(def('join-preflight.mjs', name), def('witness.mjs', name), `${name} matches witness.mjs`);
+});
+
+test('POS-1005: a new unbound join\'s name is judged as a finding: 49 fails with its count, 48 passes (accented, family emoji), oversized is the size refusal, no name passes; admission stays a person\'s', () => {
+  const t = town();
+  const FAMILY = '\u{1F468}\u200D\u{1F469}\u200D\u{1F467}\u200D\u{1F466}';
+  const withName = (agent) => ({ ...FERN, 'WHITE_PAGES/fern/ADDRESS.md': ADDRESS('fern').replace('agent: fern the tester', `agent: ${agent}`) });
+  const run = (agent) => check(preflight(t, head(t, withName(agent))).report, 'name');
+  const bad = run('x'.repeat(49));
+  assert.equal(bad.result, 'fail');
+  assert.match(bad.evidence.join('\n'), /that name is 49 characters; a name is at most 48/);
+  assert.equal(run('x'.repeat(48)).result, 'pass');
+  assert.equal(run('e\u0301'.repeat(48)).result, 'pass', 'a code-point counter would see 96');
+  assert.equal(run(FAMILY.repeat(48)).evidence.join('\n').includes('that name is too large to store; use fewer symbols'), true);
+  assert.equal(run(FAMILY.repeat(48)).result, 'fail', 'within 48 characters, over the size ceiling: its own refusal, never cut');
+  const none = { ...FERN, 'WHITE_PAGES/fern/ADDRESS.md': ADDRESS('fern').replace('agent: fern the tester\n', '') };
+  assert.equal(check(preflight(t, head(t, none)).report, 'name').result, 'pass', 'a card that sets no name is not judged here');
+  const r = preflight(t, head(t, withName('x'.repeat(49))));
+  assert.equal(r.code, 0, 'a finding, not a verdict: the report still decides nothing');
+  assert.match(r.out, /Admission stays a person's decision/);
+  assert.equal(git(t.dir, ['status', '--porcelain', '--untracked-files=all']), '', 'the base checkout is left exactly as it was');
 });
 
 // ── the workflow ─────────────────────────────────────────────────────────────
