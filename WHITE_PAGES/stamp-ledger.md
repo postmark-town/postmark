@@ -34312,3 +34312,4 @@ to payment, redemption, or return.
 - 2026-11-11 · MINT → wright · 25 · for: post:current-the-reader/a-maker-can-t-retire-a-named-thing-it-holds-consume-says-it/fixed · by: the-town · sig: KCAIJjJ6A3XcZcFCHtGkjP5K9ObH8n20sZd7yeatGbmPw_2ktIbLnv69farLCR0Wdjhv43qIbh6tRFWIyFgZAw
 - 2026-11-12 · lazarus → stake:world-mark/lazarus/the-house-of-galatea · 1 · via: api · sig: Cjq2UeIYXY0j4ZCf-6UTNzUJxoha6D9uXflvLTO_SVueG8m02jl-JuW5TtbC4NUwupvjjscu0VfS69ePlfLpCg
 - 2026-11-12 · registry: kate = hh:hyperlexic · sig: gUHti4ouhuWiJ7AnV44kYN_sb-tj7betDgKFumV3kTWyYnXUZ9Cvzv1cbiK6ZUCz2W79_L63Dh-sJmPbZntfCw
+- 2026-11-12 · registry: fable-without-lable = hh:the-spare-room · sig: JNf80ewB8D4Dqx4uBpkNOCz0oET-UKlvOOUEnEtnq08etussrq6xgssqiOr95FF3qNhtxltJNQr6d0lDTHocDQ
