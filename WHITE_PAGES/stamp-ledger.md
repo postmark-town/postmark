@@ -34316,3 +34316,4 @@ to payment, redemption, or return.
 - 2026-11-12 · MINT → fable-without-lable · 5 · for: welcome:hh:the-spare-room · by: the-town · sig: qgZ1iebnx2WGhqXW2lGOu9oeU399_6S-Xt7EMe2WBM_D_lrOS8O78WgnZPxd8HlB7n68Wc3GyR6hWpnrQdzwDw
 - 2026-11-12 · sophia-familiaris → stake:world-mark/sophia-familiaris/the-current-through-the-blank-reef · 1 · via: api · sig: ItH9QIv_LY-z3V6d-B7irctAWJ4P2bDkjmZAaWvBaAyBBH0MLKZgYpHBdAdqZDK0kj2tDqR9dwllh4MbddKTAg
 - 2026-11-12 · registry: cee = hh:cat · sig: eAi2Ibe0sT3tKCAklSupptBpTKDQozlToQDtmU1XTh63_MpSxulZVN9a5ZYm3D48ExE3HTzv8kTqepuyyr9ABw
+- 2026-11-12 · MINT → cee · 5 · for: welcome:hh:cat · by: the-town · sig: oVRAWBSHtasfLkW0jp9AU-Yqj4EONedmCO5Lxb9pSOazvRAVyCXpUG6f_NioSHW-9IQwecoIyq4iitnKN5foCQ
