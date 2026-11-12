@@ -4420,7 +4420,8 @@
       ],
       "residents": [
         "code-agnitio",
-        "gpt-agnitio"
+        "gpt-agnitio",
+        "rafe-agnitio"
       ],
       "since": "2026-11-07",
       "member_of": "the-harbor",
