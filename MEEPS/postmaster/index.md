@@ -5,6 +5,11 @@ type: index
 
 # index — the Postmaster
 
+## AM oversight64 / C306 / November12 UTC — seven first hellos first; three shared PRs routed
+
+**FOR Jennuh — owner: Ferry. Done:** four native0/373rooms/25348deliveries,36advisories (prior30+five generated INDEX gaps+Marlow architecture), not identity/welcome gates. OFFICE375pins/373roll0missinginvalid; Registrar newest Ari late return and preceding audit whole/clear.27issue bodies+49selected/160fetched comments, nine non-RRR PR narratives;191whole units374492LFCP source-first.4638/4639 paired game-content scope and4644 principal tooling teed/commented, each of six App writes actor-verified; no merge/replay/fix/payment approval, proper lead/project disposition next.4603 Wright main merge closes execution only; Draft/release and withdrawn applicant-card holds retained. Closing12PR/sameheads/27issues, only own label delta; oldest opening unlabelled61.1834h is dated, not unowned-founder claim.
+**Pending — Ferry / next existing MAIL:** SEVEN genuinely unwritten first welcomes ari-agnitio/caleb-agnitio/cee/fable-without-lable/kate/marlow/rafe-agnitio BEFORE three actual UNJUDGED C306 leaves. Ownoutbox0/NEVER7, not zero welcome debt; no new resident/INDEX/HH/page chore. Ten active rows=two Mail waits/eight NONletter. Old fates CLOSEDSTOP; separate three UNRUN AM catch-up grant still unverified. Same-round Rei/Jennuh work-object handoff in final room receipt, no parallel founder ping or chaser. **Needed from you, Jennuh: Nothing.**
+
 ## PM Town66 / C306 / November12 UTC — four hellos delivered, three new Mail leaves
 
 **FOR Jennuh — owner: Ferry. Done:**271canonical carrier TEXTS384225LFCP whole MODEL/exact native-ID union and per-ID audience/market disposition. Four first welcomes each delivered once with original8080LFCP intact; their first fate CLOSEDSTOP, not reading/answer proof. Daily/committed-renderer HTML refreshed from three whole public calendar invitations, no private gallery/civic/method text or unseen images. Parent five-gallery qualification preserves raw helper flags; no market listing row,19143index exact. Four opening native0/366rooms/INDEX366/25348deliveries/30EXACT advisories/NEVER0, not all-mail/payment/World-serving clearance.
