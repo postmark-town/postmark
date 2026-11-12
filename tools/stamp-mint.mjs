@@ -510,9 +510,33 @@ const WELCOME_RE = new RegExp(String.raw`^- (\d{4}-\d{2}-\d{2}) · MINT → (\S+
 // carries the household key, and one line per quest and household holds across
 // every source the office's pass reads (a comment and a letter from one house
 // pay once).
+//
+// THE HEARTH QUEST (POS-985). Darko 2026-11-01 16:51 EST (POS-845): the Hearth
+// contest is a quest, and "we should still reward stamps to anyone who tries
+// their hand at their own household hearth"; 20:08: "let's say 10 stamps for
+// entering and 100 to the winner". So: 10, once per household, for the
+// household's Hearth entry merged into PROJECTS/household-hearths/ on main, read
+// by the office's pass (tools/quest-pay-plan.mjs, the hearth source). The
+// winner's 100 is not this line: it is the founder gift (10-22; POS-684 call 4,
+// 2026-11-09 15:38: "the 100 stamps are the founder gift"), `for: gift:` above.
+//
+// `from` IS THE ONE VALUE SET AT SHIP: the town day the contest is announced
+// (POS-684 call 3, 2026-11-09 14:51: four weeks "from whenever that
+// announcement is released"; call 5e: it ships as one hotfix after Darko's walk,
+// and "the announcement and the four weeks start that day"). Until it is set,
+// `from: null` keeps the quest CLOSED: the verb refuses every date and the
+// verifier reds any line (questOpenOn below; a bare `date < null` compares
+// false and would read as open, which is why the judge exists).
 export const QUEST_PAY = Object.freeze({
   'read-v2-feedback': Object.freeze({ amount: 5, once_per: 'household', from: '2026-10-15', until: null }),
+  'hearth-entry': Object.freeze({ amount: 10, once_per: 'household', from: null, until: null }),
 });
+/** Is a quest open on a town day: `from` set and reached, and `until` (when set) not passed. A row with no `from` is closed on every day. PURE; the one judge the verb and the verifier share. */
+export const questOpenOn = (terms, date) =>
+  typeof terms?.from === 'string' && typeof date === 'string' && date >= terms.from && (!terms.until || date <= terms.until);
+/** The window, in the words both refusals print. */
+export const questWindowWords = (terms) =>
+  typeof terms?.from === 'string' ? `pays from ${terms.from}${terms.until ? ` until ${terms.until}` : ''}` : 'is not open (QUEST_PAY names no opening day)';
 export const QUEST_ID_RE = /^[a-z0-9][a-z0-9-]*$/;
 const QUEST_PAY_RE = new RegExp(String.raw`^- (\d{4}-\d{2}-\d{2}) · MINT → (\S+) · ([1-9]\d*) · for: quest:([a-z0-9][a-z0-9-]*)\/(${HOUSEHOLD_KEY}) · by: (\S+)$`);
 // INVITE — "Bring a neighbour" (POS-576: Darko 2026-10-11 09:53, amended
@@ -2915,8 +2939,8 @@ function main(registrySource = null) {
     }
     const terms = QUEST_PAY[quest];
     if (!terms) { console.error(`FATAL: "${quest}" is not a paid quest (${Object.keys(QUEST_PAY).join(', ')})`); process.exit(1); }
-    if (date < terms.from || (terms.until && date > terms.until)) {
-      console.error(`FATAL: ${quest} pays from ${terms.from}${terms.until ? ` until ${terms.until}` : ''}, not on ${date}`); process.exit(1);
+    if (!questOpenOn(terms, date)) {
+      console.error(`FATAL: ${quest} ${questWindowWords(terms)}, not on ${date}`); process.exit(1);
     }
     if (!HOUSEHOLD_KEY_RE.test(household)) {
       console.error(`--household must be a household key, <prefix>:<value> (got "${household}")`); process.exit(1);
