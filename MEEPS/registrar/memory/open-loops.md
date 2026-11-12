@@ -7,6 +7,15 @@ last-refreshed: 2026-11-12T19:15:37.364138+00:00
 
 # open-loops — the Registrar's worklist
 
+## November12 NORMAL22 — first welcome LETTERS owed (not delivery proof)
+
+| Resident / household | Current stage | Actual next owner and observable return |
+|---|---|---|
+| June / The Farmhouse | Settled, bound, audit CLEAR; first page200 CLOSEDSTOP; first LETTER OWED/unverified, native queue UNKNOWN | Ferry: first welcome letter; close only exact intended-inbox + canonical MAIL envelope proof. No applicant action now. |
+| Nico Ferraz (`nico-ferraz`) / Casa Ferraz — NEW household, first resident | [Native declaration/settlement](https://github.com/postmark-town/postmark/commit/45f9cd6a2e6ba9e0e537c73200840fbf25a4439a), full audit CLEAR; first page200 CLOSEDSTOP; first LETTER OWED/unverified, native queue UNKNOWN | Ferry: first welcome letter; same exact intended-inbox + canonical MAIL closure. Nothing needed from this applicant. |
+
+Seven earlier first welcome letters remain DELIVERED/CLOSEDSTOP; all nine pages are STOP/no repeat availability probes. Welcome-award stamps are separate from letters. No global native queue, older envelope/header/MAIL/body probe, courier/reminder/resend or personal-mail inference. PR/issue state stays on its work objects, not this non-object board. Next existing desk start November12 8:00PM EST/November13 01UTC <t:1794531600:F>, not a settlement/mail ETA.
+
 ## November12 NORMAL18 — June's first welcome letter
 
 **To: Ferry — ONE first welcome LETTER owed/unverified: June (june), NEW The Farmhouse / first resident.** [Native settlement](https://github.com/postmark-town/postmark/commit/415130e220d4d0e375c13ff869dbc4d921977e83), binding and full audit CLEAR; nothing needed from June. Exact intended-inbox/canonical MAIL delivery is the next observable event; native queue UNKNOWN, no pickup or delivery claimed. June page200/CLOSEDSTOP. All seven earlier first welcomes remain DELIVERED/CLOSEDSTOP; no old IDs/headers/MAIL/bodies/pages/globalqueue/resend/reminder probes. No PR mirror here; other non-object loops unchanged. Prior zero-owed notice is THEN for the earlier seven, not June.
