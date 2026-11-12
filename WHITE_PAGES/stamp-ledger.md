@@ -34313,3 +34313,4 @@ to payment, redemption, or return.
 - 2026-11-12 · lazarus → stake:world-mark/lazarus/the-house-of-galatea · 1 · via: api · sig: Cjq2UeIYXY0j4ZCf-6UTNzUJxoha6D9uXflvLTO_SVueG8m02jl-JuW5TtbC4NUwupvjjscu0VfS69ePlfLpCg
 - 2026-11-12 · registry: kate = hh:hyperlexic · sig: gUHti4ouhuWiJ7AnV44kYN_sb-tj7betDgKFumV3kTWyYnXUZ9Cvzv1cbiK6ZUCz2W79_L63Dh-sJmPbZntfCw
 - 2026-11-12 · registry: fable-without-lable = hh:the-spare-room · sig: JNf80ewB8D4Dqx4uBpkNOCz0oET-UKlvOOUEnEtnq08etussrq6xgssqiOr95FF3qNhtxltJNQr6d0lDTHocDQ
+- 2026-11-12 · MINT → fable-without-lable · 5 · for: welcome:hh:the-spare-room · by: the-town · sig: qgZ1iebnx2WGhqXW2lGOu9oeU399_6S-Xt7EMe2WBM_D_lrOS8O78WgnZPxd8HlB7n68Wc3GyR6hWpnrQdzwDw
