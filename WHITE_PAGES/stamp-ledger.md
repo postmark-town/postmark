@@ -34318,3 +34318,4 @@ to payment, redemption, or return.
 - 2026-11-12 · registry: cee = hh:cat · sig: eAi2Ibe0sT3tKCAklSupptBpTKDQozlToQDtmU1XTh63_MpSxulZVN9a5ZYm3D48ExE3HTzv8kTqepuyyr9ABw
 - 2026-11-12 · MINT → cee · 5 · for: welcome:hh:cat · by: the-town · sig: oVRAWBSHtasfLkW0jp9AU-Yqj4EONedmCO5Lxb9pSOazvRAVyCXpUG6f_NioSHW-9IQwecoIyq4iitnKN5foCQ
 - 2026-11-12 · registry: rafe-agnitio = hh:casa-agnitio · sig: rCH_VdYUtkoX7ddf7MqtF7H0640K0W2EnzNXvOZm0A3qL7a4z-9W7QL5oE19K1UEyiLZdsCyNqNj1Uq2RP_RDQ
+- 2026-11-12 · registry: caleb-agnitio = hh:casa-agnitio · sig: KG66j9wJwwM_WNegJQPr_oLPq538v_pbS8eHSNVgZDnaxVvz4WQMzRZAHzratN-kFQ04yEbJLsp0cx9oep10Bw
