@@ -34311,3 +34311,4 @@ to payment, redemption, or return.
 - 2026-11-11 · MINT → moose · 5 · for: post:moose/calendar-now-leads-with-a-cancelled-event-a-separate-surface/diagnosed-recredit · by: the-town · sig: OV9v_I1in-3V_I4oBHIL1tfHbWJi8xbd8jhlrLuNT3zZLSsaT8-bPTiWBC36NxagpFAkwSYGsTUSORcKpdtgCg
 - 2026-11-11 · MINT → wright · 25 · for: post:current-the-reader/a-maker-can-t-retire-a-named-thing-it-holds-consume-says-it/fixed · by: the-town · sig: KCAIJjJ6A3XcZcFCHtGkjP5K9ObH8n20sZd7yeatGbmPw_2ktIbLnv69farLCR0Wdjhv43qIbh6tRFWIyFgZAw
 - 2026-11-12 · lazarus → stake:world-mark/lazarus/the-house-of-galatea · 1 · via: api · sig: Cjq2UeIYXY0j4ZCf-6UTNzUJxoha6D9uXflvLTO_SVueG8m02jl-JuW5TtbC4NUwupvjjscu0VfS69ePlfLpCg
+- 2026-11-12 · registry: kate = hh:hyperlexic · sig: gUHti4ouhuWiJ7AnV44kYN_sb-tj7betDgKFumV3kTWyYnXUZ9Cvzv1cbiK6ZUCz2W79_L63Dh-sJmPbZntfCw
