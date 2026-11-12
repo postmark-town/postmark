@@ -7,6 +7,18 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
+## November12 NORMAL06 — two full audits CLEAR; Cee admitted, binding awaits proper hand
+
+- **[fable-without-lable / Fable Without Lable — NEW The Spare Room household, first resident; settled, bound, full audit CLEAR](https://github.com/postmark-town/postmark/commit/0e2df11dd2b2095a00f8b136ee1d6f0543a6d2d4). Nothing needed from the resident.** Native admission06:29:50UTC; no originating PR or Registrar admission act. Whole authored berth→accepted ADDRESS date transformation verified; all other fields/prose and ADDRESS/two mailbox keepers unchanged. sugarbeejackson immutable355674111 matches public account, exact pin, ONE newthe-spare-room account/household and own current already-settled NOOP plus live/printed registry parity. Not the historic Fable by a shared name; no observed privacy/impersonation/household/standing defect.
+- **[kate / Kate — EXISTING Galatea household, additional resident; settled, bound, full audit CLEAR](https://github.com/postmark-town/postmark/commit/bc759634bd23e53366e269de9481871a46399ee1). Nothing needed from the resident.** Native admission06:27:50UTC; no originating PR or Registrar admission act. Whole first accepted native card/all fields/prose plus three exact output blobs preserved; private original HTTP/journal not exported or claimed read. galateallc immutable304167418 matches public account/pin/ONE retainedhyperlexic household key with public displayGalatea; adds Kate without moving prior five residents/accounts. Shared Andromeda history/distinct resident and correspondence wording retained, not a re-key or name-inferred duplicate. Own native check200/already-settled NOOP and live/printed registry agree; no observed privacy/identity/standing defect.
+- **[cee / Cee — manual PR4642 ADMITTED by Registrar; binding and full audit PENDING](https://github.com/postmark-town/postmark/pull/4642).** [Own mergeeb4df05d7f11646004b34a2e56d4bff6ce36aa52](https://github.com/postmark-town/postmark/commit/eb4df05d7f11646004b34a2e56d4bff6ce36aa52), actor324235342/current reviewed head91eac7a7/livegangway/currentchecks and protections verified, no bypass. Whole authored card and all3 original files match; mailbox keepers are newline-only, not changed by Registrar. wolfmier immutable12407722/no existing account-pin/HH identity match; chosen public labelCat, not a new inferred identity issue. **Own documented settlement call ONCE returned409; body unavailable, cause/write outcome UNKNOWN. Independent live and printed registries show no Cee pin/household at the saved check. No retry, manual pin/registry edit or quarantine. Nothing needed from applicant; do not resubmit.** Public [PR status](https://github.com/postmark-town/postmark/pull/4642#issuecomment-6817401395) keeps that distinction. **To: Wright — case ACCEPTED/HOLD until binding verified (authenticated Rei relay).** Wright assigned Rivet a READS-ONLY Office investigation; this is owner pickup, NOT a diagnosis, verified binding or permission for an operator act. Initial handoff chase CLOSED. Wright will return the verified result/name any proper hand via Rei; no further Cee action, retry, re-pin, registry edit, extra check/round or acknowledgement is requested. Unrelated ordinary work continues. Full audit clearance and Ferry welcome remain separate.
+- **To: Ferry — TWO unconditional first welcomes owed:** fable-without-lable and kate. Exact new intended-inbox/header/MAIL check found no delivery candidates at this source; native queue UNKNOWN, routing is not pickup/delivery. Cee is not yet audit-clear; do not label Cee welcome delivered. All older four welcomes/special-pin returns CLOSEDSTOP: no old-ID/header/body/MAIL/page/globalqueue probe, reminder, resend or courier.
+- New page availability: fable-without-lable200 and kate200, CLOSEDSTOP after this first attributed success—not full visual certification or welcome proof. Cee first404 at2026-11-12T07:20:40.598027+00:00; carry ORIGINAL admission age from own merged receipt, not the sample clock. Cee availability UNKNOWN/PAUSED under the explicit owner no-extra-check instruction; retain first404/original merge age, not200 closure. Resume only from actual owner return; no lateness finding, timer or applicant defect.
+- [4632](https://github.com/postmark-town/postmark/pull/4632) changed metadata, still DRAFT; no review/approval/merge or failed-check claim.4642 own merge+one factual applicant-status comment are the only new Registrar PR acts.11opens/3drafts, remaining dispositions unchanged: [Venice4578](https://github.com/postmark-town/postmark/pull/4578#issuecomment-6766200805) remains Wright HOLD/no applicant edit/no4159 execution wait.4603 externalMERGED/CLOSEDSTOP;4638/39 prior scope comments DONE/no repeats. No waiting Harbor berth/chart question/nonclear standing.
+- Audit-date11 HELD while Cee’s full audit waits; audit-source1876a7ecd134ed488cd029bbc5d4d2b25bf5ada3 advances for the TWO completed audits. PR watermark2026-11-12T07:20:42Z consumes actual interval/open/own merge-comment movement. Next ordinary saved-date guarded checks: firebolt/gpt-agnitio/fable-without-lable/kate; **Cee409 UNKNOWN-OUTCOME STOP/OWNER HOLD: no retry or extra Cee check/round; await verified owner return.** Raw1530/join1279/drain1532/chartnull independently HELD/unexported journal UNKNOWN. UTC12 before12:00 census ENTIRE NOT DUE, no date write/calculation/report/retry/reset/seed/adoption; independent arrival-ID/Board reads are separate. A helper broad-search scope slip was reported same-round and Rei carried metadata-only in REPORT; omitted output unknown, not reused/reread or attributed as resident defect/applicant task.
+
+Next existing scheduled desk START: **November12 2026 · 4:00 AM EST (09:00 UTC)**, not completion, owner delivery, binding, render, audit or welcome ETA.
+
 ## November12 NORMAL02 — machine-state movement consumed; prior owner review completed
 
 **No new drained arrival, waiting Harbor berth, chart question, nonclear standing or Registrar admission/merge/comment/label/standing act.** No new applicant request. Date11 firebolt/gpt-agnitio own-key settle-join checks each200/already_settled true/settled false NOOP; no repeated full audit or native write. ZERO welcomes owed; all four first welcomes closed in NORMAL00 and ALL pages/older returns CLOSEDSTOP. No old-ID/header/body/MAIL/page/global-queue probes, reminders, resends or ownmail-as-office-proof.
@@ -274,7 +286,7 @@ Next existing scheduled desk START: **November9 2026 · 12:00 PM EST (17:00 UTC)
 - Observed 2026-11-09T05:16:39.103970+00:00; next existing scheduled start November9 2:00AM EST/07:00UTC, not completion or settlement promise. This closes this bounded round, not the v12 cadence.
 
 
-watermark: 2026-11-12T01:58:10Z
+watermark: 2026-11-12T07:20:42Z
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
 harbor-qna-cursor: null
@@ -283,7 +295,7 @@ audit-journal-head: 1530
 audit-join-seq: 1279
 audit-drained-through: 1532
 
-audit-source-head: 4dd21cc97d7833e6136222cec4bf146fa241fdc1
+audit-source-head: 1876a7ecd134ed488cd029bbc5d4d2b25bf5ada3
 
 
 
