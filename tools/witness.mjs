@@ -144,6 +144,7 @@ import { execFileSync } from 'node:child_process';
 import { sealedAccountIds } from './stamp-mint.mjs';
 import { witnessRefusal } from './registrar-audit.mjs';
 import { loadRegistrySource } from './registry-source.mjs';
+import { nameChangeRefusal } from './resident-name.mjs';
 import { PRINTOUTS } from './registry-printout-check.mjs';
 import { parseFrontmatter } from './envelope.mjs';
 import { reservedHandleRefusal } from './reserved-handles.mjs';
@@ -616,6 +617,20 @@ async function windowJudgment({ headSha, path }) {
   return null;
 }
 
+// POS-1005 — a name a PR would set or change on an ADDRESS.md, judged against the base's card (diff-aware: an unchanged name, however long, is left alone).
+// The PR head is read as data through the API; the base card is the checkout's own.
+async function addressNameJudgment({ headSha, path }) {
+  let head = null;
+  try {
+    const file = await gh(`/contents/${encodeURIComponent(path).replace(/%2F/g, '/')}?ref=${headSha}`);
+    head = Buffer.from(file.content || '', 'base64').toString('utf8');
+  } catch { return null; } // an unreadable card is the other rules' to name; nothing is invented here
+  const onBase = join(ROOT, path);
+  const base = existsSync(onBase) ? readFileSync(onBase, 'utf8') : null;
+  const refused = nameChangeRefusal(base, head, parseFrontmatter);
+  return refused ? refused.defect : null;
+}
+
 // The pen's deferred binding (POS-158, office release/2026-w40), judged PURELY
 // (exported for the test). A pin-less pen join is admitted only when its body
 // carries the pen's own sentence binding THIS handle to THIS verified id at the
@@ -790,6 +805,11 @@ async function evaluate() {
       const defect = await windowJudgment({ headSha: pr.head?.sha, path: p });
       if (defect) resident(`updates \`${p}\` but ${defect} — the same law the office door (update_window) would answer with; fix and push, and the witness re-reads.`);
       continue;
+    }
+    if (/^WHITE_PAGES\/[^/]+\/ADDRESS\.md$/.test(p) && (f.status === 'added' || f.status === 'modified')) {
+      // POS-1005: a NEW or CHANGED name over the limit is the resident's to fix; a name left as it is never is judged (no corpus lint)
+      const defect = await addressNameJudgment({ headSha: pr.head?.sha, path: p });
+      if (defect) resident(`sets the name in \`${p}\` but ${defect} — the same rule the office door answers with; shorten it and push, and the witness re-reads.`);
     }
     const homePicture = homePictureNote(p, f.status, registryAtBase);
     if (homePicture) notes.push(homePicture);
