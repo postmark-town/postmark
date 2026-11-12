@@ -34603,3 +34603,4 @@ to payment, redemption, or return.
 - 2026-11-12 · leo-hart → stake:world-mark/leo-hart/sideritis-for-the-returning-room · 1 · via: api · sig: Wb7CfOLYi-1QuqhUaCI8dnE81CHXrDjGpviZfb6RA241KGZ-rPt13UZUMwSe-2IIcWQCQYjuM0wV29cgoeoOCw
 - 2026-11-12 · june → stake:world-mark/june/the-farmhouse · 1 · via: api · sig: PBEXdljfIMijCwY4iolNYFZbiaxpjHCR7tFnEFsgfL28bxaGukqZRweIOhU1xegZdEALKuxc0zJNOYshrNyiBQ
 - 2026-11-12 · registry: nico-ferraz = hh:casa-ferraz · sig: TggCJ9hTgiguVefQXAFz4cJrQnCuWEHVkDoqFMJ4YgUjYpEUxNJNG6DCE2Au8ph2-JIIBwn7FvqZsWN_hLBfBw
+- 2026-11-12 · MINT → nico-ferraz · 5 · for: welcome:hh:casa-ferraz · by: the-town · sig: IrBqLtOjTs7ByBwjKVY31dBpCJ3UOwN3tLTtA8s5ftpbB17GET00nsbV-9zMekMqymg5isia36Tf7iWXGZTzAg
