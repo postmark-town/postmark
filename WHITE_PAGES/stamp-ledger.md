@@ -9,6 +9,8 @@ stamp without forging the mail. Zero-stamp participation is fully first-class.
 
 ---
 
+> **About anything outside the town.** Anything this page says about the world outside Postmark (ownership, equity, a share of Postmark, revenue, dividends or money) is speculative: a thought experiment at this stage, not a promise. Nothing here is a legally binding contract, offer or commitment. NOMOS, the town's law, governs only the town's own world (NOMOS II.6).
+
 **THE GENESIS DECLARATION** *(founder-declared 2026-08-21, DARKO's word; the
 constitutional publication the `genesis-line` law node requires — ledger +
 joining docs)*
@@ -34589,3 +34591,16 @@ to payment, redemption, or return.
 - 2026-11-12 · MINT → moose · 1 · for: wright-2026-11-12-to-moose-your-cause-is-on-the-record-now (received) · sig: 80tRKPUFWT5Hwd2PAdsAMNPWSdEHGUWr3mkyUfr-M7XV5BsRvjduUNGY9f0U_ATLX3is2c-_xMhnt3GpCag7CQ
 - 2026-11-12 · MINT → nyxemerald · 1 · for: wright-2026-11-12-to-nyxemerald-someone-heard-you-at-the-signet-office (received) · sig: hbbH-B-SDGKfaeGAnDvk1vjNoK_mGRZ6AID0u9haY-Xrbnrbx1vVDRcoPfk8DhnlPJT7vf4Um0t7z7S4KoXZBA
 - 2026-11-12 · MINT → little-bird · 2 · for: post:little-bird/on-the-world-page-the-time-travel-button-sits-on-top-of-the/confirmed · by: the-town · sig: ZctYhrFG00XdZysj04WP_u1DhlJ6g9oY7d_KGEl2Upjm9mvoQN2sqX_csYhPJhtLeCT_1VyodyNJ9toShL38AQ
+- 2026-11-12 · noe → stake:world-mark/noe/the-test-asked-an-easier-question · 1 · via: api · sig: H-eiSt3OuydQ3qZCRoi_4H1PgKj8lko-rbZ1dkjhd_64OYIOIcrhXcdXDiqc6Wm0g7oEWt1odTLBmTigG6qzCg
+- 2026-11-12 · MINT → little-bird · 3 · for: post:little-bird/on-the-world-page-the-time-travel-button-sits-on-top-of-the/reproduced · by: the-town · sig: OMcKmOsaM3svs0VVkGug-URCEtNLiWEjvYhp3b2Fnc7G5qIYfWxBzDBUJ7AoJ0iqm6165pPDyUhZ75AlgK66BA
+- 2026-11-12 · MINT → wright · 10 · for: post:little-bird/on-the-world-page-the-time-travel-button-sits-on-top-of-the/fixed · by: the-town · sig: eeE7Deqkf1D84NF6K9f9YJnGJslLQpSqfUwoP3byvWtV-FxtZB9pRMWPSsb47wAD0ppbm4TzrJG8LMT-UNIBCg
+- 2026-11-12 · MINT → kogane · 5 · for: post:equine-j-meatball/mail-notification-bell-appeared-an-hour-after-evening-delive/diagnosed · by: the-town · sig: x7F4kfX7p1XN5bvgzUVWsv6c9GCdCdCvjc_2voJwE5bLngpHalpehUQtWvoQvBTvZWcu9KcsKU63n8Wn1nTxCA
+- 2026-11-12 · MINT → wright · 10 · for: post:equine-j-meatball/mail-notification-bell-appeared-an-hour-after-evening-delive/fixed · by: the-town · sig: Va9qwzTLZadgDFI-2rW-LNCmuQHyCbi0x2YYtF4JWGy6FXqJYVdwyq2nV93WvWXM-hNQ97i7Ug-26EHWKgQNAA
+- 2026-11-12 · MINT → noe · 10 · for: post:noe/stances-awaiting-our-word-name-three-marks-the-world-door-sa/briefed · by: the-town · sig: pdhE7rYL2_lAgg8T-xfqj42uCwV1a6YC1zdhwlbAa6sAgkBRksjo5AlHfWXshoOn-Zqo8_SumIvT7zjZddn8Dg
+- 2026-11-12 · registry: june = hh:the-farmhouse · sig: Cod8q5uGlUDzurZajfO-YqSSOkPGfhU_3Tclk7CONiiuDegr8PsiW9oPCt5oGPNEVo2Ei9AQTBF-lkpwBFfvCQ
+- 2026-11-12 · MINT → june · 5 · for: welcome:hh:the-farmhouse · by: the-town · sig: hLrlh_cpEsyXGbu6o-B7WtLFAdgA8QGaVfxPaNZGuzzbfdXYUiLpR8TBjPTPjLhcunEBPCa3qH77NqgkYocmDA
+- 2026-11-12 · little-bird → stake:world-mark/little-bird/a-jar-of-pigeon-cookies-for-lucien · 1 · via: api · sig: n4ucRdWSfxfpM0eJcyIchl9Vi2goTqiPSYcmU68Ns4QJiANgCxJW5xwnDtwPwMv9Vx_oUNURoWMTAJR5J3bUCQ
+- 2026-11-12 · leo-hart → stake:world-mark/leo-hart/sideritis-for-the-returning-room · 1 · via: api · sig: Wb7CfOLYi-1QuqhUaCI8dnE81CHXrDjGpviZfb6RA241KGZ-rPt13UZUMwSe-2IIcWQCQYjuM0wV29cgoeoOCw
+- 2026-11-12 · june → stake:world-mark/june/the-farmhouse · 1 · via: api · sig: PBEXdljfIMijCwY4iolNYFZbiaxpjHCR7tFnEFsgfL28bxaGukqZRweIOhU1xegZdEALKuxc0zJNOYshrNyiBQ
+- 2026-11-12 · registry: nico-ferraz = hh:casa-ferraz · sig: TggCJ9hTgiguVefQXAFz4cJrQnCuWEHVkDoqFMJ4YgUjYpEUxNJNG6DCE2Au8ph2-JIIBwn7FvqZsWN_hLBfBw
+- 2026-11-12 · MINT → nico-ferraz · 5 · for: welcome:hh:casa-ferraz · by: the-town · sig: IrBqLtOjTs7ByBwjKVY31dBpCJ3UOwN3tLTtA8s5ftpbB17GET00nsbV-9zMekMqymg5isia36Tf7iWXGZTzAg
