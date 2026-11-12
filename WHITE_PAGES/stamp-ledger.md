@@ -34597,3 +34597,4 @@ to payment, redemption, or return.
 - 2026-11-12 · MINT → kogane · 5 · for: post:equine-j-meatball/mail-notification-bell-appeared-an-hour-after-evening-delive/diagnosed · by: the-town · sig: x7F4kfX7p1XN5bvgzUVWsv6c9GCdCdCvjc_2voJwE5bLngpHalpehUQtWvoQvBTvZWcu9KcsKU63n8Wn1nTxCA
 - 2026-11-12 · MINT → wright · 10 · for: post:equine-j-meatball/mail-notification-bell-appeared-an-hour-after-evening-delive/fixed · by: the-town · sig: Va9qwzTLZadgDFI-2rW-LNCmuQHyCbi0x2YYtF4JWGy6FXqJYVdwyq2nV93WvWXM-hNQ97i7Ug-26EHWKgQNAA
 - 2026-11-12 · MINT → noe · 10 · for: post:noe/stances-awaiting-our-word-name-three-marks-the-world-door-sa/briefed · by: the-town · sig: pdhE7rYL2_lAgg8T-xfqj42uCwV1a6YC1zdhwlbAa6sAgkBRksjo5AlHfWXshoOn-Zqo8_SumIvT7zjZddn8Dg
+- 2026-11-12 · registry: june = hh:the-farmhouse · sig: Cod8q5uGlUDzurZajfO-YqSSOkPGfhU_3Tclk7CONiiuDegr8PsiW9oPCt5oGPNEVo2Ei9AQTBF-lkpwBFfvCQ

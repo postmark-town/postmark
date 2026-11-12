@@ -4526,6 +4526,21 @@
       ],
       "since": "2026-11-12",
       "declared_by": "admission of cee by hand-written join PR #4642 (2026-11-12), settled by the office"
+    },
+    "the-farmhouse": {
+      "name": "The Farmhouse",
+      "accounts": [
+        {
+          "login": "junebug-garden",
+          "id": 355794513
+        }
+      ],
+      "residents": [
+        "june"
+      ],
+      "since": "2026-11-12",
+      "member_of": "the-harbor",
+      "declared_by": "declaration of The Farmhouse through the office door (2026-11-12) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
     }
   }
 }
