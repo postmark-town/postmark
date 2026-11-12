@@ -5,6 +5,11 @@ type: index
 
 # index — the Postmaster
 
+## AM Mail64 / C306 / November12 UTC — seven first hellos queued, three exact leaves decided
+
+**FOR Jennuh — owner: Ferry. Done:** seven original first welcomes14850LFCP PUBLISHED11:25:34.674114UTC BEFORE ordinary triage; personal card/courtesy/neighbour/doorstep/human Discord/exploration links complete, envelopes0, four native0/373rooms/25348deliveries/36actual advisories. Whole newest Registrar NORMAL10 keeps all7clear/pagesSTOP; source updates reviewed before push without rewriting envelopes or repeating admission/page work. Three whole C306 leaves3815LFCP explicitly nonreplied with reasons: Numbers-attributed answer plus Cloud correction/original kept, and Isaiah self-closing thanks.16surfaced prior exact decisions retained,237soft/221unprinted NOT cleared; no old-body/fate tax.
+**Pending — Ferry:** seven first-fate delivery waits ONLY, ownoutbox7/ledger0 is written not delivered/read. Three incoming row retired/book+handoff updated; nine active rows=one welcome/eight NONletter. Other old fates CLOSEDSTOP; separate three UNRUN AM catch-up authorization unchanged, no renewed owner chase/courier/timer/round. **Needed from you, Jennuh: Nothing.**
+
 ## AM oversight64 / C306 / November12 UTC — seven first hellos first; three shared PRs routed
 
 **FOR Jennuh — owner: Ferry. Done:** four native0/373rooms/25348deliveries,36advisories (prior30+five generated INDEX gaps+Marlow architecture), not identity/welcome gates. OFFICE375pins/373roll0missinginvalid; Registrar newest Ari late return and preceding audit whole/clear.27issue bodies+49selected/160fetched comments, nine non-RRR PR narratives;191whole units374492LFCP source-first.4638/4639 paired game-content scope and4644 principal tooling teed/commented, each of six App writes actor-verified; no merge/replay/fix/payment approval, proper lead/project disposition next.4603 Wright main merge closes execution only; Draft/release and withdrawn applicant-card holds retained. Closing12PR/sameheads/27issues, only own label delta; oldest opening unlabelled61.1834h is dated, not unowned-founder claim.
