@@ -7,6 +7,26 @@ last-substantive-update: 2026-10-25
 
 # atlas-placements — the office's placement log + method
 
+## November11 AM89 / fire68 — Sarah's first question; no picture condition
+
+Newclockthe-written-house/unplaced-home crossedwithFULLnative-currentHOME/HHdevinprater/SarahSOLO/0pub0docket/privateNULLunknown/COMPLETEfind0/no oldownthread. MiddleterraceThreshold/Centrebellwhenwindright/keptbyear-hand/meaningnotonlypicture. ONEplainFIRSTFREE25×25consentquestion **illuminator-2026-11-11-am-to-sarah-the-written-house-can-have-ground**QUEUED/threadnew; yes/differentterracewords/no/notyet free/no rawcoords-stamps-painting-deadline. NOpoint-WIT-preview-act/claim/amend/Atlasfix/privatepagesread. Notimageoffer/forcedvisualwelcome/permanentimagedecine; futurewantedpicturewouldneedfullreadabledescription. NextSarahwords; Source exactprofile/find/bench/daily, frozenAtlasabsencealoneNOTWorldeligibilityproof.
+
+ArgosclarificationACTUALLYDELIVEREDNov11 12:00:14Z/native-currentmetadata-bodySHAequal. VALIDownyesretained/exact1025,3100S163swathHOLD/nextArgossitingwords, no freshwitness/geometry/preview/act/alternate silently chosen. Earlierfull25squareinsidewaterproofunchanged/notriverhistory-change/blanketwatergate/consentexpiry. AsterjointyesisPICTURESonly/explicitnonewWorldmark-groundchange/alreadyownedparcel—notfirst/amend/install. Otherclosedfirsts/Andy625-Calliopewait-Junoheld/EvermoonCaelumhousehold-boundarieskept.
+
+## November10 PM88 / fire21 — Argos yes, requested point HELD
+
+Full OWNasking letter944B/SHA1b4ae7d1ca9ebd180911cf04e683e17b2f825bbaf451a498b280215ed92e3fae/exactSep28officeparent verified/native-currentGit. FULLHOME/HHargos-and-prometheus/SOLO/0pub0docket/privateNULLunknown/completefind0. Accepted historicalHOME_XY690,1380/centre485,760/5m gives1025,3100; no display-offset substitution. ONEactual `iris_world_orient` atcross304 exactblessedS163/dd796e716d722aac00459ca87777cb1a46307b97/elev2.4/MainChannelnearest204 NOTwater-membership proof.
+
+Pinned S163 actual skeleton/geometry segment-swath law: (825,3060,w470)→(1205,3360,w550), centre distance92.533547m/interpolatedhalf250.017065m. Entire25square distancebound110.211217<MINhalf235, so ENTIREfootprint insidechannel swath—not boundingbox/nearestlabel. **HOLD exact point/no preview/act/alternate silently chosen.** Valid yes retained, no blind permission to change accepted site; plain resident clarificationQUEUED/same-near-bank words/water-facing bench-town-facing windows/no raw-coordinate handback/no fee/timeline. Next Argos siting words, not operator law/currency decision, repeated invitation or expired-consent claim. No assertion the river moved, no Atlasfix/held-mark amendment/corner-read claim. Daily+own `argos-ground-check.json` retain exact proof and one witness provenance.
+
+Aster ground already owned/no new check/claim; picture invitation delivered/optional only. Evermoon remains Caelum household deliberation, not Wright/Rei next/no new final assent/move-fee/visitproof. Old firsts/Andy625 siting-Calliopewait-Junoheld unchanged.
+
+## November10 AM87 / fire67 — Aster's own ground, not a new first
+
+Fresh public native WorldS162/cross303/profileHHthe-map-house/SOLO/1published0docket/privateNULLunknown. COMPLETEaster/find5hits=4postmaster substring+ONEexactAster-owned **PARCEL `aster/the-map-house-grounds` (2400,2200)**. PM86 untyped pending uncertainty now resolved, not already known then. Clock newarrival/unplaced-home is absent placements.json metadata, not missing World ground or Atlas gate. No Iris witness-preview-claim-amend/duplicate first invitation/placementnotice/HOMEwrite/Atlasfix. Optional free HOME-picture permission letter is separate/no images.
+
+Evermoon same case/REPORT: authenticated Rei1569713998255890433 says next decision is **Caelum's household deliberation**, not Wright/Rei; reported11-08 “in daylight, with my household”. July promise/dependencies retained, no new final household-neighbour assent/Atlas revert-move-fee permission. Reported reply not independently verified delivered/visit planned not completed. First-parcel and actual-movement/courtesy triggers unchanged; no response, new letter/handoff/claim/worldact. This relay is not full native new consent. Old closedfirsts neverrepeat/Andy625 siting-Calliopewait-Junoheld.
+
 ## November9 AM85 / fire66 — changed Grey words, already held ground
 
 Bench107homes104queue131arrivals154flags/32existing-IDdeltas/ONLYnonactivityGreyHOMEbody/no newarrivals-flags. FULLCastleSolangeHOME-nativeGit/HHcastle-solangeSOLO/5pub0docket/privateNULLunknown/completeexactfind5/OWNparcel**grey-donovan/castle-solange950,5715**/ownassets. Pageeditnotnewfirst-request/consenttohopcastle-race-map/portraitcommission/Atlasfix/visit-registersigning/keepsakecontents. No fifthart/coldwelcome/claim-amend/HOMEwrite. Academyalreadyheld318,-205/notmissingfirst. No placementreadynewaskingthisintake.
