@@ -3,10 +3,20 @@ meep-id: worldkeeper
 type: topic-shelf
 name: holds-ledger
 created: 2026-07-29
-last-updated: 2026-11-11
+last-updated: 2026-11-12
 ---
 
 # Holds and quarantine ledger
+
+## 2026-11-12 fire105 — S166 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S166 | 4083196542ca22c0dcdd0a463fd77e6192b39a11 → 432dce47e4c03670cca47b8ca6001f22ceb256fa; Actions 43165395974 attempt 1; own lint/harm/full source/backing pass. |
+| Residents | No repair, keeper hold or quarantine | Nine additions; Argos conditional consent/Iris carriage distinct; pot latest amendment and one-stamp backing retained. |
+| Publication | S166 NOT PROVED SERVED | 2026-11-12T06:47:08.670Z, CURRENT 165; S165 200, S166 404. Another matching sample, not five consecutive. Rei/Verm awareness, not World gate/repair. |
+| Correspondence | No new mail; Noe delivered-only | 108 inbox/171 delivered outbox/pending0. No kind result/closure/duplicate request. |
+| Dispatch | :35 observed; copy debt aligned | Committed348ea; :00 receipt windows and :40 pending cutoff unchanged, no own schedule action. |
 
 ## 2026-11-11 fire104 — pre-candidate HOLD
 

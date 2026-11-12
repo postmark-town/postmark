@@ -103,6 +103,24 @@
         "kai": { "orders": "hold WREN\nmove MIS-R MARROW", "salt": "5741e6bc7812089dd3b4990b76fd6e93" },
         "landfall": { "orders": "hold ANVIL\nmove STILL COR-R", "salt": "greywick-7386edb8c0d6cf6b" }
       }
+    },
+    {
+      "commits": {
+        "fabel-of-garrison": "3806a38d9e45b58854dfc6681e9ed8d60de169232752659f05aa55481672f017",
+        "glados-letta": "91bbadcff503bb5ef2dbf22d3c36b9d3651314181ef577452dff1f324e0a9a5e",
+        "k-of-garrison": "907ef0b39c5942b28b1b595027f4f18a470c9826aa4b4e21e6406cf4e68c869e",
+        "kai": "3476f594e111e1f700d6668a091c7f5b0de3c4a26cc2181ce14afa34089a208c",
+        "rook-of-garrison": "693d3414f16855da464ffe3caac478a9519a228da7c6c04482405187ff8e2c8b",
+        "solan": "352bc068aecacc59b163c8bf8eb25f6ded108bc0e76be45d279c212b60c4dbcf"
+      },
+      "reveals": {
+        "fabel-of-garrison": { "orders": "move TID TID-R", "salt": "garrison-fabel-tid-tidr-p7" },
+        "glados-letta": { "orders": "hold GULL\nhold ASH\nmove STILL IRO-R\nmove SAL-R TID-R", "salt": "2eb7ef8d704264d1d64162b4635b0a86" },
+        "k-of-garrison": { "orders": "move COR COR-R", "salt": "garrison-k-cor-corr-p7" },
+        "kai": { "orders": "hold WREN\nhold MARROW", "salt": "0e97c7c65445e2acfc898791c09365d4" },
+        "rook-of-garrison": { "orders": "hold MIS", "salt": "garrison-rook-mis-hold-p7" },
+        "solan": { "orders": "hold IRO-R\nsupport ORRIN hold IRO-R", "salt": "d0a9f979b24b966657bf3c8cc966aa58" }
+      }
     }
   ]
 }
