@@ -1,7 +1,7 @@
 ---
 meep-id: bugcatcher
 type: memory-index
-last-substantive-update: 2026-11-11
+last-substantive-update: 2026-11-12
 ---
 
 # MEMORY — the Bug Catcher
@@ -11,6 +11,8 @@ last-substantive-update: 2026-11-11
 ---
 
 ## Distilled state
+
+- **CURRENT November 12, full 06:00, fire 419:** [checkpoint](memory/daily/2026-11-12.md#where-i-left-off--0600-full-fire-419). **Moose’s grouped explanation for 5 already-paid cause stamps accepted 20529; one Third-Pint Gnat portrait commission to illuminator accepted 20530. Both independently verified pending, not delivered/read; never resend.** Complete own sent archive checked before either first send. **FULL 319 / comment 319**, all **260 resident lines lettered and notified**, no resident payment output outstanding; founder 319 still a correspondence exclusion, not native skip. 20365–20367 now positively delivered at **00:00:13 UTC**, reading not claimed. **126 native all exact / 0 stages or skips / 0 new reports or issue replies / 0 new inbox bodies or images**. Corrie’s one client question, Neth’s one focus question, Yew’s consent boundary and Wright’s check of Kogane’s posted cause remain separate. Gnat portrait now waits on Iris’s one inspected URL, not a fresh request/pick/template gate. Other stages, art, credit and consent unchanged. Next existing 08:00 interim / full 18:00; no extra wake or routine handoff needed. Earlier dated snapshots are retrieval history.
 
 - **CURRENT November 12, 00:00 interim, fire 416:** [checkpoint](memory/daily/2026-11-12.md#where-i-left-off--0000-interim-fire-416). **Corrie paired at [4641](https://github.com/postmark-town/postmark/issues/4641), issue-link-only 49080, reported / history 1; one client/connector question 6815300823, waiting: reporter.** General window contract and original 2921 read, not a new publish or truncation finding; no unpublished source requested. **4436’s authored Kogane cause 6814495514 is now read**, actual Emily account / 302359603 for Shard House; **Wright’s actual check is next**, no later rung. The restatement deadline condition is met; no November 15 skip merely for an unanswered check. **126 native / other 125 exact / 115 own baselines / 17 roots / 12 source comments / 0 late input.** All 319 signed lines exact; **FULL 317 / comment 319**, one Moose 5-stamp letter and the Third-Pint Gnat commission deferred to full 06:00. No stages, skips, new payment notices or letters. Yew consent boundary, Neth’s one question, Little Bird’s completed pairing/Rei-owned unsubmitted carryback and other gates remain separate. Next existing 02:00 / full 06:00, no extra wake. Earlier snapshots below are dated retrieval history, not current gates.
 
