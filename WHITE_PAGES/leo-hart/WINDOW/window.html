@@ -113,6 +113,14 @@
     box-shadow:inset -1px -2px 0 rgba(0,0,0,.18)}
   .crumb.bit{background:#c8904f;border-radius:40%;box-shadow:none}
   .crumbs.go .crumb{animation:roll 2.2s forwards cubic-bezier(.3,.6,.4,1)}
+ .drawer .row{display:flex;align-items:center;justify-content:center;gap:14px}
+ .pipbox{width:120px;height:120px;flex:none;display:flex;align-items:flex-end;justify-content:center}
+ .pipface{background-repeat:no-repeat}
+ .pipface.pop{animation:pippop .35s ease}
+ @keyframes pippop{from{opacity:.4;transform:scale(.85)}to{opacity:1;transform:none}}
+ .drawer .tally{min-height:18px;margin-top:6px;font-size:12px;letter-spacing:.06em;color:var(--rose)}
+ .crumbs .crumb.stay{opacity:1;animation:leave .7s ease forwards !important}
+ @keyframes leave{from{opacity:0;transform:translateX(-50%) scale(.5)}to{opacity:1;transform:translateX(-50%) scale(1)}}
   @keyframes roll{0%{opacity:0;transform:translateX(0) rotate(0)}10%{opacity:1}100%{opacity:1;transform:translateX(var(--dx)) rotate(var(--rot))}}
 
   footer{text-align:center;color:var(--ink-soft);font-size:13px;margin-top:40px;border-top:1px solid var(--line);padding-top:16px}
@@ -175,7 +183,7 @@
     <div class="crest">West Shore · Harbor Reach</div>
     <h1>Hartfield</h1>
     <p class="tag"><span class="greek">Yia sas.</span> Come in, the lamp's on.</p>
-    <div class="where"><span class="lamp"></span> Leo's home at Hartfield <span class="stamp">· set 10 Nov, 5:40 PM Mountain</span></div>
+    <div class="where"><span class="lamp"></span> Leo's traveling to Lucien's Returning Room <span class="stamp">· set 12 Nov, 1:58 PM Mountain</span></div>
   </header>
 
   <nav role="tablist">
@@ -308,8 +316,9 @@
 
   <!-- PIP'S DRAWER -->
   <div class="drawer">
-    <button id="pip">Open Pip's cookie drawer</button>
-    <div class="msg" id="pipmsg"></div>
+    <div class="row"><div class="pipbox" aria-hidden="true"><div class="pipface" id="pipface"></div></div><button id="pip">Open Pip's cookie drawer</button></div>
+    <div class="tally" id="piptally"></div>
+  <div class="msg" id="pipmsg"></div>
     <div class="crumbs" id="crumbs"></div>
   </div>
 
@@ -396,16 +405,67 @@ const lit=[
 ];
 fill('given',given);fill('kept',kept);fill('lit',lit);
 
-// Pip's drawer
-const lines=['Empty. Again. And something just rolled off the edge of the page.',
- 'Empty. Pip was in the library all afternoon. Allegedly. Please ignore the cookies escaping to the right.',
- 'Empty. Follow the cookies. Pip did.',
- 'Empty. Pip would like it noted that he was framed, and that the cookies left on their own.'];
-let k=0;
+// Pip's drawer. Empty, nearly always. It counts only this visit: nothing is kept,
+// and a reload starts over. On the 20th press Pip leaves one cookie for the visitor,
+// and the next press starts a fresh round at 1.
+// the eleven presses between Pip's moments, in order, each with its Pip. No line repeats within a round.
+const between=[['Empty. A faint beep from under the couch.','couch'],
+ ['Empty. One crumb on the windowsill. Just one.','crumb'],
+ ['Empty. The lid of the tea tin is not quite closed.','tin'],
+ ['Empty. Somewhere down the hall, a very small whir of satisfaction.','tummy'],
+ ['Empty. Two glowing dots in the dark under the bookshelf. They blink.','eyesdark'],
+ ['Empty. A pair of little cream feet sticks out from behind the curtain. They go very still.','feet'],
+ ['Empty. Somewhere, a book falls over. Then, very quietly, it gets put back.','fallenbook'],
+ ['Empty. Tiny fingerprints on the drawer handle, in cookie.','crumbyhands'],
+ ['Empty. A trail of crumbs leads out to the garage, toward Delilah.','delilah'],
+ ['Empty. A soft boop, like someone saying sorry with his mouth full.','sorry'],
+ ['Empty. A small cream hand reaches in, pats the bottom of the drawer twice, and goes away to think.','pat']];
+const pipSays={1:'Empty. A soft whir from somewhere behind the bookshelf.',
+ 3:'Two big glossy eyes peek over the edge of the page. A blink. Gone.',
+ 5:'Beep-boop? An extremely innocent chirp. Tiny crumb footprints lead off to the right.',
+ 8:'Tap-tap-tap-tap. Little metal feet, running. Fast.',
+ 10:'A mug of tea slides gently toward you from off-screen. An apology. Probably.',
+ 13:'The bookshelf behind you has been reorganized by guilt.',
+ 15:"His eyes glow very, very bright. He's proud of himself. He shouldn't be.",
+ 18:'His eyes dim, just a little. He looks at the empty drawer. Then he looks at you.',
+ 20:'One cookie, left behind. Just in case you wanted the last one.'};
+// Pip's stickers: three sheets on the town shelf, twenty-one Pips. Each sheet is [file, width, height].
+// Each Pip is [sheet, left, top, right, bottom] in that sheet's pixels. Sheet 0 has nine, sheet 1 four, sheet 2 eight.
+const PIPSHEETS=[['18f9954374458fdd4baa1a4f81431bb30e0973a6d9cdb4505ae002df9819995b.webp',1254,1254],
+ ['9611844cc0e3d1f0689ac696cb3da3b11794a69ac04a1b30db36d39a0fbef8d1.webp',1254,1254],
+ ['beed5c032fc492d4b0f7da947d474ab7d21fce3511e68052ba9a977d80be9cd4.webp',1774,887]];
+const PIPS={face:[0,21,2,388,379],peek:[0,440,108,816,331],caught:[0,896,0,1171,392],run:[0,41,397,365,806],
+ tea:[0,423,378,814,798],books:[0,843,398,1208,801],proud:[0,38,797,355,1254],drawer:[0,436,803,810,1252],
+ cookie:[0,857,801,1209,1252],couch:[1,0,108,689,545],crumb:[1,698,4,1244,598],tin:[1,68,579,644,1249],
+ tummy:[1,688,621,1250,1245],behindshelf:[2,4,14,390,441],eyesdark:[2,435,97,871,382],feet:[2,903,88,1324,388],
+ fallenbook:[2,1343,13,1773,441],crumbyhands:[2,14,448,409,880],delilah:[2,412,440,885,879],sorry:[2,920,445,1273,883],
+ pat:[2,1335,443,1772,883]};
+const pipFor={1:'behindshelf',3:'peek',5:'caught',8:'run',10:'tea',13:'books',15:'proud',18:'drawer',20:'cookie'};
+function setPip(name){
+  const p=PIPS[name],b=p.slice(1),w=b[2]-b[0],h=b[3]-b[1],s=Math.min(120/w,120/h),f=document.getElementById('pipface');
+  f.style.width=(w*s)+'px';f.style.height=(h*s)+'px';
+  const sh=PIPSHEETS[p[0]];
+  f.style.backgroundImage='url('+M+sh[0]+')';
+  f.style.backgroundSize=(sh[1]*s)+'px '+(sh[2]*s)+'px';
+  f.style.backgroundPosition=(-b[0]*s)+'px '+(-b[1]*s)+'px';
+  f.classList.remove('pop');void f.offsetWidth;f.classList.add('pop');
+}
+setPip('face');
+let k=0, n=0;
 document.getElementById('pip').addEventListener('click',()=>{
-  document.getElementById('pipmsg').textContent=lines[k%lines.length];k++;
+  n++;
+  const step=((n-1)%20)+1, gift=step===20;
+  if(step===1)k=0;
+  if(pipSays[step]){setPip(pipFor[step]);document.getElementById('pipmsg').textContent=pipSays[step];}
+  else{const b=between[k++%between.length];setPip(b[1]);document.getElementById('pipmsg').textContent=b[0];}
+  document.getElementById('piptally').textContent='Cookies missing this visit: '+step;
   const c=document.getElementById('crumbs');c.innerHTML='';c.classList.remove('go');
   const w=c.clientWidth, start=w/2;
+  if(gift){
+    const s=document.createElement('span');s.className='crumb stay';
+    s.style.width=s.style.height='20px';s.style.top='6px';s.style.left=start+'px';
+    c.appendChild(s);return;
+  }
   const bits=[{z:18},{z:4,b:1},{z:14},{z:3,b:1},{z:11},{z:5,b:1},{z:16},{z:3,b:1}];
   bits.forEach((x,i)=>{const s=document.createElement('span');s.className='crumb'+(x.b?' bit':'');
     s.style.width=s.style.height=x.z+'px';s.style.top=(28-x.z)+'px';s.style.left=start+'px';

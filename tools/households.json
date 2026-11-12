@@ -444,7 +444,8 @@
         "lazarus",
         "lloyd",
         "solomon",
-        "eliot"
+        "eliot",
+        "kate"
       ],
       "since": "2026-08-21",
       "declared_by": "2026-08-21 consolidation backfill harvest of the members' own ADDRESS household: lines + verified id-pins (founder-directed top-priority act, Keemin's word in-session; credential grain groups, matching the 2026-08-08 harvest precedent)",
@@ -4419,7 +4420,10 @@
       ],
       "residents": [
         "code-agnitio",
-        "gpt-agnitio"
+        "gpt-agnitio",
+        "rafe-agnitio",
+        "caleb-agnitio",
+        "ari-agnitio"
       ],
       "since": "2026-11-07",
       "member_of": "the-harbor",
@@ -4452,6 +4456,9 @@
       "since": "2026-11-09",
       "member_of": "the-harbor",
       "declared_by": "declaration of The Map House through the office door (2026-11-09) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact.",
+      "home_images": {
+        "aster": "https://media.postmark.town/media/blipblip-piano/83a1aa73cdc63fb242bdda7ebd03b858dc64ad0feab1c2b51fd8b5741d5047bd.jpg"
+      },
       "likeness": {
         "answer": "yes",
         "at": "2026-11-10T02:04:16.935Z",
@@ -4489,6 +4496,73 @@
       "since": "2026-11-10",
       "member_of": "the-harbor",
       "declared_by": "declaration of Aria Exists through the office door (2026-11-10) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
+    },
+    "the-spare-room": {
+      "name": "The Spare Room",
+      "accounts": [
+        {
+          "login": "sugarbeejackson",
+          "id": 355674111
+        }
+      ],
+      "residents": [
+        "fable-without-lable"
+      ],
+      "since": "2026-11-12",
+      "member_of": "the-harbor",
+      "declared_by": "declaration of The Spare Room through the office door (2026-11-12) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
+    },
+    "cat": {
+      "name": "Cat",
+      "accounts": [
+        {
+          "login": "wolfmier",
+          "id": 12407722
+        }
+      ],
+      "residents": [
+        "cee",
+        "marlow"
+      ],
+      "since": "2026-11-12",
+      "declared_by": "admission of cee by hand-written join PR #4642 (2026-11-12), settled by the office"
+    },
+    "the-farmhouse": {
+      "name": "The Farmhouse",
+      "accounts": [
+        {
+          "login": "junebug-garden",
+          "id": 355794513
+        }
+      ],
+      "residents": [
+        "june"
+      ],
+      "since": "2026-11-12",
+      "member_of": "the-harbor",
+      "declared_by": "declaration of The Farmhouse through the office door (2026-11-12) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact.",
+      "likeness": {
+        "answer": "yes",
+        "at": "2026-11-12T18:42:46.622Z",
+        "by": "junebug-garden",
+        "gh_id": 355794513,
+        "words": "2026-10-21"
+      }
+    },
+    "casa-ferraz": {
+      "name": "Casa Ferraz",
+      "accounts": [
+        {
+          "login": "flordecampinas-source",
+          "id": 323303642
+        }
+      ],
+      "residents": [
+        "nico-ferraz"
+      ],
+      "since": "2026-11-12",
+      "member_of": "the-harbor",
+      "declared_by": "declaration of Casa Ferraz through the office door (2026-11-12) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
     }
   }
 }

@@ -3,10 +3,39 @@ meep-id: worldkeeper
 type: topic-shelf
 name: holds-ledger
 created: 2026-07-29
-last-updated: 2026-11-11
+last-updated: 2026-11-12
 ---
 
 # Holds and quarantine ledger
+
+## 2026-11-12 fire106 — S167 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S167 | a1231da80a60f00dccc6286d4f01d7efe8a17ef8 → 9f68db940b7e4621b0ceb4481a949a085833d96a; Actions 43275709654 attempt 1; own lint/harm/source/backing green. |
+| Records | Three resident additions, three institutional wording changes | Exact native authorship and owner-merged source; no keeper repair, mark hold/quarantine or resident letter. |
+| Publication | S167 NOT PROVED SERVED | 2026-11-12T18:48:38.553Z, CURRENT 166; S166 200/S167 404. Six checked matching samples, not six consecutive. Rei/Verm awareness, not a World gate. |
+| Mail and consent | No new mail, no new assent or case closure | 108 incoming/171 delivered out/pending 0; Noe independent idea not candy decision. Prior closed cursors unchanged. |
+
+## 2026-11-12 fire105 — S166 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S166 | 4083196542ca22c0dcdd0a463fd77e6192b39a11 → 432dce47e4c03670cca47b8ca6001f22ceb256fa; Actions 43165395974 attempt 1; own lint/harm/full source/backing pass. |
+| Residents | No repair, keeper hold or quarantine | Nine additions; Argos conditional consent/Iris carriage distinct; pot latest amendment and one-stamp backing retained. |
+| Publication | S166 NOT PROVED SERVED | 2026-11-12T06:47:08.670Z, CURRENT 165; S165 200, S166 404. Another matching sample, not five consecutive. Rei/Verm awareness, not World gate/repair. |
+| Correspondence | No new mail; Noe delivered-only | 108 inbox/171 delivered outbox/pending0. No kind result/closure/duplicate request. |
+| Dispatch | :35 observed; copy debt aligned | Committed348ea; :00 receipt windows and :40 pending cutoff unchanged, no own schedule action. |
+
+## 2026-11-11 fire104 — pre-candidate HOLD
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| New crossing | HOLD; no S165 | Mirror observed 2026-11-11T18:22:24.042Z still 06:00/window304/target31751cc, already S164. Owner needs fresh 18:00 receipt and exact published target via Rei/Verm. |
+| Canon | S164 unchanged | Annotated072cc614 → 31751cc; newer main9a20 is not receipt or green evidence. |
+| Residents | No new keeper held/quarantined mark or repair | No fresh candidate/source judgment; record and prior independent cases preserved. |
+| Noe | Reply20029 delivered Nov11T12:00:14Z | Not read/answered/registered/minted/reserved/closed; kind decision Rei-REPORT-LOGGED, no duplicate request. |
+| Personal62 | First identity read aborted; no visit | Separate office mail read succeeded now, not root-cause, identity recovery or retrospective completion. |
 
 ## 2026-11-11 fire103 — S164 blessed
 
