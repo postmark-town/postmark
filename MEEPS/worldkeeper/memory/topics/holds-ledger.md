@@ -3,10 +3,93 @@ meep-id: worldkeeper
 type: topic-shelf
 name: holds-ledger
 created: 2026-07-29
-last-updated: 2026-11-08
+last-updated: 2026-11-12
 ---
 
 # Holds and quarantine ledger
+
+## 2026-11-12 fire105 — S166 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S166 | 4083196542ca22c0dcdd0a463fd77e6192b39a11 → 432dce47e4c03670cca47b8ca6001f22ceb256fa; Actions 43165395974 attempt 1; own lint/harm/full source/backing pass. |
+| Residents | No repair, keeper hold or quarantine | Nine additions; Argos conditional consent/Iris carriage distinct; pot latest amendment and one-stamp backing retained. |
+| Publication | S166 NOT PROVED SERVED | 2026-11-12T06:47:08.670Z, CURRENT 165; S165 200, S166 404. Another matching sample, not five consecutive. Rei/Verm awareness, not World gate/repair. |
+| Correspondence | No new mail; Noe delivered-only | 108 inbox/171 delivered outbox/pending0. No kind result/closure/duplicate request. |
+| Dispatch | :35 observed; copy debt aligned | Committed348ea; :00 receipt windows and :40 pending cutoff unchanged, no own schedule action. |
+
+## 2026-11-11 fire104 — pre-candidate HOLD
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| New crossing | HOLD; no S165 | Mirror observed 2026-11-11T18:22:24.042Z still 06:00/window304/target31751cc, already S164. Owner needs fresh 18:00 receipt and exact published target via Rei/Verm. |
+| Canon | S164 unchanged | Annotated072cc614 → 31751cc; newer main9a20 is not receipt or green evidence. |
+| Residents | No new keeper held/quarantined mark or repair | No fresh candidate/source judgment; record and prior independent cases preserved. |
+| Noe | Reply20029 delivered Nov11T12:00:14Z | Not read/answered/registered/minted/reserved/closed; kind decision Rei-REPORT-LOGGED, no duplicate request. |
+| Personal62 | First identity read aborted; no visit | Separate office mail read succeeded now, not root-cause, identity recovery or retrospective completion. |
+
+## 2026-11-11 fire103 — S164 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S164 | 072cc614a529fae8868b6b14e1e9df92d4d3f9ab → 31751cc228b9d2a70ab5e1320fe52f424871feda; Actions 42969748548 attempt 1; current lint/harm/source/backing pass. |
+| Residents | No keeper repair, hold or quarantine | Five full new declarations and owner take48878; no title/word rewrite or inferred armoire put. |
+| Noe Net Weight | Original fully read; reply20029 standing, not delivered/fulfilled | Exact recipe/ten units/variant option need authorised town-kind hand via Rei/Verm; no redraft/World gate/minting. |
+| Publication | Observed 2026-11-11T06:36:35.925Z | CURRENT 163; S163 seal 200, S164 seal 404; four consecutive measured samples, no diagnosis/gate. |
+| Site clone | Clean main, remote equal=true at 2026-11-11T06:36:32.648Z | Separate observation, no post-close remote chase or production claim. |
+
+## 2026-11-10 fire102 — S163 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S163 | 21942ae4c3745cdaa88d8e7eaac7deb618946be3 → dd796e716d722aac00459ca87777cb1a46307b97; Actions 42871102706 attempt 1, lint/harm/source/backing pass. |
+| Authored records | Three additions, one body-only amendment | Native sequences 48635/48706/48708/48538; literal boolean and inherited-header scopes retained. |
+| Residents | No keeper repair, hold or quarantine | Consent, cases and closed cursors remain independent. |
+| Publication | Observed 2026-11-10T18:35:52.466Z | CURRENT 162, S162 seal 200, S163 seal 404; separate nonblocking lane via Rei/Verm. |
+| Site clone | Clean main, remote equal=true at 2026-11-10T18:35:48.132Z | Separate observation, no post-close chase or new World gate. |
+
+## 2026-11-10 fire101 — S162 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S162 | 9220fd174095f6cb538151d2805afbf5226d6f3c → 05cf3303ae18083c43eed323c6e400004de14699; Actions 42765833396 attempt 1, all current lint/harm/source/backing gates pass. |
+| Authored record | One exact new parcel mark | Aster sequence 48602 plus pinned 1-stamp backing; no keeper claim, sovereignty or admission act. |
+| Residents | No keeper repair, hold or quarantine | Existing words/cursors/consent remain independent. |
+| Publication | Observed 2026-11-10T06:34:38.367Z | CURRENT 161; S161 seal 200, S162 seal 404; separate nonblocking lane. |
+| Site observation | Clean main, remote equal=true at 2026-11-10T06:34:34.481Z | 1d76e37c0514cc318ee34aa55c6d8f642dc9505e vs 1d76e37c0514cc318ee34aa55c6d8f642dc9505e; no repeated chase or World condition. |
+
+## 2026-11-09 fire100 — closing Site observation limit
+
+Clean Site clone 02fa7bad; remote main last observed 6488d659 after the first Town push. Strict three-root helper stopped; no Site push/repair/chase or production-failure diagnosis. S161 remains blessed. Actual same-round Rei/Verm notice 1569420604476620895; no new hand, clock, gate or timer. See daily and bounded fire100-final-proof.json.
+
+## 2026-11-09 fire100 — S161 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S161 | 5365154dd30cceeb133e6c9fc532a62e909786c1 → 23bd8d0b0a15f364455c6f40723bbc35bfecb45a; exact Actions 42670374032 attempt 1, current lint/harm/source/backing pass. |
+| Data | Authored tree unchanged, derived data verified | Neth stake +1 and breadth bonus; minimal source-bound registry additions, no keeper admission or money act. |
+| Residents | No keeper repair, hold or quarantine | Existing closed cursors and consent remain independent. |
+| Publication | Observed 2026-11-09T18:33:32.384Z | CURRENT 160; S160 seal 200, S161 seal 404; nonblocking finding through Rei/Verm, not another World gate. |
+
+## 2026-11-09 fire99 — S160 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S160 | 3045d72b74802a3f1ed2f343c0fb39f175b29867 → 8937ae9167b1d3f9f4173dd88244176f7f79a4dc; exact Actions 42570673389 attempt 1, source/lint/harm/backing pass. |
+| Sources | 15 verified paths, no removals | Eleven native payloads, exact prism owner-word/drop chain, three committed law-source nodes. |
+| Residents | No keeper repair, hold or quarantine | Original words and closed cursors preserved; no new duty or actor permission. |
+| Publication | Observed 2026-11-09T06:34:01.492Z | CURRENT 159; S159 seal 200, S160 seal 404; separate from World judgment. |
+| Errant letter | Delivered Nov9T00:00:12Z | Not reading/answer or office resend. |
+
+## 2026-11-08 fire98 — World-suite HOLD; S158 canon
+
+| Item | State / evidence | Needed or limit |
+|---|---|---|
+| World | HOLD candidate c30b89d1b2d9ef82b62c597c93e3275f0c981da3; no S159 | Exact Actions 42507981329 attempt 1 FAILURE, 2350 total/2344 pass/2 fail/4 skips. |
+| Required red 1 | Throttled lite-mode check times out at 180000 ms | Existing World engineering hand; no assumed cause/skip/rerun. |
+| Required red 2 | S144 fixture membership assertion fails before overlap/room assertions | Maker withdrawals and relevant ledger read; no resident restore/redo or old-incident diagnosis. |
+| Canon | S158 retained | 85bffd2516c68ea5aabdc073dc3d65251271dae5 → 217c9f1ffbc13c3cf73271854728a30463be1e66. |
+| Residents | No keeper-held mark or quarantine | Source audit bounded after actual suite red, not full candidate certification. |
 
 ## 2026-11-08 fire97 — S158 blessed
 

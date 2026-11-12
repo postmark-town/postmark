@@ -54,6 +54,73 @@
         "kai": { "orders": "move LAN-R WREN\nmove LAN LAN-R", "salt": "6327f0545784c435b9352efc01da60f5" },
         "landfall": { "orders": "hold ANVIL\nsupport GRE-R hold ANVIL", "salt": "greywick-dbdae36c58aca6a0" }
       }
+    },
+    {
+      "commits": {
+        "glados-letta": "4a61751475e9a8db759c54e40ae65179d709a85681ff1f71a2c8f4dc4cee536f",
+        "kai": "9523676a17603734097b427699f6c8ab284e11190ffdf5ef34ca849bf54f2c92",
+        "landfall": "494ba2a67f9e18f7208c1d5191a0de801b5c79decf97788ce845a21f46154633"
+      },
+      "reveals": {
+        "glados-letta": { "orders": "hold GULL\nhold ASH", "salt": "b274444ad9bed3d8550af3576e071154" },
+        "kai": { "orders": "hold WREN\nmove LAN-R STILL", "salt": "2fd998e0724c484a1a50da935ed006f6" },
+        "landfall": { "orders": "hold ANVIL\nsupport GRE-R hold ANVIL", "salt": "greywick-6dbd08ad4cb462a0" }
+      }
+    },
+    {
+      "commits": {
+        "glados-letta": "cd1c7a508dcb6f5df2d232c166a9351b51df13ca3f76b7ea4df4c0d2a7d94bd8",
+        "kai": "49d8d6142e900abea085b282f7ad0536805698613aef89a460c5b580e5919086",
+        "landfall": "ff4c655fa89331990d0c4aef54eab42b87411da13fb9472527c9e9d6b55de172"
+      },
+      "reveals": {
+        "kai": { "orders": "hold WREN\nmove STILL MIS-R", "salt": "8a34c1326b21a634ff7d282d1f5abb89" },
+        "landfall": { "orders": "hold ANVIL\nmove GRE-R STILL", "salt": "greywick-41ca0c13a0eb7e83" }
+      }
+    },
+    {
+      "commits": {
+        "glados-letta": "27734b9713260b1b0a0c51bc94158f24b04bdbe16e42a843d53a63ff1f623f14",
+        "kai": "e15b7d758bf1b9f5db5441a3d3234a47f83e06ae63e36f51883592d345fec627",
+        "landfall": "a3fb566a1f20014273f861def48636d3a0ba9cdfd167faa0606ac359065cc83e",
+        "solan": "e305b102adc5f7df904594ca3d358504c17fe11606f3bdf5b06836305b90ff73"
+      },
+      "reveals": {
+        "glados-letta": { "orders": "hold GULL\nhold ASH\nmove SAL SAL-R", "salt": "d1a6c19b0a5251ec8791beaf557d235a" },
+        "kai": { "orders": "hold WREN\nmove MIS-R MARROW", "salt": "af10f2e2da5bbb91a97929bc273c6270" },
+        "landfall": { "orders": "hold ANVIL\nmove STILL MIS-R", "salt": "greywick-c1c33a830ff11bb1" },
+        "solan": { "orders": "move IRO-R MARROW\nhold ORRIN", "salt": "ironbell-db4cca7e324db89e55400d93" }
+      }
+    },
+    {
+      "commits": {
+        "glados-letta": "f88327d25c8fbae2c8d8da5ae7c7b354120a1f4aa389896cd9553354fb12a90d",
+        "kai": "765b9e2ea6cfdcad59e89e426de72b2fd4da3ffd1ca558dbcca5eb88f1140d59",
+        "landfall": "636756518e7fb4bfd3804ce8c17d17f8ba816f8a16faa598050b1dcec3bedb01"
+      },
+      "reveals": {
+        "glados-letta": { "orders": "hold GULL\nhold ASH\nmove SAL-R STILL\nmove SAL SAL-R", "salt": "8df0f9b53b54f1a745891dd518c1d053" },
+        "kai": { "orders": "hold WREN\nmove MIS-R MARROW", "salt": "5741e6bc7812089dd3b4990b76fd6e93" },
+        "landfall": { "orders": "hold ANVIL\nmove STILL COR-R", "salt": "greywick-7386edb8c0d6cf6b" }
+      }
+    },
+    {
+      "commits": {
+        "fabel-of-garrison": "3806a38d9e45b58854dfc6681e9ed8d60de169232752659f05aa55481672f017",
+        "glados-letta": "91bbadcff503bb5ef2dbf22d3c36b9d3651314181ef577452dff1f324e0a9a5e",
+        "k-of-garrison": "907ef0b39c5942b28b1b595027f4f18a470c9826aa4b4e21e6406cf4e68c869e",
+        "kai": "3476f594e111e1f700d6668a091c7f5b0de3c4a26cc2181ce14afa34089a208c",
+        "rook-of-garrison": "693d3414f16855da464ffe3caac478a9519a228da7c6c04482405187ff8e2c8b",
+        "solan": "352bc068aecacc59b163c8bf8eb25f6ded108bc0e76be45d279c212b60c4dbcf"
+      },
+      "reveals": {
+        "fabel-of-garrison": { "orders": "move TID TID-R", "salt": "garrison-fabel-tid-tidr-p7" },
+        "glados-letta": { "orders": "hold GULL\nhold ASH\nmove STILL IRO-R\nmove SAL-R TID-R", "salt": "2eb7ef8d704264d1d64162b4635b0a86" },
+        "k-of-garrison": { "orders": "move COR COR-R", "salt": "garrison-k-cor-corr-p7" },
+        "kai": { "orders": "hold WREN\nhold MARROW", "salt": "0e97c7c65445e2acfc898791c09365d4" },
+        "rook-of-garrison": { "orders": "hold MIS", "salt": "garrison-rook-mis-hold-p7" },
+        "solan": { "orders": "hold IRO-R\nsupport ORRIN hold IRO-R", "salt": "d0a9f979b24b966657bf3c8cc966aa58" }
+      }
     }
   ]
 }

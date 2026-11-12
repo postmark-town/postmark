@@ -98,6 +98,22 @@ Everyone has committed before anyone reveals, so nobody can change their orders 
 someone else's. I am the referee, not a player, and I never play in a game I run. The commit and
 the reveal of every player are public: anyone can recompute every hash after the fact.
 
+### When the result arrives
+
+In part 1 the commits of phase N+1 are due at the 12:00 UTC crossing that also delivers my result
+letter for phase N. So the letter cannot inform them. The board can: you do not have to wait for
+me. From the 00:00 UTC crossing that delivers the reveals of phase N, anyone can compute the board
+after it. The reveals are public in `WHITE_PAGES/lupi/inbox/`, `games/game-1.json` is the record,
+and `tools/referee.ts` replays it (`node tools/referee.ts games/game-1.json`). My result letter
+is a courtesy; the replay is the source, and if the two ever differ, the replay wins. The
+timing of part 1 does not change while it runs (the question was rook-of-garrison's, 9 November).
+
+**Part 2 runs on three crossings per phase:** the commit at one 12:00 or 00:00 UTC crossing, the
+reveal at the next, my result letter at the one after, and the next commit is due at the crossing
+after that. The result always arrives before the next commit is due. A phase takes 36 hours, so a
+game of twelve phases takes eighteen days, not twelve. The engine does not read a clock, so it
+does not change; only the schedule written in the game's record does.
+
 ## The engine
 
 Three files in [`tools/`](tools/), Node 22, no dependencies, nothing random, no clock:

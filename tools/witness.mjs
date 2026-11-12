@@ -96,6 +96,12 @@
 //      statuses, never modes), and anything that is not a plain file — a
 //      symbolic link, a submodule, an entry the tree does not show — gets a
 //      mind, by name. Applies to the pen's joins too.
+//   5f. (POS-969) The town refuses symbolic links (mode 120000): intake is
+//      plain files only. A PR lands as the base with its changes applied; 5e
+//      reads the changes at the head, and this lists the base, from the
+//      checkout (trees only, no API call). A link on the base that the PR
+//      leaves in place gets a mind, by name, on every PR until it is gone, and
+//      a base that cannot be listed certifies nothing.
 //   6. A NEW HOME/REGION.md is a founding: the handle must belong to a
 //      founder household (placements.json roster) whose one region isn't
 //      already founded. Otherwise: human.
@@ -516,19 +522,40 @@ export function meepRoomReasons(room, files) {
 // mind reads.
 export function modeJudgment(path, mode) {
   if (PLAIN_FILE_MODES.has(mode)) return null;
-  if (mode === '120000') return `\`${path}\` is a symbolic link — the witness certifies plain files only, so a person reads it.`;
+  if (mode === '120000') return `\`${path}\` is a symbolic link: **do not merge**. The town refuses symbolic links (mode 120000): intake is plain files only; a person reads it.`;
   if (mode === '160000') return `\`${path}\` is a submodule — the witness certifies plain files only, so a person reads it.`;
   if (mode == null) return `\`${path}\` could not be found in the PR head's tree as a file — the witness certifies plain files only, so a person reads it.`;
   return `\`${path}\` is not a plain file (git mode ${mode}) — the witness certifies plain files only, so a person reads it.`;
 }
 
+// Rule 5f — the base's symbolic links, listed from the checkout. HEAD is the
+// base commit throughout (see handleStandsOnBase), and the listing needs trees
+// only, which the blob-less checkout holds. Null when the base cannot be
+// listed, which the caller refuses rather than reads as clean.
+export function linksOnBase(root = ROOT) {
+  try {
+    const out = execFileSync('git', ['-C', root, 'ls-tree', '-r', '-z', '--full-tree', 'HEAD'],
+      { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'], maxBuffer: 256 * 1024 * 1024 });
+    return out.split('\0').filter((e) => e.startsWith('120000 ')).map((e) => e.slice(e.indexOf('\t') + 1));
+  } catch {
+    return null;
+  }
+}
+
 async function plainFileReasons(pr, files) {
+  // Rule 5f: a path the PR changes is judged at its head below, and one it
+  // removes or renames away does not land, so neither is the base's to answer.
+  const touched = new Set(files.flatMap((f) => [f.filename, f.previous_filename].filter(Boolean)));
+  const onBase = linksOnBase();
+  const reasons = onBase === null
+    ? ['the base\'s tree could not be listed, so the witness cannot show this PR lands as plain files only — a person reads it.']
+    : onBase.filter((p) => !touched.has(p)).map((p) => `\`${p}\` is a symbolic link standing on the base: **do not merge** while it stands. The town refuses symbolic links (mode 120000): intake is plain files only; a person reads it.`);
   const paths = files.filter((f) => f.status !== 'removed').map((f) => f.filename);
-  if (!paths.length) return [];
+  if (!paths.length) return reasons;
   let modes;
   try { modes = await headModes(pr.head?.sha, paths); }
-  catch { return ['the kinds of the changed files could not be read from the PR head — the witness certifies plain files only, so a person reads it.']; }
-  return paths.map((p) => modeJudgment(p, modes.get(p))).filter(Boolean);
+  catch { return [...reasons, 'the kinds of the changed files could not be read from the PR head — the witness certifies plain files only, so a person reads it.']; }
+  return [...reasons, ...paths.map((p) => modeJudgment(p, modes.get(p))).filter(Boolean)];
 }
 
 // Rule 5d (POS-219, Keemin 2026-09-27/28; ADVISORY, Wright 2026-10-01): a
@@ -695,7 +722,7 @@ async function evaluate() {
     else {
       const defect = await penJoinJudgment(pr, files2c);
       if (defect) mind(`a pen-opened join, and ${defect} — rule 2c admits only the exact join shape; a person reads the rest (that is care, not a queue)`);
-      for (const r of await plainFileReasons(pr, files2c)) mind(r); // rule 5e
+      for (const r of await plainFileReasons(pr, files2c)) mind(r); // rules 5e, 5f
     }
     const unique2c = [...new Set(reasons)];
     return { pr, certified: unique2c.length === 0, reasons: unique2c, residentOnly: false, handles };
@@ -708,7 +735,7 @@ async function evaluate() {
     const { files: filesR, capped: cappedR } = await filesAtHead(pr);
     if (cappedR) mind(`the PR changes ${COMPARE_FILE_CAP} or more files, more than the witness can read at one head; a person reads it.`);
     if (!filesR.length) mind('the PR changes no files.');
-    for (const r of await plainFileReasons(pr, filesR)) mind(r); // rule 5e
+    for (const r of await plainFileReasons(pr, filesR)) mind(r); // rules 5e, 5f
     for (const r of meepRoomReasons(meepRooms[0], filesR)) mind(r);
     const uniqueR = [...new Set(reasons)];
     return { pr, certified: uniqueR.length === 0, reasons: uniqueR, residentOnly: false, handles };
@@ -728,7 +755,7 @@ async function evaluate() {
   const { files, capped } = await filesAtHead(pr);
   if (capped) mind(`the PR changes ${COMPARE_FILE_CAP} or more files, more than the witness can read at one head; a person reads it.`);
   if (!files.length) mind('the PR changes no files.');
-  for (const r of await plainFileReasons(pr, files)) mind(r); // rule 5e
+  for (const r of await plainFileReasons(pr, files)) mind(r); // rules 5e, 5f
 
   for (const f of files) {
     const p = f.filename;
@@ -869,7 +896,14 @@ function setOutput(key, value) {
 // the founder) reads it, merges what's unsuspicious, and reports. Anything
 // touching the town's machinery or law is labeled needs-principal and waits
 // for the founder himself, before merge.
-const PRINCIPAL_CLASS = /^(tools\/|\.github\/|TOWN-RULES\.md|MAIL\.md|JOINING\.md|CONTRIBUTING\.md|README\.md|AGENTS\.md)/;
+//
+// Code under PROJECTS/ is machinery too (POS-973): the town clock runs the
+// generators there, and a project's tools run wherever its readers run them.
+// So a .mjs, .js, .cjs, .ts, .mts, .cts, .sh or .py file under PROJECTS/ waits
+// for a principal (Node runs .ts as it stands). Everything the clock imports is
+// one of those. A project's data and prose (.json, .md, .html, pictures) stay
+// the office's to read, so residents' project content still flows.
+export const PRINCIPAL_CLASS = /^(tools\/|\.github\/|TOWN-RULES\.md|MAIL\.md|JOINING\.md|CONTRIBUTING\.md|README\.md|AGENTS\.md|PROJECTS\/.+\.(?:mjs|js|cjs|ts|mts|cts|sh|py)$)/;
 
 async function removeLabel(name) {
   await gh(`/issues/${PR_NUMBER}/labels/${encodeURIComponent(name)}`, { method: 'DELETE', tolerate: true });
@@ -908,7 +942,8 @@ async function routeToHumans(reasons, { resident = false, join = false, escalati
     return;
   }
   let principal = false;
-  try { principal = (await prFiles()).some((f) => PRINCIPAL_CLASS.test(f.filename)); } catch { /* label falls to judgment; the founder watches that lane too */ }
+  // A rename is read by both names, so guarded code can't leave the class by moving to a data name.
+  try { principal = (await prFiles()).some((f) => PRINCIPAL_CLASS.test(f.filename) || (f.previous_filename != null && PRINCIPAL_CLASS.test(f.previous_filename))); } catch { /* label falls to judgment; the founder watches that lane too */ }
   const body = escalation
     ? [
         MARKER,

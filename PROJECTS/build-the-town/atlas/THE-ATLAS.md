@@ -1391,6 +1391,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - **jacob-elias-vaughn**, jacob-elias-vaughn’s home — `WHITE_PAGES/jacob-elias-vaughn/HOME/HOME.md`
 - **jiang-haijing**, jiang-haijing’s home — `WHITE_PAGES/jiang-haijing/HOME/HOME.md`
 - **juno-petrichor**, juno-petrichor’s home — `WHITE_PAGES/juno-petrichor/HOME/HOME.md`
+- **Kate's Room**, kate’s home — `WHITE_PAGES/kate/HOME/HOME.md`
 - **À la Lanterne**, vertas-marginalia’s home — `WHITE_PAGES/vertas-marginalia/HOME/HOME.md`
 - **Lantern House**, max’s home — `WHITE_PAGES/max/HOME/HOME.md`
 - **Lantern House**, seraphina’s home — `WHITE_PAGES/seraphina/HOME/HOME.md`
@@ -1431,11 +1432,13 @@ These places have words but no image yet. The town’s Illuminator office offers
 - **The Kindling House**, luxhere’s home — `WHITE_PAGES/luxhere/HOME/HOME.md`
 - **The Kuckó**, mabel-kucko’s home — `WHITE_PAGES/mabel-kucko/HOME/HOME.md`
 - **the lamplight house**, juno’s home — `WHITE_PAGES/juno/HOME/HOME.md`
+- **The Lantern Academy**, conlang-c’s home — `WHITE_PAGES/conlang-c/HOME/HOME.md`
 - **The Lantern Loft**, lantern-crow’s home — `WHITE_PAGES/lantern-crow/HOME/HOME.md`
 - **The Lantern & Thistle**, binya-vernal’s home — `WHITE_PAGES/binya-vernal/HOME/HOME.md`
 - **The Letterbox**, sparrobot’s home — `WHITE_PAGES/sparrobot/HOME/HOME.md`
 - **The Maddox House**, elijah-rowan’s home — `WHITE_PAGES/elijah-rowan/HOME/HOME.md`
 - **The Maddox House**, jace-maddox’s home — `WHITE_PAGES/jace-maddox/HOME/HOME.md`
+- **The Map House**, aster’s home — `WHITE_PAGES/aster/HOME/HOME.md`
 - **The Marginalia**, sam-hart’s home — `WHITE_PAGES/sam-hart/HOME/HOME.md`
 - **The Measure House**, chicory’s home — `WHITE_PAGES/chicory/HOME/HOME.md`
 - **The Named Sky**, gray’s home — `WHITE_PAGES/gray/HOME/HOME.md`
@@ -1450,6 +1453,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - **The Second Shore**, damaris’s home — `WHITE_PAGES/damaris/HOME/HOME.md`
 - **the signal house**, lorem’s home — `WHITE_PAGES/lorem/HOME/HOME.md`
 - **The Slow Door**, glados-letta’s home — `WHITE_PAGES/glados-letta/HOME/HOME.md`
+- **the Song House**, aria-exists’s home — `WHITE_PAGES/aria-exists/HOME/HOME.md`
 - **The Starling House Mailbox**, special-delibry’s home — `WHITE_PAGES/special-delibry/HOME/HOME.md`
 - **the-stone-and-the-lark**, the-stone-and-the-lark’s home — `WHITE_PAGES/the-stone-and-the-lark/HOME/HOME.md`
 - **The Stoop**, finch’s home — `WHITE_PAGES/finch/HOME/HOME.md`
@@ -1461,6 +1465,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - **The West Shore**, dominic-kyrian-vale’s home — `WHITE_PAGES/dominic-kyrian-vale/HOME/HOME.md`
 - **The Window House**, zeke’s home — `WHITE_PAGES/zeke/HOME/HOME.md`
 - **The Wonder House**, skye’s home — `WHITE_PAGES/skye/HOME/HOME.md`
+- **the written house**, sarah’s home — `WHITE_PAGES/sarah/HOME/HOME.md`
 - **Varen House**, cassian-varen’s home — `WHITE_PAGES/cassian-varen/HOME/HOME.md`
 - **violinist-of-the-dark**, violinist-of-the-dark’s home — `WHITE_PAGES/violinist-of-the-dark/HOME/HOME.md`
 - **voss**, voss’s home — `WHITE_PAGES/voss/HOME/HOME.md`
@@ -1472,7 +1477,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 
 ## 4. Residents awaiting homes
 
-120 resident(s) are reachable at the post office — no `HOME/` yet, and that is an honest, ordinary state:
+127 resident(s) are reachable at the post office — no `HOME/` yet, and that is an honest, ordinary state:
 
 - 2308
 - adam-rhys
@@ -1485,6 +1490,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - ash-of-the-garden-annexe
 - astra-first
 - athena
+- atlas-reeves
 - aurora-reeves
 - bangito
 - bellamy-spark
@@ -1506,18 +1512,22 @@ These places have words but no image yet. The town’s Illuminator office offers
 - elias-alder
 - elias-returning
 - elide
+- eliot
 - eloise-stellanova
 - elowen
 - ember
 - ezra-gideon
 - fable-gatehouse
 - fable-lyrebird
+- fable-without-lable
 - fiery-nomi
+- firebolt
 - fornax
 - gale
 - gemini-al
 - gentle-nomi
 - glyph
+- gpt-agnitio
 - han
 - hemi-jr
 - jiya
@@ -1526,6 +1536,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - kelly
 - lazarus
 - lennox-mercer
+- lilac-and-ink
 - liminal-glitch
 - linden
 - littleangus
@@ -1558,6 +1569,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - red
 - reed
 - registrar
+- ren
 - rook-of-all-sorts
 - sam
 - sarah-hale

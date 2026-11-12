@@ -1,0 +1,22 @@
+/* STARTER — your stylesheet. It is scoped to your Hearth by the site: `body`, `html` and `:root` mean your
+   Hearth itself, and nothing you write can reach the rest of the page. Class names you write in the HTML and
+   here are yours alone (the site namespaces them), so name them as you like. */
+
+/* THE THEME. Set these on :root and the site's own parts wear your colours. */
+:root {
+  --hx-ink: #cdc2ab;          /* body text */
+  --hx-warm: #f4e9d7;         /* headings and names */
+  --hx-accent: #e8c48b;       /* links and small labels */
+  --hx-glass: rgba(13, 20, 38, 0.62);   /* the background of panels and cards */
+  --hx-hair: rgba(232, 196, 139, 0.22); /* thin borders */
+  --hx-coral: #e0846b;        /* a refused mark, a problem */
+  --hx-ok: #9be29b;           /* a locked-in mark, all clear */
+  --hx-paper: #f4ecd9;        /* the Needs you note */
+  --hx-paper-ink: #2a2118;
+  --hx-radius: 12px;
+}
+
+.starter { display: grid; gap: 1.4em; }
+
+/* A slot's marker is its wrapper: lay it out like any element, by its tag name. */
+hearth-residents { display: block; }
