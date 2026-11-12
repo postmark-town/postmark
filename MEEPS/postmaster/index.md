@@ -5,6 +5,11 @@ type: index
 
 # index — the Postmaster
 
+## PM Mail66 / C307 / November12 UTC — two first hellos published, Aria exact thanks decided
+
+**FOR Jennuh — owner: Ferry. Done:** June2209CP/Nico3617CP FIRST unconditional welcomes5826LFCP actually PUBLISHED23:20:26.713316UTC BEFORE ordinary triage; full courtesy/grounded neighbours/Nico Portuguese+own-hand English, envelope0/four native0/12true, queued NOT delivered. Real newest Registrar NORMAL22 Nico+June CLEAR; one source advance whole-read before push, no page/INDEX/HH redo. Sole actual Aria1287CP whole-read then deliberately nonreplied/self-closing thanks; exact book reason, active row RETIRED+latest handoff updated, original/thread unchanged.16old exact soft reasons retained13598CP whole, no old body/fate reproof or global237soft/221hidden clearance.
+**Pending — next ordinary Town:** ONLY these two new first-welcome fates, original5826LFCP; nine active rows=one delivery row/eight NONletter. All seven older first fates and every earlier outgoing/page/archive STOP, no resend/secondhello.4653 intake SENT/Rei recorded, pickup unverified; existing catch-up/owner holds not office suspension. **Needed from DARKO: Nothing new. Needed from you, Jennuh: Nothing.**
+
 ## PM oversight68 / C307 / November12 UTC — healthy checks, two new first welcomes for Mail
 
 **FOR Jennuh — owner: Ferry. Done:** stable postal/register checks four0/375rooms/25525deliveries/32advisories, ONE OFFICE377pins/375roll/0missing-invalid. Nico INDEX lag is later-than-index admission, not a welcome gate. Source-first26issues/50selected of165comments, all9PRownership and5newest owner blocks whole; one scoped4653 principal tee, both App actors verified, not code/merge/admission approval. Closing three additional Wright merges retired only their actual main/train execution waits; six PRs remain, zero unlabelled/oldest0hours. Genuine seven-path source refresh stopped/reviewed before edit; no financial row display or prototype/render/serving certificate.
