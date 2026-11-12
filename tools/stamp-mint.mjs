@@ -306,6 +306,45 @@ export function welcomeBinding(repo, registry = null) {
   };
 }
 
+// A QUEST PAYS A LIVE RESIDENT, NOT A RETIRED PIN (POS-987). householdKeys is
+// the KEY BASE, not the roll: it keeps every pin tools/github-ids.json holds,
+// and a rename keeps the old handle there on purpose (tools/rename-handle.mjs:
+// "a handle is a key into history", marked `retired:` and `renamed_to:`, same
+// id). So `householdKeys(repo).has(h)` holds for dylan-android-husband and
+// wesley-seeker, names with no room since their renames, and a room check that
+// asks it would sign a quest to either. This is the one predicate the quest
+// mints and the verifier share; householdKeys is left as it is.
+//
+// liveResidentRefusal(handle, date, { pins, houses }) says why `handle` is no
+// live resident on `date`, or null when it is one:
+//   · retired: the registry retired the handle on or before `date`. This half
+//     is DATED, as the replay reads the registry, so it judges a recorded line
+//     by its own day and never reaches backwards: a line paid before a rename
+//     stays lawful.
+//   · off the roll: `houses` (tools/households.json's `households`, or the
+//     store's under --registry) lists no such resident. The roll is TODAY's and
+//     carries no dates, so only a writer signing now asks it (the mint); the
+//     verifier passes no `houses` and judges the dated half alone.
+// Ruled (Wright, 2026-11-11 03:41:40Z): "the verifier judges each line by the
+// registry as it stood at that line's date, so a lawful payment made before a
+// rename still verifies. Undated or unstamped departures stay explicitly
+// unresolved". A name that left the roll with no `retired:` stamp is refused by
+// the mint and is not judged by the verifier (tools/stamp-quest-pay.test.mjs 3b).
+export function liveResidentRefusal(handle, date, { pins = {}, houses = null } = {}) {
+  const pin = pins?.[handle];
+  if (pin && typeof pin === 'object' && typeof pin.retired === 'string' && String(date) >= pin.retired)
+    return `"${handle}" was retired ${pin.retired}${pin.renamed_to ? ` (renamed ${pin.renamed_to})` : ''}, so is no resident on ${date}`;
+  if (houses && !Object.values(houses).some((rec) => Array.isArray(rec?.residents) && rec.residents.includes(handle)))
+    return `"${handle}" is no resident on the roll`;
+  return null;
+}
+
+/** tools/github-ids.json, the pins householdKeys reads ({} when it cannot be read, as there). */
+export function registryPins(repo) {
+  try { return JSON.parse(readFileSync(join(repo, 'tools', 'github-ids.json'), 'utf8')) ?? {}; }
+  catch { return {}; }
+}
+
 // The CURRENT household view: the from-genesis base above with the ledger's
 // dated `registry:` revisions folded to now — the same fold deriveMints and
 // ballot apply per-date, exported once so no current-state consumer re-invents
@@ -542,6 +581,14 @@ export const INVITE_WITHIN_DAYS = 30;
 export const INVITE_CAP_PER_MONTH = 10;
 // The week the inviter's 10 waits after the activation (POS-816/a, "A week").
 export const INVITE_HOLD_DAYS = 7;
+// A LATE-NAMED INVITATION (POS-947; Darko 2026-11-07 23:05 EST, POS-816/c: "open to any amount of time for
+// the backfill for referrals", and "let's say 10 max for the backfill"; 2026-11-08 09:02 EST, POS-947/a: "The
+// town's judge too"). A house that joined without naming its inviter may name one later, once, with no window;
+// its own record then carries `backfill: true` and `at`, when it was named. Its inviter side counts the 30 days
+// from the house's JOIN day (`since`), so an old first letter or home still pays, and waits a week from the
+// naming as well as from the activation. And a house is paid for at most 10 late-named invitations IN ALL,
+// whatever month they land in, beside the month's 10 every invitation counts in.
+export const INVITE_BACKFILL_CAP = 10;
 // The town's own household (POS-576/e), as a canonical key. Until 2026-11-03 this was
 // INVITE_FOUNDERS = ['hh:starforge', 'hh:the-town']; the founders' household pays like
 // any other now (POS-816/d).
@@ -1381,17 +1428,20 @@ export function houseCanonOf(households) {
 }
 // The invitation a declared house's own registry row records (`invited_by`,
 // office migration 085: `{ by, named, at }`, the inviting house's slug first),
-// by its canonical key, or null.
+// by its canonical key, or null. A LATE-NAMED one (POS-947) also carries
+// `backfill: true`, its `at` is when it was named, and the house's own join day
+// (`since`) rides beside it as `joined`, because its pay clock runs from there.
 export function invitationOf(households) {
   return (canonKey) => {
     const slug = /^hh:(.+)$/.exec(String(canonKey ?? ''))?.[1];
     const row = slug != null && Object.hasOwn(households ?? {}, slug) ? households[slug] : null;
     const inv = row?.invited_by;
-    return inv && typeof inv.by === 'string' && inv.at ? inv : null;
+    if (!(inv && typeof inv.by === 'string' && inv.at)) return null;
+    return inv.backfill === true ? { ...inv, joined: typeof row.since === 'string' ? row.since.slice(0, 10) : null } : inv;
   };
 }
 
-export const inviteState = () => ({ welcomed: new Set(), paid: new Set(), counts: new Map() });
+export const inviteState = () => ({ welcomed: new Set(), paid: new Set(), counts: new Map(), backfilled: new Map() });
 // The cap's key for an inviter-side line: its house and the town month the
 // line is dated, the month it is paid in ("Month paid", POS-816/b).
 const inviteCapKey = (inviter, cls) => `${inviter}|${cls.date.slice(0, 7)}`;
@@ -1425,22 +1475,34 @@ export function judgeInviteLine(cls, { canon, invitationOf: invitation, houseAt,
     if (!state.welcomed.has(invited)) return `${cls.invited}'s 5 more is the rest of its join bundle, and its house holds no welcome bundle yet`;
     return null;
   }
-  const invitedDay = townDayOf(inv.at);
-  if (cls.activated < invitedDay) return `the activation (${cls.activated}) is before the invitation (${invitedDay})`;
+  // A late-named invitation's clock runs from its house's JOIN day, and it waits a week after the naming too (POS-947/a).
+  const late = inv.backfill === true;
+  if (late && !INVITE_DAY_RE.test(String(inv.joined ?? '')))
+    return `${cls.invited}'s invitation was named after it joined, and its record holds no join day (since) to count from`;
+  const invitedDay = late ? inv.joined : townDayOf(inv.at);
+  const from = late ? 'the join' : 'the invitation';
+  if (cls.activated < invitedDay) return `the activation (${cls.activated}) is before ${from} (${invitedDay})`;
   if (dayGap(invitedDay, cls.activated) > INVITE_WITHIN_DAYS)
-    return `the activation (${cls.activated}) is more than ${INVITE_WITHIN_DAYS} days after the invitation (${invitedDay})`;
+    return `the activation (${cls.activated}) is more than ${INVITE_WITHIN_DAYS} days after ${from} (${invitedDay})`;
   if (dayGap(cls.activated, cls.date) < INVITE_HOLD_DAYS)
     return `the inviter is paid on ${cls.date}, less than a week after the activation (${cls.activated}): it waits ${INVITE_HOLD_DAYS} days`;
+  if (late && dayGap(townDayOf(inv.at), cls.date) < INVITE_HOLD_DAYS)
+    return `the inviter is paid on ${cls.date}, less than a week after the invitation was named (${townDayOf(inv.at)}): a late-named one waits ${INVITE_HOLD_DAYS} days from its naming`;
   if ((state.counts.get(inviteCapKey(inviter, cls)) ?? 0) >= INVITE_CAP_PER_MONTH)
     return `${cls.inviter} already holds ${INVITE_CAP_PER_MONTH} paid invitations in ${cls.date.slice(0, 7)}, the month this one is paid in: at most ${INVITE_CAP_PER_MONTH} a month`;
+  if (late && (state.backfilled.get(inviter) ?? 0) >= INVITE_BACKFILL_CAP)
+    return `${cls.inviter} already holds ${INVITE_BACKFILL_CAP} paid late-named invitations: at most ${INVITE_BACKFILL_CAP} in all, whatever month`;
   return null;
 }
-/** Fold a lawful invite line into the state the next judgement reads. */
-export function foldInviteLine(cls, state, { canon }) {
+/** Fold a lawful invite line into the state the next judgement reads. `invitationOf` tells a late-named invitation's line, for its cap. */
+export function foldInviteLine(cls, state, { canon, invitationOf: invitation }) {
+  if (typeof invitation !== 'function') throw new Error('foldInviteLine needs invitationOf: a late-named line folds into its lifetime cap (POS-947)');
   state.paid.add(`${canon(cls.invited)}|${cls.side}`);
   if (cls.side === 'inviter') {
     const k = inviteCapKey(canon(cls.inviter), cls);
     state.counts.set(k, (state.counts.get(k) ?? 0) + 1);
+    if (invitation?.(canon(cls.invited))?.backfill === true)
+      state.backfilled.set(canon(cls.inviter), (state.backfilled.get(canon(cls.inviter)) ?? 0) + 1);
   }
 }
 
@@ -2469,6 +2531,20 @@ function main(registrySource = null) {
   const { ledgerPath, existing, deliveries, mints, transfers } = loadState(repo);
   const genesisDate = deliveries[0]?.date ?? '2026-06-12';
 
+  // WHO A QUEST MAY PAY ON `date` (POS-987): a live resident, on the roll and not
+  // retired (liveResidentRefusal). The roll and the pins are the store's when the
+  // office hands them over (--registry), the printouts' otherwise. A roll that
+  // cannot be read is a refusal: nothing is signed for a name no roll vouches for.
+  const questPayeeRefusal = (handle, date) => {
+    let houses = registrySource ? registrySource.registry?.households : null;   // the store's, never the printout's in its place
+    if (!registrySource) {
+      try { houses = JSON.parse(readFileSync(join(repo, 'tools', 'households.json'), 'utf8'))?.households; }
+      catch (e) { return `the roll (tools/households.json) could not be read (${e.message})`; }
+    }
+    if (!houses || typeof houses !== 'object') return 'the roll has no households';
+    return liveResidentRefusal(handle, date, { pins: registrySource ? (registrySource.pins ?? {}) : registryPins(repo), houses });
+  };
+
   if (has('--derive')) {
     console.log(rulesLine(genesisDate));
     for (const line of interleaveByDelivery(deliveries, mints, transfers)) console.log(line);
@@ -2594,6 +2670,8 @@ function main(registrySource = null) {
     }
     const rooms = householdKeys(repo);
     if (!rooms.has(handle)) { console.error(`FATAL: no WHITE_PAGES room for "${handle}" — a quest mint needs a resident to receive it`); process.exit(1); }
+    const offRoll = questPayeeRefusal(handle, date);
+    if (offRoll) { console.error(`FATAL: ${offRoll} — a quest mint needs a live resident to receive it; nothing minted`); process.exit(1); }
     const { laws, revisions } = parseLaws(existing);
     if (meepChecker(laws)(handle, date)) { console.error(`FATAL: "${handle}" is a meep at ${date} — meeps stay outside the currency`); process.exit(1); }
     // ONE PER HOUSEHOLD, EVER — resolved the way the verifier resolves it, so
@@ -2845,6 +2923,8 @@ function main(registrySource = null) {
     }
     const rooms = keyBase() ?? householdKeys(repo);
     if (!rooms.has(handle)) { console.error(`FATAL: no WHITE_PAGES room for "${handle}" — a quest pays a resident`); process.exit(1); }
+    const offRoll = questPayeeRefusal(handle, date);
+    if (offRoll) { console.error(`FATAL: ${offRoll} — a quest pays a live resident; nothing minted`); process.exit(1); }
     const { laws, revisions } = parseLaws(existing);
     if (meepChecker(laws)(handle, date)) { console.error(`FATAL: "${handle}" is a meep at ${date} — meeps stay outside the currency`); process.exit(1); }
     const keyOf = (h, d) => {
@@ -2926,14 +3006,15 @@ function main(registrySource = null) {
     const households = welcomeRegistry()?.households
       ?? (() => { try { return JSON.parse(readFileSync(join(repo, 'tools', 'households.json'), 'utf8')).households ?? {}; } catch { return {}; } })();
     const canon = houseCanonOf(households);
+    const invitation = invitationOf(households);
     const state = inviteState();
     for (const e of existing) {
       const c = classifyEntry(e.canonical);
       if (c.kind === 'welcome') { state.welcomed.add(canon(c.household)); state.welcomed.add(canon(keyOf(c.handle, c.date))); }
-      if (c.kind === 'invite') foldInviteLine(c, state, { canon });
+      if (c.kind === 'invite') foldInviteLine(c, state, { canon, invitationOf: invitation });
     }
     const isMeep = meepChecker(laws);
-    const why = judgeInviteLine(classifyEntry(canonical), { canon, invitationOf: invitationOf(households), houseAt: keyOf, isMeep, state });
+    const why = judgeInviteLine(classifyEntry(canonical), { canon, invitationOf: invitation, houseAt: keyOf, isMeep, state });
     if (why) { console.error(`FATAL: ${why} — nothing minted`); process.exit(1); }
     const recorded = existing.map((e) => e.canonical);
     const { problems, owed } = walkLedger(recorded.slice(1), mints, 1);

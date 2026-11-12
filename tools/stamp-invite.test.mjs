@@ -36,7 +36,7 @@ import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import {
   classifyEntry, inviteInvitedLine, inviteInviterLine, INVITE_PAY, INVITE_WITHIN_DAYS,
-  INVITE_CAP_PER_MONTH, INVITE_HOLD_DAYS, INVITE_TOWN_HOUSE, judgeInviteLine, inviteState, townDayOf,
+  INVITE_CAP_PER_MONTH, INVITE_HOLD_DAYS, INVITE_TOWN_HOUSE, INVITE_BACKFILL_CAP, judgeInviteLine, foldInviteLine, inviteState, townDayOf,
   parseStampLedger, foldBalances, sealChain, signSeal,
   giftLine, welcomeLine, firstIdeaLine, stageMintLine, questPayLine, mintLine, transferLine, rulesV2Line,
 } from './stamp-mint.mjs';
@@ -55,6 +55,9 @@ const MINT_CLI = join(HERE, 'stamp-mint.mjs');
 const INVITED_AT = '2026-10-27T20:39:04.552Z';
 const LODGES = Array.from({ length: 11 }, (_, i) => `lodge${i + 1}`);
 const LODGE_AT = '2026-10-31T15:00:00.000Z';
+const LATES = Array.from({ length: 11 }, (_, i) => `late${i + 1}`);
+const LATE_JOINED = '2026-10-01';                 // the house's join day, its record's `since`
+const NAMED_AT = '2026-12-01T15:00:00.000Z';      // when it named its inviter, two months on (town day 2026-12-01)
 function households() {
   const h = {
     keep: { residents: ['dora'], accounts: [{ id: 4 }], invited_by: { by: 'castle', named: 'carl', at: INVITED_AT } },
@@ -66,11 +69,16 @@ function households() {
     hall: { residents: ['hugo'], accounts: [{ id: 10 }], invited_by: { by: 'the-town', named: 'pen', at: INVITED_AT } },
   };
   LODGES.forEach((slug, i) => { h[slug] = { residents: [`lou${i + 1}`], accounts: [{ id: 100 + i }], invited_by: { by: 'castle', named: 'cleo', at: LODGE_AT } }; });
+  // POS-947: late1..late11 joined on LATE_JOINED and each named castle as its inviter later, on NAMED_AT;
+  // undated joined like them but its record holds no join day.
+  LATES.forEach((slug, i) => { h[slug] = { residents: [`lee${i + 1}`], accounts: [{ id: 200 + i }], since: LATE_JOINED, invited_by: { by: 'castle', named: 'cleo', at: NAMED_AT, backfill: true } }; });
+  h.undated = { residents: ['uma'], accounts: [{ id: 300 }], invited_by: { by: 'castle', named: 'cleo', at: NAMED_AT, backfill: true } };
   return h;
 }
 function pins() {
-  const p = { dora: { id: 4 }, carl: { id: 5 }, cleo: { id: 5 }, moth: { id: 5 }, wren: { id: 6 }, pen: { id: 7 }, nell: { id: 8 }, tess: { id: 9 }, hugo: { id: 10 } };
+  const p = { dora: { id: 4 }, carl: { id: 5 }, cleo: { id: 5 }, moth: { id: 5 }, wren: { id: 6 }, pen: { id: 7 }, nell: { id: 8 }, tess: { id: 9 }, hugo: { id: 10 }, uma: { id: 300 } };
   LODGES.forEach((_, i) => { p[`lou${i + 1}`] = { id: 100 + i }; });
+  LATES.forEach((_, i) => { p[`lee${i + 1}`] = { id: 200 + i }; });
   return p;
 }
 function town({ mail = [] } = {}) {
@@ -245,14 +253,15 @@ test('3 · --invite-mint refuses a lying house, an inviter the invited house nev
 
 // ── 4 · the verifier ────────────────────────────────────────────────────────
 
-function verdict(lines) {
+const verdict = (lines) => verdictWith(households(), lines);
+function verdictWith(registryHouseholds, lines) {
   const { pub, priv } = keypair();
   const repo = town();
   writeFileSync(join(repo, 'tools', 'stamp-pubkey.pem'), pub);
   const all = ['- 2026-06-12 · rules: stamps-v1', ...lines];
   const seals = sealChain(all);
   writeFileSync(join(repo, 'WHITE_PAGES', 'stamp-ledger.md'), '# stamp-ledger\n\n' + all.map((c, i) => `${c} · sig: ${signSeal(seals[i], priv)}`).join('\n') + '\n');
-  const v = verifyStampLedger(repo, { pubkeyPem: pub, registry: { households: households() } });
+  const v = verifyStampLedger(repo, { pubkeyPem: pub, registry: { households: registryHouseholds } });
   rmSync(repo, { recursive: true, force: true });
   assert.ok(!v.problems.some((p) => /SIGNATURE FAILS|UNSIGNED/.test(p)), 'the lines must be properly signed, or this tests the seal instead of the law');
   return v;
@@ -355,6 +364,77 @@ test('4 · the record: the invited house\'s own row names the inviter, the recip
   red([INVITER(), INVITER({ handle: 'cleo', date: '2026-11-05' })], /hh:keep's invitation already paid its inviter side/);
   red([WELCOME(), INVITED({ inviter: 'hh:keep' })], /an invite names one house on both sides \(hh:keep\)/);
   green([WELCOME(), INVITED({ invited: 'gh:4' }), INVITER({ invited: 'gh:4', inviter: 'gh:5' })], 'a house under its account spelling is the same house');
+});
+
+// ── 6 · a late-named invitation (POS-947) ──────────────────────────────────
+// LAW (Darko 2026-11-07 23:05 EST, POS-816/c): "open to any amount of time for the backfill for referrals",
+// and "let's say 10 max for the backfill"; (2026-11-08 09:02 EST, POS-947/a) "The town's judge too": the pay
+// clock runs from the join day, and the 10-per-inviter backfill cap, are held here, not only by the office.
+
+const LATE = ({ i = 0, date = '2026-12-08', activated = '2026-10-05', handle = 'carl' } = {}) =>
+  INVITER({ invited: `hh:${LATES[i]}`, activated, date, handle });
+
+test('6 · GREEN: a house that joined in October and named its inviter in December pays both sides, its old first letter counted from its join day', () => {
+  const v = green([WELCOME('lee1', 'gh:200'), INVITED({ handle: 'lee1', invited: 'hh:late1' }), LATE()], 'the activation (10-05) is long before the naming (12-01), within 30 days of the join (10-01)');
+  assert.equal(v.minted, 5 + 5 + 10);
+});
+
+test('6 · the clock runs from the JOIN day: 30 days of it, and never before it', () => {
+  green([LATE({ activated: '2026-10-31', date: '2026-12-08' })], 'the 30th day after the join');
+  red([LATE({ activated: '2026-11-01', date: '2026-12-08' })], /the activation \(2026-11-01\) is more than 30 days after the join \(2026-10-01\)/);
+  red([LATE({ activated: '2026-09-30', date: '2026-12-08' })], /the activation \(2026-09-30\) is before the join \(2026-10-01\)/);
+  // a late-named record with no join day pays no inviter side: there is nothing to count from
+  red([INVITER({ invited: 'hh:undated', handle: 'carl', activated: '2026-10-05', date: '2026-12-08' })],
+    /hh:undated's invitation was named after it joined, and its record holds no join day \(since\) to count from/);
+  // the control: an invitation named at joining still counts from its own day, not its house's `since`
+  red([INVITER({ activated: '2026-10-26', date: '2026-11-04' })], /the activation \(2026-10-26\) is before the invitation \(2026-10-27\)/);
+});
+
+test('6 · an old activation waits a week from the NAMING, as well as a week from the activation', () => {
+  red([LATE({ date: '2026-12-07' })], /less than a week after the invitation was named \(2026-12-01\): a late-named one waits 7 days from its naming/);
+  red([LATE({ date: '2026-12-01' })], /less than a week after the invitation was named/);
+  green([LATE({ date: '2026-12-08' })], 'the seventh day after the naming');
+  // and the activation's own week still holds, for a first letter that came after the naming
+  const named = { ...households(), late1: { ...households().late1, since: '2026-11-25' } };
+  const v = verdictWith(named, [LATE({ activated: '2026-12-05', date: '2026-12-10' })]);
+  assert.ok(v.problems.some((p) => /less than a week after the activation \(2026-12-05\)/.test(p)), v.problems.join('\n'));
+});
+
+test('6 · the backfill cap: at most 10 paid late-named invitations per inviting house IN ALL, across months; invitations named at joining are not counted in it', () => {
+  // LAW "let's say 10 max for the backfill"; Wright's reading: "a household is paid for at most 10 backfilled invitations in total … whatever month they land in".
+  assert.equal(INVITE_BACKFILL_CAP, 10);
+  const ten = [
+    ...[0, 1, 2, 3, 4].map((i) => LATE({ i, date: '2026-12-10' })),
+    ...[5, 6, 7, 8, 9].map((i) => LATE({ i, date: '2027-01-10' })),
+  ];
+  green(ten, 'ten late-named, over two months');
+  red([...ten, LATE({ i: 10, date: '2027-02-10' })], /hh:castle already holds 10 paid late-named invitations: at most 10 in all, whatever month/);
+  red([...ten, LATE({ i: 10, date: '2027-02-10', handle: 'cleo' })], /already holds 10 paid late-named invitations/);
+  // it never resets: a year on, still capped
+  red([...ten, LATE({ i: 10, date: '2028-02-10' })], /already holds 10 paid late-named invitations/);
+  // invitations named at joining are counted only in their month, never in the backfill's 10
+  const lodges = LODGES.slice(0, 10).map((_, i) => INVITER({ invited: `hh:${LODGES[i]}`, activated: '2026-11-01', date: '2026-11-20' }));
+  green([...lodges, ...ten], 'ten at joining in November, then ten late-named');
+  green([...ten, INVITER({ invited: 'hh:lodge11', activated: '2026-11-01', date: '2027-02-10' })], 'an eleventh invitation named at joining, after the ten late-named: the month has room');
+  // and a late-named one is in its month's 10 too
+  const decTen = LODGES.slice(0, 10).map((_, i) => INVITER({ invited: `hh:${LODGES[i]}`, activated: '2026-11-25', date: '2026-12-10' }));
+  red([...decTen, LATE({ i: 0, date: '2026-12-10' })], /hh:castle already holds 10 paid invitations in 2026-12, the month this one is paid in/);
+});
+
+test('6 · the fold cannot forget the cap: it refuses to fold without the invitations to read', () => {
+  assert.throws(() => foldInviteLine(classifyEntry(LATE()), inviteState(), { canon: (k) => k }), /foldInviteLine needs invitationOf/);
+});
+
+test('6 · --invite-mint holds the same terms for a late-named invitation', () => {
+  const { repo, pub, keyFile } = founded();
+  const args = (date) => ['--invite-mint', 'carl', '--side', 'inviter', '--invited', 'hh:late1', '--inviter', 'hh:castle', '--activated', '2026-10-05', '--date', date, '--key', keyFile];
+  const soon = runMint(repo, args('2026-12-07'));
+  assert.equal(soon.ok, false, 'six days after the naming');
+  assert.match(soon.out, /a late-named one waits 7 days from its naming/);
+  const paid = runMint(repo, args('2026-12-08'));
+  assert.equal(paid.ok, true, paid.out);
+  assert.equal(verifyStampLedger(repo, { pubkeyPem: pub }).ok, true);
+  rmSync(repo, { recursive: true, force: true });
 });
 
 // ── 5 · the quest row ──────────────────────────────────────────────────────
