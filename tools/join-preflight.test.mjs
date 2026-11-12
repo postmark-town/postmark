@@ -356,7 +356,11 @@ test('POS-1014: the report fits in one comment, however much a check has to say'
   assert.match(md, new RegExp(`…and ${(2000 - EVIDENCE_SHOWN).toLocaleString('en-US')} more like these`), 'it says how many it left out');
   assert.match(md, /`tools\/file-0\.mjs` is outside/, 'the first items are still named');
   assert.doesNotMatch(md, /tools\/file-1999\.mjs/, 'the tail is counted, not listed');
-  for (const row of md.split('\n').filter((l) => l.startsWith('| check '))) {
+  const rows = md.split('\n').filter((l) => /^\| check \d+ \|/.test(l));
+  // the cap cuts what a row shows, never a row or its verdict: every check is still there, still a fail
+  assert.deepEqual(rows.map((row) => row.match(/^\| (check \d+) \| \*\*(\w+)\*\* \|/)?.slice(1).join(' ')),
+    Array.from({ length: 12 }, (_, i) => `check ${i} fail`), 'a check was dropped, or a cut-down fail reads as something else');
+  for (const row of rows) {
     assert.equal((row.match(/`/g) ?? []).length % 2, 0, `a cut left a code span open: ${row.slice(0, 80)}`);
   }
   // a short report is unchanged by the cap
@@ -370,4 +374,10 @@ test('POS-1014: a report GitHub refuses to post is a warning, never a red on a P
   assert.match(step, /\n {10}post\(\) \{\n/, 'the post is one function');
   assert.match(step, /\n {10}post \|\| echo "::warning::/, 'a refused post warns and the step passes');
   assert.doesNotMatch(step.slice(step.indexOf('post || ')), /\bexit 1\b/, 'nothing after it reddens the step');
+  // a lookup that fails posts nothing (never a second report): its own status is seen, outside any pipe
+  assert.match(step, /\n {12}ids=\$\(gh api "repos\/\$GITHUB_REPOSITORY\/issues\/\$PR\/comments" --paginate -q '[^']*'\) \|\| return 1\n/,
+    'the comment lookup fails the post on its own status');
+  // only the post is softened: a preflight that crashes still reddens its step
+  const check = y.slice(y.indexOf('node tools/join-preflight.mjs'), y.indexOf('- name: Post the report (the API)'));
+  assert.match(check, /if \[ "\$code" != 0 \]; then echo "::error::[^"\n]*"; exit 1; fi/, 'a preflight crash is a red');
 });

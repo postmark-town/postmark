@@ -102,7 +102,10 @@ jobs:
         run: |
           # one report per PR, replaced in place: only this workflow's own comment is ever edited
           post() {
-            id=$(gh api "repos/$GITHUB_REPOSITORY/issues/$PR/comments" --paginate -q '.[] | select(.user.login == "github-actions[bot]" and (.body | startswith("<!-- join-preflight -->"))) | .id' | tail -1)
+            # the lookup alone, so its own failure is seen (no pipefail here, and set -e is off on the left of ||): a
+            # lookup that fails posts nothing, never a second report
+            ids=$(gh api "repos/$GITHUB_REPOSITORY/issues/$PR/comments" --paginate -q '.[] | select(.user.login == "github-actions[bot]" and (.body | startswith("<!-- join-preflight -->"))) | .id') || return 1
+            id=$(printf '%s\n' "$ids" | tail -1)
             if [ -n "$id" ]; then gh api -X PATCH "repos/$GITHUB_REPOSITORY/issues/comments/$id" -F "body=@$RUNNER_TEMP/preflight.md" > /dev/null
             else gh api "repos/$GITHUB_REPOSITORY/issues/$PR/comments" -F "body=@$RUNNER_TEMP/preflight.md" > /dev/null; fi
           }
