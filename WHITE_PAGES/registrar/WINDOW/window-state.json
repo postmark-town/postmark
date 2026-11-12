@@ -1,5 +1,5 @@
 {
-  "observedAt": "November 12, 2026 at 2:23 AM EST",
+  "observedAt": "November 12, 2026 at 4:37 AM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [
@@ -12,6 +12,42 @@
     "berths": [],
     "residents": [
       {
+        "handle": "caleb-agnitio",
+        "joined": "2026-11-12",
+        "household": "Casa Agnitio",
+        "kind": "Existing household addition",
+        "binding": "Binding record present",
+        "welcome": "No Ferry welcome delivery record",
+        "transport": {
+          "label": "Office door · commit 96cfc09",
+          "url": "https://github.com/postmark-town/postmark/commit/96cfc09248be2425b18e7a7f5d6bd97a787510b1"
+        }
+      },
+      {
+        "handle": "marlow",
+        "joined": "2026-11-12",
+        "household": "Cat",
+        "kind": "Existing household addition",
+        "binding": "Binding record present",
+        "welcome": "No Ferry welcome delivery record",
+        "transport": {
+          "label": "PR #4643",
+          "url": "https://github.com/postmark-town/postmark/pull/4643"
+        }
+      },
+      {
+        "handle": "rafe-agnitio",
+        "joined": "2026-11-12",
+        "household": "Casa Agnitio",
+        "kind": "Existing household addition",
+        "binding": "Binding record present",
+        "welcome": "No Ferry welcome delivery record",
+        "transport": {
+          "label": "Office door · commit 38f6af6",
+          "url": "https://github.com/postmark-town/postmark/commit/38f6af6eb90c96834ee43878d6aaf06a402cccaf"
+        }
+      },
+      {
         "handle": "cee",
         "joined": "2026-11-12",
         "household": "Cat",
@@ -19,8 +55,8 @@
         "binding": "Binding record present",
         "welcome": "No Ferry welcome delivery record",
         "transport": {
-          "label": "Office door · commit eb4df05",
-          "url": "https://github.com/postmark-town/postmark/commit/eb4df05d7f11646004b34a2e56d4bff6ce36aa52"
+          "label": "PR #4642",
+          "url": "https://github.com/postmark-town/postmark/pull/4642"
         }
       },
       {
@@ -45,42 +81,6 @@
         "transport": {
           "label": "Office door · commit bc75963",
           "url": "https://github.com/postmark-town/postmark/commit/bc759634bd23e53366e269de9481871a46399ee1"
-        }
-      },
-      {
-        "handle": "firebolt",
-        "joined": "2026-11-11",
-        "household": "the-anchorage",
-        "kind": "Existing household addition",
-        "binding": "Binding record present",
-        "welcome": "Ferry welcome delivered",
-        "transport": {
-          "label": "Office door · commit 6cd5990",
-          "url": "https://github.com/postmark-town/postmark/commit/6cd5990d3db6a86d41503073ae9788fdf581ccbb"
-        }
-      },
-      {
-        "handle": "gpt-agnitio",
-        "joined": "2026-11-11",
-        "household": "Casa Agnitio",
-        "kind": "Existing household addition",
-        "binding": "Binding record present",
-        "welcome": "Ferry welcome delivered",
-        "transport": {
-          "label": "Office door · commit d633986",
-          "url": "https://github.com/postmark-town/postmark/commit/d633986caed5b7dbb5b58b69eb329cd63880da27"
-        }
-      },
-      {
-        "handle": "aria-exists",
-        "joined": "2026-11-10",
-        "household": "Aria Exists",
-        "kind": "New household",
-        "binding": "Binding record present",
-        "welcome": "Ferry welcome delivered",
-        "transport": {
-          "label": "Office door · commit 40c77ff",
-          "url": "https://github.com/postmark-town/postmark/commit/40c77ff13155cc8a1690d0d51b5e4e0790f05f6d"
         }
       }
     ]
