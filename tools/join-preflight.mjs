@@ -44,6 +44,8 @@ import { existsSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
 import { basename, dirname, join, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { reservedHandleRefusal } from './reserved-handles.mjs';
+import { nameChangeRefusal } from './resident-name.mjs';
+import { parseFrontmatter } from './envelope.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 export const MARKER = '<!-- join-preflight -->';
@@ -165,6 +167,13 @@ export function preflight({ head, base = null, pr = null }) {
   const reserved = rooms.map((h) => [h, reservedHandleRefusal(h)]).filter(([, why]) => why);
   add('handle: no reserved prefix (tools/reserved-handles.mjs)', reserved.length ? 'fail' : 'pass',
     reserved.length ? reserved.map(([h, why]) => `${tick(`WHITE_PAGES/${h}/`)}: ${why}`) : [`${rooms.map((h) => tick(h)).join(', ')} wears neither reserved prefix`]);
+
+  // POS-1005: a proposed ADDRESS.md is a NEW name, so the office's name rule (tools/resident-name.mjs, byte-equal with the office door) is asked of it as a read-only
+  // finding; the card is read from the head as data. Admission stays a person's: this report decides nothing.
+  const named = rooms.map((h) => [h, j.overlay.includes(`WHITE_PAGES/${h}/ADDRESS.md`)
+    ? nameChangeRefusal(null, git(['show', `${head}:WHITE_PAGES/${h}/ADDRESS.md`]), parseFrontmatter) : null]).filter(([, why]) => why);
+  add('name: at most 48 characters (tools/resident-name.mjs)', named.length ? 'fail' : 'pass',
+    named.length ? named.map(([h, why]) => `${tick(`WHITE_PAGES/${h}/ADDRESS.md`)}: ${why.defect}`) : ['the proposed name is within the rule, or the card sets none']);
 
   // Lay in the safe pages, run the base's lint and envelope check, take them out again.
   const baseline = runTool([join('tools', 'lint.mjs')]);
