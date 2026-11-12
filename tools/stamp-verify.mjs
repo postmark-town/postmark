@@ -40,6 +40,7 @@ import {
   AWARD_MAX, AWARD_HANDS, QUEST_PAY, questOpenOn, questWindowWords, RECREDIT_STAGES, SKIPPED_CREDIT_STAGES, CORRECTION_HANDS,
   PARCEL_PRICE, PARCEL_SETTLED_BY_DAY, PARCEL_ROOM_FROM,
   houseCanonOf, invitationOf, inviteState, judgeInviteLine, foldInviteLine,
+  liveResidentRefusal, registryPins,
 } from './stamp-mint.mjs';
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
@@ -172,6 +173,9 @@ export function verifyStampLedger(repo, { pubkeyPem, registry = null } = {}) {
     const paidStages = new Set();       // `${post}/${stage}` already paid its stage stamps
     const paidAwards = new Set();       // `${post}/${label}` already paid its award (POS-290)
     const paidQuests = new Set();       // `${quest}|${household}` already paid (POS-632)
+    // A quest pays a live resident (POS-987): a line is judged by its own day
+    // against the registry's dated `retired:` stamps, never by today's roll.
+    const pins = registryPins(repo);
     const stageLineOf = new Map();      // `${post}/${stage}` -> the stage line { handle, n, sig } (POS-649)
     const stageLineBySig = new Map();   // a stage line's sig -> { post, stage, handle, n } (POS-649)
     const recredited = new Set();       // `${post}/${stage}` already re-credited (once, ever)
@@ -441,6 +445,10 @@ export function verifyStampLedger(repo, { pubkeyPem, registry = null } = {}) {
         if (lawAt(cls.date).meeps.has(cls.handle)) {
           problems.push(`line ${lineNo}: LAWFUL fails — first-idea to meep "${cls.handle}" (meeps stay outside the currency)`); break;
         }
+        const notLive = liveResidentRefusal(cls.handle, cls.date, { pins });
+        if (notLive) {
+          problems.push(`line ${lineNo}: LAWFUL fails — first-idea pays no live resident: ${notLive}`); break;
+        }
         const houseKey = hh(cls.handle, cls.date);
         if (firstIdeaHouses.has(houseKey)) {
           problems.push(`line ${lineNo}: LAWFUL fails — household of "${cls.handle}" already holds its first-idea mint (once per household, ever)`); break;
@@ -495,11 +503,13 @@ export function verifyStampLedger(repo, { pubkeyPem, registry = null } = {}) {
       // town's own; the invited house's own record names this
       // inviter; the recipient's household; one line per invited house and
       // side, ever; the invited side after its welcome; and the activation,
-      // the 30 days and the month's cap on the inviter side.
+      // the 30 days and the month's cap on the inviter side, and for a
+      // late-named invitation (POS-947) the 30 days from its join day, the week
+      // from its naming and the 10 such paid in all.
       if (cls.kind === 'invite') {
         const why = judgeInviteLine(cls, { canon: canonHouse, invitationOf: invitation, houseAt: hh, isMeep: (h, d) => lawAt(d).meeps.has(h), state: invites });
         if (why) { problems.push(`line ${lineNo}: LAWFUL fails — ${why}`); break; }
-        foldInviteLine(cls, invites, { canon: canonHouse });
+        foldInviteLine(cls, invites, { canon: canonHouse, invitationOf: invitation });
       }
 
       if (cls.kind === 'post-stage') {
@@ -688,6 +698,10 @@ export function verifyStampLedger(repo, { pubkeyPem, registry = null } = {}) {
         }
         if (lawAt(cls.date).meeps.has(cls.handle)) {
           problems.push(`line ${lineNo}: LAWFUL fails — quest pay to meep "${cls.handle}" (meeps stay outside the currency)`); break;
+        }
+        const notLive = liveResidentRefusal(cls.handle, cls.date, { pins });
+        if (notLive) {
+          problems.push(`line ${lineNo}: LAWFUL fails — quest:${cls.quest} pays no live resident: ${notLive}`); break;
         }
         const houseKey = hh(cls.handle, cls.date);
         if (canonHouse(cls.household) !== canonHouse(houseKey)) {

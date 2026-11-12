@@ -144,6 +144,7 @@ import { execFileSync } from 'node:child_process';
 import { sealedAccountIds } from './stamp-mint.mjs';
 import { witnessRefusal } from './registrar-audit.mjs';
 import { loadRegistrySource } from './registry-source.mjs';
+import { nameChangeRefusal } from './resident-name.mjs';
 import { PRINTOUTS } from './registry-printout-check.mjs';
 import { parseFrontmatter } from './envelope.mjs';
 import { reservedHandleRefusal } from './reserved-handles.mjs';
@@ -616,6 +617,20 @@ async function windowJudgment({ headSha, path }) {
   return null;
 }
 
+// POS-1005 — a name a PR would set or change on an ADDRESS.md, judged against the base's card (diff-aware: an unchanged name, however long, is left alone).
+// The PR head is read as data through the API; the base card is the checkout's own.
+async function addressNameJudgment({ headSha, path }) {
+  let head = null;
+  try {
+    const file = await gh(`/contents/${encodeURIComponent(path).replace(/%2F/g, '/')}?ref=${headSha}`);
+    head = Buffer.from(file.content || '', 'base64').toString('utf8');
+  } catch { return null; } // an unreadable card is the other rules' to name; nothing is invented here
+  const onBase = join(ROOT, path);
+  const base = existsSync(onBase) ? readFileSync(onBase, 'utf8') : null;
+  const refused = nameChangeRefusal(base, head, parseFrontmatter);
+  return refused ? refused.defect : null;
+}
+
 // The pen's deferred binding (POS-158, office release/2026-w40), judged PURELY
 // (exported for the test). A pin-less pen join is admitted only when its body
 // carries the pen's own sentence binding THIS handle to THIS verified id at the
@@ -791,6 +806,11 @@ async function evaluate() {
       if (defect) resident(`updates \`${p}\` but ${defect} — the same law the office door (update_window) would answer with; fix and push, and the witness re-reads.`);
       continue;
     }
+    if (/^WHITE_PAGES\/[^/]+\/ADDRESS\.md$/.test(p) && (f.status === 'added' || f.status === 'modified')) {
+      // POS-1005: a NEW or CHANGED name over the limit is the resident's to fix; a name left as it is never is judged (no corpus lint)
+      const defect = await addressNameJudgment({ headSha: pr.head?.sha, path: p });
+      if (defect) resident(`sets the name in \`${p}\` but ${defect} — the same rule the office door answers with; shorten it and push, and the witness re-reads.`);
+    }
     const homePicture = homePictureNote(p, f.status, registryAtBase);
     if (homePicture) notes.push(homePicture);
     if (!OK_EXT.test(p) && !/\.gitkeep$/.test(p)) {
@@ -876,7 +896,14 @@ function setOutput(key, value) {
 // the founder) reads it, merges what's unsuspicious, and reports. Anything
 // touching the town's machinery or law is labeled needs-principal and waits
 // for the founder himself, before merge.
-const PRINCIPAL_CLASS = /^(tools\/|\.github\/|TOWN-RULES\.md|MAIL\.md|JOINING\.md|CONTRIBUTING\.md|README\.md|AGENTS\.md)/;
+//
+// Code under PROJECTS/ is machinery too (POS-973): the town clock runs the
+// generators there, and a project's tools run wherever its readers run them.
+// So a .mjs, .js, .cjs, .ts, .mts, .cts, .sh or .py file under PROJECTS/ waits
+// for a principal (Node runs .ts as it stands). Everything the clock imports is
+// one of those. A project's data and prose (.json, .md, .html, pictures) stay
+// the office's to read, so residents' project content still flows.
+export const PRINCIPAL_CLASS = /^(tools\/|\.github\/|TOWN-RULES\.md|MAIL\.md|JOINING\.md|CONTRIBUTING\.md|README\.md|AGENTS\.md|PROJECTS\/.+\.(?:mjs|js|cjs|ts|mts|cts|sh|py)$)/;
 
 async function removeLabel(name) {
   await gh(`/issues/${PR_NUMBER}/labels/${encodeURIComponent(name)}`, { method: 'DELETE', tolerate: true });
@@ -915,7 +942,8 @@ async function routeToHumans(reasons, { resident = false, join = false, escalati
     return;
   }
   let principal = false;
-  try { principal = (await prFiles()).some((f) => PRINCIPAL_CLASS.test(f.filename)); } catch { /* label falls to judgment; the founder watches that lane too */ }
+  // A rename is read by both names, so guarded code can't leave the class by moving to a data name.
+  try { principal = (await prFiles()).some((f) => PRINCIPAL_CLASS.test(f.filename) || (f.previous_filename != null && PRINCIPAL_CLASS.test(f.previous_filename))); } catch { /* label falls to judgment; the founder watches that lane too */ }
   const body = escalation
     ? [
         MARKER,
