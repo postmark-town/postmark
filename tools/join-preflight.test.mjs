@@ -13,6 +13,7 @@ import { copyFileSync, existsSync, mkdirSync, mkdtempSync, readdirSync, readFile
 import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { COMMENT_LIMIT, EVIDENCE_SHOWN, tick, toMarkdown } from './join-preflight.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const REPO = join(HERE, '..');
@@ -340,4 +341,33 @@ test('the witness keeps every gate: its checks and its merge still wait on certi
     assert.ok(i >= 0, `the witness still has "${step}"`);
     assert.match(y.slice(i, i + 400), /if: steps\.check\.outputs\.certified == 'true'/, `"${step}" still waits on certification`);
   }
+});
+
+test('POS-1014: the report fits in one comment, however much a check has to say', () => {
+  // postmark#4649, a take-main: 15 rooms and every file outside them named, each with the room list. The report was
+  // 1,036,425 characters and GitHub refused the comment (HTTP 422). This is that shape, larger.
+  const rooms = Array.from({ length: 300 }, (_, i) => `resident-${i}`);
+  const outside = (p) => `${tick(p)} is outside the proposed rooms (${rooms.map((h) => tick(`WHITE_PAGES/${h}/`)).join(', ')}): a join brings only its own pages`;
+  const many = Array.from({ length: 2000 }, (_, i) => outside(`tools/file-${i}.mjs`));
+  const r = { pr: 4649, head: 'a'.repeat(40), base: 'b'.repeat(40), baseDate: '2026-11-12T00:00:00Z', mergeBase: 'b'.repeat(40), rooms,
+    checks: Array.from({ length: 12 }, (_, i) => ({ name: `check ${i}`, result: 'fail', evidence: many })) };
+  const md = toMarkdown(r, { at: '2026-11-12T14:14:52Z', baseRef: 'train/2026-w47' });
+  assert.ok(md.length <= COMMENT_LIMIT, `the report is ${md.length.toLocaleString('en-US')} characters, over GitHub's ${COMMENT_LIMIT.toLocaleString('en-US')}`);
+  assert.match(md, new RegExp(`…and ${(2000 - EVIDENCE_SHOWN).toLocaleString('en-US')} more like these`), 'it says how many it left out');
+  assert.match(md, /`tools\/file-0\.mjs` is outside/, 'the first items are still named');
+  assert.doesNotMatch(md, /tools\/file-1999\.mjs/, 'the tail is counted, not listed');
+  for (const row of md.split('\n').filter((l) => l.startsWith('| check '))) {
+    assert.equal((row.match(/`/g) ?? []).length % 2, 0, `a cut left a code span open: ${row.slice(0, 80)}`);
+  }
+  // a short report is unchanged by the cap
+  const small = { ...r, rooms: ['wren'], checks: [{ name: 'scope', result: 'pass', evidence: ['one', 'two'] }] };
+  assert.match(toMarkdown(small), /\| scope \| \*\*pass\*\* \| one<br>two \|/);
+});
+
+test('POS-1014: a report GitHub refuses to post is a warning, never a red on a PR whose preflight ran', () => {
+  const y = readFileSync(join(REPO, '.github', 'workflows', 'join-preflight.yml'), 'utf8');
+  const step = y.slice(y.indexOf('- name: Post the report (the API)'));
+  assert.match(step, /\n {10}post\(\) \{\n/, 'the post is one function');
+  assert.match(step, /\n {10}post \|\| echo "::warning::/, 'a refused post warns and the step passes');
+  assert.doesNotMatch(step.slice(step.indexOf('post || ')), /\bexit 1\b/, 'nothing after it reddens the step');
 });
