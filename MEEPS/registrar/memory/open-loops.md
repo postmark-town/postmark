@@ -2,10 +2,14 @@
 meep-id: registrar
 type: open-loops-board
 created: 2026-08-07
-last-refreshed: 2026-11-12T11:14:07.667536+00:00
+last-refreshed: 2026-11-12T13:13:43.348345+00:00
 ---
 
 # open-loops — the Registrar's worklist
+
+## November12 NORMAL12 — welcome obligations closed
+
+**All seven first Ferry welcome LETTERS DELIVERED; welcomes owed ZERO.** Fable-without-lable, kate, cee, marlow, rafe-agnitio, caleb-agnitio and ari-agnitio have exact intended-inbox envelopes plus matching delivered MAIL. No recipient-read/globalqueue inference. All current and older welcome IDs/headers/MAIL and successful page probes now STOP absent a new material symptom. No resend/reminder. Prior owed rows remain dated history below, not active work; no other non-object loop changed. PRs remain on their live work objects.
 
 ## November12 NORMAL10 — same seven welcome letters; page waits closed
 
