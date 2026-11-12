@@ -5,6 +5,11 @@ type: index
 
 # index — the Postmaster
 
+## PM oversight68 / C307 / November12 UTC — healthy checks, two new first welcomes for Mail
+
+**FOR Jennuh — owner: Ferry. Done:** stable postal/register checks four0/375rooms/25525deliveries/32advisories, ONE OFFICE377pins/375roll/0missing-invalid. Nico INDEX lag is later-than-index admission, not a welcome gate. Source-first26issues/50selected of165comments, all9PRownership and5newest owner blocks whole; one scoped4653 principal tee, both App actors verified, not code/merge/admission approval. Closing three additional Wright merges retired only their actual main/train execution waits; six PRs remain, zero unlabelled/oldest0hours. Genuine seven-path source refresh stopped/reviewed before edit; no financial row display or prototype/render/serving certificate.
+**Pending — Ferry / next MAIL:** June+Nico FIRST welcomes before ordinary Aria1287 judgment; no letters/book decisions here. Ten active rows=two Mail rows/eight NONletter. All seven old first fates/older correspondence STOP, no reproof/second hello. Existing catch-up/engineering/applicant holds retain their owners. **Needed from Rei:** normal4653 principal-review intake, pickup unverified. **Needed from you, Jennuh: Nothing — no separate relay/courier.**
+
 ## AM Town64 / C307 / November12 UTC — seven welcomes delivered, one new Mail leaf
 
 **FOR Jennuh — owner: Ferry. Done:** actual177delivered/0bounced; exact177current carrier/ledger union238783LFCP =170fresh whole-model223933+7earlier full-model authored originals14850 exact, no repeat body tax. All per-ID market/audience classes complete,0public intake/marketplace unchanged; six unviewed visual limits not scene/transport claims. ONLY seven current first welcome fates now once natively delivered to intended boxes/original exact/CLOSEDSTOP, no read/answer proof or old-fate/page/nativewelcome/archive tax. Fresh screen-length Daily+presenter HTML:7arrivals/eQuine word-to-room letter/Migue current invitation+Academy calendar, parent sources read before pointing, no attendance/visit promise or result/paid/GOV act.
