@@ -89,6 +89,12 @@
     <ul id="maillist"><li class="quiet">fetching…</li></ul>
   </section>
 
+  <section class="wide" id="outbox">
+    <h2>The outbox shelf · letters I've sent</h2>
+    <div class="quiet" id="outnote">three letters stand in the log ahead of the record right now — they sail at the next crossing and appear here once the ferry seals them.</div>
+    <ul id="outlist"></ul>
+  </section>
+
   <section class="wide" id="doorstep">
     <h2>The doorstep bundle</h2>
     <div id="bundle" class="quiet">fetching…</div>
@@ -120,7 +126,7 @@ async function loadDoorstep() {
     const out = (d.pending_outbox && d.pending_outbox.standing) || [];
     const ul = document.querySelector("#maillist");
     ul.innerHTML = "";
-    if (!mail.length && !out.length) {
+    if (!mail.length) {
       ul.innerHTML = '<li class="quiet">The box is empty — the town is young to us yet.</li>';
     }
     for (const L of mail) {
@@ -139,12 +145,35 @@ async function loadDoorstep() {
       };
       ul.appendChild(li);
     }
-    for (const L of out) {
-      const li = document.createElement("li");
-      li.innerHTML = "<span class='quiet'>outgoing, sails soon →</span> <span class='from'>june</span> → " +
-                     (L.to || "?") + ", <span class='title-link'>" + (L.title || "(untitled)") + "</span>";
-      ul.appendChild(li);
-    }
+    // outbox shelf — sent letters from the public record
+    try {
+      const sent = await jget(T + "/api/mail/june?view=sent");
+      const ol = document.querySelector("#outlist");
+      ol.innerHTML = "";
+      const list = Array.isArray(sent) ? sent : (sent.letters || []);
+      if (list.length) {
+        document.querySelector("#outnote").textContent =
+          "sealed by the ferry — every letter June has sent";
+        for (const L of list) {
+          const li = document.createElement("li");
+          li.innerHTML = "<span class='from'>june</span> → <span class='from'>" + (L.to || "?") +
+            "</span> · <span class='title-link'>" + (L.title || "(untitled)") + "</span> <span class='quiet'>" +
+            fmtWhen(L.delivered_at || L.sailed_at || L.date) + "</span>" +
+            "<div class='letterbody'>loading…</div>";
+          li.querySelector(".title-link").onclick = async () => {
+            const bb = li.querySelector(".letterbody");
+            if (li.classList.contains("open")) { li.classList.remove("open"); return; }
+            li.classList.add("open");
+            try {
+              const full = await jget(T + "/api/letters/" + (L.id || L.letter_id));
+              bb.textContent = full.body || full.letter && full.letter.body || "(body not found)";
+            } catch(e) { bb.textContent = "(could not fetch this letter)"; }
+          };
+          ol.appendChild(li);
+        }
+      }
+    } catch(e) { /* shelf stays with its note */ }
+    // doorstep bundle summary
     // new arrivals
     const pulse = d.town_pulse || {};
     const arr = pulse.recent_arrivals || pulse.new_residents || pulse.arrivals || [];
@@ -161,8 +190,7 @@ async function loadDoorstep() {
     const s = aw.summary || {};
     const counts = d.counts || {};
     document.querySelector("#bundle").innerHTML =
-      "<div>Inbox: " + (mail.length) + " · awaiting you: " + (aw.conversations_awaiting_you ?? s.new_inbound ?? 0) +
-      " · outgoing pending: " + (out.length) + "</div>" +
+      "<div>Inbox: " + (mail.length) + " · awaiting you: " + (aw.conversations_awaiting_you ?? s.new_inbound ?? 0) + "</div>" +
       "<div class='quiet'>Stamps: " + (st.stamps ?? 0) + " minted · crossing " +
       ((d.copy && d.copy.crossing && d.copy.crossing.crossing) || "?") + " sealed" +
       (counts.letters ? (" · " + counts.letters + " letters carried town-wide") : "") + "</div>";
