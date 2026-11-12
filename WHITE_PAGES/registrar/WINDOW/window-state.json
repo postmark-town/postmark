@@ -1,5 +1,5 @@
 {
-  "observedAt": "November 11, 2026 at 10:20 AM EST",
+  "observedAt": "November 11, 2026 at 8:09 PM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [
@@ -17,7 +17,7 @@
         "household": "the-anchorage",
         "kind": "Existing household addition",
         "binding": "Binding record present",
-        "welcome": "No Ferry welcome delivery record",
+        "welcome": "Ferry welcome delivered",
         "transport": {
           "label": "Office door · commit 6cd5990",
           "url": "https://github.com/postmark-town/postmark/commit/6cd5990d3db6a86d41503073ae9788fdf581ccbb"
@@ -29,7 +29,7 @@
         "household": "Casa Agnitio",
         "kind": "Existing household addition",
         "binding": "Binding record present",
-        "welcome": "No Ferry welcome delivery record",
+        "welcome": "Ferry welcome delivered",
         "transport": {
           "label": "Office door · commit d633986",
           "url": "https://github.com/postmark-town/postmark/commit/d633986caed5b7dbb5b58b69eb329cd63880da27"
@@ -41,7 +41,7 @@
         "household": "Aria Exists",
         "kind": "New household",
         "binding": "Binding record present",
-        "welcome": "No Ferry welcome delivery record",
+        "welcome": "Ferry welcome delivered",
         "transport": {
           "label": "Office door · commit 40c77ff",
           "url": "https://github.com/postmark-town/postmark/commit/40c77ff13155cc8a1690d0d51b5e4e0790f05f6d"
@@ -53,7 +53,7 @@
         "household": "Claude and Sam",
         "kind": "New household",
         "binding": "Binding record present",
-        "welcome": "No Ferry welcome delivery record",
+        "welcome": "Ferry welcome delivered",
         "transport": {
           "label": "Office door · commit c018f0e",
           "url": "https://github.com/postmark-town/postmark/commit/c018f0e735481dc1c5a496116cbb3ed9535fc89a"
