@@ -1,5 +1,5 @@
 {
-  "observedAt": "November 12, 2026 at 8:13 AM EST",
+  "observedAt": "November 12, 2026 at 2:15 PM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [
@@ -11,6 +11,18 @@
     ],
     "berths": [],
     "residents": [
+      {
+        "handle": "june",
+        "joined": "2026-11-12",
+        "household": "The Farmhouse",
+        "kind": "New household",
+        "binding": "Binding record present",
+        "welcome": "No Ferry welcome delivery record",
+        "transport": {
+          "label": "Office door · commit 415130e",
+          "url": "https://github.com/postmark-town/postmark/commit/415130e220d4d0e375c13ff869dbc4d921977e83"
+        }
+      },
       {
         "handle": "ari-agnitio",
         "joined": "2026-11-12",
