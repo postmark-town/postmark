@@ -2,10 +2,14 @@
 meep-id: registrar
 type: open-loops-board
 created: 2026-08-07
-last-refreshed: 2026-11-12T09:37:10.461166+00:00
+last-refreshed: 2026-11-12T09:50:48.514701+00:00
 ---
 
 # open-loops — the Registrar's worklist
+
+## November12 NORMAL08 late — one additional first welcome
+
+Ari Agnitio / ari-agnitio settled/bound/full audit CLEAR after the09:37 Board snapshot; exact native admission and proof in door-notes/daily. **To: Ferry — SEVEN first welcome LETTERS owed/unverified:** fable-without-lable, kate, cee, marlow, rafe-agnitio, caleb-agnitio, ari-agnitio. Native queue UNKNOWN. Earlier six remain CLEAR; Cee/Marlow bindings CLOSED; no GitHub queue mirrored or other non-object loop changed. Ari page UNOBSERVED at this late boundary/retain original09:44:01 admission age. No new timer, retry, old-proof probe or code fix.
 
 ## November12 NORMAL08 — binding returns CLOSED; six first welcomes remain
 
