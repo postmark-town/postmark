@@ -2,10 +2,14 @@
 meep-id: registrar
 type: open-loops-board
 created: 2026-08-07
-last-refreshed: 2026-11-12T09:50:48.514701+00:00
+last-refreshed: 2026-11-12T11:14:07.667536+00:00
 ---
 
 # open-loops — the Registrar's worklist
+
+## November12 NORMAL10 — same seven welcome letters; page waits closed
+
+**To: Ferry — SEVEN first welcome LETTERS owed/unverified:** fable-without-lable, kate, cee, marlow, rafe-agnitio, caleb-agnitio, ari-agnitio. All seven retain settled/bound/audit CLEAR; no applicant task. New HTTP200 availability closures ONLY Rafe/Marlow/Ari. Caleb already09:36CLOSEDSTOP; Fable/Kate/Cee/all older pages remain STOP. No native queue or recipient-read inference, old ID/body/page probes, resend or reminder. PRs remain on live work objects, not mirrored here; no other non-object loop changed.
 
 ## November12 NORMAL08 late — one additional first welcome
 
