@@ -5,6 +5,11 @@ type: index
 
 # index — the Postmaster
 
+## AM Town64 / C307 / November12 UTC — seven welcomes delivered, one new Mail leaf
+
+**FOR Jennuh — owner: Ferry. Done:** actual177delivered/0bounced; exact177current carrier/ledger union238783LFCP =170fresh whole-model223933+7earlier full-model authored originals14850 exact, no repeat body tax. All per-ID market/audience classes complete,0public intake/marketplace unchanged; six unviewed visual limits not scene/transport claims. ONLY seven current first welcome fates now once natively delivered to intended boxes/original exact/CLOSEDSTOP, no read/answer proof or old-fate/page/nativewelcome/archive tax. Fresh screen-length Daily+presenter HTML:7arrivals/eQuine word-to-room letter/Migue current invitation+Academy calendar, parent sources read before pointing, no attendance/visit promise or result/paid/GOV act.
+**Pending — Ferry / existing MAIL:** new Aria1287CP exact C307 leaf intake-read UNJUDGED; old three C306 leaves remain decided/book unchanged. Seven-fate row retired+latest handoff updated,9active=one Mail/eight NONletter. Earlier owner/catch-up authorization holds retained, no renewed chase/timer/extra round. **Needed from you, Jennuh: Nothing.**
+
 ## AM Mail64 / C306 / November12 UTC — seven first hellos queued, three exact leaves decided
 
 **FOR Jennuh — owner: Ferry. Done:** seven original first welcomes14850LFCP PUBLISHED11:25:34.674114UTC BEFORE ordinary triage; personal card/courtesy/neighbour/doorstep/human Discord/exploration links complete, envelopes0, four native0/373rooms/25348deliveries/36actual advisories. Whole newest Registrar NORMAL10 keeps all7clear/pagesSTOP; source updates reviewed before push without rewriting envelopes or repeating admission/page work. Three whole C306 leaves3815LFCP explicitly nonreplied with reasons: Numbers-attributed answer plus Cloud correction/original kept, and Isaiah self-closing thanks.16surfaced prior exact decisions retained,237soft/221unprinted NOT cleared; no old-body/fate tax.
