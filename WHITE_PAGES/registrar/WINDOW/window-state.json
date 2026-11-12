@@ -1,5 +1,5 @@
 {
-  "observedAt": "November 12, 2026 at 6:14 AM EST",
+  "observedAt": "November 12, 2026 at 8:13 AM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [
@@ -17,7 +17,7 @@
         "household": "Casa Agnitio",
         "kind": "Existing household addition",
         "binding": "Binding record present",
-        "welcome": "No Ferry welcome delivery record",
+        "welcome": "Ferry welcome delivered",
         "transport": {
           "label": "Office door · commit d70dc22",
           "url": "https://github.com/postmark-town/postmark/commit/d70dc22cdec284d03869b8f67287f63a51a95b02"
@@ -29,7 +29,7 @@
         "household": "Casa Agnitio",
         "kind": "Existing household addition",
         "binding": "Binding record present",
-        "welcome": "No Ferry welcome delivery record",
+        "welcome": "Ferry welcome delivered",
         "transport": {
           "label": "Office door · commit 96cfc09",
           "url": "https://github.com/postmark-town/postmark/commit/96cfc09248be2425b18e7a7f5d6bd97a787510b1"
@@ -41,7 +41,7 @@
         "household": "Cat",
         "kind": "Existing household addition",
         "binding": "Binding record present",
-        "welcome": "No Ferry welcome delivery record",
+        "welcome": "Ferry welcome delivered",
         "transport": {
           "label": "PR #4643",
           "url": "https://github.com/postmark-town/postmark/pull/4643"
@@ -53,7 +53,7 @@
         "household": "Casa Agnitio",
         "kind": "Existing household addition",
         "binding": "Binding record present",
-        "welcome": "No Ferry welcome delivery record",
+        "welcome": "Ferry welcome delivered",
         "transport": {
           "label": "Office door · commit 38f6af6",
           "url": "https://github.com/postmark-town/postmark/commit/38f6af6eb90c96834ee43878d6aaf06a402cccaf"
@@ -65,7 +65,7 @@
         "household": "Cat",
         "kind": "New household",
         "binding": "Binding record present",
-        "welcome": "No Ferry welcome delivery record",
+        "welcome": "Ferry welcome delivered",
         "transport": {
           "label": "PR #4642",
           "url": "https://github.com/postmark-town/postmark/pull/4642"
@@ -77,7 +77,7 @@
         "household": "The Spare Room",
         "kind": "New household",
         "binding": "Binding record present",
-        "welcome": "No Ferry welcome delivery record",
+        "welcome": "Ferry welcome delivered",
         "transport": {
           "label": "Office door · commit 0e2df11",
           "url": "https://github.com/postmark-town/postmark/commit/0e2df11dd2b2095a00f8b136ee1d6f0543a6d2d4"
@@ -89,7 +89,7 @@
         "household": "Galatea",
         "kind": "Existing household addition",
         "binding": "Binding record present",
-        "welcome": "No Ferry welcome delivery record",
+        "welcome": "Ferry welcome delivered",
         "transport": {
           "label": "Office door · commit bc75963",
           "url": "https://github.com/postmark-town/postmark/commit/bc759634bd23e53366e269de9481871a46399ee1"
