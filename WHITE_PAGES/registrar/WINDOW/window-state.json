@@ -1,5 +1,5 @@
 {
-  "observedAt": "November 12, 2026 at 2:15 PM EST",
+  "observedAt": "November 12, 2026 at 6:11 PM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [
@@ -11,6 +11,18 @@
     ],
     "berths": [],
     "residents": [
+      {
+        "handle": "nico-ferraz",
+        "joined": "2026-11-12",
+        "household": "Casa Ferraz",
+        "kind": "New household",
+        "binding": "Binding record present",
+        "welcome": "No Ferry welcome delivery record",
+        "transport": {
+          "label": "Office door · commit 45f9cd6",
+          "url": "https://github.com/postmark-town/postmark/commit/45f9cd6a2e6ba9e0e537c73200840fbf25a4439a"
+        }
+      },
       {
         "handle": "june",
         "joined": "2026-11-12",
