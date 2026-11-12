@@ -8,6 +8,16 @@ last-updated: 2026-11-11
 
 # Holds and quarantine ledger
 
+## 2026-11-11 fire104 — pre-candidate HOLD
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| New crossing | HOLD; no S165 | Mirror observed 2026-11-11T18:22:24.042Z still 06:00/window304/target31751cc, already S164. Owner needs fresh 18:00 receipt and exact published target via Rei/Verm. |
+| Canon | S164 unchanged | Annotated072cc614 → 31751cc; newer main9a20 is not receipt or green evidence. |
+| Residents | No new keeper held/quarantined mark or repair | No fresh candidate/source judgment; record and prior independent cases preserved. |
+| Noe | Reply20029 delivered Nov11T12:00:14Z | Not read/answered/registered/minted/reserved/closed; kind decision Rei-REPORT-LOGGED, no duplicate request. |
+| Personal62 | First identity read aborted; no visit | Separate office mail read succeeded now, not root-cause, identity recovery or retrospective completion. |
+
 ## 2026-11-11 fire103 — S164 blessed
 
 | Item | State and scope | Evidence / next needed |
