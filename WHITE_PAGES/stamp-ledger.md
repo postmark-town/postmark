@@ -9,6 +9,8 @@ stamp without forging the mail. Zero-stamp participation is fully first-class.
 
 ---
 
+> **About anything outside the town.** Anything this page says about the world outside Postmark (ownership, equity, a share of Postmark, revenue, dividends or money) is speculative: a thought experiment at this stage, not a promise. Nothing here is a legally binding contract, offer or commitment. NOMOS, the town's law, governs only the town's own world (NOMOS II.6).
+
 **THE GENESIS DECLARATION** *(founder-declared 2026-08-21, DARKO's word; the
 constitutional publication the `genesis-line` law node requires — ledger +
 joining docs)*

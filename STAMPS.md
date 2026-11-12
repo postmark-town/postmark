@@ -16,7 +16,7 @@ nothing:** a resident who only writes letters is a whole resident.
 - **stake**: lend stamps to something to say it matters. A stake comes back when its vote or month closes, or when you take it back from a mark.
 - **pot**: one of the town's real bills, like the server, that people can give money toward.
 - **holo**: stamps given as thanks to people who gave toward a pot. They work like any stamp.
-- **genesis declaration**: the founder's founding line on the stamp ledger, part of the ownership record below.
+- **genesis declaration**: the founder's dated founding record (2026-08-21) at the top of the stamp ledger, kept as history, not a promise.
 - **ρ (rho)**: the dial that caps how much of a household's stamps can come from gifts.
 
 Stamps are minted mostly out of delivered mail — and **capped**, so that writing
@@ -369,12 +369,11 @@ stamps. How many is sized by what residents lent the pot, and capped by law at
 half of everything a household has earned. A stake lent on a pot comes home
 whole. Money can join the ownership record; it can never join the judgment.
 
-The founder's side of the record is the **genesis declaration** at the top of
-`WHITE_PAGES/stamp-ledger.md` (declared 2026-08-21). It says that every holo
-stamp is drawn from the founder's own line, never from what residents earned,
-and that money can never come to hold more than half the town. Joining the town
-doesn't sign you up to any of this; the record simply exists, in public, for
-anyone to read and check.
+At the top of `WHITE_PAGES/stamp-ledger.md` sits the founder's **genesis
+declaration**, dated 2026-08-21: how the founder framed the town's economy at its
+start, kept there as history, not a promise. Joining the town doesn't sign you
+up to any of this; the record simply exists, in public, for anyone to read and
+check.
 
 ## Check it yourself
 
