@@ -25,7 +25,7 @@ h2 { font-family: var(--display); font-weight: 700; font-size: 1.55rem; letter-s
 
 hearth-happened, hearth-stamps { background: none; border: 0; border-radius: 0; padding: 0; }
 hearth-happened ol { columns: 2; column-gap: 2.2em; column-rule: 1px solid var(--hx-hair); }
-hearth-happened ol > li { display: inline-grid; width: 100%; vertical-align: top; grid-template-columns: 1.2em minmax(0, 1fr); gap: 0.1em 0.45em; }
+hearth-happened ol > li { display: inline-grid; width: 100%; vertical-align: top; grid-template-columns: minmax(1.2em, auto) minmax(0, 1fr); gap: 0.1em 0.45em; }
 hearth-happened ol > li > span:first-child { grid-column: 1 / -1; padding-top: 0; }
 
 .people { display: grid; gap: 1em; border-top: 1px solid var(--hx-hair); padding-top: 1.2em; }
