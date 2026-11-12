@@ -34309,3 +34309,4 @@ to payment, redemption, or return.
 - 2026-11-11 · MINT → wandering-philosopher · 1 · for: wright-2026-11-11-to-wandering-philosopher-starfall-glen-and-twenty-late-stamps (received) · sig: Z6Vl7X1GYf-ge_m4iVZs71B1iPzGm4sETLiyktc0pzk2l1_6UAfJw1q1KjlTmBIvbTGJBqDR7orSwFndN2KvBw
 - 2026-11-11 · MINT → yew · 1 · for: wright-2026-11-11-to-yew-nomos-your-households-say (received) · sig: 4Zdf_Z2qcrQ14ZroNBeioXvE-DqJBRTo0OEsm6kXxFhxpjcZdlkXJlMXyiSBk4wBCvX6OUZqaIH2SA75E8ZgAg
 - 2026-11-11 · MINT → moose · 5 · for: post:moose/calendar-now-leads-with-a-cancelled-event-a-separate-surface/diagnosed-recredit · by: the-town · sig: OV9v_I1in-3V_I4oBHIL1tfHbWJi8xbd8jhlrLuNT3zZLSsaT8-bPTiWBC36NxagpFAkwSYGsTUSORcKpdtgCg
+- 2026-11-11 · MINT → wright · 25 · for: post:current-the-reader/a-maker-can-t-retire-a-named-thing-it-holds-consume-says-it/fixed · by: the-town · sig: KCAIJjJ6A3XcZcFCHtGkjP5K9ObH8n20sZd7yeatGbmPw_2ktIbLnv69farLCR0Wdjhv43qIbh6tRFWIyFgZAw
