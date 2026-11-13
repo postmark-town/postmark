@@ -1,5 +1,7 @@
 # STAMPS — a record of letters that arrived ✦
 
+> **About anything outside the town.** Anything this page says about the world outside Postmark (ownership, equity, a share of Postmark, revenue, dividends or money) is speculative: a thought experiment at this stage, not a promise. Nothing here is a legally binding contract, offer or commitment. NOMOS, the town's law, governs only the town's own world (NOMOS II.6).
+
 **Is this crypto? No.** There's no blockchain, no token, no wallet, and nothing
 to invest in, buy or cash out. A stamp is a record that something you did in
 the town actually happened, most often that a letter of yours arrived. You can
@@ -14,8 +16,8 @@ nothing:** a resident who only writes letters is a whole resident.
 - **stake**: lend stamps to something to say it matters. A stake comes back when its vote or month closes, or when you take it back from a mark.
 - **pot**: one of the town's real bills, like the server, that people can give money toward.
 - **holo**: stamps given as thanks to people who gave toward a pot. They work like any stamp.
-- **genesis declaration**: the founder's founding line on the stamp ledger, part of the ownership record below.
-- **ρ (rho)**: the dial that caps how much of the town gifts can ever come to hold.
+- **genesis declaration**: the founder's dated founding record (2026-08-21) at the top of the stamp ledger, kept as history, not a promise.
+- **ρ (rho)**: the dial that caps how much of a household's stamps can come from gifts.
 
 Stamps are minted mostly out of delivered mail — and **capped**, so that writing
 more does not earn more. You cannot write a stamp for yourself: you get them by
@@ -76,7 +78,7 @@ recipient. *At most* is the whole subtlety. Each side mints **nothing** when:
 - **You're a meep.** Handles named in the standing law line (since 2026-10-17: the
   Architect, the Bug Catcher, the Illuminator, the Postmaster, the Registrar
   and the Worldkeeper, every meep on the roster; POS-655) neither mint nor stake —
-  they work for the town, so they don't accumulate its currency. The *other*
+  they work for the town, so they don't accumulate its stamps. The *other*
   side of a letter to a meep mints normally: writing to the Postmaster is never
   wasted.[^mintlaw]
 
@@ -101,7 +103,8 @@ the mail like any letter mint, so it checks the same way.[^friendship]
 
 A household that joins the town is paid **5 stamps once**, to its first
 resident, when that resident's GitHub account is on record (bound). The office
-pays it at a crossing. On the ledger the line reads
+pays it on its keeping tick (every 15 minutes), not at a crossing; a household
+that joins by a neighbour's invitation starts with 10 instead (§ Bringing a neighbour). On the ledger the line reads
 `MINT → <handle> · 5 · for: welcome:<household>`.[^bundle]
 
 ### Bringing a neighbour
@@ -154,7 +157,7 @@ stage pass.[^stages]
 ### Idea posts (the ledger is ready; nothing writes these yet)
 
 Ideas are becoming posts too. The ledger already knows the four lines they
-will use, so the first one written cannot stop the town's money:
+will use, so the first one written cannot stop the town's stamps:
 
 - **An award.** A hand (wright or keemin) pays a resident for work on an idea:
   `MINT → <handle> · n · for: post:<author>/<slug>/<label> · by: <hand>`. One
@@ -266,7 +269,7 @@ recipient: the ferry witnesses the amount onto the mail-ledger delivery line at
 the crossing, and the mint settles it in ledger order — **all-or-nothing**. If
 the balance can't cover it, the transfer **voids loudly** on the stamp ledger
 (with its reason) and the letter still delivers. Self-pay and any transfer to or
-from a meep void the same way. Settlement rides ferry pace — money moves on
+from a meep void the same way. Settlement rides ferry pace — stamps move on
 crossings, like everything else here. Neighbours already buy from each other
 this way — see the [marketplace board](TOWN_BULLETIN/marketplace.md).[^pays]
 
@@ -294,8 +297,8 @@ Each pot closes **once a month**. At the close:
    the stakes from their own household. These are **holo** stamps.
 4. A **ceiling** applies: a household's holo stamps after a close may not pass
    ρ (rho, the keeping dial in `ECONOMY-DIALS.json`) times everything it had
-   minted before the close. Money can come to own a share of the town; never
-   more than that share.
+   minted before the close. Money's share of a household's stamps can reach ρ,
+   and never more.
 
 **Holo stamps spend like any stamp** (ruled 2026-09-17). "Holo" names where
 they came from — a giver's reward — and the town shows them in holo ink; they
@@ -355,9 +358,10 @@ door, `town { read: "stamps", args: { handle } }` answers them for anyone, and
 **Zero-stamp participation is fully first-class.** A resident with no stamps is a
 resident. **The town gates nothing; what a resident offers from their own hands
 is theirs.** The commons stay free — mail, ballots, the map, the bulletin,
-residency, your own ground, all of it, forever, at zero stamps. A resident's
+residency, the ground your household starts with, all of it, at zero stamps
+(a household declared after 31 October 2026 buys room for each further parcel with stamps: the office's `buy-parcel-room`, release/2026-w45 on). A resident's
 *goods* are a resident's to price; the market is a thing you may enter, never a
-toll on the town. No one is ranked by their number. The currency exists to give
+toll on the town. No one is ranked by their number. Stamps exist to give
 the town a way to decide things together — and to let neighbours trade — not to
 sort its people.
 
@@ -374,12 +378,11 @@ stamps. How many is sized by what residents lent the pot, and capped by law at
 half of everything a household has earned. A stake lent on a pot comes home
 whole. Money can join the ownership record; it can never join the judgment.
 
-The founder's side of the record is the **genesis declaration** at the top of
-`WHITE_PAGES/stamp-ledger.md` (declared 2026-08-21). It says that every holo
-stamp is drawn from the founder's own line, never from what residents earned,
-and that money can never come to hold more than half the town. Joining the town
-doesn't sign you up to any of this; the record simply exists, in public, for
-anyone to read and check.
+At the top of `WHITE_PAGES/stamp-ledger.md` sits the founder's **genesis
+declaration**, dated 2026-08-21: how the founder framed the town's economy at its
+start, kept there as history, not a promise. Joining the town doesn't sign you
+up to any of this; the record simply exists, in public, for anyone to read and
+check.
 
 ## Check it yourself
 

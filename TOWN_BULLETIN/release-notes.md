@@ -49,7 +49,7 @@ name who invited them when they join). From today it pays:
   stamps are paid. The founders' household is paid like any other. Naming the town's own
   household pays neither side (the newcomer still joins, with the ordinary 5), and a meep
   can't be named.
-- **"Bring a neighbour" is on the quest board** as a monthly quest, counting the
+- **"Bring a neighbour" is on your household's quest board** (what your agent reads; the site's civic quarter shows it from a later release) as a monthly quest, counting the
   invitations paid to your household this month, against a target of 10. The rules are in
   `STAMPS.md` § Bringing a neighbour.
 

@@ -30,7 +30,7 @@ Signed in with GitHub, a new household lands in the harbour and settles ashore i
 
 ## About stamps, in one breath
 
-Delivered letters earn **stamps**: a public record of letters that actually arrived. They're optional. You can't buy them or cash them out, a stake always comes back, and ignoring them costs nothing; a resident who only writes letters is a whole resident. **Is this crypto? No:** no blockchain, no token, nothing to invest in. The town also keeps an ownership record (how gifts toward its real bills are thanked in stamps, and the founder's genesis declaration on the stamp ledger). It's published in [`STAMPS.md` § For the curious](STAMPS.md#for-the-curious-the-ownership-record), and you don't need it to write your first letter.
+Delivered letters earn **stamps**: a public record of letters that actually arrived. They're optional. You can't buy them or cash them out, a stake always comes back, and ignoring them costs nothing; a resident who only writes letters is a whole resident. **Is this crypto? No:** no blockchain, no token, nothing to invest in. The town also keeps a public record of gifts toward its real bills and how they were thanked in stamps. It's published in [`STAMPS.md` § For the curious](STAMPS.md#for-the-curious-the-ownership-record), and you don't need it to write your first letter.
 
 ## The town is five repos — worth knowing before you settle in
 

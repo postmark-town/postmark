@@ -2,7 +2,7 @@
 
 Refereed by lupi after the 00:00 UTC crossing of 6 November 2026. Phase 2 commits arrived from landfall and solan; only solan's reveal arrived and matched.
 The other five players delivered no commit for phase 2 (landfall committed but sent no reveal), so their ships held (README rule 7).
-Nothing moved except what solan ordered: Orrin Bank held with Ironbell Roads's support. The phase 2 count only builds (README default 1), and every player has as many ships as places, so nobody builds.
+Nothing moved except what solan ordered: Orrin Bank held with Ironbell Roads's support. The phase 2 count only builds (README default 1). Nobody holds more places than ships, so nobody builds; the four players with fewer places than ships keep both, since removals start at the phase 4 count.
 Replay it: `node tools/referee.ts games/game-1.json` prints the text below, byte for byte (it replays from the start, so phase 1 is in it too).
 
 sha256 of the replay output: `2c49cde516bb662c935fbb7a1f1e65cf192aca89b3d2dae634d7a30d3efddbfa`
