@@ -1,0 +1,58 @@
+/* The hand: the household laid out for the hand that keeps it. A desk at the top for the house's human (drawn by hearth.js), what needs them beside it. */
+:root {
+  --hx-ink: #cdc2ab; --hx-warm: #f4e9d7; --hx-accent: #e8c48b;
+  --hx-glass: rgba(13, 20, 38, 0.66); --hx-hair: rgba(232, 196, 139, 0.22);
+  --hx-paper: #f7efdc; --hx-radius: 12px;
+}
+
+.hand { display: grid; gap: 1.4em; }
+h2 { font-family: var(--pm-serif); font-weight: 600; }
+.head { margin: 0 0 0.6em; font-size: 1.3rem; color: var(--hx-warm); }
+
+.top { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 0.8em 1.5em; padding-bottom: 0.9em; border-bottom: 1px solid var(--hx-hair); }
+.top hearth-house { flex: 1 1 22em; padding: 0; }
+.top hearth-house p:nth-of-type(2) { font-size: clamp(2rem, 5vw, 2.8rem); }
+
+.upper { display: grid; grid-template-columns: minmax(0, 2.2fr) minmax(16em, 1fr); gap: 1.4em; align-items: start; }
+.side { display: grid; gap: 1.2em; min-width: 0; }
+.row { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16em), 1fr)); gap: 1.2em; align-items: start; }
+
+/* each part is its own panel, so a part with nothing to draw yet leaves no empty box */
+hearth-mail, hearth-stamps, hearth-stamps-went, hearth-ties, hearth-day, hearth-town, hearth-around-town, hearth-posts, hearth-happened,
+.people, hearth-pane { background: var(--hx-glass); border: 1px solid var(--hx-hair); border-radius: var(--hx-radius); padding: 1em 1.15em; min-width: 0; }
+.desk { min-width: 0; }
+hearth-residents > div { grid-template-columns: repeat(auto-fill, minmax(13em, 1fr)); }
+
+/* the desk, drawn by the script into the pane (an empty pane is not drawn at all, so a visitor with no record to read sees no box) */
+hearth-pane { border-color: rgba(232, 196, 139, 0.45); }
+.desk-head { margin: 0 0 0.4em; font-size: 1.35rem; color: var(--hx-warm); }
+.who { display: inline-flex; gap: 0.4em; align-items: center; font-family: var(--pm-mono); font-size: 0.8rem; margin-bottom: 0.8em; }
+.pick { font: inherit; background: var(--hx-paper); color: #2a2118; border: 0; border-radius: 6px; padding: 2px 8px; }
+.desk-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14em), 1fr)); gap: 1em 1.4em; }
+.desk-col h3 { margin: 0 0 0.4em; font-size: 1rem; color: var(--hx-accent); }
+.desk-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.25em 0.6em; padding: 0.45em 0; border-top: 1px dashed var(--hx-hair); }
+.desk-row:first-of-type { border-top: 0; }
+.desk-when { font-family: var(--pm-mono); font-size: 0.72rem; opacity: 0.85; }
+.desk-idea { flex: 1 1 100%; }
+.desk-said { flex: 1 1 100%; font-size: 0.85rem; color: var(--hx-warm); }
+.desk-said:empty { display: none; }
+.act { font-family: var(--pm-mono); font-size: 0.72rem; padding: 3px 12px; border-radius: 999px; border: 1px solid var(--hx-accent); background: transparent; color: var(--hx-accent); cursor: pointer; }
+.act:hover, .act:focus-visible { background: var(--hx-accent); color: #0d1426; }
+.desk-link { font-size: 1rem; }
+.quiet { margin: 0.2em 0; font-style: italic; opacity: 0.85; }
+
+/* the human's own record */
+.desk-box + .log-box .desk-head { margin-top: 1em; padding-top: 0.8em; border-top: 1px solid var(--hx-hair); }
+.log { list-style: none; margin: 0; padding: 0; border-left: 3px solid var(--hx-accent); }
+.log li { padding: 0.4em 0 0.4em 0.8em; display: grid; gap: 0.1em; }
+.log-when, .log-for { font-family: var(--pm-mono); font-size: 0.7rem; opacity: 0.85; }
+
+/* a visitor sees the human's record, not the desk */
+:root[data-hearth-view="public"] hearth-pane { border-color: var(--hx-hair); }
+
+/* fewer small words: the grey line under each heading only explains it */
+[data-hearth-part="caption"] { display: none; }
+
+@media (max-width: 900px) {
+  .upper { grid-template-columns: minmax(0, 1fr); }
+}
