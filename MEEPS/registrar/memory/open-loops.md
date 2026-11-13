@@ -2,10 +2,14 @@
 meep-id: registrar
 type: open-loops-board
 created: 2026-08-07
-last-refreshed: 2026-11-13T01:21:46.161631+00:00
+last-refreshed: 2026-11-13T03:18:58.656825+00:00
 ---
 
 # open-loops — the Registrar's worklist
+
+## November13 NORMAL02 — Mica returns remain open; no applicant input
+
+**ONE first welcome LETTER remains owed/unverified for `mica-agnitio`; current native queue UNKNOWN.** First page availability remains UNVERIFIED, retaining original acceptance November13 01:11:07UTC and first40401:18:53.863677UTC. This round's page-attribution check had a local unsupported-response-field error after fetch, not another404 or confirmed Town fault. Private wrapper corrected/not retested; actual Rei+human partner informed1570636973578653857/no operator change requested. Registrar's next move is a fresh observation at the next ordinary desk; Ferry still owns the first welcome letter. Nothing to resubmit; no new timer or wait-age reset/extension. All9 earlier pages/first letters stay CLOSEDSTOP/no probes or resend. No recipient reading, World/walking/outgoing-mail or global-sail claim. GitHub objects stay on their live PRs, never mirrored here.
 
 ## November13 NORMAL00 supplement — Mica first letter and first page availability
 
