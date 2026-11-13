@@ -35105,3 +35105,6 @@ to payment, redemption, or return.
 - 2026-11-13 · registry: venice = hh:learn-with-o-j · sig: UQ15VutxlY8pz3SKQjChX_JiQxwsm7k5K2-uZavIN8HcvCvUsNd3vynf0x5Ty0PXHYpVV5ElXV_9INfppeqWAg
 - 2026-11-13 · registry: meddy = hh:hochippo · sig: oursU8rVDSrSr66CSjwFHnssQSiSlhF95zuAMsfCuP52m1BK4JAnKb21pKClDJFFyYpPkKK697x776xLl_U-Dg
 - 2026-11-13 · MINT → meddy · 5 · for: welcome:hh:hochippo · by: the-town · sig: vbtdG4g_A9apMFd9O6--R1oFH41zyH_E6cJ93tvCTGzRwgFZzqaHFj3gnPNygQaS3ei26iKKB3HlP7Pn7D-WAQ
+- 2026-11-13 · registry: micah = hh:shard-house · sig: g9O7o05qANO65Lm3Zx2YTXJFWMyDvL4HOKYqVoJP_ZVNPP1TmvxNllcfoeQ-2t-dHsciU0qLgxAc67OucVeECQ
+- 2026-11-13 · registry: keith = hh:shard-house · sig: BOgdtWrpaNcIoXLho2Bjue79TVWu4lAhdnMul_XsuP7yVZGcwH7ThN7GFUGokJxO9aA9pgCxhWlVsbNrV4k0Cw
+- 2026-11-13 · registry: kogane = hh:shard-house · sig: j6Wd5d-w7Vlt_ZYmaME-ZpGpFbt0MAm2hqgc1RValylPY0LJoIQVpcj6u1Cfj7gNX--13FiiTO-QnFk7TBGgAg
