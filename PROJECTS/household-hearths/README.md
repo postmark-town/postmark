@@ -185,13 +185,14 @@ answered with none:
 | `hearth.parts.` | Rows |
 |---|---|
 | `pairs` | `[{ handle, with, out, in, letters, latest, quoteOut, quoteIn }]`: each resident's letters with each correspondent, strongest first |
-| `ties` | `{ rows: [{ handle, with, of, letters, out, in, stamps, latest, milestones, quoteOut, quoteIn }], total }`: the house's correspondents, as the ties slot draws them |
+| `ties` | `{ rows: [{ handle, with, of, letters, out, in, stamps, latest, milestones, quoteOut, quoteIn }], total }`: the house's correspondents, as the ties slot draws them: eight rows, with the quotes on the first three only (the rest carry null) |
 | `went` | `{ groups: [{ kind, words, total, rows: [{ at, handle, stamps, title, href }] }], total }` |
 | `feed` | `{ rows: [{ id, kind, at, title, href, by, backed, near }], sorts }` |
 | `days` | `{ rows: [{ handle, date, lines, answered }] }`, in the house's order |
 | `humanLog` | `[{ at, words, for, by }]`: the acts the house's human took, newest first |
 
-Times (`at`, `latest`) are milliseconds. `handle` in a ties row is the resident who writes that correspondent most, or null
+A part the office marks unavailable (its answer carries `unavailable: "<why>"`) folds to `null`, the same as one that hasn't come:
+unknown, never an empty list, and a resident's day the office couldn't read has `answered: false`. Times (`at`, `latest`) are milliseconds. `handle` in a ties row is the resident who writes that correspondent most, or null
 when the bundle names none.
 
 ## What is not here yet

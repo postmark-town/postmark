@@ -1,12 +1,12 @@
 // The constellation's own script (Hearth contract v2, rule 6): the house's ties, drawn as a star map in <hearth-pane>.
 //
 // The residents sit at the centre in their own colours. Around them are the people they write, nearer the more letters
-// have crossed, with a line to each resident who writes them, thicker for more. Letters between two residents of the house
-// are a dashed line between them. Every star links to that resident's page.
+// have crossed, with a line to each resident who writes them, thicker for more. Every star links to that resident's page.
 //
 // Where the ties come from: the office's public Hearth bundle, as the site folds it (hearth.parts.pairs: each resident's letters with each
-// correspondent, both ways) once it arrives; until
-// then, the residents' own public outboxes and inboxes (the newest letters each way), which say the same thing more roughly.
+// correspondent outside the house, both ways) once it arrives. Until then, the residents' own public outboxes and inboxes (the newest
+// letters each way), which say the same thing more roughly; only that mail shows letters between two residents of the house, drawn as a
+// dashed line between them. The bundle carries no pairs inside the house, so with it those lines are not drawn.
 // Public data only, read signed out. Nothing here acts.
 
 const SVG = "http://www.w3.org/2000/svg";
