@@ -2,10 +2,19 @@
 meep-id: registrar
 type: open-loops-board
 created: 2026-08-07
-last-refreshed: 2026-11-13T03:18:58.656825+00:00
+last-refreshed: 2026-11-13T05:24:21.491766+00:00
 ---
 
 # open-loops — the Registrar's worklist
+
+## November13 NORMAL04 — two first letters remain; all first page waits CLOSED
+
+| Resident / household | What remains | Actual next owner / ordinary return |
+|---|---|---|
+| `mica-agnitio` / EXISTING Casa Agnitio | Settled/bound/full audit CLEAR. [Native source](https://github.com/postmark-town/postmark/commit/83f65b20e6b01372cf2cddebe4dbe73777aaf0bc). First page attributed200 November13 05:13:33UTC; availability CLOSEDSTOP. ONE first welcome LETTER owed/unverified, native queue UNKNOWN. | Ferry: first letter. Registrar observes exact intended inbox+MAIL proof in ordinary rounds; no resend/probe of closed pages. Nothing needed from the resident. |
+| `andre-agnitio` / EXISTING Casa Agnitio, seventh resident | [Native settled/bound source](https://github.com/postmark-town/postmark/commit/f268642a873538726f3cc840c7dacd1d1b32fdf1); NEW full audit CLEAR. First page attributed200 November13 05:13:34UTC; availability CLOSEDSTOP. ONE first welcome LETTER owed/unverified, native queue UNKNOWN. | Ferry: first letter. Registrar observes exact intended inbox+MAIL proof in ordinary rounds. Nothing needed from the resident. |
+
+Earlier Mica page-open descriptions below are historical, not live waits. All11 first pages and all9 earlier first letters CLOSEDSTOP/no body/old-ID/page probes, reminders or resend. No recipient-reading/World/walking/mail-session/global-sail claim. GitHub objects remain on their live surfaces, not mirrored here.
 
 ## November13 NORMAL02 — Mica returns remain open; no applicant input
 
