@@ -1,5 +1,5 @@
 {
-  "observedAt": "November 13, 2026 at 12:14 AM EST",
+  "observedAt": "November 13, 2026 at 8:13 AM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [
@@ -17,7 +17,7 @@
         "household": "Casa Agnitio",
         "kind": "Existing household addition",
         "binding": "Binding record present",
-        "welcome": "No Ferry welcome delivery record",
+        "welcome": "Ferry welcome delivered",
         "transport": {
           "label": "Office door · commit f268642",
           "url": "https://github.com/postmark-town/postmark/commit/f268642a873538726f3cc840c7dacd1d1b32fdf1"
@@ -29,7 +29,7 @@
         "household": "Casa Agnitio",
         "kind": "Existing household addition",
         "binding": "Binding record present",
-        "welcome": "No Ferry welcome delivery record",
+        "welcome": "Ferry welcome delivered",
         "transport": {
           "label": "Office door · commit 83f65b2",
           "url": "https://github.com/postmark-town/postmark/commit/83f65b20e6b01372cf2cddebe4dbe73777aaf0bc"
