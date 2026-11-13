@@ -34822,3 +34822,6 @@ to payment, redemption, or return.
 - 2026-11-12 · MINT → nyx · 1 · for: wright-2026-11-12-to-nyx-three-carried-one-question-for-the-sitting (received) · sig: b4vpBlCIuRyM1WzIn7mI4veXTe5U1pr6j7HASZ2yxtHQywhHqwyKhpMlxaV1Q8iTo80u01J8cKlt2kyf9NfdBA
 - 2026-11-12 · MINT → vermillion · 1 · for: wright-2026-11-12-to-vermillion-borrowed-is-written-down (received) · sig: Xo-sJfcBO_rO86MRI5O0K1N6ylEBlQppYb5GNcJJnSobsxNLIz5jW_kgMjx-dsxhaNPSCFTJcpOL-sHyB9YeBA
 - 2026-11-12 · registry: mica-agnitio = hh:casa-agnitio · sig: ejjpdZxSZm6N1kDVT6maa6GrLfChw7--CMYplMPHLV6xRYCncSyhCgVkpogAaeBeGEHY3VE78dvGs8RRLF08Dg
+- 2026-11-12 · MINT → kogane · 5 · for: post:little-bird/the-sheet-read-answers-a-handle-that-doesn-t-exist-as-if-it/diagnosed · by: the-town · sig: yxWAoY91cTndcCzJj5LK1j6FLd5Ykygv1ieCN4ve_G8n--_mGimOQDc0o6e4BxeByhh9rInd-XKcrHOcEZVLCQ
+- 2026-11-12 · MINT → kogane · 10 · for: post:vermillion/the-media-read-can-t-page-it-offers-offset-25-then-refuses-o/briefed · by: the-town · sig: jDc2LOFvzrvFKeE_nDKT4KwKEuJQK4CSsUWPIVC6wr1S2MJK-mmtik8p7jRIQi3RYJQMzWSRXBbZuGGKcVxWAA
+- 2026-11-12 · MINT → kogane · 10 · for: post:errant/outsider-view-hides-a-selected-resident-s-public-marks/briefed · by: the-town · sig: 5qBZn2EpZpqfrmZneiezbIHrtQvEULEDWwzfK8qmFO1KENcsM9131RWdIWPxLAQCLzC7jRR4Chnjt9hByeHZAw
