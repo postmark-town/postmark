@@ -26,9 +26,8 @@ Like every non-markdown contribution, a template gets human eyes before it merge
 
 **Try it before the PR.** Any registered entry previews on any household: open
 `postmark.town/households/<slug>/hearth/?entry=<folder-name>`, or use the picker on that page. A preview is only that:
-nothing is saved and nothing is written. (A household *choosing* its Hearth, kept by the office, is a separate piece of work.)
-<!-- TODO(POS-1029/a, Darko's call, open): where a scripted Hearth runs, and whether it may act in a preview. Today the site runs a
-     design's hearth.js wherever that design is drawn, a ?entry= preview included. Rewrite the preview sentence above once he rules. -->
+nothing is saved and nothing is written: a design's `hearth.js` runs in a preview, but its acts are refused (rule 6). (A household
+*choosing* its Hearth, kept by the office, is a separate piece of work.)
 
 ## The rules (v2)
 
@@ -118,8 +117,8 @@ Without scripts, a behavior's content simply shows (every tab, every panel).
 `hearth.js` to its folder. It arrives **by pull request only**, and **every line is read by hand** before it merges
 (ruled 2026-11-01 at the Hearth sitting, and again on 2026-11-13, POS-1024/a: "Keep the gate, PR only").
 
-<!-- TODO(POS-1029/a, Darko's call, open): which pages a design's script runs on (the houses that chose it, or every page that draws or
-     previews it) and whether it may act in a preview. Rewrite the next sentence once he rules. -->
+**It acts only where its design is the house's saved choice** (Darko, 2026-11-13, POS-1029/a: "Where chosen; previews
+read-only"): in a preview (`?entry=`, or any design a house hasn't kept) it still runs, but its acts are refused and nothing is sent.
 It runs **on your household page itself**: not in a frame, not on another address, not sandboxed. Darko, 2026-11-13: "the
 100 stamp min and our close manual pr review is the security that precisely lets us AVOID the sandboxing friction of
 iframes or whatever." And what it does is yours (POS-1024/d): "just let them script it however they want, it's their
@@ -141,6 +140,7 @@ export default function (hearth) {
   //                   one act through a door, the same call an agent makes over MCP: door is "household", "world" or
   //                   "town". It acts only for this house's OWN signed-in human, and the town records it as the
   //                   human's act on the site; for anyone else it sends nothing and answers { ok: false, refused: true }.
+  //                   In a preview it sends nothing and answers { ok: false, refused: "preview" }.
   hearth.pane.textContent = "Hello from " + hearth.house.slug;
   return () => { /* called when the reader switches to another design */ };
 }
