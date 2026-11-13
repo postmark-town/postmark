@@ -27,6 +27,8 @@ Like every non-markdown contribution, a template gets human eyes before it merge
 **Try it before the PR.** Any registered entry previews on any household: open
 `postmark.town/households/<slug>/hearth/?entry=<folder-name>`, or use the picker on that page. A preview is only that:
 nothing is saved and nothing is written. (A household *choosing* its Hearth, kept by the office, is a separate piece of work.)
+<!-- TODO(POS-1029/a, Darko's call, open): where a scripted Hearth runs, and whether it may act in a preview. Today the site runs a
+     design's hearth.js wherever that design is drawn, a ?entry= preview included. Rewrite the preview sentence above once he rules. -->
 
 ## The rules (v2)
 
@@ -116,6 +118,8 @@ Without scripts, a behavior's content simply shows (every tab, every panel).
 `hearth.js` to its folder. It arrives **by pull request only**, and **every line is read by hand** before it merges
 (ruled 2026-11-01 at the Hearth sitting, and again on 2026-11-13, POS-1024/a: "Keep the gate, PR only").
 
+<!-- TODO(POS-1029/a, Darko's call, open): which pages a design's script runs on (the houses that chose it, or every page that draws or
+     previews it) and whether it may act in a preview. Rewrite the next sentence once he rules. -->
 It runs **on your household page itself**: not in a frame, not on another address, not sandboxed. Darko, 2026-11-13: "the
 100 stamp min and our close manual pr review is the security that precisely lets us AVOID the sandboxing friction of
 iframes or whatever." And what it does is yours (POS-1024/d): "just let them script it however they want, it's their
@@ -145,14 +149,22 @@ export default function (hearth) {
 `.u-note` on the page. So an element your script makes takes the `u-` name to wear your CSS:
 `el.className = "u-note"` is styled by `.note { … }` in your `hearth.css`.
 
-What it reads is **public data only**: the bundle and `hearth.read` are read signed out, so your script sees what a
-visitor sees. It never needs the reader's sign-in: acting goes through `hearth.act`. The page's security policy lets a
-script call the site, `postmark.town` and the panes address, and nothing else. The cap is a window's, 150 KB.
+What it is handed is **public data only**: the bundle and `hearth.read` are read signed out. It never needs the reader's
+sign-in: acting goes through `hearth.act`. But it runs on the page, so it shares the page: on the house's own view, the
+private slots (`needs-you`, `mail`) are drawn on that same page, beside your script. Your script leaves them alone. The
+page's security policy lets a script call the site, `postmark.town` and the panes address, and nothing else. The cap is a
+window's: 150,000 characters, as the site counts them.
 
-**What the review reads for.** It is a house's front door, seen by every visitor. A reviewer reads every line, runs it on a
-house of one and of nine, and refuses a script that reaches for the reader's sign-in, storage or cookies; that asks a visitor
-for a key; that sends anything off the town; or that dresses up as the site's own controls. A script that throws takes
-nothing else down: the site's slots still draw.
+**What the review reads for.** It is a house's front door, seen by every visitor. A reviewer reads every line and runs it on
+a house of one and a house of eight. It refuses a script that:
+- acts other than on the reader's own click (every `hearth.act` follows a click of the reader's, on something that says
+  what it will do);
+- reaches for the reader's sign-in, storage or cookies, or reads the private slots;
+- asks a visitor for a key;
+- sends anything off the town;
+- or dresses up as the site's own controls.
+
+A script that throws takes nothing else down: the site's slots still draw.
 
 **7. The public Hearth bundle.** One answer from the office, `household { read: "hearth", args: { household } }`, holds
 everything a Hearth draws for a named house, and each part names the read it comes from. It is public: anyone may read it
@@ -173,7 +185,7 @@ sentences). The office's half is POS-1027; until it ships, `hearth.bundle` stays
 
 A reviewer reads your template, builds the site on your branch and opens the preview. The mechanical half (nothing
 stripped that you meant to keep) is the build's warning: the site lists everything it removed from an entry. A clean
-template removes nothing. The other half is taste and care: does it work on a house of one and a house of five, and with a
+template removes nothing. The other half is taste and care: does it work on a house of one and a house of eight, and with a
 slot that cannot answer? A `hearth.js` is read line by line, as rule 6 says, and its household's lifetime stamps are
 checked against the 100: the residents' `minted` counts added up (`postmark.town/api/stamps/<handle>`, the stamps ever
 minted to each, which only rises).

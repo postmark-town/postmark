@@ -35,6 +35,30 @@ const said = (answer) => {
 
 function heading(text) { return el("h2", "desk-head", text); }
 
+/**
+ * One idea's stake, previewed and then confirmed. THE RESIDENT IS LOCKED AT PREVIEW: Confirm spends from the resident the office previewed, never
+ * from a fresh read of the picker; and reset() (the picker changed) takes the confirm away until it is previewed again. `act` is hearth.act.
+ * press(handle) answers { step: "previewed" | "refused" | "done", answer, handle }.
+ */
+export function stakeFlow(act, mark) {
+  let locked = null;
+  return {
+    get locked() { return locked; },
+    reset() { locked = null; },
+    async press(handle) {
+      if (locked === null) {
+        const answer = await act({ door: "town", do: "stake", args: { mark, stamps: 1, handle, preview: true } });
+        if (answer?.ok) { locked = handle; return { step: "previewed", answer, handle }; }
+        return { step: "refused", answer, handle };
+      }
+      const who = locked;
+      locked = null;
+      const answer = await act({ door: "town", do: "stake", args: { mark, stamps: 1, handle: who } });
+      return { step: "done", answer, handle: who };
+    },
+  };
+}
+
 /** The human's own record: the public rows of the house's record whose hand is the human's. */
 function humanLog(bundle) {
   const rows = bundle?.parts?.happened?.rows ?? bundle?.happened?.rows;
@@ -70,7 +94,10 @@ function drawDesk(box, hearth, data) {
   pick.className = "u-pick";
   for (const r of residents) { const o = document.createElement("option"); o.value = r.handle; o.textContent = r.name; pick.appendChild(o); }
   if (data.chosen) pick.value = data.chosen;                  // a redraw keeps the resident the human picked
-  pick.addEventListener("change", () => { data.chosen = pick.value; });
+  // changing the resident takes every previewed stake's confirm away, as the site's own ballot stake does ("Changing anything after a preview
+  // takes the confirm away until it is previewed again")
+  const unpreview = [];
+  pick.addEventListener("change", () => { data.chosen = pick.value; for (const f of unpreview) f(); });
   who.appendChild(pick);
   box.appendChild(who);
 
@@ -107,21 +134,15 @@ function drawDesk(box, hearth, data) {
     row.appendChild(el("span", "desk-when", "by " + idea.by));
     const b = button("Back it ✦1");
     const out = el("span", "desk-said");
-    let previewed = false;
+    const flow = stakeFlow((a) => hearth.act(a), idea.id);
+    unpreview.push(() => { if (flow.locked) { flow.reset(); b.textContent = "Back it ✦1"; out.textContent = ""; } });
     b.addEventListener("click", async () => {
       b.disabled = true;
       out.textContent = "…";
-      const args = { mark: idea.id, stamps: 1, handle: pick.value };
-      // stamps move: ask the office what it WOULD do first, then the human confirms
-      if (!previewed) {
-        const p = await hearth.act({ door: "town", do: "stake", args: { ...args, preview: true } });
-        if (p.ok) { previewed = true; b.textContent = "Confirm ✦1"; out.textContent = "One stamp from " + pick.selectedOptions[0]?.textContent + " goes into escrow behind this idea, theirs the whole time."; }
-        else out.textContent = said(p);
-      } else {
-        out.textContent = said(await hearth.act({ door: "town", do: "stake", args }));
-        previewed = false;
-        b.textContent = "Back it ✦1";
-      }
+      const name = pick.selectedOptions[0]?.textContent ?? pick.value;
+      const r = await flow.press(pick.value);
+      if (r.step === "previewed") { b.textContent = "Confirm ✦1"; out.textContent = "One stamp from " + name + " goes into escrow behind this idea, theirs the whole time."; }
+      else { b.textContent = "Back it ✦1"; out.textContent = said(r.answer); }
       b.disabled = false;
     });
     row.appendChild(b);

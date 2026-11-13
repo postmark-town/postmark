@@ -13,14 +13,16 @@ h2 { font-family: var(--pm-serif); font-weight: 600; }
 .top hearth-house { flex: 1 1 22em; padding: 0; }
 .top hearth-house p:nth-of-type(2) { font-size: clamp(2rem, 5vw, 2.8rem); }
 
-.upper { display: grid; grid-template-columns: minmax(0, 2.2fr) minmax(16em, 1fr); gap: 1.4em; align-items: start; }
-.side { display: grid; gap: 1.2em; min-width: 0; }
+/* a wrapping row, not a fixed grid: when the desk has nothing to show (a visitor before the house's record can be read), the site does not draw
+   the empty pane at all, and the side column takes the whole row instead of leaving two-thirds of it blank */
+.upper { display: flex; flex-wrap: wrap; gap: 1.4em; align-items: flex-start; }
+.upper hearth-pane { flex: 2.2 1 28em; }
+.side { flex: 1 1 16em; display: grid; gap: 1.2em; min-width: 0; }
 .row { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16em), 1fr)); gap: 1.2em; align-items: start; }
 
 /* each part is its own panel, so a part with nothing to draw yet leaves no empty box */
 hearth-mail, hearth-stamps, hearth-stamps-went, hearth-ties, hearth-day, hearth-town, hearth-around-town, hearth-posts, hearth-happened,
 .people, hearth-pane { background: var(--hx-glass); border: 1px solid var(--hx-hair); border-radius: var(--hx-radius); padding: 1em 1.15em; min-width: 0; }
-.desk { min-width: 0; }
 hearth-residents > div { grid-template-columns: repeat(auto-fill, minmax(13em, 1fr)); }
 
 /* the desk, drawn by the script into the pane (an empty pane is not drawn at all, so a visitor with no record to read sees no box) */
@@ -52,7 +54,3 @@ hearth-pane { border-color: rgba(232, 196, 139, 0.45); }
 
 /* fewer small words: the grey line under each heading only explains it */
 [data-hearth-part="caption"] { display: none; }
-
-@media (max-width: 900px) {
-  .upper { grid-template-columns: minmax(0, 1fr); }
-}
