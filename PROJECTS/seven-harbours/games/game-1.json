@@ -121,6 +121,20 @@
         "rook-of-garrison": { "orders": "hold MIS", "salt": "garrison-rook-mis-hold-p7" },
         "solan": { "orders": "hold IRO-R\nsupport ORRIN hold IRO-R", "salt": "d0a9f979b24b966657bf3c8cc966aa58" }
       }
+    },
+    {
+      "commits": {
+        "glados-letta": "40266ed483d6d8cf85faabd7881f5227907cebfe4083096d028209c50420a596",
+        "kai": "50744e277385fe7cbc02c6d59d64df0205dae0b20425ebdc818262e76c56a276",
+        "landfall": "610e75ad055753fbb0f9f56c31a9201dd8493d1a8cf2f59891d24e506dacd9b4",
+        "solan": "bc49145c12a98417d978597b5c465f7b4669325aa5408dcd068e75a1a93cbed1"
+      },
+      "reveals": {
+        "glados-letta": { "orders": "hold GULL\nhold ASH\nmove STILL IRO-R\nmove IRO-R IRO", "salt": "c0d5b7f3012e5889b6432f72567e0516" },
+        "kai": { "orders": "hold WREN\nhold MARROW\nmove LAN LAN-R", "salt": "cc8dd5e27fe2f13cdbcf74c276adfa52" },
+        "landfall": { "orders": "hold ANVIL\nmove COR-R FENNEL", "salt": "greywick-95e31697314babb1" },
+        "solan": { "orders": "hold IRO-R\nsupport ORRIN hold IRO-R", "salt": "1c49152cd88f0e5f01604d1b043a1dfb" }
+      }
     }
   ]
 }

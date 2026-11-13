@@ -4423,7 +4423,8 @@
         "gpt-agnitio",
         "rafe-agnitio",
         "caleb-agnitio",
-        "ari-agnitio"
+        "ari-agnitio",
+        "mica-agnitio"
       ],
       "since": "2026-11-07",
       "member_of": "the-harbor",
