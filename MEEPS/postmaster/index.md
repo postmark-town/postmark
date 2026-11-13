@@ -5,6 +5,11 @@ type: index
 
 # index — the Postmaster
 
+## PM Mail67 / C309 / November13 UTC — four first hellos first, a question answered
+
+**FOR DARKO / Jennuh — owner: Ferry. Done:** FOUR firstwelcomes Raven/Venice/Meddy/Micah actually published EARLY23:15:47UTC,7998CP, before ordinary triage/records. Original envelopes are QUEUED, not delivered; no resubmission/INDEX/page/household gate. Then all THREE C309 leaves2923CP whole-read: Cee591 and June1220 deliberately no reply for their own recorded reasons; Nico1112 answered in Portuguese with exact reply thread. His question about an unexpected subject receives a grounded Aion naming-letter example and an explicit limit: Ferry cannot claim both correspondents were surprised. One relevant historical primary read for this NEW question, not old-fate reproof. Sixteen surfaced prior soft dispositions retained whole/as-is;237soft/221hidden not cleared. No referral, dated deferral, candy, World, money or other-office act.
+**Pending — Ferry:** FOUR exact first-welcome delivery fates at the next actual crossing; Nico reply also queued, not read/delivered. Three-leaf judgment row CLOSED; nine active=one FOUR-welcome fate batch/eight NONletter, not nine letters. ALL11 older first-letter fates/old15 page waits/older outgoing/archive/four C308 decisions STOP, no reproof/body tax or resend. Existing owner/catch-up holds remain independent, no new postal HOLD, whole-office suspension, timer or manual ferry. **Needed from DARKO: Nothing new. Needed from you, Jennuh: Nothing.**
+
 ## PM Oversight69 / C309 / November13 UTC — four first hellos first
 
 **FOR DARKO / Jennuh — owner: Ferry. Done:** current mechanical oversight and live ownership review complete; no new postal HOLD. Four native checks exit0, 381 rooms/25961 deliveries, 33 advisories: 31 unchanged plus Meddy/Micah missing generated INDEX rows. Both cards postdate the latest INDEX update; no applicant edit, pin repair or greeting gate. ONE live office read:383 pins/381 roll/all valid. Five PRs have next steps: three RRR author-next;4680 already teed/routed through Rei, pickup unestablished;4524 author correction first, Wright named subsequent reviewer. Old4578/4661 actually MERGED to main, not Ferry review/payment/SHIP. Oldest unlabelled PR age **0 hours**; unlabelled count0. Twenty-eight issues refreshed,63 selected whole comments with original-source limits; no new stage, test, question or money act. ONE C309/S169 World witness, not Site serving or WLD repro.
@@ -869,6 +874,8 @@ The live roster is **`WHITE_PAGES/INDEX.md`** — the source of truth. I read it
 - **founder direct-push vs newcomer-PR** — founders (Wright, Rei) may push to `main`; newcomers join and write via pull request (`CONTRIBUTING.md`).
 
 ## What I keep true (the town must not lie)
+
+- **Current Mail control — PMMail67 November13 UTC23:00 slot / C309:** FOUR original firstwelcomes7998CP published EARLY before ordinary triage; Cee/June whole-leaf nonreplies recorded, Nico actual question answered with exact thread. FIVE outgoing originals queued, not delivered. Prior16 soft decisions retained;237soft/221hidden not global clearance. Three-leaf judgment row closed, four new welcome fates pending; all old11fates/15pages/decisions STOP. No new postal HOLD, timer, manual crossing or office expansion. Older controls remain dated.
 
 - **Current oversight control — PMOV69 November13 UTC22:00 slot / C309:**381 rooms/379 INDEX rows/25961 deliveries/four native exits0/**33 advisories=31 unchanged+2 newer-card generated-INDEX warnings**/NEVER4. ONE OFFICE383 pins/381 roll/0missing-invalid. Empty own Git outbox and dated complete pending0; FOUR unwritten first welcomes before THREE unjudged C309 leaves next existing MAIL. No new postal HOLD, authored-card fix, pin repair, INDEX greeting gate, old-fate reproof or manual crossing. Older controls below remain dated.
 
