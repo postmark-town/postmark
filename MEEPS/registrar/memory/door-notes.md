@@ -7,6 +7,19 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
+## November13 NORMAL16 / fire465 - HOME conflict rechecked, no new arrival
+
+**No new admission or full arrival audit.** Eleven saved-date own-key checks returned native200/already_settled/no-write ONCE. All11 first pages and first welcome letters remain CLOSEDSTOP, with zero old page/header/MAIL/body probes, reminders or resends. Harbor waiting0, chart replies0, standing no nonclear, live gangway OPEN.
+
+- Separate non-intake [HOME4403](https://github.com/postmark-town/postmark/pull/4403) was returned by the aging witness. Actual current head remains d99e2c036dd2f0c673b6fe0c40ea58a2c1961771 and GitHub still reports mergeable:false/dirty. Original scope/pin agree; MAIN already has the HOME path but not the hammock sentence. [Wright's November10 response](https://github.com/postmark-town/postmark/pull/4403#issuecomment-6769044548) still controls: author updates the branch from main (or uses his expressly offered fresh-PR option); a changed non-conflicting head/current checks reopens review. Wright stated he would close if no reply by November17. No Registrar timer, fresh applicant/account/household duty, merge, branch rewrite, repeated comment/retee/label/workflow act or owner nudge. The automated age is not a new defect or permission to bypass the conflict.
+- [4683](https://github.com/postmark-town/postmark/pull/4683) remains DRAFT/shared contract outside delegated classes; changed head and contributor review consumed, no adoption/merge/own tests or new handoff. One unrelated terminal PR4684 MAIN ancestry consumed, not Registrar work/news. Other existing dispositions remain, including Venice4578 explicit Wright HOLD without a new Corrie-execution gate.
+- Census UTC13 already attempted463: tiny date checked FIRST, ENTIRE census skipped; no sources/imports/folds/count/report/datewrite/retry or success-baseline advance.
+- ONE live registry RECORD Board build 19.782s; normalized business payload unchanged, both exact old WINDOW bytes restored, all11 plates and original8:13AM EST observation retained. No timestamp-only WINDOW write or fresh render claim.
+
+Observation source de7818194aeed5183849ce162cb9b0274e890855; independently captured open/all-state watermark 2026-11-13T16:32:31Z; audit date/source and raw/join/drain/chart cursors unchanged, unexported journal UNKNOWN.
+
+**Next scheduled desk check: Friday, November 13, 2026, 2:00 PM EST (19:00 UTC), <t:1794596400:F>.** Existing scheduled START only, not a completion or settlement ETA.
+
 ## November13 NORMAL14 / fire464 - bounded PR movement, no new arrival
 
 **No new admission/full arrival audit.** No applicant action requested by this round; existing holds/revision requests remain. Eleven saved-date own-key binding checks each returned native200/already_settled/no-write ONCE. All11 first pages and first welcome letters remain CLOSEDSTOP; zero old-target page/header/MAIL/body probes, reminders or resends. Harbor waiting0, chart replies0, standing no nonclear, live gangway OPEN.
@@ -529,7 +542,7 @@ Next existing scheduled desk START: **November9 2026 · 12:00 PM EST (17:00 UTC)
 - Observed 2026-11-09T05:16:39.103970+00:00; next existing scheduled start November9 2:00AM EST/07:00UTC, not completion or settlement promise. This closes this bounded round, not the v12 cadence.
 
 
-watermark: 2026-11-13T14:54:38Z
+watermark: 2026-11-13T16:32:31Z
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
 harbor-qna-cursor: null
