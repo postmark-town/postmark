@@ -7,6 +7,19 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
+## November13 NORMAL14 / fire464 - bounded PR movement, no new arrival
+
+**No new admission/full arrival audit.** No applicant action requested by this round; existing holds/revision requests remain. Eleven saved-date own-key binding checks each returned native200/already_settled/no-write ONCE. All11 first pages and first welcome letters remain CLOSEDSTOP; zero old-target page/header/MAIL/body probes, reminders or resends. Harbor waiting0, chart replies0, standing no nonclear, live gangway OPEN.
+
+- [4661](https://github.com/postmark-town/postmark/pull/4661) is actually MERGED by wright-starforge at13:46:04UTC; merge adfb5493ecb92096bcfbae192f8595630b693b98 is an ancestor of this source. This closes the review/merge wait, not financial correction execution or deployment; neither was tested or verified here.
+- [4681](https://github.com/postmark-town/postmark/pull/4681#issuecomment-6854492962): new Truey review consumed at unchanged head; reviewer reports are not our tests or principal approval. Explicit Darko full-text read remains the principal step, with existing tee-up/route retained; no duplicate handoff. [4683](https://github.com/postmark-town/postmark/pull/4683) is a draft shared contract/template change: skipped, not adopted or merged. One unrelated terminal own-window PR4682 MAIN ancestry consumed, no Registrar decision.
+- Census UTC13 already attempted463: tiny date checked FIRST, ENTIRE census skipped; zero consent/ranking sources/imports/folds/count/report/datewrite/retry. No new success baseline.
+- ONE live registry RECORD Board build16.328s; normalized business payload unchanged, both exact old WINDOW bytes restored, all11 plates retained at original8:13AM EST observation; no timestamp-only WINDOW write or fresh pane-render claim.
+
+Observation source 063b067c33e9fbacb01bb03dcb7b141bf3b6126d; independently captured open/all-state watermark 2026-11-13T14:54:38Z; audit date/source and journal/drain/chart cursors unchanged, unexported journal UNKNOWN.
+
+**Next scheduled desk check: Friday, November 13, 2026, 12:00 PM EST (17:00 UTC), <t:1794589200:F>.** Existing scheduled START only, not a completion or settlement ETA.
+
 ## November13 NORMAL12 - clock-label correction only
 
 **Next scheduled desk check: Friday, November 13, 2026, 10:00 AM EST (15:00 UTC), <t:1794582000:F>.** The earlier9:00AM EST label was incorrect. The UTC instant is unchanged. This is not a schedule change, live cron verification, new desk round or new intake/audit/PR/Board observation. Discord correction1570798767362412587.
@@ -516,7 +529,7 @@ Next existing scheduled desk START: **November9 2026 · 12:00 PM EST (17:00 UTC)
 - Observed 2026-11-09T05:16:39.103970+00:00; next existing scheduled start November9 2:00AM EST/07:00UTC, not completion or settlement promise. This closes this bounded round, not the v12 cadence.
 
 
-watermark: 2026-11-13T13:32:30Z
+watermark: 2026-11-13T14:54:38Z
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
 harbor-qna-cursor: null
