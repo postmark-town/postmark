@@ -1,0 +1,47 @@
+/* The gazette: the house as a newspaper of its own life, on one sheet with a masthead, ruled columns and a newsprint clipping for what needs you. */
+:root {
+  --hx-ink: #d4c9b2; --hx-warm: #f4e9d7; --hx-accent: #e8c48b;
+  --hx-glass: rgba(9, 14, 28, 0.55); --hx-hair: rgba(232, 196, 139, 0.24);
+  --hx-paper: #efe4cc; --hx-paper-ink: #221a12; --hx-radius: 3px;
+  --display: "Playfair Display", "Bodoni 72", Didot, "Iowan Old Style", Georgia, serif;
+}
+
+.paper { background: rgba(15, 23, 42, 0.86); border: 1px solid var(--hx-hair); padding: 1.6em 2em 2em; display: grid; gap: 1.8em; }
+h2 { font-family: var(--display); font-weight: 700; font-size: 1.55rem; letter-spacing: 0.005em; }
+
+/* the masthead: the house's name set large and centred, the next crossing as the edition line under a double rule */
+.mast { text-align: center; border-bottom: 3px double var(--hx-accent); padding-bottom: 0.4em; }
+.mast hearth-house { padding: 0; }
+.mast hearth-house p:nth-of-type(2) { font-family: var(--display); font-weight: 800; font-size: clamp(2.4rem, 7vw, 4.6rem); letter-spacing: -0.01em; }
+.mast hearth-house p:last-of-type { max-width: 44em; margin: 0.9em auto 0; text-align: left; }
+.mast hearth-countdown { justify-content: center; gap: 0; margin-top: 0.9em; padding-top: 0.5em; border-top: 1px solid var(--hx-hair); }
+.mast hearth-countdown > div { background: none; border: 0; border-radius: 0; padding: 0.1em 1.6em; }
+.mast hearth-countdown > div + div { border-left: 1px solid var(--hx-hair); }
+
+/* the front page: the lead story wide, the purse in a ruled column beside it */
+.front { display: grid; grid-template-columns: minmax(0, 2.2fr) minmax(16em, 1fr); gap: 2em; align-items: start; }
+.lead, .purse { display: grid; gap: 1.6em; min-width: 0; }
+.purse { border-left: 1px solid var(--hx-hair); padding-left: 1.8em; }
+
+hearth-happened, hearth-stamps { background: none; border: 0; border-radius: 0; padding: 0; }
+hearth-happened ol { columns: 2; column-gap: 2.2em; column-rule: 1px solid var(--hx-hair); }
+hearth-happened ol > li { display: inline-grid; width: 100%; vertical-align: top; grid-template-columns: minmax(1.2em, auto) minmax(0, 1fr); gap: 0.1em 0.45em; }
+hearth-happened ol > li > span:first-child { grid-column: 1 / -1; padding-top: 0; }
+
+.people { display: grid; gap: 1em; border-top: 1px solid var(--hx-hair); padding-top: 1.2em; }
+.people h2 { margin: 0; color: var(--hx-warm); }
+
+.back { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: 2em; border-top: 3px double var(--hx-accent); padding-top: 1.4em; }
+.back hearth-around-town { border-left: 1px solid var(--hx-hair); padding-left: 1.8em; }
+
+/* fewer small words: the grey line under each heading only explains it */
+hearth-needs-you h2 + p, hearth-mail h2 + p, hearth-posts h2 + p, hearth-marks h2 + p, hearth-closer h2 + p, hearth-stamps-chart h2 + p { display: none; }
+
+@media (max-width: 900px) {
+  .paper { padding: 1.1em 1em 1.4em; }
+  .front, .back { grid-template-columns: minmax(0, 1fr); }
+  .purse, .back hearth-around-town { border-left: 0; padding-left: 0; border-top: 1px solid var(--hx-hair); padding-top: 1.2em; }
+  hearth-happened ol { columns: 1; }
+  .mast hearth-countdown > div { padding: 0.1em 0.8em; }
+  .mast hearth-countdown > div + div { border-left: 0; }
+}

@@ -1,0 +1,36 @@
+/* The desk: a well-kept office for the house. What waits on the house and the residents on the left; the numbers and who they write on the right. */
+:root {
+  --hx-ink: #cdc2ab; --hx-warm: #f4e9d7; --hx-accent: #e8c48b;
+  --hx-glass: rgba(13, 20, 38, 0.72); --hx-hair: rgba(232, 196, 139, 0.22);
+  --hx-radius: 10px;
+}
+
+.desk { display: grid; gap: 1.4em; }
+
+.top { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 0.8em 1.5em; padding-bottom: 0.9em; border-bottom: 1px solid var(--hx-hair); }
+.top hearth-house { flex: 1 1 22em; padding: 0; }
+.top hearth-house p:nth-of-type(2) { font-size: clamp(2rem, 5vw, 3rem); }
+
+.work { display: grid; grid-template-columns: minmax(0, 2.6fr) minmax(17em, 1fr); gap: 1.4em; align-items: start; }
+.main, .side { display: grid; gap: 1.2em; min-width: 0; }
+
+.panel { background: var(--hx-glass); border: 1px solid var(--hx-hair); border-radius: var(--hx-radius); padding: 1em 1.15em; display: grid; gap: 1em; min-width: 0; }
+.head { margin: 0; font-size: 1.3rem; color: var(--hx-warm); }
+h2 { font-family: var(--pm-serif); font-weight: 600; }
+
+/* the parts inside a panel carry no second frame; the mail is its own panel, so it is gone whole for a reader who is not the house */
+.panel hearth-stamps { background: none; border: 0; padding: 0; }
+hearth-mail { background: var(--hx-glass); border: 1px solid var(--hx-hair); border-radius: var(--hx-radius); padding: 1em 1.15em; }
+
+/* three cards to a row, as the desk's residents sit; one card never stretches across the page */
+hearth-residents > div { grid-template-columns: repeat(auto-fill, minmax(13em, 1fr)); }
+
+.town { grid-template-columns: repeat(auto-fit, minmax(18em, 1fr)); gap: 1.4em; }
+.town hearth-around-town > div { grid-template-columns: minmax(0, 1fr); }
+
+/* fewer small words: the grey line under each heading only explains it */
+hearth-needs-you h2 + p, hearth-mail h2 + p, hearth-posts h2 + p, hearth-marks h2 + p, hearth-closer h2 + p, hearth-stamps-chart h2 + p { display: none; }
+
+@media (max-width: 900px) {
+  .work { grid-template-columns: minmax(0, 1fr); }
+}
