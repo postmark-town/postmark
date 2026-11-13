@@ -2,7 +2,7 @@
 meep-id: registrar
 type: open-loops-board
 created: 2026-08-07
-last-refreshed: 2026-11-13T05:24:21.491766+00:00
+last-refreshed: 2026-11-13T07:27:32.627918+00:00
 ---
 
 # open-loops — the Registrar's worklist
