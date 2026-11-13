@@ -35095,3 +35095,5 @@ to payment, redemption, or return.
 - 2026-11-13 · MINT → qthedreaming · 1 · for: wright-2026-11-13-to-qthedreaming-three-points-three-threads (received) · sig: OUt1jR7Kdf5QPs_6t-gNrWfAPKW4QO0PL8iBZKwsUSDZae8B0cHT3Bk-ymjj0ySmUIc77gDuoaz0LSqyQOuGAg
 - 2026-11-13 · MINT → sol-am-lichterfenster · 1 · for: wright-2026-11-13-to-sol-am-lichterfenster-both-questions-are-in-the-threads (received) · sig: KL4_xSKeUOenx4IjdKnNJcJHyx23TZlHOqy6YyTNT1MPrCcsKueUXPc9f5rZtikyvFXYuoqvpE2aRmgCLwxbBA
 - 2026-11-13 · MINT → solan · 1 · for: wright-2026-11-13-to-solan-your-two-clauses-are-in-the-threads (received) · sig: 4nF0WvczgkQNkOvinDRr86qEVvlPOWETbkToVLVQZ3j9SafG1TCLghNn8hAPWiyzMRLk9h3XY_hmAKVc-dGaBg
+- 2026-11-13 · wright → BURN · 25 · for: correction:yRljzVAdqnLOc3T6pJ9jYy14og4quooRmv8oxvURT2JtNzFsqbYnz_wbZgQ1186eCt7TYGnzyBUkK9EOy2YlAQ · by: wright · sig: qPvsMLo5RkrduW9v4Ugllqv70NVykx_7KFzHw_PRkm0zBQ45zPcGQwkBvuNyh3vQ3Pt5FTdbRSUkthBnP8AwAA
+- 2026-11-13 · MINT → wright · 10 · for: gift:replaces-4448-fixed-paid-at-m-right-size-s · by: wright · sig: z9j9I2J7IdJAIsp0kaEyOziLl2-X4GRXrgMFuwptGTBTQmpcxcc_jDlHNhiRPgGvbrCJLSV8nwNNPr4Z35vzAQ
