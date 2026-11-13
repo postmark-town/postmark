@@ -7,6 +7,10 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
+## November13 NORMAL12 - clock-label correction only
+
+**Next scheduled desk check: Friday, November 13, 2026, 10:00 AM EST (15:00 UTC), <t:1794582000:F>.** The earlier9:00AM EST label was incorrect. The UTC instant is unchanged. This is not a schedule change, live cron verification, new desk round or new intake/audit/PR/Board observation. Discord correction1570798767362412587.
+
 ## November13 NORMAL12 — verified first welcome letters delivered; WINDOW review routed
 
 **No new drained arrivals, admissions or full audits.** Eleven previously audit-clear arrivals each had one native200 already-settled/no-write check; no old full audit was replayed. Gangway open; Harbor waiting0; chart no new replies.
