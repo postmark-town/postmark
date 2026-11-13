@@ -4,7 +4,8 @@
 // have crossed, with a line to each resident who writes them, thicker for more. Letters between two residents of the house
 // are a dashed line between them. Every star links to that resident's page.
 //
-// Where the ties come from: the office's public Hearth bundle (its `closer` part, letters each way) once it arrives; until
+// Where the ties come from: the office's public Hearth bundle, as the site folds it (hearth.parts.pairs: each resident's letters with each
+// correspondent, both ways) once it arrives; until
 // then, the residents' own public outboxes and inboxes (the newest letters each way), which say the same thing more roughly.
 // Public data only, read signed out. Nothing here acts.
 
@@ -19,15 +20,11 @@ function svg(tag, attrs = {}, text) {
   return e;
 }
 
-/** The ties from the bundle's closer part: [{ handle, with, letters }], or null when the bundle has none. */
-function tiesFromBundle(bundle, handles) {
-  const part = bundle?.parts?.closer ?? bundle?.closer;
-  if (!part || !Array.isArray(part.rows)) return null;
-  const house = new Set(handles);
-  return part.rows
-    .filter((r) => house.has(String(r.handle)) && r.with)
-    .map((r) => ({ handle: String(r.handle), with: String(r.with), letters: (Number(r.out) || 0) + (Number(r.in) || 0) }))
-    .filter((r) => r.letters > 0);
+/** The ties from the site's fold of the bundle (hearth.parts.pairs, README rule 7): [{ handle, with, letters }], or null until it lands. */
+function tiesFromParts(hearth) {
+  const pairs = hearth.parts?.pairs;
+  if (!Array.isArray(pairs)) return null;
+  return pairs.map((p) => ({ handle: p.handle, with: p.with, letters: p.letters })).filter((r) => r.letters > 0);
 }
 
 /** The ties from the residents' public mail: each letter to or from a resident counts once for that pair. */
@@ -147,9 +144,9 @@ export default function constellation(hearth) {
   let ties = null, stopped = false;
 
   const render = () => { if (!stopped && ties) draw(pane, hearth.house, ties); };
-  const fromBundle = (bundle) => { const t = tiesFromBundle(bundle, handles); if (t) { ties = t; render(); } return !!t; };
+  const fromBundle = () => { const t = tiesFromParts(hearth); if (t) { ties = t; render(); } return !!t; };
 
-  if (!fromBundle(hearth.bundle)) {
+  if (!fromBundle()) {
     tiesFromMail(hearth, handles).then((t) => { if (!ties && t) { ties = t; render(); } });
   }
   const off = hearth.on("bundle", fromBundle);

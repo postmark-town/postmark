@@ -11,7 +11,7 @@ export default function (hearth) {
   pane.replaceChildren(line);
 
   const draw = () => {
-    const ties = hearth.bundle?.parts?.closer?.rows?.length ?? 0;
+    const ties = hearth.parts?.ties?.total ?? 0;   // hearth.parts: the bundle as the site folds it (README rule 7)
     line.textContent = `${hearth.house.residents.length} residents · ${ties} ties · you are reading as ${hearth.view}`;
   };
   draw();

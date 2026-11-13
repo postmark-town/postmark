@@ -8,7 +8,7 @@
 // Each act is taken AS ONE OF THE HOUSE'S RESIDENTS, the one the human picks, and the town records it as the human's hand.
 // Anyone else sees the human's record only. Every answer is the office's own words, shown as they come.
 //
-// What it reads is public, signed out: the calendar, the Think Tank's ideas, and the house's record from the Hearth bundle.
+// What it reads is public, signed out: the calendar, the Think Tank's ideas, and the house's record from the Hearth bundle (hearth.parts).
 
 const OPEN = ["announced", "doors-open", "underway"];
 const SHOWN = 4;
@@ -20,8 +20,8 @@ const el = (tag, cls, text) => {
   return e;
 };
 const button = (text) => { const b = el("button", "act", text); b.type = "button"; return b; };
-const when = (iso) => {
-  const t = Date.parse(iso);
+const when = (at) => {
+  const t = typeof at === "number" ? at : Date.parse(at);   // a fold's time is ms; the calendar's is ISO
   if (!Number.isFinite(t)) return "";
   return new Date(t).toLocaleString(undefined, { weekday: "short", hour: "numeric", minute: "2-digit" });
 };
@@ -59,24 +59,18 @@ export function stakeFlow(act, mark) {
   };
 }
 
-/** The human's own record: the public rows of the house's record whose hand is the human's. */
-function humanLog(bundle) {
-  const rows = bundle?.parts?.happened?.rows ?? bundle?.happened?.rows;
-  if (!Array.isArray(rows)) return null;
-  return rows.filter((r) => r?.hand === "human").slice(0, 6);
-}
-
 function drawLog(box, hearth) {
   box.replaceChildren();
-  const rows = humanLog(hearth.bundle);
-  if (rows == null) return;                          // the record has not come: nothing is drawn
+  // the human's own record, as the site folds the bundle (hearth.parts.humanLog, README rule 7): [{ at, words, for }], null until it lands
+  const rows = hearth.parts?.humanLog;
+  if (!Array.isArray(rows)) return;                  // the record has not come: nothing is drawn
   box.appendChild(heading(hearth.view === "owner" ? "Your hand" : "The human's hand"));
   if (!rows.length) { box.appendChild(el("p", "quiet", "Nothing taken by the house's human lately.")); return; }
   const ul = el("ul", "log");
   for (const r of rows) {
     const li = el("li");
     li.appendChild(el("span", "log-when", when(r.at)));
-    li.appendChild(el("span", "log-what", String(r.words ?? r.line ?? r.kind ?? "")));
+    li.appendChild(el("span", "log-what", String(r.words ?? "")));
     if (r.for) li.appendChild(el("span", "log-for", "for " + r.for));
     ul.appendChild(li);
   }

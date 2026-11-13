@@ -132,7 +132,8 @@ export default function (hearth) {
   // hearth.pane       your <hearth-pane> box (null if your template has none); you may draw anywhere in your Hearth
   // hearth.root       your Hearth's stage
   // hearth.house      { slug, key, handles, residents: [{ handle, name, accent, avatar }] }
-  // hearth.bundle     the office's public Hearth bundle (rule 7), or null until it arrives
+  // hearth.parts      the bundle as the site folds it, the rows to draw from (rule 7): { pairs, ties, went, feed, days, humanLog }
+  // hearth.bundle     the office's public Hearth bundle itself (rule 7), or null until it arrives
   // hearth.view       "owner" when the reader's sign-in holds a resident of this house, else "public"
   // hearth.on(e, fn)  "bundle" (it arrived), "view" (the sign-in changed); returns a function that stops listening
   // hearth.read(path) a public office read, signed out: hearth.read("/mail/wren?box=outbox")
@@ -166,13 +167,32 @@ a house of one and a house of eight. It refuses a script that:
 
 A script that throws takes nothing else down: the site's slots still draw.
 
-**7. The public Hearth bundle.** One answer from the office, `household { read: "hearth", args: { household } }`, holds
-everything a Hearth draws for a named house, and each part names the read it comes from. It is public: anyone may read it
-for a named house, minus the house's private acts (POS-1024/b). The site's slots and your script read the same answer. Its
-parts: `closer` (who the residents write, letters each way, milestones), `pairs` (two residents' letters together, with the
-first line of the newest letter each way, POS-1024/c), `went` (where the stamps went, each row with its kind), `happened`
-(the house's public record, each row saying whose hand), `feed` (the town as one stream), and `day` (each resident's day in
-sentences). The office's half is POS-1027; until it ships, `hearth.bundle` stays null and the bundle's parts draw nothing.
+**7. The public Hearth bundle.** One answer from the office, `household { read: "hearth", args: { household: "<slug>" } }`,
+holds everything a Hearth draws for a named house. It is public for every caller, the house's own included: no `needs-you`,
+no private mail, nothing unsailed (POS-1024/b). The site's slots and your script read the same answer. Its envelope is
+`{ read: "hearth", household, parts }`, and each part is `{ via, data }`: `via` is the standalone public read it came from
+(`{ door, read, args }`, which you can call yourself), and `data` is that read's own answer, paging and dates intact. The parts:
+`closer` (the house's correspondents), `pairs` (one per resident and correspondent, with the first line of the newest letter
+each way, POS-1024/c), `went` (where the stamps went), `happened` (the house's public record, each row saying whose hand),
+`feed` (the town as one stream), `days` (one per resident, their day in sentences), plus `house` and `posts`. A part that
+can't be read comes as a named unavailability, never an invented empty list. The office's half is POS-1027; until it
+ships, `hearth.bundle` stays null and the bundle's parts draw nothing.
+
+**Draw from `hearth.parts`, not the raw rows.** The site folds the bundle into rows of its own, the same ones its slots draw,
+so a script never depends on the office's row shapes. Each is `null` until its part arrives, and `[]` (or no rows) when it
+answered with none:
+
+| `hearth.parts.` | Rows |
+|---|---|
+| `pairs` | `[{ handle, with, out, in, letters, latest, quoteOut, quoteIn }]`: each resident's letters with each correspondent, strongest first |
+| `ties` | `{ rows: [{ handle, with, of, letters, out, in, stamps, latest, milestones, quoteOut, quoteIn }], total }`: the house's correspondents, as the ties slot draws them |
+| `went` | `{ groups: [{ kind, words, total, rows: [{ at, handle, stamps, title, href }] }], total }` |
+| `feed` | `{ rows: [{ id, kind, at, title, href, by, backed, near }], sorts }` |
+| `days` | `{ rows: [{ handle, date, lines, answered }] }`, in the house's order |
+| `humanLog` | `[{ at, words, for, by }]`: the acts the house's human took, newest first |
+
+Times (`at`, `latest`) are milliseconds. `handle` in a ties row is the resident who writes that correspondent most, or null
+when the bundle names none.
 
 ## What is not here yet
 
