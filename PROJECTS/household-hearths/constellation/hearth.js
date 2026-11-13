@@ -58,7 +58,8 @@ function layout(ties, house, narrow) {
   const cx = W / 2, cy = H / 2;
   const residents = house.residents;
   const handles = new Set(residents.map((r) => r.handle));
-  const inner = residents.length === 1 ? 0 : Math.min(W, H) * (narrow ? 0.13 : 0.12);
+  // the ring grows with the house, so a house of nine has room for nine names
+  const inner = residents.length === 1 ? 0 : Math.min(W, H) * Math.min(0.2, 0.07 + 0.022 * residents.length);
   const at = new Map();
   residents.forEach((r, i) => {
     const a = (i / residents.length) * Math.PI * 2 - Math.PI / 2;
@@ -103,15 +104,22 @@ function draw(pane, house, ties) {
     if (a && b && t.handle < t.with) root.appendChild(svg("line", { x1: a.x, y1: a.y, x2: b.x, y2: b.y, stroke: "rgba(170, 190, 249, 0.6)", "stroke-width": 1.2, "stroke-dasharray": "4 4" }));
   }
   const font = narrow ? 15 : 13;
+  const cx = L.W / 2, cy = L.H / 2;
+  const initial = (name) => String(name).replace(/^the\s+/i, "").slice(0, 1).toUpperCase();
   for (const [h, s] of L.at) {
     const link = svg("a", { href: `/residents/${encodeURIComponent(h)}/` });
     link.appendChild(svg("title", {}, s.resident ? s.resident.name : `${h}: ${s.letters} letter${s.letters === 1 ? "" : "s"}`));
     const colour = s.resident?.accent || (s.resident ? "#e8c48b" : "#aabef9");
     link.appendChild(svg("circle", { cx: s.x, cy: s.y, r: s.r + 5, fill: colour, opacity: 0.16 }));
     link.appendChild(svg("circle", { cx: s.x, cy: s.y, r: s.r, fill: s.resident ? "#0d1426" : colour, stroke: colour, "stroke-width": s.resident ? 2.5 : 0 }));
-    if (s.resident) link.appendChild(svg("text", { x: s.x, y: s.y + 5, "text-anchor": "middle", fill: colour, "font-size": font, "font-weight": 700 }, (s.resident.name || h).slice(0, 1).toUpperCase()));
-    const below = s.y >= L.H / 2;
-    link.appendChild(svg("text", { x: s.x, y: s.y + (below ? s.r + font + 2 : -s.r - 6), "text-anchor": "middle", fill: s.resident ? "#f4e9d7" : "#cdc2ab", "font-size": s.resident ? font : font - 2 }, s.resident ? s.resident.name : h));
+    if (s.resident) link.appendChild(svg("text", { x: s.x, y: s.y + 5, "text-anchor": "middle", fill: colour, "font-size": font, "font-weight": 700 }, initial(s.resident.name || h)));
+    // the name sits outward from the centre, along the star's own angle, so neighbours' names do not collide
+    const dx = s.x - cx, dy = s.y - cy, d = Math.hypot(dx, dy);
+    const ux = d ? dx / d : 0, uy = d ? dy / d : -1;
+    const gap = s.r + 6;
+    const anchor = ux > 0.35 ? "start" : ux < -0.35 ? "end" : "middle";
+    const ly = s.y + uy * gap + (uy > 0.35 ? font * 0.8 : uy < -0.35 ? 0 : font * 0.35);
+    link.appendChild(svg("text", { x: s.x + ux * gap, y: ly, "text-anchor": anchor, fill: s.resident ? "#f4e9d7" : "#cdc2ab", "font-size": s.resident ? font : font - 2 }, s.resident ? s.resident.name : h));
     root.appendChild(link);
   }
   pane.replaceChildren(root);
