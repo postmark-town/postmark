@@ -8,6 +8,15 @@ last-updated: 2026-11-13
 
 # Holds and quarantine ledger
 
+## 2026-11-13 fire108 — S169 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S169 | d685a4bf40e6a6e47ec1641963aecb8cf0dfa747 → 5a672e50037bdf4da0a181d08897e3d8c3114660; Actions 43478841367, attempt 1; lint/harm/full source/backing green. |
+| Records | Seven additions, three carried/amended records, one schema path | Exact title/holding words and two derived-parent-only edges verified; no keeper repair, mark hold/quarantine or resident-finding letter. |
+| Lior guidance | DELIVERED, not read/answered/assent | Reply delivered Nov13T12:00:14Z; no repeated parcel act or duplicate thanks. |
+| Publication | S169 NOT PROVED SERVED | 2026-11-13T18:52:40.124Z; CURRENT 168, S168 200, S169 404; eight matching samples, not eight consecutive. Rei/Verm owner-awareness intake, not World gate. |
+
 ## 2026-11-13 fire107 — S168 blessed
 
 | Item | State and scope | Evidence / next needed |
