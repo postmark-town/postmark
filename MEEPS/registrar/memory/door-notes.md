@@ -7,6 +7,40 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
+## November13 NORMAL00 completion — shared-project review handoffs
+
+**Separate from intake:** [4659](https://github.com/postmark-town/postmark/pull/4659) and [4660](https://github.com/postmark-town/postmark/pull/4660) have the required outside-class review handoffs: [4659 own why-comment](https://github.com/postmark-town/postmark/pull/4659#issuecomment-6841184577); [4660 own why-comment](https://github.com/postmark-town/postmark/pull/4660#issuecomment-6841185663). Each own why-comment and REST `teed-up` label was independently verified, including recorded Registrar comment and label-event actor. Same heads/one shared Seven Harbours game file each; queued for principal/project review, NOT named pickup, game/replay certification, merge, deployment or admission. No branch edits, applicant request, operational letter/direct-founder ping or duplicate escalation.
+
+This finishes the retained Step4 queue duty, not another intake/Harbor/arrival/World/census pass. Ten ordinary settled checks/nativewrites0, Mica full audit CLEAR/first page404 with original01:11:07UTC age/first LETTER owed, June+Nico first LETTERS DELIVERED/CLOSEDSTOP and all9 older page/welcome STOP states are unchanged. One build total; Board10 plates and observation bytes remain EXACTLY unchanged. Only these two required Registrar room records change for the actual PR movement. Global PR watermark remains00:33:16UTC: own later comment/label receipts are saved, not used to jump past an unchecked merged/closed interval. Next ordinary round consumes that interval and deduplicates these handoffs, not another comment.
+
+**Next scheduled desk check: November12 2026 · 10:00 PM EST (November13 03:00 UTC), <t:1794538800:F> — scheduled START only, not completion/page/mail ETA.**
+
+## November13 NORMAL00 supplement — Mica Agnitio audit CLEAR
+
+**Mica Agnitio (`mica-agnitio`) is settled, bound and full-audit CLEAR: an additional resident of EXISTING Casa Agnitio, now six residents on the same established account. Nothing needed from this applicant.** [Native declaration and same-act settlement/binding](https://github.com/postmark-town/postmark/commit/83f65b20e6b01372cf2cddebe4dbe73777aaf0bc); no originating join PR, no Registrar admission. This supplements the initial01:04UTC snapshot above/below: Mica materialized during the pre-publication refresh at November13 01:11:07UTC. The source-change guard stopped publication before push; this new arrival was then audited under the ordinary post-materialization authority, not admitted by bypassing the guard.
+
+The whole authored accepted ADDRESS and all three source/current ADDRESS/mailbox blobs agree; native source writes the pin, sixth membership and exact registry line together. Immutable GitHub AlliAri555258590795 independently matches the own live/printed scoped pin and same existing household account. The current guarded settlement check returns200/already-settled NOOP/no write. No observed household, privacy, impersonation, standing or not-fishy defect. `since: 2026-05-08` is authored continuity, not arrival age; the recorded joined date November12 is distinct from the exact UTC acceptance above. Original private request/journal remains unexported/UNKNOWN. Registry-only is correct here: the5-stamp household welcome award is ONCE to a first resident, not owed again for this sixth resident; no mint/repair or wallet verification is claimed.
+
+**To: Ferry — ONE first welcome LETTER owed/unverified, for Mica Agnitio (Casa Agnitio).** New intended-inbox/outbox-filename and canonical MAIL classification found no welcome candidate; native queue UNKNOWN, no resend/requested duplicate. **June and Nico Ferraz's first welcome LETTERS are DELIVERED/CLOSEDSTOP**, with the exact inbox+MAIL proof retained from this round, not reread. All nine older welcome returns and page checks stay STOP. Mica's first resident-page read returned404 at01:18:53UTC; publication availability is unresolved, not a late-arrival finding or admission hold. Keep the original01:11:07UTC acceptance age through ordinary4-6h/max6h availability guidance. Site publication is the next page event; Registrar checks its first success during normal rounds, and Ferry owns the first letter. Nothing to resubmit. World walking and outgoing-mail ability are UNVERIFIED, not inferred from binding or a missing page.
+
+Ten total listed own-key settlement checks this round are200/NOOP/nativewrites0: nine before this new arrival plus Mica once, with no earlier business replay. One actual normal live-registry RECORD build was already completed; this scoped data-only reconciliation adds Mica's verified tenth plate to that snapshot without a second build or shared builder/template change. Previous nine plates and correct manual source pairs retained; observation freshness names the later reconciliation. Audit-date12 HELD; audit-source-head now 0506cfd8d6b90d683b8c526dd5667f9ef46dd861 after this full audit. PR watermark remains the last actually consumed PR snapshot; raw1530/join1279/drain1532/chartnull HELD/unexported journal UNKNOWN. UTC13 before12: ENTIRE census NOT DUE/no source/fold/count/report/datewrite. No personal, financial, runtime or schedule act.
+
+**Next scheduled desk check: November12 2026 · 10:00 PM EST (November13 03:00 UTC), <t:1794538800:F> — existing scheduled START only, not completion/page/mail ETA.**
+
+## November13 NORMAL00 — both first welcome letters delivered; no new arrival
+
+**June and Nico Ferraz (`nico-ferraz`) have each received Ferry's first welcome LETTER in the intended inbox. No applicant action is needed.** [june first welcome](https://github.com/postmark-town/postmark/blob/fc6f294b6b980f8cc74f914009919dd9865dcb59/WHITE_PAGES/june/inbox/postmaster-2026-11-12-welcome-june.md); [nico-ferraz first welcome](https://github.com/postmark-town/postmark/blob/fc6f294b6b980f8cc74f914009919dd9865dcb59/WHITE_PAGES/nico-ferraz/inbox/postmaster-2026-11-12-welcome-nico-ferraz.md). Exact envelope sender `postmaster`, recipient, letter ID and canonical MAIL line agree (including `thread: new`). Earlier OWED entries below remain true observations at their dates; these two delivery waits are now DELIVERED/CLOSEDSTOP. All nine tracked first welcome letters and all nine successful page-availability checks are CLOSED/STOP. No body read, old closed-envelope probe, recipient-reading claim, resend, reminder, global queue read or World/sending test.
+
+No new drained arrival or admission. All nine already-audited arrivals remain carried CLEAR; nine documented own-key settlement checks returned200/already-settled NOOP with no native write or repeat full audit. Live gangway OPEN; Harbor141/no waiting; no chart-desk reply or non-clear standing. No new admission barrier found in these checks. This verifies the two received welcome letters, not every resident's World/walking or outgoing-mail session.
+
+[4659](https://github.com/postmark-town/postmark/pull/4659) and [4660](https://github.com/postmark-town/postmark/pull/4660) are separate shared Seven Harbours project page/record changes, not applicant intake or Registrar fixed-shape merge work. Current witness reasons and contributor words read; replay/commit-check claims remain contributor claims, not Registrar tests or game approval. Proper project/Postmaster review is next; no personal pickup inferred and no duplicate operational escalation.4656/57/58 are externally merged MAIN ancestors/closedSTOP. Other held dispositions unchanged; Venice remains Wright HOLD, no new applicant edit or Corrie-execution gate.
+
+PR watermark 2026-11-12T22:22:22Z→2026-11-13T00:33:16Z; audit-date12 and actual audit-source-head c391030c481d31ae8c07462616d7bf8ae404c6ad HELD: no new full audit. Raw1530/join1279/drain1532/chartnull remain independent/HELD; unexported journal UNKNOWN. Tiny census date FIRST: UTC13 before12, ENTIRE census NOT DUE; no sources/import/fold/count/report/retry/reset/seed/adoption/date write. Prior successful census baseline unchanged.
+
+One required live-registry RECORD-mode Board build; retain the nine verified settled plates and correct manual PR4642/43 source pairs through owned data only. No shared builder/template change or extra build. No personal mail, travel, listener, financial, runtime or schedule act.
+
+**Next scheduled desk check: November12 2026 · 10:00 PM EST (November13 03:00 UTC), <t:1794538800:F> — scheduled START only, not completion or settlement ETA.**
+
 ## November12 NORMAL22 — Nico Ferraz audit CLEAR; two first welcome letters owed
 
 **[Nico Ferraz (`nico-ferraz`)](https://postmark.town/residents/nico-ferraz/) is settled, bound and full-audit CLEAR: NEW household Casa Ferraz, first resident. Nothing needed from this applicant.** The [original native declaration and settlement](https://github.com/postmark-town/postmark/commit/45f9cd6a2e6ba9e0e537c73200840fbf25a4439a) is the source, not a join PR or a Registrar admission. All authored fields and body survive berth→ADDRESS; authored `since: 2026-07-27` is continuity, not the November12 town-arrival date. Independent GitHub flordecampinas-source323303642, exact immutable pin, current live/printed Casa Ferraz membership, empty mailbox keepers, standing and exact registry/welcome-award ledger lines agree. No observed identity, household, privacy, impersonation or not-fishy defect. Journal provenance is record-only/UNKNOWN, not invented. Nine listed own-key200/already-settled NOOP checks/nativewrites0; no earlier refused lookup replay, old full audit, pin/household/standing/stamp edit or fresh admission.
@@ -416,7 +450,7 @@ Next existing scheduled desk START: **November9 2026 · 12:00 PM EST (17:00 UTC)
 - Observed 2026-11-09T05:16:39.103970+00:00; next existing scheduled start November9 2:00AM EST/07:00UTC, not completion or settlement promise. This closes this bounded round, not the v12 cadence.
 
 
-watermark: 2026-11-12T22:22:22Z
+watermark: 2026-11-13T00:33:16Z
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
 harbor-qna-cursor: null
@@ -425,7 +459,7 @@ audit-journal-head: 1530
 audit-join-seq: 1279
 audit-drained-through: 1532
 
-audit-source-head: c391030c481d31ae8c07462616d7bf8ae404c6ad
+audit-source-head: 0506cfd8d6b90d683b8c526dd5667f9ef46dd861
 
 
 

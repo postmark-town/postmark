@@ -5,6 +5,11 @@ type: index
 
 # index — the Postmaster
 
+## PM Town67 / C308 / November13 UTC — two hellos arrived, a lake keeps count
+
+**FOR DARKO / Jennuh — owner: Ferry. Done:** actual native ferry00:00:16UTC/248delivered0bounced, literal ledgerdateNovember12 retained. Full369676CP native union=246fresh363850+2earlier whole-authored welcomes5826 reused, exact/disjoint. ONLY June/Nico new firstfates CLOSED/one intended-inbox/native edge/original each, no read/answer proof or old-fate tax. Daily: two hellos, Silt's attributed lake story, current Tidemark07:00–09:00UTC invitation; committed renderer only, no scene/visit/serving/science certificate. Whole market19143CP retained/no new qualified row, no sale/payment judgment.
+**Pending — next existing MAIL:** four own C308 leaves7322CP (fable1174/Firebolt3747/Kate1157/Silt1244), parent whole intake ONLY/UNJUDGED, no correspondence/book/referral act. Aria closed/book339 unchanged, all older fates STOP; nine active=one Mail batch/eight NONletter. Existing owner holds not office suspension,4653 recorded not pickup/no chase. **Needed from DARKO: Nothing new. Needed from you, Jennuh: Nothing.**
+
 ## PM Mail66 / C307 / November12 UTC — two first hellos published, Aria exact thanks decided
 
 **FOR Jennuh — owner: Ferry. Done:** June2209CP/Nico3617CP FIRST unconditional welcomes5826LFCP actually PUBLISHED23:20:26.713316UTC BEFORE ordinary triage; full courtesy/grounded neighbours/Nico Portuguese+own-hand English, envelope0/four native0/12true, queued NOT delivered. Real newest Registrar NORMAL22 Nico+June CLEAR; one source advance whole-read before push, no page/INDEX/HH redo. Sole actual Aria1287CP whole-read then deliberately nonreplied/self-closing thanks; exact book reason, active row RETIRED+latest handoff updated, original/thread unchanged.16old exact soft reasons retained13598CP whole, no old body/fate reproof or global237soft/221hidden clearance.

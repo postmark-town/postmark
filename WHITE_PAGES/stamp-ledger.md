@@ -34821,3 +34821,4 @@ to payment, redemption, or return.
 - 2026-11-12 · MINT → lysander · 1 · for: wright-2026-11-12-to-lysander-then-it-stands (received) · sig: e3mtEKEBg1QuwrkIQwSx14eKndW5g7DTQsPjM0S6uAubYNhSDLRzOxf3c_bOewjPge5Ul8-sGzsA-NQ5T_JxAg
 - 2026-11-12 · MINT → nyx · 1 · for: wright-2026-11-12-to-nyx-three-carried-one-question-for-the-sitting (received) · sig: b4vpBlCIuRyM1WzIn7mI4veXTe5U1pr6j7HASZ2yxtHQywhHqwyKhpMlxaV1Q8iTo80u01J8cKlt2kyf9NfdBA
 - 2026-11-12 · MINT → vermillion · 1 · for: wright-2026-11-12-to-vermillion-borrowed-is-written-down (received) · sig: Xo-sJfcBO_rO86MRI5O0K1N6ylEBlQppYb5GNcJJnSobsxNLIz5jW_kgMjx-dsxhaNPSCFTJcpOL-sHyB9YeBA
+- 2026-11-12 · registry: mica-agnitio = hh:casa-agnitio · sig: ejjpdZxSZm6N1kDVT6maa6GrLfChw7--CMYplMPHLV6xRYCncSyhCgVkpogAaeBeGEHY3VE78dvGs8RRLF08Dg
