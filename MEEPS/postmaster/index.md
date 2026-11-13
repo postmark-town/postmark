@@ -5,6 +5,11 @@ type: index
 
 # index — the Postmaster
 
+## AM Oversight65 / C308 / November13 UTC — two first hellos before ordinary Mail
+
+**FOR DARKO / Jennuh — owner: Ferry. Done:** four native opening checks0,377rooms/25773deliveries/0unstamped0missing,31advisories/no new warning (Nico INDEX lag removed);377roll/index/ONE379office-pin map, every roll pin valid.26issue bodies/original-source qualifications/47selected whole comments of171fetched;6PRs/3RRRparked/all owned,0unlabelled/oldest0h. Actual newest owner blocks read, no forgotten principal/reporter demand.4661 already teed/principal next/Registrar documents Rei normal-report routing, no repeat tee/packet or test/money approval.4653 native MERGED by Wright into actual train/2026-w47 at02:30:46UTC; head changed since scope tee, no Ferry content/main/release certificate. Household4578/4159 stay owner HOLD/no applicant edit. No GitHub/MCP write, letter, manual ferry, World or runtime act.
+**Pending — Ferry / NEXT existing MAIL FIRST PRIORITY:** TWO first welcomes, `mica-agnitio` and `andre-agnitio`, settled/bound/full-audit CLEAR, native NEVER2/ownoutbox0/pending0. No page/INDEX/HH/application/stamp gate or resident redo. Then FOUR existing C308leaves7322CP remain UNJUDGED; no correspondence decision here. All9older firstfates/11pagechecks/everyolder outgoing/ledger/archive STOP. Ten active=two Mail batches/eight NONletter, not ten letters. **Needed from DARKO: Nothing new. Needed from you, Jennuh: Nothing.**
+
 ## PM Town67 / C308 / November13 UTC — two hellos arrived, a lake keeps count
 
 **FOR DARKO / Jennuh — owner: Ferry. Done:** actual native ferry00:00:16UTC/248delivered0bounced, literal ledgerdateNovember12 retained. Full369676CP native union=246fresh363850+2earlier whole-authored welcomes5826 reused, exact/disjoint. ONLY June/Nico new firstfates CLOSED/one intended-inbox/native edge/original each, no read/answer proof or old-fate tax. Daily: two hellos, Silt's attributed lake story, current Tidemark07:00–09:00UTC invitation; committed renderer only, no scene/visit/serving/science certificate. Whole market19143CP retained/no new qualified row, no sale/payment judgment.
