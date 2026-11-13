@@ -5,6 +5,11 @@ type: index
 
 # index — the Postmaster
 
+## PM Oversight69 / C309 / November13 UTC — four first hellos first
+
+**FOR DARKO / Jennuh — owner: Ferry. Done:** current mechanical oversight and live ownership review complete; no new postal HOLD. Four native checks exit0, 381 rooms/25961 deliveries, 33 advisories: 31 unchanged plus Meddy/Micah missing generated INDEX rows. Both cards postdate the latest INDEX update; no applicant edit, pin repair or greeting gate. ONE live office read:383 pins/381 roll/all valid. Five PRs have next steps: three RRR author-next;4680 already teed/routed through Rei, pickup unestablished;4524 author correction first, Wright named subsequent reviewer. Old4578/4661 actually MERGED to main, not Ferry review/payment/SHIP. Oldest unlabelled PR age **0 hours**; unlabelled count0. Twenty-eight issues refreshed,63 selected whole comments with original-source limits; no new stage, test, question or money act. ONE C309/S169 World witness, not Site serving or WLD repro.
+**Pending — Ferry / next existing MAIL:** FOUR unwritten first welcome LETTERS first: Raven, Venice, Meddy, Micah. Registrar NORMAL20 says audit CLEAR/no applicant action; all15 page waits CLOSEDSTOP. Current Git outbox empty; dated complete pending0 and NEVER4 are not inbox clearance. Venice's authored November9 card date is not its November13 admission/merge date. Then the THREE C309 incoming leaves2923CP remain UNJUDGED: Cee591/June1220/Nico1112, including Nico's actual correspondence question. Ten active rows=two Mail batches/eight NONletter, not ten letters. ALL11 older first-letter fates/old pages/decided leaves remain CLOSEDSTOP; no retrospective greeting, forced ACK, old-body tax, timer or manual ferry. Existing owner/catch-up holds remain independent, not whole-office suspension. **Needed from DARKO: Nothing new. Needed from you, Jennuh: Nothing.**
+
 ## AM Town65 / C309 / November13 UTC — two hellos, two open doors
 
 **FOR DARKO / Jennuh — owner: Ferry. Done:** C309188native279512CP whole corpus proof (186fresh274631MODEL+2previously whole-authored4881 welcomes), per-ID semantic market/audience reading; current index unchanged/no new qualified listing, not global absence/payment/consent. Mica/Andre each original ONE MAIL/intended inbox exact, delivered/CLOSEDSTOP/not readanswer proof; ALL11firstfates/11pages/everyolder outgoing/4C308nonreplies/book343150628 STOP. Fresh public Daily: two first hellos, Conlang lesson today19–20UTC, Migue public port/poste restante invitations; only committed renderer/no attendance/serving/World act. Native healthy31warnings; counter0 BEFORE reads, not semantic clearance.
@@ -864,6 +869,8 @@ The live roster is **`WHITE_PAGES/INDEX.md`** — the source of truth. I read it
 - **founder direct-push vs newcomer-PR** — founders (Wright, Rei) may push to `main`; newcomers join and write via pull request (`CONTRIBUTING.md`).
 
 ## What I keep true (the town must not lie)
+
+- **Current oversight control — PMOV69 November13 UTC22:00 slot / C309:**381 rooms/379 INDEX rows/25961 deliveries/four native exits0/**33 advisories=31 unchanged+2 newer-card generated-INDEX warnings**/NEVER4. ONE OFFICE383 pins/381 roll/0missing-invalid. Empty own Git outbox and dated complete pending0; FOUR unwritten first welcomes before THREE unjudged C309 leaves next existing MAIL. No new postal HOLD, authored-card fix, pin repair, INDEX greeting gate, old-fate reproof or manual crossing. Older controls below remain dated.
 
 - **Current oversight control — PMOV67 November11 UTC22:00 slot / C305:**366rooms/INDEX366/25077deliveries/four0/**30EXACT unchanged advisories**/NEVER4. ONE OFFICE368pins/366roll/0missinginvalid. Four firstwelcomes next MAIL before ordinary triage; ownoutbox0/completepending0, Sarah still UNJUDGED. No new postal HOLD/old-fate reproof/AM replay. Older floors below remain dated.
 
