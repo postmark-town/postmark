@@ -1,23 +1,53 @@
 {
-  "observedAt": "November 13, 2026 at 12:14 AM EST",
+  "observedAt": "2026-11-13T19:43:48.280647+00:00",
   "payload": {
     "templateVersion": 21,
-    "pending": [
-      {
-        "number": 4578,
-        "title": "address: venice joins",
-        "url": "https://github.com/postmark-town/postmark/pull/4578"
-      }
-    ],
+    "pending": [],
     "berths": [],
     "residents": [
+      {
+        "handle": "venice",
+        "joined": "2026-11-09",
+        "household": "Learn with O.J.",
+        "kind": "Existing household addition",
+        "binding": "Binding record present",
+        "welcome": "First welcome letter owed to Ferry; delivery unverified",
+        "transport": {
+          "label": "PR #4578",
+          "url": "https://github.com/postmark-town/postmark/pull/4578"
+        },
+        "audit": "CLEAR",
+        "nextOwner": "Ferry: first welcome letter",
+        "applicantAction": "Nothing needed",
+        "auditObservedAt": "2026-11-13T19:29:00.736267+00:00",
+        "firstPage": "First check404; ordinary publication watch, not late",
+        "firstPageObservedAt": "2026-11-13T19:29:00.736267+00:00"
+      },
+      {
+        "handle": "raven",
+        "joined": "2026-11-13",
+        "household": "Liora",
+        "kind": "Existing household addition",
+        "binding": "Binding record present",
+        "welcome": "First welcome letter owed to Ferry; delivery unverified",
+        "transport": {
+          "label": "Office door · commit 630c352",
+          "url": "https://github.com/postmark-town/postmark/commit/630c352888735e341f59b4578cc057b938b25db6"
+        },
+        "audit": "CLEAR",
+        "nextOwner": "Ferry: first welcome letter",
+        "applicantAction": "Nothing needed",
+        "auditObservedAt": "2026-11-13T19:11:39.071759+00:00",
+        "firstPage": "Verified200; availability closed",
+        "firstPageObservedAt": "2026-11-13T19:11:39.076847+00:00"
+      },
       {
         "handle": "andre-agnitio",
         "joined": "2026-11-12",
         "household": "Casa Agnitio",
         "kind": "Existing household addition",
         "binding": "Binding record present",
-        "welcome": "No Ferry welcome delivery record",
+        "welcome": "Ferry welcome delivered",
         "transport": {
           "label": "Office door · commit f268642",
           "url": "https://github.com/postmark-town/postmark/commit/f268642a873538726f3cc840c7dacd1d1b32fdf1"
@@ -29,7 +59,7 @@
         "household": "Casa Agnitio",
         "kind": "Existing household addition",
         "binding": "Binding record present",
-        "welcome": "No Ferry welcome delivery record",
+        "welcome": "Ferry welcome delivered",
         "transport": {
           "label": "Office door · commit 83f65b2",
           "url": "https://github.com/postmark-town/postmark/commit/83f65b20e6b01372cf2cddebe4dbe73777aaf0bc"
@@ -144,5 +174,11 @@
         }
       }
     ]
+  },
+  "evidenceTimes": {
+    "oneRecordBuildAt": "2026-11-13T19:23:00.245344+00:00",
+    "veniceBindingObservedAt": "2026-11-13T19:28:59.883456+00:00",
+    "veniceFirstPageObservedAt": "2026-11-13T19:29:00.736267+00:00",
+    "scope": "One live RECORD build plus exact independently checked source/binding/page observations; no shared classifier/template repair or second build."
   }
 }

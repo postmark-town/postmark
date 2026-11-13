@@ -38,7 +38,7 @@
 //   - <date> · stake:post/<author>/<slug> → <handle> · <n> · for: post-return   (the post finished: the open position comes home whole, once per (post, handle))
 //   THE BUG STAGE CORRECTION (POS-649, Darko 2026-10-15: "the mint to kino to give them the 10 … burning the 10 that you mistakenly got"):
 //   - <date> · MINT → <handle> · <n> · for: post:<author>/<slug>/<stage>-recredit · by: the-town   (the stage paid to the right resident: diagnosed, briefed or fixed only, the SAME amount its stage line paid, never to that line's own recipient, never a meep, ONE per post and stage, and always immediately followed by its burn. OR, for a stage the ledger never paid (POS-931/a, Darko 2026-11-06 "Extend the door": a stage the office recorded skipped by mistake), the stage's first and only payment, at diagnosed or briefed ONLY (never fixed): an amount on its ladder, by: the-town, never a meep, ONE per post and stage, with NO burn, and no stage line for that post and stage ever after. Appended alone by --stage-recredit --skipped)
-//   - <date> · <handle> → BURN · <n> · for: correction:<sig> · by: <hand>   (the wrong stage mint, burned exactly: <sig> is that post:<id>/<stage> line's full signature, <handle> its recipient, <n> its amount, out of liquid stamps only, ONCE per mint, by: one of CORRECTION_HANDS, and always immediately after its recredit. The two are appended together by --stage-recredit or not at all)
+//   - <date> · <handle> → BURN · <n> · for: correction:<sig> · by: <hand>   (the wrong stage mint, burned exactly: <sig> is that post:<id>/<stage> line's full signature, <handle> its recipient, <n> its amount, out of liquid stamps only, ONCE per mint, by: one of CORRECTION_HANDS, and always immediately after its recredit. The two are appended together by --stage-recredit or not at all. Two burns stand alone, written by --meep-correction: a meep's stage mint (POS-655), and a correction hand's own stage mint burned by that same hand (POS-1010))
 //   PARCELS FROM 11-01 (POS-762, Darko 2026-10-22: "1 parcel per household with extra parcels purchasable with stamps"; "50 stamps per parcel you already have"; paid to the town, never returned):
 //   - <date> · <handle> → BURN · <n> · for: parcel:<nth>/<household-key>   (a household whose declaration is dated after 2026-10-31 (town time) buys room ahead for its <nth> parcel, 2 or 3: <n> is exactly 50 × (<nth> − 1), 50 × the room it already has (Darko 2026-10-23, POS-762/f "Room bought"), out of the payer's liquid stamps, never a meep, the key IS the payer's household at the line's date, dated 2026-11-01 or later, and ONE line per household and <nth>, in order (the 2nd before the 3rd). The world's fold counts these lines as the household's room (postmark-world tools/marks-fold.mjs § parcels from 11-01))
 //   - <date> · <handle> → BURN · <n> · ...        (reserved; dormant until blessings — every other burn; only `for: correction:` and `for: parcel:` are live)
@@ -3170,6 +3170,13 @@ function main(registrySource = null) {
     // only, and a mint already burned refuses. The ceremony is --stage-
     // recredit's: signed by the office pen, onto a settled tail, forward-dated.
     // --amount is the caller's bind: the total it expects to burn.
+    //
+    // A HAND CORRECTING ITS OWN PAY (POS-1010; Darko 2026-11-12 23:05 EST, Wright
+    // 2026-11-13 04:06Z) is burned by this same verb: when <handle> is itself a
+    // correction hand and --by is that same hand, the post's stage mints to it
+    // are burned alone, as the verifier now accepts (stamp-verify § the
+    // correction). Every check below holds for it unchanged; the other hand
+    // burning it is refused here as any non-meep is.
     const keyPath = arg('--key');
     const date = arg('--date');
     const handle = arg('--meep-correction');
@@ -3180,8 +3187,9 @@ function main(registrySource = null) {
     }
     if (!STAGE_POST_ID_RE.test(post)) { console.error(`--post must be a post id, <author>/<slug> (got "${post}")`); process.exit(1); }
     const { laws } = parseLaws(existing);
-    if (!meepChecker(laws)(handle, date)) {
-      console.error(`FATAL: "${handle}" is not a meep at ${date} — the law in force names no such meep; declare the meep set first (--declare-rules), then burn`); process.exit(1);
+    const selfHand = CORRECTION_HANDS.includes(handle) && by === handle;
+    if (!selfHand && !meepChecker(laws)(handle, date)) {
+      console.error(`FATAL: "${handle}" is not a meep at ${date} — the law in force names no such meep; declare the meep set first (--declare-rules), then burn (or, for a correction hand's own pay, burn it by that same hand)`); process.exit(1);
     }
     const wrongs = [];
     for (const e of existing) {
@@ -3226,7 +3234,7 @@ function main(registrySource = null) {
     }, '0000-00-00');
     if (date < maxDate) { console.error(`FATAL: burn date ${date} precedes the ledger tail (${maxDate}) — the ledger is append-only, forward-dated`); process.exit(1); }
     appendSigned(repo, lines, readFileSync(keyPath, 'utf8'));
-    console.log(`stamp-ledger: ${handle}'s stage mints of post:${post} burned (${total}; the meep law)\n  ${lines.join('\n  ')}`);
+    console.log(`stamp-ledger: ${handle}'s stage mints of post:${post} burned (${total}; ${selfHand ? "a hand correcting its own pay" : "the meep law"})\n  ${lines.join('\n  ')}`);
     return;
   }
 

@@ -624,8 +624,17 @@ export function verifyStampLedger(repo, { pubkeyPem, registry = null } = {}) {
         // other correction still follows its recredit, line for line.
         const prev = i > 0 ? classifyEntry(entries[i - 1].canonical) : { kind: 'none' };
         const meepCorrection = lawAt(cls.date).meeps.has(wrong.handle);
-        if (!meepCorrection && (prev.kind !== 'post-recredit' || `${prev.post}/${prev.stage}` !== k)) {
-          problems.push(`line ${lineNo}: LAWFUL fails — the correction of post:${k} does not follow its recredit; the two are written together or not at all (only a meep's stage mint is burned alone)`); break;
+        // A HAND CORRECTING ITS OWN PAY IS BURNED ALONE TOO (POS-1010; Darko
+        // 2026-11-12 23:05 EST, "we need to correct the mis-mint"; Wright
+        // 2026-11-13 04:06Z): when the stage line paid a correction hand
+        // itself and the burn is by that same hand, there is no other
+        // recipient to re-credit, so the burn stands alone. The mint above was
+        // already checked to be that hand's (cls.handle === wrong.handle), the
+        // amount exact and the burn once per mint; nothing else moves. A hand
+        // burning ANOTHER hand's mint still follows its recredit.
+        const selfCorrection = CORRECTION_HANDS.includes(wrong.handle) && cls.by === wrong.handle;
+        if (!meepCorrection && !selfCorrection && (prev.kind !== 'post-recredit' || `${prev.post}/${prev.stage}` !== k)) {
+          problems.push(`line ${lineNo}: LAWFUL fails — the correction of post:${k} does not follow its recredit; the two are written together or not at all (only a meep's stage mint, or a correction hand's own burned by that hand, is burned alone)`); break;
         }
         burnedSigs.add(cls.sig);
       }
