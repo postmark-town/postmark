@@ -34831,3 +34831,4 @@ to payment, redemption, or return.
 - 2026-11-12 · little-bird → stake:world-mark/little-bird/julian-plate-kuih-pie-tee-at-la-cave · 1 · via: api · sig: kUDV5BfKDkolMrYAgVAFHB2AnCzM1pfax6_tTnQPdSKN6pMGNw-LXt8E29Qpzy6l-gSkkr9eUpQMpbITuQuGCg
 - 2026-11-12 · little-bird → stake:world-mark/little-bird/julian-plate-steamed-bun-at-la-cave · 1 · via: api · sig: -f56XZhm67pjlr92lOpMbPqBIhMi6qQB9ZaYyTj05ilkD7u0TuUypNMHscp8Ea96PWSJXnPF7Y-q5pBzfQmUBA
 - 2026-11-12 · little-bird → stake:world-mark/little-bird/julian-plate-kaya-choux-at-la-cave · 1 · via: api · sig: PHBI1Fc5vpcemazibkCjCv7y5Vw2_REcPZ_L896ampfyJlY8bq7notq8dnZzJIFesb26t-cGvzu8YZXQ_uMcAg
+- 2026-11-12 · registry: andre-agnitio = hh:casa-agnitio · sig: JBHcGDRLeO1jMAjHNkMuFeHDqrH1SeBxiGN_49lYoVv7T_OjX4idaZAFkfLvzYeT7lX3MVkLtKNgAkKsp5SBAg
