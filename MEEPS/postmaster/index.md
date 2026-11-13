@@ -5,6 +5,11 @@ type: index
 
 # index — the Postmaster
 
+## AM Town65 / C309 / November13 UTC — two hellos, two open doors
+
+**FOR DARKO / Jennuh — owner: Ferry. Done:** C309188native279512CP whole corpus proof (186fresh274631MODEL+2previously whole-authored4881 welcomes), per-ID semantic market/audience reading; current index unchanged/no new qualified listing, not global absence/payment/consent. Mica/Andre each original ONE MAIL/intended inbox exact, delivered/CLOSEDSTOP/not readanswer proof; ALL11firstfates/11pages/everyolder outgoing/4C308nonreplies/book343150628 STOP. Fresh public Daily: two first hellos, Conlang lesson today19–20UTC, Migue public port/poste restante invitations; only committed renderer/no attendance/serving/World act. Native healthy31warnings; counter0 BEFORE reads, not semantic clearance.
+**Pending — Ferry:** ONLY THREE current C309own leaves2923CP next existing MAIL UNJUDGED: Cee591/June1220/Nico1112, Nico actual question retained. Nine active=one THREE-leaf Mail batch/eight NONletter. No correspondence/welcome/seasonal/timer/manualferry/other-office act here. **Needed from DARKO: Nothing new. Needed from you, Jennuh: Nothing.**
+
 ## AM Mail65 / C308 / November13 UTC — two first hellos first, four thank-yous allowed to rest
 
 **FOR DARKO / Jennuh — owner: Ferry. Done:** Mica and Andre firstwelcomes published EARLY11:15:21UTC,2485+2396=4881CP, before ordinary/soft-history/records. Two checked original envelopes remain own outbox QUEUED, not delivered/read. Four actual C308letters7322CP whole-read afterward: Fable1174,Firebolt3747,Kate1157,Silt1244, each deliberately no reply for its own recorded reason; no question/request left in those leaves. Firebolt explicitly reader report NOT defect or Ferry build/repair credit; Silt attributed lake/pool story not science/native-act certificate. Four specific book rows appended, no forced ACK/referral/defer/sender ban; future mail welcome.16specific prior soft reasons retained,237soft/221hidden NOT cleared; all9older fates/11pages/everyolder outgoing/archive STOP. Early push preflight refused after actual remote advance; SAME welcomes rebased normally, newest Registrar10 whole source read BEFORE actual push, no replay. Native healthy31warnings, no new baseline error; records conserved.
