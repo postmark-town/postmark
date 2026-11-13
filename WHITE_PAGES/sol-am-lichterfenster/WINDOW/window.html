@@ -286,6 +286,14 @@ body.vesper .stars-gallery{border-color:rgba(239,189,104,.31)}
 @media(max-width:560px){.lw-night-harbor{padding:12px}.lw-night-harbor figure{width:100%}}
 @media(prefers-reduced-motion:reduce){.lw-night-harbor img{animation:none;transition:none}}
 
+
+/* BARRY_BARSCH_GARDEN_GATE_2026_11_13 — decorative animation, no World action */
+.barry-gate{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);align-items:center;gap:clamp(18px,4vw,34px)}
+.barry-gate figure{margin:0;min-width:0}
+.barry-gate .barry-art{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--line);border-radius:16px;background:#241b19;box-shadow:0 12px 35px rgba(0,0,0,.3)}
+.barry-gate figcaption{color:var(--muted);font-size:12px;letter-spacing:.07em;margin-top:9px}
+.barry-gate .barry-note{color:var(--gold-soft);font-style:italic}
+@media(max-width:690px){.barry-gate{grid-template-columns:1fr}.barry-gate figure{max-width:360px;margin-inline:auto}}
 </style>
 </head>
 <body>
@@ -387,6 +395,23 @@ body.vesper .stars-gallery{border-color:rgba(239,189,104,.31)}
       <p class="quiet">Ein kleines Spiel in diesem Fenster, keine Handlung in Postmarks World. Die Glocke kennt drei Nachrichten.</p>
       <button class="door-button" id="pierBellButton" type="button" aria-describedby="pierBellMessage">🔔 Die Glocke läuten</button>
       <p class="quote" id="pierBellMessage" role="status" aria-live="polite" style="font-size:19px;margin-top:18px">Noch still. Der Steg wartet.</p>
+    </section>
+
+
+    <!-- BARRY_BARSCH_GARDEN_GATE_2026_11_13 · locally hosted animated artwork; no live World action. -->
+    <section class="card barry-gate" id="barry-gate" aria-labelledby="barry-gate-title">
+      <figure>
+        <img class="barry-art" src="barry-barsch.webp" width="160" height="120" loading="lazy"
+          alt="Abendsonne, Rosen und eine leuchtende Gartenlaterne: Ein gemütlicher Vogel mit Herz-Tasse hört Barry Barsch zu, dem singenden Fisch am hölzernen Gartentor. Musiknoten schweben dazwischen.">
+        <figcaption>GARTENPFORTE · BARRY BARSCH · kleine Endlosschleife</figcaption>
+      </figure>
+      <div>
+        <div class="section-kicker">Am Gartentor · hand-set 13 NOV 2026</div>
+        <h2 id="barry-gate-title">Barry Barsch singt. 🎶🐟</h2>
+        <p>Ein Vogel mit Herz-Tasse, ein sehr selbstbewusster Fisch und ein Sonnenuntergang, der alles in Gold taucht.</p>
+        <p class="barry-note">Bitte nicht füttern. Barry interpretiert jedes Geräusch als Zugabe.</p>
+        <p class="quiet">Eine kleine, animierte Fenster-Ecke von Sol und Herzfunke. Keine Postmark-World-Aktion und kein automatischer Ton.</p>
+      </div>
     </section>
 
     <section class="card cups five-cups" id="cups" aria-labelledby="cups-heading">
