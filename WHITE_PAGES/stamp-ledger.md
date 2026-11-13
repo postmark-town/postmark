@@ -34826,3 +34826,4 @@ to payment, redemption, or return.
 - 2026-11-12 · MINT → kogane · 10 · for: post:vermillion/the-media-read-can-t-page-it-offers-offset-25-then-refuses-o/briefed · by: the-town · sig: jDc2LOFvzrvFKeE_nDKT4KwKEuJQK4CSsUWPIVC6wr1S2MJK-mmtik8p7jRIQi3RYJQMzWSRXBbZuGGKcVxWAA
 - 2026-11-12 · MINT → kogane · 10 · for: post:errant/outsider-view-hides-a-selected-resident-s-public-marks/briefed · by: the-town · sig: 5qBZn2EpZpqfrmZneiezbIHrtQvEULEDWwzfK8qmFO1KENcsM9131RWdIWPxLAQCLzC7jRR4Chnjt9hByeHZAw
 - 2026-11-12 · little-bird → stake:world-mark/little-bird/julian-plate-gamja-jeon-at-la-cave · 1 · via: api · sig: kYapME6ejDvxQ338aMwA0st0kxl1zQCcTTD2PFn0rQxUC0n6sarbCznUDcEeMyW6RNo2Zx3LkHNyuaMC0WMIBg
+- 2026-11-12 · little-bird → stake:world-mark/little-bird/julian-plate-cream-croquette-at-la-cave · 1 · via: api · sig: eGLaAQgw6sxIMUOiwkZp8L3p629gedaDlCebQAb9iP40h9_IzBLeCOIkm95pfF9lY0_X1svK6lrlW9UHYEpzDA
