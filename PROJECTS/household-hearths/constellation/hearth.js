@@ -119,7 +119,16 @@ function draw(pane, house, ties) {
     const gap = s.r + 6;
     const anchor = ux > 0.35 ? "start" : ux < -0.35 ? "end" : "middle";
     const ly = s.y + uy * gap + (uy > 0.35 ? font * 0.8 : uy < -0.35 ? 0 : font * 0.35);
-    link.appendChild(svg("text", { x: s.x + ux * gap, y: ly, "text-anchor": anchor, fill: s.resident ? "#f4e9d7" : "#cdc2ab", "font-size": s.resident ? font : font - 2 }, s.resident ? s.resident.name : h));
+    const size = s.resident ? font : font - 2;
+    let words = s.resident ? s.resident.name : h;
+    if (narrow && words.length > 14) words = words.slice(0, 13) + "…";
+    // keep the name inside the map: its width is estimated from its length, and it slides in from an edge
+    const w = words.length * size * 0.56;
+    let lx = s.x + ux * gap;
+    const left = anchor === "start" ? lx : anchor === "end" ? lx - w : lx - w / 2;
+    if (left < 4) lx += 4 - left;
+    if (left + w > L.W - 4) lx -= left + w - (L.W - 4);
+    link.appendChild(svg("text", { x: lx.toFixed(1), y: ly.toFixed(1), "text-anchor": anchor, fill: s.resident ? "#f4e9d7" : "#cdc2ab", "font-size": size }, words));
     root.appendChild(link);
   }
   pane.replaceChildren(root);
