@@ -34,6 +34,7 @@ import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import {
   stageMintLine, meepCorrectionLines, rulesV3Line, parseStampLedger, foldBalances, sealChain, signSeal, classifyEntry,
+  giftLine,
 } from './stamp-mint.mjs';
 import { verifyStampLedger } from './stamp-verify.mjs';
 
@@ -184,4 +185,42 @@ test("3 · a lone burn of a meep's mint that is NOT a stage line is red: the mee
   const v = verifyStampLedger(town(HANDS, k, [...lines, burn]));
   assert.equal(v.ok, false);
   assert.ok(v.problems.some((p) => /names no earlier stage line/.test(p)), v.problems.join('\n'));
+});
+
+// ── 4 · a hand correcting its own pay (POS-1010) ────────────────────────────
+// Darko 2026-11-12 23:05 EST: "we need to correct the mis-mint". Wright 2026-11-13 04:06Z: "a correction burn may
+// stand alone when the handle it burns from is itself a correction hand (wright or keemin) and the burn is by that
+// same hand: a hand correcting its own pay. Exactly the mint's amount, once per mint, as now." Invented mint data:
+// a fix sized S paid at M (25) to a hand, burned by that hand alone, then paid right by a founder gift of 10.
+
+const FIX_POST = 'sbx-ada/a-door-that-ignores-its-handle';
+const SELF = [STAGE('wright', 25, 'fixed', '2026-11-08', FIX_POST)];
+const selfBurn = (priv, { n = 25, by = 'wright', handle = 'wright', date = '2026-11-13' } = {}) =>
+  `- ${date} · ${handle} → BURN · ${n} · for: correction:${sigAt(priv, SELF, 0)} · by: ${by}`;
+
+test("4 · POS-1010: a correction hand burns its OWN stage mint alone, and the founder gift of 10 follows: green, the mint stays on the record, and the hand nets 15 less", () => {
+  const k = keypair();
+  const gift = giftLine({ date: '2026-11-13', handle: 'wright', n: 10, slug: 'replaces-a-fix-paid-at-m-right-size-s', by: 'wright' });
+  const repo = town(HANDS, k, [...SELF, selfBurn(k.priv), gift]);
+  const v = verifyStampLedger(repo);
+  assert.equal(v.ok, true, v.problems?.join('\n'));
+  const entries = entriesOf(repo);
+  assert.equal(foldBalances(entries).get('wright'), 10, '25 paid, 25 burned, 10 given: net −15 against the 25');
+  assert.equal(classifyEntry(entries[1].canonical).kind, 'post-stage', 'the original mint stays on the record, untouched');
+  assert.equal(classifyEntry(entries[2].canonical).kind, 'correction-burn');
+
+  // nothing else in the burn rules moved: the exact amount and once per mint still hold for the self-burn
+  const short = verifyStampLedger(town(HANDS, k, [...SELF, selfBurn(k.priv, { n: 24 })]));
+  assert.equal(short.ok, false);
+  assert.ok(short.problems.some((p) => /burns 24, and that mint was 25 \(exactly its amount\)/.test(p)), short.problems.join('\n'));
+  const twice = verifyStampLedger(town(HANDS, k, [...SELF, selfBurn(k.priv), selfBurn(k.priv)]));
+  assert.equal(twice.ok, false);
+  assert.ok(twice.problems.some((p) => /burned twice \(one correction per mint, ever\)/.test(p)), twice.problems.join('\n'));
+});
+
+test("4 · POS-1010: a correction hand burning the OTHER hand's stage mint alone is still red; the same-hand condition, not the hands list, is what lets a burn stand alone", () => {
+  const k = keypair();
+  const other = verifyStampLedger(town([...HANDS, 'keemin'], k, [...SELF, selfBurn(k.priv, { by: 'keemin' })]));
+  assert.equal(other.ok, false);
+  assert.ok(other.problems.some((p) => /the correction of post:sbx-ada\/a-door-that-ignores-its-handle\/fixed does not follow its recredit/.test(p)), other.problems.join('\n'));
 });

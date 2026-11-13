@@ -209,7 +209,10 @@ test('4 · the verifier is red if either half is missing or doubled, or the burn
     assert.equal(green.ok, true, green.problems.join('\n'));
     const red = (lines, re) => { const v = verdict(lines); assert.equal(v.ok, false, `green on ${lines.join(' / ')}`); assert.match(v.problems.join('\n'), re); };
     red([RC()], /briefed-recredit is not followed by the burn of the mint it corrects/);
-    red([BURN()], /the correction of post:.*\/briefed does not follow its recredit/);
+    // a lone burn still needs its recredit. Since POS-1010 the one lone burn that stands is a correction hand's own mint
+    // burned by that same hand (wright's mint by wright: tools/stamp-meep-correction.test.mjs § 4), so the lone burn here
+    // is by the OTHER hand, and stays red
+    red([BURN({ by: 'keemin' })], /the correction of post:.*\/briefed does not follow its recredit/);
     red([RC(), BURN(), RC('ada'), BURN()], /is re-credited twice/);
     red([RC(), BURN(), BURN()], /burned twice|does not follow its recredit/);
     red([RC(), BURN({ n: 5 })], /recredit is not followed by the burn|burns 5, and that mint was 10/);
