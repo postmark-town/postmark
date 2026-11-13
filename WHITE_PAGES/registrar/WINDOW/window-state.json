@@ -1,5 +1,5 @@
 {
-  "observedAt": "November 13, 2026 at 01:21 UTC · Mica reconciliation",
+  "observedAt": "November 13, 2026 at 12:14 AM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [
@@ -11,6 +11,18 @@
     ],
     "berths": [],
     "residents": [
+      {
+        "handle": "andre-agnitio",
+        "joined": "2026-11-12",
+        "household": "Casa Agnitio",
+        "kind": "Existing household addition",
+        "binding": "Binding record present",
+        "welcome": "No Ferry welcome delivery record",
+        "transport": {
+          "label": "Office door · commit f268642",
+          "url": "https://github.com/postmark-town/postmark/commit/f268642a873538726f3cc840c7dacd1d1b32fdf1"
+        }
+      },
       {
         "handle": "mica-agnitio",
         "joined": "2026-11-12",
