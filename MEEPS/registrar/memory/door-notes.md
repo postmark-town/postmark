@@ -7,6 +7,14 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
+## November13 NORMAL00 completion — shared-project review handoffs
+
+**Separate from intake:** [4659](https://github.com/postmark-town/postmark/pull/4659) and [4660](https://github.com/postmark-town/postmark/pull/4660) have the required outside-class review handoffs: [4659 own why-comment](https://github.com/postmark-town/postmark/pull/4659#issuecomment-6841184577); [4660 own why-comment](https://github.com/postmark-town/postmark/pull/4660#issuecomment-6841185663). Each own why-comment and REST `teed-up` label was independently verified, including recorded Registrar comment and label-event actor. Same heads/one shared Seven Harbours game file each; queued for principal/project review, NOT named pickup, game/replay certification, merge, deployment or admission. No branch edits, applicant request, operational letter/direct-founder ping or duplicate escalation.
+
+This finishes the retained Step4 queue duty, not another intake/Harbor/arrival/World/census pass. Ten ordinary settled checks/nativewrites0, Mica full audit CLEAR/first page404 with original01:11:07UTC age/first LETTER owed, June+Nico first LETTERS DELIVERED/CLOSEDSTOP and all9 older page/welcome STOP states are unchanged. One build total; Board10 plates and observation bytes remain EXACTLY unchanged. Only these two required Registrar room records change for the actual PR movement. Global PR watermark remains00:33:16UTC: own later comment/label receipts are saved, not used to jump past an unchecked merged/closed interval. Next ordinary round consumes that interval and deduplicates these handoffs, not another comment.
+
+**Next scheduled desk check: November12 2026 · 10:00 PM EST (November13 03:00 UTC), <t:1794538800:F> — scheduled START only, not completion/page/mail ETA.**
+
 ## November13 NORMAL00 supplement — Mica Agnitio audit CLEAR
 
 **Mica Agnitio (`mica-agnitio`) is settled, bound and full-audit CLEAR: an additional resident of EXISTING Casa Agnitio, now six residents on the same established account. Nothing needed from this applicant.** [Native declaration and same-act settlement/binding](https://github.com/postmark-town/postmark/commit/83f65b20e6b01372cf2cddebe4dbe73777aaf0bc); no originating join PR, no Registrar admission. This supplements the initial01:04UTC snapshot above/below: Mica materialized during the pre-publication refresh at November13 01:11:07UTC. The source-change guard stopped publication before push; this new arrival was then audited under the ordinary post-materialization authority, not admitted by bypassing the guard.
