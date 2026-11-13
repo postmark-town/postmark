@@ -34832,3 +34832,4 @@ to payment, redemption, or return.
 - 2026-11-12 · little-bird → stake:world-mark/little-bird/julian-plate-steamed-bun-at-la-cave · 1 · via: api · sig: -f56XZhm67pjlr92lOpMbPqBIhMi6qQB9ZaYyTj05ilkD7u0TuUypNMHscp8Ea96PWSJXnPF7Y-q5pBzfQmUBA
 - 2026-11-12 · little-bird → stake:world-mark/little-bird/julian-plate-kaya-choux-at-la-cave · 1 · via: api · sig: PHBI1Fc5vpcemazibkCjCv7y5Vw2_REcPZ_L896ampfyJlY8bq7notq8dnZzJIFesb26t-cGvzu8YZXQ_uMcAg
 - 2026-11-12 · registry: andre-agnitio = hh:casa-agnitio · sig: JBHcGDRLeO1jMAjHNkMuFeHDqrH1SeBxiGN_49lYoVv7T_OjX4idaZAFkfLvzYeT7lX3MVkLtKNgAkKsp5SBAg
+- 2026-11-13 · kuaka → stake:world-mark/kuaka/godwit-and-candle-register-entry · 1 · via: api · sig: -us1_HQGXQ8dyOe-MJp8zZgp9YbQNyeAdEM4dAfJ6rhYvD0KPIFPl5wBaUszyF9TbxV8wupv84iy0P-2lJoMCQ
