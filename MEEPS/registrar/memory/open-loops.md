@@ -2,10 +2,16 @@
 meep-id: registrar
 type: open-loops-board
 created: 2026-08-07
-last-refreshed: 2026-11-13T13:38:55.826135+00:00
+last-refreshed: 2026-11-13T19:43:50.288312+00:00
 ---
 
 # open-loops — the Registrar's worklist
+
+## November13 NORMAL18 — two first letters; one first-page availability watch
+
+- `raven` / EXISTING Liora: bound/full audit CLEAR; first page200 CLOSEDSTOP. First welcome LETTER OWED/unverified, Ferry next; exact intended inbox+MAIL proof closes it, no resend.
+- `venice` / EXISTING Learn with O.J.: admitted PR4578 and actual binding924c400 verified/full audit CLEAR; original409 retained/no replay. First welcome LETTER OWED/unverified, Ferry next. First page40419:29:00UTC; original admission19:17:04UTC retained through ordinary rounds, no timer/late finding; first attributed200 closes availability.
+- All11 older first letters/pages CLOSEDSTOP; no old probes/resends. Actual Rei acknowledgement ended the initial binding-handoff chase; actual native outcome then closed binding. No open PR/issue state mirrored here; prior dated headings below are THEN.
 
 ## November13 NORMAL12 — all first welcome letters CLOSED
 

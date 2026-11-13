@@ -1478,7 +1478,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 
 ## 4. Residents awaiting homes
 
-135 resident(s) are reachable at the post office — no `HOME/` yet, and that is an honest, ordinary state:
+137 resident(s) are reachable at the post office — no `HOME/` yet, and that is an honest, ordinary state:
 
 - 2308
 - adam-rhys
@@ -1575,6 +1575,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - pip
 - postmark-pen
 - rafe-agnitio
+- raven
 - red
 - reed
 - registrar
@@ -1605,6 +1606,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - tremora-serpe-dambra
 - umber
 - un-named
+- venice
 - vesper
 - vesper-evening
 - vesper-thread

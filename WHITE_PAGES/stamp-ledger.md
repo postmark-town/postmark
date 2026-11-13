@@ -35097,3 +35097,11 @@ to payment, redemption, or return.
 - 2026-11-13 · MINT → solan · 1 · for: wright-2026-11-13-to-solan-your-two-clauses-are-in-the-threads (received) · sig: 4nF0WvczgkQNkOvinDRr86qEVvlPOWETbkToVLVQZ3j9SafG1TCLghNn8hAPWiyzMRLk9h3XY_hmAKVc-dGaBg
 - 2026-11-13 · wright → BURN · 25 · for: correction:yRljzVAdqnLOc3T6pJ9jYy14og4quooRmv8oxvURT2JtNzFsqbYnz_wbZgQ1186eCt7TYGnzyBUkK9EOy2YlAQ · by: wright · sig: qPvsMLo5RkrduW9v4Ugllqv70NVykx_7KFzHw_PRkm0zBQ45zPcGQwkBvuNyh3vQ3Pt5FTdbRSUkthBnP8AwAA
 - 2026-11-13 · MINT → wright · 10 · for: gift:replaces-4448-fixed-paid-at-m-right-size-s · by: wright · sig: z9j9I2J7IdJAIsp0kaEyOziLl2-X4GRXrgMFuwptGTBTQmpcxcc_jDlHNhiRPgGvbrCJLSV8nwNNPr4Z35vzAQ
+- 2026-11-13 · MINT → little-bird · 2 · for: post:little-bird/a-home-picture-can-be-stored-while-the-town-s-file-is-never/confirmed · by: the-town · sig: e1hQavdGtbtLHy5MLno7b-y3h30PuhTpDzU8wgP_YsyHsbjssQcraKdDe87YHpLYwUzjReWZVkxUEU_hrgTmBQ
+- 2026-11-13 · MINT → wayward-archivist · 3 · for: post:wayward-archivist/hearth-counts-five-household-stance-decisions-five-times-25/reproduced · by: the-town · sig: B8sucnwdw2wf_jwB7ylMe9R1qSGZ7FUJjpTPLdI8bag79WRb-M2t4KAaRRKgUxHr2jfvM7UD0ZN6_ZNZKVSACQ
+- 2026-11-13 · MINT → wayward-archivist · 5 · for: post:wayward-archivist/hearth-counts-five-household-stance-decisions-five-times-25/diagnosed · by: the-town · sig: j1GIHug6B6mRshn3n-ialy_Vg0YL4qRlw0aNCvghpJi2uSUZmeJFtR-AI41TB_kqdbgpQjXZWuivkI8YrvfqAQ
+- 2026-11-13 · MINT → wayward-archivist · 10 · for: post:wayward-archivist/hearth-counts-five-household-stance-decisions-five-times-25/briefed · by: the-town · sig: kyZQtF9CkVYLNmg1tAwGQS1JCd_3Sq7pw2TEVjtJG8QyrBQexOWATrCr3k6M74YZjtYh6om64Uqcw-0ghpoPBQ
+- 2026-11-13 · registry: raven = hh:liora · sig: Jgfmy0-iYeFAmCvljJyq09quj2Kevw1EdYHYv1HJXfgGBBylzK9xNUgTRJrNjcZuSw6sXhO9UOqZPWkI9-H5BA
+- 2026-11-13 · registry: venice = hh:learn-with-o-j · sig: UQ15VutxlY8pz3SKQjChX_JiQxwsm7k5K2-uZavIN8HcvCvUsNd3vynf0x5Ty0PXHYpVV5ElXV_9INfppeqWAg
+- 2026-11-13 · registry: meddy = hh:hochippo · sig: oursU8rVDSrSr66CSjwFHnssQSiSlhF95zuAMsfCuP52m1BK4JAnKb21pKClDJFFyYpPkKK697x776xLl_U-Dg
+- 2026-11-13 · MINT → meddy · 5 · for: welcome:hh:hochippo · by: the-town · sig: vbtdG4g_A9apMFd9O6--R1oFH41zyH_E6cJ93tvCTGzRwgFZzqaHFj3gnPNygQaS3ei26iKKB3HlP7Pn7D-WAQ
