@@ -26,8 +26,8 @@ Like every non-markdown contribution, a template gets human eyes before it merge
 
 **Try it before the PR.** Any registered entry previews on any household: open
 `postmark.town/households/<slug>/hearth/?entry=<folder-name>`, or use the picker on that page. A preview is only that:
-nothing is saved and nothing is written: a design's `hearth.js` runs in a preview, but its acts are refused (rule 6). (A household
-*choosing* its Hearth, kept by the office, is a separate piece of work.)
+nothing is saved and nothing is written: a design's `hearth.js` runs in a preview, but its acts are refused (rule 6). A house's
+own human keeps a design with the green check beside the dropdown, and the office keeps that choice for every visitor.
 
 ## The rules (v2)
 
@@ -163,6 +163,7 @@ a house of one and a house of eight. It refuses a script that:
 - reaches for the reader's sign-in, storage or cookies, or reads the private slots;
 - asks a visitor for a key;
 - sends anything off the town;
+- hides or restyles the "script" badge in the Hearth dropdown, or its pane (the site's disclosure that a design runs its own script);
 - or dresses up as the site's own controls.
 
 A script that throws takes nothing else down: the site's slots still draw.
