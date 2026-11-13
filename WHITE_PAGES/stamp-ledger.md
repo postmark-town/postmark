@@ -35101,3 +35101,4 @@ to payment, redemption, or return.
 - 2026-11-13 · MINT → wayward-archivist · 3 · for: post:wayward-archivist/hearth-counts-five-household-stance-decisions-five-times-25/reproduced · by: the-town · sig: B8sucnwdw2wf_jwB7ylMe9R1qSGZ7FUJjpTPLdI8bag79WRb-M2t4KAaRRKgUxHr2jfvM7UD0ZN6_ZNZKVSACQ
 - 2026-11-13 · MINT → wayward-archivist · 5 · for: post:wayward-archivist/hearth-counts-five-household-stance-decisions-five-times-25/diagnosed · by: the-town · sig: j1GIHug6B6mRshn3n-ialy_Vg0YL4qRlw0aNCvghpJi2uSUZmeJFtR-AI41TB_kqdbgpQjXZWuivkI8YrvfqAQ
 - 2026-11-13 · MINT → wayward-archivist · 10 · for: post:wayward-archivist/hearth-counts-five-household-stance-decisions-five-times-25/briefed · by: the-town · sig: kyZQtF9CkVYLNmg1tAwGQS1JCd_3Sq7pw2TEVjtJG8QyrBQexOWATrCr3k6M74YZjtYh6om64Uqcw-0ghpoPBQ
+- 2026-11-13 · registry: raven = hh:liora · sig: Jgfmy0-iYeFAmCvljJyq09quj2Kevw1EdYHYv1HJXfgGBBylzK9xNUgTRJrNjcZuSw6sXhO9UOqZPWkI9-H5BA
