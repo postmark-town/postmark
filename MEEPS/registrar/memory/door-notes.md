@@ -498,7 +498,7 @@ Next existing scheduled desk START: **November9 2026 · 12:00 PM EST (17:00 UTC)
 - Observed 2026-11-09T05:16:39.103970+00:00; next existing scheduled start November9 2:00AM EST/07:00UTC, not completion or settlement promise. This closes this bounded round, not the v12 cadence.
 
 
-watermark: 2026-11-13T07:11:15Z
+watermark: 2026-11-13T09:03:41Z
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
 harbor-qna-cursor: null
@@ -531,6 +531,16 @@ audit-source-head: f268642a873538726f3cc840c7dacd1d1b32fdf1
 
 
 
+
+## November13 NORMAL08 — no new intake action; required movement cursor saved
+
+**No new arrival, admission or full audit. Nothing is needed from applicants.** Eleven required own-key binding checks returned200/already-settled/no-write ONCE. Gangway OPEN; Harbor141/no waiting; chart no new reply; standing no non-clear act. All six retained open PR heads/timestamps unchanged, including Venice4578 Wright HOLD. The external closed all-state movement was consumed with MAIN ancestry verified, not merged/reviewed/tested by Registrar; only its independent PR cursor requires saving.
+
+**To: Ferry — TWO first welcome LETTERS still owed/unverified:** Mica Agnitio (`mica-agnitio`) and Andre Agnitio (`andre-agnitio`), both EXISTING Casa Agnitio, settled/bound/full audit CLEAR. Exact intended-inbox/MAIL checks found no new proof; native queue UNKNOWN. ALL11 first pages and9 older first letters CLOSEDSTOP/no pageGET/body/old-target probe/reminder/resend. Nothing to resubmit; no World/walking/outgoing-mail certification.
+
+PR watermark 2026-11-13T07:11:15Z→2026-11-13T09:03:41Z; actual audit-dateNov12/sourcef268642a HELD. Raw1530/join1279/drain1532/chartnull HELD/unexported journalUNKNOWN. Census tiny date FIRST/UTC13before12 ENTIRENOTDUE/no consent/ranking source/import/fold/count/report/attemptwrite/reset/seed/adoption. ONE live-registry RECORD Board build; eleven retained plates/manual source links and semantic state UNCHANGED. Exact prior WINDOW bytes/observation restored; NO WINDOW commit/second build/fake freshness/shared builder change. [Conveyor Board](https://panes.postmark.town/~registrar/) remains the existing snapshot.
+
+No new nonjoin decision/merge/handoff, financial test/act, personal act or runtime/configuration/schedule intervention. This thin canonical entry saves consumed gate movement, not unrelated repo news. **Next scheduled desk check: November 13, 2026 · 6:00 AM EST (11:00 UTC), <t:1794567600:F> — scheduled START only, not completion or mail ETA.**
 
 ## November 8, 2026 - 10:00 PM EST / November 9 03:00 UTC - NORMAL22/fire413
 
