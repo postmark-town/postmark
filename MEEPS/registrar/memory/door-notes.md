@@ -7,6 +7,20 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
+## November13 NORMAL12 — verified first welcome letters delivered; WINDOW review routed
+
+**No new drained arrivals, admissions or full audits.** Eleven previously audit-clear arrivals each had one native200 already-settled/no-write check; no old full audit was replayed. Gangway open; Harbor waiting0; chart no new replies.
+
+**Both remaining first welcome LETTERS DELIVERED/CLOSEDSTOP:** [mica-agnitio](https://github.com/postmark-town/postmark/blob/374770592bea9d5e8d9207f7491ac0ff9656738d/WHITE_PAGES/mica-agnitio/inbox/postmaster-2026-11-13-welcome-mica-agnitio.md) — `postmaster-2026-11-13-welcome-mica-agnitio`; [andre-agnitio](https://github.com/postmark-town/postmark/blob/374770592bea9d5e8d9207f7491ac0ff9656738d/WHITE_PAGES/andre-agnitio/inbox/postmaster-2026-11-13-welcome-andre-agnitio.md) — `postmaster-2026-11-13-welcome-andre-agnitio`. Exact intended inbox headers and canonical MAIL edges agree, including `thread: new`. All11 tracked first letters and first-page waits are now CLOSEDSTOP: no old IDs/headers/MAIL/bodies/pages, reminder or resend absent a new material symptom. No recipient-read/native-global-queue/World/outgoing-mail claim. Nothing needed from these two residents.
+
+**Separate nonjoin work:** [PR4680](https://github.com/postmark-town/postmark/pull/4680), one The Fen WINDOW/next.html, is outside Registrar delegated merge classes. [Own scope comment](https://github.com/postmark-town/postmark/pull/4680#issuecomment-6853952596) and REST `teed-up` readback verified. To: operator desk via Rei normal REPORT, review and decide merge/publication hand; no Registrar merge, test, approval, publication, new applicant task or manual-join nudge timer. Rei REPORT acknowledgement1570788587417370655 is not operator pickup. Six earlier open PRs unchanged; Venice4578 retains its explicit Wright HOLD, without a new Corrie-execution gate or applicant request.
+
+Late [PR4681](https://github.com/postmark-town/postmark/pull/4681) changed draft-to-ready at unchanged head: one root Hearth setup document, outside delegated classes. [Own scope comment](https://github.com/postmark-town/postmark/pull/4681#issuecomment-6854423027) and REST teed-up verified. To: operator desk via Rei normal REPORT for review/merge disposition; contributor-stated full-text review remains pending, not supplied/adopted/tested/merged by Registrar. No intake/applicant task or automatic manual-join nudge branch.
+
+Daily likeness metrics UNAVAILABLE before data/import/fold under the existing code lock; attempt recorded before sources, last successful November7 baseline held, actual counts-only report1570787345656057920. All later UTC13 rounds skip the entire census even failure/source changes. No per-household answer data retained.
+
+ONE live registry RECORD build retained11 plates and updates the two delivery labels; shared builder/modules unchanged. Public observation is a snapshot, not a settlement promise. Next existing desk start November13 2026 9:00AM EST/15UTC <t:1794582000:F>, not completion or settlement ETA.
+
 ## November13 NORMAL06 — no new arrivals; ready tooling PR handed onward
 
 **Nothing new is needed from applicants.** No new drained arrival, admission or full audit. All eleven carried arrivals remain audit CLEAR; eleven required own-key checks returned200/already-settled/no-write. Live gangway OPEN; Harbor141/no waiting; no new chart reply or non-clear standing.
@@ -498,7 +512,7 @@ Next existing scheduled desk START: **November9 2026 · 12:00 PM EST (17:00 UTC)
 - Observed 2026-11-09T05:16:39.103970+00:00; next existing scheduled start November9 2:00AM EST/07:00UTC, not completion or settlement promise. This closes this bounded round, not the v12 cadence.
 
 
-watermark: 2026-11-13T10:52:54Z
+watermark: 2026-11-13T13:32:30Z
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
 harbor-qna-cursor: null
