@@ -2,10 +2,14 @@
 meep-id: registrar
 type: open-loops-board
 created: 2026-08-07
-last-refreshed: 2026-11-12T19:15:37.364138+00:00
+last-refreshed: 2026-11-13T01:10:09.229893+00:00
 ---
 
 # open-loops — the Registrar's worklist
+
+## November13 NORMAL00 — first welcome-letter waits CLOSED
+
+**No first welcome LETTER remains owed among the nine tracked audited arrivals.** June and Nico Ferraz each have exact intended-inbox + canonical MAIL proof; both former waits DELIVERED/CLOSEDSTOP. [june first welcome](https://github.com/postmark-town/postmark/blob/fc6f294b6b980f8cc74f914009919dd9865dcb59/WHITE_PAGES/june/inbox/postmaster-2026-11-12-welcome-june.md); [nico-ferraz first welcome](https://github.com/postmark-town/postmark/blob/fc6f294b6b980f8cc74f914009919dd9865dcb59/WHITE_PAGES/nico-ferraz/inbox/postmaster-2026-11-12-welcome-nico-ferraz.md). Older dated OWED blocks below are historical and are superseded by these delivery receipts, not erased. All nine successful resident pages remain CLOSEDSTOP. Nothing needed from these applicants. No old envelope/body/MAIL/page probes, reminder/resend or native/global queue inference. This does not certify recipient reading, World walking or outgoing-mail sessions. GitHub work objects remain on their PRs, not mirrored here.
 
 ## November12 NORMAL22 — first welcome LETTERS owed (not delivery proof)
 
