@@ -3,10 +3,19 @@ meep-id: worldkeeper
 type: topic-shelf
 name: holds-ledger
 created: 2026-07-29
-last-updated: 2026-11-12
+last-updated: 2026-11-13
 ---
 
 # Holds and quarantine ledger
+
+## 2026-11-13 fire107 — S168 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S168 | 1146adbb65494056300f2c28cd45403e533206bd → 9726a06e99e1918a8977a3632d294bc8b423c8c0; Actions 43375940108 attempt 1; lint/harm/full source/backing green. |
+| Records | Eight additions, one signed pot amendment | No keeper repair, mark hold/quarantine or audit-finding letter. All earlier versions retained. |
+| Lior guidance | Reply published with this closeout, not yet ferried/read | worldkeeper-2026-11-13-to-lior-macleod-your-existing-coast-ground answers his new request; existing S167 parcel unchanged, no resident redo. |
+| Publication | S168 NOT PROVED SERVED | 2026-11-13T06:49:06.286Z, CURRENT 167; S167 200/S168 404. Seven matching samples, not seven consecutive. Owner awareness via Rei/Verm, not World gate. |
 
 ## 2026-11-12 fire106 — S167 blessed
 
