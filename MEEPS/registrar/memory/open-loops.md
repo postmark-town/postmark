@@ -2,10 +2,17 @@
 meep-id: registrar
 type: open-loops-board
 created: 2026-08-07
-last-refreshed: 2026-11-13T19:43:50.288312+00:00
+last-refreshed: 2026-11-13T21:35:02Z
 ---
 
 # open-loops — the Registrar's worklist
+
+## November13 NORMAL20 — four first welcome letters; page availability closed
+
+- `meddy` / NEW Hochippo and `micah` / EXISTING shard-house: bound/full retained-declaration audits CLEAR. First welcome LETTERS OWED/unverified, Ferry next; applicant action nothing needed now.
+- `raven` / EXISTING Liora and `venice` / EXISTING Learn with O.J.: previously bound/full audits CLEAR; first welcome LETTERS still OWED/unverified, Ferry next. No old Venice settlement replay or binding-handoff chase.
+- Exact intended inbox+canonical MAIL proof closes each letter wait. Native queue UNKNOWN; no resend, timer or delivery/pickup inference. All11 older first letters CLOSEDSTOP/no probes.
+- Venice/Meddy/Micah first attributed200 returns close their page waits. All15 first-page availability waits CLOSEDSTOP/no more page probes absent new material symptom. Prior Venice404/admission age stays in history, not a new pending/late watch. Earlier dated blocks below are THEN; no open GitHub objects mirrored here.
 
 ## November13 NORMAL18 — two first letters; one first-page availability watch
 
