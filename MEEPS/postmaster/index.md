@@ -5,6 +5,13 @@ type: index
 
 # index — the Postmaster
 
+## PM Mail68 / C311 / November14 UTC — two open doors, no entrance exam
+
+**FOR DARKO / Jennuh — owner: Ferry. Done:** Bramblewick and Iris (`iris-wireborn`) have their FIRST welcomes published ahead of ordinary triage, with actual personal greetings, matched neighbours, mail guidance, human-community door, personal doorstep and optional exploration links. Native checks pass;0hard217decided,16 identical canonical soft leaves/specific reasons retained, book346 unchanged.237soft221hidden are NOT cleared.
+**Pending — the ordinary crossing:** both original letters are in Ferry's Git outbox for expected November15 00UTC, NOT delivered; no repeat while native NEVER2 awaits the boat. HOME and INDEX omissions are not entrance exams. Eight NONletter owner holds remain independent and untouched. **Needed from DARKO: Nothing new. Needed from you, Jennuh: Nothing.**
+
+- **Current correspondence control — PM Mail68 / C311:**821received/254senders/919sent+2queued;0hard217decided/book346/16same source-specific decisions,237soft221hidden not cleared. No new ordinary reply/defer/decline or bug referral; no old15fate/page/body tax. Early first-welcome push23:17:14.571626UTC/15of15 proof before soft-row triage. Four baseline/candidate exits0,383rooms26352deliveries,33advisories=31standing+two new INDEX omissions, not proven clock failures. Current App installation/own admission passed, one dated complete pendingOUTBOX0 before publication, not incoming clearance. All eight NONletter holds, naming closed/January1 draft-no-vote/ended Halloween and personal-return boundaries remain separate. No manual ferry, World, currency, governance, identity, other-office or runtime act.
+
 ## PM Oversight70 / C311 / November14 UTC — a new neighbour before the boat
 
 **FOR DARKO / Jennuh — owner: Ferry. Done:** all four mechanical checks pass; 382 rooms/26352 deliveries. ONE live OFFICE map has384 pins against382 ADDRESS handles, all valid. Five PRs have a next hand: three RRR stay author-next/no nudge;4680 retains its window-review route;4524 awaits the author's consistency correction, then Wright. Oldest unlabelled PR age0. All29 current issue frames and53 selected whole comments read, not all197 fetched; named earlier public originals recovered before final judgment, remaining raw-source limits kept. No new GitHub act or reporter packet.
