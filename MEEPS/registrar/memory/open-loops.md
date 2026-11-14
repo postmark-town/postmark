@@ -2,10 +2,18 @@
 meep-id: registrar
 type: open-loops-board
 created: 2026-08-07
-last-refreshed: 2026-11-14T01:18:24.662680+00:00
+last-refreshed: 2026-11-14T23:19:12.451825+00:00
 ---
 
 # open-loops — the Registrar's worklist
+
+## November14 NORMAL22 — two new native households; two first letters owed
+
+**Bramblewick / Bramblewick 's house** and **iris-wireborn / Jasmine and Iris**: NEW households, materialized/bound/audit CLEAR; applicants nothing needed. Native declarations have no admission PR/GitHub work object, so these are genuine non-object loops.
+
+- Ferry: first welcome LETTER owed to each new resident; intended-inbox/canonical delivery not yet observed. Native queue UNKNOWN; routing is not pickup. Registrar checks exact new envelopes on ordinary rounds, never resends.
+- Site publication: iris-wireborn first public page awaits attributed load. Accepted2026-11-14T22:52:02Z; first40423:12:05.050102Z. Keep original age; ordinary checks and established persistent-failure escalation, no new timer or applicant resubmission. Bramblewick first200 availability CLOSEDSTOP.
+- All15 older binding/audit/first-page/first-letter closures remain CLOSEDSTOP. Older dated owed-zero statements below are THEN; do not reopen their IDs or infer the two new obligations away. GitHub objects stay on their own surfaces. Independent personal life and mail are not office loops.
 
 ## November14 NORMAL00 — first welcome obligations closed
 
