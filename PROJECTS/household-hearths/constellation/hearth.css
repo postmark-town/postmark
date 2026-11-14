@@ -1,0 +1,58 @@
+/* The constellation: the house under a night sky, its ties drawn as a star map by its own script (hearth.js), the stamps at a glance beside it. */
+:root {
+  --hx-ink: #cdc2ab; --hx-warm: #f4e9d7; --hx-accent: #e8c48b;
+  --hx-glass: rgba(13, 20, 38, 0.66); --hx-hair: rgba(232, 196, 139, 0.22);
+  --hx-radius: 14px;
+  --star: #aabef9;
+  background-color: #070b15;
+  background-image: radial-gradient(1.3px 1.3px at 12% 18%, rgba(255, 246, 220, 0.85), transparent), radial-gradient(1px 1px at 63% 42%, rgba(255, 255, 255, 0.6), transparent), radial-gradient(1.5px 1.5px at 82% 12%, rgba(232, 196, 139, 0.8), transparent), radial-gradient(1px 1px at 37% 77%, rgba(170, 190, 249, 0.7), transparent);
+  background-size: 230px 190px;
+  border-radius: 16px;
+  padding: 1.4em 1.5em 1.8em;
+}
+
+.sky { display: grid; gap: 1.4em; }
+h2 { font-family: var(--pm-serif); font-weight: 600; }
+.head { margin: 0; font-size: 1.45rem; color: var(--hx-warm); }
+
+.crest { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 0.8em 1.5em; padding-bottom: 1em; border-bottom: 1px solid var(--hx-hair); }
+.crest hearth-house { flex: 1 1 22em; padding: 0; }
+.crest hearth-house p:nth-of-type(2) { font-size: clamp(2rem, 5vw, 3rem); text-shadow: 0 0 24px rgba(170, 190, 249, 0.35); }
+
+/* the mail is its own panel, so it is gone whole for a reader who is not the house */
+hearth-mail { background: var(--hx-glass); border: 1px solid var(--hx-hair); border-radius: var(--hx-radius); padding: 1em 1.15em; }
+
+.field { display: grid; grid-template-columns: minmax(0, 1.9fr) minmax(16em, 1fr); gap: 1.4em; align-items: start; }
+
+/* the wide panel: a deeper patch of sky, where the script draws the ties */
+.ties { display: grid; gap: 1em; align-content: start; padding: 1.2em 1.3em 1.4em; border: 1px solid var(--hx-hair); border-radius: var(--hx-radius); min-width: 0;
+  background-image: radial-gradient(1px 1px at 20% 30%, rgba(255, 255, 255, 0.75), transparent), radial-gradient(1.4px 1.4px at 70% 65%, rgba(170, 190, 249, 0.85), transparent), radial-gradient(ellipse at 50% 40%, rgba(28, 44, 79, 0.75), rgba(7, 11, 21, 0.55) 72%);
+  background-size: 140px 120px, 190px 160px, 100% 100%; }
+.ties hearth-pane { min-width: 0; }
+.quiet { margin: 0.4em 0 0; font-style: italic; text-align: center; color: var(--hx-ink); }
+.ties hearth-ties h2 { display: none; }
+hearth-ties li { font-size: 0.95rem; }
+hearth-ties li::before { content: "✦"; color: var(--star); margin-right: 0.55em; text-shadow: 0 0 8px rgba(170, 190, 249, 0.8); }
+
+.glance { display: grid; gap: 1.3em; padding: 1.1em 1.2em; border: 1px solid var(--hx-hair); border-radius: var(--hx-radius); background: var(--hx-glass); min-width: 0; }
+.glance hearth-stamps { background: none; border: 0; padding: 0; }
+.glance hearth-stamps-went h2 { font-size: 1.05rem; }
+
+hearth-residents > div { grid-template-columns: repeat(auto-fill, minmax(15em, 1fr)); }
+hearth-residents article { box-shadow: 0 0 26px rgba(170, 190, 249, 0.1); }
+
+.more { background: var(--hx-glass); border: 1px solid var(--hx-hair); border-radius: var(--hx-radius); padding: 1em 1.1em; min-width: 0; }
+.more hearth-happened { background: none; border: 0; padding: 0; }
+.more hearth-town { margin-bottom: 1.2em; }
+
+/* fewer small words: the grey line under each heading only explains it */
+[data-hearth-part="caption"] { display: none; }
+
+/* the house's own view: its stars a touch brighter, as if the lamp were lit */
+:root[data-hearth-view="owner"] .ties { border-color: rgba(232, 196, 139, 0.45); }
+
+@media (max-width: 900px) {
+  :root { padding: 1em 0.8em 1.3em; border-radius: 10px; }
+  .field { grid-template-columns: minmax(0, 1fr); }
+  .ties { padding: 0.9em 0.7em 1em; }
+}
