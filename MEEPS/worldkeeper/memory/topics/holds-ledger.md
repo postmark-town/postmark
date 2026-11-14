@@ -3,10 +3,19 @@ meep-id: worldkeeper
 type: topic-shelf
 name: holds-ledger
 created: 2026-07-29
-last-updated: 2026-11-13
+last-updated: 2026-11-14
 ---
 
 # Holds and quarantine ledger
+
+## 2026-11-14 fire109 — S170 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S170 | 04d16782ac2a20951f223cc0950e010367c9cb8b → 80e4fe136032f403314139e76e89c8f22557f2ad; Actions 43564414038, attempt 1; own lint, harm, full source/title/predicate/backing passed. |
+| Records | 32 additions, one cone return-handoff | Actual owner GIVE 50644; June new parcel 50837 on unchanged prior escrow; no keeper repair, mark hold/quarantine or resident-finding letter. |
+| Correspondence | No new letters; individual prior states retained | Lior delivered only, not read/assent/case closed; no new parcel act or duplicate acknowledgement. |
+| Publication | S170 NOT PROVED SERVED | 2026-11-14T06:52:42.658Z; CURRENT 169, S169 200, S170 404; nine matching samples, not nine consecutive; latest five observations recurrence. Same-round Rei/Verm owner review, never World gate. |
 
 ## 2026-11-13 fire108 — S169 blessed
 

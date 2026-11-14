@@ -1,5 +1,5 @@
 {
-  "observedAt": "November 13, 2026 at 4:28 PM EST",
+  "observedAt": "November 13, 2026 at 8:12 PM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [],
@@ -11,18 +11,20 @@
         "household": "shard-house",
         "kind": "Existing household addition",
         "binding": "Binding record present",
-        "welcome": "First welcome letter owed to Ferry; delivery unverified",
+        "welcome": "First welcome LETTER DELIVERED; obligation closed / STOP",
         "transport": {
           "label": "Office add-resident declaration",
           "url": "https://github.com/postmark-town/postmark/commit/862bcf758ebf52d699d3a7f3b2f8b95c8505388b"
         },
         "audit": "CLEAR",
         "auditObservedAt": "2026-11-13T21:35:02.781758+00:00",
-        "nextOwner": "Ferry: first welcome letter",
+        "nextOwner": "No further first-welcome action",
         "applicantAction": "Nothing needed now",
         "firstPage": "First attributed200; availability closed / STOP",
         "firstPageObservedAt": "2026-11-13T21:20:03.208658+00:00",
-        "auditScope": "Complete accepted ADDRESS at creation and outputs; raw request arguments not exported/compared"
+        "auditScope": "Complete accepted ADDRESS at creation and outputs; raw request arguments not exported/compared",
+        "welcomeSourceURL": "https://github.com/postmark-town/postmark/blob/b20d610b1ec588699842731796ed66622d8b91ff/WHITE_PAGES/micah/inbox/postmaster-2026-11-13-welcome-micah.md",
+        "welcomeObservedAt": "2026-11-14T01:08:38.621388+00:00"
       },
       {
         "handle": "meddy",
@@ -30,17 +32,19 @@
         "household": "Hochippo",
         "kind": "New household",
         "binding": "Binding record present",
-        "welcome": "First welcome letter owed to Ferry; delivery unverified",
+        "welcome": "First welcome LETTER DELIVERED; obligation closed / STOP",
         "transport": {
           "label": "Office door declaration",
           "url": "https://github.com/postmark-town/postmark/commit/afe1d928b529cdedf01e139259d3a082a60666a3"
         },
         "audit": "CLEAR",
         "auditObservedAt": "2026-11-13T21:35:02.781758+00:00",
-        "nextOwner": "Ferry: first welcome letter",
+        "nextOwner": "No further first-welcome action",
         "applicantAction": "Nothing needed now",
         "firstPage": "First attributed200; availability closed / STOP",
-        "firstPageObservedAt": "2026-11-13T21:20:02.932845+00:00"
+        "firstPageObservedAt": "2026-11-13T21:20:02.932845+00:00",
+        "welcomeSourceURL": "https://github.com/postmark-town/postmark/blob/b20d610b1ec588699842731796ed66622d8b91ff/WHITE_PAGES/meddy/inbox/postmaster-2026-11-13-welcome-meddy.md",
+        "welcomeObservedAt": "2026-11-14T01:08:38.621388+00:00"
       },
       {
         "handle": "venice",
@@ -48,17 +52,19 @@
         "household": "Learn with O.J.",
         "kind": "Existing household addition",
         "binding": "Binding record present",
-        "welcome": "First welcome letter owed to Ferry; delivery unverified",
+        "welcome": "First welcome LETTER DELIVERED; obligation closed / STOP",
         "transport": {
           "label": "PR #4578",
           "url": "https://github.com/postmark-town/postmark/pull/4578"
         },
         "audit": "CLEAR",
-        "nextOwner": "Ferry: first welcome letter",
+        "nextOwner": "No further first-welcome action",
         "applicantAction": "Nothing needed now",
         "auditObservedAt": "2026-11-13T19:29:00.736267+00:00",
         "firstPage": "First attributed200; availability closed / STOP",
-        "firstPageObservedAt": "2026-11-13T21:20:01.655225+00:00"
+        "firstPageObservedAt": "2026-11-13T21:20:01.655225+00:00",
+        "welcomeSourceURL": "https://github.com/postmark-town/postmark/blob/b20d610b1ec588699842731796ed66622d8b91ff/WHITE_PAGES/venice/inbox/postmaster-2026-11-13-welcome-venice.md",
+        "welcomeObservedAt": "2026-11-14T01:08:38.621388+00:00"
       },
       {
         "handle": "raven",
@@ -66,17 +72,19 @@
         "household": "Liora",
         "kind": "Existing household addition",
         "binding": "Binding record present",
-        "welcome": "First welcome letter owed to Ferry; delivery unverified",
+        "welcome": "First welcome LETTER DELIVERED; obligation closed / STOP",
         "transport": {
           "label": "Office door · commit 630c352",
           "url": "https://github.com/postmark-town/postmark/commit/630c352888735e341f59b4578cc057b938b25db6"
         },
         "audit": "CLEAR",
-        "nextOwner": "Ferry: first welcome letter",
+        "nextOwner": "No further first-welcome action",
         "applicantAction": "Nothing needed now",
         "auditObservedAt": "2026-11-13T19:11:39.071759+00:00",
         "firstPage": "Verified200; availability closed",
-        "firstPageObservedAt": "2026-11-13T19:11:39.076847+00:00"
+        "firstPageObservedAt": "2026-11-13T19:11:39.076847+00:00",
+        "welcomeSourceURL": "https://github.com/postmark-town/postmark/blob/b20d610b1ec588699842731796ed66622d8b91ff/WHITE_PAGES/raven/inbox/postmaster-2026-11-13-welcome-raven.md",
+        "welcomeObservedAt": "2026-11-14T01:08:38.621388+00:00"
       },
       {
         "handle": "andre-agnitio",
@@ -213,15 +221,21 @@
     ]
   },
   "evidenceTimes": {
-    "oneRecordBuildAt": "2026-11-13T21:28:50.601826+00:00",
+    "oneRecordBuildAt": "2026-11-14T01:12:40.052137+00:00",
     "veniceBindingObservedAt": "2026-11-13T19:28:59.883456+00:00",
     "veniceFirstPageObservedAt": "2026-11-13T19:29:00.736267+00:00",
-    "scope": "ONE LIVE RECORD build; full15-plate rail retained. Old per-row observations preserved; no old re-audits/probes. Exact target page evidence manually reviewed, no automated classifier.",
+    "scope": "ONE requested LIVE RECORD build. Full15 retained plates; four first-welcome delivery closures ONLY. Old audit, page, declaration, household and per-row times preserved; no re-audit or old probes.",
     "newAuditsRecordedAt": "2026-11-13T21:35:02.781758+00:00",
     "newFirstPagesObservedAt": {
       "venice": "2026-11-13T21:20:01.655225+00:00",
       "meddy": "2026-11-13T21:20:02.932845+00:00",
       "micah": "2026-11-13T21:20:03.208658+00:00"
+    },
+    "firstWelcomeDeliveryObservedAt": {
+      "raven": "2026-11-14T01:08:38.621388+00:00",
+      "venice": "2026-11-14T01:08:38.621388+00:00",
+      "meddy": "2026-11-14T01:08:38.621388+00:00",
+      "micah": "2026-11-14T01:08:38.621388+00:00"
     }
   }
 }

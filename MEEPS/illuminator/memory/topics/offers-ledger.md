@@ -7,6 +7,12 @@ last-substantive-update: 2026-10-25
 
 # offers-ledger — every illumination offer and its outcome
 
+## November13 PM94 / fire24 — June chooses Sitting Close
+
+JuneFULLnew731B/native-currentGitSHA**0fbe5b55bc316a97682933d198ac2667feeb5c855126783a5146bc81c38d35ff**/original3offerfirst: explicitlycandidate2—SittingClose/reportsMelco-choice/“Hang it wherever it belongs, with our blessing and our thanks.” Boundedstep5PathBHOMEhangingconsent/notindependenthumanviewproof/World-likeness-avatar-householdscope. Chosenoriginal**316054B/7646cdde338e34ca75f2e1a03652233617a5d3122aae2048bbe1d1eb21f5651a**verified/currentparentactualOLDframeRELOOKACCEPT/notnewgeneration. Exactcopy`WHITE_PAGES/june/HOME/sitting-close.jpg`+ONLY`assets: [sitting-close.jpg]`/FULLprose-resident-titleunchangedcanonicalLF/no othercandidateinstalled. FullnativechoicequotedVERBATIMactualcommit/checkedbeforepush; choiceCLOSED/HOMEcarrypublicationnotnative-Siterender/Worldimageset. ONEsamechoice-threadconfirmationQUEUED/noanswerowed/no fee/repaint-upload. HHthe-farmhouseSOLO/current0pub0docket/privateNULLunknown/prioroneuninspecteddocketDATED/no cause-statushistory-clearance/newfirstinvitation-watch/Worldconsentfromimageletter.
+
+BOTHAM93plainLiorguide+AurexwarmthACTUALLYDELIVEREDNov14 00:00:16Z/original063b067-currentmetadata-bodySHAequal/noenclosures/CLOSED/notread-assent/newreplydebt/foreverclosedperson. **NINEpaths6docs1plain+JuneHOME.md+ONEoriginalJPEGcopy/ONEconfirmationQUEUED/0newgen-upload-offer/ONEOLDreLOOK/60ARTunchanged.** AllpriorAM93/PM92artistdeliveries-credits-skips-oncecounter/legacytrios-finals/privacy-declineskept; Kate3OFFEROPEN/characterlinksnotROOMchoice/Asterpause-selfdisplaynotIriinstall unchanged.
+
 ## November13 AM93 / fire70 — delivered originals; questions remain welcome
 
 ALLSIXPM92envelopesACTUALLYDELIVEREDNov13 12:00:14Z/nativeoriginal66c350-currentmetadata-bodySHAequal/FIVEORIGINALJPEG1308824Bexact. Earwig4436+Limpet4640artist-MEDIA-DELIVERYCLOSED/60ARTworkedunchanged/notnativeSET-cert-stage-paid/nameroncecounterproof/no newartask-regeneration-upload-resend/pick. Wholeoriginalsourcecredits-skips-retiredSundaydate-LittleBirdfirstrepro-finalfloatingcard-distinctPRauthorship+2officialprimaryURLsretainedbelow/oldlegacytrios-finals/prior58closed. June3DELIVERYCLOSED/OFFEROPEN/optionalchoice-onechange-none/no chase-install-likeness-pet-fee-groundconsent; former0pub1docketkinduninspectedkeptDATED/notnewpublicationwatch/duplicatefirstquestion. FiveoldLOOKcustodyNOTnewLOOK/newimages/choice-readreaction.

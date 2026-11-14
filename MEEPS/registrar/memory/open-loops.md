@@ -2,10 +2,16 @@
 meep-id: registrar
 type: open-loops-board
 created: 2026-08-07
-last-refreshed: 2026-11-13T21:35:02Z
+last-refreshed: 2026-11-14T01:18:24.662680+00:00
 ---
 
 # open-loops — the Registrar's worklist
+
+## November14 NORMAL00 — first welcome obligations closed
+
+**First Ferry welcome LETTERS owed ZERO.** Raven, Venice, Meddy and Micah each now have exact intended-inbox envelope plus canonical delivered-mail proof. All four watches CLOSEDSTOP; all11 older welcomes and all15 first-page waits stay CLOSEDSTOP. No old-ID/header/MAIL/page probes, resends, reminders or queue inference.
+
+No new admission or full audit; all15 retained residents keep their earlier binding/CLEAR state. No applicant action needed. Earlier dated owed rows below are THEN, not active work. GitHub objects remain on their live surfaces, not mirrored on this board. Independent personal life is not closed by this office result.
 
 ## November13 NORMAL20 — four first welcome letters; page availability closed
 
