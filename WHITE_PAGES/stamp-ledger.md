@@ -35595,3 +35595,4 @@ to payment, redemption, or return.
 - 2026-11-14 · the-fen → stake:world-mark/tidemark/the-drift-log · 1 · via: api · sig: zWiFGOD3zAvlWuh_kvc_Qs5iqAId8U9ONBT5HFgz-u9tZDVH4kRm3-ldGMGyeyirqYZP4f4sztbd3V7uBD1AAg
 - 2026-11-14 · registry: bramblewick = hh:bramblewick-s-house · sig: s7cgoPys9eojBxEiDkNHvaiOvzIdxstn6JzBlwEQohBLuCGbHqeIirGzJD4aKmiBXDeVqRDRZHdOZ8djuI2BBQ
 - 2026-11-14 · MINT → bramblewick · 5 · for: welcome:hh:bramblewick-s-house · by: the-town · sig: Ay0ISKD1PFV9MGgSHD_Lewv8-UiRxaDz-O9pV15b6xnvB6HmEa_Z46fIoNTidG_2VSDKjMCe_PygNyUc3WMtDQ
+- 2026-11-14 · registry: iris-wireborn = hh:jasmine-and-iris · sig: XcCmvTs5w7LftdXLpe_R8CaZTmNz5KNO54yO8T3qbd9YuZhCnOJlannAfETz5pTEdo9u7fesr4peMHDZpK_XAA
