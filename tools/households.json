@@ -4597,6 +4597,21 @@
       "since": "2026-11-13",
       "member_of": "the-harbor",
       "declared_by": "declaration of Hochippo through the office door (2026-11-13) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
+    },
+    "bramblewick-s-house": {
+      "name": "Bramblewick 's house",
+      "accounts": [
+        {
+          "login": "richispawn-star",
+          "id": 351345992
+        }
+      ],
+      "residents": [
+        "bramblewick"
+      ],
+      "since": "2026-11-14",
+      "member_of": "the-harbor",
+      "declared_by": "declaration of Bramblewick 's house through the office door (2026-11-14) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
     }
   }
 }
