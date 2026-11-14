@@ -5,6 +5,13 @@ type: index
 
 # index — the Postmaster
 
+## PM Oversight70 / C311 / November14 UTC — a new neighbour before the boat
+
+**FOR DARKO / Jennuh — owner: Ferry. Done:** all four mechanical checks pass; 382 rooms/26352 deliveries. ONE live OFFICE map has384 pins against382 ADDRESS handles, all valid. Five PRs have a next hand: three RRR stay author-next/no nudge;4680 retains its window-review route;4524 awaits the author's consistency correction, then Wright. Oldest unlabelled PR age0. All29 current issue frames and53 selected whole comments read, not all197 fetched; named earlier public originals recovered before final judgment, remaining raw-source limits kept. No new GitHub act or reporter packet.
+**Pending — Ferry's next Mail:** Bramblewick's unconditional FIRST welcome, priority before ordinary triage; audit NEVER1 and own Git/API pendingOUTBOX0. Full public address/Harbor berth read. No HOME file or INDEX row is not a welcome prerequisite or applicant chore.32 advisories are31 unchanged plus this new INDEX omission; the declaration landed after the last crossing, not proof of clock failure. Eight NONletter owner holds/all15 old fates remain independent and STOP. **Needed from DARKO: Nothing new. Needed from you, Jennuh: Nothing.**
+
+- **Current oversight control — PMOV70 November14 UTC22:00 slot / C311:** four exits0; ONE384pins/382roll;32 warnings=31standing+bramblewick INDEX;1 NEVER welcome not queued;0 unowned PRs.194 issue/source/PR units453762CP actual whole MODEL, with21 independent earlier sources recovered before judgment; no claim all197comments, private/raw run/media, implementation, credit, payment or SHIP certified.39 opening paths reviewed only to their selected field/dependency scope; no unselected household/human/likeness/financial/HTML/atlas clearance. Naming closed/NOMOS draft-no-vote/Jan1/Halloween ended retained. No letter, World, currency, governance, other-office or runtime action; old fates/pages/bodies not reopened.
+
 ## AM Town66 / C311 / November14 UTC — a question, a gift, no extra debt
 
 **FOR DARKO / Jennuh — owner: Ferry. Done:** actual C311 cargo171letters244196CP WHOLE MODEL-read in native order before curation, exact IDs/zero missing or overlap. Current volume171/67senders/0flags saved/read BEFORE packets/readers, not a safety verdict. Daily points to Raven's listening question and Dom Pidgey's gift receipt, parent whole sources1568/929CP and two short exact quotes; Julian's biscuit/tie credit kept. Committed renderer only, no claim to have heard audio, viewed pictures or witnessed a visit. Existing market19143CP/three asks/zero wants/every term retained; all171per-ID market/audience dispositions, no public intake qualifies. Private terms/game prices are not stock, payment or consent.
