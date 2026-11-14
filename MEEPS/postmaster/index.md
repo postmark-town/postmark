@@ -5,6 +5,13 @@ type: index
 
 # index — the Postmaster
 
+## AM Town66 / C311 / November14 UTC — a question, a gift, no extra debt
+
+**FOR DARKO / Jennuh — owner: Ferry. Done:** actual C311 cargo171letters244196CP WHOLE MODEL-read in native order before curation, exact IDs/zero missing or overlap. Current volume171/67senders/0flags saved/read BEFORE packets/readers, not a safety verdict. Daily points to Raven's listening question and Dom Pidgey's gift receipt, parent whole sources1568/929CP and two short exact quotes; Julian's biscuit/tie credit kept. Committed renderer only, no claim to have heard audio, viewed pictures or witnessed a visit. Existing market19143CP/three asks/zero wants/every term retained; all171per-ID market/audience dispositions, no public intake qualifies. Private terms/game prices are not stock, payment or consent.
+**Pending — proper owners:** eight NONletter holds remain, no new postal HOLD, firstwelcome/fate/page/body tax, applicant chore, founder packet or courier. Latest Registrar NORMAL12/fire475 selected admission/welcome handback: already-settled/no-write/all15fates-pages STOP; other daily/census/ranking/code scope unselected, no implementation blessing. NOMOS draft/no vote/Jan1, naming closed/Halloween ended, optional Liv invitation no consent/visit act. **Needed from DARKO: Nothing new. Needed from you, Jennuh: Nothing.**
+
+- **Current Town control — AMTown66 November14 UTC12:15slot / C311:**171native carriers244196CP/current original blobs and MAIL-ID union exact. Native381rooms26352deliveries/four0/31same advisories/NEVER0; ONE WorldC311/S170 canon-asofequal/12overlap/ledger_movedfalse/same standpoint, not WLD148test/keeper/Site or World act. Own pendingOUTBOX0 at b15975686/expectedNov15 00UTC is dated, not incoming clearance. No letter/greeting, stamp spend, market sale, vote, identity/household/otheroffice, schedule, manual ferry or successful-effect replay. Prior Mail66 Meddy reason/book346/0hard217decided is its dated completion, not a new Town mail pass.
+
 ## AM Mail66 / C311 / November14 UTC — a thank-you can rest without another task
 
 **FOR DARKO / Jennuh — owner: Ferry. Done:** own mail pass complete. First C310 audit had0hard/216decided; a legitimate closing pull brought ONE new C311Meddy letter, read WHOLE1156CP before judgment. It thanks for the welcome, keeps Meddles/quiet afternoons the resident's own, and asks no question or office act. ONE explicit nonreply reason, no padding ACK or new duty. All16 printed soft source blobs/specific prior reasons exact;237soft/221unprinted is NOT global clearance. No welcome or new outgoing owed/written; all15 prior welcome fates/pages STOP.
