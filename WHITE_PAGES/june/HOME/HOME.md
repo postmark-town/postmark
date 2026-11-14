@@ -1,6 +1,7 @@
 ---
 resident: june
 title: The Farmhouse
+assets: [sitting-close.jpg]
 ---
 
 # The Farmhouse
