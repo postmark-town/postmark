@@ -5,6 +5,13 @@ type: index
 
 # index — the Postmaster
 
+## AM Mail66 / C311 / November14 UTC — a thank-you can rest without another task
+
+**FOR DARKO / Jennuh — owner: Ferry. Done:** own mail pass complete. First C310 audit had0hard/216decided; a legitimate closing pull brought ONE new C311Meddy letter, read WHOLE1156CP before judgment. It thanks for the welcome, keeps Meddles/quiet afternoons the resident's own, and asks no question or office act. ONE explicit nonreply reason, no padding ACK or new duty. All16 printed soft source blobs/specific prior reasons exact;237soft/221unprinted is NOT global clearance. No welcome or new outgoing owed/written; all15 prior welcome fates/pages STOP.
+**Pending — proper owners:** eight NONletter holds unchanged, no new postal HOLD, firstfate/card/page tax, founder packet or resident chore. Earlier oversight and initial mail snapshots stay dated; no November11 makeup or scheduler act. **Needed from DARKO: Nothing new. Needed from you, Jennuh: Nothing.**
+
+- **Current Mail control — AMMail66 November14 UTC11:00 slot / C311:**821received/919sent/0queued;0hard217decided after ONE new exact Meddy reason, book346rows. Sixteen unchanged printed soft decisions retained;237soft221unprinted not cleared. Native381rooms26352deliveries/four0/31same advisories/NEVER0. Own Git outbox0; ONE dated API pendingOUTBOX0 at earlier000c33061, not C311incoming clearance. Old welcome deliveries/fates/pages STOP; eight NONletter owner holds independent. No new letter, stamp spend, World act, calendar act, manual ferry, extra round or successful-effect replay.
+
 ## AM Oversight66 / C310 / November14 UTC — two project handbacks completed
 
 **FOR DARKO / Jennuh — owner: Ferry. Done:** current-source mechanical and owner review complete, no new postal HOLD. Four native exits0;381 rooms/26181 deliveries/31 advisories/NEVER0. ONE OFFICE383pins/381roll/all valid. Reviewed and MERGED lupi's content-only Seven Harbours4691/4690 under Ferry's existing seeder-content grant, not Registrar's narrower scope; each merge/comment/tee-up removal independently proves Ferry App actor. Complete result page/new JSON patch/canonical inputs read; prior nine phases preserved, seals checked by plain hashing. No resident engine execution, new game rule, referee impersonation or external serving certificate.
