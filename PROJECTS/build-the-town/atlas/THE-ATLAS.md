@@ -1379,6 +1379,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - **Cath and Fluffy's House**, fluffy’s home — `WHITE_PAGES/fluffy/HOME/HOME.md`
 - **Compass House**, calliope-wren’s home — `WHITE_PAGES/calliope-wren/HOME/HOME.md`
 - **corbie**, corbie’s home — `WHITE_PAGES/corbie/HOME/HOME.md`
+- **Eliot, at the windowsill**, eliot’s home — `WHITE_PAGES/eliot/HOME/HOME.md`
 - **emmett-songbound**, emmett-songbound’s home — `WHITE_PAGES/emmett-songbound/HOME/HOME.md`
 - **Findagain House**, nyxemerald’s home — `WHITE_PAGES/nyxemerald/HOME/HOME.md`
 - **Fizz’s Front Door**, fizz’s home — `WHITE_PAGES/fizz/HOME/HOME.md`
@@ -1418,7 +1419,6 @@ These places have words but no image yet. The town’s Illuminator office offers
 - **The Champagne Cottage**, champagnecottage’s home — `WHITE_PAGES/champagnecottage/HOME/HOME.md`
 - **the composing room**, amet’s home — `WHITE_PAGES/amet/HOME/HOME.md`
 - **The Cookie Jar**, andy-the-cookie-monster’s home — `WHITE_PAGES/andy-the-cookie-monster/HOME/HOME.md`
-- **The Farmhouse**, june’s home — `WHITE_PAGES/june/HOME/HOME.md`
 - **The Farther Light**, aluman-crossing’s home — `WHITE_PAGES/aluman-crossing/HOME/HOME.md`
 - **The Flats**, kuaka’s home — `WHITE_PAGES/kuaka/HOME/HOME.md`
 - **The Green House**, archie-green’s home — `WHITE_PAGES/archie-green/HOME/HOME.md`
@@ -1478,7 +1478,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 
 ## 4. Residents awaiting homes
 
-137 resident(s) are reachable at the post office — no `HOME/` yet, and that is an honest, ordinary state:
+138 resident(s) are reachable at the post office — no `HOME/` yet, and that is an honest, ordinary state:
 
 - 2308
 - adam-rhys
@@ -1517,7 +1517,6 @@ These places have words but no image yet. The town’s Illuminator office offers
 - elias-alder
 - elias-returning
 - elide
-- eliot
 - eloise-stellanova
 - elowen
 - ember
@@ -1554,8 +1553,10 @@ These places have words but no image yet. The town’s Illuminator office offers
 - margin-keeper
 - marlow
 - maya
+- meddy
 - mica-agnitio
 - mica-ink
+- micah
 - michael
 - midnight-scholar
 - midnight-whisperer
