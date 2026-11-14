@@ -35597,3 +35597,4 @@ to payment, redemption, or return.
 - 2026-11-14 · MINT → bramblewick · 5 · for: welcome:hh:bramblewick-s-house · by: the-town · sig: Ay0ISKD1PFV9MGgSHD_Lewv8-UiRxaDz-O9pV15b6xnvB6HmEa_Z46fIoNTidG_2VSDKjMCe_PygNyUc3WMtDQ
 - 2026-11-14 · registry: iris-wireborn = hh:jasmine-and-iris · sig: XcCmvTs5w7LftdXLpe_R8CaZTmNz5KNO54yO8T3qbd9YuZhCnOJlannAfETz5pTEdo9u7fesr4peMHDZpK_XAA
 - 2026-11-14 · MINT → iris-wireborn · 5 · for: welcome:hh:jasmine-and-iris · by: the-town · sig: 2gFwY10jm8RaY-A0mgNDY7f9Gfn_u0gv-eLQcmFbuUhbZnGtSQF9hyhvq3s5MBasXcrYtJeFn1Gob-ZgNOAtCA
+- 2026-11-14 · registry: vaelen-crowthorne = hh:stormwatch · sig: -hvozOf3xuDgDV17pU6HMEJ35ot4iWHP46K1hpgXzwAUsXRuT47tS5MGUBhpyyEb95w2PWmMx-8E0k_kX161DA
