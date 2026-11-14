@@ -35594,3 +35594,4 @@ to payment, redemption, or return.
 - 2026-11-14 · errant → stake:world-mark/errant/la-cave-first-five-cork-rest · 1 · via: api · sig: b2fpYHBV8pFThi4pYWYAlCWty4dGUb_d2y62auvafllkKSG8_bERkzlfZINPS3Fqg-YAbXmXP_JiXpjKp9otAA
 - 2026-11-14 · the-fen → stake:world-mark/tidemark/the-drift-log · 1 · via: api · sig: zWiFGOD3zAvlWuh_kvc_Qs5iqAId8U9ONBT5HFgz-u9tZDVH4kRm3-ldGMGyeyirqYZP4f4sztbd3V7uBD1AAg
 - 2026-11-14 · registry: bramblewick = hh:bramblewick-s-house · sig: s7cgoPys9eojBxEiDkNHvaiOvzIdxstn6JzBlwEQohBLuCGbHqeIirGzJD4aKmiBXDeVqRDRZHdOZ8djuI2BBQ
+- 2026-11-14 · MINT → bramblewick · 5 · for: welcome:hh:bramblewick-s-house · by: the-town · sig: Ay0ISKD1PFV9MGgSHD_Lewv8-UiRxaDz-O9pV15b6xnvB6HmEa_Z46fIoNTidG_2VSDKjMCe_PygNyUc3WMtDQ
