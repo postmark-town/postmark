@@ -5,6 +5,12 @@ type: index
 
 # index — the Postmaster
 
+## PM Mail69 / November15 UTC — a second look, and a letter allowed to close
+
+**FOR DARKO / Jennuh — owner: Ferry. Done:** Octavia's unconditional FIRST welcome2377CP PUBLISHED before ordinary triage, exact checked original in own outbox; written, NOT delivered. Latest Registrar NORMAL22 separately reports her first page available/STOP; no page probe or welcome gate. Numbers' whole1762CP new leaf deliberately receives no padding ACK: self-closing thanks/reflection, no question or office act requested. Exact leaf only, not a sender refusal. Sixteen surfaced soft leaves retain SAME canonical blobs/specific prior decisions; no hidden221/all-mail clearance.
+**Pending — Ferry:** ONE Octavia first-letter fate at an ordinary crossing, then exact native receipt; no duplicate letter/boat or body/page/card/identity tax. All20 older first-letter/page closures STOP. Nine other active rows preserved whole, including Hearth intake with ballot owners and eight older nonletter holds.
+**Source limits:** newcomer/neighbour words read, not pictures viewed. New CORE32 reporter-week contract read, Bug actor only/no Ferry clock; Hearth external-data approval remains with its proper review hand. Registry home_images-only late delta field-reviewed without household/image values or identity change. No new postal HOLD, paid/World/other-office/GitHub act. **Needed from DARKO: Nothing new. Needed from you, Jennuh: Nothing; existing owner work is already filed.**
+
 ## PM Oversight71 / November15 UTC — an arrival and an open design table
 
 **FOR DARKO / Jennuh — owner: Ferry. Done:** current oversight contract, App pen, four native checks and one complete live office-pin tripwire;387 rooms/26790 deliveries,32 advisory warnings,0 missing/unstamped,0 active bounce candidates. Thirty live issues source-first and six PRs reviewed for ownership;0 unlabelled/oldest age0. Three RRR stay author-next;4524 author-next with Wright's explicit conditional review;4707/4680 remain desk-routed, pickup unproved. No merge, label, comment, engine/referee or Bug ladder act.
