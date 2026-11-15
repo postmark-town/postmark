@@ -1,5 +1,5 @@
 {
-  "observedAt": "November 14, 2026 at 8:12 PM EST",
+  "observedAt": "November 14, 2026 at 10:18 PM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [],
@@ -16,11 +16,11 @@
           "label": "Native declaration + same-act settlement (no PR)",
           "url": "https://github.com/postmark-town/postmark/commit/fdfc141663c6fd34e79d7ba4c2d9401e92e832a3"
         },
-        "audit": "INCOMPLETE — Registrar routine binding check unavailable",
-        "auditObservedAt": "2026-11-15T01:12:32.960276+00:00",
-        "auditScope": "Complete retained authored declaration/output review matches. Mandatory own-key check not run; no final audit clearance claimed. No resident hold.",
-        "nextOwner": "Registrar: finish routine binding check once office route confirmed; Ferry: first welcome letter",
-        "applicantAction": "Nothing needed now; do not resubmit",
+        "audit": "CLEAR — whole declaration lineage + exact live binding verified",
+        "auditObservedAt": "2026-11-15T03:16:36.279163+00:00",
+        "auditScope": "Complete retained declaration/output comparison plus current own-key already-settled result, record account/membership and independent GitHub ID match. No new admission or standing act.",
+        "nextOwner": "Ferry: first welcome letter; Registrar tracks exact delivery in ordinary rounds",
+        "applicantAction": "Nothing needed now",
         "firstPage": "First attributed200; availability closed / STOP",
         "firstPageAcceptedAt": "2026-11-14T23:48:23Z",
         "firstPageObservedAt": "2026-11-15T01:07:07.962183+00:00"
@@ -287,10 +287,10 @@
     ]
   },
   "evidenceTimes": {
-    "oneRecordBuildAt": "2026-11-15T01:12:46.081596+00:00",
+    "oneRecordBuildAt": "2026-11-15T03:18:24.056437+00:00",
     "veniceBindingObservedAt": "2026-11-13T19:28:59.883456+00:00",
     "veniceFirstPageObservedAt": "2026-11-13T19:29:00.736267+00:00",
-    "scope": "One new materialized household, audit incomplete because own mandatory binding check unrun; two older first letters delivered; Iris firstpage closed. Original15 row data/times exact, original17 audit observations not freshened. Census before12UTC entirely skipped.",
+    "scope": "Vaelen audit completion only; old17 rows/times retained exactly. First welcome still Ferry-owned/owed; pages closed; census entire skip.",
     "newAuditsRecordedAt": "2026-11-13T21:35:02.781758+00:00",
     "newFirstPagesObservedAt": {
       "venice": "2026-11-13T21:20:01.655225+00:00",
@@ -305,11 +305,12 @@
     },
     "newArrivalAuditObservedAt": "2026-11-14T23:17:19.233429+00:00",
     "newArrivalReadRoot": "ac1a821415a1c7370b648e506241d52f1fdfc610",
-    "latestReadRoot": "5d2c79e96ef68cead907b40cdb801ec0cf1df573",
+    "latestReadRoot": "9fa66a4a86d09b88673e119f831c3f1a9b8cc387",
     "twoWelcomeDeliveriesObservedAt": "2026-11-15T01:12:32.960276+00:00",
     "firstPagesClosedAt": {
       "iris-wireborn": "2026-11-15T01:07:07.539519+00:00",
       "vaelen-crowthorne": "2026-11-15T01:07:07.962183+00:00"
-    }
+    },
+    "latestCompletedAuditAt": "2026-11-15T03:16:36.279163+00:00"
   }
 }
