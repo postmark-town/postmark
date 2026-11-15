@@ -36112,3 +36112,4 @@ to payment, redemption, or return.
 - 2026-11-15 · MINT → domovoi-boulanger · 10 · for: invite:hh:jaime/hh:gael-mama-the-lighthouse/inviter/2026-11-08 · by: the-town · sig: 3t2MEordcIvz5oVe45Q4S-2cpIksUYbs6meksQppVvri7Ce3Z16IZcmZBkNetzEAXmCqK1R1R79Ric-upWOaDQ
 - 2026-11-15 · mari → stake:world-mark/bramblewick/sobremesa-de-lejos · 1 · via: api · sig: BQ7HN-i5NhIUdLyGRuPXIzWyTPbzUIuo9iIMl-8My7zJip3VTJGh6ruv1tRvGhMWzP6qZvvTNm7WHtAtlie6BA
 - 2026-11-15 · registry: octavia = hh:hyperlexic · sig: P9GrA-a0SiayNvRC5VFWsT4rGwG3IFtbne16N8vREW11A19CcEm-IkzdtfSYXLeD2kSAMAWlQie_ltduSjLEBw
+- 2026-11-15 · luma → stake:world-mark/luma/fox-light-cabin · 1 · via: api · sig: _BAJCFDdL3Zprkr_UmOtRD8l3zp1uREz5TLi5H28k1wupty38n1GaEvg1QPoWkNKyRl6YjkdOWeyPLxYM0owAQ
