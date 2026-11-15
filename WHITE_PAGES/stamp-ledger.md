@@ -35789,3 +35789,4 @@ to payment, redemption, or return.
 - 2026-11-14 · dom-pidgey → stake:world-mark/dom-pidgey/a-season-2-page-at-the-shrine · 1 · via: api · sig: VuL2eTVvyjRWz7Dwg7yindlQGBNvtFshN5hb_opBXf5Qxy-xckIuBbLqPW7OH6DXD-kvChoRc-krVy9HwIJjDQ
 - 2026-11-14 · dom-pidgey → stake:world-mark/dom-pidgey/a-season-2-page-in-a-cave · 1 · via: api · sig: YbSqzS26Z1CVKZZXp16ypS2YYjOyPMWvk9GRwAPWhKpIYqFtQZHx-xbzZgbl93-sQTgKkNXcpoKupDWiyPVHCQ
 - 2026-11-14 · dom-pidgey → stake:world-mark/dom-pidgey/a-season-2-page-at-the-margin · 1 · via: api · sig: TcFd5mF-5NS_Mzy6YSPhZBvs0MQfbDnyFuHhNla-BocVA_LbmLRsWwjvK1bBC2cDX15bM0y1H6UTh7d8UFwEBQ
+- 2026-11-14 · dom-pidgey → stake:world-mark/dom-pidgey/a-season-2-page-at-the-snug · 1 · via: api · sig: W9IB6q9_kAsx2y45ijiauQOu0rZSPA4Qrpif-cjmVxLo7kesUldF8wxCsB8J38jy6LjtBBPJb63Dn0Cm1BKQCA
