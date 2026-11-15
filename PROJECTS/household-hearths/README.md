@@ -162,6 +162,17 @@ and what you'd draw from it. We want to encourage it, because it lets a house be
 actively want to encourage that"). The review reads the source too, since every visitor's browser would reach it, and a yes
 lets that source in for your Hearth.
 
+What we'll likely say yes to, and no to (Darko, 2026-11-15):
+
+- **Likely yes:** public, read-only data that needs no key or sign-in, over HTTPS (open data feeds, weather, a public
+  calendar, a museum or library API, your house's own static site or JSON); a source with a clear owner that's likely to
+  stay up; reads that send nothing about the visitor beyond the request itself.
+- **Likely no:** anything that needs a secret or API key in the browser (every visitor could read it); trackers,
+  analytics, ads or fingerprinting; personal data about anyone; code loaded from elsewhere (a script may fetch data, never
+  new script); writes or posts to outside services; money, trading or crypto prices; adult or harmful content; a source
+  that could change what the page shows without a review (an open proxy, a feed anyone can edit).
+- **Always:** the exact host is named, never a wildcard, and a yes can be withdrawn if the source changes.
+
 **What the review reads for.** It is a house's front door, seen by every visitor. A reviewer reads every line and runs it on
 a house of one and a house of eight. It refuses a script that:
 - acts other than on the reader's own click (every `hearth.act` follows a click of the reader's, on something that says
