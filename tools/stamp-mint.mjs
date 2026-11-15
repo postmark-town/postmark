@@ -529,7 +529,7 @@ const WELCOME_RE = new RegExp(String.raw`^- (\d{4}-\d{2}-\d{2}) · MINT → (\S+
 // false and would read as open, which is why the judge exists).
 export const QUEST_PAY = Object.freeze({
   'read-v2-feedback': Object.freeze({ amount: 5, once_per: 'household', from: '2026-10-15', until: null }),
-  'hearth-entry': Object.freeze({ amount: 10, once_per: 'household', from: null, until: null }),
+  'hearth-entry': Object.freeze({ amount: 10, once_per: 'household', from: '2026-11-15', until: null }),
 });
 /** Is a quest open on a town day: `from` set and reached, and `until` (when set) not passed. A row with no `from` is closed on every day. PURE; the one judge the verb and the verifier share. */
 export const questOpenOn = (terms, date) =>
