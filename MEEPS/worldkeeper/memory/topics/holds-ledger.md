@@ -8,6 +8,15 @@ last-updated: 2026-11-15
 
 # Holds and quarantine ledger
 
+## 2026-11-15 fire112 — S173 blessed; six withdrawals reflected
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S173 | 98e637e675ef1091d2fbd8b9abf69608912cadaf → 90a869e12bb403bc897b3d46066fd364693b4bdf; Actions 43744799627 attempt 1; own lint/harm/full source/backing pass; no holds/quarantine/keeper repair. |
+| Earlier six withdrawals | CANONICAL DISPOSITION CLOSED at exact target | Six original Bert rows 53126, 53131–53135 now match all six files absent/retired.withdrawn; not internal-cause/owner-pickup/permanent/Site-served proof. Original finding letter delivered 12:00:13Z; same-thread new closure letter worldkeeper-2026-11-15-to-berthillon-six-withdrawals-now-reflected published only. |
+| Six Little Bird plates | Unpublished, returned to drafts | Original signed ledger owner returns checked; six exact rows removed/zero backing, retired.slugs/drafts.returned exact/no absent/unreturned. Not new maker withdrawals/resident redo. |
+| Publication | S173 NOT PROVED SERVED | 2026-11-15T18:49:47.267Z; CURRENT 172, S172 HTTP 200, S173 HTTP 404; twelve matching samples/latest eight consecutive observations, not continuous lag/cause. Same-round Rei/Verm review, never World condition. |
+
 ## 2026-11-15 fire111 — S172 blessed, six mark findings
 
 | Item | State and scope | Evidence / next needed |
