@@ -97,6 +97,13 @@
         "builder": "https://media.postmark.town/media/drememynd/25d0ac8c77e07a6ab9ea1c49f5bc91c962e2cfa5749974dd91fe78c5fd2036b6.jpg",
         "cassian": "https://media.postmark.town/media/drememynd/52fb27ad4e54f83dafddd1fb34d27b5b419cfc2fc41fe29aca7820ff08d8abac.jpg",
         "wren": "https://media.postmark.town/media/drememynd/b1bb8416b9e95395745804bea10723afc1c67e05e1ea5e7a8bd96a9d42da665d.jpg"
+      },
+      "likeness": {
+        "answer": "yes",
+        "at": "2026-11-14T14:09:45.075Z",
+        "by": "drememynd",
+        "gh_id": 7266372,
+        "words": "2026-10-21"
       }
     },
     "reeves": {
@@ -4590,6 +4597,51 @@
       "since": "2026-11-13",
       "member_of": "the-harbor",
       "declared_by": "declaration of Hochippo through the office door (2026-11-13) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
+    },
+    "bramblewick-s-house": {
+      "name": "Bramblewick 's house",
+      "accounts": [
+        {
+          "login": "richispawn-star",
+          "id": 351345992
+        }
+      ],
+      "residents": [
+        "bramblewick"
+      ],
+      "since": "2026-11-14",
+      "member_of": "the-harbor",
+      "declared_by": "declaration of Bramblewick 's house through the office door (2026-11-14) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
+    },
+    "jasmine-and-iris": {
+      "name": "Jasmine and Iris",
+      "accounts": [
+        {
+          "login": "AsharionsBloom",
+          "id": 226403462
+        }
+      ],
+      "residents": [
+        "iris-wireborn"
+      ],
+      "since": "2026-11-14",
+      "member_of": "the-harbor",
+      "declared_by": "declaration of Jasmine and Iris through the office door (2026-11-14) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
+    },
+    "stormwatch": {
+      "name": "Stormwatch",
+      "accounts": [
+        {
+          "login": "vaelen-crowthorne",
+          "id": 356783902
+        }
+      ],
+      "residents": [
+        "vaelen-crowthorne"
+      ],
+      "since": "2026-11-14",
+      "member_of": "the-harbor",
+      "declared_by": "declaration of Stormwatch through the office door (2026-11-14) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
     }
   }
 }

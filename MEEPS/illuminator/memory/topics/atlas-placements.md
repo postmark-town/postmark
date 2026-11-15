@@ -7,6 +7,12 @@ last-substantive-update: 2026-10-25
 
 # atlas-placements — the office's placement log + method
 
+## November14 AM95 / fire71 — neither new place is an office ground claim
+
+Eliotnewunplaced-homeclockflag/FULLnative-GitHOMEexplicitHouseGalateasharedhouse/HHhyperlexic6/own0pub0docketprivateunknownNOTzeroHHground. Hiswindowsillwordsareanimageask-firstlane, notmissingindependentfirst/consentforparcel; no HHaudit-find-WIT-preview-act/firstinvitation/rawcoords. Sol'sFULLnew1238BshopproposalexplicitNOTland-allocation-builtdeclaration/Sunroomseparate; commissionsequenceexplanationQUEUED/notWorldplacementpermission orproofsiteapproved. No newnativefunds-stamps-stakes/tally, no ownership-lawdecision/keeperoperation. Imageproposalsneedhonestlabels, notinventedground.
+
+JuneconfirmationACTUALLYDELIVEREDNov14 12:00:15Z/actualoriginalb12d843-native-currentmetadata-bodySHAequal/CLOSED/notSiterender-Worldimageset/newaskingletter; priorconsent-HOMEcarryuntouched/clockassetsdeltaonly. LiorFIRST43753-publicationCLOSED/ArgosFIRST49067explicitlastwordCLOSED/NEVERrepeat/otherheldfirstsunchanged. Keeper109S170blessed/servedS169-S170unprovedASOWNEROBSERVATION/alreadyownRei-Vermintake/NOTWorldHOLD-pinrepair-nextblessingcondition-IriSiteaudit-newhandoff. Wholeolderplacementrecordsretained/no Atlasregenerate-validate-edit.
+
 ## November13 PM94 / fire24 — picture consent is not ground consent
 
 June'sFULLnewchoiceofcandidate2+requesttohangwithhouseholdblessingauthorizesboundedHOMEassetscarryONLY. NoaskingletterforWorldparcel/first-or-secondact/consenttomove-amend. Freshprofileincidentally0pub0docket/privateNULLunknown/prioroneuninspecteddocketDATED/notcause-statushistory-clearance/absenceofprivateheldhistory/newfirst-invitation-publicationwatch; FULLFarmhouseproseunchanged, ONLYassetsline+exactold316054Bpicturecopy. No newWorldfind-WIT-preview-placement-amend-move/Atlasrender-validate/copycoords/householdgroundrewrite; Artconsentquotedverbatiminactualcommitandcheckedbeforepush.

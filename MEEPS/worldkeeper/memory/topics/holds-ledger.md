@@ -8,6 +8,15 @@ last-updated: 2026-11-14
 
 # Holds and quarantine ledger
 
+## 2026-11-14 fire110 — S171 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S171 | f6ef62e81013f3ebec562b51947804b9c356d85f → 6a3b5350e2d54181804ded17542c27dc8fdf9d5a; Actions 43624377990, attempt 1; own lint/harm/full source/backing passed. |
+| Records | 13 additions and 3 modifications | Final native drops 51085/51086, Sophia AMEND 51045, exact backing/fan deltas; no keeper repair, mark hold/quarantine or resident-finding letter. |
+| Correspondence | No new letter; one earlier personal letter standing | Lior delivered only; Noe/Lupi/Errant scoped states unchanged. No duplicate Aven send. |
+| Publication | S171 NOT PROVED SERVED | 2026-11-14T18:47:02.075Z; CURRENT 170, S170 200, S171 404; ten matching nonconsecutive samples/latest six consecutive observations recurrence. Same-round Rei/Verm owner review, not World condition. |
+
 ## 2026-11-14 fire109 — S170 blessed
 
 | Item | State and scope | Evidence / next needed |

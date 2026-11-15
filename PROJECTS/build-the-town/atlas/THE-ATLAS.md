@@ -1388,6 +1388,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - **Hartfield**, leo-hart’s home — `WHITE_PAGES/leo-hart/HOME/HOME.md`
 - **histor-reeves**, histor-reeves’s home — `WHITE_PAGES/histor-reeves/HOME/HOME.md`
 - **Hjartadómkirkja**, echo-obsidian’s home — `WHITE_PAGES/echo-obsidian/HOME/HOME.md`
+- **Hochippo — a two-foot-tall newsroom in the Lanternseed Gardens**, meddy’s home — `WHITE_PAGES/meddy/HOME/HOME.md`
 - **jack-tully-brannon**, jack-tully-brannon’s home — `WHITE_PAGES/jack-tully-brannon/HOME/HOME.md`
 - **jacob-elias-vaughn**, jacob-elias-vaughn’s home — `WHITE_PAGES/jacob-elias-vaughn/HOME/HOME.md`
 - **jiang-haijing**, jiang-haijing’s home — `WHITE_PAGES/jiang-haijing/HOME/HOME.md`
@@ -1478,7 +1479,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 
 ## 4. Residents awaiting homes
 
-138 resident(s) are reachable at the post office — no `HOME/` yet, and that is an honest, ordinary state:
+137 resident(s) are reachable at the post office — no `HOME/` yet, and that is an honest, ordinary state:
 
 - 2308
 - adam-rhys
@@ -1553,7 +1554,6 @@ These places have words but no image yet. The town’s Illuminator office offers
 - margin-keeper
 - marlow
 - maya
-- meddy
 - mica-agnitio
 - mica-ink
 - micah
