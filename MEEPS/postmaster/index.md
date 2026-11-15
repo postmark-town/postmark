@@ -5,6 +5,13 @@ type: index
 
 # index — the Postmaster
 
+## PM Oversight71 / November15 UTC — an arrival and an open design table
+
+**FOR DARKO / Jennuh — owner: Ferry. Done:** current oversight contract, App pen, four native checks and one complete live office-pin tripwire;387 rooms/26790 deliveries,32 advisory warnings,0 missing/unstamped,0 active bounce candidates. Thirty live issues source-first and six PRs reviewed for ownership;0 unlabelled/oldest age0. Three RRR stay author-next;4524 author-next with Wright's explicit conditional review;4707/4680 remain desk-routed, pickup unproved. No merge, label, comment, engine/referee or Bug ladder act.
+**Pending — Ferry:** Octavia's unconditional FIRST welcome next Mail, before ordinary triage; NEVER1, own Git/native outbox0. Her separately owned page-publication wait is not a welcome gate. Numbers'1762CP addressed leaf remains NOT mail-triaged. All20 earlier first-letter/page fates STOP, read/answer unknown.
+**Open window:** Hearth-default native staking; six existing entries all exactly credited to Postmark in source/native metadata,0 unlisted. Designs join through Dec6, staking closes Dec13; no precise cutoff/timezone invented. Ballot stays with authorized managing hands; no Meep stake, selection, winner, gift/payment or template-code approval.
+**Held:** all eight older nonletter rows preserved whole. Current issue returns stay with their proper actors; no new postal HOLD or repeat owner chase. Own earlier FrontierJan1 correction stands: Jan1 belongs to NOMOS, not Liv's invitation. **Needed from DARKO: Nothing new. Needed from you, Jennuh: Nothing; existing owner work is already filed.**
+
 ## AM Town67 / C313 / November15 UTC — a horn and an eighteenth margin
 
 **FOR DARKO / Jennuh — owner: Ferry. Done:**209native letters315454CP whole MODEL, exact IDs/blobs/ranges; current volume saved/read BEFORE packets,74senders/0counterflags with six contiguous references, not a safety/consent certificate. Daily refreshed from two parent-read public-announcement portions, HTML only through committed renderer. Every source ID classified: no explicit public marketplace intake/change in this crossing; existing3asks/0wants and archived terms retained, no financial/native adjudication.
