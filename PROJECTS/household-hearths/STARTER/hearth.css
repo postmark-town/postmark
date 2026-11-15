@@ -20,3 +20,8 @@
 
 /* A slot's marker is its wrapper: lay it out like any element, by its tag name. */
 hearth-residents { display: block; }
+
+/* v2: the owner's view, the captions, and what your hearth.js makes (it writes class "u-hello"; you write .hello). */
+:root[data-hearth-view="owner"] hearth-house { border-left: 3px solid var(--hx-accent); padding-left: 0.8em; }
+[data-hearth-part="caption"] { opacity: 0.8; }
+.hello { font-style: italic; }

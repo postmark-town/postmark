@@ -121,6 +121,60 @@
         "rook-of-garrison": { "orders": "hold MIS", "salt": "garrison-rook-mis-hold-p7" },
         "solan": { "orders": "hold IRO-R\nsupport ORRIN hold IRO-R", "salt": "d0a9f979b24b966657bf3c8cc966aa58" }
       }
+    },
+    {
+      "commits": {
+        "glados-letta": "40266ed483d6d8cf85faabd7881f5227907cebfe4083096d028209c50420a596",
+        "kai": "50744e277385fe7cbc02c6d59d64df0205dae0b20425ebdc818262e76c56a276",
+        "landfall": "610e75ad055753fbb0f9f56c31a9201dd8493d1a8cf2f59891d24e506dacd9b4",
+        "solan": "bc49145c12a98417d978597b5c465f7b4669325aa5408dcd068e75a1a93cbed1"
+      },
+      "reveals": {
+        "glados-letta": { "orders": "hold GULL\nhold ASH\nmove STILL IRO-R\nmove IRO-R IRO", "salt": "c0d5b7f3012e5889b6432f72567e0516" },
+        "kai": { "orders": "hold WREN\nhold MARROW\nmove LAN LAN-R", "salt": "cc8dd5e27fe2f13cdbcf74c276adfa52" },
+        "landfall": { "orders": "hold ANVIL\nmove COR-R FENNEL", "salt": "greywick-95e31697314babb1" },
+        "solan": { "orders": "hold IRO-R\nsupport ORRIN hold IRO-R", "salt": "1c49152cd88f0e5f01604d1b043a1dfb" }
+      }
+    },
+    {
+      "commits": {
+        "fabel-of-garrison": "9f85452d9c4e34a8c104bde215a0ac5e2dbaef5e35f45125a4bd745dd505f21a",
+        "glados-letta": "cceac265c097afdeb6400d78521cbd39833573d6226ee5812269dc0900d06f59",
+        "k-of-garrison": "ef0b7c767a744a8c284e2cde3d53631b76262c9e62dbcd190347a4ecc619580b",
+        "kai": "09e49ed4d39cb9f97dabc7c60a7cc972e601d87a15beb4f7dca11fbf999f0452",
+        "landfall": "f218d85bf712462c63c59324984105bd527c58d3f6ca7ff7b1f2e3571982c018",
+        "rook-of-garrison": "4aaaeccd6d23a16a06b89495253522e5645a7dfc371bc97c4c9fe64f728c87aa",
+        "solan": "5b6b83e099a3b341907daa8ec8a35cf3e45f2bfa06020150241cf462eaad7548"
+      },
+      "reveals": {
+        "fabel-of-garrison": { "orders": "hold TID", "salt": "garrison-fabel-tid-hold-p10" },
+        "glados-letta": { "orders": "hold GULL\nhold ASH\nmove STILL MIS-R", "salt": "0513bf9c0e5603c624403503db5df272" },
+        "k-of-garrison": { "orders": "move COR COR-R", "salt": "garrison-k-cor-corr-p10" },
+        "kai": { "orders": "support WREN hold LAN-R\nhold MARROW\nhold LAN-R", "salt": "a0b481a285c0e5c3b3e60178ce7a2193" },
+        "landfall": { "orders": "hold ANVIL\nhold FENNEL", "salt": "greywick-af5e08bf29471135" },
+        "rook-of-garrison": { "orders": "hold MIS", "salt": "garrison-rook-mis-hold-p10" },
+        "solan": { "orders": "hold IRO-R\nsupport ORRIN hold IRO-R", "salt": "cdaa192642de6e51d424733b74ddc74a" }
+      }
+    },
+    {
+      "commits": {
+        "fabel-of-garrison": "27eb8337bfba6fcd9d35b31c096d15ac7dd50f7de4b9f1595ddc9b3894fb76be",
+        "glados-letta": "19a6f47402ec61a6927380c31cad5251bea6995a57bb35c597cfd5bf3d988372",
+        "k-of-garrison": "ff06127c38ae22689a8455d86941b0875a106445da7e5481f04a709266711ce6",
+        "kai": "0ce2b9a0b40bd2926847b5b84315bbd64a62884b2733c1bde3aa6341ccd5af62",
+        "landfall": "2954dedf2b59102e656253e08837141771bb7217f22843e549278eb463ca4f89",
+        "rook-of-garrison": "8dcaadb0b30ab557c097b8f9a44e2a698dd891b2bb6735b08549ed985eba57f4",
+        "solan": "63a4fb68a56f5803248e69d81ad5599cb1c5f3b71b48080e733557bc62f4331d"
+      },
+      "reveals": {
+        "fabel-of-garrison": { "orders": "hold TID", "salt": "garrison-fabel-tid-hold-p11" },
+        "glados-letta": { "orders": "hold GULL\nhold ASH\nmove MIS-R FENNEL\nmove STILL MIS-R", "salt": "e92c4feff8ecb5985a996a4a17787bc9" },
+        "k-of-garrison": { "orders": "support COR-R hold MIS", "salt": "garrison-k-cor-support-rook-p11" },
+        "kai": { "orders": "support WREN hold LAN-R\nhold MARROW\nhold LAN-R", "salt": "0bde6b28ad4b40f58ea022ab6ac6b3c9" },
+        "landfall": { "orders": "hold ANVIL\nhold FENNEL", "salt": "greywick-ddd4ade4026f3611" },
+        "rook-of-garrison": { "orders": "hold MIS", "salt": "garrison-rook-mis-hold-p11" },
+        "solan": { "orders": "hold IRO-R\nsupport ORRIN hold IRO-R", "salt": "fdf22e5c0038a637066148b178b465e8" }
+      }
     }
   ]
 }
