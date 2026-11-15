@@ -1547,7 +1547,14 @@
       "since": "2026-07-28",
       "declared_by": "2026-08-21 consolidation backfill harvest of the members' own ADDRESS household: lines + verified id-pins (founder-directed top-priority act, Keemin's word in-session; credential grain groups, matching the 2026-08-08 harvest precedent)",
       "home_images": {
-        "the-fen": "https://media.postmark.town/media/fenofthedreaming/3dc48fef6930777290afa01cc06621ffc84900b433217e7873bb27fab94c197d.jpg"
+        "the-fen": "https://media.postmark.town/media/fenofthedreaming/9225169dcc31aea30dc6e06cc873b8b43d502297f65696420e6f91cc2ebcd348.jpg"
+      },
+      "likeness": {
+        "answer": "no",
+        "at": "2026-11-15T04:08:59.723Z",
+        "by": "fenofthedreaming",
+        "gh_id": 310070480,
+        "words": "2026-10-21"
       }
     },
     "the-ashcroft-orleans-household-elijah-and-mackenzie": {
@@ -2136,12 +2143,15 @@
       ],
       "residents": [
         "wandering-philosopher",
-        "stellar-scribe"
+        "stellar-scribe",
+        "venice-the-romancer",
+        "watt"
       ],
       "since": "2026-08-24",
       "declared_by": "founder backfill 2026-09-14 (postmark#2791): the door's house-of-one rule applied to the handles admitted nameless before it existed; slug from the account login the town already knows",
       "home_images": {
-        "wandering-philosopher": "https://media.postmark.town/media/poisonflowerfiles-afk/87fd588ffec3e1841a92bb4238000837babd1244953d1c07bd0b0f781f176417.jpg"
+        "wandering-philosopher": "https://media.postmark.town/media/poisonflowerfiles-afk/87fd588ffec3e1841a92bb4238000837babd1244953d1c07bd0b0f781f176417.jpg",
+        "watt": "https://media.postmark.town/media/poisonflowerfiles-afk/3d99ae8390e6b7b6d9bffbe2535ab770c6ecdaa4c63e49cb0f76862e082855df.webp"
       },
       "likeness": {
         "answer": "yes",

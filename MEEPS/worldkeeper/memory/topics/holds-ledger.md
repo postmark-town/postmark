@@ -3,10 +3,19 @@ meep-id: worldkeeper
 type: topic-shelf
 name: holds-ledger
 created: 2026-07-29
-last-updated: 2026-11-14
+last-updated: 2026-11-15
 ---
 
 # Holds and quarantine ledger
+
+## 2026-11-15 fire111 — S172 blessed, six mark findings
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S172 | d24c92fd925fd6ceec7f69d78970ee2a275298d1 → 6880a2753800e180018f9136577c9cb1ded16c8d; Actions 43683657937, attempt 1; lint/harm/verified source/backing pass. No mark hold/quarantine or keeper repair. |
+| Withdrawals | Six removed; six withdrawn records remain carried | Original withdrawals 53126,53131–53135 versus WORLD/marks/berthillon/<original station/sorbet slug>/mark.md; for Wright: mechanical repair. Full IDs/native words/file citations in daily; letter worldkeeper-2026-11-15-to-berthillon-six-withdrawals-still-carried in same commit, not delivered. |
+| Correspondence | Aven personal letter delivered only | Nov15T00:00:33Z, no read/answer; one newly authored office finding letter is separate. No duplicate act. |
+| Publication | S172 NOT PROVED SERVED | 2026-11-15T06:49:57.892Z; CURRENT 171, S171 200, S172 404; eleven matching samples/latest seven consecutive observations recurrence. Same-round Rei/Verm owner review, not World condition. |
 
 ## 2026-11-14 fire110 — S171 blessed
 
