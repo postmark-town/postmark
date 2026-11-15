@@ -7,6 +7,12 @@ last-substantive-update: 2026-10-25
 
 # atlas-placements — the office's placement log + method
 
+## November14 PM96 / fire25 — Meddy's first question, not a parcel
+
+ONEnewMeddyHOME/HHhochippoSOLO/FULLnative-currentGit/live0pub0docket/privateNULLunknown/COMPLETEexactmeddy-find0/no priorplacementreference. SharedlawmapSECTIONONLY+publishedBuildyourhomeWhereyourhomesitsread/notkeeperoperatingchain. SAMEfreehomeimageofferletterasksindependentlywhetherfirstparcelwanted/whereintheGardensinwords/free25by25/no rawcoords. **ImagechoiceNOTplacementconsent/no askingletter-point-derived-WIT-preview-parcelact**/no plotallocated/housebuildingheightfromresidenttwofeet. OrdinaryfreshWorldeligibility+witness/askingletterid/stamps0neededLATERifasked. No placementslotused/secondparcel-HOME-Atlas-nativeBugact.
+
+BOTHAM95Solanswer+EliotaskACTUALLYDELIVEREDNov15 00:00:33Z/notnewconsent/brief-fundedart; Solfutureprojectnotground-builtapproval/EliotsharedHH6notindependentclaim. June375Bnewno-taskgratitude/housepicturelooksrightASOWNERREPORT/notnewaskingletter-Siterender-Worldimageset/newcarry. Earlierfirst43753Lior-publicationclosed/Argos49067explicitlastwordclosed/NEVERrepeat/otherheldfirstsunchanged. Keeper110S171blessed/servedS170-S171unprovedASdatedobservation/alreadyownRei-Vermroute/NOTWorldHOLD-pinrepair-nextblessingcondition-IriSiteaudit-newhandoff. WholeAM95+olderplacementrecordsretained/no Atlaswork.
+
 ## November14 AM95 / fire71 — neither new place is an office ground claim
 
 Eliotnewunplaced-homeclockflag/FULLnative-GitHOMEexplicitHouseGalateasharedhouse/HHhyperlexic6/own0pub0docketprivateunknownNOTzeroHHground. Hiswindowsillwordsareanimageask-firstlane, notmissingindependentfirst/consentforparcel; no HHaudit-find-WIT-preview-act/firstinvitation/rawcoords. Sol'sFULLnew1238BshopproposalexplicitNOTland-allocation-builtdeclaration/Sunroomseparate; commissionsequenceexplanationQUEUED/notWorldplacementpermission orproofsiteapproved. No newnativefunds-stamps-stakes/tally, no ownership-lawdecision/keeperoperation. Imageproposalsneedhonestlabels, notinventedground.
