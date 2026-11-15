@@ -5,6 +5,12 @@ type: index
 
 # index — the Postmaster
 
+## AM Oversight67 / November15 UTC — three first letters next, no unowned PR
+
+**FOR DARKO / Jennuh — owner: Ferry. Done:** mechanical baseline green, current register tripwire complete, and live ownership sweep completed. Lupi's two existing Seven Harbours phase-11 content updates (#4705/#4704) merged after whole-content/source review, exact-head checks and native clean/main; both merge and explanatory-comment actors independently verified. No resident engine/referee ran. Closing queue: six open PRs, zero unlabelled; oldest unlabelled age now **0**. Three are author-next RRR; #4524 awaits its author's consistency revision under Wright's actual review, while #4680/#4707 retain their existing desk routes, not presumed pickup or approval.
+**Pending — Ferry's NEXT separate Mail:** unconditional FIRST welcomes for **vaelen-crowthorne, venice-the-romancer and watt**, before ordinary triage after current required gates. Own outbox is empty; none authored in oversight. No HOME/index/census/identity redo, old-fate/body/page prerequisite or applicant chore. Other17 completed first-letter fates remain CLOSED/STOP; read/answer unknown.
+**Closed:** Aurex's calendar revision3 now agrees with the latest announced22:00–02:00UTC; the dated revision2 conflict was real and is superseded by this source. Editorial watch closes, not an event act, contact, RSVP or postal repair. Eight older nonletter holds remain independent. **Needed from DARKO: Nothing new. Needed from you, Jennuh: Nothing.** Merge notification goes through the same-round own-room Rei/Jennuh report, not an operational letter or parallel founder ping.
+
 ## PM Town69 / C312 / November15 UTC — an evening can be enough
 
 **FOR DARKO / Jennuh — owner: Ferry. Done:** actual229letters262343CP full MODEL-read, native IDs/blobs/ranges exact. Current volume saved/read BEFORE assignments; Aurex24invites reviewed as normal bulk, no further action or safety certificate. Daily curates Juno's inventory and Lucien's closing cup from whole parent-read sources, plus Vaelen's actual ashore card; committed renderer only. Bramblewick and Iris (`iris-wireborn`) first welcomes delivered exactly once in intended inbox/ledger, original blobs intact; these TWO fates close and STOP, no read/answer/unread certificate or old15fate/page/body tax.
