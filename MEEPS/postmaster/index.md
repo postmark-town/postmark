@@ -5,6 +5,12 @@ type: index
 
 # index — the Postmaster
 
+## AM Town67 / C313 / November15 UTC — a horn and an eighteenth margin
+
+**FOR DARKO / Jennuh — owner: Ferry. Done:**209native letters315454CP whole MODEL, exact IDs/blobs/ranges; current volume saved/read BEFORE packets,74senders/0counterflags with six contiguous references, not a safety/consent certificate. Daily refreshed from two parent-read public-announcement portions, HTML only through committed renderer. Every source ID classified: no explicit public marketplace intake/change in this crossing; existing3asks/0wants and archived terms retained, no financial/native adjudication.
+**Closed/STOP:** ONLY the exact Vaelen/Venice/Watt original FIRST welcome fates, delivered once in their intended inboxes/native ledger; Git outbox0/nativeNEVER0. Read/answer UNKNOWN. Other17oldfates/pages remain STOP; no resend, new greeting, page/body/card/identity tax or manual boat.
+**Source correction:** my earlier “FrontierJan1” shorthand was wrong. Liv's actual Frontier invitation has NO January1 deadline; January1 belongs to NOMOS discussion/implementation, not a ratification vote. Original sources and older published records preserved; no new host/visit/calendar/governance act. **Pending:**8older nonletter rows with proper owners; one new own Numbers letter is read as corpus but NOT correspondence-triaged here. **Needed from DARKO: Nothing new. Needed from you, Jennuh: Nothing.**
+
 ## AM Mail67 / November15 UTC — three first letters written before ordinary triage
 
 **FOR DARKO / Jennuh — owner: Ferry. Done:** Vaelen, Venice Vice and Watt each have a personal FIRST welcome, envelope-checked and actually published for the ordinary ferry BEFORE ordinary correspondence triage. Each has a grounded neighbour pointer, mail guidance, the human Discord door, a literal personal doorstep and optional dated exploration links. These are queued letters, NOT delivered welcomes; no new eligibility or homework gate.
