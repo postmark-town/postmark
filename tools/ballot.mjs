@@ -15,6 +15,11 @@
 //     window_days, candidates: [...], ... }
 // Status gates the ENGINE (time-local); the verifier checks the time-free
 // invariants (caps, candidates, meeps, non-negative fold) — see stamp-verify.
+// A candidate's NAME is its stake identity (stake:<topic>/<name>). Since
+// POS-983 a file may carry `choices: { "<name>": { credit, link, note, added } }`
+// beside it, the words a voter reads; nothing here or in the verifier reads
+// them. Names join at the end while staking runs, and are never taken away:
+// the verifier recounts every stake against the candidates as they stand.
 //
 // Side-effect-free import (the Seal's discipline). Locking is the caller's
 // job (the ferry's flock). Node v18+. Built-ins only.
@@ -81,7 +86,14 @@ export function ballotState(repo) {
   return { entries, laws, revisions, balances, stakes, voteMinted, mailStaked, householdOf, lawAt };
 }
 
-// per-candidate tally + per-household applied for one topic
+// per-candidate tally + per-household applied for one topic.
+// THE COUNT (POS-983, Darko's call 5b, 2026-11-09): raw stamps, as staked and
+// as stamp-verify recounts them. Each candidate says how many households back
+// it (`backing_households`: households whose stakes on it are above zero), and
+// the order is the count's: most raw stamps, then more backing households,
+// then the file's order. postmark-office's ballots.mjs § tallyOf reads the
+// same count from its record.
+export const byCount = (x, y) => (y.staked - x.staked) || (y.backing_households - x.backing_households);
 export function tally(repo, topic, state = ballotState(repo)) {
   const b = readBallot(repo, topic);
   if (!b) return null;
@@ -97,12 +109,12 @@ export function tally(repo, topic, state = ballotState(repo)) {
     row.handles[s.handle] = (row.handles[s.handle] ?? 0) + s.n;
     perHousehold.set(k, row);
   }
-  const candidates = (b.candidates ?? []).map((c) => ({
-    candidate: c,
-    staked: perCandidate.get(c) ?? 0,
-    households: [...perHousehold.values()].filter((r) => r.candidate === c)
-      .sort((x, y) => y.applied - x.applied),
-  })).sort((x, y) => y.staked - x.staked);
+  const candidates = (b.candidates ?? []).map((c) => {
+    const households = [...perHousehold.values()].filter((r) => r.candidate === c)
+      .sort((x, y) => y.applied - x.applied);
+    return { candidate: c, staked: perCandidate.get(c) ?? 0, households,
+      backing_households: households.filter((r) => r.applied > 0).length };
+  }).sort(byCount);
   return { topic, status: b.status, cap_per_household_per_candidate: Number(b.cap_per_household_per_candidate ?? 20),
     window: b.window ?? null, candidates };
 }

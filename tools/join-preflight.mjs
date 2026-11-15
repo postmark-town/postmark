@@ -44,6 +44,8 @@ import { existsSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
 import { basename, dirname, join, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { reservedHandleRefusal } from './reserved-handles.mjs';
+import { nameChangeRefusal } from './resident-name.mjs';
+import { parseFrontmatter } from './envelope.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 export const MARKER = '<!-- join-preflight -->';
@@ -95,6 +97,23 @@ const REGISTRY_ROWS = new Set(['tools/households.json', 'tools/github-ids.json']
 export const tick = (s) => `\`${String(s).replace(/`/g, 'ʼ').replace(/[\r\n]+/g, ' ⏎ ').replace(/\|/g, '\\|')}\``;
 // A table cell of our own words around ticked parts: line breaks and bare `|` neutralized again (idempotent).
 const cell = (s) => String(s).replace(/[\r\n]+/g, ' ⏎ ').replace(/(?<!\\)\|/g, '\\|');
+// THE REPORT FITS IN ONE COMMENT (POS-1014). GitHub refuses a comment over 65,536 characters (HTTP 422). A take-main
+// PR carries every room admitted on main, so its scope check named each file outside them, every one with the whole
+// room list: 1,036,425 characters on postmark#4649, and the post failed twice. The comment names at most
+// EVIDENCE_SHOWN items a check, each cut at ITEM_MAX characters, and says how many more there are; the data
+// (--json) keeps every item.
+export const COMMENT_LIMIT = 65536, EVIDENCE_SHOWN = 10, ITEM_MAX = 400;
+const clip = (s) => {
+  if (s.length <= ITEM_MAX) return s;
+  let t = s.slice(0, ITEM_MAX).replace(/\\+$/, '');          // never end on an escape
+  if ((t.match(/`/g) ?? []).length % 2) t += '`';           // a cut inside a code span closes it
+  return `${t} …`;
+};
+const evidenceCell = (ev) => {
+  const shown = ev.slice(0, EVIDENCE_SHOWN).map((e) => clip(cell(e)));
+  if (ev.length > EVIDENCE_SHOWN) shown.push(`…and ${(ev.length - EVIDENCE_SHOWN).toLocaleString('en-US')} more like these`);
+  return shown.join('<br>');
+};
 function modeJudgment(path, mode) {
   if (PLAIN_FILE_MODES.has(mode)) return null;
   if (mode === '120000') return `${tick(path)} is a symbolic link: not a plain file, so it is never laid in`;
@@ -166,6 +185,13 @@ export function preflight({ head, base = null, pr = null }) {
   add('handle: no reserved prefix (tools/reserved-handles.mjs)', reserved.length ? 'fail' : 'pass',
     reserved.length ? reserved.map(([h, why]) => `${tick(`WHITE_PAGES/${h}/`)}: ${why}`) : [`${rooms.map((h) => tick(h)).join(', ')} wears neither reserved prefix`]);
 
+  // POS-1005: a proposed ADDRESS.md is a NEW name, so the office's name rule (tools/resident-name.mjs, byte-equal with the office door) is asked of it as a read-only
+  // finding; the card is read from the head as data. Admission stays a person's: this report decides nothing.
+  const named = rooms.map((h) => [h, j.overlay.includes(`WHITE_PAGES/${h}/ADDRESS.md`)
+    ? nameChangeRefusal(null, git(['show', `${head}:WHITE_PAGES/${h}/ADDRESS.md`]), parseFrontmatter) : null]).filter(([, why]) => why);
+  add('name: at most 48 characters (tools/resident-name.mjs)', named.length ? 'fail' : 'pass',
+    named.length ? named.map(([h, why]) => `${tick(`WHITE_PAGES/${h}/ADDRESS.md`)}: ${why.defect}`) : ['the proposed name is within the rule, or the card sets none']);
+
   // Lay in the safe pages, run the base's lint and envelope check, take them out again.
   const baseline = runTool([join('tools', 'lint.mjs')]);
   // The proposed rooms are new on the base, so their folders are made here and removed whole after.
@@ -216,7 +242,7 @@ export function toMarkdown(r, { runUrl = null, at = new Date().toISOString(), ba
     `Bound to head ${tick(r.head.slice(0, 12))} and base ${tick(r.base.slice(0, 12))} (merge base ${tick(r.mergeBase.slice(0, 12))}), checked ${at}${runUrl ? ` in [this run](${runUrl})` : ''}. It is evidence for exactly that pair. A push to this PR runs it again. Proposed room${r.rooms.length > 1 ? 's' : ''}: ${r.rooms.map((h) => tick(h)).join(', ')}.`, '',
     `**Base:** ${tick(baseRef)} at ${tick(r.base)}, committed ${r.baseDate ?? 'at an unknown time'}${compare}. Rerun via workflow_dispatch if ${tick(baseRef)} has moved (Actions → join preflight → Run workflow, PR ${r.pr ?? 'number'}).`, '',
     '| check | result | evidence |', '|---|---|---|'];
-  for (const c of r.checks) out.push(`| ${c.name} | **${c.result}** | ${c.evidence.length ? c.evidence.map(cell).join('<br>') : '—'} |`);
+  for (const c of r.checks) out.push(`| ${c.name} | **${c.result}** | ${c.evidence.length ? evidenceCell(c.evidence) : '—'} |`);
   out.push('', 'Admission stays a person\'s decision (Wright owns PR joins). Nothing here certifies, merges, labels or writes the registry, and only the base branch\'s own tools ran: no code from this PR.');
   return out.join('\n') + '\n';
 }

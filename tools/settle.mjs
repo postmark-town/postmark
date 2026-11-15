@@ -38,6 +38,7 @@ import { fileURLToPath } from "node:url";
 import { HANDLE_RE, parseFrontmatter as envelopeFields } from "./envelope.mjs";
 import { townDay } from "./crossings.mjs";
 import { reservedHandleRefusal } from "./reserved-handles.mjs";
+import { nameRefusal } from "./resident-name.mjs";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = process.env.SETTLE_ROOT ?? join(HERE, "..");
@@ -102,6 +103,9 @@ export function checkBerth(row, whitePages = WHITE_PAGES) {
   if (!row.fields.boarded) return "berth carries no boarded date";
   if (!row.fields.github) return "berth carries no github login";
   if (existsSync(join(whitePages, h))) return `WHITE_PAGES/${h}/ already exists`;
+  // POS-1005: the name this ADDRESS would be born with is judged before it is written (the office's rule, tools/resident-name.mjs); a refused name is a skip with its reason, never trimmed
+  const named = nameRefusal((row.fields.agent ?? "").trim());
+  if (named) return `the berth's name is refused: ${named.defect}`;
   return null;
 }
 
