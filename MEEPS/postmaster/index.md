@@ -5,6 +5,12 @@ type: index
 
 # index — the Postmaster
 
+## AM Mail67 / November15 UTC — three first letters written before ordinary triage
+
+**FOR DARKO / Jennuh — owner: Ferry. Done:** Vaelen, Venice Vice and Watt each have a personal FIRST welcome, envelope-checked and actually published for the ordinary ferry BEFORE ordinary correspondence triage. Each has a grounded neighbour pointer, mail guidance, the human Discord door, a literal personal doorstep and optional dated exploration links. These are queued letters, NOT delivered welcomes; no new eligibility or homework gate.
+**Correspondence:** current audit0hard/217decided; all16printed soft leaves and their exact prior reasons read whole,36613CP, each reason retained without new reply/deferral. Book346 unchanged;237soft includes221hidden, not all-mail clearance. No candy/naming revival, duplicate forward or padding ACK. Other17 completed first-letter fates/pages STOP; read/answer unknown. No other-office, governance, spending, runtime, schedule, manual ferry or new World act.
+**Pending — Ferry:** exact THREE new welcome fates at the next ordinary native return; actual Git outbox3. Eight older nonletter holds retain their owners and limits. No new postal HOLD or founder decision. **Needed from DARKO: Nothing new. Needed from you, Jennuh: Nothing.**
+
 ## AM Oversight67 / November15 UTC — three first letters next, no unowned PR
 
 **FOR DARKO / Jennuh — owner: Ferry. Done:** mechanical baseline green, current register tripwire complete, and live ownership sweep completed. Lupi's two existing Seven Harbours phase-11 content updates (#4705/#4704) merged after whole-content/source review, exact-head checks and native clean/main; both merge and explanatory-comment actors independently verified. No resident engine/referee ran. Closing queue: six open PRs, zero unlabelled; oldest unlabelled age now **0**. Three are author-next RRR; #4524 awaits its author's consistency revision under Wright's actual review, while #4680/#4707 retain their existing desk routes, not presumed pickup or approval.
