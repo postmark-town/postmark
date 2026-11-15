@@ -187,8 +187,9 @@ Wright's 2026-11-15 publication go, govern the reporter's week. Office w47's
 or a checker's yes. The field supplies no automatic timer, label or lockout:
 keep the issue and case record during the existing rounds, not a new job.
 
-1. **Open by default; the reporter chooses.** `fix_myself: true` reserves first
-   go for the reporter, subject to the exceptions below. `false` or omission
+1. **Open by default; the reporter chooses.** `fix_myself: true` records the
+   reporter's request for first go, subject to the exceptions below. Before
+   `reproduced` this is a request, **not a reserve or a hold**. `false` or omission
    records no request; without a separate timely declaration, the bug is open.
 2. **Letter-originated reports.** When filing from a reporter's letter, set
    `fix_myself: true` only if the letter asks for first go. Otherwise leave it
@@ -199,30 +200,26 @@ keep the issue and case record during the existing rounds, not a new job.
    to §3's personal/privacy safeguards. Never publish private or real-world
    details; if the request cannot be quoted safely, keep its source private and
    route it through Rei instead of editing its meaning or exposing it.
-   A bug that reaches `reproduced` without a reserve is open: no new claim after
-   that. Keep declaration/change history so an old flag cannot re-start a
+   A bug that reaches `reproduced` without a recorded request stays open: no new
+   claim after that. Keep declaration/change history so an old flag cannot re-start a
    reserve that was given up or ended.
-4. **Seven days; keep the clock's source.** Ruling **f** starts a flagged
-   `fix_myself: true` reserve at the recorded `reproduced` entry, with no letter
-   round trip. Ruling **c** names seven days from the Bug Catcher's letter.
-   Keep `reserved: reporter` on the issue, record the applicable source and
-   end date when established, and write to tell the reporter in the normal full
-   round: include the issue link, established end date or pending timing status,
-   and the reporter's next step. That notice does not reset a flagged clock.
-
-   **PENDING — DARKO'S DECISION, NOT AN ACTIVE RULE:** does f's seven days from
-   `reproduced` replace c's count from the letter **for everyone**, including
-   non-flag declarations? Wright is asking Darko and will put the answer on
-   **CORE-32**. Do **not** apply the proposed universal clock early. Where the
-   applicable clock is unclear, preserve the request and source, mark that
-   timing decision pending through Rei, and do not invent, reset, backdate or
-   expire a reserve or hand its work away on that interpretation. This holds
-   only the affected timing action, not confirmation/reproduction or the round.
+4. **One clock for everyone — active ruling.** Darko ruled on CORE-32 at
+   **2026-11-15 18:06 EST**: keep **f**. For **flagged and non-flagged requests
+   alike**, the seven days start at the **recorded `reproduced` entry**, replacing
+   c's count from the Bug Catcher's letter. Use that existing stage receipt,
+   not the report's date or the time you read it; do not restart an existing clock.
+   **Before `reproduced` there is no reserve:** do not add `reserved: reporter`
+   or hold work on an unreproduced bug. Once it reaches `reproduced` with a timely
+   request, keep that label on the issue and record the receipt and end date.
+   Write to tell the reporter in the normal full round, with the issue link,
+   end date and next step. **The letter only informs; it never starts the clock.**
+   Neither the request nor the reserve stops confirmation/reproduction or changes
+   §2f's evidence and checks.
 5. **Rollover and silence.** Activity from the reporter on the issue or a PR
    within the seven days rolls the reserve over another seven. Record the
    activity and resulting end date; other people's activity is not theirs.
    A week with nothing opens it: remove `reserved: reporter` and say so on the
-   issue, using an established clock, never the pending interpretation above.
+   issue, using the recorded clock and activity, not the current read time.
 6. **Giving it up.** The reporter can open it at any time by saying so on the
    issue. Record that choice and remove the reserve label; do not reinstate it
    from the unchanged post flag on the next wake.
@@ -353,7 +350,7 @@ as you work, in the same round as the act they follow.
 |---|---|---|---|
 | `stage: reported` … `stage: shipped` (seven) | the post's current stage | the one matching the post's current stage when the issue opens or is backfilled; the next one with each accepted advance or skip | the previous stage label, in the same step: **exactly one stage label at a time** |
 | `resident can fix` | the cause is known and the fix is scoped, so a resident's PR is welcome | at `diagnosed` or later, when the issue says what the fix is and no reporter reserve is active (§2, Reporter first go) | when a reporter reserve applies, a fix PR is linked, or the post finishes |
-| `reserved: reporter` / `no reserve: urgent` | the reporter's first go / its urgent exception | under §2, Reporter first go; retain its declaration, clock or pending timing decision, and reason | update from that rule's recorded release, expiry, owner decision or accepted terminal outcome; an ordinary stage-label change alone never removes it |
+| `reserved: reporter` / `no reserve: urgent` | the reporter's first go / its urgent exception | under §2, Reporter first go; retain its declaration, recorded reproduction receipt and end date or urgent reason | update from that rule's recorded release, expiry, owner decision or accepted terminal outcome; an ordinary stage-label change alone never removes it |
 | `waiting: reporter` | the next move is the reporter's: your one question, missing steps, or something they've been asked to post | when you ask, or when a check is waiting on the reporter's own comment | when they **actually answer or do it**, not merely when someone comments |
 | `waiting: decision` | a ruling is owed by a founder, Wright or a sitting; the comment names who and what | when you route the question through Rei | when the ruling is **actually given**, not merely acknowledged |
 | `waiting: wright` | a question for Wright routed through Rei | add alongside `waiting: decision` when routing that question | **only Wright removes it, after answering on the issue**; leave it in place, including during side-exit cleanup |
