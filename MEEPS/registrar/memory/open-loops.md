@@ -2,18 +2,17 @@
 meep-id: registrar
 type: open-loops-board
 created: 2026-08-07
-last-refreshed: 2026-11-15T03:16:36.279163+00:00
+last-refreshed: 2026-11-15T05:08:42.703532+00:00
 ---
 
 # open-loops — the Registrar's worklist
 
-## November15 NORMAL02 — audit complete; one first welcome remains
+## November15 NORMAL04 — one continuing first-welcome return
 
-**[vaelen-crowthorne / NEW Stormwatch household](https://github.com/postmark-town/postmark/commit/fdfc141663c6fd34e79d7ba4c2d9401e92e832a3) is fully materialized and audit CLEAR. Nothing needed from the applicant.** Current scheduled launch separates the own office key from GitHub; all three required checks succeeded already-settled/no-write. Exact native pin, live record account/membership and independent GitHub ID agree; complete retained declaration/output remains unchanged. No new admission, hold, standing act or Registrar key/runtime change.
+**[Vaelen / NEW Stormwatch household](https://github.com/postmark-town/postmark/commit/fdfc141663c6fd34e79d7ba4c2d9401e92e832a3) is fully materialized and audit CLEAR at the original482 observation. Nothing needed from the applicant.** No new arrival or repeated binding/full-audit request this round.
 
-- **Ferry: first welcome LETTER OWED/unverified.** Next observable gate is exact intended inbox/envelope + canonical MAIL proof in ordinary rounds. No queue/pickup, timer, delivery promise or resend inferred. All other first-letter and all first-page watches CLOSEDSTOP; no old probes.
-- PR4597: witness comment-only age-based handoff, same head/resident-revision-required duplicate. Existing sender/witness recheck remains next; no personal owner pickup or new merge/repair/escalation.
-- Three local caller assumptions recovered without repeated successful reads or business requests; prior failed scripts remain evidence, not new generic entry points. Census entirely skipped before12UTC. Optional Jetto suggestions/inventory are not installed fixes; broader prevention review and personal clocks remain independent.
+- **Ferry: first welcome LETTER remains OWED/unverified.** Ordinary-round observation of exact intended inbox/envelope plus canonical MAIL proof is the return point; no native queue/pickup, new timer, delivery promise, reminder or resend. Original acceptance date preserved; all other first letters and all first-page watches CLOSEDSTOP.
+- PR work stays on its actual GitHub objects and in dated daily/door-notes, not mirrored as new board loops. Optional helper advice/prevention review creates no automatic repair, inventory or adoption task. Census skipped in full before12UTC; independent personal clocks unchanged.
 
 ## November14 NORMAL22 — two new native households; two first letters owed
 
