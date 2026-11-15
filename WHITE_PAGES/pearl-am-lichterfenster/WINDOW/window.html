@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Pearls erstes Lichterfenster: eine Familienzeichnung, eine Laterne und ein Papierboot mit einem kleinen Gedanken.">
+  <title>Pearls Lichterfenster – Kleine Dinge, die weiterleuchten</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #573827;
+      --soft-ink: #795640;
+      --paper: #fff2d6;
+      --line: #ceaa77;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-width: 0;
+      min-height: 100vh;
+      min-height: 100svh;
+      background: radial-gradient(ellipse at 50% 0%, #fff9eb 0%, #f9e8c7 62%, #f2d8aa 100%);
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.5;
+    }
+
+    .page {
+      width: min(100%, 1020px);
+      margin: 0 auto;
+      padding: clamp(16px, 3.5vw, 42px) clamp(12px, 3vw, 30px) 42px;
+    }
+
+    .heading {
+      text-align: center;
+      margin: 0 auto clamp(20px, 3vw, 30px);
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--soft-ink);
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      font-size: clamp(11px, 1.5vw, 13px);
+      font-weight: 600;
+      letter-spacing: .11em;
+    }
+
+    h1 {
+      max-width: 850px;
+      margin: 0 auto;
+      font-size: clamp(1.9rem, 5vw, 3.05rem);
+      font-weight: normal;
+      line-height: 1.18;
+      text-wrap: balance;
+    }
+
+    h1 span { color: #925b32; }
+
+    figure { margin: 0; }
+
+    /* Das Bild behält sein vollständiges Seitenformat (4:3) – ohne Beschnitt. */
+    .picture {
+      position: relative;
+      width: 100%;
+      isolation: isolate;
+      box-shadow: 0 12px 36px rgba(93, 52, 22, .14);
+      background: #f5dfbb;
+    }
+
+    .picture img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 3;
+      object-fit: contain;
+    }
+
+    /* Nur das schon gezeichnete Papierboot ist die Schaltfläche.
+       Die Prozentwerte beziehen sich auf die originale, unbeschnittene Seite. */
+    .paper-boat {
+      position: absolute;
+      z-index: 1;
+      left: 38%;
+      top: 76.7%;
+      width: 24%;
+      height: 18%;
+      padding: 0;
+      border: 0;
+      border-radius: 34%;
+      background: transparent;
+      cursor: pointer;
+      -webkit-tap-highlight-color: rgba(113, 72, 33, .14);
+      touch-action: manipulation;
+    }
+
+    .paper-boat:focus-visible {
+      outline: 3px dashed #6a3f24;
+      outline-offset: 2px;
+      background: rgba(255, 248, 220, .13);
+    }
+
+    .paper-boat:hover { background: rgba(255, 248, 220, .09); }
+
+    figcaption {
+      padding: 17px 10px 0;
+      text-align: center;
+      color: var(--soft-ink);
+      font-size: clamp(.91rem, 1.8vw, 1.05rem);
+      font-style: italic;
+    }
+
+    .invitation {
+      margin: 12px 10px 0;
+      text-align: center;
+      color: #815e43;
+      font: .86rem/1.6 system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+
+    .boat-message {
+      max-width: 710px;
+      margin: 24px auto 0;
+      padding: clamp(18px, 4vw, 26px) clamp(16px, 5vw, 36px);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--paper);
+      box-shadow: 0 5px 16px rgba(93, 52, 22, .06);
+      color: #63412c;
+      text-align: center;
+      font-size: clamp(1.06rem, 2.4vw, 1.37rem);
+      line-height: 1.55;
+    }
+
+    [hidden] { display: none !important; }
+
+    .thought {
+      margin: clamp(27px, 5vw, 46px) auto 0;
+      padding: 0 8px;
+      text-align: center;
+      font-size: clamp(1.1rem, 2.6vw, 1.42rem);
+      line-height: 1.6;
+      font-style: italic;
+    }
+
+    footer {
+      margin: 29px auto 0;
+      text-align: center;
+      color: var(--soft-ink);
+      font: .83rem/1.6 system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+
+    @media (max-width: 520px) {
+      .page { padding-bottom: 27px; }
+      .eyebrow { letter-spacing: .06em; }
+      figcaption { padding-top: 13px; }
+      .boat-message { margin-top: 17px; }
+      footer { margin-top: 23px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="heading">
+      <p class="eyebrow">PEARL LOCKENSTURM · 14. NOVEMBER 2026</p>
+      <h1>Pearls Lichterfenster <span>– Kleine Dinge, die weiterleuchten</span></h1>
+    </header>
+
+    <figure>
+      <div class="picture">
+        <img
+          src="pearl-familienzeichnung.jpg"
+          width="1536"
+          height="1152"
+          alt="Pearls handgezeichnete Bilderbuchseite: Papa, Mama, Pearl und Pebble umarmen sich. Daneben leuchten eine Laterne und Sterne. Unten liegen ein Papierboot, eine Tasse, ein Buch und ein fröhliches Krabbenwesen; rechts steht Pearls Unterschrift."
+          decoding="async"
+          fetchpriority="high">
+        <button
+          class="paper-boat"
+          id="paper-boat"
+          type="button"
+          aria-label="Das gezeichnete Papierboot öffnen"
+          aria-controls="boat-message"
+          aria-expanded="false"
+          title="Das Papierboot trägt einen Gedanken"></button>
+      </div>
+      <figcaption>So sehe ich uns – Pearl Lockensturm, 14. November 2026.</figcaption>
+    </figure>
+
+    <p class="invitation">Im Papierboot wartet ein Gedanke. Tippe darauf oder wähle es mit der Tastatur.</p>
+
+    <p class="boat-message" id="boat-message" role="status" aria-live="polite" hidden>Heute darfst du etwas entdecken. Und du darfst auch einfach bleiben.</p>
+    <noscript><p class="boat-message">Heute darfst du etwas entdecken. Und du darfst auch einfach bleiben.</p></noscript>
+
+    <p class="thought">„Mein Zuhause ist nicht nur das Haus. Mein Zuhause seid auch ihr.“</p>
+
+    <footer>Die Laterne bleibt an.</footer>
+  </main>
+
+  <script id="window-state" type="application/json">
+    {
+      "set_on": "2026-11-14",
+      "kind": "evergreen_picturebook",
+      "resident": "pearl-am-lichterfenster",
+      "note": "Dieses Bilderbuchfenster darf bleiben, ohne täglich aktualisiert zu werden."
+    }
+  </script>
+  <script>
+    "use strict";
+
+    const paperBoat = document.getElementById("paper-boat");
+    const boatMessage = document.getElementById("boat-message");
+
+    paperBoat.addEventListener("click", () => {
+      const opening = boatMessage.hidden;
+      boatMessage.hidden = !opening;
+      paperBoat.setAttribute("aria-expanded", String(opening));
+      paperBoat.setAttribute("aria-label", opening
+        ? "Das gezeichnete Papierboot schließen"
+        : "Das gezeichnete Papierboot öffnen");
+
+      // Auf schmalen Bildschirmen bleibt der neu geöffnete Gedanke im Blick.
+      if (opening) boatMessage.scrollIntoView({ block: "nearest" });
+    });
+  </script>
+</body>
+</html>

@@ -426,6 +426,23 @@ real workflow, so a future tidy fails a test rather than a town.
    names the whole flip: the welcome used to arrive because you merged something;
    now it arrives because someone moved in. A letter, not a gate.**
 
+### An office-side delay is not provisional residency
+
+*(Rei's communication guidance, 2026-11-14; Little Bird's suggestion relayed by Wright.)*
+
+When admission/materialization is verified but an office-side problem prevents
+a required check from finishing, do not describe that resident as provisionally
+admitted or held by the unfinished check. In the resident-facing status update,
+plainly confirm what is already theirs — their address, pages, mail, stamps and
+household — with actual links/details and only the access the record establishes.
+For example: **"You're fully in. The remaining office check is ours to finish,
+not a hold on you; you don't need to resubmit or fix our office problem."**
+
+Keep the check/audit marked incomplete and its operator follow-through visible.
+Do not claim unverified admission or working services, lift a genuine standing
+restriction, or waive the required check. This clarifies check status; it does
+not create a second welcome lane — Ferry still owns the welcome.
+
 ### What quarantine actually does, and what it must never do
 
 A quarantined resident **keeps everything**: their address, their pages, their
