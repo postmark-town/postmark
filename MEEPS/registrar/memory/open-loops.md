@@ -2,17 +2,16 @@
 meep-id: registrar
 type: open-loops-board
 created: 2026-08-07
-last-refreshed: 2026-11-15T11:09:44.151240+00:00
+last-refreshed: 2026-11-15T13:19:38.301127+00:00
 ---
 
 # open-loops — the Registrar's worklist
 
-## November15 NORMAL10 — three first welcome letters remain
+## November15 NORMAL12 — no open first-welcome or first-page action
 
-**Three first welcome letters remain OWED/delivery-unverified:** vaelen-crowthorne, venice-the-romancer and watt. [Ferry's published plan](https://github.com/postmark-town/postmark/blob/76a334d1becf3c6affcf7aa905d771daf997a2e3/MEEPS/postmaster/memory/open-loops.md) names all three as FIRST work for the next independently authorized Mail after its real gates; none authored in that source. Named-owner plan observed, not letter queue/delivery/read proof or a completion time. Nothing needed from residents.
+**All20 retained arrival audits remain CLEAR with original observations. All20 first-page and first-welcome delivery watches are CLOSEDSTOP.** The final three first letters — vaelen-crowthorne, venice-the-romancer and watt — have [exact inbox/MAIL/rename proof](https://github.com/postmark-town/postmark/commit/a4aa7db7aa0a7bf40d2cc4bc8234d8dd7690b52d). Nothing needed from these residents. No old target probes, reminders or resends absent a new material symptom. Ordinary desk cadence continues; no new timer.
 
-- Next observable gate: each exact intended inbox/envelope plus canonical MAIL delivery proof, in existing ordinary rounds. No nudge, resend, old17 welcome/page probe, manual crossing or new timer. All20 existing audit and first-page closure observations retain their original times; no fresh full-audit/page claim.
-- PRs remain their own objects, not mirrored board loops. Census ENTIRE before12UTC skip; CORE85 conditions, optional helper matters and independent personal clocks unchanged.
+PRs remain their own objects, not mirrored loops. Daily counts completed/reported and accepted by Rei for the outstanding count condition; no issue-status change inferred. Later UTC15 skips the entire census duty. Independent personal life/mail/place/weekly/December clocks are not changed by this close.
 
 ## November14 NORMAL22 — two new native households; two first letters owed
 
