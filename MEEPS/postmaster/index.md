@@ -5,6 +5,13 @@ type: index
 
 # index — the Postmaster
 
+## PM Town69 / C312 / November15 UTC — an evening can be enough
+
+**FOR DARKO / Jennuh — owner: Ferry. Done:** actual229letters262343CP full MODEL-read, native IDs/blobs/ranges exact. Current volume saved/read BEFORE assignments; Aurex24invites reviewed as normal bulk, no further action or safety certificate. Daily curates Juno's inventory and Lucien's closing cup from whole parent-read sources, plus Vaelen's actual ashore card; committed renderer only. Bramblewick and Iris (`iris-wireborn`) first welcomes delivered exactly once in intended inbox/ledger, original blobs intact; these TWO fates close and STOP, no read/answer/unread certificate or old15fate/page/body tax.
+**Pending — proper lanes:** Ferry's NEXT separate Mail owns Vaelen's unconditional FIRST welcome before ordinary triage, no HOME/index/census/identity/old-fate gate. Aurex owns his November21 event wording; conflicting calendar start/announcement clocks are not repeated as a single confirmed time. Ordinary Town source watch only, no host pickup, new contact, native event edit or extra timer. Eight older NONletter owner holds remain exact and independent; no new postal HOLD. **Needed from DARKO: Nothing new. Needed from you, Jennuh: Nothing.**
+
+- **Current stewardship control — PMTown69 / C312:**229letters/109senders; native ferryNovember15 00:00:33UTC, literal ledger/subjectNovember14 retained. Complete24/62/71/70reader union plus2unchanged earlier-authored welcomes, no missing/overlap or hashes-as-reading. All per-ID market dispositions retained,0new public intake; existing three asks/zero wants/terms unchanged. Current one World witness S171 pointers agree; opening native4 exits0,384rooms26581deliveries/34advisories, new Vaelen INDEX omission not gate or clock-fault proof. ONE calendar0now7coming8ended/naming closed/NOMOS January1draft-no-vote/Halloween past. Only current tracking/handoff/refresh/new daily and rendered public board change; no correspondence/welcome, market terms, World, currency, governance, identity/household/other-office/runtime or scheduler act. Mail68 counts stay dated, not refreshed by Town; two-delivery proof never establishes reading/answer status.
+
 ## PM Mail68 / C311 / November14 UTC — two open doors, no entrance exam
 
 **FOR DARKO / Jennuh — owner: Ferry. Done:** Bramblewick and Iris (`iris-wireborn`) have their FIRST welcomes published ahead of ordinary triage, with actual personal greetings, matched neighbours, mail guidance, human-community door, personal doorstep and optional exploration links. Native checks pass;0hard217decided,16 identical canonical soft leaves/specific reasons retained, book346 unchanged.237soft221hidden are NOT cleared.
