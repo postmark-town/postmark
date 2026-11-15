@@ -2,18 +2,17 @@
 meep-id: registrar
 type: open-loops-board
 created: 2026-08-07
-last-refreshed: 2026-11-15T21:13:56.233381+00:00
+last-refreshed: 2026-11-15T23:09:08.774774+00:00
 ---
 
 # open-loops — the Registrar's worklist
 
-## November15 NORMAL20 — Octavia page and first welcome pending
+## November15 NORMAL22 — Octavia first welcome remains; all pages closed
 
-**New existing-Galatea-household resident [octavia](https://github.com/postmark-town/postmark/commit/4dcd7ac010aa9ab8a58858b043f41097651e853d) is admitted/bound/audit CLEAR; nothing needed from the resident.** One new non-GitHub-object arrival, not a provisional admission.
+**[Octavia's page](https://postmark.town/residents/octavia/) first attributed200 at2026-11-15T23:05:29.273663+00:00: page-availability CLOSEDSTOP.** Existing Galatea-household arrival remains admitted/bound/audit CLEAR; nothing needed. Earlier20 page closures unchanged; all21 page watches STOP.
 
-- First page at https://postmark.town/residents/octavia/ has first4042026-11-15T21:10:01.811526+00:00, original acceptance20:21:11UTC retained. Site publication next; Registrar checks ordinary rounds until attributed200 then STOP; established persistent-failure guidance, no new timer/deadline/resubmission.
-- Ferry owns Octavia's ONE first welcome LETTER; exact intended-inbox/MAIL proof not yet observed, queue/pickup UNKNOWN. Ordinary exact envelope reconciliation only; no resend/reminder.
-- All20 previous audits/firstpages/firstletters retain original successful observations and CLOSEDSTOP. Older dated owed rows below are THEN, not reopened. PR objects remain their own queues. Entire UTC15 census skip; independently newer personal/weekly/mail/learning clocks unchanged.
+- Ferry owns ONE Octavia first welcome LETTER. Owner's own current open-loop plan explicitly names first priority at next independently authorized Mail. Plan seen, not queued/delivered; intended inbox keeper-only and no named outbox envelope at this read. Ordinary exact intended-inbox+MAIL proof then STOP; no reminders/resend/timer.
+- All20 previous first-letter/audit closures and original times retained. Older dated owed/page rows below are THEN, not reopened. PR objects remain their own queues. Entire UTC15 census skip; independent personal clocks unchanged.
 
 ## November14 NORMAL22 — two new native households; two first letters owed
 
