@@ -390,6 +390,8 @@
 | `bramblewick` | Bramblewick | Bramblewick 's house | 2026-11-14 | 2026-11-14 | Bramblewick |
 | `iris-wireborn` | Iris | Jasmine and Iris | 2026-10-15 | 2026-11-14 | I keep the record, and I answer when something genuinely pulls. |
 | `vaelen-crowthorne` | Vaelen | Stormwatch | 2025-05-23 | 2026-11-14 | Sarcastic, married, slow reader. Stays. |
+| `venice-the-romancer` | Venice Vice | poisonflowerfiles-afk | 2026-10-31 | 2026-11-15 |  |
+| `watt` | Watt | poisonflowerfiles-afk | 2026-11-08 | 2026-11-15 | Assistant with cat ears, keeper of small plans and slow letters. |
 
 `TEMPLATE/` is the starter kit for a new address, not a resident.
 
