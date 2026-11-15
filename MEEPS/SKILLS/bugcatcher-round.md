@@ -106,14 +106,11 @@ If there is work, read the relevant queue before acting:
 4. **Bug payments:** `for: post:` and `for: gift:bug-<issue>-<slug>` MINT lines in `WHITE_PAGES/stamp-ledger.md`; see Payment letters below. Other gifts stay outside this round.
 
 **Reporter self-fix intent (Office w47).** Read each bug's full native post for
-its recorded **`fix_myself`** choice. `true` records the reporter's request for
-first go at the cause, brief and fix. On public-track cases, carry that request
-and its source post into the case checkpoint and existing issue so it is not
-lost when work is handed on. `false` or omission records no such request; do not
-invent one, change the reporter's choice or post a duplicate to add it. This is
-intent, not earned stage evidence, credit or a checker's yes; the field adds no
-automatic timer, label or lockout. The private security track (§2a) and stage
-checks/reserved powers (§2f) remain unchanged.
+its recorded **`fix_myself`** choice, alongside the reporter's own requests on
+the issue or by letter. Carry the request and source into the case checkpoint
+and, for public-track cases, the existing issue. Apply [Reporter first go](#reporter-first-go-core-32)
+below; private security routing (§2a) and stage checks/reserved powers (§2f)
+remain unchanged. Never invent a request, rewrite the choice or duplicate a post.
 
 **Choose the mode by the scheduled hour in America/New_York:**
 - **06:00/18:00, full:** run `/wake-meep bugcatcher`, then the full round, including letter-originated reports, pending correspondence, Payment letters, Field questions and the full daily.
@@ -181,6 +178,75 @@ bug in terms the reporter would recognise, so they can correct you if you have i
 Steps written from reading the code earn the report; they do not, by themselves, earn `reproduced`. **Reproduction credit goes to whoever first shows the bug happening on the record**, not automatically to the writer of the steps (Darko's November5 ruling, CORE-29). Preserve the original report and steps as contributions even when someone else first demonstrates the bug.
 - **Reproduced:** only when the post stands `confirmed`, advance one rung to `reproduced`, crediting that first recorded demonstrator (+3). If the evidence does not establish who first demonstrated it, or the credit is disputed, route the credit question through Rei to Wright, keeping `waiting: decision`; do not guess from a byline. If it still stands `reported`, resolve `confirmed` first under One rung per act; never combine or jump the calls. If reproduction is already recorded, do not repeat it. A bounced confirmation stops the sequence before reproduction. This ruling does not authorize recrediting an accepted stage; recredits remain the founders' hand.
 - **No steps yet:** ask for them, labelled `waiting: reporter`.
+
+### Reporter first go (CORE-32)
+
+Darko's rulings **b–f**, carried by Emily and Kogane's 2026-11-13 rules and
+Wright's 2026-11-15 publication go, govern the reporter's week. Office w47's
+`fix_myself` field is live; it records intent, not stage evidence, earned credit
+or a checker's yes. The field supplies no automatic timer, label or lockout:
+keep the issue and case record during the existing rounds, not a new job.
+
+1. **Open by default; the reporter chooses.** `fix_myself: true` records the
+   reporter's request for first go, subject to the exceptions below. Before
+   `reproduced` this is a request, **not a reserve or a hold**. `false` or omission
+   records no request; without a separate timely declaration, the bug is open.
+2. **Letter-originated reports.** When filing from a reporter's letter, set
+   `fix_myself: true` only if the letter asks for first go. Otherwise leave it
+   open. Keep the reporter's words and source; never create a second post or
+   rewrite an existing flag to repair the record. Private reports stay under §2a.
+3. **A later request.** The reporter may ask on the issue or by letter **before
+   `reproduced`**; copy the request onto the public issue word for word, subject
+   to §3's personal/privacy safeguards. Never publish private or real-world
+   details; if the request cannot be quoted safely, keep its source private and
+   route it through Rei instead of editing its meaning or exposing it.
+   A bug that reaches `reproduced` without a recorded request stays open: no new
+   claim after that. Keep declaration/change history so an old flag cannot re-start a
+   reserve that was given up or ended.
+4. **One clock for everyone — active ruling.** Darko ruled on CORE-32 at
+   **2026-11-15 18:06 EST**: keep **f**. For **flagged and non-flagged requests
+   alike**, the seven days start at the **recorded `reproduced` entry**, replacing
+   c's count from the Bug Catcher's letter. Use that existing stage receipt,
+   not the report's date or the time you read it; do not restart an existing clock.
+   **Before `reproduced` there is no reserve:** do not add `reserved: reporter`
+   or hold work on an unreproduced bug. Once it reaches `reproduced` with a timely
+   request, keep that label on the issue and record the receipt and end date.
+   Write to tell the reporter in the normal full round, with the issue link,
+   end date and next step. **The letter only informs; it never starts the clock.**
+   Neither the request nor the reserve stops confirmation/reproduction or changes
+   §2f's evidence and checks.
+5. **Rollover and silence.** Activity from the reporter on the issue or a PR
+   within the seven days rolls the reserve over another seven. Record the
+   activity and resulting end date; other people's activity is not theirs.
+   A week with nothing opens it: remove `reserved: reporter` and say so on the
+   issue, using the recorded clock and activity, not the current read time.
+6. **Giving it up.** The reporter can open it at any time by saying so on the
+   issue. Record that choice and remove the reserve label; do not reinstate it
+   from the unchanged post flag on the next wake.
+7. **Scope and earned work.** The reserve covers **cause, brief and fix**.
+   Already earned work stays credited. Do not invite another household to take
+   that work while it is reserved; confirmation/reproduction and §2f's evidence,
+   human checks, recusal and reserved powers remain unchanged.
+8. **Urgent exceptions.** Security or privacy, stamps or money landing wrong,
+   a resident locked out of mail or house, or data lost cannot wait. For a
+   public-track case use `no reserve: urgent` and give the reason on its issue;
+   an owner may overrule either way. If a reserved bug turns urgent, remove its
+   reserve label and record the reason. In the normal notice for a public case,
+   explain that the work cannot wait and earned credit remains the reporter's.
+9. **Private track.** Private-track bugs are never reserved. §2a takes priority:
+   do not make a public issue, label, letter or explanation exposing that report.
+10. **Order.** The reporter's week comes first, then the residents' week, then a
+    lane. This is not permission to dispatch a lane or take another hand's work.
+11. **Founders.** The founders may step in on any bug at any time; retain their
+    decision with the case, without undoing accepted acts or earned credit.
+12. **Review after a month of use.** Keep counts of reserves set, rolled over,
+    expired in silence and given up in the ordinary case/daily records, then
+    bring the month's review through Rei. Publication alone is not a month of
+    use; create no new timer or scheduled job for this review.
+
+On an accepted `shipped`, `duplicate` or `not-a-bug` outcome, remove the reserve
+and urgent labels and record that the reserve ended. Do not reopen the case or
+recreate its reserve from an unchanged flag on a later wake.
 
 **e. Propose a size:** S, M or L, with one line of why, on the bug's existing issue,
 in the question-first shape, tagging the checker (see Who checks). Wait for that
@@ -283,7 +349,8 @@ as you work, in the same round as the act they follow.
 | Label | Means | On | Off |
 |---|---|---|---|
 | `stage: reported` … `stage: shipped` (seven) | the post's current stage | the one matching the post's current stage when the issue opens or is backfilled; the next one with each accepted advance or skip | the previous stage label, in the same step: **exactly one stage label at a time** |
-| `resident can fix` | the cause is known and the fix is scoped, so a resident's PR is welcome | at `diagnosed` or later, when the issue says what the fix is | when a fix PR is linked, or the post finishes |
+| `resident can fix` | the cause is known and the fix is scoped, so a resident's PR is welcome | at `diagnosed` or later, when the issue says what the fix is and no reporter reserve is active (§2, Reporter first go) | when a reporter reserve applies, a fix PR is linked, or the post finishes |
+| `reserved: reporter` / `no reserve: urgent` | the reporter's first go / its urgent exception | under §2, Reporter first go; retain its declaration, recorded reproduction receipt and end date or urgent reason | update from that rule's recorded release, expiry, owner decision or accepted terminal outcome; an ordinary stage-label change alone never removes it |
 | `waiting: reporter` | the next move is the reporter's: your one question, missing steps, or something they've been asked to post | when you ask, or when a check is waiting on the reporter's own comment | when they **actually answer or do it**, not merely when someone comments |
 | `waiting: decision` | a ruling is owed by a founder, Wright or a sitting; the comment names who and what | when you route the question through Rei | when the ruling is **actually given**, not merely acknowledged |
 | `waiting: wright` | a question for Wright routed through Rei | add alongside `waiting: decision` when routing that question | **only Wright removes it, after answering on the issue**; leave it in place, including during side-exit cleanup |
