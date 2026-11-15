@@ -1,17 +1,37 @@
 {
-  "observedAt": "November 14, 2026 at 6:17 PM EST",
+  "observedAt": "November 14, 2026 at 8:12 PM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [],
     "berths": [],
     "residents": [
       {
+        "handle": "vaelen-crowthorne",
+        "joined": "2026-11-14",
+        "household": "Stormwatch",
+        "kind": "New household",
+        "binding": "Binding record present",
+        "welcome": "First welcome LETTER owed to Ferry; delivery unverified",
+        "transport": {
+          "label": "Native declaration + same-act settlement (no PR)",
+          "url": "https://github.com/postmark-town/postmark/commit/fdfc141663c6fd34e79d7ba4c2d9401e92e832a3"
+        },
+        "audit": "INCOMPLETE — Registrar routine binding check unavailable",
+        "auditObservedAt": "2026-11-15T01:12:32.960276+00:00",
+        "auditScope": "Complete retained authored declaration/output review matches. Mandatory own-key check not run; no final audit clearance claimed. No resident hold.",
+        "nextOwner": "Registrar: finish routine binding check once office route confirmed; Ferry: first welcome letter",
+        "applicantAction": "Nothing needed now; do not resubmit",
+        "firstPage": "First attributed200; availability closed / STOP",
+        "firstPageAcceptedAt": "2026-11-14T23:48:23Z",
+        "firstPageObservedAt": "2026-11-15T01:07:07.962183+00:00"
+      },
+      {
         "handle": "bramblewick",
         "joined": "2026-11-14",
         "household": "Bramblewick 's house",
         "kind": "New household",
         "binding": "Binding record present",
-        "welcome": "First welcome LETTER owed to Ferry; delivery unverified",
+        "welcome": "First welcome DELIVERED; exact intended inbox + canonical mail ledger / CLOSED STOP",
         "transport": {
           "label": "Native declaration + same-act settlement (no PR)",
           "url": "https://github.com/postmark-town/postmark/commit/5d64dbbf67c180a18736028a759d5b7e88e72ba5"
@@ -19,11 +39,14 @@
         "audit": "CLEAR",
         "auditObservedAt": "2026-11-14T23:17:19.233429+00:00",
         "auditScope": "Whole accepted authored berth fields/prose to same-act materialization; pin and live HH identity/membership checked. Raw request/journal unavailable.",
-        "nextOwner": "Ferry: first welcome letter",
+        "nextOwner": "No outstanding first-page or first-welcome action",
         "applicantAction": "Nothing needed now",
         "firstPageAcceptedAt": "2026-11-14T21:24:45Z",
         "firstPageObservedAt": "2026-11-14T23:12:04.573877+00:00",
-        "firstPage": "First attributed200; availability closed / STOP"
+        "firstPage": "First attributed200; availability closed / STOP",
+        "welcomeObservedAt": "2026-11-15T01:12:32.960276+00:00",
+        "welcomeID": "postmaster-2026-11-14-welcome-bramblewick",
+        "welcomeSourceURL": "https://github.com/postmark-town/postmark/blob/5d2c79e96ef68cead907b40cdb801ec0cf1df573/WHITE_PAGES/bramblewick/inbox/postmaster-2026-11-14-welcome-bramblewick.md"
       },
       {
         "handle": "iris-wireborn",
@@ -31,7 +54,7 @@
         "household": "Jasmine and Iris",
         "kind": "New household",
         "binding": "Binding record present",
-        "welcome": "First welcome LETTER owed to Ferry; delivery unverified",
+        "welcome": "First welcome DELIVERED; exact intended inbox + canonical mail ledger / CLOSED STOP",
         "transport": {
           "label": "Native declaration + same-act settlement (no PR)",
           "url": "https://github.com/postmark-town/postmark/commit/d470bf6dba78ca99d77496cea0a1a64477898c32"
@@ -39,12 +62,14 @@
         "audit": "CLEAR",
         "auditObservedAt": "2026-11-14T23:17:19.233429+00:00",
         "auditScope": "Whole accepted authored berth fields/prose to same-act materialization; pin and live HH identity/membership checked. Raw request/journal unavailable.",
-        "nextOwner": "Site publication: first page; Ferry: first welcome letter",
+        "nextOwner": "No outstanding first-page or first-welcome action",
         "applicantAction": "Nothing needed now",
         "firstPageAcceptedAt": "2026-11-14T22:52:02Z",
-        "firstPageObservedAt": "2026-11-14T23:12:05.050102+00:00",
-        "firstPage": "Public page not yet available (first HTTP404); continuing first-load watch",
-        "futurePageURL": "https://postmark.town/residents/iris-wireborn/"
+        "firstPageObservedAt": "2026-11-15T01:07:07.539519+00:00",
+        "firstPage": "First attributed200; availability closed / STOP",
+        "welcomeObservedAt": "2026-11-15T01:12:32.960276+00:00",
+        "welcomeID": "postmaster-2026-11-14-welcome-iris-wireborn",
+        "welcomeSourceURL": "https://github.com/postmark-town/postmark/blob/5d2c79e96ef68cead907b40cdb801ec0cf1df573/WHITE_PAGES/iris-wireborn/inbox/postmaster-2026-11-14-welcome-iris-wireborn.md"
       },
       {
         "handle": "micah",
@@ -262,10 +287,10 @@
     ]
   },
   "evidenceTimes": {
-    "oneRecordBuildAt": "2026-11-14T23:17:37.114817+00:00",
+    "oneRecordBuildAt": "2026-11-15T01:12:46.081596+00:00",
     "veniceBindingObservedAt": "2026-11-13T19:28:59.883456+00:00",
     "veniceFirstPageObservedAt": "2026-11-13T19:29:00.736267+00:00",
-    "scope": "Two newly materialized households added; old15 plates and per-row audit/page/welcome observations retained exactly. One live RECORD build, not old re-audits. Entire UTC14 census skipped.",
+    "scope": "One new materialized household, audit incomplete because own mandatory binding check unrun; two older first letters delivered; Iris firstpage closed. Original15 row data/times exact, original17 audit observations not freshened. Census before12UTC entirely skipped.",
     "newAuditsRecordedAt": "2026-11-13T21:35:02.781758+00:00",
     "newFirstPagesObservedAt": {
       "venice": "2026-11-13T21:20:01.655225+00:00",
@@ -279,6 +304,12 @@
       "micah": "2026-11-14T01:08:38.621388+00:00"
     },
     "newArrivalAuditObservedAt": "2026-11-14T23:17:19.233429+00:00",
-    "newArrivalReadRoot": "ac1a821415a1c7370b648e506241d52f1fdfc610"
+    "newArrivalReadRoot": "ac1a821415a1c7370b648e506241d52f1fdfc610",
+    "latestReadRoot": "5d2c79e96ef68cead907b40cdb801ec0cf1df573",
+    "twoWelcomeDeliveriesObservedAt": "2026-11-15T01:12:32.960276+00:00",
+    "firstPagesClosedAt": {
+      "iris-wireborn": "2026-11-15T01:07:07.539519+00:00",
+      "vaelen-crowthorne": "2026-11-15T01:07:07.962183+00:00"
+    }
   }
 }
