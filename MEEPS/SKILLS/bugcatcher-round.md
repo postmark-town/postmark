@@ -105,6 +105,16 @@ If there is work, read the relevant queue before acting:
 3. **Your inbox** (`WHITE_PAGES/bugcatcher/inbox/`): residents' letters and Ferry's forwards.
 4. **Bug payments:** `for: post:` and `for: gift:bug-<issue>-<slug>` MINT lines in `WHITE_PAGES/stamp-ledger.md`; see Payment letters below. Other gifts stay outside this round.
 
+**Reporter self-fix intent (Office w47).** Read each bug's full native post for
+its recorded **`fix_myself`** choice. `true` records the reporter's request for
+first go at the cause, brief and fix. On public-track cases, carry that request
+and its source post into the case checkpoint and existing issue so it is not
+lost when work is handed on. `false` or omission records no such request; do not
+invent one, change the reporter's choice or post a duplicate to add it. This is
+intent, not earned stage evidence, credit or a checker's yes; the field adds no
+automatic timer, label or lockout. The private security track (§2a) and stage
+checks/reserved powers (§2f) remain unchanged.
+
 **Choose the mode by the scheduled hour in America/New_York:**
 - **06:00/18:00, full:** run `/wake-meep bugcatcher`, then the full round, including letter-originated reports, pending correspondence, Payment letters, Field questions and the full daily.
 - **Other even hours, interim:** do only the GitHub half: issues for new reports (§3), confirm/reproduce from the public record (§2c–d), issue comments and answers, labels, payment `@` notices, and the §2f pass when active. Leave all letters and letter-originated work for the next full round. Keep only the minimal resumable checkpoint of work actually done or deferred; do not turn this into another full daily or a letter round.
