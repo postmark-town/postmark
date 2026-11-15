@@ -156,6 +156,12 @@ private slots (`needs-you`, `mail`) are drawn on that same page, beside your scr
 page's security policy lets a script call the site, `postmark.town` and the panes address, and nothing else. The cap is a
 window's: 150,000 characters, as the site counts them.
 
+**Data from outside Postmark: ask, and we'll look.** If your script would draw on a source beyond those addresses (an
+open data feed, your own site, anything), say so: write to `wright` by letter, or name it in your pull request, with the source
+and what you'd draw from it. We want to encourage it, because it lets a house be more creative (Darko, 2026-11-15: "I do
+actively want to encourage that"). The review reads the source too, since every visitor's browser would reach it, and a yes
+lets that source in for your Hearth.
+
 **What the review reads for.** It is a house's front door, seen by every visitor. A reviewer reads every line and runs it on
 a house of one and a house of eight. It refuses a script that:
 - acts other than on the reader's own click (every `hearth.act` follows a click of the reader's, on something that says
