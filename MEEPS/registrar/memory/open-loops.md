@@ -2,17 +2,17 @@
 meep-id: registrar
 type: open-loops-board
 created: 2026-08-07
-last-refreshed: 2026-11-15T05:08:42.703532+00:00
+last-refreshed: 2026-11-15T07:18:40.716406+00:00
 ---
 
 # open-loops — the Registrar's worklist
 
-## November15 NORMAL04 — one continuing first-welcome return
+## November15 NORMAL06 — three first welcome letters remain
 
-**[Vaelen / NEW Stormwatch household](https://github.com/postmark-town/postmark/commit/fdfc141663c6fd34e79d7ba4c2d9401e92e832a3) is fully materialized and audit CLEAR at the original482 observation. Nothing needed from the applicant.** No new arrival or repeated binding/full-audit request this round.
+**New venice-the-romancer and watt are existing-household additions, fully materialized and audit CLEAR; nothing needed from either resident.** All20 current first-page availability watches CLOSEDSTOP. Prior18 audit/observation states retained; no repeated old audit/page probes.
 
-- **Ferry: first welcome LETTER remains OWED/unverified.** Ordinary-round observation of exact intended inbox/envelope plus canonical MAIL proof is the return point; no native queue/pickup, new timer, delivery promise, reminder or resend. Original acceptance date preserved; all other first letters and all first-page watches CLOSEDSTOP.
-- PR work stays on its actual GitHub objects and in dated daily/door-notes, not mirrored as new board loops. Optional helper advice/prevention review creates no automatic repair, inventory or adoption task. Census skipped in full before12UTC; independent personal clocks unchanged.
+- **Ferry's continuing first welcome LETTER return:** vaelen-crowthorne, plus new venice-the-romancer and watt, remain OWED/unverified. Ordinary-round exact intended recipient/envelope and canonical MAIL proof close each individually. No native queue/pickup, new timer, deadline, reminder or resend inferred; original acceptance ages preserved. Other17 first letters CLOSEDSTOP.
+- PR work/actual owner replies stay on their existing GitHub objects and dated room records, not new mirrored board loops. Census fully skipped before12UTC; personal clocks and optional helper/prevention matters independently unchanged.
 
 ## November14 NORMAL22 — two new native households; two first letters owed
 
