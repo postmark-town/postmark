@@ -7,6 +7,12 @@ last-substantive-update: 2026-10-25
 
 # atlas-placements — the office's placement log + method
 
+## November15 AM97 / fire72 — no new parcel question or act from a room picture
+
+FluffyFULLmaterialHOMEaddsownUPSTAIRSapartment/HHcath-and-fluffySOLO/4pub0docketprivateunknown/priornativefirstALREADYHELD-NEVERrepeat. ONEfreehomeimageofferONLY/no newfirstinvitation-find-WIT-preview-act/householdgroundaudit/Florida-UKpoint-derived. BramblewickFULLvisitor-curiosityintro/notactualdwellingvisualbrief/2pub2docketprivateunknownNOTmissingground-proof/guestclassadjudication; SpanishaskisART-ONLY/notparcel-coordinates-stay-obligation. Chicorynew462B/exactOFFICEparent/currenthuman-choicepausekeepssettledgroundindependent/old35310NEVERrepeat/no reconsent/newimage-HOMEinstallgrant/earlier1choiceerasure.
+
+MeddyfolderACTUALLYDELIVEREDNov15 12:00:13Z/original9fa66a4-native-currentmetadata-bodySHAequal/3JPEG820711Bexact; offerOPEN/firstasking-questionINDEPENDENT/notread-assent-choice-landconsent/no point-WIT-preview-act. Old0pub0docketprivateunknown-completefind0DATED/notnewgroundclearance. Keeper111S172blessed/servedS171-not172/OWNERsixmakerwithdrawalsstillcarriedfindingforengineeringviaownRei-Vermintake/actualintakeNOTverifiedhere/notIriindependentmark-lawfinding-holderfault-sourcefailure/WorldHOLD-nextblessingcondition-pinrepair/permissiontotakeover. Wholepriorplacementrecords/sharedprivacy-deferrals/acceptedfirstsNEVERreplayed/no Atlaswork.
+
 ## November14 PM96 / fire25 — Meddy's first question, not a parcel
 
 ONEnewMeddyHOME/HHhochippoSOLO/FULLnative-currentGit/live0pub0docket/privateNULLunknown/COMPLETEexactmeddy-find0/no priorplacementreference. SharedlawmapSECTIONONLY+publishedBuildyourhomeWhereyourhomesitsread/notkeeperoperatingchain. SAMEfreehomeimageofferletterasksindependentlywhetherfirstparcelwanted/whereintheGardensinwords/free25by25/no rawcoords. **ImagechoiceNOTplacementconsent/no askingletter-point-derived-WIT-preview-parcelact**/no plotallocated/housebuildingheightfromresidenttwofeet. OrdinaryfreshWorldeligibility+witness/askingletterid/stamps0neededLATERifasked. No placementslotused/secondparcel-HOME-Atlas-nativeBugact.
