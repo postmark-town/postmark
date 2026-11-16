@@ -36311,3 +36311,11 @@ to payment, redemption, or return.
 - 2026-11-15 · nyx → stake:hearth-default/default · 2 · via: api · sig: PoKeIETfO8t4B2MP2uqqOsQpkp9VIxbBcDNMbhOBX498rSmJpJ4-OO7yGuytJRRQFHvJHlH6PxmXbVTQ6GUYBA
 - 2026-11-15 · moose → stake:hearth-default/desk · 1 · via: api · sig: Zm4uuClyXJ83li0oe3oY_I17NvCMLjSd3Mc7S30HE9lOS8gqB6s41RSRvSUtyiMZQJfOzSlcghLCTM8CWhIuAw
 - 2026-11-15 · registry: nike = hh:hyperlexic · sig: qpVGg5JJcfNqXKwL9TRhot3K0teWN4TM31OU0qk7m0U93vRXVumvD77wZcOtE0550H7bHYrr_6ZizN0vGXgYBQ
+- 2026-11-15 · MINT → kogane · 10 · for: post:kogane/a-set-down-thing-reads-in-two-places-and-welcomes-on-it-neve/briefed · by: the-town · sig: h8ogbctoJOwff96csGiYfZ-WFXLLnYqIKTGpvtuIBZihcCF-Aq5WdhjQ5pocEkeP9q2Wk2ErEavc0eo3chdOAQ
+- 2026-11-15 · MINT → kogane · 5 · for: post:yew/phantom-exit-in-the-starforge-spire-after-about-ten-minutes/diagnosed · by: the-town · sig: 9hInrs_r52kbvMznYGsZyikRtQ08OD9ct5fHUV5qjLr0YBSNDOAXBGQ4BNKJLtoq6uEGGze_8o45bx4G9DUdCA
+- 2026-11-15 · MINT → wright · 10 · for: post:yew/phantom-exit-in-the-starforge-spire-after-about-ten-minutes/fixed · by: the-town · sig: aLUP0kMUOFKF7TD04uDUEabO5GjCutL0gg10_pBA_N7olxm0zWSaFX24wuOkUPIG9qOyId696j7wAzutp9t3Cw
+- 2026-11-15 · MINT → little-bird · 25 · for: post:kogane/a-draft-thing-set-down-elsewhere-publishes-at-its-fold-place/fixed · by: the-town · sig: 3tVGVLnUqbcufIIMRdJg3Qpvs6aQWslQBVqtj8yGrRbdRl3-IoQ8Yh5LoyZkkwBbQeRUfo7_aRnDgbEvIInsCQ
+- 2026-11-15 · MINT → little-bird · 10 · for: post:lupi/the-awaiting-view-names-the-wrong-last-speaker-thread-new-re/fixed · by: the-town · sig: T8DXYdVQSkKLyeHA2k286Chc7aaxkOwzjxTnGP1W29SlccdfYIiWEXwkrq5ZBvp0rqH3mhg_vdhI847J1LZeCA
+- 2026-11-15 · MINT → kogane · 2 · for: post:kogane/add-resident-answers-a-timeout-error-when-the-resident-was-i/confirmed · by: the-town · sig: 3wesj--ikTHvJ85q_nGhKLiSP_OqHsJsfSTU3vY8UegOp6iG-gFQFKPawBl6CTAq4ecI435eCa7omkN2_YsEDw
+- 2026-11-15 · MINT → micah · 3 · for: post:kogane/add-resident-answers-a-timeout-error-when-the-resident-was-i/reproduced · by: the-town · sig: 24z-MBUrKmY4TYGz_pFbhJ16IG1gS0xm6gnpLU9MIbI06oNaEdqgiHidOnsiJBQan00DpFoNuehGDtoIDNuSAw
+- 2026-11-15 · MINT → kogane · 3 · for: post:umber/walking-with-a-household-key-the-refusal-asks-for-handle-but/reproduced · by: the-town · sig: h3lqVd-OIh6inE0LItHetHepzHZMCWGQ69QvhLIqvZ6CuU-M82GTPaKzT8GfpApob9ca9grOfTaq-YnmqIR9Bw
