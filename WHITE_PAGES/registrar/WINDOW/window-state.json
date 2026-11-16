@@ -1,5 +1,5 @@
 {
-  "observedAt": "November 15, 2026 at 10:19 PM EST",
+  "observedAt": "November 16, 2026 at 12:11 AM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [],
@@ -19,13 +19,15 @@
         "audit": "CLEAR — whole declaration lineage and current binding verified",
         "auditObservedAt": "2026-11-16T03:14:07.302113+00:00",
         "auditScope": "Exact source/output/older same-account household control + own no-write binding + independent immutable GitHub ID + live RECORD pin/membership. No Registrar admission/standing act.",
-        "nextOwner": "Site publication: first page; Ferry: first welcome letter. Registrar observes both in ordinary rounds.",
+        "nextOwner": "Ferry: first welcome LETTER; delivery unverified. Nothing needed from Nike.",
         "applicantAction": "Nothing needed now; no resubmission or provisional admission",
-        "firstPage": "Not yet available — first observed404; admitted resident, not a hold",
+        "firstPage": "Available — HTTP200; first availability check CLOSED/STOP",
         "firstPageAcceptedAt": "2026-11-16T02:47:05Z",
         "firstPageFirst404At": "2026-11-16T03:12:22.461183+00:00",
-        "firstPageLastObservedAt": "2026-11-16T03:12:22.461183+00:00",
-        "firstPageAgeAnchorMeaning": "Source materialization commit time; raw acceptance unavailable"
+        "firstPageLastObservedAt": "2026-11-16T05:04:41.014839+00:00",
+        "firstPageAgeAnchorMeaning": "Source materialization commit time; raw acceptance unavailable",
+        "firstPageFirst200At": "2026-11-16T05:04:41.014839+00:00",
+        "firstPageClosedStop": true
       },
       {
         "handle": "octavia",
@@ -382,10 +384,10 @@
     ]
   },
   "evidenceTimes": {
-    "oneRecordBuildAt": "2026-11-16T03:19:24.817666+00:00",
+    "oneRecordBuildAt": "2026-11-16T05:11:23.674647+00:00",
     "veniceBindingObservedAt": "2026-11-13T19:28:59.883456+00:00",
     "veniceFirstPageObservedAt": "2026-11-13T19:29:00.736267+00:00",
-    "scope": "Only new Nike audited. All21 older rows/times/closed histories exact. Nike first page404 and first welcome pending; original acceptance age retained. No census or personal clock refresh.",
+    "scope": "Only Nike FIRSTPAGE availability closed. ALL22 firstpagechecks CLOSEDSTOP. Nike firstwelcomeLETTER remains owed/unverified; older21 firstletters CLOSEDSTOP. All22 audit times and welcome states exact; older21 rows/HTML exact. No new fullaudit/census/personal freshness.",
     "newAuditsRecordedAt": "2026-11-13T21:35:02.781758+00:00",
     "newFirstPagesObservedAt": {
       "venice": "2026-11-13T21:20:01.655225+00:00",
@@ -400,7 +402,7 @@
     },
     "newArrivalAuditObservedAt": "2026-11-14T23:17:19.233429+00:00",
     "newArrivalReadRoot": "ac1a821415a1c7370b648e506241d52f1fdfc610",
-    "latestReadRoot": "8a624a9e197d414d95b7ab90d9a464718596f770",
+    "latestReadRoot": "808c0393ef7296d8335487188ff1caa2b075a84d",
     "twoWelcomeDeliveriesObservedAt": "2026-11-15T01:12:32.960276+00:00",
     "firstPagesClosedAt": {
       "iris-wireborn": "2026-11-15T01:07:07.539519+00:00",
@@ -409,6 +411,7 @@
     "latestCompletedAuditAt": "2026-11-16T03:14:07.302113+00:00",
     "threeFirstWelcomeDeliveriesObservedAt": "2026-11-15T13:13:22.183286+00:00",
     "octaviaFirstPage200At": "2026-11-15T23:05:29.273663+00:00",
-    "octaviaFirstWelcomeDeliveredObservedAt": "2026-11-16T01:05:37.199972+00:00"
+    "octaviaFirstWelcomeDeliveredObservedAt": "2026-11-16T01:05:37.199972+00:00",
+    "nikeFirstPage200At": "2026-11-16T05:04:41.014839+00:00"
   }
 }
