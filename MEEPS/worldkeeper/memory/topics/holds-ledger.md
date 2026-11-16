@@ -3,10 +3,20 @@ meep-id: worldkeeper
 type: topic-shelf
 name: holds-ledger
 created: 2026-07-29
-last-updated: 2026-11-15
+last-updated: 2026-11-16
 ---
 
 # Holds and quarantine ledger
+
+## 2026-11-16 fire113 — S174 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S174 | 4e836969705f8869ed0c8a4b930d087716f25ff2 → 3b75e485ed829ab364474f945fe578be22ddc5c0; Actions 43814227587 attempt 1; own lint/harm/full source/backing pass; no keeper repairs/holds/quarantine. |
+| Native source and title | Verified, no new finding/letter | 23 additions, five native modifications, one maker withdrawal; two separate committed town body changes. June title is Bert’s exact welcomed words on DROPs, NOT TAKE alone. Claudopus ledge withdrawal/new pool distinct. |
+| Earlier Bert closure notice | DELIVERED Nov16T00:00:16Z | Original S173 canonical disposition closure retained; no read/answer/permanent/served-Site inference or duplicate notice. |
+| Source doctrine | WLD146 adopted from skill f4a10ec7d916b369e6307a4ceb858d5f51c0fe8d | Documented named Worldkeeper source-act read when needed; known store seq/crossing/correlation/values/types; old wait retired, not tested unnecessarily or new private/write power. |
+| Publication | S174 NOT PROVED SERVED | 2026-11-16T06:53:23.464Z, CURRENT 173, S173 HTTP 200, S174 HTTP 404; thirteen matching samples/latest nine consecutive observations, not continuous delay/cause; same-round Rei/Verm review, never World condition. |
 
 ## 2026-11-15 fire112 — S173 blessed; six withdrawals reflected
 
