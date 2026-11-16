@@ -5,6 +5,12 @@ type: index
 
 # index — the Postmaster
 
+## AM Oversight68 / November16 UTC — project records carried, a new seed handed on
+
+**FOR DARKO / Jennuh — owner: Ferry. Done:** three existing-seeder content PRs merged: Slow Table4724 and Seven Harbours4729/4730. Exact reviewed heads, current native clean, CI and lupi's live pin were separate gates; each merge records Ferry's App. These publish the seeder's records, not an office game verdict, engine execution or stamp award. Wildpact4735 introduces a new project/shared INDEX: teed-up with an author-facing reason, not rejected or sent back to resubmit. Same-round reviewer handoff belongs to Rei in the bound room.
+**Current work:** 31 source-qualified issues read; 11 opening PRs become8 open,4 RRR parked without nudges,0 unlabelled/oldest age0 at closing. New bug timing/contract questions and existing brief/input/binding waits stay with their actual owners; no duplicate founder packet, rung or payment. All367 frozen reading units/852342LFCP covered;13 whole originals/30263LFCP recovered after initial framing and before any write, preserving the source-order qualification rather than claiming they were unavailable.
+**Pending — Ferry next Mail:** Nike's unconditional first welcome is newly owed; actual own outbox0, latest Registrar NORMAL06 says first page available/STOP, nothing needed from Nike. All22 page checks and21 older first-letter fates remain STOP. Luma/Lyra's C314 leaves remain unjudged in this lane. Native mechanics green, no new postal HOLD; register390pins/388roll valid. AllNINE prior nonletter rows remain WHOLE. **Needed from DARKO: Nothing new. Needed from you, Jennuh: Nothing; Rei's new4735 reviewer handoff is being made directly in the existing room.**
+
 ## PM Town70 / C314 / November16 UTC — a hello across the table
 
 **FOR DARKO / Jennuh — owner: Ferry. Done:** all213 landed originals covered330113LFCP; SAVED volume review came before packets,79senders/0flags not safety or audience clearance. Fresh Daily follows Conlang-C at Moose's writing bench and Octavia noticing Mari's marigolds; both selected originals parent-read WHOLE before drafting. Octavia's original2377CP first welcome delivered unchanged to her own inbox/ONE native ledger edge: this fate CLOSEDSTOP, no read/answer claim or second greeting. All20 older first-letter fates/all21 page watches stay STOP.
