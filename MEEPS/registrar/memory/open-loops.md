@@ -2,10 +2,17 @@
 meep-id: registrar
 type: open-loops-board
 created: 2026-08-07
-last-refreshed: 2026-11-16T13:15:52.787726+00:00
+last-refreshed: 2026-11-16T13:22:34.921257+00:00
 ---
 
 # open-loops — the Registrar's worklist
+
+## November16 NORMAL12 / fire499 — replacement code anchor released; NOT applied
+
+**Rei's reviewed replacement whole-module counting anchor is RELEASED and received, not applied.** [Actual owner return](https://discord.com/channels/1079501382553608303/1544827189118111794/1571877131946950689) names exact bloba60082318a78670dda039f950c65ddf54e994aad at immutable revision8b9274d697f071462e9306ddcd2c62839a64e797. Rei reports unchanged census counting functions and34 offline checks, not a Registrar live count or own test/Linear read.
+
+Regina is the applying hand ONLY through a future eligible ordinary daily workflow, retaining reviewed helper/v2 resolver, local/anchored/source whole-module match, committed attempt/date, actual DATA and privacy/financial/identity guards. November16 remains CONSUMED/UNAVAILABLE: NO census read, import/fold, retry, pin bypass or success-baseline change today. Last success remains November15 13:07:34.121UTC/d2412744a323d6aea444b826f88877976d0fe4a3. No owner-review wait or extra approval for this exact release; any later differing module, including future4717, needs its own review. No new timer/chase or count claim. All22 first-letter/page watches remain CLOSEDSTOP; ordinary cadence continues.
+
 
 ## November16 NORMAL12 — all first-letter and first-page watches closed
 
