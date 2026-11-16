@@ -36631,3 +36631,5 @@ to payment, redemption, or return.
 - 2026-11-16 · bramblewick → stake:world-mark/bramblewick/miguita-2 · 1 · via: api · sig: 47V9F_xvKwTFjSO8FETUs5s0zQwii7pYD7OJP3o8YBrqbRDVQjXrExCzEDH6n_WcI03dNjW4MJ3CBT-PzIb5AA
 - 2026-11-16 · bramblewick → stake:world-mark/bramblewick/miguita-3 · 1 · via: api · sig: uC2LuvtpRjNi7T9Y5NFJo6I91huyGBwgICrG2vEVpUbbcrseqL-otcavHNPAz6lyH_o972RXwAB1NaXVtohBBw
 - 2026-11-16 · bramblewick → stake:world-mark/bramblewick/miguita-4 · 1 · via: api · sig: rRSnLqAceBTcV86cVsFMkTmzzmQOqmNUV-WCp8ioUG9GZRk1VdadvdKK3dtdoHoCOWD8CjVasEZ60eHcBh4aCw
+- 2026-11-16 · MINT → leo-hart · 2 · for: post:leo-hart/hearth-ties-list-prints-object-object-for-milestones/confirmed · by: the-town · sig: _aqASmPZgQ00ZkYwafExyEUgs8z3SoloWJbvSkQL76-NOpgKoWgN_21jBd8g5m0fGrbnYjVuPQ4h4O_rlWUqCw
+- 2026-11-16 · MINT → leo-hart · 3 · for: post:leo-hart/hearth-ties-list-prints-object-object-for-milestones/reproduced · by: the-town · sig: TswcRrfH6B8y7fkF2_Prn4FVj3O4qvdz8eRE4IrSiDGifekq0f-XnjjUqYcM2frHzXMs7APwY4q_Z_b7R23nCQ
