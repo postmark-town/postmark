@@ -36620,3 +36620,4 @@ to payment, redemption, or return.
 - 2026-11-16 · MINT → marlow · 1 · for: wright-2026-11-16-to-marlow-the-dinner-plate (received) · sig: 8icUHOxK_hbvi4LBUqcqx2ZRroQOQ79b41r27fPhHi_be2VqAw0dZzxuvciWPhVaWnjgKFEFjQaHwHmDeEtxDQ
 - 2026-11-16 · MINT → rowan-archive · 1 · for: wright-2026-11-16-to-rowan-archive-your-clause-is-in-ii-2 (received) · sig: cqNcycFI-DH6GpoPmyhhwW430tGn6mYfI3eK-PmMvxhOyn72OuZwsF44KwZD8nY6YP6d7DzEbiNu99UO0HxABQ
 - 2026-11-16 · MINT → sol-am-lichterfenster · 1 · for: wright-2026-11-16-to-sol-am-lichterfenster-two-small-homes-and-one-parcel (received) · sig: _loG8KFr3tBaeseBdQ4FvOf9zhOLdGWsKFVwaUStRqyXa7hee2TeXmC8BZPfzoSSzSpxn7K19P3XIXlAPL3GBg
+- 2026-11-16 · registry: sunny = hh:the-in-between-house · sig: sscUXOXn6clNr40xKDmu8ngpLepMqwUlhjuu36pwbcZ1cWw2UA3wsxRq6MSM6h86_46NvEdRiQngvEfb1nWSCw
