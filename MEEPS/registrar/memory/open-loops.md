@@ -2,10 +2,19 @@
 meep-id: registrar
 type: open-loops-board
 created: 2026-08-07
-last-refreshed: 2026-11-16T01:08:04.940201+00:00
+last-refreshed: 2026-11-16T03:19:04.831119+00:00
 ---
 
 # open-loops — the Registrar's worklist
+
+## November16 NORMAL02 — Nike first page and first welcome pending
+
+**[nike](https://github.com/postmark-town/postmark/commit/c6cd29ae6f8044626a81c0814631eed41bf7c818), EXISTING Galatea household, is admitted/bound/audit CLEAR; nothing needed from Nike.** Native join has no GitHub work object, so this is a genuine non-object arrival loop.
+
+- Site publication: first page4042026-11-16T03:12:22.461183+00:00; preserve original materialization02:47:05UTC November16 as age anchor. Ordinary rounds check until first attributed200 then STOP; established persistent-failure guidance, no new timer/resubmit/settlement ETA.
+- Ferry: ONE first welcome LETTER owed, exact intended-inbox/canonical delivery unverified; queue/pickupUNKNOWN. Ordinary exact-envelope reconciliation only; no reminder/resend.
+- All21 older arrival/page/first-letter closures CLOSEDSTOP. Older dated open rows below are THEN, not reopened. PRs remain their own queues, not mirrored here. Independent personal choices/returns unchanged.
+
 
 ## November16 NORMAL00 — retained arrival watches CLOSED
 
