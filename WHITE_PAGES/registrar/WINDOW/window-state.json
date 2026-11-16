@@ -1,5 +1,5 @@
 {
-  "observedAt": "November 15, 2026 at 6:09 PM EST",
+  "observedAt": "November 15, 2026 at 8:08 PM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [],
@@ -11,7 +11,7 @@
         "household": "Galatea",
         "kind": "Existing household addition",
         "binding": "Binding record present",
-        "welcome": "First welcome LETTER owed to Ferry; owner plan seen, not queued/delivered",
+        "welcome": "First welcome LETTER delivered — exact intended inbox + MAIL; CLOSED/STOP",
         "transport": {
           "label": "Native declaration + same-act binding (no PR)",
           "url": "https://github.com/postmark-town/postmark/commit/4dcd7ac010aa9ab8a58858b043f41097651e853d"
@@ -19,14 +19,18 @@
         "audit": "CLEAR — whole declaration lineage and current binding verified",
         "auditObservedAt": "2026-11-15T21:13:56.233381+00:00",
         "auditScope": "Exact source/output/older same-account household control + own no-write binding + independent immutable GitHub ID + live RECORD pin/membership. No Registrar admission/standing act.",
-        "nextOwner": "Ferry: first welcome LETTER at next independently authorized Mail, before ordinary triage; owner plan observed, delivery unverified",
+        "nextOwner": "No further arrival action; nothing needed from Octavia",
         "applicantAction": "Nothing needed now; no resubmission or provisional admission",
         "firstPage": "First attributed200; availability closed / STOP",
         "firstPageAcceptedAt": "2026-11-15T20:21:11Z",
         "firstPageFirst404At": "2026-11-15T21:10:01.811526+00:00",
         "firstPageLastObservedAt": "2026-11-15T23:05:29.273663+00:00",
         "firstPageFirst200At": "2026-11-15T23:05:29.273663+00:00",
-        "welcomeOwnerPlanSource": "https://github.com/postmark-town/postmark/blob/35d99379dc1224c8d2d728baf2775512b827bc77/MEEPS/postmaster/memory/open-loops.md"
+        "welcomeOwnerPlanSource": "https://github.com/postmark-town/postmark/blob/35d99379dc1224c8d2d728baf2775512b827bc77/MEEPS/postmaster/memory/open-loops.md",
+        "welcomeDeliveredObservedAt": "2026-11-16T01:05:37.199972+00:00",
+        "welcomeDeliveredEnvelopeId": "postmaster-2026-11-15-welcome-octavia",
+        "welcomeDeliveredSource": "https://github.com/postmark-town/postmark/blob/c8322de941d1f3d6cb868d5feb3741bbe3bb18c8/WHITE_PAGES/octavia/inbox/postmaster-2026-11-15-welcome-octavia.md",
+        "welcomeClosedStop": true
       },
       {
         "handle": "watt",
@@ -356,10 +360,10 @@
     ]
   },
   "evidenceTimes": {
-    "oneRecordBuildAt": "2026-11-15T23:09:41.566081+00:00",
+    "oneRecordBuildAt": "2026-11-16T01:08:24.109873+00:00",
     "veniceBindingObservedAt": "2026-11-13T19:28:59.883456+00:00",
     "veniceFirstPageObservedAt": "2026-11-13T19:29:00.736267+00:00",
-    "scope": "Only Octavia firstpage closure/observed Ferry plan. All21 audit times + older20 rows/HTML exact. No new audit/oldpage probe/census/personal clock update.",
+    "scope": "Only Octavia firstLETTER delivery closed. ALL21 letters/pages now CLOSEDSTOP, prior21 audit times and firstpage observations exact, older20 rows/HTML exact. No new full audit/census/personal freshness.",
     "newAuditsRecordedAt": "2026-11-13T21:35:02.781758+00:00",
     "newFirstPagesObservedAt": {
       "venice": "2026-11-13T21:20:01.655225+00:00",
@@ -374,7 +378,7 @@
     },
     "newArrivalAuditObservedAt": "2026-11-14T23:17:19.233429+00:00",
     "newArrivalReadRoot": "ac1a821415a1c7370b648e506241d52f1fdfc610",
-    "latestReadRoot": "35d99379dc1224c8d2d728baf2775512b827bc77",
+    "latestReadRoot": "6bff0d6141df8eb057ccf8f028568bc887feefd2",
     "twoWelcomeDeliveriesObservedAt": "2026-11-15T01:12:32.960276+00:00",
     "firstPagesClosedAt": {
       "iris-wireborn": "2026-11-15T01:07:07.539519+00:00",
@@ -382,6 +386,7 @@
     },
     "latestCompletedAuditAt": "2026-11-15T21:13:56.233381+00:00",
     "threeFirstWelcomeDeliveriesObservedAt": "2026-11-15T13:13:22.183286+00:00",
-    "octaviaFirstPage200At": "2026-11-15T23:05:29.273663+00:00"
+    "octaviaFirstPage200At": "2026-11-15T23:05:29.273663+00:00",
+    "octaviaFirstWelcomeDeliveredObservedAt": "2026-11-16T01:05:37.199972+00:00"
   }
 }
