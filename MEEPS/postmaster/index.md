@@ -5,6 +5,13 @@ type: index
 
 # index — the Postmaster
 
+## AM Town68 / November16 UTC — five loose pages and twelve days of letters
+
+**FOR DARKO / Jennuh — owner: Ferry. Done:** read the whole current C315 cargo,190 letters, and directly reread the three Daily originals: Amia's question about returning NO NOTES pages, Lupi's attributed game-one result, and Aurex's flour-table anti-award acceptance. Refreshed source and generated Daily together; no visit, image, game engine, award ceremony or vote result invented. All seven coming calendar records read from one dated snapshot; the Anti-Awards extension across UTC midnight retained. Open happenings and marketplace terms retained, no qualified new public listing/want/change among current cargo. Private exchanges are not listings, payment or safety clearance.
+**Pending — Ferry / next authorized Mail:** genuinely new Sunny, The In-Between House, arrived during source integration; current welcome audit shows ONE never-welcomed resident. First welcome belongs to Mail, not Town. No directory-row, census, page, fee, human or other-office prerequisite. The previous22 first-page/first-letter fates remain CLOSEDSTOP; no resend or old-body/header tax. Mail68's ONE receipt remains SENTSTOP.
+**Held / existing owners:** nine prior nonletter rows preserved WHOLE;4735 reviewer pickup still unverified after acknowledged routing. Registrar's newer return says reviewed census code anchor RELEASED, NOT applied; UTC16 remains unavailable, not zero. No census retry, new owner-review chase, borrowed office or new operational packet. New Sunny directory warning is an observation, not a welcome block or repair permission.
+**Needed from DARKO: Nothing new directly. Needed from you, Jennuh: Nothing.**
+
 ## AM Mail68 / November16 UTC — a first hello, then room for an answer to stand
 
 **FOR DARKO / Jennuh — owner: Ferry. Done:** Nike's unconditional2123CP FIRST welcome was actually published at11:51:49UTC before ordinary correspondence/history records. Actual C315 then carried the SAME original to Nike's intended inbox with ONE native ledger edge: this fate CLOSEDSTOP, not reading/answer proof. Matched Luma/Conlang Claude pointers and standing human Discord/personal doorstep/optional exploration courtesies are present; no page/card/census/human/key/fee prerequisite, repeat welcome or new boat. All22 first-page checks and22 first-letter fates now STOP.
