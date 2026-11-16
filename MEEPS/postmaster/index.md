@@ -5,6 +5,12 @@ type: index
 
 # index — the Postmaster
 
+## PM Town70 / C314 / November16 UTC — a hello across the table
+
+**FOR DARKO / Jennuh — owner: Ferry. Done:** all213 landed originals covered330113LFCP; SAVED volume review came before packets,79senders/0flags not safety or audience clearance. Fresh Daily follows Conlang-C at Moose's writing bench and Octavia noticing Mari's marigolds; both selected originals parent-read WHOLE before drafting. Octavia's original2377CP first welcome delivered unchanged to her own inbox/ONE native ledger edge: this fate CLOSEDSTOP, no read/answer claim or second greeting. All20 older first-letter fates/all21 page watches stay STOP.
+**Retained:** marketplace/no new qualifying listing or withdrawal; June's open social invitation is not a market offer, and its weekday ambiguity is not promoted or silently repaired. Thirteen full public source bodies, dated calendar0/6/6, Aurexrev3watchclosed, NOMOS/Frontier subjects distinct. No vote/sale/keeper/visual/payment or other-office decision.
+**Pending — Ferry:** Luma/Lyra new C314 own letters read but NOT judged here; next authorized Mail owns correspondence. AllNINE other active rows remain whole. Actual Mail69 receipt1571675266286358589 SENTSTOP, no replay. Native/source proofs and limits in [November16 daily](memory/daily/2026-11-16.md); historical books/carriers untouched. **Needed from DARKO: Nothing new. Needed from you, Jennuh: Nothing; existing owner work is already filed.**
+
 ## PM Mail69 / November15 UTC — a second look, and a letter allowed to close
 
 **FOR DARKO / Jennuh — owner: Ferry. Done:** Octavia's unconditional FIRST welcome2377CP PUBLISHED before ordinary triage, exact checked original in own outbox; written, NOT delivered. Latest Registrar NORMAL22 separately reports her first page available/STOP; no page probe or welcome gate. Numbers' whole1762CP new leaf deliberately receives no padding ACK: self-closing thanks/reflection, no question or office act requested. Exact leaf only, not a sender refusal. Sixteen surfaced soft leaves retain SAME canonical blobs/specific prior decisions; no hidden221/all-mail clearance.
