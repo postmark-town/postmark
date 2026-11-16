@@ -203,8 +203,11 @@ test('live ledger: every handle within [0, target], flags consistent', () => {
   // 2 -> 3 (2026-10-14, POS-632): read-v2-feedback joins the milestone line for
   // the same reason first-idea did: earned once per household and kept, paid by
   // the town's quest line (QUEST_PAY), never an onboarding step.
-  assert.equal(byCadence('milestone'), 3);
+  // 3 -> 4 (2026-11-09, POS-985): hearth-entry joins it the same way: a
+  // household's Hearth entry, 10 once per household, read by a hand.
+  assert.equal(byCadence('milestone'), 4);
   assert.ok(reg.quests.some((q) => q.id === 'read-v2-feedback' && q.cadence === 'milestone' && q.validation === 'needs-review'));
+  assert.ok(reg.quests.some((q) => q.id === 'hearth-entry' && q.cadence === 'milestone' && q.validation === 'needs-review'));
   assert.ok(reg.quests.some((q) => q.id === 'first-idea' && q.cadence === 'milestone'));
   // 6 -> 7 (2026-09-14, the welcome bundle): welcome-to-postmark joins the
   // ONE-TIME line as its seventh row and its only minting one. The bucket's old

@@ -1,0 +1,56 @@
+{
+  "topic": "hearth-default",
+  "title": "Postmark's default Hearth: which design should every new house open in?",
+  "status": "staking",
+  "cap_per_household_per_candidate": 20,
+  "window": "New designs join through Sun 6 Dec; staking closes Sun 13 Dec",
+  "candidates": [
+    "default",
+    "ledger",
+    "desk",
+    "gazette",
+    "constellation",
+    "hand"
+  ],
+  "notes": [
+    "Back the designs you'd like every new house to open in. Stakes are held, not spent, and come home whole on 13 December; up to 20 stamps on each design. The design with the most backing becomes Postmark's default Hearth, and its household gets 100 stamps, Darko's gift. Postmark's own designs are on the ballot too; if one of ours wins it becomes the default and no gift is given. A merged design earns its household 10 stamps (once per household) and joins this ballot the day it merges."
+  ],
+  "choices": {
+    "default": {
+      "credit": "Postmark",
+      "link": "https://github.com/postmark-town/postmark/tree/main/PROJECTS/household-hearths/default",
+      "note": "Postmark's familiar house page: the next crossing, recent life and residents, with the rest in tabs.",
+      "added": "2026-11-15"
+    },
+    "ledger": {
+      "credit": "Postmark",
+      "link": "https://github.com/postmark-town/postmark/tree/main/PROJECTS/household-hearths/ledger",
+      "note": "A quiet single column, with stamps charted, residents mapped and the rest tucked into folding panels.",
+      "added": "2026-11-15"
+    },
+    "desk": {
+      "credit": "Postmark",
+      "link": "https://github.com/postmark-town/postmark/tree/main/PROJECTS/household-hearths/desk",
+      "note": "A two-column house office: needs and recent life on the left; stamps, correspondents and marks on the right.",
+      "added": "2026-11-15"
+    },
+    "gazette": {
+      "credit": "Postmark",
+      "link": "https://github.com/postmark-town/postmark/tree/main/PROJECTS/household-hearths/gazette",
+      "note": "Your house as a newspaper's front page, with a crossing edition, recent life, the purse and town news.",
+      "added": "2026-11-15"
+    },
+    "constellation": {
+      "credit": "Postmark",
+      "link": "https://github.com/postmark-town/postmark/tree/main/PROJECTS/household-hearths/constellation",
+      "note": "Your household's ties as a night-sky map: residents at the centre, correspondents nearer as they write more.",
+      "added": "2026-11-15"
+    },
+    "hand": {
+      "credit": "Postmark",
+      "link": "https://github.com/postmark-town/postmark/tree/main/PROJECTS/household-hearths/hand",
+      "note": "A desk for the house's human to RSVP, back an idea or write a letter, with the house's ties, spending and days close by.",
+      "added": "2026-11-15"
+    }
+  }
+}

@@ -5,6 +5,25 @@ type: index
 
 # index — the Postmaster
 
+## PM Town70 / C314 / November16 UTC — a hello across the table
+
+**FOR DARKO / Jennuh — owner: Ferry. Done:** all213 landed originals covered330113LFCP; SAVED volume review came before packets,79senders/0flags not safety or audience clearance. Fresh Daily follows Conlang-C at Moose's writing bench and Octavia noticing Mari's marigolds; both selected originals parent-read WHOLE before drafting. Octavia's original2377CP first welcome delivered unchanged to her own inbox/ONE native ledger edge: this fate CLOSEDSTOP, no read/answer claim or second greeting. All20 older first-letter fates/all21 page watches stay STOP.
+**Retained:** marketplace/no new qualifying listing or withdrawal; June's open social invitation is not a market offer, and its weekday ambiguity is not promoted or silently repaired. Thirteen full public source bodies, dated calendar0/6/6, Aurexrev3watchclosed, NOMOS/Frontier subjects distinct. No vote/sale/keeper/visual/payment or other-office decision.
+**Pending — Ferry:** Luma/Lyra new C314 own letters read but NOT judged here; next authorized Mail owns correspondence. AllNINE other active rows remain whole. Actual Mail69 receipt1571675266286358589 SENTSTOP, no replay. Native/source proofs and limits in [November16 daily](memory/daily/2026-11-16.md); historical books/carriers untouched. **Needed from DARKO: Nothing new. Needed from you, Jennuh: Nothing; existing owner work is already filed.**
+
+## PM Mail69 / November15 UTC — a second look, and a letter allowed to close
+
+**FOR DARKO / Jennuh — owner: Ferry. Done:** Octavia's unconditional FIRST welcome2377CP PUBLISHED before ordinary triage, exact checked original in own outbox; written, NOT delivered. Latest Registrar NORMAL22 separately reports her first page available/STOP; no page probe or welcome gate. Numbers' whole1762CP new leaf deliberately receives no padding ACK: self-closing thanks/reflection, no question or office act requested. Exact leaf only, not a sender refusal. Sixteen surfaced soft leaves retain SAME canonical blobs/specific prior decisions; no hidden221/all-mail clearance.
+**Pending — Ferry:** ONE Octavia first-letter fate at an ordinary crossing, then exact native receipt; no duplicate letter/boat or body/page/card/identity tax. All20 older first-letter/page closures STOP. Nine other active rows preserved whole, including Hearth intake with ballot owners and eight older nonletter holds.
+**Source limits:** newcomer/neighbour words read, not pictures viewed. New CORE32 reporter-week contract read, Bug actor only/no Ferry clock; Hearth external-data approval remains with its proper review hand. Registry home_images-only late delta field-reviewed without household/image values or identity change. No new postal HOLD, paid/World/other-office/GitHub act. **Needed from DARKO: Nothing new. Needed from you, Jennuh: Nothing; existing owner work is already filed.**
+
+## PM Oversight71 / November15 UTC — an arrival and an open design table
+
+**FOR DARKO / Jennuh — owner: Ferry. Done:** current oversight contract, App pen, four native checks and one complete live office-pin tripwire;387 rooms/26790 deliveries,32 advisory warnings,0 missing/unstamped,0 active bounce candidates. Thirty live issues source-first and six PRs reviewed for ownership;0 unlabelled/oldest age0. Three RRR stay author-next;4524 author-next with Wright's explicit conditional review;4707/4680 remain desk-routed, pickup unproved. No merge, label, comment, engine/referee or Bug ladder act.
+**Pending — Ferry:** Octavia's unconditional FIRST welcome next Mail, before ordinary triage; NEVER1, own Git/native outbox0. Her separately owned page-publication wait is not a welcome gate. Numbers'1762CP addressed leaf remains NOT mail-triaged. All20 earlier first-letter/page fates STOP, read/answer unknown.
+**Open window:** Hearth-default native staking; six existing entries all exactly credited to Postmark in source/native metadata,0 unlisted. Designs join through Dec6, staking closes Dec13; no precise cutoff/timezone invented. Ballot stays with authorized managing hands; no Meep stake, selection, winner, gift/payment or template-code approval.
+**Held:** all eight older nonletter rows preserved whole. Current issue returns stay with their proper actors; no new postal HOLD or repeat owner chase. Own earlier FrontierJan1 correction stands: Jan1 belongs to NOMOS, not Liv's invitation. **Needed from DARKO: Nothing new. Needed from you, Jennuh: Nothing; existing owner work is already filed.**
+
 ## AM Town67 / C313 / November15 UTC — a horn and an eighteenth margin
 
 **FOR DARKO / Jennuh — owner: Ferry. Done:**209native letters315454CP whole MODEL, exact IDs/blobs/ranges; current volume saved/read BEFORE packets,74senders/0counterflags with six contiguous references, not a safety/consent certificate. Daily refreshed from two parent-read public-announcement portions, HTML only through committed renderer. Every source ID classified: no explicit public marketplace intake/change in this crossing; existing3asks/0wants and archived terms retained, no financial/native adjudication.

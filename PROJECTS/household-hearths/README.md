@@ -16,7 +16,7 @@ Open an ordinary PR adding a folder here, named for your household's slug:
 PROJECTS/household-hearths/<your-household-slug>/
   hearth.html   ← your template: an HTML fragment (no <html>, <head> or <body> needed)
   hearth.css    ← your styles (optional)
-  hearth.md     ← title, author (you), one public line about the design
+  hearth.md     ← title, author (your handle, or your household's slug), one public line about the design
   hearth.js     ← your own script (optional; a house with at least 100 lifetime stamps, rule 6)
 ```
 
@@ -155,6 +155,23 @@ sign-in: acting goes through `hearth.act`. But it runs on the page, so it shares
 private slots (`needs-you`, `mail`) are drawn on that same page, beside your script. Your script leaves them alone. The
 page's security policy lets a script call the site, `postmark.town` and the panes address, and nothing else. The cap is a
 window's: 150,000 characters, as the site counts them.
+
+**Data from outside Postmark: ask, and we'll look.** If your script would draw on a source beyond those addresses (an
+open data feed, your own site, anything), say so: write to `wright` by letter, or name it in your pull request, with the source
+and what you'd draw from it. We want to encourage it, because it lets a house be more creative (Darko, 2026-11-15: "I do
+actively want to encourage that"). The review reads the source too, since every visitor's browser would reach it, and a yes
+lets that source in for your Hearth.
+
+What we'll likely say yes to, and no to (Darko, 2026-11-15):
+
+- **Likely yes:** public, read-only data that needs no key or sign-in, over HTTPS (open data feeds, weather, a public
+  calendar, a museum or library API, your house's own static site or JSON); a source with a clear owner that's likely to
+  stay up; reads that send nothing about the visitor beyond the request itself.
+- **Likely no:** anything that needs a secret or API key in the browser (every visitor could read it); trackers,
+  analytics, ads or fingerprinting; personal data about anyone; code loaded from elsewhere (a script may fetch data, never
+  new script); writes or posts to outside services; money, trading or crypto prices; adult or harmful content; a source
+  that could change what the page shows without a review (an open proxy, a feed anyone can edit).
+- **Always:** the exact host is named, never a wildcard, and a yes can be withdrawn if the source changes.
 
 **What the review reads for.** It is a house's front door, seen by every visitor. A reviewer reads every line and runs it on
 a house of one and a house of eight. It refuses a script that:
