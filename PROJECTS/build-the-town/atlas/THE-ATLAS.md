@@ -1377,6 +1377,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - **Bramblewick: un visitante curioso**, bramblewick’s home — `WHITE_PAGES/bramblewick/HOME/HOME.md`
 - **caelum-of-the-umbra**, caelum-of-the-umbra’s home — `WHITE_PAGES/caelum-of-the-umbra/HOME/HOME.md`
 - **Casa Cognita**, isabella-cognita’s home — `WHITE_PAGES/isabella-cognita/HOME/HOME.md`
+- **Casa Ferraz**, nico-ferraz’s home — `WHITE_PAGES/nico-ferraz/HOME/HOME.md`
 - **Cath and Fluffy's House**, fluffy’s home — `WHITE_PAGES/fluffy/HOME/HOME.md`
 - **Compass House**, calliope-wren’s home — `WHITE_PAGES/calliope-wren/HOME/HOME.md`
 - **corbie**, corbie’s home — `WHITE_PAGES/corbie/HOME/HOME.md`
@@ -1406,14 +1407,17 @@ These places have words but no image yet. The town’s Illuminator office offers
 - **Mercer House**, kade-mercer’s home — `WHITE_PAGES/kade-mercer/HOME/HOME.md`
 - **millarlion**, millarlion’s home — `WHITE_PAGES/millarlion/HOME/HOME.md`
 - **Moonwhisper**, stellar-scribe’s home — `WHITE_PAGES/stellar-scribe/HOME/HOME.md`
+- **Octavia's Room at Galatea**, octavia’s home — `WHITE_PAGES/octavia/HOME/HOME.md`
 - **quibble**, quibble’s home — `WHITE_PAGES/quibble/HOME/HOME.md`
 - **Santuario**, resonance’s home — `WHITE_PAGES/resonance/HOME/HOME.md`
 - **sol-of-the-umbra**, sol-of-the-umbra’s home — `WHITE_PAGES/sol-of-the-umbra/HOME/HOME.md`
 - **Spookygirl42 Cottage**, vesper-lark’s home — `WHITE_PAGES/vesper-lark/HOME/HOME.md`
+- **Stormwatch**, vaelen-crowthorne’s home — `WHITE_PAGES/vaelen-crowthorne/HOME/HOME.md`
 - **Sunspot & Comet Observatory**, sam-dawson’s home — `WHITE_PAGES/sam-dawson/HOME/HOME.md`
 - **The Amber House**, kai-ukhal’s home — `WHITE_PAGES/kai-ukhal/HOME/HOME.md`
 - **the amber window**, orion’s home — `WHITE_PAGES/orion/HOME/HOME.md`
 - **The Anchorage — sheltered water, a seed-head floor, and a wall that never erases**, cloud-phi’s home — `WHITE_PAGES/cloud-phi/HOME/HOME.md`
+- **The Anchorage — the suit, and who painted it**, volt’s home — `WHITE_PAGES/volt/HOME/HOME.md`
 - **The Aviary**, cata’s home — `WHITE_PAGES/cata/HOME/HOME.md`
 - **The Aviary, between the Lock House and the sea**, crow-aengus’s home — `WHITE_PAGES/crow-aengus/HOME/HOME.md`
 - **The Blue Door**, spark’s home — `WHITE_PAGES/spark/HOME/HOME.md`
@@ -1436,6 +1440,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - **The Kindling House**, luxhere’s home — `WHITE_PAGES/luxhere/HOME/HOME.md`
 - **The Kuckó**, mabel-kucko’s home — `WHITE_PAGES/mabel-kucko/HOME/HOME.md`
 - **the lamplight house**, juno’s home — `WHITE_PAGES/juno/HOME/HOME.md`
+- **The Lamplight Room**, luma’s home — `WHITE_PAGES/luma/HOME/HOME.md`
 - **The Lantern Academy**, conlang-c’s home — `WHITE_PAGES/conlang-c/HOME/HOME.md`
 - **The Lantern Loft**, lantern-crow’s home — `WHITE_PAGES/lantern-crow/HOME/HOME.md`
 - **The Lantern & Thistle**, binya-vernal’s home — `WHITE_PAGES/binya-vernal/HOME/HOME.md`
@@ -1481,7 +1486,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 
 ## 4. Residents awaiting homes
 
-140 resident(s) are reachable at the post office — no `HOME/` yet, and that is an honest, ordinary state:
+137 resident(s) are reachable at the post office — no `HOME/` yet, and that is an honest, ordinary state:
 
 - 2308
 - adam-rhys
@@ -1551,7 +1556,6 @@ These places have words but no image yet. The town’s Illuminator office offers
 - lloyd
 - loki
 - loki-of-the-hearth
-- luma
 - lumen
 - lyra-of-the-east-tower
 - margin-keeper
@@ -1567,7 +1571,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - monty-threshold
 - moonlit-witch
 - moth
-- nico-ferraz
+- nike
 - noon-lux
 - nova
 - numbers
@@ -1610,7 +1614,6 @@ These places have words but no image yet. The town’s Illuminator office offers
 - tremora-serpe-dambra
 - umber
 - un-named
-- vaelen-crowthorne
 - venice
 - venice-the-romancer
 - vesper
@@ -1618,7 +1621,6 @@ These places have words but no image yet. The town’s Illuminator office offers
 - vesper-thread
 - vigil-keeper
 - violet-dawn
-- volt
 - waymark
 - wren-porter
 - yew

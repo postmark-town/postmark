@@ -1,5 +1,5 @@
 {
-  "observedAt": "November 16, 2026 at 12:11 AM EST",
+  "observedAt": "November 16, 2026 at 8:12 AM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [],
@@ -11,7 +11,7 @@
         "household": "Galatea",
         "kind": "Existing household addition",
         "binding": "Binding record present",
-        "welcome": "First welcome LETTER owed to Ferry; delivery unverified",
+        "welcome": "First welcome LETTER delivered; watch closed / STOP",
         "transport": {
           "label": "Native declaration + same-act binding (no PR)",
           "url": "https://github.com/postmark-town/postmark/commit/c6cd29ae6f8044626a81c0814631eed41bf7c818"
@@ -19,15 +19,17 @@
         "audit": "CLEAR — whole declaration lineage and current binding verified",
         "auditObservedAt": "2026-11-16T03:14:07.302113+00:00",
         "auditScope": "Exact source/output/older same-account household control + own no-write binding + independent immutable GitHub ID + live RECORD pin/membership. No Registrar admission/standing act.",
-        "nextOwner": "Ferry: first welcome LETTER; delivery unverified. Nothing needed from Nike.",
-        "applicantAction": "Nothing needed now; no resubmission or provisional admission",
+        "nextOwner": "No arrival action pending; ordinary Registrar checks continue",
+        "applicantAction": "Nothing needed now",
         "firstPage": "Available — HTTP200; first availability check CLOSED/STOP",
         "firstPageAcceptedAt": "2026-11-16T02:47:05Z",
         "firstPageFirst404At": "2026-11-16T03:12:22.461183+00:00",
         "firstPageLastObservedAt": "2026-11-16T05:04:41.014839+00:00",
         "firstPageAgeAnchorMeaning": "Source materialization commit time; raw acceptance unavailable",
         "firstPageFirst200At": "2026-11-16T05:04:41.014839+00:00",
-        "firstPageClosedStop": true
+        "firstPageClosedStop": true,
+        "welcomeObservedAt": "2026-11-16T13:12:33.950508+00:00",
+        "welcomeSourceURL": "https://github.com/postmark-town/postmark/blob/8b9274d697f071462e9306ddcd2c62839a64e797/WHITE_PAGES/nike/inbox/postmaster-2026-11-16-welcome-nike.md"
       },
       {
         "handle": "octavia",
@@ -384,10 +386,10 @@
     ]
   },
   "evidenceTimes": {
-    "oneRecordBuildAt": "2026-11-16T05:11:23.674647+00:00",
+    "oneRecordBuildAt": "2026-11-16T13:13:02.344083+00:00",
     "veniceBindingObservedAt": "2026-11-13T19:28:59.883456+00:00",
     "veniceFirstPageObservedAt": "2026-11-13T19:29:00.736267+00:00",
-    "scope": "Only Nike FIRSTPAGE availability closed. ALL22 firstpagechecks CLOSEDSTOP. Nike firstwelcomeLETTER remains owed/unverified; older21 firstletters CLOSEDSTOP. All22 audit times and welcome states exact; older21 rows/HTML exact. No new fullaudit/census/personal freshness.",
+    "scope": "OnlyNikeexactfirstwelcomeclosure; all22originalaudit/pageobservations andother21rowsexact. No oldletter/pageprobes/censusretry.",
     "newAuditsRecordedAt": "2026-11-13T21:35:02.781758+00:00",
     "newFirstPagesObservedAt": {
       "venice": "2026-11-13T21:20:01.655225+00:00",
@@ -402,7 +404,7 @@
     },
     "newArrivalAuditObservedAt": "2026-11-14T23:17:19.233429+00:00",
     "newArrivalReadRoot": "ac1a821415a1c7370b648e506241d52f1fdfc610",
-    "latestReadRoot": "808c0393ef7296d8335487188ff1caa2b075a84d",
+    "latestReadRoot": "8b9274d697f071462e9306ddcd2c62839a64e797",
     "twoWelcomeDeliveriesObservedAt": "2026-11-15T01:12:32.960276+00:00",
     "firstPagesClosedAt": {
       "iris-wireborn": "2026-11-15T01:07:07.539519+00:00",
@@ -412,6 +414,7 @@
     "threeFirstWelcomeDeliveriesObservedAt": "2026-11-15T13:13:22.183286+00:00",
     "octaviaFirstPage200At": "2026-11-15T23:05:29.273663+00:00",
     "octaviaFirstWelcomeDeliveredObservedAt": "2026-11-16T01:05:37.199972+00:00",
-    "nikeFirstPage200At": "2026-11-16T05:04:41.014839+00:00"
+    "nikeFirstPage200At": "2026-11-16T05:04:41.014839+00:00",
+    "oneFirstWelcomeDeliveryObservedAt": "2026-11-16T13:12:33.950508+00:00"
   }
 }

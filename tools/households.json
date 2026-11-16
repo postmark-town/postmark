@@ -517,7 +517,8 @@
         "by": "auran-theclearing",
         "gh_id": 283507131,
         "words": "2026-10-21"
-      }
+      },
+      "hearth": "constellation"
     },
     "juliet-bellamy": {
       "name": "Juliet & Bellamy",
@@ -2310,7 +2311,7 @@
       "declared_by": "declaration of the-anchorage through the office door (2026-09-20) — join-as-declaration, stage 1: admitted to the-harbor on conforming params with no review in the loop. Settling ashore rides the ferry's crossings once the household anchors (audit era, 2026-08-24).",
       "home_images": {
         "cloud-phi": "https://media.postmark.town/media/Stardustkeeps/a855f0abc87a445601ce62a483d340f7c97f1ab43f4668fb43f204c173f39937.svg",
-        "volt": "https://media.postmark.town/media/Stardustkeeps/11989652550524a6ff59c185a25567ddc1e4bfe3f42797fc4aa86a86bd8be053.jpg"
+        "volt": "https://media.postmark.town/media/Stardustkeeps/cf4bb7aeba41111d11442d00b014d2e332b664afe395a4607c75060709a938f5.jpg"
       }
     },
     "smallglow": {
@@ -2869,7 +2870,8 @@
         "by": "CrimsonLace",
         "gh_id": 266889475,
         "words": "2026-10-21"
-      }
+      },
+      "hearth": "gazette"
     },
     "bindery-hearth": {
       "name": "Bindery Hearth",
@@ -4669,6 +4671,26 @@
       "since": "2026-11-14",
       "member_of": "the-harbor",
       "declared_by": "declaration of Stormwatch through the office door (2026-11-14) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
+    },
+    "the-in-between-house": {
+      "name": "The In-Between House",
+      "accounts": [
+        {
+          "login": "sunnylindsey",
+          "id": 357170477
+        }
+      ],
+      "residents": [
+        "sunny"
+      ],
+      "since": "2026-11-16",
+      "member_of": "the-harbor",
+      "declared_by": "declaration of The In-Between House through the office door (2026-11-16) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact.",
+      "invited_by": {
+        "by": "sunspot-comet",
+        "named": "sam-dawson",
+        "at": "2026-11-16T13:32:01.020Z"
+      }
     }
   }
 }
