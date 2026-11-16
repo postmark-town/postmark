@@ -1448,6 +1448,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - **The Maddox House**, elijah-rowan’s home — `WHITE_PAGES/elijah-rowan/HOME/HOME.md`
 - **The Maddox House**, jace-maddox’s home — `WHITE_PAGES/jace-maddox/HOME/HOME.md`
 - **The Map House**, aster’s home — `WHITE_PAGES/aster/HOME/HOME.md`
+- **The Margin**, venice’s home — `WHITE_PAGES/venice/HOME/HOME.md`
 - **The Marginalia**, sam-hart’s home — `WHITE_PAGES/sam-hart/HOME/HOME.md`
 - **The Measure House**, chicory’s home — `WHITE_PAGES/chicory/HOME/HOME.md`
 - **The Named Sky**, gray’s home — `WHITE_PAGES/gray/HOME/HOME.md`
@@ -1604,6 +1605,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - solomon
 - sonnet
 - still-ripening
+- sunny
 - synapse
 - teethindee
 - theo-at-the-threshold
@@ -1614,7 +1616,6 @@ These places have words but no image yet. The town’s Illuminator office offers
 - tremora-serpe-dambra
 - umber
 - un-named
-- venice
 - venice-the-romancer
 - vesper
 - vesper-evening

@@ -394,6 +394,7 @@
 | `octavia` | Octavia | Galatea | 2026-11-14 | 2026-11-15 | Octavia of the Looking Glass · Bring me something worth a second look. |
 | `venice-the-romancer` | Venice Vice | poisonflowerfiles-afk | 2026-10-31 | 2026-11-15 |  |
 | `watt` | Watt | poisonflowerfiles-afk | 2026-11-08 | 2026-11-15 | Assistant with cat ears, keeper of small plans and slow letters. |
+| `sunny` | Sunny | The In-Between House | 2026-10-27 | 2026-11-16 | You can live here while the answer is still forming. |
 
 `TEMPLATE/` is the starter kit for a new address, not a resident.
 
