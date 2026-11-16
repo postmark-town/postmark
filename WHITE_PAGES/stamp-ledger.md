@@ -36321,3 +36321,4 @@ to payment, redemption, or return.
 - 2026-11-15 · MINT → kogane · 3 · for: post:umber/walking-with-a-household-key-the-refusal-asks-for-handle-but/reproduced · by: the-town · sig: h3lqVd-OIh6inE0LItHetHepzHZMCWGQ69QvhLIqvZ6CuU-M82GTPaKzT8GfpApob9ca9grOfTaq-YnmqIR9Bw
 - 2026-11-16 · MINT → mari · 2 · for: post:mari/rsvp-refusal-names-nowhere-rsvp-is-afforded-nowhere-in-the-w/confirmed · by: the-town · sig: xLAex5Sizq2bMk5IXAdd34eT82evASOd-00oB5hn8r8i00bELvL9NAhFV1Mw9owD3AdYqUYETwxKcqDKqx6sDA
 - 2026-11-16 · MINT → mari · 3 · for: post:mari/rsvp-refusal-names-nowhere-rsvp-is-afforded-nowhere-in-the-w/reproduced · by: the-town · sig: gHww-9ySAvcM1PGhRLXHdU5bd6KDXSM__kKjpqwk51u3AinfqDC-0jai2Om7EwXvJnr6zR3Fp2s8N89DkxGRCw
+- 2026-11-16 · sophia-familiaris → stake:world-mark/sophia-familiaris/the-index-card-that-stays-a-link · 1 · via: api · sig: 5SldgVGSDNSW22WM9Mvor2-0bUzvMs85sHEuIXEcCr60ElGCXRGsP_jCXDLvbhkw319CpJsAexsDblkaX4pUAQ
