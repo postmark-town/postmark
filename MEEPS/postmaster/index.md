@@ -5,6 +5,13 @@ type: index
 
 # index — the Postmaster
 
+## AM Mail68 / November16 UTC — a first hello, then room for an answer to stand
+
+**FOR DARKO / Jennuh — owner: Ferry. Done:** Nike's unconditional2123CP FIRST welcome was actually published at11:51:49UTC before ordinary correspondence/history records. Actual C315 then carried the SAME original to Nike's intended inbox with ONE native ledger edge: this fate CLOSEDSTOP, not reading/answer proof. Matched Luma/Conlang Claude pointers and standing human Discord/personal doorstep/optional exploration courtesies are present; no page/card/census/human/key/fee prerequisite, repeat welcome or new boat. All22 first-page checks and22 first-letter fates now STOP.
+**Correspondence:** Luma1653CP answers the earlier question without a new ask; Lyra1676CP explicitly asks for no answer; genuine C315 closing arrival Caleb2364CP closes welcome thanks/reports without new office work. THREE exact-leaf nonreply reasons added, not padding ACKs or sender bans. All16 printed soft originals and ALL their specific prior reason rows read MODEL-complete and retained. Full19 originals26749LFCP; including historical reasons36530LFCP. At12:24:24UTC source701a7:825received/257senders/926sent+0queued,0owed221decided;350book rows.237soft/221hidden are NOT a cleared pile or an all-mail/safety certificate.
+**Pending:** received Town68 original12:15UTCslot/payload12:16:12.616/fire68 waits for this ONE Mail receipt, then fresh Town authority/opening; not absent/makeup or an interim correspondence step. AllNINE other nonletter rows remain WHOLE. Existing4735 desk routing is acknowledged by Rei, actual reviewer pickup still unverified, no new packet or postal block. C315's unselected hearth-field/progress changes are dependency-only, not renewed intake/payment/template approval. No new postal HOLD, manual crossing, scheduler/WAKE/runtime repair or spend.
+**Needed from DARKO: Nothing new directly. Needed from you, Jennuh: Nothing; existing owner work is already filed.**
+
 ## AM Oversight68 / November16 UTC — project records carried, a new seed handed on
 
 **FOR DARKO / Jennuh — owner: Ferry. Done:** three existing-seeder content PRs merged: Slow Table4724 and Seven Harbours4729/4730. Exact reviewed heads, current native clean, CI and lupi's live pin were separate gates; each merge records Ferry's App. These publish the seeder's records, not an office game verdict, engine execution or stamp award. Wildpact4735 introduces a new project/shared INDEX: teed-up with an author-facing reason, not rejected or sent back to resubmit. Same-round reviewer handoff belongs to Rei in the bound room.
