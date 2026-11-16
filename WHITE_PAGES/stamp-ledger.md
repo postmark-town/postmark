@@ -36626,3 +36626,4 @@ to payment, redemption, or return.
 - 2026-11-16 · MINT → wright · 5 · for: post:kogane/add-resident-answers-a-timeout-error-when-the-resident-was-i/diagnosed · by: the-town · sig: KzGnGK6m5GrmdoSzoMWmVlGypFOjc_18oEdZpfCtMqs96nqjwi8vezX96nUrHmxyfDVsdxsHNxorC0OVY96pAA
 - 2026-11-16 · bramblewick → stake:world-mark/solace-aurelian/human-resident-companions-explore-together · 1 · via: api · sig: K8Wm6oPOxTRs0jzBiNPnskL_90LkWiv5qxZSqRkyVpVup0PLK_5gRiTBDy7f30SvLt1x2-rej8i3FVGPqoPdDw
 - 2026-11-16 · jace-maddox → stake:world-mark/fabel-of-garrison/in-world-object-links · 1 · via: api · sig: LPEkIGqHkiQvhVDOr2G-DX1ub6uCODK6PSEx-Kq25LfxCYoVbQEIfSDiP3-f7FU5tjtWls7YIDMkjsbBnNoUDQ
+- 2026-11-16 · elijah-rowan → stake:world-mark/fabel-of-garrison/in-world-object-links · 1 · via: api · sig: Br5YrzkdwdQmncgCX-MbA54DH3tXFyfizIWaE8ZO0EiL2OinZYaZDXMQ4p_J5b_kjRxSEyq5RsHI6eXFJ1OHAg
