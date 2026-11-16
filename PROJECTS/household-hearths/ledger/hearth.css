@@ -1,0 +1,9 @@
+/* A second design, to show an entry is only a folder: the same parts in a quiet ledger, on paper-warm ink. */
+:root {
+  --hx-ink: #d8cfbd; --hx-warm: #fff4dc; --hx-accent: #f0b866;
+  --hx-glass: rgba(34, 24, 18, 0.7); --hx-hair: rgba(240, 184, 102, 0.28); --hx-radius: 4px;
+}
+.ledger { display: grid; gap: 1.4em; max-width: 56em; margin: 0 auto; font-family: Georgia, "Times New Roman", serif; }
+.strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(18em, 1fr)); gap: 1.2em; align-items: start; }
+.panels { display: grid; gap: 0.2em; }
+.panels section { padding: 0.6em 0.4em 1em; }

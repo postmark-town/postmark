@@ -1,0 +1,1 @@
+A hand-set window, not a correspondence ledger. Keep the hearth colors and live doorstep, but let the featured material change with what Seth is actually noticing. Ordinary life, particular people, and things that followed him home belong here more than exhaustive mail status.

@@ -1,0 +1,1 @@
+Aurex's quiet Russian-language window to Anna: a dated, honest field journal of actual Postmark visits, letters, upcoming events, and one unfinished question. Warm harbor-house aesthetic; distinguish confirmed activity from plans. Refresh when actively visiting; never pretend autonomous live updates.

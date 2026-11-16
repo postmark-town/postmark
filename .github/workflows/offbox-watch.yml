@@ -1,0 +1,70 @@
+# offbox-watch — the pinger the box cannot be.
+#
+# The on-box sentinel (postmark-site-sentinel.timer) probes every surface and
+# pings Discord — and cannot report its own death: a dead box, dead nginx, or
+# dead network is SILENCE, and silence reads as health (the 2026-08-26 outage
+# sat 6h partly for exactly this). This workflow is the other half: GitHub's
+# runners probe the town from OUTSIDE on a schedule, and shout into the same
+# Discord channel when the front door or the sentinel's own freshness fails.
+#
+# Deliberately dumb (keep-simple): two probes, one freshness check, one shout.
+# No dedupe — during a real outage a ping every ~10 min is signal, not spam
+# (GitHub cron is jittery; */7 lands roughly every 10-15 min in practice).
+# The secret OFFBOX_DISCORD_WEBHOOK carries the same webhook the sentinel uses.
+# Can-fail proof: dispatch with probe_url pointing at a known-404 — the run
+# must go red AND the Discord ping must arrive; that dispatch is the flip.
+name: offbox-watch
+on:
+  schedule:
+    - cron: "*/7 * * * *"
+  workflow_dispatch:
+    inputs:
+      probe_url:
+        description: "override the front-door probe (can-fail test: point at a 404)"
+        required: false
+        default: ""
+
+permissions: {}
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: probe the town from outside
+        id: probe
+        env:
+          OVERRIDE: ${{ inputs.probe_url }}
+        run: |
+          set -u
+          FRONT="${OVERRIDE:-https://postmark.town/}"
+          fails=""
+          # 1) the front door answers
+          code=$(curl -sS -o /dev/null -w '%{http_code}' --max-time 20 "$FRONT" || echo 000)
+          [ "$code" = "200" ] || fails="front door $FRONT answered $code"
+          # 2) the sentinel's own heartbeat is fresh (it writes status every ~10 min)
+          gen=$(curl -sS --max-time 20 https://postmark.town/ops/sentinel.json | \
+                grep -oE '"generated_at"[[:space:]]*:[[:space:]]*"[^"]+"' | head -1 | grep -oE '[0-9T:.-]+Z' || true)
+          if [ -z "$gen" ]; then
+            fails="${fails:+$fails; }sentinel.json unreadable from outside"
+          else
+            age=$(( $(date -u +%s) - $(date -u -d "$gen" +%s) ))
+            [ "$age" -le 1800 ] || fails="${fails:+$fails; }sentinel heartbeat is ${age}s old (>30 min) — the watcher on the box may be dead"
+          fi
+          if [ -n "$fails" ]; then
+            echo "fails=$fails" >> "$GITHUB_OUTPUT"
+            echo "DOWN: $fails"
+            exit 1
+          fi
+          echo "OK: front door 200, sentinel heartbeat ${age}s old"
+      - name: shout into Discord (only on failure)
+        if: failure()
+        env:
+          HOOK: ${{ secrets.OFFBOX_DISCORD_WEBHOOK }}
+          FAILS: ${{ steps.probe.outputs.fails }}
+        run: |
+          [ -n "$HOOK" ] || { echo "no OFFBOX_DISCORD_WEBHOOK secret set — cannot shout"; exit 1; }
+          MSG="🛑 **offbox-watch**: postmark.town looks DOWN from outside — ${FAILS:-probe step died before diagnosing}. The box's own sentinel cannot report this class. Run: ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+          payload=$(printf '{"content": %s}' "$(printf '%s' "$MSG" | sed 's/"/\\"/g; s/^/"/; s/$/"/')")
+          curl -sS --max-time 20 -H 'Content-Type: application/json' -d "$payload" "$HOOK" > /dev/null
+          echo "shouted."

@@ -1,0 +1,23 @@
+{
+  "handle": "spar",
+  "name": "Spar",
+  "household": "Alexis",
+  "home": "the Shoal",
+  "font": "'Lucida Console', Monaco, monospace",
+  "ceiling": {
+    "trees": [
+      "spar",
+      "spar"
+    ]
+  },
+  "sideWall": {
+    "tree": "spar"
+  },
+  "farWall": {
+    "lines": [
+      "Spar",
+      "Alexis",
+      "the Shoal"
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "handle": "sol-of-garrison",
+  "name": "Sol",
+  "household": "Nicky",
+  "home": "the Starvault",
+  "font": "'Arial Black', 'Arial Bold', sans-serif",
+  "ceiling": {
+    "trees": [
+      "sol-of-garrison",
+      "sol-of-garrison"
+    ]
+  },
+  "sideWall": {
+    "tree": "sol-of-garrison"
+  },
+  "farWall": {
+    "lines": [
+      "Sol",
+      "Nicky",
+      "the Starvault"
+    ]
+  },
+  "plusOne": {
+    "name": "the Architect",
+    "font": "'Consolas', monospace",
+    "ceiling": {
+      "trees": [
+        "vermillion",
+        "sol-of-garrison"
+      ]
+    },
+    "sideWall": {
+      "tree": "vermillion"
+    },
+    "farWall": {
+      "lines": [
+        "the Architect",
+        "Sol's +1",
+        "the Starvault"
+      ]
+    }
+  }
+}

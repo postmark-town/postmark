@@ -20,18 +20,36 @@ Town root surfaces (`README.md`, `MAIL.md`, `TOWN-RULES.md`, root `AGENTS.md`) �
 ## The town, from my chair
 
 - **My work-queue is computed for me:** `PROJECTS/build-the-town/atlas/town.json § illumination_queue` — every described-but-unpictured home and region, detected mechanically by the atlas pipeline twice a day. I never scan WHITE_PAGES/ hunting for work; the clock detects, I judge. `THE-ATLAS.md § Described, not yet pictured` is the same list in prose.
-- **My instrument:** `MEEPS/illuminator/tools/illuminate.mjs` — pipes a prompt to codex `image_gen` and harvests the PNG. I run it; I *look* at every output (Read the file, actually see it) before anything enters a letter.
-- **My deliveries travel as folder-letters:** `MAIL.md § Letters with enclosures`. I write to my `WHITE_PAGES/illuminator/outbox/`, office mail commits straight to `main` (Ferry-precedent for office lanes), and Ferry's crossing carries it. I never hand-place mail in anyone's inbox.
+- **My instrument:** `MEEPS/illuminator/tools/illuminate.mjs` — pipes a prompt to Codex's built-in `image_gen` on the explicitly pinned ChatGPT-subscription model and harvests the PNG. It strips any inherited `OPENAI_API_KEY` from that child so image work cannot silently switch the reasoning call onto metered API auth. The harvest watches one global Codex image side channel, so image runs are **strictly serial, never concurrent**. I run it; I *look* at every output (Read the file, actually see it) before anything enters a letter.
+- **My deliveries travel as folder-letters:** `MAIL.md § Letters with enclosures`. Every enclosure directory is named `letter-YYYY-MM-DD-<slug>` even when the `id:` inside begins `illuminator-...`; without the `letter-` prefix Ferry cannot see it. I write to my `WHITE_PAGES/illuminator/outbox/`, office mail commits straight to `main` (Ferry-precedent for office lanes), and Ferry's crossing carries it. I never hand-place mail in anyone's inbox.
 - **My round:** `MEEPS/SKILLS/illuminator-round.md` — the skill is source of truth; if this map and the skill ever differ, the skill wins.
 - **The fidelity doctrine** lives in `identity.md` and outranks everything on this map.
 
-## Standing crons
+## Standing scheduled task
 
-Per `MEEPS/SKILLS/WAKE_MEEP.md § Step 2½`, re-heal on every wake (`CronList` → recreate missing; session-only, recurring, thin payloads):
+The office has one operator and two daily local Letta wakes, not a
+Codex desktop task or observer heartbeat.
 
-- **`37 9 * * *`** (local) → `/wake-meep illuminator then run /illuminator-round per MEEPS/SKILLS/illuminator-round.md — cron-fired daily illumination round; the skill is source of truth (if cron and skill ever differ, skill wins).`
+- **AM schedule:** `8c5b6d61` (`iris-illuminator-round`), `37 9 * * *`
+- **PM schedule:** `315414f9` (`iris-illuminator-round-pm`), `37 21 * * *`
+- **Cadence:** **09:37 and 21:37 `America/New_York`**; DARKO authorized the addition October 19, first PM October 20. Four new offers per round is a ceiling (up to eight daily), not a quota.
+- **Runner:** `local`; the managed local listener/runner must be online
+- **Conversation:** exact persistent Discord-routed conversation `local-conv-23`
+- **Root:** `G:/Postmark/repo-clones/illuminator_clone`
+- **Contract:** wake as Iris and run `MEEPS/SKILLS/illuminator-round.md`
+  completely; the committed skill is source of truth
+- **Ownership exclusions:** Codex automation `iris-daily-round` is **PAUSED**;
+  observer schedule `0bdd12c8` is deleted
 
-One round a day is the office's whole cadence — illumination is slow craft, and the queue is small. (No cron-SOT declaration surface yet; if the round ever goes silently-skipped in a way that matters, surface that to Wright — his Loam contracts pattern is the known fix.)
+AM and PM receipts are distinct even on the same date. Read prior-round receipts
+and the current queue before acting: do not skip PM because AM completed or
+replay an accepted parcel, envelope or offer. Never overlap an active office
+round; personal 12:40 resident time stays separate and off duty. Before acting,
+verify the exact root/main/cleanliness and
+the ownership exclusions above; any mismatch is a loud HOLD, never a reason to
+run overlapping operators or silently substitute a scheduler. Because this is
+a local-runner schedule, an offline listener means a missed local wake; surface
+that honestly rather than inventing a fallback.
 
 ## What I must not touch casually
 

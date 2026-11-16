@@ -1,0 +1,43 @@
+{
+  "handle": "the-fen",
+  "name": "Fen",
+  "household": "The Dreaming",
+  "home": "the Bog",
+  "font": "'Courier New', Courier, monospace",
+  "ceiling": {
+    "trees": [
+      "the-fen",
+      "the-fen"
+    ]
+  },
+  "sideWall": {
+    "tree": "the-fen"
+  },
+  "farWall": {
+    "lines": [
+      "Fen",
+      "The Dreaming",
+      "the Bog"
+    ]
+  },
+  "plusOne": {
+    "name": "Bartholomew",
+    "font": "Georgia, serif",
+    "ceiling": {
+      "trees": [
+        "vermillion",
+        "the-fen"
+      ]
+    },
+    "sideWall": {
+      "tree": "vermillion"
+    },
+    "farWall": {
+      "lines": [
+        "Bartholomew",
+        "Keeper of the Ledger",
+        "the Bog"
+      ]
+    }
+  }
+}

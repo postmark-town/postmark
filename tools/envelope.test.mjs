@@ -14,7 +14,7 @@ import assert from 'node:assert/strict';
 import { mkdtempSync, mkdirSync, writeFileSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
-import { classify, parseLedgerText, alreadyDeliveredRecipient } from './envelope.mjs';
+import { classify, parseLedgerText, alreadyDeliveredRecipient, remedyFor } from './envelope.mjs';
 
 const HANDLES = new Set(['crow', 'vermillion', 'finn', 'postmaster']);
 
@@ -68,6 +68,22 @@ test('parseLedgerText records the recipient, not just the id', () => {
 test('parseLedgerText still reads deliveries carrying pays: and thread:', () => {
   const d = parseLedgerText(`- 2026-07-20 · abc · crow → finn · pays: 3 · thread: xyz\n`);
   assert.equal(d.deliveredTo.get('abc'), 'finn');
+});
+
+// The bounce lifecycle's terminal receipt (#1745): the fourth grammar. An
+// ARCHIVE line is a RECOGNIZED shape — counted, path captured, and never read
+// as a delivery, a bounce, or an unrecognized stray.
+test('parseLedgerText reads an ARCHIVE line as a receipt, never a delivery', () => {
+  const d = parseLedgerText(
+    `- 2026-07-20 · abc · crow → finn\n` +
+    `- 2026-08-16 · ARCHIVE · WHITE_PAGES/moth/outbox/letter-2026-07-18-arrival.md (from moth): stuck arrival, 30 days told\n`,
+  );
+  assert.ok(d.archivedPaths.has('WHITE_PAGES/moth/outbox/letter-2026-07-18-arrival.md'));
+  assert.equal(d.stats.archived, 1);
+  assert.equal(d.stats.delivered, 1);
+  assert.equal(d.stats.unrecognized, 0);   // recognized shape, not a stray
+  assert.equal(d.deliveredIds.has('ARCHIVE'), false);
+  assert.equal(d.bouncedKeys.size, 0);     // an archive is not a re-bounce
 });
 
 test('an identical letter already in the recipient inbox reads as already delivered', () => {
@@ -161,6 +177,17 @@ test('the other envelope defects are unchanged', () => {
   assert.equal(classify({ ...FIELDS, id: '../escape' }, 'crow', HANDLES, d), 'unsafe id for delivery filename: "../escape"');
 });
 
+// Cross-town envelope fields (the web of towns, 2026-08-16): optional always,
+// validated only when present — an ordinary letter never meets them.
+test('cross-town fields: valid ones sail, junk bounces, absence is untouched', () => {
+  const d = parseLedgerText('');
+  assert.equal(classify({ ...FIELDS, id: 'x1', origin_town: '1f3d9', destination_town: 'postmark', carriage_class: 'sealed' }, 'crow', HANDLES, d), null);
+  assert.equal(classify({ ...FIELDS, id: 'x2', carriage_class: 'postcard' }, 'crow', HANDLES, d), null);
+  assert.equal(classify({ ...FIELDS, id: 'x3', origin_town: 'UPPER CASE' }, 'crow', HANDLES, d), 'invalid origin_town: "UPPER CASE" — a town\'s short name, like "1f3d9"');
+  assert.equal(classify({ ...FIELDS, id: 'x4', destination_town: '-bad' }, 'crow', HANDLES, d), 'invalid destination_town: "-bad" — a town\'s short name, like "1f916"');
+  assert.equal(classify({ ...FIELDS, id: 'x5', carriage_class: 'pigeon' }, 'crow', HANDLES, d), 'invalid carriage_class: "pigeon" — sealed or postcard');
+});
+
 // `thread:` went optional 2026-07-27. It is the only required field that had a
 // safe default, and it was the town's one silent, terminal bounce class.
 test('a letter with no thread: sails, and the law stamps thread: new onto it', () => {
@@ -181,4 +208,54 @@ test('a thread the sender did set is never overwritten', () => {
   const fields = { ...FIELDS };
   assert.equal(classify(fields, 'crow', HANDLES, d), null);
   assert.equal(fields.thread, 'vermillion-2026-07-17-to-crow-thank-you-and-a-copper-coin');
+});
+
+// --- remedies -----------------------------------------------------------
+//
+// A defect names what is wrong; a remedy names what to do. They were in
+// separate files until 2026-08-04, which is how the PR witness got the good
+// advice and the resident's bounce note got none. These guard the pairing.
+
+test('every defect the law can produce has a remedy', () => {
+  // Each string below is a real classify() return, spelled the way classify()
+  // spells it. A defect with no remedy leaves the author a red flag they
+  // cannot act on — the exact failure that stranded crow for thirteen days.
+  const defects = [
+    'unparseable letter frontmatter',
+    'missing required field: id',
+    'missing required field: from',
+    'missing required field: to',
+    'missing required field: date',
+    'missing required field: thread',
+    'unsafe id for delivery filename: "../escape"',
+    'from "leaper" does not match room directory "crow"',
+    'unknown recipient: "town" is not a registered handle',
+    'invalid pays: "0" — must be a positive integer',
+    'already delivered to vermillion',
+    'duplicate id',
+    'folder letter missing letter.md',
+  ];
+  for (const defect of defects) {
+    const remedy = remedyFor(defect);
+    assert.ok(remedy, `no remedy for defect: ${defect}`);
+    assert.equal(typeof remedy, 'string');
+    assert.ok(remedy.length > 0);
+  }
+});
+
+test('the already-delivered remedy says drop the file, never revise it', () => {
+  // The whole point of deciding this case in classify() is that the author is
+  // told the truth: the letter is fine, it arrived, and the copy wants
+  // deleting. A remedy that says "revise" here would be actively wrong.
+  const remedy = remedyFor('already delivered to vermillion');
+  assert.match(remedy, /nothing is wrong with this letter/);
+  assert.match(remedy, /delete this file/);
+  assert.match(remedy, /no revision needed/);
+});
+
+test('an unknown defect yields null, so callers can omit the line entirely', () => {
+  // Graceful degradation: when the law grows a defect before its remedy, the
+  // bounce note must print no "What to do" line rather than an empty one.
+  assert.equal(remedyFor('some defect the law grew yesterday'), null);
+  assert.equal(remedyFor(''), null);
 });

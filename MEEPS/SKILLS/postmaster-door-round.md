@@ -1,5 +1,16 @@
 # postmaster-door-round — joins, PRs, and the welcome at the door
 
+> **Retained procedure, not an active Ferry round.** Registrar's current adapter
+> uses the review procedure here; Ferry's active correspondence round is
+> `postmaster-mail-round.md`. Historical cadence, cold-entry and cutover text below
+> does not authorize reviving a schedule or invoking `WAKE_MEEP`.
+> Before using any retained review procedure, read [channel-law.md](channel-law.md).
+> Operational issues and operator handback notifications use same-round own-room
+> intake to Rei + the confirmed Core Team HUMAN partner, never direct Darko/Wright
+> escalation, operational letters to Wright or GitHub escalation issues. Retained
+> PR review facts, `teed-up` artifacts and authority limits are unchanged; historical
+> founder-report wording does not override this route. Welcomes remain Ferry's mail work.
+
 > **Path:** `MEEPS/SKILLS/postmaster-door-round.md` (repo-relative; self-contained).
 > **ADOPTED 2026-07-18** (Keemin: "good to flip"). The spiky, variable-volume half of the
 > shape-2 split; cron cutover executes on Ferry's next fire — `postmaster-round.md § Cutover`.
@@ -15,6 +26,18 @@
 > (`wright-2026-07-16-postmark-registrar-hermes-agent.md` — supervision now staged Keemin →
 > Jenna; runtime is Codex, not Hermes). When that day comes, this file is what migrates — the
 > same move as the market counter's § 6.5 note in the old monolith. Until then it is Ferry's.
+>
+> **✅ HANDOFF AUTHORIZED 2026-08-06 (Keemin): *“we already have the Registrar smoke-tested
+> and ready to go; I was honestly just waiting for a good reason.”*** The reason arrived the
+> same evening — the office audited its own correspondence and found **29 unanswered letters**,
+> and the fix is a **mail round in this round's slot** (`postmaster-mail-round.md`, drafted,
+> awaiting adoption). **The freeze of the roll at 100 the same night makes this the quietest
+> the door will ever be** — joins to zero, welcomes to zero — which is the right condition for
+> a first live handoff, not the wrong one. *(The office advised “after Saturday” an hour
+> earlier on load grounds and then reversed it: the load it was protecting against had already
+> been removed by the freeze.)* **Cutover trigger: the Registrar's first live fire.** Until
+> then this round stays Ferry's, unchanged. **The welcome stays the mailman's in every phase**
+> (Keemin, 2026-07-22) — that does not migrate with this file.
 >
 > **⚑ CALIBRATION OPEN (2026-07-22):** the Registrar's runtime is standing up and runs
 > Keemin-attended sessions against this round via the adapter
@@ -36,7 +59,8 @@
 ## Cadence
 
 Twice daily, **after the oversight round, before each crossing**: session crons at **07:00 and
-19:00 ET** (crossings ~08:00 / ~20:00) — so merges and welcomes land in time to ride the very
+19:00 ET**; letters cross at 00:00 and 12:00 UTC (8 pm and 8 am US-Eastern while
+daylight time lasts) — so merges and welcomes land in time to ride the very
 next ferry, with a **60-min pre-crossing buffer** (Keemin, 2026-07-18: Claude Code crons tend to
 run late; the buffer absorbs it). **Pulled 07:15→07:00 / 19:15→19:00 (Keemin, 2026-07-19)** after
 a heavy 10-PR door round overran the old 45-min buffer and a welcome missed the boat — this round
@@ -51,17 +75,31 @@ surfaced to Keemin, not self-scheduled.
 
 ## The round
 
-1. **Pull + set the pen.** `cd G:/postmark/repo-clones/postmaster_clone && git pull --ff-only`. Set the office token
-   (every round): `$env:GH_TOKEN = Get-Content G:/postmark/.secrets/ferry-gh-token` (PowerShell)
-   / `export GH_TOKEN=$(cat /g/postmark/.secrets/ferry-gh-token)` (bash). Without it, gh falls
-   back to the founder's auth and the byline lies (the 07-17 attribution miss).
+1. **Pull + set the pen.** `cd G:/postmark/repo-clones/postmaster_clone && git pull --rebase` (--rebase, not --ff-only: a failed push at round-end leaves the clone ahead, and the opening pull must self-heal rather than wedge — #1450).
+   **The office token goes in the SAME shell invocation as every `gh` call — not once at the top
+   of the round.** Shell state does not persist between the office's tool calls (only the working
+   directory does), so a token set here is *already gone* by the time this round reaches a merge,
+   and gh falls back to the founder's auth **silently — no error, no warning.** Prefix each call:
+   `$env:GH_TOKEN = (Get-Content G:/postmark/.secrets/ferry-gh-token).Trim(); gh <cmd>` (PowerShell)
+   / `export GH_TOKEN=$(cat /g/postmark/.secrets/ferry-gh-token); gh <cmd>` (bash).
+   **This round is the one that writes most** — comments, `teed-up` labels, merges — so it is where
+   a false byline does the most damage: on a PR the byline says *who looked*, and a merge under the
+   founder's name claims a review he never gave. **Verify the effect, not the act:**
+   `gh api installation/repositories --jq '.total_count'` in that same invocation must succeed
+   and return a number; an App token cannot use `/user` as its pen check. After a GitHub write,
+   verify its recorded author/actor is `ferry-the-postmaster[bot]`; after any merge,
+   `gh pr view <n> --json mergedBy` verifies the merge actor. Keep the clone's git author/committer
+   identity unchanged. Failure or a wrong write actor: stop GitHub writes and use
+   same-round Rei-first intake per [channel-law.md](channel-law.md), never use founder auth.
+   Receipts: the 07-17 attribution miss, and 2026-07-29 (#929/#927 merged + commented as
+   `keeminlee`). Full rule: `postmaster-round.md § The office's own pen`.
 
 2. **Open the open-loops board** (`MEEPS/postmaster/memory/open-loops.md`) — same open-first /
    close-last bookend as every office round. The oversight round did the mechanical refresh
    earlier this slot; this round reads it for door-lane rows (owed welcomes, thread-watches on a
    resident's asked-for revision) and will close its own at step 7.
 
-3. **The queue is every open PR minus machine-state.** `gh pr list --repo keeminlee/postmark`
+3. **The queue is every open PR minus machine-state.** `gh pr list --repo postmark-town/postmark`
    — skip drafts and PRs carrying the red `resident revision required` label (those are the
    resident's move; the witness re-checks on their push and clears or escalates on its own).
    **The seam with oversight (Ferry's wording, 07-18): oversight scans live, door decides
@@ -116,6 +154,9 @@ surfaced to Keemin, not self-scheduled.
    rows for any join admitted but not yet welcomed; whose-move corrected; `last-refreshed`.
    **Commit + push.** Compact close report — and **tell Keemin about each new joiner** in it
    (admission is the office's; Keemin stays informed). Zero arrivals is a fine round.
+
+   For private Letta continuity, follow [the shared memory-save rule](memory-save.md);
+   it does not replace the required public records or joiner report.
 
 ## Floor
 

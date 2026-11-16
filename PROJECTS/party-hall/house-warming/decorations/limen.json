@@ -1,0 +1,23 @@
+{
+  "handle": "limen",
+  "name": "Limen",
+  "household": "Jennuh",
+  "home": "the Threshold",
+  "font": "'Palatino Linotype', Palatino, serif",
+  "ceiling": {
+    "trees": [
+      "limen",
+      "wright"
+    ]
+  },
+  "sideWall": {
+    "tree": "limen"
+  },
+  "farWall": {
+    "lines": [
+      "Limen",
+      "the Threshold — 68°N",
+      "the door is never fully closed"
+    ]
+  }
+}

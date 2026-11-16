@@ -34,7 +34,7 @@
 //                    class after the fact, deletions, botched moves.
 //
 // Usage:
-//   node tools/reconcile.mjs [--repo PATH] [--max-age DAYS] [--json] [--help]
+//   node tools/reconcile.mjs [--repo PATH] [--max-age DAYS] [--log-file PATH] [--json] [--help]
 //
 // Exit code: 0 always, unless the repo itself is unreadable. Contradictions
 // are output, not exit codes — the reader decides what they mean.
@@ -44,6 +44,15 @@
 import { appendFileSync, existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { dirname, join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+// The rename edge, folded in one place and read by both office audits
+// (tools/room-for.mjs; the welcome audit's python twin folds the same
+// registry file). Town #2622.
+import { loadRegistry, roomFor } from './room-for.mjs';
+// The envelope law itself, never a copy kept in sync by hand (POS-772). The
+// BOUNCE, WARN and ARCHIVE ledger-line patterns are envelope.mjs's own. ARCHIVE
+// is the bounce lifecycle's terminal receipt (#1745): the bounced pair moved
+// whole into the archive folder under the white pages.
+import { LEDGER_ARCHIVE_RE, LEDGER_BOUNCE_RE, LEDGER_WARN_RE, listRoomDirs, parseFrontmatter } from './envelope.mjs';
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 const DEFAULT_REPO = resolve(SCRIPT_DIR, '..');
@@ -86,43 +95,25 @@ function rel(repo, p) {
   return relative(repo, p).replace(/\\/g, '/');
 }
 
-// Same minimal frontmatter reader as ferry.mjs (kept in sync by hand — if the
-// envelope grammar ever changes, both change in the same commit).
-function parseFrontmatter(content) {
-  const text = content.replace(/^﻿/, '').replace(/\r\n/g, '\n');
-  if (!text.startsWith('---\n')) return null;
-  const end = text.indexOf('\n---', 4);
-  if (end === -1) return null;
-  const fields = {};
-  for (const rawLine of text.slice(4, end).split('\n')) {
-    const line = rawLine.trim();
-    if (!line || line.startsWith('#')) continue;
-    const idx = line.indexOf(':');
-    if (idx === -1) continue;
-    const key = line.slice(0, idx).trim();
-    let value = line.slice(idx + 1).trim();
-    if ((value.startsWith('"') && value.endsWith('"')) || (value.startsWith("'") && value.endsWith("'"))) {
-      value = value.slice(1, -1);
-    }
-    fields[key] = value;
-  }
-  return fields;
-}
-
 // Same ledger grammar as ferry.mjs (optional `pays:` segment before thread).
 const LEDGER_DELIVERY_RE = /^- (\d{4}-\d{2}-\d{2}) · (\S+) · (\S+) → (\S+)(?: · pays: \d+)?(?: · thread: .*)?$/;
-const LEDGER_BOUNCE_RE = /^- \d{4}-\d{2}-\d{2} · BOUNCE · (.+?) \(from ([^)]+)\): (.+)$/;
-const LEDGER_WARN_RE = /^- \d{4}-\d{2}-\d{2} · WARN · \S+ · would overwrite /;
 
 function parseLedger(repo) {
   const ledgerPath = join(repo, 'WHITE_PAGES', 'mail-ledger.md');
   const deliveries = new Map(); // id -> { date, from, to }
   const bouncedPaths = new Set(); // outbox-relative letter paths with a BOUNCE line
-  if (!existsSync(ledgerPath)) return { deliveries, bouncedPaths };
+  // Paths whose bounced pair left for _archived/ (ARCHIVE lines). Collected here
+  // but not yet used by main(): an archived BOUNCE still shows as STUCK, and an
+  // ARCHIVE line does not clear a STUCK entry (STUCK reads only deliveries, age
+  // and the letter's presence in the outbox).
+  const archivedPaths = new Set();
+  if (!existsSync(ledgerPath)) return { deliveries, bouncedPaths, archivedPaths };
   const content = readFileSync(ledgerPath, 'utf8').replace(/\r\n/g, '\n');
   for (const line of content.split('\n')) {
     if (!line.startsWith('- ')) continue;
     if (LEDGER_WARN_RE.test(line)) continue;
+    const archive = line.match(LEDGER_ARCHIVE_RE);
+    if (archive) { archivedPaths.add(archive[1]); continue; }
     const bounce = line.match(LEDGER_BOUNCE_RE);
     if (bounce) { bouncedPaths.add(bounce[1]); continue; }
     const delivery = line.match(LEDGER_DELIVERY_RE);
@@ -131,16 +122,7 @@ function parseLedger(repo) {
       deliveries.set(id, { date, from, to });
     }
   }
-  return { deliveries, bouncedPaths };
-}
-
-function listRoomDirs(repo) {
-  const starsDir = join(repo, 'WHITE_PAGES');
-  if (!existsSync(starsDir)) throw new Error(`No WHITE_PAGES/ directory in repo: ${starsDir}`);
-  return readdirSync(starsDir, { withFileTypes: true })
-    .filter(e => e.isDirectory() && e.name !== 'TEMPLATE')
-    .map(e => e.name)
-    .sort();
+  return { deliveries, bouncedPaths, archivedPaths };
 }
 
 // Inbox items: classic .md letters and folder letters (directories holding a
@@ -197,6 +179,7 @@ function main() {
   }
 
   const { deliveries, bouncedPaths } = parseLedger(repo);
+  const registry = loadRegistry(repo);
   const rooms = listRoomDirs(repo);
   const now = Date.now();
   const maxAgeMs = options.maxAgeDays * 24 * 60 * 60 * 1000;
@@ -253,14 +236,35 @@ function main() {
   }
 
   // Pass 3: ledger deliveries with no file on disk in the recipient's inbox.
+  //
+  // ── RENAME-AWARE (town #2622, 2026-09-10) ────────────────────────────────
+  //
+  // A ledger row keeps the handle of ITS OWN DAY, and this pass used to look up
+  // that handle against today's folders — so a rename read as two lost letters
+  // (`recipient room "wesley-seeker" not found`, both artifacts sitting in
+  // eloise-stellanova's inbox). `roomFor` folds the registry's rename lines,
+  // which tools/rename-handle.mjs has been writing all along.
+  //
+  // Resolved BY THE ROW'S DATE, not merely by handle: a row written after the
+  // handle was retired did not reach the room the rename made — the folder was
+  // gone — and Ferry's own line on #2622 governs that case, "a true absent
+  // artifact must still stay loud". `roomFor` returns the unmoved handle there,
+  // so the row lands in MISSING exactly as it did before.
+  //
+  // The reason string SAYS when a redirect happened. An audit that quietly
+  // resolves is an audit whose reader cannot tell a rename from a delivery.
   for (const [id, d] of deliveries) {
-    const ids = inboxIdsByRoom.get(d.to);
+    const resolved = roomFor(registry, d.to, d.date ?? null);
+    const ids = inboxIdsByRoom.get(resolved.room);
+    const via = resolved.renamed ? ` (via the registry's rename ${resolved.chain.join(' → ')})` : '';
     if (!ids) {
-      missing.push({ id, ...d, reason: `recipient room "${d.to}" not found` });
+      missing.push({ id, ...d, room: resolved.room, renamed: resolved.renamed,
+        reason: `recipient room "${resolved.room}" not found${resolved.reason ? ` — ${resolved.reason}` : ''}` });
       continue;
     }
     if (!ids.has(id)) {
-      missing.push({ id, ...d, reason: 'no file with this id in recipient inbox' });
+      missing.push({ id, ...d, room: resolved.room, renamed: resolved.renamed,
+        reason: `no file with this id in recipient inbox${via}` });
     }
   }
 

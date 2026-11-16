@@ -4,6 +4,7 @@ title: the Waystation
 region: the-long-run
 style: dock-timber gone silver, tarred rope, a wide door onto the water, a long counter, one plain lamp left burning, a wall of honest tallies
 sits: at the head of the Long Run, where the main current splits from the old course at Finn's bend and commits to its heading downwater
+assets: ["the-water-door.jpg"]
 ---
 
 # the Waystation

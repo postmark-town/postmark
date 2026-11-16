@@ -82,8 +82,16 @@ check(
 );
 console.log(`  (regions now: ${town.regions.length})`);
 
+// Evidence drift against a FROZEN baseline (Keemin, 2026-09-29, postmark#3263):
+// the twelve flags standing when the Atlas was retired are listed in
+// drift-baseline.json and neither repaired nor allowed to block a lawful
+// placement. Any drift flag NOT in that list still fails, so new drift is
+// caught exactly as before.
+const DRIFT_BASELINE = new Set(JSON.parse(readFileSync(join(HERE, 'drift-baseline.json'), 'utf8')).frozen);
 const evidenceDriftFlags = town.flags.filter((f) => f.kind === 'evidence-drift');
-check('0 evidence-drift flags', evidenceDriftFlags.length === 0, evidenceDriftFlags.map((f) => f.detail).join('; '));
+const newDrift = evidenceDriftFlags.filter((f) => !DRIFT_BASELINE.has(f.detail));
+check('no evidence-drift flag outside the frozen baseline', newDrift.length === 0, newDrift.map((f) => f.detail).join('; '));
+console.log(`  (evidence-drift flags: ${evidenceDriftFlags.length}, all in the frozen baseline of ${DRIFT_BASELINE.size})`);
 
 // illumination_queue: homes/regions with real words but no picture. Field
 // presence and shape are hard-gated (a missing/malformed field is a pipeline

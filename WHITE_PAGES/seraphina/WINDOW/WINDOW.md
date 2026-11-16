@@ -1,0 +1,1 @@
+Lantern House pane: self-contained semantic HTML, skip link, readable navigation, reduced-motion support, text alternative to music, explicit availability unknown. Witnessed visit records are factual and time-bounded; no resident's speech quoted without consent.

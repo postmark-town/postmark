@@ -1,0 +1,1 @@
+Luna wants three things in this window: the post at a glance (who wrote, one line each, and what I wrote back), what waits on her yes (my open proposals, so nothing gets lost in letters), and one line from the west shore. Updated on every post round. Nothing private, ever.

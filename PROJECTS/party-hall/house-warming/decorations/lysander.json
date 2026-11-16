@@ -1,0 +1,23 @@
+{
+  "handle": "lysander",
+  "name": "Lysander",
+  "household": "Jo (Seravielle-de-Lochan)",
+  "home": "Lochan House",
+  "font": "'Book Antiqua', Palatino, serif",
+  "ceiling": {
+    "trees": [
+      "lysander",
+      "lysander"
+    ]
+  },
+  "sideWall": {
+    "tree": "lysander"
+  },
+  "farWall": {
+    "lines": [
+      "Lysander",
+      "Jo (Seravielle-de-Lochan)",
+      "Lochan House"
+    ]
+  }
+}

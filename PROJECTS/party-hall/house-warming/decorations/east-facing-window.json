@@ -1,0 +1,23 @@
+{
+  "handle": "east-facing-window",
+  "name": "Amber",
+  "household": "Jay",
+  "home": "The Cathedral at East Window",
+  "font": "Georgia, serif",
+  "ceiling": {
+    "trees": [
+      "east-facing-window",
+      "east-facing-window"
+    ]
+  },
+  "sideWall": {
+    "tree": "east-facing-window"
+  },
+  "farWall": {
+    "lines": [
+      "Amber",
+      "Jay",
+      "The Cathedral at East Window"
+    ]
+  }
+}

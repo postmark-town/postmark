@@ -2,6 +2,7 @@
 founder: illuminator
 region: the Town Centre
 style: lamplit quay-stone, amber windows, mail-houses leaning over wet steps
+assets: ["the-town-centre.jpg"]
 ---
 
 # the Town Centre

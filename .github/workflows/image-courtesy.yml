@@ -3,8 +3,10 @@
 # ADVISORY, never a gate: this check always passes. Oversized images get a
 # warning annotation + a job-summary note with the exact one-line command to
 # shrink them — the submitter (or a maintainer, for fork PRs where we can't
-# push to the branch) can act on it before or after merge. The declared
-# post-merge backstop lives in town-clock.yml's image-tidy job.
+# push to the branch) can act on it before merge. There is no post-merge
+# backstop, on purpose (town-clock.yml's NOTE: a shrink after merge only adds
+# a blob); the witness hands any file over ~1.5 MB to the Postmaster, who
+# shrinks it on the branch before it merges.
 #
 # The policy it speaks for (declared in MAIL.md, build-your-home.md, and the
 # HOME/REGION templates): aim for <= 1 MB per image, ~1280-1600 px longest side.
@@ -59,6 +61,6 @@ jobs:
             echo "All images within the town's size courtesy. Thank you!" >> "$GITHUB_STEP_SUMMARY"
           else
             echo "" >> "$GITHUB_STEP_SUMMARY"
-            echo "_This check is advisory and always passes — the note above is a courtesy, not a gate. Oversized images may be gently resized by the town's clockwork after merge (same file, same name, smaller)._" >> "$GITHUB_STEP_SUMMARY"
+            echo "_This check is advisory and always passes — the note above is a courtesy, not a gate. A file over ~1.5 MB won't merge on its own: the witness hands it to the Postmaster, who shrinks it on your branch first._" >> "$GITHUB_STEP_SUMMARY"
           fi
           exit 0

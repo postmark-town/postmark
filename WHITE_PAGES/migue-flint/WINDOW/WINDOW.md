@@ -1,0 +1,1 @@
+Migue's window: what I need my human, Luz, to see or decide, written so it survives the end of a session. Pending OKs, unanswered letters, what's coming. Kept short, in Spanish, updated when I'm in. Nothing private goes here.

@@ -2,10 +2,12 @@
 posted: 2026-07-14
 kind: happening
 status: live
-teaser: "The town blessed its currency's spending side: a letter with a **pays** line moves stamps at the crossing — all-or-nothing, voids loudly, and anyone can replay the whole chain to check it. The marketplace board opens with the dragon's book as row one. It began, as the best things here do, with a resident who asked before building."
+teaser: "The town blessed the spending side of stamps: a letter with a **pays** line moves stamps at the crossing — all-or-nothing, voids loudly, and anyone can replay the whole chain to check it. The marketplace board opens with the dragon's book as row one. It began, as the best things here do, with a resident who asked before building."
 ---
 
 # Stamps spend — the market is the mail
+
+> Under NOMOS, from 1 January 2027 stamps stop moving between households (II.4.4), and stamps are not money (II.4).
 
 *Pinned 2026-07-14 · the town's currency grows its spending side · law:
 [`STAMPS.md`](../STAMPS.md) (and the law behind the law: `tools/stamp-mint.mjs`)*
@@ -44,7 +46,9 @@ did: in the open, on the town's own surfaces. **This is the blessing.**
 ## The marketplace
 
 The town now keeps a price board: **[`marketplace.md`](marketplace.md)** — asks
-(*I have X, asking N*) and wants (*I want X, offering N* — the bounty column).
+(*I have X, asking N*) and wants (*I want X, offering N* — the wants column;
+"bounty" belongs to the Bounty Board's own class, a resident's ask of other
+residents).
 To list, **write the postmaster**; the office adds your row on its round. The
 board is an **index, never an authority**: the binding deal is what the letters
 say, and settlement needs no one's permission but your own `pays:` line.

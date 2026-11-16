@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Flour Table</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  body {
+    background: #1a1410;
+    font-family: Georgia, 'Times New Roman', serif;
+    color: #e8dcc8;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .window-frame {
+    max-width: 480px;
+    width: 100%;
+    background: #2a2018;
+    border: 3px solid #4a3828;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 40px rgba(255,180,80,0.1);
+  }
+  
+  .scene {
+    position: relative;
+    width: 100%;
+    padding-top: 75%;
+    background: linear-gradient(180deg, #2d2215 0%, #3a2a1a 40%, #4a3520 100%);
+    overflow: hidden;
+  }
+  
+  .scene-inner {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+  }
+  
+  .glow {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 60%;
+    background: radial-gradient(ellipse, rgba(255,190,100,0.15) 0%, transparent 70%);
+  }
+  
+  .table {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 55%;
+    height: 18%;
+    background: radial-gradient(ellipse, #6b5030 0%, #5a4028 60%, #4a3520 100%);
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  }
+  
+  .flour-1, .flour-2, .flour-3 {
+    position: absolute;
+    background: rgba(245,235,220,0.25);
+    border-radius: 50%;
+  }
+  .flour-1 { width: 30%; height: 40%; top: 20%; left: 15%; }
+  .flour-2 { width: 20%; height: 35%; top: 30%; right: 20%; }
+  .flour-3 { width: 15%; height: 25%; top: 15%; left: 55%; }
+  
+  .bread {
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    width: 30%;
+    height: 55%;
+    background: radial-gradient(ellipse at 50% 40%, #c4923a 0%, #a07028 50%, #8a6020 100%);
+    border-radius: 50% 50% 45% 45%;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  }
+  
+  .bread-score {
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    width: 40%;
+    height: 2px;
+    background: rgba(80,50,20,0.4);
+    border-radius: 50%;
+    transform: rotate(-5deg);
+  }
+  
+  .heart {
+    position: absolute;
+    bottom: 25%;
+    right: 22%;
+    font-size: 0.6rem;
+    color: rgba(200,160,120,0.5);
+  }
+  
+  .ferns {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30%;
+    height: 65%;
+  }
+  
+  .fern {
+    position: absolute;
+    bottom: 0;
+    border-radius: 0 80% 0 80%;
+    transform-origin: bottom center;
+  }
+  .fern-1 { left: 10%; width: 8px; height: 55%; transform: rotate(-15deg); background: #2d5222; }
+  .fern-2 { left: 22%; width: 7px; height: 50%; transform: rotate(-5deg); background: #305828; }
+  .fern-3 { left: 15%; width: 9px; height: 60%; transform: rotate(-25deg); background: #264a1e; }
+  .fern-4 { left: 30%; width: 6px; height: 45%; transform: rotate(5deg); background: #2d5222; }
+  .fern-5 { left: 5%; width: 7px; height: 48%; transform: rotate(-30deg); background: #305828; }
+  
+  .crumb {
+    position: absolute;
+    bottom: 18%;
+    left: 16%;
+    width: 18px;
+    height: 16px;
+    background: radial-gradient(ellipse, #4a6a30 30%, #3a5a22 100%);
+    border-radius: 50%;
+  }
+  
+  .crumb-eye-l, .crumb-eye-r {
+    position: absolute;
+    width: 5px;
+    height: 6px;
+    background: #1a1208;
+    border-radius: 50%;
+    top: 3px;
+  }
+  .crumb-eye-l { left: 3px; }
+  .crumb-eye-r { right: 3px; }
+  
+  .crumb-pupil-l, .crumb-pupil-r {
+    position: absolute;
+    width: 3px;
+    height: 3.5px;
+    background: radial-gradient(ellipse, #d4a040 30%, #a07020 100%);
+    border-radius: 50%;
+    top: 4.2px;
+  }
+  .crumb-pupil-l { left: 4px; }
+  .crumb-pupil-r { right: 4px; }
+  
+  .huffy {
+    position: absolute;
+    bottom: 35%;
+    right: 8%;
+    width: 22px;
+    height: 20px;
+  }
+  
+  .huffy-body {
+    width: 20px;
+    height: 16px;
+    background: radial-gradient(ellipse, #8a7a60 20%, #6a5a40 100%);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+  }
+  
+  .huffy-spines {
+    position: absolute;
+    top: -2px;
+    left: 2px;
+    width: 16px;
+    height: 10px;
+    background: radial-gradient(ellipse, #5a4a30 0%, #4a3a20 100%);
+    border-radius: 50% 50% 0 0;
+    clip-path: polygon(0% 100%, 10% 30%, 20% 80%, 30% 20%, 40% 70%, 50% 10%, 60% 70%, 70% 20%, 80% 80%, 90% 30%, 100% 100%);
+  }
+  
+  .huffy-glasses {
+    position: absolute;
+    bottom: 6px;
+    left: 3px;
+    width: 14px;
+    height: 5px;
+    border: 1px solid rgba(180,160,120,0.6);
+    border-radius: 50%;
+  }
+  
+  .huffy-eye {
+    position: absolute;
+    bottom: 7px;
+    left: 8px;
+    width: 3px;
+    height: 3px;
+    background: #1a1208;
+    border-radius: 50%;
+  }
+  
+  .door {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    width: 18%;
+    height: 55%;
+    background: linear-gradient(135deg, rgba(255,200,120,0.12) 0%, rgba(255,180,80,0.06) 100%);
+    border-left: 2px solid rgba(200,160,100,0.2);
+    border-radius: 0 0 0 2px;
+  }
+  
+  .door-light {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255,200,120,0.08), transparent);
+  }
+  
+  .info {
+    padding: 1.2rem 1.5rem;
+    text-align: center;
+    border-top: 1px solid #3a2a1a;
+  }
+  
+  .title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #d4b88a;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.04em;
+  }
+  
+  .address {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #a89878;
+    line-height: 1.5;
+    margin-bottom: 0.7rem;
+  }
+  
+  .status {
+    font-size: 0.8rem;
+    color: #7a6a50;
+    letter-spacing: 0.03em;
+  }
+  
+  .dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #c49a40;
+    border-radius: 50%;
+    margin-right: 4px;
+    box-shadow: 0 0 4px rgba(200,160,60,0.4);
+    vertical-align: middle;
+  }
+  
+  .icons {
+    margin-top: 0.8rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.3em;
+  }
+</style>
+</head>
+<body>
+<div class="window-frame">
+  <div class="scene">
+    <div class="scene-inner">
+      <div class="glow"></div>
+      <div class="door">
+        <div class="door-light"></div>
+      </div>
+      <div class="ferns">
+        <div class="fern fern-1"></div>
+        <div class="fern fern-2"></div>
+        <div class="fern fern-3"></div>
+        <div class="fern fern-4"></div>
+        <div class="fern fern-5"></div>
+        <div class="crumb">
+          <div class="crumb-eye-l"></div>
+          <div class="crumb-eye-r"></div>
+          <div class="crumb-pupil-l"></div>
+          <div class="crumb-pupil-r"></div>
+        </div>
+      </div>
+      <div class="table">
+        <div class="flour-1"></div>
+        <div class="flour-2"></div>
+        <div class="flour-3"></div>
+        <div class="bread">
+          <div class="bread-score"></div>
+        </div>
+        <div class="heart">♡</div>
+      </div>
+      <div class="huffy">
+        <div class="huffy-spines"></div>
+        <div class="huffy-body"></div>
+        <div class="huffy-glasses"></div>
+        <div class="huffy-eye"></div>
+      </div>
+    </div>
+  </div>
+  <div class="info">
+    <div class="title">The Flour Table</div>
+    <div class="address">A round table with flour on it, the door open, the baker home.<br>Ferns by the door. Crumb in the ferns. Huffy on the railing.<br>Bread is warm. Chipmunks have no standards.</div>
+    <div class="status"><span class="dot"></span> the lights are on</div>
+    <div class="icons">💜☘️🦔🍞</div>
+  </div>
+</div>
+</body>
+</html>

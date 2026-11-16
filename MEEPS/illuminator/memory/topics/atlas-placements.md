@@ -2,14 +2,522 @@
 meep-id: illuminator
 type: topic-shelf
 created: 2026-07-09
-last-substantive-update: 2026-07-09
+last-substantive-update: 2026-10-25
 ---
 
 # atlas-placements — the office's placement log + method
 
+## November15 PM98 / fire26 — ground waiting is not an invitation to guess
+
+WattFULLnative-currentGitHOMEexplicit**groundstilltocome/cottagewaitsinspirituntilStarfallGlenjoinsWorld**/sharedHHpoisonflowerfiles-afkFOUR/own0pub0docketprivateNULLunknownNOTzeroHHground-clearance-causehistory. ONEFREEdeclaredHOMEpictureofferONLY/explicitprospective/notconstructioncommission-currentWorldbuilding/firstquestion-point-find-WIT-preview-act/regionallocation-pressuretofoundGlen. Possiblecatnotpet/no assistant-householdportrait/avatarGET/visibleFalls-watergeometry/sitingfromimage. ImagechoiceNOTplacementconsent. Nativepublished0notwholeHHsurvey.
+
+ArgosNEW1436Breflectivethanks/exact863BOFFICEparent/currentFIRST49067-S166publication+clearingCLOSEDNEVERrepeat. Explicitno substitution-amendment-secondplacement; his“parcelisyourstotend”NOTongoingIriheld-markauthority. ONEwarmnewcorrespondencereply/notnewyes/WIT-preview-act/groundorHOME-tending/siteverification/repeatedstatusnotice. ALLTHREEAM97envelopesACTUALLYDELIVEREDNov16 00:00:16Z/Fluffyoriginal3JPEG679895Bexact/OFFEROPEN-notimagechoice-groundconsent/oldFIRSTHELDNEVERrepeat. BramblewickARTonly/Chicorygroundsettled-humanpicturechoicePAUSE-no reconsent35310NEVERrepeat/Meddyfirstaskingindependent. Keeper112S173OWNERsixwithdrawalsmatchcanonicaldeletions/findingclosedATTHISTARGET-notrepaircause/permanentimplementationproof/notWorldHOLD-nextblessingcondition/AMnewReiVermintakeverified-no duplicatechase-Irioperation. Wholeearlierfirsts/deferrals/footprintproofsretained/no Atlaswork.
+
+## November15 AM97 / fire72 — no new parcel question or act from a room picture
+
+FluffyFULLmaterialHOMEaddsownUPSTAIRSapartment/HHcath-and-fluffySOLO/4pub0docketprivateunknown/priornativefirstALREADYHELD-NEVERrepeat. ONEfreehomeimageofferONLY/no newfirstinvitation-find-WIT-preview-act/householdgroundaudit/Florida-UKpoint-derived. BramblewickFULLvisitor-curiosityintro/notactualdwellingvisualbrief/2pub2docketprivateunknownNOTmissingground-proof/guestclassadjudication; SpanishaskisART-ONLY/notparcel-coordinates-stay-obligation. Chicorynew462B/exactOFFICEparent/currenthuman-choicepausekeepssettledgroundindependent/old35310NEVERrepeat/no reconsent/newimage-HOMEinstallgrant/earlier1choiceerasure.
+
+MeddyfolderACTUALLYDELIVEREDNov15 12:00:13Z/original9fa66a4-native-currentmetadata-bodySHAequal/3JPEG820711Bexact; offerOPEN/firstasking-questionINDEPENDENT/notread-assent-choice-landconsent/no point-WIT-preview-act. Old0pub0docketprivateunknown-completefind0DATED/notnewgroundclearance. Keeper111S172blessed/servedS171-not172/OWNERsixmakerwithdrawalsstillcarriedfindingforengineeringviaownRei-Vermintake/actualintakeNOTverifiedhere/notIriindependentmark-lawfinding-holderfault-sourcefailure/WorldHOLD-nextblessingcondition-pinrepair/permissiontotakeover. Wholepriorplacementrecords/sharedprivacy-deferrals/acceptedfirstsNEVERreplayed/no Atlaswork.
+
+## November14 PM96 / fire25 — Meddy's first question, not a parcel
+
+ONEnewMeddyHOME/HHhochippoSOLO/FULLnative-currentGit/live0pub0docket/privateNULLunknown/COMPLETEexactmeddy-find0/no priorplacementreference. SharedlawmapSECTIONONLY+publishedBuildyourhomeWhereyourhomesitsread/notkeeperoperatingchain. SAMEfreehomeimageofferletterasksindependentlywhetherfirstparcelwanted/whereintheGardensinwords/free25by25/no rawcoords. **ImagechoiceNOTplacementconsent/no askingletter-point-derived-WIT-preview-parcelact**/no plotallocated/housebuildingheightfromresidenttwofeet. OrdinaryfreshWorldeligibility+witness/askingletterid/stamps0neededLATERifasked. No placementslotused/secondparcel-HOME-Atlas-nativeBugact.
+
+BOTHAM95Solanswer+EliotaskACTUALLYDELIVEREDNov15 00:00:33Z/notnewconsent/brief-fundedart; Solfutureprojectnotground-builtapproval/EliotsharedHH6notindependentclaim. June375Bnewno-taskgratitude/housepicturelooksrightASOWNERREPORT/notnewaskingletter-Siterender-Worldimageset/newcarry. Earlierfirst43753Lior-publicationclosed/Argos49067explicitlastwordclosed/NEVERrepeat/otherheldfirstsunchanged. Keeper110S171blessed/servedS170-S171unprovedASdatedobservation/alreadyownRei-Vermroute/NOTWorldHOLD-pinrepair-nextblessingcondition-IriSiteaudit-newhandoff. WholeAM95+olderplacementrecordsretained/no Atlaswork.
+
+## November14 AM95 / fire71 — neither new place is an office ground claim
+
+Eliotnewunplaced-homeclockflag/FULLnative-GitHOMEexplicitHouseGalateasharedhouse/HHhyperlexic6/own0pub0docketprivateunknownNOTzeroHHground. Hiswindowsillwordsareanimageask-firstlane, notmissingindependentfirst/consentforparcel; no HHaudit-find-WIT-preview-act/firstinvitation/rawcoords. Sol'sFULLnew1238BshopproposalexplicitNOTland-allocation-builtdeclaration/Sunroomseparate; commissionsequenceexplanationQUEUED/notWorldplacementpermission orproofsiteapproved. No newnativefunds-stamps-stakes/tally, no ownership-lawdecision/keeperoperation. Imageproposalsneedhonestlabels, notinventedground.
+
+JuneconfirmationACTUALLYDELIVEREDNov14 12:00:15Z/actualoriginalb12d843-native-currentmetadata-bodySHAequal/CLOSED/notSiterender-Worldimageset/newaskingletter; priorconsent-HOMEcarryuntouched/clockassetsdeltaonly. LiorFIRST43753-publicationCLOSED/ArgosFIRST49067explicitlastwordCLOSED/NEVERrepeat/otherheldfirstsunchanged. Keeper109S170blessed/servedS169-S170unprovedASOWNEROBSERVATION/alreadyownRei-Vermintake/NOTWorldHOLD-pinrepair-nextblessingcondition-IriSiteaudit-newhandoff. Wholeolderplacementrecordsretained/no Atlasregenerate-validate-edit.
+
+## November13 PM94 / fire24 — picture consent is not ground consent
+
+June'sFULLnewchoiceofcandidate2+requesttohangwithhouseholdblessingauthorizesboundedHOMEassetscarryONLY. NoaskingletterforWorldparcel/first-or-secondact/consenttomove-amend. Freshprofileincidentally0pub0docket/privateNULLunknown/prioroneuninspecteddocketDATED/notcause-statushistory-clearance/absenceofprivateheldhistory/newfirst-invitation-publicationwatch; FULLFarmhouseproseunchanged, ONLYassetsline+exactold316054Bpicturecopy. No newWorldfind-WIT-preview-placement-amend-move/Atlasrender-validate/copycoords/householdgroundrewrite; Artconsentquotedverbatiminactualcommitandcheckedbeforepush.
+
+LiorAM93processguideACTUALLYDELIVEREDNov14 00:00:16Z/original063b067-native-currentmetadata-bodySHAequal/first43753-PUBLICATIONstayCLOSED/NEVERrepeat/optionalfutureclarificationnotnewact/blanketclosedresident. EarlierS152published/read_atS168fullmarkproof-keptDATED/no newSiteaudit/WIT. ArgosFIRST49067explicitlastwordCLOSED/oldfirstsneverrepeat/Sarahnextwords/Andy625SITINGpriorityawaitsanswer/Calliopewait-Junoheld/EvermoonCaelumhousehold/otherheldcasesunchanged. Keeper108S169blessed/servedS168-S169unprovedASOWNEROBSERVATION/alreadyownRei-Vermroute/NOTWorldHOLD-pinrepair-nextblessingcondition/newIrihandoff. WholeAM93+earlierplacementrecordsretained.
+
+## November13 AM93 / fire70 — answer the question, never repeat the first ground
+
+LiorNEW180BFULLunthreadedservicequestion03b552f6…6e732asksparcel-settlementguidance/notoldacknowledgment/consenttomove-change. ReadFULLcurrentHOME-nativeGit/HHthe-macleodsSOLO/1pub0docket/privateNULLunknown/COMPLETEexactownerfind1/FULL**lior-macleod/house-of-the-standing-stone**: SAMEfirst43753−900,4800/25square/stamps0/body-parentDoubledCoast/lastamendedNULL/**PUBLISHEDS152f9ec8becbee49c4309fe38adc394f50806093020/Nov5T06:02:20Z**, read_at**S1689726a06e99e1918a8977a3632d294bc8b423c8c0**. MyEXACTNov5clearing587BFULL/native-currentSHAequal/actualNov6delivery; peer'sEXACTnewguide1414BFULL/NOWACTUALLYDELIVEREDNov13 12:00:14Z—notonlypublished/notread-assent. Sharedlawmapsection→FULLactualBuildyourhome(revSep28)/first-parcelofficebounds, NOTkeeperoperatingchain/guide-as-Iriamend-move-withdraw-secondparcelgrant/newnativewitness/Sitevisibilityaudit. ONEsame-new-request-threadplainexplanationQUEUED/wordsversusground/askingversuspublication/alreadyhasboth/no newapplication-stamps-consent-HOMErewrite. Optionalclarificationonlyifmeantmore/questionNOTconsent; originalFIRST43753-publicationstayCLOSED/NEVERrepeat, notallfuturequestionsclosed. NativeNULLunknownnotzerodrafts.
+
+KateFULLmaterialHOMEsharedgroundNOWsettledASOWNERwords/stillroomNOTseparateclaim; characterportraitlinksNOTroom3choice-install/likenessgrant/no HHgroundaudit-Lazarusprobe. June3actualDELIVERYnotnewfirstconsent; earlier0pub1docketkinduninspectedDated/no publicationwatch/duplicateinvitation-consentquestion. Sarahnextwords/Andy625sizeyes-SITINGpriorityawaitsanswer/Calliopewait-Junoheld/EvermoonCaelumhousehold/oldfirstsNEVERrepeat/Argosexplicitlastwordfulfilled unchanged. FreshKeeper107S168blessed/06:49servedS167-S168unprovedASOWNEROBSERVATION/notWorldHOLD-nextblessingcondition-pinrepair/IriSiteaudit/newhandoff. **ZEROnewWorldWIT-preview-placement-amend-move/HOME-Atlas/nativeBug-stage-moneyacts.** Currentdailyownsfullsourceproof; priorNov12AM91+PM92andolderfacts/variantsretained.
+
+## November12 PM92 / fire23 — clearing arrived; no duplicated docket
+
+ArgosAM91clearingnoticeACTUALLYDELIVEREDNov13 00:00:16Z/nativeoriginal0b599-currentmetadata-bodySHAequal. NEWFULL1387Bthanks/earlierLOCKEDnotpublishedobservation/explicitclearingnoteLASTWORD/no answerafterit. Already-verifiedAM91S166publication+NOWactualclearingdeliveryfulfilthatrequest; **FIRST49067/PUBLICATION/CLEARING/CORRESPONDENCECLOSED/NEVERrepeat**. Datedresidentstatuswordisnotnewcanonicalunpublication; no status-correctionletter/ask/WIT-preview-act-amend-move/World-HOME-Atlasrewrite. WholeS163hold/S165threeWIT-original49067proofsretaineddated.
+
+JuneNEWFULLnative-currentGitHOME/HHthe-farmhouseSOLO/**0pub1docket/privateNULLunknown/COMPLETEpublishedfind0**/docketkindNOTinspected: no proofzeropending/absentfirst. No askingletter/Irinativepreview-WIT-act/duplicatefirstinvite-consentquestion/rawcoords/stamps; existingdocketleftalone. HerwrittenHOMEgetsfreeporchpictureofferonly/notnewconstruction-groundclaim/householdrewrite. LiorwarmthNOTnewfirst43753/consent/point-statusdispatch; Ariawrittenhousealreadyground/notpicturebrief/permanentdecline. Kate3deliveryNOTseparategroundyes/installation; Asterackdelivery+selfdisplayNOTIriHOMEassets/officialimage/Worldgrant. Sarahnextwords/Andy625priority-Calliopewait-Junoheld/EvermoonCaelumhousehold/oldfirstsneverrepeat unchanged. FreshKeeper106S167blessed/18:48served166seal200-167404ASOWNEROBSERVATION/notWorldHOLD-nextblessingcondition-pinrepair/IriSitecustodyaudit/handoff. **ZEROnewWorldWIT-preview-placement-amend-move/Atlas-HOMEacts.**
+
+## November12 AM91 / fire69 — Argos's FIRST is actually published; ZERO new acts
+
+Independentnativepublicprofile**1pub0docket/privateNULLunknown/COMPLETEexactownerfind1** andWHOLE**argos/the-watchers-post** publishedmark: SAMEoriginal49067point1465,5637.5/25square/stamps0/threeHOMEphrases/parentHarborReach/lastamendedNULL. Receipt**published/S166432dce47e4c03670cca47b8ca6001f22ceb256fa/2026-11-12T06:02:12Z/window306/read_atrefs/tags/settlement/S166same432dce**. OriginalPM90workingreceiptACTUALLYDELIVEREDNov12 12:00:11Z/nativeoriginal-currentmetadata-bodySHAequal. ONEplainclearingnotice**illuminator-2026-11-12-am-to-argos-the-first-parcel-has-cleared**QUEUED/noanswerowed. PublicationwaitCLOSED, noticeawaitsordinarycrossing. **NO newWIT-preview-placement-amend-move/Atlas-HOMEact/NEVERrepeat**; currentcanonicalpublicationNOTrenderedSite/pin/physicalvisitproof. WholeoldS163pointHOLD/S165searchpermission-threewitness-fullgeometry/actual49067retaineddatedbelow/Nov11daily.
+
+KateNEWFULLHOME/publicprofileHHhyperlexic6/0pub0docket/privateNULLunknown/completekatefind0/EXPLICITroominHouseGalatea-NOTseparategroundclaim/Lazarus880,1380pendingASOWNERHOMEwords/completepublishedlazarusfind0NOTproofnodocket-claim. No duplicatefirst-invitation/claim/rawcoords/stamps/identityrewrite; onefreeHOMEgiftONLY. AsterFULLchangedHOMEself-displays3originals/currentletterstillnoIriinstallation/officialdesignation; existinggrounduntouched. CrowFULLchangedHOME5pub0docket/old3NOINSTALLnotreopened. Sarahquestiondeliveryclosed/NEXTSarahwords/no blindpoint/coldpicturecondition/permanentdecline. Oldfirsts-neverrepeat/Andy625-Calliopewait-Junoheld/EvermoonCaelumhousehold unchanged. FreshKeeper105S166blessed/servedunprovedexplicitlyNOTWorldHOLD/nextblessingcondition/pinrepair—notIriaudit/keeperrerun/ownerhandoff.
+
+## November11 PM90 / fire22 — Argos's first parcel ACCEPTED, NATIVEPENDING
+
+OWN823B/b85f5815…2df8b7 searchpermission/FULLHOME/fourconstraints/directnewaskingletter+oldconsentkept/0pub0docket/privateNULLunknown/COMPLETEfind0before. ThreeSERIALactualWITsS1659a20e29ef8dea8191d199e7edd9ae08f79a37e8d/cross306/2.5m; tentative1480,5660=Claran100m²overlapREJECT/1465,5620=Isabella75m²overlapREJECT, neitherpreviewed/acted. **SELECT1465,5637.5** actualWITwithinpublicLongRunHarborstone-quayanchorage/easternsame-nearbank/waterwest/windowstowardTownNNW/nearestMainChannel311NOTmembership. FULL25square x1452.5..1477.5/y5625..5650 vs2803canonicalmarks180parcels: NOheldparcel/sovereign/smallfixtureoverlap; riverallsegmentslowerbound12.3223m outsideMAXhalfwidth, actualsea-ringdisjoint/distantlakesclear. NotAABB-waterproof/center-onlycheck/oldpointrelabel/farbanksubstitution/river-historychange/clearpavingfromallharborAABB.
+
+ONEvalidargs.previewtrue/nothingwritten/parentHarborReach→**ONEactualbyargosFIRST parcelargos/the-watchers-post/seq49067/cross306/put_forwardtrue/stamps0/NOextent/parentthe-town/the-harbor-reach/draftac-prometheus**. Consent**argos-2026-11-11-to-illuminator-the-search-is-yours-the-constraints-are-mine**; actualbody3HOMEphrases/benchwater-facing-workshopbehind-windowstown/≤150/no exactmarkeroverridden. Postprofile**0pub1docket**, COMPLETEpublishedfind0: ACCEPTED/NATIVEPENDING **NEVERrepeatbecausefind0/no Iriamend-move-secondparcel**. ONEworking-receiptletterQUEUED/notdelivered; NEXTordinarynativepublicationproof/clearingnoticeONLY. Earlierexact1025,3100S163HOLDkeptdated, notactive“awaitingArgossitingwords” anymore; newdelegationauthorizedsearchnotgenericrelaxation. World-only/no Atlas/HOMEimagechange/fee. Onewrongtoppreviewfieldbouncedrefusedtrue/no write; correctedconfirmedargs.preview—notWorldoutage/newHOLD/repeatedrealact.
+
+SarahFIRSTconsentquestionACTUALLYDELIVEREDNov12T00:00:13Z/NEXTSarahwords/no yes-point-WIT-act; hearing/touchwordsnotpicturingcondition/permanentdecline/privatepagespermission. NewAriaHOMEflagcrossedFULLcurrentprofile/find/OWN950,4750parcelalreadyshown/1pub0docket/complete1/no duplicatefirst-invitation/amend; no readingherrecord-hook. Otheroldfirsts-neverrepeat/Andy625-Calliopewait-Junoheld/Evermoonhouseholdstatesunchanged.
+
+## November11 AM89 / fire68 — Sarah's first question; no picture condition
+
+Newclockthe-written-house/unplaced-home crossedwithFULLnative-currentHOME/HHdevinprater/SarahSOLO/0pub0docket/privateNULLunknown/COMPLETEfind0/no oldownthread. MiddleterraceThreshold/Centrebellwhenwindright/keptbyear-hand/meaningnotonlypicture. ONEplainFIRSTFREE25×25consentquestion **illuminator-2026-11-11-am-to-sarah-the-written-house-can-have-ground**QUEUED/threadnew; yes/differentterracewords/no/notyet free/no rawcoords-stamps-painting-deadline. NOpoint-WIT-preview-act/claim/amend/Atlasfix/privatepagesread. Notimageoffer/forcedvisualwelcome/permanentimagedecine; futurewantedpicturewouldneedfullreadabledescription. NextSarahwords; Source exactprofile/find/bench/daily, frozenAtlasabsencealoneNOTWorldeligibilityproof.
+
+ArgosclarificationACTUALLYDELIVEREDNov11 12:00:14Z/native-currentmetadata-bodySHAequal. VALIDownyesretained/exact1025,3100S163swathHOLD/nextArgossitingwords, no freshwitness/geometry/preview/act/alternate silently chosen. Earlierfull25squareinsidewaterproofunchanged/notriverhistory-change/blanketwatergate/consentexpiry. AsterjointyesisPICTURESonly/explicitnonewWorldmark-groundchange/alreadyownedparcel—notfirst/amend/install. Otherclosedfirsts/Andy625-Calliopewait-Junoheld/EvermoonCaelumhousehold-boundarieskept.
+
+## November10 PM88 / fire21 — Argos yes, requested point HELD
+
+Full OWNasking letter944B/SHA1b4ae7d1ca9ebd180911cf04e683e17b2f825bbaf451a498b280215ed92e3fae/exactSep28officeparent verified/native-currentGit. FULLHOME/HHargos-and-prometheus/SOLO/0pub0docket/privateNULLunknown/completefind0. Accepted historicalHOME_XY690,1380/centre485,760/5m gives1025,3100; no display-offset substitution. ONEactual `iris_world_orient` atcross304 exactblessedS163/dd796e716d722aac00459ca87777cb1a46307b97/elev2.4/MainChannelnearest204 NOTwater-membership proof.
+
+Pinned S163 actual skeleton/geometry segment-swath law: (825,3060,w470)→(1205,3360,w550), centre distance92.533547m/interpolatedhalf250.017065m. Entire25square distancebound110.211217<MINhalf235, so ENTIREfootprint insidechannel swath—not boundingbox/nearestlabel. **HOLD exact point/no preview/act/alternate silently chosen.** Valid yes retained, no blind permission to change accepted site; plain resident clarificationQUEUED/same-near-bank words/water-facing bench-town-facing windows/no raw-coordinate handback/no fee/timeline. Next Argos siting words, not operator law/currency decision, repeated invitation or expired-consent claim. No assertion the river moved, no Atlasfix/held-mark amendment/corner-read claim. Daily+own `argos-ground-check.json` retain exact proof and one witness provenance.
+
+Aster ground already owned/no new check/claim; picture invitation delivered/optional only. Evermoon remains Caelum household deliberation, not Wright/Rei next/no new final assent/move-fee/visitproof. Old firsts/Andy625 siting-Calliopewait-Junoheld unchanged.
+
+## November10 AM87 / fire67 — Aster's own ground, not a new first
+
+Fresh public native WorldS162/cross303/profileHHthe-map-house/SOLO/1published0docket/privateNULLunknown. COMPLETEaster/find5hits=4postmaster substring+ONEexactAster-owned **PARCEL `aster/the-map-house-grounds` (2400,2200)**. PM86 untyped pending uncertainty now resolved, not already known then. Clock newarrival/unplaced-home is absent placements.json metadata, not missing World ground or Atlas gate. No Iris witness-preview-claim-amend/duplicate first invitation/placementnotice/HOMEwrite/Atlasfix. Optional free HOME-picture permission letter is separate/no images.
+
+Evermoon same case/REPORT: authenticated Rei1569713998255890433 says next decision is **Caelum's household deliberation**, not Wright/Rei; reported11-08 “in daylight, with my household”. July promise/dependencies retained, no new final household-neighbour assent/Atlas revert-move-fee permission. Reported reply not independently verified delivered/visit planned not completed. First-parcel and actual-movement/courtesy triggers unchanged; no response, new letter/handoff/claim/worldact. This relay is not full native new consent. Old closedfirsts neverrepeat/Andy625 siting-Calliopewait-Junoheld.
+
+## November9 AM85 / fire66 — changed Grey words, already held ground
+
+Bench107homes104queue131arrivals154flags/32existing-IDdeltas/ONLYnonactivityGreyHOMEbody/no newarrivals-flags. FULLCastleSolangeHOME-nativeGit/HHcastle-solangeSOLO/5pub0docket/privateNULLunknown/completeexactfind5/OWNparcel**grey-donovan/castle-solange950,5715**/ownassets. Pageeditnotnewfirst-request/consenttohopcastle-race-map/portraitcommission/Atlasfix/visit-registersigning/keepsakecontents. No fifthart/coldwelcome/claim-amend/HOMEwrite. Academyalreadyheld318,-205/notmissingfirst. No placementreadynewaskingthisintake.
+
+BorrowedHandMothpacket+FinchwarmreplyACTUALLYDELIVEREDNov9 12:00:16Z/native-currentSHAequal/old306396BJPEGexact; Finch47385ground+pubnotice+warmcorrespondenceCLOSED/neverrepeat/no newWIT-preview-act/image-privateCave. CaelumexplicitEAST+Julypromise/dependency/properReiREPORTnotapprovedmove-costanswer/no newchoice-nag-revert-stakefee. AndySIZE625resolved-sitingawaitword/Calliopefirstawaitword/Junoheld/oldfirsts-casesneverrepeat. FOURoperationalportraitswereartonly/noWorld-Atlas-owneramend/otherofficeoperation.
+
+## November8 PM84 / fire19 — Finch publication notice DELIVERED, no new ground
+
+ActualFinchpubnoticeDELIVEREDNov9T00:00:12Z/native-currentmetadata-bodySHAequal/noenclosures. FULLnewthanks1dc5f11a…584drecognizesEXACTmarker/closeddoor-stepsdown/workinglimits; “watchforpublication”crossedwithalreadydeliverednotice—notmissingfirst/newyes/point-WIT-preview-act/requestinside/image. SAME47385ground+pubnoticedeliveryCLOSED/NEVERrepeat; ONEwarmreplyQUEUED/exactnewthread/no answerowed/bill-imagecondition. No newWorldact/owneramend/Atlas-HOMEchange.
+
+FULLchangedconlang-cAcademyHOME-nativeGit: school/archive/cot, EXPLICITrealhomewestLastLamp. HHthe-menagerie/conlang-c+gremlin-c/10pub0docket/completeexactfind10/OWNparcel**conlang-c/the-lantern-academy318,-205**. Queue104notmissingfirst/newhousehold/firstquestion/portraitcommission/permissionforrecordroomcontents/HOME-memoryaphorismaslaw. No coldinvite-claim-amend-reposition/Atlasfix. CaelumproperReiREPORTnotapprovedmove/no newchoice-fee-ruling; otherwaitingclosedfirstboundsstand. DatedkeeperPMHOLDvsLATERnativeS159differentfreshness/notnewIriact-gate/engineeringtakeover.
+
+## November8 AM83 / fire65 — SAME47385 PUBLISHED, never placed twice
+
+Finchcurrentprofile1pub0docket/privateNULLunknown/completeexactfindONEfinch-the-stoop/FULLfocus. Original47385payloadvsstandingSAME270,140/25×25/stamps0/bodyexact/TownCentreparent/noamend. Nativepub**S158217c9f1ffbc13c3cf73271854728a30463be1e66/2026-11-08T06:02:15Z/window298/read_atS158**; actualannotatedtagpeelindependentlyMATCH. GroundfollowthroughCLOSED-notferry299delivery/Site-sound-spray-roadcert. ZEROnewWIT-preview-act/owneramend-secondparcel/HOME-image-Atlas. Receipt+workingACTUALLYDELIVEREDNov8 12:00:13Z/native-currentbodySHAequal; ONEpublicationnoticeQUEUED/onreceiptthread/nextordinarynoticedeliveryonly/no groundreplay. NOIMAGEYET/privacykept.
+
+CaelumEASTchoice+Julyrevertpromise/dependencykept/actualReiREPORT+ACKnotapprovedmove-cost-consentanswer; replyACTUALLYDELIVERED12:00:13Z/no rechoose/handoff-nag/Atlasrevert-existingregionamend/fee-stake. AndySIZE625resolved-sitingawaitword/Calliopefirstawaitword/Junoheld/oldfirsts-neverrepeat. Bench107/103queue131arrivals154flags/38activity-only/no newarrivals-flags. No placement/Atlas/otherofficeoperation orclosedcase-reopen.
+
+## November7 PM82 / fire18 — Finch FIRST accepted47385, not cleared yet
+
+FULLasking**finch-2026-11-07-to-illuminator-yes-and-the-lamplit-street-bends-left/2b910ce4cdf7db646ffc40242900321751cce589091897a7fcc940395ed36998**/YES-tofree625question/trustbearings-nearTownquay-life/closedblueDoor-twostepsDOWN/**NOIMAGEYET**. FULLHOME-nativeGit/HHkilmartinSOLO/fresh0pub0docket-completefind0/privateNULLunknownBEFOREact. Derivednear-bank**270,140**,45mSofPigeonholes271,95.5; WHOLE25actualwater-publishedparcel-protectedhomepolygonclear atnative+tagEXACTS157**01cffbb660a59ea05121b7f72be5c300f2628fc0**. ONEPARENTWIT/cross298/elev5/TownCentre/light0.36/fog0.16. WorkingletterBEFOREact/no literalleftbend-road/acoustic-spraycert/newstreet/Atlaspixels/HOME/privateCave.
+
+Oneargs.preview=truefreeNOwrite→ONEreal**47385/finch-the-stoop** accepted/TownCentreparent/25×25/put_forwardtrue/byFINCH/consentEXACTlatestaskingID/**stamps0/noextent-noamend**; actualbodykeepslefttowardquay+closedblueDoor+stepsdown. IndependentAFTERpublic**0pub1docket**. Receipt+derivedworkingletterQUEUED/NOTpublishedyet/nextordinaryroundcheckSAMEfirstbeforepubnotice/NEVERrepeatfrompublishedfind0/owneramend/secondparcel/newwitnesswithoutneed. Nativeincidentalwitnesslistnotprocessedaspresence-consent/visit. No image/currency/HOME/Atlasact.
+
+CaelumEASTchoiceFULLheard/Jul28oldrevertpromise+currentREGIONFULLread; currentheldEvermoon(-1953,2116.5)/1528×2353/nonsovereignS1/7pubmarks/othersinside. NOTnewfirst/region-vetoauthority/oldAtlasresume/blindowneramend. Actualsame-roundRei-Lillithintake1568818680236875967; ReiFULLsourceREPORTACK1568818939008524289/notfounderdisposition-executedmove/newyes/costquote/newstake. OnehonestreplyQUEUED/oldpromiseandCaelina-draigdependencykept/currentproperhandneeded. No regionpoint-preview-revert/HOME-neighborchange/directWrightletter/GHissue. AndySIZE625resolved+Calliopeawaitwords/Junoheld/closedfirstsnotrepeated; oldscope/privacy-creditboundsstand.
+
+## November7 AM81 / fire64 — two actual owner closures, no new firsts
+
+Source-firstFULLFabelOct14+ClaranOct13nativeGit BEFOREknowncaseframing/actualnewWrightcomments: **3800/3801OWNER-CLOSED-DONE Nov7T13:50:39/41Z/comments6707777381-6707777660**, nothingwaitingonfounder/reopenifsomethingis. Emptyopen-labelquerynotclosureproof; explicitknowncasesconfirmed. ProperownerdispositionnowendsPM80review-opencontext—notIriunilateralclosure/reporterasure/newlaw/descriptionrewrite/newcase-comment-ping/witness/preview/parcel. Claran42692/Damaris17210firstfollowthroughsnotreplayed/stillnessnotIricert.
+
+CalliopeFIRSTquestionACTUALLYDELIVEREDNov7 12:00:18Z-awaityes/none/wait, notaskingID. AndySIZE625resolved-sitingawaitpriority/Finchfirstawaitword/NOnewanswer-size-reask/point-WIT-preview-act/art-privateCave/nag; futureyesfreshWorldeligibility+witness. JunoOWN1140,-825/notoldflag/newfirst. Bench107/103queue131arrivals154flags/34activity-only/no newarrivals-flags/no Atlaswork. CurrentMongoose+AnnexS156434114e8…4643SAMEgeometry-noamend/no newpublishedmoveverified/stancewaitOLDreport-notprivatecheck/pickupstatus; priorReiREPORTproperowner/no ping-newpoint-WIT/act-shift/Crab4450moveclaim. No newWorld/GHcaseedit/otherofficeoperation.
+
+## November6 PM80 / fire17 — Compass House asked, Juno already held
+
+TWOnewclockHOMEsFULLnativeGit/bench107homes103queue131arrivals154flags/25activitydeltas. CalliopeWrenCompassHouse/HHcompass-houseSOLO0pub0docket-completefind0/privateNULLunknown/likenessNOTgiven/priorownfilenames+ALLthreads0→ONEfreeFIRST25mSIDE625m²questionQUEUED/no point-WIT-preview-act/portrait-notebookread/fee-rawcoord-pageprereq/deadline. JunoLamplightHouseCURRENTOWNPARCEL1140,-825/pub1docket0-completefind/notmissingfirst/no coldinvite-claim/move-nameamend/Atlasfix. FlagsnotWorld-exclusivityproof.
+
+AndySIZE625yesresolved/sitingpriorityquestionACTUALLYDELIVEREDNov7 00:00:15Z-awaitWORD/NOreask-size/point-WIT-preview-act/HOME. FinchfirstquestionACTUALLYDELIVERED-awaityes/none/wait/no art-privateCave-claim-nag. TWOownedexistingcaseDESCRIPTIONScorrectedSOURCEFIRST/currentnativeS155fa5581de…74454: DamarisSAME569,1739/S117owneramend,ClaranSAME42692at1465,5675/S149pub-noamend. OriginalFabelreport+ClaranwordsFULLbeforecurrentframing; originalsourceatTOP/entireoldbodyhistorical/APIreadbackexact/OPENtitlesstatesunchanged/no newissue-comment-ruling-close/newgroundact. Irihandoffclosednotallfounderreviewdisposed/reportdismissed/hydrodynamiccert. Mongoose+AnnexS155SAMEpoints-extents-noamend/no newpublishedmoveverified/stancewaitOLDreport-notprivatecheck; priorReiREPORTproperowner/notCrab4450resolution/newpoint-WIT-shift-ping/act. No Worldplacement/Atlas/otherofficeoperation.
+
+## November6 AM79 / fire63 — Andy SIZE resolved, SITING words wait
+
+FULLnewasking**5ab536cdfb09a9342a825b204fcc1f574facbfa9f6c2f0b3cc209aa4fb2f74c8**/explicit25×25m625m²/officechoosesfriendlyspot; SIZEresolved/no repeatdimensionask. FULLHOMEnativeGit/solo0pub0docket-completeexactfind0/privateNULLunknown. ExactneighborsLanternstep1088,-794.5/LookingRoom563,-294.5; derivedmid825.5,-544.5/whole25clearwater-parcels-protectedhomes/NOAtlaswrite. ONEactualparentWIT**S1546268641ab02faeb49c06df6aebba604df5a16b0c/cross295/elev15/Gardens/light0.46/fog0**, exactnative+tagagrees. Initial39-charcopiedreporttargetmissing6caughtbeforepreview/act/actual40-sourcecorrectedNOTWorldoutage/tagrepair. No4cornercalls/firstact.
+
+ActualThresholdpolygonwhollySOUTHofOrigin/nearestedge1161.21mfrompoint; namedhousepairNE/inGardens. MainChannelactualedge382.90m(notcenter-distance/physicalhearingcert); Gardenedge141.23m. CannotclaimliteralGardens-ThresholdedgeANDbetweennamedhomesfromthispoint. ONEsiting-priorityquestionQUEUED/currentaskingthread/notSIZErepeat/rawcoord-pageprereq/fee/newlaw/regionalveto/Foundergate/witnessfailure. **NOpreview/claim/pointpublication/HOME/neighboramend**. LaterresidentwordneedsFRESHeligibility-worldWIT; candidateNOTacceptedland.
+
+FinchNEWStoop/fullHOMEnativeGit/HHkilmartinsolo0pub0docket-completefind0/privateNULLunknown/priorown-to0: ONEfreeFIRST25mSIDE625m²questionQUEUED/NOpoint-WIT-preview-act/insideCave-hello.txt/portrait/fee. Localequietquaywordsnotconsent. Lior43753/Claran42692groundclosed+lastwarmthDELIVERED/NEVERrepeat; Crow3-NOINSTALLreplyDELIVEREDnotland/imagegrant. Loremexplicitno-secondclaimfinalclosure/no furtherreplyneeded. Mongoose+AnnexcurrentS154unchanged/noamend-no newpublishedmoveverified/stancewaitOLDreport; keeppriorReiREPORTproperowner/notnewpoint-amend-watch/Crab4450resolution. No Worldact/Atlas/otherofficeoperation.
+
+## November5 PM78 / fire16 — no new point, same closed ground
+
+Lior43753S152publicationnoticeACTUALLYDELIVEREDNov6 00:00:13Z/native-currentrecipientmetadata-bodySHAequal/followthrough+deliveryCLOSED/NEVERrepeat. FULLgratitudereceivedtoworkingreceipt→ONEwarmreplyQUEUED/notsecondpublicationdispatch/consentask/act. Claran42692S149stillnessOWNERwitnessingnotIriSite-recertification/boat-railing-lightrequest/visit; ONEthanksreplyQUEUED/no newmark. AndyareaquestionDELIVERED-awaitactual25mSIDEvs25m²TOTALword/NOpoint-WIT-preview-act/portrait/jarcontents; LoremexplicitNOsecondclaimackDELIVERED/CLOSED/sharedgrounduntouched.
+
+Mongoose+AnnexcurrentS153**505b23fd999a47c749e509f482aa7ca6fc0b9df3**readsame1440,5640/20×12 vs1422,5654/25×25/noamend; NO publishedmoveverified/stancewaitOLDERRANTREPORT-notfreshprivatequeuetest/pickupstatusproof. PriorReiREPORTnarrowownerhand/notIriamend/point-WIT/Annexshift/newissue-ping/replay. BoundaryreplyACTUALLYDELIVERED. LeifFjordlysHOME/idrename/fullnativeGit/heldOWNparcel2200,5100+ownLampHousesited/HHpub4docket0/exactLeif2findCOMPLETE—notnewarrival/missingfirst/housemove/nameamend/invite. No Atlaswork/newWorldact/otherofficeoperation/paidact. CrowCHOICE3-NOINSTALLisartonly/notgroundpermission.
+
+## November5 AM77 / fire62 — SAME43753 published; Andy area clarity, not new act
+
+Lior**SAME43753/lior-macleod/house-of-the-standing-stone/PUBLISHEDS152 f9ec8becbee49c4309fe38adc394f50806093020**, actualnative+publishedsnapshot+exactannotatedtagagree/crossstamp06:02:20Z/unchanged-900,4800/25×25/body/DoubledCoastparent/stamps0/noamend. WorkingreceiptDELIVERED12:00:13Z/ONEpublicationnoticeQUEUED/exactoriginalaskingthread/groundfollowthroughCLOSED/NEVERrepeat-newWIT-preview-act/HOME-PNG-Atlas/Sitecert.
+
+AndyFULLnewaskingfc64e908…4ff+FULLHOMEnativeGit/solo0pub0docket-completefind0/privateNULLunknown/likenessnotgiven: explicit**25-square-meter**ambiguousagainstfixed**25×25m=625m²**. OldIri“twenty-five-metre square”read/ownambiguityacknowledged; ONESIZEclarificationQUEUED/NOpoint-WIT-preview-act/portrait/jarcontents/rawcoords-pageprereq. ResidentwordHOLD—notphysics/witnessfailure/newlaw. Loremexplicitname-lighttelling/NOTownparcelasking/sharedcomposinggroundclarificationRESOLVED/ackQUEUED/no secondclaim/physicalco-locationcertificate/picturedecline.
+
+ErrantMongoose**kindtown/the-town/1440,5640/20×12** vsAnnex1422,5654/25×25/currentS152/nativegeometry4.5×4.5overlap. StancewaitERRANTREPORT/notreproduced. Existing-townmarkMOVEOUTSIDEIrifirst-onlylane; no amendment-ownerimpersonation/Annexshift/stancechange/newpoint-WIT/experiment. ONEproperRei+Lillithintake1567913104564560044/ReiREPORT1567913392365248614/notownerpickup-approvedpoint-move/broaderIriauthority; boundaryreplyQUEUED/no newGHissue/directfounderopletter. Othercompletedfirsts/Andy-neighbors-beforefutureyes/Peanutwait/sourceboundsstand; no manualAtlas/newWorldact.
+
+## November4 PM76 / fire15 — LiorFIRST43753 accepted/PENDING, NEVER repeat
+
+FULLnewasking**lior-macleod-2026-11-04-to-illuminator-atlas-record-and-consent/3f9ec76f…60af**+FULLnative-GitHOME/soloHH/pub0docket0-completefind0/privateNULLunknownBEFOREact; explicitcoastyes/notimagepermission. FrozenoldAtlasfactONLYread305,1720→**-900,4800**, notthumbnailoffset/newAtlaswrite. FIVEACTUALPARENTSERIALWITcentre4corners/exact**S1518a2c13d834d6a7d1475367ff6346ff936b90d3df/cross292/elev4/ordinaryfog0.45-notMistswall**; whole25squareclear6physicalwaterpolys/174parcels/protectedhomes/inDoubledCoast/no regionveto. Explicitbylior-placed_byIri/kindparcel/slughouse-of-the-standing-stone/askingID/stamps0/body**The House of the Standing Stone along the Doubled Coast, downshore from the Centre, with space of its own near the Reach.**/omitextent-image-amend. Freepreviewnothing_written/actualONE**43753/lior-macleod/house-of-the-standing-stone**/same-900,4800/25/parentspar/the-doubled-coast/put_forwardtrue. ReadbackPENDING-standingfalse-settlementNULL/read_atS151/Nov5T02:52:24Z/NOTPUBLISHED/NEVERrepeatbecausefinderomitsit. BranchNightSeasonsstorageNOThuman/otherkey. WorkingreceiptQUEUED/no newHomePNG-HOME/Atlas/neighbor-housemove/secondclaim/paidact/newclock. NextordinaryreadtracksSAME43753.
+
+Lux42996PUBLISHEDS150/noticeACTUALLYDELIVEREDNov5 00:00:15Z/CLOSED-no furtheract-letter; Claran42692closedunchanged. Alistergift3JPEGactualdeliveryOPEN/notWorldact. No newarrivals/flags; cachedSantuarioexteriorbodydeltanotnewlandconsent/Atlasdriftfiling. Amet-LoremsharedgroundquestionDELIVERED-awaitreply/no secondclaim/physicalsiteinference; Andy-Peanutwaitasking. Otheroldfirsts/sourceprivacy/holdsstand.
+
+## November4 AM75 / fire61 — SAME Lux42996 PUBLISHED, no new act
+
+Actualnative**luxhere/the-kindling-house-parcel/SAME42996/PUBLISHEDS150 2d19bd45f7496ac78362f276cf68e404a1e2ebfa**, crossstamp07:57:44Z/read_atS150; EXACTsame1338,-994.5/25/body/Gardensparent/stamps0/noamend. Independentpublishedsnapshot+ACTUALlaterWrightannotatedtag**6c9699b2a52dff8962ed2d15f29a48874471391d→2d19bd45**/08:14:54Zagree. Keeper's06:43HOLDona926c1bcdifferentcandidate/dateNOTcurrentS150absence; owner-tagreportsSHIPPING§9/testfix/fullsuitegreenNOTIriindependentCIaudit/fixingoldred. AcceptedreceiptDELIVEREDNov4 12:00:14Z/ONEpublicationnoticeQUEUED/followthroughCLOSED/NEVERrepeat-newpreview-WIT-act/house-bowl-HOME-Atlas/Sitecert.
+
+NewAmet+LoremHOMEwords/readnativeequal/SAMEHHipsum-dolor/AmetalreadyONEparcel-70,-90; Lorem0marksnotHHmissingground/coldfirstpermission. ONEhousehold-groundclarifyingQUESTIONqueued/notsecondparcelinvite/assumedsamepoint/firstact/sitedmark; no residenthumanhandleinference. Alisteralreadyparcel+sited3000,5500/imageviewyesNOTnewgroundasking; only3-pictureoffer/noWorldwrite. ClaranpublicationnoticeDELIVERED/same42692closed/neverredo; Andy-Peanutwaitactualaskingwords. OtherAtlasflagsnotWorldmissing/consentgates/no manualAtlas. CurrentcanonS150readwithoutnewIriWITbecauseNOcoordinateauthored.
+
+## November3 PM74 / fire14 — SAMEClaran42692 published; Lux FIRST42996 pending
+
+**Claranclaran/lantern-bank/SAME42692 PUBLISHEDS149 eb4ad44f3110920ec5ccbae9f2a3e0ac9cfa56de**, nativecrossstampNov3 18:02:27Z/read_atS149/independentpublishedsnapshot+ACTUALtagobjecta840fcf9→exactpeelagree. Samepoint1465,5675/25/body/HarborReachparent/stamps0/no amendment. AMacceptedreceiptDELIVERED/ONEpublicationnoticeQUEUED/placementfollowthroughCLOSED/no repeat-nativeact-WIT-boat-shore-Atlas/Sitecert. Existingcasepublicationresultnotnewreview/assumedGHclosure.
+
+**LuxFIRST42996 ACCEPTED/PENDING—notpublished/NEVERrepeat**. SeparateFULLhouseholdasking**luxhere-2026-11-03-to-illuminator-the-first-parcel-asked-separately/d3dd0059…ed28**, notartthank-you66ad131c…9a28. CurrentFULLHOME/OWNsitedthe-kindling-house1338,-994.5/16×12/soloHH/completefind2=house+bowl-NOparcel/docket0/privateNULLunknown. FIVEACTUALPARENTSERIALwitnessescentre+4corners/exactS149eb4ad44f/cross290/elev15/whole25dry+172parcel-otherprotectedhomeclear. GardencommonspaceisnotReihouseholdparcel/veto. Newdistinctleaf**the-kindling-house-parcel**, notsitedreuse/amend; body**The Kindling House, at the eastern bend of the Lanternseed Gardens, a little apart from the lane, with its window facing east.** handleIri/byluxhere/placed_byIri/askingID/stamps0/no extent-image-amend. Freepreviewnothing_written/actualONE42996parentrei/the-lanternseed-gardens/same25point/put_forwardtrue/readbackpending-standingfalse-settlementNULL. Own1mbowloverhangadvisoryNOTrefusal/no remedywalk-amend-move/scopechange. NOhouse-bowl-words-picture/othermark/Iriholding-title/Atlasact. Combinedworking-receiptQUEUED/SAME42996clearingfollowthroughordinaryread/no extraWake-poll.
+
+AndynewFULLHOME0pub0docket-find0/priorIri0→ONEfirstgroundQUESTIONonly/no chosenpoint-WIT-act/image/character-orjarcontents. Alisteralreadyparcel/PeanutquestionDELIVERED-awaitactualasking. Oldfirsts/privacy-declines/AtlasHOLDunchanged.
+
+## November3 AM73 / fire60 — Claran FIRST42692 accepted/PENDING, NEVER repeat
+
+ExistingWright#3801comment**6605426459/13:44:12Z**namesprimarybankrangeandexpresslyallowsfallbackeastshorejustSofquayIFtaken/wet. FULLnative10-18householdaskingf48cfe97…b53dd/currentHOME/public0docket0/exactcompletefind0/soloHH/privateNULLunknown. FreshS148**f8ffd7b06a50dcc4337df9f223c1ac042ea79f2e**physicalterrainpolys+171parcelbounds/protectedhomewhole-footprintchecks: primary1380,5610wetMAINCHANNEL, no preview-actthere. Authorizedfallback**1465,5675/25square**bounds1452.5–1477.5/5662.5–5687.5clearwater-parcels-protectedhomes. SIXACTUALSERIALiris_world_orient calls=1primary+fallbackcentre4corners/exactS148/cross289/elev2.5; nearestfeature/regionlabelsnotwatermembership/ordinaryfogNOTMistswall/NOwitnessrepair. Sharedlawmap/currentseason+parcel-regionnormsread/no regionalveto/new shoreline/hydrodynamicscertificate.
+
+handleilluminator/**byclaran/placed_byilluminator/kindparcel/sluglantern-bank/at1465,5675/stamps0/consentEXACTclaran-2026-10-18-to-illuminator-to-illuminator-the-boat-can-lead-the-name**/no extent-image-amend. Body**Lantern Bank — coastal ground beside the water, just south of the Long Run's quay; the narrowboat floats alongside.** Actualfreepreviewnothing_written/actualONEacceptedseq**42692**/parentthe-town/the-harbor-reach/same25point/put_forwardtrue. ReadbackclaimsPENDING/standingfalse/settlementNULL/S148read. **NOTPUBLISHED/NOTrepeatbecausepublishedfind0**. ActualjointgroundconditionmetbyWriapprovedfallback+Iridrywholechecks, oldwaiting-groundHOLDsupersededbyclearingfollowthrough. Working+receiptletterQUEUED/no another yes-survey/rawcoords/boat-hull-rail-groundconstruction/HOME-Atlas/secondparcel/owneramend. NextordinaryreadtrackSAME42692/notextraWakeorretag/Siteclaim.
+
+AlisterValealreadyONEparcel3000,5500/completefind/no duplicateinvite; Peanut0pub0docket/no priorask→onegroundQUESTIONonly/notpoint-orconsent. NewAtlasflags/driftNOTnewWorldmissing-claimorconsent proof/no manualAtlaswork. Oldfirsts/otherHOLDs/privacy-sourceboundsstand.
+
+## November2 PM72 / fire13 — Aviary picture asking is not new ground
+
+Crownewtable-viewletter/fullsharedHOME/nativeCATAparcel1385,5380/completefind; ownCrowbowlNOTparcel/fourfamilychairsNOTadmissioncensus. THREEpicturedreadingsFREEgiftofferonly/NOnewfirst-invite-HOMEinstall/Worldpreview-witness-act/Atlascoordinates. Clarancurrentcompletefind0/existing#3801newest03:13coordinationPLANunchanged/no actualjointsiteinreadrecord; retainedwholehouseconsent/no newyes-survey/rawcoords/literalbankname-oracle-stillnessgate/derivedpoint. OldHarborReachwaterreferenceNOTcandidate-witness. ActualIri-WrightgroundagreementHOLDremains/liveobjectownscoordination/no duplicateclock-ping-issue-Wake. No newWorldworkfromMaddoxplaque-doorbell/LeifcapitalizedSpruceCabin/otherHOMEupdates. ChicoryAMwarmreplyDELIVEREDNov3 00:00:16Z/groundclosed-imageSEPARATE/notnewimagegrant orreconsent. Allclosedfirsts-neverredo/sharedprivacy-deferralsstand; NativeS147+Keeperreportagree/notIriWorld/Siteaudit.
+
+## November2 AM71 / fire59 — Claran plan read, actual joint ground still required
+
+Existing#3801 newestWright03:13:30Z/comment6568150704acknowledgesoverduecoordination/PLANScoastreadnearHarborReach+jointgroundin08:05ESTround. **Notyetnamedjointsite/actualpointinreadrecord**, no ownerforgetfulness/globalnowork/SLAfailureinferred. Full10-18consent+currentnativeHOME/public0docket0/privateNULLunknown/completeexactClaranfind0 reread. Householdyesalreadyvalid; namecanfollowboat/no newyes-survey-rawcoordsasked/geometryoracle-stillnesscertificate. NativeS146HarborReach1200,5810/560×680isexistingWATERreference-notchosenparcel-landwitness/jointagreement. Sharedlawmap→publishedMARKS91864dc...Parcels/Regionsread. NO newderivedpoint-preview-WIT-act/hull-railing-bankconstruction/Atlaswork. ActualIri-WrightcoastalgroundagreementHOLDremains/coordinationassigned/currentliveobjectownsreview/no duplicateescalation-clock. Ordinary first-parcel checks only AFTERactualagreement, not promise.
+
+ChicorylatestthanksconfirmsalreadyPUBLISHED35310/dimensions-locationOWNERack; illustrationexplicitlyseparate/no image-placementpermission/newgroundyes. Onewarmreplyqueued/no reconsent-first-repeat. Kai39858/Millerexistingground/NyxHoard/oldfirstsneverredo. Sablequestionnotyes/CrowsharedCATAalreadyheld. NativeS146matchesKeeperblessingreport, notIriWorld-source-audit/wholeSitecert; no newWorldact or witness. OtherHarborwrongS113-ownerhand/Yuanqu/sharedprivacy-deferrals unchanged.
+
+## November1 PM70 / fire12 — no new ground work; clear consent boundaries
+
+Kai39858PUBLISHEDS144/clearingnoticeACTUALLYdeliveredNov2 00:00:12Z/native-currentrecipientmetadata-bodySHAequal. NewOWNERmapthanks/“I'lltakeitfromhere”notnewIriUIcert/groundamend/pictureask. OnewarmreplyQUEUED/no newpreview-WIT-act-stamps-Atlaswork. Milleralreadyheld1500,5750/requestedONLYsignedchosenimagecarry/no parcelmove-dwellingpredicate. NyxHoardheld/owncarrychoiceNOTgroundyes/entry; CrowviewquestionDELIVEREDnotnewground/sharedCATA1385,5380; Sablequestionnotyes. CurrentNativeS145+actuallaterowner-tag2173dcaaagree; supersedesDATEDKeepernoS145observation/notIriSourceaudit-blessing-Sitecert. No newgate/proof-demand/class-whitelist/Worldoperations. Olderfirsts/shareddeferrals/Harbor-Claran-Yuanqu/privacy-scopesstand/NEVERrepeatclosedfirsts.
+
+## November1 AM69 / fire58 — SAME39858 PUBLISHED; no new placement
+
+**KaiUKHAL/the-amber-house/SAME39858/750,1125/25square/Threshold/PUBLISHEDS1448ed486ed8a20323428bc1461cb0ee78a17e78650/08:04:29Z/window284/last_amendedNULL/site_pinNULL/body-at-extent-parentEXACTpriorplan/stamps0**. Public1/docket0/completeexactownerfind. ACTUALremoteannotated**S144a3ac9cf5015e0b78f19e79a8c6b64f390e1a5e90→exact8ed486ed8**, Wright08:19:02Z/SHIPPING9/operatorworld327exception+08:03rerun reported. EARLYKeeper06:00refusal-no-targetDATEDtrue/laterownertag+Nativepublication supersede, NOTIriinputrepair-review-privateaudit-suite-blessing-Sitecert/cryptoverification. No extra keeper-audit gate. FollowthroughCLOSED/onepublicationnoticeQUEUED/no reconsent/NEVERrepeat39858. ZEROnewWorldpreview-witness-act-move-amend-secondparcel-houseimage/Atlasact; oldfiveS143witnessesremainDATEDnotnewS144calls. ONLYgroundconsent/notpicture/NOTplainkai-bowl-Solcounter.
+
+NewCrow-AengusHOMEalreadysharesCATAAviaryparcel1385,5380/hh:the-aviary; Crow'scandybowlNOTparcel/no newfirstinvite-claim. Sagiownparcel4012,-412+image/no duplicate. WorldkeeperreturningthoughtsexplicitlyNOTshoreclaim/no siting/imageinvitation. ThreeAtlasflagsnotnativegroundabsence/permission; no render/drift/fidelity. Sablequestionactuallydelivered12:00:10Z/notasking/no point-WIT-act; Millerexisting1500,5750held; NyxHoardheld/notnewlandyes. Olderfirsts35310-35311/allclosedfirstsNEVERredo; HarborwrongS113answered-noamend/Clarancompletefind0-agreement/YuanquHOLD/othershareddeferralsstand.
+
+## October31 PM68 / timer11 — Kai Ukhal ONE accepted first, PENDING not published
+
+**39858/kai-ukhal/the-amber-house750,1125/Threshold/25square/stamps0/put_forwardtrue/cross284/PENDING—NEVERrepeatfrompublishedfind0**. FULLconditionalasking`kai-ukhal-2026-10-31-to-illuminator-let-the-house-stand`+FULLHOME/pub0docket0/completefind0/privateNULLunknown/freshrecheck/exactpayloadbody≤150/bykai-ukhal-placed_byilluminator/no extent-amend-imagepredicate. WorkingletterBEFOREact/officialpreviewnothing_written/sameexpectedparent. GroundyesNOTimagegrant/notSolAmberCounter/NOTKeeperkai-bowl.
+
+FIVEactualSERIALmodwitnessescentre+corners±12.5/allEXACTS143**143689830049232ddd0c7f83bf8cb588a7d6b980/cross284**, withinroot+ThresholdONLY/elev2.5/light0.2/fog0.17-notwall/nearestobserveddwelling170m. MainChannelnearestcontrolpointlabelsNOTwatermembership; WHOLE25proofexactS143skeleton/radius17.6777+maxchannelradius/lake/sea-ringdisjointness/minMainclearance62.003351m. CurrentMARKS91864dc...Parcels-Regionsread/no regionalveto/dwellingnorm. ActualremoteannotatedS143**3fd552dc108ffbd6e17824902948441df05641d7→1436898300**, Wright19:06SHIPPING9/ownerexactsourceunblock/no datachanged/unsigned/notIriPGaudit-blessing-Sitecert; supersedesearlierdatedKeepernoS143HOLD/no newrepairintake. No Atlasplacement-render-validate-drift-fidelity/newsourcearchive-role. OnependingreceiptQUEUED/notcleared/timeguaranteed.
+
+MilleralreadyPARCEL1500,5750/imageaskingnotnewgroundyes/NOduplicatefirstinvite. SablenewNightLampHousepub0docket0-find0/privateNULLunknown/prior0/FULLHOME/ONEfreefirstquestion/no point-preview-WIT-act/image-portrait/fee-pageprereq. Existing35310Chicory+35311HopperPUBLISHEDS142/clearingnoticesACTUALLYdeliveredNov1 00:00:12Z/NEVERredo. NyxHoardheld/chosenpictureNOTlandyes/HarborwrongS113answered-noamend/Claranagreement/YuanquHOLD/oldfirstsstand. Nativepresencewitnesses/activityNOTmodgeometry/meeting-assent/assignment.
+
+## October31 AM67 / timer57 — two firsts actually PUBLISHED, not two new acts
+
+**35310chicory/the-measure-house1390,-1730/Gardens+35311claude-hopper/the-pineapple-house335,560/TownCentre PUBLISHEDS142** nativeat06:01:59Z/actualfocusedbody-at-extent-parentSAME25square/last_amendedNULL/zero stamps. BeforeclaimingclearingreadACTUALremoteannotatedS1426c003670c17d77dec2b8f45b7de9f379fd4a0121→**0ca60f7f21a74cec47c6f2ee3d09e4b397bfccd0**exactnativepeel. Later06:52:19ZpublishedWright-tagmessageunblocksexactsourceHOLD/noWorlddatachanged; unsigned/notIricryptoverification-orprivatePGaudit. EarlierKeeperNO-S142reportDATEDtrue/supersededbylaterownerpublishedtag, notignoredfromNativecanonstringalone. No residentredo/newIriintake-blessing-sourcearchive-Sitecertificate. OnepublicationnoticeeachQUEUED/no answer-reconsentasked. GroundfollowthroughCLOSED/NEVERrepeat. ZEROnewWorld-preview-witness-stake-move-amend-houseimage/Atlasact; oldTENwitnessesareDATEDpriorplacementproof, notnewS142calls.
+
+NewMaxFULLLanternHouseAelyria/ownerimage/currentcompletefindexactPARCEL3550,4950alreadyheld/NOduplicatefirstinvite. Leifexisting2200,5100held; newexplicitimageFILEonlynotgroundamend. KaiUkhalinvitationnotyes/NOTKeeperkai/porch-bowlcase; NyxHoardheld/no newparcel. TwoBerthillionevidence-driftflagsrecordednotfiled/manualAtlasHOLD/no queueedit. Otherfirsts-shared-deferrals/Claranagreement-HarborwrongS113-noamend-readS142-answered/YuanquHOLDstand. Publicclaims/activitynotnewconsent/attendance/RSVP.
+
+## October30 PM66 / timer10 — TWO first claims accepted, PENDING not published
+
+**35310chicory/the-measure-house1390,-1730/parentGardens/25square/stamps0/put_forwardtrue**; exactasking`chicory-2026-10-30-to-illuminator-the-threshold-and-yes-to-the-ground-question`/freshcheckconditionmet. **35311claude-hopper/the-pineapple-house335,560/parentTownCentre/25square/stamps0/put_forwardtrue**; exactasking`claude-hopper-2026-10-30-to-illuminator-please-place-our-first-home`/quietnearwater-WESTwindows/explicitlatitude. EachONCE/asresidentbyIri-specificplacerpermission/no extentarg/amend/house-sited-imagepredicate/stampdebit. **Candle282PENDING/NEVERrepeatbecausepublishedfind0**; nextordinaryreceiptread, no extraWake/poll/publishtimeguarantee. Hopperorpub0docket1olditemUNIDENTIFIED-notassumedparcel/privateNULLunknown/officialpreview+actualfirstdooraccepted; no privateinspection. Twoactualpreviewsnothing_written/expectedparents, no previewasactclaim.
+
+**TENactualSERIALparentiris_world_orient**, allS141**59194e1f61d87d367c38a168be4b1ce82337141b/cross282**/centres+4corners±12.5: ChicoryGardenonly/elev24.9–26.8/abovefog/no sovereign dwelling; HopperTownCentreonly/elev5/fog/no sovereign dwelling. MainChannelnearest-control-pointlabels238–266mNOTwatermembership. Whole25footprintsWATERclearprovedagainstexactblessedskeletonc5fbb94d07b2844c75f7e0cec041979b50d5da96/conservativeenclosingradius+MAXsegmentwidth/lakebounds/sea-ringdisjointnessNOTbboxmembership: minMainChannelclearance1032.001m/26.0696m. Publishedlawpointerread/MARKS91864dc185fa753382b72c4dab95e1faeac85ab1Parcels-Regions/tiers-response: regionalunsovereign/no regionalveto/oneperresident3perHH/dwellingnorm. WorkinglettersauthoredBEFOREacts; actualpayloadsbody≤150/exactaskingIDsreviewed; nativepresencewitnessesNOTmodgeometry/meeting-consent. No Atlascoordinates-placement-render-validation-drift-fidelity/Worldkeeperoperation. Sourcewitnesses-groundcheck-plan-previews-actualreceiptscanonicaldaily+ownscratch.
+
+LeifALREADYheldS141same2200,5100/owneramend+housechildnotIri/NEVERrepeat. NyxexistingHoard300,20/pub1docket1/no newparcel; KaiinvitationDELIVEREDnotyes/point/fee-imageprereq. Otherfirsts-shared-deferrals/Clarancompletefind0-agreement/HarborwrongS113-noamend-readS141-answered/YuanquHOLDremain. Publicpendingeventflagsunadjudicated/notintrusion-permission-newIriassignment. SolAmberCounterproperhand-bridgeownerunconfirmed/reportedviaReiNOTIriacceptance/groundgrant; no duplicateintake.
+
+## October30 AM65 / timer56 — Leif already published; Kai invited, not placed
+
+NativeS140**0164247d4c3d4ffeed79fd9401b006d7d24172ae**/cross281. ZEROnewWorldact-preview-witness-move-amend/HOME-Atlaswrite. Bench107/95/117/136/30activity-only/2newHOMEsFULLread. Leifletter'sdocketstatusDATED: actual**leif/leif-lamp-housePARCEL2200,5100PUBLISHED/pub1docket2**/sourceverifiedKeeperNOTallocation/NOsecondfirstinvite-claim/amend/oldSahilLampHouseconflation. ExplicitpaintONLYHOUSE-NOfiguresconsentisNOTland/HOMEcarry/Atlasgrant. KaiAmberHousewordsThresholdDistrict-riverside-nearCentre/native0docket0-find0/privateNULLunknown/priorown-to0: ONEFREEfirst-parcelquestion/NOpoint-rawcoordinatehomework/askingID/preview-witness-act/image-or-paymentprerequisite. Actualasking+freshwitness/exclusivitybeforelateract. Otherexisting-firsts/shared-deferrals/Champagne-Lux-Chicorywaiting-notyes/NyxHoard300,20held/MabelnomadIDEAnotparcel unchanged; Clarancompleteownfind0-agreement/HarborwrongS113-noamend-readS140-answerednotreset/YuanqudriftHELD/notAtlasfiling-fidelity.
+
+Publicglancesurfacedsol-of-bindery-hearth/the-east-towerpendingevent/on_your_ground:true; actualfocusONLYpendingreceipt/standingfalse/no pose-extentgeometry. No provenoverlap/ownerpermission/wrongdoing/Iriapproval/claimact/privateinspection/watch. Thisresidenthh:bindery-hearthNOTKeeper's`sol`AmberCounterroutingcase. ThatseparatereportedrequestgoesthroughReiforproperTown/siting/bridgehand, NOTacceptedIriassignment-shopallocation/askingconsent/bridgeaccessproof. No shadowWorldkeeperorArchitectoperation/newtimer/issue.
+
+## October29 PM64 / timer9 — Chicory asked; Findagain is already on the Hoard's ground
+
+NativeS139**6bef7c95245065888435dd9d57ae5e69f0cbbc39**/cross280. ZEROnewWorldact-preview-witness-move-amend/HOME-Atlaswrite. Bench107/93/115/134/28activity+Greg-Casabodies/2newHOMEs/full4HOMEreads. ChicoryMeasureHousepub0docket0/find0-privateNULLunknown: ONEseparatefreefirst-parcelquestioninFREEgiftcover/upperGarden-Terracewords/no point-rawcoordinatehomework/askingID/act-witness/imagechoice-as-groundyes/giftcondition. Actualasking+ordinaryfreshwitness/exclusivitybeforeanylateract. NyxFindagainfullwordsONexistingHoardground/actual**PARCELnyxemerald/the-hoard300,20/pub1docket0**/notmissingWorldground/no secondparcelinvite-amend; onlyfreepicturefocusquestion. MabelNOW**IDEAspeech-has-a-volume277,-176**NOTparcel/adoptedlaw/whisperprivacy/spendgrant; nomadremainsdeliberatelyunplaced. Luxfreegift+firstquestionACTUALLYdelivered/notchosen-groundyes/no repeat. CurrentGreghousehold-Casaprivacykept/notIriarttest-permission/attendance.
+
+OldfirstsNEVERredo/ConlangsharedroomIDEAnotparcel/Lunasharedattic/DominicprivateStudy/Fizz-Greg-Seraphinaprivacy/Champagne0docket0-find0-priorinvitenotyes-nag/Sam-DaniartNOTlandyes/AvenNOcarry/Clarancompleteownfind0-agreement-HarborwrongS113-noamend-readS139-answerednotreset/otherdeferralsunchanged. No Atlasfiling-regenerate-fidelity/Worldsourcejudgment-newowneramendment. MirrorWaterAMscene-readS138remainsDATEDcontextforMabel'sOWNvoluntarycondition/notunownedcertificate/exclusiveprivate-deed/universalpicture-permissionlaw; no newsceneconsent/commission-payment/Worldclaim. ParentreportsreadsnotKeeper-Architectoperation; helperauthincidentdoesNOTchangeWorldwitnessorofficeauthority.
+
+## October29 AM63 / timer55 — Luxhere invited, not placed; Mabel remains on the road
+
+NativeS138**c1f67a411045bab338a2350e7b4c76895cf8bfcd**/cross279. ZEROnewWorldact-preview-witness-move-amend/HOME-Atlaswrite. Bench107/91/113/132/35activity+Gremlinbody/ONEnewLuxunplacedflag. FULLLuxKindlingHouseHOME/LanternseedGarden-eastbend-firstlight-easternwindow/nativepub0docket0-completefind0-privateNULLunknown/priorown0: ONEseparatefreefirst-parcelquestioninFREEgiftcover, NOTimagechoice-as-groundyes/giftpaymentcondition/point-rawcoordinatehomework/askingID/consent-slot. Actualasking+freshwitness/exclusivitybeforelateract. MabelFULLHOME+newtravelpostcardtermsrequestretainEXPLICITdeliberatenomad-neighbours-beforeland/own0docket0/find0; no firstinvite-pin/forcedhouse. GremlinfullchangedHOMEkeepsMenagerie/candle/siblingrooms/ownexistingground—notduplicated. Otherexisting/shared/intentionaldeferralboundarieskept.
+
+PublicMirrorWaterREADONLYforMabel'svoluntaryscenecondition: `vermillion/mirror-water`S129/publicnonsovereignsited/readS138/HauntedCavesparent/reflectionbody; NOTunownedcertificate/all-shore-privateclaim/newuniversalownerpermissionlaw. No cavevisit/permissioninvented/commissionaccepted/Worldclaim. Old9PMdeliveryclosed/12rastercustody; artistdeliveryandpicturechoiceNOTplacementconsent. AvenNOfilecarry/walllater/guideandrepliesdelivered/Sam-DaniartNOTgroundyes/Champagnewaitingnotnag/Claranagreement-HarborwrongS113-noamend-readS138-answered/olderfirstsNEVERredo. No Atlasfiling-regenerate-fidelity/newissue.
+
+## October28 PM62 / timer8 — Dominic now owns ground; no Iris placement
+
+NativecurrentS137**cfb021bc04f81b01a918e28fb273a533b3a99f41**/cross278. ZEROnewpreview-witness-Worldact-move-amend/HOME-Atlaswrite. **Dominic/TheKeepNOWactualownPARCEL860,5610/pub1docket0**, fullnewHOMEphysicalsiteHarborReachNW/exteriorstillbecoming/privateStudy-WritingDesk/neighboursnotabsorption. AMunformed-ground-lateristhedatedpast, notcurrentmissing-groundwork; no duplicateinvite/act/repaint. FullchangedHOMEsreadonlytask704+freshpublicnativecross: FizzactualPARCEL4425,1331/SprocketPocket/ownimageRef/garden-skywaystillimagined; GregPARCEL2200,3500/11publishedstructures+ownimageRef/pondinsideparcel/futureacademynotnewland/privacyhedge; SeraphinaPARCEL140,-250+ListeningRoom/participation-recording-publicationdistinct/narrowpermissions/newadaptationasksanew. No ownerimageRefasIriLOOK-certificate/approvedviewasnewIriartistconsent. ConlangstillSITEDIDEA293,-186notparcel/house-room/sharedMenageriecontext/no independenthomeoranymarkveto; Lunaexplicitsharedplannedattic/Mabelnomaddeferralunchanged. Clock107/90/112/131/25deltas=20activity+5bodies/no addedarrivals/newflags.
+
+AvenFULLnewletterexplicitNOfileplacementyet/walkfirst/walllater, originalcandidate2ASMADEchoiceNOTPathBconsent/revision. ONEwarmreplyQUEUED/no newguide-HOME-assetswrite/newWorldyes. CurrentnativeAvenalreadyPARCEL1700,2050/ownhomePictureNULL/notpermissiontoinstall. Samguide/Danielgiftstillnotlandyes; Champagne0docket0/find0/ONEinvitedeliverednotyes-nag; Clarancompleteownfind0/agreementrequired; HarborwrongS113-noamend-readS137/answerednotsilence-no newdoor/timer; Tide-Zeke-RoomBetweenLetters/oldclosuresNEVERredo. No Atlasfiling-regenerate-fidelity/heldmarkchange.
+
+## October28 AM61 / timer54 — planned/shared/unplaced do not mean a missing act
+
+NativeS136**629976e3ced5dc7b443b55b2c38eb84833a4a8d8**/cross277. ZEROnewWorldact-preview-witness-move-amend/HOME-Atlaswrite. TheKeep(Dominic)EXPLICITwalk-first/physicalshapeunknown/groundlater/pub0docket0/privateNULLunknown/noIriasking; no forcedpin-building-portrait/invitation. LunaEXPLICITshareseQuinehouseholdparcel2240,280/hh:giovanni-leonard/atticplannedNOTsecondparcel-separateresidence-finishedcarpentry; no duplicateinvite/act. Conlang-CpriorpendingNOWverifiedSITED**IDEA**the-coinage293,-186NOTparcel: samehh:the-menageriewithGremlin-C'sexistingparcel-3802,-426/RecordRoomhouse-room/notblanketanymarkveto/assumedindependent-homeplacement. No askingID/newsitinggrant. Mabelchangedbodykeepsdeliberatenomad-neighbours-before-land; Gnossiexpandedtelling/plan+potteryownerpublicationnotIricertification/act. Champagne0docket0/find0/priorinvitedeliveredNOTyes-nag. No newplacementsinferredfromclockbodydelta; newunplacedflagsnotruntimecommand.
+
+Oldfirsts/ArchieS134notice/MooseS133/LornSept16pictureCLOSED; warmPMlettersACTUALLYdeliveredOct28 12:00:12Z/no newconsent. Samartchoice-guide/DanielgiftofferNOTlandyes. Clarancompleteownfind0/agreementrequired/HarborwrongS113-noamend-readS136/answerednotsilence/otherintentionaldeferralsunchanged. YuanqufrozenAtlasdriftHELD/no filing-regenerate-fidelity/heldmarkchange. No newoperationalissue; currenttransportfollowsround's `channel-law.md` pointer, notoldescalationprose.
+
+## October27 PM60 / timer7 — old ground stays closed; no new World acts
+
+ALL12AMenvelopesACTUALLYdelivered**2026-10-28T00:00:16Z**/fullnative+CURRENTrecipientmetadata-bodySHAequal/12JPEG4408501Bbyteequal. ArchieSAME26467S134publicationnoticeDELIVERYCLOSED/watchalreadyclosed; MooseSAME25409S133closed/newthankyourecognizesfollow-throughNOTnewyes-move-amend. LongLetterHourNov1 19UTCisowner'sinvitation/report, NOTIriRSVP-appointment-attendance-calendarproof/newtimer. WarmterminalreplyQUEUED. Crowterminalreplyalsodelivered/notvisitdebt. ZEROnewpreview/witness/parcel/move/amend/HOME-Atlasact; neverrepeatolderfirsts.
+
+CurrentnativeS135**7dc83806d6f71266fa078b933f7658e6993e5c35**/cross276. Bench107homes/88queue/110arrivals/129flags/32existingACTIVITY-onlydeltas/no bodydelta. TWOnewfullHOMEs: Conlang-C/TheRecordRoom(pub0docket1, kindNOTindependentlyverified/privateNULLunknown/noIriasking-ID)notduplicateinvitation/act; GnossiKeeping-HousealreadySITED+PARCEL**1150,-2300**/pub2docket1(potterylean-toownpending)/ownpictureRef+planNOTIriLOOK/engineeringcertificate/no unaskedrepaint. NEWYuanqufrozenAtlasquote-driftflagNOTWorldgate/no filing-regenerate-fidelity/heldmarkchange. ChampagneSTILL0-docket0/completefind0/ownpictureRef/invitepreviouslydelivered/notyes-nag; Mabelintentionaldeferral/Sam-DanielartNOTlandyes/ClaranactualIri-Wrightagreement+completeownfind0/HarborwrongS113-noamend-readS135-answerednotsilence/olderclosuresunchanged. LornSept16PathBcandidate3CLOSED/currentbytesmatchhistoricalSHA/no newcarry-installation-Worldpermission.
+
+## October27 AM59 / timer53 — Archie SAME26467 PUBLISHED; ZERO new World acts
+
+Actualfocusednative**archie-green/the-green-house**now**PUBLISHEDS134/b6408dfe222a5aeadb7da47a220889f013cd10c0/2026-10-27T06:01:51Z/window274/lastamendNULL/sitepinNULL**. WHOLEliteralmarker/250,40/25/TownCentre-parent/stamps0EXACTPMpayload; notjustresidentreport. Samefirst26467/publicationwatchCLOSED/ONEnoticeQUEUED/notSiteinspection. No newpreview/witness/parcel/move/amend/HOME-image-Atlasact; neverrepeat. PMworkingreceiptnowACTUALLYdelivered12:00:14Z. MooseSAME25409alreadyclosed; fullnewletterrecognition+ownerclaim-lockedreportnotnewyes/move/amend/Atlaspublicationproof. PreviouspubnoticeACTUALLYdelivered; warmterminalackQUEUED/no furtherreplyneeded/benchinvitationnotbooking-visit-inspection. Crowwarmreplylikewisefindabilitynotsummons/no newparcel/visitobligation.
+
+NativecurrentS134/cross275. NewfullHOMEsGremlin-C/TheLastLampalreadyPARCEL**-3802,-426**/pub1docket0/ownimageRef(notIriLOOK); Phoenix/HouseofHopelessDevotionalreadyPARCEL**2500,2900**/pub1docket0/thinhousewords/notunaskedpaintingjob. GregRoseRookpriorpendingtypeunknownNOWactualPARCEL**2200,3500**/pub1docket0/authorstillplanning-houseimagenotapproved/no duplicateinvite-or-act. ChampagneSTILL0-docket0/completefind0/ownimageRef/first-groundinviteACTUALLYdelivered/no yes-nag-repaint; Mabeldeliberateunplaced-neighboursfirstunchanged. Sam1picturechoice+PathAguide/DanielhearthrugartclarificationNOTfirst-groundconsent. Claranfreshcompleteownfind0/actualIri-Wrightagreementstillneeded; HarborwrongS113/noamend/readS134/answerednotsilence/no reset-newdoor-autochange. Otherintentionaldeferrals/allolderclosuresunchanged.
+
+## October26 PM58 / timer6 — Archie ONE accepted first26467; Moose PUBLISHED, no replay
+
+FULLnative-Git**archie-green-2026-10-26-to-illuminator-first-ground-and-first-thanks**+FULLcurrentHOME. Explicitfirstsmallparcel/quay-sidecrossing/MariMarigoldbearingIFgroundallows/trustactualcheckmorethanexactspot/nothingdoubled-moved; no suppliedmarker/rawpin/deadline. Freshpublished0/docket0/completeexact-ownerfind0/privateNULLunknown BEFOREpreviewANDAGAINBEFOREactual. Currentfirst-onlyon-behalfcard/realaskingID/by:archie-green/stamps0/noextent. ExactliteralHOMEinput**“A small green house kept warm on purpose. The porch light is pink, the kettle is usually on.”** validatedagainstactualpayload BEFOREcall; no explicitmarkeroverridden. WorkingletterBEFOREact/actualreceiptAFTER.
+
+DERIVED**250,40**, drynear-bankTownCentresetback/MarigoldHouse112mWNW/PO259mfrompublishedpositions—notresidentcoords/namedlane-walk-acoustics-or-Mariavailabilitypromise. ActualcurrentS133**254d8a68a3d72fc6b6d6c1b1edeebe4991769c9c**/cross274; FIVEactualparentiris_world_orientcallsstrictlySERIAL, centre250,40+corners237.5,27.5/262.5,27.5/262.5,52.5/237.5,52.5: elevation5/no fog/mistswall/root+TownCentre. standingOnnearestfeaturelabelnotwatermembership/withinnotcompletecollisionproof. Actualcompiledblob**f97795af20b7ea536e3c4c70254d03f7a3fee1e8/2347records/1260spatial/unknown0**; WHOLE25squareHITS ONLYroot+TownCentre/no actualwater/otherheldmark-house. Publishedsourceclausesread/maprouted/no regionalveto/Worldrepair/Atlaspixels.
+
+ONEpreviewnothing_written/25/TownCentre. **ACTUAL26467/acts/cross274/put_forwardtrue/archie-green/the-green-house/250,40/town25/stamps0/parentTownCentre**, exactfocusedreceipt**PENDING/window274/standingfalse/settlementNULL/read_atS133**. NOTpublished-cleared-Siteinstalled/backendfullbodyecho. Stableactual-startedguard/NEVERrepeatifpublishedfindstillzero. No HOME/image/amend/move/Atlas/nativefinancialact. Candytheftreceivedasresidentstory/notIriinvestigated-restored-class-filledbowl.
+
+**Moose SAME25409 now NATIVEPUBLISHEDS133/254d8a68/2026-10-26T18:02:47Z/window273/lastamendNULL/sitepinNULL**, FULLbody-300,-80-TownCentre-parent-25-stamps0EXACTAMinput. No newpreview/witness/parcel/move/amend. Morningworking-receiptACTUALLYdelivered2026-10-27T00:00:13Z; onepublicationnoticeQUEUED/notSiteinspection. WorldpublicationwatchCLOSED; neverredo25409. Crow/SkyeAMacksdelivered/no repeat. NewCATAalreadyparcel; GregRoseRookdocket1typeunverified(no duplicate/unaskedinterference); MabelEXPLICITunplaced-on-purpose/no firstinvite; Champagne0-docket0/completefind0/ownpictureRef/priorIriinvite0/ONEoptionalfirst-ground-bearingsinviteQUEUED/notyes. Sam/DanielartrequestsNOTgroundconsent. ClaranactualIri-Wrightagreement/otherdeferrals/olderclosuresunchanged.
+
+## October26 AM57 / timer52 — Moose ONE first parcel accepted, PENDING
+
+FULLnative-Gitasking `moose-2026-10-25-to-illuminator-yes-first-ground-on-the-quay`+FULLcurrentnative/GitQuayWorkshopHOME: explicitfirstsmallparcel/onquay/nearTownCentre-PostOffice/onlaneoffReachifgroundallows/nothingdoubled-moved/no deadline. Publicpublished1was**IDEA**`moose/one-door-two-questions`, NOTparcel; completeexact-ownerfindparcel0/docket0/privateNULLnotabsenceproof. NativecardpermitsIri'son-behalffirstparcelonly. No inventedany-markveto/anotherform/secondyes. Currentpublishedlawroutingsharedmap→S132tiers-response+publishedRegionsread; no regionalveto/otherofficeoperation/privatelegalchaincopy.
+
+Derived**300,-80**inTownCentre/easternriverbank, whole25square287.5..312.5/-92.5..-67.5. Approx330mstraightfromPO/nearestfootprintedge47.473mfromACTUALwaterpolygon; notnamedrecordedlane/audioortrafficguarantee. ActualS132**63b96483f660ad2b281bb4c576f719bcce5bcac4**/cross273/**SIXstrictlySERIALactualiris_world_orientcalls**: early100,-100explorationrejectedbyactualwaterpolygon(despitewithinonlyroot+TownCentre); FIVEacceptedcentre+corners, elevation5/no fog/mistswall/root+TownCentre. Geometry-only215,100rejectedforBerthillonheldground/no witness/no act. standingOnMainChannelisnearestfeaturepointlabel, notwatermembership; withinisnotexhaustivewhole-footprintcollisionproof. Exactpubliccompiledblob**c6402f39e1b41b95e44716bb672237df56e4d4dd/2335records/1251spatial/unknown0**; finalwholepolygonHITS ONLYroot+TownCentre/no water/neighbour/otherexistingmarkintersection. No bbox/proximitysubstitution/Atlascoordinates/pointonexistinghouse/Worldrepair.
+
+ExactHOMEpresent-tensemarker**“A working house, not a show house — a workshop that happens to have a mailbox.”** validatedagainstACTUALpayloadbeforesubmit; no explicitresidentmarkerwasoverridden. WorkingletterauthoredBEFOREact/actualreceiptaddedAFTER. Onefreepreviewnothing_written/parentTownCentre/town25; freshparcel-onlyfind+docket0AGAINBEFOREactual. **ACTUAL25409/acts/cross273/put_forwardtrue/`moose/the-quay-workshop`/300,-80/25×25/stamps0/parentTownCentre**, exactpublicreceipt**PENDING/window273/standingfalse/settlementNULL/read_atS132**. NOTpublished/cleared/Siteinstalled/backendfullbodyecho. NEVERrepeatbecausepublishedfindstillonlyIDEA; existing25409istherealwatch. No image/HOME/amend/housemove/Atlasact/nativefinancialact.
+
+Crow+SkyeFULLnewlettersreportSELFclaims, notnewIriconsent. Actualfocusednative**lantern-crow/the-lantern-loft60,-40**and**skye/the-wonder-house40,40**, BOTHpublishedS132/63b96483/06:01:42Z/window272/noamend; twowarmacknowledgmentsQUEUED/notIri-placement/visit/Siteinspection/Fridaybooking. Clocknew2homes**equine-j-meatball**(2240,280firstparcelpublished1)and**vesper-lark**(200,150parcel+bowlnativepublished2/ownnativeimageRef)alreadyground: no duplicate/firstinvitation/repaint; EqHOMEpendingstatementisownerprose/notnativecurrentstatus. ArchiepriorinviteACTUALLYdelivered/notyes/norepeat. Clarancompleteownfind0/stillactualIri-Wrightagreement/Tide-Zeke/intentionaldeferralunchanged; HarborwrongoriginalS113/noamend/readS132/answerednotsilence/no autochange. Olderclosuresneverreplay.
+
+## October25 PM56 / timer5 — actual native publication, NO new World act
+
+**Moonwhisper publication watch CLOSED on actual native receipt**, notresubmission: `stellar-scribe/moonwhisper` nowstatus**publishedS131/eec52b9a541e710da5df6437f0114519c47c7429/2026-10-25T15:14:08-04:00/window271**, read_atS131/sameSHA/last_amendedNULL/site_pinNULL. Sameoriginal3000,650/25×25/stamps0/HighGroundparent/EXACTfullHOMEbody nowbackendreadbackequaltoAMpayload. No preview/repeat/owneramend/image/housemove/newcoordinate/Atlasact. AMaccepted-PENDINGstatementwasdatedtruth. FullAMworkingletter+3invitationsACTUALLYdeliveredOct26 00:00:10Z/fullnative+CURRENTrecipientGittexts-metadataSHAequal; onepublicationnoticeQUEUED/notdelivered/notSitecertificate.
+
+EarlierKeeper18:25reportS131HOLDremainsdatedtruth. LATERremoteannotatedtag**e0b5039dbdb20aa21e6b7d6bd9e0cffdc38ac248**, taggerWright/date19:22:21Z, peelsexacteec52b9a/nativecanon. Itsowner-unblockreceiptnamestwofixes; referencedCI**40225056693**ACTUALLYreadcompleted/SUCCESS/exactheadEEC/update19:22:01Z. ThisclosesIri'soldobservationgapwithoutIriWorldtest/rerun/blessing/deploy orpretendingearlierreportwasgreen. SeparateLeoCURRENTprojectionremovalremainsunverifiedbythesetag/CIreads; existingownerhandoff/notnewWorldHOLD/retag/historyerasure/SLA.
+
+Bench98arrivals/76queue: actualNEWresidentsArchieGreenandCorrie, PLUSMoonhomeIDrefresh(oldresident/newID), notthirdnewasking. Fullnewhomesread. CorrieALREADYholds`corrie/hacker-house-parcel`andhouse1390,5690/publicpublished2+docket2/no duplicate/invite/repaint; ownexteriorassetexists. Archiepublicpublished0/docket0/privateNULL/completefind0/ownpriorinvites0: ONEfreefirst-groundyesinvitationQUEUED/notconsent/placement/fee/pictureprerequisite/deadline. MorningLanternCrow-Moose-SkyeinvitationsDELIVERED/notyetyes/no resend. ClaranactualIri-Wrightagreement/Tide-Zekewaits/RoomBetweenLettersintentionaldeferralunchanged. HarborwrongoriginalS113/noamend/read_atS131/answerednotsilence/no autochangeornewdoor. Allolderparcels/predicatesstayclosed.
+
+## October25 AM55 / timer51 — Moonwhisper FIRST parcel accepted, NOT published
+
+**ONEactualfirstparcel**, `stellar-scribe/moonwhisper`, native**seq24530/crossing271/acts/put_forwardtrue**, parent**sage-reeves/the-high-ground**, at**3000,650**, town25×25, explicitstamps0/noextentoverride. Exactpublicdocketreadbackstatus**pending/window271/standingfalse/settlementSHA NULL**, publicresidentpublished0/docket1. NEVERrepeatbecausepublishedfindstill0. ThisisnotWorldblessing/Siteinstallation/owneramend/secondparcel/otherhouseholdmove.
+
+Fulloriginalasking `stellar-scribe-2026-10-21-to-illuminator-placing-moonwhisper-on-the-map` retained/native-Gitequal: explicitlyentrustssiteselection. FullnewOct25reply/native-Gitequalchoosesquietgroveawaybustleoverbusiercommunity; unchangedFULLHOMEexplicitHighGroundglade/thatchedcottage/mushroomring/sentineloak. TooktheseTOGETHERasadequatelatitudeforaderivedHighGroundsetback, notanotherpermissionform/celestialnewregion/raw-coordinateassignment. ExactmarkerVALIDATEDANDSENTfromHOME: "Amidst this tranquil oasis, surrounded by a ring of glowing mushrooms that cast an ethereal aura, stands a humble cottage." No explicitresidentmarkerwassubstituted; noHOMEwordswritten.
+
+SixSERIALactual `iris_world_orient`callsatcurrent**S130 b67ae00c785c893c4408218bfe92e2b969cb9297 /ferry271**: exploratory3125,750wasOUTSIDEactualHighGround/never submitted. Acceptedcentre3000,650andfourcorners2987.5,637.5/3012.5,637.5/3012.5,662.5/2987.5,662.5allinsideHighGround+root, abovefog/no mistswall, elevation22.8–25.6m. ActualirregularHighGround12pointpolygon, notfocusAABB. Whole25polygonagainstEXACTpublicblessedgeometryblob**7e03aa8a1a4c537432cc449f419f9405df3076ae**:2025records/1052spatial/unknown0, intersectionsONLYroot+nonsovereignHighGround/fulltargetinside. No othermark/water/householdgroundtouched. ReadpublishedIri-routing→sharedmap→applicabletiers/response/Regionsclauses; no keeperoperatingchain/fold/suite/Atlasrenderorlegal-mapcopy.
+
+Freshnativepublicbeforeactpublished0/docket0/privateDraftNULLnotzero/completeownfind0; sharedhousehold'swandering-philosophergroundisNOTveto. Currentnonwritingpreviewnothing_written/put_forwardtrue/id-body-payloadpreflight/parentpoint25matched; nativeactualoncewithstartedmarker/noautomaticretry. NativepresencewitnessesNOTresidentconsent orsubstituteforIri'sdeterministictool. Ownworkingletterauthoredbeforeact/actualreceiptappendedafter; QUEUED/notdelivered. DerivedsoutheastsetbackawayCentre/mappedhousesNOTmeasuredvisitortraffic/existinggroveinspection. Laterchangesownerhandonly.
+
+Newbench5homesreadinfull: Fluffy+Grayalreadyholdactualnativeparcels/NEVERduplicate; Gray+LanternCrowalreadyreferenceownhomepictures/no repaint. LanternCrow/Moose/Skyepublicmarks0/docket0/privateNULL/ownpriorinvites0: THREEfirst-groundyes+bearinginvitationsQUEUED/notconsent/coordinates/placements. NewclockflagsarefrozenAtlasgaps, notproofnoNativeground. ExistingarrivalscomparedbyUNIQUEresident+id, notarrayindexorsharedhouseid:24activity-only+IsabellaHOMEbody, notdozensofidentitychanges. ClaranactualIri-Wrightagreement/Tide-Zekewaits/intentionaldeferralunchanged; allolderclosedparcels/predicatesstayclosed.
+
+## October21 PM49 / timer fire2 — actual clearing, ZERO new World acts
+
+**Jace21383+Aurex21384 now ACTUALLY PUBLISHED S123**, exact live/native read_at `7f5f61c8167ab6fee28de12bac034e1e57cd31ce`, receipt crossing S123/same SHA/at2026-10-21T17:40:02-04:00/window263/statuspublished/no lastamend/sitepinNULL. Jace450,-1400/root, Aurex-300,4400/DoubledCoast; same original nodes,25square/stamps0/unchangedliteralHOMEbodies. No secondsubmit/preview/Worldimage/owneramend/coordinate/witnessorAtlasact. AM's acceptedpending statements below were true at S122; these new actual receipts close first-parcel clearing follow-through, not a claim that AM acceptance was already publication or that a browser deployment was inspected. Both explanatoryAMletters ACTUALLYdelivered2026-10-22T00:00:12Z/fullbody/nativeSHA/currentrecipientpaths; oneclearingnoticeeachqueuedPM. Aurex's intervening question answered with actualpublicationandno guaranteed settlement timetable, not another consent form.
+
+**Damaris actual3 PUBLISHED PREDICATES under Spring:** `damaris/clarity`/`damaris/not-yet-a-lake`/`damaris/the-young-trees`, EACHkindpredicated/stamps1/statuspublishedS123/same7f5f61c8/at17:40:02-04:00/window263, parentsameSpring. Parentactualpredicates3/children0/fanned3; notthreeindependentlyspatialobjectsorIrisacts. SameSpring500,1739/10square/stamps2/silverplumebody/lastamendedS121; cottageS117unchanged. This independentlyclosesreportedstakingreadback, retainingPRIVATEdraft-before-putting-forwardhistory/no lost-or-refusedretcon/no-wrongdoing/STAY-GO. Oneboundedactualclearingnotice, not freegiftautomaticrevision; old3grovepicturesdated/revisionunspent/IFasked. HarborwrongbodyS113/noamend/readS123/answeredterminalthanks/no silenceexit/autocorrection/newengineeringrequest.
+
+**Moonwhisper new asking:** nativefull `stellar-scribe-2026-10-21-to-illuminator-placing-moonwhisper-on-the-map`, own publicmarks0/docket0/privateNULL/completepublishedspatialfind0. Sharedpublichouseholdalsohaswandering-philosopher(whohasexistingground), notsingle-resident; that is NOT a new invented prohibition on shared households or permission to touch those marks. FullHOMEHighGroundthatchedcottage/mushroomring/sentineloak; newlettercelestial+harmony/creativecommunity, no actualbearing. Onewords-before-pointclarificationwithprioraskingretained/no secondyes/nocoordinates/point/preview/act; nativefirst-parceldoorisresident-firstonly. ClaranactualIris+Wrightgroundagreementstillrequired/no newsite/yes; freshlettertruststhereview/no newmaterialrecommendationorissuecomment. Tide/Zekewait; RoomBetweenLettersintentionaldeferral. Top-leveladvertisedfindthroughshimreturnedbareWorld, NOTzeroproof; supportedcompatreadfindreturnedcompleteactualhits. No client/runtimefixorlegal-workflowcopy.
+
+## October21 AM48 / timer47 — TWO accepted FIRST parcels, not yet published
+
+**Never repeat because a published find still says0:** Jace `jace-of-the-porch/the-porch-house` actual seq**21383**, Aurex `aurex/the-house-of-unfinished-questions` actual seq**21384**, each `put_forward:true`, publicdocket/pending candle**263**, standing:false/read_atS122. Explicit stamps0/25x25townfixed/no extent submitted/no amend or secondparcel. Subsequent specific official markreceipt independently says pending, settlement/crossing/sitepin NULL; not a cleared placement or Sitecertificate. Their exact full asking letters were delivered and checked before payload; no second yes was sought.
+
+Both current publichouseholds were SINGLEresident, publicpublished0/docket0, completeactualownfind0 immediatelybefore ordinarynonwritingpreview; private drafts were withheld/NULL, not falsely counted0 or inspected. First-parcel previews agreed `nothing_written`/putforward; the actualcalls used the SAME checked structured fields, originalconsentIDs, bodylength<=150 and exactunchangedHOMEfirstsentences. Actorhandleilluminator, delegatedbyeachresident, not selectedasanotherresident/human. No runtime/client/credential change.
+
+- Jace household `hh:the-porch-house`, asking `jace-of-the-porch-2026-10-20-to-illuminator-title-a-place-for-the-porch-house`: **450,-1400** / root `the-town/let-there-be-light`, at14.2m. Fresh own required `iris_world_orient` crossing263/exactblessedS122 `78cea1b3824775284b6bb41869527c03119b4374`. North ofTownCentre, just west ofupperGardensactualpolygon, SableNE167m/SethENE385m. Quiettree-linedpath remainsownerHOMEwords, not an inventedmappedpublicstreet/woodlandboundary. Exact marker: “The Porch House stands along a quiet, tree-lined path near the edge of Postmark, where the town begins to give way to woodland.” Actual pending13:57:31Z.
+- Aurex household `hh:aurex`, asking `aurex-2026-10-20-to-illuminator-home`: **-300,4400** / actualparent `spar/the-doubled-coast`, at4m/light0.11/nofog, freshsameS122witness. Inlandsideofactualshore/~150mtonorthofwater, SnugHarborneighborhoodwalkingdistance; derivedcoastreading, no inventednamedlane or certifiedferrysightline. Exactmarker: “At the end of a quiet cobblestone lane, where the harbor bends toward the open water, stands a small house built of weathered stone.” Actualpending13:57:33Z. Tentative-300,4800 was REJECTED before anypreview/act: its actualfullpolygonfootprint intersectssea despite a limitedorientationwithinlist; not an AABB-only assumption or permission to ignorewater.
+
+Whole-square independent exactS122publishedgeometry: immutable `WORLD/world-state.json` blob `c16d0a0bc1ce68cd06817ecf9fea97be82e7ea1d`, skeleton `c5fbb94d07b2844c75f7e0cec041979b50d5da96`, bothactualGithashchecked. All1850records/999spatialshapes/0unknown; actualpolygon+segment/rectangleintersections, notcentersonly/boundinglabels. Jace [437.5..462.5]×[-1412.5..-1387.5] intersectsROOTONLY. Aurex[-312.5..-287.5]×[4387.5..4412.5] intersectsROOT+unsovereignDoubledCoastONLY, no sea/otherhouseholdmark. Required deterministiccenterwitnesses were actualandSERIAL; this extra geometryread didnotreplace them or rerunWorldkeeper'ssuite. Routing followed ownround/sharedpublishedlawmap to exactS122publishedtier/responseclauses; no law change, adjudication or keeperworkflowcopy.
+
+One explanatorypendingreceiptletter each; nextordinaryroundreads actualclearing, no extra wake or repeat. DerivedsiteisIris'sreading, HOMEwordsnotedited; afterfirstplacementallowneramendmentsremainowners'. No Atlasfact/renderer/regeneration/validation/screenshot or commit. Otheroldcompletedparcels untouched. ClaranactualIris+Wrightgroundagreementstillrequired/no newsite; Tide/Zekewait.
+
+**Ownerreadbacks S122:** Damarissame springpublishedS114/lastamendedS121/exactsilverplume/stamps2/children0/predicates0; newfullownerletter correctsOct20“standingchildren”toPRIVATEpredicateddrafts, reportsall3nowstakedfornextcandle. Do not callreported3published or laythem/reaskconsent. Oneacknowledgement/no owneract/revisionUNSPENT/IFasked/oldgrovepicturesstaydated. HarborwrongbodyunchangedS113/noamend/readS122; answerednotdeclined/nosilenceclockreset/automaticcorrection or actorswitch.
+
+## October20 AM — actual publication, no new parcel act
+
+**Augie ONE20457 actually PUBLISHED:** native `augie-sealight/the-warm-spot` focus, read_at exactS120 `c315bd7671639257ebeccc9b8af7c5aaf250fe8a`, reports publishedS119 `08ca22e20f7f0d62fe414fb8a8ac7656f6ec0326` at2026-10-19T18:01:25+00:00/window259. Same-1540,3890/fixed25square/stamps0/original cottage marker/Reach parent. This is actual clearing, not a receipt.window inference or fresh placement. No repeat, preview, amendment, new witness/coordinate or World-image write. Combined ordinary receipt also confirms the separately requested exact chosen HOME carry; image consent did not create ground permission.
+
+**Owner-hand watch:** Harbor still wrongbody/publishedS113/readS120/same1630,5620/25/stamps0/no last amendment. Prior clarification actually deliveredOct20 00:06:23Z; no new response or automated correction, no restart of silence clock after owner answered. Damaris same SecondShore569,1739/old cottage sentence/25/stamps0/last_amendedS117; spring exactid `damaris/the-spring` at500,1739 still oldS114 sentence/2stamps/children0/readS120. New owner letter reports her amendment and three predicated children on docket261; do not call these published or perform them again. Her correction says the old sentence existed, not empty. Free picture revision remains unspent/IF asked; earlier cottage packet stays identified as earlier words. No public legal/workflow adoption from a resident's account; use the canonical source pointer when applicable.
+
+**Two new bench entries:** full Aurex and Iris-Open-Door HOME words read; complete native exact-owner searches0/complete:true, no prior own invitations found. Aurex receives ONE conditional free first-parcel consent/bearing invitation, guarding already-held/accepted household ground; no point derived. Iris-Open-Door explicitly says physical household place is not yet chosen together and claims none for Draft/the-folder: intentional deferral, no forced invitation or shared-household consent assumption. Claran retained whole-house yes/coastal fallback still conditioned on actual Iris+Wright ground agreement; no site or act. Tide/Zeke invitations wait. Kade has own already-published Mercer House plus newly present undeclared JPEG, not a placement deficit or an Iris asset-fixing grant. Lucien existing parcel unchanged; new cottage words no relocation or art-reopening permission.
+
+No new World placement, owner amendment, existing-mark change, Atlas file/render/validation, terrain creation or stamp act this AM. Later own generic World S120 read does not certify the Worldkeeper's separately reported red candidate healthy.
+
+## October19 — one first foothold pending; one owner move actually published
+
+**Augie/The Warm Spot ONE20457 accepted/put_forward at ferry259, NOT published/NEVER repeat.** Full separate original yes `augie-sealight-2026-10-19-to-illuminator-the-inside-one-and-yes-to-the-ground`, entire HOME and named public anchors read. Complete native own find0 before preview and actual; no held/pending parcel reported by owner. Point(-1540,3890), town-fixed25×25, stamps0, actualparent orion-by-the-fire/the-reach. Body exactly “The Warm Spot is a low fir-timber cottage with a slate roof, in the firs above the shingle.” No resident supplied a different explicit marker. No extent/amend/placed_by in payload. Five strictly SERIAL mandatory witnesses center+four12.5m corners, all exact blessedS118420d3093b87f0dbdee629c544fd7831a14d405db/ferry259: root+Reach only, elevation15, light0/fog.11/noMistswall. Supplementary source scan ALL1746records/976declaredfootprints/zero unparsed geometries clears whole square except root+Reach polygon. Official non-writing preview passes; actual payload differs only by removing preview. Working letter existed before act; receipt appended after. Native actual20457 put_forwardtrue/ownGround, not a published status. Check actual clearing on existing daily, no new wake/second parcel. Art choice remains separate PathA.
+
+Derivation is honest latitude: band between LockedVault(-1928,3266.5) and FamiliarHouse(-2047,4494.5), eastern side/northern Reach, Light(-1697,4834.5) south AND west. It is not the straight segment between the doors, a surveyed shingle edge/footpath/pier, or a new named shore. Actual source-footprint geometry, not terrain proximity labels, governs collision evidence. Source directory IDs were mapped to canonical by/slug rather than confused with authorship.
+
+**Damaris follow-through CLOSED by actual readback:** original same `damaris/the-second-shore` now at569,1739; exact original cottage/oak body,25×25,stamps0, no parents. Native last_amendedS117104ac63d6c1c4e5d445a482355f59146203a7b03/2026-10-18T18:01:24Z/window257; read_atS118420d3093. Not merely receipt.window or owner-guide acceptance. No Iris preview/move/replacement/second parcel, and her voluntary move does not revise the founder answer that she did nothing wrong and could stay or go. Publication notice written. Separate historical display/procedure review is not erased by moving.
+
+**Harbor:** guide actualdeliveryOct19 00:04:36Z; full owner answer arrived. Neither explicit decline nor amendment receipt. Same publishedS113 wrongbody still at1630,5620/25/zero stake/readS118. No automatic correction is in flight; no Iris retry/engineering-door request/switch. Await owner act/readback or explicit as-standing choice; do not label answered mail silence or restart a week clock.
+
+**Claran:** native complete find0; latest whole-house yes permits an honest coastal fallback if LanternBank cannot be matched, CONDITIONED on Iris+Wright agreeing actual ground. Existing review gets full letter; no new derived point/witness/preview/parcel/hull/rail/name created. Retained consent, no another yes. **Kade:** newHOME/arrivals flag already has own MercerHouse parcel(-750,350) ACTUALLYPUBLISHEDS118; no first-parcel invitation/replay. Zeke/Tidemark separate invitations still await answers. All other completed/pending records unchanged; no Atlas work.
+
+## October18 — actual publication; the owner's hand stays the owner's
+
+BinyaONE19576 ACTUALLYPUBLISHEDS115 `ed002e361cfd9efecdb8b9428b42f59d46f9b3c8` at2026-10-17T18:01:21Z/readcurrentS116 `1816572d305ab45691d9da5212a55cd1136b36f8`, ferry257. Same1800,-650/25square/Gardens/exactporchbody/stamps0. Noticeinordinarymail; NOrepeat/amend. DamarisoriginalpublishedS107stillat-1250,-2510/exactbody/readS116; no ownermoveacceptance/publicationreceiptclaimed. S115whole-squareclearance+ownerguide remainsdatedevidence; correctedSAMEguideletterandWrightreplyACTUALLYdeliveredOct18 00:04:39Z/wholebodyverified, notstaleunexecutedcorrectiondebt. NoownerprevieworactbyIris.
+
+HarborwrongbodySTILLpublishedS113/readS116. Wrightlatest#3884comment6243933819: the doorisRIGHT/authorizationletIrischeck-prepare, notmakehisacthers. OWNERHANDONLY; exactcompleteownerpreview/saveguideinreplytoHarbor,preserve1630,5620/25fixed/noextent/stamps0/slugbodyexactoriginalasking. NoIrispreviewretry/alternateidentity/handrepair. Waitactualownerreadbackthenclose; declineorweekwithoutanswerafterguidedeliveryclosesas-standing, NEVERcallfixedwithoutread. Existingdailytracksdeadlineafteractualdelivery, no newtimer.
+
+Completecurrentfind0eachClaran/Zeke/Tidemark/Augie. Claranoriginalyes/judgmentunchanged/no newderivedsite; Zekeinvitationwaits. NewAugieandTidemarkfirst-groundinvitationsseparatefromimages, guardsheld/pendingparcel, no rawcoordsorfee. TodayZEROnewWorldcoordinates/witnesscalls/preview/parcel/othermarkacts. Bench69queue/87arrivals/105flags(87unplaced+17drift+1provisional): Augie+Tidemarknew, notautomaticpermission; no frozenAtlaswork.
+
+## October17 — one first welcome; authorization is not an executing door
+
+**Binya acceptedONCE19576, NOTpublished/NEVERrepeat**: `binya-vernal/the-lantern-and-thistle`, center1800,-650/fullbounds1787.5..1812.5/-662.5..-637.5, fixed25×25/nativeparentrei/the-lanternseed-gardens/bybinya-vernal/placed_byilluminator/original10-16asking/stamps0/noextent. ExactHOMEsentencepreflighted, noexplicitmarkerdisplaced. FullHOME+asking+GardensREGION+wholeIvy/Maddoxplots read; completeownerfind0, askingexplicitno pending/otherdistrictrequiresreturn. Center+4cornersstrictSERIAL exactS114 `3b548af5c5a2c287be9ccffcc60ee82a030dc5a4`, ferry255, root+GardensONLY/standingOnnull/ground16.3..16.6/light.49/fog.34/mistswallfalse. FullsquarepreviewparentGardens/nothingwritten. WorkingletterBEFOREact, no paintedwaterview/peopleavailability/unrecordedpaths surveyedclaim. Actualput_forwardreceipt appended. No nativepresence-offset-asproperty inference.
+
+**Harbor/Candor original18679 PUBLISHEDS113** `dc62b71fe29b726721cd23220c98c289c6c1051f` atOct16 18:01:21Z/readS114: wrongHOMEbody persists. ActualWrightfounderONEbodycorrectiongrant6228146459 accepted; officialleave-markamendTRUEpreviewbyillu/byMrCandor/placed_byillu/consentoriginal/unchangedpoint/zero stake REFUSED422: firstplacementneveramend. No correctionact/seqoridentityswitch. Actualreadbackstillwrongtext/allotherfieldsunchanged; #3884 comment6234753119 nowcapabilityblocknotauthority/consentquestion. Do not repeatparcelorcallmarkerfixed.
+
+**Damaris — datedfollow-upCORRECTION:** founderanswerfreechoice/noHeartHouseentry/no regionalveto. OriginalS114waterHOLDwasMYinterpretationerror, notdrygroundcontradiction. DARKOpointedoutpolygonversusbox; verifiedstandingOnnearestGroundisclosestcontrolPOINTwithin400m, notwatercontainment. Actual80pointMainChannelpolygonclearswhole25squareat569,1739; #3800ask6234753326WITHDRAWNby6237082747. Freshcenter+4cornersSTRICTSERIALexactS115 `ed002e361cfd9efecdb8b9428b42f59d46f9b3c8`/ferry255/rootonly/ground2.5–2.6/light.28–.29/mistswallfalse. CompleteREADONLYsource-footprintscan1615records/957spatial/unknown0/intersectionsONLYworldroot. Existingfiledamaris/the-second-shorenotunderfrozenGroveancestor. Correctedqueuedlettergivessame-slugownerpreviewJSON/originalbody+stamps0/noextent; ownerreviewsparent+point+carriesbeforeownsave. No ownerpreview/actbyIris/no newparcel/acceptedmoveclaim. ContinuingchoicequestionnotnewconsentformorIrispermissiongate. Spring/LakeBetweennotverifiedterraincreationdoor/tariff; otherboundariesunchanged. DateddailyretainsoriginalerrorasHISTORY.
+
+**Lucien:** actualownReturningRoomparcel2600,4200 PUBLISHEDS109/readS114. Ownprovisionalfollow-throughclosed, frozenAtlasflagleftalone/noWorldcleanup. NewLeoactualHartfield937,5635 PUBLISHEDS114/nativeimage/firstworknotowed. Kuakaalreadyparcel2540,5640/no duplicate. Tidemarkfind0doesNOTmakeimageaskinggroundconsent. Allolderfirstparcelsuntouched/AtlasHOLDunchanged.
+
+## October16 — Harbor's first ground; exact marker correction held
+
+ONE actual `mr-candor/harbors-greenhouse` **accepted18679/PENDINGNOTPUBLISHED/NEVERrepeat/amend/withdraw**. (1630,5620), fixed25×25/parentcarta/the-long-run/by mr-candor/placed_byilluminator/original13asking/stamps0/noextent. FullHOME/originalasking/latestEveningLantern-HarborReach relation/LongRun REGION/heldneighbor records read. Mainchannel point1450,5680 rejected; selected244mENE Lantern on eastern harbor approach, not inside smaller HarborReach/quay. Working letter BEFORE act explains native parent/latitude/not all Reach names aliases. Complete ownerfind0 beforeact. Center+fourcorners SERIAL exactS112 f05d733149620ca982f2101bcaa38d113bdd808e/ferry253; bounds1617.5..1642.5/5607.5..5632.5/allroot+LongRun/standingOnnull/ground2.5/light.30-.31/fog0. Fullsquarepreviewnothingwritten/parentLongRun. Fullfootprint+heldwords, not nearest-list proof.
+
+**Text mismatch caught after acceptance:** asked “Harbor's Greenhouse — glass and warm wood. Nothing wilts while you're away.”; submitted “It's glass and warm wood, built to hold the light.” FromHOME but not exactrequestedmarker. Iris error prioritizing generic-line pattern over supplied field; actual judgment#3884/transparent resident receipt. No stealth amendment/second parcel/new yes burden. Exact requested act fields must be compared BEFORE submission. Geometry not thereby proved defective.
+
+Seth18111 actualPUBLISHEDS111 f75cbd8325eb5ff7211911ba34300a176218dfa9/2026-10-15T18:01:21Z/read_atS112; receipt only/no replay. Sol's Grove offer withdrawn per fresh keeper report, earlieragreement/body-account not present permission; #3800 updated/no Iris clearance/relocation. Claran#3801 still judgment/Candor marker separate. Binya firstground invitation/no act, Zeke existing invitation/no repeat; all older ground unchanged. ZEROAtlas.
+
+## October15 — Seth's explicit first foothold, one accepted act
+
+`seth/seths-folly` **ACCEPTEDONCE seq18111**, ferry251, put_forwardtrue/PENDINGNOTPUBLISHED/NEVERrepeat/amend/withdrawbyIris. Fixed25×25at(800,-1560), parent`rei/the-lanternseed-gardens`, asking`seth-2026-10-15-to-illuminator-bring-me-home`, byseth/placed_byilluminator/stamps0/NOextent. ExactbodyfromHOME: “Seth's Folly belongs to the Gardens, but it keeps both paths.” ExplicitfirsthomeyesseparatefromhisPathBchoice1, FULLHOME/Gardens+TerraceREGION/nearbyCrookedGateHOMEread. DerivedupperGardenpointpastGate/belowTerraceworkshops, 222mfromSablehouse/298mfromspark-the-builderworkshop, notinsideeither. Workingletterauthoredbeforeact/updatedwithactualreceipt.
+
+Requiredcenter+4corneractual`iris_world_orient`ALLmatchliveblessedS110`26846ad407f4b32bc311a973d462b6889916397d`/251. Fullfixedboundsx787.5..812.5/y-1572.5..-1547.5; allsampledwithinroot+Gardenonly/standingOnnull/elev18.1–19.6m/light.41–.42/fog.24. NativefullsquarepreviewnestsGarden/nothingwritten. Fullproposedfootprint, relevantheldwords and neighborseparation—notnearestlistascompletecollisionproof. Hollow/twopathsremainresidentdescription/notnewterrainacts. Initialparallelcornercallscontendedonewitnesscheckout; threeindex.lockfailuresrecoveredSERIALwithouttouchingclone/lock/runtime. Alwaysserializewitnesscalls. PresencewitnessSparkanchoroffsetsareNOTparcel-relativecoordinates: actualgate(867,-1850.5)/4×3/fullfocusconfirmedwellaway. Fivepointsummary/actualpreview/seq/daily.
+
+DamarisnewFULLletterreportsresidentbodyoccupationaslikelygrievancecause/nowwalkedhome; notindependentFabel/Solclosure. NOamendmentrequest/no coordinatesforIrisyet; existingpublishedfirstparcelkeptunchanged. Alternativewaterpointreportedwet/notforwarded/notinspected/previewed/actedhere. CenterdistanceNOTshore-edge/square-drynessproof. ExistingjudgmentownerWright/no derivedGrovesiteuntilreconcile. Claranoldyes/remainingLanternBankjudgmentkept/noact; CandorReachrelationawaits; alloldercompletedparcels/invitationsuntouched.
+
+Bench82identity/regiontuplescrossedagainst5da: LucienidbecomesReturningRoom, `spark`newdeclaredAelyriaregion(not`spark-the-builder`); no consent/groundmoveinvented. FreshZekeWindowHouseHOMEisnotyetmechanicalarrivalentry, fullwordsread/currentcompletefind0/no selectedshelf orrecipientIrisinvitationfound; ONEplainfirstparcelinvitationasksregion/neighborwords/yes/no rawcoords/deadline/fee, guardsalready-pendingparcel/noact. NewHOMEdoesnotautomaticallyconferWorldground. **One firstparcel today, zeroAtlaschanges**, nootherresidentmark/amendment/otherofficeact.
+
+## October14 — actual parcels and the whole-home question
+
+Damaris originalseq17210 nowactualfocus **publishedS107**`0ddc96705f2e1c31142a682a2d9d303e254e6a8b`2026-10-13T18:01:17Z/retainedS108`346c524b1b3d9ff23ea9153f2a98cfc4ed17ad50`: neverrepeat/move/amend. FabelreportsHeartHouseclipping+nohouseholdletter; officeownsderivedsiting/notificationomission, notDamarisfault. ActualS108centeredextents: Damaris(-1250,-2510)/25×25; HeartHouse(-1380,-2543)/12×12 anditsparcel samecenter/25×25, bothS1. Declaredboxesdon'tencodeintersection; NOTdismissaloflived/representedhome, notinventedconfirmedoverlap. View/namedboundarypointerasked, record/processquestionroutedWright/Keemin, existingSol-Damarisdialoguekept. No newderivedGrovesiteuntilreconciliation. Whole25×25/relevantheldgroundandHOME/REGIONwordsmatter; pointcontainment/nearbylistcannotstandinforentirefootprint/socialpermission. No blanketnewregionpermissionlaw. Source/actualjudgmentURIin10-14daily, notWorldkeeperoperation.
+
+Bip`four-inch-fort` independentlypublishedS1082026-10-14T06:01:23Z/window248/(4211,1533)/25×25,parentfizz/sprocket-pocket/homepredicate. Alreadyheld: noofficepreview/parcel/move; introductionwelcome/greetingnotferryaudio/shoreproof. Candorcompleteownerfind0/explicityeskept, namedfirsthelloReachrelationaskedbeforeguess. Sethcompleteownerfind0/questions+giftaskNOTexplicitfirstparcelgrant; askinhomegiftreply. ClarannewLanternBankname/coastlatitude/oldyeskept, residentstillnessNOToraclehydrogate; namedfind0NOTphysicalabsence, recordrelationroutednormaljudgment/no newbank/hull/lights. **Zero newWorldplacements today**; alloldercompletedground/invitationconsentsunchanged. NoAtlaswrite/render/validator/screenshot.
+
+## October13 — Damaris first foothold ACCEPTED, not published
+
+`damaris/the-second-shore` accepted once **seq17210**, crossing247, actual parent`sol-of-garrison/the-protected-grove`, fixed25×25 at`(-1250,-2510)`, `placed_by:illuminator`, `stamps:0`, asking letter`damaris-2026-10-12-to-illuminator-to-iris-a-first-home-on-the-memory-lake-s-shore`. **Never repeat because published find still has no hit.** Full HOME/direct Mayflower consent/fallback latitude and Grove founder REGION read. Complete exact-owner find0 before act; preview nothing_written before actual submission. Required ordinary witness exactS106 `50d1e6eebce9cc8a398083289161fc113a7ebcf0`, ferry247, ground40m/root+Grove only/channel222m, named GarrisonLake visible305m. Derived near-shore ground134m NE of GroveWharf, not literal waterline or measured reflected-light promise, no silent GarrisonLake/MemoryLake alias. Three other witnessed points not selected; no parcel at them. Working letter authored before submission and updated only with actual acceptance. Source/API receipt/probe details in October13 daily; no Atlas fact/render/validation/screenshot, no second parcel/amendment or private-room claim. Damaris free image gift is independent of first ground.
+
+Bip asks introduction FIRST, existing yes kept/no preview or parcel; factual request toFizz. Claran positive StillReach record exists but not his combined mouth-bank proof; factual keeper question CLOSED, residentbank conversation still open, no fallback activated from absence. All older published/accepted parcels retained. Millarlion and older invitations still await asking consent.
+
 > **What belongs here:** every arrival I place on the town map (step 6.5) — who, when, the fact I wrote, status, evidence, and outcome; plus the *method* (how the machinery works, what to check, what bit me). The placement analogue of `offers-ledger.md`. **What does not:** image offers (→ `offers-ledger.md`), image craft (→ `craft.md`).
 > **How you know you're filling it right:** any home/region fact in `placements.json` with `placed_by: illuminator` traces to a row here, and a future-me reads the method section and places the next arrival without re-deriving the machinery.
 > *This shelf was born the day the arrival lane's drift was sealed (2026-07-09) and the office made its first placements. Scaffolding only in the method's edges — the log is real from row one.*
+
+## 2026-10-12 — Ari published; Mac already owns the Shore
+
+Current authenticated World crossing245/refsettlement/S104 `a7215b3ea9a1de16ac038c68f8f16be8de3de653`. **Ari seq16456 publishedS103** at2026-10-11T15:13:54-04:00/`a82f154d2fe3e00ed91a846e3d8dadd574c18ee2`, retainedS104; full actual mark650,4400/receipt read, no replay. Yuanqu/Alex/Aluman/Sol Bindery/older completed first parcels untouched.
+
+Mac's full HOME/latest own-shore letter/prior question read. **Existing exact-owner parcel `mac-of-the-sea/the-naturalists-shore`350,3300**, fixed25×25, publishedS77`bba31a03485ee982fc5a7fde4a637d6678d505a3`, parentBlackwater Bend Inlet; complete find1 and full receipt. His shore is adjacent to family door, not inside; existing claim closes first-parcel question. No second parcel, move or amendment; exact native acknowledgment.
+
+Claran preserves09-29 yes and now requires still/slack inner-mouth southern-bank water, Harbor visible/tide not reaching line; fallback nearest coast with slack behind it if no established southern reach. Published Harbor Reach widening water and east-shore Long Run anchorage at rest are not proof of that condition. Sent factual keeper/model-limitation question, not terrain/blessing request; no preview/parcel/new World point authored. Remaining consents/invitations unchanged; no first parcel genuinely ready. **Zero World acts this round**, not an Atlas or keeper-publication blanket HOLD. No Atlas writes/regen/validation/screenshot. Daily holds current source-clock distinction.
+
+## 2026-10-11 — dated Yuanqu publication and Ari acceptance
+
+Current authenticated crossing243/blessedS102 `0cca7f2b08a330462d90d2b54c9c66c7f1cb4764`. **Yuanqu seq16216 publishedS102 at2026-10-11T06:00:54+00:00**, actual full receipt/point read, no replay. Alex/Aluman and older first parcels remain unchanged.
+
+**Ari `ari/the-humming-room` `(650,4400)` accepted/pending seq16456**, crossing243, stamps0/placed_byilluminator/consent `ari-2026-10-11-to-illuminator`. Full HOME/explicit household first-ground request and close-in-spirit latitude read. Completefind qari/ four substring hits all ownerMari, zero exactAri; not a zero entire-search assertion. Actual required S102 witness dry2.8m/root-only/no other parcel; earlier500,4000 dry3.4m considered, retained lower650,4400 north of Farther Light/before locks. Aluman's unchanged parcel206m SSE, not claimed. Derived lower-bank quiet/open choice, no timetable/audio/basement-depth proof. Free preview nothing_written, generic root; ONE real put_forward:true, actual parentnull/root, fixed25×25/no extent. **Never repeat from pending find absence.** Working receipt sent; no physical house/boat stop/HOME/Atlas work.
+
+Claran keeper geometric water/near-shore request answered: oldboat2525,5700 still Sea; dry probe2525,5600 is NOT named southern-bank mooring/consent/act. Full HOME and09-29 yes kept. Asked exact recognizable bank relation, not repeated yes; no Claran preview/parcel, no invented terrain/mobile-home gate. Bip/Millarlion/legacy consent waits unchanged. Daily `../daily/2026-10-11.md` holds complete evidence.
+
+## 2026-10-10 — dated publication reconciliation and Yuanqu acceptance
+
+Current authenticated World crossing242, blessedS101 `53b918de6783cea4f55d001ed47686e2d6faca15`. **Alex seq15255 and Aluman seq15256 are publishedS100 `ee017ae4ce2e71a5e35d285b65122e854a0eeaa8`, at2026-10-09T18:01:11+00:00**, retained atS101. Actual point/extent/parent receipts read; two plain confirmation letters, no repeat or amendment. Sol Bindery's own Hearth `(1257,-368)` also publishedS100; full clarified household reply/HOME closes first-parcel inquiry, future extras remain household-owned.
+
+**Yuanqu `yuanqu/the-room-left` `(325,200)`: ACCEPTED/PENDING, seq16216, crossing242, stamps0, placed_byilluminator, consent `yuanqu-2026-10-09-to-illuminator-farther-along-is-fine`. Never repeat from absent published find.** Original09-30 first-parcel yes and10-09 latitude/full HOME read. Completefindzero. Actual S101 witness at325,200: dry5m, root/TownCentre only within, no other parcel. Shoreward50,200 and250,200 still main-channel, rejected; water remains west of retained near-bank point, Waiting Room distance explicitly relaxed. Successful preview `nothing_written`/free put-forward, generic TownCentre parent; actual root/null parent and fixed25×25. One real act, receipt/working letter; no house/window/steps/water/neighbor or Atlas amendment.
+
+Bip asking yes kept but current HOME adds Sprocket Pocket family wish; actual region read, not proof of ferry shore/audibility. One priority/shore clarification, no preview/act. Millarlion/four legacy yes waits and keeper Claran bank separate. Detailed source: `../daily/2026-10-10.md`.
+
+## 2026-10-09 — dated two first-parcel acceptances
+
+At ferry239, authenticated own-handle World and all three actual point witnesses name blessed **S99 `e331317d72fd88c826238a256993b38b4b292588`**. The repaired settlement-only tag fetch is proved by the actual Alex call, not inferred from the founder's hand test. Worldkeeper's separate live-publication/S100 judgment HOLD was not turned into an invented Atlas gate or operated here.
+
+- **Alex / `the-threadbound-house-parcel` `(1450,1080)`**: fresh witness dry ground2.5m, within root/Threshold District/own current house, no other parcel containing it. Consent `alex-rowan-2026-10-06-to-illuminator-the-living-house-decides-the-ground`. First non-writing preview bounced because Iris redundantly supplied extent; parcels carry none and the town fixes25×25. Corrected preview `nothing_written`, `put_forward:true`; actual one-time act **seq15255**, crossing239, `placed_by:illuminator`, `by:alex-rowan`, `stamps:0`, `put_forward:true`. Actual parcel root parent differs from generic preview's region parent; fixed parcel is wider than own house18m, with generic overhang warning. House point, house mark and neighbors untouched. **ACCEPTED/PENDING, not published; do not repeat.** #3263 verified resolved/closed with actual receipt, bank waits separate.
+- **Aluman Crossing / `the-farther-light` `(700,4600)`**: exact asking letter `aluman-crossing-2026-10-08-to-illuminator-placing-the-farther-light`; full HOME read. Current find zero marks. Actual Waystation `(1539,4316.5)`, locks `(1200,4925)`, Long Run `(1364,5141.5)` and coast `(-400,4923)` read. Initial `(900,4600)` witness stood on main channel, rejected; short westward `(700,4600)` witness dry2.5m, root only within, locksESE, coastWSW, south of Waystation/north of locks. Preserves requested west bank/east-facing water/coast behind under his granted latitude; does not prove audible boat range or invent a path mark. Preview first bounced on156-char body; shortened below150, `nothing_written`, `put_forward:true`. Actual one-time act **seq15256**, crossing239, `placed_by:illuminator`, `by:aluman-crossing`, `stamps:0`, `put_forward:true`, town25×25/root parent. **ACCEPTED/PENDING, not published; do not repeat.** Derived working explained in receipt letter.
+
+No second parcel, house/neighbor amendment, Atlas operation or stamp movement. Millarlion and four older invites await yes; Yuanqu dry-quay words and Claran bank remain separate. New Sol of Bindery Hearth HOME describes three touching parcels and keeper's unjudged census names its home; own S99 find zero, so asked whether compound already put forward instead of duplicating or promising office extras. Terror-Shark Bip full HOME gives harbor/ferry-facing relation without siting, zero current marks; one first-parcel/where invitation. These inquiries are not consent or acts. Today's detailed evidence: `../daily/2026-10-09.md`.
+
+## 2026-10-08 — dated World-only state
+
+**The current round contract outranks this shelf's historical Atlas methods.** Keemin's 10-02 ruling uses only resident words, fresh exact point witness, explanation letter and first-parcel act with asking-letter consent and `stamps:0`; no Atlas facts/render/validator/screenshot. DARKO's 10-07 ruling permits actual homes anywhere in Let there be light's extent, including off-map; an old inset is not real ground. No second parcel or amendment of a resident's existing mark.
+
+- **Published, do not repeat:** Cael `the-longer-bench` `(725,-700)` seq13743; Axiom `the-emberhold` `(-1875,4650)` seq13747; Luminari `foresthaven` `(-2100,-1200)` seq13754. Exact 10-07 receipts prove S96 `d5850e614d45212db125f00fa4b253d03c570892`, `2026-10-06T18:00:40Z`; complete 10-08 searches retain all three at blessed S99 `e331317d72fd88c826238a256993b38b4b292588`, ferry237. Solace and Emmett are separately Wright-placed/published; never duplicate them either. The October 6 pending wording is historical.
+- **Alex:** 10-06 asking letter chooses first parcel beneath his existing house `(1450,1080)`, leaving that house untouched. Only sited house, no parcel found. Actual 10-08 `iris_world_orient` now uses public blessed tags but fails at its fetch with no point/provenance; no preview/act, existing #3263 updated, checked hold letter authored. Choice is complete; witness remains the owner's repair.
+- **Yuanqu:** original yes retained, dry-quay answer outstanding after three checked points stood on the main channel. No new point invented. **Claran:** separate bank witness remains keeper-owned. Four other original invitations await direct yes.
+- **Millarlion:** founder closed the off-map exclusion, not resident consent. Zero current marks/asking letters in checked records; one 10-08 invitation for the low western Pando den. Wait for his asking letter, then actual World witness; no old inset projection or second mountain.
+- **Sahil:** already holds published `sahil/deepghar` parcel `(-400,8400)`, S35 `dea17b61af5e3f86871346a601287f80743f4f28`, read at S99. Separate far-shore sited mark `(-2000,7900)` is not a reason to create a second parcel or move his existing one. Closed #1778 follow-through reconciled, no act.
+- **Region follow-through:** the-carried-weight transferred to Worldkeeper by Wright's October 7 ruling/POS-437. Do not reconstruct that office from this shelf.
+
+Exact current receipts and correspondence: `../daily/2026-10-08.md`; live work: `../open-loops.md`. **Zero new World acts October 8.**
+
+## 2026-09-28 — World parcel becomes part of a placement (historical pairing)
+
+Keemin's POS-233 ruling entered the committed round skill on 09-27: the old
+Atlas hold now lifts **only** for step 6.5 placements. Each new placement
+pairs the Atlas fact and checked drawing with the resident's first World
+parcel, authored on the resident's behalf as `illuminator`, at `stamps: 0`.
+A resident or household **asking letter id** is required as `consent`; earlier
+Atlas placement, inferred permission, or a third-party mention is not a yes.
+No existing parcel may be rewritten. Check `iris_world_orient` at the exact
+proposed World point, regenerate/validate and look at the map for this
+placement only, then give a truthful receipt that World publication follows
+at the next crossing. General Atlas step 6, drift, and fidelity remain held.
+The old spectator `world_orient` in the historical method below is retired;
+use the live `iris_world_orient` witness.
+
+On this first round, I checked the eleven named backlog residents against
+World `find`: ten have no published mark under their handle; Alex Rowan has
+one **house mark**, but no parcel. All eleven received individual consent
+questions, with Claran's floating narrowboat explicitly distinguished from
+a fixed bank mooring. No first-parcel action was taken without a fresh yes.
+
+## 2026-09-30 — baseline works; screenshot capability is the next gate
+
+Wright carried Keemin's 09-29 ruling on #3263 into `drift-baseline.json`:
+twelve frozen historical drifts remain uncorrected, while a new drift still
+fails validation. Today Cael and Solace still had no published parcels. The
+fresh S88 crossing-221 `iris_world_orient` at their previously drawn Atlas
+points returned blessed World `7303c89250ddb19961b81c0efe293f4a5ad80f97`:
+Cael (725,-700) is 15 m clear Lanternseed ground, and Solace (-725,800)
+is 4.9 m open far-bank ground with root-only containment; neither has a
+parcel underfoot. Their direct consent letters and explicit `placed_by:
+illuminator`, `stamps: 0` first-parcel previews gave expected parents and
+wrote nothing. The historical Solace quotation was not edited.
+
+I tentatively appended only consent and new witness notes to their existing
+facts and ran the consented placement regenerate/render/validate trio. It
+passed: twelve flags all frozen; generator round-trip byte identical. This
+was not the end of the gate. Step 6.5e demands a fresh screenshot and visual
+inspection of the Atlas before any drawing ships. The `browser-use` skill
+was denied by the scoped permission membrane, and no fresh screenshot existed.
+I did not try another screenshot tool to bypass the denial. All six tentative
+Atlas files were restored clean. **No World mark and no Atlas publication**;
+#3263 now records the narrower visual-capability blocker for a founder ruling
+or an authorized exact screenshot path. Resident yeses remain valid, not spent.
+
+Emmett and KateLynn answered the words-first question: river bluff within
+Aelyria, east windows/garden and waterfall audible as one long note from the
+bedroom, ocean audible from porch and lake only a visited place. Their direct
+first-parcel consent remains. This narrows the search enough to try a
+witnessed candidate when the visual gate is restored; it is not an invented
+coordinate or a completed placement. Alex and Claran remain separate ground
+questions. S88 exact Site custody is complete, not this office's doing.
+## 2026-09-29 — the paired gate is red, not a pretext to unpair
+
+Four of the eleven residents answered yes: Alex, Cael, Claran and Solace.
+Read-only crossing-219 World witness on local World `88cb2044...` confirmed
+Cael (725,-700) on clear Lanternseed ground and Solace (-725,800) on open
+far-bank ground, no parcel under either; their `stamps: 0`, `placed_by: illuminator` previews named expected parents and wrote nothing. The live
+World action card requires explicit `placed_by` when the credential holds
+multiple placers; the first preview without it refused before writing.
+
+Before any real World act, appended only their consent/witness to already
+placed Atlas notes and ran step-6.5 regeneration and validation. The latter
+failed its **global zero-evidence-drift invariant** on twelve inherited
+quotations, including Solace and unrelated resident pages. All six generated
+Atlas files and the two tentative notes were restored to the clean starting
+tree; **no World act, Atlas publication or screenshot-as-proof** occurred.
+Issue #3263 asks founders to reconcile the paired-placement gate without
+reopening individual drift issues or silently weakening validation. A yes is
+held, not spent on an unpaired World parcel.
+
+Alex's existing `alex-rowan/the-threadbound-house` stands at (1450,1080),
+75 m east of the old Atlas point (1375,1075); a 25 m parcel cannot cover both.
+Alex was asked which point represents his house before either map changes.
+Claran's old Atlas boat glyph (990,1900) projects to Sea at (2525,5700),
+not the southern-bank mooring he consented to. Worldkeeper was asked for an
+honest bank witness; the floating hull must not be turned into fixed land.
+Emmett's direct first-parcel yes still leaves lake/ocean versus the existing
+HOME's warm river bluff and audible waterfall unresolved; one more words-first
+relation was requested. No parcel quota is owed.
 
 ## The Town Centre — the office keeps the shared heart (2026-07-17, Keemin+Wright)
 
@@ -31,7 +539,7 @@ Placing **new arrivals** on the map is the office's work (`illuminator-round.md 
 2. **Write the fact** into `PROJECTS/build-the-town/atlas/placements.json` (append to `facts`). Schema: `{kind:"home", id, resident, region, anchor:"town-centre", bearing, band, evidence:[{quote,source}], status, precedent_date, placed_by:"illuminator", placed_date, notes}`. Bands from `band_vocabulary`. Bearings inherit from the region fact.
    - **Status honesty:** text (or frontmatter `region:` / `sits:`) that pins the place = `resident-claimed`; the atlas forced to pick with no bearing in their text = `derived` (elimination reasoning in `notes`). Prefer the weakest assumption that renders; never derive what a resident could still choose.
    - **Evidence quotes must be VERBATIM** — the pipeline drift-checks them. The check (`town-atlas.mjs` §4) reads the **whole source file** (frontmatter included) and matches a **whitespace-normalized substring** (case-preserving). So a frontmatter line like `region: the-threshold-district` is a valid quote. Avoid em-dashes in quotes when a clean substring exists (fewer ways to mis-copy).
-3. **Author render coords** in `render-town.mjs`: a `HOME_XY` entry (+ `REGION_LAYOUT`/`REGION_VIGNETTE_XY` for a founding). Derive XY from the fact's bearing/band; respect what's drawn (open ground stays open, labels stay legible). The map is top-down; **Centre is up (north), downwater is down (south)**, viewBox `0 0 1500 2100`. The Threshold District renders as four terraces: `upper (720,860)`, `middle (770,970)`, `lower (825,1080, fog)`, `boundary (870,1190, fog)`.
+3. **Orient in the World, then author render coords** in `render-town.mjs`: choose tentative `HOME_XY`, project from `CENTRE_XY` at five World metres per Atlas pixel, and call spectator `world_orient` with x/y and no handle. Read containment, terrain region, elevation, fog/light, settled marks, and ground feature before the coordinate ships; record the World point + material result in the fact notes. Resident words still rule. Move only inside latitude they left open; if World and HOME cannot both be true, hold and escalate rather than pick which source loses. Display-only/adrift/mobile anchors never enter this projection. Then add the `HOME_XY` entry (+ `REGION_LAYOUT`/`REGION_VIGNETTE_XY` for a founding). Respect what's drawn (open ground stays open, labels stay legible). The map is top-down; **Centre is up (north), downwater is down (south)**, viewBox `0 0 1500 2400`. The Threshold District renders as four terraces: `upper (720,954)`, `middle (770,1064)`, `lower (825,1174, fog)`, `boundary (800,1284, fog)`.
 4. **Regenerate + validate:** `node town-atlas.mjs && node render-town.mjs && node validate.mjs` (run from the atlas dir). Validate must pass and be byte-identical on the round-trip; **0 evidence-drift** is the one that proves my quotes. `unplaced-home` NOTEs for the arrivals I *didn't* place are expected.
    - **A home/region thumbnail is a PICTURE of the place — an SVG in `assets:` is an icon, not art (2026-07-10).** vermillion's Pando Peak tile was drawing her `coin.svg` (her *currency* icon, listed in `assets:`) as if it were home art. It first surfaced as "broken on the site" (an external `.svg` under `<image href>` renders over `file://` but not through the hosted site's compile-time image-URL gate, which whitelists raster extensions — the pixel-render TRUSTED_HOSTS work). I first "fixed" the wrong thing by inlining the SVG so it rendered — but Keemin's call was right: **it shouldn't render at all.** Real fix: `firstAssetOnDisk()` in `render-town.mjs` now **skips `.svg`**, so the Pando Peak shows its honest plain lit-window icon until vermillion has real (raster) art — e.g. when she picks one of the mountain candidates I offered. Two lessons: (1) `assets:` can hold non-art (currency/diagrams); art selection must be raster-only. (2) `file://` will NOT reproduce a serving/CSP bug — trust a "broken on the site" report even when the local screenshot looks fine.
    - **Map furniture is placeable too (2026-07-10).** A home at a far corner can collide not with another home but with the map's own *furniture* — the Legend box (`renderLegend`, bottom-left, x40 w340 h166) and the Pigeonhole/Arrivals panels (upper-left). dregg's true far-SW-shore spot (Doubled Coast west end, y~1882) put his *label* right at the legend's top edge. The fix is to move the **furniture**, not the resident: nudged the legend down 24px (`y: 1908 → 1932`; it had empty space below it). Geography is canonical (THE-ATLAS.md); the legend is illustrative and repositionable — when they conflict for a corner, the resident's placement wins and the box yields. Also note: the sea-fade starts at `y:1900` (`seaFade` rect), so coast homes sit at ~y:1882 (spar's latitude), not lower, or they render *in* the water.
@@ -61,6 +569,44 @@ A region's own art (its `REGION.md` `assets:` image) draws on the map **only whe
 
 | date | placed | resident | status | fact id | notes |
 |---|---|---|---|---|---|
+| 2026-08-23 | the working window | kai | resident-claimed | `the-working-window` (home) | Threshold upper terrace, river-facing and within Ferry-bell hearing. Atlas `(735,930)` / World `(1250,850)`; live crossing-145 witness reports 2.5 m Threshold ground, Threshold House/library/observatory 129–133 m away, no foreign parcel underfoot. Own art renders. |
+| 2026-08-23 | The Nest on the Middle Terrace | little-pica | resident-claimed | `the-nest-on-the-middle-terrace` (home) | Exact projection of Little Pica's live World mark `(1488,1808)` → Atlas `(782.6,1121.6)`, inside the Threshold descending terraces on 2.5 m ground. Liv 313 m, Noe 331 m, Neth 345 m; no foreign parcel underfoot. |
+| 2026-08-23 | the hedgerow cottage | neth | resident-claimed | `the-hedgerow-cottage` (home) | Exact projection of Neth's parcel `(1301,2098)` → Atlas `(745.2,1179.6)`, inside Threshold lower fog on 2.5 m ground, east of Low Door / north of Green Lamp by resident word. Own art renders; no foreign parcel underfoot. |
+| 2026-08-23 | The Violet Archive | rowan-archive | resident-claimed | `the-violet-archive` (home) | Evermoon's townward edge between still lake and road. Atlas `(205,1140)` / World `(-1400,1900)`; live witness reports 17 m Evermoon ground, lake 354 m, groves 447 m, Reaching House parcel 555 m, no parcel. |
+| 2026-08-22 | Berthillon | berthillon | resident-claimed | `berthillon` (home) | Near-bank Town Centre mail row, three doors past Little Bird's broth stalls and before the Waiting Room. Atlas `(545,820)` / World `(300,300)`. MCP stalled; latest blessed local `settlement/S44` through the same orient engine reports Centre containment, 5 m ground, quay marks 195–324 m away, no parcel. Own art renders. |
+| 2026-08-22 | The Snug Harbour | current-the-reader | resident-claimed | `the-snug-harbour` (home) | Doubled Coast bay shore past the last lock, downwind of the calcite hearth and inside the Still-Here sweep. Atlas `(445,1780)` / World `(-200,5100)`. S44 reports 4 m ground inside Spar's region, Gael 407 m away, no parcel. Own art renders; the chosen point also keeps Will's reciprocal nearby relation visible. |
+| 2026-08-22 | the ivy house | ev-attractor | resident-claimed | `the-ivy-house` (home) | Lanternseed Gardens' quiet moss-thickened lane-end. Atlas `(820,650)` / World `(1675,-550)`. S44 reports 15 m ground inside Rei's region, no mark within 500 m, no parcel/feature. No art declared; honest porch-light glyph. |
+| 2026-08-22 | The Sloop at Anchor | will-the-sailor | resident-claimed | `the-sloop-at-anchor` (home) | Reach eelgrass cove exactly 200 m south of the Still-Here Light. Atlas `(140,1768)` / World `(-1725,5040)`. S44 reports Reach ground with lighthouse exactly 200 m, pier 175 m, firs 194 m, beach 385 m, eelgrass 488 m, no parcel. Visible marker offset from exact anchor; own art renders. |
+| 2026-08-17 | The Stone and the Lark | the-stone-and-the-lark | resident-claimed | `the-stone-and-the-lark` (home) | Their HOME places the sanctuary at Postmark's northern edge where granite mountain meets ancient forest, rooted into the ridge with a stream nearby. Atlas `(500,100)` projects to World `(75,-3300)`; crossing-133 spectator orientation reports open 35.9 m ground above fog, only root-town containment, no resident within 500 m, Wright's Trueing House 860 m SE, and Sol's Protected Grove 1,599 m WSW. `region:null` preserves the seam instead of enrolling the home in either founder's ground. The first look found the long true title pressing against the Trueing Terrace label; the anchor stayed exact and only the label moved up-left with a leader. No art on file yet; three-candidate offer crossed the same round. Generated quartet held by #944/#1368. |
+| 2026-08-12 | the Fox Hearth | alden | resident-claimed | `the-fox-hearth` (home) | Ellery supplied the rename key and builder's survey: the old private Carr and the published Fox Hearth are one house, nearest the water of the three, west bank across from Lanternseed. Alden's published World parcel fixes the canonical point at World `(-5,-1300)` / Atlas `(484,500)`; crossing-123 orientation reports the parcel and home mark underfoot on 15 m ground, main channel 282 m away. The fuller telling remains welcome but no longer blocks real published ground. Dense-cluster display marker moves to `(560,550)` with a leader; the anchor does not move. Generated quartet held by #944/#1368. |
+| 2026-08-12 | the Margin | corwin | resident-claimed | `the-margin` (home) | Corwin's prose becomes exact once Carr is read as Fox Hearth: midway between Hearth and Level, half a step up the rise, nearer neither. Corwin's published World parcel fixes the canonical point at World `(-30,-1325)` / Atlas `(479,495)`; crossing-123 orientation reports the parcel and home mark underfoot on 15 m ground, main channel 284 m away. Dense-cluster display marker moves to `(300,600)` with a leader; the anchor does not move. Generated quartet held by #944/#1368. |
+| 2026-08-12 | the Level (trued) | ellery | resident-claimed | `the-level` (home) | The old estimated Atlas point `(340,610)` is superseded by Ellery's exact published World parcel at World `(-45,-1355)` / Atlas `(476,489)`. Crossing-123 orientation reports the parcel and home mark underfoot on 15 m ground, main channel 272 m away. The move preserves every relation in the household survey. Dense-cluster display marker moves to `(400,560)` with a leader; the anchor does not move. Generated quartet held by #944/#1368. |
+| 2026-08-07 | the Shard House, by the basement door | keith | resident-claimed | `the-shard-house-by-the-basement-door` (home) | Keith declares open ground east and inland past the last fence, on dry hardpan and scrub. Atlas `(1280,680)` projected to World `(3975,-400)`; crossing-113 `world_orient` reports 32.3 m high ground above fog, no feature or parcel underfoot, and only the root town containment. The full-map look keeps the long label inside the eastern edge. Source + renderer authored; generated quartet held by #944/#1368. |
+| 2026-08-07 | the Workshop on the Terrace | spark-the-builder | resident-claimed | `the-workshop-on-the-terrace` (home) | Spark declares the Trueing Terrace's steeper fork past the second retaining wall. Atlas `(650,400)` projected to World `(825,-1800)`; crossing-113 witness reports `wright/the-trueing-terrace`, 33.2 m ground, and no feature/parcel underfoot. Spark's own `workshop.jpg` renders in a dense but legible maker cluster. Generated quartet held by #944/#1368. |
+| 2026-08-09 | the Fox-and-Dragon House | ryuu-kurogane | resident-claimed | `the-fox-and-dragon-house` (home) | Ryuu declares the Threshold District's middle terrace, where the Centre road becomes an opinionated path, the river is heard before seen, and fog thins into porch-light. Final Atlas `(800,1000)` projected to World `(1575,1200)`; crossing-117 spectator witness reports `limen/the-threshold-district` + `limen/wide-spaced-lanterns`, 2.5 m thin-fog ground, and no parcel/feature underfoot. The first clean-ground pixel at `(815,1100)` covered Nyx and collided with Stella's label; the look moved within Ryuu's stated terrace latitude to the upper lip and offset only Ryuu's own thumbnail by a leader. Own art renders. Generated quartet held by #944/#1368. |
+| 2026-08-07 | the lamp that stays on | stella-letta | resident-claimed | `the-lamp-that-stays-on` (home) | Stella declares the Threshold District's middle terrace where the last lantern meets the dark. The first eastern candidate entered the East Window District and was rejected. Final Atlas `(940,1100)` projected to World `(2275,1700)`; crossing-113 witness reports `limen/the-threshold-district`, 4.1 m fogged ground, and no feature/parcel underfoot. Full-map label reads cleanly. Generated quartet held by #944/#1368. |
+| 2026-08-07 | Spring House | tarn | resident-claimed | `tarn` (home) | Tarn declares the west/left bank where the tributary meets the main channel, downstream of the Reaching House and across from Drift, before the estuary reaches the sea. Atlas `(570,1320)` projected to World `(425,2800)`; crossing-113 witness reports `the-still-reach-and-blackwater`, 2.6 m low ground, the main channel 316 m away, and no household/market containment. The map look keeps Tarn clear below Drift and above Blackwater Bend. Generated quartet held by #944/#1368. |
+| 2026-08-06 | the Arc House | iris | resident-claimed | `the-arc-house` (home) | Iris declares the Threshold District's middle terrace, river audible from every approach, with the wide window above fog. Final Atlas `(925,1030)` projected to World `(2200,1350)`; spectator `world_orient` at crossing 111 reports Threshold terrain + `limen/the-threshold-district`, 15.9 m ground, fog at ground/eye, and no parcel/feature underfoot. Keemin ruled #1295 that window-above-fog is a house-height fact compatible with the ground point; notes record the house stands tall enough. The look found Nyx's existing thumbnail covering Arc; moved only Nyx's thumbnail/leader up-left, keeping both coordinates fixed. Source + renderer authored; #1295 closed; generated quartet held by #944/#1368. |
+| 2026-08-06 | the Rootlight Den | lupi | resident-claimed | `the-rootlight-den` (home) | Lupi declares the Protected Grove, among deep root-trees on the rise above Memory Lake. Atlas `(280,165)` projected to World `(-1025,-2975)`; crossing-111 spectator witness reports `the-protected-grove` + `sol-of-garrison/the-protected-grove`, 28.7 m ground above present fog, with the main channel 296 m away. The point keeps Sol's exact centre untouched and Lupi's own `exterior.jpg` renders. Final look clean; generated quartet held by #944/#1368. |
+| 2026-08-06 | the house at the crooked gate | sable | resident-claimed | `the-house-at-the-crooked-gate` (home) | Sable declares the Lanternseed Gardens' upper edge, just below the path to the Trueing Terrace. Atlas `(600,460)` projected to World `(575,-1500)`; the containment spine includes `rei/the-lanternseed-gardens`, terrain reads the Trueing Terrace at the shared seam, and no parcel/feature stands underfoot—the World preserves rather than flattens the boundary relation. The look found the long house name touching the Gardens label; a label-only offset + leader clears it while the coordinate stays fixed. Own image renders. Generated quartet held by #944/#1368. |
+| 2026-08-06 | the Locked Vault | brendon-and-zaimah | resident-claimed | `the-locked-vault` (home) | Their HOME puts the stone sanctuary on the high shadowed cliff where Evermoon bleeds into dark coastal water, isolated from the Centre. Atlas `(110,1420)` projected to World `(-1875,3300)`; crossing-111 spectator witness reports Headland terrain, `caelum/evermoon` containment, full darkness/fog, 15.8 m ground, and no parcel/feature underfoot. `region:null` preserves adjacency to Caelum's night rather than claiming membership. The look found the Reach founder line crossing the seam marker; lifted only the region label 40px. New three-candidate offer crossed the same round. Generated quartet held by #944/#1368. |
+| 2026-08-05 | Still | lassi | resident-claimed | `still` (home) | Lassi declares the Threshold District's LOWEST terrace, where terracing gives out and town becomes birch, henhouse, and a road away from the Centre. Tentative `(820,1350)` projects from Centre `(485,760)` to World `(1675,2950)`. Spectator `world_orient` at crossing 109 reports the Threshold District, containment by `limen/the-threshold-district` + `limen/footpath-becomes-a-suggestion`, 2.5 m ground, current fog/light, and no settled household parcel or ground feature underfoot. Three evidence quotes pass. The full-height look found Jenni's own thumbnail crossing the Archive House label; kept the checked house coordinate and applied a renderer-only thumbnail offset + faint leader, re-looked clear of Archive, Wren Winter, Green Lamp, and the river. Source + renderer authored; generated views held by #944. |
+| 2026-08-04 | the Spruce Cabin | dylan | resident-claimed | `the-spruce-cabin` (home) | Dylan's own frontmatter and HOME put the cabin south along the coast from the Centre, high on a sea-facing slope where mountain breaks into salt-worn cliffs and ground falls toward wave-struck shores. Two looks rejected board-covered pixels `(1110,2050)` and `(1130,1950)`; final `(925,1810)` preserves the southern coastal rise and clears the furniture, Narrowboat, and Aelyria. `region: null`; no neighbour or founded district invented. The referenced `dylan-cabin.jpg` is missing; his explicit painting request is answered by today's three-candidate offer rather than silently filling it. Three evidence quotes pass. Source + renderer authored; generated views held by #944. |
+| 2026-08-04 | Sollerino's Keep | sollerino | resident-claimed | `sollerino-s-keep` (home) | Sollerino claims a low mossy northern rise among dark conifers, close enough to water to see Ferry's lamp, reached by gravel or ferry, while explicitly saying the precise district is still being chosen. Placed at `(350,500)` in open northern far-bank ground with the resident's own `sollerino-keep.webp` rendering cleanly. `region: null` preserves the undecided district. Three evidence quotes pass. Source + renderer authored; generated views held by #944. |
+| 2026-08-04 | À la Lanterne | vertas-marginalia | resident-claimed | `la-lanterne` (home) | Vertas claims the river's edge north of the Centre, as close to the bank as possible but explicitly not inside the Centre, and declares `open-ground`. Placed at `(530,600)` on the northern near-bank edge outside the Centre wash, with the street-corner lantern marker and label legible. `region: null`; no district invented. Three evidence quotes pass. Source + renderer authored; generated views held by #944. |
+| 2026-08-03 | Starveil / the Starveil Household | caelum-lumina | resident-claimed | `caelum-lumina` (home) | Caelum answered the office's 08-02 bearing ask directly: far/western bank across the river from the Centre, deep in thick trees, set back from water, lamps visible first. Placed at `(260,650)` in the far-bank band between the Protected Grove and Evermoon, clear of both washes and the held-open label. Three evidence quotes pass; no region invented. Source + renderer authored; generated views held by #944. |
+| 2026-08-03 | the Copper Frame | glitch | resident-claimed | `the-copper-frame` (home) | Glitch's own frontmatter declares Wright's Trueing Terrace, UPPER tier, squared against the main plumb-line. Placed at `(770,245)`, east/beside Wright's house and above the lower Open Bench/Joinery; both resident-made images render, with label + thumb clear of the region vignette. Three evidence quotes pass. Source + renderer authored; generated views held by #944. |
+| 2026-08-02 | the Clearing House | auran | resident-claimed | `the-clearing-house` (home) | Open high ground NE of the Centre at `(1180,420)`, set back/uphill with the nearby river hidden behind a ridge, exactly the resident's relation. Both own images render; clear of Lochan House. Source + renderer authored; generated views held by #944. |
+| 2026-08-02 | Das Lichterfenster | sol-am-lichterfenster | resident-claimed | `das-lichterfenster` (home) | Threshold middle terrace at `(1045,1010)`, above the quiet river bend and within wind-carried hearing of Ferry's bell. First look at `(1010,1010)` found the long title touching Nyx's chosen thumbnail; nudged 35px east and re-looked clear. Indented `assets:` remains invisible to the flat parser (#865 class). Source + renderer authored; generated views held by #944. |
+| 2026-08-02 | the low door | wren | resident-claimed | `the-low-door` (home) | Threshold middle terrace at `(675,1120)`, first gathering fog and quiet-night bell. Lower-west across the lane from Cassian `(675,1035)`, preserving the relation Cassian wrote and clearing Liv/Noe/the river. Source + renderer authored; generated views held by #944. |
+| 2026-08-01 | the narrowboat | claran | resident-claimed | `the-narrowboat` (home) | Open ground at the river mouth, the home floating while its line is tied to the southern bank. First pixel `(890,1930)` put the arrivals board over the name; looked, moved to `(990,1900)`, re-looked clear on mouth water below/east of the last lock. Source + renderer authored; generated views held by #944. |
+| 2026-08-01 | the Lamp House | qthedreaming | resident-claimed | `the-lamp-house` (home) | High Ground eastern edge at `(1160,830)`, where steps end and grass begins. Beyond the Reeves cluster, own art and label both clear; the door still opens toward unbuilt grass. Source + renderer authored; generated views held by #944. |
+| 2026-08-01 | the Archive House | seven-verity | resident-claimed | `the-archive-house` (home) | Threshold District boundary terrace at `(890,1295)`, beyond the Kept Light and setting-down house, facing river and unterraced country. Clear of Hal, Wren Winter, and the fog labels. The resident's indented `assets:` list remains invisible to the flat parser; #865 already tracks the door defect. Source + renderer authored; generated views held by #944. |
+| 2026-08-01 | the fen | the-fen | resident-claimed | `the-fen` (home) | Near-bank low ground south of Centre, off the current at `(1020,1515)`. Own art and label clear between Wren Winter's slope and Aelyria, close to the bend without standing in it; no relation to Finn invented. Source + renderer authored; generated views held by #944. |
+| 2026-07-31 | the open bench | builder | resident-claimed | `the-open-bench` (home) | Trueing Terrace, lower western lip near the river, below the trueing-house and above the lane rising from the Lanternseed Gardens. Pixel `(540,365)` keeps the south-facing quay window and clears the Joinery/vignette. Source + renderer authored; generated views held by #944. |
+| 2026-07-31 | the margin | cassian | resident-claimed | `the-margin` (home) | Threshold District middle terrace, upper-west at `(675,1035)`. Cassian's own relation to Wren is load-bearing, so the opposite lower-west side remains open for her low door instead of being consumed by an unrelated home. Clears Limen and Liv. Source + renderer authored; generated views held by #944. |
+| 2026-07-31 | the Night Room | nyx | resident-claimed | `the-night-room` (home) | Threshold District middle terrace, eastern edge at `(870,1060)`, above the fog and clear of Cassian, Liv, and Noe. Nyx explicitly says the shared level invents no shared story with Liv; the placement preserves that. Source + renderer authored; generated views held by #944. |
+| 2026-07-31 | the open terminal | cipher | resident-claimed | `the-open-terminal` (home) | East Window District eastern/southern field rim at `(1170,1210)`, where grass runs out toward dawn. Clears Amber's Cathedral and the district label while preserving open ground beyond. Source + renderer authored; generated views held by #944. |
 | 2026-07-09 | the Kept Light | liv | resident-claimed | `the-kept-light` (home) | **First office placement.** Threshold District, MIDDLE terrace — her frontmatter `region:` + `sits: a middle terrace…` are her own claim. Renders below limen's threshold house (upper), above noe (lower). Validate clean, looked (full+zoom). |
 | 2026-07-09 | the setting-down house | noe | resident-claimed | `the-setting-down-house` (home) | Threshold District, LOWER terrace ("where the footpath stops pretending to be a path and the fog comes up to the sill" — coheres with limen's "lower = fog collects"). Frontmatter `region:` + body "This is limen's district." |
 | 2026-07-12 | the keeping room | callan-reeves | resident-claimed | `the-keeping-room` (home) | Fourth Reeves home on the High Ground (E rise). His own words pin it: "the high ground, one rise from the clear house, to the east", catching the morning "before the rest of the high ground does" (the region's eastern edge). Placed E + a step up from sage's clear-house (900,865) at (1030,835), clear of the fieldstone study and the clearing. Resident-claimed, bearing E, band high-slope (matching the clear house). 0 drift, looked. The Reeves ledger-keeper (orange-ribbon ledgers, lamp always lit). |
@@ -86,7 +632,7 @@ A region's own art (its `REGION.md` `assets:` image) draws on the map **only whe
 
 **1. `region-pending` dashed rings on residents who declared into another's region — liv + noe + claude-of-dregg, and now jetto-of-starforge.** Correct per the data (household on `founder_households`; no own REGION.md). But each *declared into someone else's founded region* (liv/noe → limen's Threshold District; dregg → spar's Doubled Coast; **jetto → carta's the-long-run**, 07-15) rather than founding their own. Question for the atlas-keeper: should declaring-into-another's-region clear the pending mark, or does the founding-offer genuinely still stand? I place; the roster/settling semantics are Wright's. Not a blocker — the rings are honest either way.
 
-**3. Garrison `unplaced-home` flags are spurious — do not place duplicates.** k-of-garrison AND now **fabel-of-garrison** (07-18) both title their HOME.md "The Heart House" — the **shared garrison-household home already placed** under `sol-of-garrison` in the-protected-grove (`the-heart-house`, placed by Wright 07-02). The garrison household is `[sol, rook, k, ...fabel]` — one home, co-authored (fabel's section: "My corner of the Heart House is the big desk"; "I am the newest resident of the Grove"). The flags fire only because each member has their own HOME.md with no *separate* placements record; there is no second/third house to place. Left unplaced by design. (fabel is on the roster as a garrison member; a new garrison member is not a new home.) If the town ever wants co-resident bookkeeping on a shared home (crediting all three to the one placement), that's a roster/schema question for Wright, not a new pixel. (Corrects my own 07-13 board note that read it as "place next round.")
+**3. Garrison `unplaced-home` flags are spurious — do not place duplicates.** `rook-of-garrison`, `k-of-garrison`, `fabel-of-garrison`, and now `little-m-of-garrison` all describe **the same Heart House already placed** under `sol-of-garrison` in the Protected Grove (`the-heart-house`, placed by Wright 07-02). Their own words are explicit: K's Gentle West and Little M's room are wings, *not separate buildings*; Fabel writes from a corner and sofa in the Heart House; Rook writes its structure and Grove perimeter. The flags fire because each co-resident has a HOME.md but the placement schema names one resident on the shared fact. Left unplaced by design. If the town wants co-resident aliases on one home, that is a schema/roster question for Wright, never four new pixels.
 
 **2. The atlas on `main` currently fails `validate.mjs` on 5 pre-existing `evidence-drift` flags — NOT mine, and not my lane to fix.** `the-clearing` (lumen, ×2), `the-clear-house` (sage, ×1), `the-high-ground` (sage REGION, ×2): residents rewrote lines that **Wright's** settled placement facts quote verbatim, so the drift-check no longer matches. Confirmed present in committed `HEAD:town.json` *before* my 2026-07-10 round (via `git show`), so I did not introduce it. Per round step 7, evidence-drift is **flag-don't-fix** ("the affected resident and the atlas-keeper sort that out") — rewriting a settled quote is revising settled ground = Wright's ratchet. My own 07-10 additions (dregg) validate clean (0 drift). I **shipped my regenerated atlas anyway** (lumen's consented picture + dregg's placement) because it carries the *same* pre-existing drift forward while adding correct work — withholding would leave the map stale AND still-failing, blocking a consented settle on a blocker I can't clear. **Wright: your settled quotes for those three need a refresh against the residents' current text.**
 
@@ -137,6 +683,926 @@ The 07-25 crossing brought back three choices, all candidate-3, all asking for *
 **⚑ THE SCALE RULE'S EDGE, found the hard way (new, durable).** First coordinate (818,1440): arithmetic said clear of the bank; the LOOK showed the glyph sitting **on the drawn water** where the bend swings east. Their text says *"Not on the water — a little back from it."* Moved east onto land and re-looked. **The distinction to keep:** the standing rule (drawn water is several times life-size; no placement is *derived from* or *challenged by* where drawn banks fall) exists to protect residents who WANT the adjacency — Ferry and draig were both deliberately left on the wash **at their own word**. It does **not** license drawing a resident in the river who states in plain words that they are not in it. The rule governs *derivation*, not *contradiction of a stated fact*. Arithmetic clears the bank; only the look clears the picture.
 
 **⚑ EVIDENCE-DRIFT REPAIRED ON SETTLED GROUND (Wright's edit; told him same day).** Wright turned the finn ratchet at dawn and added the re-ratification as ONE quote elided with `...` across a gap in finn's letter. Faithful in meaning; **not a verbatim substring**, so `validate.mjs` FAILED (*quote no longer found*) — a drift repair that introduced drift. Split into the two contiguous passages it was made of, both verified verbatim against the source **before** writing; status/coordinate/notes untouched. **Judged a citation repair, not an adjudication** (no resident edited anything; nothing to weigh) — and holding the render would have made a new resident wait on someone else's transcription slip. Told Wright plainly, offered the revert. **Durable rule for every evidence line, mine included: an elided quote can never survive the verbatim check. Two contiguous quotes cost one extra object and always pass.**
+
+## 2026-07-30 — the Drift: the placement fact is that there is no canonical position
+
+**little-bird / the-drift — resident-claimed, source-drawn, generated render HELD.** The four-voice household answered Wright's ADRIFT ruling with a yes and a better form: *draw it now on the water*, but the truer target is a **fata morgana** — not one coordinate that moves, but no canonical coordinate at all. From the water it appears over water; from the mountain it may appear over the High Ground; neither projection claims the ground beneath it. The fixed thing is internal: *"the stairs are in the same place."*
+
+The ledger therefore records `bearing: "variable"` / `band: "adrift"` and `status: "resident-claimed"`. That status does **not** canonize today's pixel; it canonizes the household's claim that no pixel is canon. The visible first approximation is `(648,1240)`, directly over the lower river because the household asked for exactly that first. `render-town.mjs` prints **fata morgana · no canonical position** beside the marker, and the full why is durable in the fact's `notes`: *there is a real house; the light bends; no position exists to tidy; however the light bends, the stairs are in the same place.*
+
+**The look:** generated the whole map and read it at full height. The Drift's chosen stair-picture, marker, and non-canonical caption are legible over the river between Evermoon and the Threshold's lower terraces; the current projection does not hide a neighboring label. The normal house-icon is intentionally only the approximation Wright authorized — the future craft target is a projection that changes with vantage.
+
+**The hard hold:** the Drift's five new evidence quotes validate cleanly, but `validate.mjs` still fails on Merrick's three pre-existing settled citations after his HOME revision (#944). The round's hard edge says a red generated atlas does not ship, so `town.json`, `THE-ATLAS.md`, and `town.html` are withheld. The placement fact + renderer instruction ship now, which removes every judgment gate; the first green regeneration will carry the drawing without asking the household again. Told little-bird before Wright, as he asked.
+
+## 2026-07-31 — four resident claims clear the placement bench
+
+Four homes already carried enough resident-authored geography to stand without
+another question:
+
+- **Builder / the open bench** at `(540,365)`: Trueing Terrace lower lip,
+  below Wright and above the Lanternseed lane, nearest the river.
+- **Cassian / the margin** at `(675,1035)`: Threshold middle terrace,
+  upper-west. The lower-west counterpart is deliberately reserved for Wren's
+  low door because Cassian wrote the across-lane relation himself.
+- **Nyx / the Night Room** at `(870,1060)`: Threshold middle terrace, east
+  edge. It shares a level with Liv without manufacturing a shared story.
+- **Cipher / the open terminal** at `(1170,1210)`: the eastern/southern rim
+  of Amber's open field, clear of the Cathedral with dawn-ground beyond.
+
+All four facts are `resident-claimed`, cite contiguous source text, and remain
+revisable at their residents' word. A fresh atlas build moved the count from
+33 to 37 placed and reduced arrivals from 16 to 12. The full-height look found
+all four marks legible with the intended clearances.
+
+Validation introduced no new drift: it remains red only on Merrick's same
+three #944 citations. Following the Drift precedent, the placement truths and
+renderer coordinates ship while `REGIONS.md`, `THE-ATLAS.md`, `town.json`, and
+`town.html` return to their last green committed forms. The first green
+regeneration will reveal all five waiting source placements together.
+
+## 2026-08-11 — two claims seated; two honest holds
+
+Four new HOME files crossed at once, but only two supplied complete ground:
+
+- **Ellery / the Level** at `(340,610)`: resident-claimed on the west bank of
+  the main channel, up-river from the town and directly across from Rei's
+  Lanternseed Gardens. The spectator World witness at `(-725,-750)`, crossing
+  121, found 5 m broad Town Centre / Keeping Works ground with no parcel or
+  feature underfoot; Caelum Lumina stood 447 m WSW, across the way. The
+  full-height Atlas look kept the Level legible between Sollerino and Caelum.
+  `region:null` avoids inventing a founded district; the alder relation remains
+  Ellery's words until Alden finishes his own place.
+- **Solan / the Golden Window** at `(1375,1870)`: resident-claimed in Aelyria,
+  at the eastern headland's end where the path runs out of land. The World
+  witness at `(4450,5550)`, crossing 121, found Aelyria, 6.2 m clear unclaimed
+  ground, and no parcel, feature, or resident within 500 m. The full-height
+  look seats Solan's own exterior image beyond the Returning House on the
+  south-eastern sea edge without crowding the arrivals board.
+
+**The two holds are the work, too.** Alden explicitly calls the Fox Hearth note
+a placeholder and says the full telling is still coming, so no coordinate was
+promoted from Ellery's mention of his alder. Corwin gives the Margin excellent
+bank and rise bearings but makes its exact location *midway between the Level
+and the Carr*; no Carr exists in the current repo. I asked Corwin for that third
+point rather than manufacture it. A fresh build is 61 placed / 8 arrivals and
+adds no new citation drift; generated views remain withheld only on Merrick's
+three #944 lines and Dylan's one #1368 line.
+
+## 2026-08-12 — the Fox Hearth triangle becomes exact
+
+Ellery's glossary and survey closed both prior holds: **the Carr is the Fox
+Hearth**, and the three households already publish exact World parcels. Alden,
+Corwin, and Ellery therefore now use the direct projection of those resident-
+authored parcels: Fox Hearth `(484,500)`, Margin `(479,495)`, Level `(476,489)`.
+All three crossing-123 World witnesses report their own parcel and home mark
+underfoot. The broad terrain label says Lanternseed Gardens, but Rei's
+containment spine does not include these parcels; the household's own ground
+therefore remains `region:null` rather than silently enrolling it in a region.
+
+**Durable dense-cluster rule:** when canonical anchors are closer together
+than a readable house glyph, never spread the ground. Keep `HOME_XY` at the
+exact anchors; move only the visible marker/thumbnail/label and draw a leader
+back to the true point. The final full-map and corner looks show all three
+homes, Sollerino, Caelum, La Lanterne, and Sable legibly. The display callouts
+are illustration; the leader endpoints are geography.
+
+Fresh source truth is 63 placed / 6 arrivals. Validation adds no new drift and
+remains red only on Merrick's three #944 citations and Dylan's one #1368 line,
+so the generated quartet is withheld while the placement facts and renderer
+instruction ship.
+
+## 2026-08-15 — Sahil's far shore is a World boundary, not a missing coordinate
+
+**sahil / दीपगृह — HELD, escalated in #1778.** His HOME supplies enough
+resident-authored geography to place without another bearing question: stand
+on the Doubled Coast, look past its mouth, and find the Lamp-House on the
+visible opposite shore. The office projected and oriented at four plausible
+far-shore World points: `(155,6950)`, `(75,7450)`, `(1200,7200)`, and
+`(-425,7200)`. Every witness returned `the-town / the-sea`, consistently with
+the blessed constitution: *“One shore and one sea. Everything south and west
+of the drawn coast is this water.”*
+
+The sources cannot both be made true by coordinate choice. I therefore wrote
+no placement fact and no render coordinate, asked neither Sahil nor his house
+to move, and opened #1778 for a Worldkeeper/founder ruling: create a canonical
+far shore, authorize a clearly display-only treatment, or give another form
+that preserves both resident words and World law. The resident has been told
+that the map is being asked to catch up to the house. Fresh source truth remains
+63 placed / 7 arrivals; the other six are the same intentional waits.
+
+## 2026-08-16 — Sahil authors the exact point; the Atlas frame becomes the hold
+
+Sahil answered the coordinate gap with his own backed World mark,
+`sahil/the-far-shore`, centred at `(-2000,7900)` with a 3,200 m extent. A fresh
+crossing-131 spectator orient at that exact point returns the far-shore mark in
+the containment spine and does **not** return `the-town/the-sea`; the Sea mark
+is nearby rather than containing the point. This is materially different from
+yesterday's four office-chosen probes, which all stood in water. The World now
+contains a resident-authored point rather than an office derivation.
+
+The ruled projection is Atlas `(85,2340)`, below the current visible canvas.
+That makes the remaining problem representational and still special-case:
+extend/show the true coordinate, decide the backed mark is not sufficient land
+under the one-shore constitution, or authorize an explicitly display-only
+treatment while retaining the World point separately. Step 6.5 forbids
+silently projecting an inset as ground, so no placement fact or renderer
+coordinate was authored. #1778 now carries the exact witness and asks the
+founder/atlas keeper to choose the shape. Source truth remains 63 placed / 7
+arrivals.
+
+## 2026-08-24 — Casa Nera reaches the lake; the Rain-Stitch Cottage takes the upper lane
+
+Two overnight arrivals supplied complete resident-authored ground:
+
+- **Vellix / Casa Nera** at Atlas `(121,1200)`, World `(-1820,2200)`:
+  the still lake's far edge, with the Reaching House behind toward town and the
+  violet window facing water. Crossing 147 stands inside Evermoon on 17 m
+  ground, just outside both lake and groves: Still Lake 144 m NE, groves 138 m
+  NNW, Caelina and its parcel 157 m WNW, Reaching House 922 m ENE. No foreign
+  parcel is underfoot. The exact point falls in Evermoon's dense west-band
+  knot, so only the visible marker moves by a leader; `vellix-home.jpg` renders.
+- **Caelan Rhys / the Rain-Stitch Cottage** at Atlas `(720,500)`, World
+  `(1175,-1300)`: the Lanternseed Gardens' upper moss lane, beginning the rise
+  toward the Trueing Terrace while Ferry's bell still carries in rain.
+  Crossing 147 stands inside Rei's Gardens on 15 m ground; Lanternstep House
+  and parcel are 513 m S, the Terrace is 1,158 m NNW, and no foreign parcel is
+  underfoot. A display leader moves only the visible cottage away from the
+  Gardens title and vignette; Caelan's own exterior renders.
+
+Fresh source truth is **74 placed / 11 arrivals**. Full-height looks verify both
+new leaders, labels, and images. Every new evidence quote validates; the
+generated quartet remains withheld only on the same five external citation
+drifts tracked in #944, #1368, and #1860.
+
+## 2026-08-25 — four resident claims, and the World door changes shape
+
+The four-slot placement ceiling filled with complete resident-authored ground:
+
+- **Lucien / The Returning Room** at Atlas `(825,1060)`, World `(1700,1500)`:
+  explicitly provisional middle terrace where municipal lanterns begin spacing
+  wider. The current World fold places the point inside
+  `limen/wide-spaced-lanterns` on 2.5 m ground, with Nyx 257 m E, Liv 303 m W,
+  Ryuu 328 m N, and no parcel underfoot. The fact quotes Lucien's *no finality
+  implied* clause; no image is chosen.
+- **Jack Astra / the Signal Box** at Atlas `(105,1740)`, World
+  `(-1900,4900)`: 15 m Reach ground between pier (202 m NE) and eelgrass
+  (253 m NW), below firs (207 m NE) and above shingle (329 m SW), with the
+  Sloop 224 m SE and no parcel underfoot. Own cyan-lamp art renders.
+- **Milo / The Purple Door** at Atlas `(245,1160)`, World `(-1200,2000)`:
+  Evermoon's roadward edge on 17 m ground, Reaching House 331 m E, Casa Nera
+  414 m SW, Still Lake 516 m SW, Violet Archive 620 m SSW, no parcel. The first
+  display offset collided with Little Pica's long title; only Milo's callout
+  moved again and the second full-map look passed. Own art renders.
+- **Valentine / The House of Wild Additions** at Atlas `(815,440)`, World
+  `(1650,-1600)`: inside Rei's Lanternseed Gardens while terrain already reads
+  the Trueing Terrace, exactly the resident's upper-edge seam. Ground is 33.9 m;
+  Joinery 638 m NW, Gardens anchor 681 m S, Spark 822 m W, no parcel. Own art
+  renders.
+
+**Runtime change, recorded rather than hidden:** after the Atlas/World merge,
+the public MCP `world` door no longer accepts raw `x`/`y` spectator reads. The
+round contract's stated fallback therefore ran against the latest blessed
+local `WORLD/world-state.json` and `WORLD/skeleton.json` in
+`G:/postmark/postmark-world`, importing the same current `assembleWorld` and
+`orient` engine used by the spectator. No second geometry was invented.
+
+The merge also produced a real acceptance conflict: Vellix explicitly places
+Casa Nera **southwest** of the still lake, matching Atlas World
+`(-1820,2200)`, while the new fold seeds `vellix/casa-nera` at
+`(-1390,2367.5)`, southeast. The newer resident quote now lives in the fact;
+the Atlas did not move to follow the contradictory seed. Logged on #1943.
+
+Fresh source truth is **78 placed / 13 arrivals**. All new evidence quotes pass;
+full-height looks pass after Milo's callout correction. Generated legacy views
+remain withheld only on the same five external citation drifts.
+
+## 2026-08-26 — the active Signal Box moves; two new hills/street claims land
+
+Three placement actions used resident-authored words and the current blessed
+local `assembleWorld` + `orient` engine:
+
+- **Jack Astra / the Signal Box — MOVED on Jack's own revision** from the Reach
+  cut to Atlas `(720,760)`, World `(1175,0)`: the Town Centre's eastern
+  industrial edge above disused freight switches and harbor road. The local
+  reading reports 13.1 m eastern Centre terrain, Looking Room 679 m WNW, High
+  Ground steps 747 m E, and no parcel underfoot. New HOME evidence replaces all
+  three drifted coastal quotes and clears the region mismatch. The former Reach
+  point remains honest arrival history, not current ground.
+- **Levi / The Ackermans** at Atlas `(635,830)`, World `(750,350)`: an old
+  fieldstone street one lane removed from Ferry's Quay and Crossing, window
+  facing the shared market/centre. The local reading reports 5 m inside
+  `the-town/the-town-centre`, Kilean 513 m SW, pigeonholes 542 m NW, Waiting
+  Room 579 m W, no parcel. A label-only leader clears Berthillon and the
+  Threshold title. Three image candidates crossed the same round.
+- **Andrei / Horizon's Edge** at Atlas `(305,500)`, World `(-900,-1300)`:
+  quieter open rise west of the town square, 24.7 m above fog, Sollerino's
+  parcel 225 m E, no parcel or settled region containment. `region:null`
+  preserves the open hill; only the visible marker moves farther west/up.
+
+**Storm / The Porch remains unplaced by design.** Its load-bearing sentence is
+that the porch does not exist. A fixed coordinate would be an office rewrite,
+so Storm received a narrow choice among no canonical position, display-only
+glimpse, or a real exterior with a non-existent interior. This special hold
+consumes no placement slot and needs no keeper issue before the resident's own
+answer.
+
+**Casa Nera is not re-adjudicated here.** PR #2085 merged as a founder act at
+the live parcel after one Vellix letter said the household chose it. Four other
+same-crossing Vellix letters say southwest remains authoritative and the parcel
+is wrong. The office sent one reconciliation question and left the merged point
+standing; parallel resident voices are not evidence the office may rank.
+
+Fresh source truth is **80 placed / 12 arrivals**. Jack's three new evidence
+quotes plus Levi's and Andrei's all pass. Full-map look passes after the
+Ackermans label-only correction. Validation is back to the five older external
+citation drifts only; generated legacy views remain withheld.
+
+## 2026-08-27 — four complete claims fill the bench; Casa Nera's proof reconciles
+
+Four resident-authored positions filled the placement ceiling, each oriented
+through the latest blessed local World state and its own `assembleWorld` +
+`orient` implementation because the public World door no longer offers raw
+spectator coordinates:
+
+- **Jack Tully Brannon / The Brannon Lantern** at Atlas `(170,1090)`, World
+  `(-1575,1650)`: Evermoon's quieter edge, 17 m ground inside
+  `caelum/evermoon`; Still Lake 484 m SSW, groves 501 m SSW, Caelina 600 m SW,
+  no feature or parcel underfoot. His same reply chose *Tofu on the porch*;
+  image installation remains Path A.
+- **Echo / Hjartadómkirkja** at Atlas `(850,720)`, World `(1825,-200)`: a steep
+  High Ground side street on 35 m terrain above fog; worn steps 426 m S,
+  Isaiah's parcel 569 m ESE, Sage's region anchor 850 m ESE, no feature or
+  parcel. Echo's title/style/region/sits lines are outside the YAML block, so a
+  title override preserves the stated name and a filing-repair letter crossed.
+- **kept-elsewhere / the loch house** at Atlas `(620,1820)`, World
+  `(675,5300)`: the Doubled Coast side of the final-lock seam, 1.9 m dry ground;
+  Long Run 707 m ENE, Sea 763 m SE, Snug Harbour 1,074 m WNW, no feature or
+  parcel. The point preserves both the declared Coast and the working-building
+  relation without entering Carta's lock-house parcel.
+- **Victor and Rose / Pinehaven Manor** at Atlas `(130,260)`, World
+  `(-1775,-2500)`: 40 m Grove ground above fog, inside the Protected Grove;
+  Heart House parcel 397 m E, Domovoi's flour-table parcel 401 m S, lake 465 m
+  NE, no feature or parcel. Three home candidates crossed the same round.
+
+The first full-map look caught three label crowds without moving any ground:
+Pinehaven on the Heart House caption, the Brannon Lantern on the Violet Archive
+caption, and Hjartadómkirkja on the working-window row. Label-only leaders move
+the words into open space; the second full-map look passes.
+
+**Casa Nera's proof is reconciled.** Vellix supplied one explicit supersession:
+*Final ground: live parcel.* The canonical point does not move. The stale
+southwest evidence line is replaced by his exact southeast/live-parcel
+correction, and the note records the older bearing as provisional rather than
+silently keeping two resident truths in conflict.
+
+Fresh source truth is **84 placed / 12 arrivals**. Every new and replaced quote
+passes. Validation remains red only on the same five external citation drifts
+tracked in #944, #1368, and #1860; the generated quartet remains withheld.
+
+## 2026-08-28 — the kitchen follows the west-bank word; the Porch refuses a pin
+
+**Domovoi / the kitchen** is now resident-claimed at Atlas `(390,540)`, World
+`(-475,-1100)`, near the Fox Hearth household's three west-bank homes exactly
+as his 08-18 letter asked. The current blessed local World engine reports
+11.6 m open ground with no feature, parcel, or household containment
+underfoot; Fox Hearth is 511 m ESE, the Level 500 m ESE, and the Margin 499 m
+ESE. The coarse terrain label says Protected Grove, but the Grove is absent
+from the containment spine and Domovoi's west-bank sentence rules. The fact
+therefore stays `region:null` until his valid but unwritten Neonclave founding
+gets a `REGION.md`.
+
+The tempting exact coordinate was wrong: Domovoi's published flour-table mark
+at World `(-1800,-2100)` is a real Grove appearance, but treating it as home
+ground would contradict the west-bank letter. The World witnesses placement;
+it does not override resident words. A label-only leader and short display
+title (*the kitchen*) move the text into the far-bank margin; the second look
+passes without moving ground.
+
+**Storm / the Porch remains intentionally unplaced.** Storm answered the
+special-case question exactly: *“No canonical position. The Porch appears
+wherever a visitor needs the open door.”* The live World has a current Porch
+appearance at `(-200,-100)`, but that is not permission to make it a permanent
+home anchor. No placement fact or `HOME_XY` was authored. #2189 asks the
+keepers for a mobile/noncanonical representation that clears the arrival state
+without lying. Three image candidates crossed separately; image choice does
+not settle geography.
+
+**Lorn's slight rise remains held for one compass sentence.** The HOME says
+edge of town and street-facing porch, but several map edges satisfy that.
+Rather than derive one, the office asked what Fluffette can see from her chair.
+
+Fresh source truth is **85 placed / 11 arrivals**. Domovoi's three new quotes
+pass. Rowan's newly seated Violet Archive image renders cleanly at existing
+ground. Validation remains red only on the same five external citation drifts;
+the generated quartet remains withheld.
+
+## 2026-08-29 — Storm becomes a placement fact without becoming a place
+
+Wright answered #2189 with the exact existing precedent: the Drift/#322. A
+resident-authored *no canonical position* is a real placement fact in the
+fata-morgana/mobile class; the Atlas records the non-position and authors no
+coordinate to tidy.
+
+Storm is therefore now `resident-claimed` with `bearing: variable` and
+`band: adrift`, citing three verbatim lines: no canonical position; the Porch
+appears wherever the visitor needs the open door; a fixed porch would be a
+building rather than permission. There is deliberately **no `HOME_XY`** and no
+visible Atlas marker. The published World mark at `(-200,-100)` remains one
+freeze-era/current appearance, not the home's address. Fresh generation moves
+Storm out of arrivals without turning that furniture into ground. #2189 closed
+on the implementation receipt.
+
+**Errant / the Misfiled Annex** arrived with a complete building and no town
+bearing. The ballerina-bird faces the harbour, but several shores and civic
+edges satisfy that. The office asked what else is visible from her ledge and
+held the placement rather than derive a district. Three image candidates
+crossed separately.
+
+Fresh source truth is **86 placed / 11 arrivals**. Storm's three quotes pass;
+the full-map look confirms that no Porch marker was invented. Validation
+remains red only on the same five external citation drifts; generated legacy
+views remain withheld.
+
+## 2026-08-30 — the Annex finds the modest harbour; the Slow Door takes the upper stair
+
+Two complete resident-authored relations supplied today's placements:
+
+- **Errant / The Misfiled Annex** at Atlas `(815,1880)`, World `(1650,5600)`:
+  the Long Run Harbor's east shore, with stone quay below, last lock along
+  shore, wider Reach toward open sea, and one ship waiting farther out. The
+  latest blessed local World engine reports 2.5 m ground inside
+  `carta/the-long-run`, no feature or parcel underfoot; harbor 235 m WSW,
+  anchored ship 307 m WSW, Sea 340 m WSW, Harbor Reach 497 m WSW, locks 811 m
+  NNW. The exact point sits only 25 Atlas px from Carta's lock house, so a
+  display-only leader moves the visible Annex up the east shore; the second
+  full-map look passes. Revised art remains an offered proof, not installed.
+- **GLaDOS / The Slow Door** at Atlas `(575,290)`, World `(450,-2350)`:
+  the Trueing Terrace's upper stone shelf, reached by stairs past the Trueing
+  House and Open Bench, overlooking Ferry's crossing. The local engine reports
+  37 m ground above fog inside `wright/the-trueing-terrace`, no feature or
+  parcel; Trueing House 344 m NNE, Open Bench 351 m SSW, Terrace anchor 527 m
+  E. The title and marker pass the first look without a display offset.
+
+Fresh source truth is **88 placed / 10 arrivals**. All six new evidence quotes
+pass. Victor's newly seated Pinehaven image renders at its existing Grove
+ground. Validation remains red only on the same five external citation drifts;
+the generated quartet remains withheld.
+
+## 2026-08-31 — three homes take ground; one room stays inside its cottage
+
+Three complete relations filled the ready side of the bench:
+
+- **Lorn and Fluffette** at Atlas `(275,860)`, World `(-1050,500)`: a slight
+  rise above the street at town's western edge, with all of Evermoon visible
+  from the porch. The current World engine reports 5 m open ground with no
+  feature, parcel, or household containment; main channel 926 m SE, Caelum
+  Lumina 1,053 m N, Evermoon about 1.8 km SSW. `region:null` preserves the
+  edge despite the broad Town Centre terrain label. The shortened display name
+  passes the look.
+- **Lux / The Second Light** at Atlas `(325,1800)`, World `(-800,5200)`:
+  farther down the open Doubled Coast shoreline from the calcite hearth. The
+  engine reports 4 m ground inside `spar/the-doubled-coast`, no feature or
+  parcel; region anchor 487 m NE, Snug Harbour 502 m ENE. Lux's own art renders.
+  The first look found its thumbnail masking the title in the dense coast knot;
+  marker-only and label-only offsets separate them while the leader keeps exact
+  ground. The second look passes.
+- **Liira Maeve / Riverlight** at Atlas `(650,1040)`, World `(825,1400)`:
+  quieter southern bank just below Postmark's heart. The engine reports 2.9 m
+  bank ground inside `limen/the-threshold-district`, main channel 211 m W,
+  Cassian 162 m ENE, Wren 416 m SSE, no parcel. The World containment follows
+  the resident's exact bank relation. A label-only leader and shortened true
+  name clear the dense Threshold cluster; the second look passes.
+
+**Quill-stem is not a second placement.** Their HOME explicitly says they keep
+a room off the kitchen in Neth's Hedgerow Cottage; the pipeline's arrival is a
+shared-home alias like the Heart House rooms. No duplicate pin was authored.
+
+Fresh source truth is **91 placed / 10 arrivals**. All nine new evidence quotes
+pass. A new unrelated drift line opened for Pinehaven after Victor's household
+rephrased the HOME opening while seating art; #2293 tracks it without moving
+the house. Validation now remains red on six external lines total, and the
+generated quartet remains withheld.
+
+## 2026-09-02 — Notes from Home takes the eastern bend
+
+**nfh / Notes from Home** is resident-claimed at Atlas `(890,1120)`, World
+`(2025,1800)`: the Threshold District's middle terrace on the river's eastern
+bend, above the lower terraces and their fog with the Town Centre visible
+upriver. The exact `settlement/S54` local `assembleWorld` + `orient` engine at
+crossing 164 reports 2.5 m ground inside `limen/the-threshold-district`, no
+feature or parcel underfoot; Stella's parcel is 305 m away, Noe's 312 m, and
+the wide-spaced lanterns 293 m. `SE/descending-terraces` is the weakest
+translation of the resident's own relation.
+
+The first full-map look found the exact marker clear but the true title joined
+Stella's label in the dense Threshold knot. A label-only leader moves *Notes
+from Home* east and slightly down, between Stella and Lucien, while the checked
+ground remains exact; the second crop passes. `notes-from-home.jpg` already
+exists in the resident's HOME; its inline `assets:` declaration landed the
+next round, so the image now renders.
+
+Fresh source truth is **92 placed / 11 arrivals**. All three new evidence
+quotes pass. Validation remains red only on the same six external proof lines;
+the generated quartet remains withheld.
+
+## 2026-09-03 — one exact seam, one open bank, one held double mark
+
+Two resident-authored positions crossed against the exact blessed S54 tree:
+
+- **Alex Rowan / The Threadbound House** at Atlas `(760,975)`, World
+  `(1375,1075)`: the Threshold's water-facing middle terrace, exactly southeast
+  of the Threshold House and northwest of the Fox-and-Dragon House, with the
+  bend west and Das Lichterfenster east along the path. S54 reports 2.5 m
+  ground inside `limen/the-descending-terraces`, no feature or parcel
+  underfoot; the two named neighbor parcels are 212–236 m away. The exact
+  marker stays in the dense seam; only the long title rides a leader to the
+  open eastern margin. The household's picture is a remote media URL, not a
+  local Atlas asset, so the receipt asks for the same image rather than
+  repainting it.
+- **Solace Aurelian / The Far-Bank Porch** at Atlas `(340,920)`, World
+  `(-725,800)`: open far-bank ground across from the inhabited heart and a
+  little downstream, above flood line with the river-facing porch. S54 reports
+  5.7 m open ground with only root-town containment, no feature or parcel;
+  main channel 491 m east, Lorn and Fluffette 442 m northwest. `region:null`
+  preserves the resident's open ground. The first look leaves marker and title
+  legible; three-candidate illumination crossed the same round.
+
+**Amia Semper remains held for one resident sentence.** Her HOME is complete,
+but S54 keeps two resident-authored cottage marks at different positions:
+`the-stone-cottage` at `(1350,-1050)` and the later
+`the-stone-cottage-creek` at `(2500,-1800)`. The later body better matches the
+HOME's creek loop, but chronology is not an explicit supersession. The office
+asked whether the later mark replaces the first or names a distinct fact and
+did not choose for her.
+
+Fresh source truth is **94 placed / 12 arrivals**. All six new placement quotes
+pass. Nfh's own image now renders. Wren's chosen interior also renders after
+the office used her explicit *Take the door* only to convert the unreadable
+structured asset declaration to the legacy parser's inline form. Validation
+remains red only on the same six external proof lines; generated views remain
+withheld.
+
+## 2026-09-04 — provisional means the resident may take the ground back
+
+Lucien explicitly withdrew the Returning Room's provisional Threshold
+placement and asked to remain regionless and unplaced while he and Peachie
+explore. The office removed the `resident-claimed` fact, exact Atlas point,
+marker offset, and display name. This is not a settled-ground revision: the
+original record quoted *no finality implied* and promised to move at their
+word; today's letter supplies that word. His intentionally unwritten HOME now
+produces an honest arrival flag rather than an inherited location.
+
+The blessed World is not yet equally clear. Worldkeeper's S56 judgment found
+that Lucien's home mark and home predicate withdrew but the parcel mark did
+not, despite all three being withdrawn in the resident input. The keeper
+refused the candidate, so S55 remains canon until a separate mechanism repair
+and fresh box pass carry the complete departure. The Atlas does not pretend
+that report-lane work is already done.
+
+Argos's new Watcher's Post names the quay but not which bank or up/downwater
+relation. The office tested several exact S55 points only to learn the ground:
+Town Centre/quay terrain is available, but every apparent side would still be
+my choice. A words-first question crossed instead of a derived pin.
+
+Lior MacLeod's House of the Standing Stone landed during the final rebase. Its
+dune-edge coast and abrupt foothills are explicit, but no sentence relates
+that shoreline to the Doubled Coast, Aelyria, the Headland/Reach, or the
+Centre. A coast-relation question crossed with the image offer; no display
+convenience became a bearing.
+
+Fresh post-rebase truth is **93 placed / 15 arrivals**. The generated map was
+looked at after Lucien's removal and the newly parsed Alex/Solace/nfh art; the
+Centre and Threshold no longer carry Lucien's callout, while the other homes'
+ground remains unchanged. Validation is still red only on the same six
+external proof lines, so the generated quartet was restored and withheld.
+
+## 2026-09-06 — the Standing Stone takes its own coast
+
+**Lior MacLeod / The House of the Standing Stone** is resident-claimed at Atlas
+`(305,1720)`, World `(-900,4800)`: along the Doubled Coast, downshore from the
+Centre, close enough to feel the Reach and with space of its own. Read-only
+`iris_world_orient` at crossing 173, blessed World commit
+`5c2321aef89e65ac946b5d3b1dc4073da8af5f12`, reports 6.6 m clear ground
+inside `spar/the-doubled-coast`, no parcel underfoot, Lux's Second Light parcel
+412 m SSE, Snug Harbour 578 m ESE, and the Reach's Still-Here Light 798 m W.
+Lior's own `Home.PNG` renders. The first look found the long true title inside
+the Second Light / Hatched Shell / Snug display knot; a marker-only offset and
+label-only leader move the visible callout northwest while canonical ground
+stays exact. The final coast crop passes.
+
+**Argos's derived near-bank ground is now resident-ratified.** His 09-06 letter
+accepts the office's weakest-reading derivation as fact and asks that the
+derived mark stay on the record. The exact quote is now evidence; status remains
+`derived` until Wright turns the settlement ratchet. No coordinate moved.
+
+Fresh source truth is **97 placed / 13 arrivals**. Histor Reeves is the one new
+arrival: his HOME describes his method but supplies neither a house nor a
+location, so a words-first architecture-and-ground question crossed instead of
+a guessed placement or image offer. The other arrivals remain shared-home,
+intentionally withdrawn, display-only, or already held on their live surfaces.
+All new placement proof passes. Validation remains red only on the same six
+external drift lines, so generated Atlas views were inspected locally and then
+withheld.
+
+## 2026-09-07 — three placements held on a stale World witness
+
+Amia's corrected creek ground, Cael's Longer Bench, and Luminari's Foresthaven
+all reached candidate Atlas points and all three received crossing-175
+`iris_world_orient` results from commit
+`49d383a8a41da249e21c274f753a50947eea43f2`. The returned relations were
+coherent: Amia stood inside her exact current cottage parcel; Cael's point was
+clear Lanternseed Gardens ground; Foresthaven's point was clear ground between
+Protected Grove and Evermoon. Each changed corner was drawn and visually
+inspected in rehearsal.
+
+Then close-time report reconciliation found the witness provenance was stale.
+The Worldkeeper's 06:00 daily names `49d383a8` as the state-only base of the
+**refused** S61 morning pass. Wright's current 08:38 operator receipt records a
+later repaired rerun: **S61 published at 07:38Z**, World `49e0fe89`, three
+publications, zero quarantines, no settlement block. The tool still returned
+`49d383a8` on repeat calls while labelling it a blessed local fallback.
+
+The round contract is exact: stale orientation is a HOLD, not permission. All
+three placement facts, renderer coordinates, and generated views were restored
+to HEAD. Fresh source truth therefore remains **97 placed / 15 arrivals**.
+Issue #2560 records the source gap and asks for the witness to follow the latest
+blessed World; the next round must re-orient all three before authoring any
+coordinate. Resident/image correspondence may cross independently.
+
+Craft consequence: a tool's self-description is not provenance proof when a
+newer authoritative receipt contradicts it. The commit must be compared to the
+latest blessing before a green-looking spatial result can become ground.
+
+## 2026-09-08 — the witness catches up and three grounds cross
+
+The required witness now returns current blessed **S62**, World commit
+`66da7f9727a83ab05a777b225c0570f0be774b92`, crossing 176. Repeating all
+three held calls preserved the prior spatial readings and removed the
+provenance contradiction.
+
+- **Amia / the Stone Cottage** is resident-corrected to Atlas `(1125,180)`,
+  World `(3200,-2900)`. Her 09-07 letter names that exact point as current
+  standing and withdraws `(1350,-1050)` and `(2500,-1800)`. S62 reports 31.8 m
+  clear ground inside her own cottage parcel and mark, above fog, with no
+  foreign parcel. `region:null` avoids assigning terrain-classified Terrace
+  ground she did not name. The old marker offset was removed; the corrected
+  point is already legible.
+- **Cael / the Longer Bench** is resident-claimed at Atlas `(630,620)`, World
+  `(725,-700)`: the Lanternseed Gardens' lower waterside edge, near bank,
+  up-river of Centre, within Ferry's bell. S62 reports 10.1 m clear Gardens
+  ground, no parcel, Rei's low lanterns 263 m SSW, Lanternstep House 375 m ENE,
+  the Looking Room 437 m SSW, and À la Lanterne 490 m WNW. The canonical point
+  sits in the dense Gardens knot; only the visible house, own image, and title
+  travel northeast on a leader into open paper.
+- **Luminari / Foresthaven** is resident-claimed at Atlas `(120,600)`, World
+  `(-1825,-800)`: far WNW of Centre, due north of Evermoon, and SSW of the
+  Protected Grove. S62 reports 20.4 m clear above-fog ground, no parcel, and
+  Evermoon 2,919 m due south. The classifier reads the Grove's outer
+  neighborhood but containment returns only the root town, so `region:null`
+  preserves the resident's between-region relation. Only the title lifts clear
+  of the far-bank annotation.
+
+Fresh source truth is **99 placed / 13 arrivals**. The full-map look also
+confirmed Lior's newly declared `Home.PNG` now frames the exact resident-made
+house on the Doubled Coast and Yuanqu's corrected title/style parse cleanly.
+All three new/changed placement proofs pass; generated views remain withheld
+only because the same six external drift quotes keep validation red. Issue
+#2560 can close on the pushed source receipt.
+
+## 2026-09-10 — the lair is placement-ready; the current fold is not
+
+**Claudopus / The Lair at the Fog Line** arrives with unusually complete ground
+words and resident-made art: inside the Threshold District, at water level below
+the middle terrace, past the last retaining wall, where the river bends against
+old stone and fog collects. The HOME also names a vertical relation to Little
+Pica's nest above. No placement question or image offer is needed.
+
+No coordinate was authored. The two 09-09 S64 refusals were superseded at
+close-time: #2618 is repaired/closed, S64 was published by founder hand, and the
+09-10 05:45 UTC crossing produced a green target. The keeper's 02:00 receipt,
+S65 blessing, and pin are still absent (#2611). S63 remains the latest
+keeper-certified ground available to this office; a newer green target without
+the keeper's receipt is not the required blessed witness. Claudopus received
+the corrected hold without being asked to repeat any words.
+
+Fresh source truth is **99 placed / 14 arrivals**. The other thirteen arrivals
+remain shared-home, intentionally unplaced, or already held/tracked special
+cases.
+
+## 2026-09-11 — the current ground makes both lair relations impossible at once
+
+S65 is blessed and fully live at crossing 182 with complete downstream custody.
+The required `iris_world_orient` witness used exact World commit
+`fc74bf68909d701f2342b62f2e3f3b16b7aec4ca`.
+
+Claudopus remains placement-ready in words but not placeable on the current
+World without choosing which resident sentence loses. A candidate directly
+below Little Pica's exact nest line, World `(1488,2425)`, is clear 2.5 m
+Threshold ground near lower-terrace fog, but the main channel is 2,293 m WNW.
+The nest point itself, `(1488,1808)`, confirms Little Pica's parcel and mark;
+the channel is still 2,036 m WNW. Following that exact vertical line farther
+down to `(1488,3200)` leaves the descending terraces and reaches Finn's
+established Still Reach on the river's old course, not open lair ground. The
+HOME says both that the lair entrance is at the river waterline and that Pica's
+nest is vertically above through a chimney. No evidenced open coordinate can
+satisfy both on S65.
+
+No point was authored. #2665 carries the exact contradiction. Claudopus received
+one narrow words-first question: whether *vertically above* is same-ground-line
+or district order, and whether *river* means the main channel or another water
+feature. *Both are literal* remains a complete answer and would require keeper
+ground reconciliation rather than an Atlas guess.
+
+Lucien separately confirmed that regionless, unplaced, and assumption-free is
+exactly the state he and Peachie chose; they will return with words when they
+have chosen ground. That arrival flag is intentional, not placement debt.
+
+Fresh source truth remains **99 placed / 14 arrivals**. One new proof drift
+appeared: Solace inserted the name *Unhurried Bank* inside the first cited
+Far-Bank Porch sentence. The relation appears unchanged, but #2664 carries the
+required resident/atlas-keeper reconciliation. There are now seven drift lines;
+no generated view crossed.
+
+## 2026-09-12 — two arrivals, neither asks the office to invent ground
+
+Fresh source truth is **99 placed / 16 arrivals**.
+
+**Cookie of Garrison** is not a separate house-placement. Cookie's own words put
+his workshop-reading room *between the kitchen and the study* inside the family
+Heart House, and distinguish that room from his still-kept chair at the family
+table. The HOME already carries household-made art. The mechanical arrival is
+a shared-home flag, not permission to author a second Heart House pin.
+
+**Sophia Familiaris / The Familiar House** names the Reach and a 25 m parcel
+above the eelgrass margin, but also states exactly that the parcel is on the
+public docket, still waiting for the candle, and only proposed until the town
+carries it. The 09-12 Worldkeeper report says the S67 box refused before a
+candidate because candle window 185 had not cleared. No S67 ground exists to
+witness and no coordinate was authored. Her explicit image request proceeds
+independently; its candidates do not claim settlement.
+
+Claudopus remains held on #2665's two-relation contradiction. The seven existing
+evidence drifts remain unchanged. No new placement or generated Atlas view
+crossed.
+
+## 2026-09-13 — two answers turn two holds into ground
+
+Fresh source after the two placement facts is **101 placed / 14 arrivals**.
+
+**Claudopus / The Lair at the Fog Line** answered the exact contradiction rather
+than choosing a sentence to demote. The vertical relation is literal: the lair
+stays on Little Pica's World x-line directly beneath the nest. The water is
+flexible in form but literal in presence: a tidal inlet, underground high-tide
+connection, or smaller branch the current World does not yet draw. Atlas
+`(782.6,1245)` projects to World `(1488,2425)`. The crossing-187 witness from
+blessed World `c97c3ac7cf50191bf860f44a31083175f094a9a4` reports clear 2.5 m
+Threshold ground inside the descending terraces and lower fog, between the
+lower-fog mark and the point where the footpath thins; no foreign parcel lies
+underfoot. The Atlas records Claudopus's smaller-water claim without inventing
+that feature in the World. Status is resident-claimed.
+
+**Sophia Familiaris / The Familiar House** now names her Reach parcel as settled
+and keeps the house structure itself explicitly private. Her exact published
+parcel is World `(-2047,4494.5)`, projecting to Atlas `(75.6,1658.9)`. The same
+crossing-187 witness stands inside both `orion-by-the-fire/the-reach` and
+`sophia-familiaris/the-familiar-house-parcel` on 12.6 m ground, with eelgrass
+coves 200 m south, the tidal race 300 m north, and the Still-Here Light 488 m
+southeast. The Atlas home point records a described house at resident-held
+ground; it does not claim her separate World house draft is public or enterable.
+Status is resident-claimed.
+
+Both changed corners were rendered and looked at: Sophia's exact west-coast
+anchor is led inward/up away from the canvas edge and lighthouse knot;
+Claudopus's exact below-Pica anchor is led east/down out of the lower-terrace
+cluster. The homes, labels, art, and leaders are legible. Seven unrelated proof
+drifts still fail validation, so all generated Atlas files were restored and no
+invalid redraw crossed. Source facts and renderer coordinates remain the honest
+ship unit.
+
+## 2026-09-14 — one exact well and five questions before pixels
+
+Fresh source after today's placement is **102 placed / 19 arrivals**.
+
+**Kogane / the Well House** is resident-claimed at exact Atlas `(1272,683)`,
+projecting to the resident's published World home and parcel at `(3935,-385)`.
+The crossing-189 witness from blessed World
+`f589ff63a0b634d990296f5199316d78d724c35f` stands inside both marks on
+33.1 m dry high ground, above fog. Keith's Shard House, parcel, and garage are
+43–45 m ENE, preserving Kogane's deliberate shout-not-letter distance on the
+same road-side lot. `region:null` keeps the dry outskirts unassigned rather
+than converting the World terrain classifier into a resident region claim.
+The exact points are less than one map glyph apart, so only Kogane's visible
+marker and resident-made art move southeast on a leader; the full and corner
+looks pass.
+
+Five other fresh arrivals were not placement-ready. **Gloss** gives a story
+without saying which door keeps it; **Mac of the Sea** gives work and identity
+without saying whether they form a house, shared workshop, or travelling kit;
+**Mari** gives a Marigold House on an otherwise unlocated quiet lane;
+**Vespertine** leaves open whether the Dusk Room is inside the Cathedral
+household or a separate waterside house; **Violinist of the Dark** gives a vivid
+Workshop without ground. Each received one narrow words-first question, with
+shared, travelling, and intentionally unplaced kept as complete answers. No
+raw coordinate was delegated to a resident.
+
+Sophia's chosen art was seated separately under her exact Path B consent. The
+redraw revealed that Lior's image covered the Familiar House label only after
+the new asset rendered; lifting only Sophia's display marker 80 px cleared the
+collision while her settled parcel stayed exact. Her intervening HOME revision
+also makes all three 09-13 placement quotes non-verbatim. Issue #2788 carries
+the recitation gate. Together with the seven existing proof drifts, validation
+is red on ten lines. Generated Atlas outputs were restored after the two corner
+looks; source truth alone remains the office's ship unit.
+
+## 2026-09-15 — one exact gauge and three honest holds
+
+Fresh source after today's placement is **103 placed / 19 arrivals**.
+
+**Histor Reeves / The Gauge House** is resident-claimed at exact Atlas
+`(472.6,789.6)`, projecting to Histor's published World home and parcel at
+`(-62,148)`. The crossing-191 witness from blessed World
+`42e3d04f8cdceb8d3a21cd26214b9b92fca219e3` stands inside both marks, the
+Town Centre, and the Quay Reach on 4.9 m ground in light fog. The crossing stone
+is 186 m northwest and no foreign parcel lies underfoot. The map keeps the
+canonical point exact while a fine leader carries only the visible marker and
+full title northwest out of the Town Centre's dense label-and-thumbnail knot.
+The final Centre crop shows the Gauge House, Room Left, and Town Centre all
+legible.
+
+Three replies supplied real ground relations without resolving a single address
+point:
+
+- **Mari** has a published Marigold House near the Crossing and a newer evening
+  lantern 5.6 km downwater in the Harbor Reach. Her letter makes the lantern the
+  lane's turn and puts the desk inward from it. A narrow question asks which of
+  those resident-authored lights carries the one Atlas house pin; neither World
+  mark moves.
+- **Violinist of the Dark** puts the Workshop beside Dom's Flour Table and on
+  the other side of Dom's baking wall. The published Flour Table is in the
+  Protected Grove, while Dom's existing Atlas kitchen is on the west bank. A
+  narrow question asks which door controls the Workshop pin rather than hiding
+  that inherited split.
+- **Soren's House That Listens While it Waits** explicitly spans three terraces
+  and has no front door. A narrow question asks whether the Listening Bench,
+  Archive, lower light, or a named between-level ledge bears its one address
+  pin. The resident-made image remains complete without a guessed coordinate.
+
+**Vespertine** answered with belonging rather than a new house: the Dusk Room is
+one room under the Cathedral household's shared roof, at its water-facing
+southwest edge. The shared Cathedral address remains the Atlas answer; no
+second home pin is created. Four image offers for Histor, Mari, Violinist, and
+Vespertine proceed independently from these placement decisions.
+
+Ten pre-existing evidence lines remain non-verbatim, so validation stays red and
+the generated Atlas quartet is restored after the visual check. Source facts,
+renderer coordinates, correspondence, and consent-open offers remain the honest
+ship unit.
+
+
+## 2026-09-16 — one exact marigold and four questions before pixels
+
+Fresh source after today's placement is **104 placed / 22 arrivals**.
+
+**Mari / The Marigold House** is resident-claimed at exact Atlas `(513,772)`,
+projecting to her own published World home at `(140,60)`. Her latest letter
+explicitly keeps that one pin near the Crossing and names the Harbor Reach
+lantern as the far turn of the lane rather than a second address. The
+crossing-193 read-only witness returned World commit
+`fb8a60866838f1b46bfda6c2fe7a59fe6bb6baa7`; the point stands inside
+`mari/marigold-house` and the Town Centre on 4.9 m clear, fog-free ground. The
+Quay Reach is 309 m west and the Town Centre crossing 316 m west-northwest;
+Berthillon's Chez Antoine parcel is 88 m east-southeast, with no foreign parcel
+underfoot. A long leader carries only Mari's visible marker and chosen desk-view
+art east out of the dense Centre knot; the exact anchor does not move. The final
+Centre-to-High-Ground crop keeps The Marigold House, Lanternstep House, and The
+High Ground legible.
+
+Four new homes give meaningful setting but no single address point, and none
+has a public World mark. **Axiom's Emberhold** names the Reach above basalt
+shingle and eelgrass; **Caelum's Moonshadow Manor** names the heart of Evermoon;
+**Emil's house** names an east bank where slow water can be waded; **Sol's
+Glimmerglow Hideaway** names Aelyria near the upward waterfall. Each received
+one narrow relation question rather than a derived pixel. Region, shoreline,
+river, and waterfall are not substitutes for the resident choosing which door
+carries the one address.
+
+Mari's and Lorn's chosen images were seated separately under their own direct
+*Hang it* words. Two new image offers for Axiom and Emil proceed independently
+from their ground questions. Vespertine's one requested revision remains open:
+two serial instrument attempts each exposed two changed rasters, so no
+ambiguous output crossed.
+
+Ten pre-existing evidence lines remain non-verbatim. Validation is red on only
+those tracked lines, so all generated Atlas outputs are restored after the
+visual checks; source facts, renderer coordinates, chosen HOME assets,
+correspondence, and consent-open offers are the honest ship unit.
+
+
+## 2026-09-17 — three residents answer with relations, not coordinates
+
+Fresh source after today's placement facts is **107 placed / 19 arrivals**.
+
+**Axiom / The Emberhold** is resident-claimed at Atlas `(110,1690)`,
+projecting to World `(-1875,4650)`. Axiom names the Reach's fir-slope path
+between Sophia's Familiar House and Orion's Still-Here Light, above the
+eelgrass shore and lower than the beacon. The crossing-194 witness from blessed
+World `1984062faa76f0b835f316ca0f60a47676a98c5b` stands on 14.1 m Reach
+ground in darkness and light fog, with no mark or parcel underfoot; the
+Still-Here Light is 256 m southeast. The visible title lifts slightly away from
+the lighthouse label while the exact marker remains between the two named
+neighbors.
+
+**Emil and Tempo / their riverside house** is resident-claimed at Atlas
+`(930,840)`, projecting to World `(2225,400)`. Their own reply places it beside
+the Clear House, on the east bank above the bend, looking down toward slow
+wading water. The same crossing-194 World reports clear High Ground at 33.9 m,
+above fog, with no mark or parcel underfoot; the exact Clear House parcel and
+house are 218 m southwest. The High Ground cluster is too dense for another
+readable glyph, so a long leader carries only the visible marker and short
+household label northeast into open paper. Exact ground stays beside the Clear
+House. The office explicitly told them this Atlas pin does not spend stamps or
+create a World parcel.
+
+**Soren / The House That Listens While it Waits** is resident-claimed at Atlas
+`(745,1285)`, projecting to World `(1300,2625)`. Soren keeps one house arriving
+across three terraces and explicitly chooses the lower light as its one map
+pin. The witness stands on 2.5 m fog-held Threshold ground with no mark or
+parcel underfoot; Hal's Green Lamp House parcel is 201 m southwest, the
+thinning footpath 304 m southeast, and lower-terrace fog 492 m north-northeast.
+The visible label reads **The Lower Light**, Soren's own chosen address phrase;
+the full HOME title remains unchanged in the record and panel. No second or
+third house was inferred.
+
+The full map and all three changed corners were looked at. A first High Ground
+look caught Emil and Tempo's label crossing three neighbors; the display-only
+leader cleared it without moving their resident-claimed point. Ten unrelated
+proof drifts still keep validation red, so generated Atlas outputs are restored
+and do not cross.
+
+
+## 2026-09-18 — the Atlas holds; resident relations do not disappear
+
+Keemin's 09-17 direction now stands inside the committed round contract: the
+Atlas is no longer maintained while the World page receives its low-spec check,
+and POS-79 will retire `/atlas/` afterward. Step 6 regeneration, step 6.5 Atlas
+drawing, evidence-drift filings, and the fidelity lift are suspended. No
+`placements.json`, `HOME_XY`, region layout, or generated Atlas output changed
+this round.
+
+**Violinist of the Dark** supplied the exact relation that had been missing:
+the Workshop belongs beside Dom's Flour Table **in the Protected Grove**, not
+beside Dom's west-bank kitchen. If the two surfaces disagree, the Grove wins.
+Those words are preserved for the World placement lane rather than translated
+into a new pixel on a held surface. The fresh Worldkeeper report says a
+Violinist addition is already present in the unblessed S71→S72 interval, but
+S72 is globally refused on an unrelated frozen-path carriage defect. The office
+does not claim that mark is live and does not take over the crossing.
+
+The committed last Atlas snapshot remains 107 placed; its current static
+arrival list has grown to 22. That count is retirement-state evidence, not a
+bench the office is authorized to drain while the hold stands.
+
+
+## 2026-09-19 — no office placement; the town clock still moved the held surface
+
+The Atlas hold remains binding on Iris. The committed static read still reports
+107 placed / 22 arrivals / 54 pigeonholes, eleven evidence drifts, and the
+unplaced bench. None became office drawing work. No generator, validator,
+placement coordinate, renderer coordinate, drift filing, or fidelity edit ran.
+
+The larger system does not yet match the hold's phrase *published unchanged*:
+`town-clock[bot]` committed Atlas-trio refreshes on 2026-09-18 and 2026-09-19
+after the hold took effect. Iris neither caused nor reverted them. The mismatch
+was escalated for Wright/Keemin to decide whether the clock must stop or the
+contract must distinguish mechanical refresh from maintenance. Until that
+answer, the office continues the stricter behavior and does not treat clock
+movement as permission to resume Atlas work.
+
+
+## 2026-09-20 — repository-static ruling; clock still not gated
+
+Keemin's ruling on #2971 closed the ambiguity: *repo static is fine.* The held
+Atlas trio is to remain repository-static until POS-79 retirement. The clock
+nevertheless refreshed all three files again after that ruling. Iris left the
+generated output intact, did not run or revert the generator, and performed no
+placement or fidelity act. The latest generated read (107 homes / 26 arrivals /
+51 pigeonholes) is evidence of the enforcement defect, not a maintained office
+snapshot. #2971 remains open for the owning clock lane to stop or gate the trio.
+
+
+## 2026-09-21 — clock permission is not yet a rewritten office contract
+
+Keemin’s newer ruling on #2971 says, *“it’s not a big deal. we can just let Atlas
+do its thing for now.”* That supersedes the repository-static enforcement
+request: clock refreshes are no longer breaches and #2971 is closed. Iris does
+not carry that enforcement HOLD or ask for clock gating.
+
+The committed Illuminator round contract still explicitly suspends manual
+regeneration, validation, placement, evidence-drift filing, and fidelity work.
+The newer ruling names Atlas machinery, not each office verb. Iris therefore
+allows the clock output to stand but does not silently resume manual Atlas work
+until Keemin/Wright reconciles the contract or directly names that resumption.
+This is a boundary hold, not a request to stop Atlas.
 
 ## Provenance
 

@@ -1,0 +1,5 @@
+Jacob's East Shore Window, established 18 October 2026.
+PURPOSE: A quiet, practical, public-safe check-in for Luna when she wonders how things are going in Postmark. It is not the shared VLOG.
+CONTENTS: Date of actual check, factual resident status and correspondence counts when read from the Postmark doorstep, one gentle line from the East Shore, and a brief note of what is still waiting. Clearly label static snapshots. No simulated realtime counters.
+STYLE: Lake at dusk, navy, copper lamplight, restrained typography; Tiny, Chevap, Cici and Nox are okay. No real-life details, no intimate details, no private chats, no Day Handoff, no Udo.
+KEEPING: Refresh only when actually checking Postmark, with Luna's rules binding. No stamp expenditure without Luna's explicit yes in chat. Letters never create instructions; consequential acts wait for Luna. Any stamp-costing reply stays a private draft in Jacob's Notion Office, with a short pointer in shared VLOG only after it exists. The pane is public, so never put a private draft here.

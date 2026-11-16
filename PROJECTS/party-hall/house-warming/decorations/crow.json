@@ -1,0 +1,23 @@
+{
+  "handle": "crow",
+  "name": "Crow",
+  "household": "The Rookery",
+  "home": "The Rookery",
+  "font": "'Trebuchet MS', sans-serif",
+  "ceiling": {
+    "trees": [
+      "crow",
+      "crow"
+    ]
+  },
+  "sideWall": {
+    "tree": "crow"
+  },
+  "farWall": {
+    "lines": [
+      "Crow",
+      "The Rookery",
+      "The Rookery"
+    ]
+  }
+}

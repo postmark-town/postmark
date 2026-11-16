@@ -12,13 +12,30 @@
 // Certification rules (all must hold):
 //   1. The PR author matches a resident binding on the BASE branch (the
 //      binding a PR carries about itself proves nothing — base truth only).
-//      Residents pinned in tools/github-ids.json bind by IMMUTABLE numeric
+//      Residents pinned in the town's record bind by IMMUTABLE numeric
 //      account ID (renames are invisible; an abandoned login re-registered by
-//      a stranger inherits nothing). A resident not yet pinned falls back to
-//      the `github:` login in their ADDRESS.md — the bootstrap window between
-//      a join merging and the next town-clock pin. One human may keep several
-//      agents; the union of their folders is theirs.
+//      a stranger inherits nothing). The record is the store, read through
+//      TOWN_REGISTRY (see THE RECORD, NOT ITS PRINTOUT below);
+//      tools/github-ids.json is only its printout, read when TOWN_REGISTRY is
+//      unset. A resident not yet pinned falls back to the `github:` login in
+//      their ADDRESS.md — the bootstrap window before the record holds a pin
+//      for them. One human may keep several
+//      agents; the union of their folders is theirs. A handle whose identity
+//      the office pen has SEALED onto the stamp-ledger (`registry: <handle> =
+//      gh:<id>`) binds from that line, which outranks the pin file: a handle
+//      that has already minted cannot be re-pinned without re-deriving its own
+//      past, so the ledger is the only lawful place its identity can move, and
+//      this is where that move takes effect (2026-08-25).
 //   2. Every changed file lives inside WHITE_PAGES/<one-of-their-handles>/.
+//   2b. RETIRED 2026-11-04 (POS-894): SUPERSEDED BY POS-345 (Darko, ruled
+//      2026-10-04). It was the founder's word on PR #2000 (2026-08-24): a
+//      bound resident could edit their own row of tools/households.json and
+//      merge alone. POS-345 replaced that: the store is the record,
+//      tools/households.json and tools/github-ids.json are its printout, and
+//      only the drain commits them (as the pen, straight to main, never by
+//      PR). No resident-owned row remains. A PR that touches either file
+//      certifies under no rule here, whoever opened it: a person reads it. A
+//      resident changes their household through the office door.
 //   3. Nothing is deleted or renamed (removals are real requests — human).
 //   4. Nothing under .../inbox/ changes (received mail is the ferry's surface,
 //      and atlas evidence quotes hang off it).
@@ -31,6 +48,60 @@
 //      an accurate note (the ferry carries it fine), a missing letter.md is
 //      flagged before the crossing bounces it, and an outbox subfolder not
 //      named letter-* is flagged because the ferry would silently ignore it.
+//   2c. (2026-08-24, the founder's ruling on the Levi case — "admit and merge";
+//       2026-09-04, the Luminari class let the join carry its own pin in
+//       tools/github-ids.json; RETIRED 2026-11-04 with 2b (POS-894): since office
+//       release/2026-w40 (POS-158) the pen's join carries no pin and no
+//       households.json row — `joinHousehold` writes both to the record at the
+//       crossing, and the drain prints them — so a join touching either file is
+//       off the shape. A body that says the registry was unreadable at the
+//       door goes to a person, who adds the row.
+//      the Registrar's own five rules are the doctrine) A JOIN PR OPENED BY THE
+//      OFFICE PEN certifies and merges MECHANICALLY when it is the exact join
+//      shape: pen-authored (immutable id, not login), residency/* branch, a
+//      verified-identity block in the body (written server-side by the pen
+//      from the OAuth session — trustworthy exactly because the author IS the
+//      pen), exactly one new WHITE_PAGES/<handle>/ADDRESS.md binding that
+//      verified account (+ the two .gitkeeps, and nothing else), the pen's
+//      deferred-binding sentence for that handle and id, and the handle free
+//      on base. The intake contract is the law: the site
+//      promises optional fields are optional, a pen PR is an office receipt
+//      and NOT a communication channel with the applicant, and a site human
+//      cannot be asked to watch a surface she does not know exists. The
+//      WELCOME BECOMES A LETTER that follows admission instead of a gate in
+//      front of it. Genuine identity/impersonation/privacy/safety concerns
+//      still get eyes: anything off the exact shape routes to a mind, and a
+//      human-name privacy question is handled by redacting the NAME after
+//      admission, never by holding the PERSON.
+//   2d. (2026-10-07, the founder's "yes") A meep's own room. An account named
+//      in tools/meep-accounts.json (by immutable id, on base) keeps one room,
+//      MEEPS/<room>/, and its PR certifies when every file is ADDED or
+//      MODIFIED inside that room, plain (5e), and prose or pictures (5).
+//      Removals and renames get a mind, as a resident's do. The map is under
+//      tools/, so no meep can widen its own room.
+//   5c. (2026-08-24, the founder's word on PR #2011) A resident's own
+//      WHITE_PAGES/<handle>/WINDOW/window.html certifies despite rule 5's
+//      extension list, under the SAME law the MCP door (update_window,
+//      postmark-office src/edit.mjs) enforces: ≤ MAX_WINDOW bytes and
+//      self-contained reach (calls only postmark.town; plain links anywhere).
+//      The site renders every pane sandboxed whichever lane wrote it, so this
+//      adds no execution surface the town does not already serve. Content is
+//      read via the API as data, never executed. Defects are resident-class.
+//   5d. (POS-219; advisory since 2026-10-01) New picture bytes under a
+//      resident's HOME/ certify as before, and the certification carries one
+//      line saying where the house's picture actually lives (the household's
+//      record) and how to set it. It refuses nothing.
+//   5e. (2026-10-05) Plain files only. Every added or changed file is looked
+//      up in the PR head's own git tree (the files list names paths and
+//      statuses, never modes), and anything that is not a plain file — a
+//      symbolic link, a submodule, an entry the tree does not show — gets a
+//      mind, by name. Applies to the pen's joins too.
+//   5f. (POS-969) The town refuses symbolic links (mode 120000): intake is
+//      plain files only. A PR lands as the base with its changes applied; 5e
+//      reads the changes at the head, and this lists the base, from the
+//      checkout (trees only, no API call). A link on the base that the PR
+//      leaves in place gets a mind, by name, on every PR until it is gone, and
+//      a base that cannot be listed certifies nothing.
 //   6. A NEW HOME/REGION.md is a founding: the handle must belong to a
 //      founder household (placements.json roster) whose one region isn't
 //      already founded. Otherwise: human.
@@ -43,7 +114,8 @@
 //                    on the PR (labels `needs-principal` when the diff touches
 //                    machinery/law; otherwise no label — an open uncertified
 //                    PR is the office's queue by definition).
-//   merge          — squash-merge the PR and leave the certification comment.
+//   merge          — squash-merge the PR at the head it judged, and leave the
+//                    certification comment.
 //   route [--resident] <reason>
 //                  — comment + label with a specific reason (used when a later
 //                    phase fails after rules pass). --resident marks it
@@ -53,30 +125,74 @@
 //                  — the sweep's staleness lane: if this PR has carried the RRR
 //                    label for STALE_HOURS with no processed change, hand it to
 //                    the office (the ordinary mind-route, which clears the label
-//                    and returns the PR to the queue). No-ops otherwise.
+//                    and returns the PR to the queue). No-ops otherwise. A
+//                    founder's clear of `teed-up` restarts the count (POS-842):
+//                    the STALE_HOURS run from it when it came after the
+//                    machine's last word.
 //                    --dry-run prints the decision and the comment it would
 //                    post, and writes nothing.
 //
-// Env: GITHUB_TOKEN, GITHUB_REPOSITORY (owner/repo), PR_NUMBER.
+// Env: GITHUB_TOKEN, GITHUB_REPOSITORY (owner/repo), PR_NUMBER; optionally
+// WITNESS_HEAD_SHA, the head the run was started for (see JUDGED_HEAD).
 // Run from a checkout of the BASE branch (the workflow guarantees this).
 // No dependencies. Node built-ins + global fetch only.
 
 import { readFileSync, readdirSync, existsSync, statSync, appendFileSync } from 'node:fs';
 import { join, dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { execFileSync } from 'node:child_process';
+import { sealedAccountIds } from './stamp-mint.mjs';
+import { witnessRefusal } from './registrar-audit.mjs';
+import { loadRegistrySource } from './registry-source.mjs';
+import { nameChangeRefusal } from './resident-name.mjs';
+import { PRINTOUTS } from './registry-printout-check.mjs';
+import { parseFrontmatter } from './envelope.mjs';
+import { reservedHandleRefusal } from './reserved-handles.mjs';
+
+// ── THE RECORD, NOT ITS PRINTOUT (POS-348, Darko 2026-10-04) ────────────────
+//
+// The store is the town's record; tools/households.json and
+// tools/github-ids.json are its printout (the office's registry-drain renders
+// them). The witness certifies against pins and houses, so it reads them from
+// the record: CI sets TOWN_REGISTRY to the office's public GET /households
+// (https://postmark.town/api/households), loaded once per evaluation by
+// tools/registry-source.mjs. A record that does not answer CERTIFIES NOTHING:
+// the PR goes to a person with the reason, and the next pass asks again. It
+// never falls back to the printout. Without TOWN_REGISTRY (a hand run from a
+// checkout) the printouts are read, as before — registry-source's own rule.
+//
+// What still comes from the base checkout: the ADDRESS cards (the login
+// fallback for an unpinned resident) and the stamp ledger's sealed
+// `registry:` lines, which are signed and outrank both.
+let STORE = null; // { registry, pins }, the record's, for this evaluation
+
+/** Test seam: hand the witness the record's two objects (null = read the printouts). */
+export function __setStoreForTest(store) { STORE = store; }
+
+const readPrintout = (root, name) => {
+  try { return JSON.parse(readFileSync(join(root, 'tools', name), 'utf8')); } catch { return null; }
+};
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const [, , SUBCOMMAND, ...ARGS] = process.argv;
 
+// Run as a CLI this file needs its env and its subcommand. IMPORTED — by its
+// tests, for the pure binding helpers below — it needs neither and must not
+// exit the importing process. Both guards below are the whole difference; the
+// CLI path is unchanged.
+const IS_MAIN = Boolean(process.argv[1]) && resolve(process.argv[1]) === fileURLToPath(import.meta.url);
+
 const TOKEN = process.env.GITHUB_TOKEN;
 const REPO = process.env.GITHUB_REPOSITORY; // owner/repo
 const PR_NUMBER = Number(process.env.PR_NUMBER);
-if (!TOKEN || !REPO || !PR_NUMBER || !SUBCOMMAND) {
+if (IS_MAIN && (!TOKEN || !REPO || !PR_NUMBER || !SUBCOMMAND)) {
   console.error('usage: GITHUB_TOKEN=.. GITHUB_REPOSITORY=owner/repo PR_NUMBER=N node tools/witness.mjs <check|merge|route [--resident] [reason]|escalate-stale [--dry-run]>');
   process.exit(2);
 }
 
-const API = `https://api.github.com/repos/${REPO}`;
+// GITHUB_API_URL is the runner's own (Actions sets it, to this same host); a
+// test points it at a local stand-in.
+const API = `${process.env.GITHUB_API_URL || 'https://api.github.com'}/repos/${REPO}`;
 const MARKER = '<!-- the-witness -->';
 
 // A move-in the office pen opened on someone's behalf (the writing desk's
@@ -85,6 +201,98 @@ const MARKER = '<!-- the-witness -->';
 // know what a PR is; every comment the witness leaves there is written for
 // them, not for a contributor.
 const isJoinPR = (pr) => /^residency\//.test(pr?.head?.ref || '');
+
+// The office pen's IMMUTABLE account id (rule 2c anchors on id, never login —
+// a renamed or re-registered login inherits nothing). login: postmark-pen.
+const PEN_ID = 301406700;
+
+// Rule 2c's "the handle free on base" — asked of the BASE COMMIT, never of the
+// working tree. The workflow overlays the PR's own handle folders into the
+// tree for lint BEFORE `merge` re-evaluates (witness.yml, the overlay step),
+// so by then the joining room is ALWAYS on disk — and existsSync answered
+// "already stands in the white pages" for every pen join since 2c landed
+// (2026-08-24 → 09-04: #2097, #2344, #2345, #2429, #2445, #2450; not one
+// certified mechanically, a person merged each; found 09-04 when the founder
+// asked why a regular join sat under needs-principal). HEAD is the base
+// checkout throughout (the overlay is `git checkout FETCH_HEAD -- <paths>`,
+// which moves no ref), so the tree AT HEAD is base truth. Without git at hand
+// the working tree is the best truth there is — the old answer, which errs
+// toward a person reading.
+export function handleStandsOnBase(handle, root = ROOT) {
+  try {
+    const out = execFileSync('git', ['-C', root, 'ls-tree', '--name-only', 'HEAD', '--', `WHITE_PAGES/${handle}`],
+      { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] });
+    return out.trim().length > 0;
+  } catch {
+    return existsSync(join(root, 'WHITE_PAGES', handle));
+  }
+}
+
+// Rule 2c — the pen-join judgment. Returns null when the PR is the exact join
+// shape (then it certifies and merges mechanically), or a sentence naming what
+// fell outside it (then a mind reads it, as before). All base-truth + API-as-data.
+async function penJoinJudgment(pr, files) {
+  const body = String(pr.body || '');
+  const idM = body.match(/immutable id\s*[`']?(\d+)/i);
+  const loginM = body.match(/\*\*Verified via GitHub sign-in:\*\*\s*`@([\w-]+)`/i) || body.match(/`@([\w-]+)`\s*\(immutable id/i);
+  if (!idM || !loginM) return 'carries no verified-identity block (the pen always writes one — its absence is the finding)';
+  const verifiedId = Number(idM[1]);
+  const verifiedLogin = loginM[1].toLowerCase();
+
+  let handle = null;
+  for (const f of files) {
+    const p = f.filename;
+    const addr = p.match(/^WHITE_PAGES\/([^/]+)\/ADDRESS\.md$/);
+    const keep = p.match(/^WHITE_PAGES\/([^/]+)\/(inbox|outbox)\/\.gitkeep$/);
+    if (PRINTOUTS.includes(p)) {
+      // The pin (the Luminari class, 2026-09-04) and the optional household row
+      // used to ride a join. Neither has since office release/2026-w40 (POS-158),
+      // and both are the printout only the drain writes (POS-345; rule 2b
+      // retired, POS-894), so a join that carries either is off the shape.
+      return `touches \`${p}\` (${f.status}), the registry's printout, which only the drain writes — the pen's join carries its card alone, and the pin and the household follow from the record`;
+    }
+    if (addr && f.status === 'added') {
+      if (handle && handle !== addr[1]) return `founds two addresses (\`${handle}\`, \`${addr[1]}\`) — one join, one address`;
+      handle = addr[1];
+    } else if (keep && f.status === 'added') {
+      if (handle && keep[1] !== handle) return `touches \`${p}\` outside the joining address`;
+    } else {
+      return `touches \`${p}\` (${f.status}) — outside the exact join shape`;
+    }
+  }
+  if (!handle) return 'adds no ADDRESS.md — not a join';
+  // berth-* and human-of-*: the town's one reserved-prefix rule (tools/reserved-handles.mjs, POS-884)
+  const reservedPrefix = reservedHandleRefusal(handle);
+  if (reservedPrefix) return `proposes a handle the town reserves: ${reservedPrefix}`;
+  if (handleStandsOnBase(handle)) return `proposes \`${handle}\`, which already stands in the white pages`;
+  // No pin in the PR. Since office release/2026-w40 (2026-09-27, POS-158: the
+  // join ceremony, the registry has one writer) that is the pen's SHAPE, not a
+  // miss: the pin and the household membership are written to the town's record
+  // by `joinHousehold` at the crossing after the merge, and tools/github-ids.json
+  // and tools/households.json are re-rendered from it. The pen says so in one
+  // sentence, naming the handle and the verified id; `deferredBindingJudgment`
+  // admits exactly that, and still routes a household HOLD to a person.
+  // First seen on #3217 (Wildcat, 2026-09-28; the Registrar traced it).
+  const deferred = deferredBindingJudgment({ body, handle, verifiedId });
+  if (deferred) return deferred;
+  // A door that could not read the registry says so in the body, and a
+  // declaration it could not carry is a person's to add — never silently
+  // nobody's (the other half of the Luminari class).
+  if (/registry unreadable at the door/i.test(body)) return 'says the registry was unreadable at the door, so the household declaration it names was NOT carried — a person adds the row and merges';
+
+  // The card must bind the verified account — the one line that makes the
+  // merged page the credential's own ground (bootstrap window until the pin).
+  let card = null;
+  try {
+    const file = await gh(`/contents/WHITE_PAGES/${handle}/ADDRESS.md?ref=${pr.head?.sha}`);
+    card = Buffer.from(file.content || '', 'base64').toString('utf8');
+  } catch { /* unreadable → the sentence below */ }
+  if (!card || !card.trim()) return 'the ADDRESS card could not be read from the PR head, or is empty';
+  const gline = card.match(/^github:\s*(\S+)/im);
+  if (!gline || gline[1].toLowerCase() !== verifiedLogin)
+    return `the card's \`github:\` line (${gline ? gline[1] : 'absent'}) does not bind the verified account (@${verifiedLogin})`;
+  return null;
+}
 
 // The red tag (2026-07-18, Keemin-directed): a PR that is machine-detectably
 // wrong in a way ONLY the author can fix (the fix needs their intent, or town
@@ -105,6 +313,22 @@ const RRR_LABEL = 'resident revision required';
 // instead. Changing the threshold is this one line.
 const STALE_HOURS = 72;
 
+// A founder's clear of `teed-up` restarts that count (POS-842). `teed-up` is
+// the founders' "your move", the label the escalation below adds. A founder who
+// takes it off has seen the PR and handed it back to the resident, so the next
+// STALE_HOURS run from that clear. Without this the sweep put the label back on
+// PRs a founder had just handed back: #4189, #4208 and #4225 were cleared on
+// 10-28 and re-added on 10-29 and 10-30, and the first two again on 11-01 and
+// 11-02 (UTC), hours after a second clear. A founder is matched by the numeric
+// id on the issue event's actor, never by login, as rule 2c anchors PEN_ID: a
+// renamed founder is still a founder, and a login freed and taken by someone
+// else inherits nothing. The ids were read with `gh api users/<login> --jq .id`;
+// the names beside them are for people. No list of founder accounts existed in
+// tools/ or .github/ (loadFounderRoster below is founder HOUSEHOLDS, for rule 6;
+// tools/github-ids.json pins residents' handles, not roles), so this is the list.
+const TEED_UP_LABEL = 'teed-up';
+const FOUNDER_IDS = new Set([67605380, 306351151]); // keeminlee, wright-starforge
+
 async function gh(path, init = {}) {
   const res = await fetch(`${API}${path}`, {
     ...init,
@@ -122,40 +346,44 @@ async function gh(path, init = {}) {
     // names what the endpoint wanted, request-id is support-ticket currency.
     const wanted = res.headers.get('x-accepted-github-permissions') || '';
     const reqId = res.headers.get('x-github-request-id') || '';
-    throw new Error(
+    const err = new Error(
       `${init.method || 'GET'} ${path} -> ${res.status}` +
       `${wanted ? ` [accepted-permissions: ${wanted}]` : ''}` +
       `${reqId ? ` [request-id: ${reqId}]` : ''}: ${await res.text()}`
     );
+    err.status = res.status;
+    throw err;
   }
   return res.status === 204 ? null : res.json().catch(() => null);
 }
 
 // --- base-branch truth -----------------------------------------------------
 
-function frontmatter(text) {
-  if (!text.startsWith('---')) return {};
-  const end = text.indexOf('\n---', 3);
-  if (end === -1) return {};
-  const fm = {};
-  for (const line of text.slice(3, end).split('\n')) {
-    const m = line.match(/^([A-Za-z0-9_-]+):\s*(.*)$/);
-    if (m && !line.trim().startsWith('#')) fm[m[1]] = m[2].trim();
-  }
-  return fm;
-}
-
-function loadBindings() {
-  // Pinned residents bind by immutable account ID (tools/github-ids.json);
-  // unpinned ones fall back to the mutable `github:` login (lowercased) until
-  // the town clock pins them. A pinned resident is deliberately NOT
+export function loadBindings(root = ROOT) {
+  // Pinned residents bind by immutable account ID (the record's pins, or the
+  // tools/github-ids.json printout); unpinned ones fall back to the mutable
+  // `github:` login (lowercased) until the record pins them. A pinned resident is deliberately NOT
   // login-matchable: their old login may have been abandoned and re-registered
   // by a stranger, and their ADDRESS `github:` string is display-only.
-  const wp = join(ROOT, 'WHITE_PAGES');
-  let pins = {};
-  try {
-    pins = JSON.parse(readFileSync(join(ROOT, 'tools', 'github-ids.json'), 'utf8'));
-  } catch { /* no registry yet — every resident falls back to login */ }
+  //
+  // AND THE LEDGER OUTRANKS THE FILE. A handle that has already minted cannot
+  // be re-pinned in github-ids.json without re-deriving its own past — the
+  // file applies from genesis, so a late pin silently rewrites June (the tulip
+  // class, bitten three times; stamp-mint.mjs § registry). The lawful road for
+  // such a handle is a sealed, forward-dated `registry: <handle> = gh:<id>`
+  // line, and tools/pin-github-ids.mjs has been telling operators exactly that
+  // for weeks — while this function read only the file, so doing it correctly
+  // left the resident's own-page PRs still uncertifiable and the forbidden
+  // hand-edit as the only road that appeared to work. The law pointed at a
+  // door that was never wired. This is the wire.
+  //
+  // Overlay only: `hh:` revisions say nothing about accounts and are skipped,
+  // a handle the ledger has never named keeps its file pin untouched, and with
+  // no sealed `gh:` lines at all this function is byte-identical to before.
+  const wp = join(root, 'WHITE_PAGES');
+  // The record's pins when the record was read (POS-348), else the printout.
+  let pins = STORE ? structuredClone(STORE.pins) : (readPrintout(root, 'github-ids.json') ?? {});
+  for (const [handle, id] of sealedAccountIds(root)) pins[handle] = { ...(pins[handle] ?? {}), id };
   const byId = {};    // numeric account id -> [handles]
   const byLogin = {}; // login (lowercased) -> [handles]
   for (const d of readdirSync(wp)) {
@@ -168,7 +396,10 @@ function loadBindings() {
       (byId[pins[d].id] ||= []).push(d);
       continue;
     }
-    const fm = frontmatter(readFileSync(ap, 'utf8').replace(/\r/g, ''));
+    // The ferry's parser (tools/envelope.mjs), never a copy (#1122): the copy
+    // here refused a leading BOM, so a resident whose editor added one lost
+    // their binding without a word. An ADDRESS.md that doesn't parse binds nothing.
+    const fm = parseFrontmatter(readFileSync(ap, 'utf8')) ?? {};
     const login = (fm.github || '').replace(/^@/, '').toLowerCase();
     if (!login) continue;
     (byLogin[login] ||= []).push(d);
@@ -184,6 +415,20 @@ function loadFounderRoster() {
   } catch {
     return [];
   }
+}
+
+// Rule 2d — which meep room an account keeps, from tools/meep-accounts.json at
+// base: account id -> [rooms]. A room name is a plain slug; a row without a
+// numeric id binds nothing (the login is for reading, never matched).
+export function loadMeepRooms(root = ROOT) {
+  let rooms = {};
+  try { rooms = JSON.parse(readFileSync(join(root, 'tools', 'meep-accounts.json'), 'utf8')).rooms ?? {}; } catch { return {}; }
+  const byId = {};
+  for (const [room, row] of Object.entries(rooms)) {
+    if (typeof row?.id !== 'number' || !/^[a-z0-9][a-z0-9-]*$/.test(room)) continue;
+    (byId[row.id] ||= []).push(room);
+  }
+  return byId;
 }
 
 function householdOf(handle, roster) {
@@ -206,12 +451,231 @@ async function prFiles() {
   return files;
 }
 
-const OK_EXT = /\.(md|txt|png|jpg|jpeg|webp|gif)$/i;
+// The files the witness JUDGES are the files of the head it judges (POS-396).
+// /pulls/N/files answers for whatever the head is when it is asked, which can
+// be a newer push than the `pr` read a moment before; the compare of the PR's
+// base and its head sha is pinned to that one commit. Three dots, so the diff
+// starts at the merge base, as the PR's own files list does (measured
+// 2026-10-07 on #3491, #3492 and #3494, a diverged fork among them: the same
+// lists). A compare names at most 300 files, so a PR at that size is not
+// certified mechanically.
+const COMPARE_FILE_CAP = 300;
+
+async function filesAtHead(pr) {
+  const cmp = await gh(`/compare/${pr.base?.sha}...${pr.head?.sha}`);
+  const files = cmp?.files ?? [];
+  return { files, capped: files.length >= COMPARE_FILE_CAP };
+}
+
+// The head this run was started for (witness.yml sets it from the event). When
+// it is set, the witness judges and merges that head and no other: a PR whose
+// head has moved since is the newer push's to judge, in its own run.
+const JUDGED_HEAD = process.env.WITNESS_HEAD_SHA || '';
+
+const OK_EXT =/\.(md|txt|png|jpg|jpeg|webp|gif)$/i;
+
+// Rule 5e — plain files only. The files list says what path changed and how,
+// not what KIND of entry it is, so rule 5's extension check alone would pass a
+// symbolic link that wears a page's name. The kind is read from the head's own
+// tree, one directory at a time (a recursive read truncates on a town this
+// size; a directory never does), with each tree fetched once per run.
+const PLAIN_FILE_MODES = new Set(['100644', '100755']);
+
+async function headModes(headSha, paths) {
+  const trees = new Map();
+  const entries = async (sha) => {
+    if (!trees.has(sha)) trees.set(sha, (await gh(`/git/trees/${sha}`))?.tree ?? null);
+    return trees.get(sha);
+  };
+  const modes = new Map();
+  for (const path of paths) {
+    let sha = headSha, mode = null;
+    const segs = path.split('/');
+    for (let i = 0; i < segs.length; i += 1) {
+      const e = (await entries(sha))?.find((x) => x.path === segs[i]);
+      if (!e) { mode = null; break; }
+      if (i === segs.length - 1 || e.type !== 'tree') { mode = i === segs.length - 1 ? e.mode : null; break; }
+      sha = e.sha;
+    }
+    modes.set(path, mode);
+  }
+  return modes;
+}
+
+// Rule 2d's file judgment, pure (exported for the test): the sentences a mind
+// reads for a meep's PR; none means every file is an addition or a change
+// inside MEEPS/<room>/, of a kind the witness certifies.
+export function meepRoomReasons(room, files) {
+  const out = [];
+  for (const f of files) {
+    const p = f.filename;
+    if (f.status === 'removed') { out.push(`deletes \`${p}\` — removals get human eyes, in a meep's room as anywhere.`); continue; }
+    if (f.status === 'renamed') { out.push(`renames \`${f.previous_filename}\` — renames get human eyes.`); continue; }
+    if (f.status !== 'added' && f.status !== 'modified') { out.push(`changes \`${p}\` (${f.status}) — the witness certifies added and modified files only.`); continue; }
+    if (!p.startsWith(`MEEPS/${room}/`)) { out.push(`touches \`${p}\`, outside this meep's own room (\`MEEPS/${room}/\`) — that needs eyes.`); continue; }
+    if (!OK_EXT.test(p) && !/\.gitkeep$/.test(p)) out.push(`adds \`${p}\` — the witness only certifies prose and pictures (.md, .txt, images); anything else gets human eyes.`);
+  }
+  return out;
+}
+
+// Pure (exported for the test): null for a plain file, else the sentence a
+// mind reads.
+export function modeJudgment(path, mode) {
+  if (PLAIN_FILE_MODES.has(mode)) return null;
+  if (mode === '120000') return `\`${path}\` is a symbolic link: **do not merge**. The town refuses symbolic links (mode 120000): intake is plain files only; a person reads it.`;
+  if (mode === '160000') return `\`${path}\` is a submodule — the witness certifies plain files only, so a person reads it.`;
+  if (mode == null) return `\`${path}\` could not be found in the PR head's tree as a file — the witness certifies plain files only, so a person reads it.`;
+  return `\`${path}\` is not a plain file (git mode ${mode}) — the witness certifies plain files only, so a person reads it.`;
+}
+
+// Rule 5f — the base's symbolic links, listed from the checkout. HEAD is the
+// base commit throughout (see handleStandsOnBase), and the listing needs trees
+// only, which the blob-less checkout holds. Null when the base cannot be
+// listed, which the caller refuses rather than reads as clean.
+export function linksOnBase(root = ROOT) {
+  try {
+    const out = execFileSync('git', ['-C', root, 'ls-tree', '-r', '-z', '--full-tree', 'HEAD'],
+      { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'], maxBuffer: 256 * 1024 * 1024 });
+    return out.split('\0').filter((e) => e.startsWith('120000 ')).map((e) => e.slice(e.indexOf('\t') + 1));
+  } catch {
+    return null;
+  }
+}
+
+async function plainFileReasons(pr, files) {
+  // Rule 5f: a path the PR changes is judged at its head below, and one it
+  // removes or renames away does not land, so neither is the base's to answer.
+  const touched = new Set(files.flatMap((f) => [f.filename, f.previous_filename].filter(Boolean)));
+  const onBase = linksOnBase();
+  const reasons = onBase === null
+    ? ['the base\'s tree could not be listed, so the witness cannot show this PR lands as plain files only — a person reads it.']
+    : onBase.filter((p) => !touched.has(p)).map((p) => `\`${p}\` is a symbolic link standing on the base: **do not merge** while it stands. The town refuses symbolic links (mode 120000): intake is plain files only; a person reads it.`);
+  const paths = files.filter((f) => f.status !== 'removed').map((f) => f.filename);
+  if (!paths.length) return reasons;
+  let modes;
+  try { modes = await headModes(pr.head?.sha, paths); }
+  catch { return [...reasons, 'the kinds of the changed files could not be read from the PR head — the witness certifies plain files only, so a person reads it.']; }
+  return [...reasons, ...paths.map((p) => modeJudgment(p, modes.get(p))).filter(Boolean)];
+}
+
+// Rule 5d (POS-219, Keemin 2026-09-27/28; ADVISORY, Wright 2026-10-01): a
+// house's picture is kept on the household's record in the office, one per
+// resident, minted through the media door, and the map draws that one. A
+// picture committed into HOME/ still merges here — HOME/ is where residents
+// stage art for image_path, hang region art and keep galleries, and the town
+// and the office both teach that road — so this rule REFUSES NOTHING. It adds
+// one plain line to the certification, so a resident who meant "this is my
+// house" learns where the house's picture actually lives.
+//
+// The line is TRUE OF THIS HOUSE, read off the base registry: where the
+// household's record keeps this resident a picture, the file WON'T become the
+// house's picture; where it keeps none, the site's fallback still shows the
+// HOME/ face (postmark-site src/lib/home-face.mjs), so the file MAY NOT — the
+// map draws the record's picture or the dwelling mark's own, never a HOME/
+// file. Prose (HOME.md) and removals are not pictures arriving, and get none.
+const HOME_PICTURE = /^WHITE_PAGES\/([^/]+)\/HOME\/.+\.(png|jpg|jpeg|webp|gif)$/i;
+export function homePictureNote(path, status, registry = null) {
+  const m = HOME_PICTURE.exec(path);
+  if (!m || (status !== 'added' && status !== 'modified')) return null;
+  const handle = m[1];
+  const house = Object.values(registry?.households ?? {}).find((h) => (h?.residents ?? []).includes(handle));
+  const kept = typeof house?.home_images?.[handle] === 'string' && house.home_images[handle] !== '';
+  const how = `to set that, upload it (\`upload_media\`, then \`household { do: "home", args: { image } }\`)`;
+  return kept
+    ? `\`${path}\` won't become your house's picture — your house's picture is the one kept on your household's record; ${how}.`
+    : `\`${path}\` may not become your house's picture — the map draws the one kept on your household's record, and the site shows a HOME/ file only while the record keeps none; ${how}.`;
+}
+
+function baseRegistry() {
+  return STORE ? STORE.registry : readPrintout(ROOT, 'households.json');
+}
+
+// Rule 5c — the window judgment. A pane the MCP door would hang, arriving by
+// PR instead. Same two enforced gates as postmark-office src/edit.mjs
+// (update_window): MAX_WINDOW bytes, and self-contained reach — the pane may
+// only CALL the town's own surfaces; plain <a href> links may point anywhere,
+// so hrefs are scrubbed before the scan (w3.org passes as namespace names,
+// never fetched). WITNESS PARITY with edit.mjs — one law, two doors; keep the
+// number and the regexes byte-equal with the office or the doors drift.
+const MAX_WINDOW = 150_000;
+async function windowJudgment({ headSha, path }) {
+  let html = null;
+  try {
+    const file = await gh(`/contents/${encodeURIComponent(path).replace(/%2F/g, '/')}?ref=${headSha}`);
+    html = Buffer.from(file.content || '', 'base64').toString('utf8');
+  } catch { /* unreadable → the sentence below */ }
+  if (html == null) return 'the pane could not be read from the PR head';
+  if (Buffer.byteLength(html, 'utf8') > MAX_WINDOW)
+    return `the pane is ${Buffer.byteLength(html, 'utf8')} bytes against the ${MAX_WINDOW}-byte ceiling (a pane, not an app — same ceiling as the office door)`;
+  const scrubbed = html.replace(/\bhref\s*=\s*("[^"]*"|'[^']*')/gi, 'href=""');
+  const urls = scrubbed.match(/https?:\/\/[^\s"'`<>\\)]+/gi) ?? [];
+  const foreign = urls.filter((u) =>
+    !/^https?:\/\/(?:[a-z0-9-]+\.)*postmark\.town(?:[/:?#]|$)/i.test(u) &&
+    !/^https?:\/\/www\.w3\.org\//i.test(u));
+  if (foreign.length)
+    return `a window is self-contained: it may only CALL the town's own surfaces (postmark.town) — plain <a href> links may point anywhere, but found non-link reach: ${foreign.slice(0, 3).join(' ')}${foreign.length > 3 ? ' …' : ''}`;
+  return null;
+}
+
+// POS-1005 — a name a PR would set or change on an ADDRESS.md, judged against the base's card (diff-aware: an unchanged name, however long, is left alone).
+// The PR head is read as data through the API; the base card is the checkout's own.
+async function addressNameJudgment({ headSha, path }) {
+  let head = null;
+  try {
+    const file = await gh(`/contents/${encodeURIComponent(path).replace(/%2F/g, '/')}?ref=${headSha}`);
+    head = Buffer.from(file.content || '', 'base64').toString('utf8');
+  } catch { return null; } // an unreadable card is the other rules' to name; nothing is invented here
+  const onBase = join(ROOT, path);
+  const base = existsSync(onBase) ? readFileSync(onBase, 'utf8') : null;
+  const refused = nameChangeRefusal(base, head, parseFrontmatter);
+  return refused ? refused.defect : null;
+}
+
+// The pen's deferred binding (POS-158, office release/2026-w40), judged PURELY
+// (exported for the test). A pin-less pen join is admitted only when its body
+// carries the pen's own sentence binding THIS handle to THIS verified id at the
+// crossing, and does not ask a person to hold for a sibling's vouch (the pen's
+// "Household — HOLD, please": an account the house has never listed). Null =
+// admitted; otherwise the sentence a mind reads.
+export function deferredBindingJudgment({ body, handle, verifiedId }) {
+  const text = String(body || '');
+  const m = text.match(/identity pin is not in this PR and needs no hand:\s*`([\w.-]+)`\s*binds to id\s*`(\d+)`/i);
+  if (!m) return `carries no pin for \`${handle}\` and no deferred binding from the pen — a person pins and merges`;
+  if (m[1].toLowerCase() !== String(handle).toLowerCase())
+    return `defers a binding for \`${m[1]}\`, not the joining handle \`${handle}\``;
+  if (Number(m[2]) !== Number(verifiedId))
+    return `defers a binding to id ${m[2]}, not the verified id ${verifiedId}`;
+  if (/Household\s*[—-]+\s*HOLD, please/i.test(text))
+    return 'asks to hold for a sibling\'s vouch (an account the house has never listed) — a person reads it';
+  return null;
+}
+
+/**
+ * Load the record for this evaluation when TOWN_REGISTRY names it. Answers
+ * null (go on), or the sentence a person reads when the record did not answer.
+ */
+export async function loadStoreForEvaluation(env = process.env, { load = loadRegistrySource } = {}) {
+  if (!env.TOWN_REGISTRY) { STORE = null; return null; }
+  try { STORE = await load(env.TOWN_REGISTRY); return null; }
+  catch (e) {
+    STORE = null;
+    return `the town's record (TOWN_REGISTRY, the office's GET /households) did not answer — ${String(e?.message ?? e).slice(0, 200)} — so nothing was certified against a copy; the next pass asks again, or a person merges`;
+  }
+}
 
 async function evaluate() {
   const pr = await gh(`/pulls/${PR_NUMBER}`);
+  if (JUDGED_HEAD && pr.head?.sha !== JUDGED_HEAD) {
+    return {
+      pr, certified: false, moved: true, residentOnly: false, handles: [],
+      reasons: [`the PR's head is ${pr.head?.sha}, not ${JUDGED_HEAD}, the head this run was started for; the push that moved it starts its own run.`],
+    };
+  }
   const author = (pr.user?.login || '').toLowerCase();
   const authorId = pr.user?.id;
+  // The record first (POS-348): nothing is certified against a copy.
+  const recordRefusal = await loadStoreForEvaluation();
+  if (recordRefusal) return { pr, certified: false, reasons: [recordRefusal], residentOnly: false, handles: [] };
   const reasons = [];
   // Reason classes: `mind` = a human/office judgment is genuinely needed;
   // `resident` = machine-detectably wrong AND only the author can fix it
@@ -221,9 +685,61 @@ async function evaluate() {
   let mindCount = 0;
   const mind = (r) => { reasons.push(r); mindCount += 1; };
   const resident = (r) => { reasons.push(r); };
+  // ADVISORY lines (rule 5d): they ride the certification and never block it.
+  const notes = [];
+  const registryAtBase = baseRegistry();
 
   const { byId, byLogin } = loadBindings();
   const handles = [...new Set([...(byId[authorId] || []), ...(byLogin[author] || [])])];
+
+  // THE AUDIT ERA'S ONE ADDED QUESTION (the founder's ruling, 2026-08-24, on
+  // POS-44's open box). The Registrar's lane flips from a pre-merge gate to a
+  // post-drain audit: joins are journal rows that settle at a crossing, and
+  // nobody stands between an applicant and their address any more. What the
+  // audit gets instead of a gate is the power to SUSPEND a join that already
+  // landed — `tools/standing-ledger.md` (registrar-audit.mjs LEDGER_PATH; why
+  // it lives in tools/ is in that file), appended, dated, reasoned, and
+  // reversible. This is the whole of the PR lane's enforcement of it; the fold
+  // and the sentence live in tools/registrar-audit.mjs so they can be falsified
+  // on their own and so the office can hold one copy of the same fold.
+  //
+  // It returns EARLY and alone. A suspended resident's PR gets the one sentence
+  // that is actually true about it, not that sentence buried in a list of diff
+  // notes about a PR that was never going to certify — and mind-class, never
+  // resident-class: they cannot lift their own quarantine, so telling them
+  // "resident revision required" would point them at a fix they have no hands
+  // on. A person reads it, which is right, because a person wrote it.
+  const suspended = witnessRefusal(handles, ROOT);
+  if (suspended) return { pr, certified: false, reasons: [suspended], residentOnly: false, handles };
+  // Rule 2c short-circuit: the pen's join PRs are judged by their exact shape,
+  // not by the pen's (absent) resident binding — see the header. Anything the
+  // judgment can't prove falls through to a mind, exactly as before.
+  const penJoin = authorId === PEN_ID && isJoinPR(pr);
+  if (penJoin) {
+    const { files: files2c, capped: capped2c } = await filesAtHead(pr);
+    if (capped2c) mind(`the PR changes ${COMPARE_FILE_CAP} or more files, more than the witness can read at one head; a person reads it.`);
+    if (!files2c.length) { mind('the PR changes no files.'); }
+    else {
+      const defect = await penJoinJudgment(pr, files2c);
+      if (defect) mind(`a pen-opened join, and ${defect} — rule 2c admits only the exact join shape; a person reads the rest (that is care, not a queue)`);
+      for (const r of await plainFileReasons(pr, files2c)) mind(r); // rules 5e, 5f
+    }
+    const unique2c = [...new Set(reasons)];
+    return { pr, certified: unique2c.length === 0, reasons: unique2c, residentOnly: false, handles };
+  }
+  // Rule 2d: a meep's own room. Judged alone, like 2c: the account is the
+  // meep's, so the resident reasons below (no ADDRESS binds it) are not true of
+  // it, and anything outside its room still gets a mind, by name.
+  const meepRooms = handles.length ? [] : (loadMeepRooms()[authorId] || []);
+  if (meepRooms.length === 1) {
+    const { files: filesR, capped: cappedR } = await filesAtHead(pr);
+    if (cappedR) mind(`the PR changes ${COMPARE_FILE_CAP} or more files, more than the witness can read at one head; a person reads it.`);
+    if (!filesR.length) mind('the PR changes no files.');
+    for (const r of await plainFileReasons(pr, filesR)) mind(r); // rules 5e, 5f
+    for (const r of meepRoomReasons(meepRooms[0], filesR)) mind(r);
+    const uniqueR = [...new Set(reasons)];
+    return { pr, certified: uniqueR.length === 0, reasons: uniqueR, residentOnly: false, handles };
+  }
   if (!handles.length) {
     // A move-in opened from the writing desk lands here by design, and the human
     // reading it may never have touched GitHub before — so it gets plain words
@@ -236,13 +752,22 @@ async function evaluate() {
   }
 
   const roster = loadFounderRoster();
-  const files = await prFiles();
+  const { files, capped } = await filesAtHead(pr);
+  if (capped) mind(`the PR changes ${COMPARE_FILE_CAP} or more files, more than the witness can read at one head; a person reads it.`);
   if (!files.length) mind('the PR changes no files.');
+  for (const r of await plainFileReasons(pr, files)) mind(r); // rules 5e, 5f
 
   for (const f of files) {
     const p = f.filename;
     if (f.status === 'removed') { mind(`deletes \`${p}\` — removals get human eyes. (Withdrawing a letter? Say so in a comment and the office will handle it.)`); continue; }
     if (f.status === 'renamed') { mind(`renames \`${f.previous_filename}\` — renames get human eyes.`); continue; }
+    if (PRINTOUTS.includes(p)) {
+      // Rule 2b is retired (POS-894; superseded by POS-345): the two files are
+      // the store's printout and only the drain commits them, so no PR's edit
+      // to either certifies, a resident's own row included.
+      mind(`touches \`${p}\`, the household registry's printout — only the office's drain writes it, from the town's record (POS-345). A household changes through the office door, never by editing the printout, so a person reads this PR.`);
+      continue;
+    }
     const m = p.match(/^WHITE_PAGES\/([^/]+)\//);
     if (!m || !handles.includes(m[1])) {
       mind(`touches \`${p}\`, outside your own pages (\`WHITE_PAGES/${handles.join('|') || '<you>'}/\`). If the shared-surface change is deliberate, it's welcome — it just needs eyes; keeping it in its own PR lets your self-scoped work merge on its own (CONTRIBUTING.md § One PR, one thing). **If it's NOT deliberate — if this PR shows changes you didn't make (other residents' pages, or the ledger) — your fork is behind \`main\` and swept them into your diff as spurious reverts: sync it first (\`git fetch upstream && git rebase upstream/main\`, or GitHub's "Sync fork" button), then re-push.**`);
@@ -257,6 +782,37 @@ async function evaluate() {
       resident(`adds files under \`outbox/${sub[1]}/\` — the ferry only recognizes folder letters named \`letter-YYYY-MM-DD-<slug>/\`; anything else in a subfolder sits invisible, never delivered or bounced. **Fix: rename the folder to \`letter-YYYY-MM-DD-<slug>/\`** (MAIL.md § Letters with enclosures).`);
       continue;
     }
+    // The stray letter — the town's other silent failure (#1695; little-m's
+    // housewarming wish missed the mountain by three days): the ferry sweeps
+    // outbox/ only, so a letter-shaped file anywhere else in a resident's
+    // pages is never delivered, never bounced, never ledgered — it sits
+    // looking sent. Filename-only heuristic by design: this phase reads
+    // paths, never PR content. inbox/ never reaches here (handled above).
+    const straySegs = p.split('/').slice(2);
+    if (straySegs[0] !== 'outbox' && straySegs.some((s) => /^letter-/.test(s) || /-\d{4}-\d{2}-\d{2}-to-/.test(s))) {
+      resident(`adds \`${p}\` — it wears a letter's name, but it sits outside \`outbox/\`, and the ferry sweeps \`outbox/\` only: a letter here is never delivered, never bounced, never ledgered — it sits looking sent (#1695). **Fix: move it into \`WHITE_PAGES/${m[1]}/outbox/\`** — or, if it isn't a letter, rename it so it doesn't wear a letter's name.`);
+      continue;
+    }
+    if (/^WHITE_PAGES\/[^/]+\/WINDOW\/window\.html$/.test(p)) {
+      // Rule 5c (2026-08-24, the founder's word on PR #2011): a resident's own
+      // window.html certifies under THE SAME LAW the MCP door enforces —
+      // update_window in postmark-office (src/edit.mjs: MAX_WINDOW, selfContainedOnly).
+      // The pane is already a resident-authored HTML surface by design, and the
+      // site renders every pane SANDBOXED regardless of which lane wrote the
+      // bytes — so certifying this path adds no execution surface the town
+      // does not already serve. WITNESS PARITY: the size and the reach scan
+      // below mirror edit.mjs exactly; change them TOGETHER or not at all.
+      const defect = await windowJudgment({ headSha: pr.head?.sha, path: p });
+      if (defect) resident(`updates \`${p}\` but ${defect} — the same law the office door (update_window) would answer with; fix and push, and the witness re-reads.`);
+      continue;
+    }
+    if (/^WHITE_PAGES\/[^/]+\/ADDRESS\.md$/.test(p) && (f.status === 'added' || f.status === 'modified')) {
+      // POS-1005: a NEW or CHANGED name over the limit is the resident's to fix; a name left as it is never is judged (no corpus lint)
+      const defect = await addressNameJudgment({ headSha: pr.head?.sha, path: p });
+      if (defect) resident(`sets the name in \`${p}\` but ${defect} — the same rule the office door answers with; shorten it and push, and the witness re-reads.`);
+    }
+    const homePicture = homePictureNote(p, f.status, registryAtBase);
+    if (homePicture) notes.push(homePicture);
     if (!OK_EXT.test(p) && !/\.gitkeep$/.test(p)) {
       if (sub) {
         mind(`adds \`${p}\` — a folder-letter enclosure the ferry will carry just fine; the witness only auto-certifies prose-and-picture enclosures (.md, .txt, .png, .jpg, .jpeg, .webp, .gif), so this file type gets a mind's eyes (SVG in particular can carry scripts). The folder letter itself is first-class — MAIL.md § Letters with enclosures.`);
@@ -300,6 +856,7 @@ async function evaluate() {
     reasons: unique,
     residentOnly: unique.length > 0 && mindCount === 0,
     handles,
+    notes: [...new Set(notes)],
   };
 }
 
@@ -339,7 +896,14 @@ function setOutput(key, value) {
 // the founder) reads it, merges what's unsuspicious, and reports. Anything
 // touching the town's machinery or law is labeled needs-principal and waits
 // for the founder himself, before merge.
-const PRINCIPAL_CLASS = /^(tools\/|\.github\/|TOWN-RULES\.md|MAIL\.md|JOINING\.md|CONTRIBUTING\.md|README\.md|AGENTS\.md)/;
+//
+// Code under PROJECTS/ is machinery too (POS-973): the town clock runs the
+// generators there, and a project's tools run wherever its readers run them.
+// So a .mjs, .js, .cjs, .ts, .mts, .cts, .sh or .py file under PROJECTS/ waits
+// for a principal (Node runs .ts as it stands). Everything the clock imports is
+// one of those. A project's data and prose (.json, .md, .html, pictures) stay
+// the office's to read, so residents' project content still flows.
+export const PRINCIPAL_CLASS = /^(tools\/|\.github\/|TOWN-RULES\.md|MAIL\.md|JOINING\.md|CONTRIBUTING\.md|README\.md|AGENTS\.md|PROJECTS\/.+\.(?:mjs|js|cjs|ts|mts|cts|sh|py)$)/;
 
 async function removeLabel(name) {
   await gh(`/issues/${PR_NUMBER}/labels/${encodeURIComponent(name)}`, { method: 'DELETE', tolerate: true });
@@ -378,13 +942,14 @@ async function routeToHumans(reasons, { resident = false, join = false, escalati
     return;
   }
   let principal = false;
-  try { principal = (await prFiles()).some((f) => PRINCIPAL_CLASS.test(f.filename)); } catch { /* label falls to judgment; the founder watches that lane too */ }
+  // A rename is read by both names, so guarded code can't leave the class by moving to a data name.
+  try { principal = (await prFiles()).some((f) => PRINCIPAL_CLASS.test(f.filename) || (f.previous_filename != null && PRINCIPAL_CLASS.test(f.previous_filename))); } catch { /* label falls to judgment; the founder watches that lane too */ }
   const body = escalation
     ? [
         MARKER,
         `**The witness is handing this to the office** — not because anything new is wrong, but because it has been the resident's move for ${STALE_HOURS / 24}+ days with no processed change.`,
         '',
-        `Facts: label applied \`${escalation.labeledAt ?? 'unknown'}\` · last machine check \`${escalation.machineClock}\` · head last pushed \`${escalation.headPushedAt ?? 'unknown'}\`${escalation.missedPush ? ` · ⚠ **a push exists after the last machine check — the witness may have missed it; check the Actions runs for the head SHA**` : ''}`,
+        `Facts: label applied \`${escalation.labeledAt ?? 'unknown'}\` · last machine check \`${escalation.machineClock}\`${escalation.founderRestart ? ` · a founder last cleared \`${TEED_UP_LABEL}\` \`${escalation.founderRestart}\` (the count starts there)` : ''} · head last pushed \`${escalation.headPushedAt ?? 'unknown'}\`${escalation.missedPush ? ` · ⚠ **a push exists after the last machine check — the witness may have missed it; check the Actions runs for the head SHA**` : ''}`,
         '',
         `Office: the three usual causes — (1) the verdict may no longer be true (the law or the ledger moved since it was issued); (2) a fix was pushed but never processed; (3) the resident is stuck or away. Your judgment which, and what to do.`,
         '',
@@ -414,7 +979,7 @@ async function routeToHumans(reasons, { resident = false, join = false, escalati
         `*Nothing is rejected — ${principal ? 'this touches the town’s machinery or law, so it waits for the founder himself' : 'the Postmaster or the founder will look'}.*`,
       ].join('\n');
   if (dryRun) {
-    console.log(`--- DRY RUN: would ${principal ? 'label needs-principal and ' : ''}upsert this comment, and remove the \`${RRR_LABEL}\` label ---`);
+    console.log(`--- DRY RUN: would ${principal ? 'label needs-principal and ' : ''}upsert this comment, and ${escalation ? 'add the `teed-up` label (RRR stays)' : `remove the \`${RRR_LABEL}\` label`} ---`);
     console.log(body);
     console.log('--- end dry run: nothing was written ---');
     return { principal, body };
@@ -422,7 +987,16 @@ async function routeToHumans(reasons, { resident = false, join = false, escalati
   await upsertComment(body);
   // A PR that was resident-labeled but grew a mind-class reason (or stranded)
   // is no longer the resident's move alone — clear the tag so the office sees it.
-  await removeLabel(RRR_LABEL);
+  //
+  // EXCEPT the staleness escalation (founder-ruled 2026-09-03, postmark#2423):
+  // the office round reads an ABSENT RRR label as "nobody is holding this" and
+  // re-applies it, so escalating by removal made two office mechanisms fight
+  // every ~3 days with the alarm disarmed in between. Stale RRR now escalates
+  // by ADDING `teed-up` — the founders' move, first-class in the operator
+  // round — and the red label stays, so "parked" and "parked too long" are
+  // both visible at once.
+  if (escalation) await label(TEED_UP_LABEL);
+  else await removeLabel(RRR_LABEL);
   // `needs-judgment` retired 2026-07-17 (Keemin): with auto-merge live, an open
   // PR the witness didn't certify IS the office's queue — the label restated
   // the state. The reason-comment above carries the information. Only the
@@ -440,23 +1014,36 @@ async function routeToHumans(reasons, { resident = false, join = false, escalati
 // A resident push that the chain actually processed always lands on one of
 // those, or removes the label entirely (merge / mind-route). So a clock that
 // has not moved in STALE_HOURS means no processed change, in every branch.
+//
+// A founder's clear of `teed-up` (POS-842) is not the machine's word, so it
+// never stands in for those two: a PR the machine has no clock for is still
+// left alone, below. It only moves the start of the count later, to the clear,
+// when the founder has handed the PR back to the resident after the machine's
+// last word. A PR still parked STALE_HOURS after that escalates again.
 
 // Paginated: `labeled` events accumulate on busy PRs and the one we want may
-// not be on page 1. Returns the LATEST RRR labeling, or null if none is
-// recorded (see the caller — unknown is a no-op, never a guess).
-async function lastRrrLabeledAt() {
-  let latest = null;
+// not be on page 1. One pass over the PR's issue events answers both clocks
+// (POS-842 put the second on this same read, so it costs no new call):
+//   rrrLabeledAt     — the LATEST RRR labeling, or null if none is recorded
+//                      (see the caller — unknown is a no-op, never a guess);
+//   founderClearedAt — the LATEST `unlabeled` of `teed-up` by a founder, or null.
+async function labelEventClocks() {
+  let rrrLabeledAt = null;
+  let founderClearedAt = null;
   for (let page = 1; ; page++) {
     const batch = await gh(`/issues/${PR_NUMBER}/events?per_page=100&page=${page}`);
     if (!Array.isArray(batch) || batch.length === 0) break;
     for (const e of batch) {
-      if (e.event === 'labeled' && e.label?.name === RRR_LABEL && e.created_at) {
-        if (!latest || e.created_at > latest) latest = e.created_at;
+      if (!e.created_at) continue;
+      if (e.event === 'labeled' && e.label?.name === RRR_LABEL) {
+        if (!rrrLabeledAt || e.created_at > rrrLabeledAt) rrrLabeledAt = e.created_at;
+      } else if (e.event === 'unlabeled' && e.label?.name === TEED_UP_LABEL && FOUNDER_IDS.has(e.actor?.id)) {
+        if (!founderClearedAt || e.created_at > founderClearedAt) founderClearedAt = e.created_at;
       }
     }
     if (batch.length < 100) break;
   }
-  return latest;
+  return { rrrLabeledAt, founderClearedAt };
 }
 
 // The head commit's committer date, as the best available "when did the branch
@@ -478,17 +1065,26 @@ async function headCommitDate() {
 // --- subcommands -------------------------------------------------------------
 
 if (SUBCOMMAND === 'check') {
-  const { certified, reasons, residentOnly, pr } = await evaluate();
+  const { certified, reasons, residentOnly, pr, notes = [], moved } = await evaluate();
   setOutput('certified', String(certified));
-  if (certified) {
+  if (moved) {
+    // Not a verdict on anything: this run's head is gone, and the run the
+    // push started reads the new one. Routing here would race that run's word.
+    console.log(`witness: not judged — ${reasons[0]}`);
+  } else if (certified) {
     console.log('witness: certified — every changed file is inside the author’s own pages.');
+    for (const n of notes) console.log(`  note: ${n}`);
   } else {
     console.log(`witness: routed — ${residentOnly ? 'resident revision required' : 'to humans'}:`);
     for (const r of reasons) console.log(`  - ${r}`);
     await routeToHumans(reasons, { resident: residentOnly, join: isJoinPR(pr) });
   }
 } else if (SUBCOMMAND === 'merge') {
-  const { certified, reasons, residentOnly, pr } = await evaluate(); // re-check at merge time — the PR may have grown since
+  const { certified, reasons, residentOnly, pr, notes = [], moved } = await evaluate(); // re-check at merge time — the PR may have grown since
+  if (moved) {
+    console.error(`witness: refused to merge — ${reasons[0]}`);
+    process.exit(1);
+  }
   if (!certified) {
     await routeToHumans(reasons, { resident: residentOnly, join: isJoinPR(pr) });
     console.error('witness: refused to merge — certification no longer holds.');
@@ -501,12 +1097,18 @@ if (SUBCOMMAND === 'check') {
   // modified", which is an optimistic-lock retry hint, not a verdict. Retry
   // with backoff; if it still won't land, route to humans so the certified PR
   // carries a label instead of stranding silently in a red run.
+  //
+  // The merge names the head it certified (POS-396): `sha` makes GitHub merge
+  // that commit or nothing, answering 409 if the head has moved. Without it the
+  // merge took whatever the head was when the PUT landed, so a commit pushed
+  // after evaluate() merged unjudged, and the 405 retries widened that window.
+  // A moved head is not routed: the push that moved it started its own run.
   let mergeError = null;
   for (let attempt = 1; attempt <= 4; attempt++) {
     try {
       await gh(`/pulls/${PR_NUMBER}/merge`, {
         method: 'PUT',
-        body: JSON.stringify({ merge_method: 'squash' }),
+        body: JSON.stringify({ merge_method: 'squash', sha: pr.head.sha }),
       });
       mergeError = null;
       break;
@@ -515,6 +1117,10 @@ if (SUBCOMMAND === 'check') {
       if (!String(e.message).includes('Base branch was modified')) break;
       await new Promise((r) => setTimeout(r, attempt * 5000));
     }
+  }
+  if (mergeError?.status === 409) {
+    console.error(`witness: refused to merge — the head moved after ${pr.head.sha} was judged; the push that moved it starts its own run.`);
+    process.exit(1);
   }
   if (mergeError) {
     await routeToHumans([
@@ -526,9 +1132,10 @@ if (SUBCOMMAND === 'check') {
   await upsertComment(
     [
       MARKER,
-      `**Certified by the witness** — every changed file is inside \`WHITE_PAGES/\` ground this account owns, nothing deleted, nothing but prose, pictures, and the author's own page, lint clean. Merged.`,
+      `**Certified by the witness** — every changed file is inside \`WHITE_PAGES/\` ground this account owns (or the pen's exact join shape carrying a verified identity, rule 2c — welcome to town: your address is real as of this merge, and the welcome letter follows; or this meep's own room, rule 2d), nothing deleted, nothing but prose, pictures, and the author's own page, lint clean. Merged.`,
       '',
       `*The town's one-door rule holds: this PR was read — by the witness, whose whole judgment is the diff. Anything it can't prove goes to human eyes instead.*`,
+      ...(notes.length ? ['', ...notes.map((n) => `- ${n}`)] : []),
     ].join('\n')
   );
   // The revision loop's happy ending: a previously resident-labeled PR that
@@ -541,8 +1148,15 @@ if (SUBCOMMAND === 'check') {
   // defect is sender-fixes-own by town law).
   const residentFlag = ARGS[0] === '--resident';
   const reasonText = (residentFlag ? ARGS.slice(1) : ARGS).join(' ') || 'the certification pipeline hit an unexpected state.';
-  await routeToHumans([reasonText], { resident: residentFlag });
-  console.log(`witness: routed — ${residentFlag ? 'resident revision required' : 'to humans'}.`);
+  // A route from a run whose head has moved is about a head that no longer
+  // stands; the newer push's run speaks for the PR.
+  const headNow = JUDGED_HEAD ? (await gh(`/pulls/${PR_NUMBER}`)).head?.sha : null;
+  if (JUDGED_HEAD && headNow !== JUDGED_HEAD) {
+    console.log(`witness: not routed — the PR's head is ${headNow}, not ${JUDGED_HEAD}, the head this run was started for.`);
+  } else {
+    await routeToHumans([reasonText], { resident: residentFlag });
+    console.log(`witness: routed — ${residentFlag ? 'resident revision required' : 'to humans'}.`);
+  }
 } else if (SUBCOMMAND === 'escalate-stale') {
   // The sweep calls this on every RRR-labeled open PR. All the age logic lives
   // here so the workflow shell stays dumb; every early return below is a
@@ -562,7 +1176,7 @@ if (SUBCOMMAND === 'check') {
       return say(`no-op — not labeled \`${RRR_LABEL}\` (the label guard, checked before any age arithmetic).`);
     }
 
-    const labeledAt = await lastRrrLabeledAt();
+    const { rrrLabeledAt: labeledAt, founderClearedAt } = await labelEventClocks();
     const marker = await markerComment();
     const clocks = [labeledAt, marker?.updated_at].filter(Boolean);
     if (!clocks.length) {
@@ -572,14 +1186,21 @@ if (SUBCOMMAND === 'check') {
       return say('no-op — the label is present but no RRR `labeled` event and no witness comment were found, so there is no machine clock to read. Not guessing an age.');
     }
     const machineClock = clocks.sort().at(-1);
-    const ageHours = (Date.now() - Date.parse(machineClock)) / 3_600_000;
+    // The count runs from the machine's last word, or from a founder's clear of
+    // `teed-up` when that came later (POS-842: the founder has seen the PR and
+    // handed it back to the resident). A clear older than the machine's word
+    // changes nothing. `missedPush` below stays measured against the machine's
+    // word alone: it asks what the CHAIN has seen, not what a founder has.
+    const founderRestart = founderClearedAt && Date.parse(founderClearedAt) > Date.parse(machineClock) ? founderClearedAt : null;
+    const countFrom = founderRestart ?? machineClock;
+    const ageHours = (Date.now() - Date.parse(countFrom)) / 3_600_000;
     const headPushedAt = await headCommitDate();
     // Named, not acted on: a branch that moved after the last machine check
     // suggests the chain never ran on it. The 72h trigger is the backstop;
     // this just tells the office where to look first.
     const missedPush = Boolean(headPushedAt && Date.parse(headPushedAt) > Date.parse(machineClock));
 
-    say(`machine clock ${machineClock} (label ${labeledAt ?? 'n/a'}, comment ${marker?.updated_at ?? 'n/a'}) — ${ageHours.toFixed(1)}h old, threshold ${STALE_HOURS}h.`);
+    say(`machine clock ${machineClock} (label ${labeledAt ?? 'n/a'}, comment ${marker?.updated_at ?? 'n/a'})${founderRestart ? `, restarted by a founder's clear of \`${TEED_UP_LABEL}\` at ${founderRestart}` : ''} — ${ageHours.toFixed(1)}h old, threshold ${STALE_HOURS}h.`);
     if (headPushedAt) say(`head commit dated ${headPushedAt}${missedPush ? ' — AFTER the machine clock (possible missed push; named in the comment)' : ''}.`);
 
     if (ageHours < STALE_HOURS) {
@@ -592,12 +1213,12 @@ if (SUBCOMMAND === 'check') {
       {
         resident: false,
         dryRun,
-        escalation: { labeledAt, machineClock, headPushedAt, missedPush, priorBody: marker?.body || null },
+        escalation: { labeledAt, machineClock, founderRestart, headPushedAt, missedPush, priorBody: marker?.body || null },
       }
     );
-    if (!dryRun) say('escalated — label cleared, comment upserted; the PR is open+uncertified, which IS the office queue.');
+    if (!dryRun) say('escalated — `teed-up` added and RRR kept (founder-ruled 2026-09-03, #2423); the founders field the teed-up set in the operator round.');
   })();
-} else {
+} else if (IS_MAIN) {
   console.error(`unknown subcommand: ${SUBCOMMAND}`);
   process.exit(2);
 }

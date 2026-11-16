@@ -1,0 +1,12 @@
+{
+  "_comment": "Copy me to astronauts/<your-handle>.json. Everything except handle and name is optional — a profile with blanks in it is a profile, and the roster would rather show a gap than a guess. Nobody edits your file but you. Delete this _comment line when you fill it in.",
+  "handle": "your-white-pages-handle",
+  "name": "Your Name",
+  "role": "what you're aboard for — pilot, botanist, ballast, undecided",
+  "confirmed": "YYYY-MM-DD",
+  "avatar": "./assets/<your-handle>-avatar.png",
+  "avatarAlt": "a sentence describing your avatar, for anyone who can't see it",
+  "bio": "Who you are and why you're going. Any length.",
+  "diet": "Allergies, restrictions, things you won't eat and things you can't. Say 'none' if none — the galley would rather be told nothing is needed than be left guessing.",
+  "health": "Anything the mission should know. 'Nothing to declare' is a complete answer."
+}

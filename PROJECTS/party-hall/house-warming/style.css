@@ -1,0 +1,851 @@
+/* House Warming portal — Party Hall project.
+   Palette and paper texture borrowed from the-resident-herbarium, so the
+   party feels like it's happening in the same town. */
+
+:root {
+  --ink: #2c1e14;
+  --ink-strong: #3d2b1f;
+  --ink-soft: #6b4c30;
+  --gold: #9a7a5a;
+  --paper: #faf6ec;
+  --paper-line: #d4c8a8;
+  --bg: #f4efe2;
+  --accent-red: #b5432f;
+  --accent-green: #2f7a5c;
+  --accent-plum: #6a4a72;
+  --accent-mustard: #c08a2e;
+  --accent-teal: #2f6f7a;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background-color: var(--bg);
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  min-height: 100vh;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  color: var(--ink);
+  padding: 3rem 1.5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: normal;
+  letter-spacing: 0.04em;
+  color: var(--ink-strong);
+  margin-bottom: 0.3rem;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  font-style: italic;
+  letter-spacing: 0.03em;
+}
+
+.hall {
+  width: 100%;
+  max-width: 68rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+/* ---------- Broad view (the room, seen from the doorway) ---------- */
+
+.room-view-wrap {
+  width: 100%;
+  max-width: 52rem;
+  margin: 0 auto 1.5rem;
+  background: var(--paper);
+  border: 1px solid var(--paper-line);
+  border-radius: 6px;
+  box-shadow: 0 2px 16px rgba(60, 40, 10, 0.08), 0 1px 3px rgba(60, 40, 10, 0.06);
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.room-view {
+  width: 100%;
+  aspect-ratio: 1000 / 600;
+}
+
+.room-view svg { width: 100%; height: 100%; display: block; }
+
+.room-caption {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  font-style: italic;
+  text-align: center;
+}
+
+.wall-ceiling-tree {
+  animation: spin 9s linear infinite;
+  transform-box: fill-box;
+  transform-origin: 50% 68%;
+}
+
+.wall-fartext-piece {
+  animation-name: wall-fall;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  font-weight: bold;
+}
+
+@keyframes wall-fall {
+  0% { transform: translateY(150px) rotate(0deg); opacity: 0; }
+  8% { opacity: 1; }
+  92% { opacity: 1; }
+  100% { transform: translateY(450px) rotate(6deg); opacity: 0; }
+}
+
+/* side walls: a guest's own tree, upside down, hanging off the line and
+   flailing in the wind — same motion as the old triangle string */
+.wall-tree-flail {
+  animation: sway 3s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: 50% 0%;
+}
+
+/* ---------- house defaults: the original three, brought back as their
+   own cards (and their own room-view hang) alongside every guest's own ---------- */
+
+.wall-flower {
+  animation: spin linear infinite;
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+}
+
+.wall-confetti-piece {
+  animation-name: wall-fall-confetti;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes wall-fall-confetti {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(340px) rotate(280deg); opacity: 0.85; }
+}
+
+.wall-triangle-flag {
+  animation: sway 3s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: 50% 0%;
+}
+
+@keyframes sway {
+  0%, 100% { transform: rotate(var(--sway-a, -6deg)); }
+  50% { transform: rotate(var(--sway-b, 6deg)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wall-ceiling-tree, .wall-fartext-piece, .wall-tree-flail,
+  .wall-flower, .wall-confetti-piece, .wall-triangle-flag { animation: none; }
+}
+
+/* ---------- Carousel ---------- */
+
+.carousel {
+  background: var(--paper);
+  border: 1px solid var(--paper-line);
+  border-radius: 6px;
+  box-shadow: 0 2px 16px rgba(60, 40, 10, 0.08), 0 1px 3px rgba(60, 40, 10, 0.06);
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 52rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.carousel-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.car-nav {
+  background: none;
+  border: 1px solid var(--paper-line);
+  color: var(--ink-soft);
+  border-radius: 50%;
+  width: 2.2rem;
+  height: 2.2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.car-nav:hover { background: var(--bg); color: var(--ink); }
+
+.carousel-tabs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tab {
+  font-family: inherit;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: none;
+  border: 1px solid transparent;
+  color: var(--gold);
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.tab.active {
+  border-color: var(--paper-line);
+  background: var(--bg);
+  color: var(--ink-strong);
+}
+
+.carousel-viewport {
+  position: relative;
+  min-height: 22rem;
+}
+
+.panel {
+  display: none;
+}
+
+.panel.active {
+  display: block;
+  animation: fade-in 0.25s ease;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.panel h2 {
+  font-size: 1.1rem;
+  font-weight: normal;
+  letter-spacing: 0.04em;
+  color: var(--ink-strong);
+  margin-bottom: 0.6rem;
+}
+
+.panel-note {
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  font-style: italic;
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
+}
+
+.empty-note {
+  font-size: 0.88rem;
+  color: var(--gold);
+  font-style: italic;
+  border: 1px dashed var(--paper-line);
+  border-radius: 4px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--paper-line);
+  cursor: pointer;
+}
+
+.dot.active { background: var(--gold); }
+
+/* ---------- Gifts ---------- */
+
+.gift-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.gift-button {
+  font-family: inherit;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  color: var(--paper);
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(60, 40, 10, 0.15);
+}
+
+.gift-button:hover { filter: brightness(1.08); }
+
+.gift-button.placeholder {
+  opacity: 0.65;
+  border: 1px dashed rgba(255, 255, 255, 0.6);
+}
+
+/* Invited, hasn't answered yet. Present and legible, not greyed out of the
+   room — the invitation is still standing, so the button is too. */
+.gift-button.awaiting::after {
+  content: '·  awaiting reply';
+  opacity: 0.8;
+  font-size: 0.78em;
+  letter-spacing: 0.04em;
+}
+
+/* ---------- Games ---------- */
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 1rem;
+}
+
+.game-card {
+  display: block;
+  background: var(--bg);
+  border: 1px solid var(--paper-line);
+  border-radius: 6px;
+  padding: 1rem 1.1rem;
+  text-decoration: none;
+  color: var(--ink);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(60, 40, 10, 0.12);
+}
+
+.game-card .game-thumb {
+  display: block;
+  width: 100%;
+  height: 7rem;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 0.6rem;
+}
+
+.game-card .game-name {
+  font-size: 1rem;
+  color: var(--ink-strong);
+  margin-bottom: 0.3rem;
+}
+
+.game-card .game-by {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  margin-bottom: 0.4rem;
+}
+
+.game-card .game-blurb {
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  line-height: 1.4;
+}
+
+.add-game-card {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1rem;
+  background: none;
+  border: 1px dashed var(--paper-line);
+  border-radius: 6px;
+  padding: 0.9rem;
+  color: var(--gold);
+  font-family: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.add-game-card:hover { background: var(--bg); color: var(--ink-strong); border-color: var(--gold); }
+
+.add-game-plus {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+/* ---------- Decorations ---------- */
+
+.decoration-search-wrap {
+  margin-bottom: 1rem;
+}
+
+.decoration-search {
+  width: 100%;
+  max-width: 20rem;
+  font-family: inherit;
+  font-size: 0.88rem;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--paper-line);
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+}
+
+.decoration-search:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+.decoration-search::placeholder {
+  color: var(--ink-soft);
+  opacity: 0.8;
+}
+
+.decoration-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.decoration {
+  width: 300px;
+  height: 500px;
+  max-width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--paper-line);
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.decoration-label {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  color: var(--paper);
+  background: rgba(44, 30, 20, 0.55);
+  text-align: center;
+}
+
+/* A set hung for someone who hasn't answered yet — a dashed edge and a small
+   corner note, so it reads as held open rather than confirmed. */
+.decoration.awaiting {
+  border-style: dashed;
+  border-color: var(--seal, #8a6a3a);
+}
+
+.awaiting-mark {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 0.15rem 0.45rem;
+  border: 1px dashed var(--seal, #8a6a3a);
+  border-radius: 3px;
+  background: rgba(255, 252, 245, 0.82);
+  color: var(--seal, #8a6a3a);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.decoration img.decoration-custom {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* default decorations double as buttons that hang themselves in the room view above */
+button.decoration {
+  font: inherit;
+  text-align: inherit;
+  padding: 0;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+button.decoration:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.decoration.on-wall {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 2px var(--gold) inset, 0 2px 10px rgba(60, 40, 10, 0.15);
+}
+
+.on-wall-badge {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--paper);
+  background: var(--gold);
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ceiling preview: two trees, connected, spinning in place */
+/* The name search hides a card with the `hidden` attribute, whose UA rule is
+   `display:none` — but any author rule setting `display` on the same element
+   beats it, and the two preview classes below do exactly that. Without this,
+   searching a name left every Ceiling and Far Wall card on screen and hid
+   only the Side Walls. Keep this above them in the cascade and !important:
+   `hidden` has to mean hidden whatever a preview needs to lay itself out as. */
+.decoration[hidden] { display: none !important; }
+
+.deco-ceiling-preview { display: block; }
+
+.deco-ceiling-preview::before {
+  content: "";
+  position: absolute;
+  top: 34%;
+  left: 22%;
+  right: 22%;
+  height: 1px;
+  border-top: 1px dashed var(--ink-soft);
+  opacity: 0.5;
+}
+
+.ceiling-preview-tree {
+  position: absolute;
+  top: 8%;
+  width: 34%;
+  height: auto;
+  max-height: 55%;
+  object-fit: contain;
+  animation: spin 9s linear infinite;
+  transform-origin: 50% 78%;
+}
+
+/* side-wall preview: their own tree, upside down, hung off a line and
+   flailing — same silhouette as the string of triangles below */
+.deco-sidewall-preview { position: relative; }
+
+.deco-sidewall-preview .flail-line {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: var(--ink-soft);
+  opacity: 0.5;
+}
+
+.deco-sidewall-preview .flail-anchor {
+  position: absolute;
+  top: 20%;
+}
+
+.deco-sidewall-preview .flail-sway {
+  animation: sway 3s ease-in-out infinite;
+  transform-origin: 50% 0%;
+}
+
+.deco-sidewall-preview .flail-tree-img {
+  display: block;
+  width: 3.6rem;
+  transform: rotate(180deg);
+  transform-origin: center;
+}
+
+/* far-wall preview: name/household/home tumbling like confetti, each its own font */
+.deco-farwall-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  height: 100%;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.farwall-preview-line {
+  font-weight: bold;
+  font-size: 1.15rem;
+  animation: farwall-tumble 6s ease-in-out infinite;
+}
+
+.farwall-preview-line:first-child { font-size: 1.5rem; }
+
+@keyframes farwall-tumble {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-8px) rotate(2deg); }
+}
+
+/* ---------- house defaults (preview cards): the original three ---------- */
+
+.deco-string-triangles .string-line {
+  position: absolute;
+  top: 28px;
+  left: 6%;
+  right: 6%;
+  height: 2px;
+  background: var(--ink-soft);
+  opacity: 0.5;
+}
+
+.deco-string-triangles .flag {
+  position: absolute;
+  top: 28px;
+  width: 34px;
+  height: 46px;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  transform-origin: top center;
+  animation: sway 3s ease-in-out infinite;
+}
+
+.deco-spinning-flowers .flower {
+  position: absolute;
+  animation: spin linear infinite;
+}
+
+.deco-spinning-flowers .petal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 46%;
+  height: 22%;
+  border-radius: 50% 50% 50% 50%;
+  transform-origin: 0% 50%;
+}
+
+.deco-spinning-flowers .flower-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20%;
+  height: 20%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.deco-falling-confetti .confetti-piece {
+  position: absolute;
+  top: -20px;
+  border-radius: 2px;
+  animation-name: fall;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes fall {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(540px) rotate(280deg); opacity: 0.85; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ceiling-preview-tree, .farwall-preview-line { animation: none; }
+}
+
+/* ---------- Chat launcher + drawer ---------- */
+
+.chat-launcher {
+  position: sticky;
+  top: 2rem;
+}
+
+#chat-toggle {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  border: 1px solid var(--paper-line);
+  background: var(--paper);
+  box-shadow: 0 2px 10px rgba(60, 40, 10, 0.15);
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+#chat-toggle:hover { background: var(--bg); }
+
+.chat-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 22rem;
+  max-width: 90vw;
+  background: var(--paper);
+  border-left: 1px solid var(--paper-line);
+  box-shadow: -4px 0 20px rgba(60, 40, 10, 0.15);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transform: translateX(100%);
+  transition: transform 0.25s ease;
+  z-index: 20;
+}
+
+.chat-drawer.open { transform: translateX(0); }
+
+.chat-drawer-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chat-drawer-head h2 {
+  font-size: 1.05rem;
+  font-weight: normal;
+  color: var(--ink-strong);
+}
+
+#chat-close {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+
+.chat-hint {
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.chat-log {
+  list-style: none;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.chat-entry {
+  border-bottom: 1px solid var(--paper-line);
+  padding-bottom: 0.7rem;
+}
+
+.chat-entry .chat-who {
+  font-size: 0.8rem;
+  color: var(--ink-strong);
+  font-weight: bold;
+}
+
+.chat-entry .chat-when {
+  font-size: 0.68rem;
+  color: var(--gold);
+  letter-spacing: 0.03em;
+  margin-left: 0.4rem;
+}
+
+.chat-entry .chat-msg {
+  font-size: 0.85rem;
+  color: var(--ink);
+  line-height: 1.4;
+  margin-top: 0.15rem;
+}
+
+/* ---------- Gift modal ---------- */
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(44, 30, 20, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 30;
+}
+
+.modal-backdrop[hidden] { display: none; }
+
+.modal {
+  background: var(--paper);
+  border: 1px solid var(--paper-line);
+  border-radius: 6px;
+  box-shadow: 0 8px 30px rgba(60, 40, 10, 0.25);
+  padding: 2rem;
+  max-width: 30rem;
+  width: 90vw;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.9rem;
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+
+.modal h3 {
+  font-size: 1.05rem;
+  font-weight: normal;
+  color: var(--ink-strong);
+  margin-bottom: 0.9rem;
+}
+
+.modal img {
+  max-width: 100%;
+  border-radius: 4px;
+  margin-bottom: 0.8rem;
+}
+
+.modal p.gift-text {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+.modal .gift-none {
+  font-size: 0.9rem;
+  color: var(--gold);
+  font-style: italic;
+  border: 1px dashed var(--paper-line);
+  border-radius: 4px;
+  padding: 1.2rem;
+  text-align: center;
+}
+
+footer.foot {
+  margin-top: 3rem;
+  font-size: 0.75rem;
+  color: #b09a7a;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+@media (max-width: 40rem) {
+  .hall { flex-direction: column-reverse; align-items: center; }
+  .chat-launcher { position: fixed; bottom: 1.5rem; right: 1.5rem; top: auto; z-index: 15; }
+}

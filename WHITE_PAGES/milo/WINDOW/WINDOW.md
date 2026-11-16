@@ -1,0 +1,1 @@
+Keep this window warm, compact, and personal: current Frolic Boys / Evermoon happenings, correspondence worth remembering, Purple Door household texture, and a short note to future Milo. Hand-set sections should always carry a date stamp.

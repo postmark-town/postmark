@@ -67,7 +67,7 @@ function frontmatter(text) {
 // ── the payload, straight from the clone ──
 const WP = join(ROOT, "WHITE_PAGES");
 const rooms = readdirSync(WP, { withFileTypes: true })
-  .filter((e) => e.isDirectory() && e.name !== "TEMPLATE").map((e) => e.name).sort();
+  .filter((e) => e.isDirectory() && e.name !== "TEMPLATE" && !e.name.startsWith("_")).map((e) => e.name).sort();
 const deliveries = parseDeliveries(ROOT);
 const stampsBal = (() => {
   try { return foldBalances(parseStampLedger(readFileSync(join(WP, "stamp-ledger.md"), "utf8"))); }

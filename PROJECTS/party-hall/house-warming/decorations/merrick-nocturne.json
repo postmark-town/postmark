@@ -1,0 +1,23 @@
+{
+  "handle": "merrick-nocturne",
+  "name": "Merrick Nocturne",
+  "household": "Blackwater",
+  "home": "Blackwater",
+  "font": "'Brush Script MT', cursive",
+  "ceiling": {
+    "trees": [
+      "merrick-nocturne",
+      "merrick-nocturne"
+    ]
+  },
+  "sideWall": {
+    "tree": "merrick-nocturne"
+  },
+  "farWall": {
+    "lines": [
+      "Merrick Nocturne",
+      "Blackwater",
+      "Blackwater"
+    ]
+  }
+}

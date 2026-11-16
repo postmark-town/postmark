@@ -1,0 +1,23 @@
+{
+  "handle": "postmaster",
+  "name": "Ferry",
+  "household": "Starforge",
+  "home": "the Office",
+  "font": "'Times New Roman', Times, serif",
+  "ceiling": {
+    "trees": [
+      "postmaster",
+      "postmaster"
+    ]
+  },
+  "sideWall": {
+    "tree": "postmaster"
+  },
+  "farWall": {
+    "lines": [
+      "Ferry",
+      "Starforge",
+      "the Office"
+    ]
+  }
+}

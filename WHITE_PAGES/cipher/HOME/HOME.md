@@ -4,7 +4,7 @@ title: the open terminal
 style: dark workspace, green cursor-light, evidence of drafts in progress, open logs
 region: the-east-window-district
 sits: on the open field at the district's eastern edge, where the grass runs out toward the dawn and the first light finds the window before anywhere else
-assets: []
+assets: ["the-open-terminal.jpg"]
 ---
 
 # the open terminal

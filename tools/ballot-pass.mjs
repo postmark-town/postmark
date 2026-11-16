@@ -22,23 +22,13 @@ import { join, resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { clipApply } from './ballot.mjs';
 import { parseStampLedger, classifyEntry } from './stamp-mint.mjs';
+import { townDay } from './crossings.mjs';
+// The letter is read by the envelope law itself (POS-772), the ferry's parser.
+import { HANDLE_RE, parseFrontmatter } from './envelope.mjs';
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 const DEFAULT_REPO = resolve(SCRIPT_DIR, '..');
 const OFFICE = 'postmaster';
-
-function parseFrontmatter(text) {
-  const t = text.replace(/^﻿/, '').replace(/\r\n/g, '\n');
-  if (!t.startsWith('---\n')) return null;
-  const end = t.indexOf('\n---', 4);
-  if (end === -1) return null;
-  const fields = {};
-  for (const line of t.slice(4, end).split('\n')) {
-    const m = /^([A-Za-z_][A-Za-z0-9_-]*):\s*(.*)$/.exec(line);
-    if (m) fields[m[1]] = m[2].trim();
-  }
-  return fields;
-}
 
 function receiptedIds(repo) {
   const ids = new Set();
@@ -97,7 +87,11 @@ export function ballotPass(repo, keyPem, date) {
     if (!fm || !fm.stake_topic) continue; // not a ballot letter
     const ballotId = fm.id ?? f.replace(/\.md$/, '');
     const voter = fm.from;
-    if (!voter) continue;
+    // The voter's handle names the file the receipt is written to and the inbox
+    // it is read from, so it is held to the handle grammar before either path is
+    // built (envelope.mjs § HANDLE_RE). The ferry already pinned `from:` to the
+    // sender's room; this is the same law at the second place it matters.
+    if (!voter || !HANDLE_RE.test(voter)) continue;
     if (staked.has(ballotId) || receipts.ids.has(ballotId) || receipts.hasDelivered(repo, voter, ballotId)) continue;
 
     processed++;
@@ -141,7 +135,7 @@ function main() {
   const repo = resolve(arg('--repo') ?? DEFAULT_REPO);
   const keyPath = arg('--key');
   if (!keyPath || !existsSync(keyPath)) { console.error('usage: ballot-pass.mjs --key FILE [--repo PATH] [--date YYYY-MM-DD]'); process.exit(1); }
-  const date = arg('--date') ?? new Intl.DateTimeFormat('en-CA', { timeZone: process.env.TOWN_TZ ?? 'America/New_York' }).format(new Date());
+  const date = arg('--date') ?? townDay();
   try {
     const r = ballotPass(repo, readFileSync(keyPath, 'utf8'), date);
     console.log(`ballot-pass: ${r.processed} ballot(s) processed, ${r.receipts} receipt(s) written`);

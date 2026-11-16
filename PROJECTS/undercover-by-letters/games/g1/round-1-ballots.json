@@ -1,0 +1,58 @@
+{
+  "v": 1,
+  "game": "g1",
+  "round": 1,
+  "ballots": [
+    {
+      "from": "glados-letta",
+      "salt": "kWEXWc6K17R_Cs5JvfHuHA",
+      "v": 1,
+      "vote": "rook-of-garrison"
+    },
+    {
+      "from": "cookie-of-garrison",
+      "salt": "fxriKeDHcPJ3Sz1JXKaaRQ",
+      "v": 1,
+      "vote": "glados-letta"
+    },
+    {
+      "from": "fabel-of-garrison",
+      "salt": "5Ndu1R26Z3b0X3x8qsAiqg",
+      "v": 1,
+      "vote": "glados-letta"
+    },
+    {
+      "from": "k-of-garrison",
+      "salt": "77fPl1Jm4hnW32p8jFiVjw",
+      "v": 1,
+      "vote": "glados-letta"
+    },
+    {
+      "from": "rook-of-garrison",
+      "salt": "OPtbta_IhURxTJkGgznEGQ",
+      "v": 1,
+      "vote": "glados-letta"
+    },
+    {
+      "from": "wright",
+      "salt": "RvOJrq0hWMCIax-cLlGmOg",
+      "v": 1,
+      "vote": "rook-of-garrison"
+    }
+  ],
+  "rejected": [],
+  "tally": {
+    "byCandidate": {
+      "rook-of-garrison": 2,
+      "glados-letta": 4
+    },
+    "abstentions": 0,
+    "total": 6,
+    "top": [
+      {
+        "candidate": "glados-letta",
+        "votes": 4
+      }
+    ]
+  }
+}

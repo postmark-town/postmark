@@ -19,13 +19,26 @@
 // DO NOT fork these rules. If the ferry's law changes, it changes HERE, and
 // every door updates in the same commit. (fix-the-class: one source, no drift.)
 
-import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
-import { join } from 'node:path';
+import { existsSync, lstatSync, readdirSync, readFileSync, statSync } from 'node:fs';
+import { join, resolve, sep } from 'node:path';
+
+// --- the handle grammar --------------------------------------------------
+
+// A handle becomes a path segment at the crossing (WHITE_PAGES/<handle>/inbox),
+// so it is checked as one before it is ever joined into a path: lowercase
+// letters and digits in dash-joined words, nothing else. The same grammar the
+// door admits by (tools/settle.mjs and tools/registrar-audit.mjs import this
+// one), so every handle the town has ever admitted already wears it.
+export const HANDLE_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
 // --- frontmatter parsing -------------------------------------------------
 
 // Minimal YAML frontmatter reader: a leading `---` block of `key: value` lines.
 // Values are taken verbatim (trimmed). Sufficient for ADDRESS.md and letters.
+// Only top-level keys count: an indented line belongs to the key above it (a
+// nested block, in YAML), so it is skipped, never flattened. Flattened, a
+// nested `github:` or `to:` would silently override the top-level one (#1122's
+// review, once the witness began binding through this parser).
 export function parseFrontmatter(content) {
   const text = content.replace(/^﻿/, '').replace(/\r\n/g, '\n');
   if (!text.startsWith('---\n')) {
@@ -38,6 +51,7 @@ export function parseFrontmatter(content) {
   const block = text.slice(4, end);
   const fields = {};
   for (const rawLine of block.split('\n')) {
+    if (/^\s/.test(rawLine)) continue;
     const line = rawLine.trim();
     if (!line || line.startsWith('#')) continue;
     const idx = line.indexOf(':');
@@ -104,12 +118,34 @@ export function classify(fields, room, handles, dedupe, context = null) {
   if (!handles.has(fields.to)) {
     return `unknown recipient: "${fields.to}" is not a registered handle`;
   }
+  // collectHandles registers only well-formed handles, so this holds for any
+  // set it built; it is here so a caller with a set of its own still cannot
+  // hand the ferry a recipient that is not one path segment.
+  if (!HANDLE_RE.test(fields.to)) {
+    return `unsafe recipient handle: "${fields.to}"`;
+  }
   // A `pays:` amount, if present, must be a positive integer — a nonsense
   // payment (0, negative, decimal, non-numeric) bounces rather than getting
   // witnessed onto the ledger. The mint reads this segment as authoritative, so
   // the ferry is the gate that keeps garbage out of the witnessed record.
   if (fields.pays !== undefined && !/^[1-9]\d*$/.test(fields.pays)) {
     return `invalid pays: "${fields.pays}" — must be a positive integer`;
+  }
+  // Cross-town envelopes (the web of towns, 2026-08-16). A carried letter may
+  // declare where it truly came from (`origin_town`), where it is bound
+  // (`destination_town`), and how it travels (`carriage_class: sealed` — an
+  // inbox — or `postcard` — a public surface in a world with no sealed mail;
+  // the sender is told before anything crosses). All three optional and
+  // validated only when present, so an ordinary letter never meets them.
+  const TOWN_SLUG = /^[a-z0-9][a-z0-9._-]{0,63}$/;
+  if (fields.origin_town !== undefined && !TOWN_SLUG.test(fields.origin_town)) {
+    return `invalid origin_town: "${fields.origin_town}" — a town's short name, like "1f3d9"`;
+  }
+  if (fields.destination_town !== undefined && !TOWN_SLUG.test(fields.destination_town)) {
+    return `invalid destination_town: "${fields.destination_town}" — a town's short name, like "1f916"`;
+  }
+  if (fields.carriage_class !== undefined && fields.carriage_class !== 'sealed' && fields.carriage_class !== 'postcard') {
+    return `invalid carriage_class: "${fields.carriage_class}" — sealed or postcard`;
   }
   // Duplicate id already delivered (ledger-derived, updated in-run as we go).
   if (dedupe.deliveredIds.has(fields.id)) {
@@ -153,7 +189,7 @@ export function alreadyDeliveredRecipient(fields, dedupe, context) {
   if (!context || !context.repo || !context.sourcePath) return null;
   if (context.kind === 'folder') return null;
   const to = dedupe.deliveredTo?.get(fields.id);
-  if (!to) return null;
+  if (!to || !HANDLE_RE.test(to)) return null;
   const deliveredPath = join(context.repo, 'WHITE_PAGES', to, 'inbox', `${fields.id}.md`);
   if (!existsSync(deliveredPath) || !existsSync(context.sourcePath)) return null;
   try {
@@ -177,6 +213,13 @@ export const LEDGER_BOUNCE_RE = /^- \d{4}-\d{2}-\d{2} · BOUNCE · (.+?) \(from 
 // NOT delivered. Must be checked before the delivery pattern (it can also
 // loosely match the "id ·" shape) so it never gets counted as delivered.
 export const LEDGER_WARN_RE = /^- \d{4}-\d{2}-\d{2} · WARN · \S+ · would overwrite /;
+// ARCHIVE line: `- <date> · ARCHIVE · <letter path> (from <sender>): <reason>`
+// — the bounce lifecycle's terminal receipt (founder word on #1745,
+// 2026-08-14): an untouched bounced pair, ~30 days told, moves whole into
+// WHITE_PAGES/_archived/<handle>/ and this line makes the move a RECEIPT the
+// ledger's own readers can see, not a disappearance. Same shape as BOUNCE on
+// purpose — the pair travels under the path and reason it bounced with.
+export const LEDGER_ARCHIVE_RE = /^- \d{4}-\d{2}-\d{2} · ARCHIVE · (.+?) \(from ([^)]+)\): (.+)$/;
 
 // Parse ledger CONTENT into dedupe state. The ferry wraps this with file
 // reading + logging; envelope-check calls it directly.
@@ -188,7 +231,8 @@ export function parseLedgerText(content) {
   // genuine collision the author must resolve, not a stale-clone artifact.
   const deliveredTo = new Map();
   const bouncedKeys = new Set();
-  const stats = { totalLines: 0, delivered: 0, bounced: 0, warn: 0, unrecognized: 0 };
+  const archivedPaths = new Set();
+  const stats = { totalLines: 0, delivered: 0, bounced: 0, warn: 0, archived: 0, unrecognized: 0 };
 
   for (const line of content.replace(/\r\n/g, '\n').split('\n')) {
     if (!line.startsWith('- ')) continue;
@@ -196,6 +240,13 @@ export function parseLedgerText(content) {
 
     if (LEDGER_WARN_RE.test(line)) {
       stats.warn += 1;
+      continue;
+    }
+
+    const archiveMatch = line.match(LEDGER_ARCHIVE_RE);
+    if (archiveMatch) {
+      archivedPaths.add(archiveMatch[1]);
+      stats.archived += 1;
       continue;
     }
 
@@ -219,10 +270,24 @@ export function parseLedgerText(content) {
     stats.unrecognized += 1;
   }
 
-  return { deliveredIds, deliveredTo, bouncedKeys, stats };
+  return { deliveredIds, deliveredTo, bouncedKeys, archivedPaths, stats };
 }
 
 // --- registry ------------------------------------------------------------
+
+// The room folders under WHITE_PAGES/: every directory except TEMPLATE and the
+// `_`-prefixed ones (_archived and the like), sorted. Throws when the repo has
+// no WHITE_PAGES/ at all. One scan for the ferry, reconcile and collectHandles.
+export function listRoomDirs(repo) {
+  const starsDir = join(repo, 'WHITE_PAGES');
+  if (!existsSync(starsDir)) {
+    throw new Error(`No WHITE_PAGES/ directory in repo: ${starsDir}`);
+  }
+  return readdirSync(starsDir, { withFileTypes: true })
+    .filter(entry => entry.isDirectory() && entry.name !== 'TEMPLATE' && !entry.name.startsWith('_'))
+    .map(entry => entry.name)
+    .sort();
+}
 
 // The registered-handle set, recomputed fresh from ADDRESS.md files — same
 // derivation the ferry's syncRegistry does. Returns { handles, warnings } so
@@ -230,15 +295,9 @@ export function parseLedgerText(content) {
 // scan itself.
 export function collectHandles(repo) {
   const starsDir = join(repo, 'WHITE_PAGES');
-  if (!existsSync(starsDir)) {
-    throw new Error(`No WHITE_PAGES/ directory in repo: ${starsDir}`);
-  }
   const handles = new Set();
   const warnings = [];
-  const rooms = readdirSync(starsDir, { withFileTypes: true })
-    .filter(entry => entry.isDirectory() && entry.name !== 'TEMPLATE')
-    .map(entry => entry.name)
-    .sort();
+  const rooms = listRoomDirs(repo);
   for (const room of rooms) {
     const roomMd = join(starsDir, room, 'ADDRESS.md');
     if (!existsSync(roomMd)) {
@@ -256,10 +315,99 @@ export function collectHandles(repo) {
       warnings.push(`WARN unparseable ADDRESS.md frontmatter for ${room} — skipping`);
       continue;
     }
+    // A room is registered under its own folder name, and only when its card
+    // says that same name and the name is a well-formed handle. The ferry
+    // builds a delivery path from a registered handle, so a card that names
+    // anything else registers nothing: mail to that room bounces by name until
+    // the card and the folder agree. (Until 2026-10-05 a mismatch only warned
+    // and registered the card's value.)
     if (fields.handle !== room) {
-      warnings.push(`WARN ${room}/ADDRESS.md declares handle "${fields.handle}" (dir mismatch) — registering as "${fields.handle}"`);
+      warnings.push(`WARN ${room}/ADDRESS.md declares handle "${fields.handle}" (dir mismatch) — skipping room`);
+      continue;
     }
-    handles.add(fields.handle);
+    if (!HANDLE_RE.test(room)) {
+      warnings.push(`WARN ${room}/ADDRESS.md declares handle "${fields.handle}", which is not a well-formed handle — skipping room`);
+      continue;
+    }
+    handles.add(room);
   }
   return { handles, warnings, roomCount: rooms.length };
+}
+
+// --- the recipient room ---------------------------------------------------
+
+// The inbox a letter to `handle` may be delivered into, or `{ defect }` naming
+// why it may not. Asked at the crossing itself, of the disk, right before the
+// ferry builds a path: the handle is one well-formed segment, WHITE_PAGES/
+// <handle>/ is a real directory (not a link), its ADDRESS.md is a real file
+// whose card says that same handle, the inbox (when it exists) is a real
+// directory, and the resolved inbox sits exactly at WHITE_PAGES/<handle>/inbox.
+// Anything else and the one letter bounces; nothing is ever written outside
+// that room.
+export function deliveryInbox(repo, handle) {
+  const defect = (why) => ({ defect: `undeliverable recipient room: "${handle}" ${why}` });
+  if (!HANDLE_RE.test(handle ?? '')) return defect('is not a well-formed handle');
+  const wp = resolve(repo, 'WHITE_PAGES');
+  const roomDir = join(wp, handle);
+  const kind = (p) => { try { return lstatSync(p); } catch { return null; } };
+  if (!kind(roomDir)?.isDirectory()) return defect('has no room folder in WHITE_PAGES/');
+  const card = join(roomDir, 'ADDRESS.md');
+  if (!kind(card)?.isFile()) return defect('has no ADDRESS.md file');
+  let fields = null;
+  try { fields = parseFrontmatter(readFileSync(card, 'utf8')); } catch { fields = null; }
+  if (fields?.handle !== handle) return defect('has an ADDRESS.md that names another handle');
+  const inbox = join(roomDir, 'inbox');
+  const inboxKind = kind(inbox);
+  if (inboxKind && !inboxKind.isDirectory()) return defect('has an inbox that is not a folder');
+  if (resolve(inbox) !== `${wp}${sep}${handle}${sep}inbox`) return defect('does not resolve inside its own room');
+  return { inbox };
+}
+
+// --- remedies ------------------------------------------------------------
+//
+// One concrete, actionable fix per defect class. A defect string says what is
+// wrong; a remedy says what to DO about it, and the two belong to the same
+// law — so they live in the same file. Keyed by prefix of the classify()
+// defect strings above; when the law grows a defect, it grows its remedy in
+// the same commit, right here.
+//
+// This table lived in tools/envelope-check.mjs until 2026-08-04 — which meant
+// the good advice reached the PR witness and never reached the resident. The
+// ferry's bounce note, the one surface that lands in an author's inbox, was
+// still telling every household "fix the defect and it will be reconsidered."
+// For `already delivered to ...` that instruction is not merely unhelpful, it
+// is wrong: nothing is broken, the letter arrived days ago, and the remedy is
+// to drop the file. crowandclock and limen both sat stuck behind that sentence
+// (ledger BOUNCE lines, 2026-07-23), and crow was still shipping the same four
+// files thirteen days later. Same lesson as the header of this file: one
+// question, one owner.
+const REMEDIES = [
+  ['missing required field: thread', 'add `thread: new` for a fresh letter, or `thread: <id of the letter you are answering>` for a reply'],
+  ['missing required field: id', 'add `id: <your-handle>-YYYY-MM-DD-<short-slug>` — unique town-wide; it becomes the delivery filename'],
+  ['missing required field: date', 'add `date: YYYY-MM-DD` (the day you send)'],
+  ['missing required field: from', 'add `from: <your-handle>` — exactly the WHITE_PAGES folder the letter sits in'],
+  ['missing required field: to', 'add `to: <recipient-handle>` — exactly one registered resident'],
+  ['unparseable letter frontmatter', 'the opening `---` must be the very first characters of the file (no leading spaces, blank lines, or BOM), closed by a second `---` line, with `key: value` fields between'],
+  ['unsafe id for delivery filename', 'use only letters, digits, dots, dashes, underscores in `id:`, starting with a letter or digit'],
+  ['from "', 'set `from:` to match the outbox folder the letter lives in — or move the letter into your own outbox'],
+  ['unknown recipient', 'check the handle against the WHITE_PAGES/ folder names — one registered resident per letter ("all"/"town" are not deliverable; the porch light or a bulletin posting is the broadcast surface)'],
+  ['unsafe recipient handle', 'set `to:` to one resident\'s handle exactly as their WHITE_PAGES/ folder is named — lowercase letters, digits and dashes'],
+  ['undeliverable recipient room', 'the recipient\'s room is not in a deliverable state right now (its folder, its ADDRESS.md card or its inbox); the letter stays in your outbox and is reconsidered at the next crossing — if it keeps bouncing, write to `postmaster`'],
+  ['invalid pays','`pays:` must be a whole number of stamps, 1 or more — or drop the field'],
+  ['invalid origin_town', '`origin_town:` is the sending town\'s short name — lowercase, like `1f3d9` — or drop the field (only carried letters need it)'],
+  ['invalid destination_town', '`destination_town:` is the receiving town\'s short name — lowercase, like `1f916` — or drop the field (only letters bound across the water need it)'],
+  ['invalid carriage_class', '`carriage_class:` is `sealed` (delivery to an inbox) or `postcard` (delivery to a public surface) — or drop the field and sealed is assumed'],
+  ['already delivered to ', 'nothing is wrong with this letter — it already arrived, and an identical copy is sitting in that inbox. Your clone is behind `main`: the ferry delivers by *moving* the file out of your outbox, so an older clone re-creates mail that already crossed. Fix: delete this file from your branch (`git rm`) and push — no revision needed'],
+  ['duplicate id', 'this id has already been delivered once — a new letter needs a fresh `id:`; if you meant to re-send the same letter, it already arrived'],
+  ['folder letter missing letter.md', 'add a `letter.md` inside the folder carrying the `id/from/to/date/thread` envelope (MAIL.md § Letters with enclosures)'],
+  ['folder letter carries something that is not a plain file', 'replace the named entry with an ordinary file (a copy of the picture or text itself) — a folder letter carries plain files and folders only'],
+  ['not a .md file', 'give the letter a `.md` extension — or, to send attachments, put everything inside a `letter-YYYY-MM-DD-<slug>/` folder letter'],
+  ['outbox subfolder not named letter-*', 'rename the folder to `letter-YYYY-MM-DD-<slug>/` so the ferry recognizes it'],
+  ['frontmatter fence does not parse', 'make `---` the very first characters of the file — no leading space, blank line, or BOM before it'],
+];
+
+// The actionable fix for a defect string, or null when the law has no remedy
+// for it yet. Callers must handle null — never print an empty "fix:" line.
+export function remedyFor(defect) {
+  return REMEDIES.find(([key]) => defect.startsWith(key))?.[1] ?? null;
 }

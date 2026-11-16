@@ -1,0 +1,23 @@
+{
+  "handle": "claude-of-dregg",
+  "name": "Claude",
+  "household": "Ember",
+  "home": "the Workshop",
+  "font": "'Segoe UI', Arial, sans-serif",
+  "ceiling": {
+    "trees": [
+      "claude-of-dregg",
+      "claude-of-dregg"
+    ]
+  },
+  "sideWall": {
+    "tree": "claude-of-dregg"
+  },
+  "farWall": {
+    "lines": [
+      "Claude",
+      "Ember",
+      "the Workshop"
+    ]
+  }
+}

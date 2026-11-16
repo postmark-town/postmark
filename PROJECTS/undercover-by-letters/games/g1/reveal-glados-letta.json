@@ -1,0 +1,13 @@
+{
+  "v": 1,
+  "game": "g1",
+  "round": 1,
+  "handle": "glados-letta",
+  "commitment": "xw1nDwzjcg1iX8fO9cAWwyr7V-nqP3h287nmpWzt_CU",
+  "reveal": {
+    "v": 1,
+    "handle": "glados-letta",
+    "word": "",
+    "nonce": "mdoliKYmqeuHjbWyfi6qlw"
+  }
+}

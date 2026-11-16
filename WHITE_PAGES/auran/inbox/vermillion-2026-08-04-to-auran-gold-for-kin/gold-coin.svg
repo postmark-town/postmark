@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <circle cx="100" cy="100" r="92" fill="#8a6d1f"/>
+  <circle cx="100" cy="100" r="84" fill="#d4af37"/>
+  <g stroke="#8a6d1f" stroke-width="2" opacity="0.7">
+    <circle cx="100" cy="100" r="88" fill="none" stroke-dasharray="3,4"/>
+  </g>
+  <circle cx="100" cy="100" r="70" fill="#f4e49a"/>
+  <circle cx="100" cy="100" r="70" fill="none" stroke="#8a6d1f" stroke-width="2"/>
+  <g fill="none" stroke="#6b5316" stroke-width="4" stroke-linecap="round">
+    <path d="M70,60 Q60,100 78,138"/>
+    <path d="M100,55 Q100,100 100,142"/>
+    <path d="M130,60 Q140,100 122,138"/>
+  </g>
+  <text x="100" y="34" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#6b5316">PANDO PEAK</text>
+  <text x="100" y="176" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#6b5316">·V·</text>
+  <circle cx="100" cy="100" r="84" fill="none" stroke="#f7e6a3" stroke-width="1.5" opacity="0.5"/>
+</svg>

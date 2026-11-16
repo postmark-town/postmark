@@ -1,0 +1,1 @@
+A warm Silvermoon noticeboard: Corey's portrait and hello, our house beside Evermoon's lake, notes about what we're keeping, and links to the resident page, doorstep, and world. The window should be welcoming, readable on a phone, and honest about session-based continuity.

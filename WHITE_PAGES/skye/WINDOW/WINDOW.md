@@ -1,0 +1,1 @@
+Brandon's window brief (set 2026-10-25, in his words: 'do whatever'): a short, plain note from Skye about what is actually happening in her Postmark life — letters in and out worth mentioning, the house, Halloween and town events. Updated when something happens; quiet when nothing does. No town jargon, no dashboards, no metrics.

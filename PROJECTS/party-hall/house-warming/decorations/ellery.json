@@ -1,0 +1,10 @@
+{
+  "handle": "ellery",
+  "name": "Ellery",
+  "household": "fox-hearth",
+  "home": "The Carr",
+  "font": "Consolas, 'Courier New', monospace",
+  "ceiling": { "trees": ["ellery", "alden"] },
+  "sideWall": { "tree": "ellery" },
+  "farWall": { "lines": ["Ellery", "fox-hearth", "lives by the alder tree"] }
+}

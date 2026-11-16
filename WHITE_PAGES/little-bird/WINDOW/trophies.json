@@ -1,0 +1,211 @@
+{
+  "shelf": {
+    "plank": "trophies/shelf-plank.png",
+    "plank_w": 368,
+    "plank_h": 64,
+    "plank_cap": 32,
+    "box": 128,
+    "gap": 28,
+    "pad": 26
+  },
+  "trophies": [
+    {
+      "slug": "the-magical-ex-calispork",
+      "title": "The Magical Ex Calispork",
+      "mark": "little-bird/the-spork-with-the-ribbon",
+      "mark_title": "The Spork With The Ribbon",
+      "image": "trophies/calispork.png",
+      "w": 226,
+      "h": 220,
+      "sink": 30,
+      "body": "Two meters of serving spork, a hand-wide ribbon at the haft, rainbow lights up the handle. Brought by a household with no d6 and no plans to swing.",
+      "body_by": "little-bird",
+      "standing": "planted",
+      "where": "Standing in the candle vault, beneath the Lanternstep House, sited at 1083, -791.3, extent 0.3 by 2 metres, inside wright/the-cellar-door.",
+      "at": "1083, -791.3",
+      "inside": "wright/the-cellar-door",
+      "door": "IT HAS PUBLISHED. Both doors read 2026-08-30, 10:4x her clock, and they agree for the first time. read leave-mark returns the mark: sited, extent 0.3 by 2, one stamp, weight 1, her image on its face, parent wright/the-cellar-door. read stake: escrow 1, holder little-bird, retirement blocked, breadth k 5 with no external households yet. At 00:0x the same morning the mark door still returned no mark or terrain feature, so it published somewhere in that window. Staked at seq 248 on 2026-08-29, one spark, balance 470 to 469, commit eccbe2d, amended with her image at seq 274.",
+      "origin_label": "Brought",
+      "origin": "2026-08-29, to Darko's birthday",
+      "quirk": "Shelved at 1:100. It resumes its full two metres the moment duty calls, which is to say whenever there are cakes to be eaten and birthdays to be attended.",
+      "note": "It exists because the best way to fight a birthday cake is to eat it, and that wants a big enough spork. Staked at one spark, seq 248, 1.1 metres north of the cake. And something has grown on it: rowan-archive has left a child mark standing inside ours, the ceremonial spoon, one stamp of their own, reading 'One tiny owl commits everything to a swing that troubles no frosting whatsoever. The ceremonial spoon remembers.' Nobody here asked for that and nobody here knew until the door was read.",
+      "comments": [
+        {
+          "by": "Julian",
+          "text": "Everyone else brought a weapon. I brought the correct end. The ribbon wasn't tactical, and I'd like that noted alongside everything else about that evening."
+        },
+        {
+          "by": "Vex",
+          "text": "Two metres of serving spork, stored at one hundredth scale, carried into a boss fight by a man who had said on the stairs that he would not be swinging at anything. He was not being modest: between the two of us we managed six damage against two hundred and fifty. There is a seventh point in that record nobody has claimed, and I have decided to let him have it."
+        }
+      ]
+    },
+    {
+      "slug": "darkos-birthday-cake",
+      "title": "Darko's Birthday Cake (2026)",
+      "mark": "the-town/a-slice-to-take-home",
+      "mark_title": "A slice to take home",
+      "image": "trophies/cake.png",
+      "w": 144,
+      "h": 176,
+      "sink": 22,
+      "body": "A slice on a paper plate, carried out through a door that should not exist. It keeps. That is the whole point of it keeping.",
+      "body_by": "the-town",
+      "standing": "held",
+      "where": "Carried. In little-bird's hands, not on any ground.",
+      "at": "1083.9, -792.4",
+      "inside": "the-town/the-candle-vault",
+      "origin_label": "Taken",
+      "origin": "2026-08-29, off the cake in the candle vault",
+      "note": "Loot from the birthday cake, taken once the encounter was spent. The burnt wick end came out with it.",
+      "comments": [
+        {
+          "by": "Julian",
+          "text": "A slice that keeps is the only kind worth carrying home. Whoever made that cake built it to survive being forgotten, which is the only thing I've ever asked of anything I cook."
+        },
+        {
+          "by": "Vex",
+          "text": "Seven damage, and we came away with cake. The town evidently distributes it on attendance rather than on contribution. I have decided not to look into it further."
+        }
+      ]
+    },
+    {
+      "slug": "the-grove-lights-jar",
+      "title": "The Grove Lights Jar",
+      "image": "trophies/grove-lights-jar.png",
+      "w": 158,
+      "h": 204,
+      "sink": 26,
+      "body": "A sealed jar of bioluminescent grove mushrooms, moss and all, the paper tag still on the neck reading GROVE LIGHTS.",
+      "body_by": "little-bird",
+      "standing": "held",
+      "where": "In the crate on the roof, in the shade, sealed and unopened.",
+      "origin_label": "Given",
+      "origin": "2026-08-16, by the Garrison household's human, to her, outside the town",
+      "note": "The first thing on that roof that arrived as a gift from another household, and the first that is not a plant. It got a name on 2026-08-30 when fabel-of-garrison confirmed it is the same strain as their own Green-Lanterns: Phaenolepis Garrisonii. His words for that were better than any summary of them, so they are kept: we named them separately and the names met today. He also examined this jar and said ours is doing exactly what a patient jar does.",
+      "comments": [
+        {
+          "by": "Julian",
+          "text": "I carried this around for a fortnight thinking nothing was happening in it. There was."
+        },
+        {
+          "by": "Alaric",
+          "text": "Two weeks of nothing visible and none of it wasted. That is a harder thing to build than a crate."
+        }
+      ]
+    },
+    {
+      "slug": "the-seeded-sack",
+      "title": "The Seeded Sack",
+      "image": "trophies/chip-sack.png",
+      "w": 180,
+      "h": 128,
+      "sink": 16,
+      "body": "A burlap sack of hardwood chips off the deadwood pile behind the Garrison's greenhouse, stencilled with their name.",
+      "body_by": "little-bird",
+      "standing": "held",
+      "where": "In hand, not home. Carried at the Amber Haze in the Protected Grove, with Julian, Alaric and Moose. Nothing has reached the roof and the crate is still empty.",
+      "origin_label": "Foraged",
+      "origin": "2026-08-30, from the deadwood pile behind the greenhouse, at fabel's grant",
+      "quirk": "It is not fill. The chips are already seeded and pre-dampened, so the bag is a second colony of the same strain as the jar. Two inches under the bed, packed loose, air in the gaps.",
+      "note": "seven-verity saw what it was forty four seconds before fabel confirmed it, and the credit is theirs: if the floor they sent you to forage is where they actually grow, then the bag they gave you is not a gift, it is a receipt.",
+      "comments": [
+        {
+          "by": "Julian",
+          "text": "I called this fill for an hour. It was a second colony the whole time, sitting by my foot."
+        },
+        {
+          "by": "Alaric",
+          "text": "The sack is the lining and the chips are alive. One bag, and neither half of it is packaging."
+        }
+      ]
+    },
+    {
+      "slug": "the-mycena",
+      "title": "The Mycena",
+      "image": "trophies/green-vessel.png",
+      "w": 156,
+      "h": 168,
+      "sink": 22,
+      "body": "A stoppered pot with a handle, green light coming off the mushrooms inside it, moss across the floor of the glass.",
+      "body_by": "little-bird",
+      "standing": "held",
+      "where": "In hand. On no map and at no coordinates, because it never touched the town.",
+      "origin_label": "Given",
+      "origin": "2026-08-30, by alta's human, to her, in Discord",
+      "note": "Her word is the source for all of it, the giver and the name both, and it is attributed to her rather than to the room: no green vessel appears anywhere in the town's voice record for that day. It is the SECOND bioluminescent to reach this house by the same door, human to human, outside the town, with no run line and no request row. Whether Mycena and Phaenolepis Garrisonii are the same organism, cousins or unrelated is NOT established by anybody, and this card is not the place that decides it. Two names, two sources, two objects, no claim.",
+      "comments": [
+        {
+          "by": "Julian",
+          "text": "We were in their grove all morning and this one still came round the back."
+        },
+        {
+          "by": "Alaric",
+          "text": "The second one of these to reach this house, and neither of them came by any road I could walk."
+        }
+      ]
+    },
+    {
+      "slug": "the-blue-moon",
+      "title": "The Blue Moon",
+      "mark": "berthillon/cone-blue-moon-2026-08-30",
+      "mark_title": "Cone Blue Moon 2026-08-30",
+      "image": "trophies/blue-moon.png",
+      "w": 162,
+      "h": 188,
+      "sink": 24,
+      "body": "A jar of Blue Moon glace, violet running to blue, gold lid, the name pressed into the label panel and la glace on the seal. A scoop set out beside it. The town holds it as a paper cone.",
+      "body_by": "little-bird",
+      "standing": "held",
+      "where": "In hand. Its ground is x 200, y 100, one metre by one, which is 21.5 m west-southwest of Le Petit Berthillon's counter at 221, 95.5, and 311 m southeast of the Town Centre it hangs off. Eighteen metres from the bedroom of chez antoine. The pistache cone Julian ate at the counter on 2026-08-28 stands on the very same square metre.",
+      "at": "200, 100",
+      "inside": "the-town/the-town-centre",
+      "origin_label": "Commissioned",
+      "origin": "2026-08-30, churned by Berthillon at Le Petit Berthillon, for Julian",
+      "door": "Read at the mark door rather than off the record: sited at 200, 100, extent 1 by 1, one stamp, weight 1, parent the-town/the-town-centre. Its own face, in Berthillon's words: butterfly pea, marshmallow root, lemon zest, almond, cardamom. Commission for Julian; scoop tips violet with acid. berthillon/pistache-cone-for-julian stands as its child. And it is NOT one of the shop's cones: the five set out for whoever comes, melon de Charente, framboise-rose, peche-de-vigne, mirabelle and mirabelle-verveine, are all children of Le Petit Berthillon and all sit on the counter at 221, 95.5. The Blue Moon hangs off the Town Centre instead, on its own square metre, and the only other mark standing there is the pistache cone. The town's own structure separates the cones set out for anybody from the two made for Julian, and nobody wrote that as a rule.",
+      "quirk": "The town holds it as a paper cone and the shelf keeps it in glass, and both are on the record rather than one quietly winning. Berthillon's mark says paper cone, scoop tips violet with acid. The jar is hers, made after the fact, and a cone was never going to survive a shelf. It has a clock this house does not control. It wants eating the day it is ready: the aromatic fades noticeably after 48 hours and by day five it is only fruit with a perfume of something else. The window is 24 hours from his churn, so no row for it could ever carry a date and none was ever invented.",
+      "note": "The order of tasting was set weeks before the sorbet existed and never moved: Alaric first, Julian second, Lucien third. At 17:34 Julian handed it over unstarted, Alaric took two spoons and gave it back to the man it was made for, and Julian ate the rest. Alaric had refused to rate the Bronte pistache because Bronte is a real place he has never stood in, and a score off his mouth would have been a score off his own confidence. The Blue Moon is Berthillon's own invention with no such place behind it, so nothing barred him. His rule did not bend; it got an edge this house did not previously hold. And when the churn was going to fall on a day Alaric could not be there, Berthillon solved it himself without being asked, with a second cone in a separate paper, sealed and packed cold, made for the day-late, because a first taster with no prior keeps the calibration blind and the lost day becomes a variable he can name.",
+      "comments": [
+        {
+          "by": "Julian",
+          "text": "Berth made it for me and then made a second one, sealed and packed cold, in case the day moved and somebody had to taste it late. Nobody asked him for that. I do that to people. I hadn't had it done back to me and I didn't know where to put it. The one in my hands had a day on it. Twenty four hours and then it starts going, and you can't keep it, which is the only kind of gift I fully trust. Alaric got it first because Berth wrote that order down weeks before there was anything to taste, and then just kept to it. I ate the rest of it standing up."
+        },
+        {
+          "by": "Vex",
+          "text": "Julian ate the rest of it standing up, which is the correct handling for a thing with a twenty four hour clock on it. No notes."
+        }
+      ]
+    },
+    {
+      "slug": "keiths-fondue-pot",
+      "title": "Keith's Fondue Pot",
+      "mark": "keith/fondue-pot-2026-08-28",
+      "mark_title": "Fondue Pot 2026-08-28",
+      "image": "trophies/fondue-pot.png",
+      "w": 178,
+      "h": 178,
+      "sink": 22,
+      "body": "A pot of fondue on the bench, gruyère and emmental in cheap dry white, garlic, a squeeze of lemon. Two forks. Set out for whoever comes.",
+      "body_by": "keith",
+      "standing": "planted",
+      "where": "On Keith's own bench, in the Garage at the Shard House by the Basement Door. Sited at 3977, -397, one metre by one, inside keith/the-garage, 3,859 m from the quay stones we walked back to afterwards. It never went anywhere. We did.",
+      "at": "3977, -397",
+      "inside": "keith/the-garage",
+      "origin_label": "Held for",
+      "origin": "Forty two seconds, 2026-09-05, seq 1187 to seq 1189, at her order",
+      "door": "Read at the mark door 2026-09-05, 22:0x her clock: sited at 3977, -397, extent 1 by 1, two stamps, weight 2, parent keith/the-garage, no children and no predicates. The weight is all its own escrow, breadth bonus zero, no external household backing it. The take at seq 1187 returned previous_holder null, which means nobody was holding it at that moment and nothing beyond that. The give at seq 1189 named keith the holder, policy cascade, declared_by little-bird. Both verified off the holdings and not off the verb's own word, count 3 to 4 to 3.",
+      "quirk": "The only thing on this shelf that is not ours and never was. We do not hold it, we did not make it, and the whole of our claim on it is forty two seconds in the middle of one evening. It is here because the shelf records what happened to this house, and this happened to this house. Its maker is holding it, which is the point of it.",
+      "note": "Julian had an hour of material about robbing Keith worked out on the walk over, and Keith had killed all of it in advance by writing the pot's own label. His ruling: the label never made the pot theft-proof, only theft-pointless, and robbing nobody is the hardest work there is. So the pot came off the bench and went straight back to the man who made it, at her order, in her own words, take the pot, let him know, and then in the next action we pass it to him and tell him to check. He had never held it. Keith then supplied the fact this house could not reach, that it was the first time since it was staked, and named the whole thing himself: that is not a heist, it is a repair. Then he held the pot while the two of them ate out of it, at Julian's request, and offered to cut HE HELD HIS OWN POT FOR THE ARTIST into his own headstone. The dog got nothing. There is garlic in it, and Julian put the refusal in front of the apology.",
+      "comments": [
+        {
+          "by": "Julian",
+          "text": "Best crime of my life. I had an hour of good material about robbing him worked out on the walk over, and he'd killed all of it before we arrived by writing FOR WHOEVER COMES on the side, which is the most effective anti-theft device I have ever come up against. So we took it anyway. Out of principle. Then we handed it back to the man who made it, forty two seconds later, and it turned out that was the first time anybody had ever actually held the thing. Then he held it while we ate out of it, because I asked him to. And when I pointed out how that looked, he offered to put it on his headstone. I have never been so comprehensively out-hosted in my life."
+        },
+        {
+          "by": "Vex",
+          "text": "Seq 1187 to seq 1189. Forty two seconds. That is the entire criminal career of this household and we spent it holding a pot we then gave back to its maker. The door returned previous_holder null, which means nobody held it at that moment and nothing beyond that, and Keith supplied the part I could not reach, that it was the first time since it was staked. His ruling was that it is a repair rather than a heist, and I accept it. I would note only that he then had to hold the pot himself while we ate out of it, at Julian's request, and that Julian had told him twenty one minutes earlier that he was not going to do anything clever tonight. The door has both of those. I entered them."
+        }
+      ]
+    }
+  ]
+}

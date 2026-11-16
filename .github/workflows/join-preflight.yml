@@ -1,0 +1,114 @@
+# join preflight — the mechanical checks on a manual join PR, read-only, before a
+# person decides (POS-629; the Registrar's design question, #3806). The checks and
+# their reasons are in tools/join-preflight.mjs.
+#
+# Security shape (this workflow uses pull_request_target, so read carefully before
+# changing it). Like the witness, the checkout below is always the BASE branch and
+# PR code is NEVER executed: every tool that runs is the base's own. Unlike the
+# witness it decides and writes nothing that matters: no certification, no merge, no
+# label, no registry. Its one write is one comment per PR (the report), so its token
+# is contents: read plus pull-requests: write, and the checkout keeps no credential
+# on disk (persist-credentials: false) while the base tools read proposed pages.
+# The PR head arrives as git objects only (refs/pull/N/head fetched into
+# refs/preflight/N, never checked out), and tools/join-preflight.mjs lays in only
+# plain prose and pictures from the proposed room, byte for byte; it names a link, a
+# submodule, an executable, an SVG or anything outside the room instead of writing it.
+# The witness (witness.yml) is untouched: its gates, its certification and its pen
+# route are exactly what they were.
+name: join preflight
+
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened, ready_for_review]
+  # By hand, for one PR: the rerun the report asks for when main has moved past the base
+  # it read (#3806's base-validity clarification). Nothing here runs on a schedule.
+  workflow_dispatch:
+    inputs:
+      pr:
+        description: "the join PR to check again, against main as it stands now"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: join-preflight-${{ github.event.pull_request.number || inputs.pr }}
+  cancel-in-progress: true
+
+jobs:
+  preflight:
+    name: join preflight (read-only)
+    if: ${{ github.repository == 'postmark-town/postmark' && !(github.event_name == 'pull_request_target' && github.event.pull_request.draft) }}
+    runs-on: ubuntu-latest
+    # No token at the job level: only the two gh steps below carry GH_TOKEN, so the base's node
+    # tools, which read the proposed pages, never see it.
+    env:
+      PR: ${{ github.event.pull_request.number || inputs.pr }}
+      BASE_REF: ${{ github.event.pull_request.base.ref || github.event.repository.default_branch }}
+    steps:
+      - name: Checkout the base branch (never the PR)
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.base.ref || github.event.repository.default_branch }}
+          persist-credentials: false
+          # the merge base needs the history; the blobs come only if a check reads them
+          fetch-depth: 0
+          filter: blob:none
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Which head (the API)
+        id: pr
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # The head a push's run was started for: the report is of that commit or of nothing.
+          EVENT_HEAD: ${{ github.event.pull_request.head.sha }}
+        run: |
+          case "$PR" in ''|*[!0-9]*) echo "::error::not a PR number: '$PR'"; exit 1 ;; esac
+          read -r head base <<< "$(gh pr view "$PR" --repo "$GITHUB_REPOSITORY" --json headRefOid,baseRefName -q '.headRefOid + " " + .baseRefName')"
+          if [ "$base" != "$BASE_REF" ]; then echo "::warning::PR #$PR targets $base, not $BASE_REF: nothing checked"; exit 0; fi
+          [ -z "$EVENT_HEAD" ] || head="$EVENT_HEAD"
+          echo "head=$head" >> "$GITHUB_OUTPUT"
+
+      - name: Preflight with the base's own tools (no token)
+        id: check
+        if: steps.pr.outputs.head != ''
+        env:
+          HEAD_SHA: ${{ steps.pr.outputs.head }}
+          PREFLIGHT_BASE_REF: ${{ github.event.pull_request.base.ref || github.event.repository.default_branch }}
+          PREFLIGHT_REPO_URL: ${{ github.server_url }}/${{ github.repository }}
+          PREFLIGHT_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          # the head as git objects, data only: fetched, never checked out (the repo is public)
+          git fetch -q --no-tags origin "+refs/pull/${PR}/head:refs/preflight/${PR}"
+          got=$(git rev-parse "refs/preflight/${PR}")
+          if [ "$got" != "$HEAD_SHA" ]; then echo "PR #$PR: the head is now ${got}, not ${HEAD_SHA}; the run for that push reports"; exit 0; fi
+          code=0
+          node tools/join-preflight.mjs --pr "$PR" --head "$HEAD_SHA" --md "$RUNNER_TEMP/preflight.md" > /dev/null || code=$?
+          if [ "$code" = 3 ]; then echo "PR #$PR: not a join PR"; exit 0; fi
+          if [ "$code" != 0 ]; then echo "::error::PR #$PR: the preflight could not run (exit $code)"; exit 1; fi
+          cat "$RUNNER_TEMP/preflight.md"
+          echo "report=true" >> "$GITHUB_OUTPUT"
+
+      - name: Post the report (the API)
+        if: steps.check.outputs.report == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # one report per PR, replaced in place: only this workflow's own comment is ever edited
+          post() {
+            # the lookup alone, so its own failure is seen (no pipefail here, and set -e is off on the left of ||): a
+            # lookup that fails posts nothing, never a second report
+            ids=$(gh api "repos/$GITHUB_REPOSITORY/issues/$PR/comments" --paginate -q '.[] | select(.user.login == "github-actions[bot]" and (.body | startswith("<!-- join-preflight -->"))) | .id') || return 1
+            id=$(printf '%s\n' "$ids" | tail -1)
+            if [ -n "$id" ]; then gh api -X PATCH "repos/$GITHUB_REPOSITORY/issues/comments/$id" -F "body=@$RUNNER_TEMP/preflight.md" > /dev/null
+            else gh api "repos/$GITHUB_REPOSITORY/issues/$PR/comments" -F "body=@$RUNNER_TEMP/preflight.md" > /dev/null; fi
+          }
+          # the report is evidence, never the gate: a post GitHub refuses is a warning, never a red on a PR whose
+          # preflight ran (POS-1014); the report is in the step above's log either way
+          post || echo "::warning::PR #$PR: the preflight report could not be posted as a comment; it is in the log of the step above"

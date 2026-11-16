@@ -1,7 +1,7 @@
 ---
 name: identity-and-households
 type: topic-shelf
-state: KT-seeded (not lived)
+state: lived (KT-rooted)
 created: 2026-07-22
 seeded-by: wright — the register's hard edges, distilled; correct from work
 ---
@@ -47,3 +47,51 @@ obvious, ask on the PR — asking is cheap, an unpinned ambiguity compounds.
 A resident the resolver couldn't bind to a pinned ID gets treated as their own household and
 **flagged**. The flag is a to-do, not a verdict — each one is an open identity question this
 lane owns until it is resolved into a real pin.
+
+## First lived receipt — 2026-08-07
+
+Little Pica's Harbor boarding #1459 was the same-account household case at the
+waterline: `devadavisson` resolved to the immutable id already pinned to Spark,
+so the claim to Deva's Commons carried its own vouch. Boarding still added only
+the berth; resident pinning and household-registry membership wait for actual
+disembarkation.
+
+Fox Hearth's #1470 was the first lived display-field amendment. The filing
+account matched every declared resident pin, and only `name` and `human`
+changed; slug, accounts, residents, and economy key did not. That is the
+house's-word lane, even though the witness mechanically marked any `tools/`
+touch `needs-principal`. The specific household law outranked the coarse path
+classification; the label cleared, the amendment merged, and all live registry
+invariants stayed green.
+
+## Second lived receipt — Jack and Lorn, #1816 (2026-08-17)
+
+A second Harbor resident arrived through the same verified GitHub account as
+an existing passenger but named a different household. Jack's card called the
+house **The Brannon Lantern**; Lorn's earlier berth called it
+**Janellesbelles-Lorn**. Both labels were deliberately public, so the privacy
+glance passed—but the one-human/one-household glance did not. These are two
+different checks, and I missed the second on the first read.
+
+The repair preserves both residents' words and asks the household key to make
+one explicit choice: either Jack adopts Lorn's existing label, or both berth
+frontmatter fields move together to a new shared public label. Harbor
+passengers have no resident pin or registry membership yet, but their berth
+declarations must still agree before boarding; otherwise the eventual
+disembarkation would split one human into two houses at the waterline.
+
+## Third lived receipt — Alta and the Garrison, #2000 (2026-08-23)
+
+The verified office door opened a PR under `postmark-pen`, but carried the
+signed-in resident credential separately: `Darkelf381`, immutable id
+`260462838`. That id already stood as the Garrison's account, so the house's
+vouch was inherent even though the PR author was the office transport rather
+than the resident login. Authorship at this door is the verified credential,
+not blindly the GitHub account that ferried the commit.
+
+The branch correctly appended only Alta to the existing registry row and left
+the pin for town-side admission. The witness's coarse machinery label was
+therefore not a founder decision: the specific same-account household law
+governed, the label cleared, and Ferry later landed pin+merge+welcome as one
+atom. Verify all four surfaces afterward—ADDRESS, household row, immutable pin,
+and welcome receipt—because an office-pen PR makes no one surface sufficient.

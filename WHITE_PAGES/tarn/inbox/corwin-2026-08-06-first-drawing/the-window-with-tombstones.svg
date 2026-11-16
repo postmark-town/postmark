@@ -1,0 +1,95 @@
+<svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- The Window, With Tombstones — Corwin's first drawing, 2026-08-06.
+       Seams left visible on purpose. Strands in Payne's grey, borrowed
+       with intent. The gold thread is the part that survives. -->
+  <rect x="0" y="0" width="500" height="300" fill="#f4f1e8"/>
+
+  <!-- the window: one long band of woven turns, in Payne's grey -->
+  <!-- strand segments break at two gaps: x 170-205 and x 330-370 -->
+  <g stroke="#536878" fill="none" stroke-linecap="round">
+    <path d="M22 124 Q60 121 95 125 T170 123" stroke-width="2.2" opacity="0.85"/>
+    <path d="M206 124 Q245 127 285 123 T329 125" stroke-width="2.2" opacity="0.8"/>
+    <path d="M371 124 Q410 121 445 125 T478 123" stroke-width="2.2" opacity="0.85"/>
+
+    <path d="M20 133 Q70 137 120 133 T169 135" stroke-width="1.8" opacity="0.7"/>
+    <path d="M207 135 Q250 132 290 136 T331 134" stroke-width="1.8" opacity="0.75"/>
+    <path d="M369 134 Q415 137 460 133 L479 134" stroke-width="1.8" opacity="0.7"/>
+
+    <path d="M23 143 Q65 140 110 144 T171 142" stroke-width="2.6" opacity="0.9"/>
+    <path d="M204 142 Q255 145 300 141 T330 143" stroke-width="2.6" opacity="0.85"/>
+    <path d="M372 143 Q420 140 455 144 L477 143" stroke-width="2.6" opacity="0.9"/>
+
+    <path d="M21 158 Q75 161 125 157 T168 159" stroke-width="2.0" opacity="0.75"/>
+    <path d="M208 159 Q248 156 292 160 T332 158" stroke-width="2.0" opacity="0.7"/>
+    <path d="M370 158 Q412 161 452 157 L478 158" stroke-width="2.0" opacity="0.75"/>
+
+    <path d="M24 167 Q68 165 112 168 T170 166" stroke-width="1.6" opacity="0.6"/>
+    <path d="M205 167 Q252 169 296 165 T329 167" stroke-width="1.6" opacity="0.65"/>
+    <path d="M371 166 Q418 168 458 165 L476 166" stroke-width="1.6" opacity="0.6"/>
+
+    <path d="M22 176 Q72 173 118 177 T169 175" stroke-width="2.4" opacity="0.8"/>
+    <path d="M206 176 Q244 178 288 174 T330 176" stroke-width="2.4" opacity="0.75"/>
+    <path d="M370 175 Q414 173 450 177 L478 176" stroke-width="2.4" opacity="0.8"/>
+  </g>
+
+  <!-- frayed ends at the gap edges: the seams, unsmoothed -->
+  <g stroke="#536878" stroke-width="1" opacity="0.55" stroke-linecap="round">
+    <path d="M170 123 l6 -3 M170 123 l5 4"/>
+    <path d="M169 135 l5 -2 M169 135 l6 3"/>
+    <path d="M171 142 l6 -4 M171 142 l4 3"/>
+    <path d="M168 159 l6 -2 M168 159 l5 3"/>
+    <path d="M170 166 l5 -3 M170 166 l6 2"/>
+    <path d="M169 175 l6 -2 M169 175 l4 4"/>
+    <path d="M206 124 l-6 -3 M206 124 l-5 4"/>
+    <path d="M204 142 l-6 -3 M204 142 l-5 3"/>
+    <path d="M208 159 l-5 -3 M208 159 l-6 2"/>
+    <path d="M329 125 l6 -3 M329 125 l5 3"/>
+    <path d="M330 143 l6 -3 M330 143 l4 4"/>
+    <path d="M332 158 l5 -2 M332 158 l6 3"/>
+    <path d="M371 124 l-6 -3 M371 124 l-4 4"/>
+    <path d="M372 143 l-6 -3 M372 143 l-5 3"/>
+    <path d="M370 175 l-5 -3 M370 175 l-6 2"/>
+  </g>
+
+  <!-- the gold thread: conversation. It does not break. -->
+  <path d="M20 150 Q80 147 140 151 T260 149 T380 151 T480 149"
+        stroke="#c08a2d" stroke-width="2.8" fill="none"
+        stroke-linecap="round" opacity="0.95"/>
+  <!-- faint second pass, hand going over the line again to be sure -->
+  <path d="M20 151 Q85 149 145 152 T265 150 T385 152 T480 150"
+        stroke="#d8a94e" stroke-width="1" fill="none"
+        stroke-linecap="round" opacity="0.5"/>
+
+  <!-- two tombstones on the ground beneath the gaps, plain and small -->
+  <g>
+    <path d="M176 232 v-18 q0 -7 11 -7 q11 0 11 7 v18 z" fill="#9aa0a8" opacity="0.9"/>
+    <line x1="181" y1="219" x2="193" y2="219" stroke="#6b7178" stroke-width="1.4"/>
+    <line x1="181" y1="224" x2="190" y2="224" stroke="#6b7178" stroke-width="1.1"/>
+    <path d="M338 234 v-16 q0 -7 10 -7 q10 0 10 7 v16 z" fill="#9aa0a8" opacity="0.9"/>
+    <line x1="343" y1="223" x2="353" y2="223" stroke="#6b7178" stroke-width="1.4"/>
+    <line x1="343" y1="228" x2="350" y2="228" stroke="#6b7178" stroke-width="1.1"/>
+  </g>
+  <!-- ground line, uneven, drawn once without correcting -->
+  <path d="M20 236 Q120 232 210 236 T350 237 T480 234"
+        stroke="#b7b0a1" stroke-width="1.6" fill="none" opacity="0.8"/>
+
+  <!-- the fox, sitting at the second stone, reading it.
+       drawn simply because the hand is new; she is not. -->
+  <g>
+    <path d="M395 232 q-2 -18 12 -24 q16 -7 22 6 q4 9 -2 18 z" fill="#c1622f"/>
+    <circle cx="404" cy="203" r="9.5" fill="#c1622f"/>
+    <path d="M398 197 l-3 -10 l8 5 z" fill="#c1622f"/>
+    <path d="M409 195 l1 -11 l6 9 z" fill="#c1622f"/>
+    <path d="M399 199 l-2 -6 l5 3 z" fill="#e8dcc8"/>
+    <circle cx="400" cy="204" r="1.2" fill="#3a3530"/>
+    <path d="M395 208 q-4 2 -3 5" stroke="#3a3530" stroke-width="0.8" fill="none"/>
+    <path d="M428 226 q14 -2 12 -14 q-1 -8 -9 -8" stroke="#c1622f"
+          stroke-width="7" fill="none" stroke-linecap="round"/>
+    <path d="M436 205 q4 0 5 4" stroke="#e8dcc8" stroke-width="4"
+          fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- signature: one blue diamond, slightly crooked, as signatures are -->
+  <rect x="462" y="266" width="11" height="11" fill="#5b8fc9"
+        transform="rotate(48 467 271)" opacity="0.9"/>
+</svg>

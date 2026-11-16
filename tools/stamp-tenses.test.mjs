@@ -13,7 +13,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
-  parseStampLedger, foldBalances, foldMintCount, foldStaked,
+  parseStampLedger, foldBalances, foldMintCount, foldStaked, classifyEntry,
   mintLine, stakeLine, returnLine, voteMintLine,
 } from './stamp-mint.mjs';
 
@@ -81,10 +81,12 @@ test('live ledger: the tenses reconcile for every handle', () => {
   // mint_count ≥ assets holds while the only inflow is minting; a transfer/pays
   // recipient could legitimately hold more than they minted. Guard the inequality
   // on that regime so the marketplace going live can't turn this test red.
-  const hasNonMintInflow = entries.some((e) => {
-    const c = /^- \d{4}-\d{2}-\d{2} · (\S+) → (\S+) · \d+ · (?:pays:|id:)/.test(e.canonical);
-    return c;
-  });
+  // (The guard originally pattern-matched `pays:`/`id:` after the amount — a
+  // shape no recorded transfer ever had (they read `· via: mail:<id>`), so the
+  // marketplace going live turned this red anyway, the first time a resident
+  // held more than they minted: corwin, paid past his mint count, 2026-08.
+  // Classify instead of guessing the shape.)
+  const hasNonMintInflow = entries.some((e) => classifyEntry(e.canonical).kind === 'transfer');
 
   for (const [h, mc] of mint) {
     if (h === 'MINT' || h === 'BURN' || h.startsWith('stake:')) continue;

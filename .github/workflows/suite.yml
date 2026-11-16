@@ -1,0 +1,93 @@
+# suite — the town's tools tests and the stamp-ledger verifier on every PR and on main, plus a daily outbox scan.
+#
+# Until POS-516 nothing ran these. witness.yml judges a resident PR from the BASE
+# branch and never executes PR code; household-keys.yml runs one test;
+# slow-table-gate.yml runs the club's own tools. The tools suite
+# (tools/*.test.mjs) and the standalone verifier (tools/stamp-verify.mjs, all five
+# checks over WHITE_PAGES/stamp-ledger.md) ran only by hand, so a change to
+# tools/ or to the ledger could merge unchecked and the first anyone heard of it
+# was a crossing. This is what makes that red on the PR that brings it.
+#
+# TWO JOBS, kept apart on purpose:
+#   tools  — the PR/main gate: tools/*.test.mjs and the verifier, as two
+#            independent steps (each fails the job on its own, and the verifier
+#            still runs when the tests fail, so one red never hides the other).
+#            Runs on pull_request, push to main, and by hand. Never on the schedule.
+#   scan   — the daily outbox scan: `node tools/envelope-check.mjs` BARE, no path
+#            arguments, so it asks "does anything pending in any outbox bounce at
+#            the next crossing?". It skips letters whose (path, defect) pair the
+#            ledger already bounced (known-stuck: listed, not failed) and exits 1
+#            on a NEW defect. It reports the state of the outboxes, which no PR
+#            caused, so it never runs on a PR or a push and gates nothing. Runs on
+#            the schedule and by hand. Nothing is archived or rewritten to make it
+#            green. The witness keeps scanning a PR's own changed mail paths with
+#            explicit arguments (witness.yml), which do not suppress bounced pairs.
+#
+# There is no continue-on-error anywhere in this file.
+#
+# Security shape: plain `pull_request` and `push`, never pull_request_target, so
+# candidate code runs with a read-only token and no secrets. Nothing here signs,
+# mints (--append), or holds the office pen: the tests sign only with throwaway
+# keys in temp towns, and the verifier and the scan only read. The scan's log
+# names paths and defect classes, never letter bodies.
+#
+# Checkout: depth 1 is enough. The tests that use git build their own throwaway
+# repos (git init in tmp), and neither the verifier nor the scan reads history.
+# There is no root package.json: Node built-ins only, so no install step, and
+# `npm test` is not the entry point.
+#
+# The cron minute is off the hour on purpose (:00 is when the ferry and everyone
+# else fire; the witness sweep takes :17; the off-box watch takes every 7th
+# minute). A schedule runs from the default branch, so it starts once this file
+# is on main.
+name: suite
+
+on:
+  pull_request:
+    # main, and the weekly train: town code PRs base on train/<week>
+    # (postmark-blueprints CONTRIBUTING.md § Code, where your PR goes and who merges), and those are the PRs that change tools/.
+    branches: [main, "train/**"]
+  push:
+    branches: [main]
+  schedule:
+    - cron: "41 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: suite-${{ github.event.pull_request.number || github.sha }}
+  cancel-in-progress: true
+
+jobs:
+  tools:
+    name: tools tests and the stamp verifier
+    if: ${{ github.event_name != 'schedule' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: node --test tools/*.test.mjs
+        run: node --test tools/*.test.mjs
+
+      # The whole verifier, read-only: chain, signatures, replay, conservation,
+      # lawful. Exit 1 on any failure; a warning is not a pass.
+      - name: node tools/stamp-verify.mjs
+        if: ${{ !cancelled() }}
+        run: node tools/stamp-verify.mjs
+
+  scan:
+    name: daily bare outbox scan
+    if: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: node tools/envelope-check.mjs
+        run: node tools/envelope-check.mjs

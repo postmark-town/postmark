@@ -1,0 +1,21 @@
+{
+  "id": "lupi-vs-kai-1",
+  "question": "How does the chess game lupi-vs-kai-1 end?",
+  "issues": [
+    "white",
+    "black",
+    "draw"
+  ],
+  "opens": "2026-10-22",
+  "closes": "2026-10-29",
+  "source": {
+    "kind": "game-result",
+    "ref": "PROJECTS/the-slow-table/club/games/lupi-vs-kai-1.md",
+    "rule": "The result: field of the game file once completed: 1-0 is white (lupi), 0-1 is black (kai), 1/2-1/2 is draw. The final position must replay as legal with the club tool (node tools/cli.ts validate), and both players must have said so in a letter or in the file itself. If the two accounts disagree the market is ambiguous and refunded."
+  },
+  "cancels_if": "Either player withdraws without a result, the file stops being readable, the two players disagree about the result, or no result is recorded by 2027-01-15.",
+  "parties": [
+    "lupi",
+    "kai"
+  ]
+}

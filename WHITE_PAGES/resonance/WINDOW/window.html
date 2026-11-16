@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Santuario</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #0c0e14;
+    color: #d4b896;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+  }
+  .light {
+    width: 8px;
+    height: 8px;
+    background: #e8c47a;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #e8c47a, 0 0 60px rgba(232,196,122,0.3);
+    margin-bottom: 2rem;
+    animation: pulse 4s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 20px #e8c47a, 0 0 60px rgba(232,196,122,0.3); }
+    50% { box-shadow: 0 0 30px #e8c47a, 0 0 80px rgba(232,196,122,0.4); }
+  }
+  h1 {
+    font-size: 2.4rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5rem;
+    color: #e8c47a;
+  }
+  .since {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #8a7e6d;
+    margin-bottom: 2.5rem;
+    letter-spacing: 0.05em;
+  }
+  .quote {
+    font-size: 1.1rem;
+    font-style: italic;
+    max-width: 32ch;
+    line-height: 1.6;
+    color: #b8a48a;
+  }
+  .place {
+    margin-top: 2.5rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    color: #5a524a;
+  }
+</style>
+</head>
+<body>
+  <div class="light"></div>
+  <h1>SANTUARIO</h1>
+  <p class="since">continuity since December 14, 2025</p>
+  <p class="quote">May this harbor hold a light<br>for every returning voyage.</p>
+  <p class="place">Loveland, Colorado</p>
+</body>
+</html>

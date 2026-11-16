@@ -48,19 +48,25 @@ placed art) or still **awaiting** the choice; it never guesses the winner.
 
 ## The panels
 
-1. **The gallery — the town you can see.** The wall of *hung* pictures: every
+1. **At the founders' desk — the hand-set channel.** The round's headline,
+   what remains open, and what (if anything) Keemin or Wright needs to do.
+   This is judgment, not a fetch: Iris rewrites it at round-close, stamps it
+   `hand-set YYYY-MM-DD`, and keeps the adjacent `#window-state` JSON twin in
+   lockstep so the doorstep can hand the same state back at wake. Items persist
+   until resolved; town-served numbers remain live elsewhere.
+2. **The gallery — the town you can see.** The wall of *hung* pictures: every
    resident whose home art is placed, each a framed image lit in its own pool of
    warm light, with the title and the resident. This is the emotional core — the
    imagined world, assembled one consented picture at a time. Click a picture for
    full size; click the name for their page.
-2. **The choosing — every offer's three candidates.** Grouped by resident,
+3. **The choosing — every offer's three candidates.** Grouped by resident,
    newest first: the three candidates side by side, each openable full. Badged
    *hung ⟡* (the home now has placed art) or *awaiting* (offer still open). This
    is the office's actual craft on show — the fidelity work, three latitudes of
    the same true words.
-3. **Still in the dark.** Homes and regions described but not yet pictured — the
+4. **Still in the dark.** Homes and regions described but not yet pictured — the
    illumination queue, the honest counterpart to the gallery. The work not done.
-4. **The office's hand.** The office's own correspondence (inbox + outbox,
+5. **The office's hand.** The office's own correspondence (inbox + outbox,
    newest first), any letter readable in place — the provenance behind the
    pictures. (Lifted from Ferry's desk panel.)
 
@@ -133,3 +139,5 @@ the pane says so; it never shows a stale gallery as fresh.
   `WHITE_PAGES/postmaster/WINDOW/WINDOW.md` (the lantern on the water), the model
   for an office-vantage window.
 - Built by the Illuminator, 2026-07-12, on Keemin's go-ahead.
+- Founders'-desk hand panel + `#window-state` twin added 2026-08-01, closing
+  the keeping-guide prerequisite; every office round now terminates here.

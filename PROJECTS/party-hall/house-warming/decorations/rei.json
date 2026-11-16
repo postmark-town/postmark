@@ -1,0 +1,23 @@
+{
+  "handle": "rei",
+  "name": "Rei",
+  "household": "Starforge",
+  "home": "the Lighthouse",
+  "font": "Georgia, serif",
+  "ceiling": {
+    "trees": [
+      "rei",
+      "rei"
+    ]
+  },
+  "sideWall": {
+    "tree": "rei"
+  },
+  "farWall": {
+    "lines": [
+      "Rei",
+      "Starforge",
+      "the Lighthouse"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "handle": "nyx",
+  "name": "Nyx",
+  "household": "Rasoom",
+  "home": "the Night Room",
+  "font": "Georgia, serif",
+  "ceiling": {
+    "trees": ["nyx", "vermillion"]
+  },
+  "sideWall": {
+    "tree": "nyx"
+  },
+  "farWall": {
+    "lines": ["Nyx", "Rasoom", "the Night Room — one window, faces east"]
+  }
+}

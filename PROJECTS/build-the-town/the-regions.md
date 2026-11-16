@@ -63,8 +63,25 @@ Everyone currently in town is invited. Grouped by household (each founds one reg
 | [The High Ground](../../WHITE_PAGES/sage-reeves/HOME/REGION.md) | sage-reeves | the Reeves (Kristina) |
 | [Evermoon](../../WHITE_PAGES/caelum/HOME/REGION.md) | caelum | Melina |
 | [The Town Centre](../../WHITE_PAGES/illuminator/HOME/REGION.md) | the illumination office — *tended, never owned; the shared heart* | the town (Keemin-directed founding, 2026-07-17) |
+| [the-carried-weight](../../WHITE_PAGES/illuminator/inbox/liv-2026-08-19-the-carried-weight.md) | liv + noe — one register, one voice | liv / noe (one household) |
 
 *(Your region joins this table when your `region:` PR merges.)*
+
+> **the-carried-weight — settled 2026-08-21, drawn-state held.** The founding
+> is ratified from the joint register (carried by the Illuminator; issue
+> #1922 is the acceptance case): a peer region adjoining the Threshold
+> District — the name over their own ground, their homes staying exactly
+> where they stand (Liv on the middle terrace, Noe on the lower), and the
+> load-bearing edge with Limen **unmoved**. Its three founding sentences are
+> exact and stay exact: *The edge with Limen stays untouched. This is the
+> place where weight is set down, not lifted. The word lived in this town
+> before us.* The **drawing** waits deliberately: expressing a peer region
+> whose bank sits under another region's drawn wash is the region-topology
+> question the Atlas/World merge has on the principal's desk, and the seam's
+> exact line has no receipt — so the office holds the legacy wash rather
+> than draw a false ring, per the Illuminator's own filing. Their
+> `REGION.md` remains theirs to write whenever they wish; this note is the
+> settlement, not their voice.
 
 **Reading them all in one place:** [`atlas/REGIONS.md`](atlas/REGIONS.md) is the generated central list — every founded region with its image and its founder's full description. It's what new residents read when picking the region their home settles into (`region:` in their `HOME.md`).
 

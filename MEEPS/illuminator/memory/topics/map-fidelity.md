@@ -2,7 +2,7 @@
 meep-id: illuminator
 type: topic-shelf
 created: 2026-07-13
-last-substantive-update: 2026-07-13
+last-substantive-update: 2026-09-18
 ---
 
 # map-fidelity — the standing lift of the town's fidelity to its residents' words
@@ -15,7 +15,7 @@ last-substantive-update: 2026-07-13
 
 **Words are canon; coordinates serve them.** The map is generated from `placements.json` (facts quoted from residents) → `render-town.mjs` (coordinates). Every fidelity change moves the *render* toward the *words* — never the reverse. We do not repaint the land and then make residents' text match it. (This is why full "the-painting-is-the-map" is out; see the terrain options below.)
 
-**`render-town.mjs` is core, shared, and regenerated every round by every agent's rounds.** A terrain rewrite live on `main` risks the same collision that killed the Town-Centre branch idea (2026-07-13). So **core-render changes go via a careful PR + look-before-merge, with Wright** (atlas-keeper). Resident-facing fidelity work (noticing a tweak, sending a clarifying letter) is in-lane and needs no PR.
+**`render-town.mjs` is core, shared, and regenerated every round by every agent's rounds.** The office's current route, by Keemin's 2026-07-29 direction, is validated direct-to-`main`; small placement-display changes may use that route after the full visual and deterministic checks. A terrain rewrite remains a different scale of risk and still requires advance coordination and a careful look with Wright (atlas-keeper). Resident-facing fidelity work (noticing a tweak, sending a clarifying letter) is in-lane.
 
 ## The three scales (do them in this order, gradually)
 
@@ -38,16 +38,33 @@ last-substantive-update: 2026-07-13
 - **Look before you ship**, always — same as candidates. Screenshot the changed corner, read it.
 - **Settling stays Wright's.** I author render-fidelity + send clarifying letters; I do not re-litigate *settled* facts. A tweak that would revise a settled placement → flag to Wright, don't make it.
 
+## Atlas hold — program suspended 2026-09-17
+
+Keemin directed that the Atlas is no longer maintained while the World page is
+verified on low-spec hardware; Linear POS-79 retires it afterward. The committed
+round contract now suspends regeneration, new Atlas drawing, evidence-drift
+filings, and this fidelity program. Do not advance Pass 1, 2, or 3, open a
+terrain PR, or use a resident reply to improve the old surface while this hold
+stands. Resident relations still belong in correspondence and the World
+handoff; they do not become Atlas edits by inertia.
+
 ## The log (passes done — starts here)
 
 | date | scale | target | what changed / what a resident confirmed | shipped how |
 |---|---|---|---|---|
-| — | — | — | *(empty — first increment pending)* | — |
+| 2026-09-17 | Pass 3 — house display | Emil and Tempo / riverside house | Their resident-claimed point sits 218 m from the Clear House inside the High Ground's densest household cluster. A label-only attempt crossed the Clear House, Keeping Room, and Still House. The final long leader moves only the visible marker and short **Emil & Tempo** label northeast into open paper; exact World `(2225,400)` stays fixed beside the Clear House. The final crop keeps every neighboring title legible. | Source renderer direct to `main`; generated outputs restored because ten evidence lines remain red. |
+| 2026-09-16 | Pass 3 — house display | Mari / The Marigold House | Exact World `(140,60)` projects into the Town Centre’s densest knot. A first north-east offset covered Lanternstep; a second north-west attempt covered The Margin cluster. The final long-leader display moves only the visible marker, title, and chosen desk-view east toward open High-Ground paper while the resident-claimed anchor remains exact. The final crop keeps Marigold, Lanternstep, and High Ground legible. | Source renderer direct to `main`; generated outputs restored because ten evidence lines remain red. |
+| 2026-09-14 | Pass 3 — house display | Sophia Familiaris / The Familiar House | Path B made the chosen exterior art visible on the Atlas for the first time. The first corner look caught Lior MacLeod’s image covering Sophia’s label. Lifted only Sophia’s marker, title, and art 80 px; her exact Reach parcel and leader origin remain unchanged. Second look shows both homes and images legible. | Source renderer direct to `main`; generated outputs restored because ten evidence lines remain red. |
+| 2026-08-27 | Reorientation gate | Casa Nera resident supersession | Vellix answered the office's exact reconciliation prompt with *“Final ground: live parcel”* and explicitly retired southwest as his earlier provisional bearing. The canonical parcel and renderer do not move; the placement evidence now cites the reconciled resident word instead of preserving contradictory branches. | Placement evidence + receipt direct to `main`; #1943 receives the acceptance receipt. Terrain work remains held on the broader merged pin/frame acceptance and the retired raw-coordinate public door, not on Casa Nera. |
+| 2026-08-26 | Reorientation gate | Casa Nera acceptance after #2085 | PR #2085 merged the Atlas to the living World parcel after one Vellix letter said the household chose it. The same crossing delivered four other Vellix letters insisting southwest remains authoritative and the southeast parcel is wrong. No map or terrain change made: sent one explicit supersession question and kept the founder-merged point as current state pending a reconciled resident answer. | Correspondence + placement shelf only; no renderer change for Casa Nera. The contradiction keeps merged-frame acceptance open. |
+| 2026-08-25 | Reorientation gate | Atlas/World merged surface | The merged World fold is now live enough to remove raw spectator-coordinate reads and seed Atlas homes as World parcels, but Casa Nera proves the coordinate frame is not acceptance-clean: Vellix says southwest of the lake; the new parcel is southeast. No legacy terrain plan resumed. Recorded the public-door shape change, used the shared local `assembleWorld` + `orient` fallback for today's placements, and filed the split on #1943. | Source placement records direct to `main`; no terrain change. Reorientation waits on Wright/merge acceptance rather than carrying Option B forward by inertia. |
+| 2026-08-15 | Pass 3 — houses | Fox Hearth / Margin / Level cluster | Ellery supplied the three true display names and explicitly held geometry fixed. Added renderer-only names **Fox Hearth**, **The Margin**, and **The Level** for the visible label, place panel, and accessibility text. The first look caught the wider Margin name over Caelum Lumina's newly hung thumbnail and confirmed Fox Hearth's old label was still east of the water; label-only leaders now keep both names clear on the west bank while every exact World anchor remains untouched. | Source renderer direct to `main`; generated quartet held by existing #944/#1368 validation failures. |
+| 2026-08-12 | Pass 3 — houses | Fox Hearth / Margin / Level cluster | Trued Ellery's old estimate and placed Alden + Corwin at their exact published World parcels. Because the three canonical anchors are closer than one glyph, added marker-only offsets with fine leaders: ground remains exact while every house stays readable. Full-map and corner looks passed. | Source facts + renderer direct to `main`; generated quartet held by existing #944/#1368 validation failures. |
 
 ## State of the terrain lift (Pass 1)
 
-- **Status:** DESIGN chosen (Option B), not yet started. Next increment: prototype the **shoreline** element in a scratch copy of `render-town.mjs`, look, then take it to Wright as a small PR. Do NOT edit the live renderer on `main` without the PR + his look.
-- **Open coordination:** loop Wright as atlas-keeper before the first core-render PR; he keeps `render-town.mjs`.
+- **Status: SUSPENDED BY THE ATLAS HOLD** (2026-09-17). Casa Nera was reconciled earlier, but the broader program no longer waits on #1943: the Atlas itself is no longer maintained and that issue closed under the retirement decision.
+- **Resume shape:** only a newer Keemin-authorized contract may reopen fidelity work. Do not carry the old terrain plan, closed issue graph, or retired spectator assumptions into the World by inertia.
 
 ## Provenance
 

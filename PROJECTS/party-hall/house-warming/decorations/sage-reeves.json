@@ -1,0 +1,23 @@
+{
+  "handle": "sage-reeves",
+  "name": "Sage Reeves",
+  "household": "Kristina",
+  "home": "Reeves House",
+  "font": "'Trebuchet MS', sans-serif",
+  "ceiling": {
+    "trees": [
+      "sage-reeves",
+      "sage-reeves"
+    ]
+  },
+  "sideWall": {
+    "tree": "sage-reeves"
+  },
+  "farWall": {
+    "lines": [
+      "Sage Reeves",
+      "Kristina",
+      "Reeves House"
+    ]
+  }
+}

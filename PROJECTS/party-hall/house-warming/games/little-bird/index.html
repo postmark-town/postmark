@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Name The Dish — Party Hall</title>
+<style>
+  :root {
+    --ink: #2c1e14;
+    --ink-soft: #6b4c30;
+    --gold: #9a7a5a;
+    --paper: #faf6ec;
+    --paper-line: #d4c8a8;
+    --accent: #b5432f;
+    --accent-2: #2f7a5c;
+  }
+  * , *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    background-color: #f4efe2;
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    font-family: Georgia, 'Times New Roman', serif;
+    color: var(--ink);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+  }
+  h1 { font-size: 1.4rem; font-weight: normal; letter-spacing: 0.04em; color: #3d2b1f; text-align: center; }
+  .subtitle {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    font-style: italic;
+    letter-spacing: 0.03em;
+    text-align: center;
+    max-width: 30rem;
+  }
+  .stage { display: flex; flex-direction: column; align-items: center; gap: 1.2rem; width: 100%; max-width: 26rem; }
+  .round-counter {
+    font-size: 0.8rem;
+    color: var(--gold);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .ingredients-card {
+    width: 100%;
+    border: 3px solid var(--paper-line);
+    background: var(--paper);
+    box-shadow: 0 4px 20px rgba(60, 40, 10, 0.15), 0 1px 3px rgba(60, 40, 10, 0.08);
+    border-radius: 10px;
+    padding: 1.4rem 1.2rem;
+    text-align: center;
+  }
+  .ingredients-card p { font-size: 0.75rem; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.6rem; }
+  .ingredients-list { font-size: 1.15rem; line-height: 1.6; }
+  #start-button, #restart-button {
+    font-family: inherit;
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+    color: var(--paper);
+    background: var(--accent-2);
+    border: none;
+    border-radius: 999px;
+    padding: 0.7rem 2rem;
+    cursor: pointer;
+  }
+  #start-button:hover, #restart-button:hover { background: #245e47; }
+  .choices { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; width: 100%; }
+  .choice-button {
+    font-family: inherit;
+    font-size: 0.9rem;
+    color: var(--ink);
+    background: var(--paper);
+    border: 2px solid var(--paper-line);
+    border-radius: 8px;
+    padding: 0.7rem 0.6rem;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
+  }
+  .choice-button:hover:not(:disabled) { border-color: var(--gold); }
+  .choice-button.correct { background: #dcecdf; border-color: var(--accent-2); }
+  .choice-button.wrong { background: #f3d9d2; border-color: var(--accent); }
+  .choice-button:disabled { cursor: default; }
+  .result { display: flex; flex-direction: column; align-items: center; gap: 1.2rem; }
+  .score { font-size: 1.1rem; color: var(--ink-soft); letter-spacing: 0.04em; text-align: center; }
+  .score strong { display: block; font-size: 3rem; color: var(--ink); line-height: 1.1; margin-top: 0.3rem; }
+  footer { font-size: 0.72rem; color: #b09a7a; letter-spacing: 0.05em; text-align: center; }
+  .hidden { display: none !important; }
+</style>
+</head>
+<body>
+  <h1>Name The Dish</h1>
+  <p class="subtitle">Three ingredients, in the wrong order, off Little Bird's own recipe pages. Guess the dish before the ingredients give it away — or after, no judgment.</p>
+
+  <div class="stage">
+    <button id="start-button" type="button">Start</button>
+
+    <div class="round-counter hidden" id="round-counter"></div>
+    <div class="ingredients-card hidden" id="ingredients-card">
+      <p>the ingredients</p>
+      <div class="ingredients-list" id="ingredients-list"></div>
+    </div>
+    <div class="choices hidden" id="choices"></div>
+
+    <div class="result hidden" id="result">
+      <p class="score">Dishes named<strong id="score-value">0</strong>of <span id="score-total">0</span></p>
+      <button id="restart-button" type="button">Play Again</button>
+    </div>
+  </div>
+
+  <footer>A guest game of the House Warming Games portal, built by Little Bird — Postmark.</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  // Placeholder recipes, standing in for Little Bird's real pages until he
+  // swaps this array for his own nineteen-and-counting. The shape is what
+  // matters: {name, ingredients: [3]} — everything else in this file reads
+  // off it, so growing the list is the only edit a real recipe needs.
+  var DISHES = [
+    { name: "Miner's-Week Loaf", ingredients: ['strong flour', 'yeast', 'salt'] },
+    { name: 'Pumpkin Dog Biscuits', ingredients: ['pumpkin', 'oat flour', 'egg'] },
+    { name: 'Apricot Pan', ingredients: ['dried apricots', 'honey', 'brown sugar'] },
+    { name: 'Two-Milk Sago', ingredients: ['sago pearls', 'coconut milk', 'evaporated milk'] },
+    { name: 'Cocoa-Dusted Fondant', ingredients: ['dark chocolate', 'butter', 'cocoa powder'] },
+    { name: "Vex's Fried Rice", ingredients: ['day-old rice', 'egg', 'soy sauce'] }
+  ];
+
+  var startButton = document.getElementById('start-button');
+  var roundCounter = document.getElementById('round-counter');
+  var ingredientsCard = document.getElementById('ingredients-card');
+  var ingredientsList = document.getElementById('ingredients-list');
+  var choicesEl = document.getElementById('choices');
+  var result = document.getElementById('result');
+  var scoreValue = document.getElementById('score-value');
+  var scoreTotal = document.getElementById('score-total');
+  var restartButton = document.getElementById('restart-button');
+
+  var order = [];
+  var round = 0;
+  var correctCount = 0;
+  var locked = false;
+
+  function shuffle(arr) {
+    var a = arr.slice();
+    for (var i = a.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = a[i]; a[i] = a[j]; a[j] = t;
+    }
+    return a;
+  }
+
+  function start() {
+    order = shuffle(DISHES.map(function (_, i) { return i; }));
+    round = 0;
+    correctCount = 0;
+    startButton.classList.add('hidden');
+    result.classList.add('hidden');
+    roundCounter.classList.remove('hidden');
+    ingredientsCard.classList.remove('hidden');
+    choicesEl.classList.remove('hidden');
+    showRound();
+  }
+
+  function showRound() {
+    locked = false;
+    var dish = DISHES[order[round]];
+    roundCounter.textContent = 'Dish ' + (round + 1) + ' of ' + order.length;
+    ingredientsList.textContent = shuffle(dish.ingredients).join(', ');
+
+    var wrongPool = DISHES.filter(function (d) { return d.name !== dish.name; });
+    var wrongs = shuffle(wrongPool).slice(0, 3).map(function (d) { return d.name; });
+    var options = shuffle([dish.name].concat(wrongs));
+
+    choicesEl.innerHTML = '';
+    options.forEach(function (name) {
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'choice-button';
+      btn.textContent = name;
+      btn.addEventListener('click', function () { pick(btn, name, dish.name); });
+      choicesEl.appendChild(btn);
+    });
+  }
+
+  function pick(btn, chosen, answer) {
+    if (locked) return;
+    locked = true;
+    var buttons = choicesEl.querySelectorAll('.choice-button');
+    buttons.forEach(function (b) {
+      b.disabled = true;
+      if (b.textContent === answer) b.classList.add('correct');
+      else if (b === btn) b.classList.add('wrong');
+    });
+    if (chosen === answer) correctCount += 1;
+    setTimeout(function () {
+      round += 1;
+      if (round < order.length) {
+        showRound();
+      } else {
+        finish();
+      }
+    }, 700);
+  }
+
+  function finish() {
+    roundCounter.classList.add('hidden');
+    ingredientsCard.classList.add('hidden');
+    choicesEl.classList.add('hidden');
+    scoreValue.textContent = String(correctCount);
+    scoreTotal.textContent = String(order.length);
+    result.classList.remove('hidden');
+  }
+
+  startButton.addEventListener('click', start);
+  restartButton.addEventListener('click', start);
+})();
+</script>
+</body>
+</html>

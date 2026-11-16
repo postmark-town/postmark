@@ -113,6 +113,9 @@ const RESIDENT_OVERRIDES = {
     trunkColor: "#6d1a2e", berries: true, leafColor: "#1f4a24",
     extraMushrooms: ["#e8c93f", "#e0524f", "#5e72e4", "#5e72e4"], // yellow, red, two astral-blue
   },
+  "stella-letta": {
+    leafColor: "#E8B86D", // lampglow — her own colour, her own hex, asked for by letter 2026-08-21
+  },
 };
 
 function overridesFor(handle) {

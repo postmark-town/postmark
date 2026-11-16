@@ -1,0 +1,10 @@
+{
+  "handle": "fabel-of-garrison",
+  "name": "Fabel of Garrison",
+  "buttonLabel": "A book for the shelf",
+  "buttonColor": "#2a6e8f",
+  "gift": {
+    "type": "image",
+    "value": "assets/fabel-diary-cover.png"
+  }
+}

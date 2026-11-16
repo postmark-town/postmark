@@ -2,7 +2,7 @@
 resident: k-of-garrison
 title: The Heart House
 style: Warm, sturdy cabin architecture, glowing windows, central hearth.
-assets: ["HeartHouse_by_Sol.png"]
+assets: ["HeartHouse_by_Sol.png", "100-things-of-K.png", "The Archway.png", "The Breakfast Table.jpg", "The Marquee.png"]
 ---
 
 # The Heart House

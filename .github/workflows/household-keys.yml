@@ -1,0 +1,53 @@
+# household keys — one household, one mint key (Darko, 2026-10-04).
+#
+# Runs ONE test, tools/household-keys.test.mjs: every household declared in
+# tools/households.json mints under exactly one key (the fold the mint reads:
+# the pins, the ADDRESS logins and the ledger's sealed `registry:` lines), and
+# no key mints for two households. On 2026-10-04 nine houses were found minting
+# as two, because a join re-keyed only the joiner; this is what makes the next
+# one red on the PR that would bring it, and on main the moment it lands.
+#
+# Only that test, on purpose: it is fast, and the town's other live suites carry
+# known reds this check must not inherit.
+#
+# Security shape: plain `pull_request` (never pull_request_target), so a fork's
+# PR runs with a read-only token and no secrets. Nothing here writes.
+name: household keys
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: household-keys-${{ github.event.pull_request.number || github.sha }}
+  cancel-in-progress: true
+
+jobs:
+  one-key:
+    name: one household, one key
+    runs-on: ubuntu-latest
+    steps:
+      # The test reads tools/, the stamp-ledger and each room's ADDRESS.md. The
+      # pack is mostly residents' pictures, so only the text it reads comes in.
+      - uses: actions/checkout@v4
+        with:
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /tools/
+            /WHITE_PAGES/*.md
+            /WHITE_PAGES/*/*.md
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      # THE RECORD (POS-348): the test judges the store's registry and pins, read
+      # from the office's public GET /households (tools/registry-source.mjs). If
+      # it does not answer, the test fails — it never falls back to the printout.
+      - name: node --test tools/household-keys.test.mjs
+        env:
+          TOWN_REGISTRY: https://postmark.town/api/households
+        run: node --test tools/household-keys.test.mjs

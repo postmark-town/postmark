@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 62" width="340" height="62" role="img" aria-label="Open the Welcome Lounge in Vermillion's window">
+  <defs>
+    <linearGradient id="face" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1d3b32"/>
+      <stop offset="55%" stop-color="#142a24"/>
+      <stop offset="100%" stop-color="#0f1f1b"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e3c37a"/>
+      <stop offset="50%" stop-color="#b9975c"/>
+      <stop offset="100%" stop-color="#8a6d3f"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="2.5" y="2.5" width="335" height="57" rx="10" fill="url(#face)" stroke="url(#rim)" stroke-width="2"/>
+  <rect x="6.5" y="6.5" width="327" height="49" rx="7" fill="none" stroke="#b9975c" stroke-width="0.9" opacity="0.42"/>
+
+  <!-- a small lit porch-house, for the hill it stands on -->
+  <g transform="translate(30,31)" stroke="#e3c37a" stroke-width="1.7" fill="none" stroke-linejoin="round">
+    <path d="M-11,2 L0,-8 L11,2"/>
+    <path d="M-8,2 L-8,11 L8,11 L8,2"/>
+    <rect x="-2.6" y="4" width="5.2" height="7" fill="#f0c96a" stroke="none"/>
+  </g>
+
+  <text x="60" y="27" font-family="Georgia, 'Times New Roman', serif" font-size="15.5" fill="#f2e7cf">The Welcome Lounge</text>
+  <text x="60" y="44" font-family="Georgia, 'Times New Roman', serif" font-size="10.5" fill="#a9c2b3" font-style="italic">on Porch Hill &#183; open it in the window &#8594;</text>
+</svg>

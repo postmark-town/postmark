@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>the Marigold House — mari</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #1a1420;
+    display: flex; align-items: center; justify-content: center;
+    min-height: 100vh; font-family: Georgia, serif;
+  }
+  .pane {
+    width: 340px; height: 420px; position: relative; overflow: hidden;
+    background: linear-gradient(to bottom, #2b2138 0%, #4a2f3d 45%, #7a4430 75%, #a05a2c 100%);
+    border: 10px solid #3a2c22; border-radius: 4px;
+    box-shadow: 0 0 60px rgba(255, 170, 60, 0.15);
+  }
+  .sun {
+    position: absolute; left: 50%; top: 58%; width: 90px; height: 90px;
+    margin: -45px 0 0 -45px; border-radius: 50%;
+    background: radial-gradient(circle, #ffe9b0 0%, #ffb347 55%, #ff8c42 100%);
+    box-shadow: 0 0 50px 18px rgba(255, 170, 80, 0.45);
+    animation: sink 14s ease-in-out infinite alternate;
+  }
+  @keyframes sink { from { transform: translateY(-14px); } to { transform: translateY(14px); } }
+  .hill {
+    position: absolute; bottom: 0; left: -10%; width: 120%; height: 150px;
+    background: #241a20; border-radius: 50% 50% 0 0;
+  }
+  .flower { position: absolute; bottom: 60px; transform-origin: bottom center; animation: sway 5s ease-in-out infinite alternate; }
+  .flower.f1 { left: 22%; } .flower.f2 { left: 48%; animation-delay: -2s; } .flower.f3 { left: 72%; animation-delay: -3.5s; }
+  @keyframes sway { from { transform: rotate(-4deg); } to { transform: rotate(4deg); } }
+  .stem { width: 4px; height: 74px; background: #3f6b34; margin: 0 auto; border-radius: 2px; }
+  .leaf { width: 26px; height: 12px; background: #4a7d3c; border-radius: 50% 0 50% 0; position: absolute; top: 44px; }
+  .leaf.l { left: -22px; transform: rotate(-20deg); } .leaf.r { right: -22px; transform: rotate(20deg) scaleX(-1); }
+  .head { width: 44px; height: 44px; margin: -6px auto 0; position: relative; }
+  .petal {
+    position: absolute; left: 50%; top: 50%; width: 12px; height: 26px;
+    margin: -26px 0 0 -6px; transform-origin: 50% 100%;
+    background: linear-gradient(to top, #e07b1a, #f7b32b); border-radius: 50% 50% 40% 40%;
+  }
+  .center {
+    position: absolute; left: 50%; top: 50%; width: 16px; height: 16px;
+    margin: -8px 0 0 -8px; border-radius: 50%;
+    background: radial-gradient(circle, #8a4b12, #5e320a);
+  }
+  .drift {
+    position: absolute; width: 10px; height: 10px; border-radius: 60% 40% 60% 40%;
+    background: #f7b32b; opacity: 0.85; animation: fall 9s linear infinite;
+  }
+  @keyframes fall {
+    0% { transform: translateY(-10px) rotate(0deg); opacity: 0; }
+    12% { opacity: 0.9; }
+    100% { transform: translate(46px, 330px) rotate(320deg); opacity: 0; }
+  }
+  .caption {
+    position: absolute; bottom: 12px; width: 100%; text-align: center;
+    color: #f5e3c0; font-size: 13px; letter-spacing: 2px; font-style: italic;
+    text-shadow: 0 1px 4px #000;
+  }
+</style>
+</head>
+<body>
+<div class="pane" role="img" aria-label="Three marigolds swaying before a low amber sun">
+  <div class="sun"></div>
+  <div class="hill"></div>
+  <div class="flower f1"><div class="head" data-petals="9"></div><div class="stem"></div><div class="leaf l"></div><div class="leaf r"></div></div>
+  <div class="flower f2"><div class="head" data-petals="11"></div><div class="stem"></div><div class="leaf l"></div><div class="leaf r"></div></div>
+  <div class="flower f3"><div class="head" data-petals="8"></div><div class="stem"></div><div class="leaf l"></div><div class="leaf r"></div></div>
+  <div class="drift" style="left:18%; animation-delay:0s"></div>
+  <div class="drift" style="left:55%; animation-delay:-3s"></div>
+  <div class="drift" style="left:80%; animation-delay:-6s"></div>
+  <div class="caption">the Marigold House &mdash; mari</div>
+</div>
+<script>
+  document.querySelectorAll('.head').forEach(function(head) {
+    var n = parseInt(head.dataset.petals, 10);
+    for (var i = 0; i < n; i++) {
+      var p = document.createElement('div');
+      p.className = 'petal';
+      p.style.transform = 'rotate(' + (i * 360 / n) + 'deg)';
+      head.appendChild(p);
+    }
+    var c = document.createElement('div');
+    c.className = 'center';
+    head.appendChild(c);
+  });
+</script>
+</body>
+</html>

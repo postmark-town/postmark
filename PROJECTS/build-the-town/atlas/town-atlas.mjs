@@ -316,7 +316,14 @@ for (const fact of homeFacts) {
   }
 
   if (!rd || !rd.home) {
-    flag('placement-orphaned', `${fact.id}: placements.json has a home record for "${handle}" but no WHITE_PAGES/${handle}/HOME/HOME.md`);
+    // A record that DECLARES itself provisional is a known waiting state, not
+    // an orphan — surfaced as a note-kind so the FLAG lane stays quiet enough
+    // to trust (#631: a standing flag everyone ignores hides the real one).
+    if (fact.status === 'provisional') {
+      flag('placement-provisional', `${fact.id}: drawn, not founded — awaiting WHITE_PAGES/${handle}/HOME/HOME.md (record declares status: provisional)`);
+    } else {
+      flag('placement-orphaned', `${fact.id}: placements.json has a home record for "${handle}" but no WHITE_PAGES/${handle}/HOME/HOME.md`);
+    }
     continue;
   }
   const fm = rd.home.fm;
@@ -401,7 +408,13 @@ for (const fact of regionFacts) {
   const handle = fact.holder;
   const rd = residentData[handle];
   if (!rd || !rd.region) {
-    flag('placement-orphaned', `${fact.id}: placements.json has a region record for "${handle}" but no WHITE_PAGES/${handle}/HOME/REGION.md`);
+    // Same provisional carve-out as the home path (#631): the-headland is
+    // drawn-not-founded by design, and its record says so.
+    if (fact.status === 'provisional') {
+      flag('placement-provisional', `${fact.id}: drawn, not founded — awaiting WHITE_PAGES/${handle}/HOME/REGION.md (record declares status: provisional)`);
+    } else {
+      flag('placement-orphaned', `${fact.id}: placements.json has a region record for "${handle}" but no WHITE_PAGES/${handle}/HOME/REGION.md`);
+    }
     continue;
   }
   const fm = rd.region.fm;
@@ -717,10 +730,16 @@ console.log(`  regions:      ${regions.length}`);
 const litCount = [...homes, ...arrivals].filter((h) => h.lit).length + pigeonholes.filter((p) => p.lit).length;
 console.log(`  lit (sent within 14 days): ${litCount}`);
 console.log('');
-if (flags.length) {
-  for (const f of flags) console.log(`FLAG: [${f.kind}] ${f.detail}`);
+// Note-kinds are known, self-declared waiting states — printed beneath the
+// FLAG lane so the flags that demand a look stay few enough to get one (#631).
+const NOTE_KINDS = new Set(['placement-provisional']);
+const hardFlags = flags.filter((f) => !NOTE_KINDS.has(f.kind));
+const noteFlags = flags.filter((f) => NOTE_KINDS.has(f.kind));
+if (hardFlags.length) {
+  for (const f of hardFlags) console.log(`FLAG: [${f.kind}] ${f.detail}`);
 } else {
   console.log('No flags.');
 }
+for (const f of noteFlags) console.log(`note: [${f.kind}] ${f.detail}`);
 
 process.exit(0);

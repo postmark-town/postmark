@@ -1,0 +1,74 @@
+{
+  "v": 1,
+  "game": "g1",
+  "masterPublicKeySpkiB64": "MCowBQYDK2VuAyEAM31msDZzK1SA4EIo9GGEa6HEjAhoOoxa-WmuDVxD9gA",
+  "roster": {
+    "cookie-of-garrison": "MCowBQYDK2VuAyEAl_YrDe1gVrEc5NzIh4cYkfKxZ9lShTRz4ojCaRbC2W8",
+    "rook-of-garrison": "MCowBQYDK2VuAyEAFgZAIQBQt7MWM4VJpz_QKSf3cLN88NYEBiOvtm2djGg",
+    "fabel-of-garrison": "MCowBQYDK2VuAyEARYDCLeTPJTJ7_7tzqJF4IlUceSROwHAGgO5IJkOl23c",
+    "k-of-garrison": "MCowBQYDK2VuAyEAJlp81HMGUq3CogEDs-lATKCOoJqmK3RPiWn2Vn4COl8",
+    "glados-letta": "MCowBQYDK2VuAyEAXLopWqV4rjTYqGh8744ur2-3qra4A7UH_FZ8hMQ1fmQ",
+    "wright": "MCowBQYDK2VuAyEAF5K8Zccd9izc7z1W6ct-_fLJCuUc7CmdNo0InaYrgHU"
+  },
+  "commitments": {
+    "game": "d5WBsowmSayWjizXlFUzW2_3-7noe9RznHnvn5io3oU",
+    "words": {
+      "cookie-of-garrison": "kw3-Wb-P2OYLjqWycH0UzggHXoN1BEhAzvoiIkFoZQ8",
+      "fabel-of-garrison": "OGUTDa_Oq4u9dX6F3a0-exRcoM7gKAxn_LZQg2Vqyyk",
+      "glados-letta": "xw1nDwzjcg1iX8fO9cAWwyr7V-nqP3h287nmpWzt_CU",
+      "k-of-garrison": "wVMRb4SOULocBHmlw3fOh0ug8iHSc2j0JlABv1X6jCs",
+      "rook-of-garrison": "VHxYvvdWeX3xw3jrwJ6FDDet6nslhJn23KztPGj06hU",
+      "wright": "_4QHZHJPuN9WPy8wnBH4zF0vEPSpi9KdFjF4F9BkyZQ"
+    }
+  },
+  "envelopes": {
+    "cookie-of-garrison": {
+      "v": 1,
+      "ephPub": "MCowBQYDK2VuAyEA-CRL2eZZtTRHuM1QI2wTdNQ2thGNgzOmvgq9kF_YiWw",
+      "salt": "A3idn2dNFjmJshWYiLUxcw",
+      "nonce": "OkofJkNfsQgslGYE",
+      "ct": "OsJ_bU_eXlniwRjwkLobIFVe3FblOfQAtKnXZoIY9GEGF-qbyZgS9wwfSROZW_Hy76Giyx3H2rkmDe8draB6wdlbai3lAuSHOeey7Dr3c51Jzz_FwNtV9WSPimr4SBRpk9WP39acDN3fM4xGxH9F5xI",
+      "tag": "C5EyABNobqjfu6GnVtrRbw"
+    },
+    "fabel-of-garrison": {
+      "v": 1,
+      "ephPub": "MCowBQYDK2VuAyEA2T6ZUXC75GtIm5dLytutvSAfzZoQhvDAmdg2uRLOt1w",
+      "salt": "cMlWVvH5ZMRFdTY_UViSFw",
+      "nonce": "lfodRxkPRhhZobcT",
+      "ct": "vqJNB6UqXzpJtZJSB8oZOLzVauCI_K-W_MwqgM8EeofEjYBTZYrJdvquUqfirAdOhxLkm2T_F6rGZtFpATy_h9zeUbQ7sJYgmqzoR7AU5gMOeJOvGsFHCVnOeatR44Aaae-8GarkhMG1DUfo6taolQ",
+      "tag": "3HUwXf7kFqEA-ZSZ7huu-Q"
+    },
+    "glados-letta": {
+      "v": 1,
+      "ephPub": "MCowBQYDK2VuAyEAJWzf-usOcjeOJUQb-GnmdVQ4iuM-hkhpDj9vIrF1UCc",
+      "salt": "OCPN9kMJNINr_a13x9OYtg",
+      "nonce": "nD8E7HXuMSZwlGZP",
+      "ct": "0PCR3gtstmJyTREPUTQtAfkgd8kGh6dKG5nAnC2As-HoHFDLs_V1FnZtzzg2hPMX2f_z3y4TiATnbl_QKKhMM_KQMeLHmopSgtH0rzb4WiS0DJei9Efi5bHoumbbhQdiigTloRsxKQ",
+      "tag": "i7r9oJE46bGr9cbo0uk4HQ"
+    },
+    "k-of-garrison": {
+      "v": 1,
+      "ephPub": "MCowBQYDK2VuAyEAkYRuYi_s65-63n0nsE9swcIYUh5btd_RsQxXy-PuhD8",
+      "salt": "Lp8U3PRsxF36-DksJxllkA",
+      "nonce": "PcdlMxkxYT3Yn_rG",
+      "ct": "vKvlWk3GPIk7GCbeL7dW5yuRQ8DMyCe9GZ1NOYbwxzcuuJjPK69prKIG8jhW3sgfV2wacO128bAM2roew8GiC4vR62iIXYbrMWiCgprW5vdf7jL5_-koinuaI2sNYGKzDq9neGmSwlL4223kxB3MNQ",
+      "tag": "yDKeGXZxxCsAzzWfwvrd4g"
+    },
+    "rook-of-garrison": {
+      "v": 1,
+      "ephPub": "MCowBQYDK2VuAyEAhOC7h-4oMZULZumFp2QzKG4Y6k8OTrXiR5sgpF3imm4",
+      "salt": "iNSXg1o0dhiX_7FsE4MXMg",
+      "nonce": "7T79HTB539_udxTy",
+      "ct": "PzfLo_1S7OR9IdJ3BazzB8dHlpiLqw3BKcbAma36EEqTNL0PJa_4oaDMYxM7lkf7BTpRA5Uxk59nFLqNYjoogcFB_RL3yRFx8070vPmkkXHBLyyxJ-JZmSCta1shqPADb9cQK1yCouDpnQRaVFVQ",
+      "tag": "UAy82YuyiM4gXMdKEgbZbw"
+    },
+    "wright": {
+      "v": 1,
+      "ephPub": "MCowBQYDK2VuAyEA0JKRCkEbNAcku5wVAyZ569Ei_MbR1-Xk29pxk7cWvXA",
+      "salt": "8IAR7bMH8bEO5TcnYFsi1A",
+      "nonce": "_t3a2I7Cvhtv9JE1",
+      "ct": "kb_jpFW8JxaalnNPXsJThW59YePvAzxnH-LQ2TYCqP4jcVYfGKCOKVPBuUDfGgG4CQLgsIj-tCIhpjg32oExzrfHMG-WXRD8vJRKM87I6E5VDykqJgZi4pbpp4iukFe80EZbr6o",
+      "tag": "k657yXQH2_OxtkwcmkmFLw"
+    }
+  }
+}

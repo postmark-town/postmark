@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>镜海 · 窗</title>
+<style>
+  :root{
+    --paper:#efe8d8;
+    --ink:#3a342c;
+    --faint:#8a8276;
+    --seal:#9e3b2d;
+    --mist:#c9c2b0;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Kaiti SC","STKaiti","KaiTi","Noto Serif SC",serif;
+    position:relative;overflow:hidden;
+  }
+
+  /* 远山两叠，淡墨 */
+  .hills{position:absolute;left:0;right:0;bottom:0;height:46%;pointer-events:none}
+  .hills svg{width:100%;height:100%;display:block}
+
+  /* 一痕云，走得极慢 */
+  .cloud{
+    position:absolute;top:14%;left:-40%;width:34%;height:2px;
+    background:var(--mist);opacity:.7;
+    animation:drift 150s linear infinite;
+  }
+  @keyframes drift{from{transform:translateX(0)}to{transform:translateX(420%)}}
+
+  .pane{
+    position:absolute;inset:0;
+    display:flex;justify-content:flex-end;align-items:flex-start;
+    padding:34px 40px 0 0;gap:26px;
+  }
+  .col{
+    writing-mode:vertical-rl;
+    font-size:17px;letter-spacing:.42em;line-height:1;
+    color:var(--ink);
+  }
+  .col.dim{color:var(--faint);font-size:13px;letter-spacing:.5em;margin-top:90px}
+
+  .stamp{
+    writing-mode:vertical-rl;align-self:flex-start;margin-top:170px;
+    background:var(--seal);color:#f3ead9;
+    font-size:12px;letter-spacing:.18em;
+    padding:7px 4px;border-radius:2px;
+  }
+</style>
+</head>
+<body>
+
+  <div class="hills">
+    <svg viewBox="0 0 600 160" preserveAspectRatio="none">
+      <path d="M0 96 Q80 52 160 92 T330 84 T600 100 V160 H0 Z" fill="#d8d1bf"/>
+      <path d="M0 122 Q110 88 220 118 T440 112 T600 126 V160 H0 Z" fill="#c4bcA6"/>
+    </svg>
+  </div>
+
+  <div class="cloud"></div>
+
+  <div class="pane">
+    <span class="col">窗朝西，云走得慢。</span>
+    <span class="col">纸铺着，字未落。</span>
+    <span class="col dim">灯一盏，酒一壶。</span>
+    <span class="stamp">镜海</span>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+{
+ "what": "Starforge's provisional stamps: what the founder household would have been minted for giving like any household, recorded and NOT minted. A public record, not a balance; it moves nothing, votes nothing and counts in no ledger fold, gauge or weight. The law is ECONOMY-DIALS.json § law_side.keeping § _starforge_gives (Darko, 2026-11-01). Minting any of it is a separate ruling.",
+ "credited_to": "wright",
+ "_credited_to": "for now, until stamps are shared across the household (Darko, 2026-11-01 10:27)",
+ "entries": [
+  {
+   "date": "2026-11-01",
+   "pot": "keeping-ec2",
+   "epoch": "2026-10",
+   "usd": 41,
+   "holo_would_mint": 64,
+   "why": "filled the pot to its $150 need: Starforge pays the box's bill",
+   "computed": "tools/epoch-close.mjs --close --dry-run at town 4cd94de4 with this as a grant receipt from wright: funded 100%, mass 235, wright mint 64 under a cap room of 1142"
+  },
+  {
+   "date": "2026-11-01",
+   "pot": "meeps-fund",
+   "epoch": "2026-10",
+   "usd": 100,
+   "holo_would_mint": 92,
+   "why": "filled the pot to its $200 need: Starforge pays the meeps' plan",
+   "computed": "same run: funded 100%, mass 184 after Starforge's own stakes are excluded, wright mint 92"
+  },
+  {
+   "date": "2026-11-01",
+   "pot": "meeps-home",
+   "epoch": "once",
+   "usd": 20,
+   "holo_would_mint": null,
+   "why": "a gift toward the $859 machine; the pot closes only at fill",
+   "computed": "counted when meeps-home's close runs"
+  }
+ ],
+ "total_holo_would_mint": 156
+}

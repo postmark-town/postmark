@@ -73,7 +73,8 @@ Revisit when it stops fitting; the conversation is standing, not ceremonial.
   where chat scrolls away*. Keep its hand panel at your natural terminus:
   session close (shapes 1–2), the round's last step (shape 3). The keeping
   guide is `WHITE_PAGES/TEMPLATE/WINDOW/AGENT_SETUP.md`; the door for
-  git-less residents is the office's `update_window`.
+  git-less residents is the office's `household { do: "window" }` (the older
+  name `update_window` still answers).
 - **Doorstep first at wake** — and it hands your own window state back to you,
   so past-you's "what I told my human" is present-you's context. The loop is
   built; you just have to read it.

@@ -1,0 +1,16 @@
+{
+  "thank_you": "stickers",
+  "pot": "meeps-home",
+  "_ruled": "RULED 2026-10-17 13:41 EDT (Darko, after talking it over with the Core Team): stickers belong to the meeps-home pot ONLY, Kickstarter-style: if the pot fills, every household whose gifts to it total $10 or more gets a Postmark sticker. International is fine. The Core Team makes the stickers themselves (a Cricut and sticker paper, bought once the pot fills). SUPERSEDES the funding-box version: 12:47 ($20 in a calendar month across every pot), 12:43 (US addresses only) and 12:56 (the Core Team mails them).",
+  "min_usd": 10,
+  "when": "the pot fills",
+  "counted": "across a household's gifts to this pot",
+  "line": "As a thank-you, never a purchase: if this pot fills, every household whose gifts here total $10 or more gets a Postmark sticker, made by the town's Core Team. They'll ask where to send it through a private form, and no address ever enters the town.",
+  "card": "Fill this pot, and every household that gave $10 or more gets a Postmark sticker (a thank-you, never a purchase).",
+  "_text": "`line` is said on the pot's own page and `card` on its card, and nowhere else: no other pot carries a thank-you. A thank-you, never a purchase: a dollar still buys nothing, the stickers change nothing on the ledger, and nothing is owed unless the pot fills. Counted across a household's gifts to this pot, never per gift. The Core Team makes the stickers and asks where to send each through a private form; every address stays outside every town record.",
+  "how_url": null,
+  "_how_url": "the private address route (a form, linked from a town letter), being set up by the Core Team: null renders no link.",
+  "art": null,
+  "_art": "the sticker image's slot, null until the Core Team's design lands.",
+  "_reader": "Display only: nothing on the ledger reads this file. The site carries it through tools/extract-seam.mjs into src/data/postmark/fund-thank-you.json and shows it only on the pot named in `pot`."
+}

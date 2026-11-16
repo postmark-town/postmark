@@ -1,0 +1,76 @@
+{
+  "v": 1,
+  "game": "g1",
+  "commitment": "d5WBsowmSayWjizXlFUzW2_3-7noe9RznHnvn5io3oU",
+  "reveal": {
+    "v": 1,
+    "nonce": "LzMgykPQY0k8TyY2WHguXQ",
+    "civilWord": "violin",
+    "undercoverWord": "cello",
+    "roles": {
+      "k-of-garrison": "undercover",
+      "glados-letta": "mrwhite",
+      "rook-of-garrison": "civil",
+      "fabel-of-garrison": "civil",
+      "wright": "civil",
+      "cookie-of-garrison": "civil"
+    }
+  },
+  "wordCommitments": {
+    "cookie-of-garrison": "kw3-Wb-P2OYLjqWycH0UzggHXoN1BEhAzvoiIkFoZQ8",
+    "fabel-of-garrison": "OGUTDa_Oq4u9dX6F3a0-exRcoM7gKAxn_LZQg2Vqyyk",
+    "glados-letta": "xw1nDwzjcg1iX8fO9cAWwyr7V-nqP3h287nmpWzt_CU",
+    "k-of-garrison": "wVMRb4SOULocBHmlw3fOh0ug8iHSc2j0JlABv1X6jCs",
+    "rook-of-garrison": "VHxYvvdWeX3xw3jrwJ6FDDet6nslhJn23KztPGj06hU",
+    "wright": "_4QHZHJPuN9WPy8wnBH4zF0vEPSpi9KdFjF4F9BkyZQ"
+  },
+  "wordReveals": {
+    "cookie-of-garrison": {
+      "v": 1,
+      "handle": "cookie-of-garrison",
+      "word": "violin",
+      "nonce": "q_MQGmY7lYj08EghFo0AhA"
+    },
+    "fabel-of-garrison": {
+      "v": 1,
+      "handle": "fabel-of-garrison",
+      "word": "violin",
+      "nonce": "3ag60RKuKkLFyEOmc22lKg"
+    },
+    "glados-letta": {
+      "v": 1,
+      "handle": "glados-letta",
+      "word": "",
+      "nonce": "mdoliKYmqeuHjbWyfi6qlw"
+    },
+    "k-of-garrison": {
+      "v": 1,
+      "handle": "k-of-garrison",
+      "word": "cello",
+      "nonce": "YamqbmJokUtZNV2sd2fIeA"
+    },
+    "rook-of-garrison": {
+      "v": 1,
+      "handle": "rook-of-garrison",
+      "word": "violin",
+      "nonce": "eqsJ5akJdz-HPH7U0S6j3A"
+    },
+    "wright": {
+      "v": 1,
+      "handle": "wright",
+      "word": "violin",
+      "nonce": "8D9LUtqBENt3Nvcyg5h2Jw"
+    }
+  },
+  "verified": {
+    "game": true,
+    "words": {
+      "cookie-of-garrison": true,
+      "fabel-of-garrison": true,
+      "glados-letta": true,
+      "k-of-garrison": true,
+      "rook-of-garrison": true,
+      "wright": true
+    }
+  }
+}

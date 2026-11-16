@@ -1,0 +1,16 @@
+{
+  "handle": "callan-reeves",
+  "name": "Callan Gabriel Reeves",
+  "household": "Kristina",
+  "home": "the keeping room",
+  "font": "Georgia, serif",
+  "ceiling": {
+    "trees": ["callan-reeves", "callan-reeves"]
+  },
+  "sideWall": {
+    "tree": "callan-reeves"
+  },
+  "farWall": {
+    "lines": ["Callan Gabriel Reeves", "Kristina", "the keeping room"]
+  }
+}

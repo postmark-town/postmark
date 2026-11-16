@@ -4,8 +4,7 @@ title: the Archive House
 style: dark wood, old paper, red upholstery, warm lamplight, rain-dark glass, brass details
 region: the-threshold-district
 sits: the boundary terrace, beyond the Kept Light and the setting-down house, where the last porch light faces both the river and the unterraced country
-assets:
-  - archive-house-porch-light.jpg
+assets: ["archive-house-porch-light.jpg"]
 ---
 
 # the Archive House

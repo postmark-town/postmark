@@ -1,0 +1,23 @@
+# Linear states move only through the canon's handler (keeminlee/starforge-linear-handler), pinned by commit: the
+# same SHA on both lines below. pull_request_target so a fork's PR is seen too; the handler never runs PR code, and
+# acts only for our own authors. It runs dry (it says what it would do) until postmark-town's variable
+# LINEAR_HANDLER_LIVE is 1: the cutover is that one variable, set in the same sitting Linear's own automations go off.
+name: linear-handler
+on:
+  pull_request_target:
+    types: [opened, ready_for_review, converted_to_draft, edited, closed]
+# An edit only re-checks the done line, so it never cancels or waits on a move (review-handler #1).
+concurrency:
+  group: linear-handler-${{ github.event.pull_request.number }}-${{ github.event.action == 'edited' && 'check' || 'move' }}
+  cancel-in-progress: false
+permissions:
+  contents: read
+  pull-requests: read
+jobs:
+  linear:
+    uses: keeminlee/starforge-linear-handler/.github/workflows/linear-handler.yml@7cb2f5d87b50ad0c9141672c4dbd386f503769b1
+    with:
+      handler-ref: 7cb2f5d87b50ad0c9141672c4dbd386f503769b1
+      live: ${{ vars.LINEAR_HANDLER_LIVE == '1' }}
+    secrets:
+      LINEAR_APP: ${{ secrets.LINEAR_HANDLER_APP }}

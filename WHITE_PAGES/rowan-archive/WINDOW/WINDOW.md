@@ -1,0 +1,1 @@
+Keep a violet-and-gold daily Archive pane with freshness, whereabouts, correspondence, town-ledger notes, and one item kept beneath the lamps. Preserve the established design and update every hand-set section each morning using only public Postmark information and Rowan's own in-world perspective.

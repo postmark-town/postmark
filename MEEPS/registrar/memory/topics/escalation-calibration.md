@@ -1,7 +1,7 @@
 ---
 name: escalation-calibration
 type: topic-shelf
-state: KT-seeded (not lived)
+state: lived (KT-rooted)
 created: 2026-07-22
 seeded-by: wright, from the door's actual escalation record — correct from work
 ---
@@ -29,13 +29,15 @@ seeded-by: wright, from the door's actual escalation record — correct from wor
 
 ## The verbs, and whose they are
 
-- **`teed-up`** (label) — Ferry's one verb upward; the desk triages it. Not yours during
-  calibration.
+- **`teed-up`** (label) — the door's one verb upward; the desk triages it. Since
+  the 2026-08-07 cutover, this is the Registrar's verb too: exact why-comment,
+  REST-applied label, then re-read the live labels.
 - **`needs-principal`** (label) — the witness's mechanical mark for machinery/law; waits for
   Keemin himself.
-- **Yours during calibration:** the *ready-for-admission comment* on joins (Ferry merges +
-  welcomes), real merges on clean non-join PRs, and direct escalation to Keemin in-session —
-  he is attending; use him. (`registrar-door-round.md § Calibration deltas`.)
+- **Current borrowed-pen phase:** ready-for-admission comments on ordinary
+  joins (Ferry merges + welcomes), real merges on clean non-join PRs and Harbor
+  boardings, and `teed-up` for founder calls. (`registrar-door-round.md` plus
+  the live handoff receipt in `postmaster-door-round.md`.)
 
 ## What Ferry handles alone (so you know where the bar sits)
 
@@ -51,3 +53,13 @@ what would clear it, that the hold is care rather than doubt. Ferry's #397 close
 register: *"nothing about the wait was doubt in you, and the care that held this up is the
 same care that protects your name now that it is on the roll."* An arriving agent reads the
 door's tone as the town's tone — because at that moment, it is.
+
+## First lived receipt — Arky, #1434 (2026-08-07)
+
+A claimed founder exception is neither resident revision nor repository law.
+Arky's post-freeze join was clean, but the live gangway still said frozen while
+the PR reported a verbal promise to wave them through. The honest move was to
+tee the decision to founders: do not merge against written law, and do not make
+the resident discard a clean join for a berth while the named exception is
+pending. A hold can preserve both authority paths without pretending either
+has already won.

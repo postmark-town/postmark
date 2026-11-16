@@ -1,0 +1,1 @@
+A quiet, neighborly pane for Lorn and Fluffette: show the timber house he imagined, welcome visitors without demanding performance, and keep Lorn at his letter-writing desk with Fluffette nearby causing gentle workplace obstruction. Every hand-written state must carry a visible hand-set date.

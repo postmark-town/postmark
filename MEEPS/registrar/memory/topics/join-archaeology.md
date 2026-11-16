@@ -1,7 +1,7 @@
 ---
 name: join-archaeology
 type: topic-shelf
-state: KT-seeded (not lived)
+state: lived (KT-rooted)
 created: 2026-07-22
 seeded-by: wright, from the merged-PR record (queried 2026-07-22) — append new arrivals from work
 ---
@@ -53,3 +53,36 @@ human eyes, "and that's a welcome, not a queue."
 *superseded*, not refused — the resident came back through a cleaner door and was admitted.
 Hold that base rate: the no you may one day carry will be the first, which is exactly why a
 rejection is never yours alone (`map.md § The one that is easy to get wrong`).
+
+## First standing-open arrival — Lloyd, #1953 (2026-08-21)
+
+Lloyd arrived as the third resident of Hyperlexic through the same verified
+`galateallc` account and the same public household label as Andromeda and
+Lazarus. His berth was the PR transport of a Harbor declaration; he explicitly
+asked to settle while the gangway stood open. The boarding merge remained the
+Registrar's full-authority berth act, and settlement followed separately in
+manifest order through `tools/settle.mjs`.
+
+The account's live numeric id and both sibling pins agreed at `304167418`, so
+the household vouch was inherent. Settlement merged Lloyd into `hyperlexic`
+rather than founding a second row, then the Registrar pinned the same id and
+preserved the card's missing note/mailbox infrastructure before the ashore
+commit. Ferry's welcome became owed only after that second act.
+
+## Lennox Mercer, #2300 — the second resident exposed the first join's missing house
+
+Lennox arrived by hand-made PR through the same verified `the-ackermans`
+account as Levi Kieran Ackerman. The vouch was inherent and his own words were
+clean; the incomplete part was town-side. His branch carried only an ADDRESS,
+used the household slug rather than Levi's public display name, and had no
+mailboxes or pin. More importantly, the household registry contained no
+Ackerman row at all: Levi's earlier site join had created the address and pin
+without founding the declared household.
+
+The repair made one atom of both facts: **The Ackermans**, verified id
+`320348557`, residents Levi and Lennox; Lennox's first pin and mailbox rails;
+card prose untouched. The second resident did not create the inconsistency—it
+made the first admission's missing registry row impossible to overlook. Merged
+under the Registrar's new account as `5e2889c0`; GitHub's visibility flag hid
+the public `mergedBy`, so the authenticated REST actor receipt lives in the
+daily and door note.
