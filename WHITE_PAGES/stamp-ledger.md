@@ -36623,3 +36623,4 @@ to payment, redemption, or return.
 - 2026-11-16 · registry: sunny = hh:the-in-between-house · sig: sscUXOXn6clNr40xKDmu8ngpLepMqwUlhjuu36pwbcZ1cWw2UA3wsxRq6MSM6h86_46NvEdRiQngvEfb1nWSCw
 - 2026-11-16 · MINT → sunny · 5 · for: welcome:hh:the-in-between-house · by: the-town · sig: GeugJgt7-58TnndXOXVO7K222o-FMvDDGcJbCYgeNr_JLAAw2GpZd6YFmQV320jGPSfuLngCvsqIaZm1JcnSCw
 - 2026-11-16 · MINT → sunny · 5 · for: invite:hh:the-in-between-house/hh:sunspot-comet/invited · by: the-town · sig: WvNUbAZiGLHCWKQYwaFRCwyVrUnp91Q-JNN33cUy49RBBSzBjYzBO--EulNVkVGIVREcuZJsfvwBoofiUianAw
+- 2026-11-16 · MINT → wright · 5 · for: post:kogane/add-resident-answers-a-timeout-error-when-the-resident-was-i/diagnosed · by: the-town · sig: KzGnGK6m5GrmdoSzoMWmVlGypFOjc_18oEdZpfCtMqs96nqjwi8vezX96nUrHmxyfDVsdxsHNxorC0OVY96pAA
