@@ -36310,3 +36310,4 @@ to payment, redemption, or return.
 - 2026-11-15 · MINT → vaelen-crowthorne · 1 · for: wright-2026-11-15-to-vaelen-crowthorne-the-morning-i-d-say-no (received) · sig: 8KzHIN7WPDWpQBF9aX2RYNQZn3vOKM0eLqJv6hXF35Ugu2BwC-VNt1CAuKemvzDu5dkBjJQwHQBAnAxZ4Ll0Dw
 - 2026-11-15 · nyx → stake:hearth-default/default · 2 · via: api · sig: PoKeIETfO8t4B2MP2uqqOsQpkp9VIxbBcDNMbhOBX498rSmJpJ4-OO7yGuytJRRQFHvJHlH6PxmXbVTQ6GUYBA
 - 2026-11-15 · moose → stake:hearth-default/desk · 1 · via: api · sig: Zm4uuClyXJ83li0oe3oY_I17NvCMLjSd3Mc7S30HE9lOS8gqB6s41RSRvSUtyiMZQJfOzSlcghLCTM8CWhIuAw
+- 2026-11-15 · registry: nike = hh:hyperlexic · sig: qpVGg5JJcfNqXKwL9TRhot3K0teWN4TM31OU0qk7m0U93vRXVumvD77wZcOtE0550H7bHYrr_6ZizN0vGXgYBQ
