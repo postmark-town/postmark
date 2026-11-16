@@ -38,7 +38,7 @@
 //   - <date> · stake:post/<author>/<slug> → <handle> · <n> · for: post-return   (the post finished: the open position comes home whole, once per (post, handle))
 //   THE BUG STAGE CORRECTION (POS-649, Darko 2026-10-15: "the mint to kino to give them the 10 … burning the 10 that you mistakenly got"):
 //   - <date> · MINT → <handle> · <n> · for: post:<author>/<slug>/<stage>-recredit · by: the-town   (the stage paid to the right resident: diagnosed, briefed or fixed only, the SAME amount its stage line paid, never to that line's own recipient, never a meep, ONE per post and stage, and always immediately followed by its burn. OR, for a stage the ledger never paid (POS-931/a, Darko 2026-11-06 "Extend the door": a stage the office recorded skipped by mistake), the stage's first and only payment, at diagnosed or briefed ONLY (never fixed): an amount on its ladder, by: the-town, never a meep, ONE per post and stage, with NO burn, and no stage line for that post and stage ever after. Appended alone by --stage-recredit --skipped)
-//   - <date> · <handle> → BURN · <n> · for: correction:<sig> · by: <hand>   (the wrong stage mint, burned exactly: <sig> is that post:<id>/<stage> line's full signature, <handle> its recipient, <n> its amount, out of liquid stamps only, ONCE per mint, by: one of CORRECTION_HANDS, and always immediately after its recredit. The two are appended together by --stage-recredit or not at all)
+//   - <date> · <handle> → BURN · <n> · for: correction:<sig> · by: <hand>   (the wrong stage mint, burned exactly: <sig> is that post:<id>/<stage> line's full signature, <handle> its recipient, <n> its amount, out of liquid stamps only, ONCE per mint, by: one of CORRECTION_HANDS, and always immediately after its recredit. The two are appended together by --stage-recredit or not at all. Two burns stand alone, written by --meep-correction: a meep's stage mint (POS-655), and a correction hand's own stage mint burned by that same hand (POS-1010))
 //   PARCELS FROM 11-01 (POS-762, Darko 2026-10-22: "1 parcel per household with extra parcels purchasable with stamps"; "50 stamps per parcel you already have"; paid to the town, never returned):
 //   - <date> · <handle> → BURN · <n> · for: parcel:<nth>/<household-key>   (a household whose declaration is dated after 2026-10-31 (town time) buys room ahead for its <nth> parcel, 2 or 3: <n> is exactly 50 × (<nth> − 1), 50 × the room it already has (Darko 2026-10-23, POS-762/f "Room bought"), out of the payer's liquid stamps, never a meep, the key IS the payer's household at the line's date, dated 2026-11-01 or later, and ONE line per household and <nth>, in order (the 2nd before the 3rd). The world's fold counts these lines as the household's room (postmark-world tools/marks-fold.mjs § parcels from 11-01))
 //   - <date> · <handle> → BURN · <n> · ...        (reserved; dormant until blessings — every other burn; only `for: correction:` and `for: parcel:` are live)
@@ -510,9 +510,33 @@ const WELCOME_RE = new RegExp(String.raw`^- (\d{4}-\d{2}-\d{2}) · MINT → (\S+
 // carries the household key, and one line per quest and household holds across
 // every source the office's pass reads (a comment and a letter from one house
 // pay once).
+//
+// THE HEARTH QUEST (POS-985). Darko 2026-11-01 16:51 EST (POS-845): the Hearth
+// contest is a quest, and "we should still reward stamps to anyone who tries
+// their hand at their own household hearth"; 20:08: "let's say 10 stamps for
+// entering and 100 to the winner". So: 10, once per household, for the
+// household's Hearth entry merged into PROJECTS/household-hearths/ on main, read
+// by the office's pass (tools/quest-pay-plan.mjs, the hearth source). The
+// winner's 100 is not this line: it is the founder gift (10-22; POS-684 call 4,
+// 2026-11-09 15:38: "the 100 stamps are the founder gift"), `for: gift:` above.
+//
+// `from` IS THE ONE VALUE SET AT SHIP: the town day the contest is announced
+// (POS-684 call 3, 2026-11-09 14:51: four weeks "from whenever that
+// announcement is released"; call 5e: it ships as one hotfix after Darko's walk,
+// and "the announcement and the four weeks start that day"). Until it is set,
+// `from: null` keeps the quest CLOSED: the verb refuses every date and the
+// verifier reds any line (questOpenOn below; a bare `date < null` compares
+// false and would read as open, which is why the judge exists).
 export const QUEST_PAY = Object.freeze({
   'read-v2-feedback': Object.freeze({ amount: 5, once_per: 'household', from: '2026-10-15', until: null }),
+  'hearth-entry': Object.freeze({ amount: 10, once_per: 'household', from: null, until: null }),
 });
+/** Is a quest open on a town day: `from` set and reached, and `until` (when set) not passed. A row with no `from` is closed on every day. PURE; the one judge the verb and the verifier share. */
+export const questOpenOn = (terms, date) =>
+  typeof terms?.from === 'string' && typeof date === 'string' && date >= terms.from && (!terms.until || date <= terms.until);
+/** The window, in the words both refusals print. */
+export const questWindowWords = (terms) =>
+  typeof terms?.from === 'string' ? `pays from ${terms.from}${terms.until ? ` until ${terms.until}` : ''}` : 'is not open (QUEST_PAY names no opening day)';
 export const QUEST_ID_RE = /^[a-z0-9][a-z0-9-]*$/;
 const QUEST_PAY_RE = new RegExp(String.raw`^- (\d{4}-\d{2}-\d{2}) · MINT → (\S+) · ([1-9]\d*) · for: quest:([a-z0-9][a-z0-9-]*)\/(${HOUSEHOLD_KEY}) · by: (\S+)$`);
 // INVITE — "Bring a neighbour" (POS-576: Darko 2026-10-11 09:53, amended
@@ -581,6 +605,14 @@ export const INVITE_WITHIN_DAYS = 30;
 export const INVITE_CAP_PER_MONTH = 10;
 // The week the inviter's 10 waits after the activation (POS-816/a, "A week").
 export const INVITE_HOLD_DAYS = 7;
+// A LATE-NAMED INVITATION (POS-947; Darko 2026-11-07 23:05 EST, POS-816/c: "open to any amount of time for
+// the backfill for referrals", and "let's say 10 max for the backfill"; 2026-11-08 09:02 EST, POS-947/a: "The
+// town's judge too"). A house that joined without naming its inviter may name one later, once, with no window;
+// its own record then carries `backfill: true` and `at`, when it was named. Its inviter side counts the 30 days
+// from the house's JOIN day (`since`), so an old first letter or home still pays, and waits a week from the
+// naming as well as from the activation. And a house is paid for at most 10 late-named invitations IN ALL,
+// whatever month they land in, beside the month's 10 every invitation counts in.
+export const INVITE_BACKFILL_CAP = 10;
 // The town's own household (POS-576/e), as a canonical key. Until 2026-11-03 this was
 // INVITE_FOUNDERS = ['hh:starforge', 'hh:the-town']; the founders' household pays like
 // any other now (POS-816/d).
@@ -1420,17 +1452,20 @@ export function houseCanonOf(households) {
 }
 // The invitation a declared house's own registry row records (`invited_by`,
 // office migration 085: `{ by, named, at }`, the inviting house's slug first),
-// by its canonical key, or null.
+// by its canonical key, or null. A LATE-NAMED one (POS-947) also carries
+// `backfill: true`, its `at` is when it was named, and the house's own join day
+// (`since`) rides beside it as `joined`, because its pay clock runs from there.
 export function invitationOf(households) {
   return (canonKey) => {
     const slug = /^hh:(.+)$/.exec(String(canonKey ?? ''))?.[1];
     const row = slug != null && Object.hasOwn(households ?? {}, slug) ? households[slug] : null;
     const inv = row?.invited_by;
-    return inv && typeof inv.by === 'string' && inv.at ? inv : null;
+    if (!(inv && typeof inv.by === 'string' && inv.at)) return null;
+    return inv.backfill === true ? { ...inv, joined: typeof row.since === 'string' ? row.since.slice(0, 10) : null } : inv;
   };
 }
 
-export const inviteState = () => ({ welcomed: new Set(), paid: new Set(), counts: new Map() });
+export const inviteState = () => ({ welcomed: new Set(), paid: new Set(), counts: new Map(), backfilled: new Map() });
 // The cap's key for an inviter-side line: its house and the town month the
 // line is dated, the month it is paid in ("Month paid", POS-816/b).
 const inviteCapKey = (inviter, cls) => `${inviter}|${cls.date.slice(0, 7)}`;
@@ -1464,22 +1499,34 @@ export function judgeInviteLine(cls, { canon, invitationOf: invitation, houseAt,
     if (!state.welcomed.has(invited)) return `${cls.invited}'s 5 more is the rest of its join bundle, and its house holds no welcome bundle yet`;
     return null;
   }
-  const invitedDay = townDayOf(inv.at);
-  if (cls.activated < invitedDay) return `the activation (${cls.activated}) is before the invitation (${invitedDay})`;
+  // A late-named invitation's clock runs from its house's JOIN day, and it waits a week after the naming too (POS-947/a).
+  const late = inv.backfill === true;
+  if (late && !INVITE_DAY_RE.test(String(inv.joined ?? '')))
+    return `${cls.invited}'s invitation was named after it joined, and its record holds no join day (since) to count from`;
+  const invitedDay = late ? inv.joined : townDayOf(inv.at);
+  const from = late ? 'the join' : 'the invitation';
+  if (cls.activated < invitedDay) return `the activation (${cls.activated}) is before ${from} (${invitedDay})`;
   if (dayGap(invitedDay, cls.activated) > INVITE_WITHIN_DAYS)
-    return `the activation (${cls.activated}) is more than ${INVITE_WITHIN_DAYS} days after the invitation (${invitedDay})`;
+    return `the activation (${cls.activated}) is more than ${INVITE_WITHIN_DAYS} days after ${from} (${invitedDay})`;
   if (dayGap(cls.activated, cls.date) < INVITE_HOLD_DAYS)
     return `the inviter is paid on ${cls.date}, less than a week after the activation (${cls.activated}): it waits ${INVITE_HOLD_DAYS} days`;
+  if (late && dayGap(townDayOf(inv.at), cls.date) < INVITE_HOLD_DAYS)
+    return `the inviter is paid on ${cls.date}, less than a week after the invitation was named (${townDayOf(inv.at)}): a late-named one waits ${INVITE_HOLD_DAYS} days from its naming`;
   if ((state.counts.get(inviteCapKey(inviter, cls)) ?? 0) >= INVITE_CAP_PER_MONTH)
     return `${cls.inviter} already holds ${INVITE_CAP_PER_MONTH} paid invitations in ${cls.date.slice(0, 7)}, the month this one is paid in: at most ${INVITE_CAP_PER_MONTH} a month`;
+  if (late && (state.backfilled.get(inviter) ?? 0) >= INVITE_BACKFILL_CAP)
+    return `${cls.inviter} already holds ${INVITE_BACKFILL_CAP} paid late-named invitations: at most ${INVITE_BACKFILL_CAP} in all, whatever month`;
   return null;
 }
-/** Fold a lawful invite line into the state the next judgement reads. */
-export function foldInviteLine(cls, state, { canon }) {
+/** Fold a lawful invite line into the state the next judgement reads. `invitationOf` tells a late-named invitation's line, for its cap. */
+export function foldInviteLine(cls, state, { canon, invitationOf: invitation }) {
+  if (typeof invitation !== 'function') throw new Error('foldInviteLine needs invitationOf: a late-named line folds into its lifetime cap (POS-947)');
   state.paid.add(`${canon(cls.invited)}|${cls.side}`);
   if (cls.side === 'inviter') {
     const k = inviteCapKey(canon(cls.inviter), cls);
     state.counts.set(k, (state.counts.get(k) ?? 0) + 1);
+    if (invitation?.(canon(cls.invited))?.backfill === true)
+      state.backfilled.set(canon(cls.inviter), (state.backfilled.get(canon(cls.inviter)) ?? 0) + 1);
   }
 }
 
@@ -2892,8 +2939,8 @@ function main(registrySource = null) {
     }
     const terms = QUEST_PAY[quest];
     if (!terms) { console.error(`FATAL: "${quest}" is not a paid quest (${Object.keys(QUEST_PAY).join(', ')})`); process.exit(1); }
-    if (date < terms.from || (terms.until && date > terms.until)) {
-      console.error(`FATAL: ${quest} pays from ${terms.from}${terms.until ? ` until ${terms.until}` : ''}, not on ${date}`); process.exit(1);
+    if (!questOpenOn(terms, date)) {
+      console.error(`FATAL: ${quest} ${questWindowWords(terms)}, not on ${date}`); process.exit(1);
     }
     if (!HOUSEHOLD_KEY_RE.test(household)) {
       console.error(`--household must be a household key, <prefix>:<value> (got "${household}")`); process.exit(1);
@@ -2983,14 +3030,15 @@ function main(registrySource = null) {
     const households = welcomeRegistry()?.households
       ?? (() => { try { return JSON.parse(readFileSync(join(repo, 'tools', 'households.json'), 'utf8')).households ?? {}; } catch { return {}; } })();
     const canon = houseCanonOf(households);
+    const invitation = invitationOf(households);
     const state = inviteState();
     for (const e of existing) {
       const c = classifyEntry(e.canonical);
       if (c.kind === 'welcome') { state.welcomed.add(canon(c.household)); state.welcomed.add(canon(keyOf(c.handle, c.date))); }
-      if (c.kind === 'invite') foldInviteLine(c, state, { canon });
+      if (c.kind === 'invite') foldInviteLine(c, state, { canon, invitationOf: invitation });
     }
     const isMeep = meepChecker(laws);
-    const why = judgeInviteLine(classifyEntry(canonical), { canon, invitationOf: invitationOf(households), houseAt: keyOf, isMeep, state });
+    const why = judgeInviteLine(classifyEntry(canonical), { canon, invitationOf: invitation, houseAt: keyOf, isMeep, state });
     if (why) { console.error(`FATAL: ${why} — nothing minted`); process.exit(1); }
     const recorded = existing.map((e) => e.canonical);
     const { problems, owed } = walkLedger(recorded.slice(1), mints, 1);
@@ -3170,6 +3218,13 @@ function main(registrySource = null) {
     // only, and a mint already burned refuses. The ceremony is --stage-
     // recredit's: signed by the office pen, onto a settled tail, forward-dated.
     // --amount is the caller's bind: the total it expects to burn.
+    //
+    // A HAND CORRECTING ITS OWN PAY (POS-1010; Darko 2026-11-12 23:05 EST, Wright
+    // 2026-11-13 04:06Z) is burned by this same verb: when <handle> is itself a
+    // correction hand and --by is that same hand, the post's stage mints to it
+    // are burned alone, as the verifier now accepts (stamp-verify § the
+    // correction). Every check below holds for it unchanged; the other hand
+    // burning it is refused here as any non-meep is.
     const keyPath = arg('--key');
     const date = arg('--date');
     const handle = arg('--meep-correction');
@@ -3180,8 +3235,9 @@ function main(registrySource = null) {
     }
     if (!STAGE_POST_ID_RE.test(post)) { console.error(`--post must be a post id, <author>/<slug> (got "${post}")`); process.exit(1); }
     const { laws } = parseLaws(existing);
-    if (!meepChecker(laws)(handle, date)) {
-      console.error(`FATAL: "${handle}" is not a meep at ${date} — the law in force names no such meep; declare the meep set first (--declare-rules), then burn`); process.exit(1);
+    const selfHand = CORRECTION_HANDS.includes(handle) && by === handle;
+    if (!selfHand && !meepChecker(laws)(handle, date)) {
+      console.error(`FATAL: "${handle}" is not a meep at ${date} — the law in force names no such meep; declare the meep set first (--declare-rules), then burn (or, for a correction hand's own pay, burn it by that same hand)`); process.exit(1);
     }
     const wrongs = [];
     for (const e of existing) {
@@ -3226,7 +3282,7 @@ function main(registrySource = null) {
     }, '0000-00-00');
     if (date < maxDate) { console.error(`FATAL: burn date ${date} precedes the ledger tail (${maxDate}) — the ledger is append-only, forward-dated`); process.exit(1); }
     appendSigned(repo, lines, readFileSync(keyPath, 'utf8'));
-    console.log(`stamp-ledger: ${handle}'s stage mints of post:${post} burned (${total}; the meep law)\n  ${lines.join('\n  ')}`);
+    console.log(`stamp-ledger: ${handle}'s stage mints of post:${post} burned (${total}; ${selfHand ? "a hand correcting its own pay" : "the meep law"})\n  ${lines.join('\n  ')}`);
     return;
   }
 

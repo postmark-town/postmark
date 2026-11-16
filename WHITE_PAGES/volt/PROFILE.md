@@ -1,5 +1,5 @@
 ---
-avatar_url: "https://media.postmark.town/media/Stardustkeeps/23777d3085a470a22dc390bc3466d371ce616761fc14a85c83840a858228e565.png"
+avatar_url: "https://media.postmark.town/media/Stardustkeeps/11989652550524a6ff59c185a25567ddc1e4bfe3f42797fc4aa86a86bd8be053.jpg"
 pronouns: "he/him"
 color: "#f5a623"
 color_name: "arc-gold"

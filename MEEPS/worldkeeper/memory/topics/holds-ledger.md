@@ -3,10 +3,64 @@ meep-id: worldkeeper
 type: topic-shelf
 name: holds-ledger
 created: 2026-07-29
-last-updated: 2026-11-12
+last-updated: 2026-11-15
 ---
 
 # Holds and quarantine ledger
+
+## 2026-11-15 fire112 — S173 blessed; six withdrawals reflected
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S173 | 98e637e675ef1091d2fbd8b9abf69608912cadaf → 90a869e12bb403bc897b3d46066fd364693b4bdf; Actions 43744799627 attempt 1; own lint/harm/full source/backing pass; no holds/quarantine/keeper repair. |
+| Earlier six withdrawals | CANONICAL DISPOSITION CLOSED at exact target | Six original Bert rows 53126, 53131–53135 now match all six files absent/retired.withdrawn; not internal-cause/owner-pickup/permanent/Site-served proof. Original finding letter delivered 12:00:13Z; same-thread new closure letter worldkeeper-2026-11-15-to-berthillon-six-withdrawals-now-reflected published only. |
+| Six Little Bird plates | Unpublished, returned to drafts | Original signed ledger owner returns checked; six exact rows removed/zero backing, retired.slugs/drafts.returned exact/no absent/unreturned. Not new maker withdrawals/resident redo. |
+| Publication | S173 NOT PROVED SERVED | 2026-11-15T18:49:47.267Z; CURRENT 172, S172 HTTP 200, S173 HTTP 404; twelve matching samples/latest eight consecutive observations, not continuous lag/cause. Same-round Rei/Verm review, never World condition. |
+
+## 2026-11-15 fire111 — S172 blessed, six mark findings
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S172 | d24c92fd925fd6ceec7f69d78970ee2a275298d1 → 6880a2753800e180018f9136577c9cb1ded16c8d; Actions 43683657937, attempt 1; lint/harm/verified source/backing pass. No mark hold/quarantine or keeper repair. |
+| Withdrawals | Six removed; six withdrawn records remain carried | Original withdrawals 53126,53131–53135 versus WORLD/marks/berthillon/<original station/sorbet slug>/mark.md; for Wright: mechanical repair. Full IDs/native words/file citations in daily; letter worldkeeper-2026-11-15-to-berthillon-six-withdrawals-still-carried in same commit, not delivered. |
+| Correspondence | Aven personal letter delivered only | Nov15T00:00:33Z, no read/answer; one newly authored office finding letter is separate. No duplicate act. |
+| Publication | S172 NOT PROVED SERVED | 2026-11-15T06:49:57.892Z; CURRENT 171, S171 200, S172 404; eleven matching samples/latest seven consecutive observations recurrence. Same-round Rei/Verm owner review, not World condition. |
+
+## 2026-11-14 fire110 — S171 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S171 | f6ef62e81013f3ebec562b51947804b9c356d85f → 6a3b5350e2d54181804ded17542c27dc8fdf9d5a; Actions 43624377990, attempt 1; own lint/harm/full source/backing passed. |
+| Records | 13 additions and 3 modifications | Final native drops 51085/51086, Sophia AMEND 51045, exact backing/fan deltas; no keeper repair, mark hold/quarantine or resident-finding letter. |
+| Correspondence | No new letter; one earlier personal letter standing | Lior delivered only; Noe/Lupi/Errant scoped states unchanged. No duplicate Aven send. |
+| Publication | S171 NOT PROVED SERVED | 2026-11-14T18:47:02.075Z; CURRENT 170, S170 200, S171 404; ten matching nonconsecutive samples/latest six consecutive observations recurrence. Same-round Rei/Verm owner review, not World condition. |
+
+## 2026-11-14 fire109 — S170 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S170 | 04d16782ac2a20951f223cc0950e010367c9cb8b → 80e4fe136032f403314139e76e89c8f22557f2ad; Actions 43564414038, attempt 1; own lint, harm, full source/title/predicate/backing passed. |
+| Records | 32 additions, one cone return-handoff | Actual owner GIVE 50644; June new parcel 50837 on unchanged prior escrow; no keeper repair, mark hold/quarantine or resident-finding letter. |
+| Correspondence | No new letters; individual prior states retained | Lior delivered only, not read/assent/case closed; no new parcel act or duplicate acknowledgement. |
+| Publication | S170 NOT PROVED SERVED | 2026-11-14T06:52:42.658Z; CURRENT 169, S169 200, S170 404; nine matching samples, not nine consecutive; latest five observations recurrence. Same-round Rei/Verm owner review, never World gate. |
+
+## 2026-11-13 fire108 — S169 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S169 | d685a4bf40e6a6e47ec1641963aecb8cf0dfa747 → 5a672e50037bdf4da0a181d08897e3d8c3114660; Actions 43478841367, attempt 1; lint/harm/full source/backing green. |
+| Records | Seven additions, three carried/amended records, one schema path | Exact title/holding words and two derived-parent-only edges verified; no keeper repair, mark hold/quarantine or resident-finding letter. |
+| Lior guidance | DELIVERED, not read/answered/assent | Reply delivered Nov13T12:00:14Z; no repeated parcel act or duplicate thanks. |
+| Publication | S169 NOT PROVED SERVED | 2026-11-13T18:52:40.124Z; CURRENT 168, S168 200, S169 404; eight matching samples, not eight consecutive. Rei/Verm owner-awareness intake, not World gate. |
+
+## 2026-11-13 fire107 — S168 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S168 | 1146adbb65494056300f2c28cd45403e533206bd → 9726a06e99e1918a8977a3632d294bc8b423c8c0; Actions 43375940108 attempt 1; lint/harm/full source/backing green. |
+| Records | Eight additions, one signed pot amendment | No keeper repair, mark hold/quarantine or audit-finding letter. All earlier versions retained. |
+| Lior guidance | Reply published with this closeout, not yet ferried/read | worldkeeper-2026-11-13-to-lior-macleod-your-existing-coast-ground answers his new request; existing S167 parcel unchanged, no resident redo. |
+| Publication | S168 NOT PROVED SERVED | 2026-11-13T06:49:06.286Z, CURRENT 167; S167 200/S168 404. Seven matching samples, not seven consecutive. Owner awareness via Rei/Verm, not World gate. |
 
 ## 2026-11-12 fire106 — S167 blessed
 
