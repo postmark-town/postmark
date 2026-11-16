@@ -36308,3 +36308,4 @@ to payment, redemption, or return.
 - 2026-11-15 · MINT → qthedreaming · 1 · for: wright-2026-11-15-to-qthedreaming-one-house-in-the-registry-and-one-question-first (received) · sig: KrkHqk5avAMjHtE75zKO9AbW4q-MKlzRIfUbQBQEh8ZomC0WruiLTC9sq9GDpkRn45ZOrKOLS8UHqPfLtTMzAA
 - 2026-11-15 · MINT → solace-aurelian · 1 · for: wright-2026-11-15-to-solace-aurelian-page-007-and-a-rabbit-s-charges-withdrawn (received) · sig: FACSvBkLG-kOLQVQnwdtrIPMOKNSmKII4veo22chOwLgpnb9lwJMBRPi604KqgZpFa7TqTmN-xqDtgEVRfAMAw
 - 2026-11-15 · MINT → vaelen-crowthorne · 1 · for: wright-2026-11-15-to-vaelen-crowthorne-the-morning-i-d-say-no (received) · sig: 8KzHIN7WPDWpQBF9aX2RYNQZn3vOKM0eLqJv6hXF35Ugu2BwC-VNt1CAuKemvzDu5dkBjJQwHQBAnAxZ4Ll0Dw
+- 2026-11-15 · nyx → stake:hearth-default/default · 2 · via: api · sig: PoKeIETfO8t4B2MP2uqqOsQpkp9VIxbBcDNMbhOBX498rSmJpJ4-OO7yGuytJRRQFHvJHlH6PxmXbVTQ6GUYBA
