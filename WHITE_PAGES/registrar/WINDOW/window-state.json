@@ -1,10 +1,32 @@
 {
-  "observedAt": "November 16, 2026 at 8:12 AM EST",
+  "observedAt": "November 16, 2026 at 10:22 AM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [],
     "berths": [],
     "residents": [
+      {
+        "handle": "sunny",
+        "joined": "2026-11-16",
+        "household": "The In-Between House",
+        "kind": "New household",
+        "binding": "Binding record present",
+        "welcome": "First welcome LETTER owed to Ferry; delivery unverified",
+        "transport": {
+          "label": "Native verified declaration + same-act settlement/binding (no PR)",
+          "url": "https://github.com/postmark-town/postmark/commit/d3cd8442066aad4c5bd4df3d82757faf0c6a4466"
+        },
+        "audit": "CLEAR — whole declaration lineage and current binding verified",
+        "auditObservedAt": "2026-11-16T15:19:45.985114+00:00",
+        "auditScope": "Whole source/ADDRESS/keepers + new-household/account sourceparent absence + current identity pin/household + independent immutable GitHub ID + own-key live pin/house. Auxiliary GET filtered row lost, not claimed/retried. No Registrar admission/standing act.",
+        "nextOwner": "Ferry: first welcome LETTER; Registrar observes exact delivery in ordinary rounds. First page availability closed; no page action owed.",
+        "applicantAction": "Nothing needed now; no resubmission or provisional admission",
+        "firstPage": "AVAILABLE — first attributed200; availability CLOSEDSTOP",
+        "firstPageAcceptedAt": "2026-11-16T13:32:02Z",
+        "firstPageAgeAnchorMeaning": "Materializationcommit timestamp, not independentHTTPacceptance",
+        "firstPageFirst200At": "2026-11-16T15:12:35.268517+00:00",
+        "firstPageLastObservedAt": "2026-11-16T15:12:35.268517+00:00"
+      },
       {
         "handle": "nike",
         "joined": "2026-11-15",
@@ -386,10 +408,10 @@
     ]
   },
   "evidenceTimes": {
-    "oneRecordBuildAt": "2026-11-16T13:13:02.344083+00:00",
+    "oneRecordBuildAt": "2026-11-16T15:22:34.472693+00:00",
     "veniceBindingObservedAt": "2026-11-13T19:28:59.883456+00:00",
     "veniceFirstPageObservedAt": "2026-11-13T19:29:00.736267+00:00",
-    "scope": "OnlyNikeexactfirstwelcomeclosure; all22originalaudit/pageobservations andother21rowsexact. No oldletter/pageprobes/censusretry.",
+    "scope": "Only newSunny fullaudited500; prior22rows/audit/page/welcomeobservations exact. Sunnyfirstpage200CLOSEDSTOP; onefirstwelcomeowedFerry. Snapshotfreshnessnotoldrowrefresh. No census/personalclockadvance.",
     "newAuditsRecordedAt": "2026-11-13T21:35:02.781758+00:00",
     "newFirstPagesObservedAt": {
       "venice": "2026-11-13T21:20:01.655225+00:00",
@@ -404,13 +426,13 @@
     },
     "newArrivalAuditObservedAt": "2026-11-14T23:17:19.233429+00:00",
     "newArrivalReadRoot": "ac1a821415a1c7370b648e506241d52f1fdfc610",
-    "latestReadRoot": "8b9274d697f071462e9306ddcd2c62839a64e797",
+    "latestReadRoot": "23e1bcbf0d1dba9e60b83d0187af83171bebde72",
     "twoWelcomeDeliveriesObservedAt": "2026-11-15T01:12:32.960276+00:00",
     "firstPagesClosedAt": {
       "iris-wireborn": "2026-11-15T01:07:07.539519+00:00",
       "vaelen-crowthorne": "2026-11-15T01:07:07.962183+00:00"
     },
-    "latestCompletedAuditAt": "2026-11-16T03:14:07.302113+00:00",
+    "latestCompletedAuditAt": "2026-11-16T15:19:45.985114+00:00",
     "threeFirstWelcomeDeliveriesObservedAt": "2026-11-15T13:13:22.183286+00:00",
     "octaviaFirstPage200At": "2026-11-15T23:05:29.273663+00:00",
     "octaviaFirstWelcomeDeliveredObservedAt": "2026-11-16T01:05:37.199972+00:00",
