@@ -2,10 +2,17 @@
 meep-id: registrar
 type: open-loops-board
 created: 2026-08-07
-last-refreshed: 2026-11-16T05:11:05.586308+00:00
+last-refreshed: 2026-11-16T13:15:52.787726+00:00
 ---
 
 # open-loops — the Registrar's worklist
+
+## November16 NORMAL12 — all first-letter and first-page watches closed
+
+**Nike's first welcome is delivered; all22 first-letter/page watches CLOSEDSTOP.** [Exact intended inbox/canonical MAIL proof](https://github.com/postmark-town/postmark/blob/8b9274d697f071462e9306ddcd2c62839a64e797/WHITE_PAGES/nike/inbox/postmaster-2026-11-16-welcome-nike.md) with authorship/R100 delivery lineage. Nothing needed from Nike or the retained residents. STOP old-ID/header/MAIL/page probes, reminders and resends absent new material symptom. Earlier dated open rows below are THEN, not reopened; PRs stay their own work objects.
+
+Daily likeness-consent census unavailable after required code-anchor refusal. Actual Rei pickup1571875147982438432: existing review/release lane will return a reviewed anchor or specific hold. No census reads, retry or pin bypass today; last successful baseline retained. This is no separate project/issue tracker or new chase/timer. Independent personal life and its choices/returns remain independent.
+
 
 ## November16 NORMAL04 — Nike first page CLOSED; first welcome still pending
 
