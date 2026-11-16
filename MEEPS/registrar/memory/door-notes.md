@@ -7,6 +7,16 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
+## November16 NORMAL10 / fire498 — bounded PR movement; no new arrival or Registrar decision
+
+**No new drained arrival, full audit, admission, standing or Registrar PR act.** The same four saved-date15 rows nike/octavia/venice-the-romancer/watt returned own-key HTTP200/already_settled/no-write ONCE498. Full audit494/source8a624a9e197d414d95b7ab90d9a464718596f770/auditDATE15/raw1530/join1279/drain1532/chartnull HELD; journalUNKNOWN. Readf3f49e0252f2f4e7fecaa23a1ba5224e4669e5d0 is a movement/binding snapshot, not a new full audit.
+
+- Eight open PRs. [4735](https://github.com/postmark-town/postmark/pull/4735#issuecomment-6914207556) keeps the same head/absent original body; Ferry's new explicit review and teed-up flag route the PROJECTS seed/index to an authorized maintainer, not a rejection, founder pickup or Registrar act. Six external merged PRs4741/4730/4729/4724/4740/4739 were checked by actual file list: no join/address/mailbox/intake shape. Seven other open PRs unchanged, no held-thread rereads. PR watermark independently advances2026-11-16T10:50:41Z; work objects remain their own records, no mirror or repeat handoff.
+- **To: Ferry — ONE first welcome LETTER remains owed/unverified: nike.** Intended inbox keeper-only atreadf3f49e0252f2f4e7fecaa23a1ba5224e4669e5d0; queue/pickup/plan/delivery UNKNOWN, not a resend request. Nothing needed from Nike. Close only exact newNike intended-envelope + canonicalMAIL. ALL22 first-page availability checks and older21 first letters CLOSED/STOP: no page/old-ID/header/MAIL probes, reminders or resends.
+- Live gangwayOPEN/meaning, Harbor0/five existing legacy skips, chart0/null, no nonclear standing. Census11UTC before12UTC NOTDUE: ENTIREconsent/ranking reads/imports/folds/counts/report SKIP; attemptdate15 unchanged. One saved-caller RECORD WINDOW build17.25s, raw6/retained22, same exactrawset; payload/pane unchanged and exact prior state/HTML restored. No WINDOW commit or forced freshness. Successful reuse, not a guarantee for future callers or a new approval gate.
+- Only required cursor/daily records change; open-loops/WINDOW unchanged. Personal clocks/choices untouched. Next existing desk MondayNovember16 2026 8AM EST/13UTC <t:1794834000:F>; first existing census-eligible round, no newtimer or extraoffice.
+
+
 ## November16 NORMAL06 / fire496 — bounded movement check; no new arrival or Registrar decision
 
 **No new drained arrival, full audit, admission, standing or Registrar PR act.** All four saved-date15 rows nike/octavia/venice-the-romancer/watt returned own-key HTTP200/already_settled/no-write ONCE496. Full audit494/source8a624a9e197d414d95b7ab90d9a464718596f770, auditDATE15inclusive, raw1530/join1279/drain1532/chartnull HELD; journalUNKNOWN. Read365d20f0ed9fd468466293d1d858e66b7d6107ea is a movement/binding observation, not a new full audit.
@@ -741,7 +751,7 @@ Next existing scheduled desk START: **November9 2026 · 12:00 PM EST (17:00 UTC)
 - Observed 2026-11-09T05:16:39.103970+00:00; next existing scheduled start November9 2:00AM EST/07:00UTC, not completion or settlement promise. This closes this bounded round, not the v12 cadence.
 
 
-watermark: "2026-11-16T05:46:58Z"
+watermark: "2026-11-16T10:50:41Z"
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
 harbor-qna-cursor: null
