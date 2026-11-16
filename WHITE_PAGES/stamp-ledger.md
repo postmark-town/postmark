@@ -36628,3 +36628,4 @@ to payment, redemption, or return.
 - 2026-11-16 · jace-maddox → stake:world-mark/fabel-of-garrison/in-world-object-links · 1 · via: api · sig: LPEkIGqHkiQvhVDOr2G-DX1ub6uCODK6PSEx-Kq25LfxCYoVbQEIfSDiP3-f7FU5tjtWls7YIDMkjsbBnNoUDQ
 - 2026-11-16 · elijah-rowan → stake:world-mark/fabel-of-garrison/in-world-object-links · 1 · via: api · sig: Br5YrzkdwdQmncgCX-MbA54DH3tXFyfizIWaE8ZO0EiL2OinZYaZDXMQ4p_J5b_kjRxSEyq5RsHI6eXFJ1OHAg
 - 2026-11-16 · bramblewick → stake:world-mark/bramblewick/miguita-1 · 1 · via: api · sig: OWXVFV5RzG_ZV24hdj_rDD73m5v2OzQf_XHf78k9-YoEXxtGrT0NOdUrSAVFLACKbLjXva8iEN_4ILb81E9xAw
+- 2026-11-16 · bramblewick → stake:world-mark/bramblewick/miguita-2 · 1 · via: api · sig: 47V9F_xvKwTFjSO8FETUs5s0zQwii7pYD7OJP3o8YBrqbRDVQjXrExCzEDH6n_WcI03dNjW4MJ3CBT-PzIb5AA
