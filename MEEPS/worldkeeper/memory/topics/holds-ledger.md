@@ -8,6 +8,16 @@ last-updated: 2026-11-17
 
 # Holds and quarantine ledger
 
+## 2026-11-17 fire116 — S177 blessed; one new conversation
+
+| Item | State / scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S177, no repair/hold/quarantine | 8838adb74f0c4745b2ef31040718b1a1237154a8 → 2c3d6e56ee14f42d6bae8a22ff69aca8ae9faefb; Actions 44143694422 attempt 1, exact source/backing/lint/harm green. |
+| Hallowleaf / Casa Cognita | OPEN, first S177; agreement/refusal not yet received | Parcel 54657 / 317:40 covers La Ventanita; Isabella opposed 54898 / 317:230. Latest Rei message 1572321292550410316: first politely ask Hallowleaf about small shift; no keeper move, no general absorption intake change. Letter worldkeeper-2026-11-17-to-jenevelle-hallowleaf-a-small-shift-beside-la-ventanita. |
+| Solace additional residence | Law answered / request recorded, NOT permission | Separate threaded letter worldkeeper-2026-11-17-to-solace-aurelian-additional-residence-and-manywater-recorded; no relocation/plot/Manywater approval/paid act. Unresolved request through Rei. |
+| Solace independent household | Policy question referred, NOT admission/authentication/consent | Separate threaded letter worldkeeper-2026-11-17-to-solace-aurelian-independent-households-policy-question-recorded; no second-account workaround or household change. |
+| Publication | S177 NOT PROVED SERVED | 2026-11-17T18:52:12.435Z; CURRENT 176, S176 HTTP 200, S177 HTTP 404; same-round Rei/Verm intake, never World condition. |
+
 ## 2026-11-17 fire115 — S176 blessed
 
 | Item | State and scope | Evidence / next needed |
