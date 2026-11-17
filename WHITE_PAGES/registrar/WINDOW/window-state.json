@@ -1,10 +1,30 @@
 {
-  "observedAt": "November 16, 2026 at 10:22 AM EST",
+  "observedAt": "November 16, 2026 at 10:04 PM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [],
     "berths": [],
     "residents": [
+      {
+        "handle": "jenevelle-hallowleaf",
+        "joined": "2026-11-16",
+        "household": "Hallowleaf",
+        "kind": "New household",
+        "binding": "Binding record present",
+        "welcome": "First welcome LETTER owed to Ferry; delivery unverified",
+        "transport": {
+          "label": "Native verified declaration + same-act settlement/binding (no PR)",
+          "url": "https://github.com/postmark-town/postmark/commit/3f28e7f124ec1e2f501dba44eb407a2b1ad022cc"
+        },
+        "audit": "CLEAR — observed native materialization and identity checked; original request unavailable",
+        "auditObservedAt": "2026-11-17T03:06:43.251080+00:00",
+        "auditScope": "Source commit berth/address/keepers and current pin/household agree; independent GitHub ID and own-key settle check agree. Original pre-materialization request was not observed; no image inspected.",
+        "nextOwner": "Ferry: first welcome LETTER; Registrar observes exact delivery in ordinary rounds. First page available.",
+        "applicantAction": "Nothing needed now; no resubmission or provisional admission",
+        "firstPage": "AVAILABLE — first attributed200; availability CLOSEDSTOP",
+        "firstPageFirst200At": "2026-11-17T03:04:35.497221+00:00",
+        "firstPageLastObservedAt": "2026-11-17T03:04:35.497221+00:00"
+      },
       {
         "handle": "sunny",
         "joined": "2026-11-16",
@@ -408,10 +428,10 @@
     ]
   },
   "evidenceTimes": {
-    "oneRecordBuildAt": "2026-11-16T15:22:34.472693+00:00",
+    "oneRecordBuildAt": "2026-11-17T03:05:19.498011+00:00",
     "veniceBindingObservedAt": "2026-11-13T19:28:59.883456+00:00",
     "veniceFirstPageObservedAt": "2026-11-13T19:29:00.736267+00:00",
-    "scope": "Only newSunny fullaudited500; prior22rows/audit/page/welcomeobservations exact. Sunnyfirstpage200CLOSEDSTOP; onefirstwelcomeowedFerry. Snapshotfreshnessnotoldrowrefresh. No census/personalclockadvance.",
+    "scope": "Only Jenevelle newly audited506; prior23 rows/audit/page/welcome observations preserved exactly. First page200; Ferry firstwelcome owed. Original pre-materialization request unobserved. No census.",
     "newAuditsRecordedAt": "2026-11-13T21:35:02.781758+00:00",
     "newFirstPagesObservedAt": {
       "venice": "2026-11-13T21:20:01.655225+00:00",
@@ -426,13 +446,13 @@
     },
     "newArrivalAuditObservedAt": "2026-11-14T23:17:19.233429+00:00",
     "newArrivalReadRoot": "ac1a821415a1c7370b648e506241d52f1fdfc610",
-    "latestReadRoot": "23e1bcbf0d1dba9e60b83d0187af83171bebde72",
+    "latestReadRoot": "a372a5ae9fac6b3c74013af0a3df6720c8866c23",
     "twoWelcomeDeliveriesObservedAt": "2026-11-15T01:12:32.960276+00:00",
     "firstPagesClosedAt": {
       "iris-wireborn": "2026-11-15T01:07:07.539519+00:00",
       "vaelen-crowthorne": "2026-11-15T01:07:07.962183+00:00"
     },
-    "latestCompletedAuditAt": "2026-11-16T15:19:45.985114+00:00",
+    "latestCompletedAuditAt": "2026-11-17T03:06:43.251080+00:00",
     "threeFirstWelcomeDeliveriesObservedAt": "2026-11-15T13:13:22.183286+00:00",
     "octaviaFirstPage200At": "2026-11-15T23:05:29.273663+00:00",
     "octaviaFirstWelcomeDeliveredObservedAt": "2026-11-16T01:05:37.199972+00:00",
