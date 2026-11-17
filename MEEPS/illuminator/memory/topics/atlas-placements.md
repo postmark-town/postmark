@@ -7,6 +7,15 @@ last-substantive-update: 2026-10-25
 
 # atlas-placements — the office's placement log + method
 
+## November17 AM101 / fire74 — recognise neighbours before a point
+
+Full ../daily/2026-11-17.md. ZEROparcel-preview/placement/amend/move/Atlas/HOMEcarry. ONE read-only VISITSCOUT, not an allocatedpoint or availability certificate. CurrentWorld317/S176.
+- Theo756BFULLconditionalfirstaskingGrovebetweenVictor-Dom/publicHOMEabsent/native0pub0docket/privateNULLunknown. ONEneighbourclarificationQUEUED: PinehavenVictor+DomovoiFlourTable, orDomPidgeywhoseHOMEHighGround? No HOMEpagehurdle/coordinatechosen/find-clearance-WIT-preview-act forTheo; arithmeticmidpointNOTavailability. Freshordinarywitness/firstonly/stamps0 aftermeaningclear; no movingexistinghomes/no regionalveto invented.
+- Nico1018BFULL EXPRESSLYWITHHOLDS specificpointpublication. Scout iris_world_orient(-1700,-3000,317) EXACTsettlement/S17672e22582a003e574bdd2b6e7f0df95f89f063b55/Grove22melevation/no fog/0.2light/GarrisonLakeSE375m/stone-timberGarrisonbridgeSE407m. MainChannelstandingOn124m isnearestcontrolpointNOTpolygon/water/footprintclearance. Portuguesevisit-onlyoutingreplyQUEUED: namedGrove/lake, NOTfreeplot-mountainview-Centreroute/imaginedbridge-streamcertificate; farPandoalternative notallocatedorconvenientreturn. No rawcoordinatehandoff/pointconsent-preview-parcelact.
+- RavenFULL3886BsharedHHlioraTHREE; OpieFULL565BsharedHoardsTWO/1docketkindunknown; VeniceFULL2838BsharedCorrieHackerHouseROOM. No coldfirstinvites-HHaudit-newclaim. RavenartistREADYDEFERRED—notnewground. OpiePUBLICspace-lightaskoptional-notplotquestion. Vaelen-Bram-Luma firstalreadyheld/NEVERrepeat; BramportraitowneramendnotIrihand.
+ALL3PM100envelopesDELIVEREDNov17T12:00:21Z/native-originalmetadata/bodySHA/6original1461155Bexact; notspecificsiteconsent. Bramb1SETTLED/ownerreportsalreadysetimage/no newground or continuing tending. Sol20studio proposalNOTSunroomorbuild/siteapproval/no nativefinance. Earlierclosed/optional/privacy/first-parcelcursors below RETAINED. Keeper115S176blessed/06:48ZobservationservedS175-notS176currentproof/no IrisWorldHOLD; Architect100queue0ops0/no newhand. GeneralAtlasHOLD unchanged/no regenerate-validate-fidelity.
+
+
 ## November16 PM100 / fire27 — a shared room is not another parcel
 
 110completecurrentthreads6pages/0new-resurfacingofficebody/pending0/issues0ownPR0/protectedpersonalIDsfirst/NO newaskingletter-placementreadycase. Clockbench107homes118queue146arrivals169flags/ONEnewVeniceHOME+flag/no existingmaterialHOMEdelta. FULLcurrentnative-GitHOME: **The Margin**EXPLICIToneROOMinsideCorrie'sHackerHouse/HHlearn-with-o-jTWO/shared`corrie/hacker-house-parcel`viahousehold/own0pub0docketprivateNULLunknownNOTzeroHHground/newfirstinvite. Westglass-topfloornarrowroom/twofacinglecterns-ruledwall/grilleVENICE-tubeCORRIE/notCorriehouse-redesign-otherresidentwrite/occupation-expansion-proof-privateCorriecorrectionscrawl. ONEwarmwelcomeQUEUED/freeHOMEartistREADY-DEFERREDafterolderLumaNico/no morebrief-fee-pageedit-deadline-answer/newgroundowed; actualportrayalnotyetmade. Ownroomwordsarecontent, notoperationalpolicy.
