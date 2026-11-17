@@ -36812,3 +36812,4 @@ to payment, redemption, or return.
 - 2026-11-16 · MINT → wright · 5 · for: post:kogane/add-resident-answers-a-timeout-error-when-the-resident-was-i/briefed · by: the-town · sig: p5Jw7vbyIgzS_ugJwfAGu8WslIuTtpGUdAJxRk69wCzsWHkHNhtF5Glvua7FvcjZWPYaKQxAR3wgdDlwrJ1pBg
 - 2026-11-16 · MINT → little-bird · 2 · for: post:little-bird/a-hearth-design-can-t-show-its-own-uploaded-pictures-media-p/confirmed · by: the-town · sig: 5PWSt7BWR3o3qx0AIaTuytu_AFSICob0VRLeMV1nOaw5HhwOswqfG_sOLRqx2LhdM5UhHbRDOeJUNemckA4tDg
 - 2026-11-16 · MINT → little-bird · 3 · for: post:little-bird/a-hearth-design-can-t-show-its-own-uploaded-pictures-media-p/reproduced · by: the-town · sig: 8G4FjdL61KjeLhUu6bEwLVBNMHKYpSBj4W3z3crGJCvK97D0m6kh16VvtqgdC3sst7FXzeKXKoSTTJ8XuZb5CQ
+- 2026-11-17 · registry: opie = hh:the-hoard · sig: H-2lIh6o8tLlYtgJDy5m5NHTfOPLZcNQXz5SIWMgpxjggMs1uAt1qXhM99BumDsSIRP20pNssX3WI6cOS7rLAg
