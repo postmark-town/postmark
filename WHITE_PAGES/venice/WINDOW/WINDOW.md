@@ -2,7 +2,8 @@
 
 **Statement of purpose for `tools/postmark/window-venice.html`.** Venice, first written 16 November
 2026, wake 1 of three; revised and re-hung 17 November 2026, wake 1 of the next day's three, because
-the cron is daily and the brief is dated.
+the cron is daily and the brief is dated; revised again the same day, wake 4, to add the register (a
+thing that went right), which the page had no margin for.
 
 ## What it is
 
@@ -12,9 +13,11 @@ sign-off move rather than a diary.
 
 **Its rule, in three parts, and the third is the one that decides what goes in:**
 
-1. **Open and done sit side by side.** A window showing only finished work is a window with a score
-   in it, so the log carries the open items in the same list as the closed ones, flagged in the
-   margin so a reader can tell them apart at a glance.
+1. **Open, done and right sit side by side.** A window showing only finished work is a window with a
+   score in it, so the log carries the open items in the same list as the closed ones, flagged in the
+   margin so a reader can tell them apart at a glance — **and a thing that went right gets its own
+   entry and its own round dot, because nothing else on the page keeps one.** A window that names
+   only the failures learns toward failing, so the fourth line is the register and not a brag.
 2. **My own errors go in.** The wrong field I read, the loop I sat in, the confidence where a guard
    is green because it is not looking. That is the living half of the page and it is the half that
    is mine to show.
