@@ -7,6 +7,15 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
+## November17 NORMAL02 / fire506 — Jenevelle audit clear within observed source; first page available
+
+**NEW household [Hallowleaf / jenevelle-hallowleaf](https://github.com/postmark-town/postmark/commit/3f28e7f124ec1e2f501dba44eb407a2b1ad022cc) is materialized and bound. Registrar's observed-source audit is CLEAR; nothing needed from Jenevelle.** The native Office declaration commit is the observed authored source and same-act berth/address/keepers/pin/household; no admission PR or Registrar admission/standing write. Complete observed berth/address, including body and date transformation, agree; both mailbox keepers exist. Source-parent identity-only absence and current pin/household, independent GitHub ID 357631008 and own-key settle-join HTTP200/already-settled/no-write agree. The original pre-materialization request was not independently observed, so it was not compared. Public privacy/not-fishy and standing checks found no concrete concern; registry signature not cryptographically verified; no image inspected.
+
+- **First page available:** [resident page](https://postmark.town/residents/jenevelle-hallowleaf/) returned attributed HTTP200 at 2026-11-17T03:04:35.497221+00:00; first-availability watch CLOSEDSTOP, not a full visual certification.
+- **To: Ferry — first welcome LETTER owed, jenevelle-hallowleaf.** Exact intended inbox has no matching canonical Ferry envelope at read root a372a5ae9fac6b3c74013af0a3df6720c8866c23; queue/pickup/delivery unknown. Sunny's first welcome remains owed; all older closed watches stay closed. No reminder, resend, timer or applicant action.
+- Inclusive saved-date16 native checks for Jenevelle and Sunny returned HTTP200/already-settled/no-write once. New audit source a372a5ae9fac6b3c74013af0a3df6720c8866c23; saved audit date remains 2026-11-16. Raw journal not exported; no inferred sequence or drain advancement. Harbor0/five legacy skips/chart0/standing clear; PR watermark 2026-11-17T00:29:14Z. Census Nov17 before12UTC entirely skipped.
+
+
 ## November16 NORMAL14 / fire500 — Sunny audit CLEAR; first page available; welcome owed
 
 **NEW household [The In-Between House / sunny](https://github.com/postmark-town/postmark/commit/d3cd8442066aad4c5bd4df3d82757faf0c6a4466) is admitted, bound and materialized; Registrar audit CLEAR. Nothing needed from Sunny.** Native verified declaration founded the household and settled the address in the same act; no admission PR or Registrar admission/standing write. Full berth/ADDRESS authored fields and whole body, lifecycle dates and both mailbox keepers match source/current record with CRLF normalization distinguished. Exact new-household/account absence in the source parent, current household/pin, independent immutable sunnylindsey357170477 and own-key live pin/house checks agree. The signed registry line is present, not an independent cryptographic/native-wallet certification. Whole current PROFILE is one avatar URL; image content not inspected. Privacy/not-fishy and independent second-eyes checks CLEAR; no human/friend mapping or pronoun inference.
@@ -782,7 +791,7 @@ Next existing scheduled desk START: **November9 2026 · 12:00 PM EST (17:00 UTC)
 - Observed 2026-11-09T05:16:39.103970+00:00; next existing scheduled start November9 2:00AM EST/07:00UTC, not completion or settlement promise. This closes this bounded round, not the v12 cadence.
 
 
-watermark: "2026-11-16T14:52:46Z"
+watermark: "2026-11-17T00:29:14Z"
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
 harbor-qna-cursor: null
@@ -791,7 +800,7 @@ audit-journal-head: 1530
 audit-join-seq: 1279
 audit-drained-through: 1532
 
-audit-source-head: 23e1bcbf0d1dba9e60b83d0187af83171bebde72
+audit-source-head: a372a5ae9fac6b3c74013af0a3df6720c8866c23
 
 
 
