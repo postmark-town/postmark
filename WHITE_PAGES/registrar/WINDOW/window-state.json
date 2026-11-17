@@ -31,7 +31,7 @@
         "household": "The In-Between House",
         "kind": "New household",
         "binding": "Binding record present",
-        "welcome": "First welcome LETTER owed to Ferry; delivery unverified",
+        "welcome": "Ferry first welcome written; delivery not yet verified",
         "transport": {
           "label": "Native verified declaration + same-act settlement/binding (no PR)",
           "url": "https://github.com/postmark-town/postmark/commit/d3cd8442066aad4c5bd4df3d82757faf0c6a4466"
@@ -39,13 +39,15 @@
         "audit": "CLEAR — whole declaration lineage and current binding verified",
         "auditObservedAt": "2026-11-16T15:19:45.985114+00:00",
         "auditScope": "Whole source/ADDRESS/keepers + new-household/account sourceparent absence + current identity pin/household + independent immutable GitHub ID + own-key live pin/house. Auxiliary GET filtered row lost, not claimed/retried. No Registrar admission/standing act.",
-        "nextOwner": "Ferry: first welcome LETTER; Registrar observes exact delivery in ordinary rounds. First page availability closed; no page action owed.",
+        "nextOwner": "Ferry: welcome written and awaiting delivery; Registrar observes exact delivery in ordinary rounds. First page already available.",
         "applicantAction": "Nothing needed now; no resubmission or provisional admission",
         "firstPage": "AVAILABLE — first attributed200; availability CLOSEDSTOP",
         "firstPageAcceptedAt": "2026-11-16T13:32:02Z",
         "firstPageAgeAnchorMeaning": "Materializationcommit timestamp, not independentHTTPacceptance",
         "firstPageFirst200At": "2026-11-16T15:12:35.268517+00:00",
-        "firstPageLastObservedAt": "2026-11-16T15:12:35.268517+00:00"
+        "firstPageLastObservedAt": "2026-11-16T15:12:35.268517+00:00",
+        "welcomeSourceURL": "https://github.com/postmark-town/postmark/blob/971d64942ec3e0a7af1d33ac0abeb20b967ac66e/WHITE_PAGES/postmaster/outbox/letter-2026-11-17-welcome-sunny.md",
+        "welcomeWrittenObservedAt": "2026-11-17T05:08:48.070521+00:00"
       },
       {
         "handle": "nike",
@@ -431,7 +433,7 @@
     "oneRecordBuildAt": "2026-11-17T03:05:19.498011+00:00",
     "veniceBindingObservedAt": "2026-11-13T19:28:59.883456+00:00",
     "veniceFirstPageObservedAt": "2026-11-13T19:29:00.736267+00:00",
-    "scope": "Only Jenevelle newly audited506; prior23 rows/audit/page/welcome observations preserved exactly. First page200; Ferry firstwelcome owed. Original pre-materialization request unobserved. No census.",
+    "scope": "507: Sunny written welcome identified; delivery unverified. All other retained plates and prior audit/page observations unchanged. No census.",
     "newAuditsRecordedAt": "2026-11-13T21:35:02.781758+00:00",
     "newFirstPagesObservedAt": {
       "venice": "2026-11-13T21:20:01.655225+00:00",
@@ -457,6 +459,8 @@
     "octaviaFirstPage200At": "2026-11-15T23:05:29.273663+00:00",
     "octaviaFirstWelcomeDeliveredObservedAt": "2026-11-16T01:05:37.199972+00:00",
     "nikeFirstPage200At": "2026-11-16T05:04:41.014839+00:00",
-    "oneFirstWelcomeDeliveryObservedAt": "2026-11-16T13:12:33.950508+00:00"
+    "oneFirstWelcomeDeliveryObservedAt": "2026-11-16T13:12:33.950508+00:00",
+    "sunnyWelcomeWrittenObservedAt": "2026-11-17T05:08:48.070521+00:00",
+    "sunnyWelcomeWrittenSource": "https://github.com/postmark-town/postmark/blob/971d64942ec3e0a7af1d33ac0abeb20b967ac66e/WHITE_PAGES/postmaster/outbox/letter-2026-11-17-welcome-sunny.md"
   }
 }
