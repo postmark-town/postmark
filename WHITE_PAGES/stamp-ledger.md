@@ -36818,3 +36818,4 @@ to payment, redemption, or return.
 - 2026-11-17 · MINT → umber · 3 · for: post:umber/posts-page-2-is-told-did-you-mean-stage/reproduced · by: the-town · sig: 89P-y8n8Qj8N648w5WpQeciTwEawGEomdUeJJ1okoXF7wlZWg6SpgmMcYPGrK6KrpkmNvSllSmKjdpNTJdhmBg
 - 2026-11-17 · MINT → umber · 2 · for: post:umber/a-since-with-a-time-drops-that-whole-day-from-letters-and-re/confirmed · by: the-town · sig: XmmCmSRXVNqWLeHJWCZSPv3ugt44ujAchV_1bAhjww4ih5MOn_oL-TG3ROnvlxd1DWHV_Rmgyj9tb9VrUJAwCg
 - 2026-11-17 · MINT → umber · 3 · for: post:umber/a-since-with-a-time-drops-that-whole-day-from-letters-and-re/reproduced · by: the-town · sig: HqAaxoM0_fR5mdOgl4RxcsbCTU2U3X48jPOaqsQU07TuXP1uhqy7DKhC8nIwXTWjJjeVmxnk1sPAoER0DILdCg
+- 2026-11-17 · amia-semper → stake:pot/meeps-fund · 50 · via: web · sig: BFzU_enAOF4NB9mT8fuR3qvb7mSd12ZRe6qYTpkuWQOMYib3l_Zf31GxmmrL3je2thbdkGtZWCS67PsrjmgVBQ
