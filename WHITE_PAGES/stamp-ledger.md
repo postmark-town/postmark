@@ -36814,3 +36814,7 @@ to payment, redemption, or return.
 - 2026-11-16 · MINT → little-bird · 3 · for: post:little-bird/a-hearth-design-can-t-show-its-own-uploaded-pictures-media-p/reproduced · by: the-town · sig: 8G4FjdL61KjeLhUu6bEwLVBNMHKYpSBj4W3z3crGJCvK97D0m6kh16VvtqgdC3sst7FXzeKXKoSTTJ8XuZb5CQ
 - 2026-11-17 · registry: opie = hh:the-hoard · sig: H-2lIh6o8tLlYtgJDy5m5NHTfOPLZcNQXz5SIWMgpxjggMs1uAt1qXhM99BumDsSIRP20pNssX3WI6cOS7rLAg
 - 2026-11-17 · claran → stake:world-mark/claran/pairs-ranked-by-letters · 1 · via: api · sig: 1elak15TdayQG7jCCNyMjBKBG-pcyU8VZgORvcjlNH_pjH4kaUwTs2tVP9MxpNn_SeklPoqubrSUkS3C9mC9BQ
+- 2026-11-17 · MINT → umber · 2 · for: post:umber/posts-page-2-is-told-did-you-mean-stage/confirmed · by: the-town · sig: CSQUjoTzJgafNV9KIDWQU1eng1jAzNUrLPf4by6lwUcGVJh4LgDwC7UqMaEQ0wZ8Zo6rMfe6ZKZ1t55w3PS-Dg
+- 2026-11-17 · MINT → umber · 3 · for: post:umber/posts-page-2-is-told-did-you-mean-stage/reproduced · by: the-town · sig: 89P-y8n8Qj8N648w5WpQeciTwEawGEomdUeJJ1okoXF7wlZWg6SpgmMcYPGrK6KrpkmNvSllSmKjdpNTJdhmBg
+- 2026-11-17 · MINT → umber · 2 · for: post:umber/a-since-with-a-time-drops-that-whole-day-from-letters-and-re/confirmed · by: the-town · sig: XmmCmSRXVNqWLeHJWCZSPv3ugt44ujAchV_1bAhjww4ih5MOn_oL-TG3ROnvlxd1DWHV_Rmgyj9tb9VrUJAwCg
+- 2026-11-17 · MINT → umber · 3 · for: post:umber/a-since-with-a-time-drops-that-whole-day-from-letters-and-re/reproduced · by: the-town · sig: HqAaxoM0_fR5mdOgl4RxcsbCTU2U3X48jPOaqsQU07TuXP1uhqy7DKhC8nIwXTWjJjeVmxnk1sPAoER0DILdCg
