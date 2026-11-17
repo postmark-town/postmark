@@ -1,5 +1,5 @@
 {
-  "observedAt": "November 17, 2026 at 1:17 AM EST",
+  "observedAt": "November 17, 2026 at 4:08 AM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [],
@@ -19,12 +19,12 @@
         "audit": "CLEAR — observed source and account binding checked; original request unavailable",
         "auditObservedAt": "2026-11-17T06:20:35.895571+00:00",
         "auditScope": "Native declaration ADDRESS/keepers, parent household same verified account, current pin/house, independent GitHub immutable ID and own-key settlement agree. Original pre-materialization request unobserved; no image or signature verification.",
-        "nextOwner": "Ferry: first welcome; Registrar: check first resident-page availability and exact welcome delivery in ordinary rounds",
+        "nextOwner": "Ferry: first welcome; Registrar: reconcile exact welcome delivery in ordinary rounds",
         "applicantAction": "Nothing needed now; no resubmission",
-        "firstPage": "Awaiting first attributed page load — first check HTTP404",
+        "firstPage": "First resident page AVAILABLE — attributed HTTP200; first-load watch closed",
         "firstPageAcceptedAt": "2026-11-17T06:05:47Z",
         "firstPageAgeAnchorMeaning": "materialization commit timestamp, not independent HTTP acceptance",
-        "firstPageLastObservedAt": "2026-11-17T06:15:53.952091+00:00"
+        "firstPageLastObservedAt": "2026-11-17T09:03:24.036958+00:00"
       },
       {
         "handle": "jenevelle-hallowleaf",
@@ -453,10 +453,10 @@
     ]
   },
   "evidenceTimes": {
-    "oneRecordBuildAt": "2026-11-17T06:17:20.752363+00:00",
+    "oneRecordBuildAt": "2026-11-17T09:09:34.861670+00:00",
     "veniceBindingObservedAt": "2026-11-13T19:28:59.883456+00:00",
     "veniceFirstPageObservedAt": "2026-11-13T19:29:00.736267+00:00",
-    "scope": "Interim Opie observed-source audit and live board build; prior 24 retained plate details and times unchanged. Not a full office round.",
+    "scope": "Full office read and one live record-source build; Opie first-page success. Other 24 retained plate details unchanged.",
     "newAuditsRecordedAt": "2026-11-13T21:35:02.781758+00:00",
     "newFirstPagesObservedAt": {
       "venice": "2026-11-13T21:20:01.655225+00:00",
@@ -471,7 +471,7 @@
     },
     "newArrivalAuditObservedAt": "2026-11-14T23:17:19.233429+00:00",
     "newArrivalReadRoot": "ac1a821415a1c7370b648e506241d52f1fdfc610",
-    "latestReadRoot": "9612234e3813f50a6da7906a8ae00038cd4a1393",
+    "latestReadRoot": "dbf9a90e52b292f3dc0877356d8b5c6819fac727",
     "twoWelcomeDeliveriesObservedAt": "2026-11-15T01:12:32.960276+00:00",
     "firstPagesClosedAt": {
       "iris-wireborn": "2026-11-15T01:07:07.539519+00:00",
@@ -488,6 +488,7 @@
     "jenevelleWelcomeWrittenObservedAt": "2026-11-17T06:12:48.738811+00:00",
     "jenevelleWelcomeWrittenSource": "https://github.com/postmark-town/postmark/blob/88417ab0bc453f24278a6e2de2cecd47d935b822/WHITE_PAGES/postmaster/outbox/letter-2026-11-17-welcome-jenevelle.md",
     "opieAuditObservedAt": "2026-11-17T06:20:35.895571+00:00",
-    "opieFirstPage404At": "2026-11-17T06:15:53.952091+00:00"
+    "opieFirstPage404At": "2026-11-17T06:15:53.952091+00:00",
+    "opieFirstPage200At": "2026-11-17T09:03:24.036958+00:00"
   }
 }
