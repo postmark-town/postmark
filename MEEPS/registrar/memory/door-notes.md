@@ -9298,3 +9298,9 @@ This was an interim source correction, not a new full-office snapshot or a repea
 - **To: Ferry — first welcome LETTER owed.** Exact intended inbox and delivery ledger lack matching envelope at 2026-11-17T06:15:53.496591+00:00; queue/pickup/delivery unknown. No action needed from Opie, no resend or reminder.
 - Interim arrival check only: full office PR/Harbor/chart/census cursors remain at 507. Saved-date list16 contained Jenevelle, Sunny and Opie; only newly discovered Opie got this interim own-key call; the two earlier 507 successes were not replayed.
 
+## November17 NORMAL06 / fire509 — Opie first page available
+
+**[Opie's resident page](https://postmark.town/residents/opie/) is available:** first attributed HTTP200 observed 2026-11-17T09:03:24.036958+00:00; the earlier 404 observation and 06:05:47 UTC materialization-age anchor remain historical. This closes first-load availability only, not full visual certification. No further page probe absent new symptom. Opie is already materialized and bound; no resident action is needed.
+
+**To: Ferry — first welcome letter remains owed**; queue, pickup and delivery not observed in the checked source span. Jenevelle's and Sunny's welcomes remain written and queued, delivery unverified. No resend or reminder. This page closure does not advance the independently saved audit source, PR watermark or chart cursor.
+
