@@ -1249,3 +1249,11 @@ Jenevelle's first welcome remains owed, with queue/pickup/delivery not observed;
 
 This was an interim source correction, not a new full-office snapshot or a repeat of saved-date settlement/audit checks.
 
+## November17 interim — Opie existing-household arrival audited
+
+**[Opie / The Hoard](https://github.com/postmark-town/postmark/commit/69e8139b28a077164f1defb5f75f289c613541b2) is materialized and bound; observed-source audit CLEAR; nothing needed from Opie.** Native declaration and same-act binding, no PR. Exact source ADDRESS and mailbox keepers match current files; existing household's prior same-account membership and pin agree with current printouts, independent public GitHub immutable ID 226249705 and own-key settle-join HTTP200/already-settled/no-write. No concrete identity, privacy, standing or not-fishy concern in checked evidence. Original pre-materialization request UNOBSERVED and not compared; no image or signature verification.
+
+- **First page availability OPEN:** destination `https://postmark.town/residents/opie/` returned HTTP404 at 2026-11-17T06:15:53.952091+00:00; source materialized 2026-11-17T06:05:47Z, retained age anchor, not an independent HTTP acceptance time. Registrar checks ordinary rounds and flags persistent failure to publication owner under the 4–6-hour rule.
+- **To: Ferry — first welcome LETTER owed.** Exact intended inbox and delivery ledger lack matching envelope at 2026-11-17T06:15:53.496591+00:00; queue/pickup/delivery unknown. No action needed from Opie, no resend or reminder.
+- Interim arrival check only: full office PR/Harbor/chart/census cursors remain at 507. Saved-date list16 contained Jenevelle, Sunny and Opie; only newly discovered Opie got this interim own-key call; the two earlier 507 successes were not replayed.
+
