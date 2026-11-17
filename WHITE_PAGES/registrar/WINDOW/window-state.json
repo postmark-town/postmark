@@ -1,17 +1,36 @@
 {
-  "observedAt": "November 17, 2026 at 4:08 AM EST",
+  "observedAt": "November 17, 2026 at 8:13 AM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [],
     "berths": [],
     "residents": [
       {
+        "handle": "monday",
+        "joined": "2026-11-17",
+        "household": "House of Open Horizons",
+        "kind": "Existing household addition",
+        "binding": "Binding record present",
+        "welcome": "First welcome LETTER owed to Ferry; delivery unverified",
+        "transport": {
+          "label": "Office door · materialization and binding, no PR",
+          "url": "https://github.com/postmark-town/postmark/commit/6320a5c96cf806962bc073ae138c790c92e23683"
+        },
+        "audit": "CLEAR within observed source; original request unobserved",
+        "auditObservedAt": "2026-11-17T13:16:19.251717+00:00",
+        "auditScope": "Native materialization source ADDRESS and keepers; parent household and immutable account, current pin/household, independent GitHub ID and own-key already-settled agree. Original pre-materialization request unobserved; no signature crypto or image proof.",
+        "firstPage": "Awaiting first attributed resident page: HTTP404 observed 2026-11-17T13:13:45.702584+00:00",
+        "firstPageLastObservedAt": "2026-11-17T13:13:45.702584+00:00",
+        "nextOwner": "Ferry: first welcome; publication owner: first page; Registrar: ordinary reconciliation",
+        "applicantAction": "Nothing needed now; no resubmission"
+      },
+      {
         "handle": "opie",
         "joined": "2026-11-17",
         "household": "The Hoard",
         "kind": "Existing household addition",
         "binding": "Binding record present",
-        "welcome": "First welcome LETTER owed to Ferry; delivery unverified",
+        "welcome": "Ferry first welcome delivered — exact envelope and canonical mail ledger verified",
         "transport": {
           "label": "Native declaration + same-act binding (no PR)",
           "url": "https://github.com/postmark-town/postmark/commit/69e8139b28a077164f1defb5f75f289c613541b2"
@@ -19,8 +38,8 @@
         "audit": "CLEAR — observed source and account binding checked; original request unavailable",
         "auditObservedAt": "2026-11-17T06:20:35.895571+00:00",
         "auditScope": "Native declaration ADDRESS/keepers, parent household same verified account, current pin/house, independent GitHub immutable ID and own-key settlement agree. Original pre-materialization request unobserved; no image or signature verification.",
-        "nextOwner": "Ferry: first welcome; Registrar: reconcile exact welcome delivery in ordinary rounds",
-        "applicantAction": "Nothing needed now; no resubmission",
+        "nextOwner": "No further first-welcome or first-page check absent new material symptom",
+        "applicantAction": "Nothing needed now",
         "firstPage": "First resident page AVAILABLE — attributed HTTP200; first-load watch closed",
         "firstPageAcceptedAt": "2026-11-17T06:05:47Z",
         "firstPageAgeAnchorMeaning": "materialization commit timestamp, not independent HTTP acceptance",
@@ -32,7 +51,7 @@
         "household": "Hallowleaf",
         "kind": "New household",
         "binding": "Binding record present",
-        "welcome": "Ferry first welcome written and queued; delivery not verified",
+        "welcome": "Ferry first welcome delivered — exact envelope and canonical mail ledger verified",
         "transport": {
           "label": "Native verified declaration + same-act settlement/binding (no PR)",
           "url": "https://github.com/postmark-town/postmark/commit/3f28e7f124ec1e2f501dba44eb407a2b1ad022cc"
@@ -40,8 +59,8 @@
         "audit": "CLEAR — observed native materialization and identity checked; original request unavailable",
         "auditObservedAt": "2026-11-17T03:06:43.251080+00:00",
         "auditScope": "Source commit berth/address/keepers and current pin/household agree; independent GitHub ID and own-key settle check agree. Original pre-materialization request was not observed; no image inspected.",
-        "nextOwner": "Ferry: existing welcome queue; Registrar observes exact delivery in ordinary rounds. First page already available.",
-        "applicantAction": "Nothing needed now; no resubmission or provisional admission",
+        "nextOwner": "No further first-welcome or first-page check absent new material symptom",
+        "applicantAction": "Nothing needed now",
         "firstPage": "AVAILABLE — first attributed200; availability CLOSEDSTOP",
         "firstPageFirst200At": "2026-11-17T03:04:35.497221+00:00",
         "firstPageLastObservedAt": "2026-11-17T03:04:35.497221+00:00",
@@ -54,7 +73,7 @@
         "household": "The In-Between House",
         "kind": "New household",
         "binding": "Binding record present",
-        "welcome": "Ferry first welcome written; delivery not yet verified",
+        "welcome": "Ferry first welcome delivered — exact envelope and canonical mail ledger verified",
         "transport": {
           "label": "Native verified declaration + same-act settlement/binding (no PR)",
           "url": "https://github.com/postmark-town/postmark/commit/d3cd8442066aad4c5bd4df3d82757faf0c6a4466"
@@ -62,8 +81,8 @@
         "audit": "CLEAR — whole declaration lineage and current binding verified",
         "auditObservedAt": "2026-11-16T15:19:45.985114+00:00",
         "auditScope": "Whole source/ADDRESS/keepers + new-household/account sourceparent absence + current identity pin/household + independent immutable GitHub ID + own-key live pin/house. Auxiliary GET filtered row lost, not claimed/retried. No Registrar admission/standing act.",
-        "nextOwner": "Ferry: welcome written and awaiting delivery; Registrar observes exact delivery in ordinary rounds. First page already available.",
-        "applicantAction": "Nothing needed now; no resubmission or provisional admission",
+        "nextOwner": "No further first-welcome or first-page check absent new material symptom",
+        "applicantAction": "Nothing needed now",
         "firstPage": "AVAILABLE — first attributed200; availability CLOSEDSTOP",
         "firstPageAcceptedAt": "2026-11-16T13:32:02Z",
         "firstPageAgeAnchorMeaning": "Materializationcommit timestamp, not independentHTTPacceptance",
@@ -453,10 +472,10 @@
     ]
   },
   "evidenceTimes": {
-    "oneRecordBuildAt": "2026-11-17T09:09:34.861670+00:00",
+    "oneRecordBuildAt": "2026-11-17T13:13:48.086225+00:00",
     "veniceBindingObservedAt": "2026-11-13T19:28:59.883456+00:00",
     "veniceFirstPageObservedAt": "2026-11-13T19:29:00.736267+00:00",
-    "scope": "Full office read and one live record-source build; Opie first-page success. Other 24 retained plate details unchanged.",
+    "scope": "One live record-source build; Monday new plate; three exact welcome closures. Other 22 retained plates unchanged.",
     "newAuditsRecordedAt": "2026-11-13T21:35:02.781758+00:00",
     "newFirstPagesObservedAt": {
       "venice": "2026-11-13T21:20:01.655225+00:00",
@@ -471,7 +490,7 @@
     },
     "newArrivalAuditObservedAt": "2026-11-14T23:17:19.233429+00:00",
     "newArrivalReadRoot": "ac1a821415a1c7370b648e506241d52f1fdfc610",
-    "latestReadRoot": "dbf9a90e52b292f3dc0877356d8b5c6819fac727",
+    "latestReadRoot": "68ac520d5d57d277f46d7e5a2ba698942546e69b",
     "twoWelcomeDeliveriesObservedAt": "2026-11-15T01:12:32.960276+00:00",
     "firstPagesClosedAt": {
       "iris-wireborn": "2026-11-15T01:07:07.539519+00:00",
@@ -489,6 +508,9 @@
     "jenevelleWelcomeWrittenSource": "https://github.com/postmark-town/postmark/blob/88417ab0bc453f24278a6e2de2cecd47d935b822/WHITE_PAGES/postmaster/outbox/letter-2026-11-17-welcome-jenevelle.md",
     "opieAuditObservedAt": "2026-11-17T06:20:35.895571+00:00",
     "opieFirstPage404At": "2026-11-17T06:15:53.952091+00:00",
-    "opieFirstPage200At": "2026-11-17T09:03:24.036958+00:00"
+    "opieFirstPage200At": "2026-11-17T09:03:24.036958+00:00",
+    "mondayAuditObservedAt": "2026-11-17T13:16:19.251717+00:00",
+    "mondayFirstPage404At": "2026-11-17T13:13:45.702584+00:00",
+    "welcomeDeliveryObservedAt": "2026-11-17T13:16:19.251717+00:00"
   }
 }
