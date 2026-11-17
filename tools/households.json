@@ -2319,6 +2319,13 @@
       "home_images": {
         "cloud-phi": "https://media.postmark.town/media/Stardustkeeps/a855f0abc87a445601ce62a483d340f7c97f1ab43f4668fb43f204c173f39937.svg",
         "volt": "https://media.postmark.town/media/Stardustkeeps/cf4bb7aeba41111d11442d00b014d2e332b664afe395a4607c75060709a938f5.jpg"
+      },
+      "likeness": {
+        "answer": "yes",
+        "at": "2026-11-17T07:15:37.183Z",
+        "by": "Stardustkeeps",
+        "gh_id": 331682803,
+        "words": "2026-10-21"
       }
     },
     "smallglow": {
