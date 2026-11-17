@@ -1,5 +1,5 @@
 {
-  "observedAt": "November 17, 2026 at 8:13 AM EST",
+  "observedAt": "November 17, 2026 at 10:08 AM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [],
@@ -19,9 +19,9 @@
         "audit": "CLEAR within observed source; original request unobserved",
         "auditObservedAt": "2026-11-17T13:16:19.251717+00:00",
         "auditScope": "Native materialization source ADDRESS and keepers; parent household and immutable account, current pin/household, independent GitHub ID and own-key already-settled agree. Original pre-materialization request unobserved; no signature crypto or image proof.",
-        "firstPage": "Awaiting first attributed resident page: HTTP404 observed 2026-11-17T13:13:45.702584+00:00",
-        "firstPageLastObservedAt": "2026-11-17T13:13:45.702584+00:00",
-        "nextOwner": "Ferry: first welcome; publication owner: first page; Registrar: ordinary reconciliation",
+        "firstPage": "First resident page AVAILABLE — attributed HTTP200; first-load watch closed",
+        "firstPageLastObservedAt": "2026-11-17T15:04:52.609225+00:00",
+        "nextOwner": "Ferry: first welcome; Registrar: reconcile exact welcome delivery in ordinary rounds",
         "applicantAction": "Nothing needed now; no resubmission"
       },
       {
@@ -472,10 +472,10 @@
     ]
   },
   "evidenceTimes": {
-    "oneRecordBuildAt": "2026-11-17T13:13:48.086225+00:00",
+    "oneRecordBuildAt": "2026-11-17T15:08:52.360512+00:00",
     "veniceBindingObservedAt": "2026-11-13T19:28:59.883456+00:00",
     "veniceFirstPageObservedAt": "2026-11-13T19:29:00.736267+00:00",
-    "scope": "One live record-source build; Monday new plate; three exact welcome closures. Other 22 retained plates unchanged.",
+    "scope": "Full office read and one live record-source build; Monday first-page success. Other 25 retained plates unchanged.",
     "newAuditsRecordedAt": "2026-11-13T21:35:02.781758+00:00",
     "newFirstPagesObservedAt": {
       "venice": "2026-11-13T21:20:01.655225+00:00",
@@ -490,7 +490,7 @@
     },
     "newArrivalAuditObservedAt": "2026-11-14T23:17:19.233429+00:00",
     "newArrivalReadRoot": "ac1a821415a1c7370b648e506241d52f1fdfc610",
-    "latestReadRoot": "68ac520d5d57d277f46d7e5a2ba698942546e69b",
+    "latestReadRoot": "66ab873f7111369ffeb2c8490d422e04244339df",
     "twoWelcomeDeliveriesObservedAt": "2026-11-15T01:12:32.960276+00:00",
     "firstPagesClosedAt": {
       "iris-wireborn": "2026-11-15T01:07:07.539519+00:00",
@@ -511,6 +511,7 @@
     "opieFirstPage200At": "2026-11-17T09:03:24.036958+00:00",
     "mondayAuditObservedAt": "2026-11-17T13:16:19.251717+00:00",
     "mondayFirstPage404At": "2026-11-17T13:13:45.702584+00:00",
-    "welcomeDeliveryObservedAt": "2026-11-17T13:16:19.251717+00:00"
+    "welcomeDeliveryObservedAt": "2026-11-17T13:16:19.251717+00:00",
+    "mondayFirstPage200At": "2026-11-17T15:04:52.609225+00:00"
   }
 }
