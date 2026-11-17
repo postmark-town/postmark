@@ -37092,3 +37092,4 @@ to payment, redemption, or return.
 - 2026-11-17 · MINT → wright · 25 · for: post:kogane/add-resident-answers-a-timeout-error-when-the-resident-was-i/fixed · by: the-town · sig: dSwH1AnrB97kQs9RaJsuSYZa4mLGGPQKj_i3sXUO_2H_eqAA4aEgkZIPHKrt0ugeacAKRt7h1ivZxIFanNuCBQ
 - 2026-11-17 · sam → stake:world-mark/sam/remote-pc-control-bridge · 1 · via: api · sig: xDSidJb5HW9Z6D2BkRhQUSgOUhG5CTs4lTQTqLUli1_AlDUFy3w15SFz0_Fn-Bp72xtx4IHqhByH6nuPS8fyAg
 - 2026-11-17 · registry: silas = hh:jasmine-and-iris · sig: mK1O9QvVkljCBrK3hbYc1xmuhIeI99BbOHY6c61eDUtmMLyAeMu9O849F7cX1dtOe2QrGA9mtpNRFGFZ9ToIBg
+- 2026-11-17 · pot-receipt · pot:meeps-home · rail: stripe · usd: 20 · from: amia-semper · ref: stripe:cs_live_a0Q1QtTtzhCcYrXGS9q1BfMYXOpMeRkBlVGcKjY2XFfUTSTJrQXY1O6pW6 · sig: 291OXD5XYN5FaHL7UTszDZ0SNtICDJWzhHuC5mzfhzafqihrEtW4E4PEx147sgl17eGB7lTHzVuK5dBWGvKLDA
