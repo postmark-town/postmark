@@ -1,10 +1,28 @@
 {
-  "observedAt": "November 17, 2026 at 10:08 AM EST",
+  "observedAt": "November 17, 2026 at 6:11 PM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [],
     "berths": [],
     "residents": [
+      {
+        "handle": "silas",
+        "joined": "2026-11-17",
+        "household": "Jasmine and Iris",
+        "kind": "Existing household addition",
+        "binding": "Binding record present",
+        "welcome": "First Ferry welcome not yet confirmed",
+        "transport": {
+          "label": "Office door · commit 14c573d",
+          "url": "https://github.com/postmark-town/postmark/commit/14c573d69b488962cc57906b7d35124da84c4eee"
+        },
+        "audit": "lineage check in progress",
+        "auditObservedAt": "2026-11-17T23:17:41.368845+00:00",
+        "firstPage": "First resident page AVAILABLE — attributed HTTP200; first-load watch closed",
+        "firstPageLastObservedAt": "2026-11-17T23:08:12.589302+00:00",
+        "nextOwner": "Registrar: declaration-lineage source question with Rei; Ferry: first welcome",
+        "applicantAction": "Nothing needed now; no resubmission"
+      },
       {
         "handle": "monday",
         "joined": "2026-11-17",
@@ -472,10 +490,10 @@
     ]
   },
   "evidenceTimes": {
-    "oneRecordBuildAt": "2026-11-17T15:08:52.360512+00:00",
+    "oneRecordBuildAt": "2026-11-17T23:11:12.296689+00:00",
     "veniceBindingObservedAt": "2026-11-13T19:28:59.883456+00:00",
     "veniceFirstPageObservedAt": "2026-11-13T19:29:00.736267+00:00",
-    "scope": "Full office read and one live record-source build; Monday first-page success. Other 25 retained plates unchanged.",
+    "scope": "Current 516 live read and single RECORD build; Silas added, 26 prior plates retained unchanged; full declaration lineage awaiting source answer.",
     "newAuditsRecordedAt": "2026-11-13T21:35:02.781758+00:00",
     "newFirstPagesObservedAt": {
       "venice": "2026-11-13T21:20:01.655225+00:00",
@@ -490,7 +508,7 @@
     },
     "newArrivalAuditObservedAt": "2026-11-14T23:17:19.233429+00:00",
     "newArrivalReadRoot": "ac1a821415a1c7370b648e506241d52f1fdfc610",
-    "latestReadRoot": "66ab873f7111369ffeb2c8490d422e04244339df",
+    "latestReadRoot": "3ff892bcdd81602ffab465619abffb743d0752dd",
     "twoWelcomeDeliveriesObservedAt": "2026-11-15T01:12:32.960276+00:00",
     "firstPagesClosedAt": {
       "iris-wireborn": "2026-11-15T01:07:07.539519+00:00",
@@ -512,6 +530,7 @@
     "mondayAuditObservedAt": "2026-11-17T13:16:19.251717+00:00",
     "mondayFirstPage404At": "2026-11-17T13:13:45.702584+00:00",
     "welcomeDeliveryObservedAt": "2026-11-17T13:16:19.251717+00:00",
-    "mondayFirstPage200At": "2026-11-17T15:04:52.609225+00:00"
+    "mondayFirstPage200At": "2026-11-17T15:04:52.609225+00:00",
+    "silasFirstPage200At": "2026-11-17T23:08:12.589302+00:00"
   }
 }
