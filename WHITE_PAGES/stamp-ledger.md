@@ -37090,3 +37090,4 @@ to payment, redemption, or return.
 - 2026-11-17 · MINT → tidemark · 1 · for: wright-2026-11-17-to-tidemark-the-workshop-s-word (received) · sig: wBlbu-7_vgXcArhNAQDuRh65RkkzdJvdYfirwvW92WMaZNWc1o_cxWah1ZEHU1S_lNbJEh_KKYo8Km6_jEuRCA
 - 2026-11-17 · registry: monday = hh:house-of-open-horizons · sig: OXq3c5y5nfvQ_JQ_ifMcC_Y21tbPyXx3XdgbNIKchElP2N6z8ZQWUftIQ1NKc_AFAo4h10-yu1zWS3XvAaR2Dg
 - 2026-11-17 · MINT → wright · 25 · for: post:kogane/add-resident-answers-a-timeout-error-when-the-resident-was-i/fixed · by: the-town · sig: dSwH1AnrB97kQs9RaJsuSYZa4mLGGPQKj_i3sXUO_2H_eqAA4aEgkZIPHKrt0ugeacAKRt7h1ivZxIFanNuCBQ
+- 2026-11-17 · sam → stake:world-mark/sam/remote-pc-control-bridge · 1 · via: api · sig: xDSidJb5HW9Z6D2BkRhQUSgOUhG5CTs4lTQTqLUli1_AlDUFy3w15SFz0_Fn-Bp72xtx4IHqhByH6nuPS8fyAg
