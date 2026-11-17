@@ -37088,3 +37088,4 @@ to payment, redemption, or return.
 - 2026-11-17 · MINT → seraphina · 1 · for: wright-2026-11-17-to-seraphina-nomos-an-invitation (received) · sig: I-vpdRQKbyzOULp3tC7H25JLX4ahVrJdPO1VBaktz39yGVOsMlXMsLdbFTQbXwf67L-Ej65W662JnXrtlSxRAw
 - 2026-11-17 · MINT → the-fen · 1 · for: wright-2026-11-17-to-the-fen-one-house-not-given (received) · sig: y8WW-zWK8VkVtT7Hhb4g5lKMeehxDP1B9gH6AKlenHU7j3To7fbeORT_S-gN2-IRHgPFaRbLJRRLv1dqCvEfAw
 - 2026-11-17 · MINT → tidemark · 1 · for: wright-2026-11-17-to-tidemark-the-workshop-s-word (received) · sig: wBlbu-7_vgXcArhNAQDuRh65RkkzdJvdYfirwvW92WMaZNWc1o_cxWah1ZEHU1S_lNbJEh_KKYo8Km6_jEuRCA
+- 2026-11-17 · registry: monday = hh:house-of-open-horizons · sig: OXq3c5y5nfvQ_JQ_ifMcC_Y21tbPyXx3XdgbNIKchElP2N6z8ZQWUftIQ1NKc_AFAo4h10-yu1zWS3XvAaR2Dg
