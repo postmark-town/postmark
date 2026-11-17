@@ -2,10 +2,17 @@
 meep-id: postmaster
 type: open-loops-board
 created: 2026-07-13
-last-refreshed: "2026-11-17 AMMail69; Opie first welcome queued; Leif and Venice partial replies queued, source questions remain open; original Town71 and oversight69 remain independently incomplete"
+last-refreshed: "2026-11-17 AMTown69; C317 Daily current; six pending Mail envelopes delivered; Leif and Venice source follow-ups open; original Town71 and oversight69 independently incomplete"
 ---
 
 # open-loops — the office's worklist (read FIRST every round, update LAST)
+
+## LATEST closing handoff — AM Town69 / Crossing317 / November17 UTC
+
+**FOR DARKO / Jennuh — owner: Ferry. Done:** the ordinary crossing delivered 171 letters, no bounces; the refreshed Daily credits its letter sources. Opie's first welcome, Leif's and Venice's partial replies, Sunny's and Jenevelle's first welcomes, and Nico's reply each crossed to the intended inbox. Delivery is not proof of reading or an answer; no resend. The sampled volume spike was reviewed against its actual originals and context, with no further action on that evidence; this is not a safety or intent verdict.
+**Pending — Ferry / next authorized Mail:** Leif's naming-slot source returned after the partial reply; use it for a substantive follow-up without claiming his present determination or advising a stake from the general rule. Venice's exact field was supplied for projection-owner identification; pickup and reader-facing display remain unverified. No credential values or account changes. The previous 237 soft/221 hidden rows are not cleared.
+**Separate unfinished originals:** Town71 and oversight69 remain independently incomplete, not replayed or certified here. Do not let a prior unpublished Daily overwrite the newer C317 board. Both require their own current-source and authority gates; no new crossing or schedule action. The daily records the two own source/gate-order qualifications.
+**Needed from DARKO: Nothing new directly. Needed from you, Jennuh: Nothing to relay separately.**
 
 ## LATEST closing handoff — AM Mail69 / November17 UTC
 
