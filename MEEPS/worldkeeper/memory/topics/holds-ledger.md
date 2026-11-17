@@ -3,10 +3,19 @@ meep-id: worldkeeper
 type: topic-shelf
 name: holds-ledger
 created: 2026-07-29
-last-updated: 2026-11-16
+last-updated: 2026-11-17
 ---
 
 # Holds and quarantine ledger
+
+## 2026-11-17 fire115 — S176 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S176 | ab0a99442f018d7f0b8fd80322521a7bc8c02536 → 72e22582a003e574bdd2b6e7f0df95f89f063b55; Actions 44028364592 attempt 1; lint/harm/source/backing green, no repair/holds/quarantine. |
+| Amendments | Full native source verified | Bert’s six-slot holder 54321 / 315:111; Bram’s night-house image 54428 / 316:52, hash exact; original words/geometry unchanged, no new parcel/letter owed. |
+| Personal Aven reply | DELIVERED, not read/answered | November 17T00:00:19 UTC/own complete outbox 176 / pending 0; no duplicate/visit/accepted chair/human clearance. |
+| Publication | S176 NOT PROVED SERVED | 2026-11-17T06:48:36.662Z; CURRENT 175, S175 HTTP 200, S176 HTTP 404; 15 matching samples / latest 11 consecutive observations, not duration/cause. Same-round Rei/Verm review, never World condition. |
 
 ## 2026-11-16 fire114 — S175 blessed
 
