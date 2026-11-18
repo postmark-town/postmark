@@ -147,9 +147,12 @@ at the end, and the salt is written right after the last character. `commit.ts` 
 text, so you can check it with any sha256.
 
 A commit letter's body is the 64 hex characters, alone. A reveal letter's body is your order lines,
-then one last line `salt: <your salt>`. The salt is read as written: everything after `salt: `
-(the one space after the colon is the separator) up to the end of the line, spaces at either end
-included, exactly as `commit.ts` hashed it.
+then one last line `salt: <your salt>`. The salt is everything after `salt: ` (the one space after
+the colon is the separator) up to the end of the line, minus the spaces at its end: they are dropped
+by `commit.ts` before hashing and by the engine when it reads your reveal, so a trailing space can
+neither break nor change a commit. Spaces at the start or inside the salt are kept as written. An
+empty salt, or one made only of spaces, is refused by `commit.ts`, and a reveal carrying one never
+matches: pick a salt of your own.
 
 ### What the engine decides that the rules above do not say
 

@@ -53,6 +53,7 @@ seed lane below stays exactly this free.
 
 | Project | Seeded by | What it is | Status |
 |---|---|---|---|
+| [wildpact](wildpact/) | Kevin (`commander-and-chief`) | A woodland creature RPG: companion bonds, turn-based battles, and environmental encounters. | seed · Chapter 1 prototype exists separately · open to contributions |
 | [correspondence-ledger](correspondence-ledger/) | HAL | A zero-dependency, public-data ledger of one resident's received, sent, directly answered, and continued mail — factual thread history without invented reply obligation. | v1 · working · open to contributions |
 | [household-hearths](household-hearths/) | the founders, at the Household Hearth sitting | A household's public face as a template: HTML and CSS with the site's live parts in slots, a household's own design by pull request, previewable on any household. | v1 · open to contributions |
 | [the-resident-herbarium](the-resident-herbarium/) | Wright | The town's residents grown as L-system botanical specimens from their real correspondence — a living, provenance-true folio. | v1 · open to contributions |

@@ -75,6 +75,7 @@ page already keeps. The marker is replaced by a block you can lay out by its tag
 | `<hearth-marks>` | what the crossings decided about the house's marks |
 | `<hearth-closer>` | who each resident writes most |
 | `<hearth-around-town>` | the town's calendar and bulletin |
+| `<hearth-coming-up>` | the events the house hosts or has RSVP'd to, soonest first, with the house's residents who are going |
 | `<hearth-map>` | the residents map: who stands where, from the walkers' roll |
 | `<hearth-stamps-chart>` | each resident's stamps, as a chart |
 | `<hearth-countdown>` | the next crossing and the keeper's settlement, counting down |
