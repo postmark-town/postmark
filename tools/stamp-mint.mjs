@@ -42,6 +42,8 @@
 //   PARCELS FROM 11-01 (POS-762, Darko 2026-10-22: "1 parcel per household with extra parcels purchasable with stamps"; "50 stamps per parcel you already have"; paid to the town, never returned):
 //   - <date> · <handle> → BURN · <n> · for: parcel:<nth>/<household-key>   (a household whose declaration is dated after 2026-10-31 (town time) buys room ahead for its <nth> parcel, 2 or 3: <n> is exactly 50 × (<nth> − 1), 50 × the room it already has (Darko 2026-10-23, POS-762/f "Room bought"), out of the payer's liquid stamps, never a meep, the key IS the payer's household at the line's date, dated 2026-11-01 or later, and ONE line per household and <nth>, in order (the 2nd before the 3rd). The world's fold counts these lines as the household's room (postmark-world tools/marks-fold.mjs § parcels from 11-01))
 //   - <date> · <handle> → BURN · <n> · ...        (reserved; dormant until blessings — every other burn; only `for: correction:` and `for: parcel:` are live)
+//   THE TOWN'S RETURN ON A REMOVED WORLD MARK (POS-1139, Darko 2026-11-18 16:3x: "Town-authored return"; earlier "Back to each staker", owner included):
+//   - <date> · stake:world-mark/<mark> → <handle> · <n> · for: town-return:S<settlement>   (the town's act, not the staker's: when the town's opposition removes a mark at settlement S<n>, the town hands each staker's remaining stamps back. <handle> is the actual staker and <n> is their WHOLE open position on that mark — never more, never part, never another's, and never ✦weight, bonus or fan-up — so a second line for the same position finds nothing open and fails to verify. Written only by world-stake.mjs worldTownReturnApply, one signed append per removal. The resident's own way out stays `for: unstake`)
 // Every entry that moves stamps is a two-sided movement — conservation is
 // structural (entries sum to zero against the MINT/BURN accounts); a balance is
 // a pure fold, and the fold must never take any account except MINT below zero.
@@ -963,6 +965,7 @@ export function deriveTransfers(deliveries, households, { laws = [], revisions =
     else if (c.kind === 'pot-unstake') add(c.handle, c.n);     // the staker's own way out, before any close — the stamps go home to liquid exactly as a pot-return's do; the only thing it does NOT share with pot-return is the closed-epoch marker, and that difference lives in foldClosedEpochs, not in a balance
     else if (c.kind === 'world-stake') add(c.handle, -c.n);    // world-mark escrow out — the OVER-CREDIT direction if omitted, which is the dangerous one: this fold would fund a `pays:` out of stamps already escrowed on a mark
     else if (c.kind === 'world-unstake') add(c.handle, c.n);   // world-mark escrow home
+    else if (c.kind === 'world-town-return') add(c.handle, c.n); // the town hands a removed mark's escrow home (POS-1139)
     // THE HOLO ARM (2026-09-17, this branch). The founder's ruling makes the
     // givers' reward liquid, and this balance is the one the mint pass decides
     // transfer-vs-void against. The verifier replays that decision from ITS own
@@ -1052,6 +1055,20 @@ export const worldStakeLine = ({ date, handle, mark, n, via }) =>
 
 export const worldUnstakeLine = ({ date, mark, handle, n }) =>
   `- ${date} · stake:world-mark/${mark} → ${handle} · ${n} · for: unstake`;
+
+// The town's return of one staker's position on a removed mark (POS-1139). The
+// builder refuses what would misfile the line or forge a field: a malformed
+// date, mark id or removal, an amount that is not a whole stamp, a beneficiary
+// that is not one plain token. Whether <n> is that staker's whole open position
+// is the verifier's question, and the plan's (world-stake.mjs).
+export const worldTownReturnLine = ({ date, mark, handle, n, removal }) => {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(String(date ?? ''))) throw new Error(`town return: the date is YYYY-MM-DD, got ${JSON.stringify(date)}`);
+  if (!/^[a-z0-9][a-z0-9-]*\/[a-z0-9][a-z0-9-]*$/.test(String(mark ?? ''))) throw new Error(`town return: the mark must be a mark id, <by>/<slug>, got ${JSON.stringify(mark)}`);
+  if (!/^[^\s·:]+$/.test(String(handle ?? ''))) throw new Error(`town return: the staker is one plain handle, got ${JSON.stringify(handle)}`);
+  if (!Number.isInteger(n) || n < 1) throw new Error(`town return: the amount must be a whole number ≥ 1, got ${JSON.stringify(n)}`);
+  if (!/^S[1-9]\d*$/.test(String(removal ?? ''))) throw new Error(`town return: the removal is named by its settlement, S<n>, got ${JSON.stringify(removal)}`);
+  return `- ${date} · stake:world-mark/${mark} → ${handle} · ${n} · for: town-return:${removal}`;
+};
 
 export const voteMintLine = ({ date, handle, topic }) =>
   `- ${date} · MINT → ${handle} · 1 · for: vote:${topic} (stake)`;
@@ -1518,12 +1535,13 @@ export function foldStaked(entries) {
     // here, because the tenses do not care WHY escrow ended.
     // Post stakes are the fourth member, for the same reason (POS-290).
     if (c.kind === 'stake' || c.kind === 'world-stake' || c.kind === 'pot-stake' || c.kind === 'post-stake') st.set(c.handle, (st.get(c.handle) ?? 0) + c.n);
-    else if (c.kind === 'return' || c.kind === 'world-unstake' || c.kind === 'pot-return' || c.kind === 'pot-unstake' || c.kind === 'keeping-burn' || c.kind === 'post-unstake' || c.kind === 'post-return') st.set(c.handle, (st.get(c.handle) ?? 0) - c.n);
+    else if (c.kind === 'return' || c.kind === 'world-unstake' || c.kind === 'world-town-return' || c.kind === 'pot-return' || c.kind === 'pot-unstake' || c.kind === 'keeping-burn' || c.kind === 'post-unstake' || c.kind === 'post-return') st.set(c.handle, (st.get(c.handle) ?? 0) - c.n);
   }
   return st;
 }
 
-// Open escrow per world-mark: stakes minus unstakes. A mark absent here has none.
+// Open escrow per world-mark: stakes minus unstakes minus the town's returns
+// (POS-1139). A mark absent here has none.
 // This is the stable signed input to the read-side weight derive: it cannot move
 // when a resident's liquid balance moves — only when someone stakes or unstakes
 // on purpose. The derive adds the ruled unique-household breadth term.
@@ -1532,7 +1550,7 @@ export function foldWorldMarkEscrow(entries) {
   for (const e of entries) {
     const c = classifyEntry(e.canonical);
     if (c.kind === 'world-stake') esc.set(c.mark, (esc.get(c.mark) ?? 0) + c.n);
-    else if (c.kind === 'world-unstake') esc.set(c.mark, (esc.get(c.mark) ?? 0) - c.n);
+    else if (c.kind === 'world-unstake' || c.kind === 'world-town-return') esc.set(c.mark, (esc.get(c.mark) ?? 0) - c.n);
   }
   for (const [k, v] of esc) if (v === 0) esc.delete(k); // absent == zero, one representation
   return esc;
@@ -1540,12 +1558,13 @@ export function foldWorldMarkEscrow(entries) {
 
 // Per (mark, handle) open escrow — who has stamps on what, the read an unstake
 // must clip against so a resident can never take out more than they put in, and
-// never another resident's stake.
+// never another resident's stake. A town return (POS-1139) closes the position
+// it names, so a position the town has handed back is gone from here too.
 export function foldWorldMarkPositions(entries) {
   const pos = new Map(); // `${mark}|${handle}` -> open escrow
   for (const e of entries) {
     const c = classifyEntry(e.canonical);
-    if (c.kind === 'world-stake' || c.kind === 'world-unstake') {
+    if (c.kind === 'world-stake' || c.kind === 'world-unstake' || c.kind === 'world-town-return') {
       const k = `${c.mark}|${c.handle}`;
       pos.set(k, (pos.get(k) ?? 0) + (c.kind === 'world-stake' ? c.n : -c.n));
     }
