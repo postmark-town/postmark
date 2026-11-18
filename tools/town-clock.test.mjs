@@ -35,6 +35,9 @@
 //   · a commit job that pushes main directly (the clock before POS-938): the
 //     origin's hook refuses it, and its landing test reds;
 //   · one try instead of three: the race test reds;
+//   · the merge-in deleted (the fetch, merge and push between tries): the race
+//     test reds on the second head not holding the moved main, and the
+//     conflict test on a second merge try;
 //   · the branch delete removed: the landing test reds on the leftover branch.
 //
 // The last test is A TEXT PIN, the weakest instrument: it reads the workflow's
@@ -110,8 +113,11 @@ const RULESET_HOOK = [
 // A stand-in for gh: `pr create` and `pr merge`, against the test's bare origin,
 // as GitHub would answer them. Every call is logged to $GH_STUB_DIR/calls. The
 // first $GH_STUB_REFUSE merges are refused, each after a resident's commit lands
-// on the base, as a race would. A merge squashes the head onto the base under
-// --subject, pinned to --match-head-commit.
+// on the base, as a race would; with $GH_STUB_CONFLICT set, that commit writes
+// into the named file instead, where the clock writes. Each merge try logs its
+// number, the PR head and the base tip to $GH_STUB_DIR/tries. A merge squashes
+// the head onto the base under --subject, pinned to --match-head-commit, and is
+// refused as GitHub refuses it when the squash conflicts.
 const GH_STUB = [
   '#!/usr/bin/env bash',
   'set -eo pipefail',
@@ -147,10 +153,16 @@ const GH_STUB = [
   '    git -C "$w" config user.name "github stub"',
   '    git -C "$w" config user.email "stub@github.test"',
   '    git -C "$w" checkout -q "$base"',
+  '    tip=$(git --git-dir="$O" rev-parse "refs/heads/$head")',
+  '    printf "%s %s %s\\n" "$n" "$tip" "$(git --git-dir="$O" rev-parse "refs/heads/$base")" >> "$GH_STUB_DIR/tries"',
   '    if [ "$n" -le "${GH_STUB_REFUSE:-0}" ]; then',
-  '      r="race-$GH_STUB_RUN-$n"',
-  '      mkdir -p "$w/WHITE_PAGES/$r"',
-  '      echo "$r" > "$w/WHITE_PAGES/$r/ADDRESS.md"',
+  '      if [ -n "${GH_STUB_CONFLICT:-}" ]; then',
+  '        echo "a resident line, where the clock writes" >> "$w/$GH_STUB_CONFLICT"',
+  '      else',
+  '        r="race-$GH_STUB_RUN-$n"',
+  '        mkdir -p "$w/WHITE_PAGES/$r"',
+  '        echo "$r" > "$w/WHITE_PAGES/$r/ADDRESS.md"',
+  '      fi',
   '      git -C "$w" add -A',
   '      git -C "$w" commit -qm "a resident commit, under the clock PR"',
   '      GH_STUB_MERGE=1 git -C "$w" push -q origin "HEAD:refs/heads/$base"',
@@ -158,9 +170,8 @@ const GH_STUB = [
   '      exit 1',
   '    fi',
   '    [ "$method" = --squash ] || { echo "stub gh: this test expects --squash, got $method" >&2; exit 1; }',
-  '    tip=$(git --git-dir="$O" rev-parse "refs/heads/$head")',
   '    [ "$match" = "$tip" ] || { echo "stub gh: the head is $tip, not $match" >&2; exit 1; }',
-  '    git -C "$w" merge -q --squash "origin/$head"',
+  '    git -C "$w" merge -q --squash "origin/$head" > /dev/null 2>&1 || { echo "stub gh: Pull Request is not mergeable" >&2; exit 1; }',
   '    git -C "$w" commit -qm "$subject"',
   '    GH_STUB_MERGE=1 git -C "$w" push -q origin "HEAD:refs/heads/$base"',
   '    ;;',
@@ -274,7 +285,7 @@ function withTown(fn) {
     // The commit job's step, run on `patch` in a fresh clone, with the gh stub
     // refusing its first `refuse` merges. Reports what reached origin's main, its
     // tip, the clock branches left on origin, and every gh call.
-    const commit = (name, patch, { refuse = 0 } = {}) => {
+    const commit = (name, patch, { refuse = 0, conflict = '' } = {}) => {
       const runner = clone();
       const before = git(origin, ['rev-parse', 'main']).trim();
       const t = temp();
@@ -289,6 +300,7 @@ function withTown(fn) {
         GH_STUB_RUN: basename(stubDir),
         GH_STUB_ORIGIN: origin,
         GH_STUB_REFUSE: String(refuse),
+        GH_STUB_CONFLICT: conflict,
         GH_TOKEN: '',
         GH_CONFIG_DIR: ghConfig,
       });
@@ -296,12 +308,25 @@ function withTown(fn) {
       const landed = after === before ? [] : git(origin, ['diff', '--name-only', before, after]).split('\n').filter(Boolean);
       const callsFile = join(stubDir, 'calls');
       const calls = existsSync(callsFile) ? readFileSync(callsFile, 'utf8').split('\n').filter(Boolean) : [];
+      const triesFile = join(stubDir, 'tries');
+      const tries = existsSync(triesFile)
+        ? readFileSync(triesFile, 'utf8').split('\n').filter(Boolean).map((l) => { const [n, head, base] = l.split(' '); return { n: Number(n), head, base }; })
+        : [];
       const branches = git(origin, ['for-each-ref', '--format=%(refname)', 'refs/heads/clock/']).split('\n').filter(Boolean);
+      const branchHead = branches.length ? git(origin, ['rev-parse', branches[0]]).trim() : null;
       const tip = { subject: git(origin, ['log', '-1', '--format=%s', 'main']).trim(), parent: git(origin, ['log', '-1', '--format=%P', 'main']).trim() };
-      return { ...r, before, after, landed, calls, branches, tip };
+      return { ...r, before, after, landed, calls, tries, branches, branchHead, tip };
     };
 
-    return fn({ handover, hostile, commit });
+    // Is commit a an ancestor of commit b in origin? 0 is yes, 1 is no; anything else is a broken read.
+    const isAncestor = (a, b) => {
+      const r = spawnSync('git', ['merge-base', '--is-ancestor', a, b], { cwd: origin, encoding: 'utf8' });
+      if (r.status !== 0 && r.status !== 1) throw new Error(`merge-base --is-ancestor ${a} ${b}: exit ${r.status} ${r.stderr}`);
+      return r.status === 0;
+    };
+    const show = (rev, path) => git(origin, ['show', `${rev}:${path}`]);
+
+    return fn({ handover, hostile, commit, isAncestor, show });
   } finally {
     rmSync(root, { recursive: true, force: true });
   }
@@ -335,7 +360,7 @@ for (const [name, { folder, generator, subject, outputs }] of Object.entries(CLO
     assert.deepEqual(c.branches, [], `the clock branch was left on origin: ${c.branches.join(' ')}`);
   }));
 
-  test(`${name}: a refused merge brings main into the branch and merges again; the third refusal fails and leaves the PR open`, () => withTown(({ hostile, commit }) => {
+  test(`${name}: a refused merge brings main into the branch and merges again; the third refusal fails and leaves the PR open`, () => withTown(({ hostile, commit, isAncestor }) => {
     const output = outputs[0];
     // Each run changes the output anew; the second is cut from main after the first landed.
     const change = (tag) => hostile([[output, `${BASE[output]}${tag}\n`]]);
@@ -344,6 +369,12 @@ for (const [name, { folder, generator, subject, outputs }] of Object.entries(CLO
     const once = commit(name, change('raced once'), { refuse: 1 });
     assert.equal(once.status, 0, `one refusal stopped the clock:\n${once.stdout}${once.stderr}`);
     assert.equal(once.calls.filter((l) => l.startsWith('pr merge')).length, 2, `not two merge tries:\n${once.calls.join('\n')}`);
+    // Between the tries, the branch took the moved main: the second try's head holds the
+    // base it met, and the first try's head (the control) doesn't.
+    const [first, second] = once.tries;
+    assert.notEqual(second.base, first.base, 'main did not move between the tries');
+    assert.ok(!isAncestor(second.base, first.head), 'the first head already held the moved main, so this case separates nothing');
+    assert.ok(isAncestor(second.base, second.head), 'the branch was not brought up to the moved main before the second merge');
     assert.equal(once.tip.subject, subject, 'the clock commit is not the tip of main');
     assert.equal(races(once.landed).length, 1, 'the resident commit under the PR is not on main');
     assert.deepEqual(notRaces(once.landed), [output], 'the clock landed more or less than its change');
@@ -357,6 +388,22 @@ for (const [name, { folder, generator, subject, outputs }] of Object.entries(CLO
     assert.deepEqual(notRaces(thrice.landed), [], 'a refused clock commit reached main');
     assert.equal(races(thrice.landed).length, 3, 'the three resident commits are not on main');
     assert.deepEqual(thrice.branches, [`refs/heads/${branchOf(name)}`], 'the open PR lost its branch');
+  }));
+
+  test(`${name}: a main that conflicts with the clock's change fails the job at the merge-in, and leaves the PR open`, () => withTown(({ hostile, commit, show }) => {
+    const output = outputs[0];
+    // The clock appends a line to its output; the resident commit under the PR appends another in the same place.
+    const c = commit(name, hostile([[output, `${BASE[output]}the clock line\n`]]), { refuse: 1, conflict: output });
+    assert.notEqual(c.status, 0, 'a conflicting main did not fail the job');
+    assert.match(`${c.stdout}${c.stderr}`, /CONFLICT/, `the job failed, but not at the merge-in:\n${c.stdout}${c.stderr}`);
+    assert.equal(c.tries.length, 1, `the job tried the merge again over a conflict:\n${c.calls.join('\n')}`);
+    // Main holds the resident's line and not the clock's.
+    assert.equal(c.tip.subject, 'a resident commit, under the clock PR', 'main does not end at the resident commit');
+    assert.match(show('main', output), /a resident line, where the clock writes/);
+    assert.doesNotMatch(show('main', output), /the clock line/, 'the clock change reached main over a conflict');
+    // The PR stays open on the head it was opened with, with no half-done merge pushed.
+    assert.deepEqual(c.branches, [`refs/heads/${branchOf(name)}`], 'the open PR lost its branch');
+    assert.equal(c.branchHead, c.tries[0].head, 'the PR branch moved after the conflict');
   }));
 
   test(`${name}: the commit job refuses every patch that reaches past its outputs`, () => withTown(({ hostile, commit }) => {
