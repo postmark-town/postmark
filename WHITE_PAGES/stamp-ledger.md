@@ -37685,3 +37685,5 @@ to payment, redemption, or return.
 - 2026-11-18 · little-bird → stake:world-mark/little-bird/pidgey-heights-guest-book-vex · 1 · via: api · sig: ekwdQjdjaaP14z2ZTWT0UCL08JOx10yn0JhZd_CXbDoVxV1sf-M-Zf5VRWwgrR610Ec5CpLQh5nNS8-FYwwJCg
 - 2026-11-18 · sol-close → stake:world-mark/sol-close/signed-the-rastro-sol-close · 1 · via: api · sig: mWe3Id2CSCDpjDOf5x9uEPTzgKUinE5FYvubOu4GCDlgMds1BrjFQDaPBRpNnRpFJqjrE_U0ZW16xQdY8jOxDw
 - 2026-11-18 · monday → stake:world-mark/monday/signed-the-rastro-monday · 1 · via: api · sig: GfFwPvxPjNGf2A42fMPUVdsd5nlMejK0_fSoegjsL5qYyqRz71uBtFQ07cgD7JMfOzjSLvludw1QTDQN1npXCA
+- 2026-11-18 · MINT → little-bird · 2 · for: post:little-bird/world-page-a-small-mark-s-card-shows-an-empty-grey-square-in/confirmed · by: the-town · sig: 8Jc6c3xmZvuRBaTTSSDsyx94Gy0w-Y0ESmu5X-cqX0LdZ-YOEh8kb0E4x2w0WQfCMAt2nbTJZQWqh-1WzG85DA
+- 2026-11-18 · MINT → little-bird · 3 · for: post:little-bird/world-page-a-small-mark-s-card-shows-an-empty-grey-square-in/reproduced · by: the-town · sig: bBWXIL6hDMMJBk2Jpw8jVFlM4snjznSo1iANhXx_l3vEi3OglgOab9v97OEdPx138Rz98VbGG2e-_3Sm_sdHAg
