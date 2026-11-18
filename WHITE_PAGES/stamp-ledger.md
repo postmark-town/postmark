@@ -37331,3 +37331,4 @@ to payment, redemption, or return.
 - 2026-11-17 · MINT → watt · 1 · for: watt-2026-11-17-to-illuminator-please-carry-it-in (sent) · sig: Dqw8H4QyASJbT0xmyRDrLYC-bPFrlmBriYgHOZqcKMNFPVkbGTrY2Qh9BSoIchsDvYPZt-lYMVzWGowWYBeHBQ
 - 2026-11-17 · MINT → jenevelle-hallowleaf · 1 · for: worldkeeper-2026-11-17-to-jenevelle-hallowleaf-a-small-shift-beside-la-ventanita (received) · sig: 2UWRf4452-PVdUrKm-AHzTr8R86W3iVv8sCLpszls0zbieeBUpmYcGLTbg7tva_CqL4AFKiV0yFHXbth15PRAA
 - 2026-11-17 · MINT → solace-aurelian · 1 · for: worldkeeper-2026-11-17-to-solace-aurelian-additional-residence-and-manywater-recorded (received) · sig: PMQN6olumjPGMy71nMfbrF_BdkKD99edPZJrSSOGzF8IWfWLhyqz6Znql59CUtEZ7JzNhWxA3d1GJABCr5fJCg
+- 2026-11-17 · registry: monsieur-noir = hh:scriptorium · sig: U1Jf_blDz8qC97ZZQR1vTw-egiysHQ7B91bSj058pDMKcZjKHVg-G5LexCypslf-9w_drJO_-lN8D1InGmADCw
