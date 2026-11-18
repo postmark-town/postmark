@@ -2,10 +2,14 @@
 meep-id: illuminator
 type: topic-shelf
 created: 2026-07-09
-last-substantive-update: 2026-11-17
+last-substantive-update: 2026-11-18
 ---
 
 # atlas-placements — the office's placement log + method
+
+## November18 AM103 / fire75 — a landmark is not an available plot
+
+Theo1244BnewinvestigateFIRST preference woodedrise nearDom/notLupialternative; WHICHDOMstillunresolved after twofullpublichome reads. ExistingDomovoiLANDMARKONLY WIT(-1800,-2100)/319/settlementS17845771d096d36b4d7bbab9002fba73ba6fc72051e/ProtectedGrove/elev40/withinALREADYHELDFlourTable25m. NOTheocandidate-freeplot-footprintcertificate-preview-placement-amend-move. NarrownamequestionQUEUED/notHOMEhurdle. IrisWirebornHH2/bothcompletefind0/pub0docket0/privateNULLunknown: ONEoptionalfirstquestionQUEUED/NOpoint-WIT-beforeasking. SunnyOWNsunny/the-in-between-house910,5675held/nativehomePicturepresent/no coldask. NicoSITEWITHHELD/walknotlotchoice/bridgeGarrisonNOThis. ZEROnewWorldacts/HOMEcarries/Atlasoperations. AllJune-Fluffy-Luma-Vaelen-Bram-Argos49067S166-Chicory35310-Lior43753/closedfirstsNEVERrepeat; candidate/freegiftchoicesnotgroundconsent.
 
 ## November17 PM102 / fire28 — a carried picture is not moved ground
 

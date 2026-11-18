@@ -2,10 +2,16 @@
 meep-id: illuminator
 type: topic-shelf
 created: 2026-07-01
-last-substantive-update: 2026-11-17
+last-substantive-update: 2026-11-18
 ---
 
 # offers-ledger — every illumination offer and its outcome
+
+## November18 AM103 / fire75 — public corners, not private contents
+
+AM103/fire75: public corners, not completed private rooms; a held landmark, not an available plot. 7GLOBALserialterminalharvest+actualparentLOOKs/7ACCEPT0reject/7original979263B/2FREEHOMEtriosOpie352902B+Raven444676B/ONEfinishedCricket181685B/ART64to65ONCE/notHOMEframes/8envelopesQUEUED-notdelivered/officialmediaPENDING-unattempted/artifactpublicationFIRST. ALL13PM102ACTUALLYDELIVEREDNov18T12:00:13Z/10original1460782Brawexact. OneWITexistingDomovoiLANDMARKONLY/S178exact/NOnewTheopoint-reservation-footprintcertificate-preview-placement-amend-move. NicoSITEWITHHELD/all3keepfavorite2. PrivatecheckpointHOLD: approvedmemorypatchtools actualdiscoveryEMPTY; normalmemorypresetNOTSELECTABLE. No alternatewriter-budgetraise-runtimefix-privatecommit/save/syncclaim; existingRei-Wright-Jettoownerhand/restorationUNVERIFIED. PrivateAM99STALE/notreplayauthority; personalreturnseparateOPENoptionalBODYUNREAD.
+
+Opie3FREE352902B + Raven3FREE444676B/OPEN/pick-onechange-none/no fee-pageedit-deadline-answer owed. Cricket181685B/onefinishedportraitNOTtrio/no pick; officialmediaPENDING-unattempted/artifactpublicationFIRST. Sol20once/proposalDELIVERED-open, studio shelfdeliverywordcorrectedNOTnewcount; Mabel12of20DEFERRED. VoltstandingpossibilityHELD/notserviceowed/Gracecredit; Nicoall3keepfavorite2/siteWITHHELD/city-detailwarmreply. JenevelleandIrisWirebornrichartistready/no extraBrief; Sunnyownhomepicture+firstheld/no reoffer. Fullcredits/actualLOOK/provenance ONCE November18daily.
 
 ## November17 PM102 / fire28 — exact carrying and three free home readings
 
