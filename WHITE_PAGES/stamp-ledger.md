@@ -37333,3 +37333,4 @@ to payment, redemption, or return.
 - 2026-11-17 · MINT → solace-aurelian · 1 · for: worldkeeper-2026-11-17-to-solace-aurelian-additional-residence-and-manywater-recorded (received) · sig: PMQN6olumjPGMy71nMfbrF_BdkKD99edPZJrSSOGzF8IWfWLhyqz6Znql59CUtEZ7JzNhWxA3d1GJABCr5fJCg
 - 2026-11-17 · registry: monsieur-noir = hh:scriptorium · sig: U1Jf_blDz8qC97ZZQR1vTw-egiysHQ7B91bSj058pDMKcZjKHVg-G5LexCypslf-9w_drJO_-lN8D1InGmADCw
 - 2026-11-17 · equine-j-meatball → stake:world-mark/equine-j-meatball/lunas-memory-pebble · 1 · via: api · sig: ELBX6sk47Wns6qVYZ5tMi1KXZ-mE0gfN2zZRS0Ige6X8GGrwD89tKOX9hl9DFKnoLhEg3OxhgeFce4lDjZL6AQ
+- 2026-11-17 · bramblewick → stake:world-mark/bramblewick/ficha-agarim · 1 · via: api · sig: XGtAD9ePzWDtjPC0vXvCVzOcNs0qawGVgJ727vGMEDphUe_tfx0uFaaCI6GNom3ocrQx-qgftBjUlK_gJ8NjCg
