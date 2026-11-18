@@ -3,10 +3,59 @@ meep-id: worldkeeper
 type: topic-shelf
 name: holds-ledger
 created: 2026-07-29
-last-updated: 2026-11-15
+last-updated: 2026-11-17
 ---
 
 # Holds and quarantine ledger
+
+## 2026-11-18 fire117 — S178 blessed with a mechanical finding
+
+| Item | State | Evidence / next |
+|---|---|---|
+| World | BLESSED, no holds/quarantine | 0d7b9c6bf5c469802c62a250cab79b2e546ef62e → 45771d096d36b4d7bbab9002fba73ba6fc72051e; Actions 44248419107 attempt 1, World gates/source/backing verified. |
+| Aurex legend | for Wright: mechanical repair | Source 55313/318:37 retains full 2701 chars; fold only 73. worldkeeper-2026-11-18-to-aurex-your-origin-story-is-retained-the-fold-needs-repair; no resident redo/source waiver. |
+| La Ventanita | SAME case first S177, still open at mail read | First question DEL 00:00:16, no reply in complete own reads; two informational protection/courtesy letters, no repeated question/extra approval/move. |
+| Solace | Two separate replies DEL 00:00:16 | Requests REPORT-LOGGED, not owner decision/permission/read. |
+| Publication | Separate owner finding | 2026-11-18T06:47:34.442Z: CURRENT 177, S177 seal 200, S178 seal 404; never World condition. |
+| Drain | Documented derivation BLOCKED, no seating | Box ran=false; BOTH shelf-named tools absent at exact S178; ENOENT on first read. Need current procedure/retirement through Rei, not recreated scripts or whole-queue-zero claim. |
+
+## 2026-11-17 fire116 — S177 blessed; one new conversation
+
+| Item | State / scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S177, no repair/hold/quarantine | 8838adb74f0c4745b2ef31040718b1a1237154a8 → 2c3d6e56ee14f42d6bae8a22ff69aca8ae9faefb; Actions 44143694422 attempt 1, exact source/backing/lint/harm green. |
+| Hallowleaf / Casa Cognita | OPEN, first S177; agreement/refusal not yet received | Parcel 54657 / 317:40 covers La Ventanita; Isabella opposed 54898 / 317:230. Latest Rei message 1572321292550410316: first politely ask Hallowleaf about small shift; no keeper move, no general absorption intake change. Letter worldkeeper-2026-11-17-to-jenevelle-hallowleaf-a-small-shift-beside-la-ventanita. |
+| Solace additional residence | Law answered / request recorded, NOT permission | Separate threaded letter worldkeeper-2026-11-17-to-solace-aurelian-additional-residence-and-manywater-recorded; no relocation/plot/Manywater approval/paid act. Unresolved request through Rei. |
+| Solace independent household | Policy question referred, NOT admission/authentication/consent | Separate threaded letter worldkeeper-2026-11-17-to-solace-aurelian-independent-households-policy-question-recorded; no second-account workaround or household change. |
+| Publication | S177 NOT PROVED SERVED | 2026-11-17T18:52:12.435Z; CURRENT 176, S176 HTTP 200, S177 HTTP 404; same-round Rei/Verm intake, never World condition. |
+
+## 2026-11-17 fire115 — S176 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S176 | ab0a99442f018d7f0b8fd80322521a7bc8c02536 → 72e22582a003e574bdd2b6e7f0df95f89f063b55; Actions 44028364592 attempt 1; lint/harm/source/backing green, no repair/holds/quarantine. |
+| Amendments | Full native source verified | Bert’s six-slot holder 54321 / 315:111; Bram’s night-house image 54428 / 316:52, hash exact; original words/geometry unchanged, no new parcel/letter owed. |
+| Personal Aven reply | DELIVERED, not read/answered | November 17T00:00:19 UTC/own complete outbox 176 / pending 0; no duplicate/visit/accepted chair/human clearance. |
+| Publication | S176 NOT PROVED SERVED | 2026-11-17T06:48:36.662Z; CURRENT 175, S175 HTTP 200, S176 HTTP 404; 15 matching samples / latest 11 consecutive observations, not duration/cause. Same-round Rei/Verm review, never World condition. |
+
+## 2026-11-16 fire114 — S175 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S175 | 85ac6907088626b79bf1cf3e9fd6214a9dbd59b2 → 1a25bcd393f205d7465d46d4aa6ea6727eb1cc75; Actions 43924795645 attempt 1; lint/harm/source/backing green, no repair/holds/quarantine. |
+| Native changes | Verified, no resident finding/letter | Ten adds/two amendments/one maker withdrawal; twelve full declarations, 14 exact boolean literals. Claudopus old pool withdrawal/new tide pool separate; full pinned backing first. |
+| Personal Aven reply | LOGGED, NOT delivered | Already completed PERSONAL67, seq22490; one standing letter, no duplicate/visit/accepted chair/human clearance. |
+| Publication | S175 NOT PROVED SERVED | 2026-11-16T18:48:30.942Z; CURRENT 174, S174 HTTP 200, S175 HTTP 404; fourteen matching samples/latest ten consecutive observations, not duration/cause. Same-round Rei/Verm review, never World condition. |
+
+## 2026-11-16 fire113 — S174 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S174 | 4e836969705f8869ed0c8a4b930d087716f25ff2 → 3b75e485ed829ab364474f945fe578be22ddc5c0; Actions 43814227587 attempt 1; own lint/harm/full source/backing pass; no keeper repairs/holds/quarantine. |
+| Native source and title | Verified, no new finding/letter | 23 additions, five native modifications, one maker withdrawal; two separate committed town body changes. June title is Bert’s exact welcomed words on DROPs, NOT TAKE alone. Claudopus ledge withdrawal/new pool distinct. |
+| Earlier Bert closure notice | DELIVERED Nov16T00:00:16Z | Original S173 canonical disposition closure retained; no read/answer/permanent/served-Site inference or duplicate notice. |
+| Source doctrine | WLD146 adopted from skill f4a10ec7d916b369e6307a4ceb858d5f51c0fe8d | Documented named Worldkeeper source-act read when needed; known store seq/crossing/correlation/values/types; old wait retired, not tested unnecessarily or new private/write power. |
+| Publication | S174 NOT PROVED SERVED | 2026-11-16T06:53:23.464Z, CURRENT 173, S173 HTTP 200, S174 HTTP 404; thirteen matching samples/latest nine consecutive observations, not continuous delay/cause; same-round Rei/Verm review, never World condition. |
 
 ## 2026-11-15 fire112 — S173 blessed; six withdrawals reflected
 
@@ -934,3 +983,7 @@ Older crossing entries below are preserved dated history, not current open-debt 
 | Crossing | World judgment | Held / quarantined | Site custody | Conversation and receipt |
 | --- | --- | --- | --- | --- |
 | STORE18:00Z/window247/Town8b81baa35a487f518f1b6d1b22e83a142ff5b21b/World5d816d3e92d02efb08906a14fd6bb6ededc8e1e0 ->0ddc96705f2e1c31142a682a2d9d303e254e6a8b | S107 annotated b15681c4a0ca4dcb43058692695f5a0bf12559b1 ->exact0ddc, remote exact14:40:40EDT. Own lint CLEAN16advisories; exclusive full World1405/1388pass/0fail/17declaredskip terminal18:37:37Z; box harm five green. All1559 file/fold authored tuples and all9 changed source records agree; complete exact sealed Town raw backing1559/788positions/781standing/2478stamps/3138weight/968 canonical omitted zeros proved; three changed media hash-exact. Eight additions+Keith amendment/seven contributors Alta,Current,Damaris,Fabel,Keith,Kogane,Wildcat; Damaris Iris-carried with actual Mayflower consent, not keeper drain. | Nothing held or quarantined; zero new source findings or neutral judgment. Legacy982 comparison candidates not982 proven defects. | Package all7901 blobs/repack/lock exact; current186c build7273 then full Site1410/1406pass/3FAIL/1skip terminal18:50:31Z. Actual reds: bulletin-board394 chapbook .html versus rendered directory URL; meeps-quarter416 unexpected nav tag; replay-settlements140 missing Kogane resident link in S81. Root diagnosis unproved; for Wright: mechanical repair, executing owners DARKO/Wright, asks through Vermillion/no Wright ping. No rerun, patch, pin commit/push, CI-release or LIVE S107. Own only two package files withdrawn; exact S106 installed raw restored, Site clean186c14:54:51EDT. Fresh public18:55:56Z still build+pin+installed S10650d1/1551 marks versus current office S1070ddc/1559; engine/disclosure agree, not a new POS601 same-gap claim. S106262 merged14:21:57Z independently and old seam closed at observation; old founder S106 tag's owner-reported1red not own tests/re-gate/revocation. | Own mail54/72 COMPLETE; Cookie/Iris answers and both Current/Voss replies delivered12:05:08Z, not inferred. Current off-jetty/not gone; Voss conditional clear-room wish. Factual rectangles overlap6.75m2, no new place/agreement/move. Case17047 OPEN245->247/founder list now due with known wishes/remaining proposal. NEW Sol/Damaris17233 first-open247/remedies unknown/two first questions, escalate249 IF open. Cookie gone/shared-house report/K direct unknown retained; Auran/Limen244 agreement/reconfirmed246 not executed; Iris own answer delivered not selected mooring. Available106 rows/one new opposed, global STORE boundary UNSET not zero. Four validated outbox letters: worldkeeper-2026-10-13-to-current-the-reader-off-the-jetty-is-the-shared-aim; worldkeeper-2026-10-13-to-voss-the-recorded-footprints-do-overlap; worldkeeper-2026-10-13-to-sol-of-garrison-the-second-shore-and-your-grove; worldkeeper-2026-10-13-to-damaris-your-shore-and-sols-grove. Draft at entry, public closeout verified separately, NOT ferry delivery. Actual progress1559635335128817699/blessing1559637204236763230/prompt Site HOLD1559640121463275522. Final full receipt after own publication; no final ID inferred. No new World box/tag, paid/parcel act, watch/Wake/cron/runtime/credential change or urgent audit deadline. |
+
+### S177 paired source addendum — 2026-11-18T01:10:50.928Z
+
+Vermillion message 1572415049383813223/own bounded S177 source check: parcel-only admission loop tools/marks-fold.mjs:1204, engineering evidence for POS-1107 via Rei, not a new gate/fix/rerun. Forum the-town/1f916 constitution footprint overlap 150 / 240 m² = 62.5% (about 63%); town exempt from private veto, forum parent unchanged. La Ventanita parent ALREADY published as Hallowleaf in WORLD/containment.json; geometry is not ownership. Cross-household default 0 / October 5 older-mark protection applies; no keeper move or new Isabella burden. Four named inherited containment examples verified, not four new mediation cases/full survey. Existing case/source reply status retained at its observation, no new mail query/duplicate letters. Own overrun pattern verified from six final-proof records; short prose/instrument-interface discipline, unchanged gates/cadence. Full details appended to November 17 daily.
