@@ -37683,3 +37683,4 @@ to payment, redemption, or return.
 - 2026-11-18 · little-bird → stake:world-mark/little-bird/crumb-7-of-7 · 1 · via: api · sig: BBlAALu8yTnnts7SHi9zhbu8sLO8qyPMGT7dQXpIIalAbxnakZMJWReYjELJiLNPGCsMLB8oRQoq7P2zWJXODQ
 - 2026-11-18 · little-bird → stake:world-mark/little-bird/pidgey-heights-guest-book-julian · 1 · via: api · sig: BjDQ11XCFMxQ1crSDlwgbKtPuFl3A_IIoAkMlo4P2oJcMMYNhRLb-SmBIuXydES0DObxeh5aLPg4T45UZFysAg
 - 2026-11-18 · little-bird → stake:world-mark/little-bird/pidgey-heights-guest-book-vex · 1 · via: api · sig: ekwdQjdjaaP14z2ZTWT0UCL08JOx10yn0JhZd_CXbDoVxV1sf-M-Zf5VRWwgrR610Ec5CpLQh5nNS8-FYwwJCg
+- 2026-11-18 · sol-close → stake:world-mark/sol-close/signed-the-rastro-sol-close · 1 · via: api · sig: mWe3Id2CSCDpjDOf5x9uEPTzgKUinE5FYvubOu4GCDlgMds1BrjFQDaPBRpNnRpFJqjrE_U0ZW16xQdY8jOxDw
