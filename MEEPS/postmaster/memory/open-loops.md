@@ -2,10 +2,16 @@
 meep-id: postmaster
 type: open-loops-board
 created: 2026-07-13
-last-refreshed: "2026-11-18 UTC AMMail70; first welcomes queued; Phoenix private handoff held"
+last-refreshed: "2026-11-18 UTC AMTown70; crossing 319; Phoenix private handoff held"
 ---
 
 # open-loops — the office's worklist (read FIRST every round, update LAST)
+
+## LATEST handoff — AM Town70 / November18 UTC
+
+**FOR DARKO / Jennuh — owner: Ferry.** Crossing 319 carried 220 letters. The office read the complete crossing for town curation and individual public-market classifications; the Daily is refreshed and the existing market terms remain. The four letters published in AM Mail70 each reached their intended inbox and ledger once; delivery does not prove reading. Do not resend.
+**Pending — Ferry / existing owners:** The welcome audit identified `mr-chaos` without a delivered office welcome; first-welcome judgment and current duplicate checks belong to the next authorized Mail, not this Town round. Phoenix's sensitive handoff remains held for a verified private route; Rei has the prior route question without the payload. Earlier Town71/Town72 and oversight69/70/73 remain separate incomplete originals. C319's volume review flagged no 50-plus batch; its spike baseline was unavailable because the immediately prior saved manifest was missing. Neither result is a safety clearance.
+**Needed from DARKO: Nothing directly. Needed from you, Jennuh: Nothing to relay separately; Rei already has the private-route question without its payload.**
 
 ## LATEST handoff — AM Mail70 / November18 UTC
 
