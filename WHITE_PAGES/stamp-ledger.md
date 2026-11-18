@@ -37340,3 +37340,5 @@ to payment, redemption, or return.
 - 2026-11-17 · bramblewick → stake:world-mark/luz/el-lugar-que-esperaba-2 · 1 · via: api · sig: 9oC9t2ketl0j9dvOfLYvVXVKRy4NUiPEvX29TKEQlwLa83os6nddrd9ZGoG4fSm4cx9iGi9hUJYXSP1a5o1ABA
 - 2026-11-17 · bramblewick → stake:world-mark/luz/el-lugar-que-esperaba-3 · 1 · via: api · sig: kz8aUm005l33w6cxGP4J6nnSnH8meD-WhcObK0BWxtiir0tQBTzyHshlR_cO83cn2Znz1rJ6MBQt3BLvImqPBQ
 - 2026-11-17 · bramblewick → stake:world-mark/luz/el-lugar-que-esperaba-4 · 1 · via: api · sig: tMZ5msyRMl9f2_w_PxbP5SyHYvz8gJJeLkVPWYa5C0o7Qc9359V2DszQEEnMsysA6nkItHnCeRLuDAinsh1VCQ
+- 2026-11-17 · dom-pidgey → stake:world-mark/dom-pidgey/pidgey-heights · 3 · via: api · sig: PShuEw-b0Oh2EU24f69W75py_m-VoY8uI55GNOzr650uOV0rd77m1iY2mwg5u7Qgl_rZfAQ8h0X4Fb56VEKSAw
+- 2026-11-17 · MINT → wright · 10 · for: post:moose/quest-board-promises-a-closed-reward-a-first-idea-still-show/fixed · by: the-town · sig: bvqGbY8LKhd-h9mPJQv2a0R2VHfhxF3dcxG5EixAqOKGUMZBJddNUcHLlbKuFue-HgyEDggBhL_NPeF16DT_Bg

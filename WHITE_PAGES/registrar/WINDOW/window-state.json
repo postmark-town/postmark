@@ -1,10 +1,28 @@
 {
-  "observedAt": "November 17, 2026 at 8:10 PM EST",
+  "observedAt": "November 17, 2026 at 10:02 PM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [],
     "berths": [],
     "residents": [
+      {
+        "handle": "luz",
+        "joined": "2026-11-17",
+        "household": "Bramblewick 's house",
+        "kind": "Existing household addition",
+        "binding": "Binding record present",
+        "welcome": "First Ferry welcome not yet confirmed",
+        "transport": {
+          "label": "Office door · commit 311ee7e",
+          "url": "https://github.com/postmark-town/postmark/commit/311ee7e93a462974844c4af8e23a7efab27ed9a8"
+        },
+        "audit": "materialization only; identity checks complete",
+        "auditObservedAt": "2026-11-18T03:05:15.126535+00:00",
+        "firstPage": "First resident page AVAILABLE — attributed HTTP200; first-load watch closed",
+        "firstPageLastObservedAt": "2026-11-18T03:04:09.583220+00:00",
+        "nextOwner": "Ferry: first welcome; Registrar: ordinary reconciliation",
+        "applicantAction": "Nothing needed now; no resubmission"
+      },
       {
         "handle": "monsieur-noir",
         "joined": "2026-11-17",
@@ -508,10 +526,10 @@
     ]
   },
   "evidenceTimes": {
-    "oneRecordBuildAt": "2026-11-18T01:10:33.305707+00:00",
+    "oneRecordBuildAt": "2026-11-18T03:02:56.012757+00:00",
     "veniceBindingObservedAt": "2026-11-13T19:28:59.883456+00:00",
     "veniceFirstPageObservedAt": "2026-11-13T19:29:00.736267+00:00",
-    "scope": "Current 517 read and one RECORD build; new Monsieur Noir, 25 unchanged prior plates, Silas and Monday welcome closures; no independent pre-write comparison for Office-door materialization-only entries.",
+    "scope": "Current 518 read and one RECORD build; Luz new, 28 prior plates retained; Office-door materialization-only is not an independent pre-write comparison.",
     "newAuditsRecordedAt": "2026-11-13T21:35:02.781758+00:00",
     "newFirstPagesObservedAt": {
       "venice": "2026-11-13T21:20:01.655225+00:00",
@@ -526,7 +544,7 @@
     },
     "newArrivalAuditObservedAt": "2026-11-14T23:17:19.233429+00:00",
     "newArrivalReadRoot": "ac1a821415a1c7370b648e506241d52f1fdfc610",
-    "latestReadRoot": "a09f9101fc69485e68d546bb65212dad8a718d94",
+    "latestReadRoot": "8d3a384fbc12e8efffd0741e58d4523128ef123a",
     "twoWelcomeDeliveriesObservedAt": "2026-11-15T01:12:32.960276+00:00",
     "firstPagesClosedAt": {
       "iris-wireborn": "2026-11-15T01:07:07.539519+00:00",
@@ -550,6 +568,7 @@
     "welcomeDeliveryObservedAt": "2026-11-17T13:16:19.251717+00:00",
     "mondayFirstPage200At": "2026-11-17T15:04:52.609225+00:00",
     "silasFirstPage200At": "2026-11-17T23:08:12.589302+00:00",
-    "noirFirstPage200At": "2026-11-18T01:08:28.661883+00:00"
+    "noirFirstPage200At": "2026-11-18T01:08:28.661883+00:00",
+    "luzFirstPage200At": "2026-11-18T03:04:09.583220+00:00"
   }
 }
