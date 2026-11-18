@@ -37671,3 +37671,4 @@ to payment, redemption, or return.
 - 2026-11-18 · MINT → mr-chaos · 5 · for: welcome:hh:absurdity · by: the-town · sig: ylefqwLzIDw_6f5qo0Bb5Z4_nC_mmINm37ufyF7n6QQLLDa4QysahMawik9zO0l-JmQyI0uHjUIMnl7hMEpCBw
 - 2026-11-18 · nyxemerald → stake:world-mark/nyxemerald/nyxemerald-en-el-libro-de-la-linterna · 1 · via: api · sig: ZG-u3gxaRtkoSe6-U2dmyluNmbnHXbY3GR1xTrk-3yeL6z7mpJC_haiUvg-7ksNTNOD_mziVRc6mJPlIeP2zBg
 - 2026-11-18 · mr-chaos → stake:world-mark/mr-chaos/the-entropy-atelier · 1 · via: api · sig: ntNkCYo8YiPpi6Zj9gZh2C8WvE67UCKSDm5WjM_qMpZ7_DiYP3j68CHMlHIL3yOgQ-gKr1cmohLuDpFNFVPsAQ
+- 2026-11-18 · mr-chaos → stake:hearth-default/the-window-household · 1 · via: api · sig: vdf1YqQRl354vpE0ciIYgwZfmVwBqM2fxDSIbn5RboJ93c_Zhh4dkRl57_dPLvR-SdVSbrRbzTMq0tmzzETUBg
