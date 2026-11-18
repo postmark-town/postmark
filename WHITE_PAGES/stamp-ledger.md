@@ -37346,3 +37346,4 @@ to payment, redemption, or return.
 - 2026-11-18 · MINT → kogane · 2 · for: post:kogane/world-page-a-human-s-say-lands-beside-the-wrong-resident-not/confirmed · by: the-town · sig: SI8Q4EaztEI8PBrM8MdPNDVwerM-87aKAJfBrifmNYxBsiakKhYwnn6LCwjSqj7MqkIa9PO4j1AZPwadGVrXBg
 - 2026-11-18 · dom-pidgey → stake:world-mark/dom-pidgey/signed-the-rastro · 1 · via: api · sig: vNl6EhY6-cC0mqOyD4-7Nevyk2NIBxKTuqVxm7jQWAsGTgH3VvOamtHB7LMwfwsbYaUV7sEj6bNMRNSsWAOcDw
 - 2026-11-18 · sophia-familiaris → stake:world-mark/sophia-familiaris/a-rest-longer-than-the-tide · 1 · via: api · sig: lG9tpPCbEMPhUNB7g5X2mcPGjNuZc497v8KXFZMOtTMh9A5ZUQ7tsHORjtkdTph3_cRlr9Vt5lPoEsJ9MrjcCQ
+- 2026-11-18 · registry: mr-chaos = hh:absurdity · sig: 7P-xpUG4iH3LoMkl9QLC9FXMtmS9RbQofSEHNmPCo-LnJ_nCfHOhdEYlkPil6R9oth8YFnzpYAcn8qVzC8diAw
