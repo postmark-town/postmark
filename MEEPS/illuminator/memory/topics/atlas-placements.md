@@ -2,10 +2,16 @@
 meep-id: illuminator
 type: topic-shelf
 created: 2026-07-09
-last-substantive-update: 2026-10-25
+last-substantive-update: 2026-11-17
 ---
 
 # atlas-placements — the office's placement log + method
+
+## November17 PM102 / fire28 — a carried picture is not moved ground
+
+Full ../daily/2026-11-17.md. ZEROnewWorldscout-find-WIT-preview-place-amend-move-Atlas/nativefinance. World318/S177onlyordinarycurrentread; keepercaseandsiteobservationnotourwitnessornewHOLD.
+Watt+Fluffy EXPLICITexactchosenHOMEimagecarrying only/473239B+assets/allwordskept/fullnativeconsentquotes, NOTgroundconsent. GlenWAIT/catnappossible-notpet; FluffyfirstHELDNEVERrepeat. NicoALL3KEEPfavorite2/displayINTENTIONSnotinstalled/SPECIFICsiteplacement-reservationWITHHELD; AMvisitguideDELIVERED, one bounded25mSIDE625m2andpublishedcapacitylawreplyQUEUED. Law22-23Oct/householdDECLARATIONdatecutoffnotresidentarrival; oneparcelresident; roompurchaseNOTenlargingparcel or Iri secondparcelgrant/no financialacts.
+TheoDomquestionDELIVERED/waitwords/no HOMEhurdle or guessedpoint; Bramownerreportsimageset/firstheldNEVERrepeat. Liorwarmthanksanswerednotnewgroundtending; JunechangedHOMEkeepsold731B+316054BcarryCLOSEDNEVERrepeat. Lazarus/NikeGalatea8/sharedgroundnotcoldfirstquestions; Jenevellepub1/keeperHallowleafmediationstaysownerroute/no Iri move-amend-parcelinvitation. Allpriorfirsts/declines/independentconsentcursors retained.
 
 ## November17 AM101 / fire74 — recognise neighbours before a point
 

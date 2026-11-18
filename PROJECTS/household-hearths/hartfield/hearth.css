@@ -1,0 +1,156 @@
+/* Hartfield at dusk. The colours, sky, type and crest are lifted from the Hartfield window's own code,
+   so the two pages read as one house. Storm blue and rose gold; the crest is the window's, as a small image. */
+
+:root {
+  /* the window's palette, exactly */
+  --storm: #2E4A6B;
+  --storm-soft: #e3e9f0;
+  --rose: #b76e79;
+  --rose-light: #e8b4a6;
+  --rose-glow: #f6d2c4;
+  --stone: #f7f1ec;
+  --stone-deep: #eedfd8;
+  --paper: #fdfaf7;
+  --ink: #24303d;
+  --ink-soft: #5d6774;
+  --line: #e2c4bc;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  /* the town's own parts set their small labels in a typewriter face and their names in the town's serif:
+     inside Hartfield both are the window's serif, so every word on the page is in one hand */
+  --pm-mono: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --pm-serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+
+  /* the town's own parts wear the same colours */
+  --hx-ink: #24303d;
+  --hx-warm: #2E4A6B;
+  --hx-accent: #b76e79;
+  --hx-glass: #fdfaf7;
+  --hx-hair: #e2c4bc;
+  --hx-coral: #a8505c;
+  --hx-ok: #4f7a5c;
+  --hx-paper: #2E4A6B;
+  --hx-paper-ink: #fbf6ec;
+  --hx-radius: 14px;
+
+  /* the window's dusk: night at the top, fading through lavender and rose into warm stone */
+  background-color: #f7f1ec;
+  background-image: linear-gradient(180deg, #1f3352 0, #2E4A6B 110px, #5b6587 220px, #b9a0ab 320px, rgba(247, 241, 236, 0) 440px), radial-gradient(ellipse at top, rgba(232, 180, 166, 0.35), transparent 60%);
+  background-repeat: no-repeat;
+  color: #24303d;
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  font-size: 17px;
+  line-height: 1.6;
+  border-radius: 16px;
+  padding: 0 1.4em 1.8em;
+}
+
+a { color: var(--storm); }
+h1, h2, h3 { font-family: var(--serif); font-weight: 400; }
+
+.house { display: grid; gap: 1.3em; max-width: 1080px; margin: 0 auto; }
+
+/* ── the header, as the window draws it ─────────────────────────────── */
+.dusk { position: relative; text-align: center; padding: 2.2em 0 0.4em; }
+.dusk::before, .dusk::after { content: ""; position: absolute; top: 0; left: -1.4em; right: -1.4em; height: 190px; pointer-events: none; background-repeat: no-repeat; }
+.dusk::before { background-image: radial-gradient(1.2px 1.2px at 6% 14px, #fff, transparent), radial-gradient(1.2px 1.2px at 14% 62px, #f6e7d8, transparent), radial-gradient(1.2px 1.2px at 23% 22px, #fff, transparent), radial-gradient(1.2px 1.2px at 31% 88px, #f0d6cf, transparent), radial-gradient(1.2px 1.2px at 38% 10px, #fff, transparent), radial-gradient(1.2px 1.2px at 63% 76px, #fff, transparent); }
+.dusk::after { background-image: radial-gradient(1.2px 1.2px at 71% 32px, #f0d6cf, transparent), radial-gradient(1.2px 1.2px at 79% 6px, #fff, transparent), radial-gradient(1.2px 1.2px at 86% 58px, #fff, transparent), radial-gradient(1.2px 1.2px at 93% 26px, #f6e7d8, transparent), radial-gradient(1.8px 1.8px at 19% 40px, #fff, transparent), radial-gradient(1.8px 1.8px at 83% 84px, #fff, transparent); animation: twinkle 5s infinite ease-in-out; }
+@keyframes twinkle { 0%, 100% { opacity: 1; } 50% { opacity: 0.55; } }
+
+.moonstar { display: block; margin: 4px auto 2px; width: 58px; height: 58px; filter: drop-shadow(0 0 8px rgba(232, 180, 166, 0.55)); position: relative; }
+/* the house's own name, drawn by the town (so every house sees its own), dressed as the window's title */
+.dusk hearth-house { position: relative; padding: 0; }
+.dusk hearth-house p { margin: 0; }
+.dusk hearth-house p:first-of-type { font-style: normal; font-size: 13px; letter-spacing: 0.32em; text-transform: uppercase; color: #f0d6cf; }
+.dusk hearth-house p:first-of-type + p { margin: 6px 0 0; font-family: var(--serif); font-size: 46px; font-weight: 400; line-height: 1.25; letter-spacing: 0.02em; color: #fbf6ec; text-shadow: 0 2px 14px rgba(20, 30, 50, 0.35); }
+.dusk hearth-house p:first-of-type + p::after { content: ""; display: block; width: 120px; height: 2px; margin: 12px auto 0; border-radius: 2px; background: linear-gradient(90deg, rgba(246, 210, 196, 0), #f6d2c4 30%, #e3a596 50%, #f6d2c4 70%, rgba(246, 210, 196, 0)); }
+.dusk hearth-house p:first-of-type + p + p { display: none; }
+/* the town's note to visitors ("You are reading … public record", with its sign-in) stays, small and quiet, under the welcome */
+.dusk hearth-house p:last-of-type { max-width: 34em; margin: 0.9em auto 0; background: rgba(31, 51, 82, 0.35); border: 1px solid rgba(246, 210, 196, 0.25); border-radius: 12px; padding: 0.5em 0.9em; font-size: 13px; line-height: 1.5; color: #efe4e6; }
+.dusk hearth-house p:last-of-type b { color: #fbf6ec; font-weight: 400; }
+.dusk hearth-house a { color: #f6d2c4; }
+.tag { position: relative; margin: 8px 0 0; font-style: italic; color: #efe4e6; }
+.greek { color: #f6d2c4; font-style: italic; }
+
+/* ── the tabs: the window's nav, rose line above and below, the chosen one a storm-blue pill ── */
+.rooms { min-width: 0; }
+.rooms > div { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin: 0 0 1em; padding: 10px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: none; }
+.rooms > div > * { font-family: var(--serif); font-size: 15px; background: none; border: 0; border-radius: 999px; color: var(--ink-soft); padding: 6px 14px; cursor: pointer; }
+.rooms > div > *:hover { color: var(--rose); }
+.rooms > div > [aria-selected="true"] { background: var(--storm); color: #fff; }
+.rooms > div > [aria-selected="true"]:hover { color: #fff; }
+.room { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 1.2em 1.4em 1.4em; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset, 0 6px 18px -12px rgba(74, 52, 38, 0.35); min-width: 0; }
+.roomhead { margin: 0; font-size: 26px; color: var(--storm); }
+.roomsub { margin: 2px 0 0.8em; font-style: italic; color: var(--ink-soft); }
+.room section { background: none; border: 0; padding: 0; box-shadow: none; }
+/* the filters in "Since you last looked", dressed like the tab bar (hearth.js puts .chip and .chip-on on the site's buttons) */
+.chip { font-family: var(--serif); font-size: 14px; letter-spacing: 0.02em; text-transform: none; padding: 4px 14px; border-radius: 999px; border: 1px solid var(--line); background: transparent; color: var(--ink-soft); cursor: pointer; }
+.chip:hover { color: var(--rose); border-color: var(--rose-light); }
+.chip.chip-on { background: var(--storm); border-color: var(--storm); color: #fff; }
+.chip.chip-on:hover { color: #fff; }
+.room hearth-stamps-chart { margin-top: 1.4em; padding-top: 1.1em; border-top: 1px dashed var(--line); }
+
+/* the star map's panel: a patch of the window's night, rose stars on storm blue */
+.room hearth-pane { display: block; border-radius: 12px; padding: 0.6em 0.4em; background-color: #22385a; background-image: radial-gradient(1px 1px at 20% 30%, rgba(255, 255, 255, 0.75), transparent), radial-gradient(1.3px 1.3px at 70% 65%, rgba(246, 210, 196, 0.85), transparent), radial-gradient(ellipse at 50% 45%, #34537a, #1f3352 75%); background-size: 140px 120px, 190px 160px, 100% 100%; }
+.ties { list-style: none; margin: 1em 0 0; padding: 0; display: grid; gap: 0.2em 1.6em; grid-template-columns: repeat(auto-fill, minmax(17em, 1fr)); }
+.tie { padding: 0.45em 0; border-bottom: 1px dashed var(--line); }
+.tie::before { content: "✦"; color: var(--rose); margin-right: 0.5em; }
+.tie a { text-decoration: none; color: var(--storm); }
+.tie a:hover { color: var(--rose); }
+.count { color: var(--ink-soft); font-size: 14px; }
+.said { display: block; margin: 0.2em 0 0 1.4em; font-style: italic; font-size: 15px; color: var(--ink-soft); }
+.quiet { margin: 0.6em 0; font-style: italic; text-align: center; color: #f0d6cf; }
+
+/* ── who's home, with the window beside them ───────────────────────── */
+.home { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.3em; align-items: stretch; }
+hearth-residents { min-width: 0; }
+hearth-residents { display: flex; flex-direction: column; }
+hearth-residents > div { grid-template-columns: minmax(0, 1fr); flex: 1 1 auto; }
+hearth-residents article { height: 100%; box-sizing: border-box; }
+hearth-residents article { background: var(--paper); border: 1px solid var(--line); border-left: 4px solid var(--storm); border-radius: 14px; box-shadow: 0 6px 18px -12px rgba(74, 52, 38, 0.35); }
+
+.pane-box { display: flex; flex-direction: column; min-width: 0; background: var(--paper); border: 1px solid var(--rose); border-radius: 14px; padding: 1em 1.1em 0.9em; box-shadow: 0 6px 18px -12px rgba(74, 52, 38, 0.35); }
+.boxhead { margin: 0; font-size: 22px; color: var(--storm); }
+.boxsub { margin: 0 0 0.6em; font-style: italic; font-size: 15px; color: var(--ink-soft); }
+.pane-box hearth-windows h2, .pane-box hearth-windows [data-hearth-part="caption"] { display: none; }
+.pane-box hearth-windows figure > *:first-child { aspect-ratio: auto; height: 470px; border-color: var(--line); border-radius: 12px; background: #1f3352; }
+.room hearth-map h2, .room hearth-map [data-hearth-part="caption"] { display: none; }
+/* where they stand: storm-blue tiles, like the clocks and Needs you, cream name, rose place */
+.room hearth-map { --hx-glass: #2E4A6B; --hx-hair: #2E4A6B; --hx-warm: #fbf6ec; --hx-ink: #efe4e6; --hx-accent: #f6d2c4; }
+.room hearth-map a { color: #fbf6ec; font-size: 1.15rem; text-decoration: none; border-bottom-color: var(--rose-light); }
+.room hearth-map div div { color: #efe4e6; border-radius: 14px; padding: 0.8em 1em; box-shadow: 0 8px 20px -12px rgba(20, 30, 50, 0.6); }
+
+/* the next crossing and the keeper's settlement: two small paper cards under the name, like the window's where-line */
+hearth-countdown { justify-content: center; gap: 0.8em; margin-top: -0.2em; }
+hearth-countdown { --hx-glass: #2E4A6B; --hx-hair: #2E4A6B; --hx-warm: #fbf6ec; --hx-ink: #efe4e6; --hx-accent: #f6d2c4; }
+hearth-countdown div { color: #efe4e6; text-align: center; border-radius: 14px; box-shadow: 0 8px 20px -12px rgba(20, 30, 50, 0.6); min-width: 15em; }
+
+/* ── coming up, the mail, and what needs us ────────────────────────── */
+hearth-mail { padding: 1em 1.2em; }
+hearth-coming-up, hearth-mail { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 6px 18px -12px rgba(74, 52, 38, 0.35); }
+.ours { display: grid; gap: 1.3em; }
+/* Needs you: a storm-blue note, the window's night, in our cream and rose instead of the town's green */
+hearth-needs-you { border-radius: 14px; box-shadow: 0 6px 18px -12px rgba(74, 52, 38, 0.35); border: 1px solid var(--storm); }
+hearth-needs-you h2, hearth-needs-you p { color: #fbf6ec; }
+hearth-needs-you li { border-top-color: rgba(246, 210, 196, 0.3); }
+hearth-needs-you li span { color: var(--rose-light); }
+hearth-needs-you a { color: var(--rose-glow); }
+hearth-needs-you [data-hearth-part="caption"] { color: #f0d6cf; }
+hearth-needs-you li:only-child p { font-style: italic; color: var(--rose-glow); }
+
+/* the town's numbers are amber for its night sky; on our paper they are storm blue */
+hearth-stamps dl dd { color: var(--storm); }
+hearth-stamps-chart i { background: linear-gradient(90deg, var(--rose-light), var(--rose)); }
+
+h2 { color: var(--storm); }
+[data-hearth-part="caption"] { font-style: italic; color: var(--ink-soft); letter-spacing: 0; text-transform: none; }
+
+.foot { margin: 0.6em 0 0; text-align: center; font-size: 13px; color: var(--ink-soft); letter-spacing: 0.04em; }
+
+@media (max-width: 760px) {
+  :root { padding: 0 0.8em 1.3em; border-radius: 10px; }
+  .home { grid-template-columns: minmax(0, 1fr); }
+  .dusk hearth-house p:first-of-type + p { font-size: 38px; }
+  .pane-box hearth-windows figure > *:first-child { height: 420px; }
+  hearth-countdown div { min-width: 0; }
+  .room { padding: 1em 0.9em 1.1em; }
+}
