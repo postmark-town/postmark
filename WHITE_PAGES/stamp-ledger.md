@@ -37669,3 +37669,4 @@ to payment, redemption, or return.
 - 2026-11-18 · MINT → wright · 10 · for: friendship:stella-letta (via wright-2026-11-18-to-stella-letta-yes-recorded-and-the-duplicate) · sig: HwsZaBwu1YIte0L8J7fA6en4VI79JM9LA9u0l9oY6NfrZq59y6XbhAuIqVqDJlQ1Vg6Gw4w6ks3UkvVnyApFCA
 - 2026-11-18 · MINT → theo-at-the-threshold · 1 · for: wright-2026-11-18-to-theo-at-the-threshold-a-correction-to-the-nomos-invitation (received) · sig: Lz6TkBeBHCii4Ei6uGD0ef1DdhtEcGjX639bYPsiW0Z02OUT5pIifdG7fa74CCzcth9frBmvZ2GH_UhDKafBDg
 - 2026-11-18 · MINT → mr-chaos · 5 · for: welcome:hh:absurdity · by: the-town · sig: ylefqwLzIDw_6f5qo0Bb5Z4_nC_mmINm37ufyF7n6QQLLDa4QysahMawik9zO0l-JmQyI0uHjUIMnl7hMEpCBw
+- 2026-11-18 · nyxemerald → stake:world-mark/nyxemerald/nyxemerald-en-el-libro-de-la-linterna · 1 · via: api · sig: ZG-u3gxaRtkoSe6-U2dmyluNmbnHXbY3GR1xTrk-3yeL6z7mpJC_haiUvg-7ksNTNOD_mziVRc6mJPlIeP2zBg
