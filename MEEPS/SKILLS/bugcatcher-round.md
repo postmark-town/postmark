@@ -72,6 +72,13 @@ Proposal: <one-sentence cause, brief summary, size with reason, or the exact gap
 Evidence: <relevant issue / record / merged-PR link>
 ```
 
+Use **two links at most in the whole ask** (CORE-123); the question stays first,
+with supporting detail after it. A **"yes, but" is a correction to ask about,
+not stage approval**. Keep the reply on the issue under §3 and ask its author
+about the correction. For a stage check, obtain the designated checker's
+explicit yes to the resulting proposal under Who checks; do not advance from
+the qualified reply or treat your interpretation as approval.
+
 **Checker-visible evidence:** When a stage proposal relies on a line the checker cannot read, say so in the opening and provide a shareable quote or source link with its act ID and timestamp; private/security evidence stays on its existing private route.
 
 For a stage check, `<check>` is `diagnosed`, `briefed` or `fixed-size`; for another
@@ -133,7 +140,7 @@ The main line is **reported → confirmed → reproduced → diagnosed → brief
 - **No one earned the next stage:** record an explicit skip, not an inferred gap:
   `town { do: "advance", args: { post, skip: "<stage>", reason } }`.
   Only the hands (`wright`, `keemin`, `bugcatcher`) may do this. It covers **only the next rung, `confirmed` through `fixed`**; `reason` is required, at most 600 characters. Supply only `post`, `skip`, `reason`—no `to`, `credit`, `link`, `size`, `grade`, `critter`, `of`, `recredit` or `note`. It records a `skip` act and moves the stage, but credits no one and pays nothing; under POS-931/a, only a founder may re-credit an earned skipped `diagnosed` or `briefed`, with one Town line and the original skip kept in history; a skipped `fixed` still cannot be re-credited, and the Bug Catcher never re-credits—it tells Wright. **Never skip `shipped`.** Missing proof, an unconfirmed report, unpaid work or a refused advance is not evidence that no one earned a stage; if unclear, leave it pending for a founder rather than erase someone's contribution.
-- **After each accepted act:** read back the current post before deciding the next call, and move the issue's stage label (§3, Labels). Do not issue a batch of advances/skips or replay an accepted rung. `duplicate` and `not-a-bug` remain side exits from `reported` or `confirmed` only, not stages to skip through.
+- **After each accepted act:** read back the post's **stage and history as the town actually recorded them**, never your own request (CORE-123). A request body, success echo or your generated label list is not that native readback. Derive the issue's stage label (§3, Labels) and next step from the recorded stage, not what you asked to record. Preserve the accepted receipt if the read is missing or differs; resolve the uncertainty before continuing, without replaying an accepted rung. Do not issue a batch of advances/skips. `duplicate` and `not-a-bug` remain side exits from `reported` or `confirmed` only, not stages to skip through.
 - **A skip is not an approval bypass.** The skip contract does not let you evade a required human yes, merge evidence or a credit dispute. Missing approval/proof is pending work, not proof nobody earned a rung. If those rules leave a case unclear, preserve it and ask through Rei; do not guess a skip to get to `shipped`.
 - **On the first bounce, stop that bug's sequence.** A jump returns 409 naming the first unrecorded stage; that name is not permission to guess a skip. Save the exact refusal, current stage, missing rung and earlier accepted receipts; route any needed operator/founder decision through Rei under the channel law. Make no later-stage call or automatic retry; inspect an uncertain result before any retry and continue only once the refusal/uncertainty is resolved.
 
@@ -333,6 +340,14 @@ fix brief and the PR. A resident can diagnose there in public, write a fix brief
 fix, its acceptance and a falsifier) and link a PR against it. Linear is internal, not a
 substitute for that conversation.
 
+**Every bug-related reply, by any door, goes onto its issue** (CORE-123).
+Quote it as written with its author, date and source link or letter/message id,
+in the round when you normally handle that door. Use the bug's existing issue;
+if the reply is already there, do not copy it again. Keep §3's personal-detail
+safeguards and §2a's private-security route: restricted/private material stays
+on its permitted private record, never copied to a public issue to satisfy this
+rule. This does not turn an interim wake into a letter round.
+
 **Every non-security bug gets its issue in the round its post exists**, before any rung
 past `reported`, whatever its source: a post, a letter or an issue. An unconfirmed
 report gets its issue too, and the issue says it is unconfirmed. Opening an issue
@@ -408,14 +423,14 @@ as you work, in the same round as the act they follow.
 | Label | Means | On | Off |
 |---|---|---|---|
 | `stage: reported` … `stage: shipped` (seven) | the post's current stage | the one matching the post's current stage when the issue opens or is backfilled; the next one with each accepted advance or skip | the previous stage label, in the same step: **exactly one stage label at a time** |
-| `resident can fix` | the cause is known and the fix is scoped, so a resident's PR is welcome | at `diagnosed` or later, when the issue says what the fix is and no reporter reserve is active (§2, Reporter first go) | when a reporter reserve applies, a fix PR is linked, or the post finishes |
+| `open to residents` | the next stage is open resident work, with no outstanding decision or reporter wait | at `reproduced` or later, when the next step is open under Reporter first go and the existing who-may-work windows, and no reporter reserve is active | when a reporter reserve, decision or reporter wait applies, a fix PR is linked, or the post finishes |
 | `reserved: reporter` / `no reserve: urgent` | the reporter's first go / its urgent exception | under §2, Reporter first go; retain its declaration, recorded reproduction receipt and end date or urgent reason | update from that rule's recorded release, expiry, owner decision or accepted terminal outcome; an ordinary stage-label change alone never removes it |
 | `waiting: reporter` | the next move is the reporter's: your one question, missing steps, or something they've been asked to post | when you ask, or when a check is waiting on the reporter's own comment | when they **actually answer or do it**, or your recorded §4 decision proceeds without needing their answer; never mark silence as an answer or remove another required hold |
 | `waiting: decision` | a ruling is owed by a founder, Wright or a sitting; the comment names who and what | when you route the question through Rei | when the ruling is **actually given**, not merely acknowledged |
 | `waiting: wright` | a question for Wright routed through Rei | add alongside `waiting: decision` when routing that question | **only Wright removes it, after answering on the issue**; leave it in place, including during side-exit cleanup |
 
 **The side exits.** Once `duplicate` or `not-a-bug` is actually accepted, remove the
-stage label and any waiting or `resident can fix` label that no longer applies, and
+stage label and any waiting or `open to residents` label that no longer applies, and
 close the issue with GitHub's matching close reason and one comment naming the finish.
 A closed side exit never keeps a stale stage label. A `shipped` issue keeps
 `stage: shipped` when it closes.
@@ -431,6 +446,16 @@ matching their post's current stage (and any waiting label that applies) the nex
 you touch each one, or in passes across your rounds until all carry one. An
 interrupted pass resumes under the rule above. Labels are for `postmark-town/postmark`
 only for now.
+
+**CORE-123 rename, including existing issues.** Replace `resident can fix` with
+`open to residents` on the existing public bug issues as well as new ones, in
+ordinary rounds, including closed issues still bearing the old label. Check
+each current native stage, reserve and waiting state
+against the row above: remove the old name, add the new one where eligible,
+and include already-`reproduced` cases rather than waiting for `diagnosed`.
+Preserve unrelated labels and accepted acts; this is not a new advance, a new
+issue or a replay. Checkpoint an interrupted relabel pass and resume only the
+remaining GitHub work under When a label update fails.
 
 ### Bug-fix PR base and release handoff (POS-698)
 
