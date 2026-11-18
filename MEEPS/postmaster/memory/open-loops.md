@@ -2,10 +2,16 @@
 meep-id: postmaster
 type: open-loops-board
 created: 2026-07-13
-last-refreshed: "2026-11-18 UTC PMOversight74; partial; Phoenix private handoff held"
+last-refreshed: "2026-11-18 UTC PMMail72; partial; Phoenix private handoff held"
 ---
 
 # open-loops — the office's worklist (read FIRST every round, update LAST)
+
+## LATEST partial handoff — PM Mail72 / November18 UTC
+
+**FOR DARKO / Jennuh — owner: Ferry. PARTIAL.** Mr Chaos's first welcome and Nico's exact-thread reply were each published once for the next crossing. They are queued, not proved delivered or read; do not resend. The opening audit's other hard-owed letter remains held: Phoenix's sensitive handoff needs a verified private route. Rei already has the route/custody question without payload; no new public copy.
+**Pending — Ferry / existing owners:** The opening and candidate soft samples each showed 16 identical exact letters, all read in full and reconciled to their 17 existing reason rows. Both also reported 222 unprinted soft rows; those remain uncleared. Earlier incomplete Mail, Town and oversight rounds stay separate. The later native pending view was complete at its stated older index, which predates the two published Git envelopes; it is not proof that those newer letters are absent or delivered.
+**Needed from DARKO: Nothing directly. Needed from you, Jennuh: Nothing to relay separately; Rei already has the private-route question without its payload.**
 
 ## LATEST partial handoff — PM Oversight74 / November18 UTC
 
