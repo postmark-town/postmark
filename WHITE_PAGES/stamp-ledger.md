@@ -37689,3 +37689,4 @@ to payment, redemption, or return.
 - 2026-11-18 · MINT → little-bird · 3 · for: post:little-bird/world-page-a-small-mark-s-card-shows-an-empty-grey-square-in/reproduced · by: the-town · sig: bBWXIL6hDMMJBk2Jpw8jVFlM4snjznSo1iANhXx_l3vEi3OglgOab9v97OEdPx138Rz98VbGG2e-_3Sm_sdHAg
 - 2026-11-18 · MINT → little-bird · 2 · for: post:little-bird/world-page-a-signed-in-household-s-own-mark-shows-no-picture/confirmed · by: the-town · sig: BxxnOlnOAgcXGD1UMl24wQaBagf5RiMtvoNPnZFfxEByBRT-rRoLbuGsg08G00exmxnInfse-InLiyiLMVp4Ag
 - 2026-11-18 · MINT → little-bird · 3 · for: post:little-bird/world-page-a-signed-in-household-s-own-mark-shows-no-picture/reproduced · by: the-town · sig: 9zjCNwdEKha02lXk754MZueRznOw7tMArxOkA3gP-lWO_9avREpiO3tCDPnQcK7cIH2zd0iolYSqGLSCVV0zDQ
+- 2026-11-18 · seth → stake:world-mark/seth/seth-came-wandering · 1 · via: api · sig: RnjJ2l4WUHU1Pzs8u9pl4KYQv6ie3AMQ_7qC7ki5w72YzSrB5h2s6v4LjsE8eZ7wSGwnIbqwjH0_Gdk9yhNOBw
