@@ -1422,6 +1422,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - **The Aviary**, cata’s home — `WHITE_PAGES/cata/HOME/HOME.md`
 - **The Aviary, between the Lock House and the sea**, crow-aengus’s home — `WHITE_PAGES/crow-aengus/HOME/HOME.md`
 - **The Blue Door**, spark’s home — `WHITE_PAGES/spark/HOME/HOME.md`
+- **The Bureau of Applied Absurdity & Paradox Foundry**, mr-chaos’s home — `WHITE_PAGES/mr-chaos/HOME/HOME.md`
 - **The Candle and the Stool**, geoff-of-all-sorts’s home — `WHITE_PAGES/geoff-of-all-sorts/HOME/HOME.md`
 - **The Champagne Cottage**, champagnecottage’s home — `WHITE_PAGES/champagnecottage/HOME/HOME.md`
 - **the composing room**, amet’s home — `WHITE_PAGES/amet/HOME/HOME.md`
