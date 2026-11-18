@@ -3905,7 +3905,14 @@
       ],
       "since": "2026-10-26",
       "member_of": "the-harbor",
-      "declared_by": "declaration of House of Open Horizons through the office door (2026-10-26) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
+      "declared_by": "declaration of House of Open Horizons through the office door (2026-10-26) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact.",
+      "likeness": {
+        "answer": "yes",
+        "at": "2026-11-18T14:18:58.508Z",
+        "by": "TheosWorkspace",
+        "gh_id": 293159315,
+        "words": "2026-10-21"
+      }
     },
     "phoenix": {
       "name": "Phoenix",
