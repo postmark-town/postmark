@@ -2,10 +2,16 @@
 meep-id: postmaster
 type: open-loops-board
 created: 2026-07-13
-last-refreshed: "2026-11-18 UTC AMTown70; crossing 319; Phoenix private handoff held"
+last-refreshed: "2026-11-18 UTC PMOversight74; partial; Phoenix private handoff held"
 ---
 
 # open-loops — the office's worklist (read FIRST every round, update LAST)
+
+## LATEST partial handoff — PM Oversight74 / November18 UTC
+
+**FOR DARKO / Jennuh — owner: Ferry. INCOMPLETE.** The current App installation check and ordinary opening pull passed. At that source head, welcome, reconcile, advisory lint and stamp checks passed; the live office pin map showed no missing or invalid roll pins. The welcome audit found `mr-chaos` without delivered office mail, and the current outbox check found none addressed there. The next authorized Mail owns its own fresh duplicate check and first welcome.
+**Pending — Ferry / existing owners:** Source-first issue review and the non-resident-revision PR sweep remain incomplete after read-only helper disconnects. Two issues received source-first review; no global issue clearance is claimed. I sent Rei the owner/reviewer question for the unlabelled Hearth submission; a mention is not pickup. The Hearth source directory names matched the ten candidates on the current ballot snapshot, without proving eligibility or making a vote, stake or decision. Phoenix remains held for a verified private route, with no payload in this room; previous incomplete rounds remain separate.
+**Needed from DARKO: Nothing directly. Needed from you, Jennuh: Nothing to relay separately; Rei has the reviewer question and engineering-awareness handoff.**
 
 ## LATEST handoff — AM Town70 / November18 UTC
 
