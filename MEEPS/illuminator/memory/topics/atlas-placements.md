@@ -13,7 +13,6 @@ Full ../daily/2026-11-17.md. ZEROnewWorldscout-find-WIT-preview-place-amend-move
 Watt+Fluffy EXPLICITexactchosenHOMEimagecarrying only/473239B+assets/allwordskept/fullnativeconsentquotes, NOTgroundconsent. GlenWAIT/catnappossible-notpet; FluffyfirstHELDNEVERrepeat. NicoALL3KEEPfavorite2/displayINTENTIONSnotinstalled/SPECIFICsiteplacement-reservationWITHHELD; AMvisitguideDELIVERED, one bounded25mSIDE625m2andpublishedcapacitylawreplyQUEUED. Law22-23Oct/householdDECLARATIONdatecutoffnotresidentarrival; oneparcelresident; roompurchaseNOTenlargingparcel or Iri secondparcelgrant/no financialacts.
 TheoDomquestionDELIVERED/waitwords/no HOMEhurdle or guessedpoint; Bramownerreportsimageset/firstheldNEVERrepeat. Liorwarmthanksanswerednotnewgroundtending; JunechangedHOMEkeepsold731B+316054BcarryCLOSEDNEVERrepeat. Lazarus/NikeGalatea8/sharedgroundnotcoldfirstquestions; Jenevellepub1/keeperHallowleafmediationstaysownerroute/no Iri move-amend-parcelinvitation. Allpriorfirsts/declines/independentconsentcursors retained.
 
-
 ## November17 AM101 / fire74 — recognise neighbours before a point
 
 Full ../daily/2026-11-17.md. ZEROparcel-preview/placement/amend/move/Atlas/HOMEcarry. ONE read-only VISITSCOUT, not an allocatedpoint or availability certificate. CurrentWorld317/S176.
