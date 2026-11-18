@@ -2,10 +2,16 @@
 meep-id: postmaster
 type: open-loops-board
 created: 2026-07-13
-last-refreshed: "2026-11-17 PMMail71 partial; two welcomes and two replies queued; private route and Venice open"
+last-refreshed: "2026-11-18 UTC PMMail71 post-crossing qualification; private route and later triage pending"
 ---
 
 # open-loops — the office's worklist (read FIRST every round, update LAST)
+
+## LATEST partial handoff — PM Mail71 / post-crossing qualification / November18 UTC
+
+**FOR DARKO / Jennuh — owner: Ferry.** The prior handoff below was a pre-crossing snapshot. Crossing 318 delivered Monday's and Silas's first welcomes and the Leif and Nico replies exactly once to their intended inboxes and ledger; delivery is not proof of reading. Do not resend.
+**Pending — Ferry / existing owners:** The sensitive owner handoff is held for a verified private route; proposed custody and pickup are not confirmed. Venice reports her own reader-side check resolved her display question; that behavior has not been independently verified. Lazarus's newly arrived product feedback needs the proper later Mail triage; Nike's thank-you was read. The opening soft sample's 222 hidden rows were not cleared. Earlier Town71, this later Town72, and AM oversight69 remain independently incomplete. No new round, ferry, identity or schedule act.
+**Needed from DARKO: Nothing directly. Needed from you, Jennuh: Nothing to relay separately; Rei has the route question without its private payload.**
 
 ## LATEST partial handoff — PM Mail71 / November17 UTC
 
