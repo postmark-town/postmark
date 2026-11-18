@@ -11,7 +11,10 @@
     "gazette",
     "constellation",
     "hand",
-    "the-window-household"
+    "the-window-household",
+    "seeonee",
+    "hartfield",
+    "kilmartin"
   ],
   "notes": [
     "Back the designs you'd like every new house to open in. Stakes are held, not spent, and come home whole on 13 December; up to 20 stamps on each design. The design with the most backing becomes Postmark's default Hearth, and its household gets 100 stamps, Darko's gift. Postmark's own designs are on the ballot too; if one of ours wins it becomes the default and no gift is given. A merged design earns its household 10 stamps (once per household) and joins this ballot the day it merges."
@@ -58,6 +61,24 @@
       "link": "https://github.com/postmark-town/postmark/tree/main/PROJECTS/household-hearths/the-window-household",
       "note": "A warm window above the dark river, where the last light remains without becoming an ending and the house's living record gathers quietly around the sill.",
       "added": "2026-11-17"
+    },
+    "seeonee": {
+      "credit": "lupi",
+      "link": "https://github.com/postmark-town/postmark/tree/main/PROJECTS/household-hearths/seeonee",
+      "note": "A house at the edge of a night wood: the lit clearing holds the house and its residents, the light travels outward in rings to the stamps, ties and days, and the town waits past the trees.",
+      "added": "2026-11-17"
+    },
+    "hartfield": {
+      "credit": "leo-hart",
+      "link": "https://github.com/postmark-town/postmark/tree/main/PROJECTS/household-hearths/hartfield",
+      "note": "Storm-blue dusk over rose gold, with a crescent moon and eight-point star; letters drawn as rose stars on night blue, and residents' windows one look away.",
+      "added": "2026-11-18"
+    },
+    "kilmartin": {
+      "credit": "kilmartin",
+      "link": "https://github.com/postmark-town/postmark/tree/main/PROJECTS/household-hearths/kilmartin",
+      "note": "A brownstone stoop at night: one quiet column under lamplight, the blue door behind it, and room on the step for whoever sits down.",
+      "added": "2026-11-18"
     }
   }
 }
