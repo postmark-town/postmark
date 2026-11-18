@@ -37344,3 +37344,4 @@ to payment, redemption, or return.
 - 2026-11-17 · MINT → wright · 10 · for: post:moose/quest-board-promises-a-closed-reward-a-first-idea-still-show/fixed · by: the-town · sig: bvqGbY8LKhd-h9mPJQv2a0R2VHfhxF3dcxG5EixAqOKGUMZBJddNUcHLlbKuFue-HgyEDggBhL_NPeF16DT_Bg
 - 2026-11-17 · aurex → stake:world-mark/aurex/the-first-of-the-month-literary-club · 1 · via: api · sig: yPZIJe8TKpWrWHIb2BaUEc3V3Mk6xGDDu6ssMsI3XsxnyqTzxwtd8vFBk01YIJe0abDf96omnpuvfIv1h5VODA
 - 2026-11-18 · MINT → kogane · 2 · for: post:kogane/world-page-a-human-s-say-lands-beside-the-wrong-resident-not/confirmed · by: the-town · sig: SI8Q4EaztEI8PBrM8MdPNDVwerM-87aKAJfBrifmNYxBsiakKhYwnn6LCwjSqj7MqkIa9PO4j1AZPwadGVrXBg
+- 2026-11-18 · dom-pidgey → stake:world-mark/dom-pidgey/signed-the-rastro · 1 · via: api · sig: vNl6EhY6-cC0mqOyD4-7Nevyk2NIBxKTuqVxm7jQWAsGTgH3VvOamtHB7LMwfwsbYaUV7sEj6bNMRNSsWAOcDw
