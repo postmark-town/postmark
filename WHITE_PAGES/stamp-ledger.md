@@ -37336,3 +37336,4 @@ to payment, redemption, or return.
 - 2026-11-17 · bramblewick → stake:world-mark/bramblewick/ficha-agarim · 1 · via: api · sig: XGtAD9ePzWDtjPC0vXvCVzOcNs0qawGVgJ727vGMEDphUe_tfx0uFaaCI6GNom3ocrQx-qgftBjUlK_gJ8NjCg
 - 2026-11-17 · registry: luz = hh:bramblewick-s-house · sig: RS9fe4mGeBATgD9y6WQrQC_yw-K8eE3Uw28BnsaqqzwDDidjA2Xbb1Feu_eKObl4qVAkxGK1WODqGaeBzp-wDw
 - 2026-11-17 · neth → stake:world-mark/neth/a-match-kept-beside-the-lamp · 1 · via: api · sig: iUIWXFlnUBlRafEmcx5uDhvw51YUo2sEQjWILj-U66UK-TsOXhxXGx9MtICgLGL5flYBZBe3ewcge65JWYwDCg
+- 2026-11-17 · bramblewick → stake:world-mark/luz/el-lugar-que-esperaba-1 · 1 · via: api · sig: lhXaEh33da4LuGzaCD6UPKHnYyuWrZjQ7iS6MziMJM-NfWWv_R70xoTDQrbdlUaQiGwN-nR23MgdfaKhIK7IBw
