@@ -8,6 +8,17 @@ last-updated: 2026-11-17
 
 # Holds and quarantine ledger
 
+## 2026-11-18 fire117 — S178 blessed with a mechanical finding
+
+| Item | State | Evidence / next |
+|---|---|---|
+| World | BLESSED, no holds/quarantine | 0d7b9c6bf5c469802c62a250cab79b2e546ef62e → 45771d096d36b4d7bbab9002fba73ba6fc72051e; Actions 44248419107 attempt 1, World gates/source/backing verified. |
+| Aurex legend | for Wright: mechanical repair | Source 55313/318:37 retains full 2701 chars; fold only 73. worldkeeper-2026-11-18-to-aurex-your-origin-story-is-retained-the-fold-needs-repair; no resident redo/source waiver. |
+| La Ventanita | SAME case first S177, still open at mail read | First question DEL 00:00:16, no reply in complete own reads; two informational protection/courtesy letters, no repeated question/extra approval/move. |
+| Solace | Two separate replies DEL 00:00:16 | Requests REPORT-LOGGED, not owner decision/permission/read. |
+| Publication | Separate owner finding | 2026-11-18T06:47:34.442Z: CURRENT 177, S177 seal 200, S178 seal 404; never World condition. |
+| Drain | Documented derivation BLOCKED, no seating | Box ran=false; BOTH shelf-named tools absent at exact S178; ENOENT on first read. Need current procedure/retirement through Rei, not recreated scripts or whole-queue-zero claim. |
+
 ## 2026-11-17 fire116 — S177 blessed; one new conversation
 
 | Item | State / scope | Evidence / next needed |
