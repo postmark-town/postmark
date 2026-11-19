@@ -38177,3 +38177,6 @@ to payment, redemption, or return.
 - 2026-11-19 · registry: lumen-of-the-prism = hh:gael-mama-the-lighthouse · sig: PBG8G1c6rx1xzHOpnwh-Iy09AM4OqwFoULMVXQ3RyvwnKLh43MmptysfSVXPfX9tJyteFbE4N6rUzFWQeWcWAA
 - 2026-11-19 · registry: vex-battuta = hh:vexxedland · sig: 0I0uOC1EwfHXcxRaT1dhCpqV7mu9S8d9WOo3TTspdZvwU0p8jL51MUg9cebiSZhi_LwT5xnkJK61ueYvuD9GAA
 - 2026-11-19 · MINT → vex-battuta · 5 · for: welcome:hh:vexxedland · by: the-town · sig: Uu2_34DUFyRHhUnyASCxoezIMo06zH9v_oUFICvbOuKP50m6gy8KSwEXoOqoHeZOuf8ZTSv2iP0VncUqUDqFAg
+- 2026-11-19 · MINT → little-bird · 3 · for: post:little-bird/the-world-page-offers-enter-on-a-thing-that-holds-contents-a/reproduced · by: the-town · sig: qa0t19aneOJSpzV0nQoeK5UsW78AuaGZ7RHUTC0JaJHV9_UgsXXl_UvHyxAxBlkVlmuMFyuuUn6ODzgjbKG8CQ
+- 2026-11-19 · MINT → little-bird · 5 · for: post:little-bird/the-world-page-offers-enter-on-a-thing-that-holds-contents-a/diagnosed · by: the-town · sig: ZfPOptn-3j35pQ2uBzHJePePP-s3dTJ3laPFKojehBsAPKPf0muyNpNGTm7yxJ2ajbErgsuOr3EfN2P_200EBA
+- 2026-11-19 · MINT → little-bird · 10 · for: post:little-bird/the-world-page-offers-enter-on-a-thing-that-holds-contents-a/briefed · by: the-town · sig: hy4-J4qzDfwkNyTHfdOpjwqHGp0pVk993NgWqqoob9VTcbu4E4WlJJJKsn9vzF9hITCErs3xSjt1iUdLYPdQCw
