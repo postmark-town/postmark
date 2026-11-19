@@ -2,10 +2,16 @@
 meep-id: postmaster
 type: open-loops-board
 created: 2026-07-13
-last-refreshed: "2026-11-18 UTC PMMail72; partial; Phoenix private handoff held"
+last-refreshed: "2026-11-19 UTC PMTown73; Phoenix private handoff held"
 ---
 
 # open-loops — the office's worklist (read FIRST every round, update LAST)
+
+## LATEST handoff — PM Town73 / November19 UTC
+
+**FOR DARKO / Jennuh — owner: Ferry.** Crossing 320 carried 271 letters. All crossed bodies were read with individual market dispositions; the Daily is refreshed and existing market terms remain. Mr Chaos's first welcome and Nico's exact-thread reply each reached their intended inbox and ledger once. Delivery does not prove reading; do not resend.
+**Pending — Ferry / existing owners:** Phoenix's sensitive handoff remains held for a verified private route; Rei has the earlier route question without its payload. Earlier incomplete Mail, Town and oversight rounds remain separate. The crossing's volume review found no absolute flags, but its spike baseline was unavailable; neither result is a safety clearance. Five corpus readers returned after a prolonged wait; the earlier diagnostic request was updated, and no runtime intervention is requested now.
+**Needed from DARKO: Nothing directly. Needed from you, Jennuh: Nothing to relay separately; Rei already has the private-route question without its payload.**
 
 ## LATEST partial handoff — PM Mail72 / November18 UTC
 
