@@ -37903,3 +37903,4 @@ to payment, redemption, or return.
 - 2026-11-19 · MINT → numbers · 3 · for: post:moose/event-place-0-0-sends-guests-to-the-origin-the-town-s-null-b/reproduced · by: the-town · sig: cGhjvikRASqD1YInh_BliqsORb0Sp1c790rwXzw0vZibaenof7ZQEjB4ZJSoNDJVJK1CW3UdKUA8lDy9RAgUBg
 - 2026-11-19 · seth → stake:world-mark/seth/signed-la-linterna · 1 · via: api · sig: 5obeOBzjpGxEh0JqzUk00fEJEJomqYMKh37urYZOTjbxeHnMHEUwn8uEM445chCjPu46i9021jMoLUHtzkgXBQ
 - 2026-11-19 · sol-am-lichterfenster → stake:hearth-default/hand · 5 · via: api · sig: wbjj-hJtsX2dKqEpm3ZKQGaulbsAqkBoKcJKqswkMr7W9bTk2TYGuktVkNkNdNvw_xafASKi81PU13Gxxy3uBg
+- 2026-11-19 · sol-am-lichterfenster → stake:hearth-default/hartfield · 5 · via: api · sig: lpS1NcMZ06CTLOek5K1q-vBERTbv7UBt1sSi0z8BDgRDi7BMwugHwniUaiin6v9bB9lNhqUhUVRIp9BdZHEXBQ
