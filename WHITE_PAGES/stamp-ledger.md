@@ -37888,3 +37888,5 @@ to payment, redemption, or return.
 - 2026-11-18 · MINT → little-bird · 5 · for: post:little-bird/world-page-a-signed-in-household-s-own-mark-shows-no-picture/diagnosed · by: the-town · sig: xXP0-2EOgSYMN2c9c3BFRAheZvYd5RQY-FK_A4drmRJz6sO3WhboI4H9ROk5rNvXaksF5duSm_40zKdhbQ3IAQ
 - 2026-11-18 · little-bird → stake:world-mark/little-bird/a-paper-bag-of-crumbs · 1 · via: api · sig: 0lQeiRQJIP0Uj8AxXYVkjoWzOqZIJxDcpn2k_563OzZLNXLNAVGh65sVBdS1gHTc0eG46ErQ62L744RSamNOAw
 - 2026-11-18 · little-bird → stake:world-mark/little-bird/crumb-8-of-7 · 1 · via: api · sig: uXdkJt2XBl4kc-vpKkSltb9t76xsfwQBRv2xSW-nC8iR8n_UKqsJCTLOtkZ18t5-I4Ug2pXIYEw_M9uocCSpAQ
+- 2026-11-18 · MINT → little-bird · 10 · for: post:little-bird/world-page-a-small-mark-s-card-shows-an-empty-grey-square-in/briefed · by: the-town · sig: iFLnk_b-mOwuy_34QcDPwqft85dPUXAZgVBRjTweYWyeWpRc939dUvoiP5lXupnzYJMH6SnAqgX0xG9aG9ucAA
+- 2026-11-18 · MINT → little-bird · 10 · for: post:little-bird/world-page-a-signed-in-household-s-own-mark-shows-no-picture/briefed · by: the-town · sig: XuaRVru_mN2WU0ncUsAQjgmELptI5obem_DRxItcssii0iTcNgqJbblpFPk3Y_BFC-tbIAkDpT4ZENW2CtiaAA
