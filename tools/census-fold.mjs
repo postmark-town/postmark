@@ -74,6 +74,14 @@ const WORLD_STAKE_RE = new RegExp(String.raw`^- (\d{4}-\d{2}-\d{2}) · (\S+) →
 // from the ballot's `for: close` — there the founder closes a window and every
 // escrow returns at once; here the staker takes their own stamps back.
 const WORLD_UNSTAKE_RE = new RegExp(String.raw`^- (\d{4}-\d{2}-\d{2}) · stake:world-mark\/(${MARK_ID}) → (\S+) · ([1-9]\d*) · for: unstake$`);
+// The town's own return (POS-1139, Darko 2026-11-18 16:3x: "Town-authored
+// return"). When the town's opposition removes a mark, the town hands each
+// staker's remaining stamps back, and the line says so: the actor is the town,
+// named by the removal it carries out (`S<n>`, the settlement), never the
+// staker. So it is its own shape, not `for: unstake` written in the staker's
+// name. Same movement out of the same escrow account, so conservation folds it
+// structurally; the verifier holds it to the staker's WHOLE open position.
+const WORLD_TOWN_RETURN_RE = new RegExp(String.raw`^- (\d{4}-\d{2}-\d{2}) · stake:world-mark\/(${MARK_ID}) → (\S+) · ([1-9]\d*) · for: town-return:(S[1-9]\d*)$`);
 // A transfer is a plain handle→handle movement backed by a delivered `pays:`
 // letter. It is checked AFTER stake/return so a `stake:…` target never matches
 // here; its recipient is a bare handle, never `stake:…`.
@@ -304,6 +312,8 @@ export function classifyEntry(canonical) {
     return { kind: 'world-stake', date: m[1], handle: m[2], mark: m[3], n: Number(m[4]), via: m[5] };
   if ((m = WORLD_UNSTAKE_RE.exec(canonical)))
     return { kind: 'world-unstake', date: m[1], mark: m[2], handle: m[3], n: Number(m[4]) };
+  if ((m = WORLD_TOWN_RETURN_RE.exec(canonical)))
+    return { kind: 'world-town-return', date: m[1], mark: m[2], handle: m[3], n: Number(m[4]), removal: m[5] };
   // Keeping-pot movements sit above TRANSFER for the same reason the world pair
   // does: a pot stake carried by a letter reads `via: mail:<id>`, which
   // TRANSFER_RE would otherwise claim as a payment to an account named

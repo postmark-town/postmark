@@ -29,12 +29,14 @@ import {
   classifyEntry, parseStampLedger, foldBalances, foldStaked, foldMintCount,
   foldWorldMarkEscrow, foldWorldMarkPositions,
   worldStakeLine, worldUnstakeLine, stakeLine, mintLine, transferLine,
+  worldTownReturnLine, returnLine, postReturnLine, potReturnLine,
 } from './stamp-mint.mjs';
 import { verifyStampLedger } from './stamp-verify.mjs';
 import {
   worldStakeApply, worldUnstakeApply, worldStakeState,
   markEscrow, markPosition, retirementBlocked, MARK_ID_RE,
   deriveWorldMarkWeights, worldWeightDial, DEFAULT_UNIQUE_HOUSEHOLD_BONUS,
+  worldTownReturnPlan, worldTownReturnApply,
 } from './world-stake.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
@@ -516,6 +518,270 @@ test('the escrow account never goes negative across a full life of one mark', ()
     const bal = foldBalances(parseStampLedger(readFileSync(join(repo, 'WHITE_PAGES', 'stamp-ledger.md'), 'utf8')));
     assert.equal(bal.get(`stake:world-mark/${MARK}`), 0);
     assert.equal(markEscrow(repo, MARK), 0);
+    assert.equal(verifyStampLedger(repo).ok, true);
+  } finally { rmSync(repo, { recursive: true, force: true }); }
+});
+
+// ─────────────── 4. THE TOWN'S RETURN ON A REMOVED MARK (POS-1139) ───────────
+// Darko 2026-11-18 16:3x: "Town-authored return"; earlier, "Back to each
+// staker", owner included. The town's act, recorded as the town's, paying each
+// actual staker their own whole remaining principal and nothing else. The same
+// three layers: grammar, folds, and the real verifier over a signed town.
+
+const ledgerOf = (repo) => readFileSync(join(repo, 'WHITE_PAGES', 'stamp-ledger.md'), 'utf8');
+const balanceOf = (repo, handle) => foldBalances(parseStampLedger(ledgerOf(repo))).get(handle) ?? 0;
+const TR = (handle, n, removal = 'S172', mark = MARK) => worldTownReturnLine({ date: '2026-06-25', mark, handle, n, removal });
+
+test('town return grammar: the lawful line classifies as the town\'s act, with the removal named', () => {
+  const line = '- 2026-06-25 · stake:world-mark/wright/the-crossing-bench → dot · 2 · for: town-return:S172';
+  assert.equal(TR('dot', 2), line, 'the builder writes exactly the grammar');
+  assert.deepEqual(classifyEntry(line), { kind: 'world-town-return', date: '2026-06-25', mark: MARK, handle: 'dot', n: 2, removal: 'S172' });
+  // the resident's own way out is still the resident's, and every sibling return keeps its kind
+  assert.equal(classifyEntry(worldUnstakeLine({ date: '2026-06-25', mark: MARK, handle: 'dot', n: 2 })).kind, 'world-unstake');
+  assert.equal(classifyEntry(returnLine({ date: '2026-06-25', topic: 'name-vote', candidate: 'Iris', handle: 'dot', n: 2 })).kind, 'return');
+  assert.equal(classifyEntry(postReturnLine({ date: '2026-06-25', post: 'alice/a-post', handle: 'dot', n: 2 })).kind, 'post-return');
+  assert.equal(classifyEntry(potReturnLine({ date: '2026-06-25', pot: 'darko', handle: 'dot', n: 2, epoch: '2026-06' })).kind, 'pot-return');
+});
+
+test('town return grammar: malformed and out-of-class lines FAIL CLOSED, and no other grammar absorbs them', () => {
+  const W = 'stake:world-mark/wright/the-crossing-bench';
+  const refused = [
+    [`- 2026-06-25 · ${W} → dot · 2 · for: town-return:S0`, 'settlement zero'],
+    [`- 2026-06-25 · ${W} → dot · 2 · for: town-return:S01`, 'a leading zero'],
+    [`- 2026-06-25 · ${W} → dot · 2 · for: town-return:172`, 'no S'],
+    [`- 2026-06-25 · ${W} → dot · 2 · for: town-return:s172`, 'a lowercase s'],
+    [`- 2026-06-25 · ${W} → dot · 2 · for: town-return:`, 'no removal'],
+    [`- 2026-06-25 · ${W} → dot · 2 · for: town-return`, 'no removal, no colon'],
+    [`- 2026-06-25 · ${W} → dot · 2 · for: town-return:S172 · by: wright`, 'trailing fields'],
+    [`- 2026-06-25 · ${W} → dot · 2 · for: town-return:S172 · via: mail:abc`, 'a letter tail'],
+    [`- 2026-06-25 · ${W} → dot · 0 · for: town-return:S172`, 'zero stamps'],
+    [`- 2026-06-25 · ${W} → dot · -2 · for: town-return:S172`, 'a negative amount'],
+    [`- 2026-06-25 · ${W} → dot · 1.5 · for: town-return:S172`, 'a fractional amount'],
+    [`- 26-06-25 · ${W} → dot · 2 · for: town-return:S172`, 'a bad date'],
+    ['- 2026-06-25 · stake:world-mark/Wright/the-crossing-bench → dot · 2 · for: town-return:S172', 'capitals in the mark id'],
+    ['- 2026-06-25 · stake:world-mark/thebench → dot · 2 · for: town-return:S172', 'a slash-free mark id'],
+    ['- 2026-06-25 · stake:world-mark/a/b/c → dot · 2 · for: town-return:S172', 'a deeper path'],
+    ['- 2026-06-25 · stake:name-vote/Iris → dot · 2 · for: town-return:S172', 'a ballot topic'],
+    ['- 2026-06-25 · stake:post/alice/a-post → dot · 2 · for: town-return:S172', 'a post'],
+    ['- 2026-06-25 · stake:pot/darko → dot · 2 · for: town-return:S172', 'a pot'],
+    [`- 2026-06-25 · dot → ${W} · 2 · for: town-return:S172`, 'the arrow reversed'],
+  ];
+  for (const [line, why] of refused)
+    assert.equal(classifyEntry(line).kind, 'unknown', `${why}\n  line: ${line}\n  got: ${classifyEntry(line).kind}`);
+});
+
+test('town return builder refuses what would misfile or forge the line', () => {
+  const ok = { date: '2026-06-25', mark: MARK, handle: 'dot', n: 2, removal: 'S172' };
+  for (const [bad, re] of [
+    [{ n: 0 }, /whole number/], [{ n: -2 }, /whole number/], [{ n: 1.5 }, /whole number/], [{ n: '2' }, /whole number/],
+    [{ removal: 'S0' }, /S<n>/], [{ removal: '172' }, /S<n>/], [{ removal: 'S1 · by: x' }, /S<n>/], [{ removal: undefined }, /S<n>/],
+    [{ mark: 'Wright/x' }, /mark id/], [{ mark: 'thebench' }, /mark id/],
+    [{ handle: 'dot · 9' }, /plain handle/], [{ handle: 'a b' }, /plain handle/], [{ handle: 'stake:world-mark/a/b' }, /plain handle/],
+    [{ date: '26-06-25' }, /YYYY-MM-DD/],
+  ]) assert.throws(() => worldTownReturnLine({ ...ok, ...bad }), re, JSON.stringify(bad));
+});
+
+test('town return folds: escrow, positions and the staked tense close; liquid comes home; conservation holds', () => {
+  const entries = E(
+    '- 2026-06-21 · MINT → wright · 5 · for: gift:float · by: keemin',
+    '- 2026-06-21 · MINT → dot · 4 · for: gift:float · by: keemin',
+    worldStakeLine({ date: '2026-06-21', handle: 'wright', mark: MARK, n: 3, via: 'api' }),
+    worldStakeLine({ date: '2026-06-21', handle: 'dot', mark: MARK, n: 4, via: 'api' }),
+    worldUnstakeLine({ date: '2026-06-22', mark: MARK, handle: 'dot', n: 1 }),
+    TR('wright', 3), TR('dot', 3),
+  );
+  assert.equal(foldWorldMarkEscrow(entries).has(MARK), false, 'the mark carries no escrow');
+  assert.equal(foldWorldMarkPositions(entries).size, 0, 'no position stays open');
+  const staked = foldStaked(entries);
+  assert.equal(staked.get('wright') ?? 0, 0);
+  assert.equal(staked.get('dot') ?? 0, 0);
+  const bal = foldBalances(entries);
+  assert.equal(bal.get('wright'), 5);
+  assert.equal(bal.get('dot'), 4);
+  assert.equal(bal.get(`stake:world-mark/${MARK}`), 0);
+  assert.equal([...bal.values()].reduce((a, b) => a + b, 0), 0, 'every line is a movement; the whole fold sums to zero');
+});
+
+test('THE FALSIFIER: the owner and several stakers get back exactly their remaining deposits, a prior partial unstake included', () => {
+  const { pub, priv } = keypair();
+  const repo = stakeTown(pub, priv);
+  try {
+    const before = { wright: balanceOf(repo, 'wright'), rei: balanceOf(repo, 'rei'), dot: balanceOf(repo, 'dot') };
+    assert.deepEqual(before, { wright: 5, rei: 5, dot: 2 });
+    // wright owns MARK. rei shares wright's household; dot is outside it.
+    worldStakeApply(repo, { handle: 'wright', mark: MARK, n: 3, via: 'api', date: '2026-06-21' }, priv);
+    worldStakeApply(repo, { handle: 'rei', mark: MARK, n: 4, via: 'api', date: '2026-06-21' }, priv);
+    worldStakeApply(repo, { handle: 'dot', mark: MARK, n: 2, via: 'api', date: '2026-06-21' }, priv);
+    worldStakeApply(repo, { handle: 'rei', mark: MARK2, n: 1, via: 'api', date: '2026-06-21' }, priv);
+    worldUnstakeApply(repo, { handle: 'wright', mark: MARK, n: 1, date: '2026-06-22' }, priv);   // the owner's own partial way out
+    assert.ok(deriveWorldMarkWeights(repo).rows.some((r) => r.mark === MARK && r.weight > r.n), 'a bonus rides the weight, and must not ride the return');
+
+    const r = worldTownReturnApply(repo, { marks: [MARK, MARK2], removal: 'S172', date: '2026-06-25' }, priv);
+    assert.deepEqual(r, {
+      removal: 'S172', date: '2026-06-25', marks: [MARK2, MARK],
+      returned: [
+        { mark: MARK2, handle: 'rei', n: 1 },
+        { mark: MARK, handle: 'dot', n: 2 },
+        { mark: MARK, handle: 'rei', n: 4 },
+        { mark: MARK, handle: 'wright', n: 2 },
+      ],
+      nothing_open: [], total: 9,
+      proof: { escrow_before: { [MARK2]: 1, [MARK]: 8 }, escrow_after: { [MARK2]: 0, [MARK]: 0 }, conserved: true },
+      appended: true,
+    });
+    // each actual staker, by handle (rei and wright share a household; they are paid apart), whole again
+    assert.deepEqual({ wright: balanceOf(repo, 'wright'), rei: balanceOf(repo, 'rei'), dot: balanceOf(repo, 'dot') }, before);
+    assert.equal(markEscrow(repo, MARK), 0);
+    assert.equal(markEscrow(repo, MARK2), 0);
+    assert.equal(retirementBlocked(repo, MARK).blocked, false);
+    assert.equal(deriveWorldMarkWeights(repo).rows.length, 0, 'the world\'s stake input no longer lists the removed marks');
+    // recorded as the town's act: four town-return lines, and the resident's one unstake is the only unstake
+    const text = ledgerOf(repo);
+    assert.equal((text.match(/ · for: town-return:S172 · sig: /g) ?? []).length, 4);
+    assert.equal((text.match(/ · for: unstake · sig: /g) ?? []).length, 1);
+    const v = verifyStampLedger(repo);
+    assert.equal(v.ok, true, v.problems.join('; '));
+  } finally { rmSync(repo, { recursive: true, force: true }); }
+});
+
+test('replay and retry: a second call finds the positions closed and writes NOTHING', () => {
+  const { pub, priv } = keypair();
+  const repo = stakeTown(pub, priv);
+  try {
+    worldStakeApply(repo, { handle: 'dot', mark: MARK, n: 2, via: 'api', date: '2026-06-21' }, priv);
+    const first = worldTownReturnApply(repo, { marks: [MARK], removal: 'S172', date: '2026-06-25' }, priv);
+    assert.equal(first.appended, true);
+    const after = ledgerOf(repo);
+    for (const removal of ['S172', 'S173']) {
+      const again = worldTownReturnApply(repo, { marks: [MARK, MARK], removal, date: '2026-06-26' }, priv);
+      assert.deepEqual(again, {
+        removal, date: '2026-06-26', marks: [MARK], returned: [], nothing_open: [MARK], total: 0,
+        proof: { escrow_before: { [MARK]: 0 }, escrow_after: { [MARK]: 0 }, conserved: true }, appended: false,
+      });
+      assert.equal(ledgerOf(repo), after, 'the ledger is byte-for-byte unchanged');
+    }
+    assert.equal(balanceOf(repo, 'dot'), 2, 'paid once');
+    assert.equal(verifyStampLedger(repo).ok, true);
+  } finally { rmSync(repo, { recursive: true, force: true }); }
+});
+
+test('late positions are not orphaned: the write reads the ledger at apply time, never a list handed in', () => {
+  const { pub, priv } = keypair();
+  const repo = stakeTown(pub, priv);
+  try {
+    worldStakeApply(repo, { handle: 'wright', mark: MARK, n: 2, via: 'api', date: '2026-06-21' }, priv);
+    const early = worldTownReturnPlan(repo, { marks: [MARK], removal: 'S172', date: '2026-06-25' });
+    assert.deepEqual(early.returned, [{ mark: MARK, handle: 'wright', n: 2 }]);
+    // a stake lands after the world's fold was read
+    worldStakeApply(repo, { handle: 'dot', mark: MARK, n: 2, via: 'api', date: '2026-06-24' }, priv);
+    worldStakeApply(repo, { handle: 'wright', mark: MARK, n: 1, via: 'api', date: '2026-06-24' }, priv);
+    // a stale list handed in is not an input at all
+    const r = worldTownReturnApply(repo, {
+      marks: [MARK], removal: 'S172', date: '2026-06-25', returned: [{ mark: MARK, handle: 'wright', n: 2 }],
+    }, priv);
+    assert.deepEqual(r.returned, [{ mark: MARK, handle: 'dot', n: 2 }, { mark: MARK, handle: 'wright', n: 3 }]);
+    // and a stake on the removed mark after the return is returned by the next call, not left inert
+    worldStakeApply(repo, { handle: 'rei', mark: MARK, n: 1, via: 'api', date: '2026-06-26' }, priv);
+    const later = worldTownReturnApply(repo, { marks: [MARK], removal: 'S172', date: '2026-06-26' }, priv);
+    assert.deepEqual(later.returned, [{ mark: MARK, handle: 'rei', n: 1 }]);
+    assert.equal(markEscrow(repo, MARK), 0);
+    const v = verifyStampLedger(repo);
+    assert.equal(v.ok, true, v.problems.join('; '));
+  } finally { rmSync(repo, { recursive: true, force: true }); }
+});
+
+test('the plan refuses malformed input and writes nothing; its proof refuses a state that would not conserve', () => {
+  const { pub, priv } = keypair();
+  const repo = stakeTown(pub, priv);
+  try {
+    worldStakeApply(repo, { handle: 'dot', mark: MARK, n: 2, via: 'api', date: '2026-06-21' }, priv);
+    const before = ledgerOf(repo);
+    for (const [args, re] of [
+      [{ marks: [], removal: 'S172', date: '2026-06-25' }, /incomplete/],
+      [{ marks: MARK, removal: 'S172', date: '2026-06-25' }, /incomplete/],
+      [{ marks: [MARK], date: '2026-06-25' }, /incomplete/],
+      [{ marks: ['Wright/x'], removal: 'S172', date: '2026-06-25' }, /not a mark id/],
+      [{ marks: [MARK, 7], removal: 'S172', date: '2026-06-25' }, /not a mark id/],
+      [{ marks: [MARK], removal: 'S0', date: '2026-06-25' }, /does not name a removal/],
+      [{ marks: [MARK], removal: 172, date: '2026-06-25' }, /does not name a removal/],
+      [{ marks: [MARK], removal: 'S172', date: 'tomorrow' }, /not a date/],
+    ]) {
+      assert.throws(() => worldTownReturnApply(repo, args, priv), (e) => e.code === 422 && re.test(e.message), JSON.stringify(args));
+    }
+    // A position map that disagrees with the escrow it came from (a stale or
+    // doctored read) fails the proof before anything is written.
+    const state = worldStakeState(repo);
+    const doctored = { ...state, positions: new Map([[`${MARK}|dot`, 5]]) };
+    assert.throws(() => worldTownReturnPlan(repo, { marks: [MARK], removal: 'S172', date: '2026-06-25' }, doctored), /does not conserve; nothing written/);
+    assert.equal(ledgerOf(repo), before);
+  } finally { rmSync(repo, { recursive: true, force: true }); }
+});
+
+test('UNLAWFUL: forged town returns are REFUSED by the verifier — overdraw, part, wrong beneficiary, twice, a staker left behind', () => {
+  const cases = [
+    { why: 'an overdraw past dot\'s own position (the mark holds 5, dot 2)', lines: [TR('dot', 3)], re: /a town return is whole: 3 to dot .* open position is 2/ },
+    { why: 'a part of a position', lines: [TR('dot', 1)], re: /a town return is whole: 1 to dot .* open position is 2/ },
+    { why: 'a beneficiary with no stake there, though their household has one', lines: [TR('rei', 2)], re: /a town return is whole: 2 to rei .* open position is 0/ },
+    { why: 'the owner paid another\'s stake', lines: [TR('wright', 5)], re: /a town return is whole: 5 to wright .* open position is 3/ },
+    { why: 'the same position returned twice', lines: [TR('dot', 2), TR('wright', 3), TR('dot', 2, 'S173')], re: /a town return is whole: 2 to dot .* \(S173\), but the open position is 0/ },
+    { why: 'a removal that returns one staker and leaves the owner\'s stake behind', lines: [TR('dot', 2)], re: /town return S172 on world-mark wright\/the-crossing-bench leaves 3 stamp\(s\) of other stakers behind/ },
+    { why: 'a removal split by another line', lines: [TR('dot', 2), worldStakeLine({ date: '2026-06-25', handle: 'rei', mark: MARK2, n: 1, via: 'api' }), TR('wright', 3)], re: /leaves 3 stamp\(s\) of other stakers behind/ },
+    { why: 'a removal split across two settlements', lines: [TR('dot', 2), TR('wright', 3, 'S173')], re: /town return S172 .* leaves 3 stamp\(s\)/ },
+  ];
+  for (const c of cases) {
+    const { pub, priv } = keypair();
+    const repo = stakeTown(pub, priv);
+    try {
+      worldStakeApply(repo, { handle: 'wright', mark: MARK, n: 3, via: 'api', date: '2026-06-21' }, priv);
+      worldStakeApply(repo, { handle: 'dot', mark: MARK, n: 2, via: 'api', date: '2026-06-21' }, priv);
+      mintMod.appendSigned(repo, c.lines, priv);
+      const v = verifyStampLedger(repo);
+      assert.equal(v.ok, false, c.why);
+      assert.match(v.problems.join(' '), c.re, c.why);
+    } finally { rmSync(repo, { recursive: true, force: true }); }
+  }
+});
+
+test('UNLAWFUL: a malformed, zero or negative town return, or one signed by another key, fails verification', () => {
+  const W = 'stake:world-mark/wright/the-crossing-bench';
+  const malformed = [
+    `- 2026-06-25 · ${W} → dot · 2 · for: town-return:S0`,
+    `- 2026-06-25 · ${W} → dot · 2 · for: town-return:172`,
+    `- 2026-06-25 · ${W} → dot · 0 · for: town-return:S172`,
+    `- 2026-06-25 · ${W} → dot · -2 · for: town-return:S172`,
+  ];
+  for (const line of malformed) {
+    const { pub, priv } = keypair();
+    const repo = stakeTown(pub, priv);
+    try {
+      worldStakeApply(repo, { handle: 'dot', mark: MARK, n: 2, via: 'api', date: '2026-06-21' }, priv);
+      mintMod.appendSigned(repo, [line], priv);
+      const v = verifyStampLedger(repo);
+      assert.equal(v.ok, false, line);
+      assert.match(v.problems.join(' '), /unrecognized grammar/, line);
+    } finally { rmSync(repo, { recursive: true, force: true }); }
+  }
+  const { pub, priv } = keypair();
+  const repo = stakeTown(pub, priv);
+  try {
+    worldStakeApply(repo, { handle: 'dot', mark: MARK, n: 2, via: 'api', date: '2026-06-21' }, priv);
+    mintMod.appendSigned(repo, [TR('dot', 2)], keypair().priv);   // the right shape, the wrong pen
+    assert.equal(verifyStampLedger(repo).ok, false, 'only the office pen writes a town return');
+  } finally { rmSync(repo, { recursive: true, force: true }); }
+});
+
+test('the resident\'s unstake stays the resident\'s: clipped to their own position, written `for: unstake`', () => {
+  const { pub, priv } = keypair();
+  const repo = stakeTown(pub, priv);
+  try {
+    worldStakeApply(repo, { handle: 'wright', mark: MARK, n: 3, via: 'api', date: '2026-06-21' }, priv);
+    worldStakeApply(repo, { handle: 'dot', mark: MARK2, n: 2, via: 'api', date: '2026-06-21' }, priv);
+    worldTownReturnApply(repo, { marks: [MARK2], removal: 'S172', date: '2026-06-22' }, priv);
+    const r = worldUnstakeApply(repo, { handle: 'wright', mark: MARK, n: 9, date: '2026-06-23' }, priv);
+    assert.equal(r.applied, 3, 'clipped to the resident\'s own position');
+    const lines = ledgerOf(repo).trimEnd().split('\n');
+    assert.match(lines.at(-1), /^- 2026-06-23 · stake:world-mark\/wright\/the-crossing-bench → wright · 3 · for: unstake · sig: /);
+    assert.equal(worldUnstakeApply(repo, { handle: 'dot', mark: MARK2, n: 2, date: '2026-06-23' }, priv).applied, 0, 'the town already returned it; nothing left to unstake');
     assert.equal(verifyStampLedger(repo).ok, true);
   } finally { rmSync(repo, { recursive: true, force: true }); }
 });

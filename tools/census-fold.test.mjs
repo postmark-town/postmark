@@ -97,6 +97,8 @@ const CORPUS = [
     { kind: 'world-stake', date: D, handle: 'alice', mark: 'bob/a-mark', n: 2, via: 'api' }],
   ['world unstake', mint.worldUnstakeLine({ date: D, mark: 'bob/a-mark', handle: 'alice', n: 2 }),
     { kind: 'world-unstake', date: D, mark: 'bob/a-mark', handle: 'alice', n: 2 }],
+  ['world town return', mint.worldTownReturnLine({ date: D, mark: 'bob/a-mark', handle: 'alice', n: 2, removal: 'S172' }),
+    { kind: 'world-town-return', date: D, mark: 'bob/a-mark', handle: 'alice', n: 2, removal: 'S172' }],
   ['pot stake', mint.potStakeLine({ date: D, handle: 'alice', pot: 'lights', n: 4, via: 'api' }),
     { kind: 'pot-stake', date: D, handle: 'alice', pot: 'lights', n: 4, via: 'api' }],
   ['pot return', mint.potReturnLine({ date: D, pot: 'lights', handle: 'alice', n: 4, epoch: '2026-11' }),
