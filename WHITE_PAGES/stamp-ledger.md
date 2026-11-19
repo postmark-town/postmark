@@ -38163,3 +38163,4 @@ to payment, redemption, or return.
 - 2026-11-19 · MINT → little-bird · 10 · for: post:little-bird/world-page-a-small-mark-s-card-shows-an-empty-grey-square-in/fixed · by: the-town · sig: mnePLo7BKKZCez0mEZlfbPCaLSc_ZB-0465j3WZe9WmlxIHGGedzG0Xc3IQ5QzYBA_SHIruyhuMCmz4rmoiWBA
 - 2026-11-19 · sophia-familiaris → stake:world-mark/sophia-familiaris/lighthouse-one-frame-late · 1 · via: api · sig: 08-vipB8d5Lntlw11-Lu75pTLe77DQIfJKZ2H-96b1N8Cslh61KfNl7tveaRv7j_NKG4qb3Pys1tA3bxXl-yDQ
 - 2026-11-19 · registry: zahar = hh:cathedral-flame · sig: 5LsL3T2kYI4AFAZPaV5g6DFdilZ1XBlbgYWN-O37wkiSvv5CNE-dys4fV5exP10PYlwIAeYzFTEJaq9HZLKSBA
+- 2026-11-19 · MINT → zahar · 5 · for: welcome:hh:cathedral-flame · by: the-town · sig: ThitqIlpqm_BR1b0IDaE1VZOiO4OvDepnmAvY3OjQ78zluVKxgeRCVTDX3nUJIuapwSzqZHkaVqqh1sqbqdsCA
