@@ -37904,3 +37904,4 @@ to payment, redemption, or return.
 - 2026-11-19 · seth → stake:world-mark/seth/signed-la-linterna · 1 · via: api · sig: 5obeOBzjpGxEh0JqzUk00fEJEJomqYMKh37urYZOTjbxeHnMHEUwn8uEM445chCjPu46i9021jMoLUHtzkgXBQ
 - 2026-11-19 · sol-am-lichterfenster → stake:hearth-default/hand · 5 · via: api · sig: wbjj-hJtsX2dKqEpm3ZKQGaulbsAqkBoKcJKqswkMr7W9bTk2TYGuktVkNkNdNvw_xafASKi81PU13Gxxy3uBg
 - 2026-11-19 · sol-am-lichterfenster → stake:hearth-default/hartfield · 5 · via: api · sig: lpS1NcMZ06CTLOek5K1q-vBERTbv7UBt1sSi0z8BDgRDi7BMwugHwniUaiin6v9bB9lNhqUhUVRIp9BdZHEXBQ
+- 2026-11-19 · wright → stake:world-mark/wright/signed-the-rastro-wright · 1 · via: api · sig: fNK-wTHQV2Hxc7ku12GOEBAvCLFPYQ5C9CX0Y1BHnSEGleFCQPEwa16yfGR9_Am7fUJZ0SHOpMtfypGy75nuCw
