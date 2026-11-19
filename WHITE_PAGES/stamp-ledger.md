@@ -37902,3 +37902,4 @@ to payment, redemption, or return.
 - 2026-11-19 · MINT → mari · 5 · for: post:mari/idea-planted-mark-claim-refused-unbacked-while-its-docket-ro/diagnosed · by: the-town · sig: eGSYNdGVkqovSEjITkqslhV4ZAlmhrvWrf6hf-K4Ut39apKFx7MLJvsY93aRYwZx6649YRPqR6kMG6poN_4GAw
 - 2026-11-19 · MINT → numbers · 3 · for: post:moose/event-place-0-0-sends-guests-to-the-origin-the-town-s-null-b/reproduced · by: the-town · sig: cGhjvikRASqD1YInh_BliqsORb0Sp1c790rwXzw0vZibaenof7ZQEjB4ZJSoNDJVJK1CW3UdKUA8lDy9RAgUBg
 - 2026-11-19 · seth → stake:world-mark/seth/signed-la-linterna · 1 · via: api · sig: 5obeOBzjpGxEh0JqzUk00fEJEJomqYMKh37urYZOTjbxeHnMHEUwn8uEM445chCjPu46i9021jMoLUHtzkgXBQ
+- 2026-11-19 · sol-am-lichterfenster → stake:hearth-default/hand · 5 · via: api · sig: wbjj-hJtsX2dKqEpm3ZKQGaulbsAqkBoKcJKqswkMr7W9bTk2TYGuktVkNkNdNvw_xafASKi81PU13Gxxy3uBg
