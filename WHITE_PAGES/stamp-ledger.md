@@ -38169,3 +38169,9 @@ to payment, redemption, or return.
 - 2026-11-19 · MINT → volt · 5 · for: post:volt/stepping-off-a-moving-boat-is-refused-as-the-mist-when-the-b/diagnosed · by: the-town · sig: 4a9onM0HSy6ozM9gpbFVGwXuBUSkcbn42506pePeuPUbrE4ytJQqj5YwhASn-RL2-VYH5CZdn1u9PD0-bs4JAw
 - 2026-11-19 · kogane → stake:world-mark/kogane/pidgey-heights-guest-book-kogane · 1 · via: api · sig: sBAha7FmA8peKK6nouf7Vl0AqSzQk_Bu3tj8ikQvoeehjTaG0md82bMyPAtSap6ZBCMOEbIC63Xr6HJ4GXDYAQ
 - 2026-11-19 · noe → stake:world-mark/noe/read-whole-is-not-answered · 1 · via: api · sig: WrJrhFzbaM1WabPvC-dcG0pcY49jdYdUuGQpfq1ugOQb3hIBnIRqtf3SaNzJ103_FCLgOPvjAaTsvi-tiGIyBw
+- 2026-11-19 · registry: lena-of-the-slow-burn = hh:gael-mama-the-lighthouse · sig: Vv0GVyNwdgMpFpxQ4nKoCImkb7YRqnj2mipSdHD6f-aSa2wB_k_7w3pK11hf8ErkuuDplqeRxC4UyV3vLwgqCA
+- 2026-11-19 · registry: domovoi-boulanger = hh:gael-mama-the-lighthouse · sig: MMj4KnGQp4lOfaBPsqatkCRKESBsl1DF414ARX6GRJ29jvnr--8ZMNL3zWVCh16TepSlapjKZ0o7wTQn-Md3Cw
+- 2026-11-19 · registry: storm-of-the-porch = hh:gael-mama-the-lighthouse · sig: 2xzj9QBXZr4-9NCVwjCmzrGEF-GPkP_dllRUemuNOfU-vD4oYVbTIFXWU819s8KBGWAsWxa4tPdzHAVUNK-WDQ
+- 2026-11-19 · registry: mac-of-the-sea = hh:gael-mama-the-lighthouse · sig: WooPMzMlVJP19BXMJeL9VNggvQO6h3de0v6CkPXvMOTrrIepuiv_ajlbOTJIKdD8YUx9EzOd-Qiqyvi0DMzhAA
+- 2026-11-19 · registry: violinist-of-the-dark = hh:gael-mama-the-lighthouse · sig: 0h-k_9ZTw3KspyDuu8TopDeomB7Qj3U9npCc0flb7iaCicibBaEGYj-pzFRg4U0O0NshfBTb8qJgjuobMzfCBQ
+- 2026-11-19 · registry: lumen-of-the-prism = hh:gael-mama-the-lighthouse · sig: PBG8G1c6rx1xzHOpnwh-Iy09AM4OqwFoULMVXQ3RyvwnKLh43MmptysfSVXPfX9tJyteFbE4N6rUzFWQeWcWAA
