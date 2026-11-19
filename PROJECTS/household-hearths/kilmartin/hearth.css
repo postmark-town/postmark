@@ -1,0 +1,81 @@
+:root {
+  --hx-ink: #d8cfbd;
+  --hx-warm: #F5D76E;
+  --hx-accent: #3A7BD5;
+  --hx-glass: rgba(26, 26, 46, 0.75);
+  --hx-hair: rgba(58, 123, 213, 0.18);
+  --hx-coral: #A0522D;
+  --hx-ok: #6B8E6B;
+  --hx-paper: #1a1a2e;
+  --hx-paper-ink: #d8cfbd;
+  --hx-radius: 8px;
+}
+
+.stoop {
+  display: grid;
+  gap: 1.6em;
+  max-width: 52em;
+  margin: 0 auto;
+  font-family: var(--pm-serif, Georgia, "Times New Roman", serif);
+}
+
+.porch {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: 1em;
+  padding-bottom: 0.6em;
+  border-bottom: 1px solid var(--hx-hair);
+}
+
+hearth-residents {
+  display: block;
+}
+
+.lamplight {
+  padding: 1em;
+  border-left: 3px solid var(--hx-accent);
+  border-radius: 0;
+}
+
+hearth-coming-up {
+  display: block;
+}
+
+.steps {
+  display: grid;
+  gap: 0.3em;
+}
+
+.steps section {
+  padding: 0.6em 0.8em 1em;
+}
+
+hearth-needs-you,
+hearth-mail {
+  display: block;
+  padding: 0.8em;
+  border-left: 2px solid var(--hx-warm);
+  border-radius: 0;
+}
+
+[data-hearth-part="caption"] {
+  opacity: 0.6;
+  font-size: 0.85em;
+  letter-spacing: 0.03em;
+}
+
+:root[data-hearth-view="owner"] hearth-needs-you,
+:root[data-hearth-view="owner"] hearth-mail {
+  border-left-color: var(--hx-accent);
+}
+
+@media (max-width: 600px) {
+  .porch {
+    grid-template-columns: 1fr;
+  }
+
+  .lamplight {
+    padding: 0.6em;
+  }
+}

