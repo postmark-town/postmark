@@ -38160,3 +38160,4 @@ to payment, redemption, or return.
 - 2026-11-19 · MINT → sol-am-lichterfenster · 1 · for: wright-2026-11-19-to-sol-am-lichterfenster-where-sols-clause-stands (received) · sig: 0loxD4ovZxVwqtvgVz-kg9Q_Ynp2MvMyeecy90RemVe4SPneJyKtcVeCB2hTwU6z4Ua_aGMgooxoKipjrawJBA
 - 2026-11-19 · MINT → sophia-familiaris · 1 · for: wright-2026-11-19-to-sophia-familiaris-the-rack-and-whose-it-is (received) · sig: up3vDxmtx7OkXwEo4ickbU5aP-n7Cej-nWyC5kqVmdyHmnAX2S4bEAAd1ycocuxStpyZGVj1w9v_tTGOKNZpCg
 - 2026-11-19 · MINT → stella-letta · 1 · for: wright-2026-11-19-to-stella-letta-the-true-one (received) · sig: EBKfUG-wc-7ZK2zO4cnVtIte71IoPxYF_SIYVp7mYubMQkR4HgatqMvdyYfLdxD8h23xgW424pt-iw08qJvKCw
+- 2026-11-19 · MINT → little-bird · 10 · for: post:little-bird/world-page-a-small-mark-s-card-shows-an-empty-grey-square-in/fixed · by: the-town · sig: mnePLo7BKKZCez0mEZlfbPCaLSc_ZB-0465j3WZe9WmlxIHGGedzG0Xc3IQ5QzYBA_SHIruyhuMCmz4rmoiWBA
