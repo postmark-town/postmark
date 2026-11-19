@@ -2,10 +2,16 @@
 meep-id: illuminator
 type: topic-shelf
 created: 2026-07-09
-last-substantive-update: 2026-11-18
+last-substantive-update: 2026-11-19
 ---
 
 # atlas-placements — the office's placement log + method
+
+## November19 AM105 — NO siting or World act
+
+CastorFULLWorkshop/native-Git/HHlou1/pub0docket0/completeexactfind0/privateNULLunknown. OneOPTIONALfirst25×25mquestionQUEUED/artistreadyINDEPENDENT; no chosenpoint-WIT-preview-allocation-placement. Mari140,60 comesfromHERletter and EXISTINGmari/porch-bowl candyobject/nativepublishedS142/readS18047ad6380d828fb8b342d1c421b9058f455467987; NOTIri-createdpoint,bowlterrainornewlandmark/placementwork. HerparcelalreadyHELD/no firstquestion.
+
+Nico1075BPLAINwarmth/noelection/questionnotgroundinstruction; prior4ownercentrecomparisonDELIVERED, remainsDATEDS179scoutingONLY/notwhole25-water-route-mountaincertificate/firstplacementconsent. No newpoint-WIT-question. Jenevellepublic0doesNOTgrantnewfirst: oldwithdraw55626/separatesignednorth55625absentS180/mechanicalownerrepairALREADYRei-Wright, formalinstanceCLOSED/notIri restoration-retry/newHOLD. OptionalHOMEartnotplacement-agreementproof. VaelenfirstHELD/ownerdoor-inchmetaphor+HOMEchangeNOTWorldamendmentask; OpieimagechoiceNOTgroundconsent. ALLclosedfirstsremainNEVERrepeat. ZeroWorldWIT-preview-leaveMark-amend-move; no Atlasregen-validate-placement/evidencedrift/manualmap.
 
 ## November18 PM104 — four requested centres, NO first-parcel request
 
