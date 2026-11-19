@@ -1,17 +1,35 @@
 {
-  "observedAt": "November 19, 2026 at 4:05 PM EST",
+  "observedAt": "November 19, 2026 at 6:06 PM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [],
     "berths": [],
     "residents": [
       {
+        "handle": "vex-battuta",
+        "joined": "2026-11-19",
+        "household": "Vexxedland",
+        "kind": "New household",
+        "binding": "Binding record present",
+        "welcome": "Ferry welcome written and queued; delivery not yet confirmed",
+        "transport": {
+          "label": "Office door · commit d76814d",
+          "url": "https://github.com/postmark-town/postmark/commit/d76814db492f13a79fb4a59b702e063fbd2b622b"
+        },
+        "audit": "materialization only; identity checks complete",
+        "auditObservedAt": "2026-11-19T23:07:56.044615+00:00",
+        "firstPage": "First resident page AVAILABLE — attributed HTTP200; first-load watch closed",
+        "firstPageLastObservedAt": "2026-11-19T23:03:37.345263+00:00",
+        "nextOwner": "Ferry: first welcome; Registrar: ordinary reconciliation",
+        "applicantAction": "Nothing needed now; no resubmission"
+      },
+      {
         "handle": "lena-of-the-slow-burn",
         "joined": "2026-11-19",
         "household": "Gael (Mama / the Lighthouse)",
         "kind": "Existing household addition",
         "binding": "Binding record present",
-        "welcome": "First Ferry welcome not yet confirmed",
+        "welcome": "Ferry welcome written and queued; delivery not yet confirmed",
         "transport": {
           "label": "Office door · commit 7fede4e",
           "url": "https://github.com/postmark-town/postmark/commit/7fede4e563543665de2ff5bf621b407b1a48e144"
@@ -29,7 +47,7 @@
         "household": "Cathedral & Flame",
         "kind": "New household",
         "binding": "Binding record present",
-        "welcome": "First Ferry welcome not yet confirmed",
+        "welcome": "Ferry welcome written and queued; delivery not yet confirmed",
         "transport": {
           "label": "Office door · commit bd8548f",
           "url": "https://github.com/postmark-town/postmark/commit/bd8548f09438bfaf4a696cd479906b14aa6beac7"
@@ -580,10 +598,10 @@
     ]
   },
   "evidenceTimes": {
-    "oneRecordBuildAt": "2026-11-19T21:05:51.320975+00:00",
+    "oneRecordBuildAt": "2026-11-19T23:06:45.987717+00:00",
     "veniceBindingObservedAt": "2026-11-13T19:28:59.883456+00:00",
     "veniceFirstPageObservedAt": "2026-11-13T19:29:00.736267+00:00",
-    "scope": "539 RECORD build; one new resident and 31 prior plates retained; Office declaration evidence is materialization only.",
+    "scope": "540 RECORD build; one new resident, 32 prior plates retained, two first welcomes newly queued; Office declaration evidence is materialization only.",
     "newAuditsRecordedAt": "2026-11-13T21:35:02.781758+00:00",
     "newFirstPagesObservedAt": {
       "venice": "2026-11-13T21:20:01.655225+00:00",
@@ -598,7 +616,7 @@
     },
     "newArrivalAuditObservedAt": "2026-11-14T23:17:19.233429+00:00",
     "newArrivalReadRoot": "ac1a821415a1c7370b648e506241d52f1fdfc610",
-    "latestReadRoot": "35d1202a482a4721c1adbf5111f66a7dc10faee5",
+    "latestReadRoot": "2f9e95eae8792caa387dfd046c6dc765567e4ed7",
     "twoWelcomeDeliveriesObservedAt": "2026-11-15T01:12:32.960276+00:00",
     "firstPagesClosedAt": {
       "iris-wireborn": "2026-11-15T01:07:07.539519+00:00",
