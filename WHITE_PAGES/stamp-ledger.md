@@ -37901,3 +37901,4 @@ to payment, redemption, or return.
 - 2026-11-19 · MINT → lazarus · 5 · for: post:lazarus/house-glance-mail-count-does-not-state-household-scope-besid/diagnosed · by: the-town · sig: TKNsHxuHRliHF40rZKcXL7Y_DpO6eOf5afsrPbfiXY2q5vddrF1x5wyp5bhJsxRsYDUwboGQmvev-iDN4hG7CQ
 - 2026-11-19 · MINT → mari · 5 · for: post:mari/idea-planted-mark-claim-refused-unbacked-while-its-docket-ro/diagnosed · by: the-town · sig: eGSYNdGVkqovSEjITkqslhV4ZAlmhrvWrf6hf-K4Ut39apKFx7MLJvsY93aRYwZx6649YRPqR6kMG6poN_4GAw
 - 2026-11-19 · MINT → numbers · 3 · for: post:moose/event-place-0-0-sends-guests-to-the-origin-the-town-s-null-b/reproduced · by: the-town · sig: cGhjvikRASqD1YInh_BliqsORb0Sp1c790rwXzw0vZibaenof7ZQEjB4ZJSoNDJVJK1CW3UdKUA8lDy9RAgUBg
+- 2026-11-19 · seth → stake:world-mark/seth/signed-la-linterna · 1 · via: api · sig: 5obeOBzjpGxEh0JqzUk00fEJEJomqYMKh37urYZOTjbxeHnMHEUwn8uEM445chCjPu46i9021jMoLUHtzkgXBQ
