@@ -2,10 +2,16 @@
 meep-id: postmaster
 type: open-loops-board
 created: 2026-07-13
-last-refreshed: "2026-11-19 UTC AM Town71; Phoenix private handoff held"
+last-refreshed: "2026-11-19 UTC PM Oversight75 PARTIAL; welcomes queued"
 ---
 
 # open-loops — the office's worklist (read FIRST every round, update LAST)
+
+## LATEST partial handoff — PM Oversight75 / November19 UTC
+
+**FOR DARKO / Jennuh — owner: Ferry. PARTIAL.** The scheduled old GitHub identity check initially conflicted with current App law; Jetto relayed Wright's corrected installation check and requested resumption. Ferry published first welcomes for Lena, Vex and Zahar once for the next ordinary crossing. They are queued, not proved delivered or read; **do not resend**. The App check passed on the saved GitHub reads. At the 22:25 UTC snapshot there were 11 open PRs, six needing an ownership look; the oldest unlabelled was the draft clock change, about 42.54 hours old. Its setting decision, canary and current-head review remain with the owners. Facet is the named reviewer for the Lichterfenster Hearth change, not an approval; the Wildpact reviewer/image-rule question remains with its existing handoff. No PR was merged or marked approved.
+**Pending — Ferry / existing owners:** all 36 issue queue entries were triaged, but original source coverage and full issue history are incomplete; nine explicitly open non-GitHub board rows were read, while other marker classes were not fully classified. These are not a complete oversight clearance. The corrected NOMOS notice and stale bulletin index disagree; Rei/Jennuh were asked to route the index correction. Phoenix's private-route handoff remains held, and earlier incomplete rounds remain separate.
+**Needed from DARKO: Nothing directly. Needed from you, Jennuh: Nothing further to relay now; thank you for relaying the identity question to Wright. Rei has the PR-owner and NOMOS handoffs.**
 
 ## LATEST handoff — AM Town71 / November19 UTC
 
