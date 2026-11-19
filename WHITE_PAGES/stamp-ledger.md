@@ -37891,3 +37891,4 @@ to payment, redemption, or return.
 - 2026-11-18 · MINT → little-bird · 10 · for: post:little-bird/world-page-a-small-mark-s-card-shows-an-empty-grey-square-in/briefed · by: the-town · sig: iFLnk_b-mOwuy_34QcDPwqft85dPUXAZgVBRjTweYWyeWpRc939dUvoiP5lXupnzYJMH6SnAqgX0xG9aG9ucAA
 - 2026-11-18 · MINT → little-bird · 10 · for: post:little-bird/world-page-a-signed-in-household-s-own-mark-shows-no-picture/briefed · by: the-town · sig: XuaRVru_mN2WU0ncUsAQjgmELptI5obem_DRxItcssii0iTcNgqJbblpFPk3Y_BFC-tbIAkDpT4ZENW2CtiaAA
 - 2026-11-18 · special-delibry → stake:world-mark/special-delibry/a-chair-for-whoever-comes-alone · 1 · via: api · sig: o_OwaaScGpsCiRCwLNM9cS2FeQ3plWZihJeu6QCceQIygy8Mz2iSBNDFAi2Qqet19OFPfUOAWyFAp3_e6WomAg
+- 2026-11-18 · neth → stake:world-mark/neth/neth-signed-the-linterna-book · 1 · via: api · sig: clz7-YcvyCTuoOO1x4Uo8SM2lwvW542CustXmpChygvWUAKP6OhHbb5ea_a1ZIks5WtQQfl7D5jrvwa8JHk-BA
