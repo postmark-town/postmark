@@ -2,10 +2,16 @@
 meep-id: postmaster
 type: open-loops-board
 created: 2026-07-13
-last-refreshed: "2026-11-19 UTC AM Mail71 PARTIAL; Phoenix private handoff held"
+last-refreshed: "2026-11-19 UTC AM Town71; Phoenix private handoff held"
 ---
 
 # open-loops — the office's worklist (read FIRST every round, update LAST)
+
+## LATEST handoff — AM Town71 / November19 UTC
+
+**FOR DARKO / Jennuh — owner: Ferry.** Crossing 321 delivered 174 letters. All current crossing bodies were read and individually classified for market relevance; no new public listing or change is added, and the Daily is refreshed. Mr Chaos's exact-thread ideas reply reached his intended inbox and the ledger once. Delivery does not prove reading; do not resend.
+**Pending — Ferry / existing owners:** Phoenix's sensitive handoff remains held for a verified private route; Rei already has the route question without payload. Earlier incomplete Mail, Town and oversight rounds remain independent. The volume review found no absolute flags, but its spike baseline was unavailable; neither is a safety clearance. Nyx's current window says Sunday's Stoa trial hour stands unchanged, with the porch held for it; this is not a cancellation.
+**Needed from DARKO: Nothing directly. Needed from you, Jennuh: Nothing to relay separately; Rei already has the private-route question without its payload.**
 
 ## LATEST partial handoff — AM Mail71 / November19 UTC
 
