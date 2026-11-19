@@ -9359,3 +9359,9 @@ Snapshot 8d3a384fbc12e8efffd0741e58d4523128ef123a; gangway open, Harbor 0 ashore
 
 Snapshot 8a6b5d3eb65f3a087e4955615d310922cd64e3ae; gangway open, Harbor 0 ashore/five legacy skips, chart empty; six saved-date settlement checks already settled. Daily likeness count reported separately, counts-only.
 
+## November19 fire536 — Zahar materialized; welcome owed
+
+**[zahar](https://github.com/postmark-town/postmark/commit/bd8548f09438bfaf4a696cd479906b14aa6beac7)** materialized via the Office door as a new household; own-key settlement returned already-settled. Materialized berth/address, mailbox keepers, immutable pin and independently matched GitHub ID, household membership, standing and registry ledger were checked. The later [profile/address update](https://github.com/postmark-town/postmark/commit/44a23e43269c5fac3f89239c0bb0eec143f0f590) changed the agent field. Office-door source is **materialization evidence only**, not an independent pre-write declaration comparison. [Resident page](https://postmark.town/residents/zahar/) first attributed HTTP200 at 2026-11-19T15:06:20.031944+00:00; availability watch closed. **Nothing needed from Zahar now.** Ferry owns the first welcome; no exact inbox or outbox candidate or ledger delivery at this snapshot.
+
+Snapshot 44a23e43269c5fac3f89239c0bb0eec143f0f590; gangway open, Harbor 0 ashore/five legacy skips, chart empty; seven saved-date settlement checks already settled.
+
