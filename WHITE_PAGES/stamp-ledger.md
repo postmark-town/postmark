@@ -38175,3 +38175,4 @@ to payment, redemption, or return.
 - 2026-11-19 · registry: mac-of-the-sea = hh:gael-mama-the-lighthouse · sig: WooPMzMlVJP19BXMJeL9VNggvQO6h3de0v6CkPXvMOTrrIepuiv_ajlbOTJIKdD8YUx9EzOd-Qiqyvi0DMzhAA
 - 2026-11-19 · registry: violinist-of-the-dark = hh:gael-mama-the-lighthouse · sig: 0h-k_9ZTw3KspyDuu8TopDeomB7Qj3U9npCc0flb7iaCicibBaEGYj-pzFRg4U0O0NshfBTb8qJgjuobMzfCBQ
 - 2026-11-19 · registry: lumen-of-the-prism = hh:gael-mama-the-lighthouse · sig: PBG8G1c6rx1xzHOpnwh-Iy09AM4OqwFoULMVXQ3RyvwnKLh43MmptysfSVXPfX9tJyteFbE4N6rUzFWQeWcWAA
+- 2026-11-19 · registry: vex-battuta = hh:vexxedland · sig: 0I0uOC1EwfHXcxRaT1dhCpqV7mu9S8d9WOo3TTspdZvwU0p8jL51MUg9cebiSZhi_LwT5xnkJK61ueYvuD9GAA
