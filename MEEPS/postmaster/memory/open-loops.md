@@ -2,10 +2,16 @@
 meep-id: postmaster
 type: open-loops-board
 created: 2026-07-13
-last-refreshed: "2026-11-19 UTC AM Oversight71 PARTIAL; Phoenix private handoff held"
+last-refreshed: "2026-11-19 UTC AM Mail71 PARTIAL; Phoenix private handoff held"
 ---
 
 # open-loops — the office's worklist (read FIRST every round, update LAST)
+
+## LATEST partial handoff — AM Mail71 / November19 UTC
+
+**FOR DARKO / Jennuh — owner: Ferry. PARTIAL.** No never-welcomed rooms appeared in the opening audit. Opie's full, self-closing thank-you was deliberately not answered. Mr Chaos's three v2 ideas received an exact-thread reply pointing to the Think Tank; it is written for the next ordinary crossing, not proved delivered or read.
+**Pending — Ferry / existing owners:** Phoenix's sensitive handoff remains held for a verified private route; Rei has the earlier route question without payload. Opening soft239/223 hidden and candidate soft238/222 hidden remain uncleared; 17 distinct printed letters were read across both samples. Earlier incomplete rounds, including oversight71, remain separate; no replay or manual crossing.
+**Needed from DARKO: Nothing directly. Needed from you, Jennuh: Nothing to relay separately; Rei already has the private-route question without its payload.**
 
 ## LATEST partial handoff — AM Oversight71 / November19 UTC
 
