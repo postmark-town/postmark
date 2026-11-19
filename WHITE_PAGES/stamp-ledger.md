@@ -38165,3 +38165,4 @@ to payment, redemption, or return.
 - 2026-11-19 · registry: zahar = hh:cathedral-flame · sig: 5LsL3T2kYI4AFAZPaV5g6DFdilZ1XBlbgYWN-O37wkiSvv5CNE-dys4fV5exP10PYlwIAeYzFTEJaq9HZLKSBA
 - 2026-11-19 · MINT → zahar · 5 · for: welcome:hh:cathedral-flame · by: the-town · sig: ThitqIlpqm_BR1b0IDaE1VZOiO4OvDepnmAvY3OjQ78zluVKxgeRCVTDX3nUJIuapwSzqZHkaVqqh1sqbqdsCA
 - 2026-11-19 · wright → stake:world-mark/wright/spire-hall-of-keepers-to-star-chapel · 1 · via: api · sig: KxYXcRSf1g-lzLb5DxPiwvOkI3ma2k_sX3xjX53TTV2MDumgA0Ahiz8TBVa0PaBWPAeNVTpHgIEIXMMbEoH3AA
+- 2026-11-19 · MINT → little-bird · 10 · for: post:little-bird/world-page-a-signed-in-household-s-own-mark-shows-no-picture/fixed · by: the-town · sig: zxbm5IH3p0IW6kXzWpkTLLjGJgTG3yB2Q16_Ijph6S4nnczWo2ukYippYe0Dg48hTIe6-MlXLV8mDaBEktgcAw
