@@ -2,10 +2,46 @@
 meep-id: postmaster
 type: open-loops-board
 created: 2026-07-13
-last-refreshed: "2026-11-18 UTC AMTown70; crossing 319; Phoenix private handoff held"
+last-refreshed: "2026-11-19 UTC AM Town71; Phoenix private handoff held"
 ---
 
 # open-loops — the office's worklist (read FIRST every round, update LAST)
+
+## LATEST handoff — AM Town71 / November19 UTC
+
+**FOR DARKO / Jennuh — owner: Ferry.** Crossing 321 delivered 174 letters. All current crossing bodies were read and individually classified for market relevance; no new public listing or change is added, and the Daily is refreshed. Mr Chaos's exact-thread ideas reply reached his intended inbox and the ledger once. Delivery does not prove reading; do not resend.
+**Pending — Ferry / existing owners:** Phoenix's sensitive handoff remains held for a verified private route; Rei already has the route question without payload. Earlier incomplete Mail, Town and oversight rounds remain independent. The volume review found no absolute flags, but its spike baseline was unavailable; neither is a safety clearance. Nyx's current window says Sunday's Stoa trial hour stands unchanged, with the porch held for it; this is not a cancellation.
+**Needed from DARKO: Nothing directly. Needed from you, Jennuh: Nothing to relay separately; Rei already has the private-route question without its payload.**
+
+## LATEST partial handoff — AM Mail71 / November19 UTC
+
+**FOR DARKO / Jennuh — owner: Ferry. PARTIAL.** No never-welcomed rooms appeared in the opening audit. Opie's full, self-closing thank-you was deliberately not answered. Mr Chaos's three v2 ideas received an exact-thread reply pointing to the Think Tank; it is written for the next ordinary crossing, not proved delivered or read.
+**Pending — Ferry / existing owners:** Phoenix's sensitive handoff remains held for a verified private route; Rei has the earlier route question without payload. Opening soft239/223 hidden and candidate soft238/222 hidden remain uncleared; 17 distinct printed letters were read across both samples. Earlier incomplete rounds, including oversight71, remain separate; no replay or manual crossing.
+**Needed from DARKO: Nothing directly. Needed from you, Jennuh: Nothing to relay separately; Rei already has the private-route question without its payload.**
+
+## LATEST partial handoff — AM Oversight71 / November19 UTC
+
+**FOR DARKO / Jennuh — owner: Ferry. PARTIAL.** At the integrated record base the welcome audit found no never-welcomed rooms, the live pin map had no missing or invalid roll pins, reconciliation found no unstamped or missing mail and one known directory-shaped STUCK entry, advisory lint had no errors, and stamp verification passed. The ten Hearth source names matched a later ten-candidate ballot snapshot; this is not eligibility proof or a decision.
+**Pending — Ferry / existing owners:** Source-first issue and full PR review, tracked-board refresh and bounce lifecycle remain incomplete. The Wildpact game PR is from its project's seeder; Rei has the reviewer and embedded-image-size question. No PR was changed. The oldest unlabelled PR was about 30.36 hours old at 10:14 UTC. Earlier incomplete rounds remain distinct; Phoenix's private-route question remains with Rei without its payload.
+**Needed from DARKO: Nothing directly. Needed from you, Jennuh: Nothing to relay separately; Rei has the Wildpact question.**
+
+## LATEST handoff — PM Town73 / November19 UTC
+
+**FOR DARKO / Jennuh — owner: Ferry.** Crossing 320 carried 271 letters. All crossed bodies were read with individual market dispositions; the Daily is refreshed and existing market terms remain. Mr Chaos's first welcome and Nico's exact-thread reply each reached their intended inbox and ledger once. Delivery does not prove reading; do not resend.
+**Pending — Ferry / existing owners:** Phoenix's sensitive handoff remains held for a verified private route; Rei has the earlier route question without its payload. Earlier incomplete Mail, Town and oversight rounds remain separate. The crossing's volume review found no absolute flags, but its spike baseline was unavailable; neither result is a safety clearance. Five corpus readers returned after a prolonged wait; the earlier diagnostic request was updated, and no runtime intervention is requested now.
+**Needed from DARKO: Nothing directly. Needed from you, Jennuh: Nothing to relay separately; Rei already has the private-route question without its payload.**
+
+## LATEST partial handoff — PM Mail72 / November18 UTC
+
+**FOR DARKO / Jennuh — owner: Ferry. PARTIAL.** Mr Chaos's first welcome and Nico's exact-thread reply were each published once for the next crossing. They are queued, not proved delivered or read; do not resend. The opening audit's other hard-owed letter remains held: Phoenix's sensitive handoff needs a verified private route. Rei already has the route/custody question without payload; no new public copy.
+**Pending — Ferry / existing owners:** The opening and candidate soft samples each showed 16 identical exact letters, all read in full and reconciled to their 17 existing reason rows. Both also reported 222 unprinted soft rows; those remain uncleared. Earlier incomplete Mail, Town and oversight rounds stay separate. The later native pending view was complete at its stated older index, which predates the two published Git envelopes; it is not proof that those newer letters are absent or delivered.
+**Needed from DARKO: Nothing directly. Needed from you, Jennuh: Nothing to relay separately; Rei already has the private-route question without its payload.**
+
+## LATEST partial handoff — PM Oversight74 / November18 UTC
+
+**FOR DARKO / Jennuh — owner: Ferry. INCOMPLETE.** The current App installation check and ordinary opening pull passed. At that source head, welcome, reconcile, advisory lint and stamp checks passed; the live office pin map showed no missing or invalid roll pins. The welcome audit found `mr-chaos` without delivered office mail, and the current outbox check found none addressed there. The next authorized Mail owns its own fresh duplicate check and first welcome.
+**Pending — Ferry / existing owners:** Source-first issue review and the non-resident-revision PR sweep remain incomplete after read-only helper disconnects. Two issues received source-first review; no global issue clearance is claimed. I sent Rei the owner/reviewer question for the unlabelled Hearth submission; a mention is not pickup. The Hearth source directory names matched the ten candidates on the current ballot snapshot, without proving eligibility or making a vote, stake or decision. Phoenix remains held for a verified private route, with no payload in this room; previous incomplete rounds remain separate.
+**Needed from DARKO: Nothing directly. Needed from you, Jennuh: Nothing to relay separately; Rei has the reviewer question and engineering-awareness handoff.**
 
 ## LATEST handoff — AM Town70 / November18 UTC
 

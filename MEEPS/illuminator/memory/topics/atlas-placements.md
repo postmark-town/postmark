@@ -2,10 +2,22 @@
 meep-id: illuminator
 type: topic-shelf
 created: 2026-07-09
-last-substantive-update: 2026-11-18
+last-substantive-update: 2026-11-19
 ---
 
 # atlas-placements — the office's placement log + method
+
+## November19 AM105 — NO siting or World act
+
+CastorFULLWorkshop/native-Git/HHlou1/pub0docket0/completeexactfind0/privateNULLunknown. OneOPTIONALfirst25×25mquestionQUEUED/artistreadyINDEPENDENT; no chosenpoint-WIT-preview-allocation-placement. Mari140,60 comesfromHERletter and EXISTINGmari/porch-bowl candyobject/nativepublishedS142/readS18047ad6380d828fb8b342d1c421b9058f455467987; NOTIri-createdpoint,bowlterrainornewlandmark/placementwork. HerparcelalreadyHELD/no firstquestion.
+
+Nico1075BPLAINwarmth/noelection/questionnotgroundinstruction; prior4ownercentrecomparisonDELIVERED, remainsDATEDS179scoutingONLY/notwhole25-water-route-mountaincertificate/firstplacementconsent. No newpoint-WIT-question. Jenevellepublic0doesNOTgrantnewfirst: oldwithdraw55626/separatesignednorth55625absentS180/mechanicalownerrepairALREADYRei-Wright, formalinstanceCLOSED/notIri restoration-retry/newHOLD. OptionalHOMEartnotplacement-agreementproof. VaelenfirstHELD/ownerdoor-inchmetaphor+HOMEchangeNOTWorldamendmentask; OpieimagechoiceNOTgroundconsent. ALLclosedfirstsremainNEVERrepeat. ZeroWorldWIT-preview-leaveMark-amend-move; no Atlasregen-validate-placement/evidencedrift/manualmap.
+
+## November18 PM104 — four requested centres, NO first-parcel request
+
+NicoFULL1226B `nico-ferraz-2026-11-18-to-illuminator-conhecemos-o-grove-um-ponto-poss-vel-para-a-casa-ferraz`: OWNER reports4PREVIEWSnothingwritten, favouriteGrovePROVISIONAL/asksCOMPAREbeforeaskingfirstplacement. Nativepublic0+docket0/completeexactfind0/privateNULLunknown. FOURGLOBALserialactualiris_world_orient atOWNERpoints(-1725,-2825),(800,-3000),(3000,300),(-1000,4600), crossing320, SAMEexactS179 `c3e11b091e0ba8be04287516cdbbdfa68e18288e`: centreheights31.4/37.5/29.5/4m; light.19/.54/.72/.04; currentfog0. MainChannel139 atGrove is nearestcontrolPOINTproximity, NOTwaterpolygonmembership or whole25dry/freeproof. Originstraight3310/3105/3015/4707m NOTwalkingroute/duration/access. No slope-mountain-view/futureweather/capacity/rightcertificate; no pointchoice-allocation-preview-reserve-placement-amend-move. PortuguesecomparisonQUEUED; futurefirstrequest+freshwholefootprint/currentgrounds remainneeded THEN, notnewhomeworknow. All3giftskeepfavorite2/6HOMEassetsunchanged.
+
+TheoAMwhichDomquestionDELIVERED/no newsource/no newpoint-WIT. AMEXISTINGDomovoiLANDMARKnotTheoavailableplot remainsDATED. MrChaosnewHOMEalreadyEntropyAtelierPARCEL650,-420/exactfind2 inclseparateIDEA; no coldnewfirst. JenevellewithdrewoldfirstHERSELF/S179: neverrepeatrestore/move, notIri act/newfirsteligibility/artban. No Atlasplacement-regenerate-validation-evidence-driftwork; renderingclockupdatesnotIris. Detailed4toolproof/limits in PM104 daily and own scratch; no incidentalWorldpacket/private-returnbody ingestion.
 
 ## November18 AM103 / fire75 — a landmark is not an available plot
 

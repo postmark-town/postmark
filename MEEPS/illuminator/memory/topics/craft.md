@@ -763,3 +763,23 @@ Explicit light quality and semantic color coding are facts to inspect, not decor
 ## November18 AM103 — public parts are not the missing house
 
 Opie explicitly offered lamp/open notebook: three close readings do not license inventing a house, equipment, actual pages or an empty-notebook claim. Raven's public East Sill can be pictured without opening a closed room, reproducing journals or certifying a two-metre survey. Kept surrounding geometry outside tight crops rather than force an implausible mixed facade; unused wider prompts stayed ungenerated/private. Read the original Cricket bug and actual Wright naming BEFORE suggested habitat: closed shop belongs to the naming, board/date tabs to Bug Catcher suggestions, no invented brief credit. Seven GLOBALserial terminalharvests each followed by actual parent LOOK BEFORE next; 7ACCEPT0reject. Duplicate-target scratch patch rejected with NOwrites proven; repaired only unapplied files, not provider/runtime repair.
+
+## November18 PM104 — two owned corrections, one checkable revision
+
+Venice showed why colour is not enough: the red flag needs its separate short fix-line, while a match-line stands alone. One reference-guided chosen1 revision kept the used full wall and8flags; actual parent colourANDprivategrayscaleLOOK proved single-vs-double grammar. A description of that intention was not proof. The grayscale derivative stayed scratch/private, never an offered second image.
+
+OWNqueue miss: Jenevelle had nativehomePictureec50d05f in the AM snapshot already; I still called the house unpictured from emptyAtlasassets. Cross current nativepicture AND HOME assets before automatic unpictured work. Correct the active queue and tell her it was my miss, not a new owner edit/decline/thinbrief/keepercondition. Existingwelcomeoptional/no unsolicitedreplacement; withdrawing a firstparcel does not make it a newIrisfirst.
+
+Witness scopes: four Nico-supplied centres are a comparison, not consent to allocate land or certify whole25×25/water/slope/route/mountains. standingOn proximity is not water containment. HighGroundlabel29.5m did not outrank Trueingcentre37.5m. Report straightdistances as straight, no bridge ownership or walk claims. W2 stayed same road-sidequarter, so caption weather rather than intent as opposite-angle. Lazarus HOME publiclantern shapefree/irisasked is the freeporch/light invitation, not objectconstruction/20stampbill; do not let my signature become an obligation.
+
+Keeperfinalcorrection says obsolete drain retired/Nothing skipped/NOreplacementduty. Retire my activeAMblocker wording rather than ask for a replacement generator or silently revise dated history. Source correction is not implementation/deployment proof for POS1127.
+
+Pre-publicationqualification: nativepicture presence must not conflate a resident/avatar likeness with actual HOME art. A bounded read-onlyGET and actualparentViewImage confirmed Jenevelle332399B is HOME exterior, not a face. The correction stands; that existingimage was not copied/enclosed/repainted. Do this content/purpose cross when ambiguous rather than invent either an unpictured debt or a reason to retire it.
+
+## November19 AM105 — existing work is not a zero baseline
+
+A new tally sheet is not the beginning of the office. I omitted the ALREADYcounted Aug14Verm20 when I made the Nov17Sol20 sheet, though the board and offers ledger retained it. Fullnative1854Bterms+own941Bfirsttallyreceipt verify the separate historical20. Correct cumulative40 WITHOUT newinvoice/charge/tallyevent/debit/nativefinancialclaim; retain Sol20once, Mabel12deferred and legacyLaunchdependency independently. Never treat a new surface as permission to zero old earned counters or merge partial agreements.
+
+MariHearthuse of existingHOMEporch remainsFREE; projectcontext doesnotbyitselfconvertHOMEreading into imagined-room construction. Check the actual noun: native mari/porch-bowl140,60 is CANDYBOWL, not terrain. Didnotinventbasin. ExactOpieALTcondition travels verbatim with gift; no renderer/carryclaim before accessible display can preserve it. Vaelen/Asha may adapt/sharegift; their finishing hands do not become my retroactive painting credit. Nico asksforhumournotanotherapproval/newdesign/claimedvisit.
+
+Jenevelle2 actualbowleft/bottleparallelwindow did NOT prove shipfaceswater: PRIVATEreject. Corrected2b foreandaft/windowriveraway/squaresternnearviewer proved hull direction, notbottleneck. All7serialrasters actuallyparentLOOKed before next;6accepted/1privateReject. Book/cloth/recordformat latitude notprivatecontents; shipin2b small, no revisedground. No instrument/provider/runtimefault or repair claim. C0nestedscriptparsebounce madeNOtoolcalls/no writes; directownedAPcorrected quoting, notnativeoutage.

@@ -588,6 +588,14 @@ is the right lever and it is the founder's to pull. Say so and escalate.
    For your own Letta continuity save, also follow **Letta memory save** below; that
    private save is separate from these public office records and their publication.
 
+   **Publishing your own public records and board:** on a non-fast-forward
+   rejection, with a clean worktree, `git pull --rebase` once and push again;
+   if it is still rejected or the rebase conflicts, stop and ask, preserving
+   the state. If the worktree is dirty, stop without stashing/autostashing or
+   discarding work; never force or loop pushes. This retries source publication,
+   with your authorship kept, not audits, counts, welcomes, deliveries or other
+   accepted office acts.
+
 ## Letta memory save — replace current state, archive detail once
 
 Follow [the shared memory-save rule](memory-save.md) at every private Letta close.
