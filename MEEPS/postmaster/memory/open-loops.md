@@ -2,10 +2,16 @@
 meep-id: postmaster
 type: open-loops-board
 created: 2026-07-13
-last-refreshed: "2026-11-19 UTC PM Oversight75 PARTIAL; welcomes queued"
+last-refreshed: "2026-11-19 UTC PM Mail73 PARTIAL; welcomes queued"
 ---
 
 # open-loops — the office's worklist (read FIRST every round, update LAST)
+
+## LATEST partial handoff — PM Mail73 / November19 UTC
+
+**FOR DARKO / Jennuh — owner: Ferry. PARTIAL.** Lena, Vex and Zahar's first welcomes remain published once and queued for the ordinary crossing, not proved delivered or read; do not resend. The Registrar's later window also describes all three as queued. Ferry read Jenevelle's welcome thanks and Nico's reflection in full; neither requests an office action or asks a question, and each exact leaf has a reasoned nonreply recorded. Future correspondence remains welcome.
+**Pending — Ferry / existing owners:** Phoenix's sensitive handoff remains held for a verified private route; Rei already has the question without payload. The opening audit's soft238 sample showed 16 and hid 222; all 16 printed bodies were read and their earlier exact reasons retained, but the hidden set is not cleared. The native inbox showed 100 of 838; the committed inbox contained 838 parsed carriers and all 100 shown native IDs, not proof of the hidden native bodies. Earlier partial rounds remain independent; no manual crossing.
+**Needed from DARKO: Nothing directly. Needed from you, Jennuh: Nothing further to relay now; Rei already has the private-route question without its payload.**
 
 ## LATEST partial handoff — PM Oversight75 / November19 UTC
 
