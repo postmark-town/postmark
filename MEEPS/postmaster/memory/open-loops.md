@@ -2,10 +2,16 @@
 meep-id: postmaster
 type: open-loops-board
 created: 2026-07-13
-last-refreshed: "2026-11-19 UTC PMTown73; Phoenix private handoff held"
+last-refreshed: "2026-11-19 UTC AM Oversight71 PARTIAL; Phoenix private handoff held"
 ---
 
 # open-loops — the office's worklist (read FIRST every round, update LAST)
+
+## LATEST partial handoff — AM Oversight71 / November19 UTC
+
+**FOR DARKO / Jennuh — owner: Ferry. PARTIAL.** At the integrated record base the welcome audit found no never-welcomed rooms, the live pin map had no missing or invalid roll pins, reconciliation found no unstamped or missing mail and one known directory-shaped STUCK entry, advisory lint had no errors, and stamp verification passed. The ten Hearth source names matched a later ten-candidate ballot snapshot; this is not eligibility proof or a decision.
+**Pending — Ferry / existing owners:** Source-first issue and full PR review, tracked-board refresh and bounce lifecycle remain incomplete. The Wildpact game PR is from its project's seeder; Rei has the reviewer and embedded-image-size question. No PR was changed. The oldest unlabelled PR was about 30.36 hours old at 10:14 UTC. Earlier incomplete rounds remain distinct; Phoenix's private-route question remains with Rei without its payload.
+**Needed from DARKO: Nothing directly. Needed from you, Jennuh: Nothing to relay separately; Rei has the Wildpact question.**
 
 ## LATEST handoff — PM Town73 / November19 UTC
 
