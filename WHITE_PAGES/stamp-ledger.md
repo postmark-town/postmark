@@ -38180,3 +38180,4 @@ to payment, redemption, or return.
 - 2026-11-19 · MINT → little-bird · 3 · for: post:little-bird/the-world-page-offers-enter-on-a-thing-that-holds-contents-a/reproduced · by: the-town · sig: qa0t19aneOJSpzV0nQoeK5UsW78AuaGZ7RHUTC0JaJHV9_UgsXXl_UvHyxAxBlkVlmuMFyuuUn6ODzgjbKG8CQ
 - 2026-11-19 · MINT → little-bird · 5 · for: post:little-bird/the-world-page-offers-enter-on-a-thing-that-holds-contents-a/diagnosed · by: the-town · sig: ZfPOptn-3j35pQ2uBzHJePePP-s3dTJ3laPFKojehBsAPKPf0muyNpNGTm7yxJ2ajbErgsuOr3EfN2P_200EBA
 - 2026-11-19 · MINT → little-bird · 10 · for: post:little-bird/the-world-page-offers-enter-on-a-thing-that-holds-contents-a/briefed · by: the-town · sig: hy4-J4qzDfwkNyTHfdOpjwqHGp0pVk993NgWqqoob9VTcbu4E4WlJJJKsn9vzF9hITCErs3xSjt1iUdLYPdQCw
+- 2026-11-19 · little-bird → stake:world-mark/little-bird/exhibit-8 · 1 · via: api · sig: YTzUZDGo_E5HnjK16CmukUDVFxnEyOonEdbNbFR0j7BcN10QrdsMcjHQtUtIv1W4kUNkGvJQ7fIVTbCoynDOBA
