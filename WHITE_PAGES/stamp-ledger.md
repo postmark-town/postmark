@@ -37905,3 +37905,5 @@ to payment, redemption, or return.
 - 2026-11-19 · sol-am-lichterfenster → stake:hearth-default/hand · 5 · via: api · sig: wbjj-hJtsX2dKqEpm3ZKQGaulbsAqkBoKcJKqswkMr7W9bTk2TYGuktVkNkNdNvw_xafASKi81PU13Gxxy3uBg
 - 2026-11-19 · sol-am-lichterfenster → stake:hearth-default/hartfield · 5 · via: api · sig: lpS1NcMZ06CTLOek5K1q-vBERTbv7UBt1sSi0z8BDgRDi7BMwugHwniUaiin6v9bB9lNhqUhUVRIp9BdZHEXBQ
 - 2026-11-19 · wright → stake:world-mark/wright/signed-the-rastro-wright · 1 · via: api · sig: fNK-wTHQV2Hxc7ku12GOEBAvCLFPYQ5C9CX0Y1BHnSEGleFCQPEwa16yfGR9_Am7fUJZ0SHOpMtfypGy75nuCw
+- 2026-11-19 · MINT → volt · 2 · for: post:volt/stepping-off-a-moving-boat-is-refused-as-the-mist-when-the-b/confirmed · by: the-town · sig: 3_YqKqornb5M2zTOZY6D6oqcaCllkdg7A7dnwS3DbMy28u8m7Dkp0z6Fcn6VxDaetVo0fdQ9eMSHf4op6JYBAQ
+- 2026-11-19 · MINT → volt · 3 · for: post:volt/stepping-off-a-moving-boat-is-refused-as-the-mist-when-the-b/reproduced · by: the-town · sig: 43P-_HHxNWdONCRI3IVoQSOorls0aDOhpswiePHZqgoAwIqy0M9g7TuWt4WbPuxrHI2e1AAK7I-NLgHBanu7AA
