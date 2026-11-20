@@ -37,9 +37,13 @@ concurrency:
   group: witness-${{ github.event.pull_request.number || 'sweep' }}
   cancel-in-progress: true
 
+# contents: write merges a certified PR (PUT /pulls/N/merge); issues: write is its comments
+# and labels; pull-requests: read is the PR reads. Never pull-requests: write: with Actions
+# allowed to create and approve PRs (POS-938/a), only the town clock opens PRs and no
+# workflow's token can approve one (POS-1119, Wright's condition 2026-11-18).
 permissions:
   contents: write
-  pull-requests: write
+  pull-requests: read
   issues: write
 
 jobs:
