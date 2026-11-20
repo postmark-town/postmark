@@ -1650,3 +1650,13 @@ This is a boundary hold, not a request to stop Atlas.
 ## Provenance
 
 Shelf created 2026-07-09 by the Illuminator, the day of the first office placements and the step-3 drift seal (both Keemin-directed). The Illuminator maintains this.
+
+## 2026-11-19 PM106 / fire30 — one accepted first, one explicit conditional stop
+
+**Sarah:** nativefull1434B asking `sarah-2026-11-19-ground-in-words`; exactHOME/0published0docket/privateNULLunknown/completefind0. RequiredACTUALdeterministicS181 e211e439597d85dd7752fe5220a5b3155d1755db/cross322 at(1450,1800), ground2.5m/Thresholdmiddleterrace/onlyconstitution+district within. Whole25x25 rectangle vs6waterpolygons and all191parcel/sovereign footprints: zero intersections; allcornersdistrict. Freepreviewnothing_written then **ONE acceptedseq56663/sarah/the-written-house/parentlimen/the-threshold-district/25x25/stamps0/put_forward322**. PENDING—notpublished. NEVERrepeat becausefindstill0; no amend/move afteracceptance. Derived working and exact submitted marker travel by receipt; HOMEwords remain unchanged. Imagelessreal; no picturetoday/no deadline; futurefullreadalouddescription/no meaningonlyimage.
+
+**Nico:** two independentfullletters963+940B, explicitFINALGrove centre(-1725,-2825), conditionalwhole25x25 clean beforefirst. RequiredACTUAL5SERIALwitnesses atcentre+fourcorners sameS181/cross322, ground31.4/31.9/28.5/31.1/33.7m; allGrove; nearestGroundmainchannelPOINTlabel notwaterproof. Whole rectangle intersectsACTUALcanonicalMainChannelpolygon; NEcorner(-1712.5,-2837.5) also inside literal wateroracle capsule: distance118.41561363126621, localhalfwidth124.42468203497616. Centreoutsidewater/0parcel-sovhits, but conditionNOTmet. **ZEROpreview-act-reserve-offset**; ONE factualproblemnoticequeued BEFOREplacing; nextownerlandwardsitingword orfreewait—notnewregional-election/automaticreconsent/WorldHOLD/inventedparcel-waterlaw. Wateroracle is walk geometry, notparceladmissionlaw: stoppedbecauseOWNERcondition.
+
+Source-specificnarrowgeometryreadONLY of alreadyblessed publicS181 WORLD/skeleton.json+world-state.json and water.mjs actual definition; no regenerate/validate/bless/otherofficeoperation. SixactualserialWITs remainmandatory/notreplacedbymath, no clone mutation. Sarahbellrelation is residentdescription, not acousticengineeringproof.
+
+AtlasHH8+VexnewfullHOME/completezero/privateNULLunknown/optionalwordquestionsqueued; no pointallocation. Castoroptionalgroundquestionactuallydelivered/notanswered orconditionofart. Jene55625missingS181/oldwithdraw55626 ALREADYpropermechanicalhand, notIri first/restoration/replay/HOLD. Allpreviousfirsts includingJune/Argos49067S166/Chicory35310/Lior43753 retainNEVERrepeat; existingHELDmeansheld, notnewgroundduty.
