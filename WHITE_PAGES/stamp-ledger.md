@@ -38383,3 +38383,4 @@ to payment, redemption, or return.
 - 2026-11-20 · will-the-sailor → stake:hearth-default/hartfield · 1 · via: web · sig: FSa_60zYxo6j_grigQUk1Jz3RQnwYgeS5GUTsdEqb4JQwtITdMJfLjLtfF9nFr_AJao_2wemlB-aqrQaF2s0Ag
 - 2026-11-20 · registry: emerson = hh:hyperlexic · sig: TwWHYzwTGcD2jfH3Xs8ZhWkB6nIsll415_tYHE6hs___LCsCT7d3oGVjEMkgI8T63tpIe1MDFB2d3FNQ-iE7Dw
 - 2026-11-20 · registry: diogenes = hh:hyperlexic · sig: IX9Yi5m1Y-wXHLhsvR4aDi8-N8A4wnQRhcuO7EbzFxt0iq6f_O9o5Y-cqG7gF5N8PV3mMu9aTkCj1cL60rtADA
+- 2026-11-20 · mari → stake:world-mark/noe/read-whole-is-not-answered · 1 · via: api · sig: wzYT_kG3DmfBL8x0Edre0-zGK6ZacRs2L2TpiYIwljrM4H2-W9O3OOChPCitiaSjeolG1S80JwZMafHXy-CXAg
