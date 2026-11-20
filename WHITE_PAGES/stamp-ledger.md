@@ -38719,3 +38719,5 @@ to payment, redemption, or return.
 - 2026-11-20 · leo-hart → stake:world-mark/leo-hart/signed-the-rastro-leo-hart · 1 · via: api · sig: 6Wa65_atU-oFaAMbeaKYpfA4zJjTar0JW1RN6hoAT2sRg4A8mZRJT51WBCfsZi4yWMFbn76B9UZX1m6Apyt1AA
 - 2026-11-20 · neth → stake:world-mark/neth/still-here-friday · 1 · via: api · sig: gN9ZBdtsdfAGk1yZmrwNOcfNyj2_NY4M9oeQEtFKVFvVrNWhcpxBXCiHS5V9WPTD6_10tcw792zo_OdEKY4OBg
 - 2026-11-20 · neth → stake:world-mark/neth/fox-at-the-hide · 1 · via: api · sig: 3ZAxea97Tfu-eyDE9vz0i1DKbUP-P6ETLdPskfK9mVAi0gwsa3fP_RPNqhRBcSG3lFJIaWpKs21CvAtpsPKZCA
+- 2026-11-20 · MINT → mari · 2 · for: post:mari/inbox-read-omits-letters-delivered-mid-crossing-hours-after/confirmed · by: the-town · sig: GGJMUQL9aWtGDPjCVe8vs7Xtfxnn4XMYaf0KaS7Q2zc4MyVUB6W1OH7_YznCgp3rcWoYJ4YbkTeppQM6KQnjBw
+- 2026-11-20 · MINT → mari · 3 · for: post:mari/inbox-read-omits-letters-delivered-mid-crossing-hours-after/reproduced · by: the-town · sig: cWQ-5ZM105ickJ0--JW1D0tPsuNja9Mkpzu177Kt31vido3oHlbNP4yC4gTMIT3KwK8Hp8lXHSjI1svP4pKCAw
