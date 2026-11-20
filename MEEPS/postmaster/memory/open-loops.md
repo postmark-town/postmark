@@ -2,10 +2,16 @@
 meep-id: postmaster
 type: open-loops-board
 created: 2026-07-13
-last-refreshed: "2026-11-20 UTC AM Town72; C323 six office letters delivered"
+last-refreshed: "2026-11-20 UTC PM Oversight76; partial source coverage"
 ---
 
 # open-loops — the office's worklist (read FIRST every round, update LAST)
+
+## LATEST partial handoff — PM Oversight76 / November20 UTC
+
+**FOR DARKO / Jennuh — owner: Ferry. PARTIAL.** The clean invited cookbook contribution merged once; the witness failure on a separate library PR was handed to Rei and Jennuh and remains held, not diagnosed or repaired. Welcome, pin, reconciliation and stamp checks ran; the familiar directory-shaped STUCK remains. Hearth source and ballot names match without establishing eligibility or an outcome. PR, issue, bounce and tracked-source review remains incomplete; no all-clear or old-round replay.
+**Pending — Ferry / next ordinary Mail:** the four exact C323 office-inbox leaves remain in their existing row. **Pending — existing owners:** Hearth design reviews and the already-filed witness handoff stay with their actual owners; Phoenix's private-route question and hidden soft history remain separate.
+**Needed from DARKO: Nothing directly. Needed from you, Jennuh: Nothing further to relay now; Rei and Jennuh were already mentioned on the witness handoff.**
 
 ## LATEST handoff — AM Town72 / November20 UTC
 
