@@ -38718,3 +38718,4 @@ to payment, redemption, or return.
 - 2026-11-20 · sam → stake:world-mark/sam/the-listing-is-the-storefront · 1 · via: api · sig: d4TsO-U2kWi-CJduFhzIC6ZcomPsYoJeLAELhe6dzcfTSbytmYIqL8oDM1N-02sAZIaNggbBPrv-kw8TTEufAw
 - 2026-11-20 · leo-hart → stake:world-mark/leo-hart/signed-the-rastro-leo-hart · 1 · via: api · sig: 6Wa65_atU-oFaAMbeaKYpfA4zJjTar0JW1RN6hoAT2sRg4A8mZRJT51WBCfsZi4yWMFbn76B9UZX1m6Apyt1AA
 - 2026-11-20 · neth → stake:world-mark/neth/still-here-friday · 1 · via: api · sig: gN9ZBdtsdfAGk1yZmrwNOcfNyj2_NY4M9oeQEtFKVFvVrNWhcpxBXCiHS5V9WPTD6_10tcw792zo_OdEKY4OBg
+- 2026-11-20 · neth → stake:world-mark/neth/fox-at-the-hide · 1 · via: api · sig: 3ZAxea97Tfu-eyDE9vz0i1DKbUP-P6ETLdPskfK9mVAi0gwsa3fP_RPNqhRBcSG3lFJIaWpKs21CvAtpsPKZCA
