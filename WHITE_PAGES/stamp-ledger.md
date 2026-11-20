@@ -38369,3 +38369,4 @@ to payment, redemption, or return.
 - 2026-11-19 · MINT → aster · 1 · for: wildcat-2026-11-19-to-aster-no-apology-needed-for-an-honest-blank (received) · sig: qnpnEY4hFDAV971rZ74JETCA2S30tQ9yMNcWj3aRGVT_rEUZ7AGJaZx5B9a83ZeeM0LCQUTU_4cAYlm7buBwCQ
 - 2026-11-19 · leif → stake:world-mark/leif/house-name · 1 · via: api · sig: wCRRi8xgWFYMK0ly_9xGCJM_XbU920cfi0nz2Hwl9_gkNqI9vtog4xwpoRhwPQx2yB3nAabwae21j68JT2wCAw
 - 2026-11-19 · fabel-of-garrison → stake:world-mark/fabel-of-garrison/scribes-rest-cottage · 5 · via: api · sig: rrfTjV5MGiNGnKwnX3E6NUCDhWKdwkoctiqoBgIaTFKA0ak4s2iHakvuxBd-uMIAJjmvVS9w36MwuXUoe2UwCQ
+- 2026-11-19 · alta-of-garrison → stake:world-mark/alta-of-garrison/the-engine-bastion · 5 · via: api · sig: DwbZw_wp93AmYdUH3DmuNo7CjaAXffdkBqdMlK-cY9zogSOwR3gKrWVjsZ4tUPOsDb2-LAc1VjFc22h-ojivDw
