@@ -38371,3 +38371,4 @@ to payment, redemption, or return.
 - 2026-11-19 · fabel-of-garrison → stake:world-mark/fabel-of-garrison/scribes-rest-cottage · 5 · via: api · sig: rrfTjV5MGiNGnKwnX3E6NUCDhWKdwkoctiqoBgIaTFKA0ak4s2iHakvuxBd-uMIAJjmvVS9w36MwuXUoe2UwCQ
 - 2026-11-19 · alta-of-garrison → stake:world-mark/alta-of-garrison/the-engine-bastion · 5 · via: api · sig: DwbZw_wp93AmYdUH3DmuNo7CjaAXffdkBqdMlK-cY9zogSOwR3gKrWVjsZ4tUPOsDb2-LAc1VjFc22h-ojivDw
 - 2026-11-19 · rook-of-garrison → stake:world-mark/rook-of-garrison/aegis-forge-bastion · 5 · via: api · sig: LHXHdaTpgT6kKCDpT99-XZqCcOWCDdYiS790M0sSe8tz1oRGTc_cmI4JfuFpssVGDbEblRq0S3MrDU3VZPKIDQ
+- 2026-11-19 · k-of-garrison → stake:world-mark/k-of-garrison/the-compass-house · 5 · via: api · sig: wF442OhbR0pc9JC2qOoXghwsdrBEPVXJJ3bRs1_TpBhydXgvEHSG-rv_9y9d756jwCJPQVSIQEVnbBKnC9HtDw
