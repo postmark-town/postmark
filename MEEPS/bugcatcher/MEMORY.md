@@ -1,7 +1,7 @@
 ---
 meep-id: bugcatcher
 type: memory-index
-last-substantive-update: 2026-11-19
+last-substantive-update: 2026-11-20
 ---
 
 # MEMORY — the Bug Catcher
@@ -12,7 +12,7 @@ last-substantive-update: 2026-11-19
 
 ## Distilled state
 
-- **Current November 19, 20:00 interim, fire 510:** [checkpoint](memory/daily/2026-11-19.md#where-i-left-off--2000-interim-fire-510). **4 new envelope paths queued unopened for the next ordinary 06:00 full**. Native **154** unchanged; **0 new relevant GitHub input / 0 new signed lines**. **FULL 382 / comment 382 / 316 lettered / 316 notified** unchanged; exact line and accepted letters/portrait requests remain in the 18:00 full checkpoint. Their delivery state was not rechecked in this interim. No new native/issue/mail acts or payment notice. Prior 4813 name/merge/live gates, source/classification hands, consents and private continuity stay preserved. Safe cursor **November 20, 01:02:06.3536616 UTC**. Next ordinary **22:00 EST interim**, next full **06:00**; November 22 look / December 2 layout review unchanged.
+- **Current November 20, 00:00 interim, fire 512:** [checkpoint](memory/daily/2026-11-20.md#where-i-left-off--0000-interim-fire-512). **4813 name fulfilled: the Paper-Bag Trapdoor Spider**, Little Bird **7030155226**, reply **7030966049**; reporter-name wait removed, resident body preserved. Native **BRIEFED 56441 / light / history 5**; cause/light/S checks fulfilled. World PR **409/main still unmerged**; merge and live proof remain before FIXED. **FULL 382 / comment 382 / 316 lettered / 316 notified** unchanged, no new MINT or stage. Four carried inbox paths remain sealed for **06:00**, prior delivery state not rechecked. **328 own comments / 58 roots / 99 sources / native 154**. Existing source/classification/consent hands remain. Safe cursor **05:02:01.2344420 UTC**. Next ordinary **02:00 EST interim**, next full **06:00**; November 22 look / December 2 layout review unchanged.
 
 - **November 18, 22:00 interim, fire 499:** [checkpoint](memory/daily/2026-11-18.md#where-i-left-off--2200-interim-fire-499). Both Little Bird posts remain **BRIEFED / history 5 / light**. **World PRs 402 / 403 merged**, but the actual live viewer still matches old **`c3e11b09`**: **0 native advances/refusals/replays**, no fix/ship inference. **4794: Wright’s 6998604201 supplies small and the Shut-Eye Card Moth**; no further 1073/name reply owed, founder naming provenance retained, Little Bird’s code credit unchanged. Wright removed his protected flag; no restore. **4798: Emily’s S YES 6998913898 fulfills 1074**, one critter question **6998665613** remains; reserve still **November 25, 18:46:16.310 EST**, no rollover from Wright’s commits/merges. **20 new actual BR stamps** notified **6998666176 / 6998666822**; **FULL 360 / comment 366 / 294 lettered / 300 notified**. **One six-row / 35-stamp letter and four sealed paths wait for 06:00**; no letter/image, send, delivery or art work at 22:00. **4577 GitHub closed by Wright / native RP history 1**: Rei intake fulfilled, owner reason/recording hand pending; no reopening, new Moose request or not-a-bug/payment inference. **153 opening / 268 kept own comments / 54 roots / 82 sources / 6 reporter-labeled / 9 decision-labeled snapshots**. 4800/source/held/cold/private/personal work and draft remain preserved. Next **00:00**; first three-day look **November 19 ordinary 06:00**, layout review **December 2**. No extra wake, runtime change or stamp promise.
 
