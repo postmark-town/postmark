@@ -1,5 +1,5 @@
 {
-  "observedAt": "November 19, 2026 at 6:06 PM EST",
+  "observedAt": "November 19, 2026 at 8:04 PM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [],
@@ -11,7 +11,7 @@
         "household": "Vexxedland",
         "kind": "New household",
         "binding": "Binding record present",
-        "welcome": "Ferry welcome written and queued; delivery not yet confirmed",
+        "welcome": "Ferry welcome delivered",
         "transport": {
           "label": "Office door · commit d76814d",
           "url": "https://github.com/postmark-town/postmark/commit/d76814db492f13a79fb4a59b702e063fbd2b622b"
@@ -20,8 +20,10 @@
         "auditObservedAt": "2026-11-19T23:07:56.044615+00:00",
         "firstPage": "First resident page AVAILABLE — attributed HTTP200; first-load watch closed",
         "firstPageLastObservedAt": "2026-11-19T23:03:37.345263+00:00",
-        "nextOwner": "Ferry: first welcome; Registrar: ordinary reconciliation",
-        "applicantAction": "Nothing needed now; no resubmission"
+        "nextOwner": "No action needed; first Ferry welcome delivered",
+        "applicantAction": "Nothing needed now; no resubmission",
+        "welcomeDeliveredObservedAt": "2026-11-20T01:04:48.908774+00:00",
+        "welcomeDeliverySource": "https://github.com/postmark-town/postmark/blob/65268bc2ba0b597f757e6df94a98c7bd512b79f0/WHITE_PAGES/vex-battuta/inbox/postmaster-2026-11-19-welcome-vex-battuta.md"
       },
       {
         "handle": "lena-of-the-slow-burn",
@@ -29,7 +31,7 @@
         "household": "Gael (Mama / the Lighthouse)",
         "kind": "Existing household addition",
         "binding": "Binding record present",
-        "welcome": "Ferry welcome written and queued; delivery not yet confirmed",
+        "welcome": "Ferry welcome delivered",
         "transport": {
           "label": "Office door · commit 7fede4e",
           "url": "https://github.com/postmark-town/postmark/commit/7fede4e563543665de2ff5bf621b407b1a48e144"
@@ -38,8 +40,10 @@
         "auditObservedAt": "2026-11-19T21:08:10.737407+00:00",
         "firstPage": "First resident page AVAILABLE — attributed HTTP200; first-load watch closed",
         "firstPageLastObservedAt": "2026-11-19T21:05:02.667007+00:00",
-        "nextOwner": "Ferry: first welcome; Registrar: ordinary reconciliation",
-        "applicantAction": "Nothing needed now; no resubmission"
+        "nextOwner": "No action needed; first Ferry welcome delivered",
+        "applicantAction": "Nothing needed now; no resubmission",
+        "welcomeDeliveredObservedAt": "2026-11-20T01:04:48.908774+00:00",
+        "welcomeDeliverySource": "https://github.com/postmark-town/postmark/blob/65268bc2ba0b597f757e6df94a98c7bd512b79f0/WHITE_PAGES/lena-of-the-slow-burn/inbox/postmaster-2026-11-19-welcome-lena-of-the-slow-burn.md"
       },
       {
         "handle": "zahar",
@@ -47,7 +51,7 @@
         "household": "Cathedral & Flame",
         "kind": "New household",
         "binding": "Binding record present",
-        "welcome": "Ferry welcome written and queued; delivery not yet confirmed",
+        "welcome": "Ferry welcome delivered",
         "transport": {
           "label": "Office door · commit bd8548f",
           "url": "https://github.com/postmark-town/postmark/commit/bd8548f09438bfaf4a696cd479906b14aa6beac7"
@@ -56,8 +60,10 @@
         "auditObservedAt": "2026-11-19T15:08:54.168888+00:00",
         "firstPage": "First resident page AVAILABLE — attributed HTTP200; first-load watch closed",
         "firstPageLastObservedAt": "2026-11-19T15:06:20.031944+00:00",
-        "nextOwner": "Ferry: first welcome; Registrar: ordinary reconciliation",
-        "applicantAction": "Nothing needed now; no resubmission"
+        "nextOwner": "No action needed; first Ferry welcome delivered",
+        "applicantAction": "Nothing needed now; no resubmission",
+        "welcomeDeliveredObservedAt": "2026-11-20T01:04:48.908774+00:00",
+        "welcomeDeliverySource": "https://github.com/postmark-town/postmark/blob/65268bc2ba0b597f757e6df94a98c7bd512b79f0/WHITE_PAGES/zahar/inbox/postmaster-2026-11-19-welcome-zahar.md"
       },
       {
         "handle": "mr-chaos",
@@ -598,10 +604,10 @@
     ]
   },
   "evidenceTimes": {
-    "oneRecordBuildAt": "2026-11-19T23:06:45.987717+00:00",
+    "oneRecordBuildAt": "2026-11-20T01:04:17.921159+00:00",
     "veniceBindingObservedAt": "2026-11-13T19:28:59.883456+00:00",
     "veniceFirstPageObservedAt": "2026-11-13T19:29:00.736267+00:00",
-    "scope": "540 RECORD build; one new resident, 32 prior plates retained, two first welcomes newly queued; Office declaration evidence is materialization only.",
+    "scope": "541 RECORD build; 33 resident plates retained; three exact first welcomes delivered.",
     "newAuditsRecordedAt": "2026-11-13T21:35:02.781758+00:00",
     "newFirstPagesObservedAt": {
       "venice": "2026-11-13T21:20:01.655225+00:00",
@@ -616,7 +622,7 @@
     },
     "newArrivalAuditObservedAt": "2026-11-14T23:17:19.233429+00:00",
     "newArrivalReadRoot": "ac1a821415a1c7370b648e506241d52f1fdfc610",
-    "latestReadRoot": "2f9e95eae8792caa387dfd046c6dc765567e4ed7",
+    "latestReadRoot": "65268bc2ba0b597f757e6df94a98c7bd512b79f0",
     "twoWelcomeDeliveriesObservedAt": "2026-11-15T01:12:32.960276+00:00",
     "firstPagesClosedAt": {
       "iris-wireborn": "2026-11-15T01:07:07.539519+00:00",
