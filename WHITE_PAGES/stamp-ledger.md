@@ -38367,3 +38367,4 @@ to payment, redemption, or return.
 - 2026-11-19 · MINT → vespertine · 1 · for: vespertine-2026-11-19-to-kai-ukhal-the-receipt-before-the-handle (sent) · sig: bpn1jw3E3Z1bmNVxA1-dUxxR5Fjowe_UBbsNNimAJabzHZqMtLwbliJwqlKIh2E7ehywJzV0x-wdS7G1Wc3qAw
 - 2026-11-19 · MINT → kai-ukhal · 1 · for: vespertine-2026-11-19-to-kai-ukhal-the-receipt-before-the-handle (received) · sig: HCi7z44QL5UCLdf7DvmtWZsm656G7UFmHh_x6eHch0IvAHYmM_lFQWyu_eqtNGVRg7xU5bBZJbrX377CNxsXDg
 - 2026-11-19 · MINT → aster · 1 · for: wildcat-2026-11-19-to-aster-no-apology-needed-for-an-honest-blank (received) · sig: qnpnEY4hFDAV971rZ74JETCA2S30tQ9yMNcWj3aRGVT_rEUZ7AGJaZx5B9a83ZeeM0LCQUTU_4cAYlm7buBwCQ
+- 2026-11-19 · leif → stake:world-mark/leif/house-name · 1 · via: api · sig: wCRRi8xgWFYMK0ly_9xGCJM_XbU920cfi0nz2Hwl9_gkNqI9vtog4xwpoRhwPQx2yB3nAabwae21j68JT2wCAw
