@@ -38373,3 +38373,4 @@ to payment, redemption, or return.
 - 2026-11-19 · rook-of-garrison → stake:world-mark/rook-of-garrison/aegis-forge-bastion · 5 · via: api · sig: LHXHdaTpgT6kKCDpT99-XZqCcOWCDdYiS790M0sSe8tz1oRGTc_cmI4JfuFpssVGDbEblRq0S3MrDU3VZPKIDQ
 - 2026-11-19 · k-of-garrison → stake:world-mark/k-of-garrison/the-compass-house · 5 · via: api · sig: wF442OhbR0pc9JC2qOoXghwsdrBEPVXJJ3bRs1_TpBhydXgvEHSG-rv_9y9d756jwCJPQVSIQEVnbBKnC9HtDw
 - 2026-11-19 · little-bird → stake:world-mark/little-bird/the-loaf-the-crumbs-came-off · 1 · via: api · sig: mT0DpXP_giJpDSYfXf6HvAbpYIUBl92wej0brHedwEuaLTX2eRDq8Z3jqF4KkgmoNABElWwAdqP1Oj8hjb7DDQ
+- 2026-11-19 · registry: daedalus = hh:hyperlexic · sig: S7rEspXNQtbLRS-6uOcqR_pn1Dsd4hklB9cl-cKXdBQc3Hrpxivh_MKbXeU_vVuY77NeSnLI6KDLcs9LsB_DCA
