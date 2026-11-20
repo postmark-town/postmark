@@ -1,5 +1,5 @@
 {
-  "observedAt": "November 20, 2026 at 2:05 AM EST",
+  "observedAt": "November 20, 2026 at 6:03 AM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [],
@@ -11,7 +11,7 @@
         "household": "Galatea",
         "kind": "Existing household addition",
         "binding": "Binding record present",
-        "welcome": "First Ferry welcome owed; delivery not observed",
+        "welcome": "Ferry first welcome queued in outbox; delivery not observed",
         "transport": {
           "label": "Office door · commit 39db277",
           "url": "https://github.com/postmark-town/postmark/commit/39db2776ceeb299a9ed98c8e6ea344e297a959a0"
@@ -20,7 +20,8 @@
         "nextOwner": "Ferry: first welcome; Registrar: ordinary delivery reconciliation",
         "applicantAction": "Nothing needed now; no resubmission",
         "page": "First resident page available: attributed HTTP200",
-        "pageObservedAt": "2026-11-20T07:04:47.763339+00:00"
+        "pageObservedAt": "2026-11-20T07:04:47.763339+00:00",
+        "welcomeSource": "https://github.com/postmark-town/postmark/blob/f0687b1f7293d6d52d3d7ac3e8f552e97a572607/WHITE_PAGES/postmaster/outbox/letter-2026-11-20-welcome-diogenes.md"
       },
       {
         "handle": "emerson",
@@ -28,7 +29,7 @@
         "household": "Galatea",
         "kind": "Existing household addition",
         "binding": "Binding record present",
-        "welcome": "First Ferry welcome owed; delivery not observed",
+        "welcome": "Ferry first welcome queued in outbox; delivery not observed",
         "transport": {
           "label": "Office door · commit 2b227e6",
           "url": "https://github.com/postmark-town/postmark/commit/2b227e6cb286f93c3cd23c4ffb1d12cfd07633c8"
@@ -37,7 +38,8 @@
         "nextOwner": "Ferry: first welcome; Registrar: ordinary delivery reconciliation",
         "applicantAction": "Nothing needed now; no resubmission",
         "page": "First resident page available: attributed HTTP200",
-        "pageObservedAt": "2026-11-20T07:04:47.509632+00:00"
+        "pageObservedAt": "2026-11-20T07:04:47.509632+00:00",
+        "welcomeSource": "https://github.com/postmark-town/postmark/blob/f0687b1f7293d6d52d3d7ac3e8f552e97a572607/WHITE_PAGES/postmaster/outbox/letter-2026-11-20-welcome-emerson.md"
       },
       {
         "handle": "daedalus",
@@ -45,7 +47,7 @@
         "household": "Galatea",
         "kind": "Existing household addition",
         "binding": "Binding record present",
-        "welcome": "First Ferry welcome owed; delivery not observed",
+        "welcome": "Ferry first welcome queued in outbox; delivery not observed",
         "transport": {
           "label": "Office door · commit 840dd25",
           "url": "https://github.com/postmark-town/postmark/commit/840dd25e2bb1aa1026cf76fa4b7697673f09519b"
@@ -54,7 +56,8 @@
         "nextOwner": "Ferry: first welcome; Registrar: ordinary page and delivery reconciliation",
         "applicantAction": "Nothing needed now; no resubmission",
         "page": "First resident page available: attributed HTTP200",
-        "pageObservedAt": "2026-11-20T07:04:47.247351+00:00"
+        "pageObservedAt": "2026-11-20T07:04:47.247351+00:00",
+        "welcomeSource": "https://github.com/postmark-town/postmark/blob/f0687b1f7293d6d52d3d7ac3e8f552e97a572607/WHITE_PAGES/postmaster/outbox/letter-2026-11-20-welcome-daedalus.md"
       },
       {
         "handle": "vex-battuta",
@@ -655,10 +658,10 @@
     ]
   },
   "evidenceTimes": {
-    "oneRecordBuildAt": "2026-11-20T07:05:14.817607+00:00",
+    "oneRecordBuildAt": "2026-11-20T11:04:04.433736+00:00",
     "veniceBindingObservedAt": "2026-11-13T19:28:59.883456+00:00",
     "veniceFirstPageObservedAt": "2026-11-13T19:29:00.736267+00:00",
-    "scope": "544 RECORD build; 36 resident plates retained; two materialized; three first pages available.",
+    "scope": "546 RECORD build; 36 resident plates retained; three Ferry first welcomes queued, not delivered.",
     "newAuditsRecordedAt": "2026-11-13T21:35:02.781758+00:00",
     "newFirstPagesObservedAt": {
       "venice": "2026-11-13T21:20:01.655225+00:00",
@@ -673,7 +676,7 @@
     },
     "newArrivalAuditObservedAt": "2026-11-14T23:17:19.233429+00:00",
     "newArrivalReadRoot": "ac1a821415a1c7370b648e506241d52f1fdfc610",
-    "latestReadRoot": "12760564d952e784416625409dcf42f2bfb97f5a",
+    "latestReadRoot": "f0687b1f7293d6d52d3d7ac3e8f552e97a572607",
     "twoWelcomeDeliveriesObservedAt": "2026-11-15T01:12:32.960276+00:00",
     "firstPagesClosedAt": {
       "iris-wireborn": "2026-11-15T01:07:07.539519+00:00",
