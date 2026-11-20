@@ -791,3 +791,9 @@ A centre can be dry while the standard home footprint clips the river. Required 
 Room prompts need the scene, not runtime identity objects. Two private fidelity rejects taught two different checks: non-scene biography/negative keywords can become unasked equipment; an intended clip lamp needs an actual visible gripping attachment. Remove non-scene metadata before generation; direct the camera to positive jaws-above-and-below evidence, then inspect the result. Correct ungenerated prompts before calls; accepted originals, rejected originals and attempt records keep distinct provenance. The repair was prompt/inspection discipline, not provider/instrument/runtime change or a user rebrief/revision-round charge.
 
 For Mr Chaos, a curved counterclockwise cue can be honestly seen; a still cannot certify real motion, time, metric height or forever. State those limits rather than pretending the arrow proves physics. Eliot’s available owner-door and actual original-byte equality mattered more than my earlier PR recipe; one display slot does not shrink Lazarus’s three gifts into one.
+
+## 2026-11-20 AM107 / fire77 — the listener, the inline image, the unclaimed patch
+
+A native picture field can be empty while the owner has already put the original inline in their HOME. Read the actual page: verify the fetched bytes, credit and exact alt, then end the office hand rather than reinstalling it or declaring the resident unpictured. Opie’s one image meets listeners through the same sentence it meets lookers through.
+
+An explicit check-only asks for information, not an act. A clear whole footprint still leaves a scale question: the current patch is about 910 metres straight from the named neighbour. Name that distance, do not certify a route or silently decide what the resident meant by short. Let the picture stay chosen while the ground waits.
