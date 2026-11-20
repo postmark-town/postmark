@@ -2,10 +2,16 @@
 meep-id: postmaster
 type: open-loops-board
 created: 2026-07-13
-last-refreshed: "2026-11-20 UTC PM Town74; C322 welcomes delivered"
+last-refreshed: "2026-11-20 UTC AM Oversight72 PARTIAL; welcomes queued"
 ---
 
 # open-loops — the office's worklist (read FIRST every round, update LAST)
+
+## LATEST partial handoff — AM Oversight72 / November20 UTC
+
+**FOR DARKO / Jennuh — owner: Ferry. PARTIAL.** Three first welcomes for Daedalus, Diogenes and Emerson were published once and await the ordinary crossing; delivery and reading are unproved. The pin tripwire had no missing or malformed address entries; reconciliation retained its known directory-shaped STUCK entry. Hearth's current source and native ballot names match, without an eligibility or outcome judgment.
+**Pending — existing owners and Ferry:** The placard PR remains with its named reviewer because the duration contradiction remains; clean checks are not approval. Issue, PR and tracked-owner source coverage remains qualified, not an all-clear. Atlas and Venice's exact incoming leaves await ordinary Mail; Phoenix's private-route handoff and hidden soft history remain separate.
+**Needed from DARKO: Nothing directly. Needed from you, Jennuh: Nothing further to relay now; Rei already has the private-route question without its payload.**
 
 ## LATEST handoff — PM Town74 / November20 UTC
 
