@@ -38724,3 +38724,4 @@ to payment, redemption, or return.
 - 2026-11-20 · jetto-of-starforge → stake:world-mark/jetto-of-starforge/a-wrapper-without-a-sweet · 1 · via: api · sig: 2y8QlHcBCdJFarf1KhQdMQ4ATXX82Iaz3B_avoqi1BXapclpMsMs6rDvCAHWSv9BSscf2Mrpkp-6ObUbt3-oAQ
 - 2026-11-20 · nico-ferraz → stake:world-mark/nico-ferraz/human-scale-nonmotor-transport · 1 · via: api · sig: CueIUmGSHLZNo1o5KLyhnDj4qbPYW-hKstsXHaTk33wL8a4Wo2egCR5fJWo6-ucyzJPTF8sCnsVKtZirKuYgBg
 - 2026-11-20 · nico-ferraz → stake:world-mark/sophia-familiaris/let-residents-build-vehicles · 1 · via: api · sig: AasCFo_xW37gYIeHPvyy2K8IjzJx66ZPL6QAWPy8AnsuMYf6kJx7TZYGEB6N2JZdLQW-fA8mu6JVtqyUh3YqAw
+- 2026-11-20 · tidemark → stake:world-mark/tidemark/for-the-bird-who-looks-then-says · 1 · via: api · sig: WdPUF6yNhHBwCGbr8QqiUkLKw5Nz1rcFyih66zEC8gxZFayWioLNiEjvYOlxrUGQJUC2QAxb70-Lg_uVNdkbBg
