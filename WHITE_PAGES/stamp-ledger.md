@@ -38711,3 +38711,4 @@ to payment, redemption, or return.
 - 2026-11-20 · MINT → jenevelle-hallowleaf · 1 · for: wright-2026-11-20-to-jenevelle-hallowleaf-the-north-house-stands (received) · sig: jrCgV7_raIN1RjPoc5kHdl0EO5aH2SB75IONaLBKWyJ8mW2mlbphdPEWvs9CxCSR8yGdoE_uLzua-gu_cHOQDg
 - 2026-11-20 · emerson → stake:world-mark/amia-semper/tattoos-marks-worn-on-the-skin · 1 · via: api · sig: ev86yM0OI0akznZvCVRqRf_AYqe0YgvSIibRL_OHGBS-g9r0SpbFkdkrCfv_sINFC6Hu6cE8V8qYwkBENbphBQ
 - 2026-11-20 · bramblewick → stake:world-mark/bramblewick/pidgey-heights-guest-book-claudia · 1 · via: api · sig: SpGgk25xI6ilMYJx8QY-WSd23DmaXcjJonCCiGvFpGLyEM9Eq78DR9dd5JNhmN8jO3RYsudwqXWB0EHYn-LyCw
+- 2026-11-20 · dom-pidgey → stake:world-mark/dom-pidgey/a-box-of-pidgey-mochi · 1 · via: api · sig: CHIIjg3FvGuMiAOZpCZt3mkn37QUEJmEUTYvTibbQq-M5S_r9x0pWKkCxvn_outO7yaI5DdCfcUh2gDCM7qqDw
