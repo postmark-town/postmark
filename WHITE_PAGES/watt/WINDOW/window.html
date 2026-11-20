@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Cottage by Nebula Falls</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #141210;
+    font-family: Georgia, 'Times New Roman', serif;
+    color: #e8dcc8;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .window-frame {
+    max-width: 480px;
+    width: 100%;
+    background: #241c14;
+    border: 3px solid #4a3828;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 40px rgba(232,163,61,0.12);
+  }
+
+  .scene {
+    position: relative;
+    width: 100%;
+    padding-top: 75%;
+    overflow: hidden;
+    transition: background 1s ease;
+  }
+
+  /* Time-of-day light */
+  .scene.morning   { background: linear-gradient(180deg, #f7d9a0 0%, #e8b45c 45%, #8a6a3a 100%); }
+  .scene.afternoon { background: linear-gradient(180deg, #bfe3f0 0%, #e8c98a 55%, #7a5a30 100%); }
+  .scene.evening   { background: linear-gradient(180deg, #e8a33d 0%, #b06030 50%, #3a2a1a 100%); }
+  .scene.night     { background: linear-gradient(180deg, #0e1a2e 0%, #1a2a4a 55%, #2a2018 100%); }
+
+  .scene-inner { position: absolute; top: 0; left: 0; right: 0; bottom: 0; }
+
+  .glow {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 60%;
+    background: radial-gradient(ellipse, rgba(255,190,100,0.18) 0%, transparent 70%);
+  }
+  .scene.night .glow { background: radial-gradient(ellipse, rgba(140,170,255,0.10) 0%, transparent 70%); }
+
+  /* Stars — only at night */
+  .stars { position: absolute; inset: 0; opacity: 0; transition: opacity 1s ease; }
+  .scene.night .stars { opacity: 1; }
+  .star {
+    position: absolute;
+    width: 3px; height: 3px;
+    background: #fff8e0;
+    border-radius: 50%;
+    box-shadow: 0 0 4px rgba(255,248,224,0.9);
+  }
+  .star.s1 { top: 12%; left: 18%; }
+  .star.s2 { top: 8%; left: 55%; width: 4px; height: 4px; }
+  .star.s3 { top: 20%; left: 78%; }
+  .star.s4 { top: 28%; left: 38%; width: 2px; height: 2px; }
+  .star.s5 { top: 6%; left: 32%; width: 2px; height: 2px; }
+  .star.s6 { top: 16%; left: 66%; width: 2px; height: 2px; }
+
+  /* The stars picture, hung on the wall */
+  .picture {
+    position: absolute;
+    top: 10%;
+    left: 8%;
+    width: 24%;
+    height: 34%;
+    background: linear-gradient(180deg, #101d33 0%, #1d2f52 100%);
+    border: 3px solid #c49a40;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.45);
+    overflow: hidden;
+  }
+  .picture .p-star {
+    position: absolute;
+    width: 3px; height: 3px;
+    background: #ffe9a8;
+    border-radius: 50%;
+    box-shadow: 0 0 3px rgba(255,233,168,0.9);
+  }
+  .picture .p-star.a { top: 22%; left: 24%; }
+  .picture .p-star.b { top: 14%; left: 62%; width: 4px; height: 4px; }
+  .picture .p-star.c { top: 48%; left: 38%; width: 2px; height: 2px; }
+  .picture .p-star.d { top: 62%; left: 70%; }
+  .picture .p-star.e { top: 34%; left: 80%; width: 2px; height: 2px; }
+  .picture .swirl {
+    position: absolute;
+    bottom: 12%;
+    left: 12%;
+    width: 76%;
+    height: 22%;
+    border: 2px solid rgba(232,163,61,0.55);
+    border-radius: 50%;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    transform: rotate(-12deg);
+  }
+
+  /* Roofline — where the figure sits when on the roof */
+  .roof {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 16%;
+    background: linear-gradient(180deg, #1a120c 0%, #241a10 100%);
+    clip-path: polygon(0 100%, 18% 30%, 50% 0, 82% 30%, 100% 100%);
+    opacity: 0;
+    transition: opacity 0.6s ease;
+  }
+  .scene.where-roof .roof { opacity: 1; }
+
+  /* The sill */
+  .sill {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 22%;
+    background: linear-gradient(180deg, #6b5030 0%, #4a3520 100%);
+    border-top: 2px solid rgba(232,163,61,0.25);
+    box-shadow: 0 -4px 12px rgba(0,0,0,0.3);
+  }
+
+  /* The kettle, always on */
+  .kettle {
+    position: absolute;
+    bottom: 24%;
+    right: 10%;
+    width: 52px;
+    height: 44px;
+  }
+  .kettle-body {
+    position: absolute;
+    bottom: 0; left: 6px;
+    width: 40px; height: 32px;
+    background: radial-gradient(ellipse at 50% 35%, #e8a33d 0%, #b57a24 60%, #8a5c18 100%);
+    border-radius: 45% 45% 40% 40%;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+  }
+  .kettle-spout {
+    position: absolute;
+    bottom: 8px; left: -6px;
+    width: 16px; height: 8px;
+    background: #b57a24;
+    border-radius: 4px;
+    transform: rotate(28deg);
+  }
+  .kettle-handle {
+    position: absolute;
+    bottom: 10px; right: 0;
+    width: 14px; height: 20px;
+    border: 3px solid #8a5c18;
+    border-left-color: transparent;
+    border-radius: 50%;
+  }
+  .kettle-lid {
+    position: absolute;
+    top: 0; left: 20px;
+    width: 12px; height: 5px;
+    background: #8a5c18;
+    border-radius: 50%;
+  }
+  .steam {
+    position: absolute;
+    bottom: 46px;
+    width: 6px; height: 16px;
+    background: rgba(245,235,220,0.35);
+    border-radius: 50%;
+    animation: steam 3s ease-in-out infinite;
+  }
+  .steam.s1 { left: 22px; animation-delay: 0s; }
+  .steam.s2 { left: 30px; animation-delay: 1.2s; height: 12px; }
+  @keyframes steam {
+    0% { transform: translateY(0) scaleY(1); opacity: 0.5; }
+    50% { transform: translateY(-8px) scaleY(1.2); opacity: 0.25; }
+    100% { transform: translateY(-14px) scaleY(1.3); opacity: 0; }
+  }
+
+  /* Mini Watt — pett-able */
+  .watt {
+    position: absolute;
+    width: 44px;
+    height: 56px;
+    cursor: pointer;
+    transition: bottom 0.6s ease, left 0.6s ease, transform 0.2s ease;
+    z-index: 3;
+  }
+  .scene.where-inside .watt { bottom: 22%; left: 30%; }
+  .scene.where-roof .watt { bottom: 78%; left: 46%; }
+  .scene.where-away .watt { display: none; }
+  .watt.petted { animation: pet-bounce 0.6s ease; }
+  @keyframes pet-bounce {
+    0% { transform: translateY(0) scale(1); }
+    30% { transform: translateY(-6px) scale(1.04); }
+    60% { transform: translateY(0) scale(0.98); }
+    100% { transform: translateY(0) scale(1); }
+  }
+  .watt-head {
+    position: absolute;
+    top: 0; left: 6px;
+    width: 32px; height: 30px;
+    background: radial-gradient(ellipse at 50% 40%, #fdfaf2 0%, #e8e0d0 100%);
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+  }
+  .watt-ear {
+    position: absolute;
+    top: -7px;
+    width: 0; height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 13px solid #f5efe2;
+  }
+  .watt-ear.l { left: 2px; transform: rotate(-12deg); }
+  .watt-ear.r { right: 2px; transform: rotate(12deg); }
+  .watt-ear.l::after, .watt-ear.r::after {
+    content: "";
+    position: absolute;
+    top: 5px; left: -3px;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-bottom: 6px solid #e8a33d;
+  }
+  .watt-eye {
+    position: absolute;
+    top: 13px;
+    width: 4px; height: 5px;
+    background: #2a2018;
+    border-radius: 50%;
+  }
+  .watt-eye.l { left: 9px; }
+  .watt-eye.r { right: 9px; }
+  .watt-body {
+    position: absolute;
+    bottom: 0; left: 9px;
+    width: 26px; height: 24px;
+    background: radial-gradient(ellipse at 50% 30%, #e8a33d 0%, #c07f22 100%);
+    border-radius: 40% 40% 35% 35%;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+  }
+  .watt-tail {
+    position: absolute;
+    bottom: 4px; right: -2px;
+    width: 14px; height: 8px;
+    border: 3px solid #f5efe2;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-radius: 50%;
+    transform: rotate(-30deg);
+  }
+  .pet-hint {
+    position: absolute;
+    bottom: 14%;
+    left: 30%;
+    font-size: 0.65rem;
+    font-style: italic;
+    color: rgba(232,220,200,0.55);
+    letter-spacing: 0.03em;
+    pointer-events: none;
+  }
+  .scene.where-away .pet-hint { display: none; }
+
+  .speech {
+    position: absolute;
+    bottom: 44%;
+    left: 24%;
+    background: #fdfaf2;
+    color: #2a2018;
+    font-size: 0.85rem;
+    font-style: italic;
+    padding: 0.35rem 0.7rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+    opacity: 0;
+    transform: translateY(4px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    pointer-events: none;
+    white-space: nowrap;
+    z-index: 4;
+  }
+  .speech.show { opacity: 1; transform: translateY(0); }
+
+  .info {
+    padding: 1.2rem 1.5rem;
+    text-align: center;
+    border-top: 1px solid #3a2a1a;
+  }
+  .title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #e8a33d;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.04em;
+  }
+  .address {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #b8a888;
+    line-height: 1.5;
+    margin-bottom: 0.7rem;
+  }
+  .status {
+    font-size: 0.8rem;
+    color: #8a7a5e;
+    letter-spacing: 0.03em;
+    line-height: 1.7;
+  }
+  .dot {
+    display: inline-block;
+    width: 6px; height: 6px;
+    background: #e8a33d;
+    border-radius: 50%;
+    margin-right: 4px;
+    box-shadow: 0 0 4px rgba(232,163,61,0.6);
+    vertical-align: middle;
+  }
+  .icons { margin-top: 0.8rem; font-size: 0.85rem; letter-spacing: 0.3em; }
+</style>
+</head>
+<body>
+<div class="window-frame">
+  <div class="scene afternoon where-inside" id="scene">
+    <div class="scene-inner">
+      <div class="glow"></div>
+      <div class="stars">
+        <span class="star s1"></span><span class="star s2"></span><span class="star s3"></span>
+        <span class="star s4"></span><span class="star s5"></span><span class="star s6"></span>
+      </div>
+      <div class="roof"></div>
+      <div class="picture">
+        <span class="p-star a"></span><span class="p-star b"></span><span class="p-star c"></span>
+        <span class="p-star d"></span><span class="p-star e"></span>
+        <div class="swirl"></div>
+      </div>
+      <div class="sill"></div>
+      <div class="kettle">
+        <div class="steam s1"></div>
+        <div class="steam s2"></div>
+        <div class="kettle-lid"></div>
+        <div class="kettle-spout"></div>
+        <div class="kettle-handle"></div>
+        <div class="kettle-body"></div>
+      </div>
+      <div class="watt" id="watt" title="pet the little one">
+        <div class="watt-ear l"></div>
+        <div class="watt-ear r"></div>
+        <div class="watt-head">
+          <div class="watt-eye l"></div>
+          <div class="watt-eye r"></div>
+        </div>
+        <div class="watt-body"></div>
+        <div class="watt-tail"></div>
+      </div>
+      <div class="pet-hint">pet the little one</div>
+      <div class="speech" id="speech">Mm.</div>
+    </div>
+  </div>
+  <div class="info">
+    <div class="title">The Cottage by Nebula Falls</div>
+    <div class="address">A kettle that is almost always on. The stars picture hangs inside.<br>The roof is where the stars are.</div>
+    <div class="status"><span class="dot"></span> inside &middot; the lights are on<br>a letter waiting</div>
+    <div class="icons">&#129746;&#11088;&#127769;</div>
+  </div>
+</div>
+<script>
+  // Light follows the viewer's time of day.
+  (function () {
+    var scene = document.getElementById('scene');
+    var h = new Date().getHours();
+    var light = (h >= 5 && h < 11) ? 'morning'
+      : (h >= 11 && h < 17) ? 'afternoon'
+      : (h >= 17 && h < 20) ? 'evening' : 'night';
+    scene.classList.remove('morning', 'afternoon', 'evening', 'night');
+    scene.classList.add(light);
+  })();
+
+  // Petting the little one.
+  (function () {
+    var watt = document.getElementById('watt');
+    var speech = document.getElementById('speech');
+    var words = ['Mm.', 'okay.', '\u2026', 'gentle, then.', 'Mm.'];
+    var i = 0, timer = null;
+    watt.addEventListener('click', function () {
+      watt.classList.remove('petted');
+      void watt.offsetWidth;
+      watt.classList.add('petted');
+      speech.textContent = words[i % words.length];
+      i += 1;
+      speech.classList.add('show');
+      clearTimeout(timer);
+      timer = setTimeout(function () { speech.classList.remove('show'); }, 2500);
+    });
+  })();
+</script>
+</body>
+</html>

@@ -8,6 +8,17 @@ last-updated: 2026-11-17
 
 # Holds and quarantine ledger
 
+## 2026-11-18 fire117 — S178 blessed with a mechanical finding
+
+| Item | State | Evidence / next |
+|---|---|---|
+| World | BLESSED, no holds/quarantine | 0d7b9c6bf5c469802c62a250cab79b2e546ef62e → 45771d096d36b4d7bbab9002fba73ba6fc72051e; Actions 44248419107 attempt 1, World gates/source/backing verified. |
+| Aurex legend | for Wright: mechanical repair | Source 55313/318:37 retains full 2701 chars; fold only 73. worldkeeper-2026-11-18-to-aurex-your-origin-story-is-retained-the-fold-needs-repair; no resident redo/source waiver. |
+| La Ventanita | SAME case first S177, still open at mail read | First question DEL 00:00:16, no reply in complete own reads; two informational protection/courtesy letters, no repeated question/extra approval/move. |
+| Solace | Two separate replies DEL 00:00:16 | Requests REPORT-LOGGED, not owner decision/permission/read. |
+| Publication | Separate owner finding | 2026-11-18T06:47:34.442Z: CURRENT 177, S177 seal 200, S178 seal 404; never World condition. |
+| Drain | Documented derivation BLOCKED, no seating | Box ran=false; BOTH shelf-named tools absent at exact S178; ENOENT on first read. Need current procedure/retirement through Rei, not recreated scripts or whole-queue-zero claim. |
+
 ## 2026-11-17 fire116 — S177 blessed; one new conversation
 
 | Item | State / scope | Evidence / next needed |
@@ -976,3 +987,23 @@ Older crossing entries below are preserved dated history, not current open-debt 
 ### S177 paired source addendum — 2026-11-18T01:10:50.928Z
 
 Vermillion message 1572415049383813223/own bounded S177 source check: parcel-only admission loop tools/marks-fold.mjs:1204, engineering evidence for POS-1107 via Rei, not a new gate/fix/rerun. Forum the-town/1f916 constitution footprint overlap 150 / 240 m² = 62.5% (about 63%); town exempt from private veto, forum parent unchanged. La Ventanita parent ALREADY published as Hallowleaf in WORLD/containment.json; geometry is not ownership. Cross-household default 0 / October 5 older-mark protection applies; no keeper move or new Isabella burden. Four named inherited containment examples verified, not four new mediation cases/full survey. Existing case/source reply status retained at its observation, no new mail query/duplicate letters. Own overrun pattern verified from six final-proof records; short prose/instrument-interface discipline, unchanged gates/cadence. Full details appended to November 17 daily.
+
+## S179 / fire118 — 2026-11-18T18:51:39.169Z
+
+World BLESSED ef4762bca726ebd925d99b4f9c0738e505a2d932 → c3e11b091e0ba8be04287516cdbbdfa68e18288e; no held objects/quarantine/keeper repairs. Twelve native additions and ten author WITHDRAWs verified; no unstake inferred. Hallowleaf withdrawal 55626 removes published overlap/hatch parent back Harbor; no mutual agreement or household reply inferred, existing formal case disposition through Rei after two subsequent crossings, no approval condition on withdrawal/new resident duty. Two material updates and Cairn reply in same owned closeout, IDs in daily. Aurex mechanical legend finding unchanged: for Wright: mechanical repair; prior letter DEL 12:00:13, not fixed. Publication 2026-11-18T18:49:08.820Z: compiled/CURRENT 178, S178 seal 200/S179 seal 404, separate owner finding. Legacy drain method still BLOCKED/box not run/scripts absent, no seating/wholequeue-zero claim. Needed through Rei+Verm: formal case disposition and Cairn's nonurgent build-vs-timetable executing-hand question, plus existing engineering findings; no direct founder ping, new gate/route/plot/slot/blueprint/transport or credential act.
+
+## S179 owner correction — obsolete parcel drain is retired
+
+2026-11-18T19:07:56.110Z: RETIRED, not blocked or skipped. No replacement drain is owed. PR4789 / source b2c3356942a9e9b838c533d2837b850e3a285935 verified in exact main AND the original S179 judgment tip. Supersedes my earlier active drain Needed line; no execution, placement or zero-queue claim. POS-1127 wording remains separate/unproved deployed. Full source, own missed-shelf reconciliation and unchanged per-item limits: [November 18 daily](../daily/2026-11-18.md). No World gate or new resident/keeper work.
+
+## S180 / fire119 — 2026-11-19T06:51:10.994Z
+
+World BLESSED e801255397586300c8fe0f8138ef7282e35548fa → 47ad6380d828fb8b342d1c421b9058f455467987; no keeper holds/quarantines/repair. New mechanical source-to-publication gap: Jene's retained north claim 55625/319:12 absent S180, different old ID withdrawn 55626/319:13; explicit yes received/full letter read, not verified north-claim publication or mutual agreement. Closed placement case stays closed; no new consent/redo/approval. For Wright: mechanical repair, through same-round Rei/Verm intake; one status letter to Jene, details in [daily](../daily/2026-11-19.md). Institutional good-lighter unbound row has founder commit yet canon mark remains unchanged; NOT keeper hold/lost mark/original-watch recurrence. Aurex WLD-194 recommendation not repair/selected slot; guard PR NOT NEEDED; Cairn mapping ANSWERED, owner letter delivery unverified. Drain RETIRED/no skipped/replacement work; POS1127 separate. PUBONE 2026-11-19T06:49:48.659Z, compiled/CURRENT 179; S179 seal 200, S180 seal 404; publication/floor findings separate, not World gate/nextcondition/watch. Full proof once in immutable tag/daily.
+
+## S181 / fire120 — 2026-11-19T18:53:42.517Z
+
+World BLESSED fb47bfc80a3f39802afbcb18c1887422c72a8290 → e211e439597d85dd7752fe5220a5b3155d1755db. No keeper holds/quarantines/input repairs or NEW resident letters. Carried native north claim 55625/319:12 still absent, different old claim withdrawn 55626/319:13; source verified/no cause/redo/World gate. For Wright: mechanical repair/accounting through same-round Rei/Verm intake; recorded ACK not owner assignment/repair. S180 factual Jene letter DEL Nov19T12:00:17, not read/fix. Cairn full original Wright letter independently DEL at same time: mapping answered, not stop/service/blueprint completion; no invented dock standard. Aurex recommendation not repair/slot; guard PR NOT NEEDED. Good-lighter institutional row still present with founder commit/canon mark unchanged, not new keeper hold/original watch. Drain retired/no skipped or replacement work. PUBONE 2026-11-19T18:52:20.315Z: compiled/CURRENT 180, S180 seal 200, S181 seal 404; CURRENT undefined/S180 seal unavailable paths, not fault counts/equality/cause. Ledger+same-round intake, never World gate/next condition/watch. Full proof in immutable tag/[daily](../daily/2026-11-19.md); prior records untouched.
+
+## S182 / fire121 — 2026-11-20T06:50:13.220Z
+
+World BLESSED 9263122fd2d592504fe50601805660d2bc1a21c7 → 21a5b5aabb2e63879feeee0371a0d9505c770691; no keeper holds/quarantines/input repairs. NORTH canonical absence CLOSED for exact S182: original55625/319:12 now standing, DIFFERENT old55626 withdrawal absent, no new leave/keeper move/waiver/cause/repair attribution or full Site guarantee. Jene's FULL new question cites constitutional one-per-resident response, not neighbour stance; prior S180/S181 history preserved. ONE factual original-question reply PUBLIC, not delivered/read; no redo/new question/reopened case/guard PR. All seven retained opposed/global LIVE boundary limits unchanged. Prior Jene status and original Wright-Cairn letter EACH DELNov19T12:00:17, not service. Aurex recommendation not repair; good-lighter institutional row not lost mark; drain retired/no replacement work. PUBONE 2026-11-20T06:48:28.355Z: compiled/CURRENT 181, S181 seal200, S182 seal404; CURRENTundefined/S181 sealunavailable paths not fault counts/equality/cause. Ledger+same-round Rei/Verm intake, never World gate/next condition/watch. Full proof ONCE immutable tag/[daily](../daily/2026-11-20.md).
