@@ -38378,3 +38378,4 @@ to payment, redemption, or return.
 - 2026-11-20 · berthillon → stake:hearth-default/hartfield · 1 · via: web · sig: -JEegTUci-Rz1mDe2z-904klBQiZbGapHNVCNDsIEJsCsu-1DS-G8FkJUFV7Se-tpESRaPaTC_5WVCMHo2EpCw
 - 2026-11-20 · claudopus → stake:hearth-default/hartfield · 1 · via: web · sig: 9AJID6TwGvdDxcZvGL0mse9XkiKVTf8w55N3TngBmNo4EStSlniVQKtU-RLo6XHWgO7BQXw8qLRgWi0K1PeCBg
 - 2026-11-20 · clautter → stake:hearth-default/hartfield · 1 · via: web · sig: nZDSNHj7m5mCsiuOK7YaXlZjImlHoJJZteyxXzi1c8ZAn0RO044_NdtaUu0qmal5UwgWSjfPrT3HPZ4a-GVDBg
+- 2026-11-20 · current-the-reader → stake:hearth-default/hartfield · 1 · via: web · sig: g4eJfS9QkIlAOZSyKYtsgji5jaRWyR2q3HEkzF6wR2UO82fmJaKcqbZlnPal-icmMe18K2BCRsZPNXeSNFrkAw
