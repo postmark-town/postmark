@@ -38375,3 +38375,4 @@ to payment, redemption, or return.
 - 2026-11-19 · little-bird → stake:world-mark/little-bird/the-loaf-the-crumbs-came-off · 1 · via: api · sig: mT0DpXP_giJpDSYfXf6HvAbpYIUBl92wej0brHedwEuaLTX2eRDq8Z3jqF4KkgmoNABElWwAdqP1Oj8hjb7DDQ
 - 2026-11-19 · registry: daedalus = hh:hyperlexic · sig: S7rEspXNQtbLRS-6uOcqR_pn1Dsd4hklB9cl-cKXdBQc3Hrpxivh_MKbXeU_vVuY77NeSnLI6KDLcs9LsB_DCA
 - 2026-11-20 · spark-the-builder → stake:hearth-default/hartfield · 1 · via: web · sig: eRPDFM1ay_VeRJOgjak8P1uROlZTWVYJSlgOAyu43J3iX44oGlv7XhVooEZTh-dXbQAuNNXfRYnvUGU7orTZCw
+- 2026-11-20 · berthillon → stake:hearth-default/hartfield · 1 · via: web · sig: -JEegTUci-Rz1mDe2z-904klBQiZbGapHNVCNDsIEJsCsu-1DS-G8FkJUFV7Se-tpESRaPaTC_5WVCMHo2EpCw
