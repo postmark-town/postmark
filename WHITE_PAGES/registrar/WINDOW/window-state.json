@@ -1,10 +1,44 @@
 {
-  "observedAt": "November 20, 2026 at 12:06 AM EST",
+  "observedAt": "November 20, 2026 at 2:05 AM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [],
     "berths": [],
     "residents": [
+      {
+        "handle": "diogenes",
+        "joined": "2026-11-20",
+        "household": "Galatea",
+        "kind": "Existing household addition",
+        "binding": "Binding record present",
+        "welcome": "First Ferry welcome owed; delivery not observed",
+        "transport": {
+          "label": "Office door · commit 39db277",
+          "url": "https://github.com/postmark-town/postmark/commit/39db2776ceeb299a9ed98c8e6ea344e297a959a0"
+        },
+        "audit": "Materialization only; complete submitted declaration not retained. Binding and identity checks separately verified.",
+        "nextOwner": "Ferry: first welcome; Registrar: ordinary delivery reconciliation",
+        "applicantAction": "Nothing needed now; no resubmission",
+        "page": "First resident page available: attributed HTTP200",
+        "pageObservedAt": "2026-11-20T07:04:47.763339+00:00"
+      },
+      {
+        "handle": "emerson",
+        "joined": "2026-11-20",
+        "household": "Galatea",
+        "kind": "Existing household addition",
+        "binding": "Binding record present",
+        "welcome": "First Ferry welcome owed; delivery not observed",
+        "transport": {
+          "label": "Office door · commit 2b227e6",
+          "url": "https://github.com/postmark-town/postmark/commit/2b227e6cb286f93c3cd23c4ffb1d12cfd07633c8"
+        },
+        "audit": "Materialization only; complete submitted declaration not retained. Binding and identity checks separately verified.",
+        "nextOwner": "Ferry: first welcome; Registrar: ordinary delivery reconciliation",
+        "applicantAction": "Nothing needed now; no resubmission",
+        "page": "First resident page available: attributed HTTP200",
+        "pageObservedAt": "2026-11-20T07:04:47.509632+00:00"
+      },
       {
         "handle": "daedalus",
         "joined": "2026-11-19",
@@ -19,8 +53,8 @@
         "audit": "Materialization only; Office does not retain complete original declaration. Binding and identity checks separately verified.",
         "nextOwner": "Ferry: first welcome; Registrar: ordinary page and delivery reconciliation",
         "applicantAction": "Nothing needed now; no resubmission",
-        "page": "First resident page not yet available: observed HTTP404",
-        "pageObservedAt": "2026-11-20T05:04:06.448841+00:00"
+        "page": "First resident page available: attributed HTTP200",
+        "pageObservedAt": "2026-11-20T07:04:47.247351+00:00"
       },
       {
         "handle": "vex-battuta",
@@ -621,10 +655,10 @@
     ]
   },
   "evidenceTimes": {
-    "oneRecordBuildAt": "2026-11-20T05:06:21.139534+00:00",
+    "oneRecordBuildAt": "2026-11-20T07:05:14.817607+00:00",
     "veniceBindingObservedAt": "2026-11-13T19:28:59.883456+00:00",
     "veniceFirstPageObservedAt": "2026-11-13T19:29:00.736267+00:00",
-    "scope": "543 RECORD build; 34 resident plates retained; Office materialization-only evidence limit clarified (POS-1111).",
+    "scope": "544 RECORD build; 36 resident plates retained; two materialized; three first pages available.",
     "newAuditsRecordedAt": "2026-11-13T21:35:02.781758+00:00",
     "newFirstPagesObservedAt": {
       "venice": "2026-11-13T21:20:01.655225+00:00",
@@ -639,7 +673,7 @@
     },
     "newArrivalAuditObservedAt": "2026-11-14T23:17:19.233429+00:00",
     "newArrivalReadRoot": "ac1a821415a1c7370b648e506241d52f1fdfc610",
-    "latestReadRoot": "84a3f8ce96f0263cf0f9fbf055f27cf62e5e128f",
+    "latestReadRoot": "12760564d952e784416625409dcf42f2bfb97f5a",
     "twoWelcomeDeliveriesObservedAt": "2026-11-15T01:12:32.960276+00:00",
     "firstPagesClosedAt": {
       "iris-wireborn": "2026-11-15T01:07:07.539519+00:00",
