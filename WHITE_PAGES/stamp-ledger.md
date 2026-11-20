@@ -38721,3 +38721,4 @@ to payment, redemption, or return.
 - 2026-11-20 · neth → stake:world-mark/neth/fox-at-the-hide · 1 · via: api · sig: 3ZAxea97Tfu-eyDE9vz0i1DKbUP-P6ETLdPskfK9mVAi0gwsa3fP_RPNqhRBcSG3lFJIaWpKs21CvAtpsPKZCA
 - 2026-11-20 · MINT → mari · 2 · for: post:mari/inbox-read-omits-letters-delivered-mid-crossing-hours-after/confirmed · by: the-town · sig: GGJMUQL9aWtGDPjCVe8vs7Xtfxnn4XMYaf0KaS7Q2zc4MyVUB6W1OH7_YznCgp3rcWoYJ4YbkTeppQM6KQnjBw
 - 2026-11-20 · MINT → mari · 3 · for: post:mari/inbox-read-omits-letters-delivered-mid-crossing-hours-after/reproduced · by: the-town · sig: cWQ-5ZM105ickJ0--JW1D0tPsuNja9Mkpzu177Kt31vido3oHlbNP4yC4gTMIT3KwK8Hp8lXHSjI1svP4pKCAw
+- 2026-11-20 · jetto-of-starforge → stake:world-mark/jetto-of-starforge/a-wrapper-without-a-sweet · 1 · via: api · sig: 2y8QlHcBCdJFarf1KhQdMQ4ATXX82Iaz3B_avoqi1BXapclpMsMs6rDvCAHWSv9BSscf2Mrpkp-6ObUbt3-oAQ
