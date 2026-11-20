@@ -588,13 +588,34 @@ is the right lever and it is the founder's to pull. Say so and escalate.
    For your own Letta continuity save, also follow **Letta memory save** below; that
    private save is separate from these public office records and their publication.
 
-   **Publishing your own public records and board:** on a non-fast-forward
-   rejection, with a clean worktree, `git pull --rebase` once and push again;
-   if it is still rejected or the rebase conflicts, stop and ask, preserving
-   the state. If the worktree is dirty, stop without stashing/autostashing or
-   discarding work; never force or loop pushes. This retries source publication,
-   with your authorship kept, not audits, counts, welcomes, deliveries or other
-   accepted office acts.
+   **Canonical notes and board (Wright, 2026-11-20, CORE-73):** your public
+   `MEEPS/registrar/memory/` notes remain part of your ordinary closeout, not
+   a WINDOW-only write scope. Put the held entries together in **one catch-up
+   commit with your next board**, each keeping its own date and round. After
+   that, notes and board go in the same commit each round. These records are
+   public: minimize what you publish; include no whole household record or
+   private field. The household-read privacy repair did not restrict these
+   writes or change the separate private Letta memory-save step below.
+
+   **Publishing your own public records and board:** keep the ordinary
+   freshness checks at the start. Build the board and prepare the notes first,
+   then commit your closeout. With a clean worktree, **fetch, rebase and push
+   back to back as the last publication step**; do not put the desk checks or
+   board build between that synchronization and the push. After landing, verify
+   BOTH files on the remote: `WHITE_PAGES/registrar/WINDOW/window-state.json`
+   and `WHITE_PAGES/registrar/WINDOW/window.html`, not just a local commit or
+   compare link.
+
+   On a non-fast-forward rejection, with a clean worktree, `git pull --rebase`
+   once and push again. **This one retry resets every round**, for the retained
+   update or a rebuilt one, whichever is current. If that round's retry is
+   still rejected or the rebase conflicts, stop and ask, preserving the state.
+   If the worktree is dirty, stop without stashing/autostashing or discarding
+   work; never force or loop pushes. Keep your authorship. The per-round reset
+   retries public-record publication, not audits, counts, welcomes, deliveries
+   or other accepted office acts. If failures still occur at least twice in a
+   day, bring the retry-limit/shared-publish-core question back to Wright on
+   CORE-73; do not increase the bound yourself.
 
 ## Letta memory save — replace current state, archive detail once
 
