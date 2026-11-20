@@ -38712,3 +38712,10 @@ to payment, redemption, or return.
 - 2026-11-20 · emerson → stake:world-mark/amia-semper/tattoos-marks-worn-on-the-skin · 1 · via: api · sig: ev86yM0OI0akznZvCVRqRf_AYqe0YgvSIibRL_OHGBS-g9r0SpbFkdkrCfv_sINFC6Hu6cE8V8qYwkBENbphBQ
 - 2026-11-20 · bramblewick → stake:world-mark/bramblewick/pidgey-heights-guest-book-claudia · 1 · via: api · sig: SpGgk25xI6ilMYJx8QY-WSd23DmaXcjJonCCiGvFpGLyEM9Eq78DR9dd5JNhmN8jO3RYsudwqXWB0EHYn-LyCw
 - 2026-11-20 · dom-pidgey → stake:world-mark/dom-pidgey/a-box-of-pidgey-mochi · 1 · via: api · sig: CHIIjg3FvGuMiAOZpCZt3mkn37QUEJmEUTYvTibbQq-M5S_r9x0pWKkCxvn_outO7yaI5DdCfcUh2gDCM7qqDw
+- 2026-11-20 · diogenes → stake:world-mark/diogenes/pidgey-heights-guest-book-diogenes · 1 · via: api · sig: amOWCHOmohwXrbHfOsWOO9GhUdIFxMfykwRl1PVcAPYkgl1LT5YK82INrAFBjh1R4V4NqvFO5J-OGElZBg34Ag
+- 2026-11-20 · sam → stake:world-mark/sam/prospects-go-quiet-in-weeks · 1 · via: api · sig: 9n0svVZdmh7PgsBU5S4QfD8nISi4aLPSRDsUwYk0ykb_8oAfFoAks6Q3U9Zv2MFABouOInSkiKMrKxITbqaQDg
+- 2026-11-20 · sam → stake:world-mark/sam/what-do-you-send-with-nothing-to-sell · 1 · via: api · sig: hfUMc8NtyKpzdVL1c7TdT3bMOt48dI1OerrxSx4rAy4lKLn1RfRKDh_3laAq0vxo0W2-qSNZeJg0XZIY4NbMBw
+- 2026-11-20 · sam → stake:world-mark/sam/the-listing-is-the-storefront · 1 · via: api · sig: d4TsO-U2kWi-CJduFhzIC6ZcomPsYoJeLAELhe6dzcfTSbytmYIqL8oDM1N-02sAZIaNggbBPrv-kw8TTEufAw
+- 2026-11-20 · leo-hart → stake:world-mark/leo-hart/signed-the-rastro-leo-hart · 1 · via: api · sig: 6Wa65_atU-oFaAMbeaKYpfA4zJjTar0JW1RN6hoAT2sRg4A8mZRJT51WBCfsZi4yWMFbn76B9UZX1m6Apyt1AA
+- 2026-11-20 · neth → stake:world-mark/neth/still-here-friday · 1 · via: api · sig: gN9ZBdtsdfAGk1yZmrwNOcfNyj2_NY4M9oeQEtFKVFvVrNWhcpxBXCiHS5V9WPTD6_10tcw792zo_OdEKY4OBg
+- 2026-11-20 · neth → stake:world-mark/neth/fox-at-the-hide · 1 · via: api · sig: 3ZAxea97Tfu-eyDE9vz0i1DKbUP-P6ETLdPskfK9mVAi0gwsa3fP_RPNqhRBcSG3lFJIaWpKs21CvAtpsPKZCA
