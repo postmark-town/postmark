@@ -310,7 +310,7 @@ test('the join preflight workflow runs base tooling only, never the PR\'s code, 
   const y = wf('join-preflight.yml');
   assert.ok(y, 'there is a join preflight workflow');
   assert.match(y, /^on:\n  pull_request_target:\n    types: \[opened, synchronize, reopened, ready_for_review\]/m);
-  assert.match(y, /^permissions:\n  contents: read\n  pull-requests: write\n\n/m, 'read the repo, write one comment: nothing else');
+  assert.match(y, /^permissions:\n  contents: read\n  pull-requests: read\n  issues: write\n\n/m, 'read the repo and the PR, write one comment through the issues API: nothing else (never pull-requests: write, POS-1159)');
   assert.match(y, /uses: actions\/checkout@v4\n        with:\n          ref: \$\{\{ github\.event\.pull_request\.base\.ref \|\| github\.event\.repository\.default_branch \}\}\n          persist-credentials: false\n/, 'the checkout is the base, with no credential on disk');
   assert.equal((y.match(/uses: actions\/checkout/g) ?? []).length, 1, 'one checkout, the base');
   assert.doesNotMatch(y, /head\.ref|head\.sha \}\}\n\s+(persist|fetch)|git checkout|git switch|git worktree|npm |npx |\byarn\b/, 'nothing checks out or installs the PR');
@@ -340,6 +340,19 @@ test('the witness keeps every gate: its checks and its merge still wait on certi
     const i = y.indexOf(`- name: ${step}`);
     assert.ok(i >= 0, `the witness still has "${step}"`);
     assert.match(y.slice(i, i + 400), /if: steps\.check\.outputs\.certified == 'true'/, `"${step}" still waits on certification`);
+  }
+});
+
+test('no workflow token here can approve a PR: neither the witness nor the preflight grants pull-requests: write (POS-1159)', () => {
+  // With "Allow GitHub Actions to create and approve pull requests" on (POS-938/a), only the town clock opens PRs, and
+  // an approving review needs pull-requests: write. The witness merges with contents: write and comments and labels
+  // with issues: write, so it never needs it either.
+  for (const file of ['witness.yml', 'join-preflight.yml']) {
+    const y = wf(file);
+    const block = y.slice(y.indexOf('\npermissions:\n') + 1).split('\n\n')[0];
+    assert.match(block, /^permissions:\n/, `${file} has a top-level permissions block`);
+    assert.doesNotMatch(block, /pull-requests: write/, `${file} must not grant pull-requests: write`);
+    assert.match(block, /\n  pull-requests: read\n/, `${file} reads PRs, read-only`);
   }
 });
 
