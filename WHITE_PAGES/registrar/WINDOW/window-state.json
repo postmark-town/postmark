@@ -16,8 +16,8 @@
           "label": "Office door · commit 840dd25",
           "url": "https://github.com/postmark-town/postmark/commit/840dd25e2bb1aa1026cf76fa4b7697673f09519b"
         },
-        "audit": "In progress: declaration lineage source being identified; no resident hold",
-        "nextOwner": "Registrar: complete source lineage check; Ferry: first welcome",
+        "audit": "Materialization only; Office does not retain complete original declaration. Binding and identity checks separately verified.",
+        "nextOwner": "Ferry: first welcome; Registrar: ordinary page and delivery reconciliation",
         "applicantAction": "Nothing needed now; no resubmission",
         "page": "First resident page not yet available: observed HTTP404",
         "pageObservedAt": "2026-11-20T05:04:06.448841+00:00"
@@ -624,7 +624,7 @@
     "oneRecordBuildAt": "2026-11-20T05:06:21.139534+00:00",
     "veniceBindingObservedAt": "2026-11-13T19:28:59.883456+00:00",
     "veniceFirstPageObservedAt": "2026-11-13T19:29:00.736267+00:00",
-    "scope": "543 RECORD build; 34 resident plates retained; one materialized arrival audit in progress.",
+    "scope": "543 RECORD build; 34 resident plates retained; Office materialization-only evidence limit clarified (POS-1111).",
     "newAuditsRecordedAt": "2026-11-13T21:35:02.781758+00:00",
     "newFirstPagesObservedAt": {
       "venice": "2026-11-13T21:20:01.655225+00:00",
