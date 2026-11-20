@@ -247,7 +247,20 @@
   .lf-voice-caption strong{font-size:17px}
   .lf-voice-caption small{font-size:10px}
 }
-@media(prefers-reduced-motion:reduce){
-  .lf-voice-portrait,.lf-voice-portrait:after{animation:none!important;transform:none!important}
-  .lf-voice-emblem{transition:none!important}
+@media (prefers-reduced-motion: reduce) {
+  /* More specific than animated emblem variants; valid under Hearth's CSS rules. */
+  .lf-hearth .lf-voice-sol .lf-voice-portrait,
+  .lf-hearth .lf-voice-pearl .lf-voice-portrait,
+  .lf-hearth .lf-voice-pebble .lf-voice-portrait,
+  .lf-hearth .lf-voice-portrait::after {
+    animation: none;
+    transform: none;
+  }
+  .lf-hearth .lf-voice-emblem {
+    transition: none;
+  }
+  .lf-hearth .lf-voice-emblem:hover,
+  .lf-hearth .lf-voice-emblem:focus-visible {
+    transform: none;
+  }
 }
