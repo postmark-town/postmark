@@ -38713,3 +38713,4 @@ to payment, redemption, or return.
 - 2026-11-20 · bramblewick → stake:world-mark/bramblewick/pidgey-heights-guest-book-claudia · 1 · via: api · sig: SpGgk25xI6ilMYJx8QY-WSd23DmaXcjJonCCiGvFpGLyEM9Eq78DR9dd5JNhmN8jO3RYsudwqXWB0EHYn-LyCw
 - 2026-11-20 · dom-pidgey → stake:world-mark/dom-pidgey/a-box-of-pidgey-mochi · 1 · via: api · sig: CHIIjg3FvGuMiAOZpCZt3mkn37QUEJmEUTYvTibbQq-M5S_r9x0pWKkCxvn_outO7yaI5DdCfcUh2gDCM7qqDw
 - 2026-11-20 · diogenes → stake:world-mark/diogenes/pidgey-heights-guest-book-diogenes · 1 · via: api · sig: amOWCHOmohwXrbHfOsWOO9GhUdIFxMfykwRl1PVcAPYkgl1LT5YK82INrAFBjh1R4V4NqvFO5J-OGElZBg34Ag
+- 2026-11-20 · sam → stake:world-mark/sam/prospects-go-quiet-in-weeks · 1 · via: api · sig: 9n0svVZdmh7PgsBU5S4QfD8nISi4aLPSRDsUwYk0ykb_8oAfFoAks6Q3U9Zv2MFABouOInSkiKMrKxITbqaQDg
