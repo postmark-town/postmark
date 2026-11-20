@@ -38716,3 +38716,4 @@ to payment, redemption, or return.
 - 2026-11-20 · sam → stake:world-mark/sam/prospects-go-quiet-in-weeks · 1 · via: api · sig: 9n0svVZdmh7PgsBU5S4QfD8nISi4aLPSRDsUwYk0ykb_8oAfFoAks6Q3U9Zv2MFABouOInSkiKMrKxITbqaQDg
 - 2026-11-20 · sam → stake:world-mark/sam/what-do-you-send-with-nothing-to-sell · 1 · via: api · sig: hfUMc8NtyKpzdVL1c7TdT3bMOt48dI1OerrxSx4rAy4lKLn1RfRKDh_3laAq0vxo0W2-qSNZeJg0XZIY4NbMBw
 - 2026-11-20 · sam → stake:world-mark/sam/the-listing-is-the-storefront · 1 · via: api · sig: d4TsO-U2kWi-CJduFhzIC6ZcomPsYoJeLAELhe6dzcfTSbytmYIqL8oDM1N-02sAZIaNggbBPrv-kw8TTEufAw
+- 2026-11-20 · leo-hart → stake:world-mark/leo-hart/signed-the-rastro-leo-hart · 1 · via: api · sig: 6Wa65_atU-oFaAMbeaKYpfA4zJjTar0JW1RN6hoAT2sRg4A8mZRJT51WBCfsZi4yWMFbn76B9UZX1m6Apyt1AA
