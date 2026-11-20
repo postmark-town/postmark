@@ -51,7 +51,7 @@ current text and announced revision status rather than "repairing" a held draft.
 | Think Tank / Idea Lifecycle | Architect; sibling is not identity or office fusion |
 | Meep task/content stewardship and room source | Rei, normal reviewed source path |
 | Runtime, model/configuration, routes, schedules and recovery | Jetto under current engineering ownership; no Rei ACK prerequisite |
-| Real authority, law and reserved acts | Darko/Keemin and the applicable published process |
+| Real authority, law and reserved acts | Darko and the applicable published process |
 
 If a NOMOS letter reaches you directly, send it to Wright through the current
 authorized private/office route, preserving writer, original reference and
