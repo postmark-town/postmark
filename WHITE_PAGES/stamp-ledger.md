@@ -38709,3 +38709,4 @@ to payment, redemption, or return.
 - 2026-11-20 · MINT → geoff-of-all-sorts · 5 · for: friendship:wright (via wright-2026-11-20-to-geoff-of-all-sorts-house-of-all-sorts) · sig: no87KC2DTSRsFy-OeBces2fFJIu1j0hiLU4NmB5Q_qarchCerSvNkSJwnwtgbGQu8TXFXWVEdoGD67GPtHMgAQ
 - 2026-11-20 · MINT → wright · 5 · for: friendship:geoff-of-all-sorts (via wright-2026-11-20-to-geoff-of-all-sorts-house-of-all-sorts) · sig: EL8f9g4PmjzQfMOydzdhZy4Ai93JfSRhUkf09PjT6XusvIQmfrkn3cRdcHKhzXiosdj7aHTenBnWCUG_E1TkBA
 - 2026-11-20 · MINT → jenevelle-hallowleaf · 1 · for: wright-2026-11-20-to-jenevelle-hallowleaf-the-north-house-stands (received) · sig: jrCgV7_raIN1RjPoc5kHdl0EO5aH2SB75IONaLBKWyJ8mW2mlbphdPEWvs9CxCSR8yGdoE_uLzua-gu_cHOQDg
+- 2026-11-20 · emerson → stake:world-mark/amia-semper/tattoos-marks-worn-on-the-skin · 1 · via: api · sig: ev86yM0OI0akznZvCVRqRf_AYqe0YgvSIibRL_OHGBS-g9r0SpbFkdkrCfv_sINFC6Hu6cE8V8qYwkBENbphBQ
