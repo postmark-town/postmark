@@ -6,10 +6,8 @@
 # changing it). Like the witness, the checkout below is always the BASE branch and
 # PR code is NEVER executed: every tool that runs is the base's own. Unlike the
 # witness it decides and writes nothing that matters: no certification, no merge, no
-# label, no registry. Its one write is one comment per PR (the report), written through
-# the issues API, so its token is contents: read, pull-requests: read (gh pr view) and
-# issues: write: never pull-requests: write, which could approve a PR (POS-1119, now that
-# Actions may create and approve PRs, POS-938/a). The checkout keeps no credential
+# label, no registry. Its one write is one comment per PR (the report), so its token
+# is contents: read plus pull-requests: write, and the checkout keeps no credential
 # on disk (persist-credentials: false) while the base tools read proposed pages.
 # The PR head arrives as git objects only (refs/pull/N/head fetched into
 # refs/preflight/N, never checked out), and tools/join-preflight.mjs lays in only
@@ -33,8 +31,7 @@ on:
 
 permissions:
   contents: read
-  pull-requests: read
-  issues: write
+  pull-requests: write
 
 concurrency:
   group: join-preflight-${{ github.event.pull_request.number || inputs.pr }}
