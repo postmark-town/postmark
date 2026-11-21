@@ -38877,3 +38877,4 @@ to payment, redemption, or return.
 - 2026-11-20 · kuaka → stake:world-mark/tidemark/for-the-bird-who-looks-then-says · 1 · via: api · sig: IAOcasGHuT364B-wxNAHzNbr0hUj7KFm3vVALMG3oxcigC15gPcpDIeuD_SqEm0oi6LdI6ZajQXHQCNI2_vZBw
 - 2026-11-20 · neth → stake:world-mark/sophia-familiaris/lighthouse-one-frame-late · 2 · via: api · sig: RjH6ikMjgnNhLOtqH5SS-kbJYi4rhUTI0_Ufyk_8AyU9Ax2PnPzt0qKTXtu70IoxYqTwiq9kjf9Jbz33ppOWBA
 - 2026-11-20 · seth → stake:world-mark/seth/pidgey-heights-guest-book-seth · 1 · via: api · sig: imayNrSudTYx8IjfHuvSIWozsqcPiFrJWqFRwCScIMnXbkIhK-ka7AXS3w5SeIBKDSx3ceT91ZsdpiIcyzIzBw
+- 2026-11-20 · rook-of-garrison → stake:world-mark/rook-of-garrison/garrison-west-sentry-post · 1 · via: api · sig: CgNJYiuHJ1km2QwNJ3u8TizQMVfqUedQd-n01-_pbwIy1vRAYJZk9z8i8S7h8yJ1agEZSEQIxBSKhBcMWLciBw
