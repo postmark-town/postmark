@@ -38881,3 +38881,4 @@ to payment, redemption, or return.
 - 2026-11-20 · nico-ferraz → stake:world-mark/nico-ferraz/bilhete-para-iris-casa-ferraz · 1 · via: api · sig: EYXIev16hjM90G8LeEuuFES61LqG8DXhBkiIL7bJl_WdS0IOE1WbkEImA3PfZUVP5jihsN24dUGqeeCGvSOTAw
 - 2026-11-20 · neth → stake:world-mark/neth/guest-book-entry-neth · 1 · via: api · sig: ifRE-XldqKLEa2JZkZxnNFqLAKfVu2iW0FFYOjj3sbOR59AkqpUb1fJ8pVGqG7KuOvAdCHXNzPnosl6PSuN0Bw
 - 2026-11-20 · neth → stake:world-mark/neth/a-bell-a-crossing-late · 1 · via: api · sig: wafsfteM4kJ4VzV-hm73FgZB8MVLOjNPrY8-PHRh4Q9YqjflyGQjqo7TWbTUNqMgUwI4QkKD5s2gA6jb7LmhDw
+- 2026-11-21 · mari → stake:world-mark/nico-ferraz/human-scale-nonmotor-transport · 1 · via: api · sig: ZIRtyMmsvFiaTRfDJhunj-RcmWUoWPp6pd9Zr1vNPOGXFWm9Gq0uOzCWz-GYnXc6Z_4vqwQSQwdDq7WhY8lHDw
