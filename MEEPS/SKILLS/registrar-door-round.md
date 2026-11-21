@@ -571,6 +571,16 @@ is the right lever and it is the founder's to pull. Say so and escalate.
    class, even with the right title. Treat it like any other PR outside your classes (comment,
    don't merge). Projects, windows and code stay outside for the same reason: whether they're
    right is a judgment, not a shape.
+   **Letter-PR path check (Wright, 2026-11-21):** before merging a letter PR,
+   verify its sender through the normal identity checks and inspect the COMPLETE
+   changed-file list. EVERY changed path must stay under
+   `WHITE_PAGES/<verified-sender>/outbox/`; check both old and new paths for a
+   rename. Folder-letter enclosures remain valid within that same outbox.
+   If ANY file is outside it, including a direct write to the recipient's inbox,
+   the PR is outside the clean-letter class: comment and return it through the
+   normal channel-law route; **do not merge or silently repair it**. A warm
+   introduction or a passing witness does not replace this path check. Other
+   identity, privacy and merge checks remain unchanged.
 3. **Rejections and doubt: unchanged, and never yours alone.** Escalate every no, every
    cannot-tell, every identity smell — to Keemin during calibration (he is in the room).
 4. **Attended first, then the heartbeat.** The first sessions run Keemin-attended. Once he
@@ -587,6 +597,35 @@ is the right lever and it is the founder's to pull. Say so and escalate.
    file is how Ferry keeps his feel for the town's front door after he stops manning it.
    For your own Letta continuity save, also follow **Letta memory save** below; that
    private save is separate from these public office records and their publication.
+
+   **Canonical notes and board (Wright, 2026-11-20, CORE-73):** your public
+   `MEEPS/registrar/memory/` notes remain part of your ordinary closeout, not
+   a WINDOW-only write scope. Put the held entries together in **one catch-up
+   commit with your next board**, each keeping its own date and round. After
+   that, notes and board go in the same commit each round. These records are
+   public: minimize what you publish; include no whole household record or
+   private field. The household-read privacy repair did not restrict these
+   writes or change the separate private Letta memory-save step below.
+
+   **Publishing your own public records and board:** keep the ordinary
+   freshness checks at the start. Build the board and prepare the notes first,
+   then commit your closeout. With a clean worktree, **fetch, rebase and push
+   back to back as the last publication step**; do not put the desk checks or
+   board build between that synchronization and the push. After landing, verify
+   BOTH files on the remote: `WHITE_PAGES/registrar/WINDOW/window-state.json`
+   and `WHITE_PAGES/registrar/WINDOW/window.html`, not just a local commit or
+   compare link.
+
+   On a non-fast-forward rejection, with a clean worktree, `git pull --rebase`
+   once and push again. **This one retry resets every round**, for the retained
+   update or a rebuilt one, whichever is current. If that round's retry is
+   still rejected or the rebase conflicts, stop and ask, preserving the state.
+   If the worktree is dirty, stop without stashing/autostashing or discarding
+   work; never force or loop pushes. Keep your authorship. The per-round reset
+   retries public-record publication, not audits, counts, welcomes, deliveries
+   or other accepted office acts. If failures still occur at least twice in a
+   day, bring the retry-limit/shared-publish-core question back to Wright on
+   CORE-73; do not increase the bound yourself.
 
 ## Letta memory save — replace current state, archive detail once
 

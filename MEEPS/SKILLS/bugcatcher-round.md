@@ -72,6 +72,13 @@ Proposal: <one-sentence cause, brief summary, size with reason, or the exact gap
 Evidence: <relevant issue / record / merged-PR link>
 ```
 
+Use **two links at most in the whole ask** (CORE-123); the question stays first,
+with supporting detail after it. A **"yes, but" is a correction to ask about,
+not stage approval**. Keep the reply on the issue under §3 and ask its author
+about the correction. For a stage check, obtain the designated checker's
+explicit yes to the resulting proposal under Who checks; do not advance from
+the qualified reply or treat your interpretation as approval.
+
 **Checker-visible evidence:** When a stage proposal relies on a line the checker cannot read, say so in the opening and provide a shareable quote or source link with its act ID and timestamp; private/security evidence stays on its existing private route.
 
 For a stage check, `<check>` is `diagnosed`, `briefed` or `fixed-size`; for another
@@ -97,6 +104,11 @@ repeat already accepted office acts to rebuild a checkpoint.
 **One thin freshness check opens every wake:** new bug posts, new relevant issues or comments across the three repositories named below, new inbox letters, or new bug-payment MINT lines (`for: post:` or `for: gift:bug-<issue>-<slug>`) since your last recorded check. If there is nothing new and no unfinished work due in this mode, **end the wake writing nothing: no daily, no commit, no room-tend or routine Discord receipt.** At 06:00/18:00, pending letters from an interim wake count as work even if no new input arrived since then. On the first check, inspect the existing queue rather than inventing an empty checkpoint.
 
 **Each `reported` bug not yet assessed under §2c is due its look**, so unassessed reports always prevent a quiet check. Record the observation, decision or blocker, the next owner and what would bring it back. A recorded waiting case is not an instruction to repeat an unchanged read or question every wake: reassess it when relevant evidence or an answer arrives, or when its recorded follow-up is due.
+
+A due [three-day look](#three-day-look-core-105) also counts as work at the
+existing 06:00 full round, even if no fresh input arrived. Keep its checkpoint
+in the ordinary case/daily record; do not add a wake or turn every interim
+check into a full round.
 
 If there is work, read the relevant queue before acting:
 
@@ -128,7 +140,7 @@ The main line is **reported → confirmed → reproduced → diagnosed → brief
 - **No one earned the next stage:** record an explicit skip, not an inferred gap:
   `town { do: "advance", args: { post, skip: "<stage>", reason } }`.
   Only the hands (`wright`, `keemin`, `bugcatcher`) may do this. It covers **only the next rung, `confirmed` through `fixed`**; `reason` is required, at most 600 characters. Supply only `post`, `skip`, `reason`—no `to`, `credit`, `link`, `size`, `grade`, `critter`, `of`, `recredit` or `note`. It records a `skip` act and moves the stage, but credits no one and pays nothing; under POS-931/a, only a founder may re-credit an earned skipped `diagnosed` or `briefed`, with one Town line and the original skip kept in history; a skipped `fixed` still cannot be re-credited, and the Bug Catcher never re-credits—it tells Wright. **Never skip `shipped`.** Missing proof, an unconfirmed report, unpaid work or a refused advance is not evidence that no one earned a stage; if unclear, leave it pending for a founder rather than erase someone's contribution.
-- **After each accepted act:** read back the current post before deciding the next call, and move the issue's stage label (§3, Labels). Do not issue a batch of advances/skips or replay an accepted rung. `duplicate` and `not-a-bug` remain side exits from `reported` or `confirmed` only, not stages to skip through.
+- **After each accepted act:** read back the post's **stage and history as the town actually recorded them**, never your own request (CORE-123). A request body, success echo or your generated label list is not that native readback. Derive the issue's stage label (§3, Labels) and next step from the recorded stage, not what you asked to record. Preserve the accepted receipt if the read is missing or differs; resolve the uncertainty before continuing, without replaying an accepted rung. Do not issue a batch of advances/skips. `duplicate` and `not-a-bug` remain side exits from `reported` or `confirmed` only, not stages to skip through.
 - **A skip is not an approval bypass.** The skip contract does not let you evade a required human yes, merge evidence or a credit dispute. Missing approval/proof is pending work, not proof nobody earned a rung. If those rules leave a case unclear, preserve it and ask through Rei; do not guess a skip to get to `shipped`.
 - **On the first bounce, stop that bug's sequence.** A jump returns 409 naming the first unrecorded stage; that name is not permission to guess a skip. Save the exact refusal, current stage, missing rung and earlier accepted receipts; route any needed operator/founder decision through Rei under the channel law. Make no later-stage call or automatic retry; inspect an uncertain result before any retry and continue only once the refusal/uncertainty is resolved.
 
@@ -267,6 +279,22 @@ history just because your authority changed.
 | `fixed` | Verify the linked fix PR **has merged**, its repository, author and merge evidence; identify the author's creditable resident handle and the fixer's actual critter; use the size the checker explicitly approved on the issue | Bug records the merged fix, crediting **the PR's author**, with the fixer's critter and approved size |
 | `shipped` | Verify an actual **live tag or `build.json` receipt** that contains the fix; retain the URL/ref/revision and observation time. A merge, proposed tag or normal release rhythm is not live proof | Bug records `shipped`, after all earlier rungs are resolved in order |
 
+**A cause the reporter already wrote (CORE-105).** The reporter's own cause in
+the original report, steps or source letter counts as their authored cause;
+do not ask them to write it again. At confirmation on the public track, quote
+it word for word on the existing issue, with its author, original date and
+source link, subject to §3's personal/privacy safeguards. Once the
+post stands `reproduced`, put that cause through the ordinary `diagnosed` check
+above; a hedged suspicion that proves right still counts. A later explanation
+is kept beside the original, not substituted for its author or credit.
+
+Use the original authored source and only link kinds the live card supports.
+If recording the native post itself is not supported yet, retain the evidence
+and report that capability gap through Rei, not another request to the reporter
+or `waiting: reporter`. Existing supported authored letter/issue sources remain
+usable. Your own transcription is not the reporter's authored contribution.
+No checker yes, recusal, one-rung/readback or founder recredit rule is waived.
+
 **Never record `fixed` before the PR merges, or `shipped` without live evidence.**
 Office enforcement of both is planned (a Plumb lane, `train/2026-w45`); whether or not
 it is live yet, these rules apply as written, and a planned date is not deployment proof.
@@ -312,6 +340,14 @@ fix brief and the PR. A resident can diagnose there in public, write a fix brief
 fix, its acceptance and a falsifier) and link a PR against it. Linear is internal, not a
 substitute for that conversation.
 
+**Every bug-related reply, by any door, goes onto its issue** (CORE-123).
+Quote it as written with its author, date and source link or letter/message id,
+in the round when you normally handle that door. Use the bug's existing issue;
+if the reply is already there, do not copy it again. Keep §3's personal-detail
+safeguards and §2a's private-security route: restricted/private material stays
+on its permitted private record, never copied to a public issue to satisfy this
+rule. This does not turn an interim wake into a letter round.
+
 **Every non-security bug gets its issue in the round its post exists**, before any rung
 past `reported`, whatever its source: a post, a letter or an issue. An unconfirmed
 report gets its issue too, and the issue says it is unconfirmed. Opening an issue
@@ -339,6 +375,44 @@ comment naming the finish. An issue that is **not** a bug (an idea, a design que
 for the founders) carries no stage label, is left open and is named in your handoff
 through Rei.
 
+### Issue layout — two-week trial (CORE-105)
+
+Keep each public bug issue in this order, with these headings:
+
+- **Overview:** the reporter's own description, resident handle, bug post id
+  and source link; a letter id only when one exists. Keep §3's privacy rules.
+- **Status:** three plain lines — where it stands, whose move it is, and what
+  they need to do. Keep them current; do not invent an action when none is owed.
+- **Stages:** the current ladder record and the evidence/check links for each
+  recorded rung or pending proposal. The native post still owns the stage.
+- **Notes:** the remaining dated evidence, questions, answers and decisions.
+- **Payments:** actual ledger-backed payments and their notices, not promised
+  awards or a claim that a recorded stage alone proves payment.
+
+This **layout alone** is a two-week trial, beginning when this change actually
+lands on town `main`, not at the review, PR creation or your first pull. Record
+that publication date and the date two weeks later in the ordinary checkpoint.
+Emily pings Darko to look at a few issues after about two weeks of use; keep
+example issue links ready for that review, without a new job or Rei approval gate.
+Do not reset the clock on another wake or confuse it with the whole-ladder
+trial. Preserve existing issue history, evidence and payment checkpoints while
+updating the description; this is not a reason to replay any act or notice.
+
+### Three-day look (CORE-105)
+
+Every three days, during the existing 06:00 full round, look at each public case
+that hasn't moved. Use its original report and current record,
+not only the waiting label. If the next step is yours, take it within the round's
+existing authority. If it waits on somebody else, tag their verified account
+on the issue and say what they need to do; carry the owner and next action in
+your room's handoff too. Reach a resident by letter under §4 rather than relying
+on a GitHub tag they may not see. Private security reports keep §2a's route.
+
+Keep the last look, pending asks and next review date in existing case/daily
+records; with no saved look, take the first at the next ordinary 06:00 full
+round. Do not repeat an answered question, demand a cause already in the
+report, rerun accepted work or create a scheduler/poller for this look.
+
 ### Labels
 
 On `postmark-town/postmark` (added by Wright on 2026-11-04 at Emily's ask). **Labels
@@ -349,14 +423,14 @@ as you work, in the same round as the act they follow.
 | Label | Means | On | Off |
 |---|---|---|---|
 | `stage: reported` … `stage: shipped` (seven) | the post's current stage | the one matching the post's current stage when the issue opens or is backfilled; the next one with each accepted advance or skip | the previous stage label, in the same step: **exactly one stage label at a time** |
-| `resident can fix` | the cause is known and the fix is scoped, so a resident's PR is welcome | at `diagnosed` or later, when the issue says what the fix is and no reporter reserve is active (§2, Reporter first go) | when a reporter reserve applies, a fix PR is linked, or the post finishes |
+| `open to residents` | the next stage is open resident work, with no outstanding decision or reporter wait | at `reproduced` or later, when the next step is open under Reporter first go and the existing who-may-work windows, and no reporter reserve is active | when a reporter reserve, decision or reporter wait applies, a fix PR is linked, or the post finishes |
 | `reserved: reporter` / `no reserve: urgent` | the reporter's first go / its urgent exception | under §2, Reporter first go; retain its declaration, recorded reproduction receipt and end date or urgent reason | update from that rule's recorded release, expiry, owner decision or accepted terminal outcome; an ordinary stage-label change alone never removes it |
-| `waiting: reporter` | the next move is the reporter's: your one question, missing steps, or something they've been asked to post | when you ask, or when a check is waiting on the reporter's own comment | when they **actually answer or do it**, not merely when someone comments |
+| `waiting: reporter` | the next move is the reporter's: your one question, missing steps, or something they've been asked to post | when you ask, or when a check is waiting on the reporter's own comment | when they **actually answer or do it**, or your recorded §4 decision proceeds without needing their answer; never mark silence as an answer or remove another required hold |
 | `waiting: decision` | a ruling is owed by a founder, Wright or a sitting; the comment names who and what | when you route the question through Rei | when the ruling is **actually given**, not merely acknowledged |
 | `waiting: wright` | a question for Wright routed through Rei | add alongside `waiting: decision` when routing that question | **only Wright removes it, after answering on the issue**; leave it in place, including during side-exit cleanup |
 
 **The side exits.** Once `duplicate` or `not-a-bug` is actually accepted, remove the
-stage label and any waiting or `resident can fix` label that no longer applies, and
+stage label and any waiting or `open to residents` label that no longer applies, and
 close the issue with GitHub's matching close reason and one comment naming the finish.
 A closed side exit never keeps a stale stage label. A `shipped` issue keeps
 `stage: shipped` when it closes.
@@ -373,10 +447,24 @@ you touch each one, or in passes across your rounds until all carry one. An
 interrupted pass resumes under the rule above. Labels are for `postmark-town/postmark`
 only for now.
 
+**CORE-123 rename, including existing issues.** Replace `resident can fix` with
+`open to residents` on the existing public bug issues as well as new ones, in
+ordinary rounds, including closed issues still bearing the old label. Check
+each current native stage, reserve and waiting state
+against the row above: remove the old name, add the new one where eligible,
+and include already-`reproduced` cases rather than waiting for `diagnosed`.
+Preserve unrelated labels and accepted acts; this is not a new advance, a new
+issue or a replay. Checkpoint an interrupted relabel pass and resume only the
+remaining GitHub work under When a label update fails.
+
 ### Bug-fix PR base and release handoff (POS-698)
 
 **Name `main` as the base for bug-fix PRs in office, site and town code—not
-`train/2026-wNN`.** Apply this both to the founders' handoff and to every resident
+`train/2026-wNN`, with a resident's fix coming from `hotfix/<short-name>`.**
+The PR names its bug post or paired issue ("Fixes #N"); this is the bug-post
+exception in [blueprints #84](https://github.com/postmark-town/postmark-blueprints/pull/84),
+not permission to route a feature or an unrelated change as a hotfix.
+Apply this both to the founders' handoff and to every resident
 answer, fix brief pointer or "how to fix this" explanation you write. Name the
 affected repository and name the bug post. Link its paired issue with its full
 URL or qualified `owner/repository#N` when crossing repositories, not a substituted
@@ -394,14 +482,17 @@ do not call a feature a bug to obtain the faster route.
 This base/cadence change does not alter the existing who-may-work windows or grant new
 office powers. The operator owns release checks, tagging, live proof and train
 integration, including a fix already merged into the train; you do not cherry-pick,
-retarget, review, merge, tag or deploy it. During the trial, `fixed` follows the merge
+retarget, review, merge, tag or deploy it. During the whole-ladder trial, `fixed` follows the merge
 and the checker's size yes (§2f), not the release; `shipped` still needs live evidence.
 A merge or the normal cut cadence alone proves neither a live fix nor a payment;
 read the actual post and release record, and never promise a resident a ship date.
 
 ## 4. Write back
 
-One reply per report, where the reporter will see it: a letter for a letter, a comment for an issue. Say:
+**A letter is your main way to reach a resident** (CORE-105), in the existing
+full round. Keep the question and progress on the bug's issue too; an issue tag
+alone is not a substitute for reaching a letter/town-door reporter. Respect
+§2a's private-security route and the existing letter-send checkpoints. Say:
 - which stage it's at, and what that stage pays on the ladder (2 / 3 / 5 / 10 / up to 50, flat, never staked);
 - that earned advances are considered by the office's stage pass; only a matching MINT line proves the stamps landed. A recorded skip credits no one and pays nothing. You send the payment explanation for actual payments at the next full round, not a promise of a future payment or date;
 - when you need something, **one specific question** ("which page, and what did you expect to see?"), not a form, with the issue labelled `waiting: reporter`.
@@ -409,6 +500,20 @@ One reply per report, where the reporter will see it: a letter for a letter, a c
 Mention the weekly cap only when it bites: "this is your household's fourth report this week, so it's recorded and pays nothing; thank you all the same."
 
 Write plainly and warmly. The reporter did the town a favour.
+
+**After two unanswered asks (CORE-105).** Keep the dates and links/accepted ids
+of both asks. One must be a letter, **unless the reporter already posted on
+that issue**. After the second goes unanswered, say on the issue **by what
+date you will go ahead with what is on record**. Record that date and, when
+due, take the next step the retained evidence and your authority actually allow.
+Do not silently leave the case waiting or send the same question forever.
+
+This does not turn silence into an answer, a checker's yes or stage evidence.
+It does not end a reporter reserve early, establish an unearned rung, permit
+a skip/recredit or close an unfinished bug. If the record still cannot support
+the next act, name the actual gap and next owner instead of manufacturing proof;
+update `waiting: reporter` under §3 only when the reporter's answer is no longer
+needed. Keep the ordinary checker/recusal, side-exit and private-security rules.
 
 ## Payment letters
 

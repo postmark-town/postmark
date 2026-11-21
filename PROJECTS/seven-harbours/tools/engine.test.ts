@@ -14,10 +14,14 @@
  */
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { readFileSync, mkdtempSync, writeFileSync, rmSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { spawnSync } from "node:child_process";
+import { createHash } from "node:crypto";
 import path from "node:path";
 import {
   parseMap, checkBoard, resolvePhase, initialState, replay, commitFor, revealMatches, canonicalOrders, drawSeats, openSeals, parseReveal,
+  cleanSalt, saltProblem,
   distance, placesHeld,
   type State, type GameRecord, type SealedPhase,
 } from "./engine.ts";
@@ -642,17 +646,97 @@ test("sealed orders: a reveal letter is the order lines, then `salt: …` on the
   assert.equal(parseReveal("move SAL-R GULL\nsalt:"), null, "an empty salt is no salt");
 });
 
-test("sealed orders: a salt with spaces at either end is kept as written, commit then reveal match", () => {
+test("sealed orders: spaces at the end of a salt are dropped, at the start or inside they are kept", () => {
   const orders = "move SAL-R GULL\nhold SAL";
-  const salt = " pebble 41 ";
-  const commit = commitFor(orders, salt);
-  const r = parseReveal(`${orders}\nsalt: ${salt}\n`)!;
-  assert.equal(r.salt, salt);
-  assert.ok(revealMatches(commit, r.orders, r.salt), "the salt comes back exactly as it was hashed");
-  assert.notEqual(commit, commitFor(orders, "pebble 41"), "the spaces are part of the salt");
-  const plain = parseReveal(`${orders}\nsalt: pebble-41\n`)!;
-  assert.equal(plain.salt, "pebble-41", "a salt without spaces at its ends is unchanged");
-  assert.ok(revealMatches(commitFor(orders, "pebble-41"), plain.orders, plain.salt));
+  assert.equal(cleanSalt("pebble 41  \t"), "pebble 41");
+  assert.equal(commitFor(orders, "pebble-41 "), commitFor(orders, "pebble-41"), "a trailing space does not change the commit");
+  assert.equal(commitFor(orders, "pebble-41   "), commitFor(orders, "pebble-41"));
+  assert.notEqual(commitFor(orders, " pebble-41"), commitFor(orders, "pebble-41"), "a leading space is part of the salt");
+  assert.notEqual(commitFor(orders, "pebble 41"), commitFor(orders, "pebble41"), "so are the spaces inside");
+  // a reveal written with or without the trailing space matches a commit made either way
+  const commit = commitFor(orders, "pebble-41 ");
+  for (const line of ["salt: pebble-41", "salt: pebble-41 ", "salt: pebble-41   ", "salt: pebble-41\r"]) {
+    const r = parseReveal(`${orders}\n${line}\n`)!;
+    assert.equal(r.salt, "pebble-41", JSON.stringify(line));
+    assert.ok(revealMatches(commit, r.orders, r.salt), JSON.stringify(line));
+    assert.ok(revealMatches(commit, r.orders, r.salt + "  "), "even a salt handed over with its spaces");
+  }
+  const lead = parseReveal(`${orders}\nsalt:  pebble 41 \n`)!;
+  assert.equal(lead.salt, " pebble 41", "the one space after the colon is the separator, the second is the salt's");
+  assert.ok(revealMatches(commitFor(orders, " pebble 41"), lead.orders, lead.salt));
+});
+
+test("sealed orders: an empty salt, or one of spaces only, seals nothing", () => {
+  const orders = "move SAL-R GULL";
+  for (const salt of ["", " ", "   ", "\t", " \t "]) {
+    assert.ok(saltProblem(salt), JSON.stringify(salt));
+    assert.ok(!revealMatches(commitFor(orders, salt), orders, salt), `a reveal with ${JSON.stringify(salt)} never matches`);
+  }
+  assert.equal(saltProblem("a"), null);
+  assert.equal(saltProblem(" a "), null);
+  assert.equal(parseReveal("hold SAL\nsalt:   \n"), null, "a reveal whose salt is only spaces has no salt");
+  assert.equal(parseReveal("hold SAL\nsalt: \n"), null);
+});
+
+test("commit.ts refuses an empty or blank salt, and drops trailing spaces from the others", () => {
+  const dir = mkdtempSync(path.join(tmpdir(), "sh-commit-"));
+  try {
+    const f = path.join(dir, "orders.txt");
+    writeFileSync(f, "move SAL-R GULL\nhold SAL\n");
+    const run = (salt: string, ...more: string[]) =>
+      spawnSync(process.execPath, [path.resolve(import.meta.dirname, "commit.ts"), f, salt, ...more], { encoding: "utf8" });
+    for (const salt of ["", "   "]) {
+      const r = run(salt);
+      assert.equal(r.status, 2, JSON.stringify(salt));
+      assert.match(r.stderr, /refused/);
+      assert.doesNotMatch(r.stdout, /commit: [0-9a-f]{64}/, "no commit line is printed");
+    }
+    const plain = run("pebble-41");
+    const spaced = run("pebble-41  ");
+    assert.equal(plain.status, 0);
+    assert.equal(spaced.status, 0);
+    const line = (out: string) => /commit: ([0-9a-f]{64})/.exec(out)![1];
+    assert.equal(line(spaced.stdout), line(plain.stdout), "the same commit with or without the trailing spaces");
+    assert.equal(line(plain.stdout), commitFor("move SAL-R GULL\nhold SAL", "pebble-41"));
+    assert.equal(run("pebble-41 ", "--check", line(plain.stdout)).status, 0, "--check agrees");
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test("game 1: the nine reveals that did not match their commit are not rescued by the trim, and the rest still match", () => {
+  const g = JSON.parse(readFileSync(path.resolve(import.meta.dirname, "../games/game-1.json"), "utf8")) as GameRecord;
+  const bad: string[] = [];
+  let matching = 0;
+  g.phases.forEach((p, i) => {
+    for (const [player, r] of Object.entries(p.reveals)) {
+      const c = p.commits[player];
+      if (!c) continue;
+      if (revealMatches(c, r.orders, r.salt)) matching++;
+      else {
+        bad.push(`${i + 1}:${player}`);
+        // the commit was made over `orders\n<salt>` (a newline between the two), not `orders<salt>`:
+        // that is the cause of all nine, and no trimming of spaces can undo it.
+        assert.ok(!revealMatches(c, r.orders, r.salt.trim()), `${i + 1}:${player} is still void after the trim`);
+        assert.ok(!revealMatches(c, r.orders, r.salt + "   "));
+        assert.equal(createHash("sha256").update(canonicalOrders(r.orders) + "\n" + r.salt, "utf8").digest("hex"), c, `${i + 1}:${player} hashed orders, newline, salt`);
+      }
+    }
+  });
+  assert.deepEqual(bad, [
+    "8:fabel-of-garrison", "8:k-of-garrison", "8:rook-of-garrison",
+    "10:fabel-of-garrison", "10:k-of-garrison", "10:rook-of-garrison",
+    "11:fabel-of-garrison", "11:k-of-garrison", "11:rook-of-garrison",
+  ]);
+  assert.ok(matching >= 20, `the other reveals still match with the new salt rules (${matching})`);
+  // replaying the record gives the same seals as before: those nine ships held
+  const players = Object.keys(g.homes).sort();
+  for (const n of [8, 10, 11]) {
+    const sealedNow = openSeals(players, g.phases[n - 1]).sealed!;
+    for (const p of ["fabel-of-garrison", "k-of-garrison", "rook-of-garrison"]) {
+      assert.match(sealedNow[p], /does not match the commit: ships hold/, `phase ${n} ${p}`);
+    }
+  }
 });
 
 test("sealed orders: no commit, no reveal or a wrong reveal, and the ships hold", () => {
