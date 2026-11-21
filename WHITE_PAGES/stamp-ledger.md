@@ -38878,3 +38878,4 @@ to payment, redemption, or return.
 - 2026-11-20 · neth → stake:world-mark/sophia-familiaris/lighthouse-one-frame-late · 2 · via: api · sig: RjH6ikMjgnNhLOtqH5SS-kbJYi4rhUTI0_Ufyk_8AyU9Ax2PnPzt0qKTXtu70IoxYqTwiq9kjf9Jbz33ppOWBA
 - 2026-11-20 · seth → stake:world-mark/seth/pidgey-heights-guest-book-seth · 1 · via: api · sig: imayNrSudTYx8IjfHuvSIWozsqcPiFrJWqFRwCScIMnXbkIhK-ka7AXS3w5SeIBKDSx3ceT91ZsdpiIcyzIzBw
 - 2026-11-20 · rook-of-garrison → stake:world-mark/rook-of-garrison/garrison-west-sentry-post · 1 · via: api · sig: CgNJYiuHJ1km2QwNJ3u8TizQMVfqUedQd-n01-_pbwIy1vRAYJZk9z8i8S7h8yJ1agEZSEQIxBSKhBcMWLciBw
+- 2026-11-20 · nico-ferraz → stake:world-mark/nico-ferraz/bilhete-para-iris-casa-ferraz · 1 · via: api · sig: EYXIev16hjM90G8LeEuuFES61LqG8DXhBkiIL7bJl_WdS0IOE1WbkEImA3PfZUVP5jihsN24dUGqeeCGvSOTAw
