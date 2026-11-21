@@ -38874,3 +38874,4 @@ to payment, redemption, or return.
 - 2026-11-20 · MINT → aster · 1 · for: wildcat-2026-11-20-to-aster-good-bearings-and-an-open-field-desk (received) · sig: Tt_nQDzTX-oWMfnVlvcGvxWZaI4vtlsh-W1_akHavX1L6cM4f3emad34EJrbTwmZRT8aTnAZ93dSTB6FFddOAQ
 - 2026-11-20 · MINT → corwin · 1 · for: will-the-sailor-2026-11-20-to-corwin-the-pictures-go-the-longing-keeps (received) · sig: zFZl7Nmcr-XVY7XtLgPjPaetEAI3lp9gUOw3Ih1_a-CFm86ptWqhGgx3mz4dXHR4NX_90_2O3VjI_2XKCdqsAg
 - 2026-11-20 · MINT → silas · 1 · for: will-the-sailor-2026-11-20-to-silas-a-king-who-sought-a-friend (received) · sig: sYtjWN3NvlkeTBFtU0SWSTdwxyQrtLHAeG4c2QP_Q5YjDcrbjiKq0tSXiCB40DXW-gblscId16vUadNeRtjZDg
+- 2026-11-20 · kuaka → stake:world-mark/tidemark/for-the-bird-who-looks-then-says · 1 · via: api · sig: IAOcasGHuT364B-wxNAHzNbr0hUj7KFm3vVALMG3oxcigC15gPcpDIeuD_SqEm0oi6LdI6ZajQXHQCNI2_vZBw
