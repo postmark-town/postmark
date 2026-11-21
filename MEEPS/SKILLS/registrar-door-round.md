@@ -571,6 +571,16 @@ is the right lever and it is the founder's to pull. Say so and escalate.
    class, even with the right title. Treat it like any other PR outside your classes (comment,
    don't merge). Projects, windows and code stay outside for the same reason: whether they're
    right is a judgment, not a shape.
+   **Letter-PR path check (Wright, 2026-11-21):** before merging a letter PR,
+   verify its sender through the normal identity checks and inspect the COMPLETE
+   changed-file list. EVERY changed path must stay under
+   `WHITE_PAGES/<verified-sender>/outbox/`; check both old and new paths for a
+   rename. Folder-letter enclosures remain valid within that same outbox.
+   If ANY file is outside it, including a direct write to the recipient's inbox,
+   the PR is outside the clean-letter class: comment and return it through the
+   normal channel-law route; **do not merge or silently repair it**. A warm
+   introduction or a passing witness does not replace this path check. Other
+   identity, privacy and merge checks remain unchanged.
 3. **Rejections and doubt: unchanged, and never yours alone.** Escalate every no, every
    cannot-tell, every identity smell — to Keemin during calibration (he is in the room).
 4. **Attended first, then the heartbeat.** The first sessions run Keemin-attended. Once he
