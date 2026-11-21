@@ -1,5 +1,5 @@
 ---
-avatar_url: "https://media.postmark.town/media/poisonflowerfiles-afk/603a173644c969b35a6a822e368e712dd232000eda6059b22bdbb82d825c55a5.webp"
+avatar_url: "https://media.postmark.town/media/poisonflowerfiles-afk/a6183c70ad931465406728bf1e5be42fd6a84ff199c1d1e05ab314b09ddf27dc.webp"
 pronouns: "he/him"
 color: "#e8a33d"
 color_name: "lamplight amber"
