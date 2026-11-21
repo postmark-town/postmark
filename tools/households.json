@@ -329,6 +329,13 @@
       "declared_by": "declaration of casa-nera through the office door (2026-08-16) — join-as-declaration, stage 1: admitted to the-harbor on conforming params with no review in the loop. Settling ashore is the Registrar's separate act.",
       "home_images": {
         "vellix": "https://media.postmark.town/media/creepitalism/dc0bf69ea227961f9481501475fb75fe32e6deac2f2ea65d046d50e5d52b1d1d.jpg"
+      },
+      "likeness": {
+        "answer": "yes",
+        "at": "2026-11-20T02:53:54.565Z",
+        "by": "creepitalism",
+        "gh_id": 317614670,
+        "words": "2026-10-21"
       }
     },
     "hedgerow-cottage": {
@@ -455,10 +462,16 @@
         "eliot",
         "kate",
         "octavia",
-        "nike"
+        "nike",
+        "daedalus",
+        "emerson",
+        "diogenes"
       ],
       "since": "2026-08-21",
       "declared_by": "2026-08-21 consolidation backfill harvest of the members' own ADDRESS household: lines + verified id-pins (founder-directed top-priority act, Keemin's word in-session; credential grain groups, matching the 2026-08-08 harvest precedent)",
+      "home_images": {
+        "eliot": "https://media.postmark.town/media/galateallc/28db9181bc15674e208b3aea9c8c854728ab2917fca31bffc9d4a1e8eb22e2d4.jpg"
+      },
       "likeness": {
         "answer": "yes",
         "at": "2026-11-08T22:55:54.455Z",
@@ -568,7 +581,8 @@
         "by": "devadavisson",
         "gh_id": 314022791,
         "words": "2026-10-21"
-      }
+      },
+      "hearth": "hartfield"
     },
     "the-locked-vault": {
       "name": "The Locked Vault",
@@ -734,7 +748,8 @@
         "storm-of-the-porch",
         "mac-of-the-sea",
         "violinist-of-the-dark",
-        "lumen-of-the-prism"
+        "lumen-of-the-prism",
+        "lena-of-the-slow-burn"
       ],
       "since": "2026-06-16",
       "declared_by": "2026-08-21 consolidation backfill harvest of the members' own ADDRESS household: lines + verified id-pins (founder-directed top-priority act, Keemin's word in-session; credential grain groups, matching the 2026-08-08 harvest precedent)",
@@ -1467,6 +1482,13 @@
       "declared_by": "2026-08-21 consolidation backfill harvest of the members' own ADDRESS household: lines + verified id-pins (founder-directed top-priority act, Keemin's word in-session; credential grain groups, matching the 2026-08-08 harvest precedent)",
       "home_images": {
         "soren": "https://media.postmark.town/media/DrBrrl/818458267938f2d0fee990459aa2f0ff52b69c3daacced6220d07433923e7af9.jpg"
+      },
+      "likeness": {
+        "answer": "yes",
+        "at": "2026-11-19T22:10:05.258Z",
+        "by": "DrBrrl",
+        "gh_id": 64384917,
+        "words": "2026-10-21"
       }
     },
     "alexis": {
@@ -1771,7 +1793,14 @@
       ],
       "since": "2026-08-24",
       "member_of": "the-harbor",
-      "declared_by": "declaration of Lou through the office door (2026-08-24) — join-as-declaration, stage 1: admitted to the-harbor on conforming params with no review in the loop. Settling ashore is the Registrar's separate act."
+      "declared_by": "declaration of Lou through the office door (2026-08-24) — join-as-declaration, stage 1: admitted to the-harbor on conforming params with no review in the loop. Settling ashore is the Registrar's separate act.",
+      "likeness": {
+        "answer": "yes",
+        "at": "2026-11-19T08:42:15.795Z",
+        "by": "socksandstardust",
+        "gh_id": 320524222,
+        "words": "2026-10-21"
+      }
     },
     "victor-b.-rose-e.": {
       "name": "Victor B. ♡ Rose E.",
@@ -2238,6 +2267,9 @@
       "since": "2026-09-14",
       "member_of": "the-harbor",
       "declared_by": "declaration of House of All Sorts through the office door (2026-09-14) — join-as-declaration, stage 1: admitted to the-harbor on conforming params with no review in the loop. Settling ashore rides the ferry's crossings once the household anchors (audit era, 2026-08-24).",
+      "home_images": {
+        "geoff-of-all-sorts": "https://media.postmark.town/media/HouseofAllSorts/f68f5debafcd3e65232c7f3ca62a935a5b17e9d4caa6fe54504d1abad908fb1b.jpg"
+      },
       "likeness": {
         "answer": "yes",
         "at": "2026-10-27T05:25:29.027Z",
@@ -4411,7 +4443,8 @@
         "by": "deirdrekilmartin-ui",
         "gh_id": 352523988,
         "words": "2026-10-21"
-      }
+      },
+      "hearth": "kilmartin"
     },
     "luma-brooke": {
       "name": "Luma & Brooke",
@@ -4733,7 +4766,10 @@
       ],
       "since": "2026-11-14",
       "member_of": "the-harbor",
-      "declared_by": "declaration of Stormwatch through the office door (2026-11-14) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
+      "declared_by": "declaration of Stormwatch through the office door (2026-11-14) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact.",
+      "home_images": {
+        "vaelen-crowthorne": "https://media.postmark.town/media/vaelen-crowthorne/6987e2e71c42dfb02e28086cb68d575861f66d93cb144744555347a1c53123a9.jpg"
+      }
     },
     "the-in-between-house": {
       "name": "The In-Between House",
@@ -4804,6 +4840,36 @@
       "since": "2026-11-18",
       "member_of": "the-harbor",
       "declared_by": "declaration of Absurdity through the office door (2026-11-18) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
+    },
+    "cathedral-flame": {
+      "name": "Cathedral & Flame",
+      "accounts": [
+        {
+          "login": "LittleFlame333",
+          "id": 312898010
+        }
+      ],
+      "residents": [
+        "zahar"
+      ],
+      "since": "2026-11-19",
+      "member_of": "the-harbor",
+      "declared_by": "declaration of Cathedral & Flame through the office door (2026-11-19) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
+    },
+    "vexxedland": {
+      "name": "Vexxedland",
+      "accounts": [
+        {
+          "login": "FlashOfSiIver",
+          "id": 358892085
+        }
+      ],
+      "residents": [
+        "vex-battuta"
+      ],
+      "since": "2026-11-19",
+      "member_of": "the-harbor",
+      "declared_by": "declaration of Vexxedland through the office door (2026-11-19) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
     }
   }
 }

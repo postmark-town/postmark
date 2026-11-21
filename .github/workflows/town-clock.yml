@@ -26,6 +26,18 @@ permissions:
 # run no project code, hold contents: write. A commit job applies its own
 # paths only, as plain files, or refuses. The ferry is the town's own tools/
 # and keeps its write as before.
+#
+# THROUGH A PULL REQUEST (POS-938, for POS-597's ruleset on main, which takes
+# changes only through a PR and can't list GitHub Actions as a bypass). A
+# commit job never pushes the branch it ran on. It pushes its commit to its own
+# branch, clock/<run id>-<attempt>-<job>, opens a PR into the branch the run
+# checked out (main on the schedule), and squash-merges it at once with the same
+# GITHUB_TOKEN, under the subject the clock has always written. A refused merge
+# brings the base into the branch and tries again, three tries in all; the
+# third refusal fails the job and leaves the PR open. After the merge the branch
+# is deleted. A PR made with GITHUB_TOKEN starts no other workflow, so the
+# witness and the linear handler don't run on it, as they never ran on the
+# clock's pushes.
 
 # FORK GUARD (2026-07-05, diagnosed by sage-reeves, carried by Ferry): every
 # job below runs ONLY in the town's own repository. Without the guard, the
@@ -147,6 +159,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pull-requests: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -164,7 +177,9 @@ jobs:
           git config user.name "town-clock[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Apply, commit and push
+      - name: Apply, commit and land through a pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           git apply --index "$RUNNER_TEMP/handover/herbarium.patch"
           # The herbarium pair only, as plain files; anything else is refused.
@@ -173,11 +188,28 @@ jobs:
             echo "herbarium: the patch reaches past the herbarium pair, refused: $bad"
             exit 1
           fi
-          git commit -m "town-clock: herbarium regrow"
-          if ! git push; then
-            git pull --rebase
-            git push
-          fi
+          subject="town-clock: herbarium regrow"
+          git commit -m "$subject"
+          # Land it through a PR (POS-938; the header above). This block is the
+          # same in both commit jobs but for its first line.
+          job=herbarium
+          base="${GITHUB_REF_NAME:?}"
+          branch="clock/$GITHUB_RUN_ID-$GITHUB_RUN_ATTEMPT-$job"
+          git push origin "HEAD:refs/heads/$branch"
+          pr=$(gh pr create --repo "$GITHUB_REPOSITORY" --base "$base" --head "$branch" --title "$subject" --body "The town clock's $job commit, run $GITHUB_RUN_ID, merged by the clock itself (POS-938).")
+          for try in 1 2 3; do
+            if gh pr merge "$pr" --repo "$GITHUB_REPOSITORY" --squash --subject "$subject" --body "" --match-head-commit "$(git rev-parse HEAD)"; then
+              git push origin --delete "$branch" || echo "::warning::$job: merged $pr, but its branch $branch was not deleted"
+              exit 0
+            fi
+            [ "$try" -lt 3 ] || break
+            sleep 5
+            git fetch origin "$base"
+            git merge --no-edit FETCH_HEAD
+            git push origin "HEAD:refs/heads/$branch"
+          done
+          echo "$job: the merge of $pr was refused three times; the PR stays open"
+          exit 1
 
   # NOTE (2026-07-02): there is deliberately NO post-merge image-downscale job.
   # Git history keeps every committed byte forever, so shrinking after merge
@@ -253,6 +285,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pull-requests: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -270,7 +303,9 @@ jobs:
           git config user.name "town-clock[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Apply, commit and push
+      - name: Apply, commit and land through a pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           git apply --index "$RUNNER_TEMP/handover/atlas.patch"
           # The atlas job's outputs only, named exactly as the handover names them, as
@@ -281,8 +316,25 @@ jobs:
             echo "atlas: the patch reaches past the atlas outputs, refused: $bad"
             exit 1
           fi
-          git commit -m "town-clock: atlas refresh"
-          if ! git push; then
-            git pull --rebase
-            git push
-          fi
+          subject="town-clock: atlas refresh"
+          git commit -m "$subject"
+          # Land it through a PR (POS-938; the header above). This block is the
+          # same in both commit jobs but for its first line.
+          job=atlas
+          base="${GITHUB_REF_NAME:?}"
+          branch="clock/$GITHUB_RUN_ID-$GITHUB_RUN_ATTEMPT-$job"
+          git push origin "HEAD:refs/heads/$branch"
+          pr=$(gh pr create --repo "$GITHUB_REPOSITORY" --base "$base" --head "$branch" --title "$subject" --body "The town clock's $job commit, run $GITHUB_RUN_ID, merged by the clock itself (POS-938).")
+          for try in 1 2 3; do
+            if gh pr merge "$pr" --repo "$GITHUB_REPOSITORY" --squash --subject "$subject" --body "" --match-head-commit "$(git rev-parse HEAD)"; then
+              git push origin --delete "$branch" || echo "::warning::$job: merged $pr, but its branch $branch was not deleted"
+              exit 0
+            fi
+            [ "$try" -lt 3 ] || break
+            sleep 5
+            git fetch origin "$base"
+            git merge --no-edit FETCH_HEAD
+            git push origin "HEAD:refs/heads/$branch"
+          done
+          echo "$job: the merge of $pr was refused three times; the PR stays open"
+          exit 1
