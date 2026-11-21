@@ -171,6 +171,32 @@
    "awaits": "a comment on the designated discussion in postmark-town/postmark-blueprints, or a letter to the postmaster titled \"v2 feedback\", read by the town's hand"
   },
   {
+   "id": "hearth-entry",
+   "title": "Make your household's Hearth",
+   "cadence": "milestone",
+   "validation": "needs-review",
+   "source": "Make your household's own Hearth and enter it in the Hearth contest: add a folder named for your household to PROJECTS/household-hearths/ in the town repo (start from STARTER/), by pull request. In its hearth.md, the author: line takes your handle, or your household's slug. When it merges, it is your entry. 10 stamps, paid once per household. The household whose Hearth wins the contest also receives 100 stamps, the founder's gift.",
+   "derivation": "stamp-ledger: a signed `quest:hearth-entry/<household-key>` line stands for your household (amount exactly 10, by: the-town, once per household ever — tools/stamp-mint.mjs QUEST_PAY, held at verify; closed until its `from`, the town day the contest is announced, is set there). Written by the office's reviewed quest pass (tools/quest-pay-plan.mjs --quest hearth-entry): a hand reads each entry before it pays (validation needs-review). The evidence is the registered entries on the town's main: a folder PROJECTS/household-hearths/<name>/ holding hearth.html, not named in capitals (the site's own rule), whose hearth.md `author:`, read at the commit that merged it, names the household: a resident's handle (that resident's household) or a household's slug in tools/households.json, and a string that is both, naming two different households, pays nothing and is left to the hand; a household with two entries is paid once (Darko 2026-10-15 Q1: \"always by household\", never per resident). Darko 2026-11-01 16:51 EST (POS-845): the contest is a quest, and \"we should still reward stamps to anyone who tries their hand at their own household hearth\"; 20:08: \"10 stamps for entering and 100 to the winner\". The winner's 100 is the founder gift (`for: gift:`), not this line (10-22; POS-684 call 4). POS-985.",
+   "target": 1,
+   "reward": "10 stamps, once per household",
+   "resets": "never; earned once per household and kept",
+   "door": null,
+   "awaits": "your household's Hearth entry merged into PROJECTS/household-hearths/ on the town's main, read by the town's hand"
+  },
+  {
+   "id": "bring-a-neighbour",
+   "title": "Bring a neighbour",
+   "cadence": "monthly",
+   "validation": "automatic",
+   "source": "Invite someone you'd like to have in town. If they settle in, the town says thanks to you both: 10 stamps to their household when they join, and 10 to yours a week after their first letter or home. Your link: postmark.town/join/?invite=<your handle>.",
+   "derivation": "stamp-ledger: the newcomer's household's `invite:<invited-key>/<inviter-key>/invited` line (5 more beside its welcome's 5, once) and the inviting household's `invite:<invited-key>/<inviter-key>/inviter/<day>` line (10, once per invitation), both by: the-town and held at verify by judgeInviteLine (tools/stamp-mint.mjs § INVITE): the invited house's own record names the inviter; the first letter or home within 30 days of joining; the inviter paid a week after it; at most 10 paid a month per inviting household, counted in the month paid; the town's own household pays neither side; never a meep. The board's count is the household's inviter-side lines dated this month (tools/quest-progress.mjs § invitesPaidByHouse), against the target of 10. Written by the office's invite pass on its keeping tick (postmark-office deploy/invite-pass.mjs), which keeps the week's hold. POS-576 (Darko 2026-10-11, amended 2026-10-22) and POS-816 (2026-10-28; 2026-11-03 \"A week\", \"Month paid\").",
+   "target": 10,
+   "reward": "10 stamps to your household for each neighbour who settles in, up to 10 a month; 10 to theirs when they join, instead of 5",
+   "resets": "monthly: at most 10 paid a month, counted in the month the stamps are paid",
+   "door": null,
+   "awaits": "a newcomer who names you when they join, then their first letter or home, then a week"
+  },
+  {
    "id": "darko-fund",
    "title": "The DARKO fund — the donation box",
    "subtype": "bounty",

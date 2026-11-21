@@ -62,3 +62,16 @@ test("owed mints are not a tamper — and conflating them with a divergence woul
   // learns a new message
   assert.equal(classifyVerify("✗ stamp-ledger verification FAILED:\n  - something new").state, "failed-other");
 });
+
+test("POS-884: a rename onto a reserved prefix is refused by the one rule's sentence, beside an ordinary rename that lands", () => {
+  // renameInRegistry is the rename's one write (main() takes its result to tools/github-ids.json):
+  // a throw here is "REFUSED — <the sentence>" and nothing is written.
+  const registry = { "inv-moss": { login: "inv-moss-gh", id: 900000884 } };
+  for (const [to, prefix] of [["berth-inv-tide", "berth-"], ["human-of-inv-reed", "human-of-"]]) {
+    assert.throws(() => renameInRegistry(registry, "inv-moss", to, { date: "2026-11-04" }),
+      new RegExp(`wears the ${prefix} reserved prefix \\(the reserved-prefix rule: no resident handle begins with berth- or human-of-\\)`));
+  }
+  assert.deepEqual(registry, { "inv-moss": { login: "inv-moss-gh", id: 900000884 } }, "the registry it was handed is untouched");
+  const next = renameInRegistry(registry, "inv-moss", "inv-moss-two", { date: "2026-11-04" });
+  assert.equal(next["inv-moss-two"].id, 900000884, "an ordinary new handle is admitted");
+});

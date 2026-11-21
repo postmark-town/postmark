@@ -1,0 +1,221 @@
+/* The Working Window: a warm room above a dark river, just after sunset. */
+:root {
+  --hx-ink: #d7cfbf;
+  --hx-warm: #fff0d2;
+  --hx-accent: #e7b56f;
+  --hx-glass: rgba(9, 17, 29, 0.76);
+  --hx-hair: rgba(231, 181, 111, 0.24);
+  --hx-coral: #d77c70;
+  --hx-ok: #9ec9aa;
+  --hx-paper: #f1e5d1;
+  --hx-paper-ink: #2b2018;
+  --hx-radius: 14px;
+  background: #070b12;
+  border-radius: 18px;
+  padding: 1.35em 1.45em 1.7em;
+}
+
+.working-window {
+  display: grid;
+  gap: 1.45em;
+  max-width: 76em;
+  margin: 0 auto;
+}
+
+.lintel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.8em 1.6em;
+  align-items: end;
+  padding-bottom: 0.9em;
+  border-bottom: 1px solid var(--hx-hair);
+}
+
+.lintel hearth-house {
+  padding: 0;
+}
+
+.lintel hearth-house p:nth-of-type(2) {
+  font-family: var(--pm-serif);
+  font-size: clamp(2.15rem, 5vw, 3.35rem);
+  color: var(--hx-warm);
+  text-shadow: 0 0 24px rgba(231, 181, 111, 0.18);
+}
+
+.river-window {
+  position: relative;
+  min-height: 22em;
+  overflow: hidden;
+  border: 1px solid rgba(231, 181, 111, 0.38);
+  border-radius: 16px;
+  padding: 1.2em;
+  background: #09101d;
+  box-shadow: inset 0 0 0 0.45em rgba(5, 9, 15, 0.72), 0 1.4em 3em rgba(0, 0, 0, 0.22);
+}
+
+.afterglow {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background:
+    linear-gradient(to bottom,
+      #070d19 0%,
+      #11182a 42%,
+      #31202c 60%,
+      #95504a 70%,
+      #d1845c 75%,
+      #241720 78%,
+      #080c13 79%,
+      #05080d 100%);
+}
+
+.afterglow::before {
+  content: "";
+  position: absolute;
+  inset: 76% 0 0;
+  background:
+    linear-gradient(100deg, transparent 0 18%, rgba(215, 124, 112, 0.13) 35%, rgba(231, 181, 111, 0.22) 49%, rgba(215, 124, 112, 0.09) 64%, transparent 82%),
+    repeating-linear-gradient(to bottom, rgba(231, 181, 111, 0.11) 0 1px, transparent 1px 8px),
+    #05080d;
+  filter: blur(0.2px);
+}
+
+.far-bank {
+  position: absolute;
+  left: -3%;
+  right: -3%;
+  top: 75%;
+  height: 5%;
+  background: #08090d;
+  border-radius: 50% 45% 0 0;
+  transform: rotate(-0.4deg);
+}
+
+.river-light {
+  position: absolute;
+  left: 43%;
+  top: 76%;
+  width: 16%;
+  height: 23%;
+  background: linear-gradient(to bottom, rgba(231, 181, 111, 0.3), rgba(215, 124, 112, 0.09) 45%, transparent);
+  filter: blur(10px);
+  transform: skewX(-8deg);
+}
+
+.window-panes {
+  position: relative;
+  z-index: 1;
+  min-height: 19.6em;
+  display: grid;
+  align-content: end;
+  padding: 1em;
+  border: 0.45em solid rgba(7, 11, 18, 0.9);
+  border-radius: 10px;
+  background:
+    linear-gradient(to right, transparent calc(50% - 0.18em), rgba(7, 11, 18, 0.88) calc(50% - 0.18em) calc(50% + 0.18em), transparent calc(50% + 0.18em)),
+    linear-gradient(to bottom, transparent calc(58% - 0.18em), rgba(7, 11, 18, 0.88) calc(58% - 0.18em) calc(58% + 0.18em), transparent calc(58% + 0.18em));
+}
+
+.window-panes hearth-windows {
+  background: rgba(7, 11, 18, 0.62);
+  border: 1px solid rgba(231, 181, 111, 0.2);
+  border-radius: 10px;
+  padding: 0.8em;
+}
+
+.sill {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20em), 1fr));
+  gap: 1.2em;
+  align-items: start;
+  padding: 1em 1.1em;
+  border-top: 1px solid rgba(231, 181, 111, 0.36);
+  border-bottom: 1px solid var(--hx-hair);
+  background: linear-gradient(to right, rgba(39, 27, 23, 0.75), rgba(12, 19, 30, 0.74));
+  border-radius: 8px;
+}
+
+.residents {
+  display: grid;
+  gap: 0.8em;
+}
+
+.residents h2 {
+  margin: 0;
+  font-family: var(--pm-serif);
+  font-size: 1.35rem;
+  color: var(--hx-warm);
+}
+
+.residents hearth-residents > div {
+  grid-template-columns: repeat(auto-fill, minmax(14em, 1fr));
+}
+
+.nearby {
+  display: grid;
+  grid-template-columns: minmax(0, 1.8fr) minmax(17em, 1fr);
+  gap: 1.25em;
+  align-items: start;
+}
+
+.correspondence,
+.house-numbers {
+  display: grid;
+  gap: 1.15em;
+  min-width: 0;
+}
+
+.correspondence > *,
+.house-numbers > *,
+.record {
+  background: var(--hx-glass);
+  border: 1px solid var(--hx-hair);
+  border-radius: var(--hx-radius);
+  padding: 1em 1.1em;
+}
+
+.house-numbers hearth-stamps {
+  background: none;
+  border: 0;
+  padding: 0;
+}
+
+.record {
+  min-width: 0;
+}
+
+.record section {
+  display: grid;
+  gap: 1.15em;
+}
+
+[data-hearth-part="caption"] {
+  opacity: 0.72;
+}
+
+:root[data-hearth-view="owner"] .river-window {
+  border-color: rgba(231, 181, 111, 0.58);
+  box-shadow: inset 0 0 0 0.45em rgba(5, 9, 15, 0.72), 0 0 2.2em rgba(231, 181, 111, 0.1);
+}
+
+@media (max-width: 900px) {
+  :root {
+    padding: 1em 0.8em 1.25em;
+    border-radius: 10px;
+  }
+
+  .lintel,
+  .nearby {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .river-window {
+    min-height: 18em;
+    padding: 0.75em;
+  }
+
+  .window-panes {
+    min-height: 16.5em;
+    padding: 0.65em;
+  }
+}

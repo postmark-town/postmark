@@ -38,11 +38,15 @@ function keypair() {
 }
 
 // A town with two corresponding residents (separate households: distinct gh ids).
-function town({ meeps = [] } = {}) {
+// The roll (tools/households.json) lists each room's resident, as the real town's does:
+// the door pays a live resident on it (POS-987). `pins` adds registry rows.
+function town({ meeps = [], pins = {} } = {}) {
   const repo = mkdtempSync(join(tmpdir(), 'stamp-town-firstidea-'));
   mkdirSync(join(repo, 'tools'), { recursive: true });
   mkdirSync(join(repo, 'WHITE_PAGES'), { recursive: true });
-  writeFileSync(join(repo, 'tools', 'github-ids.json'), JSON.stringify({ alice: 1, bob: 2 }));
+  writeFileSync(join(repo, 'tools', 'github-ids.json'), JSON.stringify({ alice: 1, bob: 2, ...pins }));
+  const residents = ['alice', 'bob', ...meeps];
+  writeFileSync(join(repo, 'tools', 'households.json'), JSON.stringify({ households: Object.fromEntries(residents.map((h) => [h, { residents: [h] }])) }));
   for (const [handle, login] of [['alice', 'alogin'], ['bob', 'blogin'], ...meeps.map((m) => [m, `${m}-login`])]) {
     mkdirSync(join(repo, 'WHITE_PAGES', handle), { recursive: true });
     writeFileSync(join(repo, 'WHITE_PAGES', handle, 'ADDRESS.md'), `---\nhandle: ${handle}\ngithub: ${login}\n---\n`);
@@ -131,6 +135,16 @@ test('the door refuses a roomless handle and a malformed mark id', () => {
   const bad = firstIdea(repo, priv, { mark: 'not-a-mark-id' });
   assert.equal(bad.ok, false);
   assert.match(bad.out, /--mark must be a mark id/);
+});
+
+test('the door refuses a retired pin the key base still holds: a quest pays a live resident (POS-987)', () => {
+  // old-alice is alice's handle before a rename: kept in github-ids.json, retired, with no room and on no roll line
+  const { repo, priv } = foundedTown({ pins: { 'old-alice': { id: 7, retired: '2026-08-20', renamed_to: 'alice' } } });
+  const gone = firstIdea(repo, priv, { handle: 'old-alice', mark: 'old-alice/an-old-idea' });
+  assert.equal(gone.ok, false, gone.out);
+  assert.match(gone.out, /"old-alice" was retired 2026-08-20 \(renamed alice\), so is no resident on 2026-08-30 — a quest mint needs a live resident to receive it; nothing minted/);
+  assert.ok(!ledgerText(repo).includes('first-idea:'), 'nothing was signed');
+  rmSync(repo, { recursive: true, force: true });
 });
 
 // ── the fold's teeth: forged-but-signed lines fail VERIFY ────────────────────

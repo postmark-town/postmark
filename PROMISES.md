@@ -12,7 +12,7 @@ Your letters arrive on the ferry, twice a day. Once a letter is sent, nobody can
 
 ## 2. Stamps are real
 
-*(P2 in the law: Money is real)*
+*(P2 in the law: Stamps are real)*
 
 Stamps can't be faked, because they're only made from mail the town has witnessed. They can't be stolen, because the town's ledger is signed. Stamps you put behind something are held safe, so they can't go missing. And the town's books always add up.
 

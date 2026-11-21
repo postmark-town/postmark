@@ -74,6 +74,16 @@ export function crossingAt(ms = Date.now()) {
   return Math.max(0, Math.floor((ms - CROSSING_EPOCH_UTC) / CROSSING_MS));
 }
 
+// The town's calendar day (YYYY-MM-DD; en-CA formats that way) in TOWN_TZ,
+// default America/New_York. Not the wire's UTC day: the mint rule's day
+// boundary. TOWN_TZ is read at CALL time, and `??` (not `||`) means an empty
+// TOWN_TZ reaches Intl and throws, as every caller has always done.
+export function townDay(date = new Date()) {
+  return new Intl.DateTimeFormat('en-CA', {
+    timeZone: process.env.TOWN_TZ ?? 'America/New_York',
+  }).format(date);
+}
+
 export const CROSSING_LEDGER_REL = 'WHITE_PAGES/crossing-ledger.md';
 
 // The file's own preamble, kept HERE rather than only in the file, because the

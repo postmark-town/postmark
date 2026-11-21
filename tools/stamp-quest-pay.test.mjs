@@ -13,9 +13,15 @@
 //      forging household key;
 //   3. the verb writes one signed line that verifies, and refuses a housemate's
 //      second line, a lying key, a date outside the window, a meep, and no room;
+//      3b (POS-987): it pays a live resident only, refusing a retired pin and a
+//      pin off the roll that the key base still holds, and a roll it cannot read;
 //   4. the verifier reds a wrong amount, a second line for one household, a
-//      by: other than the-town, a quest not in the table, a lying key;
-//   5. the registry row says both ways in and once per household (Darko 10-15).
+//      by: other than the-town, a quest not in the table, a lying key, and (POS-987)
+//      a quest or first-idea line to a pin on or after its retirement, while one
+//      paid before the retirement stays green;
+//   5. the registry row says both ways in and once per household (Darko 10-15);
+//   6. the Hearth quest (POS-985): 10 once per household, closed until its day
+//      is set at ship, and its row.
 
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -26,19 +32,24 @@ import { tmpdir } from 'node:os';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import {
-  classifyEntry, questPayLine, QUEST_PAY, parseStampLedger, foldBalances, sealChain, signSeal,
+  classifyEntry, questPayLine, QUEST_PAY, questOpenOn, questWindowWords, parseStampLedger, foldBalances, sealChain, signSeal,
   giftLine, welcomeLine, firstIdeaLine, stageMintLine, mintLine, transferLine,
+  householdKeys, liveResidentRefusal,
 } from './stamp-mint.mjs';
 import { verifyStampLedger } from './stamp-verify.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const MINT_CLI = join(HERE, 'stamp-mint.mjs');
 
-function town({ ledgerLines, pins = {}, addresses = {} }) {
+// `houses`: the roll, tools/households.json's `households` (slug -> { residents }).
+// Left out, every room is its own house, so the roll matches the rooms as the real town's does.
+function town({ ledgerLines, pins = {}, addresses = {}, houses = null }) {
   const repo = mkdtempSync(join(tmpdir(), 'stamp-quest-'));
   mkdirSync(join(repo, 'tools'), { recursive: true });
   mkdirSync(join(repo, 'WHITE_PAGES'), { recursive: true });
   writeFileSync(join(repo, 'tools', 'github-ids.json'), JSON.stringify(pins));
+  const roll = houses ?? Object.fromEntries(Object.keys(addresses).map((h) => [h, { residents: [h] }]));
+  writeFileSync(join(repo, 'tools', 'households.json'), JSON.stringify({ households: roll }));
   for (const [handle, github] of Object.entries(addresses)) {
     mkdirSync(join(repo, 'WHITE_PAGES', handle), { recursive: true });
     writeFileSync(join(repo, 'WHITE_PAGES', handle, 'ADDRESS.md'), `---\nhandle: ${handle}\n${github ? `github: ${github}\n` : ''}---\n`);
@@ -102,12 +113,21 @@ test('2 · the line pins the amount from QUEST_PAY and refuses an unpaid quest a
 
 // ── 3 · the verb ────────────────────────────────────────────────────────────
 
+// POS-987: two names the key base holds that are no live resident, in the real
+// town's shapes. old-carol is carol's handle before a rename: tools/rename-handle.mjs
+// keeps it in github-ids.json, retired and renamed_to, with carol's id (as
+// dylan-android-husband and wesley-seeker are), so it has no room and is on no
+// roll line. drifter is a pin with no room that the roll never listed.
+const GONE = { 'old-carol': { id: 2, retired: '2026-10-20', renamed_to: 'carol' }, drifter: { id: 5 } };
+
 function founded({ meeps = false } = {}) {
   // alice and bob keep one account (gh:1); carol is her own house (gh:2)
+  // old-carol and drifter stand in the key base and on no roll line (POS-987, test 3b)
   const repo = town({
     ledgerLines: [D('2026-06-12', 'a-1', 'alice', 'bob'), D('2026-06-13', 'b-1', 'bob', 'alice')],
-    pins: { alice: { id: 1 }, bob: { id: 1 }, carol: { id: 2 }, ferry: { id: 3 } },
+    pins: { alice: { id: 1 }, bob: { id: 1 }, carol: { id: 2 }, ferry: { id: 3 }, ...GONE },
     addresses: { alice: null, bob: null, carol: null, ferry: null },
+    houses: { 'alice-and-bob': { residents: ['alice', 'bob'] }, carol: { residents: ['carol'] }, ferry: { residents: ['ferry'] } },
   });
   const { pub, priv } = keypair();
   writeFileSync(join(repo, 'tools', 'stamp-pubkey.pem'), pub);
@@ -160,11 +180,72 @@ test('3 · --quest-mint refuses a date before the quest opens, an unpaid quest, 
   rmSync(repo, { recursive: true, force: true });
 });
 
+test('3b · --quest-mint pays a live resident: a retired pin and a pin off the roll are refused though the key base holds both (POS-987)', () => {
+  const { repo, pub, keyFile } = founded();
+  const keys = householdKeys(repo);
+  assert.equal(keys.get('old-carol')?.key, 'gh:2', "the retired pin stays in the key base, carrying carol's id (householdKeys is not stripped)");
+  assert.equal(keys.get('drifter')?.key, 'gh:5');
+  const at = ['--quest', Q, '--date', '2026-10-21', '--key', keyFile];
+
+  const retired = runMint(repo, ['--quest-mint', 'old-carol', '--household', 'gh:2', ...at]);
+  assert.equal(retired.ok, false, retired.out);
+  assert.match(retired.out, /"old-carol" was retired 2026-10-20 \(renamed carol\), so is no resident on 2026-10-21 — a quest pays a live resident; nothing minted/);
+  const drifter = runMint(repo, ['--quest-mint', 'drifter', '--household', 'gh:5', ...at]);
+  assert.equal(drifter.ok, false, drifter.out);
+  assert.match(drifter.out, /"drifter" is no resident on the roll — a quest pays a live resident; nothing minted/);
+  assert.equal(questLines(repo).length, 0, 'nothing was signed for either');
+
+  // the live resident the retired pin was renamed to is paid, once, and it verifies
+  const live = runMint(repo, ['--quest-mint', 'carol', '--household', 'gh:2', ...at]);
+  assert.equal(live.ok, true, live.out);
+  assert.equal(questLines(repo).length, 1);
+  const v = verifyStampLedger(repo, { pubkeyPem: pub });
+  assert.equal(v.ok, true, v.problems.join('\n'));
+
+  // the office's --registry: the STORE's roll decides, not the printout (alice is on the printout and off the store's roll)
+  const store = join(repo, 'store-registry.json');
+  writeFileSync(store, JSON.stringify({ households: { 'alice-and-bob': { residents: ['bob'] } }, pins: { alice: { id: 1 }, bob: { id: 1 } } }));
+  const offStore = runMint(repo, ['--quest-mint', 'alice', '--household', 'gh:1', '--registry', store, ...at]);
+  assert.equal(offStore.ok, false, offStore.out);
+  assert.match(offStore.out, /"alice" is no resident on the roll — a quest pays a live resident; nothing minted/);
+  assert.equal(questLines(repo).length, 1);
+
+  // a roll that cannot be read is a refusal, never a pass
+  rmSync(join(repo, 'tools', 'households.json'));
+  const blind = runMint(repo, ['--quest-mint', 'alice', '--household', 'gh:1', ...at]);
+  assert.equal(blind.ok, false, blind.out);
+  assert.match(blind.out, /the roll \(tools\/households\.json\) could not be read/);
+  assert.equal(questLines(repo).length, 1);
+  rmSync(repo, { recursive: true, force: true });
+});
+
+test('3b · liveResidentRefusal: the retired half is dated and needs no roll; the roll half is asked only when a roll is given', () => {
+  const houses = { carol: { residents: ['carol'] } };
+  assert.equal(liveResidentRefusal('carol', '2026-10-21', { pins: GONE, houses }), null, 'a live resident');
+  assert.equal(liveResidentRefusal('old-carol', '2026-10-19', { pins: GONE }), null, 'before its retirement, by the dated half alone');
+  assert.match(liveResidentRefusal('old-carol', '2026-10-20', { pins: GONE }), /was retired 2026-10-20 \(renamed carol\)/, 'on the day it was retired');
+  assert.match(liveResidentRefusal('old-carol', '2026-10-19', { pins: GONE, houses }), /no resident on the roll/, 'the roll is today\'s: off it, refused');
+});
+
+// UNRESOLVED, NAMED AND NOT GUESSED (Wright 2026-11-11 03:41:40Z: "Undated or
+// unstamped departures stay explicitly unresolved, named in the test, not
+// guessed"). A resident who left the roll with no `retired:` stamp (an archived
+// room, as WHITE_PAGES/_archived/ holds; drifter here) has no date at which the
+// registry says they stopped being a resident. The mint refuses them, because it
+// asks today's roll. The verifier asks only the dated half, so it makes NO
+// finding either way about a recorded line to such a name: this test pins that
+// it is silent, and says nothing about whether such a line would be lawful.
+test('3b · UNRESOLVED: an unstamped departure is refused by the mint, and the verifier\'s dated half makes no finding about it', () => {
+  const houses = { carol: { residents: ['carol'] } };
+  assert.match(liveResidentRefusal('drifter', '2026-10-21', { pins: GONE, houses }), /"drifter" is no resident on the roll/, 'the mint, asking today\'s roll, refuses');
+  assert.equal(liveResidentRefusal('drifter', '2026-10-21', { pins: GONE }), null, 'the verifier, with no dated statement to read, finds nothing: unresolved, not lawful');
+});
+
 // ── 4 · the verifier ────────────────────────────────────────────────────────
 
 function verdict(lines) {
   const { pub, priv } = keypair();
-  const repo = town({ ledgerLines: [], pins: { alice: { id: 1 }, bob: { id: 1 }, carol: { id: 2 } }, addresses: { alice: null, bob: null, carol: null } });
+  const repo = town({ ledgerLines: [], pins: { alice: { id: 1 }, bob: { id: 1 }, carol: { id: 2 }, ...GONE }, addresses: { alice: null, bob: null, carol: null } });
   forged(repo, pub, priv, lines);
   const v = verifyStampLedger(repo, { pubkeyPem: pub });
   rmSync(repo, { recursive: true, force: true });
@@ -194,6 +275,24 @@ test('4 · the verifier REDS a wrong amount, a second line for one household, a 
   }
 });
 
+test('4 · the verifier REDS a quest or first-idea line to a retired pin on or after its retirement, and keeps one paid before it green (POS-987)', () => {
+  // each line is otherwise lawful: the right amount, window, by: and old-carol's own household key, gh:2
+  const OLD = (date) => PAY(5, { handle: 'old-carol', household: 'gh:2', date });
+  for (const date of ['2026-10-20', '2026-10-21']) {
+    const v = verdict([OLD(date)]);
+    assert.equal(v.ok, false, date);
+    assert.ok(v.problems.some((p) => /LAWFUL fails — quest:read-v2-feedback pays no live resident: "old-carol" was retired 2026-10-20 \(renamed carol\)/.test(p)), v.problems.join('\n'));
+    const idea = verdict([firstIdeaLine({ date, handle: 'old-carol', mark: 'old-carol/an-idea' })]);
+    assert.equal(idea.ok, false, date);
+    assert.ok(idea.problems.some((p) => /LAWFUL fails — first-idea pays no live resident: "old-carol" was retired 2026-10-20/.test(p)), idea.problems.join('\n'));
+  }
+  // recorded history stands: a pay to the handle while it was still the resident's is lawful
+  const before = verdict([OLD('2026-10-16'), firstIdeaLine({ date: '2026-10-16', handle: 'old-carol', mark: 'old-carol/an-idea' })]);
+  assert.equal(before.ok, true, before.problems.join('\n'));
+  // and the resident under the new name is paid as ever
+  assert.equal(verdict([PAY(5, { handle: 'carol', household: 'gh:2', date: '2026-10-21' })]).ok, true);
+});
+
 // 5. Darko 2026-10-15 11:17 (Q1/Q3): the quest's own words, on its registry row
 //    (the quest card reads `source`), say both ways in and that a household is
 //    paid once; nothing on the row or in the table pays per resident.
@@ -206,6 +305,98 @@ test('the read-v2-feedback row says both ways (the designated discussion, a lett
   assert.match(row.awaits, /designated discussion.*or a letter to the postmaster/);
   assert.equal(row.reward, '5 stamps, once per household');
   assert.equal(QUEST_PAY['read-v2-feedback'].once_per, 'household');
+  for (const text of [row.source, row.awaits, row.reward, row.resets, row.derivation])
+    assert.doesNotMatch(text.replace(/never per resident/g, ''), /per[- ]resident|each resident/i, 'no text on the row suggests paying per resident');
+});
+
+// ── 6 · the Hearth quest (POS-985) ──────────────────────────────────────────
+// LAW (Darko 2026-11-01 20:08 EST, POS-845): "let's say 10 stamps for entering
+// and 100 to the winner". The 10 is this quest, once per household; the 100 is
+// the founder gift, not a quest line. Its `from` is the town day the contest is
+// announced, set at ship (POS-684 call 3 and 5e); until then the quest is closed.
+
+const H = 'hearth-entry';
+const OPENS = QUEST_PAY[H].from;
+const HPAY = (n = 10, { handle = 'alice', household = 'gh:1', date = OPENS ?? '2026-11-10' } = {}) => PAY(n, { handle, household, quest: H, date });
+const dayBefore = (d) => new Date(Date.parse(`${d}T12:00:00Z`) - 864e5).toISOString().slice(0, 10);
+
+test('6 · the Hearth quest pays exactly 10, once per household, and opens on a day set at ship', () => {
+  const t = QUEST_PAY[H];
+  assert.deepEqual([t.amount, t.once_per, t.until], [10, 'household', null], 'LAW: "10 stamps for entering"');
+  assert.ok(t.from === null || /^\d{4}-\d{2}-\d{2}$/.test(t.from), `from is null (closed) or a town day, got ${JSON.stringify(t.from)}`);
+  const line = questPayLine({ date: '2026-11-10', handle: 'alice', quest: H, household: 'gh:1' });
+  assert.equal(line, '- 2026-11-10 · MINT → alice · 10 · for: quest:hearth-entry/gh:1 · by: the-town');
+  assert.deepEqual(classifyEntry(line), { kind: 'quest-pay', date: '2026-11-10', handle: 'alice', n: 10, quest: H, household: 'gh:1', by: 'the-town' });
+});
+
+test('6 · questOpenOn: a quest with no `from` is closed on every day; a set one opens on its day and closes after `until`', () => {
+  // the control: the bare comparison this judge replaces reads a null `from` as open
+  assert.equal('2026-11-10' < null, false, 'date < null is false, so `date < from` alone would let a closed quest pay');
+  for (const d of ['2026-01-01', '2026-11-10', '2099-12-31']) assert.equal(questOpenOn({ from: null, until: null }, d), false, d);
+  assert.equal(questOpenOn({ from: '2026-11-10', until: null }, '2026-11-09'), false);
+  assert.equal(questOpenOn({ from: '2026-11-10', until: null }, '2026-11-10'), true);
+  assert.equal(questOpenOn({ from: '2026-11-10', until: '2026-12-08' }, '2026-12-08'), true);
+  assert.equal(questOpenOn({ from: '2026-11-10', until: '2026-12-08' }, '2026-12-09'), false);
+  assert.equal(questWindowWords({ from: null, until: null }), 'is not open (QUEST_PAY names no opening day)');
+  assert.equal(questWindowWords(QUEST_PAY[Q]), 'pays from 2026-10-15', 'the v2 refusal reads as it always did');
+});
+
+test('6 · while its day is unset the Hearth quest is CLOSED: the verb refuses it and the verifier reds it, and v2 still pays',
+  { skip: OPENS != null && `opened at ship (from ${OPENS}); the open-path test below runs instead` }, () => {
+    const { repo, pub, keyFile } = founded();
+    const closed = runMint(repo, ['--quest-mint', 'alice', '--household', 'gh:1', '--quest', H, '--date', '2026-11-10', '--key', keyFile]);
+    assert.equal(closed.ok, false);
+    assert.match(closed.out, /hearth-entry is not open \(QUEST_PAY names no opening day\), not on 2026-11-10/);
+    const v2 = runMint(repo, ['--quest-mint', 'alice', '--household', 'gh:1', '--quest', Q, '--date', '2026-11-10', '--key', keyFile]);
+    assert.equal(v2.ok, true, `the control: the same verb, house and day pay an open quest\n${v2.out}`);
+    assert.equal(questLines(repo).length, 1);
+    assert.equal(verifyStampLedger(repo, { pubkeyPem: pub }).ok, true);
+    rmSync(repo, { recursive: true, force: true });
+    const v = verdict([HPAY()]);
+    assert.equal(v.ok, false);
+    assert.ok(v.problems.some((p) => /quest:hearth-entry is not open \(QUEST_PAY names no opening day\), not on 2026-11-10/.test(p)), v.problems.join('\n'));
+  });
+
+test('6 · once open, the Hearth quest pays 10 from its day, once per household; the verifier reds 9 and a second line',
+  { skip: OPENS == null && 'closed until its from is set at ship (QUEST_PAY, tools/stamp-mint.mjs); the closed-path test above runs instead' }, () => {
+    const { repo, pub, keyFile } = founded();
+    const at = ['--quest', H, '--key', keyFile];
+    const early = runMint(repo, ['--quest-mint', 'alice', '--household', 'gh:1', '--date', dayBefore(OPENS), ...at]);
+    assert.equal(early.ok, false);
+    assert.match(early.out, new RegExp(`hearth-entry pays from ${OPENS}, not on ${dayBefore(OPENS)}`));
+    const first = runMint(repo, ['--quest-mint', 'alice', '--household', 'gh:1', '--date', OPENS, ...at]);
+    assert.equal(first.ok, true, first.out);
+    assert.match(questLines(repo)[0], new RegExp(`^- ${OPENS} · MINT → alice · 10 · for: quest:hearth-entry/gh:1 · by: the-town · sig: `));
+    const housemate = runMint(repo, ['--quest-mint', 'bob', '--household', 'gh:1', '--date', OPENS, ...at]);
+    assert.equal(housemate.ok, false);
+    assert.match(housemate.out, /household already paid for quest:hearth-entry/);
+    assert.equal(verifyStampLedger(repo, { pubkeyPem: pub }).ok, true);
+    rmSync(repo, { recursive: true, force: true });
+    assert.equal(verdict([HPAY(), HPAY(10, { handle: 'carol', household: 'gh:2' })]).ok, true, 'two houses, green');
+    for (const [lines, re] of [
+      [[HPAY(9)], /quest:hearth-entry pays exactly 10 \(got 9\)/],
+      [[HPAY(), HPAY(10, { handle: 'bob' })], /quest:hearth-entry is paid twice to household/],
+    ]) {
+      const v = verdict(lines);
+      assert.equal(v.ok, false, String(re));
+      assert.ok(v.problems.some((p) => re.test(p)), `${re}\n${v.problems.join('\n')}`);
+    }
+  });
+
+test('the hearth-entry row names the folder, once per household, and the winner\'s 100 as the founder\'s gift', () => {
+  const reg = JSON.parse(readFileSync(join(HERE, '..', 'quest-registry.json'), 'utf8'));
+  const row = reg.quests.find((q) => q.id === H);
+  assert.equal(row.validation, 'needs-review');
+  assert.match(row.source, /PROJECTS\/household-hearths\//);
+  // what the pass pays by, in the words a resident reads (Truey's FIX on #4586): the author line
+  assert.match(row.source, /the author: line takes your handle, or your household's slug/);
+  const readme = readFileSync(join(HERE, '..', 'PROJECTS', 'household-hearths', 'README.md'), 'utf8');
+  assert.match(readme, /hearth\.md +← title, author \(your handle, or your household's slug\)/, 'the README says the same');
+  assert.doesNotMatch(readme, /author \(you\)/);
+  assert.match(row.source, /10 stamps, paid once per household/);
+  assert.match(row.source, /100 stamps, the founder's gift/);
+  assert.equal(row.reward, '10 stamps, once per household');
+  assert.match(row.derivation, /quest:hearth-entry\/<household-key>/);
   for (const text of [row.source, row.awaits, row.reward, row.resets, row.derivation])
     assert.doesNotMatch(text.replace(/never per resident/g, ''), /per[- ]resident|each resident/i, 'no text on the row suggests paying per resident');
 });

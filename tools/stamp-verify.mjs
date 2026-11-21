@@ -23,7 +23,9 @@
 //                  vote-mints are once-per-handle-per-topic with a stake behind
 //                  them. You can't overdraw a stake without breaking the fold.
 //
-// Usage: node tools/stamp-verify.mjs [--repo PATH]   exits 0 green, 1 on any failure.
+// Usage: node tools/stamp-verify.mjs [--repo PATH] [--registry <file|url>]
+//        exits 0 green, 1 on any failure. --registry hands over the store's
+//        registry (tools/registry-source.mjs); without it the printout is read.
 
 import { createPublicKey, verify as edVerify } from 'node:crypto';
 import { existsSync, readFileSync } from 'node:fs';
@@ -35,8 +37,10 @@ import {
   parseStampLedger, sealChain, foldBalances, parseLaws, classifyEntry, walkLedger,
   townIssuanceDial,
   keepingDial, potFile, deriveEpochClose, keepingLine, TREASURY_POT, STAGE_LADDER,
-  AWARD_MAX, AWARD_HANDS, QUEST_PAY, RECREDIT_STAGES, CORRECTION_HANDS,
+  AWARD_MAX, AWARD_HANDS, QUEST_PAY, questOpenOn, questWindowWords, RECREDIT_STAGES, SKIPPED_CREDIT_STAGES, CORRECTION_HANDS,
   PARCEL_PRICE, PARCEL_SETTLED_BY_DAY, PARCEL_ROOM_FROM,
+  houseCanonOf, invitationOf, inviteState, judgeInviteLine, foldInviteLine,
+  liveResidentRefusal, registryPins,
 } from './stamp-mint.mjs';
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
@@ -169,6 +173,9 @@ export function verifyStampLedger(repo, { pubkeyPem, registry = null } = {}) {
     const paidStages = new Set();       // `${post}/${stage}` already paid its stage stamps
     const paidAwards = new Set();       // `${post}/${label}` already paid its award (POS-290)
     const paidQuests = new Set();       // `${quest}|${household}` already paid (POS-632)
+    // A quest pays a live resident (POS-987): a line is judged by its own day
+    // against the registry's dated `retired:` stamps, never by today's roll.
+    const pins = registryPins(repo);
     const stageLineOf = new Map();      // `${post}/${stage}` -> the stage line { handle, n, sig } (POS-649)
     const stageLineBySig = new Map();   // a stage line's sig -> { post, stage, handle, n } (POS-649)
     const recredited = new Set();       // `${post}/${stage}` already re-credited (once, ever)
@@ -185,21 +192,22 @@ export function verifyStampLedger(repo, { pubkeyPem, registry = null } = {}) {
     // EITHER spelling, and once-per-household counts the house, not the
     // spelling. Nothing here widens what a lying key can do: a gh: id the
     // households file does not bind to the handle's declared house still fails.
-    const houseSlugByGhId = (() => {
-      const m = new Map();
-      try {
-        const hhFile = registry ?? JSON.parse(readFileSync(join(repo, 'tools', 'households.json'), 'utf8'));
-        for (const [slug, rec] of Object.entries(hhFile?.households ?? {})) {
-          for (const a of rec?.accounts ?? []) if (a && a.id != null) m.set(`gh:${a.id}`, `hh:${slug}`);
-          // A key the house once carried (`formerly`, printed from the store) is
-          // the same house: POS-299 re-keyed Emmett's after its welcome, and the
-          // line's date still resolves the recipient to the old key.
-          for (const f of rec?.formerly ?? []) if (f) m.set(`hh:${f}`, `hh:${slug}`);
-        }
-      } catch { /* no declared households: every key is its own spelling */ }
-      return m;
+    // The declared households, read once: the store's when the office hands
+    // them over (--registry), the printout otherwise.
+    const declaredHouseholds = (() => {
+      try { return (registry ?? JSON.parse(readFileSync(join(repo, 'tools', 'households.json'), 'utf8')))?.households ?? {}; }
+      catch { return {}; } // no declared households: every key is its own spelling
     })();
-    const canonHouse = (key) => houseSlugByGhId.get(key) ?? key;
+    // A key the house once carried (`formerly`, printed from the store) is the
+    // same house: POS-299 re-keyed Emmett's after its welcome, and the line's
+    // date still resolves the recipient to the old key. The map is
+    // houseCanonOf (stamp-mint.mjs), moved there unchanged so the invite verb
+    // resolves a key exactly as this fold does (POS-816).
+    const canonHouse = houseCanonOf(declaredHouseholds);
+    // Bring a neighbour (POS-816): the invitations the declared houses record,
+    // and the fold's running state for the one judge the verb also uses.
+    const invitation = invitationOf(declaredHouseholds);
+    const invites = inviteState();
     // Each declared house's declaration day, as the registry wrote it (`since`,
     // a town-time date string, never the day it came ashore), keyed by its
     // canonical `hh:<slug>`: the parcel purchase is lawful only for a house
@@ -437,6 +445,10 @@ export function verifyStampLedger(repo, { pubkeyPem, registry = null } = {}) {
         if (lawAt(cls.date).meeps.has(cls.handle)) {
           problems.push(`line ${lineNo}: LAWFUL fails — first-idea to meep "${cls.handle}" (meeps stay outside the currency)`); break;
         }
+        const notLive = liveResidentRefusal(cls.handle, cls.date, { pins });
+        if (notLive) {
+          problems.push(`line ${lineNo}: LAWFUL fails — first-idea pays no live resident: ${notLive}`); break;
+        }
         const houseKey = hh(cls.handle, cls.date);
         if (firstIdeaHouses.has(houseKey)) {
           problems.push(`line ${lineNo}: LAWFUL fails — household of "${cls.handle}" already holds its first-idea mint (once per household, ever)`); break;
@@ -476,6 +488,29 @@ export function verifyStampLedger(repo, { pubkeyPem, registry = null } = {}) {
         }
         welcomedHouses.add(houseKey);
       }
+      // Every welcome that stood (a ruled one too) is a house the invite's
+      // "5 more" may follow, by its house, never its spelling (POS-816).
+      if (cls.kind === 'welcome') {
+        invites.welcomed.add(canonHouse(cls.household));
+        invites.welcomed.add(canonHouse(hh(cls.handle, cls.date)));
+      }
+
+      // ── Bring a neighbour (POS-816) ───────────────────────────────────────
+      // The signature proves the office pen; the fold holds the terms through
+      // judgeInviteLine (stamp-mint.mjs), the one judge the --invite-mint verb
+      // also asks, quoted from the grammar comment: the amount for the side;
+      // by: the-town; the meep law; two different houses and never the
+      // town's own; the invited house's own record names this
+      // inviter; the recipient's household; one line per invited house and
+      // side, ever; the invited side after its welcome; and the activation,
+      // the 30 days and the month's cap on the inviter side, and for a
+      // late-named invitation (POS-947) the 30 days from its join day, the week
+      // from its naming and the 10 such paid in all.
+      if (cls.kind === 'invite') {
+        const why = judgeInviteLine(cls, { canon: canonHouse, invitationOf: invitation, houseAt: hh, isMeep: (h, d) => lawAt(d).meeps.has(h), state: invites });
+        if (why) { problems.push(`line ${lineNo}: LAWFUL fails — ${why}`); break; }
+        foldInviteLine(cls, invites, { canon: canonHouse, invitationOf: invitation });
+      }
 
       if (cls.kind === 'post-stage') {
         // A bug's stage stamps (Posts phase 2, 2026-09-29). The signature proves
@@ -504,6 +539,10 @@ export function verifyStampLedger(repo, { pubkeyPem, registry = null } = {}) {
         if (paidStages.has(k)) {
           problems.push(`line ${lineNo}: LAWFUL fails — post:${k} is paid twice (one line per post and stage, ever)`); break;
         }
+        // A skipped stage's credit (POS-931/a) was the stage's first and only payment.
+        if (recredited.has(k)) {
+          problems.push(`line ${lineNo}: LAWFUL fails — post:${k} was already paid by its recredit, and a stage line after it pays the stage twice (one payment per post and stage, ever)`); break;
+        }
         paidStages.add(k);
         stageLineOf.set(k, { handle: cls.handle, n: cls.n, sig: entries[i].sig });
         stageLineBySig.set(entries[i].sig, { post: cls.post, stage: cls.stage, handle: cls.handle, n: cls.n });
@@ -525,14 +564,26 @@ export function verifyStampLedger(repo, { pubkeyPem, registry = null } = {}) {
         if (!RECREDIT_STAGES.includes(cls.stage)) {
           problems.push(`line ${lineNo}: LAWFUL fails — only ${RECREDIT_STAGES.join(', ')} are re-credited (post:${k}-recredit)`); break;
         }
+        // A STAGE NEVER PAID (POS-931/a, Darko 2026-11-06 "Extend the door"):
+        // no stage line before it, so this recredit is the stage's first and
+        // only payment, a skipped stage's credit. An amount on the stage's
+        // ladder, never a meep, once per post and stage, and NO burn after it
+        // (there is no wrong mint); a stage line after it is red above.
         if (!wrong) {
-          problems.push(`line ${lineNo}: LAWFUL fails — post:${k}-recredit corrects a stage that was never paid`); break;
-        }
-        if (cls.n !== wrong.n) {
-          problems.push(`line ${lineNo}: LAWFUL fails — post:${k}-recredit pays ${cls.n}, and the stage it corrects paid ${wrong.n} (the same amount, never another)`); break;
-        }
-        if (cls.handle === wrong.handle) {
-          problems.push(`line ${lineNo}: LAWFUL fails — post:${k}-recredit pays ${cls.handle}, who the stage already paid`); break;
+          // diagnosed and briefed only: a never-paid fixed carries no size, critter or merge, so it is no lawful credit
+          if (!SKIPPED_CREDIT_STAGES.includes(cls.stage)) {
+            problems.push(`line ${lineNo}: LAWFUL fails — post:${k}-recredit credits a ${cls.stage} that was never paid, and only ${SKIPPED_CREDIT_STAGES.join(' and ')} are credited when never paid`); break;
+          }
+          if (!(STAGE_LADDER[cls.stage] ?? []).includes(cls.n)) {
+            problems.push(`line ${lineNo}: LAWFUL fails — post:${k}-recredit pays a stage never paid ${cls.n}, and ${cls.stage} pays ${(STAGE_LADDER[cls.stage] ?? []).join(' or ')}`); break;
+          }
+        } else {
+          if (cls.n !== wrong.n) {
+            problems.push(`line ${lineNo}: LAWFUL fails — post:${k}-recredit pays ${cls.n}, and the stage it corrects paid ${wrong.n} (the same amount, never another)`); break;
+          }
+          if (cls.handle === wrong.handle) {
+            problems.push(`line ${lineNo}: LAWFUL fails — post:${k}-recredit pays ${cls.handle}, who the stage already paid`); break;
+          }
         }
         if (lawAt(cls.date).meeps.has(cls.handle)) {
           problems.push(`line ${lineNo}: LAWFUL fails — a recredit to meep "${cls.handle}" (meeps stay outside the currency)`); break;
@@ -541,7 +592,11 @@ export function verifyStampLedger(repo, { pubkeyPem, registry = null } = {}) {
           problems.push(`line ${lineNo}: LAWFUL fails — post:${k} is re-credited twice (one correction per post and stage, ever)`); break;
         }
         const next = entries[i + 1] ? classifyEntry(entries[i + 1].canonical) : { kind: 'none' };
-        if (next.kind !== 'correction-burn' || next.sig !== wrong.sig) {
+        if (!wrong) {
+          if (next.kind === 'correction-burn') {
+            problems.push(`line ${lineNo}: LAWFUL fails — post:${k}-recredit credits a stage never paid, and a burn follows it; a stage never paid has no mint to burn`); break;
+          }
+        } else if (next.kind !== 'correction-burn' || next.sig !== wrong.sig) {
           problems.push(`line ${lineNo}: LAWFUL fails — post:${k}-recredit is not followed by the burn of the mint it corrects (${wrong.sig.slice(0, 16)}…); the two are written together or not at all`); break;
         }
         recredited.add(k);
@@ -571,8 +626,17 @@ export function verifyStampLedger(repo, { pubkeyPem, registry = null } = {}) {
         // other correction still follows its recredit, line for line.
         const prev = i > 0 ? classifyEntry(entries[i - 1].canonical) : { kind: 'none' };
         const meepCorrection = lawAt(cls.date).meeps.has(wrong.handle);
-        if (!meepCorrection && (prev.kind !== 'post-recredit' || `${prev.post}/${prev.stage}` !== k)) {
-          problems.push(`line ${lineNo}: LAWFUL fails — the correction of post:${k} does not follow its recredit; the two are written together or not at all (only a meep's stage mint is burned alone)`); break;
+        // A HAND CORRECTING ITS OWN PAY IS BURNED ALONE TOO (POS-1010; Darko
+        // 2026-11-12 23:05 EST, "we need to correct the mis-mint"; Wright
+        // 2026-11-13 04:06Z): when the stage line paid a correction hand
+        // itself and the burn is by that same hand, there is no other
+        // recipient to re-credit, so the burn stands alone. The mint above was
+        // already checked to be that hand's (cls.handle === wrong.handle), the
+        // amount exact and the burn once per mint; nothing else moves. A hand
+        // burning ANOTHER hand's mint still follows its recredit.
+        const selfCorrection = CORRECTION_HANDS.includes(wrong.handle) && cls.by === wrong.handle;
+        if (!meepCorrection && !selfCorrection && (prev.kind !== 'post-recredit' || `${prev.post}/${prev.stage}` !== k)) {
+          problems.push(`line ${lineNo}: LAWFUL fails — the correction of post:${k} does not follow its recredit; the two are written together or not at all (only a meep's stage mint, or a correction hand's own burned by that hand, is burned alone)`); break;
         }
         burnedSigs.add(cls.sig);
       }
@@ -635,14 +699,18 @@ export function verifyStampLedger(repo, { pubkeyPem, registry = null } = {}) {
         if (cls.n !== terms.amount) {
           problems.push(`line ${lineNo}: LAWFUL fails — quest:${cls.quest} pays exactly ${terms.amount} (got ${cls.n})`); break;
         }
-        if (cls.date < terms.from || (terms.until && cls.date > terms.until)) {
-          problems.push(`line ${lineNo}: LAWFUL fails — quest:${cls.quest} pays from ${terms.from}${terms.until ? ` until ${terms.until}` : ''}, not on ${cls.date}`); break;
+        if (!questOpenOn(terms, cls.date)) {
+          problems.push(`line ${lineNo}: LAWFUL fails — quest:${cls.quest} ${questWindowWords(terms)}, not on ${cls.date}`); break;
         }
         if (cls.by !== 'the-town') {
           problems.push(`line ${lineNo}: LAWFUL fails — a quest is the town's mint (by: "${cls.by}", must be the-town)`); break;
         }
         if (lawAt(cls.date).meeps.has(cls.handle)) {
           problems.push(`line ${lineNo}: LAWFUL fails — quest pay to meep "${cls.handle}" (meeps stay outside the currency)`); break;
+        }
+        const notLive = liveResidentRefusal(cls.handle, cls.date, { pins });
+        if (notLive) {
+          problems.push(`line ${lineNo}: LAWFUL fails — quest:${cls.quest} pays no live resident: ${notLive}`); break;
         }
         const houseKey = hh(cls.handle, cls.date);
         if (canonHouse(cls.household) !== canonHouse(houseKey)) {

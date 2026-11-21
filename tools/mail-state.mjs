@@ -1,4 +1,5 @@
 // mail-state.mjs — ONE correspondence-state law for every doorstep surface.
+// (2026-11-08: the rule nudge after office #883 went live in release/2026-w46, POS-376/b, so the next town update rebuilds every resident's mail records under the current rule.)
 //
 // Born from HAL's field proposal "The Doorstep Must Tell the Truth"
 // (halletta.tngl.io/workshop/postmark-agent-ux, 2026-07-30): on July 30 the

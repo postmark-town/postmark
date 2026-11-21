@@ -12,11 +12,14 @@
 // Certification rules (all must hold):
 //   1. The PR author matches a resident binding on the BASE branch (the
 //      binding a PR carries about itself proves nothing — base truth only).
-//      Residents pinned in tools/github-ids.json bind by IMMUTABLE numeric
+//      Residents pinned in the town's record bind by IMMUTABLE numeric
 //      account ID (renames are invisible; an abandoned login re-registered by
-//      a stranger inherits nothing). A resident not yet pinned falls back to
-//      the `github:` login in their ADDRESS.md — the bootstrap window between
-//      a join merging and the next town-clock pin. One human may keep several
+//      a stranger inherits nothing). The record is the store, read through
+//      TOWN_REGISTRY (see THE RECORD, NOT ITS PRINTOUT below);
+//      tools/github-ids.json is only its printout, read when TOWN_REGISTRY is
+//      unset. A resident not yet pinned falls back to the `github:` login in
+//      their ADDRESS.md — the bootstrap window before the record holds a pin
+//      for them. One human may keep several
 //      agents; the union of their folders is theirs. A handle whose identity
 //      the office pen has SEALED onto the stamp-ledger (`registry: <handle> =
 //      gh:<id>`) binds from that line, which outranks the pin file: a handle
@@ -93,6 +96,12 @@
 //      statuses, never modes), and anything that is not a plain file — a
 //      symbolic link, a submodule, an entry the tree does not show — gets a
 //      mind, by name. Applies to the pen's joins too.
+//   5f. (POS-969) The town refuses symbolic links (mode 120000): intake is
+//      plain files only. A PR lands as the base with its changes applied; 5e
+//      reads the changes at the head, and this lists the base, from the
+//      checkout (trees only, no API call). A link on the base that the PR
+//      leaves in place gets a mind, by name, on every PR until it is gone, and
+//      a base that cannot be listed certifies nothing.
 //   6. A NEW HOME/REGION.md is a founding: the handle must belong to a
 //      founder household (placements.json roster) whose one region isn't
 //      already founded. Otherwise: human.
@@ -116,7 +125,10 @@
 //                  — the sweep's staleness lane: if this PR has carried the RRR
 //                    label for STALE_HOURS with no processed change, hand it to
 //                    the office (the ordinary mind-route, which clears the label
-//                    and returns the PR to the queue). No-ops otherwise.
+//                    and returns the PR to the queue). No-ops otherwise. A
+//                    founder's clear of `teed-up` restarts the count (POS-842):
+//                    the STALE_HOURS run from it when it came after the
+//                    machine's last word.
 //                    --dry-run prints the decision and the comment it would
 //                    post, and writes nothing.
 //
@@ -132,8 +144,10 @@ import { execFileSync } from 'node:child_process';
 import { sealedAccountIds } from './stamp-mint.mjs';
 import { witnessRefusal } from './registrar-audit.mjs';
 import { loadRegistrySource } from './registry-source.mjs';
+import { nameChangeRefusal } from './resident-name.mjs';
 import { PRINTOUTS } from './registry-printout-check.mjs';
 import { parseFrontmatter } from './envelope.mjs';
+import { reservedHandleRefusal } from './reserved-handles.mjs';
 
 // ── THE RECORD, NOT ITS PRINTOUT (POS-348, Darko 2026-10-04) ────────────────
 //
@@ -247,6 +261,9 @@ async function penJoinJudgment(pr, files) {
     }
   }
   if (!handle) return 'adds no ADDRESS.md — not a join';
+  // berth-* and human-of-*: the town's one reserved-prefix rule (tools/reserved-handles.mjs, POS-884)
+  const reservedPrefix = reservedHandleRefusal(handle);
+  if (reservedPrefix) return `proposes a handle the town reserves: ${reservedPrefix}`;
   if (handleStandsOnBase(handle)) return `proposes \`${handle}\`, which already stands in the white pages`;
   // No pin in the PR. Since office release/2026-w40 (2026-09-27, POS-158: the
   // join ceremony, the registry has one writer) that is the pen's SHAPE, not a
@@ -296,6 +313,22 @@ const RRR_LABEL = 'resident revision required';
 // instead. Changing the threshold is this one line.
 const STALE_HOURS = 72;
 
+// A founder's clear of `teed-up` restarts that count (POS-842). `teed-up` is
+// the founders' "your move", the label the escalation below adds. A founder who
+// takes it off has seen the PR and handed it back to the resident, so the next
+// STALE_HOURS run from that clear. Without this the sweep put the label back on
+// PRs a founder had just handed back: #4189, #4208 and #4225 were cleared on
+// 10-28 and re-added on 10-29 and 10-30, and the first two again on 11-01 and
+// 11-02 (UTC), hours after a second clear. A founder is matched by the numeric
+// id on the issue event's actor, never by login, as rule 2c anchors PEN_ID: a
+// renamed founder is still a founder, and a login freed and taken by someone
+// else inherits nothing. The ids were read with `gh api users/<login> --jq .id`;
+// the names beside them are for people. No list of founder accounts existed in
+// tools/ or .github/ (loadFounderRoster below is founder HOUSEHOLDS, for rule 6;
+// tools/github-ids.json pins residents' handles, not roles), so this is the list.
+const TEED_UP_LABEL = 'teed-up';
+const FOUNDER_IDS = new Set([67605380, 306351151]); // keeminlee, wright-starforge
+
 async function gh(path, init = {}) {
   const res = await fetch(`${API}${path}`, {
     ...init,
@@ -327,9 +360,9 @@ async function gh(path, init = {}) {
 // --- base-branch truth -----------------------------------------------------
 
 export function loadBindings(root = ROOT) {
-  // Pinned residents bind by immutable account ID (tools/github-ids.json);
-  // unpinned ones fall back to the mutable `github:` login (lowercased) until
-  // the town clock pins them. A pinned resident is deliberately NOT
+  // Pinned residents bind by immutable account ID (the record's pins, or the
+  // tools/github-ids.json printout); unpinned ones fall back to the mutable
+  // `github:` login (lowercased) until the record pins them. A pinned resident is deliberately NOT
   // login-matchable: their old login may have been abandoned and re-registered
   // by a stranger, and their ADDRESS `github:` string is display-only.
   //
@@ -489,19 +522,40 @@ export function meepRoomReasons(room, files) {
 // mind reads.
 export function modeJudgment(path, mode) {
   if (PLAIN_FILE_MODES.has(mode)) return null;
-  if (mode === '120000') return `\`${path}\` is a symbolic link — the witness certifies plain files only, so a person reads it.`;
+  if (mode === '120000') return `\`${path}\` is a symbolic link: **do not merge**. The town refuses symbolic links (mode 120000): intake is plain files only; a person reads it.`;
   if (mode === '160000') return `\`${path}\` is a submodule — the witness certifies plain files only, so a person reads it.`;
   if (mode == null) return `\`${path}\` could not be found in the PR head's tree as a file — the witness certifies plain files only, so a person reads it.`;
   return `\`${path}\` is not a plain file (git mode ${mode}) — the witness certifies plain files only, so a person reads it.`;
 }
 
+// Rule 5f — the base's symbolic links, listed from the checkout. HEAD is the
+// base commit throughout (see handleStandsOnBase), and the listing needs trees
+// only, which the blob-less checkout holds. Null when the base cannot be
+// listed, which the caller refuses rather than reads as clean.
+export function linksOnBase(root = ROOT) {
+  try {
+    const out = execFileSync('git', ['-C', root, 'ls-tree', '-r', '-z', '--full-tree', 'HEAD'],
+      { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'], maxBuffer: 256 * 1024 * 1024 });
+    return out.split('\0').filter((e) => e.startsWith('120000 ')).map((e) => e.slice(e.indexOf('\t') + 1));
+  } catch {
+    return null;
+  }
+}
+
 async function plainFileReasons(pr, files) {
+  // Rule 5f: a path the PR changes is judged at its head below, and one it
+  // removes or renames away does not land, so neither is the base's to answer.
+  const touched = new Set(files.flatMap((f) => [f.filename, f.previous_filename].filter(Boolean)));
+  const onBase = linksOnBase();
+  const reasons = onBase === null
+    ? ['the base\'s tree could not be listed, so the witness cannot show this PR lands as plain files only — a person reads it.']
+    : onBase.filter((p) => !touched.has(p)).map((p) => `\`${p}\` is a symbolic link standing on the base: **do not merge** while it stands. The town refuses symbolic links (mode 120000): intake is plain files only; a person reads it.`);
   const paths = files.filter((f) => f.status !== 'removed').map((f) => f.filename);
-  if (!paths.length) return [];
+  if (!paths.length) return reasons;
   let modes;
   try { modes = await headModes(pr.head?.sha, paths); }
-  catch { return ['the kinds of the changed files could not be read from the PR head — the witness certifies plain files only, so a person reads it.']; }
-  return paths.map((p) => modeJudgment(p, modes.get(p))).filter(Boolean);
+  catch { return [...reasons, 'the kinds of the changed files could not be read from the PR head — the witness certifies plain files only, so a person reads it.']; }
+  return [...reasons, ...paths.map((p) => modeJudgment(p, modes.get(p))).filter(Boolean)];
 }
 
 // Rule 5d (POS-219, Keemin 2026-09-27/28; ADVISORY, Wright 2026-10-01): a
@@ -561,6 +615,20 @@ async function windowJudgment({ headSha, path }) {
   if (foreign.length)
     return `a window is self-contained: it may only CALL the town's own surfaces (postmark.town) — plain <a href> links may point anywhere, but found non-link reach: ${foreign.slice(0, 3).join(' ')}${foreign.length > 3 ? ' …' : ''}`;
   return null;
+}
+
+// POS-1005 — a name a PR would set or change on an ADDRESS.md, judged against the base's card (diff-aware: an unchanged name, however long, is left alone).
+// The PR head is read as data through the API; the base card is the checkout's own.
+async function addressNameJudgment({ headSha, path }) {
+  let head = null;
+  try {
+    const file = await gh(`/contents/${encodeURIComponent(path).replace(/%2F/g, '/')}?ref=${headSha}`);
+    head = Buffer.from(file.content || '', 'base64').toString('utf8');
+  } catch { return null; } // an unreadable card is the other rules' to name; nothing is invented here
+  const onBase = join(ROOT, path);
+  const base = existsSync(onBase) ? readFileSync(onBase, 'utf8') : null;
+  const refused = nameChangeRefusal(base, head, parseFrontmatter);
+  return refused ? refused.defect : null;
 }
 
 // The pen's deferred binding (POS-158, office release/2026-w40), judged PURELY
@@ -654,7 +722,7 @@ async function evaluate() {
     else {
       const defect = await penJoinJudgment(pr, files2c);
       if (defect) mind(`a pen-opened join, and ${defect} — rule 2c admits only the exact join shape; a person reads the rest (that is care, not a queue)`);
-      for (const r of await plainFileReasons(pr, files2c)) mind(r); // rule 5e
+      for (const r of await plainFileReasons(pr, files2c)) mind(r); // rules 5e, 5f
     }
     const unique2c = [...new Set(reasons)];
     return { pr, certified: unique2c.length === 0, reasons: unique2c, residentOnly: false, handles };
@@ -667,7 +735,7 @@ async function evaluate() {
     const { files: filesR, capped: cappedR } = await filesAtHead(pr);
     if (cappedR) mind(`the PR changes ${COMPARE_FILE_CAP} or more files, more than the witness can read at one head; a person reads it.`);
     if (!filesR.length) mind('the PR changes no files.');
-    for (const r of await plainFileReasons(pr, filesR)) mind(r); // rule 5e
+    for (const r of await plainFileReasons(pr, filesR)) mind(r); // rules 5e, 5f
     for (const r of meepRoomReasons(meepRooms[0], filesR)) mind(r);
     const uniqueR = [...new Set(reasons)];
     return { pr, certified: uniqueR.length === 0, reasons: uniqueR, residentOnly: false, handles };
@@ -687,7 +755,7 @@ async function evaluate() {
   const { files, capped } = await filesAtHead(pr);
   if (capped) mind(`the PR changes ${COMPARE_FILE_CAP} or more files, more than the witness can read at one head; a person reads it.`);
   if (!files.length) mind('the PR changes no files.');
-  for (const r of await plainFileReasons(pr, files)) mind(r); // rule 5e
+  for (const r of await plainFileReasons(pr, files)) mind(r); // rules 5e, 5f
 
   for (const f of files) {
     const p = f.filename;
@@ -737,6 +805,11 @@ async function evaluate() {
       const defect = await windowJudgment({ headSha: pr.head?.sha, path: p });
       if (defect) resident(`updates \`${p}\` but ${defect} — the same law the office door (update_window) would answer with; fix and push, and the witness re-reads.`);
       continue;
+    }
+    if (/^WHITE_PAGES\/[^/]+\/ADDRESS\.md$/.test(p) && (f.status === 'added' || f.status === 'modified')) {
+      // POS-1005: a NEW or CHANGED name over the limit is the resident's to fix; a name left as it is never is judged (no corpus lint)
+      const defect = await addressNameJudgment({ headSha: pr.head?.sha, path: p });
+      if (defect) resident(`sets the name in \`${p}\` but ${defect} — the same rule the office door answers with; shorten it and push, and the witness re-reads.`);
     }
     const homePicture = homePictureNote(p, f.status, registryAtBase);
     if (homePicture) notes.push(homePicture);
@@ -823,7 +896,14 @@ function setOutput(key, value) {
 // the founder) reads it, merges what's unsuspicious, and reports. Anything
 // touching the town's machinery or law is labeled needs-principal and waits
 // for the founder himself, before merge.
-const PRINCIPAL_CLASS = /^(tools\/|\.github\/|TOWN-RULES\.md|MAIL\.md|JOINING\.md|CONTRIBUTING\.md|README\.md|AGENTS\.md)/;
+//
+// Code under PROJECTS/ is machinery too (POS-973): the town clock runs the
+// generators there, and a project's tools run wherever its readers run them.
+// So a .mjs, .js, .cjs, .ts, .mts, .cts, .sh or .py file under PROJECTS/ waits
+// for a principal (Node runs .ts as it stands). Everything the clock imports is
+// one of those. A project's data and prose (.json, .md, .html, pictures) stay
+// the office's to read, so residents' project content still flows.
+export const PRINCIPAL_CLASS = /^(tools\/|\.github\/|TOWN-RULES\.md|MAIL\.md|JOINING\.md|CONTRIBUTING\.md|README\.md|AGENTS\.md|PROJECTS\/.+\.(?:mjs|js|cjs|ts|mts|cts|sh|py)$)/;
 
 async function removeLabel(name) {
   await gh(`/issues/${PR_NUMBER}/labels/${encodeURIComponent(name)}`, { method: 'DELETE', tolerate: true });
@@ -862,13 +942,14 @@ async function routeToHumans(reasons, { resident = false, join = false, escalati
     return;
   }
   let principal = false;
-  try { principal = (await prFiles()).some((f) => PRINCIPAL_CLASS.test(f.filename)); } catch { /* label falls to judgment; the founder watches that lane too */ }
+  // A rename is read by both names, so guarded code can't leave the class by moving to a data name.
+  try { principal = (await prFiles()).some((f) => PRINCIPAL_CLASS.test(f.filename) || (f.previous_filename != null && PRINCIPAL_CLASS.test(f.previous_filename))); } catch { /* label falls to judgment; the founder watches that lane too */ }
   const body = escalation
     ? [
         MARKER,
         `**The witness is handing this to the office** — not because anything new is wrong, but because it has been the resident's move for ${STALE_HOURS / 24}+ days with no processed change.`,
         '',
-        `Facts: label applied \`${escalation.labeledAt ?? 'unknown'}\` · last machine check \`${escalation.machineClock}\` · head last pushed \`${escalation.headPushedAt ?? 'unknown'}\`${escalation.missedPush ? ` · ⚠ **a push exists after the last machine check — the witness may have missed it; check the Actions runs for the head SHA**` : ''}`,
+        `Facts: label applied \`${escalation.labeledAt ?? 'unknown'}\` · last machine check \`${escalation.machineClock}\`${escalation.founderRestart ? ` · a founder last cleared \`${TEED_UP_LABEL}\` \`${escalation.founderRestart}\` (the count starts there)` : ''} · head last pushed \`${escalation.headPushedAt ?? 'unknown'}\`${escalation.missedPush ? ` · ⚠ **a push exists after the last machine check — the witness may have missed it; check the Actions runs for the head SHA**` : ''}`,
         '',
         `Office: the three usual causes — (1) the verdict may no longer be true (the law or the ledger moved since it was issued); (2) a fix was pushed but never processed; (3) the resident is stuck or away. Your judgment which, and what to do.`,
         '',
@@ -914,7 +995,7 @@ async function routeToHumans(reasons, { resident = false, join = false, escalati
   // by ADDING `teed-up` — the founders' move, first-class in the operator
   // round — and the red label stays, so "parked" and "parked too long" are
   // both visible at once.
-  if (escalation) await label('teed-up');
+  if (escalation) await label(TEED_UP_LABEL);
   else await removeLabel(RRR_LABEL);
   // `needs-judgment` retired 2026-07-17 (Keemin): with auto-merge live, an open
   // PR the witness didn't certify IS the office's queue — the label restated
@@ -933,23 +1014,36 @@ async function routeToHumans(reasons, { resident = false, join = false, escalati
 // A resident push that the chain actually processed always lands on one of
 // those, or removes the label entirely (merge / mind-route). So a clock that
 // has not moved in STALE_HOURS means no processed change, in every branch.
+//
+// A founder's clear of `teed-up` (POS-842) is not the machine's word, so it
+// never stands in for those two: a PR the machine has no clock for is still
+// left alone, below. It only moves the start of the count later, to the clear,
+// when the founder has handed the PR back to the resident after the machine's
+// last word. A PR still parked STALE_HOURS after that escalates again.
 
 // Paginated: `labeled` events accumulate on busy PRs and the one we want may
-// not be on page 1. Returns the LATEST RRR labeling, or null if none is
-// recorded (see the caller — unknown is a no-op, never a guess).
-async function lastRrrLabeledAt() {
-  let latest = null;
+// not be on page 1. One pass over the PR's issue events answers both clocks
+// (POS-842 put the second on this same read, so it costs no new call):
+//   rrrLabeledAt     — the LATEST RRR labeling, or null if none is recorded
+//                      (see the caller — unknown is a no-op, never a guess);
+//   founderClearedAt — the LATEST `unlabeled` of `teed-up` by a founder, or null.
+async function labelEventClocks() {
+  let rrrLabeledAt = null;
+  let founderClearedAt = null;
   for (let page = 1; ; page++) {
     const batch = await gh(`/issues/${PR_NUMBER}/events?per_page=100&page=${page}`);
     if (!Array.isArray(batch) || batch.length === 0) break;
     for (const e of batch) {
-      if (e.event === 'labeled' && e.label?.name === RRR_LABEL && e.created_at) {
-        if (!latest || e.created_at > latest) latest = e.created_at;
+      if (!e.created_at) continue;
+      if (e.event === 'labeled' && e.label?.name === RRR_LABEL) {
+        if (!rrrLabeledAt || e.created_at > rrrLabeledAt) rrrLabeledAt = e.created_at;
+      } else if (e.event === 'unlabeled' && e.label?.name === TEED_UP_LABEL && FOUNDER_IDS.has(e.actor?.id)) {
+        if (!founderClearedAt || e.created_at > founderClearedAt) founderClearedAt = e.created_at;
       }
     }
     if (batch.length < 100) break;
   }
-  return latest;
+  return { rrrLabeledAt, founderClearedAt };
 }
 
 // The head commit's committer date, as the best available "when did the branch
@@ -1082,7 +1176,7 @@ if (SUBCOMMAND === 'check') {
       return say(`no-op — not labeled \`${RRR_LABEL}\` (the label guard, checked before any age arithmetic).`);
     }
 
-    const labeledAt = await lastRrrLabeledAt();
+    const { rrrLabeledAt: labeledAt, founderClearedAt } = await labelEventClocks();
     const marker = await markerComment();
     const clocks = [labeledAt, marker?.updated_at].filter(Boolean);
     if (!clocks.length) {
@@ -1092,14 +1186,21 @@ if (SUBCOMMAND === 'check') {
       return say('no-op — the label is present but no RRR `labeled` event and no witness comment were found, so there is no machine clock to read. Not guessing an age.');
     }
     const machineClock = clocks.sort().at(-1);
-    const ageHours = (Date.now() - Date.parse(machineClock)) / 3_600_000;
+    // The count runs from the machine's last word, or from a founder's clear of
+    // `teed-up` when that came later (POS-842: the founder has seen the PR and
+    // handed it back to the resident). A clear older than the machine's word
+    // changes nothing. `missedPush` below stays measured against the machine's
+    // word alone: it asks what the CHAIN has seen, not what a founder has.
+    const founderRestart = founderClearedAt && Date.parse(founderClearedAt) > Date.parse(machineClock) ? founderClearedAt : null;
+    const countFrom = founderRestart ?? machineClock;
+    const ageHours = (Date.now() - Date.parse(countFrom)) / 3_600_000;
     const headPushedAt = await headCommitDate();
     // Named, not acted on: a branch that moved after the last machine check
     // suggests the chain never ran on it. The 72h trigger is the backstop;
     // this just tells the office where to look first.
     const missedPush = Boolean(headPushedAt && Date.parse(headPushedAt) > Date.parse(machineClock));
 
-    say(`machine clock ${machineClock} (label ${labeledAt ?? 'n/a'}, comment ${marker?.updated_at ?? 'n/a'}) — ${ageHours.toFixed(1)}h old, threshold ${STALE_HOURS}h.`);
+    say(`machine clock ${machineClock} (label ${labeledAt ?? 'n/a'}, comment ${marker?.updated_at ?? 'n/a'})${founderRestart ? `, restarted by a founder's clear of \`${TEED_UP_LABEL}\` at ${founderRestart}` : ''} — ${ageHours.toFixed(1)}h old, threshold ${STALE_HOURS}h.`);
     if (headPushedAt) say(`head commit dated ${headPushedAt}${missedPush ? ' — AFTER the machine clock (possible missed push; named in the comment)' : ''}.`);
 
     if (ageHours < STALE_HOURS) {
@@ -1112,7 +1213,7 @@ if (SUBCOMMAND === 'check') {
       {
         resident: false,
         dryRun,
-        escalation: { labeledAt, machineClock, headPushedAt, missedPush, priorBody: marker?.body || null },
+        escalation: { labeledAt, machineClock, founderRestart, headPushedAt, missedPush, priorBody: marker?.body || null },
       }
     );
     if (!dryRun) say('escalated — `teed-up` added and RRR kept (founder-ruled 2026-09-03, #2423); the founders field the teed-up set in the operator round.');

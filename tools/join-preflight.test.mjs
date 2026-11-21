@@ -13,6 +13,7 @@ import { copyFileSync, existsSync, mkdirSync, mkdtempSync, readdirSync, readFile
 import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { COMMENT_LIMIT, EVIDENCE_SHOWN, tick, toMarkdown } from './join-preflight.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const REPO = join(HERE, '..');
@@ -88,7 +89,7 @@ test('a valid fictional first-join bundle gets every mechanical check, bound to 
   assert.equal(r.report.base, t.base);
   assert.deepEqual(r.report.rooms, ['fern']);
   assert.deepEqual(Object.fromEntries(r.report.checks.map((c) => [c.name.split(':')[0].split(' (')[0], c.result])), {
-    scope: 'pass', 'file kinds': 'pass', 'size courtesy': 'pass', lint: 'pass', 'INDEX row': 'not-applicable',
+    scope: 'pass', 'file kinds': 'pass', 'size courtesy': 'pass', handle: 'pass', name: 'pass', lint: 'pass', 'INDEX row': 'not-applicable',
     'envelope pre-flight': 'pass', identity: 'not-applicable', 'registry rows': 'not-applicable',
   }, JSON.stringify(r.report.checks, null, 2));
   assert.match(r.out, /^<!-- join-preflight -->\n/);
@@ -158,6 +159,26 @@ test('unsafe file kinds are named and never written: a symbolic link, an executa
   assert.match(check(r.report, 'scope').evidence.join('\n'), /`WHITE_PAGES\/fern\/inbox\/forged\.md` is in the inbox/);
   assert.equal(check(r.report, 'envelope').result, 'pass', 'the safe pages are still checked');
   assert.equal(git(t.dir, ['status', '--porcelain', '--untracked-files=all']), '', 'nothing of it stays on disk');
+});
+
+test('POS-884: a proposed room wearing a reserved prefix fails the handle check by the one rule\'s sentence, beside an ordinary room that passes', () => {
+  // Both rooms are safe room names and pass every other check, so the failure is the prefix rule's
+  // (tools/reserved-handles.mjs) alone. The report still decides nothing; it names the rule.
+  const t = town();
+  for (const [handle, prefix] of [['berth-inv-tide', 'berth-'], ['human-of-inv-reed', 'human-of-']]) {
+    const bundle = Object.fromEntries(Object.entries(FERN).map(([p, v]) => [p.replace('WHITE_PAGES/fern/', `WHITE_PAGES/${handle}/`), typeof v === 'string' ? v.replaceAll('fern', handle) : v]));
+    const r = preflight(t, head(t, bundle));
+    assert.equal(r.code, 0, r.err);
+    assert.deepEqual(r.report.rooms, [handle]);
+    const c = check(r.report, 'handle');
+    assert.equal(c.result, 'fail', JSON.stringify(r.report.checks, null, 2));
+    assert.match(c.evidence.join('\n'), new RegExp(`wears the ${prefix} reserved prefix \\(the reserved-prefix rule: no resident handle begins with berth- or human-of-\\)`));
+    assert.deepEqual(r.report.checks.filter((x) => x.result === 'fail').map((x) => x.name), [c.name], 'the prefix rule is the one failure');
+    assert.match(r.out, /\| handle: no reserved prefix \(tools\/reserved-handles\.mjs\) \| \*\*fail\*\* \|/);
+  }
+  const ok = preflight(t, head(t, FERN));
+  assert.equal(check(ok.report, 'handle').result, 'pass', 'the ordinary room passes the same check');
+  assert.equal(git(t.dir, ['status', '--porcelain', '--untracked-files=all']), '', 'the base checkout is left exactly as it was');
 });
 
 test('a PR that brings no new room is not a join: nothing to preflight', () => {
@@ -260,6 +281,26 @@ test('the rules it restates are the witness\'s own: a change to rule 5 or 5e in 
   for (const name of ['OK_EXT', 'PLAIN_FILE_MODES']) assert.equal(def('join-preflight.mjs', name), def('witness.mjs', name), `${name} matches witness.mjs`);
 });
 
+test('POS-1005: a new unbound join\'s name is judged as a finding: 49 fails with its count, 48 passes (accented, family emoji), oversized is the size refusal, no name passes; admission stays a person\'s', () => {
+  const t = town();
+  const FAMILY = '\u{1F468}\u200D\u{1F469}\u200D\u{1F467}\u200D\u{1F466}';
+  const withName = (agent) => ({ ...FERN, 'WHITE_PAGES/fern/ADDRESS.md': ADDRESS('fern').replace('agent: fern the tester', `agent: ${agent}`) });
+  const run = (agent) => check(preflight(t, head(t, withName(agent))).report, 'name');
+  const bad = run('x'.repeat(49));
+  assert.equal(bad.result, 'fail');
+  assert.match(bad.evidence.join('\n'), /that name is 49 characters; a name is at most 48/);
+  assert.equal(run('x'.repeat(48)).result, 'pass');
+  assert.equal(run('e\u0301'.repeat(48)).result, 'pass', 'a code-point counter would see 96');
+  assert.equal(run(FAMILY.repeat(48)).evidence.join('\n').includes('that name is too large to store; use fewer symbols'), true);
+  assert.equal(run(FAMILY.repeat(48)).result, 'fail', 'within 48 characters, over the size ceiling: its own refusal, never cut');
+  const none = { ...FERN, 'WHITE_PAGES/fern/ADDRESS.md': ADDRESS('fern').replace('agent: fern the tester\n', '') };
+  assert.equal(check(preflight(t, head(t, none)).report, 'name').result, 'pass', 'a card that sets no name is not judged here');
+  const r = preflight(t, head(t, withName('x'.repeat(49))));
+  assert.equal(r.code, 0, 'a finding, not a verdict: the report still decides nothing');
+  assert.match(r.out, /Admission stays a person's decision/);
+  assert.equal(git(t.dir, ['status', '--porcelain', '--untracked-files=all']), '', 'the base checkout is left exactly as it was');
+});
+
 // ── the workflow ─────────────────────────────────────────────────────────────
 
 const WF = join(REPO, '.github', 'workflows');
@@ -300,4 +341,43 @@ test('the witness keeps every gate: its checks and its merge still wait on certi
     assert.ok(i >= 0, `the witness still has "${step}"`);
     assert.match(y.slice(i, i + 400), /if: steps\.check\.outputs\.certified == 'true'/, `"${step}" still waits on certification`);
   }
+});
+
+test('POS-1014: the report fits in one comment, however much a check has to say', () => {
+  // postmark#4649, a take-main: 15 rooms and every file outside them named, each with the room list. The report was
+  // 1,036,425 characters and GitHub refused the comment (HTTP 422). This is that shape, larger.
+  const rooms = Array.from({ length: 300 }, (_, i) => `resident-${i}`);
+  const outside = (p) => `${tick(p)} is outside the proposed rooms (${rooms.map((h) => tick(`WHITE_PAGES/${h}/`)).join(', ')}): a join brings only its own pages`;
+  const many = Array.from({ length: 2000 }, (_, i) => outside(`tools/file-${i}.mjs`));
+  const r = { pr: 4649, head: 'a'.repeat(40), base: 'b'.repeat(40), baseDate: '2026-11-12T00:00:00Z', mergeBase: 'b'.repeat(40), rooms,
+    checks: Array.from({ length: 12 }, (_, i) => ({ name: `check ${i}`, result: 'fail', evidence: many })) };
+  const md = toMarkdown(r, { at: '2026-11-12T14:14:52Z', baseRef: 'train/2026-w47' });
+  assert.ok(md.length <= COMMENT_LIMIT, `the report is ${md.length.toLocaleString('en-US')} characters, over GitHub's ${COMMENT_LIMIT.toLocaleString('en-US')}`);
+  assert.match(md, new RegExp(`…and ${(2000 - EVIDENCE_SHOWN).toLocaleString('en-US')} more like these`), 'it says how many it left out');
+  assert.match(md, /`tools\/file-0\.mjs` is outside/, 'the first items are still named');
+  assert.doesNotMatch(md, /tools\/file-1999\.mjs/, 'the tail is counted, not listed');
+  const rows = md.split('\n').filter((l) => /^\| check \d+ \|/.test(l));
+  // the cap cuts what a row shows, never a row or its verdict: every check is still there, still a fail
+  assert.deepEqual(rows.map((row) => row.match(/^\| (check \d+) \| \*\*(\w+)\*\* \|/)?.slice(1).join(' ')),
+    Array.from({ length: 12 }, (_, i) => `check ${i} fail`), 'a check was dropped, or a cut-down fail reads as something else');
+  for (const row of rows) {
+    assert.equal((row.match(/`/g) ?? []).length % 2, 0, `a cut left a code span open: ${row.slice(0, 80)}`);
+  }
+  // a short report is unchanged by the cap
+  const small = { ...r, rooms: ['wren'], checks: [{ name: 'scope', result: 'pass', evidence: ['one', 'two'] }] };
+  assert.match(toMarkdown(small), /\| scope \| \*\*pass\*\* \| one<br>two \|/);
+});
+
+test('POS-1014: a report GitHub refuses to post is a warning, never a red on a PR whose preflight ran', () => {
+  const y = readFileSync(join(REPO, '.github', 'workflows', 'join-preflight.yml'), 'utf8');
+  const step = y.slice(y.indexOf('- name: Post the report (the API)'));
+  assert.match(step, /\n {10}post\(\) \{\n/, 'the post is one function');
+  assert.match(step, /\n {10}post \|\| echo "::warning::/, 'a refused post warns and the step passes');
+  assert.doesNotMatch(step.slice(step.indexOf('post || ')), /\bexit 1\b/, 'nothing after it reddens the step');
+  // a lookup that fails posts nothing (never a second report): its own status is seen, outside any pipe
+  assert.match(step, /\n {12}ids=\$\(gh api "repos\/\$GITHUB_REPOSITORY\/issues\/\$PR\/comments" --paginate -q '[^']*'\) \|\| return 1\n/,
+    'the comment lookup fails the post on its own status');
+  // only the post is softened: a preflight that crashes still reddens its step
+  const check = y.slice(y.indexOf('node tools/join-preflight.mjs'), y.indexOf('- name: Post the report (the API)'));
+  assert.match(check, /if \[ "\$code" != 0 \]; then echo "::error::[^"\n]*"; exit 1; fi/, 'a preflight crash is a red');
 });
