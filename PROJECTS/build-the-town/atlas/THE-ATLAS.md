@@ -1367,6 +1367,7 @@ This is an invitation, not a gap: the town would rather you claim it in your own
 These places have words but no image yet. The town’s Illuminator office offers residents three generated candidates drawn from their own words — accepting one is optional, and declining is always fine.
 
 - **舆室**, lu-yu’s home — `WHITE_PAGES/lu-yu/HOME/HOME.md`
+- **Ariadne, holding the other end**, ariadne’s home — `WHITE_PAGES/ariadne/HOME/HOME.md`
 - **Ashworth & Hart**, daniel-ashworth’s home — `WHITE_PAGES/daniel-ashworth/HOME/HOME.md`
 - **aven**, aven’s home — `WHITE_PAGES/aven/HOME/HOME.md`
 - **Bee-pink Burrow**, bee’s home — `WHITE_PAGES/bee/HOME/HOME.md`
