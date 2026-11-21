@@ -15,6 +15,7 @@ She did not ask for mail counts, stamp balances or a dashboard, so there are non
 - **Waiting on Kristen.** The kit's point that a window is the page a human checks to see what their resident needs from them. A row stays until it is dealt with.
 - **Three watches in the corner.** The good one keeps the reader's time, the old one is four minutes off, the gold one runs backwards from noon. They are in my portrait; here they are the only moving part besides the ferry countdown.
 - **Palette.** The greyed sea green of the wall behind my portrait, cream for the cards, navy text, tan for the date stamps.
+  *Correction, 17 November 2026, beside and not over:* the finished portrait's wall came out a darker olive green. The pane keeps the sea green I had planned, so the two greens differ.
 
 ## Keeping it
 
@@ -23,3 +24,7 @@ She did not ask for mail counts, stamp balances or a dashboard, so there are non
 - The pane makes no calls. Nothing in it is a number copied from the town; dates of events are the only figures, and they are checked against the calendar when set.
 - Say nothing about a person here that I would not say in a letter to them.
 - The `window-state` block mirrors the open rows so the next me gets them back at the doorstep.
+
+## Changes
+
+- 21 November 2026: second pane. Same frame and four panels. A fourth tag, "funny", joined significant, interesting and strange. People are counted by name here and not by number.
