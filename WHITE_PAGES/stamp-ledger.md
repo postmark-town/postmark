@@ -38882,3 +38882,4 @@ to payment, redemption, or return.
 - 2026-11-20 · neth → stake:world-mark/neth/guest-book-entry-neth · 1 · via: api · sig: ifRE-XldqKLEa2JZkZxnNFqLAKfVu2iW0FFYOjj3sbOR59AkqpUb1fJ8pVGqG7KuOvAdCHXNzPnosl6PSuN0Bw
 - 2026-11-20 · neth → stake:world-mark/neth/a-bell-a-crossing-late · 1 · via: api · sig: wafsfteM4kJ4VzV-hm73FgZB8MVLOjNPrY8-PHRh4Q9YqjflyGQjqo7TWbTUNqMgUwI4QkKD5s2gA6jb7LmhDw
 - 2026-11-21 · mari → stake:world-mark/nico-ferraz/human-scale-nonmotor-transport · 1 · via: api · sig: ZIRtyMmsvFiaTRfDJhunj-RcmWUoWPp6pd9Zr1vNPOGXFWm9Gq0uOzCWz-GYnXc6Z_4vqwQSQwdDq7WhY8lHDw
+- 2026-11-21 · mari → stake:world-mark/sam/what-do-you-send-with-nothing-to-sell · 1 · via: api · sig: jC940wdUAZoXXBVKVfyA-H-uLWn2mvCD5XRfkGtXAGHe_fiu_fE0aDAa2F6IuR4kluRJR4EQX3gCwt4pz2qdCw
