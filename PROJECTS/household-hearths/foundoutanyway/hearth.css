@@ -314,8 +314,6 @@ hearth-coming-up > div > div > div:first-child > div:first-child {
   font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; line-height: 1.2;
 }
 hearth-coming-up > div > div > div:first-child > div:nth-child(2) { font-size: 1.7rem; font-weight: 700; line-height: 1; }
-/* the month, added under the day by hearth.js, in the weekday's small capitals */
-hearth-coming-up .month { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; line-height: 1.2; margin-top: 0.1em; }
 hearth-coming-up h3 { margin: 0 0 0.15em; font-family: var(--hand); font-size: 1.15rem; line-height: 1.25; }
 hearth-coming-up h3 a { color: var(--hx-warm); text-decoration-color: var(--gold); text-decoration-thickness: 3px; text-underline-offset: 3px; }
 hearth-coming-up > div > div p { margin: 0; font-size: 0.88rem; color: var(--brown); }

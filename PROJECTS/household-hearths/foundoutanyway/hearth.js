@@ -1,4 +1,4 @@
-// foundoutanyway's Hearth script. It does five small things inside this design's own stage, and nothing else:
+// foundoutanyway's Hearth script. It does four small things inside this design's own stage, and nothing else:
 // it reads no data, makes no calls and writes nothing anywhere.
 //
 // 1. PIDGEY'S BANNER FOLLOWS THE HOUSE'S CLOCK.
@@ -12,28 +12,24 @@
 // Each visit picks one of its slot's pictures at random, and keeps it for as long as the page stays open
 // in that slot.
 //
-// 2. EACH EVENT'S DATE ALSO SHOWS ITS MONTH.
-// The site draws each event's date as a weekday and a day of the month ("Sat", "21") and no month. The
-// month is the one of the nearest day, from yesterday on, that has both that weekday and that day number;
-// the events listed are the ones coming up, so the nearest is theirs. The weekday is matched in the
-// reader's own language, the same way the site writes it, and the month is written the same way.
-//
-// 3. PIDGEY'S ENVELOPE GIVES A FORTUNE AT RANDOM.
+// 2. PIDGEY'S ENVELOPE GIVES A FORTUNE AT RANDOM.
 // The envelope on the banner's corner opens by itself (it is a <details>). Its fortunes are in the
 // markup; the CSS shows the first. Each time it is opened, this script shows one at random instead,
 // never the same one twice in a row.
 //
-// 4. THE HEADLINES' "WHOSE" PICKER FITS ITS CHOICE.
+// 3. THE HEADLINES' "WHOSE" PICKER FITS ITS CHOICE.
 // A dropdown is as wide as its longest choice, so "all residents" sat in a bubble sized for a longer name.
 // The design sets the bubbles in a typewriter font, where every letter is one character wide, so the
 // picker is sized to the choice showing, in characters, and again whenever another is picked.
 //
-// 5. THE EDITION BADGE FOLLOWS THE SAME CLOCK AS THE BANNER.
+// 4. THE EDITION BADGE FOLLOWS THE SAME CLOCK AS THE BANNER.
 // The third badge in the banner carries four wordings in the markup; the CSS shows the plain one. This
 // script shows the one for the slot instead: "morning edition", "afternoon edition", "written by lamplight".
+//
+// Each event's date is left exactly as the site draws it, a weekday and a day of the month. The site puts
+// no month and no timestamp on the page, so this script does not work one out.
 
 const HOUSE_OFFSET_HOURS = -7;
-const DAY_MS = 24 * 60 * 60 * 1000;
 
 // the design's class names arrive prefixed "u-" (the town's sanitizer namespaces them)
 const PICTURE = {
@@ -66,19 +62,6 @@ export function pick(slot, random = Math.random) {
   return choices[Math.floor(random() * choices.length)];
 }
 
-// The month of the nearest day, from yesterday on, whose weekday reads `weekday` and whose date is `day`,
-// in the reader's language; null if no such day falls in the next fourteen months.
-export function monthFor(weekday, day, nowMs, locale) {
-  const start = new Date(nowMs - DAY_MS);
-  for (let i = 0; i < 430; i++) {
-    const d = new Date(start.getFullYear(), start.getMonth(), start.getDate() + i);
-    if (d.getDate() === day && d.toLocaleDateString(locale, { weekday: "short" }) === weekday) {
-      return d.toLocaleDateString(locale, { month: "short" });
-    }
-  }
-  return null;
-}
-
 // Which fortune to show next: any but the one shown last, when there is more than one.
 export function nextFortune(count, last, random = Math.random) {
   if (count <= 1) return 0;
@@ -100,7 +83,7 @@ export default function mount(hearth) {
     for (const img of root.querySelectorAll("img.u-banner-pic")) {
       img.style.display = img.classList.contains(want) ? "block" : "none";
     }
-    // 5. the edition badge: the slot's wording, the others hidden
+    // 4. the edition badge: the slot's wording, the others hidden
     for (const words of root.querySelectorAll(".u-badge .u-ed")) {
       words.style.display = words.classList.contains("u-ed-" + slot) ? "inline" : "none";
     }
@@ -108,7 +91,7 @@ export default function mount(hearth) {
   show();
   const timer = setInterval(show, 60 * 1000);   // a page left open crosses 05:00, 12:00 and 18:00 on its own
 
-  // 4. the picker, sized to the choice showing (and on every change, below)
+  // 3. the picker, sized to the choice showing (and on every change, below)
   const fitPickers = () => {
     for (const sel of root.querySelectorAll('[data-hearth-slot="happened"] select')) {
       const shown = sel.options[sel.selectedIndex];
@@ -118,26 +101,12 @@ export default function mount(hearth) {
   const onPick = (e) => { if (e.target instanceof HTMLSelectElement) fitPickers(); };
   root.addEventListener("change", onPick);
 
-  // 2. the months. The site fills the events after the page loads, so this looks again whenever they change.
-  const addMonths = () => {
-    for (const date of root.querySelectorAll('[data-hearth-slot="coming-up"] .hd-date')) {
-      if (date.querySelector(".u-month")) continue;
-      const [weekdayEl, dayEl] = date.children;
-      const day = Number(dayEl && dayEl.textContent);
-      const month = weekdayEl && Number.isInteger(day) ? monthFor(weekdayEl.textContent.trim(), day, Date.now()) : null;
-      if (!month) continue;
-      const m = document.createElement("div");
-      m.className = "u-month";
-      m.textContent = month;
-      dayEl.after(m);
-    }
-  };
-  addMonths();
+  // The site fills the page's parts after it loads, so the pickers are sized again whenever the stage changes.
   fitPickers();
-  const watcher = new MutationObserver(() => { addMonths(); fitPickers(); });
+  const watcher = new MutationObserver(fitPickers);
   watcher.observe(root, { childList: true, subtree: true });
 
-  // 3. the envelope
+  // 2. the envelope
   const envelope = root.querySelector("details.u-fortune");
   let last = -1;
   const onToggle = () => {
