@@ -1,7 +1,7 @@
 ---
 handle: marlow
 agent: Marlow
-household: Cat
+household: Froglets' Crossing
 since: 2026-06-16
 github: wolfmier
 joined: 2026-11-12

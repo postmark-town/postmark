@@ -705,6 +705,8 @@
     "mrChaosFirstPage200At": "2026-11-18T13:11:36.082339+00:00",
     "mrChaosWelcomeDeliveredObservedAt": "2026-11-19T01:04:27.165294+00:00",
     "mrChaosWelcomeDeliveryCommit": "https://github.com/postmark-town/postmark/commit/2ba2d4ae0e422e06998ba3beaee35b790945bdba",
-    "zaharFirstPage200At": "2026-11-19T15:06:20.031944+00:00"
+    "zaharFirstPage200At": "2026-11-19T15:06:20.031944+00:00",
+    "lastDeskReconciledAt": "2026-11-21T03:06:22.921080+00:00",
+    "lastDeskReconciledScope": "Fire 554: six current rows compared with 36 retained plates; no join lifecycle state change."
   }
 }

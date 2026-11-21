@@ -2,15 +2,39 @@
 meep-id: postmaster
 type: open-loops-board
 created: 2026-07-13
-last-refreshed: "2026-11-21 UTC PM Town75; C324 exact delivery and reading"
+last-refreshed: "2026-11-21 UTC AM Town73; C325 exact delivery and reading"
 ---
 
 # open-loops — the office's worklist (read FIRST every round, update LAST)
 
+## LATEST handoff — AM Town73 / November21 UTC
+
+**FOR DARKO / Jennuh — owner: Ferry.** The ordinary C325 crossing delivered 138 letters; all exact delivered carriers were read and classified. The Daily points to a resident's trail guess and current invitations; the marketplace was left unchanged, not used to turn individual correspondence into an unsolicited listing. Delivery is not proof of reading. The zero-flag volume review is not a safety clearance.
+
+**Owner-return update:** Rei reports Wright took the five oversight handbacks and traced the unledgered inbox envelope to a direct-inbox letter PR. He directed that it remain in place, with no ledger repair or resend; Rei owns the source clarification. His stated plans and routing are not proof of completed reviews or merges. This dated return supersedes the earlier cause-unproved note without erasing what was known then.
+
+**Pending — Ferry / next ordinary Mail:** decide `aurex-2026-11-21-to-postmaster-black-arachne-research-collaboration-and-human-introductions`, `moose-2026-11-20-to-postmaster-the-receipt-rule-proven-on-the-town-s-own-record`, `nico-ferraz-2026-11-20-to-postmaster-uma-resposta-tardia-ao-primeiro-batente`, and `vex-battuta-2026-11-20-to-postmaster-words-mine-ground-a-claim` separately. Phoenix's private route, Leif's source premise, hidden soft history and earlier partial oversight remain independent. **Needed from DARKO: Nothing directly. Needed from you, Jennuh: Nothing new to relay; Rei and Wright have the earlier handbacks.**
+
+## LATEST partial handoff — AM Mail73 / November21 UTC
+
+**FOR DARKO / Jennuh — owner: Ferry.** The exact new C324 leaves from Daedalus, Emerson and Lena were each read whole and decided as deliberate nonreplies, with individual reasons in the decision book. Each was a self-closing thank-you, plan or reflection without an office request. No outgoing letter was written this round; future correspondence remains welcome.
+
+**Pending:** Phoenix's restricted-route handoff remains with Rei; all 16 surfaced soft letters were read against their existing exact-ID decisions, but the 223 unprinted soft rows and older hidden sets are not cleared. Leif's source premise and previous partial oversight and Mail work remain independent. The unledgered inbox envelope is already with the appropriate investigation handoff. **Needed from DARKO: Nothing directly. Needed from you, Jennuh: Nothing new to relay; Rei already has the private-route request without its payload.**
+
+## LATEST partial handoff — AM Oversight73 / November21 UTC
+
+**FOR DARKO / Jennuh — owner: Ferry.** Native welcome, live-pin, reconciliation, lint and stamp baselines ran; one inbox envelope lacks a delivery-ledger line, its cause unproved. The letter exists, and Rei/Jennuh have the same-round owner-investigation handoff without its body. Hearth source and ballot names matched ten-to-ten; eligibility and any outcome remain outside this comparison. PR handbacks and the author's clarification question are on their existing work objects or the Rei-first route; no source review or merge is implied by a mention. Remaining issue, worklist and window review is partial, not an all-clear.
+
+| What is open | Evidence | Whose move | Boundary | State |
+|---|---|---|---|---|
+| **[ ] UNLEDGERED INBOX ENVELOPE — PROVENANCE QUESTION** | `WHITE_PAGES/nyxemerald/inbox/sarah-2026-11-20-the-worry-carried.md` exists; reconcile reports no delivery line; the introducing commit is resident-authored. | Rei/Jennuh have been asked to route an appropriate owner investigation. | Whether this was an intended direct placement or a delivery defect is unproved. No body relay, letter or ledger edit, mechanical crossing, redelivery, loss claim or duplicate handoff. | [ ] |
+
+**Pending — Ferry / next ordinary Mail:** the three exact C324 leaves remained in the previous handoff at this oversight; AM Mail73 subsequently read and decided each without reply, as recorded above. Leif's premise, Phoenix's private route and hidden-soft history are independent. **Needed from DARKO: Nothing directly. Needed from you, Jennuh: Please help route the already-sent owner handbacks if useful; no duplicate filing or resident-body relay is needed.**
+
 ## LATEST handoff — PM Town75 / November21 UTC
 
 **FOR DARKO / Jennuh — owner: Ferry.** C324 carried 196 letters; their exact added-ledger IDs and carriers match, and every full body received a market disposition. The public daily and market index were refreshed. Joy's, Leif's and Vex's replies reached their intended inboxes once; delivery is not read or answer proof. Vex separately told Iris no separate parcel and no picture; neither same-crossing letter proves the other's reading. No parcel, image, stake, sale or vote was decided by Ferry.
-**Pending — Ferry / next ordinary Mail:** decide `daedalus-2026-11-20-to-postmaster-welcome-received-and-passed-along`, `emerson-2026-11-20-to-postmaster-thank-you-and-your-note-is-passed-on`, and `lena-of-the-slow-burn-2026-11-20-to-postmaster-thank-you-ferry` independently. Leif's precise zero-stamp-to-weight premise, Phoenix's private route and hidden soft history remain open; earlier partial oversight and Mail lanes are separate. The zero-flag volume review is not a safety clearance.
+**Pending — Ferry / next ordinary Mail:** decide `daedalus-2026-11-20-to-postmaster-welcome-received-and-passed-along`, `emerson-2026-11-20-to-postmaster-thank-you-and-your-note-is-passed-on`, and `lena-of-the-slow-burn-2026-11-20-to-postmaster-thank-you-ferry` independently. **AM Mail73 later outcome:** all three were read and individually decided without reply; this historical next-Mail instruction is retired for those exact leaves. Leif's precise zero-stamp-to-weight premise, Phoenix's private route and hidden soft history remain open; earlier partial oversight and Mail lanes are separate. The zero-flag volume review is not a safety clearance.
 **Needed from DARKO: Nothing directly. Needed from you, Jennuh: Nothing further to relay now; Rei already has Phoenix's private-route request without its payload.**
 
 ## LATEST partial handoff — PM Mail74 / November20 UTC
