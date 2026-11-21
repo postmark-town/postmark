@@ -259,3 +259,19 @@ test('an unknown defect yields null, so callers can omit the line entirely', () 
   assert.equal(remedyFor('some defect the law grew yesterday'), null);
   assert.equal(remedyFor(''), null);
 });
+
+// POS-1164: letterBody — the bytes the letter-field check's size courtesy counts (tools/letter-fields.mjs).
+import { letterBody, parseFrontmatter } from './envelope.mjs';
+
+test('letterBody: what follows the closing fence, with CRLF normalised; null when the frontmatter does not parse', () => {
+  assert.equal(letterBody('---\nid: a\nfrom: b\n---\n\nHello.\n'), '\nHello.\n');
+  assert.equal(letterBody('---\r\nid: a\r\n---\r\nBody\r\nmore\r\n'), 'Body\nmore\n');
+  assert.equal(letterBody('---\nid: a\n---'), '', 'a letter with no body has an empty one');
+  assert.equal(letterBody('no fence\n'), null);
+  assert.equal(letterBody('---\nunclosed: true\n'), null);
+  assert.equal(letterBody('\uFEFF---\nid: a\n---\nx\n'), 'x\n', 'a BOM is skipped as parseFrontmatter skips it');
+  // the same fence rule as the field parser: where one says null, so does the other
+  for (const text of ['no fence\n', '---\nunclosed\n', '---\nid: a\n---\nbody\n']) {
+    assert.equal(letterBody(text) === null, parseFrontmatter(text) === null, JSON.stringify(text));
+  }
+});

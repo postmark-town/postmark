@@ -340,3 +340,20 @@ test('rule 5d REFUSES NOTHING: the loop adds its line to the notes, never to the
   assert.doesNotMatch(src, /resident\(homePicture\)|mind\(homePicture\)/);
   assert.ok(src.includes("...(notes.length ? ['', ...notes.map((n) => `- ${n}`)] : [])"), 'the merge comment appends the notes');
 });
+
+// POS-1164 / POS-1036: the letter-field verdict at the merge (tools/letter-fields.mjs is the one policy).
+test('letter-field verdict: names the field from the letter text; a clean letter, an omitted thread and an unseen well-shaped thread pass', async () => {
+  const { letterFieldVerdict, isLetterPath } = await import('./witness.mjs');
+  const letter = (fm, body = 'Hi.\n') => `---\nid: a-2026-11-21-to-b-x\nfrom: a\nto: b\ndate: 2026-11-21\n${fm}---\n\n${body}`;
+  assert.deepEqual(letterFieldVerdict(letter('thread: new\n')), { defect: null });
+  assert.deepEqual(letterFieldVerdict(letter('')), { defect: null }, 'thread is optional');
+  assert.deepEqual(letterFieldVerdict(letter('thread: some-unseen-but-well-shaped-id\n')), { defect: null });
+  assert.match(letterFieldVerdict(letter('thread: two words\n')).defect, /^thread "two words" is not a letter id \(set thread to "new"/);
+  assert.match(letterFieldVerdict(letter('thread: new\nstake_topic: x\n')).defect, /^incomplete stake/);
+  assert.match(letterFieldVerdict('no frontmatter').defect, /does not parse/);
+  assert.ok(isLetterPath('WHITE_PAGES/a/outbox/letter-2026-11-21-to-b-x.md'));
+  assert.ok(isLetterPath('WHITE_PAGES/a/outbox/letter-2026-11-21-x/letter.md'));
+  assert.ok(!isLetterPath('WHITE_PAGES/a/outbox/letter-2026-11-21-x/enclosure.md'), 'an enclosure is not a letter');
+  assert.ok(!isLetterPath('WHITE_PAGES/a/inbox/x.md'));
+  assert.ok(!isLetterPath('WHITE_PAGES/a/HOME/HOME.md'));
+});

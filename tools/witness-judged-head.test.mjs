@@ -105,6 +105,14 @@ function fakeApi(town, base, state) {
       if (p === '/pulls/1/files') return send(200, url.searchParams.get('page') === '1' ? filesBetween(town, base, state.filesHead ?? state.head) : []);
       const c = /^\/compare\/([0-9a-f]{40})\.\.\.([0-9a-f]{40})$/.exec(p);
       if (c) return send(200, { status: 'ahead', files: filesBetween(town, git(town, ['merge-base', c[1], c[2]]), c[2]) });
+      const ct = /^\/contents\/(.+)$/.exec(p);
+      if (ct) {
+        const path = decodeURIComponent(ct[1]);
+        if ((state.unreadable ?? []).includes(path)) return send(404, { message: 'Not Found' });
+        const r = spawnSync('git', ['show', `${url.searchParams.get('ref')}:${path}`], { cwd: town, encoding: 'buffer' });
+        if (r.status !== 0) return send(404, { message: 'Not Found' });
+        return send(200, { type: 'file', encoding: 'base64', content: r.stdout.toString('base64') });
+      }
       if (p === '/issues/1/comments') return send(200, []);
       const t = /^\/git\/trees\/([0-9a-f]{40})$/.exec(p);
       if (t) {
@@ -259,4 +267,110 @@ test('witness.yml ties the test merge to the judged head, and nothing after it f
   assert.doesNotMatch(lint, /git fetch/);
   assert.match(wf, /id: lint\n\s+if: .*steps\.pin\.outputs\.judged == 'true'/);
   assert.equal([...wf.matchAll(/git fetch/g)].length, 1, 'a second fetch could move FETCH_HEAD off the tied merge');
+}));
+
+// ── POS-1164 / POS-1036: the letter-field check at the trusted merge ("Same check at merge", Darko 2026-11-14) ──
+//
+// A raw outbox letter sent as a PR met only the crossing's classifier, which defaults `thread` and reads neither the
+// grammar nor the stake trio. evaluate() now applies tools/letter-fields.mjs (the office door's one policy) to the
+// changed letter bytes AT THE JUDGED HEAD, so the certify job's check, a direct `merge` and the sweep's `merge` all
+// refuse a bad letter by name BEFORE the merge PUT. Identity/ownership, the ferry's classify and the Registrar's
+// path rule are not touched.
+
+const ENVELOPE = (over = {}, body = 'A letter.\n') => {
+  const f = { id: 'alice-2026-11-21-to-bob-note', from: 'alice', to: 'bob', date: '2026-11-21', thread: 'new', ...over };
+  return `---\n${Object.entries(f).filter(([, v]) => v !== undefined).map(([k, v]) => `${k}: ${v}`).join('\n')}\n---\n\n${body}`;
+};
+const FLAT = 'WHITE_PAGES/alice/outbox/letter-2026-11-21-to-bob-note.md';
+const FOLDER = 'WHITE_PAGES/alice/outbox/letter-2026-11-21-to-bob-photos';
+const flat = (over, body) => [FLAT, ENVELOPE(over, body)];
+
+/** The merge entry (the sweep's, and any direct merge) refuses and attempts no merge; the certify job's check names the letter and the field. */
+async function refused(town, base, state, want) {
+  const merge = await witness(town, base, state, ['merge']);
+  assert.equal(merge.code, 1, `${merge.stdout}${merge.stderr}`);
+  assert.deepEqual(merge.merged, [], `a bad letter reached the merge PUT:\n${merge.stdout}${merge.stderr}`);
+  assert.match(merge.stderr, /refused to merge/);
+  const check = await witness(town, base, state, ['check']);
+  assert.match(check.output, /^certified=false$/m);
+  assert.match(check.stdout, want);
+  assert.doesNotMatch(check.stdout, /A letter\./, 'the refusal names the defect, never the letter\'s body');
+}
+
+test('a malformed thread is refused at merge: the check names the letter and the field, and no merge is attempted', () => withTown(async ({ town, base }) => {
+  const head = headCommit(town, base, [flat({ thread: 'has a space' })]);
+  const check = await witness(town, base, { head }, ['check']);
+  assert.equal(check.code, 0, check.stderr);
+  assert.match(check.output, /^certified=false$/m);
+  assert.match(check.stdout, /WHITE_PAGES\/alice\/outbox\/letter-2026-11-21-to-bob-note\.md`: thread "has a space" is not a letter id/);
+  assert.doesNotMatch(check.stdout, /A letter\./, 'the refusal names the defect, never the letter\'s body');
+  const merge = await witness(town, base, { head }, ['merge']);   // the sweep's entry and any direct merge
+  assert.equal(merge.code, 1);
+  assert.deepEqual(merge.merged, [], `a malformed-thread letter reached the merge PUT:\n${merge.stdout}${merge.stderr}`);
+}));
+
+test('an invalid or half-written stake trio is refused at merge, by name', () => withTown(async ({ town, base }) => {
+  for (const [over, want] of [
+    [{ stake_topic: 'the-ballot' }, /incomplete stake/],
+    [{ stake_topic: 'the-ballot', stake_candidate: 'Ana One', stake_stamps: '0' }, /stake_stamps "0" is not a positive whole number/],
+    [{ stake_topic: 'Not A Slug', stake_candidate: 'Ana One', stake_stamps: '2' }, /stake_topic "Not A Slug" is not a ballot slug/],
+  ]) {
+    await refused(town, base, { head: headCommit(town, base, [flat(over)]) }, want);
+  }
+}));
+
+test('an oversized body is refused at merge (the size courtesy)', () => withTown(async ({ town, base }) => {
+  await refused(town, base, { head: headCommit(town, base, [flat({}, 'a'.repeat(100_001))]) }, /letter exceeds the size courtesy/);
+}));
+
+test('a bad folder letter is refused by its letter.md; the enclosure beside it is not what is judged', () => withTown(async ({ town, base }) => {
+  const head = headCommit(town, base, [[`${FOLDER}/letter.md`, ENVELOPE({ id: 'alice-2026-11-21-to-bob-photos', thread: 'a/b' })], [`${FOLDER}/note.md`, 'an enclosure, not a letter: thread: nonsense\n']]);
+  await refused(town, base, { head }, /letter-2026-11-21-to-bob-photos\/letter\.md`: thread "a\/b" is not a letter id/);
+  const check = await witness(town, base, { head }, ['check']);
+  assert.doesNotMatch(check.stdout, /note\.md/);
+}));
+
+test('valid controls merge: a flat letter, a well-shaped UNSEEN reply thread, an omitted thread, a valid stake trio, a folder letter with its enclosure', () => withTown(async ({ town, base }) => {
+  const controls = [
+    [flat({ thread: 'new' })],
+    [flat({ thread: 'bob-2026-11-20-to-alice-never-seen-by-anyone' })],
+    [flat({ thread: undefined })],
+    [flat({ stake_topic: 'the-ballot', stake_candidate: 'Ana One', stake_stamps: '3' })],
+    [[`${FOLDER}/letter.md`, ENVELOPE({ id: 'alice-2026-11-21-to-bob-photos' })], [`${FOLDER}/picture.png`, 'not really a png\n']],
+  ];
+  for (const entries of controls) {
+    const head = headCommit(town, base, entries);
+    const merge = await witness(town, base, { head }, ['merge']);
+    assert.equal(merge.code, 0, `${merge.stdout}${merge.stderr}`);
+    assert.deepEqual(merge.merged, [head], JSON.stringify(entries.map((e) => e[0])));
+  }
+}));
+
+test('an unreadable letter is not a passing check: the head\'s bytes cannot be read, so nothing merges', () => withTown(async ({ town, base }) => {
+  const head = headCommit(town, base, [flat({})]);
+  await refused(town, base, { head, unreadable: [FLAT] }, /could not be read from the PR head, so its fields could not be checked/);
+  // frontmatter that does not parse is the same: not a pass
+  await refused(town, base, { head: headCommit(town, base, [[FLAT, 'no frontmatter at all\n']]) }, /its frontmatter does not parse/);
+}));
+
+test('the check judges the bytes of the head it judged: a clean letter at the judged head merges even if another head holds a bad one', () => withTown(async ({ town, base }) => {
+  const clean = headCommit(town, base, [flat({})]);
+  const bad = headCommit(town, base, [flat({ thread: 'bad thread' })]);
+  const r = await witness(town, base, { head: clean, filesHead: clean }, ['merge'], { WITNESS_HEAD_SHA: clean });
+  assert.deepEqual(r.merged, [clean]);
+  const r2 = await witness(town, base, { head: bad }, ['merge'], { WITNESS_HEAD_SHA: bad });
+  assert.deepEqual(r2.merged, []);
+}));
+
+test('CAN-FAIL: without the shared check at merge the same bad letters reach the attempted merge, whatever a workflow preflight does', () => withTown(async ({ town, base }) => {
+  // the throwaway town carries a copy of tools/; take the call out of ITS witness.mjs and the bypass is back
+  const f = join(town, 'tools', 'witness.mjs');
+  const src = readFileSync(f, 'utf8');
+  assert.ok(src.includes('if (isLetterPath(p) && '), 'the check is where this test expects it');
+  writeFileSync(f, src.replace('if (isLetterPath(p) && ', 'if (false && isLetterPath(p) && '));
+  for (const over of [{ thread: 'has a space' }, { stake_topic: 'the-ballot' }]) {
+    const head = headCommit(town, base, [flat(over)]);
+    const merge = await witness(town, base, { head }, ['merge']);
+    assert.deepEqual(merge.merged, [head], 'the falsifier reaches the attempted merge once the shared check is removed');
+  }
 }));

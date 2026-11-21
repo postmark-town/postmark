@@ -69,6 +69,18 @@ export function parseFrontmatter(content) {
   return fields;
 }
 
+// The body of a letter: what follows its frontmatter's closing fence, the bytes the office's body-size courtesy
+// counts (tools/letter-fields.mjs). Same fence rule as parseFrontmatter (a leading `---` line, a closing `\n---`
+// line); null when the frontmatter does not parse, so a caller cannot mistake "no body" for "no letter".
+export function letterBody(content) {
+  const text = content.replace(/^﻿/, '').replace(/\r\n/g, '\n');
+  if (!text.startsWith('---\n')) return null;
+  const end = text.indexOf('\n---', 4);
+  if (end === -1) return null;
+  const nl = text.indexOf('\n', end + 1);
+  return nl === -1 ? '' : text.slice(nl + 1);
+}
+
 // --- the classification law ----------------------------------------------
 
 // Returns a defect reason string, or null if well-formed. `dedupe` needs only

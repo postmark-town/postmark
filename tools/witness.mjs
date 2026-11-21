@@ -48,6 +48,13 @@
 //      an accurate note (the ferry carries it fine), a missing letter.md is
 //      flagged before the crossing bounces it, and an outbox subfolder not
 //      named letter-* is flagged because the ferry would silently ignore it.
+//   5g. (POS-1164, Darko 2026-11-14 "Same check at merge") A changed outbox
+//      letter's FIELDS are judged by the office door's own policy,
+//      tools/letter-fields.mjs: a malformed `thread:`, an oversized body or a
+//      half-written stake trio is refused by name, from the bytes at the judged
+//      head, in evaluate() so every merge runs it. Field policy only: identity
+//      and ownership stay with the rules above, the envelope with the ferry's
+//      classify (the second net). An unreadable letter is not a pass.
 //   2c. (2026-08-24, the founder's ruling on the Levi case — "admit and merge";
 //       2026-09-04, the Luminari class let the join carry its own pin in
 //       tools/github-ids.json; RETIRED 2026-11-04 with 2b (POS-894): since office
@@ -146,7 +153,8 @@ import { witnessRefusal } from './registrar-audit.mjs';
 import { loadRegistrySource } from './registry-source.mjs';
 import { nameChangeRefusal } from './resident-name.mjs';
 import { PRINTOUTS } from './registry-printout-check.mjs';
-import { parseFrontmatter } from './envelope.mjs';
+import { parseFrontmatter, letterBody } from './envelope.mjs';
+import { checkLetterFields } from './letter-fields.mjs';
 import { reservedHandleRefusal } from './reserved-handles.mjs';
 
 // ── THE RECORD, NOT ITS PRINTOUT (POS-348, Darko 2026-10-04) ────────────────
@@ -617,6 +625,40 @@ async function windowJudgment({ headSha, path }) {
   return null;
 }
 
+// POS-1164 / POS-1036 (Darko, 2026-11-14: "Same check at merge"): the letter-field policy the office's door applies
+// (tools/letter-fields.mjs, the ONE implementation: the thread's grammar, the body-size courtesy, the stake trio),
+// applied here to the bytes of a changed outbox letter AT THE JUDGED HEAD, read as data through the API. It lives in
+// evaluate() because every merge runs evaluate: the certify job's check, a direct `merge`, and the sweep's merge. It
+// judges field policy only; the sender's identity and ownership stay with the rules above (a letter outside the
+// author's own pages never reaches this), and the id/from/to/date envelope stays with the ferry's classify (the
+// second net). `{ defect }` is a short sentence naming the field; `{ unread }` means the bytes could not be judged,
+// and an unreadable letter is NOT a passing check.
+const FLAT_LETTER = /^WHITE_PAGES\/[^/]+\/outbox\/[^/]+\.md$/;
+const FOLDER_LETTER = /^WHITE_PAGES\/[^/]+\/outbox\/letter-[^/]+\/letter\.md$/;
+export const isLetterPath = (p) => FLAT_LETTER.test(p) || FOLDER_LETTER.test(p);
+
+// Pure (exported for the test): the judgment of one letter's text.
+export function letterFieldVerdict(content) {
+  const fields = parseFrontmatter(content);
+  const body = letterBody(content);
+  if (!fields || body == null) return { defect: 'its frontmatter does not parse, so its fields cannot be checked' };
+  const bad = checkLetterFields({
+    thread: fields.thread, body,
+    stake_topic: fields.stake_topic, stake_candidate: fields.stake_candidate, stake_stamps: fields.stake_stamps,
+  });
+  return bad ? { defect: `${bad.defect} (${bad.hint})` } : { defect: null };
+}
+
+async function letterFieldJudgment({ headSha, path }) {
+  let text = null;
+  try {
+    const file = await gh(`/contents/${encodeURIComponent(path).replace(/%2F/g, '/')}?ref=${headSha}`);
+    if (file?.encoding !== 'base64' || typeof file.content !== 'string') throw new Error('not inline');
+    text = Buffer.from(file.content, 'base64').toString('utf8');
+  } catch { return { unread: true }; }
+  return letterFieldVerdict(text);
+}
+
 // POS-1005 — a name a PR would set or change on an ADDRESS.md, judged against the base's card (diff-aware: an unchanged name, however long, is left alone).
 // The PR head is read as data through the API; the base card is the checkout's own.
 async function addressNameJudgment({ headSha, path }) {
@@ -820,6 +862,11 @@ async function evaluate() {
         mind(`adds \`${p}\` — the witness only certifies prose and pictures (.md, .txt, images); anything else gets human eyes.`);
       }
       continue;
+    }
+    if (isLetterPath(p) && (f.status === 'added' || f.status === 'modified')) {
+      const verdict = await letterFieldJudgment({ headSha: pr.head?.sha, path: p });
+      if (verdict.unread) mind(`\`${p}\` could not be read from the PR head, so its fields could not be checked — the witness does not certify a letter it cannot read; a person reads it.`);
+      else if (verdict.defect) resident(`\`${p}\`: ${verdict.defect} — the same letter-field check the office door applies (tools/letter-fields.mjs); fix and push, and the witness re-reads.`);
     }
     if (f.status === 'added' && /^WHITE_PAGES\/[^/]+\/HOME\/REGION\.md$/.test(p)) {
       const handle = m[1];
