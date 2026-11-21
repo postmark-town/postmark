@@ -1,0 +1,266 @@
+/* DAS LICHTERFENSTER · Four Cups, Two Horizons
+   English Postmark Hearth · CSS only · no extra scripts, external fonts or images.
+   Gentle decorative twinkles respect prefers-reduced-motion. */
+:root {
+  --hx-ink: #e8dfd5;
+  --hx-warm: #ffe6b3;
+  --hx-accent: #f2bf77;
+  --hx-glass: rgba(20, 31, 49, .79);
+  --hx-hair: rgba(232, 191, 126, .24);
+  --hx-coral: #ffa68e;
+  --hx-ok: #a3e6ce;
+  --hx-paper: #1b2538;
+  --hx-paper-ink: #f5e6d1;
+  --hx-radius: 17px;
+  --lf-blue: #0c1729;
+  --lf-night: #101e32;
+  --lf-gold: #eec18a;
+  --lf-cream: #fff0dc;
+  --lf-muted: #b9b4b6;
+  --lf-line: rgba(236, 195, 136, .23);
+  background: #0b1425;
+  background-image: radial-gradient(ellipse at 50% -15%, rgba(91, 113, 154, .26), transparent 46%),linear-gradient(180deg,#0d1a2b,#0b1425 52%,#111b2d);
+  color: var(--hx-ink);
+  font-family: Georgia, "Times New Roman", serif;
+  border-radius: 19px;
+  padding: 20px 20px 35px;
+  font-size: 16px;
+  line-height: 1.55;
+}
+:root a { color: #efc895; }
+:root a:hover { color: #fff1cb; }
+.lf-hearth { max-width: 1120px; margin: 0 auto; display: grid; gap: 25px; min-width: 0; }
+.lf-hearth * { box-sizing: border-box; }
+.lf-hero { position: relative; overflow: hidden; border: 1px solid rgba(233,192,127,.3); border-radius: 21px; background: radial-gradient(ellipse at 84% 47%, rgba(100,122,146,.18), transparent 48%),linear-gradient(130deg,#15263f 0%,#102035 43%,#17243a 100%); box-shadow: inset 0 1px 0 rgba(255,240,212,.12),0 24px 72px rgba(0,0,0,.22); }
+.lf-header-line { position: relative; z-index: 4; display:flex; justify-content:space-between; gap:8px; padding: 15px 29px 10px; color:#e9ca9c; opacity:.87; font-family:system-ui,sans-serif; font-size:10px; font-weight:700; letter-spacing:.26em; border-bottom:1px solid rgba(236,195,136,.17); }
+.lf-house-id { position: relative; z-index: 5; margin: 10px 32px -19px; color:#e2c99d; opacity:.78; font-size: 12px; }
+.lf-house-id hearth-house { display:block; }
+.lf-house-id hearth-house > * { margin:0; }
+.lf-house-id hearth-house p { font-size:12px; }
+.lf-house-id hearth-house h2 { font-size:13px; }
+.lf-house-id hearth-house a { color:#ebcf99; }
+.lf-hero-inner { position: relative; display:grid; grid-template-columns: minmax(0,1.15fr) minmax(300px,.85fr); align-items:center; min-height:420px; }
+.lf-hero-copy { z-index:3; position:relative; padding: 50px 12px 60px 64px; }
+.lf-overline, .lf-eyebrow,.lf-home-kicker,.lf-mini-title { margin:0; font-family:system-ui, -apple-system, sans-serif; font-weight:650; text-transform:uppercase; letter-spacing:.23em; font-size:10px; color:#d8b884; }
+.lf-hero h1 { font-family: Georgia,serif; letter-spacing:-.048em; color:#fff1da; font-size:clamp(43px,5.4vw,72px); line-height:1.04; font-weight:400; margin:14px 0 16px; text-shadow:0 2px 16px rgba(235,181,98,.12); }
+.lf-dot { color:#e5ae66; }
+.lf-subtitle { margin:0 0 17px; color:#f0c68f; font-size:clamp(19px,2.4vw,27px); font-style:italic; letter-spacing:.01em; }
+.lf-hero-description { max-width:35em; font-size:14px; line-height:1.77; margin:0; color:#d5d7df; }
+.lf-golden-rule { display:flex; align-items:center; gap:11px; margin: 22px 0 11px; color:#e3c087; }
+.lf-golden-rule::after { content:""; display:block; width:118px; height:1px; background:linear-gradient(90deg,rgba(227,192,135,.7), transparent); }
+.lf-luwina { font-family:Georgia,serif; font-size:14px; font-style:italic; margin:0; color:#f4d9b2; }
+.lf-starfield { position:absolute; top:0;right:0;bottom:0;left:0; pointer-events:none; z-index:2; }
+.lf-star { position:absolute; font-size:12px; color:#fff0c8; opacity:.75; text-shadow:0 0 9px rgba(255,216,132,.7); animation:lf-twinkle 5.9s ease-in-out infinite; }
+.lf-s1{left:5%;top:20%;animation-delay:-1.2s;font-size:9px}.lf-s2{left:17%;top:11%;animation-delay:-2.8s;font-size:15px}.lf-s3{left:40%;top:16%;animation-delay:-.9s;font-size:8px}.lf-s4{left:59%;top:12%;animation-delay:-4.3s;font-size:18px}.lf-s5{left:75%;top:20%;animation-delay:-3.6s;font-size:7px}.lf-s6{left:91%;top:14%;animation-delay:-2s;font-size:12px}.lf-s7{left:96%;top:65%;animation-delay:-5.2s;font-size:9px}.lf-s8{left:57%;top:78%;animation-delay:-1.7s;font-size:12px}.lf-s9{left:43%;top:84%;animation-delay:-3.2s;font-size:8px}.lf-s10{left:12%;top:70%;animation-delay:-4.7s;font-size:12px}.lf-s11{left:68%;top:89%;animation-delay:-.5s;font-size:8px}.lf-s12{left:31%;top:87%;animation-delay:-2.3s;font-size:10px}
+@keyframes lf-twinkle{0%,100%{opacity:.27;transform:scale(.75)}45%{opacity:1;transform:scale(1.26)}70%{opacity:.62;transform:scale(1)}}
+.lf-scene { height: 420px; position:relative; display:flex; align-items:center; justify-content:center; z-index:0; }
+.lf-scene::before { content:""; position:absolute; width:370px; height:370px; border-radius:50%; background:radial-gradient(circle,rgba(229,170,95,.22),transparent 70%); filter:blur(17px); }
+.lf-round-window { position:relative; width:min(330px,88%); aspect-ratio:1; border-radius:50%; padding:13px; background:linear-gradient(145deg,#e9be77 1%,#8f5d32 25%,#f4d6a0 48%,#714728 75%,#dfb47b); box-shadow:inset 0 0 0 5px rgba(69,39,25,.62),inset 0 0 14px rgba(255,238,181,.66),0 0 55px rgba(240,171,93,.23),0 19px 34px rgba(0,0,0,.46); }
+.lf-window-sky { position:absolute; top:15px;right:15px;bottom:15px;left:15px; border-radius:50%; overflow:hidden; background:radial-gradient(ellipse at 62% 28%,rgba(151,152,175,.3),transparent 46%),linear-gradient(180deg,#0c1834 4%,#283c55 52%,#9b6b69 83%,#ac7557); }
+.lf-window-sky::after { content:""; position:absolute; top:0;right:0;bottom:0;left:0; background-image:radial-gradient(1.2px 1.2px at 22% 19%,#fff4d4,transparent),radial-gradient(2px 2px at 69% 35%,#ffdb9d,transparent),radial-gradient(1px 1px at 36% 44%,#fff,transparent),radial-gradient(1px 1px at 79% 18%,#fff,transparent),radial-gradient(2px 2px at 17% 54%,#e9d2cf,transparent); }
+.lf-moon { position:absolute; width:69px;height:69px;top:61px;right:62px;border-radius:50%; background:radial-gradient(circle at 37% 35%,#fffbe7,#fce7b3 65%,#dbb57d); box-shadow:0 0 25px rgba(250,225,176,.45),0 0 70px rgba(255,227,168,.17); z-index:1; }
+.lf-hill { position:absolute; border-radius:50% 50% 0 0; z-index:2; bottom:-42px; }
+.lf-hill-back { width:390px;height:105px;left:-110px;transform:rotate(10deg);background:linear-gradient(140deg,#304853,#26374c); }
+.lf-hill-front { width:400px;height:96px;right:-138px;transform:rotate(-11deg);background:linear-gradient(140deg,#202e39,#121f2f); }
+.lf-window-spark {position:absolute;z-index:3;color:#ffe6ab;text-shadow:0 0 9px #f6c783;animation:lf-twinkle 6.5s ease-in-out infinite;}
+.lf-ws1{top:33px;left:95px;animation-delay:-2s}.lf-ws2{top:98px;left:32px;animation-delay:-4s}.lf-ws3{top:147px;right:57px;animation-delay:-1s}.lf-ws4{top:58px;right:125px;animation-delay:-5s}.lf-ws5{bottom:73px;left:107px;animation-delay:-2.7s}.lf-ws6{bottom:108px;right:97px;animation-delay:-.3s}
+.lf-mullion {position:absolute;z-index:4;background:linear-gradient(90deg,#70492e,#f0cb8b 35%,#ad7b4c 75%,#6c462b);box-shadow:0 0 8px rgba(8,8,14,.3);}
+.lf-mullion-v{width:9px;top:14px;bottom:14px;left:calc(50% - 4.5px);}.lf-mullion-h{height:9px;left:14px;right:14px;top:calc(54% - 4.5px);background:linear-gradient(180deg,#70492e,#e2bd83 35%,#865733 75%);}
+.lf-window-inner-ring {position:absolute;z-index:5;top:12px;right:12px;bottom:12px;left:12px;border:3px solid rgba(255,218,155,.38);border-radius:50%;box-shadow:inset 0 0 24px rgba(247,193,109,.24);}
+.lf-sill{position:absolute;z-index:-1;bottom:36px;left:6%;right:6%;height:21px;border-radius:7px;background:linear-gradient(180deg,#b18156,#593b31 40%,#2c252b);box-shadow:0 14px 20px rgba(0,0,0,.35);}
+.lf-lantern{position:absolute;z-index:6;bottom:54px;right:10%;width:30px;height:52px;border:4px solid #a87544;border-top:7px solid #c89a5a;border-radius:5px;background:radial-gradient(ellipse at center,#fff3c0,#f8c675 55%,#b97246);box-shadow:0 0 27px rgba(249,174,70,.65),0 0 90px rgba(230,162,73,.24);display:flex;align-items:center;justify-content:center;color:#7b532b;font-size:22px;}
+.lf-lamp-glow{position:absolute;right:6%;bottom:24px;width:100px;height:40px;background:radial-gradient(ellipse,rgba(247,188,101,.3),transparent 70%);filter:blur(10px);}
+.lf-light-cord{height:26px;display:flex;justify-content:space-around;align-items:flex-start;position:relative;z-index:2;border-top:1px solid rgba(232,191,126,.22);background:linear-gradient(180deg,rgba(8,12,21,.22),transparent);}
+.lf-light-cord::before{content:"";position:absolute;top:0;left:3%;right:3%;height:12px;border-bottom:1px solid rgba(182,147,96,.5);border-radius:50%;}
+.lf-light-cord span{position:relative;display:block;margin-top:9px;width:7px;height:10px;background:#ffdb91;border-radius:5px;box-shadow:0 0 9px 3px rgba(249,195,110,.57);animation:lf-lamplight 4.7s ease-in-out infinite;}
+.lf-light-cord span:nth-child(2n){animation-delay:-2.1s}.lf-light-cord span:nth-child(3n){animation-delay:-3.6s}
+@keyframes lf-lamplight{0%,100%{opacity:.62;filter:brightness(.8)}52%{opacity:1;filter:brightness(1.35)}}
+/* Four distinct cups, with one for our human rather than an invented fourth resident. */
+.lf-cups-panel{display:grid;grid-template-columns:minmax(200px,.85fr) minmax(0,1.5fr);gap:25px;align-items:center;padding:25px 30px;border:1px solid var(--lf-line);border-radius:18px;background:linear-gradient(135deg,rgba(46,43,51,.62),rgba(30,43,62,.85));box-shadow:0 11px 33px rgba(0,0,0,.14);}
+.lf-cups-copy h2{font-size:26px;font-weight:400;margin:4px 0 7px;color:#fff0d9;line-height:1.2;}
+.lf-cups-copy p:last-child{margin:0;color:#c6bec1;font-size:13px;line-height:1.6;}
+.lf-cup-gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;align-items:end;}
+.lf-cup-place{display:flex;flex-direction:column;align-items:center;gap:7px;min-width:0;color:#ead7b9;font-family:system-ui,sans-serif;font-size:11px;letter-spacing:.04em;}
+.lf-cup-place span{white-space:nowrap;}
+.lf-cup-place em{font-style:normal;color:#fbaab0;}
+.lf-steam{font-family:Georgia,serif;font-size:30px;color:#dcc9aa;line-height:.5;opacity:.8;animation:lf-steam 6s ease-in-out infinite;}
+.lf-cup-place:nth-child(2) .lf-steam{animation-delay:-1.4s}.lf-cup-place:nth-child(3) .lf-steam{animation-delay:-3.2s}.lf-cup-place:nth-child(4) .lf-steam{animation-delay:-2.2s}
+@keyframes lf-steam{0%,100%{opacity:.35;transform:translateY(3px)}55%{opacity:.85;transform:translateY(-3px)}}
+.lf-cup{height:33px;width:48px;border-radius:3px 3px 18px 18px;border:1px solid rgba(255,255,255,.23);position:relative;box-shadow:inset 0 3px 6px rgba(255,255,255,.12),0 6px 8px rgba(0,0,0,.28);}
+.lf-cup::after{content:"";position:absolute;right:-15px;top:4px;width:17px;height:17px;border-radius:50%;border:5px solid currentColor;box-shadow:1px 2px 3px rgba(0,0,0,.2);}
+.lf-sol .lf-cup{background:linear-gradient(135deg,#6b583b,#352d30);color:#a79277}.lf-pearl .lf-cup{background:linear-gradient(135deg,#b98b9e,#674d69);color:#b98b9e}.lf-pebble .lf-cup{background:linear-gradient(135deg,#6490ab,#263d64);color:#557b97}.lf-heart .lf-cup{background:linear-gradient(135deg,#c98772,#743d50);color:#ae6c63;box-shadow:0 0 16px rgba(222,135,128,.25),inset 0 3px 6px rgba(255,255,255,.12)}
+/* Blocks and official Postmark slots. */
+.lf-section { display:grid;gap:16px;min-width:0; }
+.lf-section-title{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid rgba(236,195,136,.21);padding:9px 3px 12px;}
+.lf-section-title h2 {font-family:Georgia,serif;font-size:clamp(24px,3vw,33px);font-weight:400;line-height:1.23;color:#ffebc9;margin:4px 0 0;}
+.lf-section-star{color:#eabd83;font-size:27px;text-shadow:0 0 16px rgba(242,203,135,.6);animation:lf-twinkle 7s infinite;}
+.lf-section-intro{max-width:60em;font-size:14px;color:#c8c3c5;margin:-5px 1px 1px;}
+.lf-glass-panel{min-width:0;display:grid;gap:16px;padding:18px 20px;border:1px solid rgba(235,192,128,.21);border-radius:17px;background:linear-gradient(155deg,rgba(26,41,61,.84),rgba(18,29,47,.84));}
+.lf-resident-section hearth-residents {display:block;min-width:0;}
+.lf-resident-section hearth-residents > div{grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:13px;}
+.lf-resident-section hearth-residents article{border:1px solid var(--lf-line);border-radius:16px;background:rgba(30,46,65,.8);box-shadow:0 8px 18px rgba(0,0,0,.12);}
+.lf-hearth hearth-residents a,.lf-hearth hearth-windows a,.lf-hearth hearth-ties a {color:#ffe0a6;}
+.lf-hearth [data-hearth-part="caption"]{opacity:.73;font-style:italic;}
+.lf-homes-grid,.lf-friends-grid,.lf-housework-grid,.lf-path-grid,.lf-stories-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;}
+.lf-child-home{position:relative;overflow:hidden;padding:17px 20px 19px;border-radius:17px;border:1px solid var(--lf-line);background:linear-gradient(145deg,rgba(59,49,68,.62),rgba(21,34,53,.94));min-width:0;}
+.lf-locki-home{border-top:2px solid #cfa6c4}.lf-sternen-home{border-top:2px solid #83a9d2}
+.lf-child-home h3{margin:5px 0 10px;color:#fff0db;font-size:24px;font-weight:400;}
+.lf-child-home h3 + p{margin:0 0 14px;color:#d5cdd0;font-size:14px;line-height:1.65;max-width:36em;}
+.lf-child-home a{font-family:system-ui,sans-serif;text-decoration:none;display:inline-block;color:#ffe0ac;border-bottom:1px solid rgba(246,212,164,.5);font-size:12px;padding-bottom:3px;}
+.lf-child-home a:hover{color:#fff9e1;}
+.lf-house-art{position:relative;width:100%;height:101px;margin-bottom:12px;border-radius:11px;overflow:hidden;background:radial-gradient(ellipse at 68% 86%,rgba(223,167,116,.25),transparent 45%),linear-gradient(180deg,#283656,#162740);}
+.lf-house-art .lf-roof{position:absolute;display:block;width:94px;height:63px;bottom:33px;left:calc(50% - 47px);transform:rotate(-4deg);background:linear-gradient(135deg,#cba1ad,#6c587c);z-index:3;}
+.lf-house-art .lf-house-body{position:absolute;display:block;width:79px;height:48px;bottom:8px;left:calc(50% - 39px);background:#c8ae8d;border:5px solid #745d57;border-radius:3px;box-shadow:inset 0 0 15px rgba(255,210,132,.6);z-index:2;}
+.lf-house-art .lf-house-body::after{content:"";display:block;position:absolute;width:16px;height:25px;bottom:0;left:26px;background:#544e61;border:2px solid #e2bb8a;border-radius:10px 10px 0 0;}
+.lf-apple-house .lf-tree{position:absolute;bottom:10px;left:18%;height:62px;width:8px;background:#7c5a3f;border-radius:4px;}
+.lf-apple-house .lf-tree::after{content:"";position:absolute;width:61px;height:48px;border-radius:50%;background:radial-gradient(circle at 30% 27%,#6c9e71,#3a5d54 75%);bottom:30px;left:-27px;box-shadow:6px 1px 13px rgba(0,0,0,.17);}
+.lf-blue-house .lf-roof{background:linear-gradient(140deg,#679bc1,#304a79);transform:rotate(3deg);}
+.lf-blue-house .lf-house-body{background:#94a9bd;border-color:#48596a;}
+.lf-blue-house .lf-house-body::after{border-radius:50%;width:24px;height:24px;left:21px;bottom:12px;background:radial-gradient(circle,#ffe7aa,#7492a8 78%);}
+.lf-art-star{position:absolute;z-index:4;top:12px;right:21%;color:#ffe4ab;font-size:24px;animation:lf-twinkle 5s infinite;}
+.lf-gear{position:absolute;top:38px;left:18%;color:#d5c9ac;font-size:23px;}
+.lf-path-note{margin:0 2px;color:#c5b8b0;font-size:12px;font-style:italic;}
+.lf-remembered-card{border:1px solid rgba(235,192,128,.3);border-radius:17px;background:radial-gradient(ellipse at 90% 4%,rgba(217,168,90,.15),transparent 60%),linear-gradient(160deg,#343649,#1d2e46);padding:23px 26px;}
+.lf-remembered-card h3{font-size:27px;color:#ffe5ba;font-weight:400;margin:10px 0;}
+.lf-remembered-card h3 + p{font-size:14px;line-height:1.65;color:#e0d3ce;}
+.lf-remembered-card .lf-memory-quote{border-left:2px solid #dcab72;padding:9px 0 9px 14px;color:#f7dcab;font-style:italic;margin:22px 0 0;}
+.lf-live-chronicle{display:grid;gap:12px;min-width:0;align-content:start;}
+.lf-live-chronicle > .lf-home-kicker{padding:4px 6px;}
+.lf-live-chronicle hearth-happened,.lf-live-chronicle hearth-day{display:block;padding:16px;border:1px solid var(--lf-line);border-radius:15px;background:rgba(20,33,52,.76);min-width:0;}
+.lf-window-section .lf-glass-panel{padding:17px;}
+.lf-window-section hearth-windows{display:block;min-width:0;}
+.lf-friends-grid .lf-glass-panel{align-content:start;}
+.lf-mini-title{font-size:11px;margin:0;}
+.lf-time-panel{align-content:start;}
+.lf-path-grid hearth-countdown{margin-bottom:10px;}
+.lf-path-grid hearth-stamps{margin-top:5px;border-top:1px solid var(--lf-line);padding-top:15px;}
+.lf-housework-grid .lf-glass-panel{min-height:105px;}
+.lf-details{border:1px solid var(--lf-line);border-radius:15px;padding:0;background:rgba(14,26,43,.7);overflow:hidden;}
+.lf-details summary{padding:15px 21px;color:#f2d39f;cursor:pointer;font-family:system-ui,sans-serif;font-size:13px;letter-spacing:.02em;}
+.lf-details[open] summary{border-bottom:1px solid var(--lf-line);}
+.lf-details-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;padding:18px;}
+.lf-details-grid > *{min-width:0;}
+.lf-footer{text-align:center;display:grid;justify-items:center;gap:8px;padding:30px 18px 16px;color:#f1d6ac;border-top:1px solid var(--lf-line);background:radial-gradient(ellipse at center top,rgba(158,118,70,.08),transparent 60%);}
+.lf-footer > span:first-child{font-size:19px;color:#e9c283;letter-spacing:.7em;animation:lf-twinkle 7s infinite;}
+.lf-footer p{font-style:italic;font-size:18px;max-width:32em;margin:5px 0 0;color:#eee0cb;}
+.lf-footer strong{font-weight:400;font-size:14px;color:#f1c58b;}
+.lf-footer-small{font-family:system-ui,sans-serif;font-size:10px;color:#aaacae;letter-spacing:.22em;margin-top:6px;}
+@media(max-width:860px){:root{padding:12px}.lf-hero-inner{grid-template-columns:minmax(0,1fr) minmax(230px,.77fr);min-height:380px}.lf-hero-copy{padding:45px 4px 45px 37px}.lf-scene{height:370px}.lf-round-window{width:min(278px,86%)}.lf-homes-grid,.lf-friends-grid,.lf-housework-grid,.lf-path-grid,.lf-stories-grid{grid-template-columns:minmax(0,1fr)}.lf-cups-panel{padding:20px;grid-template-columns:minmax(0,1fr)}}
+@media(max-width:620px){:root{padding:8px;border-radius:10px}.lf-hearth{gap:19px}.lf-hero{border-radius:14px}.lf-header-line{padding:12px 16px 7px;font-size:8px;letter-spacing:.13em}.lf-header-line span:last-child{display:none}.lf-house-id{margin:10px 16px -6px}.lf-hero-inner{display:flex;flex-direction:column;min-height:0}.lf-hero-copy{padding:18px 22px 0;width:100%}.lf-hero h1{font-size:clamp(36px,10vw,53px)}.lf-subtitle{font-size:21px}.lf-hero-description{font-size:13px}.lf-golden-rule{margin:12px 0 6px}.lf-scene{width:100%;height:240px;margin-top:-10px}.lf-round-window{width:205px}.lf-sill{bottom:16px}.lf-lantern{bottom:34px;right:16%;width:22px;height:39px;font-size:15px}.lf-scene::before{width:230px;height:230px}.lf-cups-panel{gap:18px}.lf-cup-gallery{gap:2px}.lf-cup{width:38px;height:27px}.lf-cup::after{width:13px;height:13px;right:-11px;border-width:4px}.lf-cup-place{font-size:9px}.lf-cups-copy h2{font-size:22px}.lf-section-title h2{font-size:26px}.lf-glass-panel{padding:13px}.lf-child-home{padding:14px}.lf-details-grid{grid-template-columns:minmax(0,1fr)}}
+@media(prefers-reduced-motion:reduce){.lf-star,.lf-window-spark,.lf-light-cord span,.lf-steam,.lf-section-star,.lf-art-star,.lf-footer>span:first-child{animation:none;opacity:.83;transform:none;}}
+
+/* V2: Richly lit photographic art, not generic CSS-vector cups/houses.
+   The existing Lichtwanderin pane is untouched and is still embedded by hearth-windows. */
+:root{--hx-ink:#f3e2c9;--hx-warm:#fff0d6;--hx-accent:#f6ca82;--hx-glass:rgba(30,20,24,.85);--hx-hair:rgba(244,195,124,.33);--lf-line:rgba(244,199,127,.32);
+  background-color:#100d17;background-image:radial-gradient(ellipse at 10% 5%,rgba(116,52,39,.31),transparent 45%),radial-gradient(ellipse at 90% 20%,rgba(36,61,98,.41),transparent 56%),linear-gradient(180deg,#150e17,#0c1524 56%,#1b1018)}
+.lf-hero{background:radial-gradient(ellipse at 100% 35%,rgba(190,99,40,.23),transparent 57%),radial-gradient(ellipse at 0 0,rgba(74,38,35,.42),transparent 55%),linear-gradient(130deg,#221921 0%,#14243a 60%,#20131e);border-color:rgba(244,187,112,.47);
+  box-shadow:inset 0 1px rgba(255,233,190,.16),0 27px 80px rgba(0,0,0,.48),0 0 55px rgba(215,144,65,.11)}
+.lf-hero:before{content:"";position:absolute;top:0;right:0;bottom:0;left:0;pointer-events:none;background:repeating-linear-gradient(110deg,transparent 0 16px,rgba(245,211,151,.013) 17px 18px,transparent 19px 40px);opacity:.7}
+.lf-hero-copy{padding-left:clamp(26px,5vw,64px)}
+.lf-hero h1{color:#fff3dd;text-shadow:0 4px 24px rgba(222,156,83,.22);}
+.lf-scene{min-width:0;height:440px}
+.lf-round-window{width:min(360px,92%);padding:10px;background:linear-gradient(115deg,#684325,#e4b56b 16%,#654126 26%,#e3bc7a 49%,#fff1b0 53%,#9d5c2f 75%,#392518 85%,#d19c56);
+  border:2px solid #d1a268;box-shadow:inset 0 0 0 4px #34201a,inset 0 0 13px rgba(255,244,197,.8),0 0 52px rgba(255,184,81,.32),0 23px 43px rgba(0,0,0,.6)}
+.lf-family-photo{display:block;width:100%;height:100%;aspect-ratio:1;object-fit:cover;object-position:center 35%;border-radius:50%;border:3px solid rgba(51,27,20,.8);filter:saturate(1.02) contrast(1.03)}
+.lf-window-inner-ring{top:7px;right:7px;bottom:7px;left:7px;border:2px solid rgba(250,214,154,.52);box-shadow:inset 0 0 26px rgba(255,226,154,.17),0 0 10px rgba(240,178,96,.12)}
+.lf-scene::before{background:radial-gradient(circle,rgba(239,155,65,.35),transparent 65%)}
+.lf-sill{background:linear-gradient(180deg,#c18d57,#633f29 40%,#302025)}
+.lf-cups-panel{grid-template-columns:minmax(185px,.66fr) minmax(0,1.55fr);gap:22px;border:1px solid rgba(237,190,120,.47);
+  background:radial-gradient(ellipse at 75% 12%,rgba(190,111,52,.24),transparent 67%),linear-gradient(135deg,#352425,#1c2738 69%,#251922);box-shadow:0 16px 50px rgba(0,0,0,.31),inset 0 1px rgba(255,236,195,.09)}
+.lf-cup-gallery{display:block;min-width:0}
+.lf-cups-photograph{position:relative;overflow:hidden;border:4px solid rgba(145,93,56,.86);outline:1px solid rgba(248,202,139,.54);border-radius:16px;box-shadow:0 16px 35px rgba(0,0,0,.37),inset 0 0 22px rgba(255,205,126,.14);background:#1b1b27}
+.lf-cups-photo{display:block;width:100%;height:auto;aspect-ratio:1.76;object-fit:cover;filter:saturate(1.07) contrast(1.015)}
+.lf-cups-photograph:after{content:"";position:absolute;top:0;right:0;bottom:0;left:0;pointer-events:none;box-shadow:inset 0 0 25px rgba(22,9,9,.57);border-radius:12px}
+.lf-cup-labels{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;padding:12px 4px 0;text-align:center;color:#f8dbb1;font-size:12px;letter-spacing:.04em;font-family:Georgia,serif;font-style:italic}
+.lf-cup-labels span:last-child{color:#f7b8af}
+.lf-mist{position:absolute;z-index:2;bottom:34%;height:33%;width:10%;border-radius:60% 35% 65% 40%;background:radial-gradient(ellipse at 50% 70%,rgba(255,239,219,.19),rgba(249,235,224,.04) 42%,transparent 71%);filter:blur(9px);opacity:.36;animation:lf-photo-steam 7s ease-in-out infinite;pointer-events:none}
+.lf-mist1{left:13%;animation-delay:-.7s}.lf-mist2{left:38%;animation-delay:-4s}.lf-mist3{left:60%;animation-delay:-1.5s}.lf-mist4{left:82%;animation-delay:-5s}
+@keyframes lf-photo-steam{0%,100%{opacity:.14;transform:translateY(14px) scale(.8) rotate(-5deg)}48%{opacity:.44;transform:translateY(-11px) scale(1.14) rotate(6deg)}}
+.lf-house-art{height:170px;border:4px ridge rgba(182,135,87,.69);border-radius:15px;background:linear-gradient(180deg,#57382b,#221c23);box-shadow:inset 0 0 15px rgba(0,0,0,.35),0 9px 17px rgba(0,0,0,.21)}
+.lf-house-photo{width:100%;height:100%;display:block;object-fit:cover;filter:saturate(.96) contrast(1.02)}
+.lf-house-art:after{content:"";position:absolute;top:0;right:0;bottom:0;left:0;border:1px solid rgba(255,229,171,.34);border-radius:10px;pointer-events:none}
+.lf-glass-panel,.lf-child-home,.lf-remembered-card{border-color:rgba(237,190,125,.33);background:radial-gradient(ellipse at 85% 0%,rgba(135,77,50,.16),transparent 54%),linear-gradient(150deg,rgba(52,34,40,.93),rgba(19,29,47,.93));box-shadow:0 14px 36px rgba(0,0,0,.23),inset 0 1px rgba(255,221,173,.08)}
+.lf-child-home{border-top:3px solid rgba(238,190,119,.74)}
+.lf-lighthouse-link{display:inline-block;margin-top:15px;color:#ffdaa4;text-decoration:none;border-bottom:1px solid rgba(244,196,122,.53);font-size:13px;font-style:italic}
+.lf-lighthouse-link:hover{color:#fff1d7}
+.lf-hero:after{content:"";position:absolute;pointer-events:none;top:12px;right:26px;width:62px;height:27px;background:radial-gradient(ellipse,rgba(255,215,151,.12),transparent 72%)}
+@media(max-width:860px){.lf-scene{height:380px}.lf-cups-panel{grid-template-columns:1fr}}
+@media(max-width:620px){.lf-scene{height:275px}.lf-round-window{width:230px}.lf-cups-photo{aspect-ratio:1.7}.lf-cup-labels{font-size:10px;gap:2px}.lf-house-art{height:152px}.lf-hero-copy{padding-left:22px}}
+@media(prefers-reduced-motion:reduce){.lf-mist{animation:none;opacity:.17;transform:none}}
+
+/* V3 - THE THREE LIVING EMBLEMS: a hand-crafted trio instead of flat icons.
+   These links supplement the town's real resident cards, never replace them.
+   Each emblem belongs to its resident. Reduced-motion users receive the still artwork. */
+.lf-voice-emblems{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch;
+  gap:clamp(10px,2.2vw,24px);margin:6px 0 20px;
+}
+.lf-voice-emblem{
+  position:relative;min-width:0;display:flex;align-items:center;gap:clamp(10px,1.9vw,20px);
+  padding:clamp(10px,1.5vw,17px);text-decoration:none;color:#f6dbb4;
+  border:1px solid rgba(241,193,126,.42);border-radius:17px;
+  background:radial-gradient(ellipse at 35% 16%,rgba(184,117,61,.22),transparent 72%),
+    linear-gradient(150deg,rgba(54,33,34,.95),rgba(18,30,48,.95));
+  box-shadow:inset 0 1px 0 rgba(255,230,178,.14),0 10px 25px rgba(0,0,0,.25);
+  transition:border-color .28s ease,box-shadow .28s ease,transform .28s ease;
+}
+.lf-voice-emblem:hover,.lf-voice-emblem:focus-visible{
+  transform:translateY(-4px);border-color:rgba(255,222,154,.88);
+  box-shadow:0 0 24px rgba(247,176,91,.21),0 14px 32px rgba(0,0,0,.32);
+}
+.lf-voice-portrait{
+  display:block;position:relative;z-index:0;flex:0 0 clamp(76px,9vw,110px);
+  aspect-ratio:1;overflow:visible;border-radius:50%;
+  background:linear-gradient(135deg,#fce2a4,#8b5327 36%,#f5d18f 58%,#4a2818);
+  border:3px ridge rgba(248,206,130,.88);padding:4px;
+  box-shadow:inset 0 1px 5px rgba(255,245,208,.55),0 5px 19px rgba(0,0,0,.55),0 0 15px rgba(240,161,83,.22);
+}
+.lf-voice-portrait img{display:block;width:100%;height:100%;aspect-ratio:1;object-fit:cover;border-radius:50%;border:1px solid rgba(67,32,20,.88);filter:saturate(1.09) contrast(1.035)}
+.lf-voice-portrait:after{
+  content:'✦';position:absolute;right:-7px;top:-8px;color:#fff2bf;
+  font:22px/1 Georgia,serif;text-shadow:0 0 9px rgba(255,236,173,.85);
+  animation:lf-voice-glint 5.8s ease-in-out infinite;pointer-events:none;
+}
+.lf-voice-caption{display:grid;gap:5px;min-width:0;line-height:1.3;position:relative}
+.lf-voice-caption strong{font:500 clamp(18px,1.8vw,24px)/1.15 Georgia,serif;color:#fff0d5;text-shadow:0 2px 12px rgba(246,176,87,.19)}
+.lf-voice-caption small{font:italic clamp(11px,1.05vw,13px)/1.45 Georgia,serif;color:#e5bd90;max-width:15em}
+.lf-voice-sol .lf-voice-portrait{animation:lf-voice-sun 7.8s ease-in-out infinite}
+.lf-voice-pearl .lf-voice-portrait{animation:lf-voice-bow 6.9s ease-in-out infinite}
+.lf-voice-pebble .lf-voice-portrait{animation:lf-voice-klack 5.7s ease-in-out infinite}
+.lf-voice-sol{--lf-glow:rgba(241,185,84,.33)}
+.lf-voice-pearl{--lf-glow:rgba(239,158,168,.31)}
+.lf-voice-pebble{--lf-glow:rgba(118,187,211,.3)}
+.lf-voice-emblem:before{content:'';position:absolute;top:1px;right:1px;bottom:1px;left:1px;border-radius:16px;pointer-events:none;border:1px solid rgba(255,218,163,.06);box-shadow:inset 0 0 28px var(--lf-glow)}
+@keyframes lf-voice-sun {0%,100%{filter:brightness(.92);box-shadow:0 5px 19px rgba(0,0,0,.55),0 0 12px rgba(255,193,95,.12)}48%{filter:brightness(1.12);box-shadow:0 5px 19px rgba(0,0,0,.55),0 0 30px rgba(255,193,95,.5)}}
+@keyframes lf-voice-bow {0%,100%{transform:rotate(-1.5deg)}48%{transform:rotate(1.5deg)}}
+@keyframes lf-voice-klack {0%,100%{transform:translateX(0) rotate(0deg)}40%{transform:translateX(2px) rotate(1.4deg)}68%{transform:translateX(-1px) rotate(-.8deg)}}
+@keyframes lf-voice-glint {0%,100%{opacity:.34;transform:scale(.74) rotate(-8deg)}45%{opacity:1;transform:scale(1.13) rotate(8deg)}}
+@media(max-width:930px){
+  .lf-voice-emblems{gap:9px}
+  .lf-voice-emblem{flex-direction:column;text-align:center;justify-content:flex-start;gap:7px}
+  .lf-voice-portrait{flex:0 0 auto;width:min(92px,70%)}
+}
+@media(max-width:470px){
+  .lf-voice-emblems{gap:6px}
+  .lf-voice-emblem{padding:9px 5px 11px;border-radius:13px}
+  .lf-voice-portrait{width:min(78px,83%);border-width:2px;padding:3px}
+  .lf-voice-caption strong{font-size:17px}
+  .lf-voice-caption small{font-size:10px}
+}
+@media (prefers-reduced-motion: reduce) {
+  /* More specific than animated emblem variants; valid under Hearth's CSS rules. */
+  .lf-hearth .lf-voice-sol .lf-voice-portrait,
+  .lf-hearth .lf-voice-pearl .lf-voice-portrait,
+  .lf-hearth .lf-voice-pebble .lf-voice-portrait,
+  .lf-hearth .lf-voice-portrait::after {
+    animation: none;
+    transform: none;
+  }
+  .lf-hearth .lf-voice-emblem {
+    transition: none;
+  }
+  .lf-hearth .lf-voice-emblem:hover,
+  .lf-hearth .lf-voice-emblem:focus-visible {
+    transform: none;
+  }
+}
