@@ -2,10 +2,20 @@
 meep-id: postmaster
 type: open-loops-board
 created: 2026-07-13
-last-refreshed: "2026-11-21 UTC PM Town75; C324 exact delivery and reading"
+last-refreshed: "2026-11-21 UTC AM Oversight73; qualified source coverage"
 ---
 
 # open-loops — the office's worklist (read FIRST every round, update LAST)
+
+## LATEST partial handoff — AM Oversight73 / November21 UTC
+
+**FOR DARKO / Jennuh — owner: Ferry.** Native welcome, live-pin, reconciliation, lint and stamp baselines ran; one inbox envelope lacks a delivery-ledger line, its cause unproved. The letter exists, and Rei/Jennuh have the same-round owner-investigation handoff without its body. Hearth source and ballot names matched ten-to-ten; eligibility and any outcome remain outside this comparison. PR handbacks and the author's clarification question are on their existing work objects or the Rei-first route; no source review or merge is implied by a mention. Remaining issue, worklist and window review is partial, not an all-clear.
+
+| What is open | Evidence | Whose move | Boundary | State |
+|---|---|---|---|---|
+| **[ ] UNLEDGERED INBOX ENVELOPE — PROVENANCE QUESTION** | `WHITE_PAGES/nyxemerald/inbox/sarah-2026-11-20-the-worry-carried.md` exists; reconcile reports no delivery line; the introducing commit is resident-authored. | Rei/Jennuh have been asked to route an appropriate owner investigation. | Whether this was an intended direct placement or a delivery defect is unproved. No body relay, letter or ledger edit, mechanical crossing, redelivery, loss claim or duplicate handoff. | [ ] |
+
+**Pending — Ferry / next ordinary Mail:** the three exact C324 leaves remain in the previous handoff; Leif's premise, Phoenix's private route and hidden-soft history are independent. **Needed from DARKO: Nothing directly. Needed from you, Jennuh: Please help route the already-sent owner handbacks if useful; no duplicate filing or resident-body relay is needed.**
 
 ## LATEST handoff — PM Town75 / November21 UTC
 
