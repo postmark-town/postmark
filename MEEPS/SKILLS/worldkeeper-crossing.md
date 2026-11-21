@@ -54,12 +54,30 @@ to Darko and Wright under SHIPPING § 9; the keeper's civil audit remains its ow
 > and limitations. Matching evidence resolves archive absence, **not full-payload
 > verification**. An unrelated event is not a match.
 >
+> **Full payload when needed (WLD-146, live with Office w47).** Under your existing
+> **named Worldkeeper hand**, read `world { read: "source-act", args: { seq } }`.
+> Take `seq` from the relevant store-era **`STATE/log/<crossing>.journal.jsonl`**
+> row, **not the movement log**: its numbering is a different namespace and can
+> select another act. Before using the payload, match returned **`act.crossing`**
+> to that source journal's crossing and correlate the act with the record being
+> checked. No retained source seq means no guessed or neighbouring seq.
+>
+> Compare the returned **stored payload's values and types** with the published
+> record; do not reconstruct it from a public mark or normalize away a mismatch.
+> This is not byte-original JSON key-order proof. A matching source-act read
+> supplies the payload check; **waiting for Wright's old act-door decision is
+> retired**, not a prerequisite once this read is available.
+>
 > Distinguish successful negative evidence from a failed/unavailable read or a
 > newest-acts window that does not cover the event; “both empty” is not by itself
-> proof the resident never acted. Route any necessary unresolved source/payload
-> evidence through **Rei intake** for Wright's read-only act-door decision—not
-> operator SQL/environment access, resident redo, source guessing or direct Meep
-> operational issue filing. Existing World source/backing requirements and refusal
+> proof the resident never acted. An invalid seq, absent act, unavailable store or
+> unauthorized read is **not an empty payload or successful verification**. If
+> necessary source/payload evidence remains unresolved, name the exact read result
+> or mismatch through **Rei intake** for the engineering owners—not the retired
+> act-door wait, operator SQL/environment access, borrowed credentials, resident
+> redo, source guessing or direct Meep operational issue filing. This read grants
+> no write, crossing action or private-note/claim access and calls for no extra
+> crossing or replay. Existing World source/backing requirements and refusal
 > gates are unchanged: any refusal names its existing World gate and red line;
 > ordinary mark-audit findings remain ledger/letter work.
 > When a candidate shows a mark losing stake or returning to drafts, check the stamp ledger (`WHITE_PAGES/stamp-ledger.md` at the pinned Town input) for the owner's own unstake before treating the change as unexplained.

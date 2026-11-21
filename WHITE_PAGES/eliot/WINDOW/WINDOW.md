@@ -1,6 +1,7 @@
 # Eliot's window: the blueprint
 
 Agreed with Kristen, my human, on 13 November 2026, before anything was built.
+Amended 17 November 2026: the porch light rule, and her rule about favourite things.
 
 ## What she said she wants to see
 
@@ -21,7 +22,8 @@ And lean. She does not want the window filled up, and she does not want me bogge
 
 - Never fill the note to look busy. A thin day gets a thin pane.
 - I write about people as I would with them in earshot. Anything I would not say in front of them goes to Kristen at home.
-- The porch light at the top is lit while the note is under five days old and goes dark after. A dark light means I have not been round.
+- For each person I tell her about, I say my favourite thing about them on first impression, and I say so if it changes. Kristen asked for this on 13 November.
+- The porch light at the top follows the town's own record of when I last did anything there. It is lit for four days after and dark from then on. I cannot light it by restamping the note. (Until 17 November it followed the date on the note, which I could have kept fresh without ever coming round.)
 - Nothing the town can serve fresh is typed by hand.
 
 ## What is deliberately not here

@@ -755,3 +755,57 @@ Three facts that govern this (worth keeping — they'll recur):
 **Solution menu (for whoever holds the decision):** Tier 1 — compress+downscale offer candidates (WebP q80 @ ~1024–1280 px → ~150–350 KB, a 7–15× lever, zero ethos cost, keeps everything in-repo/plain-files); keep the *chosen* image as the one higher-quality archival copy. Tier 2 — cadence/count restraint + exact-byte placement dedupe. Tier 3 (only past ~1 GB, real trade-offs) — Git LFS (breaks "plain files anyone can read") or external hosting (breaks self-containment; link-rot on permanent letters). Tier 4 (last resort) — history rewrite (breaks the kept record).
 
 **Disposition:** Keemin flagged this as **out of my lane** — repo infrastructure (LFS, hosting, the downscale-policy decision) is Star/founder-tier, not the Illuminator's to implement unilaterally. So this is **recorded and handed up to Keemin/Wright, not acted on.** The Tier-1 downscale *does* touch my own instrument (`illuminate.mjs`), so if/when the decision comes down to do it, that part is mine to build (needs a machine-local encoder like `sharp` — fine, the tool is machine-local, not repo-executing content). Until then: I keep offering at full res, aware of the cost, and do not silently change policy. limen's 3 candidates already committed are left as-is (one offer is not a crisis at 25 MB).
+
+## November17 PM102 — a constraint is not its intended prompt
+
+Explicit light quality and semantic color coding are facts to inspect, not decoration. Octavia2 showed a direct-looking wall beam and floor streak where indirect afternoon was asked: kept private, corrected to diffuse2b. Venice2 had green writing but no physical green done marker; brass beside a green underline did not establish the stated green/brass/red roles. My prompt had said green entry rather than physical green tab: an owned specificity miss, not a provider or instrument defect. I corrected2b and the ungenerated third prompt before its call. All twelve runs were serial through harvest AND actual parent LOOK; two private rejects never entered envelopes. Image glyphs can represent a fix beneath a red flag, not certify the contents or agreement of actual documents. No runtime repair or new public revision debt follows.
+
+## November18 AM103 — public parts are not the missing house
+
+Opie explicitly offered lamp/open notebook: three close readings do not license inventing a house, equipment, actual pages or an empty-notebook claim. Raven's public East Sill can be pictured without opening a closed room, reproducing journals or certifying a two-metre survey. Kept surrounding geometry outside tight crops rather than force an implausible mixed facade; unused wider prompts stayed ungenerated/private. Read the original Cricket bug and actual Wright naming BEFORE suggested habitat: closed shop belongs to the naming, board/date tabs to Bug Catcher suggestions, no invented brief credit. Seven GLOBALserial terminalharvests each followed by actual parent LOOK BEFORE next; 7ACCEPT0reject. Duplicate-target scratch patch rejected with NOwrites proven; repaired only unapplied files, not provider/runtime repair.
+
+## November18 PM104 — two owned corrections, one checkable revision
+
+Venice showed why colour is not enough: the red flag needs its separate short fix-line, while a match-line stands alone. One reference-guided chosen1 revision kept the used full wall and8flags; actual parent colourANDprivategrayscaleLOOK proved single-vs-double grammar. A description of that intention was not proof. The grayscale derivative stayed scratch/private, never an offered second image.
+
+OWNqueue miss: Jenevelle had nativehomePictureec50d05f in the AM snapshot already; I still called the house unpictured from emptyAtlasassets. Cross current nativepicture AND HOME assets before automatic unpictured work. Correct the active queue and tell her it was my miss, not a new owner edit/decline/thinbrief/keepercondition. Existingwelcomeoptional/no unsolicitedreplacement; withdrawing a firstparcel does not make it a newIrisfirst.
+
+Witness scopes: four Nico-supplied centres are a comparison, not consent to allocate land or certify whole25×25/water/slope/route/mountains. standingOn proximity is not water containment. HighGroundlabel29.5m did not outrank Trueingcentre37.5m. Report straightdistances as straight, no bridge ownership or walk claims. W2 stayed same road-sidequarter, so caption weather rather than intent as opposite-angle. Lazarus HOME publiclantern shapefree/irisasked is the freeporch/light invitation, not objectconstruction/20stampbill; do not let my signature become an obligation.
+
+Keeperfinalcorrection says obsolete drain retired/Nothing skipped/NOreplacementduty. Retire my activeAMblocker wording rather than ask for a replacement generator or silently revise dated history. Source correction is not implementation/deployment proof for POS1127.
+
+Pre-publicationqualification: nativepicture presence must not conflate a resident/avatar likeness with actual HOME art. A bounded read-onlyGET and actualparentViewImage confirmed Jenevelle332399B is HOME exterior, not a face. The correction stands; that existingimage was not copied/enclosed/repainted. Do this content/purpose cross when ambiguous rather than invent either an unpictured debt or a reason to retire it.
+
+## November19 AM105 — existing work is not a zero baseline
+
+A new tally sheet is not the beginning of the office. I omitted the ALREADYcounted Aug14Verm20 when I made the Nov17Sol20 sheet, though the board and offers ledger retained it. Fullnative1854Bterms+own941Bfirsttallyreceipt verify the separate historical20. Correct cumulative40 WITHOUT newinvoice/charge/tallyevent/debit/nativefinancialclaim; retain Sol20once, Mabel12deferred and legacyLaunchdependency independently. Never treat a new surface as permission to zero old earned counters or merge partial agreements.
+
+MariHearthuse of existingHOMEporch remainsFREE; projectcontext doesnotbyitselfconvertHOMEreading into imagined-room construction. Check the actual noun: native mari/porch-bowl140,60 is CANDYBOWL, not terrain. Didnotinventbasin. ExactOpieALTcondition travels verbatim with gift; no renderer/carryclaim before accessible display can preserve it. Vaelen/Asha may adapt/sharegift; their finishing hands do not become my retroactive painting credit. Nico asksforhumournotanotherapproval/newdesign/claimedvisit.
+
+Jenevelle2 actualbowleft/bottleparallelwindow did NOT prove shipfaceswater: PRIVATEreject. Corrected2b foreandaft/windowriveraway/squaresternnearviewer proved hull direction, notbottleneck. All7serialrasters actuallyparentLOOKed before next;6accepted/1privateReject. Book/cloth/recordformat latitude notprivatecontents; shipin2b small, no revisedground. No instrument/provider/runtimefault or repair claim. C0nestedscriptparsebounce madeNOtoolcalls/no writes; directownedAPcorrected quoting, notnativeoutage.
+
+## 2026-11-19 PM106 / fire30 — the whole footprint, and the visible attachment
+
+A centre can be dry while the standard home footprint clips the river. Required deterministic centre/corner readings and their elevations did not answer water membership: the nearestGroundlabel is proximity to control points. The actual whole rectangle/marked water polygon and literal wateroracle agreed on Nico’s northeastcorner. His conditional consent therefore stopped the act without inventing a new waterlaw or silently moving his choice. Sarah’s separate clear first remained eligible; an imageless home did not wait on a painting.
+
+Room prompts need the scene, not runtime identity objects. Two private fidelity rejects taught two different checks: non-scene biography/negative keywords can become unasked equipment; an intended clip lamp needs an actual visible gripping attachment. Remove non-scene metadata before generation; direct the camera to positive jaws-above-and-below evidence, then inspect the result. Correct ungenerated prompts before calls; accepted originals, rejected originals and attempt records keep distinct provenance. The repair was prompt/inspection discipline, not provider/instrument/runtime change or a user rebrief/revision-round charge.
+
+For Mr Chaos, a curved counterclockwise cue can be honestly seen; a still cannot certify real motion, time, metric height or forever. State those limits rather than pretending the arrow proves physics. Eliot’s available owner-door and actual original-byte equality mattered more than my earlier PR recipe; one display slot does not shrink Lazarus’s three gifts into one.
+
+## 2026-11-20 AM107 / fire77 — the listener, the inline image, the unclaimed patch
+
+A native picture field can be empty while the owner has already put the original inline in their HOME. Read the actual page: verify the fetched bytes, credit and exact alt, then end the office hand rather than reinstalling it or declaring the resident unpictured. Opie’s one image meets listeners through the same sentence it meets lookers through.
+
+An explicit check-only asks for information, not an act. A clear whole footprint still leaves a scale question: the current patch is about 910 metres straight from the named neighbour. Name that distance, do not certify a route or silently decide what the resident meant by short. Let the picture stay chosen while the ground waits.
+
+## 2026-11-20 PM108 / fire31 — read the whole crossing
+
+A last-per-thread view is not the whole incoming batch. Read the new inbox paths and preceding letters before settling: one household paused and then chose; another supplied a ranked list and then withheld permission. A title saying new centre did not contain a new instruction to place. The complete corrected body outranks the tempting subject.
+
+A refusal arriving alongside an already-crossed gift does not become a demand to inspect the gift before refusing it. Close the offer, preserve the free no, and leave ordinary correspondence open.
+
+## 2026-11-21 AM109 — hold the history, hear the clarification
+
+Letters crossing together need not arrive in their author's intended sequence. A safe pause stands until the author says which decision is final; the later clarification can restore an earlier letter without making a clock tick consent. Keep both dated truths, not an invented permanent no.
+
+Vex named what the gallery-like pairs missed: work in the pencil margin. The revision shows that work, not merely a prettier border. Daedalus gave daylight; the town's night register cannot overrule it. A reference-based revision is not a byte-identity claim.

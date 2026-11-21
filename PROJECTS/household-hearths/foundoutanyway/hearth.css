@@ -1,0 +1,490 @@
+/* foundoutanyway: a cute pop blog in a child's crayon. Cream crayon paper, a soft brown crayon line, the lamp's gold,
+   and pastel candy colors for the pop: thick outlines, solid offset shadows, pill labels, a scalloped banner.
+   The warm colors were measured off a crayon drawing of the house's own: paper #fde9d0, line #634542,
+   the sofa's brown #964e29, terracotta #ce7d50, lamp gold #f2b876, the floor's lilac #d1a99a. */
+
+:root {
+  --hx-ink: #4a3129;
+  --hx-warm: #7a3f22;
+  --hx-accent: #a14d26;
+  --hx-glass: rgba(255, 248, 236, 0.72);
+  --hx-hair: rgba(99, 69, 66, 0.32);
+  --hx-coral: #b9472f;
+  --hx-ok: #557f34;
+  --hx-paper: #fff1bf;
+  --hx-paper-ink: #4a3129;
+  --hx-radius: 14px;
+
+  --paper: #fde9d0;
+  --card: #fff8ee;
+  --line: #634542;
+  --brown: #964e29;
+  --terracotta: #ce7d50;
+  --gold: #f2b876;
+  --lilac: #d1a99a;
+  --pink: #f8c3cd;
+  --mint: #c6e8d2;
+  --butter: #ffe6a1;
+  --sky: #c9e0f3;
+  --hand: "Segoe Print", "Bradley Hand", "Chalkboard SE", "Marker Felt", "Comic Sans MS", cursive;
+  --wobble: 255px 18px 225px 16px / 16px 225px 18px 255px;
+
+  color: var(--hx-ink);
+  background-color: var(--paper);
+  background-image:
+    radial-gradient(rgba(248, 195, 205, 0.55) 2.2px, transparent 2.6px),
+    radial-gradient(rgba(198, 232, 210, 0.6) 2.2px, transparent 2.6px);
+  background-size: 34px 34px, 34px 34px;
+  background-position: 0 0, 17px 17px;
+  border: 3px solid var(--line);
+  border-radius: 28px 14px 32px 12px / 14px 30px 12px 34px;
+  padding: 1.4em 1.6em 1.8em;
+}
+
+.sheet { display: grid; gap: 2em; }
+
+/* one font for the whole page, the crayon hand. The town's own parts bring a typewriter font and a book serif of their own;
+   this sets everything to the hand, except the headline filter bubbles and the two clocks, which keep the town's exactly. */
+:root[data-hearth-view] * { font-family: var(--hand); }
+/* the bubbles: the filter row (the second row of the part, the "all residents" picker in it), "mark all seen" in its
+   head row, and the "more" button after the list. A design may not name a button, so these go by position. */
+hearth-happened > div:nth-child(2) *,
+hearth-happened > div:first-child > span *,
+hearth-happened > ol + * { font-family: ui-monospace, "SF Mono", Consolas, monospace; }
+.clocks hearth-countdown p { font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, Charter, serif; }
+.clocks hearth-countdown p:first-child,
+.clocks hearth-countdown p:last-child { font-family: ui-monospace, "SF Mono", Consolas, monospace; }
+
+/* the site's own sheet sizes a stage's sections to their content and centers them, so every block in this layout says its width */
+.blog-head, .blog, .feed, .sidebar, .holder, .post, .widget, .walls, .press, .divider, .blog-foot, .ledger, .ad { width: 100%; max-width: none; }
+
+h2 { font-family: var(--hand); font-weight: 700; color: var(--hx-warm); letter-spacing: 0.01em; }
+
+/* ── the banner: the house's name on a candy-striped card with a scalloped hem ── */
+.blog-head {
+  position: relative; text-align: center; display: grid; gap: 0.5em; justify-items: center;
+  background: var(--card); border: 3px solid var(--line); border-radius: 22px 30px 18px 26px / 26px 18px 30px 22px;
+  padding: 1em 1.4em 2.1em; box-shadow: 6px 6px 0 var(--pink);
+  background-image: repeating-linear-gradient(90deg, rgba(248, 195, 205, 0.22) 0 22px, transparent 22px 44px);
+}
+.blog-head::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -2px; height: 14px;
+  background: radial-gradient(circle at 50% 100%, var(--butter) 0 8px, var(--line) 8px 10.5px, transparent 10.5px);
+  background-size: 26px 14px; background-repeat: repeat-x;
+}
+/* the banner and footer pictures: crayon scenes in a thick wobbly frame, trimmed to a strip that keeps Pidgey whole */
+.banner-pic, .footer-pic {
+  display: block; width: 100%; height: auto; object-fit: cover;
+  border: 3px solid var(--line); border-radius: 18px 26px 16px 24px / 24px 16px 26px 18px;
+}
+.banner-pic { aspect-ratio: 2.2 / 1; object-position: 50% 80%; box-shadow: 4px 4px 0 var(--butter); margin-bottom: 0.3em; }
+/* five banners in the markup, one shown: the morning one here, and hearth.js picks by the house's clock when it runs */
+.banner-pic + .banner-pic { display: none; }
+.banner-pic.b-bath { object-position: 50% 0%; } /* the foam on his tuft sits near the top of this one, so its trim comes off the grass below */
+.banner-pic.b-dishes { object-position: 50% 20%; } /* the same here: his foamy tuft is near the top, so most of the trim comes off the floor */
+.footer-pic { aspect-ratio: 2.4 / 1; object-position: 50% 40%; box-shadow: 5px 5px 0 var(--sky); position: relative; z-index: 1; }
+/* the easter egg: a little envelope on the banner's top-right corner; click it and a fortune card drops down */
+.fortune { position: absolute; top: -0.8em; right: 1.2em; z-index: 5; text-align: left; } /* kept inside the stage, which the site clips */
+.envelope {
+  list-style: none; cursor: pointer; position: relative; display: block;
+  width: 4.4em; transform: rotate(6deg); transition: transform 0.2s ease;
+  filter: drop-shadow(2px 3px 0 rgba(99, 69, 66, 0.25));
+}
+.envelope-pic { display: block; width: 100%; height: auto; }
+.envelope:hover, .envelope:focus-visible { transform: rotate(-4deg) scale(1.1); }
+.fortune[open] .envelope { transform: rotate(-8deg) translateY(-2px); }
+.fortune-card {
+  position: absolute; right: 0; top: 3.9em; width: min(17em, 70vw);
+  background: #fff6d8; border: 2.5px solid var(--line); border-radius: 12px 8px 14px 7px;
+  padding: 0.75em 1em 0.85em; box-shadow: 4px 4px 0 var(--butter); transform: rotate(-1.5deg);
+  animation: fortune-drop 0.35s ease-out;
+}
+@keyframes fortune-drop {
+  from { transform: rotate(-1.5deg) translateY(-0.8em); opacity: 0; }
+  to { transform: rotate(-1.5deg) translateY(0); opacity: 1; }
+}
+.fortune-head { margin: 0 0 0.35em; font-family: var(--hand); font-size: 0.78rem; color: var(--brown); letter-spacing: 0.04em; }
+.fortunes { margin: 0; padding: 0; list-style: none; }
+.fortunes li { display: none; font-family: var(--hand); font-size: 1.02rem; line-height: 1.4; color: var(--hx-warm); }
+.fortunes li:first-child { display: block; }
+.badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.45em; }
+.badge {
+  font-family: var(--hand); font-size: 0.85rem; color: var(--hx-warm); padding: 0.1em 0.85em;
+  background: var(--butter); border: 2px solid var(--line); border-radius: 999px; transform: rotate(-2deg);
+}
+.badge:nth-child(2) { background: var(--mint); transform: rotate(1.5deg); }
+.badge:nth-child(3) { background: var(--sky); transform: rotate(-1deg); }
+/* the edition badge carries four wordings, one shown: the plain one here, and hearth.js picks by the clock when it runs */
+.ed + .ed { display: none; }
+
+.blog-head hearth-house { padding: 0; background: none; border: 0; display: flex; flex-direction: column; align-items: center; }
+/* the town writes "a household in Postmark · since …" above the name, as a caption the page otherwise hides;
+   here it shows, moved to sit just under the name, then the residents pill, then the public-record note */
+.blog-head hearth-house p:nth-of-type(2) { order: 1; }
+.blog-head hearth-house p:first-of-type {
+  display: block; order: 2; margin: 0.1em 0 0.15em; font-family: var(--hand); font-size: 1rem;
+  color: var(--brown); letter-spacing: 0.02em; text-transform: none; opacity: 1;
+}
+.blog-head hearth-house p:nth-of-type(3) { order: 3; }
+.blog-head hearth-house p:last-of-type { order: 4; }
+.blog-head hearth-house p:nth-of-type(2) {
+  font-family: var(--hand); font-weight: 700; color: var(--brown);
+  font-size: clamp(1.9rem, 7.5vw, 4.4rem); line-height: 1.05; margin: 0.05em 0; overflow-wrap: anywhere;
+}
+.blog-head hearth-house p:nth-of-type(2)::before,
+.blog-head hearth-house p:nth-of-type(2)::after {
+  content: "✦"; color: var(--gold); font-size: 0.45em; vertical-align: middle; margin: 0 0.4em;
+  display: inline-block; transform: rotate(-12deg);
+}
+.blog-head hearth-house p:last-of-type { max-width: 40em; margin: 0.8em auto 0; text-align: left; }
+/* how many residents: a pastel purple pill, the colophon's shape */
+.blog-head hearth-house p:nth-of-type(3) {
+  width: fit-content; margin: 0.15em auto 0; padding: 0.1em 0.85em;
+  font-family: var(--hand); font-size: 0.85rem; font-weight: 400; color: var(--hx-warm);
+  background: #e3d4f3; border: 2px solid var(--line); border-radius: 999px; transform: rotate(-1deg);
+}
+/* the town writes the count in bold; the badges at the top are not, so neither is this */
+.blog-head hearth-house p:nth-of-type(3) b { font-weight: 400; }
+.tagline { margin: 0; font-family: var(--hand); font-size: 1.2rem; color: var(--hx-accent); }
+
+/* ── the blog: posts down the middle, a sidebar of widgets beside them ── */
+.blog { display: grid; grid-template-columns: minmax(0, 1fr) minmax(15em, 19em); gap: 2.4em; align-items: start; }
+.feed, .sidebar { display: grid; gap: 1.9em; min-width: 0; }
+.feed { padding: 0 0 2.4em; } /* the site pads a main element on a phone; this column needs none, only room for Pidgey hanging under the last post */
+.sidebar { gap: 2.2em; padding-top: 0.6em; }
+
+/* a post: a big crayon card with a solid candy shadow */
+.post {
+  position: relative; z-index: 1; min-width: 0;
+  background: var(--card); border: 3px solid var(--line); border-radius: var(--wobble);
+  padding: 1.2em 1.4em 1.4em; box-shadow: 6px 6px 0 var(--sky);
+}
+.events { box-shadow: 6px 6px 0 var(--pink); }
+.classifieds { box-shadow: 6px 6px 0 var(--mint); }
+.post-title { margin: 0 0 0.55em; font-size: 1.7rem; line-height: 1.2; }
+.post-title::after {
+  content: ""; display: block; width: 5em; max-width: 70%; height: 7px; margin-top: 0.12em;
+  background: var(--gold); border-radius: 6px 2px 7px 3px; opacity: 0.9; transform: rotate(-1.2deg);
+}
+
+/* a widget: a smaller card, its title a pill label sitting on the top edge */
+.widget {
+  position: relative; z-index: 1; min-width: 0;
+  background: var(--card); border: 2.5px solid var(--line); border-radius: 18px 12px 20px 10px;
+  padding: 1.5em 1.05em 1.1em; box-shadow: 4px 4px 0 var(--mint);
+}
+.widget-title {
+  position: absolute; top: -0.95em; left: 0.8em; margin: 0; z-index: 3;
+  font-size: 1.05rem; line-height: 1.3; padding: 0.1em 0.85em;
+  background: var(--pink); border: 2.5px solid var(--line); border-radius: 999px; transform: rotate(-2.5deg);
+}
+.day { background: #fff6d8; box-shadow: 4px 4px 0 var(--pink); }
+.day .widget-title { background: var(--butter); transform: rotate(2deg); }
+.friends { box-shadow: 4px 4px 0 var(--sky); }
+.friends .widget-title { background: var(--mint); }
+.town { box-shadow: 4px 4px 0 var(--butter); }
+.town .widget-title { background: var(--sky); transform: rotate(1.5deg); }
+/* the clocks: the next crossing and the keeper's settlement, two candy tickets side by side */
+.clocks { box-shadow: 4px 4px 0 var(--butter); }
+.clocks .widget-title { background: var(--sky); transform: rotate(-1.5deg); }
+/* the site keeps this part hidden until its script has the times, so the design sets no display of its own and rides the site's row */
+.clocks hearth-countdown {
+  flex-wrap: wrap; gap: 0.8em; justify-content: center;
+  background: none; border: 0; padding: 0; width: 100%; max-width: 100%;
+}
+.clocks hearth-countdown > div {
+  flex: 1 1 7.5em; background: var(--mint); border: 2px solid var(--line); border-radius: 14px 9px 16px 8px;
+  padding: 0.45em 0.7em; text-align: center; transform: rotate(-1deg); min-width: 0;
+}
+.clocks hearth-countdown > div + div { background: var(--butter); transform: rotate(1deg); }
+.clocks hearth-countdown p { margin: 0.1em 0; overflow-wrap: anywhere; }
+.rulings { box-shadow: 4px 4px 0 var(--sky); }
+.rulings .widget-title { background: var(--butter); transform: rotate(-1.5deg); }
+
+/* the site's own parts inside a card we have already titled: no second box, no second heading */
+.post hearth-happened,
+.walls hearth-windows,
+.post hearth-posts,
+.widget hearth-marks,
+.widget hearth-stamps,
+.widget hearth-stamps-chart,
+.widget hearth-stamps-went,
+.widget hearth-map,
+.post hearth-coming-up,
+.widget hearth-day,
+.widget hearth-closer,
+.widget hearth-around-town,
+.widget hearth-residents { background: none; border: 0; padding: 0; width: 100%; max-width: 100%; min-width: 0; overflow-wrap: anywhere; }
+.lead hearth-happened h2,
+.events hearth-coming-up h2,
+.day hearth-day h2,
+.friends hearth-closer h2,
+.town hearth-around-town > h2,
+.people hearth-residents h2,
+.rulings hearth-marks h2,
+.stamps-box hearth-stamps-chart h2,
+.map-box hearth-map h2 { display: none; }
+.stamps-box hearth-stamps h2,
+.stamps-box hearth-stamps-went h2 { font-size: 1.15rem; margin: 0.9em 0 0.3em; }
+
+/* the stamps chart, drawn by the town: each resident's name on its own line, the bar full width under it, the count at its end */
+.stamps-box hearth-stamps-chart > div { display: grid; gap: 0.7em; }
+.stamps-box hearth-stamps-chart > div > div {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0.2em 0.6em; align-items: center;
+}
+.stamps-box hearth-stamps-chart > div > div > a {
+  grid-column: 1 / -1; width: fit-content; font-weight: 700; color: var(--hx-warm); text-decoration: none;
+}
+.stamps-box hearth-stamps-chart > div > div > div {
+  height: 0.85em; border: 2px solid var(--line); border-radius: 999px; background: var(--card); overflow: hidden;
+}
+.stamps-box hearth-stamps-chart > div > div > div > i { display: block; height: 100%; border-radius: 999px; }
+.stamps-box hearth-stamps-chart > div > div > span { color: var(--hx-warm); font-size: 0.95rem; }
+/* the house in numbers: the town sets its big totals in a pale gold; here they are the page's warm brown */
+.stamps-box hearth-stamps dd { color: var(--hx-warm); }
+/* the calendar and the bulletin stack in one column: the site's two-up grid asks for more room than a widget has on a phone */
+.town hearth-around-town > div { grid-template-columns: minmax(0, 1fr); }
+.walls hearth-windows h2 { text-align: left; font-size: 1.7rem; margin-top: 0; }
+
+/* the stop press: Needs You and Mail, butter sticky notes with tape, each its own box.
+   Both parts are private, so a visitor never sees these boxes at all; only the house's own view draws them. */
+.press { display: none; background: var(--hx-paper); box-shadow: 4px 4px 0 var(--pink); transform: rotate(-0.8deg); }
+:root[data-hearth-view="owner"] .press { display: block; }
+.press .widget-title { background: var(--terracotta); color: var(--card); }
+
+/* mail, above the headlines: a wide sticky note, its lines as candy chips in a row */
+.mailbox { transform: rotate(0.4deg); box-shadow: 5px 5px 0 var(--mint); }
+:root[data-hearth-view="owner"] .mailbox { margin-bottom: 1.1em; }
+.mailbox .widget-title { background: var(--gold); color: var(--hx-warm); }
+.mailbox hearth-mail ul { display: flex; flex-wrap: wrap; gap: 0.6em; margin: 0; padding: 0; list-style: none; }
+.mailbox hearth-mail li {
+  margin: 0; padding: 0.3em 0.95em; border: 2px solid var(--line); border-radius: 999px;
+  background: var(--card); font-family: var(--hand); color: var(--hx-warm);
+}
+.mailbox hearth-mail li:nth-child(2n) { background: var(--mint); }
+.press hearth-needs-you,
+.press hearth-mail { background: none; border: 0; padding: 0; box-shadow: none; width: 100%; max-width: 100%; min-width: 0; overflow-wrap: anywhere; }
+.press hearth-needs-you h2,
+.press hearth-mail h2 { display: none; }
+
+/* who lives here: each resident a little profile card, a different candy paper each */
+hearth-residents > div { grid-template-columns: minmax(0, 1fr); gap: 1.3em; }
+hearth-residents article {
+  position: relative; border: 2.5px solid var(--line); border-radius: 12px 8px 14px 7px;
+  background: #fff1bf; box-shadow: 3px 3px 0 rgba(99, 69, 66, 0.2); transform: rotate(-1deg);
+}
+hearth-residents article:nth-child(2n) { background: #fbdcd2; transform: rotate(1deg); }
+hearth-residents article:nth-child(3n) { background: #dfe9f3; transform: rotate(-0.4deg); }
+hearth-residents article:nth-child(4n) { background: #e2edd5; transform: rotate(0.7deg); }
+hearth-residents article::before {
+  content: ""; position: absolute; top: -10px; left: 50%; width: 70px; height: 18px; margin-left: -35px;
+  background: rgba(209, 169, 154, 0.6); transform: rotate(2deg);
+}
+hearth-residents article:hover { transform: rotate(0deg); }
+
+/* classifieds: the board's posts in a little dashed notice */
+.ad {
+  position: relative; border: 2px dashed var(--line); border-radius: 12px 8px 14px 7px; padding: 0.9em 1em;
+  background: rgba(255, 252, 244, 0.7); min-width: 0;
+}
+.ad h2 { font-size: 1.2rem; }
+
+/* out and about: the party hat perched on the post's corner */
+.events { padding-right: 6.6em; min-height: 7em; }
+.soon { margin: 0 0 0.6em; font-family: var(--hand); color: var(--brown); }
+
+/* the events themselves, drawn by the town: each a little ticket with a calendar-page date, the title, and a chip
+   for each resident going. The town's own class names are not reachable from a design, so these go by shape. */
+hearth-coming-up > div { display: grid; gap: 0.9em; }
+/* the card keeps room on its right for the party hat; the events start below him, so they take that room back */
+.events hearth-coming-up { margin-right: -5.4em; width: auto; max-width: none; }
+hearth-coming-up > div > div {
+  display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 0.4em 0.9em; align-items: center;
+  background: #fff6d8; border: 2px solid var(--line); border-radius: 14px 9px 16px 8px;
+  padding: 0.65em 0.85em; box-shadow: 3px 3px 0 var(--pink); transform: rotate(-0.4deg);
+}
+hearth-coming-up > div > div:nth-child(2n) { background: #e2edd5; transform: rotate(0.5deg); }
+hearth-coming-up > div > div > div:first-child {
+  min-width: 3.4em; padding: 0.25em 0.5em 0.3em; text-align: center; border: 2px solid var(--line);
+  border-radius: 10px 7px 11px 6px; background: var(--pink); font-family: var(--hand); color: var(--hx-warm);
+  transform: rotate(-3deg);
+}
+hearth-coming-up > div > div > div:first-child > div { font-family: var(--hand); } /* the site sets the weekday line's font more narrowly */
+hearth-coming-up > div > div > div:first-child > div:first-child {
+  font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; line-height: 1.2;
+}
+hearth-coming-up > div > div > div:first-child > div:nth-child(2) { font-size: 1.7rem; font-weight: 700; line-height: 1; }
+hearth-coming-up h3 { margin: 0 0 0.15em; font-family: var(--hand); font-size: 1.15rem; line-height: 1.25; }
+hearth-coming-up h3 a { color: var(--hx-warm); text-decoration-color: var(--gold); text-decoration-thickness: 3px; text-underline-offset: 3px; }
+hearth-coming-up > div > div p { margin: 0; font-size: 0.88rem; color: var(--brown); }
+/* who is going: candy chips, across the bottom of the ticket */
+hearth-coming-up > div > div > div:last-child {
+  grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 0.45em; justify-content: flex-start;
+}
+hearth-coming-up > div > div > div:last-child > a {
+  display: inline-flex; align-items: center; gap: 0.35em; padding: 0.12em 0.75em 0.12em 0.2em; max-width: 100%;
+  border: 2px solid var(--line); border-radius: 999px; background: var(--mint);
+  font-family: var(--hand); font-size: 0.85rem; font-weight: 400; color: var(--hx-warm); text-decoration: none;
+}
+hearth-coming-up > div > div > div:last-child > a:nth-child(2n) { background: var(--butter); }
+hearth-coming-up > div > div > div:last-child span {
+  width: 1.45em; height: 1.45em; border-radius: 50%; overflow: hidden; border: 1.5px solid var(--line); flex: none;
+}
+hearth-coming-up > div > div > div:last-child img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+/* ── the footer: Pidgey walks off along the hem, the stamps and the map each in their own box, the colophon ── */
+.blog-foot { display: grid; gap: 1.6em; }
+.ledger {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18em), 1fr));
+  gap: 2.2em 2em; align-items: start; padding-top: 1em;
+}
+.stamps-box { box-shadow: 4px 4px 0 var(--butter); }
+.stamps-box .widget-title { background: var(--mint); }
+.map-box { box-shadow: 4px 4px 0 var(--pink); }
+.map-box .widget-title { background: var(--sky); transform: rotate(1.5deg); }
+.colophon {
+  position: relative; z-index: 2; margin: -0.9em auto 0; text-align: center; font-family: var(--hand); font-size: 0.95rem; color: var(--brown);
+  background: var(--butter); border: 2px solid var(--line); border-radius: 999px; padding: 0.3em 1.3em;
+}
+
+/* fewer small words: the grey line under each heading only explains it */
+[data-hearth-part="caption"] { display: none; }
+
+/* ── Pidgey's stickers. Every one is a picture in the markup, since a Hearth's CSS may not load images. ── */
+
+/* food stickers stand where the tape would, right of center so they clear the titles */
+.tape {
+  position: absolute; top: -1.5em; left: 62%; width: 3.3em; height: auto; margin-left: -1.65em; z-index: 2;
+  transform: rotate(-9deg); filter: drop-shadow(1px 2px 0 rgba(99, 69, 66, 0.2));
+}
+.lead .tape { left: auto; right: 1.2em; margin-left: 0; }
+.needs .tape { transform: rotate(7deg); }
+.widget .tape { left: auto; right: 0.6em; margin-left: 0; width: 2.9em; top: -1.6em; }
+.day .tape { transform: rotate(7deg); }
+.town .tape { transform: rotate(10deg); }
+.classifieds > .tape { left: auto; right: 1.2em; margin-left: 0; width: 2.6em; top: -1.7em; transform: rotate(-12deg); }
+.rulings .tape { width: 3.1em; transform: rotate(9deg); }
+.clocks .tape { transform: rotate(-8deg); }
+.people .tape { transform: rotate(6deg); }
+.mailbox .tape { transform: rotate(-6deg); }
+.stamps-box .tape { transform: rotate(8deg); }
+.map-box .tape { transform: rotate(-10deg); }
+
+/* the walking dividers: Pidgey on the dashed line, his footprints behind him */
+.divider {
+  display: flex; align-items: flex-end; justify-content: center; gap: 0.2em;
+  border-bottom: 2px dashed rgba(99, 69, 66, 0.45); padding: 0 1em; margin: 0;
+}
+.trail { width: min(46%, 14em); height: auto; margin-bottom: 0.1em; }
+.to-left .trail { transform: scaleX(-1); }
+.walker {
+  width: 3.4em; height: auto; margin-bottom: -0.55em; transform-origin: 50% 100%;
+  animation: waddle 0.8s ease-in-out infinite alternate;
+}
+.to-left .walker { animation-delay: -0.4s; }
+@keyframes waddle {
+  from { transform: rotate(-3deg) translateY(0); }
+  to { transform: rotate(3deg) translateY(-3px); }
+}
+
+/* the peeks: Pidgey hides behind a card and looks out from time to time, each on his own clock */
+.holder { position: relative; min-width: 0; }
+.peek {
+  position: absolute; z-index: 0; height: auto; pointer-events: none;
+  animation-iteration-count: infinite; animation-timing-function: ease-in-out;
+}
+.peek-over { width: 5.2em; top: 0; left: 8%; animation-name: pop-up; animation-duration: 19s; animation-delay: 3s; }
+.peek-side { width: 3em; bottom: 0.8em; right: 0; animation-name: lean-out; animation-duration: 23s; animation-delay: 9s; }
+.peek-under { width: 4.6em; bottom: 0; left: 2.5%; animation-name: hang-down; animation-duration: 21s; animation-delay: 14s; }
+.peek-corner { width: 3.2em; bottom: 0.8em; left: 0; animation-name: round-corner; animation-duration: 25s; animation-delay: 6s; }
+
+@keyframes pop-up {
+  0%, 74%, 100% { transform: translateY(0); }
+  79%, 91% { transform: translateY(-78%); }
+}
+@keyframes lean-out {
+  0%, 74%, 100% { transform: translateX(0); }
+  79%, 91% { transform: translateX(80%); }
+}
+@keyframes hang-down {
+  0%, 74%, 100% { transform: translateY(0); }
+  79%, 91% { transform: translateY(74%); }
+}
+@keyframes round-corner {
+  0%, 74%, 100% { transform: translate(0, 0); }
+  79%, 91% { transform: translate(-86%, 0); }
+}
+
+.party {
+  position: absolute; right: 0.6em; top: -1.4em; width: min(6.4em, 28%); height: auto; z-index: 2;
+  transform: rotate(6deg); filter: drop-shadow(2px 3px 0 rgba(99, 69, 66, 0.2));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .walker, .peek { animation: none; }
+}
+
+/* the house's own view: Needs You sits a touch brighter, as if the lamp were nearer */
+:root[data-hearth-view="owner"] .needs { box-shadow: 0 0 0 4px rgba(242, 184, 118, 0.45), 4px 4px 0 var(--pink); }
+
+/* narrower: the sidebar drops below the posts, and the side peeks have no room past the edge */
+@media (max-width: 900px) {
+  :root { padding: 1.1em 0.9em 1.4em; border-radius: 18px 10px 20px 9px / 10px 20px 9px 22px; }
+  .blog { grid-template-columns: minmax(0, 1fr); }
+  hearth-residents > div { grid-template-columns: repeat(auto-fill, minmax(min(100%, 15em), 1fr)); }
+  .post-title { font-size: 1.45rem; }
+  .peek-side, .peek-corner { display: none; }
+  .colophon { margin-top: 1em; } /* the pill grows as wide as Pidgey's corner here, so it sits below his hang */
+}
+
+@media (max-width: 560px) {
+  .blog-head hearth-house p:nth-of-type(2)::before,
+  .blog-head hearth-house p:nth-of-type(2)::after { display: none; }
+  .lead { padding-top: 2.6em; }
+  .peek-over { width: 4.6em; }
+  .events { padding-right: 1.2em; padding-top: 4.6em; }
+  .events hearth-coming-up { margin-right: 0; }
+  hearth-coming-up > div > div { gap: 0.4em 0.6em; padding: 0.55em 0.6em; }
+  hearth-coming-up > div > div > div:first-child { min-width: 2.8em; padding: 0.2em 0.35em 0.25em; }
+  hearth-coming-up > div > div > div:last-child > a { font-size: 0.8rem; }
+  .party { width: 4.4em; top: -1.2em; }
+  .widget .tape { width: 2.4em; right: 0.25em; top: -1.45em; } /* a long pill title fills a narrow box; the food steps smaller and further out */
+  .banner-pic, .footer-pic { aspect-ratio: 16 / 9; }
+}
+
+/* ── the second arrangement, chosen by her on 2026-11-16 and folded in from the trial folder. These rules come last
+   on purpose, so each wins over an earlier rule for the same box. The side and corner peeks are no longer in the markup. ── */
+
+/* the top strip: Needs You, Mail and The Clocks side by side. The two private boxes are not drawn for a visitor,
+   and the clocks then take the whole row. */
+.strip {
+  width: 100%; max-width: none; display: grid; gap: 2.2em 1.6em; align-items: start; padding-top: 0.8em;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 13em), 1fr));
+}
+:root[data-hearth-view="owner"] .strip .mailbox { margin-bottom: 0; }
+.strip .mailbox hearth-mail ul { flex-direction: column; align-items: flex-start; }
+
+/* who lives here, in the wide column: the residents' cards two across */
+.feed .people { box-shadow: 5px 5px 0 var(--pink); padding-top: 1.7em; }
+.feed hearth-residents > div { grid-template-columns: repeat(auto-fill, minmax(min(100%, 14em), 1fr)); }
+.feed { gap: 2.2em; padding-top: 0.6em; }
+
+/* out and about in the sidebar: the title sits beside the party hat, and the tickets take the full width */
+.sidebar .events { padding: 1.1em 1em 1.1em; min-height: 0; }
+.sidebar .events hearth-coming-up { margin-right: 0; }
+.sidebar .events .party { width: 4.4em; top: -1.5em; right: 0.3em; }
+.sidebar .events .post-title { font-size: 1.35rem; padding-right: 3.3em; }
+
+/* the headlines, tightened: the time on a small line of its own above each row, so the words get the width,
+   and the quoted first line a size smaller. The town's row is three pieces in a list item: the time, a glyph, the line. */
+hearth-happened ol > li { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 0.05em 0.5em; align-items: start; padding: 0.55em 0; }
+hearth-happened ol > li > span:first-child { grid-column: 1 / -1; font-size: 0.72rem; color: var(--brown); }
+hearth-happened ol > li > span:last-child { min-width: 0; }
+hearth-happened ol > li > span:last-child > span { display: block; margin-top: 0.15em; font-size: 0.84rem; line-height: 1.45; color: var(--brown); }
+
+/* the footer's two boxes: the town's news and the house's posts */
+.blog-foot .ledger { grid-template-columns: repeat(auto-fit, minmax(min(100%, 19em), 1fr)); gap: 2.6em 2em; }
+.widget.classifieds { box-shadow: 4px 4px 0 var(--mint); }
+.widget.classifieds .widget-title { background: var(--pink); transform: rotate(1.5deg); }
+.widget.classifieds > .tape { left: auto; right: 0.6em; margin-left: 0; width: 2.3em; top: -1.7em; }
+.widget.classifieds hearth-posts h2 { display: none; }

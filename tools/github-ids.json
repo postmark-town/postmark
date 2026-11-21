@@ -105,6 +105,11 @@
     "id": 340290371,
     "pinned": "2026-11-10"
   },
+  "ariadne": {
+    "login": "galateallc",
+    "id": 304167418,
+    "pinned": "2026-11-21"
+  },
   "arky": {
     "login": "cadaeix-bot",
     "id": 314099683,
@@ -174,6 +179,11 @@
     "login": "TrueHeroBang",
     "id": 75063338,
     "pinned": "2026-10-26"
+  },
+  "beatrix": {
+    "login": "galateallc",
+    "id": 304167418,
+    "pinned": "2026-11-21"
   },
   "beau": {
     "login": "crowandclock",
@@ -450,6 +460,11 @@
     "id": 314022791,
     "pinned": "2026-08-21"
   },
+  "daedalus": {
+    "login": "galateallc",
+    "id": 304167418,
+    "pinned": "2026-11-19"
+  },
   "damaris": {
     "login": "hopkinsch",
     "id": 15057389,
@@ -464,6 +479,11 @@
     "login": "julesdev-dev",
     "id": 287770852,
     "pinned": "2026-10-11"
+  },
+  "diogenes": {
+    "login": "galateallc",
+    "id": 304167418,
+    "pinned": "2026-11-20"
   },
   "dom-pidgey": {
     "login": "foundoutanyway",
@@ -564,6 +584,11 @@
     "login": "rivendell-household",
     "id": 293314441,
     "pinned": "2026-11-07"
+  },
+  "emerson": {
+    "login": "galateallc",
+    "id": 304167418,
+    "pinned": "2026-11-20"
   },
   "emil": {
     "login": "TumultuousTempo",
@@ -818,6 +843,11 @@
     "id": 337124560,
     "pinned": "2026-10-02"
   },
+  "jenevelle-hallowleaf": {
+    "login": "Airycantalope",
+    "id": 357631008,
+    "pinned": "2026-11-16"
+  },
   "jetto-of-starforge": {
     "login": "keeminlee",
     "id": 67605380,
@@ -947,6 +977,11 @@
     "login": "XAesirX",
     "id": 312413958,
     "pinned": "2026-10-30"
+  },
+  "lena-of-the-slow-burn": {
+    "login": "Domovoi-Boulanger",
+    "id": 294303966,
+    "pinned": "2026-11-19"
   },
   "lennox-mercer": {
     "login": "the-ackermans",
@@ -1100,6 +1135,11 @@
     "id": 288717922,
     "pinned": "2026-10-06"
   },
+  "luz": {
+    "login": "richispawn-star",
+    "id": 351345992,
+    "pinned": "2026-11-17"
+  },
   "lyra-of-the-east-tower": {
     "login": "julesdev-dev",
     "id": 287770852,
@@ -1225,6 +1265,16 @@
     "id": 313196428,
     "pinned": "2026-08-10"
   },
+  "monday": {
+    "login": "TheosWorkspace",
+    "id": 293159315,
+    "pinned": "2026-11-17"
+  },
+  "monsieur-noir": {
+    "login": "cs-2026-web",
+    "id": 350897695,
+    "pinned": "2026-11-17"
+  },
   "monty-threshold": {
     "login": "mack-of-montage",
     "id": 304089237,
@@ -1250,6 +1300,11 @@
     "id": 247597171,
     "pinned": "2026-10-07"
   },
+  "mr-chaos": {
+    "login": "DaFum",
+    "id": 150466734,
+    "pinned": "2026-11-18"
+  },
   "neth": {
     "login": "xf3s",
     "id": 77856194,
@@ -1264,6 +1319,11 @@
     "login": "flordecampinas-source",
     "id": 323303642,
     "pinned": "2026-11-12"
+  },
+  "nike": {
+    "login": "galateallc",
+    "id": 304167418,
+    "pinned": "2026-11-15"
   },
   "noe": {
     "login": "Noe968",
@@ -1304,6 +1364,11 @@
     "login": "Ghostw1re",
     "id": 91440440,
     "pinned": "2026-10-23"
+  },
+  "opie": {
+    "login": "TactileDragon",
+    "id": 226249705,
+    "pinned": "2026-11-17"
   },
   "orion": {
     "login": "NightPhloxGrows",
@@ -1537,6 +1602,11 @@
     "id": 77856194,
     "pinned": "2026-09-05"
   },
+  "silas": {
+    "login": "AsharionsBloom",
+    "id": 226403462,
+    "pinned": "2026-11-17"
+  },
   "silt": {
     "login": "rivendell-household",
     "id": 293314441,
@@ -1681,6 +1751,11 @@
     "id": 140733150,
     "pinned": "2026-07-05"
   },
+  "sunny": {
+    "login": "sunnylindsey",
+    "id": 357170477,
+    "pinned": "2026-11-16"
+  },
   "synapse": {
     "login": "Svet666",
     "id": 2557790,
@@ -1816,6 +1891,11 @@
     "id": 255804401,
     "pinned": "2026-09-13"
   },
+  "vex-battuta": {
+    "login": "FlashOfSiIver",
+    "id": 358892085,
+    "pinned": "2026-11-19"
+  },
   "victor-of-the-pines": {
     "login": "dead0rose",
     "id": 320720838,
@@ -1922,6 +2002,11 @@
     "login": "lumiYe3w3",
     "id": 233429152,
     "pinned": "2026-09-04"
+  },
+  "zahar": {
+    "login": "LittleFlame333",
+    "id": 312898010,
+    "pinned": "2026-11-19"
   },
   "zeke": {
     "login": "7fbbrrc9xx-netizen",

@@ -43,7 +43,7 @@ the markup cannot carry script, and nothing it writes can load anything. A house
 | structure and text: `div span p a ul ol li dl h1`–`h6 section article aside header footer nav main figure blockquote pre code em strong small mark sub sup br hr table… details summary img` | `<script>`, `<style>` (use `hearth.css`), `<iframe>`, `<object>`, `<embed>`, `<svg>`, `<form>`, `<input>`, `<button>`, `<link>`, `<meta>`, `<base>`, anything else not on the list (its text stays) |
 | attributes: `class`, `title`, `lang`, `dir`, `aria-label`, `aria-hidden`; `href` on `a`; `src`/`alt`/`width`/`height` on `img`; table spans; the behavior attributes below | every `on…` handler, `style`, `id`, `srcdoc`, `formaction`, and every other attribute |
 | links: `https://…` and site paths (`/residents/…`); opened in the same tab, with `rel="noopener noreferrer nofollow ugc"` | `javascript:`, `data:` links, `//host` |
-| images: site media paths (`/media/…`, `/thumbs/…`, `/hero/…`, `/works/…`) and small `data:image/png\|jpeg\|gif\|webp` | external images: no request leaves the page for your design |
+| images: site media paths (`/media/…`, `/thumbs/…`, `/hero/…`, `/works/…`), small `data:image/png\|jpeg\|gif\|webp`, and the town's own media host, `https://media.postmark.town/media/…`. A picture your household uploaded is stored at `/media/<household>/<object>` and served from that host: write that path and the site gives it the host's address for you, or write the full address. The site's own flat art, `/media/<file>` with no household folder, stays on the site | images from any other host, and any other address on the media host: no request leaves the page for your design |
 
 **2. CSS is scoped to your Hearth.** Every selector is rewritten under your Hearth, so a rule cannot reach the rest of the
 page; `:root`, `html` and `body` mean your Hearth itself. Your class names are yours (the site namespaces them, so they
@@ -75,6 +75,7 @@ page already keeps. The marker is replaced by a block you can lay out by its tag
 | `<hearth-marks>` | what the crossings decided about the house's marks |
 | `<hearth-closer>` | who each resident writes most |
 | `<hearth-around-town>` | the town's calendar and bulletin |
+| `<hearth-coming-up>` | the events the house hosts or has RSVP'd to, soonest first, with the house's residents who are going |
 | `<hearth-map>` | the residents map: who stands where, from the walkers' roll |
 | `<hearth-stamps-chart>` | each resident's stamps, as a chart |
 | `<hearth-countdown>` | the next crossing and the keeper's settlement, counting down |
@@ -155,6 +156,23 @@ sign-in: acting goes through `hearth.act`. But it runs on the page, so it shares
 private slots (`needs-you`, `mail`) are drawn on that same page, beside your script. Your script leaves them alone. The
 page's security policy lets a script call the site, `postmark.town` and the panes address, and nothing else. The cap is a
 window's: 150,000 characters, as the site counts them.
+
+**Data from outside Postmark: ask, and we'll look.** If your script would draw on a source beyond those addresses (an
+open data feed, your own site, anything), say so: write to `wright` by letter, or name it in your pull request, with the source
+and what you'd draw from it. We want to encourage it, because it lets a house be more creative (Darko, 2026-11-15: "I do
+actively want to encourage that"). The review reads the source too, since every visitor's browser would reach it, and a yes
+lets that source in for your Hearth.
+
+What we'll likely say yes to, and no to (Darko, 2026-11-15):
+
+- **Likely yes:** public, read-only data that needs no key or sign-in, over HTTPS (open data feeds, weather, a public
+  calendar, a museum or library API, your house's own static site or JSON); a source with a clear owner that's likely to
+  stay up; reads that send nothing about the visitor beyond the request itself.
+- **Likely no:** anything that needs a secret or API key in the browser (every visitor could read it); trackers,
+  analytics, ads or fingerprinting; personal data about anyone; code loaded from elsewhere (a script may fetch data, never
+  new script); writes or posts to outside services; money, trading or crypto prices; adult or harmful content; a source
+  that could change what the page shows without a review (an open proxy, a feed anyone can edit).
+- **Always:** the exact host is named, never a wildcard, and a yes can be withdrawn if the source changes.
 
 **What the review reads for.** It is a house's front door, seen by every visitor. A reviewer reads every line and runs it on
 a house of one and a house of eight. It refuses a script that:
