@@ -362,6 +362,40 @@ test('the check judges the bytes of the head it judged: a clean letter at the ju
   assert.deepEqual(r2.merged, []);
 }));
 
+// The body-size boundary, in the OFFICE'S REAL FORMAT (postmark-office src/write.mjs enqueueLetter): `---\n<fm>---\n\n` +
+// body.trim() + `\n`. The check counts the authored body's bytes, so a body of exactly MAX_BODY (100,000) bytes sails, one byte
+// more is refused, and the framing (the blank separator, the file's newline) never tips a body over the cap.
+const officeFile = (body, thread = 'new') =>
+  `---\nid: alice-2026-11-21-to-bob-note\nfrom: alice\nto: bob\ndate: 2026-11-21\nthread: ${thread}\n---\n\n${body.trim()}\n`;
+
+test('the size boundary in the office\'s own letter format: under and exactly at the cap sail, one byte over is refused', () => withTown(async ({ town, base }) => {
+  const MAX = 100_000;
+  for (const [label, body] of [
+    ['under by one byte', 'a'.repeat(MAX - 1)],
+    ['exactly the cap', 'a'.repeat(MAX)],
+    ['exactly the cap in multibyte UTF-8 (the euro sign is 3 bytes)', '\u20ac'.repeat(33_333) + 'a'],
+    ['exactly the cap with internal CRLFs (counted as written)', 'ab\r\n'.repeat(24_999) + 'abcd'],
+  ]) {
+    assert.equal(Buffer.byteLength(body), MAX - (label.startsWith('under') ? 1 : 0), label + ' (the fixture itself)');
+    const head = headCommit(town, base, [[FLAT, officeFile(body)]]);
+    const r = await witness(town, base, { head }, ['merge']);
+    assert.equal(r.code, 0, `${label}: ${r.stdout}${r.stderr}`);
+    assert.deepEqual(r.merged, [head], label);
+  }
+  await refused(town, base, { head: headCommit(town, base, [[FLAT, officeFile('a'.repeat(MAX + 1))]]) }, /letter exceeds the size courtesy/);
+  await refused(town, base, { head: headCommit(town, base, [[FLAT, officeFile('\u20ac'.repeat(33_334))]]) }, /letter exceeds the size courtesy/);
+}));
+
+test('the framing never counts: a cap-sized body sails whether the file ends with one newline, none, or the CRLF form', () => withTown(async ({ town, base }) => {
+  const body = 'a'.repeat(100_000);
+  const fm = '---\nid: alice-2026-11-21-to-bob-note\nfrom: alice\nto: bob\ndate: 2026-11-21\nthread: new\n---\n';
+  for (const file of [fm + '\n' + body + '\n', fm + '\n' + body, fm.replace(/\n/g, '\r\n') + '\r\n' + body + '\r\n', fm + body + '\n']) {
+    const head = headCommit(town, base, [[FLAT, file]]);
+    const r = await witness(town, base, { head }, ['merge']);
+    assert.deepEqual(r.merged, [head], JSON.stringify(file.slice(0, 5) + '…' + file.slice(-4)));
+  }
+}));
+
 test('CAN-FAIL: without the shared check at merge the same bad letters reach the attempted merge, whatever a workflow preflight does', () => withTown(async ({ town, base }) => {
   // the throwaway town carries a copy of tools/; take the call out of ITS witness.mjs and the bypass is back
   const f = join(town, 'tools', 'witness.mjs');

@@ -69,16 +69,24 @@ export function parseFrontmatter(content) {
   return fields;
 }
 
-// The body of a letter: what follows its frontmatter's closing fence, the bytes the office's body-size courtesy
-// counts (tools/letter-fields.mjs). Same fence rule as parseFrontmatter (a leading `---` line, a closing `\n---`
-// line); null when the frontmatter does not parse, so a caller cannot mistake "no body" for "no letter".
+// The body of a letter: the AUTHORED body, the bytes the office's body-size courtesy counts (tools/letter-fields.mjs).
+// The office writes a letter as `---\n<frontmatter>---\n\n` + body.trim() + `\n` (postmark-office src/write.mjs
+// enqueueLetter), so exactly two pieces of representation framing sit around the body in the file: the one blank
+// separator line after the closing fence, and the one newline that ends the file. This strips those and nothing else:
+// no trim, no global line-ending change, so the body's own UTF-8 bytes and its internal (or leading/trailing-internal)
+// CRLFs are counted as written. The fence rule is parseFrontmatter's (a leading `---` line, a closing `---` line,
+// a BOM skipped); null when the frontmatter does not parse, so a caller cannot mistake "no body" for "no letter".
 export function letterBody(content) {
-  const text = content.replace(/^﻿/, '').replace(/\r\n/g, '\n');
-  if (!text.startsWith('---\n')) return null;
-  const end = text.indexOf('\n---', 4);
+  const text = content.replace(/^\uFEFF/, '');
+  const open = text.startsWith('---\r\n') ? 5 : text.startsWith('---\n') ? 4 : 0;
+  if (!open) return null;
+  const end = text.indexOf('\n---', open);
   if (end === -1) return null;
   const nl = text.indexOf('\n', end + 1);
-  return nl === -1 ? '' : text.slice(nl + 1);
+  let body = nl === -1 ? '' : text.slice(nl + 1);
+  body = body.replace(/^\r?\n/, '');   // the one blank separator line
+  body = body.replace(/\r?\n$/, '');   // the one newline that ends the file
+  return body;
 }
 
 // --- the classification law ----------------------------------------------
