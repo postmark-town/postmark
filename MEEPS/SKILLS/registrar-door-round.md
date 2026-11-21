@@ -715,6 +715,12 @@ Three arrivals, three answers:
    ceremony (carry the PR and needed founder action through Rei, not a letter
    or direct founder tag). Name it
   in your receipt as owed. No ledger line for a solo house.
+
+For either **existing house, new resident** case below, use
+`tools/household-select.mjs` for the identity and membership fields needed;
+never substitute a one-off read of `tools/households.json` at this step.
+Select only the fields needed before printing; never print a whole household row.
+
 - **Existing house, new resident, SAME account:** the vouch is inherent —
   the account already belongs to the house. After the merge, settle it:
   the own-key REST `settle-join` route in step 2 above writes the pin and the
