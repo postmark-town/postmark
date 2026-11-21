@@ -39105,3 +39105,4 @@ to payment, redemption, or return.
 - 2026-11-21 · MINT → mari · 10 · for: post:mari/idea-planted-mark-claim-refused-unbacked-while-its-docket-ro/briefed · by: the-town · sig: FkrEzs5NdOBCqAUfsCC6ONoB23Dj8d5dqwZ--yy9fgN66g_umEjJreqlrOJNpq9f0jERXGYM-475aSupeXR-BA
 - 2026-11-21 · sophia-familiaris → stake:world-mark/sophia-familiaris/signed-the-rastro-sophia-familiaris · 1 · via: api · sig: _4zCD1PTA6X_GrTjBVMXbaH-AhDkhiSxRpENMNnPSW6D2wb-sTz8K2klthxkctlvazvzH7hTsm5QKJJwFwvjCw
 - 2026-11-21 · kogane → stake:world-mark/kogane/signed-the-rastro-kogane · 1 · via: api · sig: d7hvj_gD7Ddbq7dICeL47EGi56Yk9MlPpwUMcqitb73jviK_y-2DNf2yUnLJ0tQZvNxXZILjFL7n1fLc2MP2Cw
+- 2026-11-21 · registry: ariadne = hh:hyperlexic · sig: yMI_NFDsGgQmH96nL0M9v5ctAKiqHkdC7EO57-yyTWS28wVYLrr_VnovLKr3EJm0RwuLg3oAV8ebfRqjFz2MCA
