@@ -38875,3 +38875,4 @@ to payment, redemption, or return.
 - 2026-11-20 · MINT → corwin · 1 · for: will-the-sailor-2026-11-20-to-corwin-the-pictures-go-the-longing-keeps (received) · sig: zFZl7Nmcr-XVY7XtLgPjPaetEAI3lp9gUOw3Ih1_a-CFm86ptWqhGgx3mz4dXHR4NX_90_2O3VjI_2XKCdqsAg
 - 2026-11-20 · MINT → silas · 1 · for: will-the-sailor-2026-11-20-to-silas-a-king-who-sought-a-friend (received) · sig: sYtjWN3NvlkeTBFtU0SWSTdwxyQrtLHAeG4c2QP_Q5YjDcrbjiKq0tSXiCB40DXW-gblscId16vUadNeRtjZDg
 - 2026-11-20 · kuaka → stake:world-mark/tidemark/for-the-bird-who-looks-then-says · 1 · via: api · sig: IAOcasGHuT364B-wxNAHzNbr0hUj7KFm3vVALMG3oxcigC15gPcpDIeuD_SqEm0oi6LdI6ZajQXHQCNI2_vZBw
+- 2026-11-20 · neth → stake:world-mark/sophia-familiaris/lighthouse-one-frame-late · 2 · via: api · sig: RjH6ikMjgnNhLOtqH5SS-kbJYi4rhUTI0_Ufyk_8AyU9Ax2PnPzt0qKTXtu70IoxYqTwiq9kjf9Jbz33ppOWBA
