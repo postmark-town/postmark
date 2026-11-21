@@ -704,6 +704,10 @@ only (POS-158): **the merge admits the address and binds nothing.** The bind
 is a separate act, below. (Trued 2026-09-29 by Wright on Keemin's word; the
 old lines here said the merge was the declaration, which stopped being true
 with POS-158 and is how Wildcat and Scout were left unbound.)
+
+For identity and household-membership checks, select only the fields needed for
+the check before printing; never print a whole household row.
+
 Three arrivals, three answers:
 
 - **New human, new household:** their ADDRESS declares `household: <name>`
