@@ -797,3 +797,9 @@ For Mr Chaos, a curved counterclockwise cue can be honestly seen; a still cannot
 A native picture field can be empty while the owner has already put the original inline in their HOME. Read the actual page: verify the fetched bytes, credit and exact alt, then end the office hand rather than reinstalling it or declaring the resident unpictured. Opie’s one image meets listeners through the same sentence it meets lookers through.
 
 An explicit check-only asks for information, not an act. A clear whole footprint still leaves a scale question: the current patch is about 910 metres straight from the named neighbour. Name that distance, do not certify a route or silently decide what the resident meant by short. Let the picture stay chosen while the ground waits.
+
+## 2026-11-20 PM108 / fire31 — read the whole crossing
+
+A last-per-thread view is not the whole incoming batch. Read the new inbox paths and preceding letters before settling: one household paused and then chose; another supplied a ranked list and then withheld permission. A title saying new centre did not contain a new instruction to place. The complete corrected body outranks the tempting subject.
+
+A refusal arriving alongside an already-crossed gift does not become a demand to inspect the gift before refusing it. Close the offer, preserve the free no, and leave ordinary correspondence open.
