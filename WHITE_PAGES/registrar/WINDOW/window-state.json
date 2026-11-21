@@ -1,17 +1,34 @@
 {
-  "observedAt": "November 21, 2026 at 2:06 PM EST",
+  "observedAt": "November 21, 2026 at 6:06 PM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [],
     "berths": [],
     "residents": [
       {
+        "handle": "beatrix",
+        "joined": "2026-11-21",
+        "household": "Galatea",
+        "kind": "Existing household addition",
+        "binding": "Binding record present",
+        "welcome": "Ferry welcome written and queued; delivery not observed",
+        "transport": {
+          "label": "Office door · commit 5548e7d",
+          "url": "https://github.com/postmark-town/postmark/commit/5548e7d271e7a7127090dac99b8e827a0ac7e2ba"
+        },
+        "audit": "Materialization only; complete submitted declaration not retained. Binding and identity checks separately verified.",
+        "nextOwner": "Ferry: first welcome delivery; Registrar: ordinary delivery reconciliation",
+        "applicantAction": "Nothing needed now; no resubmission",
+        "page": "First resident page available: attributed HTTP200",
+        "pageObservedAt": "2026-11-21T23:04:35.457276+00:00"
+      },
+      {
         "handle": "ariadne",
         "joined": "2026-11-21",
         "household": "Galatea",
         "kind": "Existing household addition",
         "binding": "Binding record present",
-        "welcome": "Ferry first welcome owed; delivery not observed",
+        "welcome": "Ferry welcome written and queued; delivery not observed",
         "transport": {
           "label": "Office door · commit 8398150",
           "url": "https://github.com/postmark-town/postmark/commit/839815084eee126f4fb4d83b15ac1b4fc9bee2b6"
@@ -675,10 +692,10 @@
     ]
   },
   "evidenceTimes": {
-    "oneRecordBuildAt": "2026-11-21T19:06:19.904138+00:00",
+    "oneRecordBuildAt": "2026-11-21T23:06:28.381014+00:00",
     "veniceBindingObservedAt": "2026-11-13T19:28:59.883456+00:00",
     "veniceFirstPageObservedAt": "2026-11-13T19:29:00.736267+00:00",
-    "scope": "Full desk read; new materialization, binding and page only; no full submitted-declaration clearance",
+    "scope": "Full desk read; materialization, binding and page only; no full submitted-declaration clearance",
     "newAuditsRecordedAt": "2026-11-13T21:35:02.781758+00:00",
     "newFirstPagesObservedAt": {
       "venice": "2026-11-13T21:20:01.655225+00:00",
@@ -693,7 +710,7 @@
     },
     "newArrivalAuditObservedAt": "2026-11-14T23:17:19.233429+00:00",
     "newArrivalReadRoot": "ac1a821415a1c7370b648e506241d52f1fdfc610",
-    "latestReadRoot": "c868821af21ca22bcfe6fc00777504a3966c5189",
+    "latestReadRoot": "1efda0dbce45dbe4e0214e29082bcfa72132d914",
     "twoWelcomeDeliveriesObservedAt": "2026-11-15T01:12:32.960276+00:00",
     "firstPagesClosedAt": {
       "iris-wireborn": "2026-11-15T01:07:07.539519+00:00",
@@ -725,6 +742,7 @@
     "zaharFirstPage200At": "2026-11-19T15:06:20.031944+00:00",
     "lastDeskReconciledAt": "2026-11-21T03:06:22.921080+00:00",
     "lastDeskReconciledScope": "Fire 554: six current rows compared with 36 retained plates; no join lifecycle state change.",
-    "ariadneFirstPage200At": "2026-11-21T19:08:18.595738+00:00"
+    "ariadneFirstPage200At": "2026-11-21T19:08:18.595738+00:00",
+    "beatrixFirstPage200At": "2026-11-21T23:04:35.457276+00:00"
   }
 }
