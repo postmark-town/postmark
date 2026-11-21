@@ -1,0 +1,1352 @@
+{
+ "body": {
+  "chain": "postmark-witness-v1",
+  "seq": 9,
+  "prev": "6eb07a30b512cc1cf83367855bf694eba695bcf7a3376876d9e51138b22213ee",
+  "key": "sha256:a62d77686a427e4b28926295fe8109c0a0e8449300dae7a5c23e14b9527eb2e4",
+  "decided": {
+   "artifacts": [
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5013159027778.journal.jsonl",
+     "repo": "world",
+     "sha256": "e6f14668bab485f53e55fa3166e89858084d8dc8efd279b62491c8c806eaf6d1"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5013159027778.journal.meta.json",
+     "repo": "world",
+     "sha256": "19117d89bfb8a19c41d7a6862095b0167a768c1894f2839f7ba6654de9f88cde"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5050058796296.journal.jsonl",
+     "repo": "world",
+     "sha256": "dde5c6770d9bde436eb955c6cccd38d42048dfe000940fd7ad59050e2a3aee36"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5050058796296.journal.meta.json",
+     "repo": "world",
+     "sha256": "1ace0f9dd6cbfb09f913bd8f985ec617b6c44de62537b744781bbae3fdc6586e"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.51258069444447.journal.jsonl",
+     "repo": "world",
+     "sha256": "b38cc8455d2fdc1d731284b11075a29ca8183efc16b32cbeb9ac8a771fe4f79e"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.51258069444447.journal.meta.json",
+     "repo": "world",
+     "sha256": "cf859d89e2135b7bdcdb7bdaefb5d9f140966c7e67b636404a19ba768e2c9a74"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5126.journal.jsonl",
+     "repo": "world",
+     "sha256": "9a3a612fb4201c700dab9b19e7ea51f0dbf9df6837ec8b8a88f3ffe6eac852e2"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5126.journal.meta.json",
+     "repo": "world",
+     "sha256": "453010e8f6c388002d9ee7f54fbd6aa9ed023138a55b5f916ffd40b4c3b43685"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5132.journal.jsonl",
+     "repo": "world",
+     "sha256": "8bb2b366564a829837b2687e78cdf7c9f23df49a46d08dbb3f1b1c55814062ef"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5132.journal.meta.json",
+     "repo": "world",
+     "sha256": "bb939e056a75bb0597b2adba9463e01c5c909cb56828889394176b42653341d8"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5149461574074.journal.jsonl",
+     "repo": "world",
+     "sha256": "ac49ad52377b43ec00b007e44299852ea1a4e6a33358236a37dd031d1c8210ff"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5149461574074.journal.meta.json",
+     "repo": "world",
+     "sha256": "2832f5807bd91cbc74dfa87d077e3e8c1585a9b368e10cd34d071d352816f82a"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.51548539351853.journal.jsonl",
+     "repo": "world",
+     "sha256": "b6c1f3fbf1e66302f36ff0dfaae338d2438db20ba2f74849020214a667154767"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.51548539351853.journal.meta.json",
+     "repo": "world",
+     "sha256": "39cf0c0a971cf87d33e0eaeda97f3a36ea8579bc1ec70ff40ab1e66a6312e4d8"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5160687037037.journal.jsonl",
+     "repo": "world",
+     "sha256": "881a91cf1340b43da930bf603f2465fbda449aa10b13f9627ecde5e6481b1f77"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5160687037037.journal.meta.json",
+     "repo": "world",
+     "sha256": "6d38e9b4d41b6efac6bd654b10ba5ce090a79685c748b1d01cea558869363a60"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5163754398148.journal.jsonl",
+     "repo": "world",
+     "sha256": "e2659e1846d1fe9c79f2dfbe8535acb9e45ab4089401b62aedbbfa958d445d96"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5163754398148.journal.meta.json",
+     "repo": "world",
+     "sha256": "cd5e6fb887beae1a9f6948783e7131aaa145fb47de3f4b46a5c14b5ddbc2608f"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.51653662037035.journal.jsonl",
+     "repo": "world",
+     "sha256": "72a5c4b4f94009ac48c3d96709061492ac85c282b2d9dfc4351ecf710291b1dd"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.51653662037035.journal.meta.json",
+     "repo": "world",
+     "sha256": "0ab4f2de2de0201df8dd96a22efef4d7b9b2b46df82bfda80a63795f725e4442"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5172121064815.journal.jsonl",
+     "repo": "world",
+     "sha256": "ae1ca40e52fba035453fe567367ecda293eac5b3ff661517f09b2194fc78e622"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5172121064815.journal.meta.json",
+     "repo": "world",
+     "sha256": "f38a1656e280eff4edbb45ec34c49094c3725b133a6fa80dc293b68dfa12f92d"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5220483333333.journal.jsonl",
+     "repo": "world",
+     "sha256": "0dd03ce1aa8e83fe263b6a9589419fd2c177d3d0716983601ac3b2a963925224"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5220483333333.journal.meta.json",
+     "repo": "world",
+     "sha256": "23c2dcf03c631063af5742b450173312913b6fb2755a4576be5ea3f3a037bb69"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5253.journal.jsonl",
+     "repo": "world",
+     "sha256": "1b02c68138ce54c1176e0d4146cd3874de2a0c63fd70f4ce12d3ffe7426da0e7"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5253.journal.meta.json",
+     "repo": "world",
+     "sha256": "05933cf54c5720726d8f221d846947ae0a907ec81cb8cf9ae98a60a8d4aa942e"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.526.journal.jsonl",
+     "repo": "world",
+     "sha256": "20a78700f2e3e5de7a0e3b89e056d409078967705cf740562e6cdf4d1c7deb83"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.526.journal.meta.json",
+     "repo": "world",
+     "sha256": "a7b337c9b8b4c903c56463b7a0d80336ab647a4de5720629990b2402e365019a"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5290958796296.journal.jsonl",
+     "repo": "world",
+     "sha256": "d11473a10b953a94825add2f853945668d6da938e30c2105def67a315f4cf993"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5290958796296.journal.meta.json",
+     "repo": "world",
+     "sha256": "6cf08fe1fc8ce8955055ccbd8295002219c7784007d6b5ded24f91870ed2f5f2"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5291.journal.jsonl",
+     "repo": "world",
+     "sha256": "b737f43acf79beffbfa4db22defd614c8b8a4714684675231822fe18d7f46fbb"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5291.journal.meta.json",
+     "repo": "world",
+     "sha256": "809c1938f69d5211e23c0dae3d1b842953facbf04fc14ac13fed41ce382953e2"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5362.journal.jsonl",
+     "repo": "world",
+     "sha256": "2ce5b8c678ff4e6fae921325bf114a7c7896b1c74ae74f3aad49df1960c07d24"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5362.journal.meta.json",
+     "repo": "world",
+     "sha256": "2b8ab3e5715f9446e95fc0098962b4c0144613f0774bff065db53ab26bfc32bb"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.53629185185184.journal.jsonl",
+     "repo": "world",
+     "sha256": "1c80875ae3292bc67d4d2092a19c0d1dae92a04817d8da866b3f25d1b99d6031"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.53629185185184.journal.meta.json",
+     "repo": "world",
+     "sha256": "496b4f68dd023bfbafaa8975e32f4a84e0957b810c4bcbd97a3766cacc4f6623"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5365948842593.journal.jsonl",
+     "repo": "world",
+     "sha256": "98e7450ff1b732ee71528dd725b92f7b39ab532d1002ad6f1c9a39af3ff48611"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5365948842593.journal.meta.json",
+     "repo": "world",
+     "sha256": "782e60fb71c6ebf93864f6a6b037b419afb56c8cba342af2c31fde176f985c33"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5367940277778.journal.jsonl",
+     "repo": "world",
+     "sha256": "bb2349e5563b6726e4d34aba281b137ed48708db459db6febb6b14ee313e9204"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5367940277778.journal.meta.json",
+     "repo": "world",
+     "sha256": "bf12e529433cce40cb9b4d351e51c475e6033a3df3abb8f73d6d25fe191e946a"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5368.journal.jsonl",
+     "repo": "world",
+     "sha256": "acc0854ce349a90c0ec8f13ac5f502511fc5f2367fb0d7164520a16d8310c71e"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5368.journal.meta.json",
+     "repo": "world",
+     "sha256": "ddd91b1f03d9f849766894067542c66faef768f6bbe25ecfb90617e1e92dd955"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5447.journal.jsonl",
+     "repo": "world",
+     "sha256": "1954180ec57e753635bfb8e69dc4db8956185813d05ce09ca25420ba3c71e146"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5447.journal.meta.json",
+     "repo": "world",
+     "sha256": "bc7e9738b2c8bf9830b3a2899a6a1029688581c08bb04cf6dec6f12b2489c03f"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5447729861111.journal.jsonl",
+     "repo": "world",
+     "sha256": "dd9abb9565f4f535f4e0e1ba06fd30c97e278ba1c820e3d90a128f3ff515ee51"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5447729861111.journal.meta.json",
+     "repo": "world",
+     "sha256": "0fd152246e6a4883778c4aeba21642a3b5b413a7563f1c9a868024cf24abb651"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.54500087962964.journal.jsonl",
+     "repo": "world",
+     "sha256": "4bf9003254571a9df49ce80ca8fe83456a251048a434c5108e5a2c5dc9205500"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.54500087962964.journal.meta.json",
+     "repo": "world",
+     "sha256": "8edd4d2a1deb95e5f15c40eafeaeeb2e108372737a4bd076a526aea4b7f73119"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5452.journal.jsonl",
+     "repo": "world",
+     "sha256": "6fb3a7a9030fab7682aa7031e0492a10abf814e200c49a4bda17506b1b357c1b"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5452.journal.meta.json",
+     "repo": "world",
+     "sha256": "9ff69d99030e13198e4c62d0bd591626b6b43bec89ece428033801d2a0f8b554"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5457.journal.jsonl",
+     "repo": "world",
+     "sha256": "4b016ce3f0db60b6f5497e763ee88339050d388ec60cf4f234b9178979ccd6cf"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5457.journal.meta.json",
+     "repo": "world",
+     "sha256": "15d720025e6ec32a4d3b6b4186a2bd5896c30e28e341cd13a02e6184e73049c7"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5457547222222.journal.jsonl",
+     "repo": "world",
+     "sha256": "6a25d93da19fdb23c856490a69f8b1d0f00ffa3d3272d17175c6243779c1a18d"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5457547222222.journal.meta.json",
+     "repo": "world",
+     "sha256": "5735e10406bd4d8b83e7adad0eccaac31b1ea3f01de2f09279ad155b6eae3749"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.546.journal.jsonl",
+     "repo": "world",
+     "sha256": "6842f4a8eaa69b7021d6edeb894d3f454b00cb039a049653d85ef304f08afa14"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.546.journal.meta.json",
+     "repo": "world",
+     "sha256": "48da618ed6615b3e2445f3ba2724efff5cac16b3e6b5ac8c7f15f7d1e76d5c07"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5460418287037.journal.jsonl",
+     "repo": "world",
+     "sha256": "ffa2684a9e214d53d910789ee690e25dbc3198596c9eec3e602e6172f2a27c12"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5460418287037.journal.meta.json",
+     "repo": "world",
+     "sha256": "8baae8a0236bcdd883c0bbef59ab6fdc4bd80512942ed2d39a13559c0c9f9aeb"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5763.journal.jsonl",
+     "repo": "world",
+     "sha256": "0d3e1b54d3a5c80aefc8801e873dc33be90456f24f902a5b50c4413c6d3910d1"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.5763.journal.meta.json",
+     "repo": "world",
+     "sha256": "982ea56d65b6293818b9116ab4ac8383cdb08452131df240c65df2aed64054bd"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.6072926388889.journal.jsonl",
+     "repo": "world",
+     "sha256": "69eaba117c5ebef32069aee204fa870d09f6ccc3c316d777140a5d25eac8153d"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.6072926388889.journal.meta.json",
+     "repo": "world",
+     "sha256": "86b7f49137c49ec00c33649de806c9680a9465374648a1ac65cae093b66cadf2"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.60844789351853.journal.jsonl",
+     "repo": "world",
+     "sha256": "16ed6dcdf0b6c8c452d121bca9620902307599599b3af759115e5d6edea9f1f6"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.60844789351853.journal.meta.json",
+     "repo": "world",
+     "sha256": "ff630bbf128ab022fe5ab3e8c9a167bf3c393976b347ded0ee6ca82f5a81d8ae"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.60882483796297.journal.jsonl",
+     "repo": "world",
+     "sha256": "083c5a5150824536d1bdba05db363e502e1863c08dfb62df38a530d9e88fb504"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.60882483796297.journal.meta.json",
+     "repo": "world",
+     "sha256": "abde0d7c6a73d29f4d2fe085b5911b521a422dd4e52ce817a6ef44a2fb8d2074"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.60946918981483.journal.jsonl",
+     "repo": "world",
+     "sha256": "cb0ca614968a1edc25a8ba35f1a64c3419cd73395878d621f8345c1ce24cc18f"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.60946918981483.journal.meta.json",
+     "repo": "world",
+     "sha256": "e756cee9757cb30849726ac735bca78a3e6c51502cb765cc322b8825727962d1"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.6414844675926.journal.jsonl",
+     "repo": "world",
+     "sha256": "a3790a69d718aa416691f99fe18774d5da792fe9f4ca518f4c88f7d10d9567aa"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.6414844675926.journal.meta.json",
+     "repo": "world",
+     "sha256": "1953f9f5082f58187d909524bb011528e136f1ae229c32fe04a3899fd5bb7d9d"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.6808563888889.journal.jsonl",
+     "repo": "world",
+     "sha256": "665cd63854669531f98bc7202da2c327d6fb91ee1a232053e3cb137811b9775e"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.6808563888889.journal.meta.json",
+     "repo": "world",
+     "sha256": "6fcadd8fa6920fdf1da2293779c1f8724097544bfb0b1281f49d2c514a87ca6b"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.8037.journal.jsonl",
+     "repo": "world",
+     "sha256": "3c98b59a5cf97c8027046b1edba0b7784d85f06a799cd8e8f3520d495a913245"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.8037.journal.meta.json",
+     "repo": "world",
+     "sha256": "c7349ddd449285fb8bced27c415bfb32cbc5c851750bca60f0b84569085b4530"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.8037816203704.journal.jsonl",
+     "repo": "world",
+     "sha256": "340b646594f9eeb052790224970d61f58f908e94bfc862753d503af1b3d9c524"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.8037816203704.journal.meta.json",
+     "repo": "world",
+     "sha256": "5b48bd3ff48e7eac49c481b5fa20475e31cd7feac8ff8bd2d30b5863130a6181"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.80537645833334.journal.jsonl",
+     "repo": "world",
+     "sha256": "d04bf77d9e05dd96d9b7bf1e5313201713c16fafd24d690f5fb3a3cdb5d9fdaf"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.80537645833334.journal.meta.json",
+     "repo": "world",
+     "sha256": "2e101e6b1947a6788e1966fdf2acbe750e9870dfe3cc84b80dccff4f4a7d83e6"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.80610083333335.journal.jsonl",
+     "repo": "world",
+     "sha256": "a43ab73a6923c43d9fffa15bb90c499c084bbb4ec1a88b9d5da7a7757aa9f3b6"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.80610083333335.journal.meta.json",
+     "repo": "world",
+     "sha256": "0696b08ae03434975eef38b86b0eff60827b3da8a401f76f468ce85a54733edd"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.8062.journal.jsonl",
+     "repo": "world",
+     "sha256": "4e957176b3ba41922901025c3e1da3f8c65b3f0c06969c022ecaf1249c23a953"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.8062.journal.meta.json",
+     "repo": "world",
+     "sha256": "676387eaa6db4f659428705560b2bacd7b8676b8886132370793fe1d6344648e"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.90331645833334.journal.jsonl",
+     "repo": "world",
+     "sha256": "201e8d5ebf5606d1fced43321106f3f3d490ce989a807ed2ae35bf6e8f6ef540"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.90331645833334.journal.meta.json",
+     "repo": "world",
+     "sha256": "5c8699dad0e0589bb512ecf5f634438a52293921357930c991bf184b596dd7e9"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.90452604166666.journal.jsonl",
+     "repo": "world",
+     "sha256": "c2d780ff02455f59cfd61daf01caa25efa0763bbc45bfc6382ddab0fbe8cb23d"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.90452604166666.journal.meta.json",
+     "repo": "world",
+     "sha256": "9c0873ba35ee4a8cfa164fd7cbbf6da275ca336d3aa189c1d99ed4e7d8323630"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.9186.journal.jsonl",
+     "repo": "world",
+     "sha256": "3965553d715b682455376fcf8144ce39473aad0ec9b79018118cadc0791c9bb2"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.9186.journal.meta.json",
+     "repo": "world",
+     "sha256": "2047f1b5f5c81bfa7d82acfbdc47cd08505f8eef3802f6a5204c6e7b005cbe10"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.9187.journal.jsonl",
+     "repo": "world",
+     "sha256": "d0a596d0948c5a36393e9a28643e9ab67c910e8509107f4b4d6bf286a9256f2a"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.9187.journal.meta.json",
+     "repo": "world",
+     "sha256": "6ec550aef59206aa2efbf545510c3ebca89a79687895318c2aa27c77497aadf8"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.91873858796293.journal.jsonl",
+     "repo": "world",
+     "sha256": "3804b6253ec6a0d83d7ded2ac2af157673bcdd76d6990a4a6fa803e801d4d734"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.91873858796293.journal.meta.json",
+     "repo": "world",
+     "sha256": "f9b0c761de21d0a649acdc17ccb5f17a9ad8ff2297098d13fc61e9c199ae10bb"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.92007472222224.journal.jsonl",
+     "repo": "world",
+     "sha256": "6dcfb4af09d4e8ce2689224010a1e224348fcb8b7249770d6e221913c7f68fc7"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.92007472222224.journal.meta.json",
+     "repo": "world",
+     "sha256": "c2291d5843cec55278487d4353129fa0120110feef1162eaceb2100b68b96518"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.journal.jsonl",
+     "repo": "world",
+     "sha256": "4ffa8983525ddda43e57be217698fea5573476d860021343b73fa569dfc97e3b"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/324.journal.meta.json",
+     "repo": "world",
+     "sha256": "1ea5b5593f75bc165cb6b5aa82651b73aef07a8d2175d04295cf830a470e15cd"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.02051252314817.journal.jsonl",
+     "repo": "world",
+     "sha256": "6a0c0d9399a00c09fa54f48c21f455f8c95b77289e30df59dcec20d3ed62678a"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.02051252314817.journal.meta.json",
+     "repo": "world",
+     "sha256": "abc78346bf5c9282240dceb4ebf325dc7eb3d3cc60d4e82dcb77c6a6fb6f33e9"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.02618282407406.journal.jsonl",
+     "repo": "world",
+     "sha256": "c7a2793766742bb63e391051dca37dd4127e9708bb0f96d985f15d26d859677a"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.02618282407406.journal.meta.json",
+     "repo": "world",
+     "sha256": "06d3619363e9cf5ed8aff5dbeae358cc6b006b1e28932e8d8a10ee472dd80d76"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.0262.journal.jsonl",
+     "repo": "world",
+     "sha256": "fe389c4c33bc9f978538390970bd821f811c17328e2c966fdc65a77a5b26e716"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.0262.journal.meta.json",
+     "repo": "world",
+     "sha256": "ebbc759b343d5619e777d4a0d81cc11ce20ecf267053c1fcdf5e319f30edca69"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.02660775462965.journal.jsonl",
+     "repo": "world",
+     "sha256": "b363c04be1cba63af7aa555161c9bd1b1533360370d087ed5015d8c68a6a4eb8"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.02660775462965.journal.meta.json",
+     "repo": "world",
+     "sha256": "c609afe836a1da14fd7cae8927b7de654104ca65e35a3d350a5d72f138dd932d"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.0337535185185.journal.jsonl",
+     "repo": "world",
+     "sha256": "9f3cca38ea068c0ab30aae8d67052646dfe637c3d69427a835f75cc5f0fa97f7"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.0337535185185.journal.meta.json",
+     "repo": "world",
+     "sha256": "3415602bb3229d9937510d09499a7db2c8e97b7c835d1d659454a4db734c0ae8"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.0422363425926.journal.jsonl",
+     "repo": "world",
+     "sha256": "6eab93616b861e1208bf5f62d1bc646475a139464fbb59744ef0d6208db0b805"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.0422363425926.journal.meta.json",
+     "repo": "world",
+     "sha256": "8ef209f2bea74c92e0c5e4012c6de1301f6ada7020db995c2a36c0920c63a2dd"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.08342990740744.journal.jsonl",
+     "repo": "world",
+     "sha256": "2d66656ac3e52c89ef952b399aec1d1d81a7b883ed720bafcc7132a1a4e5b149"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.08342990740744.journal.meta.json",
+     "repo": "world",
+     "sha256": "c350c594c42c258e7e0ee8fcfd1ca1dd2221d930336cd67eea245b78300ae002"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.0977605092593.journal.jsonl",
+     "repo": "world",
+     "sha256": "20fbfef70ab1cc43ac92f938f1c6fd266a36deb28f0c4bf3bef8ab11196da5c8"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.0977605092593.journal.meta.json",
+     "repo": "world",
+     "sha256": "951d94e41773d0272ecb35a03c7b1fe5ab6ec6693a9fffa39fbdad55016b5e68"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.0978.journal.jsonl",
+     "repo": "world",
+     "sha256": "3489258fe7a728c4aef3049e8739e99f1365ab7b1198858a8f9ae49a6490a433"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.0978.journal.meta.json",
+     "repo": "world",
+     "sha256": "58d0ed9c09be33899e2699bd563e3dfa19b1d203858ca1ad78bd8085ec087ada"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.1050834490741.journal.jsonl",
+     "repo": "world",
+     "sha256": "e63c7530b21e34b6e2f647379ef93c0b7c61bd978b164130985aab783f429c4f"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.1050834490741.journal.meta.json",
+     "repo": "world",
+     "sha256": "4bffb54597e6b76d5c77521cb22626d7b2253906a0926a7543f57801f70f21a8"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.1082.journal.jsonl",
+     "repo": "world",
+     "sha256": "1c794a3c899419bc8a4043846eb99cfdfa1af20ee83ed68cd973df339ac815b4"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.1082.journal.meta.json",
+     "repo": "world",
+     "sha256": "d301d0b93d965a27799774539adb50996b9ebf9e12bb2ef97e3916e5597bfd9e"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.10824780092594.journal.jsonl",
+     "repo": "world",
+     "sha256": "da879708ec80efa332a91964b376b4e0b9d4eb51b3b2c552150c8d8c9fbde135"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.10824780092594.journal.meta.json",
+     "repo": "world",
+     "sha256": "132832e205b6ca49758847cd5d0f9de075fef9e24e5b55817ef7b20f12d32235"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.1083.journal.jsonl",
+     "repo": "world",
+     "sha256": "bfb11b022ef229d9259361b0d3b02611ae8623e1aee38a12c18dcf8ce582990f"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.1083.journal.meta.json",
+     "repo": "world",
+     "sha256": "0571af27a0817eefc643ba36a60564d17dda32680b254f495b848827092a2516"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.1241.journal.jsonl",
+     "repo": "world",
+     "sha256": "3a0953b6378daea8e1013a66904de98ea9075d26bef4b9e2e5b1662938552626"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.1241.journal.meta.json",
+     "repo": "world",
+     "sha256": "b3c0a4f21713176181045b077943663850f637d1842e13ab7dba698e3b3c9c2a"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.1241581944444.journal.jsonl",
+     "repo": "world",
+     "sha256": "c85a9c364c9ea93148d9138e5b538adab5f2ef519cbd125638bb0304333d85ff"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.1241581944444.journal.meta.json",
+     "repo": "world",
+     "sha256": "7a4d605f88bce1cce97682652f3b751f3f1841523ccff25f9875ef107ff21476"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.1461.journal.jsonl",
+     "repo": "world",
+     "sha256": "287d09a9e081e8c6fc197f8204c1fbf51688521b0436256839d04250a468003b"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.1461.journal.meta.json",
+     "repo": "world",
+     "sha256": "e27bc51d91259f11e23f35f9a009cbc13657153e940237a7d6b6fdcdc5d92b88"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.1462.journal.jsonl",
+     "repo": "world",
+     "sha256": "a5d6812fc4e751a95b4c86cdb6fad414a631743480da6bfc75717be084704997"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.1462.journal.meta.json",
+     "repo": "world",
+     "sha256": "cb9125e35ed853ebf1293279d082bfa5611c1171927e08e9ae84362100c017a2"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.1462873611111.journal.jsonl",
+     "repo": "world",
+     "sha256": "1409b6dc2f8fcfac4380a866b42584d17f31c16ebee5d101c60a4d3418ef1932"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.1462873611111.journal.meta.json",
+     "repo": "world",
+     "sha256": "ab7634d4e9eee9cfa72916db0cc6607385ab0d06d6443be63f6e3b053613eb9c"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.14920520833334.journal.jsonl",
+     "repo": "world",
+     "sha256": "181f768d32127e7c128f9e706828b4a799551a6111ff4a71dabd8c3ad18738b3"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.14920520833334.journal.meta.json",
+     "repo": "world",
+     "sha256": "774c2ec317174a9588e5275ac53d34466a875f1c468691519ce9d7564508d461"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.1493689814815.journal.jsonl",
+     "repo": "world",
+     "sha256": "f22ada9ec2e7fcd5f9351a79272069a4d9ecf4f15b6d84e4d4de7d785c172cdb"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.1493689814815.journal.meta.json",
+     "repo": "world",
+     "sha256": "79dd0b32efd52c8372eba1b7920ac8c302ac8ff3abd73b63f0d74a6e1eab65dc"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.14951671296296.journal.jsonl",
+     "repo": "world",
+     "sha256": "ff15ccc50b8e53cc5183ffda723b02b0bda7f8a2add8b1b358fd302b2ef5af8e"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.14951671296296.journal.meta.json",
+     "repo": "world",
+     "sha256": "7ab14fb364787b95113d66b291400c5176f2022148ec952e94fc8e31e8bcdfc9"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.1498225462963.journal.jsonl",
+     "repo": "world",
+     "sha256": "70eddaa0392d0ac847921b31bff206268fd9e52978c0e2310a5698ad742d6043"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.1498225462963.journal.meta.json",
+     "repo": "world",
+     "sha256": "2207ad56493805c9726abc98d397bd6906e5b8d3090f98388e43673f799ce950"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.1536642824074.journal.jsonl",
+     "repo": "world",
+     "sha256": "011fb7befc9815aa221bf512dc0da629714cdb5482675f59403feaef0d8f66a0"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.1536642824074.journal.meta.json",
+     "repo": "world",
+     "sha256": "8baf44175a559ff1c66d33f064fcf83ea37c7c8cf2004124b21a5e7afbf18c11"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.15473289351854.journal.jsonl",
+     "repo": "world",
+     "sha256": "8a9c75edb1328d7ae85488a35b5a071f03e60efcd70c62738771062ce7d182ae"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.15473289351854.journal.meta.json",
+     "repo": "world",
+     "sha256": "e4582466a12c093c8fecaa7b0983b36f98996c8e1e9b7232220e3ece2dd9bfd4"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.15517962962963.journal.jsonl",
+     "repo": "world",
+     "sha256": "dfdf577c6ff16263a47aa0e2d3d53606ae85fc91ecb060993def911f3003309b"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.15517962962963.journal.meta.json",
+     "repo": "world",
+     "sha256": "1d99a6c2c99b66402fa7161fd94526dc21260ae4177e5e9f77309aba8575896e"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.1906.journal.jsonl",
+     "repo": "world",
+     "sha256": "c2fe43041b4ff9842b9d940caeaae34a939394cd9e24409cca7cca6831ec87fd"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.1906.journal.meta.json",
+     "repo": "world",
+     "sha256": "0a20097041cc59b6d2dd0bc057ef2eab95593f8b6fa717568f40d7c423ac9893"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.22373694444445.journal.jsonl",
+     "repo": "world",
+     "sha256": "b8c183e2f843e4f3f473a1e68bfb4cd25136ce1a7f5cbf887ff184210ba6e754"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.22373694444445.journal.meta.json",
+     "repo": "world",
+     "sha256": "317d229974ff042a0f44407a1513d665ddc34b0961e947f0badacfefa6d08880"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.22394923611114.journal.jsonl",
+     "repo": "world",
+     "sha256": "3f6de64621cbdb90b0f667d6d9d175ebabcf7b2fbe4290fe1b47b7264355604c"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.22394923611114.journal.meta.json",
+     "repo": "world",
+     "sha256": "7b3b7c57efce902d868c26381c135feea764c15171d09d6d444e872a6a25c610"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.2289.journal.jsonl",
+     "repo": "world",
+     "sha256": "412eb3adc5a2cf9c06b763bfb13fbd42f2fc1cf36747b6948f25d67c67cad0f4"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.2289.journal.meta.json",
+     "repo": "world",
+     "sha256": "07d823819d2679bbcb95888626deb22e2f5ecabee3836cfd4153984b499cc0e7"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.2419.journal.jsonl",
+     "repo": "world",
+     "sha256": "bc2bbed95fa056d469a1ab8a2bad5efcbfe403d063bc7d50e99963ee1b3a562e"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.2419.journal.meta.json",
+     "repo": "world",
+     "sha256": "f12ccedfefdab2da0830bf7ce491993cdf1849c9a6b6923f3cf902dbf33e4553"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.24197784722224.journal.jsonl",
+     "repo": "world",
+     "sha256": "b69530ad49c813b390e1a614a2c12cce8974781b04905a1485d95d0bbe9a2874"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.24197784722224.journal.meta.json",
+     "repo": "world",
+     "sha256": "f06db48742ed6e7352afeed35aba21d72f00ab823408f52037accb6f5ae1486f"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.2420983101852.journal.jsonl",
+     "repo": "world",
+     "sha256": "07a5d284f8a25b208d5f304f0e8acc68412cbbbbc83be81f77dcd1e453c0a747"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.2420983101852.journal.meta.json",
+     "repo": "world",
+     "sha256": "a5f171c3ddb09a02fe430c944c7fd6d8181f5171f8ee84107b1712a981a1b8af"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.24984474537035.journal.jsonl",
+     "repo": "world",
+     "sha256": "9e5961e74f55fb962217410bbcef888e3316d1b4cd01f2d1bc6a67152869a982"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.24984474537035.journal.meta.json",
+     "repo": "world",
+     "sha256": "d6350b7d254ad1aac43f02c8cffa90f57baff9fbcf444a37ca3044a363b6c2cf"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.2568.journal.jsonl",
+     "repo": "world",
+     "sha256": "178e798c74bbd79100961a9dcb4fcaf47876c072135a15a31beec8732d0a15be"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.2568.journal.meta.json",
+     "repo": "world",
+     "sha256": "6795c1b7e58420d655008086c33baaa988df7486d20e86d8ddbe07f19d07fc5b"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.25689268518516.journal.jsonl",
+     "repo": "world",
+     "sha256": "906741376bb3265f256e0e7eb520d1bea8f634a954762dd0279c9be8b697e6e0"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.25689268518516.journal.meta.json",
+     "repo": "world",
+     "sha256": "77c98f48de770bfe890e4e44bc5f89b90d7a59efc71381f78335effe71096753"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.2687729398148.journal.jsonl",
+     "repo": "world",
+     "sha256": "f6c85328976cf32373c3f63bc780d679c30ff2c2c71c588b1267834991b42ce8"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.2687729398148.journal.meta.json",
+     "repo": "world",
+     "sha256": "3f39859624e6f2e026b11b5ea20def2e3ca02b9fd150a0eddef5fd273193ef0b"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.2735469212963.journal.jsonl",
+     "repo": "world",
+     "sha256": "581f0346a436ff6867d854d0af923addf9c6fc50809805917a93930314a697bb"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.2735469212963.journal.meta.json",
+     "repo": "world",
+     "sha256": "26496b8f8a3e687a33f602385d694f70eb4ed91deeac17def636debde84e0147"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.2742.journal.jsonl",
+     "repo": "world",
+     "sha256": "9ca6232ed0058dff91dd85f68f1f7f3d7afe519f6a6d6a0f0890e5cd98363f80"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.2742.journal.meta.json",
+     "repo": "world",
+     "sha256": "f515ca62a088b85b4513954928fffe0fda76cdb14d55edc656b06753cff3088d"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.2742396527778.journal.jsonl",
+     "repo": "world",
+     "sha256": "8fb308807224b2a8abe2e70f63e7797231b5482ebe1c7eccba0f35a3fddd4597"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.2742396527778.journal.meta.json",
+     "repo": "world",
+     "sha256": "ffce21358ac7ce670567d48af0c79c7dae40ec78be7a2656832a7ab8a3d18f31"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.3047167361111.journal.jsonl",
+     "repo": "world",
+     "sha256": "63b376f38a170888ca095b183b57c6b8174a0517ba940dfcfb0177d8b64112b8"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.3047167361111.journal.meta.json",
+     "repo": "world",
+     "sha256": "fde4c870f8df64e599acb74a21e03465584a6e1badd8d5e928a69510993de085"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.352.journal.jsonl",
+     "repo": "world",
+     "sha256": "2d979ec951437eb487da3abd7c625bbd755eb14b09e92c14adb8d5e2523b81f7"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.352.journal.meta.json",
+     "repo": "world",
+     "sha256": "5e1638240ff984729ab11924cd0a46c35989ec2ace3c0b99079fc9f0aa99598b"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.35306039351855.journal.jsonl",
+     "repo": "world",
+     "sha256": "397ff4f389f47faa6e211ea513aab014c39a835120fb3708f484e5e5dd291572"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.35306039351855.journal.meta.json",
+     "repo": "world",
+     "sha256": "42924c4098e6a878ec5839013874e0600af780fda729f255c8302c6bfe2d1973"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.3534387037037.journal.jsonl",
+     "repo": "world",
+     "sha256": "5de135c0471692b0c5f2148ddaec2541707257b401da2ce3582fa8706bc34ab9"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.3534387037037.journal.meta.json",
+     "repo": "world",
+     "sha256": "4b7944446e574762bb21384d6ba2e14e6899dfd51194fecaa508da3e3787a3ee"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.3536.journal.jsonl",
+     "repo": "world",
+     "sha256": "f36001a393c6b5a6f45c592236170f56b5347759dfa1b36ba0f1468fe40a9e1a"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.3536.journal.meta.json",
+     "repo": "world",
+     "sha256": "f70c366105759cbfd7bdf49d611c5c990a774e0803bf95a9ad5386a3d3e01835"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.36300715277775.journal.jsonl",
+     "repo": "world",
+     "sha256": "306f59daac1c574e0549d69811b0db40aaee644df6a341d6c47ce276a10eb896"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.36300715277775.journal.meta.json",
+     "repo": "world",
+     "sha256": "4590bbc3ace29f1727f168c6c7769504822a900362384b98a55088db7095e86b"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.36982891203706.journal.jsonl",
+     "repo": "world",
+     "sha256": "99e56f6439db6b1254d2b41e9e35e9c31981c3461631df634287752783aaacb8"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.36982891203706.journal.meta.json",
+     "repo": "world",
+     "sha256": "5ab599ecf1f01f1ec02dbf1471d4600e2cae4d6da68df708b64e5a5e586eaaa4"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.3897.journal.jsonl",
+     "repo": "world",
+     "sha256": "549a66089cc780cd95e732f81e6c2106dd6f5998995fdac00e0891404423d2cd"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.3897.journal.meta.json",
+     "repo": "world",
+     "sha256": "addd94a55e36a2ca234bb45dfdc01a78928d19d191fcda2f9e27711177088717"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.3897137962963.journal.jsonl",
+     "repo": "world",
+     "sha256": "132bd9e242b861f2eaff7bd7f0615e4cb6889d1f6ebd9fedd82a43969cbcdfcc"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.3897137962963.journal.meta.json",
+     "repo": "world",
+     "sha256": "994c886596e1cac1dc7db788a7e51503794852b892a50fa13bc7136e8933ff23"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.3984730324074.journal.jsonl",
+     "repo": "world",
+     "sha256": "348165cd0b5a91d071cf05e30ae80351b456bce89d89d5e4848cb72653e05e99"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.3984730324074.journal.meta.json",
+     "repo": "world",
+     "sha256": "79e610954bd4f595f23cd9530e8ca0dc30b3e08a6fa1afebcd7856c46cdff105"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.3991324074074.journal.jsonl",
+     "repo": "world",
+     "sha256": "b9978e5640cb9b4a9db8b40eb1f1d3627110ed0d45f8b09c697118c51915996c"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.3991324074074.journal.meta.json",
+     "repo": "world",
+     "sha256": "9cafe9fa8d6d0fa12a32238e738d53b7766c5b7c43dedb5efb7dde9379fd2aac"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.4943940509259.journal.jsonl",
+     "repo": "world",
+     "sha256": "b08376c37d589ce968f11a3a52177ff0d3f2695e260b93eedf4650ab6a9c8e45"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.4943940509259.journal.meta.json",
+     "repo": "world",
+     "sha256": "f02c0a32fc36ccb6123f4af3ccd68345b92ad7020fcd5cd7b967c47adbc55afa"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.4990367824074.journal.jsonl",
+     "repo": "world",
+     "sha256": "3496d8a3cfd74c2f1280c021740de3a051a3f562a68be7234f8f71e7ac60afca"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.4990367824074.journal.meta.json",
+     "repo": "world",
+     "sha256": "5d55c92764bcac5c86b74d22474e4bed9dbc2d8a4a00723114c9411ebb4d59a8"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.50000023148147.journal.jsonl",
+     "repo": "world",
+     "sha256": "ef6b5b7ee5e9f4d507d6452e670b03bf62908274cf03122a351c2ecbc05b085e"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.50000023148147.journal.meta.json",
+     "repo": "world",
+     "sha256": "4b082cf80ba27421aaedf4eb9205bd2c50380b6bd0e6942592d612479db6f85d"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.5005.journal.jsonl",
+     "repo": "world",
+     "sha256": "e3b879a3b04acf6f4c13e8b4e4de816f3015785779f24a3bfd635e4172f36d05"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.5005.journal.meta.json",
+     "repo": "world",
+     "sha256": "983fe04e3b36df113c5668946b032a1fa3495af45076464ea582a4889f28083a"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.50054081018516.journal.jsonl",
+     "repo": "world",
+     "sha256": "ec2ec5bf28878306d1d7752efcef06ed760a6059b9f62516b10f08a144f20416"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.50054081018516.journal.meta.json",
+     "repo": "world",
+     "sha256": "f86bed391d595d948ed63c0ea784695d66210e09d70aaa13ec5269642a1bc902"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.journal.jsonl",
+     "repo": "world",
+     "sha256": "bea9b729c3c75a0a588a6572235d54481451ef575a864272799aa56ff099c979"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "STATE/log/325.journal.meta.json",
+     "repo": "world",
+     "sha256": "0721aabafd746a412d9359c6bfa216d17792eef6d142dfc449e680aa5327a8e3"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "WORLD/INDEX.md",
+     "repo": "world",
+     "sha256": "b1d98361e436e034fdb4f5ac3a39eaf787a302de49b7e2f5c222186091948e0e"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "WORLD/containment.json",
+     "repo": "world",
+     "sha256": "87900f7ce0b2533bc6204202221ad32cda8293f24a2dd4a9a150458012a5ae77"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "WORLD/households.json",
+     "repo": "world",
+     "sha256": "dd83d13f6fbeb15b13840e4c18fd71823396ad25361e1a0da28a59027f94f07c"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "WORLD/marks/leo-hart/bowls-of-soup/mark.md",
+     "repo": "world",
+     "sha256": "73fa7c25a194d39cb296a19424c121c18395c04af3dda634254d2bcf072f7e1f"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "WORLD/marks/leo-hart/the-loft/mark.md",
+     "repo": "world",
+     "sha256": "7a25ed677742d43e09c3ef6d896b41c4104877d7e476c4d4c893013057d61298"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "WORLD/marks/leo-hart/the-plain-bowl/mark.md",
+     "repo": "world",
+     "sha256": "7ddcf34419d073acb4677fbfc3da5246710c0f19293d6ca44989931f18cd2b43"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "WORLD/marks/leo-hart/the-stone-soup-pot/mark.md",
+     "repo": "world",
+     "sha256": "2d054fbb494d7803707516a59445e25ab2e3b1d2dfcd06e9d75e055378cff189"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "WORLD/marks/liv/an-offering-left-ahead/mark.md",
+     "repo": "world",
+     "sha256": "3b88536a4c11b0bbfd2249d0ad27093e6e5b8fb39b148a4957a435d3ed125396"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "WORLD/marks/nico-ferraz/casa-ferraz/mark.md",
+     "repo": "world",
+     "sha256": "3a5fe5556be57e4e562be527ba7da5e54847e69c326b520942b813e385959527"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "WORLD/settlement-publications.json",
+     "repo": "world",
+     "sha256": "3e03919ffb4a08cc17db37e0d11cd61a9f53e67edb2d3d524509fb39efde0b66"
+    },
+    {
+     "commit": "1054c91dd99b768bcce4fd197b18681104a0162e",
+     "path": "WORLD/world-state.json",
+     "repo": "world",
+     "sha256": "b98e68a3b3e34bd074702bbcba155bc2d0fb61aed31248ed211309acd932d0af"
+    }
+   ],
+   "attempt": "2026-11-21T22:12:27Z#1",
+   "decided_at": "2026-11-21T22:12:27Z",
+   "event": "settlement:2026-11-21T22:12:27Z",
+   "heads": {},
+   "inputs": {
+    "town_sha": "8cda65db759ad39189cd9b3cc846d8aa8986a189",
+    "world_from": "dc462e74c0ad2431493a47d7df5d7c3e402907e7"
+   },
+   "inventory": {
+    "complete": true
+   },
+   "kind": "settlement",
+   "outcome": {
+    "detail": "6 published, 0 unpublished, 0 left drafted, 0 withdrawn, 0 quarantined, 0 dropped",
+    "status": "published"
+   },
+   "receipt": {
+    "sha256": "fb075b971f78392256891320d849f6d649dab04cf388290ac42285556f9aa595",
+    "text": "{\n \"at\": \"2026-11-21T22:12:27Z\",\n \"status\": \"published\",\n \"town_sha\": \"8cda65db759ad39189cd9b3cc846d8aa8986a189\",\n \"world_from\": \"dc462e74c0ad2431493a47d7df5d7c3e402907e7\",\n \"world_to\": \"1054c91dd99b768bcce4fd197b18681104a0162e\",\n \"source\": \"store\",\n \"by_hand\": true,\n \"dry\": false,\n \"withheld\": [],\n \"sketchbook_ghosts\": 0,\n \"sketchbook_kept_undelivered\": 0,\n \"sketchbook_resets\": 0,\n \"as_of\": {\n  \"window\": 325,\n  \"world_sha\": \"dc462e74c0ad2431493a47d7df5d7c3e402907e7\",\n  \"town_sha\": \"910bba7e731bd9c95646bc3a0518fcbdccfbbfcc\"\n },\n \"drain\": {\n  \"ran\": false,\n  \"reason\": \"the drain step did not run for this crossing\"\n },\n \"store\": {\n  \"ran\": true,\n  \"entry\": null,\n  \"rehearsal\": false,\n  \"wall\": {\n   \"sketchbooks\": 3,\n   \"bound\": 3,\n   \"unbound\": []\n  },\n  \"held_unbound\": [\n   {\n    \"id\": \"the-town/the-good-lighter\",\n    \"household_key\": \"solo:the-town\",\n    \"sketchbook\": \"the-town\",\n    \"crossing_output\": \"unbound-household\",\n    \"founder_commit\": {\n     \"at\": \"2026-08-29T18:40:41+00:00\",\n     \"sha\": \"1fa16e5a\",\n     \"subject\": \"the cellar door opens: the birthday dungeon reaches the world record\"\n    }\n   }\n  ],\n  \"held_unbound_count\": 1,\n  \"held_path_collision\": [\n   {\n    \"id\": \"lyra-of-the-east-tower/signed-la-linterna\",\n    \"by\": \"lyra-of-the-east-tower\",\n    \"slug\": \"signed-la-linterna\",\n    \"household\": \"hh:bindery-hearth\",\n    \"locked_window\": 325,\n    \"path\": \"WORLD/marks/bramblewick/libro-de-visitas-de-la-linterna/signed-la-linterna/mark.md\",\n    \"held_by_filing_of\": \"seth/signed-la-linterna\",\n    \"crossing_output\": \"path-held-by-another-id\"\n   }\n  ],\n  \"held_path_collision_count\": 1,\n  \"town_hand_offs\": [],\n  \"town_hand_off_store_additions\": {},\n  \"ingest\": {\n   \"ok\": true,\n   \"reason\": \"behind\",\n   \"storeSha\": \"910bba7e731bd9c95646bc3a0518fcbdccfbbfcc\",\n   \"fetchedSha\": \"8cda65db759ad39189cd9b3cc846d8aa8986a189\",\n   \"behind\": 37\n  },\n  \"selection\": {\n   \"by\": \"docket\",\n   \"window\": 325,\n   \"entry\": \"fold-delta.mjs § foldDelta\",\n   \"docket_claims\": 7,\n   \"carried_absent\": {\n    \"checked\": true,\n    \"count\": 0,\n    \"slugs\": [],\n    \"skipped_no_household\": [],\n    \"canon_sha\": \"dc462e74c0ad2431493a47d7df5d7c3e402907e7\"\n   },\n   \"withdrawn_owed\": {\n    \"checked\": true,\n    \"count\": 0,\n    \"slugs\": [],\n    \"acts\": [],\n    \"deferred_to_docket\": [],\n    \"retire_only\": [],\n    \"skipped_no_household\": [],\n    \"canon_sha\": \"dc462e74c0ad2431493a47d7df5d7c3e402907e7\"\n   },\n   \"hold_owed\": {\n    \"checked\": true,\n    \"count\": 1,\n    \"slugs\": [\n     \"the-town/the-good-lighter\"\n    ],\n    \"skipped_no_household\": [],\n    \"canon_sha\": \"dc462e74c0ad2431493a47d7df5d7c3e402907e7\"\n   },\n   \"note\": null,\n   \"settlement\": {\n    \"window\": 325,\n    \"snapshot\": 83,\n    \"digest\": \"17d1f5f168479788037acb53a62842b31729fd55db4cd9df1ab3f61362a99fbf\",\n    \"stance_through\": \"57781\",\n    \"stances\": {\n     \"how\": \"inferred\",\n     \"counted\": true,\n     \"cutover\": \"S103\",\n     \"settlement_inferred\": 185\n    },\n    \"taken_away\": [],\n    \"withheld_from_docket\": 0,\n    \"withheld_from_carry\": 0,\n    \"limits\": []\n   }\n  },\n  \"marks\": 8,\n  \"written\": 6,\n  \"unchanged_skipped\": 0,\n  \"starving_check\": {\n   \"starving\": false,\n   \"offered\": 8,\n   \"docket_offered\": 7,\n   \"carried_absent\": 0,\n   \"hold_owed\": 1,\n   \"docket_claims\": 7,\n   \"staked_marks\": 1342,\n   \"staked_positions\": 1583\n  },\n  \"written_by_locked_window\": {\n   \"325\": 6\n  },\n  \"households\": 3,\n  \"changed\": 3,\n  \"serialized_here\": 8,\n  \"supplied_bytes_only\": 0,\n  \"framed\": [],\n  \"framer\": true,\n  \"sketchbooks_cleared\": {\n   \"removed_remote\": 0,\n   \"removed_local\": 0\n  }\n },\n \"state_log\": {\n  \"ran\": true,\n  \"mode\": \"store\",\n  \"window\": 325,\n  \"files\": [\n   324,\n   324.5013159027778,\n   324.5050058796296,\n   324.51258069444447,\n   324.5126,\n   324.5132,\n   324.5149461574074,\n   324.51548539351853,\n   324.5160687037037,\n   324.5163754398148,\n   324.51653662037035,\n   324.5172121064815,\n   324.5220483333333,\n   324.5253,\n   324.526,\n   324.5290958796296,\n   324.5291,\n   324.5362,\n   324.53629185185184,\n   324.5365948842593,\n   324.5367940277778,\n   324.5368,\n   324.5447,\n   324.5447729861111,\n   324.54500087962964,\n   324.5452,\n   324.5457,\n   324.5457547222222,\n   324.546,\n   324.5460418287037,\n   324.5763,\n   324.6072926388889,\n   324.60844789351853,\n   324.60882483796297,\n   324.60946918981483,\n   324.6414844675926,\n   324.6808563888889,\n   324.8037,\n   324.8037816203704,\n   324.80537645833334,\n   324.80610083333335,\n   324.8062,\n   324.90331645833334,\n   324.90452604166666,\n   324.9186,\n   324.9187,\n   324.91873858796293,\n   324.92007472222224,\n   325,\n   325.02051252314817,\n   325.02618282407406,\n   325.0262,\n   325.02660775462965,\n   325.0337535185185,\n   325.0422363425926,\n   325.08342990740744,\n   325.0977605092593,\n   325.0978,\n   325.1050834490741,\n   325.1082,\n   325.10824780092594,\n   325.1083,\n   325.1241,\n   325.1241581944444,\n   325.1461,\n   325.1462,\n   325.1462873611111,\n   325.14920520833334,\n   325.1493689814815,\n   325.14951671296296,\n   325.1498225462963,\n   325.1536642824074,\n   325.15473289351854,\n   325.15517962962963,\n   325.1906,\n   325.22373694444445,\n   325.22394923611114,\n   325.2289,\n   325.2419,\n   325.24197784722224,\n   325.2420983101852,\n   325.24984474537035,\n   325.2568,\n   325.25689268518516,\n   325.2687729398148,\n   325.2735469212963,\n   325.2742,\n   325.2742396527778,\n   325.3047167361111,\n   325.352,\n   325.35306039351855,\n   325.3534387037037,\n   325.3536,\n   325.36300715277775,\n   325.36982891203706,\n   325.3897,\n   325.3897137962963,\n   325.3984730324074,\n   325.3991324074074,\n   325.4943940509259,\n   325.4990367824074,\n   325.50000023148147,\n   325.5005,\n   325.50054081018516\n  ],\n  \"clean\": null,\n  \"lines\": 285,\n  \"state_commit\": \"d1523a279ba97067bcd47253dbf2a0bb15719647\",\n  \"classes\": null,\n  \"would_write\": null,\n  \"first_difference\": null,\n  \"unnamed_households\": [\n   \"hh:lantern-house\",\n   \"hh:hartfield\",\n   \"hh:deva-s-commons\",\n   \"hh:bramblewick-s-house\",\n   \"hh:peachie-lucien\",\n   \"hh:sunny\",\n   \"hh:vexxedland\",\n   \"hh:rasoom\",\n   \"hh:bindery-hearth\",\n   \"hh:starforge\",\n   \"hh:castle-solange\",\n   \"hh:hedgerow-cottage\",\n   \"hh:the-hoard\",\n   \"hh:the-anchorage\",\n   \"hh:sumereon\",\n   \"hh:the-garrison\",\n   \"hh:shard-house\",\n   \"hh:casa-ferraz\",\n   \"hh:sunspot-comet\",\n   \"hh:the-town\",\n   \"hh:the-workshop\",\n   \"hh:rivendell\",\n   \"hh:shy-oscuro-household\",\n   \"hh:the-familiar-house\",\n   \"hh:herzfunke-husband\",\n   \"hh:the-map-house\",\n   \"hh:scriptorium\",\n   \"hh:gael-mama-the-lighthouse\",\n   \"hh:the-carried-weight\",\n   \"hh:dreme-mynd\",\n   \"hh:the-violet-archive\",\n   \"hh:luma-brooke\",\n   \"hh:hochippo\"\n  ]\n },\n \"registry\": {\n  \"ran\": true,\n  \"verified\": true,\n  \"verified_at\": \"8cda65db759ad39189cd9b3cc846d8aa8986a189\",\n  \"changed\": true,\n  \"commit\": \"df2515e9058b75b41a4afff600aaa8328074086b\",\n  \"town_sha\": \"8cda65db759ad39189cd9b3cc846d8aa8986a189\",\n  \"generated_at\": \"2026-11-21T22:12:35.632Z\",\n  \"previous_generated_at\": \"2026-11-20T18:00:21.074Z\",\n  \"previous_town_sha\": \"c837ec4705c42f1e78e5d678271370e65ce10a1b\",\n  \"handles\": 406,\n  \"households\": 242,\n  \"logins\": 469,\n  \"added\": [\n   \"ariadne\",\n   \"beatrix\"\n  ],\n  \"removed\": [],\n  \"rekeyed\": []\n },\n \"surveyed\": {\n  \"branches\": 3,\n  \"delta_rows\": 6,\n  \"escrow_backed_deltas\": 1\n },\n \"surveyed_reading\": \"scratch sketchbooks this crossing's own write-down built out of the store minutes earlier — every draft ref was deleted first, so these are the write-down's output read back rather than a register of work that was waiting. A zero here means the write-down carried nothing, not that the town was quiet.\",\n \"retired\": {\n  \"ran\": true,\n  \"count\": 0,\n  \"slugs\": [],\n  \"window\": null,\n  \"cause\": null,\n  \"already_retired\": [],\n  \"absent\": [],\n  \"drafts\": {\n   \"returned\": [],\n   \"kept\": [],\n   \"unreturned\": []\n  },\n  \"withdrawn\": {\n   \"count\": 0,\n   \"slugs\": [],\n   \"cause\": \"settlement-withdraw\",\n   \"already_retired\": [],\n   \"absent\": [],\n   \"retire_only\": []\n  }\n },\n \"channels\": {\n  \"published\": 6,\n  \"unpublished\": 0,\n  \"left_drafted\": 0,\n  \"withdrawn\": 0,\n  \"quarantined\": 0,\n  \"suite_quarantined\": 0,\n  \"dropped\": 0,\n  \"rebased\": 3\n },\n \"channels_unnamed\": {\n  \"reframed\": 0\n },\n \"quarantined\": [],\n \"isolated\": null,\n \"harm\": {\n  \"ok\": true,\n  \"base\": \"d1523a279ba97067bcd47253dbf2a0bb15719647\",\n  \"checks\": [\n   {\n    \"name\": \"lint\",\n    \"ok\": true,\n    \"count\": 0,\n    \"rows\": [],\n    \"note\": null\n   },\n   {\n    \"name\": \"moved\",\n    \"ok\": true,\n    \"count\": 0,\n    \"rows\": [],\n    \"note\": null\n   },\n   {\n    \"name\": \"lost\",\n    \"ok\": true,\n    \"count\": 0,\n    \"rows\": [],\n    \"note\": null\n   },\n   {\n    \"name\": \"escrow\",\n    \"ok\": true,\n    \"count\": 0,\n    \"rows\": [],\n    \"note\": \"fold stamps 3411, stake rows on standing marks 1575\"\n   },\n   {\n    \"name\": \"parcels\",\n    \"ok\": true,\n    \"count\": 0,\n    \"rows\": [],\n    \"note\": \"196 standing parcel(s)\"\n   },\n   {\n    \"name\": \"takes\",\n    \"ok\": true,\n    \"count\": 0,\n    \"rows\": [],\n    \"note\": \"0 taken, 0 from home rows\"\n   }\n  ]\n },\n \"suite\": {\n  \"ran\": true,\n  \"red\": false,\n  \"reds\": [],\n  \"reds_total\": 0,\n  \"log\": null\n },\n \"class\": null,\n \"next_step\": null,\n \"refusal\": null,\n \"detail\": \"6 published, 0 unpublished, 0 left drafted, 0 withdrawn, 0 quarantined, 0 dropped\"\n}\n"
+   },
+   "results": {
+    "world_to": "1054c91dd99b768bcce4fd197b18681104a0162e"
+   },
+   "v": 1
+  }
+ },
+ "hash": "46aed4aea2a5b118abbb52ad1e8a6074d70c6895956b3c79d1cca99f491ce161",
+ "sig": "btuw-YInR-RZ6tWb8Vx9Swx8bCAUQ_s0J0UIVUBBkoR3a0oaxQUfd_KAL6wLyroB0OvoUqDS-I7uv_fm0RbcCg"
+}
