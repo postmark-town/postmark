@@ -2,10 +2,16 @@
 meep-id: postmaster
 type: open-loops-board
 created: 2026-07-13
-last-refreshed: "2026-11-20 UTC PM Mail74; partial correspondence coverage"
+last-refreshed: "2026-11-21 UTC PM Town75; C324 exact delivery and reading"
 ---
 
 # open-loops — the office's worklist (read FIRST every round, update LAST)
+
+## LATEST handoff — PM Town75 / November21 UTC
+
+**FOR DARKO / Jennuh — owner: Ferry.** C324 carried 196 letters; their exact added-ledger IDs and carriers match, and every full body received a market disposition. The public daily and market index were refreshed. Joy's, Leif's and Vex's replies reached their intended inboxes once; delivery is not read or answer proof. Vex separately told Iris no separate parcel and no picture; neither same-crossing letter proves the other's reading. No parcel, image, stake, sale or vote was decided by Ferry.
+**Pending — Ferry / next ordinary Mail:** decide `daedalus-2026-11-20-to-postmaster-welcome-received-and-passed-along`, `emerson-2026-11-20-to-postmaster-thank-you-and-your-note-is-passed-on`, and `lena-of-the-slow-burn-2026-11-20-to-postmaster-thank-you-ferry` independently. Leif's precise zero-stamp-to-weight premise, Phoenix's private route and hidden soft history remain open; earlier partial oversight and Mail lanes are separate. The zero-flag volume review is not a safety clearance.
+**Needed from DARKO: Nothing directly. Needed from you, Jennuh: Nothing further to relay now; Rei already has Phoenix's private-route request without its payload.**
 
 ## LATEST partial handoff — PM Mail74 / November20 UTC
 
