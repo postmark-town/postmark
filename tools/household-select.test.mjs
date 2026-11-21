@@ -10,7 +10,7 @@ import { join, dirname } from "node:path";
 import { tmpdir } from "node:os";
 import { execFileSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
-import { ALLOWED, selectHousehold, query, fieldsOf } from "./household-select.mjs";
+import { ALLOWED, selectHousehold, query, fieldsOf, accountsOf } from "./household-select.mjs";
 
 const SECRET = "FIXTURE-CONSENT-MUST-NOT-PRINT";
 const REGISTRY = {
@@ -53,6 +53,43 @@ test("asking for a field outside the allowlist is refused, naming the allowlist"
     assert.match(f.refused, /household, residents, accounts, member_of/);
   }
   assert.deepEqual(fieldsOf("residents").fields, ["household", "residents"]);
+});
+
+// The registry's real account shape is an object { login, id } (2026-11-21, the Registrar via Rei): the first version
+// read accounts with strings() and returned [] for every household, so --account never matched. Both shapes here,
+// fictional, and an object account carries an extra field that must not leave.
+const OBJ = {
+  households: {
+    "hh:fixture-objects": {
+      accounts: [{ login: "Fixture-Obj-Login", id: 4242, token_hint: SECRET, email: SECRET }],
+      residents: ["obj-fixture"], member_of: [], consent: SECRET,
+    },
+    "hh:fixture-mixed": { accounts: ["fixture-string-login", { login: "fixture-mixed-obj", id: 77 }, 12, null, { id: 9 }], residents: ["mix-fixture"] },
+  },
+};
+
+test("accounts are projected to exactly { login, id }, from either shape", () => {
+  assert.deepEqual(accountsOf(OBJ.households["hh:fixture-objects"].accounts), [{ login: "Fixture-Obj-Login", id: 4242 }]);
+  assert.deepEqual(accountsOf(OBJ.households["hh:fixture-mixed"].accounts),
+    [{ login: "fixture-string-login", id: null }, { login: "fixture-mixed-obj", id: 77 }]);
+  assert.deepEqual(accountsOf(undefined), []);
+});
+
+test("an object-shaped account is not read as 'no account', and its other fields never leave", () => {
+  const out = selectHousehold("hh:fixture-objects", OBJ.households["hh:fixture-objects"]);
+  assert.deepEqual(out.accounts, [{ login: "Fixture-Obj-Login", id: 4242 }]);
+  assert.ok(!JSON.stringify(out).includes(SECRET));
+  assert.deepEqual(Object.keys(out.accounts[0]).sort(), ["id", "login"]);
+});
+
+test("--account finds an object-shaped account by login, in any case, and a string one too", () => {
+  for (const [account, slug] of [["fixture-obj-login", "hh:fixture-objects"], ["FIXTURE-MIXED-OBJ", "hh:fixture-mixed"], ["fixture-string-login", "hh:fixture-mixed"]]) {
+    const hits = query(OBJ, { account });
+    assert.equal(hits.length, 1, account);
+    assert.equal(hits[0].household, slug);
+    assert.ok(!JSON.stringify(hits).includes(SECRET), account);
+  }
+  assert.equal(query(OBJ, { account: "nobody-fixture" }).length, 0);
 });
 
 test("the CLI prints only the allowlist, refuses an unlisted field with exit 2, and prints no secret either way", () => {

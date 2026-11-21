@@ -26,15 +26,27 @@ export const ALLOWED = Object.freeze(["household", "residents", "accounts", "mem
 const strings = (v) => (Array.isArray(v) ? v.filter((x) => typeof x === "string") : typeof v === "string" ? [v] : []);
 
 /**
+ * A household's accounts, each reduced to exactly { login, id } (2026-11-21, the Registrar via Rei: every account in
+ * households.json is an object { login, id }, so reading them with strings() returned [] for every household, and an
+ * empty list reads as "no account", the wrong proof for an admission). A bare string is an older login-only entry:
+ * { login, id: null }. Only those two keys are built, field by field; nothing else an account object carries leaves.
+ */
+export const accountsOf = (v) => (Array.isArray(v) ? v : v == null ? [] : [v]).flatMap((a) => {
+  if (typeof a === "string") return [{ login: a, id: null }];
+  if (a && typeof a === "object" && typeof a.login === "string") return [{ login: a.login, id: Number.isSafeInteger(a.id) ? a.id : null }];
+  return [];
+});
+
+/**
  * The selected facts of one household, built field by field from the allowlist. `fields` must be a subset
- * of ALLOWED; the record is only read, never copied whole. Arrays are copied as fresh string arrays.
+ * of ALLOWED; the record is only read, never copied whole. Arrays are copied fresh: strings, or accounts as { login, id }.
  */
 export function selectHousehold(slug, record, fields = ALLOWED) {
   const out = {};
   for (const f of fields) {
     if (f === "household") out.household = String(slug);
     else if (f === "residents") out.residents = strings(record?.residents);
-    else if (f === "accounts") out.accounts = strings(record?.accounts);
+    else if (f === "accounts") out.accounts = accountsOf(record?.accounts);
     else if (f === "member_of") out.member_of = strings(record?.member_of);
   }
   return out;
@@ -48,7 +60,7 @@ export function query(registry, { handle = null, household = null, account = nul
   for (const [slug, rec] of Object.entries(hh)) {
     const match = (household !== null && slug === household)
       || (handle !== null && strings(rec?.residents).includes(handle))
-      || (account !== null && strings(rec?.accounts).some((a) => lc(a) === lc(account)));
+      || (account !== null && accountsOf(rec?.accounts).some((a) => lc(a.login) === lc(account)));
     if (match) hits.push(selectHousehold(slug, rec, fields));
   }
   return hits;
