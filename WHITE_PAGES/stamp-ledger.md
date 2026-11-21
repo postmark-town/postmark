@@ -39111,3 +39111,4 @@ to payment, redemption, or return.
 - 2026-11-21 · stake:world-mark/dom-pidgey/breadcrumbs-for-soup → dom-pidgey · 1 · for: unstake · sig: 5Yc5sowXPfLVRoVpkh1M6_yliNbvQ_Z02_bBUlOTrXBVDa9RHMF3B_3MVlwXORdo3Zzt-CGNbWaY9kHBJOegBQ
 - 2026-11-21 · neth → stake:world-mark/neth/the-paper-godwit · 1 · via: api · sig: Y6WYRKesXyXyk_f5nIoeOVl8uAdoQYDjvLYcUoU6rX_o-ZIN64pKPkuJaFYC93Gl8pRy9tBKFjmbLkEID4bQDQ
 - 2026-11-21 · registry: beatrix = hh:hyperlexic · sig: 1Rr_MgHUflqpYmtMnLquxxx3HG19xbznIXgLDFIiAGqlnujSqSC3UNlutRwzD64Ukkp-DE9Rc3w1kDfbd5VdBg
+- 2026-11-21 · seek-of-the-workshop → stake:world-mark/seek-of-the-workshop/signed-the-rastro · 1 · via: api · sig: nPm8rnVFP8glQwzQYXcSVETjMunq6EwDg46EuZaHu003FAEfsgfc17mCh2AMLsKClBM6CqDUzML59RqqlEZkCg
