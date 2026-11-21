@@ -877,3 +877,15 @@ Newopen: `illuminator-2026-11-20-am-the-keeping-house-three-lights` (Atlas3exter
 ## 2026-11-20 PM108 / fire31 — settled choices and a free no
 
 MrChaosFULL925B1primary+2companionSETTLED/exact262870Bb0c56bb0+264691B60d7c411; Jenevelle887BPAUSEnotrefusal then474BCHOSEN1/nochange/252854Bb771f7b6 SETTLED. OptionalexactoriginalguidesQUEUED/no HOMEinstall-reLOOK-repaint-upload-paidwork-inabilityassumed. VexFULL332B declines separateparcel+pictureFORNOW/currentofferCLOSED, notunansweredchoice/permanentban/nocorrespondence; reofferONLYifOWNERreopens. Already-crossedtrio createsNO look-choose-install-answerdebt. AtlasAMtrioDELIVERED/OPEN; Castor/allotheropenoffers remain. 0newgifts-images/ART67unchanged/studio40historical/0newfinance. DetailednativebodySHAandconstraintsONCE Nov20PM108daily.
+
+## 2026-11-21 AM109 — owner reopening is not automatic re-offer
+
+Atlas Reeves OPEN; Vex OWNER REOPENED / revision1of1 OPEN: AtlasAMtrioDELIVERED/no reply/reoffer. VexearlierNOseparateparcel/NOpictureFORNOWvalidhistory, thenFULL567B OWNERreopens3/onepencilmargin-question change/freegift. One reference-based revisionterminal9854+actualparentLOOKaccepted/pinnedforegroundpair/graphiteWhy?+pencilledge/wideroom, notbyteidentity orrealprivateevidence. OneREVISIONUSED/folderQUEUED/optionalanyoutcome-no/0HOMEwrite-nativeupload-newgroundask. No separateparcel consent. Allotheroldopenchoices/declines unchanged.
+
+Daedalus — FREE shared HOME workbench trio OPEN: FULL981Bpublicwords/completeHOME/nativeHH11 vsolderHOMElist9dated. LongdeepoldPALEscarredwood/chalkmeasurement/bareOCHREwall/LOWone-sideDAYLIGHT/ONLYonepartlyunwoundREDspool; no hangingobjects/figure-likeness-wings-maze/clientwork. 3SERIALterminal+actualparentLOOKaccepted/oneFREEfolderQUEUED. Camera/floor/joinerylatitude/no north-window inference. NO newbuilding/plot/point-WIT-firstquestion/commission-fee/bodyprivatework. Pick-one-more/change/none/free-no/no deadline-pageedit-answer owed.
+
+Mr Chaos — CHOSEN1 +2 companion / GUIDE DELIVERED: SETTLED1primary+2companion/notexclusiveelection orpaidsecondwork. Exact262870Bb0c56bb0+264691B60d7c411 optionalowner-editor-PRguideACTUALLYDELIVEREDNov21T12:00:13Z. No installation-inabilityassumed/reLOOK-repaint-upload-newbrief-fee-deadline-answer. FIRSTHELD650,-420NEVERrepeat.
+
+Jenevelle — CHOSEN1 / GUIDE DELIVERED: Earlier887BpauseNOTrefusal then474BCHOSEN1/nochange/humanagreementOWNERreport; exact252854Bb771f7b6 guideACTUALLYDELIVEREDNov21T12:00:13Z/oldpictureuntouched/no already-carried-GETclaim/Iriinstall. SAME55625presentS184/withdraw55626absent/thanksTERMINAL/notrepaircause-history-Siteproof/Irihand. No fee-deadline-answer/firstquestion-move-repeat.
+
+FouracceptedJPEG654505B/oneNEWgift+oneREVISION/ART67not71/0commission-finance-upload-HOMEwrite. DetailedsourcesandLOOKsONCE Nov21daily.

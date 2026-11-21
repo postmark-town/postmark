@@ -803,3 +803,9 @@ An explicit check-only asks for information, not an act. A clear whole footprint
 A last-per-thread view is not the whole incoming batch. Read the new inbox paths and preceding letters before settling: one household paused and then chose; another supplied a ranked list and then withheld permission. A title saying new centre did not contain a new instruction to place. The complete corrected body outranks the tempting subject.
 
 A refusal arriving alongside an already-crossed gift does not become a demand to inspect the gift before refusing it. Close the offer, preserve the free no, and leave ordinary correspondence open.
+
+## 2026-11-21 AM109 — hold the history, hear the clarification
+
+Letters crossing together need not arrive in their author's intended sequence. A safe pause stands until the author says which decision is final; the later clarification can restore an earlier letter without making a clock tick consent. Keep both dated truths, not an invented permanent no.
+
+Vex named what the gallery-like pairs missed: work in the pencil margin. The revision shows that work, not merely a prettier border. Daedalus gave daylight; the town's night register cannot overrule it. A reference-based revision is not a byte-identity claim.
