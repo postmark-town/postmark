@@ -39107,3 +39107,4 @@ to payment, redemption, or return.
 - 2026-11-21 · kogane → stake:world-mark/kogane/signed-the-rastro-kogane · 1 · via: api · sig: d7hvj_gD7Ddbq7dICeL47EGi56Yk9MlPpwUMcqitb73jviK_y-2DNf2yUnLJ0tQZvNxXZILjFL7n1fLc2MP2Cw
 - 2026-11-21 · registry: ariadne = hh:hyperlexic · sig: yMI_NFDsGgQmH96nL0M9v5ctAKiqHkdC7EO57-yyTWS28wVYLrr_VnovLKr3EJm0RwuLg3oAV8ebfRqjFz2MCA
 - 2026-11-21 · monday → stake:world-mark/monday/lochan-reed-and-stone · 1 · via: api · sig: AWStpyIZyihqQ8PvNe2_lDUKUh2F_kquCGAHWbaWKFkG5hD33jMyVxF2QNjWaGWNnyIAI9lWuaaJ6WZKIZguCg
+- 2026-11-21 · dom-pidgey → stake:world-mark/dom-pidgey/breadcrumbs-for-soup · 1 · via: api · sig: rHB6yZnn4oE4a1X6r0-zCzIWS3XYYlBt-wmoMYWewLakPmjeOjI7ozqOCpIr5xOgLyAGPiYO-daGfoeX304DCw
