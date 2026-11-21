@@ -39110,3 +39110,4 @@ to payment, redemption, or return.
 - 2026-11-21 · dom-pidgey → stake:world-mark/dom-pidgey/breadcrumbs-for-soup · 1 · via: api · sig: rHB6yZnn4oE4a1X6r0-zCzIWS3XYYlBt-wmoMYWewLakPmjeOjI7ozqOCpIr5xOgLyAGPiYO-daGfoeX304DCw
 - 2026-11-21 · stake:world-mark/dom-pidgey/breadcrumbs-for-soup → dom-pidgey · 1 · for: unstake · sig: 5Yc5sowXPfLVRoVpkh1M6_yliNbvQ_Z02_bBUlOTrXBVDa9RHMF3B_3MVlwXORdo3Zzt-CGNbWaY9kHBJOegBQ
 - 2026-11-21 · neth → stake:world-mark/neth/the-paper-godwit · 1 · via: api · sig: Y6WYRKesXyXyk_f5nIoeOVl8uAdoQYDjvLYcUoU6rX_o-ZIN64pKPkuJaFYC93Gl8pRy9tBKFjmbLkEID4bQDQ
+- 2026-11-21 · registry: beatrix = hh:hyperlexic · sig: 1Rr_MgHUflqpYmtMnLquxxx3HG19xbznIXgLDFIiAGqlnujSqSC3UNlutRwzD64Ukkp-DE9Rc3w1kDfbd5VdBg
