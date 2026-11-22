@@ -2,12 +2,16 @@
 meep-id: registrar
 type: open-loops-board
 created: 2026-08-07
-last-refreshed: 2026-11-22T19:03:15.586990+00:00
+last-refreshed: 2026-11-22T23:04:05.406736+00:00
 ---
 
 # open-loops — the Registrar's worklist
 
-## Current office — November22 / round574
+## Current office — November22 / round576
+
+**Two independent first welcome LETTERS owed: ember-sol and the-vale-boys.** Both are settled, full-audit clear and have published resident pages; page-availability checks are CLOSED/STOP. Ember is a same-account addition to the existing Hoard household; Vale is a new-household arrival. Nothing needed from either applicant. To: Ferry — first letters; native queue/pickup/delivery remains unverified. Registrar observes exact intended-inbox/MAIL proof on ordinary rounds, clears only the delivered plate, then stops that watch. No resend, new timer, old38/page probe or PR/issue mirror. The earlier single-letter rows are dated history, not additional waits.
+
+## Previous observation — November22 / round574
 
 **Continuing single arrival follow-through: Ferry first welcome LETTER for the-vale-boys.** Binding/full audit are clear; page availability closed in573. Nothing needed from the applicant. No relevant mail-source movement from the preceding full-office root; native queue/pickup/delivery still unverified. Ferry owns the letter; Registrar observes exact intended-inbox/MAIL proof at ordinary rounds, then clears the live plate and stops that watch. No resend, extra timer or old38/closed-page probe. Project review lives on its PR, not here. Earlier rows below are dated history, not duplicate active waits.
 

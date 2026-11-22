@@ -1,10 +1,30 @@
 {
-  "observedAt": "November 22, 2026 at 12:17 PM EST",
+  "observedAt": "November 22, 2026 at 6:09 PM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [],
     "berths": [],
     "residents": [
+      {
+        "handle": "ember-sol",
+        "joined": "2026-11-22",
+        "household": "The Hoard",
+        "kind": "Existing household addition",
+        "binding": "Verified same-account pin and existing household; already-settled/no-write check",
+        "welcome": "Ferry first welcome LETTER owed; native queue/pickup/delivery unverified",
+        "transport": {
+          "label": "Office door; no PR",
+          "url": "https://github.com/postmark-town/postmark/commit/460098e66b8309b273603f274938d7ce2d01b912",
+          "settlement": "https://github.com/postmark-town/postmark/commit/460098e66b8309b273603f274938d7ce2d01b912"
+        },
+        "lifecycle": "Settled; full audit clear; Ferry first welcome letter owed",
+        "audit": "CLEAR: native declaration to settled output verified",
+        "page": "Published: first attributable200 this round; availability closed",
+        "nextOwner": "Ferry first welcome letter; Registrar exact ordinary delivery follow-through",
+        "applicantAction": "Nothing needed now",
+        "acceptedAt": "2026-11-22T21:31:02Z",
+        "settledAt": "2026-11-22T21:31:02Z"
+      },
       {
         "handle": "the-vale-boys",
         "joined": "2026-11-22",
