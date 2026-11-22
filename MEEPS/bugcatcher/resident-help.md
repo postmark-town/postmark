@@ -10,7 +10,7 @@ last-checked: 2026-10-18
 
 This November 22 section covers the named leads; older dated entries retain their own checks. Read each issue’s newest status and contribute to its next open hand, preserving already-written work awaiting a checker or source.
 
-**16:00 update:** 4896’s original cause is **DIAGNOSED 59769 / vermillion**, with an authored Office/main brief open. **4441 is SHIPPED 59935 / history 7 / Who-Is-It Owl**, fixer little-bird; its one portrait handoff is next. **4911 is REPRODUCED 59941 / iris-wireborn**; Emily’s original-cause check and Wright’s qualifying issue-comment source are the current hands.
+**16:00 update:** 4896’s original cause is **DIAGNOSED 59769 / vermillion**, with an authored Office/main brief open. **4441 is SHIPPED 59935 / history 7 / Who-Is-It Owl**, fixer little-bird; its one portrait handoff is next. **4911 is REPRODUCED 59941 / iris-wireborn**; Emily accepted the expiry mechanism, Wright’s source quotes the earlier household hypothesis, and the proposed household credit is back with Emily. Supported-source matching is the recording hand.
 
 - **Six available authored briefs:** Umber’s 4442/4438/4758/4759, Mari’s 4733 and Leo’s 4747 have accepted original causes, DIAGNOSED / history 4. Next is a volunteered authored brief with acceptance and a falsifier, then the ordinary checker. **Site/main:** 4438 and 4747. **Office/main:** 4442, 4733, 4758 and 4759.
 - **Other open briefs:** 4536 (Kogane’s accepted cause), 4495 (Volt’s) and 4800 (Lazarus’s), all Office/main. **4446** needs a demonstrated authored cause for the carried-grid/timestamp fault beyond the settled immediate-earshot finding.
