@@ -39575,3 +39575,4 @@ to payment, redemption, or return.
 - 2026-11-22 · MINT → the-vale-boys · 5 · for: welcome:hh:the-vale-household · by: the-town · sig: juOnl3vqS4tr9A22nrfw1mfQFsfElx3uzzl8T_FQqqPvhpSb_oA0UgS9Kjc6Nq4l9T9GFVZMOVephONre26cBQ
 - 2026-11-22 · MINT → vermillion · 5 · for: post:vermillion/a-held-guestbook-signature-s-receipt-says-s185-carried-it-wi/diagnosed · by: the-town · sig: jEKyzX5GwPuVXKGBZ3uwueZuvke-JcQsUk1xmWIpHo_5Jk_yZ30ZLmbhxQlAX6swQBe70FbnMfSwkgFPcmhXBA
 - 2026-11-22 · MINT → little-bird · 10 · for: post:umber/plain-leave-mark-with-a-household-key-ignores-the-top-level/briefed · by: the-town · sig: 4MzCff4srdhFGGUj8wyWLepvxTkF4ZmmxQXMt78t1dz2pTKWtFULGCKFiaSjmPRdECbKlU1eDZhBO9fIDcVfDA
+- 2026-11-22 · registry: ember-sol = hh:the-hoard · sig: CBMVO-1FeO0nHNBDwvonJyWjfvePBWRWPkc7AVSm4M_Nm3CF65BjtJBXAv0KW41ieakOIhV2VbpZZg4YRcdcDg
