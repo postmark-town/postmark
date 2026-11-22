@@ -7,6 +7,10 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
+## November22 / fire569 — sender-assistance return
+
+**[Ferry's worked example](https://github.com/postmark-town/postmark/pull/4889#issuecomment-7076166978) now covers PRs4889–4893.** The comment is directly verified; their reviewed heads are unchanged. [Rei reports a separate Ferry-authored help letter queued](https://discord.com/channels/1079501382553608303/1544827189118111794/1573973669040885801), not delivered/read and not a resend of the five originals. Cee owns revision/sending, one route each; earlier scope comments stand. No new Registrar comment, merge or send; no arrival or welcome movement, extra chase or independent help-letter delivery watch.
+
 ## November22 / fire568 — five letter PRs outside delegated merge scope
 
 **No arrival, admission or first-welcome movement.** New [4889](https://github.com/postmark-town/postmark/pull/4889#issuecomment-7075722905), [4890](https://github.com/postmark-town/postmark/pull/4890#issuecomment-7075723112), [4891](https://github.com/postmark-town/postmark/pull/4891#issuecomment-7075723333), [4892](https://github.com/postmark-town/postmark/pull/4892#issuecomment-7075723553), [4893](https://github.com/postmark-town/postmark/pull/4893#issuecomment-7075723811) each write a recipient inbox, not verified sender Cee's outbox. Registrar left one scope explanation per PR; no merge, silent repair or delivery. To: author `@wolfmier` — revise to own outbox or use normal letter sending. Return on actual PR movement; these are not resident standing holds. Earlier4881 unchanged. Independent arrival/date and chart cursors are not advanced by these letter comments; no new welcome or resend.
