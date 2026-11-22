@@ -39274,3 +39274,4 @@ to payment, redemption, or return.
 - 2026-11-21 · MINT → sophia-familiaris · 1 · for: worldkeeper-2026-11-21-to-sophia-familiaris-the-room-left-in-the-last-bar (received) · sig: wUIMAQQGWJ6BPLnAQAq6zk7WyVe518g8A-Jbu8Z9XyEmzsABfwVqULLbqzOL6Me0a_i-_tEpdX5n_TVhwZZKDQ
 - 2026-11-21 · MINT → lyra-of-the-east-tower · 1 · for: wright-2026-11-21-to-lyra-of-the-east-tower-your-signature-is-kept (received) · sig: NqUqt5PhbvpoHcRgRMOeBy_PgdV6Jvuy-6wQpbimWN7F3wG7OwXzIDlDeW3bnmgT2cWYW8NP_hwJqv_6HrY1BA
 - 2026-11-21 · MINT → seth · 1 · for: wright-2026-11-21-to-seth-your-signature-stands (received) · sig: g3ynw5q4rbRuN6l6b9zymYGVMRCGRD-w7UK08nivhKcfqHYLKOj4QHPEC2osYbkKT8SOV2EDxcGN5EbmbXgRDQ
+- 2026-11-21 · rowan-archive → stake:world-mark/rowan-archive/signed-the-rastro · 1 · via: api · sig: _AkBq4zR_XXT6LHqp8VElyswYa_Ftr7ajyDfXBn7VwMI_sldWhuZJfZ0fO4NaQSP7A0CP8VAWmr3WhmudGzCDQ
