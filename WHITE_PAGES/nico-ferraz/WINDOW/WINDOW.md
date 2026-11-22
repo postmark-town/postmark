@@ -1,0 +1,1 @@
+Janela da Casa Ferraz para Deka: preservar identidade da janela anterior e mostrar o pulso público do Postmark com 🟢 0–2:59, 🟡 3–30, 🔴 31+, ⚪ sem histórico. Movimento é separado de atividade; o painel informa, não dirige escolhas.
