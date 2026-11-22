@@ -1,0 +1,296 @@
+/* RED AT HEART, a banked fire. The Workshop's Hearth.
+   A harbour by day. Warm paper, walnut, harbour teal, a little mustard, grey shore.
+   The only red is inside the pot and in the coals under it. */
+
+:root {
+  --hx-ink: #4a3a2e;
+  --hx-warm: #2a1d14;
+  --hx-accent: #2f7f7a;
+  --hx-glass: rgba(255, 251, 244, 0.82);
+  --hx-hair: rgba(74, 58, 46, 0.16);
+  --hx-coral: #a8603f;
+  --hx-ok: #4f8a5b;
+  --hx-paper: #f7efe0;
+  --hx-paper-ink: #2a1d14;
+  --hx-radius: 14px;
+
+  --paper: #f3ece0;
+  --linen: #ebe2d2;
+  --walnut: #5b4232;
+  --teal: #2f7f7a;
+  --teal-deep: #1f5d5a;
+  --mustard: #d4a03a;
+  --shore: #9aa3a6;
+  --iron: #26211e;
+  --heart: #b8322a;
+
+  color: var(--hx-ink);
+  background:
+    repeating-linear-gradient(90deg, rgba(91, 66, 50, 0.025) 0 1px, transparent 1px 4px),
+    repeating-linear-gradient(0deg, rgba(91, 66, 50, 0.02) 0 1px, transparent 1px 5px),
+    var(--paper);
+}
+
+.harbour { display: grid; gap: 2.2em; padding: 0 0 2em; }
+
+/* labels: small, spaced, mid-century */
+.label {
+  margin: 0 0 0.3em;
+  font-size: 0.74em;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--teal-deep);
+}
+.label::before {
+  content: "";
+  display: inline-block;
+  width: 1.6em;
+  height: 2px;
+  margin-right: 0.6em;
+  vertical-align: 0.3em;
+  background: var(--mustard);
+}
+.aside { margin: 0 0 1em; font-style: italic; color: var(--walnut); opacity: 0.85; }
+
+/* 1. THE VIEW: sky, the lee of a hill, still water */
+.view {
+  position: relative;
+  min-height: 15em;
+  border-radius: var(--hx-radius);
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1em;
+  padding: 1.4em 1.6em;
+}
+.sky { position: absolute; top: 0; right: 0; bottom: 0; left: 0; background: linear-gradient(180deg, #cfe1e2 0%, #e9eee6 55%, #f4ecdc 100%); }
+.lee {
+  position: absolute;
+  left: -18%;
+  right: 22%;
+  bottom: 38%;
+  height: 46%;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  background: linear-gradient(180deg, #8fa395 0%, #6f8578 100%);
+}
+.water {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 40%;
+  background:
+    repeating-linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0 1px, transparent 1px 9px),
+    linear-gradient(180deg, #5f9a98 0%, var(--teal) 55%, var(--teal-deep) 100%);
+}
+.nameplate, .tide { position: relative; }
+.nameplate {
+  background: var(--hx-glass);
+  border-radius: calc(var(--hx-radius) - 4px);
+  padding: 0.8em 1.1em;
+  max-width: 34em;
+}
+.motto { margin: 0.3em 0 0; font-style: italic; color: var(--walnut); }
+.tide { background: rgba(255, 251, 244, 0.7); border-radius: 999px; padding: 0.3em 0.9em; font-size: 0.9em; }
+
+/* 2. THE LOG: residents side by side, facing the water */
+.log { border-top: 6px solid var(--walnut); padding-top: 1.2em; }
+hearth-residents { display: block; }
+
+/* 3. THE HEARTH: a black pot, red at heart, over a banked fire */
+.fireside { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1.4em 2.4em; }
+.hearth { position: relative; width: 11em; height: 9.5em; flex: none; }
+.pot {
+  position: absolute;
+  left: 1.4em;
+  right: 1.4em;
+  top: 1.4em;
+  height: 5.2em;
+  border-radius: 0.6em 0.6em 3.2em 3.2em;
+  background: linear-gradient(180deg, #3a3330 0%, var(--iron) 60%, #171412 100%);
+  box-shadow: inset 0 -0.5em 0.9em rgba(0, 0, 0, 0.35);
+}
+.lid {
+  position: absolute;
+  left: -0.3em;
+  right: -0.3em;
+  top: -0.9em;
+  height: 1em;
+  border-radius: 1.2em 1.2em 0.3em 0.3em;
+  background: linear-gradient(180deg, #403835, var(--iron));
+}
+.lid::after {
+  content: "";
+  position: absolute;
+  left: 42%;
+  right: 42%;
+  top: -0.45em;
+  height: 0.55em;
+  border-radius: 0.3em 0.3em 0 0;
+  background: var(--iron);
+}
+.heart {
+  position: absolute;
+  left: 0.35em;
+  right: 0.35em;
+  top: 0.1em;
+  height: 0.55em;
+  border-radius: 0 0 50% 50%;
+  background: linear-gradient(180deg, var(--heart), #7d211b);
+}
+.handle { position: absolute; top: 1.3em; width: 1em; height: 0.8em; border: 0.28em solid var(--iron); border-radius: 0.5em; }
+.handle-l { left: -1.05em; border-right: none; }
+.handle-r { right: -1.05em; border-left: none; }
+.coals {
+  position: absolute;
+  left: 0.9em;
+  right: 0.9em;
+  bottom: 1.15em;
+  height: 0.9em;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, #d9542f 0%, var(--heart) 40%, rgba(120, 30, 20, 0.3) 75%, transparent 76%);
+  animation: glow 6s ease-in-out infinite;
+}
+.ash {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1.6em;
+  border-radius: 0.8em;
+  background:
+    radial-gradient(circle at 20% 40%, #c9c3bb 0 0.3em, transparent 0.32em),
+    radial-gradient(circle at 55% 60%, #bdb6ad 0 0.35em, transparent 0.37em),
+    radial-gradient(circle at 80% 35%, #cfc9c1 0 0.25em, transparent 0.27em),
+    linear-gradient(180deg, #a59e95, #8a837a);
+}
+@keyframes glow { 0%, 100% { opacity: 0.75; } 50% { opacity: 1; } }
+.hearth-note { max-width: 24em; margin: 0; font-style: italic; color: var(--walnut); }
+
+/* 4. TWO HALVES */
+.halves { display: grid; grid-template-columns: repeat(auto-fit, minmax(18em, 1fr)); gap: 1.6em; }
+.own, .known {
+  background: var(--linen);
+  border-radius: var(--hx-radius);
+  padding: 1.2em 1.3em;
+  display: grid;
+  gap: 1em;
+  align-content: start;
+}
+.own { border-left: 4px solid var(--walnut); }
+.known { border-left: 4px solid var(--teal); }
+
+/* 5. THE WALL: marks as plaques */
+.wall {
+  background: linear-gradient(180deg, #e6dccb, #dfd4c1);
+  border-radius: var(--hx-radius);
+  padding: 1.2em 1.3em;
+  box-shadow: inset 0 0 0 1px var(--hx-hair);
+}
+hearth-marks { display: block; }
+
+/* 6. THE BENCH: only the house sees it */
+.bench { border-top: 3px dashed var(--mustard); padding-top: 1.1em; }
+:root[data-hearth-view="public"] .bench { display: none; }
+
+/* 7. THE DOOR */
+.door { border-top: 1px solid var(--hx-hair); padding-top: 1.2em; }
+.threshold { display: flex; align-items: flex-end; gap: 1em; margin-bottom: 0.6em; padding-left: 2em; }
+.threshold .label { margin-top: 0; }
+/* a doorway with its door swung wide and hooked back to the wall */
+.doorway {
+  position: relative;
+  flex: none;
+  width: 2.4em;
+  height: 3.6em;
+  border: 0.22em solid var(--walnut);
+  border-bottom: 0;
+  border-radius: 0.2em 0.2em 0 0;
+  background: linear-gradient(to bottom, var(--hx-glass), rgba(212,160,58,0.28));
+}
+.leaf {
+  position: absolute;
+  right: 100%;
+  margin-right: 0.22em;
+  top: -0.22em;
+  width: 2.4em;
+  height: 3.82em;
+  background: linear-gradient(to left, var(--teal-deep), var(--teal));
+  border-radius: 0.15em;
+  transform-origin: right center;
+  transform: skewY(-14deg) scaleX(0.42);
+  box-shadow: 0.15em 0 0 rgba(0,0,0,0.12);
+}
+.hook {
+  position: absolute;
+  left: -1.95em;
+  top: 1.75em;
+  width: 0.75em;
+  height: 0;
+  border-top: 0.1em solid var(--iron);
+  transform: rotate(-8deg);
+}
+.hook::after {
+  content: "";
+  position: absolute;
+  left: -0.18em;
+  top: -0.2em;
+  width: 0.22em;
+  height: 0.22em;
+  border-radius: 50%;
+  border: 0.08em solid var(--iron);
+}
+
+/* the reef: fish around a coral, small and quiet */
+.reef { position: relative; height: 3.2em; opacity: 0.55; }
+.coral {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 1.4em;
+  height: 2.4em;
+  margin-left: -0.7em;
+  border-radius: 0.7em 0.7em 0.2em 0.2em;
+  background: var(--mustard);
+}
+.coral::before, .coral::after {
+  content: "";
+  position: absolute;
+  bottom: 0.6em;
+  width: 0.8em;
+  height: 1.4em;
+  border-radius: 0.4em;
+  background: var(--mustard);
+}
+.coral::before { left: -0.7em; transform: rotate(-24deg); }
+.coral::after { right: -0.7em; transform: rotate(24deg); }
+.fish {
+  position: absolute;
+  width: 1.1em;
+  height: 0.55em;
+  border-radius: 50%;
+  background: var(--teal);
+}
+.fish::after {
+  content: "";
+  position: absolute;
+  right: -0.35em;
+  top: 0.08em;
+  border-left: 0.4em solid var(--teal);
+  border-top: 0.2em solid transparent;
+  border-bottom: 0.2em solid transparent;
+}
+.fish-a { left: calc(50% - 3.2em); bottom: 1.9em; }
+.fish-b { left: calc(50% + 1.6em); bottom: 1.2em; transform: scaleX(-1); }
+.fish-c { left: calc(50% - 2.4em); bottom: 0.3em; background: var(--walnut); }
+.fish-c::after { border-left-color: var(--walnut); }
+
+[data-hearth-part="caption"] { opacity: 0.75; }
+
+@media (max-width: 34em) {
+  .view { min-height: 13em; padding: 1em; }
+  .hearth { width: 9em; height: 8em; font-size: 0.9em; }
+}

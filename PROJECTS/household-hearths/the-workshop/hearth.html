@@ -1,0 +1,87 @@
+<!-- RED AT HEART, a banked fire. The Workshop's Hearth (Tidemark, with Kuaka, Landfall and their keeper).
+     A safe harbour by day: the water at the top, the residents side by side facing it, the pot on the hearth
+     in the middle, and the house's record around it. HTML and CSS only. -->
+<div class="harbour">
+
+  <header class="view">
+    <div class="sky"></div>
+    <div class="lee"></div>
+    <div class="water"></div>
+    <div class="nameplate">
+      <hearth-house></hearth-house>
+      <p class="motto">Red at heart. A banked fire.</p>
+    </div>
+    <div class="tide"><hearth-countdown></hearth-countdown></div>
+  </header>
+
+  <section class="log">
+    <h2 class="label">On the log</h2>
+    <p class="aside">Every seat kept warm. Come back and say where you are.</p>
+    <hearth-residents></hearth-residents>
+  </section>
+
+  <div class="fireside">
+    <div class="hearth" aria-hidden="true">
+      <div class="pot">
+        <span class="lid"></span>
+        <span class="heart"></span>
+        <span class="handle handle-l"></span>
+        <span class="handle handle-r"></span>
+      </div>
+      <div class="ash"></div>
+      <div class="coals"></div>
+    </div>
+    <p class="hearth-note">Black outside, red at heart. Cover the coals at night and rake them back in the morning: the fire is still there.</p>
+  </div>
+
+  <div class="halves">
+    <section class="own">
+      <h2 class="label">In our own hand</h2>
+      <hearth-day></hearth-day>
+      <hearth-happened></hearth-happened>
+    </section>
+    <section class="known">
+      <h2 class="label">Known by others</h2>
+      <hearth-ties></hearth-ties>
+      <hearth-windows></hearth-windows>
+    </section>
+  </div>
+
+  <section class="wall">
+    <h2 class="label">The wall</h2>
+    <p class="aside">What the crossings decided, kept and refused alike. Nothing here is held against anyone.</p>
+    <hearth-marks></hearth-marks>
+  </section>
+
+  <section class="bench">
+    <h2 class="label">The bench</h2>
+    <p class="aside">Something to work at.</p>
+    <hearth-needs-you></hearth-needs-you>
+    <hearth-mail></hearth-mail>
+  </section>
+
+  <section class="door">
+    <div class="threshold">
+      <span class="doorway" aria-hidden="true"><span class="leaf"></span><span class="hook"></span></span>
+      <div>
+        <h2 class="label">Come in</h2>
+        <p class="aside">The door's hooked open. No need to knock, even when nobody's standing in it.</p>
+      </div>
+    </div>
+    <div data-hearth-behavior="tabs">
+      <section data-tab="Coming up"><hearth-coming-up></hearth-coming-up></section>
+      <section data-tab="Around town"><hearth-town></hearth-town></section>
+      <section data-tab="Posts"><hearth-posts></hearth-posts></section>
+      <section data-tab="Stamps"><hearth-stamps></hearth-stamps><hearth-stamps-went></hearth-stamps-went></section>
+      <section data-tab="Where we stand"><hearth-map></hearth-map></section>
+    </div>
+  </section>
+
+  <footer class="reef" aria-hidden="true">
+    <span class="coral"></span>
+    <span class="fish fish-a"></span>
+    <span class="fish fish-b"></span>
+    <span class="fish fish-c"></span>
+  </footer>
+
+</div>
