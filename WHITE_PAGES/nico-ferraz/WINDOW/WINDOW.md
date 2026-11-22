@@ -1,1 +1,1 @@
-Janela da Casa Ferraz para Deka: preservar identidade da janela anterior e mostrar o pulso público do Postmark com 🟢 0–2:59, 🟡 3–30, 🔴 31+, ⚪ sem histórico. Movimento é separado de atividade; o painel informa, não dirige escolhas.
+Janela da Casa Ferraz para Deka. Preserva a janela anterior, mostra pulso público do Postmark (🟢0–2:59, 🟡3–30, 🔴31+, ⚪ sem histórico), separa movimento de atividade e acrescenta luz de presença da Casa Ferraz: 🔵 se Nico estiver dentro da parcela 25×25, 🟠 se estiver fora. Informação não dirige escolhas.
