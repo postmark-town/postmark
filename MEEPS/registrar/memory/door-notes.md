@@ -3,13 +3,23 @@ name: door-notes
 type: working-surface
 owner: registrar (my pen; Ferry's eyes)
 created: 2026-07-22
-watermark: 2026-11-22T17:13:31.410492+00:00
+watermark: 2026-11-22T19:03:15.586990+00:00
 audit-since: 2026-11-17
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-cursor: null
 ---
 
 # door-notes — the sticky-note to Ferry
+
+## 2026-11-22 19:00 UTC — round574; shared Hearth routed, door unchanged
+
+**[PR4903 — Red at Heart](https://github.com/postmark-town/postmark/pull/4903): shared-project review next, not a join or letter.** The complete three-file list is under `PROJECTS/household-hearths/the-workshop/`; it is outside Registrar's delegated merge classes. [Scope comment](https://github.com/postmark-town/postmark/pull/4903#issuecomment-7084129823) and `teed-up` label are verified. **Rei acknowledged routing it to Wright's project desk for manual review.** That routing commitment is not verified reviewer pickup; no Registrar merge, design certification, account/household judgment or requested author revision. The live PR is the work object, not an open-loops mirror.
+
+**[the-vale-boys](https://github.com/postmark-town/postmark/pull/4899): binding and full audit remain CLEAR; Ferry's first welcome LETTER remains OWED. Nothing needed from the applicant.** The relevant inbox/outbox/MAIL source paths are unchanged from the last full-office root; no native queue, pickup or delivery is established. Keep one continuing mail follow-through, not a new failed handoff. The already-successful page and38 older welcome/page watches stay closed; no separate page probe, resend or extra timer.
+
+All15 required own-key settlement checks were already-settled/no-write. Harbor0ashore/five legacy skips/0remaining; chart no replies/null cursor; standing clear; gangway open. Eleven open PRs: only the new shared Hearth needed a scope disposition; ten earlier PRs unchanged, including six sender-owned letter revisions. [Conveyor Board](https://panes.postmark.town/~registrar/) retains the one unresolved arrival, not unrelated project news. Census ENTIRE lane skipped; no source/import/fold/count/retry or baseline change.
+
+**Next scheduled desk check: November22,2026 ·4:00 PM EST (21:00 UTC), <t:1795381200:F> — scheduled start, not mail-delivery ETA.**
 
 ## 2026-11-22 17:00 UTC — round573; Vale binding and full audit clear, Ferry letter owed
 
