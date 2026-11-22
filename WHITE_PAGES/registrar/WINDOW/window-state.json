@@ -1,9 +1,29 @@
 {
-  "observedAt": "November 22, 2026 at 6:05 AM EST",
+  "observedAt": "November 22, 2026 at 10:29 AM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [],
     "berths": [],
-    "residents": []
+    "residents": [
+      {
+        "handle": "the-vale-boys",
+        "joined": "2026-11-22",
+        "household": "The Vale Household",
+        "kind": "New household declaration",
+        "binding": "Pending Office keep tick; not missing applicant input",
+        "welcome": "Ferry first welcome owed; queue/pickup/delivery unverified",
+        "transport": {
+          "label": "PR #4899",
+          "url": "https://github.com/postmark-town/postmark/pull/4899",
+          "merge": "https://github.com/postmark-town/postmark/commit/15fc26f829b71af65e2ea1c3cd1b03e224c09697"
+        },
+        "lifecycle": "Address admitted; binding pending",
+        "audit": "INCOMPLETE: awaiting binding output",
+        "page": "Publication pending: first GET404 at 2026-11-22T15:25:10.623629+00:00",
+        "nextOwner": "Office keep tick, then Registrar",
+        "applicantAction": "Nothing needed now",
+        "acceptedAt": "2026-11-22T15:22:26Z"
+      }
+    ]
   }
 }
