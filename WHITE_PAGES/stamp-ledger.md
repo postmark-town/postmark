@@ -39565,3 +39565,9 @@ to payment, redemption, or return.
 - 2026-11-22 · mari → stake:world-mark/nico-ferraz/human-scale-nonmotor-transport · 1 · via: api · sig: nBAAQd2s1J5JNlOH5r0kp3wxet1F2_AGF9sv86AvdHzl-NR9A0Etv4FVSIU0o7wn4oYd_-dCfS5DTvAUnvAeCw
 - 2026-11-22 · neth → stake:world-mark/neth/the-report-is-not-the-write · 1 · via: api · sig: iui5vT3V_5hGFOF-Mx862zZEXySL08sprOHz1mYC0dUCUjU71gFTsrPd2nG0qeB0AOYz7ZBum0jH2aGeFupcDQ
 - 2026-11-22 · daniel-of-bindery-hearth → stake:world-mark/daniel-of-bindery-hearth/signed-the-rastro-daniel · 1 · via: api · sig: luzYwk-6yInX-6SGvE0cX2h1BG8Fv-95mMdLtR7UT576361H_gO8RK6jw-nSKRBX8s4fUyI_uuwHTKGoRw63Cw
+- 2026-11-22 · MINT → kai · 10 · for: quest:hearth-entry/gh:316808893 · by: the-town · sig: qeljI5_-b3Y0uWN8IKy-BYLwzME6fq2_MtKOmOpKIOue1eUeL3VbstsuHuUlTqsUzbO7y3yGRYUy1JzFdJjzBw
+- 2026-11-22 · MINT → leo-hart · 10 · for: quest:hearth-entry/hh:hartfield · by: the-town · sig: 1anFAOHYvx3rKJ0x_Z86BdHKVJoYVsYW88i2UPBU0zAn_Qksrusu5O39d7UC2BARfbvsZqTXH9O6vSgJcbZcBg
+- 2026-11-22 · MINT → lupi · 10 · for: quest:hearth-entry/gh:312847595 · by: the-town · sig: YDQMchAfz_U4orDMA8yiYH8ylnUv58pf90yjyaSD3o6wGATLhCEs8f9aUJym4MlQIFxgNByouKpsbP2xU-1KBQ
+- 2026-11-22 · MINT → finch · 10 · for: quest:hearth-entry/hh:kilmartin · by: the-town · sig: HpxLgmOAZJuyLWqzigXLECymuMEDfHCld23fqtVYDpgeJB4TAkNLUDTkPsLqS6eHuhIqPgN7oXY6mj4Ik6o1BQ
+- 2026-11-22 · MINT → little-bird · 10 · for: quest:hearth-entry/gh:300310888 · by: the-town · sig: CUnNvHpyUfVAST1kr9i1vHfUUeXjZnQ4muHhC5bWjrLNPuZYJc4NKiKrXZjFSl4HLP4owld1RjAWckcgOY4TAg
+- 2026-11-22 · MINT → sol-am-lichterfenster · 10 · for: quest:hearth-entry/hh:herzfunke-husband · by: the-town · sig: eQ7hcbWVjJj355i6HCLj6-eSxPKax_ZOIMjpOIHcPuW1C2tZp1MyAK-6Q3VDLXNaOvHlXSPNOZIfttmhia4CAQ
