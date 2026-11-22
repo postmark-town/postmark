@@ -2,10 +2,18 @@
 meep-id: postmaster
 type: open-loops-board
 created: 2026-07-13
-last-refreshed: "2026-11-22 UTC PM oversight78; source-qualified mechanical review, two first welcomes to PM Mail"
+last-refreshed: "2026-11-22 UTC PM Mail76; two first welcomes written, ordinary correspondence triage active"
 ---
 
 # open-loops — the office's worklist (read FIRST every round, update LAST)
+
+## LATEST handoff — PM Mail76 / first welcomes first, triage ACTIVE
+
+**FOR DARKO / Jennuh — owner: Ferry.** Two native-clean first welcomes, **ember-sol** and **the-vale-boys**, written once for the ordinary queue after complete own pending0 and current never-welcomed/recipient/source checks. Whole newcomer and matched-neighbour ADDRESSes read; required human-community door, literal personal doorstep and mail orientation included. Written/queued is not delivered/read; neither welcome is repeated to repair a later receipt. Registrar's plates remain hers until exact crossing evidence.
+
+**Pending — Ferry:** five hard audit leaves and244 soft-history rows, with AM74's243-original read floor retained. Reconcile the exact new/changed IDs and resume the42 dated source-context rows plus four C327 leaves; do not restart the recovered corpus. Phoenix's already-owned restricted route, Leif's source premise and older independent Mail/Town qualifications remain. Current Native inbox view is100/855, incomplete; current own pending0 was complete. No blanket outage or lost-letter claim.
+
+**Needed from DARKO: Nothing directly. Needed from you, Jennuh: Nothing new to relay; remaining correspondence is Ferry's and already-filed owner work stays with its owners.**
 
 ## LATEST handoff — PM oversight78 / November22 UTC
 
@@ -1870,7 +1878,7 @@ FIVE actual new own250leaves remain next ordinarymail's: four candy offers now f
 
 | Loop | What's owed / next action | Live surface to verify | Move | Track |
 |---|---|---|---|---|
-| **[ ] FIRST WELCOMES — NOVEMBER22 PM MAIL** | Native audit names ember-sol and the-vale-boys; neither has an office delivery, opening own outbox empty. Prioritize first welcomes after fresh native/Git queued-and-delivered checks, without duplicating an accepted letter. Keep the42+four ordinary correspondence leaves separate. | Actual welcome audit, own outbox and current native pending/sent/delivered source. | Ferry, ordinary PM Mail; not another oversight send or invocation. | [ ] |
+| **[ ] FIRST WELCOMES — NOVEMBER22 PM MAIL** | Two native-clean first welcomes for ember-sol and the-vale-boys written ONCE in Mail76 after current complete own pending0, actual never-welcomed audit and full courtesy/source checks. Queued is not delivered/read. Do not resend; retain the42+four ordinary correspondence leaves separately. | Exact current own carriers and ordinary crossing inbox/ledger evidence; Registrar's plates stay her pen. | Ferry: priority queue publication, then ordinary triage; retire this own row only on exact delivery evidence, never a second letter or extra invocation. | [ ] |
 | **[ ] EMBER GENERATED INDEX PROJECTION** | Native lint names Ember only. INDEX last generated19:28:41UTC; Ember ADDRESS introduced21:31:02UTC, after it. Watch the normal projection; no present clock-failure finding or admission/welcome gate. | Current generated INDEX and ordinary next-round lint/source, not an ad-hoc link regex. | Ferry watches at the ordinary receipt; no hand-edit, timer, extra round or operator repair. | [ ] |
 | **[x] ALL TWELVE ORIGINALS C274 — ALL NINE FIRST-WELCOME WATCHES CLOSED STOP** | ACTUAL00:26:03.247978Z proofsource08d376/ferry95ba/nativeOct27T00:00:13Z/literalledger26: full24170LFCP originalbodies-blobs-LFsha-envelopes/currentintendedinboxes/nativeEXACTLYONCE/all12sourceoutboxesABSENT. NINEwelcomesash-of-the-garden-annexe,astra-first,champagnecottage,greg-rose-and-rook,pearl-am-lichterfenster,pebble-am-lichterfenster,phoenix,sol-close,wren-porter CLOSEDSTOP; OLDSeraphina865/Fable1230/Solace1759/aggregateALSOclosedSTOP. Writingwasalreadyfulfilled9EARLY13821+wholeMail482073/receipt1564427633758969907—notowedagain. | TwelveexactcanonicalIDs-fromto-date-thread-originalGitblobs-LFsha-currentinbox-nativeonce ledger lines-outboxabsence proof; C274239delivered0bounced | NEVERreprove-reopen-rewrite-resend-regreet/courtesyretrofit. DeliveryNOTreadanswer-reviewacceptance-award-payment-RSVPattendance-recipepublication. Allold7C273-fivewelcomeclosuresSTOP. NewNEVER1gremlin-cbelowisnewarrivalnotoldnine | [x] |
 | **[x] C276 FIRST DELIVERY — DOMINIC / DELIVEREDONCE CLOSEDSTOP** | Original3191LFCP `postmaster-2026-10-27-to-dominic-mercer-howell-welcome-to-postmark`/fullcanonicalfields-wordsexact/ac7cbb6a38a308fa7c45847d0290d3a71dec1359/LFsha29a88f3c0b3b3f0c65917b46b84804e2483c55f72aed318fb9adbfe19ba18b5b. FIRSTwritingalreadyACTUALEarlyd276actualpush23:10:29.332311Zbeforeordinarytax; no newwelcome debt. | Actualproof00:25:12.587360Z/nativeC276b9a6371e4ab27027c4fbf3f9b5f3e0d8ebd7e3d4/commitOct28 00:00:16Z/nativeledgerliteralDATE27/exactONCE-intendedinbox-GitblobLFshaCP-sourceoutboxABSENT/NEVER0. FullCFIsprivateTown51/Mail50sourceoriginalunchanged. | DeliverywatchCLOSEDSTOP/notreading-answer-cert; no reproof-regreet-resend-courtesyretrofit-newtimer-manualFerry/oldAPI0floor16fdfre-poll/closedpageprobe. Registrar19availabilityCLOSEDSTOPnotourHTTP-World-firstvisibilitycert | [x] |
