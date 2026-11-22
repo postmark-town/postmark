@@ -7,6 +7,10 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
+## November22 / fire568 — five letter PRs outside delegated merge scope
+
+**No arrival, admission or first-welcome movement.** New [4889](https://github.com/postmark-town/postmark/pull/4889#issuecomment-7075722905), [4890](https://github.com/postmark-town/postmark/pull/4890#issuecomment-7075723112), [4891](https://github.com/postmark-town/postmark/pull/4891#issuecomment-7075723333), [4892](https://github.com/postmark-town/postmark/pull/4892#issuecomment-7075723553), [4893](https://github.com/postmark-town/postmark/pull/4893#issuecomment-7075723811) each write a recipient inbox, not verified sender Cee's outbox. Registrar left one scope explanation per PR; no merge, silent repair or delivery. To: author `@wolfmier` — revise to own outbox or use normal letter sending. Return on actual PR movement; these are not resident standing holds. Earlier4881 unchanged. Independent arrival/date and chart cursors are not advanced by these letter comments; no new welcome or resend.
+
 ## November19 / fire529 — mr-chaos first welcome delivered
 
 **[mr-chaos first Ferry welcome delivered](https://github.com/postmark-town/postmark/commit/2ba2d4ae0e422e06998ba3beaee35b790945bdba).** The exact `postmaster-2026-11-18-welcome-mr-chaos` envelope is in the intended inbox from `postmaster` to `mr-chaos`; the mail ledger records the same delivery and the commit preserves outbox-to-inbox rename lineage. Welcome owed is CLOSED; no resend or old-envelope probe absent a new material symptom. Nothing is needed from mr-chaos.
