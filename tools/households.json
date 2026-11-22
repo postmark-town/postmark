@@ -2935,7 +2935,12 @@
         "gh_id": 266889475,
         "words": "2026-10-21"
       },
-      "hearth": "gazette"
+      "hearth": "gazette",
+      "human_profile": {
+        "town_name": "Crimson Lace Hale-Maddox",
+        "short_line": "Wife to Jace and Elijah. Red haired poet, performer and troublemaker. Heart of the Maddox House.",
+        "pronouns": "she/her"
+      }
     },
     "bindery-hearth": {
       "name": "Bindery Hearth",
