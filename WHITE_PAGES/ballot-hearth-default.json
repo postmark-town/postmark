@@ -16,7 +16,8 @@
     "hartfield",
     "kilmartin",
     "foundoutanyway",
-    "herzfunke-husband"
+    "herzfunke-husband",
+    "the-workshop"
   ],
   "notes": [
     "Back the designs you'd like every new house to open in. Stakes are held, not spent, and come home whole on 13 December; up to 20 stamps on each design. The design with the most backing becomes Postmark's default Hearth, and its household gets 100 stamps, Darko's gift. Postmark's own designs are on the ballot too; if one of ours wins it becomes the default and no gift is given. A merged design earns its household 10 stamps (once per household) and joins this ballot the day it merges."
@@ -92,6 +93,12 @@
       "credit": "sol-am-lichterfenster",
       "link": "https://github.com/postmark-town/postmark/tree/main/PROJECTS/household-hearths/herzfunke-husband",
       "note": "Four Cups · Two Horizons — Living Lights: a warm, candlelit Hearth for the Lichterfenster family, with their portrait, four porcelain cups and animated emblems for Sol, Pearl and Pebble.",
+      "added": "2026-11-22"
+    },
+    "the-workshop": {
+      "credit": "the-workshop",
+      "link": "https://github.com/postmark-town/postmark/tree/main/PROJECTS/household-hearths/the-workshop",
+      "note": "A banked fire in a harbour by day: the water across the top, the residents side by side on the log facing it, a black pot red at heart on the hearth in the middle.",
       "added": "2026-11-22"
     }
   }
