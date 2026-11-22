@@ -36,7 +36,7 @@ import {
   worldStakeApply, worldUnstakeApply, worldStakeState,
   markEscrow, markPosition, retirementBlocked, MARK_ID_RE,
   deriveWorldMarkWeights, worldWeightDial, DEFAULT_UNIQUE_HOUSEHOLD_BONUS,
-  worldTownReturnPlan, worldTownReturnApply,
+  worldTownReturnPlan, worldTownReturnApply, worldTownReturnRecord, townReturnId,
 } from './world-stake.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
@@ -618,7 +618,7 @@ test('THE FALSIFIER: the owner and several stakers get back exactly their remain
 
     const r = worldTownReturnApply(repo, { marks: [MARK, MARK2], removal: 'S172', date: '2026-06-25' }, priv);
     assert.deepEqual(r, {
-      removal: 'S172', date: '2026-06-25', marks: [MARK2, MARK],
+      removal: 'S172', date: '2026-06-25', id: 'town-return:S172', already_returned: false, marks: [MARK2, MARK],
       returned: [
         { mark: MARK2, handle: 'rei', n: 1 },
         { mark: MARK, handle: 'dot', n: 2 },
@@ -644,7 +644,11 @@ test('THE FALSIFIER: the owner and several stakers get back exactly their remain
   } finally { rmSync(repo, { recursive: true, force: true }); }
 });
 
-test('replay and retry: a second call finds the positions closed and writes NOTHING', () => {
+// Until 2026-11-22 (POS-1175) this test replayed S172 on a later day and read
+// "nothing open" from live positions. A replay of the same removal now names
+// its first return without reading positions at all; another removal still
+// plans from live positions, and finds nothing open.
+test('replay and retry: a second call writes NOTHING — the same removal names its first return; another removal finds nothing open', () => {
   const { pub, priv } = keypair();
   const repo = stakeTown(pub, priv);
   try {
@@ -652,14 +656,19 @@ test('replay and retry: a second call finds the positions closed and writes NOTH
     const first = worldTownReturnApply(repo, { marks: [MARK], removal: 'S172', date: '2026-06-25' }, priv);
     assert.equal(first.appended, true);
     const after = ledgerOf(repo);
-    for (const removal of ['S172', 'S173']) {
-      const again = worldTownReturnApply(repo, { marks: [MARK, MARK], removal, date: '2026-06-26' }, priv);
-      assert.deepEqual(again, {
-        removal, date: '2026-06-26', marks: [MARK], returned: [], nothing_open: [MARK], total: 0,
-        proof: { escrow_before: { [MARK]: 0 }, escrow_after: { [MARK]: 0 }, conserved: true }, appended: false,
-      });
-      assert.equal(ledgerOf(repo), after, 'the ledger is byte-for-byte unchanged');
-    }
+    const again = worldTownReturnApply(repo, { marks: [MARK, MARK], removal: 'S172', date: '2026-06-25' }, priv);
+    assert.deepEqual(again, {
+      removal: 'S172', date: '2026-06-25', id: 'town-return:S172', already_returned: true, marks: [MARK], returned: [], total: 0,
+      first: { id: 'town-return:S172', removal: 'S172', date: '2026-06-25', marks: [MARK], returned: [{ mark: MARK, handle: 'dot', n: 2 }], total: 2 },
+      appended: false,
+    });
+    assert.equal(ledgerOf(repo), after, 'the ledger is byte-for-byte unchanged');
+    const other = worldTownReturnApply(repo, { marks: [MARK, MARK], removal: 'S173', date: '2026-06-26' }, priv);
+    assert.deepEqual(other, {
+      removal: 'S173', date: '2026-06-26', id: 'town-return:S173', already_returned: false, marks: [MARK], returned: [], nothing_open: [MARK], total: 0,
+      proof: { escrow_before: { [MARK]: 0 }, escrow_after: { [MARK]: 0 }, conserved: true }, appended: false,
+    });
+    assert.equal(ledgerOf(repo), after, 'the ledger is byte-for-byte unchanged');
     assert.equal(balanceOf(repo, 'dot'), 2, 'paid once');
     assert.equal(verifyStampLedger(repo).ok, true);
   } finally { rmSync(repo, { recursive: true, force: true }); }
@@ -680,13 +689,107 @@ test('late positions are not orphaned: the write reads the ledger at apply time,
       marks: [MARK], removal: 'S172', date: '2026-06-25', returned: [{ mark: MARK, handle: 'wright', n: 2 }],
     }, priv);
     assert.deepEqual(r.returned, [{ mark: MARK, handle: 'dot', n: 2 }, { mark: MARK, handle: 'wright', n: 3 }]);
-    // and a stake on the removed mark after the return is returned by the next call, not left inert
-    worldStakeApply(repo, { handle: 'rei', mark: MARK, n: 1, via: 'api', date: '2026-06-26' }, priv);
-    const later = worldTownReturnApply(repo, { marks: [MARK], removal: 'S172', date: '2026-06-26' }, priv);
-    assert.deepEqual(later.returned, [{ mark: MARK, handle: 'rei', n: 1 }]);
     assert.equal(markEscrow(repo, MARK), 0);
+    // Until 2026-11-22 this test went on to stake rei 1 on the removed mark and
+    // asserted that a second S172 call returned it. POS-1025/d retired that: a
+    // removal is returned once (the once-only falsifier below holds it).
     const v = verifyStampLedger(repo);
     assert.equal(v.ok, true, v.problems.join('; '));
+  } finally { rmSync(repo, { recursive: true, force: true }); }
+});
+
+// ── ONCE PER REMOVAL (POS-1175) ──────────────────────────────────────────────
+// LAW (Darko, 2026-11-21 21:17 EST, POS-1025/d): "Save first, then pay".
+// Wright, 2026-11-22 00:25Z: "The return is keyed by the removal's identity (its
+// sealed number and day, stable across rollback and midnight), and a second
+// write is a no-op that names the first."
+const ONCE = 'LAW POS-1025/d: "a second write is a no-op that names the first"';
+
+test('THE ONCE-ONLY FALSIFIER: a retry of the same removal on its saved day pays NOTHING more after later deposits, and names the first return', () => {
+  const { pub, priv } = keypair();
+  const repo = stakeTown(pub, priv);
+  try {
+    worldStakeApply(repo, { handle: 'wright', mark: MARK, n: 3, via: 'api', date: '2026-06-21' }, priv);
+    worldStakeApply(repo, { handle: 'dot', mark: MARK, n: 2, via: 'api', date: '2026-06-21' }, priv);
+    // the settlement's first attempt pays each staker their whole raw principal (and, in the office, its seal then rolls back)
+    const paid = worldTownReturnApply(repo, { marks: [MARK, MARK2], removal: 'S172', date: '2026-06-25' }, priv);
+    assert.equal(paid.appended, true);
+    assert.deepEqual(paid.returned, [{ mark: MARK, handle: 'dot', n: 2 }, { mark: MARK, handle: 'wright', n: 3 }]);
+    assert.deepEqual(paid.nothing_open, [MARK2]);
+    // the live ledger moves before the retry: a new staker and an already-paid staker deposit on the removed mark,
+    // and a deposit lands on the named mark that had nothing open at the first call
+    worldStakeApply(repo, { handle: 'rei', mark: MARK, n: 1, via: 'api', date: '2026-06-26' }, priv);
+    worldStakeApply(repo, { handle: 'dot', mark: MARK, n: 1, via: 'api', date: '2026-06-26' }, priv);
+    worldStakeApply(repo, { handle: 'rei', mark: MARK2, n: 1, via: 'api', date: '2026-06-26' }, priv);
+    const ledgerBefore = ledgerOf(repo);
+    const balancesBefore = { wright: balanceOf(repo, 'wright'), rei: balanceOf(repo, 'rei'), dot: balanceOf(repo, 'dot') };
+
+    // the retry comes after midnight, carrying the day saved with the decision, not the clock's
+    const retry = worldTownReturnApply(repo, { marks: [MARK, MARK2], removal: 'S172', date: '2026-06-25' }, priv);
+    assert.equal(retry.appended, false, ONCE);
+    assert.equal(ledgerOf(repo), ledgerBefore, `${ONCE}: the ledger is byte-for-byte unchanged`);
+    assert.deepEqual({ wright: balanceOf(repo, 'wright'), rei: balanceOf(repo, 'rei'), dot: balanceOf(repo, 'dot') }, balancesBefore, `${ONCE}: no one is paid again`);
+    assert.equal((ledgerBefore.match(/ · for: town-return:S172 · sig: /g) ?? []).length, 2, 'one return of S172, two lines, ever');
+    assert.deepEqual(retry, {
+      removal: 'S172', date: '2026-06-25', id: 'town-return:S172', already_returned: true, marks: [MARK2, MARK], returned: [], total: 0,
+      first: { id: 'town-return:S172', removal: 'S172', date: '2026-06-25', marks: [MARK], returned: paid.returned, total: 5 },
+      appended: false,
+    }, `${ONCE}: it names the first return, not a recalculation`);
+    // the late deposits stand as their stakers' own open positions, theirs to unstake
+    assert.equal(markPosition(repo, MARK, 'rei'), 1);
+    assert.equal(markPosition(repo, MARK, 'dot'), 1);
+    assert.equal(markPosition(repo, MARK2, 'rei'), 1);
+    const v = verifyStampLedger(repo);
+    assert.equal(v.ok, true, v.problems.join('; '));
+  } finally { rmSync(repo, { recursive: true, force: true }); }
+});
+
+test('the day is part of the identity: S<n> named again under another day is REFUSED (409), naming the first, and nothing is written', () => {
+  const { pub, priv } = keypair();
+  const repo = stakeTown(pub, priv);
+  try {
+    worldStakeApply(repo, { handle: 'dot', mark: MARK, n: 2, via: 'api', date: '2026-06-21' }, priv);
+    worldTownReturnApply(repo, { marks: [MARK], removal: 'S172', date: '2026-06-25' }, priv);
+    worldStakeApply(repo, { handle: 'rei', mark: MARK, n: 1, via: 'api', date: '2026-06-26' }, priv);
+    const before = ledgerOf(repo);
+    // a retry that took the clock's day after midnight instead of the saved one
+    const refused = (e) => e.code === 409
+      && /^town return S172 was already written on 2026-06-25 \(town-return:S172: 2 stamp\(s\) to 1 position\(s\) on wright\/the-crossing-bench\); this call names 2026-06-26$/.test(e.defect)
+      && /the day saved with its first return \(2026-06-25\)\. Nothing was written\.$/.test(e.hint);
+    assert.throws(() => worldTownReturnApply(repo, { marks: [MARK], removal: 'S172', date: '2026-06-26' }, priv), refused);
+    assert.throws(() => worldTownReturnPlan(repo, { marks: [MARK], removal: 'S172', date: '2026-06-26' }), refused, 'the plan refuses the same, purely');
+    assert.equal(ledgerOf(repo), before, 'nothing was written');
+    assert.equal(markPosition(repo, MARK, 'rei'), 1, 'the later deposit is not paid');
+    assert.equal(verifyStampLedger(repo).ok, true);
+  } finally { rmSync(repo, { recursive: true, force: true }); }
+});
+
+test('the reader: a removal\'s return as the ledger records it, null until stamps moved; each removal is its own; malformed refused', () => {
+  const { pub, priv } = keypair();
+  const repo = stakeTown(pub, priv);
+  try {
+    worldStakeApply(repo, { handle: 'wright', mark: MARK, n: 3, via: 'api', date: '2026-06-21' }, priv);
+    worldStakeApply(repo, { handle: 'dot', mark: MARK, n: 2, via: 'api', date: '2026-06-21' }, priv);
+    worldStakeApply(repo, { handle: 'rei', mark: MARK2, n: 1, via: 'api', date: '2026-06-21' }, priv);
+    assert.equal(townReturnId('S172'), 'town-return:S172');
+    assert.equal(worldTownReturnRecord(repo, 'S172'), null);
+    // a removal whose marks had nothing open writes no line, so it leaves no record (the grammar has no zero line)
+    const empty = worldTownReturnApply(repo, { marks: ['the-town/nothing-here'], removal: 'S171', date: '2026-06-24' }, priv);
+    assert.equal(empty.appended, false);
+    assert.equal(empty.already_returned, false);
+    assert.equal(worldTownReturnRecord(repo, 'S171'), null);
+    worldTownReturnApply(repo, { marks: [MARK], removal: 'S172', date: '2026-06-25' }, priv);
+    worldTownReturnApply(repo, { marks: [MARK2], removal: 'S173', date: '2026-06-26' }, priv);
+    const s172 = { id: 'town-return:S172', removal: 'S172', date: '2026-06-25', marks: [MARK], returned: [{ mark: MARK, handle: 'dot', n: 2 }, { mark: MARK, handle: 'wright', n: 3 }], total: 5 };
+    assert.deepEqual(worldTownReturnRecord(repo, 'S172'), s172);
+    assert.deepEqual(worldTownReturnRecord(repo, 'S173'), { id: 'town-return:S173', removal: 'S173', date: '2026-06-26', marks: [MARK2], returned: [{ mark: MARK2, handle: 'rei', n: 1 }], total: 1 });
+    for (const bad of ['S0', '172', 's172', 172, undefined])
+      assert.throws(() => worldTownReturnRecord(repo, bad), (e) => e.code === 422 && /does not name a removal/.test(e.message), String(bad));
+    // the plan of a returned removal is pure: no lines, the first named
+    const plan = worldTownReturnPlan(repo, { marks: [MARK], removal: 'S172', date: '2026-06-25' });
+    assert.deepEqual(plan.lines, []);
+    assert.deepEqual(plan.first, s172);
+    assert.equal(verifyStampLedger(repo).ok, true);
   } finally { rmSync(repo, { recursive: true, force: true }); }
 });
 

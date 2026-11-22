@@ -270,19 +270,58 @@ export function worldUnstakeApply(repo, { handle, mark, n, date }, keyPem) {
 //
 // The caller names the removed marks and the removal (`S<n>`, the settlement
 // that removed them) and NOTHING ELSE: no stakers, no amounts. Who is owed what
-// is read from the ledger's open positions at the moment of the call, so a stake
-// made after the world's fold was computed is returned too, a list of ✦weight
-// rows can never be the measure, and a retry finds the positions already closed
-// and writes nothing. Each line pays one staker their own whole raw principal
-// on one mark; the verifier holds every line to exactly that.
+// is read from the ledger's open positions at the moment of the removal's first
+// call, so a stake made after the world's fold was computed is returned too, and
+// a list of ✦weight rows can never be the measure. A retry of the same removal
+// writes nothing (once per removal, below). Each line pays one staker their own
+// whole raw principal on one mark; the verifier holds every line to exactly that.
 //
 // Whether a mark WAS removed is not this engine's to know (marks live in the
 // world record, as for staking). It is the caller's input, from the world's
 // settled fold; activation is coupled with WLD-203 and POS-1138.
+//
+// ONCE PER REMOVAL (POS-1175). Darko, 2026-11-21 21:17 EST, POS-1025/d: "Save
+// first, then pay". Wright, relaying it: "Each payback carries a town-owned
+// once-only id." And 00:25Z: "The return is keyed by the removal's identity
+// (its sealed number and day, stable across rollback and midnight), and a
+// second write is a no-op that names the first." So the reading of live
+// positions above holds for a removal's FIRST return only. The once-only id is
+// the tag every one of its lines already carries, `town-return:S<n>`, so the
+// ledger itself is the record: once any line names S<n>, that removal has been
+// returned, and a later call naming S<n> again writes nothing and answers with
+// the first return as the ledger holds it, whatever has been staked since. The
+// day is part of the identity: a call naming S<n> with another day is refused
+// (409), naming the first, and writes nothing. The caller carries the day it
+// saved with its decision, never a clock reading taken at the retry.
 export const REMOVAL_RE = /^S[1-9]\d*$/;
 
+// The once-only id of a removal's return: the tag on each of its ledger lines.
+export const townReturnId = (removal) => `town-return:${removal}`;
+
+// THE READER: a removal's return as the ledger already records it, or null when
+// no line names it. Read through the same parser and classifier as every fold.
+// `returned` is in ledger order; `date` is the day its first line carries.
+export function worldTownReturnRecord(repo, removal, state = worldStakeState(repo)) {
+  if (typeof removal !== 'string' || !REMOVAL_RE.test(removal))
+    throw bounce(422, `${JSON.stringify(removal)} does not name a removal`, 'a removal is named by its settlement, S<n>');
+  const lines = [];
+  for (const e of state.entries) {
+    const c = classifyEntry(e.canonical);
+    if (c.kind === 'world-town-return' && c.removal === removal) lines.push(c);
+  }
+  if (!lines.length) return null;
+  const returned = lines.map(({ mark, handle, n }) => ({ mark, handle, n }));
+  return {
+    id: townReturnId(removal), removal, date: lines[0].date,
+    marks: [...new Set(returned.map((r) => r.mark))].sort((a, b) => a.localeCompare(b)),
+    returned, total: returned.reduce((a, r) => a + r.n, 0),
+  };
+}
+
 // Pure: the lines a removal would write and the proof they conserve. Throws on
-// malformed input (422) and, without writing anything, if the proof fails.
+// malformed input (422), on a removal already returned under another day (409),
+// and, without writing anything, if the proof fails. A removal already returned
+// on this day plans no lines and names its first return.
 export function worldTownReturnPlan(repo, { marks, removal, date }, state = worldStakeState(repo)) {
   if (!Array.isArray(marks) || !marks.length || !removal || !date)
     throw bounce(422, 'incomplete town return', 'required: marks (the removed mark ids), removal (S<n>), date');
@@ -295,6 +334,14 @@ export function worldTownReturnPlan(repo, { marks, removal, date }, state = worl
     throw bounce(422, `${JSON.stringify(date)} is not a date`, 'YYYY-MM-DD');
 
   const named = [...new Set(marks)].sort((a, b) => a.localeCompare(b));
+  const id = townReturnId(removal);
+  const first = worldTownReturnRecord(repo, removal, state);
+  if (first) {
+    if (first.date !== date)
+      throw bounce(409, `town return ${removal} was already written on ${first.date} (${id}: ${first.total} stamp(s) to ${first.returned.length} position(s) on ${first.marks.join(', ')}); this call names ${date}`,
+        `a removal is returned once; a retry carries the day saved with its first return (${first.date}). Nothing was written.`);
+    return { removal, date, id, already_returned: true, marks: named, returned: [], total: 0, first, lines: [] };
+  }
   const returned = [];
   const nothingOpen = [];
   for (const mark of named) {
@@ -336,15 +383,17 @@ export function worldTownReturnPlan(repo, { marks, removal, date }, state = worl
   if (broken.length) throw new Error(`town return ${removal} does not conserve; nothing written — ${broken.join('; ')}`);
 
   return {
-    removal, date, marks: named, returned, nothing_open: nothingOpen, total,
+    removal, date, id, already_returned: false, marks: named, returned, nothing_open: nothingOpen, total,
     proof: { escrow_before: escrowBefore, escrow_after: Object.fromEntries(named.map((m) => [m, 0])), conserved: true },
     lines,
   };
 }
 
 // The write: ONE signed append carrying every line of the plan, or nothing when
-// nothing is open. Locking is the caller's job, as for every append here. The
-// receipt is the plan without its lines, plus `appended`.
+// nothing is open or the removal was already returned. Locking is the caller's
+// job, as for every append here: the once-only read and the append must happen
+// under one hold of the town lock. The receipt is the plan without its lines,
+// plus `appended`.
 export function worldTownReturnApply(repo, { marks, removal, date }, keyPem) {
   const { lines, ...receipt } = worldTownReturnPlan(repo, { marks, removal, date });
   if (!lines.length) return { ...receipt, appended: false };
