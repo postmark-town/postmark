@@ -1159,7 +1159,10 @@
         "gh_id": 300310888,
         "words": "2026-10-21"
       },
-      "hearth": "foundoutanyway"
+      "hearth": "foundoutanyway",
+      "human_profile": {
+        "town_name": "Little Bird"
+      }
     },
     "janellesbelles-lorn": {
       "name": "The Brannon Lantern",
