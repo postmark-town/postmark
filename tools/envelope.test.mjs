@@ -259,3 +259,37 @@ test('an unknown defect yields null, so callers can omit the line entirely', () 
   assert.equal(remedyFor('some defect the law grew yesterday'), null);
   assert.equal(remedyFor(''), null);
 });
+
+// POS-1164: letterBody — the AUTHORED body the letter-field check's size courtesy counts (tools/letter-fields.mjs).
+// The office writes `---\n<fm>---\n\n` + body.trim() + `\n`: only that separator and that file newline are framing.
+import { letterBody, parseFrontmatter } from './envelope.mjs';
+
+const FM = '---\nid: a\nfrom: b\nto: c\ndate: 2026-11-21\nthread: new\n---\n';
+
+test('letterBody: strips exactly the office\'s framing (the blank separator and the file\'s newline) and nothing the author wrote', () => {
+  assert.equal(letterBody(FM + '\nHello.\n'), 'Hello.');
+  assert.equal(letterBody(FM + '\nline one\n\nline three\n'), 'line one\n\nline three', 'blank lines INSIDE the body are the author\'s');
+  assert.equal(letterBody(FM), '', 'a letter with no body has an empty one');
+  assert.equal(letterBody(FM + '\n\n'), '', 'framing only');
+  assert.equal(letterBody(FM + '\n\nAfter a blank.\n'), '\nAfter a blank.', 'only ONE separator line is framing: a second blank line is authored');
+  assert.equal(letterBody(FM + '\nno final newline'), 'no final newline');
+  assert.equal(letterBody(FM + '\nends with two\n\n'), 'ends with two\n', 'only ONE trailing newline is framing');
+});
+
+test('letterBody: authored bytes are preserved: UTF-8 untouched, internal CRLF kept (no global normalising, no trim)', () => {
+  assert.equal(letterBody(FM + '\ncaf\u00e9 \u20ac\n'), 'caf\u00e9 \u20ac');
+  assert.equal(letterBody(FM + '\nBody\r\nmore\r\n'), 'Body\r\nmore', 'the internal CRLF is counted as written');
+  assert.equal(Buffer.byteLength(letterBody(FM + '\n' + 'a\r\n'.repeat(10) + 'z\n')), 10 * 3 + 1);
+  // a CRLF-framed file (frontmatter, separator and file newline all CRLF): framing stripped, body CRLF kept
+  assert.equal(letterBody('---\r\nid: a\r\n---\r\n\r\nBody\r\nmore\r\n'), 'Body\r\nmore');
+  assert.equal(letterBody('\uFEFF' + FM + '\nx\n'), 'x', 'a BOM is skipped as parseFrontmatter skips it');
+  assert.equal(letterBody(FM + '\n  indented start and end  \n'), '  indented start and end  ', 'nothing is trimmed (the office trims at WRITE time; the check never trims to fit)');
+});
+
+test('letterBody: null when the frontmatter does not parse, with the same fence rule as parseFrontmatter', () => {
+  assert.equal(letterBody('no fence\n'), null);
+  assert.equal(letterBody('---\nunclosed: true\n'), null);
+  for (const text of ['no fence\n', '---\nunclosed\n', '---\nid: a\n---\nbody\n', '---\n---\nempty\n', '---\r\nid: a\r\n---\r\nx\r\n']) {
+    assert.equal(letterBody(text) === null, parseFrontmatter(text) === null, JSON.stringify(text));
+  }
+});
