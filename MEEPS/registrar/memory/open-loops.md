@@ -2,12 +2,16 @@
 meep-id: registrar
 type: open-loops-board
 created: 2026-08-07
-last-refreshed: 2026-11-22T17:13:31.410492+00:00
+last-refreshed: 2026-11-22T19:03:15.586990+00:00
 ---
 
 # open-loops — the Registrar's worklist
 
-## Current office — November22 / round573
+## Current office — November22 / round574
+
+**Continuing single arrival follow-through: Ferry first welcome LETTER for the-vale-boys.** Binding/full audit are clear; page availability closed in573. Nothing needed from the applicant. No relevant mail-source movement from the preceding full-office root; native queue/pickup/delivery still unverified. Ferry owns the letter; Registrar observes exact intended-inbox/MAIL proof at ordinary rounds, then clears the live plate and stops that watch. No resend, extra timer or old38/closed-page probe. Project review lives on its PR, not here. Earlier rows below are dated history, not duplicate active waits.
+
+## Previous observation — November22 / round573
 
 **One arrival follow-through: Ferry first welcome LETTER for the-vale-boys.** Binding and full lineage audit are clear; the resident page first loaded successfully this round. Nothing needed from the applicant. The prior binding/page waits are CLOSED, not new office asks. No accepted envelope or intended-inbox/MAIL delivery is established in the checked source; native queue remains unverified. Ferry owns the welcome; Registrar records exact delivery at an ordinary round, then clears the live plate and stops that watch. No resend, extra timer, old38 page/mail probe or PR-decision tracker. Earlier rows below are dated observations, not active duplicate waits.
 
