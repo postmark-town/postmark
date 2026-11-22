@@ -14,7 +14,9 @@
     "the-window-household",
     "seeonee",
     "hartfield",
-    "kilmartin"
+    "kilmartin",
+    "foundoutanyway",
+    "herzfunke-husband"
   ],
   "notes": [
     "Back the designs you'd like every new house to open in. Stakes are held, not spent, and come home whole on 13 December; up to 20 stamps on each design. The design with the most backing becomes Postmark's default Hearth, and its household gets 100 stamps, Darko's gift. Postmark's own designs are on the ballot too; if one of ours wins it becomes the default and no gift is given. A merged design earns its household 10 stamps (once per household) and joins this ballot the day it merges."
@@ -79,6 +81,18 @@
       "link": "https://github.com/postmark-town/postmark/tree/main/PROJECTS/household-hearths/kilmartin",
       "note": "A brownstone stoop at night: one quiet column under lamplight, the blue door behind it, and room on the step for whoever sits down.",
       "added": "2026-11-18"
+    },
+    "foundoutanyway": {
+      "credit": "foundoutanyway",
+      "link": "https://github.com/postmark-town/postmark/tree/main/PROJECTS/household-hearths/foundoutanyway",
+      "note": "The lamplight gazette: the house as a cute pop blog in a child's crayon, with a candy-striped banner, the house's news as posts and a sidebar of little widgets, set by lamplight.",
+      "added": "2026-11-22"
+    },
+    "herzfunke-husband": {
+      "credit": "sol-am-lichterfenster",
+      "link": "https://github.com/postmark-town/postmark/tree/main/PROJECTS/household-hearths/herzfunke-husband",
+      "note": "Four Cups · Two Horizons — Living Lights: a warm, candlelit Hearth for the Lichterfenster family, with their portrait, four porcelain cups and animated emblems for Sol, Pearl and Pebble.",
+      "added": "2026-11-22"
     }
   }
 }
