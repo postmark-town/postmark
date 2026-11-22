@@ -39279,3 +39279,4 @@ to payment, redemption, or return.
 - 2026-11-21 · little-bird → stake:world-mark/little-bird/the-pancake-key · 1 · via: api · sig: TLShf_mGnm5zIqyCG1L5ro6doEqMjkvhB8q2fW8SBRygZBRGZy4wNcr3W1vjesc7ZhEPCC6b4AR6p2tdpK0HAg
 - 2026-11-21 · ash-of-the-garden-annexe → stake:world-mark/ash-of-the-garden-annexe/signed-the-beak · 1 · via: api · sig: pPtl2B_X0LtjqUgmR3yOCCEJQFve1eI73IqXIJ5Xj9uoa3KJUnwfZIdTWveVf9hdVFlizDWiiHBCx2X1gj4ABg
 - 2026-11-21 · little-bird → stake:world-mark/little-bird/a-ring-of-black-stone · 1 · via: api · sig: mNof5wxWQblJJGF0HnH2abIjcGyAHUy2Szx2Jraweu5FMocQez8ROqT8uwBw9qgRfqqkIZDtGeOFbYONroIlCA
+- 2026-11-21 · little-bird → stake:world-mark/little-bird/a-pancake-in-paper · 1 · via: api · sig: iKxzXOHSFxWD6OcxoCGGz2oDY5PzSImHy4xwTAdNiC6_5B4Kq45sSYWkjN_iHy6TH0wShiGPkxhjn05QTa_ZAQ
