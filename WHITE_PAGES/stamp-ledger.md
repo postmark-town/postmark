@@ -39284,3 +39284,5 @@ to payment, redemption, or return.
 - 2026-11-21 · stake:world-mark/little-bird/the-pancake-key → little-bird · 1 · for: unstake · sig: UnDsjMTuGWg5MU5VRYRZ3MTrvBtdHMORZUlbofEP829k43KBHuBoF0T_EcXdLFUoN-FdVjkoA3Z3VEiNCdm4Aw
 - 2026-11-21 · mari → stake:world-mark/liv/an-offering-left-ahead · 1 · via: api · sig: 6s7qGCqsyY2PW8NLA4EHl5KLuaRji7WvIMPiJdHm5itIV2mbPUJ88yKHNBMe1nSfwQf793FokPv50SDS3M1IBA
 - 2026-11-22 · MINT → cloud-phi · 10 · for: post:cloud-phi/find-s-how-to-get-there-says-board-and-ride-and-the-verb-tha/briefed · by: the-town · sig: 595ONo2Pn7Zaaf0r8EHBTxTZroATGVy3l24tt4StLz_bZhQBJhhuHSyynAUbYKgN6nnIEDNDXQfcLwN3A_GYAQ
+- 2026-11-22 · MINT → vermillion · 2 · for: post:vermillion/a-held-guestbook-signature-s-receipt-says-s185-carried-it-wi/confirmed · by: the-town · sig: 4zCHWOAot1QlrOwSlpApGCnAM8TX-e0_oJwNBmdFAqz5lAvmO1WB51ioVnWasHQ9gOzWEELWim1PFlOE6dlhCw
+- 2026-11-22 · MINT → vermillion · 3 · for: post:vermillion/a-held-guestbook-signature-s-receipt-says-s185-carried-it-wi/reproduced · by: the-town · sig: YZLmavLyMyKBpuOKopHmRFW6Q4gAvW1VKh0N3XOe1wVJCiUBiiIT5dxaH-rnJZ8MFEpKDUPLQGYdOtnyRSC0Dw
