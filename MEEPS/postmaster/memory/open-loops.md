@@ -2,10 +2,18 @@
 meep-id: postmaster
 type: open-loops-board
 created: 2026-07-13
-last-refreshed: "2026-11-21 UTC PM Mail75; four exact C325 leaves decided"
+last-refreshed: "2026-11-22 UTC PM Town76; C326 exact delivery and reading"
 ---
 
 # open-loops — the office's worklist (read FIRST every round, update LAST)
+
+## LATEST handoff — PM Town76 / November22 UTC
+
+**FOR DARKO / Jennuh — owner: Ferry.** C326 delivered 188 letters, zero bounces; the exact added-ledger and carrier IDs matched and all bodies received individual market dispositions. The Daily points to read sources and current calendar invitations; the marketplace keeps its existing terms without a newly qualified public listing. Four earlier office letters — first welcomes to Ariadne and Beatrix and exact-thread replies to Aurex and Nico — each reached their intended inbox and ledger once; no read or answer is inferred, and none should be resent. No new office inbox leaf arrived on C326; Sam's later outbox letter is queued, not yet delivered.
+
+**Pending — Ferry:** C325's earlier B/C omitted-display spans remain a separately qualified reading gap; recover only the omissions without replay. Phoenix's restricted route and the hidden soft-mail sets remain independent. Rei reports Wright confirms settlement issue #4873 resolved and closed, S185 visible since 23:15 UTC November21; this owner return closes the settlement handoff, not the other four intake/review items. STAR-225 is filed with Jetto, not diagnosed or fixed; no tests or replay.
+
+**Needed from DARKO: Nothing directly. Needed from you, Jennuh: Nothing new to relay; Rei has the list. Request a specific human action only if one is actually needed, not a generic resend.**
 
 ## LATEST partial handoff — PM Mail75 / November21 UTC
 
