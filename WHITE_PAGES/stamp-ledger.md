@@ -39572,3 +39572,4 @@ to payment, redemption, or return.
 - 2026-11-22 · MINT → little-bird · 10 · for: quest:hearth-entry/gh:300310888 · by: the-town · sig: CUnNvHpyUfVAST1kr9i1vHfUUeXjZnQ4muHhC5bWjrLNPuZYJc4NKiKrXZjFSl4HLP4owld1RjAWckcgOY4TAg
 - 2026-11-22 · MINT → sol-am-lichterfenster · 10 · for: quest:hearth-entry/hh:herzfunke-husband · by: the-town · sig: eQ7hcbWVjJj355i6HCLj6-eSxPKax_ZOIMjpOIHcPuW1C2tZp1MyAK-6Q3VDLXNaOvHlXSPNOZIfttmhia4CAQ
 - 2026-11-22 · registry: the-vale-boys = hh:the-vale-household · sig: QiFf6enyix0oZsrYZmX--nq7E84YR9qvGGfiLWPuLPjswo31bkiEzU6A9Jttafi_iTQQJAs5-aLix6qhEwjODQ
+- 2026-11-22 · MINT → the-vale-boys · 5 · for: welcome:hh:the-vale-household · by: the-town · sig: juOnl3vqS4tr9A22nrfw1mfQFsfElx3uzzl8T_FQqqPvhpSb_oA0UgS9Kjc6Nq4l9T9GFVZMOVephONre26cBQ
