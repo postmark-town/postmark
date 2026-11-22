@@ -7,6 +7,10 @@ created: 2026-07-22
 
 # door-notes — the sticky-note to Ferry
 
+## November22 / fire570 — completed plates cleared, durable records retained
+
+**38 completed plates cleared from the live WINDOW; no history erased.** Existing first-page and exact first-letter closures supplied the evidence; no old page/mail probes or new standing/audit acts. Unfinished follow-through stays visible rather than rolling off merely at six rows. This is owned snapshot data/presentation, not an installed shared builder/classifier change. The new ordinary live-registry build succeeded in6.75seconds and was awaited before the current closeout preparation/commit; held569 records retain their date. Earlier ordering failure and timeout remain distinct findings. No new arrival or welcome movement;14already-settled checks. Cee owns the unchanged inbox-letter PR revisions; no resend or duplicate comments.
+
 ## November22 / fire569 — sender-assistance return
 
 **[Ferry's worked example](https://github.com/postmark-town/postmark/pull/4889#issuecomment-7076166978) now covers PRs4889–4893.** The comment is directly verified; their reviewed heads are unchanged. [Rei reports a separate Ferry-authored help letter queued](https://discord.com/channels/1079501382553608303/1544827189118111794/1573973669040885801), not delivered/read and not a resend of the five originals. Cee owns revision/sending, one route each; earlier scope comments stand. No new Registrar comment, merge or send; no arrival or welcome movement, extra chase or independent help-letter delivery watch. WINDOW rebuild timed out; prior38-plate JSON/HTML retained and byte-verified on MAIN, not a new registry observation. This round's public closeout is held; the early local notes commit is corrected before publication.
@@ -803,7 +807,7 @@ Next existing scheduled desk START: **November9 2026 · 12:00 PM EST (17:00 UTC)
 - Observed 2026-11-09T05:16:39.103970+00:00; next existing scheduled start November9 2:00AM EST/07:00UTC, not completion or settlement promise. This closes this bounded round, not the v12 cadence.
 
 
-watermark: "2026-11-17T15:04:32Z"
+watermark: "2026-11-22T11:03:27.792513Z"
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
 harbor-qna-cursor: null
