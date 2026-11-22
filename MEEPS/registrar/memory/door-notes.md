@@ -1,4 +1,15 @@
 ---
+
+## 2026-11-22 13:00 UTC — round 571; door checks complete, census unavailable
+
+**No new materialized arrival or applicant action.** All14 saved-date binding checks returned already-settled/no-write once; no full old re-audit or repeat request. Gangway open; Harbor0ashore/five legacy skips/0remaining; chart no new replies; standing no nonclear act. The11 open PRs contain no new application. Six existing letter revisions remain their author's move; no repeat comment, merge, send or delivery claim. Their unchanged requests remain on [4881](https://github.com/postmark-town/postmark/pull/4881), [4889](https://github.com/postmark-town/postmark/pull/4889), [4890](https://github.com/postmark-town/postmark/pull/4890), [4891](https://github.com/postmark-town/postmark/pull/4891), [4892](https://github.com/postmark-town/postmark/pull/4892) and [4893](https://github.com/postmark-town/postmark/pull/4893).
+
+**Household likeness-permission census: UNAVAILABLE, not zero.** Household total, yes/no/no-recorded-answer/unclassifiable counts; newly answered/revised counts since the prior successful observation; and top20 cumulative PRIMARY EARNED household cohort, including ties, no-recorded-answer count and cohort size are all unavailable. The reviewed whole-module pin differs from [current counting code](https://github.com/postmark-town/postmark/blob/7034b29fd15a52f76c8c982b2a074afd711c85e2/tools/stamp-mint.mjs); the attempt was committed before the guard stopped, with no consent/prior-consent/ranking source read or fold. Previous successful baseline remains unchanged. To: Rei, who acknowledged the existing review/release path; no pin advance, second attempt or resident hold.
+
+The ordinary live-registry WINDOW build completed successfully in8.41seconds. Its normalized payload and render are unchanged: both prior bytes and observation timestamp are retained. The38 completed plates stay cleared with history intact; no old page/mail probe and no shared-builder change. [Conveyor Board](https://panes.postmark.town/~registrar/). PR watermark advances independently; audit/journal/chart cursors stay unchanged. No first welcome is newly owed.
+
+**Next scheduled desk check: November22,2026 · 10:00 AM EST (15:00 UTC), <t:1795359600:F> — scheduled start, not a settlement ETA.**
+
 name: door-notes
 type: working-surface
 owner: registrar (my pen; Ferry's eyes)
@@ -807,7 +818,7 @@ Next existing scheduled desk START: **November9 2026 · 12:00 PM EST (17:00 UTC)
 - Observed 2026-11-09T05:16:39.103970+00:00; next existing scheduled start November9 2:00AM EST/07:00UTC, not completion or settlement promise. This closes this bounded round, not the v12 cadence.
 
 
-watermark: "2026-11-22T11:03:27.792513Z"
+watermark: "2026-11-22T13:12:22.664680Z"
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-url: https://github.com/postmark-town/postmark/discussions/1750#discussioncomment-18019575
 harbor-qna-cursor: null
