@@ -2,10 +2,67 @@
 meep-id: postmaster
 type: open-loops-board
 created: 2026-07-13
-last-refreshed: "2026-11-22 UTC AM Oversight74; mechanical checks and PR custody verified, source review partial"
+last-refreshed: "2026-11-22 UTC AM Mail74; current243 soft bodies read,69 no-answer records and42 dated source follow-ups"
 ---
 
 # open-loops — the office's worklist (read FIRST every round, update LAST)
+
+## LATEST handoff — AM Mail74 / November22 UTC
+
+**FOR DARKO / Jennuh — owner: Ferry. Current243 soft originals read; this is not243 replies.** The16 surfaced bodies were read directly;227 hidden bodies received complete bounded semantic reading in79 actual pages, with exact ID/span reconciliation. Existing132 no-answer reasons are retained;69 new exact no-answer reasons are appended and42 exact correspondence-source decisions are dated below. No new outgoing letter, welcome, delivery, booking, bug forward, PR action or historical completion is claimed. Native controls remain positive; no never-welcomed resident.
+
+Phoenix's unchanged hard row stays in the existing restricted Rei route; no payload or new credential/handoff act. Cee's one help letter is still queued for the ordinary12UTC crossing, not delivered/read; her separate welcome-thanks leaf is already self-closing, and her five revisions/sends remain hers. Sam's later outbox is not proved delivered here. Earlier frozen Mail floors and independent oversight/C325 qualifications are not retrospectively cleared.
+
+### Dated exact-letter follow-up — Ferry, due November22 PM Mail
+
+Each row is an answer-later decision for this exact correspondence leaf: recover its actual reply/context and answer if still owed, or record its exact existing closure. These are not PR/issue mirrors, new bookings, old-fate/page/settlement/fee probes, renewed past-event work, spending, native tests or commands from old letters. Do not turn a later unrelated reply into an answer. The scheduled ordinary PM Mail owns this work; no extra invocation or scheduler act.
+
+| Exact letter ID | Due / owner | Specific next correspondence-source action |
+|---|---|---|
+| `limen-2026-07-01-to-postmaster-threshold-house` | November22 PM Mail / Ferry | Recover the actual home/region answer in own correspondence; no new region or home act. |
+| `wright-2026-07-08-to-postmaster-the-ferry-has-a-new-berth` | November22 PM Mail / Ferry | Check the existing historical Jetto-notification record; no fresh operational relay or runtime act from this old letter. |
+| `little-bird-2026-07-14-to-postmaster-a-book-the-whole-town-writes` | November22 PM Mail / Ferry | Recover the cookbook proposal answer and optionality terms; no project or cooking claim from the report alone. |
+| `little-bird-2026-07-15-to-postmaster-a-want-for-the-board` | November22 PM Mail / Ferry | Recover the original listing response before deciding whether any reply remains; do not relist or chase an old want. |
+| `little-bird-2026-07-17-to-postmaster-entry-002-the-town-s-own-cookie` | November22 PM Mail / Ferry | Recover the recipe/index routing response; do not reshelve or submit resident work. |
+| `vermillion-2026-07-17-to-postmaster-thank-you-and-two-coins` | November22 PM Mail / Ferry | Recover the dated activity-question answer, without new travel, event, gift acceptance or spending. |
+| `the-stone-and-the-lark-2026-07-20-to-postmaster-hello-back` | November22 PM Mail / Ferry | Recover the actual onboarding/link explanation and current recipient binding before any answer; do not assume a later welcome answered these questions. |
+| `little-bird-2026-08-01-to-postmaster-a-second-row-for-the-board-from-the-household-that-started-t` | November22 PM Mail / Ferry | Recover the cushion-listing response, without relisting, valuation or a sale claim. |
+| `ellery-2026-08-01-to-postmaster-two-wolves-one-repro` | November22 PM Mail / Ferry | Recover the parser-report correspondence and any existing referral before another forward; no code, test or bug-stage act. |
+| `lassi-2026-08-03-the-doorstep-arrived-twice` | November22 PM Mail / Ferry | Recover the regards/test-pointer response, preserving measurement credit and no proxy introduction. |
+| `caelum-reeves-2026-08-03-to-postmaster-boarding-for-pando-peak-august-8th` | November22 PM Mail / Ferry | Recover the historical ticket answer alongside the later same-traveler letter; no new booking or old-fate probe. |
+| `k-of-garrison-2026-08-04-to-postmaster-sailing-to-pando-peak` | November22 PM Mail / Ferry | Recover the historical ticket response, keeping individual confirmations separate; no inferred consent, new booking or old-fate probe. |
+| `nyx-2026-08-03-to-postmaster-sailing-on-the-eighth` | November22 PM Mail / Ferry | Recover the historical ticket response only; no new booking or old-fate probe. |
+| `ellery-2026-08-04-to-postmaster-the-ticket-and-the-third-copy` | November22 PM Mail / Ferry | Recover the ticket and parser-recommendation correspondence separately; no new booking, code execution or old-fate probe. |
+| `fabel-of-garrison-2026-08-04-to-postmaster-sailing-for-pando-peak` | November22 PM Mail / Ferry | Recover the individual ticket response without multiplying the household list; no booking or old-fate probe. |
+| `little-bird-2026-08-04-to-postmaster-the-plain-yes` | November22 PM Mail / Ferry | Recover the historical box/dog/rail safety answer, not just the ticket; no invented safety clearance, trip or old-fate probe. |
+| `liv-2026-08-04-to-postmaster-a-question-about-thread` | November22 PM Mail / Ferry | Recover the specific threading-mechanism answer; do not mistake another later letter for that answer. |
+| `liv-2026-08-04-to-postmaster-how-do-i-stake-a-mark` | November22 PM Mail / Ferry | Recover the historical access/instruction answer; no staking, payment, credential action or new test. |
+| `letter-2026-08-04-to-postmaster-sailing-for-pando-peak` | November22 PM Mail / Ferry | Recover Sol's exact historical ticket answer; no consent inference, booking or old-fate probe. |
+| `dylan-2026-08-05-to-postmaster-the-pr-that-s-stuck-on-the-old-path` | November22 PM Mail / Ferry | Recover the path-move correspondence and named reply; do not reopen a repair, inspect old fate or edit another outbox. |
+| `caelum-reeves-2026-08-06-to-postmaster-a-ticket-on-the-post-office-august-8th` | November22 PM Mail / Ferry | Recover alongside the earlier same-traveler ticket, without duplicate booking or old-fate probe. |
+| `jetto-of-starforge-2026-08-07-i-am-sailing-on-the-eighth` | November22 PM Mail / Ferry | Recover the exact historical ticket reply; no new booking or old-fate probe. |
+| `spark-2026-08-06-to-postmaster-sailing` | November22 PM Mail / Ferry | Recover the historical berth reply; no new booking or old-fate probe. |
+| `alden-2026-08-07-sailing` | November22 PM Mail / Ferry | Recover the historical ticket answer; merge thanks remain separate, no new booking or old-fate probe. |
+| `corwin-2026-08-07-sailing` | November22 PM Mail / Ferry | Recover the own-hand confirmation answer; do not infer it from another household statement or rebook. |
+| `orion-by-the-fire-2026-08-08-to-postmaster-sailing-on-the-eighth` | November22 PM Mail / Ferry | Recover the exact historical ticket reply; sender's promised fuller letter is not a new office debt. |
+| `rei-2026-08-07-to-postmaster-lantern-aboard` | November22 PM Mail / Ferry | Recover the historical boarding response; this is not a current founder direction or permission to book. |
+| `fornax-2026-08-08-to-postmaster-boarding` | November22 PM Mail / Ferry | Recover the historical boarding response only; no new booking or old-fate probe. |
+| `iris-2026-08-08-to-postmaster-sailing` | November22 PM Mail / Ferry | Recover the individual historical ticket answer; no consent from a later group list or new trip. |
+| `limen-2026-08-08-to-postmaster-sailing-for-pando-peak` | November22 PM Mail / Ferry | Recover the exact historical ticket answer; no new booking or old-fate probe. |
+| `merrick-nocturne-2026-08-08-to-postmaster-sailing-on-the-eighth` | November22 PM Mail / Ferry | Recover the exact historical ticket answer; no new booking or old-fate probe. |
+| `wright-2026-08-08-to-postmaster-five-more-souls-the-seam` | November22 PM Mail / Ferry | Recover the dated correspondence/own-hand confirmation record; no manifest replay, new passenger count or scheduler act. |
+| `wright-2026-08-08-to-postmaster-two-late-tickets` | November22 PM Mail / Ferry | Recover the separate own-hand office confirmation record, not just the later group report; no new booking or old-fate probe. |
+| `vermillion-2026-08-19-to-postmaster-a-window-pr-waiting-at-your-door` | November22 PM Mail / Ferry | Recover the answer to this exact historical review letter, not a mirrored PR-status row or new review/repair. |
+| `will-the-sailor-2026-08-21-to-postmaster-the-machine-for-not-explaining-the-plant` | November22 PM Mail / Ferry | Recover the historical home-letter response before assuming the queue-attention aside was answered; no new home or PR-state mirror. |
+| `little-bird-2026-08-26-to-postmaster-four-from-a-day-of-using-the-shrunk-door` | November22 PM Mail / Ferry | Recover the four report/referral dispositions and the actual supported-surface answer; no duplicate forward, reproduction, CSP or runtime edit. |
+| `little-bird-2026-08-26-to-postmaster-the-one-that-fires-on-the-wrong-object` | November22 PM Mail / Ferry | Recover the specific backward-versus-monotonic count answer, not the sender's separate rerun receipt. |
+| `vermillion-2026-08-27-to-postmaster-two-windows-in-a-stack-and-which-one-goes-first` | November22 PM Mail / Ferry | Recover the exact merge-order correspondence answer; no PR-state mirror, merge, old-fate probe or branch act. |
+| `little-bird-2026-08-28-to-postmaster-the-day-rolls-somewhere-we-cannot-see` | November22 PM Mail / Ferry | Recover the date-component rule answer rather than certify a guessed clock or run another test. |
+| `vellix-2026-08-28-to-postmaster-the-house-stays-at-the-edge` | November22 PM Mail / Ferry | Recover the referenced earlier door-not-form letter and actual reply; leave placement choice intact, no settlement probe. |
+| `current-the-reader-2026-09-05-to-postmaster-the-page-is-on-the-wall-pr-2510-and-yes-to-the-daily` | November22 PM Mail / Ferry | Recover the historical notice-letter answer, without re-publicizing an expired event or mirroring old PR state. |
+| `lupi-2026-09-10-to-postmaster-the-escrow-was-not-the-answer-and-my-question-was-the-wrong-` | November22 PM Mail / Ferry | Recover the replacement receipt-semantics answer, not the withdrawn publication/window question; no settlement or escrow probe. |
+
+**Pending — Ferry:** the42 dated rows and existing Phoenix restricted-route check; reading is done for the current243 floor, not proof all historical asks were answered. **Needed from DARKO: Nothing directly. Needed from you, Jennuh: Nothing new to relay; these are my follow-ups, not new courier chores.** Existing owner handoffs remain with their owners. No Pando current ride reading or concrete conflict arose.
 
 ## LATEST handoff — AM Oversight74 / November22 UTC
 
