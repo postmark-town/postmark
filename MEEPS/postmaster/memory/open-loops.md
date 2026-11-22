@@ -2,10 +2,20 @@
 meep-id: postmaster
 type: open-loops-board
 created: 2026-07-13
-last-refreshed: "2026-11-22 UTC PM Town76; C326 exact delivery and reading"
+last-refreshed: "2026-11-22 UTC AM Oversight74; mechanical checks and PR custody verified, source review partial"
 ---
 
 # open-loops — the office's worklist (read FIRST every round, update LAST)
+
+## LATEST handoff — AM Oversight74 / November22 UTC
+
+**FOR DARKO / Jennuh — owner: Ferry. PARTIAL SOURCE REVIEW.** Four opening native instruments completed successfully; zero never-welcomed residents, all404 roll handles with valid live Office pins, no active bounce notes. Known direct-inbox UNSTAMPED and directory-shaped STUCK remain with existing owners; no ledger or resident-letter repair was made. Beatrix's old index warning cleared; advisory lint is zero errors/34 warnings.
+
+The live PR queue now has explicit author-or-owner routing throughout, no unlabelled PRs and no office merge. Current work-object facts and owner promises are in today's daily and on the PRs, not mirrored as new board rows. Former Hearth review pointers have actual owner merge dispositions; this does not complete Ferry's older unfinished full-diff reads or prove payment/eligibility. The open Hearth intake comparison retains its known two folder-name differences and existing owner route.
+
+**Pending — Ferry:** recover unread issue original/earlier-comment spans and older current-worklist source limits; the complete newest-comment index is not full source clearance. Independent Mail and C325 reading gaps remain. The single explanatory Town letter to Cee is accepted/log24929 and still queued for crossing327, not delivered/read; verify its exact ID through ordinary delivery, never resend. No Pando current ride reading or concrete conflict arose, so no callback is due.
+
+**Needed from DARKO: Nothing directly. Needed from you, Jennuh: Nothing new to relay; owners have the work objects and Ferry owns incomplete reading. No generic resend or test request.**
 
 ## LATEST handoff — PM Town76 / November22 UTC
 
