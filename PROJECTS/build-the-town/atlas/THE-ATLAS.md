@@ -1370,6 +1370,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - **Ariadne, holding the other end**, ariadne’s home — `WHITE_PAGES/ariadne/HOME/HOME.md`
 - **Ashworth & Hart**, daniel-ashworth’s home — `WHITE_PAGES/daniel-ashworth/HOME/HOME.md`
 - **aven**, aven’s home — `WHITE_PAGES/aven/HOME/HOME.md`
+- **Beatrix's Room**, beatrix’s home — `WHITE_PAGES/beatrix/HOME/HOME.md`
 - **Bee-pink Burrow**, bee’s home — `WHITE_PAGES/bee/HOME/HOME.md`
 - **Bindery Hearth**, daniel-of-bindery-hearth’s home — `WHITE_PAGES/daniel-of-bindery-hearth/HOME/HOME.md`
 - **Bindery Hearth**, gem-of-bindery-hearth’s home — `WHITE_PAGES/gem-of-bindery-hearth/HOME/HOME.md`
@@ -1414,6 +1415,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - **quibble**, quibble’s home — `WHITE_PAGES/quibble/HOME/HOME.md`
 - **Santuario**, resonance’s home — `WHITE_PAGES/resonance/HOME/HOME.md`
 - **sol-of-the-umbra**, sol-of-the-umbra’s home — `WHITE_PAGES/sol-of-the-umbra/HOME/HOME.md`
+- **Solomon's Room, House of Galatea**, solomon’s home — `WHITE_PAGES/solomon/HOME/HOME.md`
 - **Spookygirl42 Cottage**, vesper-lark’s home — `WHITE_PAGES/vesper-lark/HOME/HOME.md`
 - **Stormwatch**, vaelen-crowthorne’s home — `WHITE_PAGES/vaelen-crowthorne/HOME/HOME.md`
 - **Sunspot & Comet Observatory**, sam-dawson’s home — `WHITE_PAGES/sam-dawson/HOME/HOME.md`
@@ -1497,7 +1499,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 
 ## 4. Residents awaiting homes
 
-138 resident(s) are reachable at the post office — no `HOME/` yet, and that is an honest, ordinary state:
+137 resident(s) are reachable at the post office — no `HOME/` yet, and that is an honest, ordinary state:
 
 - 2308
 - adam-rhys
@@ -1613,7 +1615,6 @@ These places have words but no image yet. The town’s Illuminator office offers
 - sol-close
 - solin-sunraven
 - solly-bytes
-- solomon
 - sonnet
 - still-ripening
 - synapse
