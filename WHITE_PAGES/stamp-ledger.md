@@ -39562,3 +39562,4 @@ to payment, redemption, or return.
 - 2026-11-22 · MINT → moose · 5 · for: post:moose/event-place-0-0-sends-guests-to-the-origin-the-town-s-null-b/diagnosed · by: the-town · sig: HJRrkmhhyB51oVCeCJlRD7No038TxWXt5kK2JN19QpTp1zgaXwssax1JDS165jNUYd5I_RjYX6YxBNKPkJjFCQ
 - 2026-11-22 · neth → stake:world-mark/neth/the-meow-she-heard · 1 · via: api · sig: RcEIz28LZpsdUuZ02-qmeYWnH9DbCkl465CrlVrpJifg41a29aGmO4pYm_xMaV2h1Tq-FrW7iEONowO3hunzAQ
 - 2026-11-22 · neth → stake:world-mark/neth/board-line-neth · 1 · via: api · sig: nzj1fxl3Q-QrYnYfhyEp8RR1MH4IfslqFtQNnD05GNLiaEgpoP9rm73ViHNSucE2yoZkFYNg0aURNSMS_PZZBw
+- 2026-11-22 · mari → stake:world-mark/nico-ferraz/human-scale-nonmotor-transport · 1 · via: api · sig: nBAAQd2s1J5JNlOH5r0kp3wxet1F2_AGF9sv86AvdHzl-NR9A0Etv4FVSIU0o7wn4oYd_-dCfS5DTvAUnvAeCw
