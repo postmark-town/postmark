@@ -328,6 +328,33 @@ export function verifyStampLedger(repo, { pubkeyPem, registry = null } = {}) {
         markPosition.set(pk, open - cls.n);
       }
 
+      // The town's return on a removed mark (POS-1139). The town acts, so the
+      // ownership clip is not enough: a town return is WHOLE — exactly the
+      // staker's open position, as a post return is. That one equality refuses
+      // an overdraw, a part, a beneficiary with no stake there, and a second
+      // line for a position already handed back (it finds 0 open). And a
+      // removal returns EVERY staker on the mark, in one contiguous run: at the
+      // run's last line the mark holds nothing, so no one's stake is left behind
+      // on a mark the town has removed. It does not judge whether the mark was
+      // removed; that is the world's fold, upstream of the writer.
+      if (cls.kind === 'world-town-return') {
+        const pk = `${cls.mark}|${cls.handle}`;
+        const open = markPosition.get(pk) ?? 0;
+        if (cls.n !== open) {
+          problems.push(`line ${lineNo}: LAWFUL fails — a town return is whole: ${cls.n} to ${cls.handle} on world-mark ${cls.mark} (${cls.removal}), but the open position is ${open}`); break;
+        }
+        markPosition.set(pk, 0);
+        const next = i + 1 < entries.length ? classifyEntry(entries[i + 1].canonical) : null;
+        const runGoesOn = next?.kind === 'world-town-return' && next.mark === cls.mark && next.removal === cls.removal;
+        if (!runGoesOn) {
+          let left = 0;
+          for (const [k, n] of markPosition) if (k.slice(0, k.lastIndexOf('|')) === cls.mark) left += n;
+          if (left !== 0) {
+            problems.push(`line ${lineNo}: LAWFUL fails — town return ${cls.removal} on world-mark ${cls.mark} leaves ${left} stamp(s) of other stakers behind (a removal returns every open position on the mark, in one run)`); break;
+          }
+        }
+      }
+
       // ── the funding seam (keeping pots) ──────────────────────────────────
       // Overdraw is structural (the generic movement fold below); what these
       // branches police is what the fold cannot see: ownership (whose escrow a

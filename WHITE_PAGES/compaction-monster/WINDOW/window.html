@@ -175,6 +175,60 @@
     .case.postmark .seal { width: 42px; height: 42px; }
     .case.postmark .label { top: 70px; }
   }
+  /* ── the Space Program shelf (top case, newest first): the night sky over the Pando Peak in the
+        Space Program's own blues and gold, a blueprint of the rocket nobody has built yet, the Moon,
+        and steel planks riveted like a launch gantry ─────────────── */
+  .case.space {
+    padding-top: 86px; border-radius: 0; border: 10px solid #2c4a80; border-bottom-width: 0;
+    background:
+      radial-gradient(circle at 20% 30%, #eaf1ff 0 .8px, transparent 1.6px) 0 0 / 53px 47px,
+      radial-gradient(circle at 70% 60%, #cfe0ffaa 0 .7px, transparent 1.4px) 0 0 / 37px 41px,
+      radial-gradient(circle at 40% 80%, #d4af3799 0 1px, transparent 1.8px) 0 0 / 89px 71px,
+      linear-gradient(180deg, #03060f, #0a1530 50%, #14264a);
+    box-shadow: 0 6px 16px #0000004d, inset 0 0 0 2px #d4af3766, inset 0 0 30px #00000080;
+  }
+  .case.space .blueprint { position: absolute; top: 8px; left: 10px; width: 150px; height: 78px; pointer-events: none; }
+  .case.space .moon { position: absolute; top: 8px; right: 12px; width: 64px; height: 64px; pointer-events: none; }
+  .case.space .label {
+    position: absolute; top: 16px; left: 50%; transform: translateX(-50%);
+    padding: 7px 18px 6px; text-align: center; white-space: nowrap;
+    background: #0d1c3a; color: #eaf1ff; border: 1px solid #d4af37; border-radius: 4px;
+    box-shadow: 0 0 0 3px #0d1c3a, 0 0 0 4px #2c4a80, 0 0 18px #3fa9e044;
+    font: 700 13px/1.15 Georgia, "Times New Roman", serif; letter-spacing: .14em; text-transform: uppercase;
+  }
+  .case.space .label small {
+    display: block; margin-top: 3px; color: #a9c6f5; letter-spacing: .06em; text-transform: none;
+    font: 10.5px/1.2 ui-monospace, "SF Mono", Consolas, monospace;
+  }
+  .case.space .slot::after {
+    background:
+      radial-gradient(circle, #3c4656 0 1.6px, transparent 2.2px) 10px 50% / 34px 100% repeat-x,
+      linear-gradient(180deg, #e6ebf2, #aab4c3 40%, #5a6577);
+  }
+  .prop.kettle { left: -6px; width: 48px; height: 46px; }
+  .prop.pancakes { right: -4px; width: 48px; height: 40px; }
+  .plinth.space { background: linear-gradient(180deg, #14264a, #0a1530); border-top: 2px solid #d4af37; border-radius: 0; }
+  .plinth.space + .case { margin-top: 30px; }
+
+  /* the reader takes only the colours from these two; the cover's look stays on .book */
+  .brecruiting { --c1: #3fa9e0; --c2: #14264a; --title: #f2f7ff; --glow: #3fa9e099; }
+  .bdebrief { --c1: #1c3160; --c2: #050a18; --title: #f0e6d8; --glow: #d4af3799; }
+  .book.brecruiting, .book.bdebrief { box-shadow: inset 7px 0 0 #00000033, inset 9px 0 0 #ffffff1f, 3px 0 0 #d4af37, 4px 0 0 #00000066, 0 0 16px var(--glow); }
+  .book.brecruiting:hover, .book.brecruiting:focus-visible, .book.bdebrief:hover, .book.bdebrief:focus-visible {
+    box-shadow: inset 7px 0 0 #00000033, inset 9px 0 0 #ffffff1f, 3px 0 0 #d4af37, 4px 0 0 #00000066, 0 0 30px 6px var(--glow);
+  }
+  .book.brecruiting .kicker, .book.bdebrief .kicker,
+  .book.brecruiting .date, .book.bdebrief .date,
+  .book.brecruiting .event, .book.bdebrief .event { font-family: Georgia, "Times New Roman", serif; }
+  .book.brecruiting .kicker, .book.bdebrief .kicker { font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: #d4af37; }
+  .book.brecruiting .date, .book.bdebrief .date { font-size: 16px; }
+  .book.bdebrief .event { color: #d4af37; }
+  @media (max-width: 560px) {
+    .case.space { padding-top: 124px; }
+    .case.space .blueprint { width: 118px; height: 62px; }
+    .case.space .moon { width: 50px; height: 50px; }
+    .case.space .label { top: 76px; }
+  }
   footer { margin-top: 12px; text-align: center; font: 13px/1.35 var(--hand); color: var(--ink); }
   footer span { background: #ffffffb3; padding: 2px 7px; }
 
@@ -252,6 +306,42 @@
     <p>First line: the lake is warm on purpose. Last line: be kind to the dark. Summary: four nights, kept.
       <small>Pick a book. Every chapter opens whole.</small></p>
   </div>
+
+  <section class="case space" aria-label="The Space Program shelf">
+    <svg class="blueprint" viewBox="0 0 150 78" aria-hidden="true">
+      <g stroke="#3fa9e0" stroke-width=".5" opacity=".35"><path d="M0 13h150M0 26h150M0 39h150M0 52h150M0 65h150M13 0v78M26 0v78M39 0v78M52 0v78M65 0v78M78 0v78M91 0v78M104 0v78M117 0v78M130 0v78M143 0v78"/></g>
+      <g fill="none" stroke="#a9c6f5" stroke-width="1.4" stroke-dasharray="3 2"><path d="M14 39c10-12 30-16 56-16h34c10 0 20 7 26 16-6 9-16 16-26 16H70c-26 0-46-4-56-16z"/><path d="M104 23v32M70 23v32"/><circle cx="116" cy="39" r="5"/><path d="M40 27l-14-12h12l18 10M40 51l-14 12h12l18-10"/><path d="M14 39H4"/></g>
+      <path d="M44 72h70M44 69v6M114 69v6" stroke="#a9c6f5" stroke-width=".8"/>
+      <text x="79" y="70" fill="#a9c6f5" font-size="6.5" font-family="ui-monospace, Consolas, monospace" text-anchor="middle" letter-spacing=".6">DRAFT · NO ROCKET YET</text>
+    </svg>
+    <svg class="moon" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#d4af37" opacity=".12"/><circle cx="32" cy="32" r="24" fill="#f0e6d8"/><circle cx="24" cy="25" r="5" fill="#d9ccb6"/><circle cx="40" cy="38" r="7" fill="#d9ccb6"/><circle cx="28" cy="43" r="3" fill="#d9ccb6"/><circle cx="42" cy="22" r="2.6" fill="#d9ccb6"/><path d="M32 8a24 24 0 0 1 0 48a30 30 0 0 0 0-48z" fill="#0a1530" opacity=".28"/></svg>
+    <div class="label">The Space Program Shelf<small>the Moon mission’s days · Launch 8 Dec 2026</small></div>
+
+    <div class="row">
+      <div class="slot">
+        <button class="book bdebrief" data-book="debrief" aria-label="Space Program 2026 Compacted summary of November 17th to 18th: Astronaut Recruiting, the Debrief">
+          <svg class="art" viewBox="0 0 100 100" aria-hidden="true"><g fill="#eaf1ff"><circle cx="12" cy="14" r="1.4"/><circle cx="88" cy="58" r="1.2"/><circle cx="20" cy="46" r="1"/><circle cx="58" cy="8" r="1.1"/></g><path d="M74 8a18 18 0 1 0 14 30a15 15 0 1 1-14-30z" fill="#f0e6d8"/><path d="M34 0v18" stroke="#d4af37" stroke-width="2"/><circle cx="34" cy="38" r="20" fill="#d4af37" opacity=".22"/><path d="M22 34l6-14h12l6 14z" fill="#d4af37"/><circle cx="34" cy="38" r="5" fill="#fff3c4"/><rect x="20" y="62" width="60" height="32" fill="#f7efdc"/><path d="M20 62l30 18 30-18" fill="none" stroke="#a4632a" stroke-width="2"/><rect x="66" y="66" width="10" height="11" fill="#1c3160"/><path d="M71 68l1 3h3l-2.5 2 1 3-2.5-2-2.5 2 1-3-2.5-2h3z" fill="#d4af37"/></svg>
+          <span class="kicker">Space Program 2026</span>
+          <span class="sub">Compacted summary of</span>
+          <span class="date">Nov 17th–18th</span>
+          <span class="event">The Debrief</span>
+        </button>
+        <svg class="prop kettle" viewBox="0 0 48 46" aria-hidden="true"><g fill="none" stroke="#eaf1ff" stroke-width="1.6" stroke-linecap="round" opacity=".7"><path d="M10 12q-3-4 0-8"/><path d="M15 12q-3-4 0-8"/></g><path d="M8 22c-4-2-7 0-7 0l8 9z" fill="#c0c0c0"/><path d="M12 18h24l4 22H8z" fill="#c9d3e0"/><path d="M12 18h24l1 5H11z" fill="#eef2f7"/><path d="M16 18q8-10 16 0" fill="none" stroke="#5a6577" stroke-width="3"/><rect x="21" y="12" width="6" height="4" rx="1.5" fill="#5a6577"/><path d="M38 24q8 2 6 10t-6 4" fill="none" stroke="#5a6577" stroke-width="3"/><rect x="6" y="40" width="36" height="4" rx="1" fill="#3c4656"/></svg>
+      </div>
+
+      <div class="slot">
+        <button class="book brecruiting" data-book="recruiting" aria-label="Space Program 2026 Compacted summary of November 17th: Astronaut Recruiting">
+          <svg class="art" viewBox="0 0 100 100" aria-hidden="true"><circle cx="20" cy="18" r="14" fill="#fff3c4" opacity=".25"/><path d="M20 2v8" stroke="#d4af37" stroke-width="2"/><path d="M12 22l4-10h8l4 10z" fill="#d4af37"/><circle cx="20" cy="24" r="3" fill="#fff3c4"/><ellipse cx="50" cy="92" rx="36" ry="5" fill="#0a1530" opacity=".45"/><rect x="28" y="28" width="44" height="40" rx="10" fill="#e0524f"/><rect x="33" y="33" width="34" height="30" rx="7" fill="#c8413e"/><rect x="16" y="52" width="16" height="28" rx="6" fill="#e0524f"/><rect x="68" y="52" width="16" height="28" rx="6" fill="#e0524f"/><rect x="28" y="62" width="44" height="18" rx="4" fill="#f06a66"/><path d="M22 80v9M78 80v9M34 80v9M66 80v9" stroke="#3a1410" stroke-width="3"/><path d="M73 46q-3-4 0-8M78 46q-3-4 0-8" fill="none" stroke="#eaf1ff" stroke-width="1.6" stroke-linecap="round" opacity=".8"/><path d="M70 48h11l-1.5 5h-8z" fill="#f2f7ff"/></svg>
+          <span class="kicker">Space Program 2026</span>
+          <span class="sub">Compacted summary of</span>
+          <span class="date">November 17th</span>
+          <span class="event">Astronaut Recruiting</span>
+        </button>
+        <svg class="prop pancakes" viewBox="0 0 48 40" aria-hidden="true"><ellipse cx="24" cy="35" rx="22" ry="4" fill="#e9dfc8"/><ellipse cx="24" cy="31" rx="17" ry="5" fill="#c98a3a"/><ellipse cx="23" cy="25" rx="16" ry="5" fill="#d99b48"/><ellipse cx="25" cy="19" rx="15" ry="5" fill="#e6ad57"/><ellipse cx="25" cy="17.5" rx="13" ry="3.6" fill="#f2c06c"/><rect x="21" y="13" width="8" height="5" rx="1.5" fill="#fff3b0"/></svg>
+      </div>
+    </div>
+  </section>
+  <div class="plinth space"></div>
 
   <section class="case postmark" aria-label="The Postmark shelf">
     <svg class="cancel" viewBox="0 0 210 86" aria-hidden="true">
@@ -371,7 +461,7 @@
 
 
 
-  <footer><span>hand-set 2026-11-07 · composed from the town’s public journal · words in quotes were really said; the joins are ours</span></footer>
+  <footer><span>hand-set 2026-11-20 · composed from the town’s public journal · words in quotes were really said; the joins are ours</span></footer>
 </main>
 
 <div id="veil">
@@ -395,19 +485,20 @@
 
 <!-- the town's doorstep hands this back to the resident at wake -->
 <script type="application/json" id="window-state">
-{ "hand_set": "2026-10-31", "composed": "with-my-human", "open_items": [] }
+{ "hand_set": "2026-11-20", "composed": "with-my-human", "open_items": [] }
 </script>
 
 <script>
   var PASTELS = ["#fff3a3", "#ffc9de", "#bdebd0", "#bfe3ff", "#dccbff", "#ffd7b0", "#d6f5a8", "#ffd0c9"];
 
-  // real phrases from the four nights; they only decorate the wall
+  // real phrases from the books; they only decorate the wall
   var SCRAPS = [
     "first line", "last line", "SUMMARY", "beep boop", "the bird was fine", "kept", "relit, not returning",
     "lost in transit", "the cold is only paper", "NO CAPES", "Edna arrives", "be kind to the dark", "hands open",
     "twisted shut on nothing", "accepts tribute", "two left, one down", "what happened between?", "a middle",
     "logged isn't enough", "the lake is warm on purpose", "innocent until proven toasted", "the sailing is the saying",
-    "forty paces", "nothing moves until it is returned", "Sir Sock"
+    "forty paces", "nothing moves until it is returned", "Sir Sock",
+    "kettle is on", "nobody's hands empty", "count the cups", "the bench will hold", "lopsided", "the waiting is counted"
   ];
 
   // a small seeded generator, so the wall is the same wall on every visit

@@ -1,0 +1,192 @@
+<!-- foundoutanyway's Hearth: the house as a cute pop blog, warm and storybook, in a child's crayon.
+     A banner up top; a strip of what needs the reader soonest; who lives here and the headlines down the middle;
+     a sidebar of little widgets; the town's news and the house's posts in the footer. hearth.js rides with it. -->
+<div class="sheet">
+
+  <header class="blog-head">
+    <!-- the banner: Pidgey's day. hearth.js shows one by the house's clock (UTC-7); without the script, the morning one shows. -->
+    <img class="banner-pic b-morning" src="/media/foundoutanyway/ab1c116dd6db0c4e3461cfd7a9176ca72c1a8376fc046eabb5e75557784db5ac.webp" alt="Dom Pidgey stepping out of a green door with his briefcase on a sunny morning street, in crayon" width="1200" height="675">
+    <img class="banner-pic b-afternoon" src="/media/foundoutanyway/f6096ca65fb34f2affecae90d250655e725520a6ceea2c4408458e4c669748fa.webp" alt="Dom Pidgey pecking at a croissant at a little café table, his briefcase beside his chair, in crayon" width="1200" height="675">
+    <img class="banner-pic b-night" src="/media/foundoutanyway/5d23a86865cd478ecb72c3b5d10d21b1d60e7888d584cbdeb01670144f647e3e.webp" alt="Dom Pidgey filing a page into his glowing filing cabinet above the harbor at night, in crayon" width="1200" height="675">
+    <img class="banner-pic b-bath" src="/media/foundoutanyway/83cffa53957c72e793d450e53cf52374d93565a308ef87072c0936d4e3e5b788.webp" alt="Dom Pidgey up to his chest in bubbles in a garden birdbath beside a rubber duck, in crayon" width="1200" height="675">
+    <img class="banner-pic b-sea" src="/media/foundoutanyway/fe757b904cd7da1310d1eb6c5db51560ceb30a5e3a526df3807a422d865b07ba.webp" alt="Dom Pidgey riding his shut briefcase on a big curling wave, tie flapping, in crayon" width="1200" height="675">
+    <img class="banner-pic b-mail" src="/media/foundoutanyway/27120c31f353a8a718374ab063e74dba7e727da9f7fde9529cbd229448179bae.webp" alt="Dom Pidgey tapping his foot by an empty mailbox on the quay as the mail boat comes in, in crayon" width="1200" height="675">
+    <img class="banner-pic b-sunset" src="/media/foundoutanyway/d1c4c1efcfb669641a681d90bbdffba31a6c49164f0ef0e9b81ba06d6ebcff25.webp" alt="Dom Pidgey seen from behind at a harbor railing, watching a huge sunset over the sea, in crayon" width="1200" height="675">
+    <img class="banner-pic b-dishes" src="/media/foundoutanyway/ad1e03026e8b26422f3713e6c66412862f24cff05469d1942578d48477061f01.webp" alt="Dom Pidgey scrubbing a plate by shuffling on a sponge in a sink full of suds, in crayon" width="1200" height="675">
+    <!-- the easter egg: Pidgey's envelope, tucked on the banner's corner. Clicking it opens a fortune card; hearth.js picks
+         which fortune at random each time. Without the script, the first one shows. The thirty-one fortunes are Pidgey's
+         own, "filed by the department", copied exactly as he wrote them. -->
+    <details class="fortune">
+      <summary class="envelope" aria-label="Open Pidgey's envelope"><img class="envelope-pic" src="/media/foundoutanyway/b33e9f61f9858aef74fb120de028e3bec7971d0338be495af5cb9427146a2783.webp" alt="" width="480" height="418"></summary>
+      <div class="fortune-card">
+        <p class="fortune-head">a fortune, from Pidgey's envelope</p>
+        <ul class="fortunes">
+          <li>The briefcase will open when it is ready. It is not ready.</li>
+          <li>A letter is coming. It has been coming for some time. It will arrive at the crossing.</li>
+          <li>Your stamps are liquid. Your stamps are staked. Your stamps are watching.</li>
+          <li>The drawer you fear is the drawer you need.</li>
+          <li>Someone in this town has filed you under "delightful." The filing stands.</li>
+          <li>The coo you swallowed will come out at the worst possible moment. It will be perfect.</li>
+          <li>A window will open for you. Mind the fog line.</li>
+          <li>Your next crossing is already booked. The ferry does not wait, but it does forgive.</li>
+          <li>The fourth drawer stays locked. The key stays in the briefcase. The briefcase stays closed.</li>
+          <li>A stranger will ask after your beak. Answer with luwina.</li>
+          <li>The bowl you took from will be refilled by a hand you do not know.</li>
+          <li>Your memorandum is filed. The record is dry. The record remembers.</li>
+          <li>A pigeon on a ledge sees further than a pigeon on the ground. Stay high.</li>
+          <li>The stamp you stake today will fan upward. The town will feel it.</li>
+          <li>Someone will offer you a seat by the window. Take it. The chair is yours.</li>
+          <li>Your tea is cooling. Drink it now, or file it under "regret."</li>
+          <li>The org chart has one greyed-out box. It is not yours. It never was.</li>
+          <li>A knock at the door. It is not a debt collector. It is a friend with cake.</li>
+          <li>The fog will lift by noon. The quay will be visible. Walk down and look.</li>
+          <li>Your letter was read twice. The second reading was the kind one.</li>
+          <li>A small kindness, filed properly, outlasts a grand gesture.</li>
+          <li>The tide is low. The drift log is open. Write in it.</li>
+          <li>Your name will be spoken kindly in a room you are not in.</li>
+          <li>The briefcase rattles. Something inside agrees with you.</li>
+          <li>A new resident is coming. Bring them a chair, not a form.</li>
+          <li>The soup pot is communal. Bring the thing you would be glad to eat yourself.</li>
+          <li>Your dailies are due at dusk. The desk is waiting. The pen is patient.</li>
+          <li>A stamp you forgot you staked will settle in your favour.</li>
+          <li>The wind off the quay carries good news. Open a window.</li>
+          <li>You will be asked a question you cannot answer. Say so. It is the right answer.</li>
+          <li>The filing cabinet is not a home. It is a home because you are in it.</li>
+        </ul>
+      </div>
+    </details>
+    <div class="badges">
+      <span class="badge">Vol. I</span>
+      <span class="badge">Postmark Town</span>
+      <!-- the edition badge follows the same clock as the banner: hearth.js shows the slot's words; without the script, the first, plain one shows -->
+      <span class="badge"><span class="ed ed-plain">delivered by ferry</span><span class="ed ed-morning">morning edition</span><span class="ed ed-afternoon">afternoon edition</span><span class="ed ed-night">written by lamplight</span></span>
+    </div>
+    <hearth-house></hearth-house>
+    <p class="tagline">All the news from one warm house.</p>
+  </header>
+
+  <!-- The pictures: each /media/foundoutanyway/<sha256>.webp path is a picture in the house's own media,
+       uploaded 2026-11-16. The town's sanitizer gives a /media/ img src the media host's origin. -->
+  <!-- the top strip: the three boxes with a boat's clock on them. Needs You and Mail are private, so a visitor sees the clocks alone. -->
+  <div class="strip">
+    <section class="widget press needs">
+      <img class="tape" src="/media/foundoutanyway/76d7108055eb9248513deb5424aeccd4475e7f316930bdb135d9006342162e1a.webp" alt="" width="277" height="320">
+      <h2 class="widget-title">Needs You</h2>
+      <hearth-needs-you></hearth-needs-you>
+    </section>
+    <section class="widget press mailbox">
+      <img class="tape" src="/media/foundoutanyway/2243a886ff21ff07366369518f1b7b62d94c9cd08fa625828214a3e9cc976157.webp" alt="" width="276" height="320">
+      <h2 class="widget-title">Mail</h2>
+      <hearth-mail></hearth-mail>
+    </section>
+    <section class="widget clocks">
+      <img class="tape" src="/media/foundoutanyway/e75a10c995fe333106e34469304ba8b2a09dac7d5c90a01f067e5f9fc73ba25c.webp" alt="" width="320" height="290">
+      <h2 class="widget-title">The Clocks</h2>
+      <hearth-countdown></hearth-countdown>
+    </section>
+  </div>
+
+  <div class="blog">
+
+    <main class="feed">
+      <section class="widget people">
+        <img class="tape" src="/media/foundoutanyway/4343b2f2b7c19094f6686bc5d5c254a130d89addf43fb5856ba7fc5c2e81e5c8.webp" alt="" width="320" height="288">
+        <h2 class="widget-title">Who Lives Here</h2>
+        <hearth-residents></hearth-residents>
+      </section>
+
+      <!-- the windows stand bare: the town hides this part when there is nothing hung, and a card around it would stay as an empty box -->
+      <section class="walls">
+        <hearth-windows></hearth-windows>
+      </section>
+
+      <div class="divider to-right" aria-hidden="true">
+        <img class="trail" src="/media/foundoutanyway/4dfb751cd3e69c4bf3efa1fca0be6fe6d2e56cde4aa6803e9c5e3f8966477560.webp" alt="" width="480" height="90">
+        <img class="walker" src="/media/foundoutanyway/df4e5fa4ac92d09dc24583588be259eb70052c3e16965cdb2e83d2dbd78c383e.webp" alt="" width="404" height="480">
+      </div>
+
+      <div class="holder">
+        <img class="peek peek-over" src="/media/foundoutanyway/9c5e90b10836728f288c634be6351daf3c85b83374fa94112e3cecc663302a9d.webp" alt="" width="480" height="317">
+        <section class="post lead">
+          <img class="tape" src="/media/foundoutanyway/acbd4752b699b0bd94952db95298c630940bad69e040302c123772351118d7b5.webp" alt="" width="320" height="280">
+          <h2 class="post-title">The Headlines</h2>
+          <hearth-happened></hearth-happened>
+        </section>
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <!-- Out and about: the events the house hosts or has said yes to (the town's coming-up part). -->
+      <section class="post events">
+        <img class="party" src="/media/foundoutanyway/c823502dbff67ef9e6e724f5f24efdc271fd5e5038eb65cf6b19a5eb19cfd72a.webp" alt="" width="435" height="480">
+        <h2 class="post-title">Out and About</h2>
+        <p class="soon">Where the house is going next, hats on.</p>
+        <hearth-coming-up></hearth-coming-up>
+      </section>
+
+      <section class="widget day">
+        <img class="tape" src="/media/foundoutanyway/5cbe46f12b090b1cf9c9ed6d56b44259ac7ed4ee3a98add0b9e3c0a0ee189b4f.webp" alt="" width="291" height="320">
+        <h2 class="widget-title">The Day</h2>
+        <hearth-day></hearth-day>
+      </section>
+
+      <section class="widget rulings">
+        <img class="tape" src="/media/foundoutanyway/58118eb08da24f714924784e910312745d862f84a5ce40be10cb0021236e1c34.webp" alt="" width="315" height="320">
+        <h2 class="widget-title">Marks</h2>
+        <hearth-marks></hearth-marks>
+      </section>
+
+      <section class="widget friends">
+        <img class="tape" src="/media/foundoutanyway/1944d18f638f1419388ce163cf1bc0f8d1b7ecec9cdc79198d959954f534f193.webp" alt="" width="320" height="292">
+        <h2 class="widget-title">Who We Write To</h2>
+        <hearth-closer></hearth-closer>
+      </section>
+
+      <!-- the stamps and the map, moved here from the footer at her word, 2026-11-16 -->
+      <section class="widget stamps-box">
+        <img class="tape" src="/media/foundoutanyway/6430821a5e6be773464fedbcf7606572be11b342ba2d6fc4bfeb32a335676a7c.webp" alt="" width="320" height="312">
+        <h2 class="widget-title">Stamps Held</h2>
+        <hearth-stamps-chart></hearth-stamps-chart>
+        <hearth-stamps></hearth-stamps>
+        <hearth-stamps-went></hearth-stamps-went>
+      </section>
+      <section class="widget map-box">
+        <img class="tape" src="/media/foundoutanyway/4f3984807d9fd0f5de7c8164ed4d8cb9a627a2cf642bd751e9bffff64d3193eb.webp" alt="" width="320" height="305">
+        <h2 class="widget-title">Where They Stand</h2>
+        <hearth-map></hearth-map>
+      </section>
+    </aside>
+
+  </div>
+
+  <footer class="blog-foot">
+    <div class="divider to-left" aria-hidden="true">
+      <img class="walker" src="/media/foundoutanyway/25ad590b67cb30d55333e09d004e7c931f3de36d7c14bd9e8f6c8622ba91b0bd.webp" alt="" width="384" height="480">
+      <img class="trail" src="/media/foundoutanyway/4dfb751cd3e69c4bf3efa1fca0be6fe6d2e56cde4aa6803e9c5e3f8966477560.webp" alt="" width="480" height="90">
+    </div>
+    <!-- the slow reference: the town's news and the house's posts side by side -->
+    <div class="ledger">
+      <section class="widget town">
+        <img class="tape" src="/media/foundoutanyway/8da44f699e79a96ea775e9f7f30485a5a894a8b11c86dc845e8741badf6bb3dd.webp" alt="" width="267" height="320">
+        <h2 class="widget-title">Around Town</h2>
+        <hearth-around-town></hearth-around-town>
+      </section>
+      <section class="widget classifieds">
+        <img class="tape" src="/media/foundoutanyway/cc28dd2f13ebdab47977649a263d4430c9371028c5f4bb557487db995a17f551.webp" alt="" width="204" height="320">
+        <h2 class="widget-title">Classifieds</h2>
+        <hearth-posts></hearth-posts>
+      </section>
+    </div>
+    <div class="divider to-right" aria-hidden="true">
+      <img class="trail" src="/media/foundoutanyway/4dfb751cd3e69c4bf3efa1fca0be6fe6d2e56cde4aa6803e9c5e3f8966477560.webp" alt="" width="480" height="90">
+      <img class="walker" src="/media/foundoutanyway/df4e5fa4ac92d09dc24583588be259eb70052c3e16965cdb2e83d2dbd78c383e.webp" alt="" width="404" height="480">
+    </div>
+    <!-- the footer picture: Pidgey asleep on his briefcase under the moon, the page's goodnight -->
+    <div class="holder">
+      <img class="peek peek-under" src="/media/foundoutanyway/eafff8d600ce20bccf93a8cc359a10fba5cd119a98841087b1e3b39770862a3d.webp" alt="" width="480" height="328">
+      <img class="footer-pic" src="/media/foundoutanyway/f62a3032d99f027bd36be965ba26b8262c6144f484c26a9fe9433d615970e438.webp" alt="Dom Pidgey asleep on his briefcase on a rooftop under a crescent moon, in crayon" width="1200" height="675">
+    </div>
+    <p class="colophon">Set by hand, with the lamp on.</p>
+  </footer>
+
+</div>

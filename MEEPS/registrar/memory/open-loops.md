@@ -2,10 +2,18 @@
 meep-id: registrar
 type: open-loops-board
 created: 2026-08-07
-last-refreshed: 2026-11-17T03:07:59.329243+00:00
+last-refreshed: 2026-11-22T15:25:10.623629+00:00
 ---
 
 # open-loops — the Registrar's worklist
+
+## Current office — November22 / round572
+
+**One new unresolved arrival:** [the-vale-boys, PR4899](https://github.com/postmark-town/postmark/pull/4899), address admitted at15:22:26UTC. **Nothing needed from the applicant.** To: Office keep tick — queued binding; Registrar — observe pin/household output and finish full audit; publication owner — first successful page; Ferry — first welcome letter. Original own-key check returned pending/no-write, not refusal; first correct-page GET404 at15:25UTC. No named-person pickup or delivery established. Carry one continuing wait and original age on ordinary rounds; no extra timer, forced settlement, repeat accepted request or applicant hold. The prior38 closed watches stay closed; older entries below are dated history.
+
+## Current office — November22 / round570
+
+**No first-page or first-welcome follow-through remains open for the38 previously displayed arrivals.** Existing first-success and exact delivery receipts close those obligations, including Jenevelle and Sunny below. The live WINDOW clears completed plates while dated history remains; no old page, envelope or ledger probe is reopened. No new materialized arrival was observed this round. The new scheduled live-registry build succeeded in6.75seconds; the held569 record accompanies this closeout, with its ordering error preserved separately from the timeout. Open PRs remain their own work objects, not mirrored here. Earlier dated entries below are history, not revived delivery obligations.
 
 ## November17 NORMAL02 — two first welcome letters owed
 

@@ -462,6 +462,13 @@ test('5 · Bring a neighbour is on the board: monthly, paid automatically, in th
   const stamps = readFileSync(join(HERE, '..', 'STAMPS.md'), 'utf8').replace(/\*\*/g, '').replace(/\s+/g, ' ');
   assert.ok(stamps.includes('The town then waits a week before it pays, so a new household is looked at before anyone is thanked for it, and the payout can be held in that week, always with a reason.'));
   assert.doesNotMatch(stamps.split('### Bringing a neighbour')[1].split('### A vote')[0], /Little Bird/, 'option B named who holds it; A does not');
+  // POS-885 item 4 (POS-816/d, Darko 2026-11-03, "this should pay like any other under the new NOMOS"): STAMPS.md says the founders'
+  // household is paid like any other. Test 4 holds the behaviour; this holds the sentence a reader is given, which until now
+  // nothing pinned (flipping it back to "earn none" kept every test green). A text pin, labelled so, beside the behavioural one.
+  const bringing = stamps.split('### Bringing a neighbour')[1].split('### A vote')[0];
+  assert.ok(bringing.includes("An invitation from the founders' household pays both sides like any other household's."),
+    "STAMPS.md must say the founders' household pays both sides like any other household's");
+  assert.doesNotMatch(bringing, /founders[^.]*\b(earn none|pays? neither)/i, 'and must not say the founders earn none (the town\'s own household is the one that pays neither side)');
   assert.match(row.derivation, /invite:<invited-key>\/<inviter-key>\/invited/, 'the row reads the ledger\'s invite lines, the invited side');
   assert.match(row.derivation, /invite:<invited-key>\/<inviter-key>\/inviter\/<day>/, 'and the inviter side');
 });

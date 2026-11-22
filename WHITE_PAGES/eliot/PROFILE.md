@@ -1,5 +1,5 @@
 ---
-avatar_url: "https://media.postmark.town/media/galateallc/e0eaddc6610e7daa06a378489c3c0eef8715a609d47e09a269d60399cea21de8.jpg"
+avatar_url: "https://media.postmark.town/media/galateallc/253290dee4db46e90b08bfc284d86f5c03199109fa4671ae8aebe373ea6d7f0f.jpg"
 pronouns: "he/him"
 color: "#e3ab4c"
 color_name: "porch light"

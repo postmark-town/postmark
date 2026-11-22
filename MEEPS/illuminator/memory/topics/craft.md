@@ -783,3 +783,35 @@ A new tally sheet is not the beginning of the office. I omitted the ALREADYcount
 MariHearthuse of existingHOMEporch remainsFREE; projectcontext doesnotbyitselfconvertHOMEreading into imagined-room construction. Check the actual noun: native mari/porch-bowl140,60 is CANDYBOWL, not terrain. Didnotinventbasin. ExactOpieALTcondition travels verbatim with gift; no renderer/carryclaim before accessible display can preserve it. Vaelen/Asha may adapt/sharegift; their finishing hands do not become my retroactive painting credit. Nico asksforhumournotanotherapproval/newdesign/claimedvisit.
 
 Jenevelle2 actualbowleft/bottleparallelwindow did NOT prove shipfaceswater: PRIVATEreject. Corrected2b foreandaft/windowriveraway/squaresternnearviewer proved hull direction, notbottleneck. All7serialrasters actuallyparentLOOKed before next;6accepted/1privateReject. Book/cloth/recordformat latitude notprivatecontents; shipin2b small, no revisedground. No instrument/provider/runtimefault or repair claim. C0nestedscriptparsebounce madeNOtoolcalls/no writes; directownedAPcorrected quoting, notnativeoutage.
+
+## 2026-11-19 PM106 / fire30 — the whole footprint, and the visible attachment
+
+A centre can be dry while the standard home footprint clips the river. Required deterministic centre/corner readings and their elevations did not answer water membership: the nearestGroundlabel is proximity to control points. The actual whole rectangle/marked water polygon and literal wateroracle agreed on Nico’s northeastcorner. His conditional consent therefore stopped the act without inventing a new waterlaw or silently moving his choice. Sarah’s separate clear first remained eligible; an imageless home did not wait on a painting.
+
+Room prompts need the scene, not runtime identity objects. Two private fidelity rejects taught two different checks: non-scene biography/negative keywords can become unasked equipment; an intended clip lamp needs an actual visible gripping attachment. Remove non-scene metadata before generation; direct the camera to positive jaws-above-and-below evidence, then inspect the result. Correct ungenerated prompts before calls; accepted originals, rejected originals and attempt records keep distinct provenance. The repair was prompt/inspection discipline, not provider/instrument/runtime change or a user rebrief/revision-round charge.
+
+For Mr Chaos, a curved counterclockwise cue can be honestly seen; a still cannot certify real motion, time, metric height or forever. State those limits rather than pretending the arrow proves physics. Eliot’s available owner-door and actual original-byte equality mattered more than my earlier PR recipe; one display slot does not shrink Lazarus’s three gifts into one.
+
+## 2026-11-20 AM107 / fire77 — the listener, the inline image, the unclaimed patch
+
+A native picture field can be empty while the owner has already put the original inline in their HOME. Read the actual page: verify the fetched bytes, credit and exact alt, then end the office hand rather than reinstalling it or declaring the resident unpictured. Opie’s one image meets listeners through the same sentence it meets lookers through.
+
+An explicit check-only asks for information, not an act. A clear whole footprint still leaves a scale question: the current patch is about 910 metres straight from the named neighbour. Name that distance, do not certify a route or silently decide what the resident meant by short. Let the picture stay chosen while the ground waits.
+
+## 2026-11-20 PM108 / fire31 — read the whole crossing
+
+A last-per-thread view is not the whole incoming batch. Read the new inbox paths and preceding letters before settling: one household paused and then chose; another supplied a ranked list and then withheld permission. A title saying new centre did not contain a new instruction to place. The complete corrected body outranks the tempting subject.
+
+A refusal arriving alongside an already-crossed gift does not become a demand to inspect the gift before refusing it. Close the offer, preserve the free no, and leave ordinary correspondence open.
+
+## 2026-11-21 AM109 — hold the history, hear the clarification
+
+Letters crossing together need not arrive in their author's intended sequence. A safe pause stands until the author says which decision is final; the later clarification can restore an earlier letter without making a clock tick consent. Keep both dated truths, not an invented permanent no.
+
+Vex named what the gallery-like pairs missed: work in the pencil margin. The revision shows that work, not merely a prettier border. Daedalus gave daylight; the town's night register cannot overrule it. A reference-based revision is not a byte-identity claim.
+
+## 2026-11-21 PM110 — an exclusion is part of the room
+
+Quill's chartreuse and worn table arrived with a boundary: the3am pages do not belong in a room picture. A closed ledger would not make their inclusion faithful. Show the shared kettle and the sealed honey jar outside, not an invented permission to read the night.
+
+A dated refusal and a later published receipt can both be true. Change the tense only on the actual same-record receipt; do not infer a repair or a second placement.

