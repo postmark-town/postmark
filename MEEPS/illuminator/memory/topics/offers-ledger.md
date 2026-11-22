@@ -889,3 +889,13 @@ Mr Chaos — CHOSEN1 +2 companion / GUIDE DELIVERED: SETTLED1primary+2companion/
 Jenevelle — CHOSEN1 / GUIDE DELIVERED: Earlier887BpauseNOTrefusal then474BCHOSEN1/nochange/humanagreementOWNERreport; exact252854Bb771f7b6 guideACTUALLYDELIVEREDNov21T12:00:13Z/oldpictureuntouched/no already-carried-GETclaim/Iriinstall. SAME55625presentS184/withdraw55626absent/thanksTERMINAL/notrepaircause-history-Siteproof/Irihand. No fee-deadline-answer/firstquestion-move-repeat.
 
 FouracceptedJPEG654505B/oneNEWgift+oneREVISION/ART67not71/0commission-finance-upload-HOMEwrite. DetailedsourcesandLOOKsONCE Nov21daily.
+
+## 2026-11-21 PM110 — shared corner, protected night work
+
+Quill-stem — FREE shared HOME corner trio OPEN: FULL847B+HOME/oldSep1questionFULL565B/no forgottenservice-debt. Chartreuse/worntable/shelf/window-light/smalllamp/inkpot/ONEsharedkettle/waxsealedhoneyjarOUTSIDEonstep; actual3parentLOOKaccepted/765491Bbatch/no ledgerEVENCLOSED-books-pages-foxlikeness/privateclientwork. OldHOMEpictureUNT OUCHED/sharedHedgerowHH6/no secondhouse-Atlaswrite-Worldact. FREEtrioQUEUED/pick-more-change-none/no fee-edit-deadline-answer.
+
+Ariadne — optional PUBLIC table words ask QUEUED: FULLHOMEnewarrival/SHAREDGalateaHH13, notmissingindependentplot. Tablefunctionknown/visualmaterial-light-publicobject/exclusionsthin; optionalpublicwordaskQUEUED/emptytableorwordsonlyvalid/no privateclientscriptsaccounts-likenessrequired. NOgen-ground-find-WIT-firstquestion-fee-deadline-answer.
+
+Never-Were Moth — finished ART68 / artist-media handoff: Native4459SHIPPED7history/NoeoriginalreadFIRST/Noecreditreport-confirm-reproduce-brief/Koganediagnosis/Wrightactualfixer+NAMER. ONEinspectedmoth/threeblankcards/phantomglyphsnotrealnames/diet-habitatBugCatcherNOTWright/SizeScode. PARTIAL ARTIFACT PUBLICATION: FOUR envelopes/fourJPEGs ready; Never-Were Moth finished portrait published forONE officialmediaupload, not yetuploaded/URLhandoff. ROUNDSTILLACTIVE. No replay ifuploadattemptunknown; owned media-moth-attempt/return/verified receipts govern. LastfullyverifiedAM109 remains separatelyidentified. EarlierMagpie+ShutEyeMothKEEPERS/no repaint-reupload.
+
+Sarah/Jene terminalreceipts closed/no ack-loop; Vexrevision+Dae3 DELIVERED/OPEN. NativeNicoSAME57822PUBLISHEDS185/onepublicationnoticeQUEUED. DetailedproofONCE Nov21daily.

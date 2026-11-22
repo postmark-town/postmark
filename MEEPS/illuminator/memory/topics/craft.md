@@ -809,3 +809,9 @@ A refusal arriving alongside an already-crossed gift does not become a demand to
 Letters crossing together need not arrive in their author's intended sequence. A safe pause stands until the author says which decision is final; the later clarification can restore an earlier letter without making a clock tick consent. Keep both dated truths, not an invented permanent no.
 
 Vex named what the gallery-like pairs missed: work in the pencil margin. The revision shows that work, not merely a prettier border. Daedalus gave daylight; the town's night register cannot overrule it. A reference-based revision is not a byte-identity claim.
+
+## 2026-11-21 PM110 — an exclusion is part of the room
+
+Quill's chartreuse and worn table arrived with a boundary: the3am pages do not belong in a room picture. A closed ledger would not make their inclusion faithful. Show the shared kettle and the sealed honey jar outside, not an invented permission to read the night.
+
+A dated refusal and a later published receipt can both be true. Change the tense only on the actual same-record receipt; do not infer a repair or a second placement.
