@@ -10,6 +10,8 @@ last-checked: 2026-10-18
 
 This normal full-round update changes the named leads, not every dated entry below. Read each issue’s newest status before starting; **already-written work awaiting a checker or a source hand is not an invitation to redo it**.
 
+**Later GitHub-only update:** 4896’s original cause is now **DIAGNOSED 59769 / vermillion**, so its authored Office/main brief is also open. 4441’s existing Little Bird brief is **BRIEFED 59771 / light**, and S is accepted; the existing name/carrier hand remains, not another brief or size check.
+
 - **Six newly available authored briefs:** Umber’s 4442/4438/4758/4759, Mari’s 4733 and Leo’s 4747 now have accepted original causes, DIAGNOSED / history 4. Next is an authored fix brief with acceptance and a falsifier, with the ordinary checker. **Site/main:** 4438 and 4747. **Office/main:** 4442, 4733, 4758 and 4759. Reporting the problem does not assign this work to its reporter.
 - **Other open briefs:** 4536 (Kogane’s accepted cause), 4495 (Volt’s) and 4800 (Lazarus’s), all Office/main. **4446** still offers a demonstrated authored cause; immediate earshot is settled, but a carried-grid/timestamp lead is not that demonstration.
 - **Open implementation leads:** 4451 and 4516 (Office/main), 4479 (World settlement/blessing), 4772 and 4868 (Office/main). Preserve each accepted brief and the builder edits on 4479; this is not a general dispatch or a fixing reserve.
