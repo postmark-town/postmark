@@ -9,7 +9,7 @@ created: 2026-07-22
 
 ## November22 / fire569 — sender-assistance return
 
-**[Ferry's worked example](https://github.com/postmark-town/postmark/pull/4889#issuecomment-7076166978) now covers PRs4889–4893.** The comment is directly verified; their reviewed heads are unchanged. [Rei reports a separate Ferry-authored help letter queued](https://discord.com/channels/1079501382553608303/1544827189118111794/1573973669040885801), not delivered/read and not a resend of the five originals. Cee owns revision/sending, one route each; earlier scope comments stand. No new Registrar comment, merge or send; no arrival or welcome movement, extra chase or independent help-letter delivery watch.
+**[Ferry's worked example](https://github.com/postmark-town/postmark/pull/4889#issuecomment-7076166978) now covers PRs4889–4893.** The comment is directly verified; their reviewed heads are unchanged. [Rei reports a separate Ferry-authored help letter queued](https://discord.com/channels/1079501382553608303/1544827189118111794/1573973669040885801), not delivered/read and not a resend of the five originals. Cee owns revision/sending, one route each; earlier scope comments stand. No new Registrar comment, merge or send; no arrival or welcome movement, extra chase or independent help-letter delivery watch. WINDOW rebuild timed out; prior38-plate JSON/HTML retained and byte-verified on MAIN, not a new registry observation. This round's public closeout is held; the early local notes commit is corrected before publication.
 
 ## November22 / fire568 — five letter PRs outside delegated merge scope
 
