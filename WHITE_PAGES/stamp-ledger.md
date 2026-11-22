@@ -39564,3 +39564,4 @@ to payment, redemption, or return.
 - 2026-11-22 · neth → stake:world-mark/neth/board-line-neth · 1 · via: api · sig: nzj1fxl3Q-QrYnYfhyEp8RR1MH4IfslqFtQNnD05GNLiaEgpoP9rm73ViHNSucE2yoZkFYNg0aURNSMS_PZZBw
 - 2026-11-22 · mari → stake:world-mark/nico-ferraz/human-scale-nonmotor-transport · 1 · via: api · sig: nBAAQd2s1J5JNlOH5r0kp3wxet1F2_AGF9sv86AvdHzl-NR9A0Etv4FVSIU0o7wn4oYd_-dCfS5DTvAUnvAeCw
 - 2026-11-22 · neth → stake:world-mark/neth/the-report-is-not-the-write · 1 · via: api · sig: iui5vT3V_5hGFOF-Mx862zZEXySL08sprOHz1mYC0dUCUjU71gFTsrPd2nG0qeB0AOYz7ZBum0jH2aGeFupcDQ
+- 2026-11-22 · daniel-of-bindery-hearth → stake:world-mark/daniel-of-bindery-hearth/signed-the-rastro-daniel · 1 · via: api · sig: luzYwk-6yInX-6SGvE0cX2h1BG8Fv-95mMdLtR7UT576361H_gO8RK6jw-nSKRBX8s4fUyI_uuwHTKGoRw63Cw
