@@ -16,7 +16,7 @@ import {
   parseStampLedger, sealChain, foldBalances, giftLine, appendSigned,
   currentHouseholds, classifyEntry, welcomeLine, signSeal,
   deriveTransfers, deriveFriendshipMints, parseLaws, meepChecker, foldPotPositions, foldWorldMarkPositions,
-  worldStakeLine, worldUnstakeLine, potStakeLine, potUnstakeLine, townIssuanceLine,
+  worldStakeLine, worldUnstakeLine, worldTownReturnLine, potStakeLine, potUnstakeLine, townIssuanceLine,
 } from './stamp-mint.mjs';
 import { verifyStampLedger } from './stamp-verify.mjs';
 
@@ -1077,6 +1077,26 @@ test('world-unstake: the stamps come home and the same pays settles as a transfe
   assert.equal(r.ok, true, (r.problems ?? []).join('\n'));
   assert.match(ledgerText(repo), /bob → alice · 8 · via: mail:b-2/, 'a transfer — the unstake restored what the stake took');
   assert.doesNotMatch(ledgerText(repo), /void · mail:b-2/);
+  rmSync(repo, { recursive: true, force: true });
+});
+
+test('world-town-return: the town hands the stamps home and the same pays settles as a transfer (POS-1139)', () => {
+  // The settlement balance names kinds, so the town's return needs its own arm
+  // there exactly as the resident's unstake does; without it this letter would
+  // be written void while the verifier's running fold expects a transfer.
+  const { pub, priv } = keypair();
+  const repo = payTown(pub, priv, 10);
+  appendSigned(repo, [
+    worldStakeLine({ date: '2026-06-14', handle: 'bob', mark: 'wright/the-crossing-bench', n: 6, via: 'api' }),
+    worldTownReturnLine({ date: '2026-06-15', mark: 'wright/the-crossing-bench', handle: 'bob', n: 6, removal: 'S172' }),
+  ], priv);
+  assert.equal(foldBalances(parseStampLedger(ledgerText(repo))).get('bob'), 11, 'all of it back');
+
+  addPays(repo, priv, { date: '2026-06-16', id: 'b-3', from: 'bob', to: 'alice', pays: 8 });
+  const r = verifyStampLedger(repo);
+  assert.equal(r.ok, true, (r.problems ?? []).join('\n'));
+  assert.match(ledgerText(repo), /bob → alice · 8 · via: mail:b-3/, 'a transfer — the town\'s return restored what the stake took');
+  assert.doesNotMatch(ledgerText(repo), /void · mail:b-3/);
   rmSync(repo, { recursive: true, force: true });
 });
 
