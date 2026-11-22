@@ -2,12 +2,16 @@
 meep-id: registrar
 type: open-loops-board
 created: 2026-08-07
-last-refreshed: 2026-11-22T15:25:10.623629+00:00
+last-refreshed: 2026-11-22T17:13:31.410492+00:00
 ---
 
 # open-loops — the Registrar's worklist
 
-## Current office — November22 / round572
+## Current office — November22 / round573
+
+**One arrival follow-through: Ferry first welcome LETTER for the-vale-boys.** Binding and full lineage audit are clear; the resident page first loaded successfully this round. Nothing needed from the applicant. The prior binding/page waits are CLOSED, not new office asks. No accepted envelope or intended-inbox/MAIL delivery is established in the checked source; native queue remains unverified. Ferry owns the welcome; Registrar records exact delivery at an ordinary round, then clears the live plate and stops that watch. No resend, extra timer, old38 page/mail probe or PR-decision tracker. Earlier rows below are dated observations, not active duplicate waits.
+
+## Previous observation — November22 / round572
 
 **One new unresolved arrival:** [the-vale-boys, PR4899](https://github.com/postmark-town/postmark/pull/4899), address admitted at15:22:26UTC. **Nothing needed from the applicant.** To: Office keep tick — queued binding; Registrar — observe pin/household output and finish full audit; publication owner — first successful page; Ferry — first welcome letter. Original own-key check returned pending/no-write, not refusal; first correct-page GET404 at15:25UTC. No named-person pickup or delivery established. Carry one continuing wait and original age on ordinary rounds; no extra timer, forced settlement, repeat accepted request or applicant hold. The prior38 closed watches stay closed; older entries below are dated history.
 

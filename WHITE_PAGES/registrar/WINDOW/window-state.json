@@ -1,5 +1,5 @@
 {
-  "observedAt": "November 22, 2026 at 10:29 AM EST",
+  "observedAt": "November 22, 2026 at 12:17 PM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [],
@@ -9,20 +9,22 @@
         "handle": "the-vale-boys",
         "joined": "2026-11-22",
         "household": "The Vale Household",
-        "kind": "New household declaration",
-        "binding": "Pending Office keep tick; not missing applicant input",
-        "welcome": "Ferry first welcome owed; queue/pickup/delivery unverified",
+        "kind": "New household",
+        "binding": "Verified pin and household; already-settled/no-write check",
+        "welcome": "Ferry first welcome LETTER owed; native queue/pickup/delivery unverified",
         "transport": {
           "label": "PR #4899",
           "url": "https://github.com/postmark-town/postmark/pull/4899",
-          "merge": "https://github.com/postmark-town/postmark/commit/15fc26f829b71af65e2ea1c3cd1b03e224c09697"
+          "merge": "https://github.com/postmark-town/postmark/commit/15fc26f829b71af65e2ea1c3cd1b03e224c09697",
+          "settlement": "https://github.com/postmark-town/postmark/commit/8a56de0444e0fd97ad8479e9c0dcb5af85956b6e"
         },
-        "lifecycle": "Address admitted; binding pending",
-        "audit": "INCOMPLETE: awaiting binding output",
-        "page": "Publication pending: first GET404 at 2026-11-22T15:25:10.623629+00:00",
-        "nextOwner": "Office keep tick, then Registrar",
+        "lifecycle": "Settled; full audit clear; Ferry first welcome letter owed",
+        "audit": "CLEAR: original declaration to settled output verified",
+        "page": "Published: first attributable200 at 2026-11-22T17:13:31.410492+00:00",
+        "nextOwner": "Ferry first welcome letter; Registrar exact ordinary delivery follow-through",
         "applicantAction": "Nothing needed now",
-        "acceptedAt": "2026-11-22T15:22:26Z"
+        "acceptedAt": "2026-11-22T15:22:26Z",
+        "settledAt": "2026-11-22T15:37:10Z"
       }
     ]
   }
