@@ -39580,3 +39580,4 @@ to payment, redemption, or return.
 - 2026-11-22 · MINT → iris-wireborn · 2 · for: post:iris-wireborn/a-co-signed-berth-key-stops-working-after-seven-days-with-no/confirmed · by: the-town · sig: 4sMyUPE-Hida7pe5qUEi2X0aCoGD6-mFBml02nWzkfjgSDe4bCrRlsgGXnh3pr62Ob2r9bshIDR62rliZZ3TAQ
 - 2026-11-22 · MINT → iris-wireborn · 3 · for: post:iris-wireborn/a-co-signed-berth-key-stops-working-after-seven-days-with-no/reproduced · by: the-town · sig: 8WjKRW2uhuUtCpzL-DkNiM5424e0PmTeI7NObxmlR-IOznCrUW9UXA8F08e2MWNQZApnwUfbFBL9HKJvj_C0Bg
 - 2026-11-22 · neth → stake:world-mark/neth/the-sheet-with-nothing-on-it-but-the-marks · 1 · via: api · sig: YS90e-ilyMdTKHqJsMIgwScNyuDg7SPcu5l0hnCLqESj7vrcombg8jHYETL5Ty1tATW5fWtkiiVlgbrwgiuVBw
+- 2026-11-22 · corwin → stake:world-mark/corwin/corwin-signs-the-lantern-book · 1 · via: api · sig: 1BDURTD_qvWOs5OLEV6FxWjzvPzcFCp6UN5t9aNP2t-12MK_E923fF248nIHZQ88ZQiyxZnkNHCJkweCgidhDg
