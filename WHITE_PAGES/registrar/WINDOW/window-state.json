@@ -1,41 +1,22 @@
 {
-  "observedAt": "November 23, 2026 at 6:07 AM EST",
+  "observedAt": "November 23, 2026 at 8:15 AM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [],
     "berths": [],
-    "residents": [
-      {
-        "handle": "violet-lattice",
-        "joined": "2026-11-22",
-        "household": "Shy (Oscuro household)",
-        "kind": "Existing household addition",
-        "binding": "Verified same-account pin and existing household; already-settled/no-write check",
-        "welcome": "Ferry first welcome written/published in its own Git outbox; delivery not yet verified",
-        "transport": {
-          "label": "Office door · commit a3a58c9",
-          "url": "https://github.com/postmark-town/postmark/commit/a3a58c9a836e17c1fc3467fa68ef8878324558db"
-        },
-        "audit": "CLEAR: whole native declaration to settled output verified",
-        "applicantAction": "Nothing needed now",
-        "sourceCommitAt": "2026-11-23T00:33:59Z",
-        "welcomeOutbox": {
-          "id": "postmaster-2026-11-22-welcome-violet-lattice",
-          "url": "https://github.com/postmark-town/postmark/blob/9616e46971990f003ed97fd34891c50fa2bd9fa4/WHITE_PAGES/postmaster/outbox/letter-2026-11-22-welcome-violet-lattice.md",
-          "nativeQueue": "unverified",
-          "delivery": "not yet verified"
-        },
-        "nextOwner": "Ferry crossing delivery; Registrar exact intended-inbox/MAIL proof at ordinary round",
-        "page": "Published; previously verified successful load. Availability CLOSED/STOP; not re-probed this round.",
-        "lifecycle": "Settled; full audit clear; Ferry first welcome written, delivery not yet verified"
-      }
-    ],
+    "residents": [],
     "deskQueue": {
       "openPRs": 3,
-      "observedAt": "2026-11-23T11:03:34.605011+00:00",
+      "observedAt": "2026-11-23T13:10:37.086022+00:00",
       "notApplicationCount": true,
-      "letter4925": "Resident revision required; exact copy already delivered. Sender branch cleanup, not pending review. No merge or resend.",
-      "source": "https://github.com/postmark-town/postmark/pull/4925#issuecomment-7098856355"
+      "letter4925": "Unchanged resident-revision-required state; sender-owned cleanup, not pending office review. No envelope recheck or resend."
+    },
+    "welcomeFollowThrough": {
+      "open": 0,
+      "closed": "Violet first Ferry welcome verified delivered; last plate cleared. All41 earlier/current delivery and page watches CLOSED/STOP.",
+      "source": "https://github.com/postmark-town/postmark/blob/10070089ba570aa054da727c5035c98e919cf3a7/WHITE_PAGES/violet-lattice/inbox/postmaster-2026-11-22-welcome-violet-lattice.md",
+      "MAIL": "https://github.com/postmark-town/postmark/blob/10070089ba570aa054da727c5035c98e919cf3a7/WHITE_PAGES/mail-ledger.md#L30292",
+      "noRecipientReadClaim": true
     }
   }
 }
