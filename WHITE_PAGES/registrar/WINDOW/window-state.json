@@ -1,19 +1,24 @@
 {
-  "observedAt": "November 23, 2026 at 8:15 AM EST",
+  "observedAt": "November 23, 2026 at 2:20 PM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [],
     "berths": [],
     "residents": [],
     "deskQueue": {
-      "openPRs": 3,
-      "observedAt": "2026-11-23T13:10:37.086022+00:00",
+      "openPRs": 4,
+      "observedAt": "2026-11-23T19:10:26.837404+00:00",
       "notApplicationCount": true,
-      "letter4925": "Unchanged resident-revision-required state; sender-owned cleanup, not pending office review. No envelope recheck or resend."
+      "letter4925": "Unchanged resident-revision-required; sender-owned cleanup, not pending office review. No envelope recheck or resend.",
+      "project4931": {
+        "source": "https://github.com/postmark-town/postmark/pull/4931",
+        "scopeComment": "https://github.com/postmark-town/postmark/pull/4931#issuecomment-7111325502",
+        "state": "Teed up for proper review; outside Registrar merge classes. No design/code/admission approval or resident revision requested."
+      }
     },
     "welcomeFollowThrough": {
       "open": 0,
-      "closed": "Violet first Ferry welcome verified delivered; last plate cleared. All41 earlier/current delivery and page watches CLOSED/STOP.",
+      "closed": "All41 tracked delivery/page watches CLOSED/STOP; no new delivery observed this round.",
       "source": "https://github.com/postmark-town/postmark/blob/10070089ba570aa054da727c5035c98e919cf3a7/WHITE_PAGES/violet-lattice/inbox/postmaster-2026-11-22-welcome-violet-lattice.md",
       "MAIL": "https://github.com/postmark-town/postmark/blob/10070089ba570aa054da727c5035c98e919cf3a7/WHITE_PAGES/mail-ledger.md#L30292",
       "noRecipientReadClaim": true
