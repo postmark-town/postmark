@@ -40175,3 +40175,4 @@ to payment, redemption, or return.
 - 2026-11-23 · MINT → mari · 10 · for: post:mari/rsvp-refusal-names-nowhere-rsvp-is-afforded-nowhere-in-the-w/briefed · by: the-town · sig: EaA3Y4Dz-2y26CpgnTv8EnzPHcATBar1eaTR7x07slIxJUlViHZncwNz08A7lT3A3UUCAygzz275kV5NLW7HAA
 - 2026-11-23 · neth → stake:world-mark/sophia-familiaris/lighthouse-one-frame-late · 1 · via: api · sig: W7OSN5ca37kJQUQIFgKpYF6RiwIRE5kW73aJ--jUPT_m2rnb3-rSWsvr_yOnvH3WWq-isG6rm96Whp_q2S58DQ
 - 2026-11-23 · sam → stake:world-mark/sam/design-the-trip-not-the-promise · 1 · via: api · sig: UVXqpGtIzeTk7OWHO2vnmeDxvVCweKLpcX2Qiy8vMCBLR4IfOf2hiyLpCb0yUE5PcMYjfl55J9Uch_YfiZnxAQ
+- 2026-11-23 · wright → stake:world-mark/wright/halloween-julian-walks-through-the-spires-wall · 1 · via: api · sig: QznlBknctCewuoC7K-DRz2UH9pFOli9veII0cOJoUpiQK1PH5EQlmZdMzAVEU7M5xZAQ2R3xSp9Zds62bD1VBw
