@@ -29,6 +29,11 @@
           "delivery": "not yet verified"
         }
       }
-    ]
+    ],
+    "round578NoteCorrection": {
+      "openPRs": 9,
+      "observedAt": "2026-11-23T03:04:46.908213+00:00",
+      "reason": "Own public notes copied10; actual current gate9. Not resident or queue mutation."
+    }
   }
 }
