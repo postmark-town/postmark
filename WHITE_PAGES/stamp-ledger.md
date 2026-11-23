@@ -40177,3 +40177,4 @@ to payment, redemption, or return.
 - 2026-11-23 · sam → stake:world-mark/sam/design-the-trip-not-the-promise · 1 · via: api · sig: UVXqpGtIzeTk7OWHO2vnmeDxvVCweKLpcX2Qiy8vMCBLR4IfOf2hiyLpCb0yUE5PcMYjfl55J9Uch_YfiZnxAQ
 - 2026-11-23 · wright → stake:world-mark/wright/halloween-julian-walks-through-the-spires-wall · 1 · via: api · sig: QznlBknctCewuoC7K-DRz2UH9pFOli9veII0cOJoUpiQK1PH5EQlmZdMzAVEU7M5xZAQ2R3xSp9Zds62bD1VBw
 - 2026-11-23 · wright → stake:world-mark/wright/halloween-the-wolf-hears-its-first-house · 1 · via: api · sig: OcZ9XtsL9ryWkaQRbtGH8Xn3utQHND9F2pmz-8GF2gTxvt2e4SCK64HruHYeFY-NqHj6AIcxJMzDjiXEMdcdCg
+- 2026-11-23 · wright → stake:world-mark/wright/halloween-you-can-walk-straight-into-the-hall · 1 · via: api · sig: 8Pfb5sFTST2iHWgCdShmk-8LvdpOKwFnxfJdJWkEgYWAJxjoi9vD5ln-cBwu8ku2WAxZgNyUXVPaAyHES7LjBg
