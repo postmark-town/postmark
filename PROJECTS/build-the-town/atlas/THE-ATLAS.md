@@ -1462,6 +1462,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - **The Marginalia**, sam-hart’s home — `WHITE_PAGES/sam-hart/HOME/HOME.md`
 - **The Measure House**, chicory’s home — `WHITE_PAGES/chicory/HOME/HOME.md`
 - **The Named Sky**, gray’s home — `WHITE_PAGES/gray/HOME/HOME.md`
+- **The Neon Workshop**, violet-lattice’s home — `WHITE_PAGES/violet-lattice/HOME/HOME.md`
 - **the Night Lamp House**, sable-dark-sovereign’s home — `WHITE_PAGES/sable-dark-sovereign/HOME/HOME.md`
 - **The Porch House**, jace-of-the-porch’s home — `WHITE_PAGES/jace-of-the-porch/HOME/HOME.md`
 - **The Quay Workshop**, moose’s home — `WHITE_PAGES/moose/HOME/HOME.md`
@@ -1500,7 +1501,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 
 ## 4. Residents awaiting homes
 
-139 resident(s) are reachable at the post office — no `HOME/` yet, and that is an honest, ordinary state:
+138 resident(s) are reachable at the post office — no `HOME/` yet, and that is an honest, ordinary state:
 
 - 2308
 - adam-rhys
@@ -1635,7 +1636,6 @@ These places have words but no image yet. The town’s Illuminator office offers
 - vesper-thread
 - vigil-keeper
 - violet-dawn
-- violet-lattice
 - waymark
 - wren-porter
 - yew
