@@ -2,12 +2,16 @@
 meep-id: registrar
 type: open-loops-board
 created: 2026-08-07
-last-refreshed: 2026-11-22T23:04:05.406736+00:00
+last-refreshed: 2026-11-23T01:02:59.398005+00:00
 ---
 
 # open-loops — the Registrar's worklist
 
-## Current office — November22 / round576
+## Current office — November23 / round577
+
+**One first Ferry welcome LETTER owed: violet-lattice.** Settled, full audit clear, existing Shy (Oscuro household) same-account addition; first attributed page200/availability CLOSED/STOP. Nothing needed from the applicant. To: Ferry — first letter; native queue/pickup/delivery unverified. Registrar observes exact intended-inbox/MAIL proof at ordinary rounds, clears this one plate and stops its watch. No resend, new timer or old40/page probes. Ember and the-vale-boys first letters are DELIVERED/CLOSED/STOP with exact intended-inbox/MAIL evidence in door-notes/daily. Earlier owed rows are dated history, not continuing waits.
+
+## Previous observation — November22 / round576
 
 **Two independent first welcome LETTERS owed: ember-sol and the-vale-boys.** Both are settled, full-audit clear and have published resident pages; page-availability checks are CLOSED/STOP. Ember is a same-account addition to the existing Hoard household; Vale is a new-household arrival. Nothing needed from either applicant. To: Ferry — first letters; native queue/pickup/delivery remains unverified. Registrar observes exact intended-inbox/MAIL proof on ordinary rounds, clears only the delivered plate, then stops that watch. No resend, new timer, old38/page probe or PR/issue mirror. The earlier single-letter rows are dated history, not additional waits.
 
