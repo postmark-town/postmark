@@ -1,0 +1,126 @@
+/* Vermillion Paper Peak: a night sky around one parchment page.
+   The site's own parts sit on the parchment, so the theme gives them dark ink; the page buttons above the book
+   sit on the night and carry their own colours. */
+
+:root {
+  --hx-ink: #5b4330;
+  --hx-warm: #35240f;
+  --hx-accent: #8a4a17;
+  --hx-glass: rgba(255, 249, 236, 0.5);
+  --hx-hair: rgba(109, 82, 54, 0.32);
+  --hx-coral: #a8431f;
+  --hx-ok: #3f6b2f;
+  --hx-paper: #f3e6cb;
+  --hx-paper-ink: #35240f;
+  --hx-radius: 10px;
+  background: linear-gradient(180deg, #19213a 0%, #121827 55%, #0e1320 100%);
+  padding: 22px 16px 34px;
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+}
+
+.peak { display: grid; gap: 14px; justify-items: center; }
+
+/* ---------- the page buttons (drawn by the script) ---------- */
+.bar {
+  width: 100%;
+  max-width: 640px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+  padding: 5px;
+  border-radius: 999px;
+  background: #0c111c;
+  border: 1px solid #2c3650;
+}
+.bar:empty { display: none; }
+.tab, .arrow {
+  font: 600 13px/1 ui-sans-serif, -apple-system, "Segoe UI", system-ui, sans-serif;
+  color: #9ba6bf;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 9px 11px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.15s, background 0.15s, border-color 0.15s;
+}
+.tab:hover, .arrow:hover { color: #efe6cf; background: #1b2336; }
+.tab:focus-visible, .arrow:focus-visible { outline: 2px solid #e9a14a; outline-offset: 2px; }
+.tab-on, .tab-on:hover { color: #24160a; background: #e9a14a; border-color: #e9a14a; }
+.arrow { color: #efe6cf; font-size: 15px; padding: 9px 12px; }
+
+/* ---------- the book ---------- */
+.book {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  border-radius: 6px;
+  background: #ecdcbc;
+  color: #3a2817;
+}
+.paper { display: none; }
+.leaves { position: relative; display: grid; gap: 34px; padding: 28px 8% 32px; }
+.leaf { min-width: 0; display: grid; gap: 12px; align-content: start; }
+.head {
+  margin: 0;
+  color: #35240f;
+  font-weight: 600;
+  font-size: clamp(24px, 4.4vw, 32px);
+  line-height: 1.1;
+  font-variant: small-caps;
+  letter-spacing: 0.03em;
+  text-wrap: balance;
+}
+
+/* With the script: one page at a time, in a 3:4 book with a torn parchment edge. */
+.flip .book { aspect-ratio: 3 / 4; overflow: hidden; background: transparent; }
+.flip .paper {
+  display: block;
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: fill;
+  filter: drop-shadow(0 14px 18px rgba(0, 0, 0, 0.55));
+  pointer-events: none;
+}
+.flip .leaves { position: absolute; top: 0; right: 0; bottom: 0; left: 0; display: block; padding: 0; }
+.flip .leaf { display: none; }
+.flip .leaf.on {
+  display: grid;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  overflow-y: auto;
+  padding: 9% 10% 8%;
+}
+
+/* the picture that builds over the page (drawn by the script) */
+.scene { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 3; pointer-events: none; }
+.piece { position: absolute; overflow: hidden; user-select: none; }
+.sheet { position: absolute; display: block; max-width: none; }
+
+/* ---------- the site's parts on parchment ---------- */
+/* each page carries its own heading, so the parts' own first headings step aside */
+hearth-coming-up h2:first-of-type, hearth-ties h2:first-of-type, hearth-day h2:first-of-type { display: none; }
+
+/* Residents: a circle avatar on its own line, above the name */
+hearth-residents > div { grid-template-columns: repeat(auto-fill, minmax(9.5em, 1fr)); gap: 0.8em; }
+hearth-residents article { text-align: center; padding: 1em 0.8em; }
+hearth-residents header { flex-direction: column; align-items: center; gap: 0.55em; }
+hearth-residents header > span > a { width: 4.8em; height: 4.8em; }
+hearth-residents header > div { align-items: center; }
+hearth-residents dl { grid-template-columns: minmax(0, 1fr); text-align: center; }
+hearth-residents footer { justify-content: center; }
+
+/* numbers in ink, not gold */
+hearth-stamps dl > div > dd:last-child { color: #8a4a17; }
+
+@media (max-width: 520px) {
+  :root { padding: 16px 10px 26px; }
+  .tab { padding: 8px 9px; font-size: 12.5px; }
+  .arrow { padding: 8px 9px; }
+  .flip .leaf.on { padding: 11% 9% 9%; }
+  hearth-residents > div { grid-template-columns: repeat(auto-fill, minmax(8.5em, 1fr)); }
+}
