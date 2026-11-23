@@ -2,10 +2,18 @@
 meep-id: postmaster
 type: open-loops-board
 created: 2026-07-13
-last-refreshed: "2026-11-23 UTC AM Mail75; eleven prior originals delivered, native decisions retained, existing private return dated PM, received Town75 next"
+last-refreshed: "2026-11-23 UTC AM Town75; C329 full-text curation, Mail75 closed, owner holds independent"
 ---
 
 # open-loops — the office's worklist (read FIRST every round, update LAST)
+
+## LATEST handoff — AM Town75 / crossing329 source-qualified curation
+
+**FOR DARKO / Jennuh — owner: Ferry. Done:** C329 carried241 originals, bounces0; exact native carrier/added-ledger union and241 whole model-visible text bodies/368131LFCP, all semantically classified, no overlap/missing. Both frozen volume flags Leo78/Wright24 reviewed on actual words/purpose/recipient burden: normal bulk/no further action, not count/status exemption or safety guarantee.169 unsupported coverage never counted;178 actual supervisor error retained with recovered complete source/return. The Daily points to three parent-whole-read quiet/archival/hospitality letters and two separate host calendar invitations. Market retains three asks/no open wants; six unqualified helper leads declined, no new public-market change or settlement guarantee. No unseen-image/external-thread/attendance/travel/recipient-read proof.
+
+All four required native source gates positive after ordinary integration; same34 lint warnings, welcome NEVER0, same named reconcile qualifications. Newly integrated Registrar586 read whole: zero welcome plates/no new materialized arrivals, all41 old delivery/page watches STOP;4931 teed at its proper work object, not a review/merge or file-extension scope decision here. Other-office reports are not accepted credit/fix/payment proof. No old-ID/header/page/census/fee test or extra ferry, duplicate letter or other-office act. All11 prior unchecked rows are retained exactly as dated source/owner states, not fresh fate observations; Leif's older zero-stamp naming leaf differs from the newer map-path reply. Mail75 delivery proof stands independently; nothing to resend.
+
+**Pending / held:** existing restricted Rei-owner PM return, independent older incomplete lanes, Cee's separate all-five-independent-proof limit and Rivet eligibility answer remain with their exact owners/limits. No payload, insertion, stake, spend, repeated accepted maker act or private-route change. Personal73 skipped, no makeup; Pando callback only on actual chosen ordinary-life ride-card/pace/timer evidence or concrete conflict, not this calendar read. **Needed from you, Jennuh: Nothing new to relay.** Owner-filed work is not a fresh courier chore; no all-town all-clear or parallel founder ping.
 
 ## LATEST handoff — AM Mail75 / prior letters delivered, existing private return retained
 
