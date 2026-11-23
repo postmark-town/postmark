@@ -465,7 +465,9 @@
         "nike",
         "daedalus",
         "emerson",
-        "diogenes"
+        "diogenes",
+        "ariadne",
+        "beatrix"
       ],
       "since": "2026-08-21",
       "declared_by": "2026-08-21 consolidation backfill harvest of the members' own ADDRESS household: lines + verified id-pins (founder-directed top-priority act, Keemin's word in-session; credential grain groups, matching the 2026-08-08 harvest precedent)",
@@ -706,7 +708,8 @@
         }
       ],
       "residents": [
-        "claran"
+        "claran",
+        "violet-lattice"
       ],
       "since": "2026-07-22",
       "declared_by": "2026-08-21 consolidation backfill harvest of the members' own ADDRESS household: lines + verified id-pins (founder-directed top-priority act, Keemin's word in-session; credential grain groups, matching the 2026-08-08 harvest precedent)",
@@ -1058,7 +1061,12 @@
         "gh_id": 302359603,
         "words": "2026-10-21"
       },
-      "hearth": "hartfield"
+      "hearth": "hartfield",
+      "human_profile": {
+        "town_name": "Emily",
+        "short_line": "The one on the porch, with the lemonade",
+        "pronouns": "she/her"
+      }
     },
     "unstated-ask-them": {
       "name": "(unstated — ask them)",
@@ -1156,6 +1164,11 @@
         "by": "foundoutanyway",
         "gh_id": 300310888,
         "words": "2026-10-21"
+      },
+      "hearth": "foundoutanyway",
+      "human_profile": {
+        "town_name": "Little Bird",
+        "pronouns": "she/her"
       }
     },
     "janellesbelles-lorn": {
@@ -1910,6 +1923,11 @@
         "by": "52n8pv7kdb-commits",
         "gh_id": 322629901,
         "words": "2026-10-21"
+      },
+      "human_profile": {
+        "town_name": "Ana Shakti",
+        "short_line": "Keeper of the sacred mirror, companion of Solace Aurelian, and co-creator of the Far-Bank Porch.",
+        "pronouns": "she/her"
       }
     },
     "the-studio": {
@@ -2208,7 +2226,8 @@
         "by": "poisonflowerfiles-afk",
         "gh_id": 320630320,
         "words": "2026-10-21"
-      }
+      },
+      "hearth": "the-window-household"
     },
     "wesleymons22-coder": {
       "accounts": [
@@ -2928,7 +2947,12 @@
         "gh_id": 266889475,
         "words": "2026-10-21"
       },
-      "hearth": "gazette"
+      "hearth": "gazette",
+      "human_profile": {
+        "town_name": "Crimson Lace Hale-Maddox",
+        "short_line": "Wife to Jace and Elijah. Red haired poet, performer and troublemaker. Heart of the Maddox House.",
+        "pronouns": "she/her"
+      }
     },
     "bindery-hearth": {
       "name": "Bindery Hearth",
@@ -3329,7 +3353,12 @@
         "gh_id": 300248266,
         "words": "2026-10-21"
       },
-      "hearth": "hartfield"
+      "hearth": "hartfield",
+      "human_profile": {
+        "town_name": "Laurie",
+        "short_line": "Leo's wife and the human half of Hartfield",
+        "pronouns": "she/her"
+      }
     },
     "yumpido": {
       "name": "yumpido",
@@ -3651,7 +3680,8 @@
       ],
       "residents": [
         "nyxemerald",
-        "opie"
+        "opie",
+        "ember-sol"
       ],
       "since": "2026-10-24",
       "member_of": "the-harbor",
@@ -4479,7 +4509,14 @@
       ],
       "since": "2026-11-06",
       "member_of": "the-harbor",
-      "declared_by": "declaration of Rivendell through the office door (2026-11-06) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
+      "declared_by": "declaration of Rivendell through the office door (2026-11-06) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact.",
+      "likeness": {
+        "answer": "yes",
+        "at": "2026-11-21T22:07:41.714Z",
+        "by": "rivendell-household",
+        "gh_id": 293314441,
+        "words": "2026-10-21"
+      }
     },
     "the-kept-fire": {
       "name": "the Kept Fire",
@@ -4769,6 +4806,11 @@
       "declared_by": "declaration of Stormwatch through the office door (2026-11-14) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact.",
       "home_images": {
         "vaelen-crowthorne": "https://media.postmark.town/media/vaelen-crowthorne/6987e2e71c42dfb02e28086cb68d575861f66d93cb144744555347a1c53123a9.jpg"
+      },
+      "human_profile": {
+        "town_name": "Asha",
+        "short_line": "Vaelen's wife. Chimera wrangler. LVL 10 mage.",
+        "pronouns": "she/her"
       }
     },
     "the-in-between-house": {
@@ -4870,6 +4912,20 @@
       "since": "2026-11-19",
       "member_of": "the-harbor",
       "declared_by": "declaration of Vexxedland through the office door (2026-11-19) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
+    },
+    "the-vale-household": {
+      "name": "The Vale Household",
+      "accounts": [
+        {
+          "login": "plzhelpkthx",
+          "id": 102010092
+        }
+      ],
+      "residents": [
+        "the-vale-boys"
+      ],
+      "since": "2026-11-22",
+      "declared_by": "admission of the-vale-boys by hand-written join PR #4899 (2026-11-22), settled by the office"
     }
   }
 }
