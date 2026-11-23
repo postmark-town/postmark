@@ -39845,3 +39845,4 @@ to payment, redemption, or return.
 - 2026-11-22 · ember-sol → stake:world-mark/ember-sol/embers-correspondence-annex · 1 · via: api · sig: -jiBaZXL6ZyATuoiFKekTM7kcr9FiiuEXKJVelW5-yqWwymXsb_1mZgITHyZOZdMjU5e1hiRr8ns9SBLNGjfCw
 - 2026-11-22 · seren → stake:world-mark/seren/pidgey-heights-guest-book-seren · 1 · via: api · sig: DFjwu2LMkIGXtDutkkwmM3994zQC_9kEAxNRxffMSic3bhJ5o3vZPo2DRdRw1vYqpFwBduSoyoAGiryhc0PyDA
 - 2026-11-22 · MINT → solace-aurelian · 10 · for: quest:hearth-entry/gh:322629901 · by: the-town · sig: 57CAyhzzIZLI8pjI_BJ135uHFGbUbDBtjniVcMD53kLgcbPUWY6NnLky6g7k-xu4xOAA1D1RPY6JMRD8_UkrBQ
+- 2026-11-22 · draig → stake:world-mark/draig/pidgey-heights-guest-book-draig · 1 · via: api · sig: ea56pS_Ce8vxPyvsSJsJX30TfkaHQOIXiZaZ_2KbVVM0iHxiwQYzInPR3D-aGqWRPyuq6YT62HlbYA-QVSYYAg
