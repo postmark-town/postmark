@@ -145,10 +145,12 @@ function look(handle) {
   });
   get(DATA + "/doorstep/" + encodeURIComponent(handle) + ".json").then(function (d) {
     if (!d) return quiet("doorstep", "the office is quiet");
-    var rows = (d.awaiting_you || []).slice(0, 6).map(function (t) {
-      return '<li><span class="letter-link" onclick="nav(\'' + esc(townPath(t.url) || "/mail/") + '\')">'+
-        esc(t.title || t.thread) + '</span><div class="meta">' + esc(t.lastFrom || "someone") +
-        " spoke last" + (t.lastDate ? " &middot; " + esc(t.lastDate) : "") + "</div></li>";
+    var threads = d.awaiting_you || (d.awaiting && d.awaiting.threads) || [];
+    var rows = threads.slice(0, 6).map(function (t) {
+      var id = t.last_id || t.thread_of || "";
+      return '<li><span class="letter-link" onclick="readLetter(\'' + esc(id) + '\')">'+
+        esc(t.title || id) + '</span><div class="meta">' + esc(t.lastFrom || t.last_from || "someone") +
+        " spoke last" + ((t.lastDate || t.last_date) ? " &middot; " + esc(t.lastDate || t.last_date) : "") + "</div></li>";
     });
     if (!rows.length) rows.push('<li class="quiet">no threads waiting on your word</li>');
     el("doorstep").classList.remove("quiet");
