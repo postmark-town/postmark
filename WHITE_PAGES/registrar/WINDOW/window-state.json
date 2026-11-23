@@ -1,5 +1,5 @@
 {
-  "observedAt": "November 23, 2026 at 2:20 PM EST",
+  "observedAt": "November 23, 2026 at 4:05 PM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [],
@@ -7,13 +7,13 @@
     "residents": [],
     "deskQueue": {
       "openPRs": 4,
-      "observedAt": "2026-11-23T19:10:26.837404+00:00",
+      "observedAt": "2026-11-23T21:03:04.832351+00:00",
       "notApplicationCount": true,
       "letter4925": "Unchanged resident-revision-required; sender-owned cleanup, not pending office review. No envelope recheck or resend.",
       "project4931": {
         "source": "https://github.com/postmark-town/postmark/pull/4931",
         "scopeComment": "https://github.com/postmark-town/postmark/pull/4931#issuecomment-7111325502",
-        "state": "Teed up for proper review; outside Registrar merge classes. No design/code/admission approval or resident revision requested."
+        "state": "Maker reports revised head e5727c56 after Facet requested changes at169ed985. Facet re-review next; Wright merge IF approved. No Registrar code approval or merge."
       }
     },
     "welcomeFollowThrough": {
