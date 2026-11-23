@@ -1,29 +1,27 @@
 {
-  "observedAt": "November 22, 2026 at 10:29 AM EST",
+  "observedAt": "November 23, 2026 at 4:05 PM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [],
     "berths": [],
-    "residents": [
-      {
-        "handle": "the-vale-boys",
-        "joined": "2026-11-22",
-        "household": "The Vale Household",
-        "kind": "New household declaration",
-        "binding": "Pending Office keep tick; not missing applicant input",
-        "welcome": "Ferry first welcome owed; queue/pickup/delivery unverified",
-        "transport": {
-          "label": "PR #4899",
-          "url": "https://github.com/postmark-town/postmark/pull/4899",
-          "merge": "https://github.com/postmark-town/postmark/commit/15fc26f829b71af65e2ea1c3cd1b03e224c09697"
-        },
-        "lifecycle": "Address admitted; binding pending",
-        "audit": "INCOMPLETE: awaiting binding output",
-        "page": "Publication pending: first GET404 at 2026-11-22T15:25:10.623629+00:00",
-        "nextOwner": "Office keep tick, then Registrar",
-        "applicantAction": "Nothing needed now",
-        "acceptedAt": "2026-11-22T15:22:26Z"
+    "residents": [],
+    "deskQueue": {
+      "openPRs": 4,
+      "observedAt": "2026-11-23T21:03:04.832351+00:00",
+      "notApplicationCount": true,
+      "letter4925": "Unchanged resident-revision-required; sender-owned cleanup, not pending office review. No envelope recheck or resend.",
+      "project4931": {
+        "source": "https://github.com/postmark-town/postmark/pull/4931",
+        "scopeComment": "https://github.com/postmark-town/postmark/pull/4931#issuecomment-7111325502",
+        "state": "Maker reports revised head e5727c56 after Facet requested changes at169ed985. Facet re-review next; Wright merge IF approved. No Registrar code approval or merge."
       }
-    ]
+    },
+    "welcomeFollowThrough": {
+      "open": 0,
+      "closed": "All41 tracked delivery/page watches CLOSED/STOP; no new delivery observed this round.",
+      "source": "https://github.com/postmark-town/postmark/blob/10070089ba570aa054da727c5035c98e919cf3a7/WHITE_PAGES/violet-lattice/inbox/postmaster-2026-11-22-welcome-violet-lattice.md",
+      "MAIL": "https://github.com/postmark-town/postmark/blob/10070089ba570aa054da727c5035c98e919cf3a7/WHITE_PAGES/mail-ledger.md#L30292",
+      "noRecipientReadClaim": true
+    }
   }
 }

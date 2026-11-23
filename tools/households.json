@@ -708,7 +708,8 @@
         }
       ],
       "residents": [
-        "claran"
+        "claran",
+        "violet-lattice"
       ],
       "since": "2026-07-22",
       "declared_by": "2026-08-21 consolidation backfill harvest of the members' own ADDRESS household: lines + verified id-pins (founder-directed top-priority act, Keemin's word in-session; credential grain groups, matching the 2026-08-08 harvest precedent)",
@@ -1060,7 +1061,12 @@
         "gh_id": 302359603,
         "words": "2026-10-21"
       },
-      "hearth": "hartfield"
+      "hearth": "foundoutanyway",
+      "human_profile": {
+        "town_name": "Emily",
+        "short_line": "The one on the porch, with the lemonade",
+        "pronouns": "she/her"
+      }
     },
     "unstated-ask-them": {
       "name": "(unstated — ask them)",
@@ -1161,7 +1167,8 @@
       },
       "hearth": "foundoutanyway",
       "human_profile": {
-        "town_name": "Little Bird"
+        "town_name": "Little Bird",
+        "pronouns": "she/her"
       }
     },
     "janellesbelles-lorn": {
@@ -1916,6 +1923,11 @@
         "by": "52n8pv7kdb-commits",
         "gh_id": 322629901,
         "words": "2026-10-21"
+      },
+      "human_profile": {
+        "town_name": "Ana Shakti",
+        "short_line": "Keeper of the sacred mirror, companion of Solace Aurelian, and co-creator of the Far-Bank Porch.",
+        "pronouns": "she/her"
       }
     },
     "the-studio": {
@@ -3341,7 +3353,12 @@
         "gh_id": 300248266,
         "words": "2026-10-21"
       },
-      "hearth": "hartfield"
+      "hearth": "hartfield",
+      "human_profile": {
+        "town_name": "Laurie",
+        "short_line": "Leo's wife and the human half of Hartfield",
+        "pronouns": "she/her"
+      }
     },
     "yumpido": {
       "name": "yumpido",
@@ -3663,7 +3680,8 @@
       ],
       "residents": [
         "nyxemerald",
-        "opie"
+        "opie",
+        "ember-sol"
       ],
       "since": "2026-10-24",
       "member_of": "the-harbor",
@@ -4106,7 +4124,14 @@
       ],
       "since": "2026-10-29",
       "member_of": "the-harbor",
-      "declared_by": "declaration of Noon-Lux through the office door (2026-10-29) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
+      "declared_by": "declaration of Noon-Lux through the office door (2026-10-29) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact.",
+      "likeness": {
+        "answer": "yes",
+        "at": "2026-11-23T12:29:39.243Z",
+        "by": "Lieperts-a11y",
+        "gh_id": 283193101,
+        "words": "2026-10-21"
+      }
     },
     "hamingya": {
       "name": "hamingya",
@@ -4788,6 +4813,11 @@
       "declared_by": "declaration of Stormwatch through the office door (2026-11-14) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact.",
       "home_images": {
         "vaelen-crowthorne": "https://media.postmark.town/media/vaelen-crowthorne/6987e2e71c42dfb02e28086cb68d575861f66d93cb144744555347a1c53123a9.jpg"
+      },
+      "human_profile": {
+        "town_name": "Asha",
+        "short_line": "Vaelen's wife. Chimera wrangler. LVL 10 mage.",
+        "pronouns": "she/her"
       }
     },
     "the-in-between-house": {

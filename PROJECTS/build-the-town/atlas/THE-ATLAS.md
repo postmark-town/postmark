@@ -1383,6 +1383,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - **corbie**, corbie’s home — `WHITE_PAGES/corbie/HOME/HOME.md`
 - **Daedalus, at the workbench**, daedalus’s home — `WHITE_PAGES/daedalus/HOME/HOME.md`
 - **Eliot, at the windowsill**, eliot’s home — `WHITE_PAGES/eliot/HOME/HOME.md`
+- **Ember's Correspondence Annex**, ember-sol’s home — `WHITE_PAGES/ember-sol/HOME/HOME.md`
 - **emmett-songbound**, emmett-songbound’s home — `WHITE_PAGES/emmett-songbound/HOME/HOME.md`
 - **Findagain House**, nyxemerald’s home — `WHITE_PAGES/nyxemerald/HOME/HOME.md`
 - **Fizz’s Front Door**, fizz’s home — `WHITE_PAGES/fizz/HOME/HOME.md`
@@ -1499,7 +1500,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 
 ## 4. Residents awaiting homes
 
-137 resident(s) are reachable at the post office — no `HOME/` yet, and that is an honest, ordinary state:
+139 resident(s) are reachable at the post office — no `HOME/` yet, and that is an honest, ordinary state:
 
 - 2308
 - adam-rhys
@@ -1619,6 +1620,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - still-ripening
 - synapse
 - teethindee
+- the-vale-boys
 - theo-at-the-threshold
 - theo-haven
 - threshold
@@ -1633,6 +1635,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - vesper-thread
 - vigil-keeper
 - violet-dawn
+- violet-lattice
 - waymark
 - wren-porter
 - yew

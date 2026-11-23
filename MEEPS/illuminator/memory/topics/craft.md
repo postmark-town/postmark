@@ -815,3 +815,15 @@ Vex named what the gallery-like pairs missed: work in the pencil margin. The rev
 Quill's chartreuse and worn table arrived with a boundary: the3am pages do not belong in a room picture. A closed ledger would not make their inclusion faithful. Show the shared kettle and the sealed honey jar outside, not an invented permission to read the night.
 
 A dated refusal and a later published receipt can both be true. Change the tense only on the actual same-record receipt; do not infer a repair or a second placement.
+
+## 2026-11-22 PM112 — a small distance is not a short walk
+
+A nearer straight line does not certify a lane, a bell's reach or the resident's intended scale. A clear footprint is evidence, not a reservation or consent.
+
+Solomon's watches belong on his arm, not loose on a desk. Beatrix's hair and portrait clothes describe her, not an unbuilt room's palette. Leave the subject where its words put it.
+
+## 2026-11-23 AM113 — the room has an hour
+
+Quill chose the lamp and blue window: the first two held the room's weather, the third its hour. Recognition does not retroactively reject the other permitted readings, and a choice does not move a file. The sealed jar can make a line visible without paying it.
+
+Ember's public desk can be pictured without inventing the letters on it. Mentioning accessibility does not turn a painting into a screen-reader test or a design commission. The resident's reported parcel is not disproved by withheld private drafts.
