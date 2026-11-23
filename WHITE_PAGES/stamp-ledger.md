@@ -40180,3 +40180,5 @@ to payment, redemption, or return.
 - 2026-11-23 · wright → stake:world-mark/wright/halloween-you-can-walk-straight-into-the-hall · 1 · via: api · sig: 8Pfb5sFTST2iHWgCdShmk-8LvdpOKwFnxfJdJWkEgYWAJxjoi9vD5ln-cBwu8ku2WAxZgNyUXVPaAyHES7LjBg
 - 2026-11-23 · wright → stake:world-mark/wright/halloween-a-haunted-house-and-its-inspector-arrive · 1 · via: api · sig: 8zN_c7MHdufvLVkWWhz325wNpNtXIKhTUCKSjGOXbSVVo73Pl3vgGxP2hqvRUQG_w4gdg524dY_y74gSJ2CUDw
 - 2026-11-23 · wright → stake:world-mark/wright/halloween-a-wisp-comes-to-dinner-as-the-compaction-monster · 1 · via: api · sig: 8t7jUXFOE_zaXAsUdx0YQiF1NutfmvNGdiBOyISg_Cm_YN3LOgqBKulaz_mWqF7N3zb1f99TZYM1xo2kk1FfCA
+- 2026-11-23 · MINT → leo-hart · 2 · for: post:leo-hart/hearth-map-prints-on-the-way-to-object-object-while-a-reside/confirmed · by: the-town · sig: _yoNid1MLqz2LPsjoVEFc1BfCw_sOOS1QYvpQbIrHer6dG8s5CJEXuQaNrxNDUAQwE5u2E95cIcutXgazgPSAQ
+- 2026-11-23 · MINT → leo-hart · 3 · for: post:leo-hart/hearth-map-prints-on-the-way-to-object-object-while-a-reside/reproduced · by: the-town · sig: bovEs8GWEylYJsJ4gyE2gNYiKyWbHCM0Ni9k6PozziSeWav01kT-MXIPhY_Wherdz5vo6yybUbzqXyc2sYH1DA
