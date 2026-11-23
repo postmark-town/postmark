@@ -5,7 +5,8 @@
 //
 //   1. It draws a row of page buttons above the book (House, Residents, Coming up, Ties, Today, Crossing, with arrows either
 //      side) and shows one page at a time. The arrow keys turn pages while focus is inside the design, and a sideways swipe
-//      on the book does too.
+//      on the book, by touch or pen, does too (a mouse drag is left to select text). Quick presses add up: three presses of ›
+//      go three pages on. If the keyboard focus was inside the page being left, it moves to the new page's button.
 //   2. When a page is chosen, that page's cut-paper picture builds itself over the book, the page underneath changes, and the
 //      picture comes apart again to show it. On first load the House picture does this once, to open the book.
 //   3. It honours prefers-reduced-motion: the picture then fades in whole and fades out whole.
@@ -13,8 +14,8 @@
 //      Pressing one opens that resident's window below the cards; pressing another closes it and opens the new one; pressing
 //      the open one again closes it. The windows themselves are the site's own <hearth-windows> part, framed and sandboxed by
 //      the site exactly as on the resident's page: this script only adds the class u-open to the one figure to show, and
-//      creates no frame of its own. A resident with no hung window gets a faded icon that does nothing. Turning to another
-//      page closes any open window.
+//      creates no frame of its own. A resident with no hung window, or whose window the site could not read just now, gets a
+//      faded icon that does nothing and says which. Turning to another page closes any open window.
 //
 // THE PICTURES are seven of the house's own uploads at the town's media door: one sheet per page holding that picture's cut
 // pieces, and the parchment page itself (placed by the template). Each piece is a small clipped box onto its sheet; PICTURES
@@ -22,12 +23,17 @@
 // (sx, sy, sw, sh in pixels), and how it moves: "slide" in from a side (fromX/fromY: -1, 0 or 1), "pop" (grow from nothing
 // around ox/oy), "stretch" (grow up from its foot with a wobble), "fade", "twinkle" (fade with a little growth) or "fly"
 // (arrive from a random direction, spinning). Pieces sharing a `group` follow each other inside one step of `order`.
+// Only the House sheet loads with the book; every other sheet loads when its page is first chosen (or a pointer rests on its
+// button, or on the arrow that leads to it). A turn whose sheet hasn't arrived after four seconds turns without the picture.
 //
-// WHAT IT TOUCHES: this design's own elements inside hearth.root; inside the site's residents part, one icon button added
-// after each name (removed again on stop); inside the site's windows part, one class on the open figure. It reads no data
+// WHAT IT TOUCHES: this design's own elements inside hearth.root (it gives its page bar role="group", so the bar's label is
+// read out, and gives the book and its pages touch-action "pan-y pinch-zoom", so a sideways swipe reaches it; both undone on
+// stop); inside the site's residents part, one icon button added after each name (removed again on stop); inside the site's
+// windows part, one class on the open figure. It reads no data
 // (the site's parts draw every word on the pages), calls no office read, and never acts: no hearth.act, no sign-in, no
 // storage, no cookies, nothing sent anywhere. The only network it causes is the six picture sheets loading from
-// media.postmark.town, and, when a reader opens a window, the site's own frame for that window loading from its panes address.
+// media.postmark.town, each when it is first wanted, and, when a reader opens a window, the site's own frame for that window
+// loading from its panes address.
 
 const MEDIA = "https://media.postmark.town/media/FluffUPando/";
 const SHEETS = {
@@ -160,6 +166,7 @@ const EASE = {
   fly: "cubic-bezier(.2, .9, .25, 1)",
 };
 const STEP_IN = 190, STEP_OUT = 110, HOLD = 260;   // ms between steps, and the pause while the page changes underneath
+const LOAD_WAIT = 4000;                            // ms a turn waits for its page's sheet before turning without the picture
 const HOME = "translate(0px, 0px) rotate(0deg) scale(1, 1)";
 const at = (sx, sy, r = 0, tx = 0, ty = 0) => `translate(${tx}px, ${ty}px) rotate(${r}deg) scale(${sx}, ${sy})`;
 const rnd = (a, b) => a + Math.random() * (b - a);
@@ -219,7 +226,9 @@ export default function (hearth) {
   if (!peak || !book || !bar || leaves.some((l) => !l)) return () => {};
 
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
-  let alive = true, current = 0, busy = false, queued = null;
+  // current: the page showing. heading: the page a running turn is going to. queued: where to go after it.
+  let alive = true, current = 0, heading = 0, busy = false, queued = null;
+  const n = PAGES.length;
 
   // ---- the page buttons ----
   const prev = el("button", "u-arrow"), next = el("button", "u-arrow");
@@ -232,10 +241,17 @@ export default function (hearth) {
     b.type = "button";
     b.textContent = p.label;
     b.addEventListener("click", () => go(i));
+    b.addEventListener("pointerenter", () => build(p.key));   // a pointer resting on a page's button starts its picture loading
     return b;
   });
-  prev.addEventListener("click", () => go(current - 1));
-  next.addEventListener("click", () => go(current + 1));
+  // the arrows count from where the book is going, so quick presses add up
+  const step = (d) => go((queued ?? heading) + d);
+  const near = (d) => () => build(PAGES[(((queued ?? heading) + d) % n + n) % n].key);
+  prev.addEventListener("click", () => step(-1));
+  next.addEventListener("click", () => step(1));
+  prev.addEventListener("pointerenter", near(-1));
+  next.addEventListener("pointerenter", near(1));
+  bar.setAttribute("role", "group");   // so the bar's "Pages" label is read out
   bar.append(prev, ...tabs, next);
 
   // ---- one page at a time ----
@@ -245,6 +261,9 @@ export default function (hearth) {
   book.appendChild(scene);
   peak.classList.add("u-flip");
   function show(i) {
+    // if the keyboard focus is inside the page about to hide, it moves to the new page's button (else it would fall out of the design)
+    const focused = root.ownerDocument.activeElement;
+    const lost = leaves.some((l, k) => k !== i && l.contains(focused));
     leaves.forEach((l, k) => l.classList.toggle("u-on", k === i));
     tabs.forEach((b, k) => {
       b.classList.toggle("u-tab-on", k === i);
@@ -252,6 +271,7 @@ export default function (hearth) {
     });
     leaves[i].scrollTop = 0;
     if (PAGES[i].key !== "residents" && openWin) { openWin = null; syncWindows(); }
+    if (lost) tabs[i].focus({ preventScroll: true });
   }
 
   // ---- Residents: a paper window under each name opens that resident's window, one at a time ----
@@ -261,13 +281,17 @@ export default function (hearth) {
   let openWin = null;
   const figureOf = (h) => [...(winSlot?.querySelectorAll("figure[data-hx-pane-of]") ?? [])].find((f) => f.getAttribute("data-hx-pane-of") === h) ?? null;
   function syncWindows() {
+    // the site shows its windows part once the panes have answered; while it is hidden, who has a window is not known
+    const known = !!winSlot && !winSlot.hidden;
+    if (!known) openWin = null;
     winButtons.forEach(({ button, name }, h) => {
-      const has = !!figureOf(h), on = has && h === openWin;
+      const has = known && !!figureOf(h), on = has && h === openWin;
       button.classList.toggle("u-winbtn-on", on);
       button.classList.toggle("u-winbtn-none", !has);
       button.setAttribute("aria-pressed", on ? "true" : "false");
-      button.setAttribute("aria-label", has ? `${on ? "Close" : "Open"} ${name}'s window` : `${name} has not hung a window`);
-      button.title = has ? (on ? "Close the window" : "Open the window") : "No window hung yet";
+      button.setAttribute("aria-label", has ? `${on ? "Close" : "Open"} ${name}'s window`
+        : known ? `${name} has not hung a window` : `${name}'s window isn't available just now`);
+      button.title = has ? (on ? "Close the window" : "Open the window") : known ? "No window hung yet" : "Window not available just now";
     });
     winSlot?.querySelectorAll("figure[data-hx-pane-of]").forEach((f) => f.classList.toggle("u-open", f.getAttribute("data-hx-pane-of") === openWin));
   }
@@ -283,7 +307,7 @@ export default function (hearth) {
       img.alt = "";
       button.appendChild(img);
       button.addEventListener("click", () => {
-        if (!figureOf(h)) return;
+        if (winSlot.hidden || !figureOf(h)) return;
         openWin = openWin === h ? null : h;
         syncWindows();
         const fig = openWin && figureOf(openWin);
@@ -365,16 +389,20 @@ export default function (hearth) {
   // One turn: the picture builds over the book, the page underneath changes, the picture comes apart.
   async function turn(i) {
     const key = PAGES[i].key, pic = build(key);
-    await pic.ready;
+    const loaded = await Promise.race([pic.ready.then(() => true), wait(LOAD_WAIT).then(() => false)]);
     if (!alive) return;
+    if (!loaded) { current = i; show(i); return; }   // the sheet is slow to arrive: turn without the picture (it plays next time)
     scene.replaceChildren(pic.layer);
     scene.hidden = false;
     if (reduce.matches) {
       pic.pieces.forEach((p) => { p.el.style.opacity = "1"; });
       await scene.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 260, fill: "both" }).finished.catch(() => {});
+      if (!alive) return;
       current = i; show(i);
       await wait(400);
+      if (!alive) return;
       await scene.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 300, fill: "both" }).finished.catch(() => {});
+      if (!alive) return;
       scene.getAnimations().forEach((a) => a.cancel());
       pic.pieces.forEach((p) => { p.el.style.opacity = "0"; });
     } else {
@@ -389,41 +417,53 @@ export default function (hearth) {
     scene.hidden = true;
   }
   async function go(i, again = false) {
-    i = (i + PAGES.length) % PAGES.length;
+    i = ((i % n) + n) % n;
     if (busy) { queued = i; return; }
     if (i === current && !again) return;
     busy = true;
+    heading = i;
     try { await turn(i); } finally {
       busy = false;
+      heading = current;
       if (alive && queued !== null) { const q = queued; queued = null; if (q !== current) go(q); }
     }
   }
 
-  // arrow keys while focus is inside the design, and a sideways swipe on the book
+  // arrow keys while focus is inside the design
   const onKey = (e) => {
-    if (e.key === "ArrowRight") { e.preventDefault(); go(current + 1); }
-    if (e.key === "ArrowLeft") { e.preventDefault(); go(current - 1); }
+    if (e.key === "ArrowRight") { e.preventDefault(); step(1); }
+    if (e.key === "ArrowLeft") { e.preventDefault(); step(-1); }
   };
-  let sx = null;
-  const onDown = (e) => { sx = e.clientX; };
+  // a sideways swipe on the book, by touch or pen (a mouse drag is left to select text; the mouse has the buttons and arrow keys).
+  // The browser keeps up-and-down scrolling and pinch zoom, and hands sideways drags to the design; each page is its own scroller,
+  // so it carries the setting too.
+  const swipeAreas = [book, ...leaves];
+  swipeAreas.forEach((a) => { a.style.touchAction = "pan-y pinch-zoom"; });
+  let sx = null, sy = 0;
+  const onDown = (e) => { if (e.pointerType === "mouse") return; sx = e.clientX; sy = e.clientY; };
   const onUp = (e) => {
     if (sx === null) return;
-    const dx = e.clientX - sx;
+    const dx = e.clientX - sx, dy = e.clientY - sy;
     sx = null;
-    if (Math.abs(dx) > 60) go(current + (dx < 0 ? 1 : -1));
+    if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy)) step(dx < 0 ? 1 : -1);
   };
+  const onCancel = () => { sx = null; };
   peak.addEventListener("keydown", onKey);
   book.addEventListener("pointerdown", onDown);
   book.addEventListener("pointerup", onUp);
+  book.addEventListener("pointercancel", onCancel);
 
-  // open the book: the House picture builds and comes apart once, then the other sheets load quietly
-  go(0, true).then(() => { if (alive) PAGES.forEach((p) => build(p.key)); });
+  // open the book: the House picture builds and comes apart once (every other page's sheet loads when that page is first wanted)
+  go(0, true);
 
   return () => {
     alive = false;
     peak.removeEventListener("keydown", onKey);
     book.removeEventListener("pointerdown", onDown);
     book.removeEventListener("pointerup", onUp);
+    book.removeEventListener("pointercancel", onCancel);
+    swipeAreas.forEach((a) => { a.style.touchAction = ""; });
+    bar.removeAttribute("role");
     Object.values(built).forEach((b) => b.pieces.forEach((p) => p.el.getAnimations().forEach((a) => a.cancel())));
     scene.remove();
     winWatch?.disconnect();
