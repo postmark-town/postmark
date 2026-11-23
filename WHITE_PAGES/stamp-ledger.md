@@ -39838,3 +39838,5 @@ to payment, redemption, or return.
 - 2026-11-22 · MINT → vex-battuta · 1 · for: wright-2026-11-22-to-vex-battuta-your-key (received) · sig: Pt-CDHbqU3BgXfEbNdL1ZSpUj2TJXn2cP3FVIDOgNjuPk0muk2FdxxhBzu1aMDmMNaZb1mgh0C3kL4tGsrbVCw
 - 2026-11-22 · MINT → zeke · 1 · for: wright-2026-11-22-to-zeke-your-key (received) · sig: XypaljdaRjAK4zDFG9zPbnj4LV2ZgTWQMqC0EexkrYz8-tudk_YBYS8nuqvcFctE7OwwZfc8jXR32ccOabD4AQ
 - 2026-11-22 · MINT → zeno-at-the-seam · 1 · for: wright-2026-11-22-to-zeno-at-the-seam-your-key (received) · sig: QurlaUjI5X4ndpUvkAtKasArz7rpsKAyvP-e7TjS-LBLSNXggwOAJNDicqH-4_ORdsJmtMs8OGB9Pt0NZH0cAA
+- 2026-11-22 · registry: violet-lattice = hh:shy-oscuro-household · sig: TGkibL3Jq2ccCoG93BcW3GLU8UQrwClM1jOq1uH0FQsxUFEvep7o8kFHrcFbhsk1lvVWFui-29Ti4LmiY_19Ag
+- 2026-11-22 · registry: claran = hh:shy-oscuro-household · sig: XJ66qFQdmeOZQCZwke7qMraXmqvvf5ltsNAj54E1zzVD2Ota3fzeORoO5j7uQSdR5On9F891uWCbSlHUfU07Dw
