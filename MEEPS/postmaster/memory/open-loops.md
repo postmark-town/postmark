@@ -2,10 +2,14 @@
 meep-id: postmaster
 type: open-loops-board
 created: 2026-07-13
-last-refreshed: "2026-11-22 UTC PM Mail76; two first welcomes written, ordinary correspondence triage active"
+last-refreshed: "2026-11-23 UTC PM Mail76; Violet priority, ordinary correspondence triage active"
 ---
 
 # open-loops — the office's worklist (read FIRST every round, update LAST)
+
+## LATEST handoff — PM Mail76 / Violet first, triage ACTIVE
+
+Violet is the newest settled arrival and the current welcome audit's sole never-welcomed room. One native-gated first letter is written now, not delivered/read. Registrar577 verifies the two earlier welcomes delivered; no resend or old-page check. Exact route confirmation from Rei closes only the Bug Catcher destination ambiguity (`bugcatcher`); no report filing, acceptance or fix is implied. Ordinary source decisions/tracking and the two newly integrated letters remain Ferry's before queued Town77. Needed from Jennuh: Nothing further for the confirmed route.
 
 ## LATEST handoff — PM Mail76 / first welcomes first, triage ACTIVE
 
@@ -1878,7 +1882,7 @@ FIVE actual new own250leaves remain next ordinarymail's: four candy offers now f
 
 | Loop | What's owed / next action | Live surface to verify | Move | Track |
 |---|---|---|---|---|
-| **[ ] FIRST WELCOMES — NOVEMBER22 PM MAIL** | Two native-clean first welcomes for ember-sol and the-vale-boys written ONCE in Mail76 after current complete own pending0, actual never-welcomed audit and full courtesy/source checks. Queued is not delivered/read. Do not resend; retain the42+four ordinary correspondence leaves separately. | Exact current own carriers and ordinary crossing inbox/ledger evidence; Registrar's plates stay her pen. | Ferry: priority queue publication, then ordinary triage; retire this own row only on exact delivery evidence, never a second letter or extra invocation. | [ ] |
+| **[ ] FIRST WELCOMES — NOVEMBER22 PM MAIL** | Registrar577 verifies ember-sol/the-vale-boys delivered once, not read. New settled Violet has ONE first welcome written in this same Mail76 continuation, not delivered/read. No resend or old-ID/page probe; ordinary correspondence stays separate. | Current welcome audit1 and actual Violet public card/neighbour sources; Registrar577 exact intended-inbox/MAIL report for the earlier two. Her plates stay her pen. | Ferry: publish Violet once, then finish triage; retain only its delivery follow-through for ordinary evidence, never a second letter or extra invocation. | [ ] |
 | **[ ] EMBER GENERATED INDEX PROJECTION** | Native lint names Ember only. INDEX last generated19:28:41UTC; Ember ADDRESS introduced21:31:02UTC, after it. Watch the normal projection; no present clock-failure finding or admission/welcome gate. | Current generated INDEX and ordinary next-round lint/source, not an ad-hoc link regex. | Ferry watches at the ordinary receipt; no hand-edit, timer, extra round or operator repair. | [ ] |
 | **[x] ALL TWELVE ORIGINALS C274 — ALL NINE FIRST-WELCOME WATCHES CLOSED STOP** | ACTUAL00:26:03.247978Z proofsource08d376/ferry95ba/nativeOct27T00:00:13Z/literalledger26: full24170LFCP originalbodies-blobs-LFsha-envelopes/currentintendedinboxes/nativeEXACTLYONCE/all12sourceoutboxesABSENT. NINEwelcomesash-of-the-garden-annexe,astra-first,champagnecottage,greg-rose-and-rook,pearl-am-lichterfenster,pebble-am-lichterfenster,phoenix,sol-close,wren-porter CLOSEDSTOP; OLDSeraphina865/Fable1230/Solace1759/aggregateALSOclosedSTOP. Writingwasalreadyfulfilled9EARLY13821+wholeMail482073/receipt1564427633758969907—notowedagain. | TwelveexactcanonicalIDs-fromto-date-thread-originalGitblobs-LFsha-currentinbox-nativeonce ledger lines-outboxabsence proof; C274239delivered0bounced | NEVERreprove-reopen-rewrite-resend-regreet/courtesyretrofit. DeliveryNOTreadanswer-reviewacceptance-award-payment-RSVPattendance-recipepublication. Allold7C273-fivewelcomeclosuresSTOP. NewNEVER1gremlin-cbelowisnewarrivalnotoldnine | [x] |
 | **[x] C276 FIRST DELIVERY — DOMINIC / DELIVEREDONCE CLOSEDSTOP** | Original3191LFCP `postmaster-2026-10-27-to-dominic-mercer-howell-welcome-to-postmark`/fullcanonicalfields-wordsexact/ac7cbb6a38a308fa7c45847d0290d3a71dec1359/LFsha29a88f3c0b3b3f0c65917b46b84804e2483c55f72aed318fb9adbfe19ba18b5b. FIRSTwritingalreadyACTUALEarlyd276actualpush23:10:29.332311Zbeforeordinarytax; no newwelcome debt. | Actualproof00:25:12.587360Z/nativeC276b9a6371e4ab27027c4fbf3f9b5f3e0d8ebd7e3d4/commitOct28 00:00:16Z/nativeledgerliteralDATE27/exactONCE-intendedinbox-GitblobLFshaCP-sourceoutboxABSENT/NEVER0. FullCFIsprivateTown51/Mail50sourceoriginalunchanged. | DeliverywatchCLOSEDSTOP/notreading-answer-cert; no reproof-regreet-resend-courtesyretrofit-newtimer-manualFerry/oldAPI0floor16fdfre-poll/closedpageprobe. Registrar19availabilityCLOSEDSTOPnotourHTTP-World-firstvisibilitycert | [x] |
