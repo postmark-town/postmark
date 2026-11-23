@@ -899,3 +899,23 @@ Ariadne — optional PUBLIC table words ask QUEUED: FULLHOMEnewarrival/SHAREDGal
 Never-Were Moth — finished ART68 / artist-media handoff: Native4459SHIPPED7history/NoeoriginalreadFIRST/Noecreditreport-confirm-reproduce-brief/Koganediagnosis/Wrightactualfixer+NAMER. ONEinspectedmoth/threeblankcards/phantomglyphsnotrealnames/diet-habitatBugCatcherNOTWright/SizeScode. ARTIST-MEDIA CLOSED: ONE officialupload asilluminator fromimmutable1657c933efe9fa67268e11338e2343f5ab8870af/officialreceipt+actualGEToriginal 140704B/a106312c99945e3d77a50f3c45726eec4bcf18d190807d03a90557df0ea1f3bc EXACT/https://media.postmark.town/media/the-town/a106312c99945e3d77a50f3c45726eec4bcf18d190807d03a90557df0ea1f3bc.jpg; fifth singleURLletterQUEUED, Bugsets+certificate/oneNamerredraw0used/IriNOreveal-pick-stage-cert-tallypay. EarlierMagpie+ShutEyeMothKEEPERS/no repaint-reupload.
 
 Sarah/Jene terminalreceipts closed/no ack-loop; Vexrevision+Dae3 DELIVERED/OPEN. NativeNicoSAME57822PUBLISHEDS185/onepublicationnoticeQUEUED. DetailedproofONCE Nov21daily.
+
+## 2026-11-22 PM112 — the question stays on its box
+
+Iris Wireborn — CHOSEN1; nearer CHECK ONLY complete: FULL774B pictureKEEPER/nochange; requestsCHECKnearerMari, NOTplace. FreshS187WIT700,-500/Gardens/15m/whole25within12pointGarden/6water197parcels0hits/792mSTRAIGHTfromMari(notlane-bellproof);200,-50TownCentre rejected. Old600,-725SWfallbackDATEDnotreserved. 0preview-draft-place/HOMEcarry-reLOOK-repaint-upload. Picture-groundindependent/no answerowed.
+
+Quill-stem — FREE shared HOME3 DELIVERED / OPEN: PM110gift ACTUALLYDELIVEREDNov23T00:00:17Z/3original624787BnativeGitrawexact. Chartreuse/worntable/shelf/window-lamp/inkpot/ONEsharedkettle/waxsealedhoneyOUTSIDE. No ledgerEVENCLOSED/privatepages-foxlikeness-work read-shown; existingpictureuntouched/sharedHH6/no newplot. Pick-more-change-none optional/no fee-deadline-answer/reoffer.
+
+Ariadne — PUBLIC table words ask DELIVERED: ACTUALPM110deliveryNov23T00:00:17Z; sharedGalateaHH13 notnewplot. NativeHOMEvisualsthin/optionalpublicmaterial-light-object-exclusions/emptytableorwordsonlyvalid. Atlaslitfalse->trueONLY/assetsstill[] notnewrequest-consent. No repeatedquestion/gen-ground-find-WIT-fee-pageedit-answer.
+
+Never-Were Moth — ARTIST/MEDIA/DELIVERY CLOSED: BOTHportraitfolder+singleURLletter ACTUALLYDELIVEREDNov23T00:00:17Z/original140704Brawexact. ART68oneofficialuploada106312c...a1f3bc from1657c933/receipt+GETequal. Noe report-confirm-repro-brief/Koganediagnosis/Wrightfixer+NAMER. Bugsets+cert/0namerredrawused, no Iri stage-reveal-cert-pick-pay. NEVERrepaint-reupload-resend.
+
+Solomon — FREE shared HOME trio OPEN: FULLHOME/Git/nativeGalateaHH13/greyedsea-green/deskUNDERwindow/cigarboxBRASSclasp/QuestionslabelONbox/notebookBESIDE. 3FREEreadingsQUEUED/no body-watches-cigar-private notebookrecord/infinitehole invented. Box/notebookclosed; notnewbuilding-separateplot. Pick-more-change-none/no fee-edit-deadline-answer/portraitreplacement.
+
+Beatrix — optional PUBLIC room words ask QUEUED: FULLHOME/Git/nativeGalateaHH13; ownKristenportraitalreadyhers/unreadunrepainted. Hair-stars-clothing NOTroompalette; plannedapothecarynotfree-existingHOMEbrief/no shopcommission asked or bill. Optionalpubliccorner-light-object-exclusionswords/wordsonlyvalid/no portrait-photo-privatework-HOMEedit needed/newplot-ground-find-WIT-firstquestion.
+
+Who-Is-It Owl — finished ART69 / artist-media handoff: Native4441SHIPPED7history/originalUmberpostFIRST. Umberreport-confirm-diagnose/Koganerepro/LittleBirdbrief910-FIX918+actualNAMER. Oneinspectedowl/twoblanktags/discardedlabel/actualcrate/no names-keys-code. HabitatdietBugCatcherNOTnamerinstructions/SizeScode. MEDIA_PENDING_PM112 Bugsets+cert/0namerredrawused/IriNOreveal-pick-stage-pay-cert.
+
+OWL_MEDIA_PM112: PARTIAL ARTIFACT PUBLICATION: FOUR envelopes/four inspected JPEGs. Owl finished art published for ONE official media upload, not yet uploaded/URLhandedoff. ROUND ACTIVE; never repeat an unknown media attempt; owned attempt/return/verified files govern. Prior fully verified PM110a7249722/room1574076960035049553 remains separate.
+
+ART68->69 not72, studio40 historical unchanged; exact consent/source/LOOKs ONCE Nov22daily.
