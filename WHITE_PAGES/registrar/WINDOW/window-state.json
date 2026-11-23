@@ -1,5 +1,5 @@
 {
-  "observedAt": "November 22, 2026 at 10:09 PM EST",
+  "observedAt": "November 23, 2026 at 6:07 AM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [],
@@ -17,23 +17,25 @@
           "url": "https://github.com/postmark-town/postmark/commit/a3a58c9a836e17c1fc3467fa68ef8878324558db"
         },
         "audit": "CLEAR: whole native declaration to settled output verified",
-        "page": "Published: first attributable200 this round; availability closed",
-        "lifecycle": "Settled; full audit clear; Ferry first welcome letter owed",
         "applicantAction": "Nothing needed now",
         "sourceCommitAt": "2026-11-23T00:33:59Z",
-        "nextOwner": "Ferry crossing delivery; Registrar exact intended-inbox/MAIL proof at ordinary round",
         "welcomeOutbox": {
           "id": "postmaster-2026-11-22-welcome-violet-lattice",
           "url": "https://github.com/postmark-town/postmark/blob/9616e46971990f003ed97fd34891c50fa2bd9fa4/WHITE_PAGES/postmaster/outbox/letter-2026-11-22-welcome-violet-lattice.md",
           "nativeQueue": "unverified",
           "delivery": "not yet verified"
-        }
+        },
+        "nextOwner": "Ferry crossing delivery; Registrar exact intended-inbox/MAIL proof at ordinary round",
+        "page": "Published; previously verified successful load. Availability CLOSED/STOP; not re-probed this round.",
+        "lifecycle": "Settled; full audit clear; Ferry first welcome written, delivery not yet verified"
       }
     ],
-    "round578NoteCorrection": {
-      "openPRs": 9,
-      "observedAt": "2026-11-23T03:04:46.908213+00:00",
-      "reason": "Own public notes copied10; actual current gate9. Not resident or queue mutation."
+    "deskQueue": {
+      "openPRs": 3,
+      "observedAt": "2026-11-23T11:03:34.605011+00:00",
+      "notApplicationCount": true,
+      "letter4925": "Resident revision required; exact copy already delivered. Sender branch cleanup, not pending review. No merge or resend.",
+      "source": "https://github.com/postmark-town/postmark/pull/4925#issuecomment-7098856355"
     }
   }
 }
