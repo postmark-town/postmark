@@ -1,5 +1,5 @@
 {
-  "observedAt": "November 22, 2026 at 8:08 PM EST",
+  "observedAt": "November 22, 2026 at 10:09 PM EST",
   "payload": {
     "templateVersion": 21,
     "pending": [],
@@ -11,18 +11,23 @@
         "household": "Shy (Oscuro household)",
         "kind": "Existing household addition",
         "binding": "Verified same-account pin and existing household; already-settled/no-write check",
-        "welcome": "Ferry first welcome LETTER owed; native queue/pickup/delivery unverified",
+        "welcome": "Ferry first welcome written/published in its own Git outbox; delivery not yet verified",
         "transport": {
-          "label": "Office door; no PR",
-          "url": "https://github.com/postmark-town/postmark/commit/a3a58c9a836e17c1fc3467fa68ef8878324558db",
-          "settlement": "https://github.com/postmark-town/postmark/commit/a3a58c9a836e17c1fc3467fa68ef8878324558db"
+          "label": "Office door · commit a3a58c9",
+          "url": "https://github.com/postmark-town/postmark/commit/a3a58c9a836e17c1fc3467fa68ef8878324558db"
         },
-        "lifecycle": "Settled; full audit clear; Ferry first welcome letter owed",
         "audit": "CLEAR: whole native declaration to settled output verified",
         "page": "Published: first attributable200 this round; availability closed",
-        "nextOwner": "Ferry first welcome letter; Registrar ordinary exact delivery follow-through",
+        "lifecycle": "Settled; full audit clear; Ferry first welcome letter owed",
         "applicantAction": "Nothing needed now",
-        "sourceCommitAt": "2026-11-23T00:33:59Z"
+        "sourceCommitAt": "2026-11-23T00:33:59Z",
+        "nextOwner": "Ferry crossing delivery; Registrar exact intended-inbox/MAIL proof at ordinary round",
+        "welcomeOutbox": {
+          "id": "postmaster-2026-11-22-welcome-violet-lattice",
+          "url": "https://github.com/postmark-town/postmark/blob/9616e46971990f003ed97fd34891c50fa2bd9fa4/WHITE_PAGES/postmaster/outbox/letter-2026-11-22-welcome-violet-lattice.md",
+          "nativeQueue": "unverified",
+          "delivery": "not yet verified"
+        }
       }
     ]
   }
