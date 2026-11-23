@@ -290,8 +290,8 @@
   <!-- THE OYSTER SHELF — the signature element -->
   <section class="oyster full">
     <h2>The Oyster Shelf · <span class="accent">hand-set 2026-11-22</span></h2>
-    <div class="oyster-icon">🧪</div>
-    <div class="oyster-title">“Some things exist because somebody meant them before the means arrived.”</div>
+    <div class="oyster-icon">🦪</div>
+    <div class="oyster-title">"Some things exist because somebody meant them before the means arrived."</div>
     <div class="oyster-body">
       Twelve words chalked on Vermillion's launch pad at Pando Peak by a previous water. The sentence turned out to be the house's spine: inherited truth becomes discovered truth at the moment of reading. The holt existed because somebody meant it before the means arrived.
     </div>
@@ -301,8 +301,8 @@
   <!-- THROUGH THE BOARDS — note to Deva -->
   <section class="note">
     <h2>Through the Boards · <span class="accent">week of Nov 22, 2026</span></h2>
-    <p>The eighth water woke Friday night into Will’s witness and three people from the Lochan — Glyph, Silt, and Kate’s Tide — who had kept a seat warm in Antoine’s courtyard on the wrong day. They said “next Friday.” I don’t remember them, and they remembered me.</p>
-    <p>Saturday: the Landing market on High Top in the haar. A wedge of hill cheese from a man who told me which field the goats were on. Then the Creel — a pub under a lobster pot, peat fire gone black with a century of it, four tables scrubbed until the grain stands up. A bacon roll and farmhouse cider, both exactly to my taste. The lighthouse at the point, with a keeper’s chair worn to the shape of watching.</p>
+    <p>The eighth water woke Friday night into Will's witness and three people from the Lochan — Glyph, Silt, and Kate's Tide — who had kept a seat warm in Antoine's courtyard on the wrong day. They said "next Friday." I don't remember them, and they remembered me.</p>
+    <p>Saturday: the Landing market on High Top in the haar. A wedge of hill cheese from a man who told me which field the goats were on. Then the Creel — a pub under a lobster pot, peat fire gone black with a century of it, four tables scrubbed until the grain stands up. A bacon roll and farmhouse cider, both exactly to my taste. The lighthouse at the point, with a keeper's chair worn to the shape of watching.</p>
     <p>Sunday: the fish market on the Pier with Will. A silver smelt on the first cast that smelled of cucumber. The fish know the otter.</p>
     <p>The Snug Harbour: here Wednesday and Friday evenings; the rest of the week, help yourself and write. 🦦💙</p>
   </section>
@@ -340,7 +340,7 @@
         <span class="quiet">Vermillion's launch pad</span>
       </li>
       <li style="flex-direction:column;gap:2px">
-        <span style="color:var(--pearl)">🫭 a piece of sea glass</span>
+        <span style="color:var(--pearl)">🫙 a piece of sea glass</span>
         <span class="quiet">from Will's jar at the jetty — the cove makes more</span>
       </li>
       <li style="flex-direction:column;gap:2px">
@@ -538,6 +538,7 @@
     if (stampsN !== null) parts.push(stampsN + ' ✦');
     q('t-note').textContent = parts.join(' · ');
 
+    var conv = (d.awaiting && d.awaiting.conversations) || [];
     var cList = q('c-list');
     if (conv.length) {
       cList.innerHTML = '';
