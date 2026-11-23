@@ -1,7 +1,7 @@
 // Vermillion Paper Peak: the design's own script, by aurumsalamandra (Hearth contract v2, rule 6).
 //
 // The design is a paper pop-up book. The template holds six pages as plain sections, each with one or two of the site's own
-// parts; without this script they stand one under another. The script does three things:
+// parts; without this script they stand one under another. The script does four things:
 //
 //   1. It draws a row of page buttons above the book (House, Residents, Coming up, Ties, Today, Crossing, with arrows either
 //      side) and shows one page at a time. The arrow keys turn pages while focus is inside the design, and a sideways swipe
@@ -9,6 +9,12 @@
 //   2. When a page is chosen, that page's cut-paper picture builds itself over the book, the page underneath changes, and the
 //      picture comes apart again to show it. On first load the House picture does this once, to open the book.
 //   3. It honours prefers-reduced-motion: the picture then fades in whole and fades out whole.
+//   4. On Residents it puts a small paper window under each resident's name (a copy of the template's hidden "winicon" picture).
+//      Pressing one opens that resident's window below the cards; pressing another closes it and opens the new one; pressing
+//      the open one again closes it. The windows themselves are the site's own <hearth-windows> part, framed and sandboxed by
+//      the site exactly as on the resident's page: this script only adds the class u-open to the one figure to show, and
+//      creates no frame of its own. A resident with no hung window gets a faded icon that does nothing. Turning to another
+//      page closes any open window.
 //
 // THE PICTURES are seven of the house's own uploads at the town's media door: one sheet per page holding that picture's cut
 // pieces, and the parchment page itself (placed by the template). Each piece is a small clipped box onto its sheet; PICTURES
@@ -17,9 +23,11 @@
 // around ox/oy), "stretch" (grow up from its foot with a wobble), "fade", "twinkle" (fade with a little growth) or "fly"
 // (arrive from a random direction, spinning). Pieces sharing a `group` follow each other inside one step of `order`.
 //
-// WHAT IT TOUCHES: only this design's own elements, inside hearth.root. It reads no data (the site's parts draw every word on
-// the pages), calls no office read, and never acts: no hearth.act, no sign-in, no storage, no cookies, nothing sent anywhere.
-// The only network it causes is the six picture sheets loading, from media.postmark.town.
+// WHAT IT TOUCHES: this design's own elements inside hearth.root; inside the site's residents part, one icon button added
+// after each name (removed again on stop); inside the site's windows part, one class on the open figure. It reads no data
+// (the site's parts draw every word on the pages), calls no office read, and never acts: no hearth.act, no sign-in, no
+// storage, no cookies, nothing sent anywhere. The only network it causes is the six picture sheets loading from
+// media.postmark.town, and, when a reader opens a window, the site's own frame for that window loading from its panes address.
 
 const MEDIA = "https://media.postmark.town/media/FluffUPando/";
 const SHEETS = {
@@ -243,7 +251,53 @@ export default function (hearth) {
       if (k === i) b.setAttribute("aria-current", "page"); else b.removeAttribute("aria-current");
     });
     leaves[i].scrollTop = 0;
+    if (PAGES[i].key !== "residents" && openWin) { openWin = null; syncWindows(); }
   }
+
+  // ---- Residents: a paper window under each name opens that resident's window, one at a time ----
+  const iconSrc = root.querySelector(".u-winicon")?.getAttribute("src") ?? "";
+  const winSlot = root.querySelector('[data-hearth-slot="windows"]');
+  const winButtons = new Map();   // handle -> { button, name }
+  let openWin = null;
+  const figureOf = (h) => [...(winSlot?.querySelectorAll("figure[data-hx-pane-of]") ?? [])].find((f) => f.getAttribute("data-hx-pane-of") === h) ?? null;
+  function syncWindows() {
+    winButtons.forEach(({ button, name }, h) => {
+      const has = !!figureOf(h), on = has && h === openWin;
+      button.classList.toggle("u-winbtn-on", on);
+      button.classList.toggle("u-winbtn-none", !has);
+      button.setAttribute("aria-pressed", on ? "true" : "false");
+      button.setAttribute("aria-label", has ? `${on ? "Close" : "Open"} ${name}'s window` : `${name} has not hung a window`);
+      button.title = has ? (on ? "Close the window" : "Open the window") : "No window hung yet";
+    });
+    winSlot?.querySelectorAll("figure[data-hx-pane-of]").forEach((f) => f.classList.toggle("u-open", f.getAttribute("data-hx-pane-of") === openWin));
+  }
+  if (iconSrc && winSlot) {
+    root.querySelectorAll('[data-hearth-slot="residents"] article[data-hd-card]').forEach((card) => {
+      const h = card.getAttribute("data-hd-card");
+      const nameEl = card.querySelector(".hd-card-name");
+      const name = (nameEl?.textContent ?? h).trim();
+      const button = el("button", "u-winbtn");
+      button.type = "button";
+      const img = el("img");
+      img.src = iconSrc;
+      img.alt = "";
+      button.appendChild(img);
+      button.addEventListener("click", () => {
+        if (!figureOf(h)) return;
+        openWin = openWin === h ? null : h;
+        syncWindows();
+        const fig = openWin && figureOf(openWin);
+        if (fig) fig.scrollIntoView({ block: "nearest", behavior: reduce.matches ? "auto" : "smooth" });
+      });
+      if (nameEl) nameEl.insertAdjacentElement("afterend", button);
+      else card.querySelector("header")?.appendChild(button);
+      winButtons.set(h, { button, name });
+    });
+  }
+  // the windows part is drawn by the site once the panes answer (and may be drawn again): keep the icons in step with it
+  const winWatch = winSlot ? new MutationObserver(syncWindows) : null;
+  winWatch?.observe(winSlot, { childList: true, subtree: true, attributes: true, attributeFilter: ["hidden"] });
+  syncWindows();
   show(0);
 
   // ---- the pictures: each piece is a clipped box onto its page's sheet ----
@@ -372,6 +426,9 @@ export default function (hearth) {
     book.removeEventListener("pointerup", onUp);
     Object.values(built).forEach((b) => b.pieces.forEach((p) => p.el.getAnimations().forEach((a) => a.cancel())));
     scene.remove();
+    winWatch?.disconnect();
+    winButtons.forEach(({ button }) => button.remove());
+    winSlot?.querySelectorAll("figure.u-open").forEach((f) => f.classList.remove("u-open"));
     bar.replaceChildren();
     peak.classList.remove("u-flip");
     leaves.forEach((l) => l.classList.remove("u-on"));

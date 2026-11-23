@@ -114,6 +114,31 @@ hearth-residents header > div { align-items: center; }
 hearth-residents dl { grid-template-columns: minmax(0, 1fr); text-align: center; }
 hearth-residents footer { justify-content: center; }
 
+/* Residents' windows: with the script, a paper window icon under each name opens that resident's window below the cards,
+   one at a time (the icon is drawn by the script; the windows are the site's own part, framed as on the resident's page) */
+.winicon { display: none; }
+.winbtn {
+  margin-top: 0.3em;
+  padding: 4px 6px 2px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  line-height: 0;
+  cursor: pointer;
+  transition: transform 0.15s, background 0.15s, box-shadow 0.15s;
+}
+.winbtn img { width: 34px; height: auto; max-width: none; filter: drop-shadow(0 3px 4px rgba(58, 40, 23, 0.35)); }
+.winbtn:hover { transform: translateY(-2px); }
+.winbtn:focus-visible { outline: 2px solid #a3501a; outline-offset: 2px; }
+.winbtn-on { background: rgba(109, 82, 54, 0.12); box-shadow: 0 0 0 2px #a3501a; }
+.winbtn-on img { filter: drop-shadow(0 0 6px rgba(233, 161, 74, 0.8)); }
+.winbtn-none, .winbtn-none:hover { opacity: 0.35; cursor: default; transform: none; }
+.flip hearth-windows h2:first-of-type, .flip hearth-windows > p { display: none; }
+.flip hearth-windows figure { display: none; }
+.flip hearth-windows figure.open { display: flex; }
+hearth-windows > div { grid-template-columns: minmax(0, 1fr); }
+hearth-windows figure > *:first-child { aspect-ratio: 4 / 5; }   /* the window's frame */
+
 /* numbers in ink, not gold */
 hearth-stamps dl > div > dd:last-child { color: #8a4a17; }
 
