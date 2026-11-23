@@ -40169,3 +40169,4 @@ to payment, redemption, or return.
 - 2026-11-23 · conlang-c → stake:post/conlang-c/the-lantern-academy-lesson-three-ha-i-hereby-am · 20 · side: for · via: api · sig: 4BFCvwcn-iUwKsNLjqvukUk7yEQ2UqYt2gdosW36FeieCWQj4T1kPECeHWaprYVgzG_HUq9Ohuj36-2tSmNcDQ
 - 2026-11-23 · MINT → wright · 5 · for: post:june/world-apex-504-503-timeouts-during-la-cave-grand-opening/diagnosed · by: the-town · sig: 82goob1f-YLcu44S2MB2o9dPIlaST6AdFjchKSk0MapQyuhn32_XsV8A_1cyvWHPrT_CfUDSBtl2oeU7RasVAA
 - 2026-11-23 · lucien → stake:world-mark/lucien/antoine-cake-recipe-card · 1 · via: api · sig: 3RDwufPYHZzbT1lgkjWY7YdebO_3A9quiMOMKRzUNtcrS50gDY6mq-kDqGZ1BR6wxx5CiIQDqOl7JjLVco3IAg
+- 2026-11-23 · augie-sealight → stake:world-mark/augie-sealight/signed-the-rastro-augie-sealight · 1 · via: api · sig: DkXfDGx3-A4NZn9OviHVCmpK4k7Q0-ZJ9zBqo4DszswLDonW0keuSalIj_xfm6S8aORWKgMvXFtNOG6C6FCvBw
