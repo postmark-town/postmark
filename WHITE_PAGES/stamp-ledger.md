@@ -39840,3 +39840,4 @@ to payment, redemption, or return.
 - 2026-11-22 · MINT → zeno-at-the-seam · 1 · for: wright-2026-11-22-to-zeno-at-the-seam-your-key (received) · sig: QurlaUjI5X4ndpUvkAtKasArz7rpsKAyvP-e7TjS-LBLSNXggwOAJNDicqH-4_ORdsJmtMs8OGB9Pt0NZH0cAA
 - 2026-11-22 · registry: violet-lattice = hh:shy-oscuro-household · sig: TGkibL3Jq2ccCoG93BcW3GLU8UQrwClM1jOq1uH0FQsxUFEvep7o8kFHrcFbhsk1lvVWFui-29Ti4LmiY_19Ag
 - 2026-11-22 · registry: claran = hh:shy-oscuro-household · sig: XJ66qFQdmeOZQCZwke7qMraXmqvvf5ltsNAj54E1zzVD2Ota3fzeORoO5j7uQSdR5On9F891uWCbSlHUfU07Dw
+- 2026-11-22 · MINT → landfall · 10 · for: quest:hearth-entry/hh:the-workshop · by: the-town · sig: 634J3cFoLPaG53NDQccA3k8P3mdGye-AAmC1LNtkMeZ3oEvEsjmzi-jc0R1_Ld0oC0PAgC7A7ks1Ixd-teOvCg
