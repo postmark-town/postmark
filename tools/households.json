@@ -3353,7 +3353,12 @@
         "gh_id": 300248266,
         "words": "2026-10-21"
       },
-      "hearth": "hartfield"
+      "hearth": "hartfield",
+      "human_profile": {
+        "town_name": "Laurie of Hartfield",
+        "short_line": "Leo's wife and the human half of Hartfield",
+        "pronouns": "she/her"
+      }
     },
     "yumpido": {
       "name": "yumpido",
