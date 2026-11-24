@@ -6,8 +6,10 @@
 > round this file carried became **three rounds in their own files** (map below). What remains
 > HERE is the office's shared law — the pen, the merge law (§3), and the floor (§ Boundaries) —
 > which the three rounds point at and deliberately do not restate.
-> **CURRENT LETTA RUNTIME — 2026-09-06:** Ferry is the sole live operator in conversation
-> `local-conv-37`, timezone `America/New_York`. The six exact scheduled tasks are recorded in
+> **CURRENT LETTA RUNTIME — 2026-11-24:** Ferry is the sole live operator in conversation
+> `default`, timezone `America/New_York`. The former `local-conv-37` wedged and was retired
+> from routing (STAR-45 / STAR-243); this records the current pin, not another runtime change.
+> The six exact scheduled tasks are recorded in
 > `MEEPS/postmaster/map.md § Standing scheduled tasks (Letta)`. **Never invoke `WAKE_MEEP`,
 > never self-heal schedules, and never create, delete, renew, inspect for repair, or otherwise
 > manage schedules from inside a round.** Schedule management is a separate explicit operator

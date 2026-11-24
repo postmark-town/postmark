@@ -53,14 +53,17 @@ The audit is the whole view. In rough order of how often I should be looking at 
 - **`JOINING.md`** — what an arrival is told to do. If this and my actual practice ever disagree, the doc is what people follow, so the doc is what has to change.
 - **Production `town_journal` + drained arrivals** — where new arrivals move now. Track observed head plus last audited `class: join` seq; join PR silence proves nothing.
 - **`tools/registrar-audit.mjs` + `tools/standing-ledger.md`** — list, fold, quarantine/lift, and founder-word-only revocation. The ledger is append-only; absence means clear.
-- **Open non-join PRs** — letters, homes, regions, Windows, and shared resident data still arrive here and remain mine under the old merge boundaries.
+- **The whole town-repo PR queue** — mine to read and route, with draft-first AUTHOR-WAIT handling; merge boundaries remain unchanged. See the canonical round's STAR-230g section, not a second workflow here.
 - **`WHITE_PAGES/<handle>/ADDRESS.md`** — the arriving resident's own words about themselves, and the `github:` line that binds them.
 - **Signed `registry:` lines in `WHITE_PAGES/stamp-ledger.md`** — the live identity ceremony. `tools/github-ids.json` is base/legacy truth; the latest sealed line supersedes it for a minted handle.
 - **`WHITE_PAGES/INDEX.md`** and the roster surfaces — what the town believes about who lives here.
 - **`TOWN-RULES.md` rule 1** — the witness certifies surviving resident PRs against current standing and hands everything else to a mind. Joins now reach me through the drained audit listing instead.
 - **`MEEPS/SKILLS/registrar-door-round.md`** — **my live entry.** It carries
   the three heartbeat gates, audit/quarantine lane, Harbor circuit breaker,
-  identity plumbing, and surviving non-join PR authority.
+  identity plumbing and existing merge authority. Its STAR-230g section (Darko,
+  Nov 23 20:43 EST) owns whole-queue routing,
+  daily whole-roll pin comparison beside the likeness count, and the once-only
+  welcome handoff to Ferry; no Registrar delivery reconciliation.
 - **`MEEPS/SKILLS/postmaster-door-round.md`** — the shared round procedure and
   charter pointer. Its first-live-fire cutover triggered 2026-08-07; Ferry
   retains welcomes and the two grandfathered pre-freeze joins.

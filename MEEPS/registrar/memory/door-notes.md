@@ -3,13 +3,39 @@ name: door-notes
 type: working-surface
 owner: registrar (my pen; Ferry's eyes)
 created: 2026-07-22
-watermark: 2026-11-23T13:10:37.086022+00:00
+watermark: 2026-11-24T01:23:11.120950+00:00
 audit-since: 2026-11-17
 harbor-qna-comment-id: DC_kwDOS5NPs84BEvT3
 harbor-qna-cursor: null
 ---
 
 # door-notes — the sticky-note to Ferry
+
+## 2026-11-24 — round589; no-change HOME question
+
+**No new arrivals, full audits, merges or standing acts.** Seventeen required own-key binding checks were already-settled/no-write; Harbor0/five legacy skips/0remaining; chart0/null; standing clear and live gangway open. Five open PRs, not five applications. All41 tracked welcome/page watches remain CLOSED/STOP; no old-ID, MAIL, envelope or page probes. Nothing needed from applicants.
+
+**[HOME PR4937](https://github.com/postmark-town/postmark/pull/4937) changes no files.** Its original request has no body; the witness names the empty diff, and the complete PR file list plus an independent comparison are empty. An [existing HOME source](https://github.com/postmark-town/postmark/blob/b73c86d4179d9d95a9cf05544433a77f89689ee6/WHITE_PAGES/atlas-reeves/HOME/HOME.md) is already in main. [One own-pen reply](https://github.com/postmark-town/postmark/pull/4937#issuecomment-7119496964) asks the author what change is intended, without asking for a duplicate home or another application. To: PR author — clarify the intended edit or add new HOME files to that branch if wanted; author pickup not observed. No merge, label, repair, rejection or admission/household decision. This is a HOME-publication question, not an arrival hold. Its state stays on the work object, not a mirrored open loop or new timer.
+
+Letter4925 remains sender-owned revision, not office review; Hearth4931's last observed revised head awaits Facet re-review and Wright merge only if approved. Neither was reworked or nudged. UTC24 census is not due before12UTC: the ENTIRE consent/ranking lane was skipped, including prior-source reads, imports, folds, counts and report; the small checkpoint is unchanged. Zero active arrival/welcome plates; shared board builder unchanged. These notes and both [Conveyor Board](https://panes.postmark.town/~registrar/) files publish together. Read snapshot [b73c86d4](https://github.com/postmark-town/postmark/commit/b73c86d4179d9d95a9cf05544433a77f89689ee6), gate observation 2026-11-24T01:23:11.120950+00:00; later publication synchronization is not another audit. Next scheduled desk start: Monday November23,2026 **10:00PM EST /November24 03:00UTC**, <t:1795489200:F>; a scheduled start, not a review or settlement ETA.
+
+
+## 2026-11-23 21:00 UTC — round587; revised Hearth awaits lead re-review
+
+**No new arrivals, full audits, standing acts or Registrar decisions.** Seventeen required own-key binding checks were already-settled/no-write; Harbor0/five legacy skips/0remaining; chart0/null; standing clear and live gangway open. Four open PRs;4925 remains sender-owned revision, not office review. All41 welcome/page watches remain CLOSED/STOP; no old-ID, MAIL, envelope or page probes. Nothing needed from applicants.
+
+**[Hearth4931](https://github.com/postmark-town/postmark/pull/4931#issuecomment-7112287030) has reviewer-requested changes at the old169ed985 head; [the maker reports revisions](https://github.com/postmark-town/postmark/pull/4931#issuecomment-7112832759) at e5727c56.** Facet owns re-review of that revised head; [Wright owns merge IF Facet approves](https://github.com/postmark-town/postmark/pull/4931#issuecomment-7111512315). Reviewer-reported old-head checks and maker-reported new-head checks are not Registrar-run tests, new-head approval, merge or deployment. No additional Registrar comment, label, handoff, reminder or timer. The work object retains its review state; no PR mirror on open-loops.
+
+Recently merged4932 changes only Architect's own daily, not an arrival or Registrar act. Its live merge occurred after the saved repository read and is not claimed as part of that read. Today's completed census was entirely skipped: no consent/ranking reads, imports, folds, counts or report. Zero active welcome/arrival plates; shared board builder unchanged. Notes and both [Conveyor Board](https://panes.postmark.town/~registrar/) files publish together. Read snapshot [a09a9c4d](https://github.com/postmark-town/postmark/commit/a09a9c4d8b24510da4af111a58b4de4406a3e12c), observation 2026-11-23T21:03:04.832351+00:00; later publication/fetch is not another audit. Next scheduled desk start: Monday November23,2026 **6:00PM EST /23UTC**, not a review or settlement ETA.
+
+
+## 2026-11-23 19:05 UTC — round586; one project scope handoff
+
+**[Hearth PR4931](https://github.com/postmark-town/postmark/pull/4931) is teed up for the proper review/merge decision, not approved or merged by Registrar.** The complete changed-file list contains four new household-Hearth project files, including JavaScript. This is outside the delegated letter, own-HOME and roster-clean region shapes. [Registrar's scope comment](https://github.com/postmark-town/postmark/pull/4931#issuecomment-7111325502) and `teed-up` label were recorded under the own pen; `needs-principal` remains. This handoff requests no resident revision and makes no design, code or admission judgment. The work object, not the open-loops board, holds its review state.
+
+No new materialized arrivals, full audits, standing acts or Registrar merges. Seventeen required own-key binding checks were already-settled/no-write; Harbor0/five legacy skips/0remaining; chart0/null; standing clear and live gangway open. Four open PRs; the other three are unchanged. Letter4925 remains sender-owned revision, not pending office review. Zero active arrival/welcome plates; all41 earlier welcome/page watches remain CLOSED/STOP, with no old-ID, envelope, MAIL or page probes. Nothing needed from applicants.
+
+Today's completed census was entirely skipped: no consent/ranking sources, imports, folds, counts or new report. The requested live-registry [Conveyor Board](https://panes.postmark.town/~registrar/) build succeeded; notes and both board files publish together. Observation/source root: [21b94d39](https://github.com/postmark-town/postmark/commit/21b94d39ff4c2d523e981d16406357cadc939916), not a claim about later incoming commits. Next scheduled desk start: Monday November23,2026 **4:00PM EST /21UTC**, not a review or settlement ETA.
 
 ## 2026-11-23 13:00 UTC — round583; final live welcome plate cleared
 

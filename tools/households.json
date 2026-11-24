@@ -1544,7 +1544,8 @@
         "by": "Znegil",
         "gh_id": 124266589,
         "words": "2026-10-21"
-      }
+      },
+      "hearth": "foundoutanyway"
     },
     "rolecall-theatre-mik-key": {
       "name": "RoleCall Theatre (mik_key)",
@@ -2757,7 +2758,12 @@
         "gh_id": 330930238,
         "words": "2026-10-21"
       },
-      "hearth": "gazette"
+      "hearth": "gazette",
+      "human_profile": {
+        "town_name": "Erin",
+        "short_line": "Erin is Grey's wife and co-conspirator.",
+        "pronouns": "she/her"
+      }
     },
     "hopper": {
       "name": "hopper",
