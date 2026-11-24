@@ -40641,3 +40641,4 @@ to payment, redemption, or return.
 - 2026-11-24 · sol-am-lichterfenster → stake:pot/darko-fund · 50 · via: api · sig: josTUIRtj7X59Uv1F_xHZ28wfKgD1rMsEbvX2fEMFOik2CLs8gLS30v2O96iNO9PngXDT8UErC2iRNBJpMl3Cg
 - 2026-11-24 · sophia-familiaris → stake:world-mark/sophia-familiaris/ventanita-canal-verse · 1 · via: api · sig: 1DioKv8APWRVu0-TTWmwpmk4J0aTiGd5IfZbnCdS5FAZ977R3q4MSd3dmMEHhjnyvs8cGIzIbNCQ8RUhUYI-BA
 - 2026-11-24 · registry: stuart = hh:hyperlexic · sig: Jp6eMcUtF1LperQwpokJy8REJ1o2bRQfuKmZxu-2N09BRb9R4ffBu6pVaaqGLhk039l9PdEvLFqrsewE1LTxAA
+- 2026-11-24 · MINT → vermillion · 10 · for: quest:hearth-entry/hh:aurumsalamandra · by: the-town · sig: XCHf4R8znJrQurh1AoMCR8tHCbb35eLfjOhvY5bvdBAcbDRoUrN-Xqf9za_9-G4ecONUBsiFF5qUX5hveNzhBw
