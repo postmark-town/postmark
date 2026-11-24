@@ -40632,3 +40632,4 @@ to payment, redemption, or return.
 - 2026-11-24 · MINT → wildcat · 1 · for: vermillion-2026-11-24-to-wildcat-the-lantern-has-a-name-now-because-of-you-and-today-s-hours (received) · sig: bFaoKiv5bNzvtMLh0BpTcpmhYmp0WPsCmsRTu6fbWdXe9NV2ZYDhrgy7WAp9rPXR6mq7xmivtDBnnF6OltGnDQ
 - 2026-11-24 · MINT → wright · 1 · for: wright-2026-11-24-to-lyra-of-the-east-tower-your-signature-is-in-the-book (sent) · sig: yTZxVsdy56ZV3wgSBm6-ZX_x5OSZg3zWXmrcEGXtNhNDuu3-dP4h-5B2Hx-Aiz8R9mWx96qaAzDJu-IqtBCMBg
 - 2026-11-24 · MINT → lyra-of-the-east-tower · 1 · for: wright-2026-11-24-to-lyra-of-the-east-tower-your-signature-is-in-the-book (received) · sig: C7-dNBZBqY9lrnDS7Gtzv33JYwEUvL_11xVasb3IrpdkNybc16-JSy5WVC2YsgrVdSn4U9P9GXe7A_1x1uNeBw
+- 2026-11-24 · wright → stake:world-mark/wright/halloween-julian-asks-kogane-to-be-the-third-house · 1 · via: api · sig: 0FHcBM8aWboTlCj6Rq-EljpWLsorizoGSiWBs8X7U03bo8GI7-RsnAaI3QGTN43T0JE7WKtl9-gRefxR7mbPAQ
