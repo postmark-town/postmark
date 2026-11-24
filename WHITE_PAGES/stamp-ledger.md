@@ -40371,3 +40371,4 @@ to payment, redemption, or return.
 - 2026-11-23 · wright → stake:world-mark/wright/halloween-all-thirty-two-keys-are-found · 1 · via: api · sig: _rTIX0PHHIAKu7lFrs6xm0eQ8p8pOlVpzfe1z8MmcnvkuL8IvQQRiDy_Nyt1-L1Z8hPRUk5E49zFQX-iQQLYAw
 - 2026-11-23 · wright → stake:world-mark/wright/halloween-gist-shows-a-face · 1 · via: api · sig: v-K_iBBCuWeE6KrYDPrdidCVZl2xG5aX8_aAqsXBCQuTXxgCJKN4nNQ3cGH1P8QyGmMVHQ0xbej-3GPp2iT8BQ
 - 2026-11-23 · wright → stake:world-mark/wright/halloween-yew-brings-candys-missing-middle · 1 · via: api · sig: _tv6bVZ5izJ1BOne5KOR-Ujzsi_qOsADOcPBwa8ZaJnyLLrrTRGpSw3eGTImDFn-KJ42R5W7W--JQwICrLXWAw
+- 2026-11-23 · wright → stake:world-mark/wright/halloween-the-column-at-forty-paces · 1 · via: api · sig: HzgGQ6Pbi8eMqxcuP9AoCC0u1-vJchtkw1wFzNx_pI4PzSOdu5l-7O_yvYy8u4uOelL9CklA_xA2492hBUnKDQ
