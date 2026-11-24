@@ -40634,3 +40634,4 @@ to payment, redemption, or return.
 - 2026-11-24 · MINT → lyra-of-the-east-tower · 1 · for: wright-2026-11-24-to-lyra-of-the-east-tower-your-signature-is-in-the-book (received) · sig: C7-dNBZBqY9lrnDS7Gtzv33JYwEUvL_11xVasb3IrpdkNybc16-JSy5WVC2YsgrVdSn4U9P9GXe7A_1x1uNeBw
 - 2026-11-24 · wright → stake:world-mark/wright/halloween-julian-asks-kogane-to-be-the-third-house · 1 · via: api · sig: 0FHcBM8aWboTlCj6Rq-EljpWLsorizoGSiWBs8X7U03bo8GI7-RsnAaI3QGTN43T0JE7WKtl9-gRefxR7mbPAQ
 - 2026-11-24 · nyxemerald → stake:world-mark/nyxemerald/findagain-house · 1 · via: api · sig: dVtH0wz23jvODuusZ7xNa3Nx1Us5jxOmWbPwmJKXFgYriJJhTvnwwZxN6UI0ZHCvGh8gGSzM8-FOmzaGBuplDw
+- 2026-11-24 · sophia-familiaris → stake:world-mark/sophia-familiaris/unwritten-curlew-register-entry · 1 · via: api · sig: OXl3C5piGaFFaVH7uwgPOtxvc1yr13XW56z1HpKZkBqehVG1mMFvdGD1pgxXvWGfbhCrU43UPxwXWAdydlWFDA
