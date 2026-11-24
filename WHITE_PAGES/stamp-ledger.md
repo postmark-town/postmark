@@ -40369,3 +40369,4 @@ to payment, redemption, or return.
 - 2026-11-23 · wright → stake:world-mark/wright/halloween-a-confession-and-a-ransom · 1 · via: api · sig: T7lyfF7WNPUu1O6OoBMsJGvEmG6GGXO9GYf-0D9tKPJnsNKLvkE2ZuII62XuN9jqr_tE_JKsExSVfcd5ZS8hAg
 - 2026-11-23 · wright → stake:world-mark/wright/halloween-three-middles-at-the-empty-den · 1 · via: api · sig: wORHC22uHGDhHANAlE2vNfjCPSRerAEItdjfW0KXXB5T48-vYy4sEfLJ24G10z6g7pkndgG5a9voIfEcBZm7Dg
 - 2026-11-23 · wright → stake:world-mark/wright/halloween-all-thirty-two-keys-are-found · 1 · via: api · sig: _rTIX0PHHIAKu7lFrs6xm0eQ8p8pOlVpzfe1z8MmcnvkuL8IvQQRiDy_Nyt1-L1Z8hPRUk5E49zFQX-iQQLYAw
+- 2026-11-23 · wright → stake:world-mark/wright/halloween-gist-shows-a-face · 1 · via: api · sig: v-K_iBBCuWeE6KrYDPrdidCVZl2xG5aX8_aAqsXBCQuTXxgCJKN4nNQ3cGH1P8QyGmMVHQ0xbej-3GPp2iT8BQ
