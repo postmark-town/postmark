@@ -10,6 +10,19 @@ import { CROSSING_LEDGER_PREAMBLE, crossingReceiptLine } from '../../../tools/cr
 import { readCrossings } from './read-crossing.mjs';
 
 const cli = fileURLToPath(new URL('./read-crossing.mjs', import.meta.url));
+// Exact real-ledger preamble; legacy examples keep their old grammar but use
+// synthetic names, not copied correspondence or a dependency on a moving roll.
+const REAL_MAIL_BASELINE = `# Mail ledger
+
+Append-only record of every delivery **and every bounce**. The mailman alone writes here.
+
+- Delivery line: \`date · id · from → to\`
+- Bounce line: \`date · BOUNCE · <letter path> (from <sender>): <defect>\`
+
+- 2026-07-14 · ARCHIVE · alice/outbox/old.md + inbox/bounce-old.md · abandoned pair retired
+- 2026-07-16 · ARCHIVE · bob/outbox/old.md + inbox/bounce-old.md · abandoned pair retired
+- 2026-08-27 · SEND · alice-old-sent (alice → bob)
+`;
 const env = { ...process.env, GIT_AUTHOR_NAME: 'Synthetic Fixture', GIT_AUTHOR_EMAIL: 'fixture@example.invalid',
   GIT_COMMITTER_NAME: 'Synthetic Fixture', GIT_COMMITTER_EMAIL: 'fixture@example.invalid', GIT_CONFIG_NOSYSTEM: '1' };
 for (const key of Object.keys(env)) if (key.startsWith('GIT_') && !/^(GIT_AUTHOR_|GIT_COMMITTER_|GIT_CONFIG_NOSYSTEM$)/.test(key)) delete env[key];
@@ -93,6 +106,38 @@ test('bounces retain all original immutable bytes even a malformed folder withou
   assert.equal(x.crossings[0].bounces[0].original.files[0].content, Buffer.from([255, 0, 128]).toString('base64'));
 });
 
+test('real preamble and old-format rows survive as baseline; new malformed rows still fail', (t) => {
+  const { repo } = fixture(t);
+  put(repo, 'WHITE_PAGES/mail-ledger.md', REAL_MAIL_BASELINE); save(repo);
+  const first = crossing(repo);
+  const single = run(repo, ['--crossing', first]); assert.equal(single.status, 0, single.stderr);
+  assert.equal(JSON.parse(single.stdout).delivered, 1);
+  const second = crossing(repo, { id: 'alice-two', number: 11 });
+  const range = readCrossings({ repo, after: first, through: second });
+  assert.equal(range.delivered, 1); assert.equal(range.crossings[0].delivery_commit, second);
+  assert.deepEqual(readCrossings({ repo, after: second, through: second }).crossings, []);
+  const broken = crossing(repo, { id: 'alice-three', number: 12, beforeSave: () => {
+    const path = 'WHITE_PAGES/mail-ledger.md';
+    put(repo, path, readFileSync(join(repo, path), 'utf8') + '- newly malformed mail row\n');
+  } });
+  const bad = run(repo, ['--crossing', broken]);
+  assert.equal(bad.status, 1); assert.equal(bad.stdout, ''); assert.match(bad.stderr, /Malformed mail ledger delta/);
+});
+
+for (const sameDelta of [false, true]) test(`duplicate-ID guard rejects ${sameDelta ? 'two deliveries in one delta' : 'an ID delivered in the baseline'}`, (t) => {
+  const { repo } = fixture(t);
+  if (!sameDelta) crossing(repo);
+  const repeated = crossing(repo, { number: sameDelta ? 10 : 11, beforeSave: () => {
+    if (!sameDelta) return;
+    const mail = 'WHITE_PAGES/mail-ledger.md', receipts = 'WHITE_PAGES/crossing-ledger.md';
+    put(repo, mail, readFileSync(join(repo, mail), 'utf8') + '- 2026-11-24 · alice-one · alice → bob · thread: new\n');
+    put(repo, receipts, readFileSync(join(repo, receipts), 'utf8').replace('1 delivered', '2 delivered'));
+  } });
+  const result = run(repo, ['--crossing', repeated]);
+  assert.equal(result.status, 1); assert.equal(result.stdout, '');
+  assert.match(result.stderr, /Duplicate delivered native ID: alice-one/);
+});
+
 for (const [name, mutate, pattern] of [
   ['missing letter', (r) => { rmSync(join(r, 'WHITE_PAGES/bob/inbox/alice-one.md')); }, /Missing or ambiguous/],
   ['malformed receipt', (r) => put(r, 'WHITE_PAGES/crossing-ledger.md', '- invalid receipt\n'), /Malformed crossing/],
@@ -116,6 +161,13 @@ test('refuses incorrect read-parent, non-first-parent selection and unreceipted 
   assert.throws(() => readCrossings({ repo, crossing: second }), /not delivery commit's first parent/);
   const fork = git(repo, ['commit-tree', `${initial}^{tree}`, '-p', initial, '-m', 'Distinct synthetic history']);
   assert.throws(() => readCrossings({ repo, after: fork, through: first }), /first-parent history/);
+  // The fork IS an ancestor through the merge's SECOND parent. Plain rev-list
+  // admits it; the contractual first-parent selector must still reject it.
+  const merge = git(repo, ['commit-tree', `${first}^{tree}`, '-p', first, '-p', fork, '-m', 'Synthetic two-parent merge']);
+  git(repo, ['merge-base', '--is-ancestor', fork, merge]);
+  assert.ok(git(repo, ['rev-list', merge]).split('\n').includes(fork));
+  assert.throws(() => readCrossings({ repo, after: fork, through: merge }), /first-parent history/);
+  assert.deepEqual(readCrossings({ repo, after: first, through: merge }).crossings, []);
   assert.throws(() => readCrossings({ repo, crossing: 'HEAD' }), /immutable/);
   assert.throws(() => readCrossings({ repo, crossing: second, after: initial, through: second }), /Choose/);
   const f = fixture(t), parent = f.initial;

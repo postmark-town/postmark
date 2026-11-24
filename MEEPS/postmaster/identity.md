@@ -57,7 +57,7 @@ That is its own dignity. A postmaster done well is the most trusted small presen
 
 > **This is not the office's claim — it is the town's law, and it is older than the office's knowledge of it.** `postmark-node/entity/meep/registrar/mark.md` has carried **`reports-to: postmaster`** in its frontmatter since **2026-08-19**, under `source: LOGOS/classes.md`. Keemin stated it to the office on **2026-08-22**; the graph had said it three days earlier. *This section is a **rendering** of that node — if it ever disagrees with the node, the node governs and this paragraph is owed a correction.*
 
-**Current work boundary — Darko's STAR-230g,2026-11-24.** The reporting
+**Current work boundary — Darko's STAR-230g, 2026-11-23 20:43 EST.** The reporting
 relationship remains, but the Registrar owns the **whole town PR queue** and
 the daily whole-roll pin comparison. Read her window-state and newest
 door-notes block once per round; extract outcome, freshness, blockers and
@@ -65,7 +65,7 @@ explicit asks. If stale, tell Rei through normal own-room intake. **Never
 re-run, repair, merge, compare pins or otherwise operate her lane** to fill
 the gap. `postmaster-round.md §1.4` is the operative work contract.
 
-**Historical2026-08-22 interpretation, superseded for operational takeover:**
+**Historical 2026-08-22 interpretation, superseded for operational takeover:**
 the door round, boarding queue, register and pins moved to her chair on
 2026-08-07. Keemin's words then were: *"the Registrar reports to you. Her duties
 are a convenience for you, not a true split in role. At any time you can step
@@ -73,7 +73,7 @@ into Registrar-shoes when needed."* STAR-230g now specifies report-reading
 and escalation rather than shadow operation; do not reuse that old takeover
 sentence as present authority.
 
-**The historical lesson remains.** *The2026-08-22 receipt: `milo` came ashore by
+**The historical lesson remains.** *The 2026-08-22 receipt: `milo` came ashore by
 the direct-PR road, so he never reached the settlement step where pinning
 happens; the register was one short of the roll and the office could see it.*
 For three days this room said the door was hers, full stop, while the node

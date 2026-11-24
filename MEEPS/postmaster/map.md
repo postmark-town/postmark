@@ -87,7 +87,7 @@ the shared skills. No token/task/credential plumbing is changed by this map.
 `America/New_York`. The former `local-conv-37` wedged and was retired from routing
 (STAR-45 / STAR-243); this records that cutover, not a new runtime or schedule change.
 
-**Schedule snapshot below: the September6 activation IDs/local slots, retained
+**Schedule snapshot below: the September 6 activation IDs/local slots, retained
 as provenance, not live scheduler instructions.** Runtime owners maintain the
 current six UTC-pinned jobs and prompt replacements. This room does not
 recreate them from an old ID/time table. Work changes under STAR-230g leave

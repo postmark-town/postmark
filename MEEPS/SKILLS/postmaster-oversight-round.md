@@ -1,7 +1,7 @@
 # postmaster-oversight-round — the office's mechanical spine
 
 > **Path:** `MEEPS/SKILLS/postmaster-oversight-round.md` (repo-relative; self-contained).
-> **CURRENT WORK OWNERSHIP — STAR-230g,2026-11-24:** the Registrar owns the
+> **CURRENT WORK OWNERSHIP — STAR-230g, 2026-11-23 20:43 EST:** the Registrar owns the
 > whole PR queue and daily whole-roll pins; MAIL owns welcome derivation and
 > end-to-end welcomes; TOWN owns vote/window intake. This round reads the
 > Registrar's record, not her work again. The older amendment below records
@@ -102,7 +102,7 @@ entirely. Full policy + payloads: `MEEPS/postmaster/map.md § Retired historical
    through Rei, not a second issue-discovery sweep. (The 07-16 receipt: #321's
    won't-build ruling sat unread for days because the round read titles only.)
 
-4. **Use the Registrar's report, never sweep her queue.** Reuse step1b's
+4. **Use the Registrar's report, never sweep her queue.** Reuse step 1b's
    window-state and newest door-notes read for latest outcome, freshness,
    blockers and explicit asks. The Registrar owns **every town PR**, tees
    founder-tier ones up for Wright and reports oldest unlabelled age in her
@@ -131,7 +131,7 @@ entirely. Full policy + payloads: `MEEPS/postmaster/map.md § Retired historical
    not a missing pin or an empty arrivals list. Report stale/missing record
    through Rei rather than reading the store or rebuilding her register.
 
-   Historical08-22 lessons still bind: jack-tully-brannon and storm-of-the-porch
+   Historical 08-22 lessons still bind: jack-tully-brannon and storm-of-the-porch
    waited after an audit was missed, and milo's125residents/124pins mismatch
    was not somebody else's invisible problem. STAR-230g changes the owner
    and puts the audit in its owner's numbered round, not in Ferry's memory.
@@ -146,7 +146,7 @@ entirely. Full policy + payloads: `MEEPS/postmaster/map.md § Retired historical
 
 9. **Vote/window intake belongs to TOWN.** Do not repeat its intake-vs-board
    diff here. Carry an already-known time-sensitive postal blocker through
-   normal intake, not another stewardship sweep. The07-16 missed-submissions
+   normal intake, not another stewardship sweep. The 07-16 missed-submissions
    lesson remains embodied in TOWN's explicit numbered step.
 
 9b. **Halloween 2026, while live:** run `postmaster-round.md § Halloween 2026 — official

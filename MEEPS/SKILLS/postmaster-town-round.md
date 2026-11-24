@@ -71,7 +71,7 @@ outside the round.** Thin payload points here; this file is source of truth for 
    role is on the ballot). **Run the concrete intake-vs-board diff HERE**, not
    in oversight and not from recall; log new submissions with credit. This
    round owns both that mechanical intake and its stewardship: write-ups,
-   board prose and credit lines. (The07-16 receipt: four naming submissions
+   board prose and credit lines. (The 07-16 receipt: four naming submissions
    sat unlogged through three join-heavy rounds.)
 
 4. **The market counter** (`TOWN_BULLETIN/marketplace.md`) — the bulletin-editor role, not a

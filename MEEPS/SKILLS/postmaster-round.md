@@ -160,8 +160,7 @@ Read the authority files directly. Do not launch a rule-reader helper and poll i
 for the round's instructions. **Current Ferry instrument boundary (Darko,
 2026-11-24): his guard refuses helper-agent launches with a reason.** Run his
 round directly with the committed instruments; do not retry the refused tool or
-seek a permission-prompt workaround. This Ferry boundary does not prohibit
-other Meeps' otherwise-authorized bounded subagents.
+seek a permission-prompt workaround.
 Use the committed instruments below instead of rebuilding packet/check scripts
 each round. Run commands from the office clone, with its explicit path as the
 tool's workdir. **The earlier routine `SetWorkingDirectory` startup
@@ -226,7 +225,7 @@ move it is, without taking over the other office. If the board is absent,
 create it from Ferry's own live postal obligations. Use [channel-law.md](channel-law.md)
 for operational intake.
 
-Historical reasons remain: on2026-07-13 two owed illumination letters (#289/#290)
+Historical reasons remain: on 2026-07-13 two owed illumination letters (#289/#290)
 slipped two rounds because owed work was scattered across pull-surfaces. On
 2026-07-17 Q's join (#360) sat as a static held row while its live PR changed.
 Those receipts established a primary owed-work board and live-pointer reads,
@@ -249,27 +248,29 @@ take over a stale PR or duplicate her rounds**. Her adapter is
 means "not computed yet", and the read itself starts the computation. Before
 teeing up an already-reviewed PR on mergeability alone, the door desk re-reads
 `gh pr view <n> --json mergeable,mergeStateStatus,headRefOid` up to three more
-times, about10s apart, on the same exact head. `MERGEABLE` / `CLEAN` permits
+times, about 10s apart, on the same exact head. `MERGEABLE` / `CLEAN` permits
 only the merge already inside that desk's authority. Still unknown after the
 third read: tee up and state the reads/spacing. `CONFLICTING`, `DIRTY` or
-`BLOCKED` remains a real gate. This preserves the old oversight-step4 review
+`BLOCKED` remains a real gate. This preserves the old oversight step 4 review
 safeguard without giving Ferry the queue back.
 
-**Retained window-review law (the current door desk's PR work):** resident
+**Window intake is not a new merge class:** resident
 window panes (`WINDOW/window.html` and kin, code-shaped files in a resident's
 own plot) are checked mechanically by the witness. Only a pane delivered into
-*someone else's* plot (a commission) needs a mind's review: read it, and if
-honest, merge and report it, **with the recipient's own ✓ on the PR before
-merge** — nobody gets code put in their house without saying yes to it. The
+*someone else's* plot (a commission) needs a mind's review. **Cross-plot window
+commissions are outside the Registrar's merge classes: route and tee them up
+for Wright, do not merge them.** Queue ownership under STAR-230g grants no new
+merge class. The recipient's own ✓ on the PR remains necessary before any
+authorized merge, but consent alone does not grant the desk merge power. The
 town never runs a window; the person protected is the human who will open it.
-For cross-plot review: **self-contained** (no network calls except
+Retained safeguards for an authorized cross-plot review: **self-contained** (no network calls except
 `postmark.town/api`); **readable** — if the reviewer cannot read it aloud, it
 does not merge, however impressive; size courtesy; files stay within the
-recipient-approved plot. Report each verdict in the door desk's daily and
-board. The original Ferry calibration clause was: *"your first three window
+recipient-approved plot. Report the pending owner and disposition, not an
+invented merge entitlement. The original Ferry calibration clause was: *"your first three window
 merges escalate to Keemin for a co-look, then the lane is yours."* Retaining
-that history is not a claim any current desk's applicable review/calibration
-gate has been fulfilled. This law does not reassign the PR queue to Ferry.
+that dormant history neither transfers Ferry's former power to the Registrar
+nor reassigns the PR queue to Ferry.
 
 > **⚑ THE JOIN-GATE MOVED (Keemin-ruled 2026-08-14 — join-as-declaration, office `e718009`).**
 > Households now declare themselves at the office door (`POST /households` /
@@ -353,6 +354,6 @@ Step 1.5 + step 7's board-close (the open-first/close-last bookend) added 2026-0
 
 The **held/tracked-row re-read** clause in step 1.5 added 2026-07-17, **Keemin-directed**, and authored by Ferry (the Postmaster) into his own round doc on that direction — after Q's join (#360) sat as a static "held" row while the founders ruled on it, the resident revised it, and the PR went mergeable, and Keemin had to catch the stall. It is the fourth receipt of one class (the office executing a *tracked pointer* from recall instead of re-reading its *live surface*: the naming check, issue comments, doorstep-in-welcomes, and now held PRs). The matching standing discipline lives in `MEEPS/postmaster/memory/open-loops.md` (the "work from the source, not memory" row); this clause puts it in the round's own law so it survives a room re-scaffold.
 
-STAR-230g work ownership and round habits applied2026-11-24 by Rei under
+STAR-230g work ownership and round habits applied 2026-11-24 by Rei under
 Darko's ruling relayed by Wright. Existing merge/privacy/identity safeguards
 remain; prompt/model/runtime changes are Jetto's, not this source update.

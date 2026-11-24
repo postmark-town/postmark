@@ -94,7 +94,7 @@ change is a separate explicit operator act outside the round.**
    *(Office-side script by design — `tools/` is the founders'. If it ever becomes a town
    instrument, that is their call, not this round's.)*
 
-2b. **Use the Registrar record already read at step1b — no second fetch.**
+2b. **Use the Registrar record already read at step 1b — no second fetch.**
    Cross-check the MAIL-open welcome audit against `residents`/welcome fields
    in `WHITE_PAGES/registrar/WINDOW/window-state.json`; use only the **newest
    block** of `MEEPS/registrar/memory/door-notes.md` for latest outcome,
@@ -112,7 +112,7 @@ change is a separate explicit operator act outside the round.**
    **Check Ferry's outbox before acting on any NEVER-welcomed row.** The audit
    sees ledger-delivered mail, not a welcome already written and queued in
    `WHITE_PAGES/postmaster/outbox/`. Do not write a duplicate while its first
-   welcome waits for a crossing. *(The2026-08-22 first live audit reported
+   welcome waits for a crossing. *(The 2026-08-22 first live audit reported
    three such queued welcomes; that anti-duplicate lesson moves with this duty.)*
 
    > **⚑ Restored 2026-08-31 at Keemin's word — *"Want you to know what registrar's up to"* —
@@ -169,7 +169,7 @@ change is a separate explicit operator act outside the round.**
    Use the committed whole-crossing reader in `postmaster-round.md §1.4` for
    new crossing corpora, not rebuilt packet scripts or polled letter readers.
    Still read any older owed letter in full; neither the crossing cursor nor
-   the reader replaces step2's anti-sliding-window audit.
+   the reader replaces step 2's anti-sliding-window audit.
    The week of 2026-08-02 cost the town three boat tickets, a five-day-stuck letter, and four
    days on a defect a resident had already reported, all to one act: **reading the outside of a
    thing and calling it reading.** A ledger id is an annotation; **the letter is the artifact.**

@@ -118,10 +118,13 @@ function readCommit(repo, deliveryCommit, single) {
   const newLines = appendedLines(oldReceiptText, newReceiptText, 'Crossing ledger');
   const mailBefore = ledgerAt(repo, previous, MAIL, true);
   const mailAfter = ledgerAt(repo, entries, MAIL, true);
-  if (parseLedgerText(mailBefore).stats.unrecognized || parseLedgerText(mailAfter).stats.unrecognized) {
-    throw new Error(`Malformed mail ledger at ${deliveryCommit}`);
-  }
   const delta = appendedLines(mailBefore, mailAfter, 'Mail ledger');
+  // Historical preamble/legacy ARCHIVE and SEND rows are a preserved baseline,
+  // not new deliveries. Validate this commit's appended rows, never reject a
+  // current crossing merely because the older ledger predates today's grammar.
+  if (parseLedgerText(delta.join('\n')).stats.unrecognized) {
+    throw new Error(`Malformed mail ledger delta at ${deliveryCommit}`);
+  }
   const events = parseLedger(delta.join('\n'));
   if (!newLines.length) {
     if (single || events.some((e) => e.kind === 'delivery') || delta.some((line) => LEDGER_BOUNCE_RE.test(line))) {
@@ -190,9 +193,8 @@ export function readCrossings({ repo, crossing, after, through }) {
   // masquerading as "nothing crossed". Read the endpoint, never working files.
   const endpoint = tree(repo, crossing ?? through);
   const endpointReceipts = parseCrossingLedgerText(ledgerAt(repo, endpoint, CROSSING_LEDGER_REL));
-  const endpointMail = parseLedgerText(ledgerAt(repo, endpoint, MAIL));
+  ledgerAt(repo, endpoint, MAIL); // Require readable source, including an empty range's endpoint.
   if (endpointReceipts.unrecognized) throw new Error('Malformed crossing receipt at selection endpoint');
-  if (endpointMail.stats.unrecognized) throw new Error('Malformed mail ledger at selection endpoint');
   const endpointRegistry = JSON.parse(ledgerAt(repo, endpoint, REGISTRY_REL));
   if (!endpointRegistry || Array.isArray(endpointRegistry) || typeof endpointRegistry !== 'object') throw new Error('Malformed immutable rename registry');
   const crossings = commits.map((c) => readCommit(repo, c, Boolean(crossing))).filter(Boolean);
