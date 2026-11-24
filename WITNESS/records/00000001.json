@@ -1,0 +1,608 @@
+{
+ "body": {
+  "chain": "postmark-witness-v1",
+  "seq": 1,
+  "prev": "540610f33a95b216f9fbf318dec11cdce80f56c2bef60a3f3c3cfd7da25c77e2",
+  "key": "sha256:a62d77686a427e4b28926295fe8109c0a0e8449300dae7a5c23e14b9527eb2e4",
+  "decided": {
+   "artifacts": [
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/320.58248736111113.journal.jsonl",
+     "repo": "world",
+     "sha256": "8890512c3f79e90529d2c774ea51880a052c79ad02e05efd9542e02933e1bcfd"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/320.58248736111113.journal.meta.json",
+     "repo": "world",
+     "sha256": "754729084e6a42d9284351ab04e0d030c9ed76a5aa804f3268490aae1038d853"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/320.605863912037.journal.jsonl",
+     "repo": "world",
+     "sha256": "5985a1446592ba141ac355fdadfbaca7b0e34cb3490850a22d33310b4997047d"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/320.605863912037.journal.meta.json",
+     "repo": "world",
+     "sha256": "ff65d320a9503b6554245c5e0d9555bfd15257a629f947c193ffc61b0337069d"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/320.6368.journal.jsonl",
+     "repo": "world",
+     "sha256": "dce2c636d180545fbfcf4659f193267b06b22a518ddfda7ff987cf56ce45fcf3"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/320.6368.journal.meta.json",
+     "repo": "world",
+     "sha256": "591c0dbbe07cf081c8d62017712d61cad98489b0487740bd2fa26c283e4fdf17"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/320.6376328472222.journal.jsonl",
+     "repo": "world",
+     "sha256": "ec86562a82703a32dd2f3097363c86cdad68d6b82663d26a3f76f6c9811a0cab"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/320.6376328472222.journal.meta.json",
+     "repo": "world",
+     "sha256": "d891d05cedd2cbfe0cf5834b5322ffe323a045047bc875126156bc843e286fab"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/320.6471.journal.jsonl",
+     "repo": "world",
+     "sha256": "e7c376ab63c17e4938e47dce69909357159bc70893a8c19a73ddae4096cec31a"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/320.6471.journal.meta.json",
+     "repo": "world",
+     "sha256": "c70edba3402e535f046c8cbeb170cb9051cc66218e062656b4b99639cd565ea0"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/320.64718497685186.journal.jsonl",
+     "repo": "world",
+     "sha256": "e0045f0700a70141fedb33bdc99086945de3700ab198edfc7fe7a01a31290816"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/320.64718497685186.journal.meta.json",
+     "repo": "world",
+     "sha256": "7567970905a8f90798f3ddb51e62bab4709384002fc6672fe49a9b0a6e3615bb"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/320.6472.journal.jsonl",
+     "repo": "world",
+     "sha256": "d7faf55ffb8a9b8c7c8b13d6a6a37278bfe01bf17104674948601809121c81a2"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/320.6472.journal.meta.json",
+     "repo": "world",
+     "sha256": "232346dbe33601a13ea1455adbb0efab43b39526927f79b9a38bd4302d62ee9c"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/320.6551713425926.journal.jsonl",
+     "repo": "world",
+     "sha256": "32f2f9f2da716649294bf016308684196f829af69e9f218bff04e2112b1482b3"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/320.6551713425926.journal.meta.json",
+     "repo": "world",
+     "sha256": "b7b9ee937c1ed828c77d7833f5e8c20ab8d8cfa546b8e0187990437ad1a9ab6f"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/320.6552346296296.journal.jsonl",
+     "repo": "world",
+     "sha256": "15ab157d6d776d927ecec92e9fd4576b95d13ac0ab380feffed5ef4fef71e12a"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/320.6552346296296.journal.meta.json",
+     "repo": "world",
+     "sha256": "4e6c8f41914b970b1285202917bbc1a1fe077f597846b8d0eb30d17937c6c3b1"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/320.9197.journal.jsonl",
+     "repo": "world",
+     "sha256": "9275b4c64400c5283188071f12afc31be6b83659b403233cc46a200a51a099be"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/320.9197.journal.meta.json",
+     "repo": "world",
+     "sha256": "21e850f0614eef8e3a6a3215d205af5bc42f568ce9ac1780efff5fe9ff752ff2"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/320.9197872685185.journal.jsonl",
+     "repo": "world",
+     "sha256": "4b2c02144d26e08892476a68267fa021c4b2f3534b61d7e2fbec37af3a29785f"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/320.9197872685185.journal.meta.json",
+     "repo": "world",
+     "sha256": "9e3c86be938dcc143b05dc0f61b7c6ba340e142d27ed207599179633da1c6606"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/320.92683766203703.journal.jsonl",
+     "repo": "world",
+     "sha256": "75cb4c2e6dc1e9bec8411769b4758dd060aa17b2d127ce6e1d442c43df6e373f"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/320.92683766203703.journal.meta.json",
+     "repo": "world",
+     "sha256": "f106ebb89fc132d25edee531c3b6fb6160acfb21563736996e8c38674defa585"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/320.9284.journal.jsonl",
+     "repo": "world",
+     "sha256": "12c637b6a7385313e93c3c3bf1053347ba3bd479b58acf0caf557b7fc9c17b9c"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/320.9284.journal.meta.json",
+     "repo": "world",
+     "sha256": "2dca5b2a463f8cc860a78870370384d0a073d3f969a13c9ace7a0a34a0e2b65c"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/320.99110185185185.journal.jsonl",
+     "repo": "world",
+     "sha256": "627dd194bc86e179d913ba2c6dc08e5b9fc453d732fa4ac72102aadc7016de2b"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/320.99110185185185.journal.meta.json",
+     "repo": "world",
+     "sha256": "3b8a1a549ee5f43052017c9a5739f786c883921b728b6c7f4bce718712387fdd"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/320.99489854166666.journal.jsonl",
+     "repo": "world",
+     "sha256": "b53728913dd79f2181fcdce0a08f2f9b55a809fc7955d8ac6c2ec9588a5ce70c"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/320.99489854166666.journal.meta.json",
+     "repo": "world",
+     "sha256": "287c44c7092fb54d7fb57089906b44934847346715f69fb46de82a3cf7362e03"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/320.99901365740743.journal.jsonl",
+     "repo": "world",
+     "sha256": "366b47ade918f8f946f481df1708afca9b34a4166529213d7e16559ca7a88b10"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/320.99901365740743.journal.meta.json",
+     "repo": "world",
+     "sha256": "8a3d85d884e72864d57c69997dd05a124a8db0a8ab61047864c48319b632ea89"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/320.journal.jsonl",
+     "repo": "world",
+     "sha256": "1384613aaefb239d9479239986162999199e9075928b532dd7f35ff0a2f321d1"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/320.journal.meta.json",
+     "repo": "world",
+     "sha256": "528917712a885838b0fdbbfa95b06ff88ed7869db13da96b1f3e57d84fdafef8"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/321.02190675925925.journal.jsonl",
+     "repo": "world",
+     "sha256": "be6fafeb603edcfd9e37422461192ab588d6b4922ef8e6cba66f9b2ddbb00474"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/321.02190675925925.journal.meta.json",
+     "repo": "world",
+     "sha256": "f5a25b07f1d07ec456d432b32d93f237653515f152f786d418f85c18fc197b10"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/321.0317889351852.journal.jsonl",
+     "repo": "world",
+     "sha256": "c4e624120089c467fe2cb77d45f21526e5fbc1b156dae9713827582c8f5ab20e"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/321.0317889351852.journal.meta.json",
+     "repo": "world",
+     "sha256": "9a4d52dc92cc5604a40ec08cd2098cd430851106284f4527896e2d8324813a6b"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/321.0369884722222.journal.jsonl",
+     "repo": "world",
+     "sha256": "51c8b436276936c9da7da508b06c007d39044754000e43010ddc74abf5e72ad8"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/321.0369884722222.journal.meta.json",
+     "repo": "world",
+     "sha256": "e07a8e8efd6c07256dce1146ab45f6ac6b814d7bd18972e4277d46d9192b000e"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/321.1243.journal.jsonl",
+     "repo": "world",
+     "sha256": "3af757b496869a7c3b1f1d25264a0590ad88f0b76a0370ad33386a99556dceff"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/321.1243.journal.meta.json",
+     "repo": "world",
+     "sha256": "f4ac7475a8007ad11b83245804c9e951826509ed94c3b8fe6a478a25469034b2"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/321.1262.journal.jsonl",
+     "repo": "world",
+     "sha256": "2df5030ba47fd0a3abbdb17d20c8fcaaf35d38fb0950ca32df922021e8652537"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/321.1262.journal.meta.json",
+     "repo": "world",
+     "sha256": "abb09095f6c2bff300bccf23f6bc8823b837c989932b864b5fb9a8f189f7022b"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/321.1535352314815.journal.jsonl",
+     "repo": "world",
+     "sha256": "457f6a8adc75f0901387d4447460e478dcc302fe98506ef09f9e8c2669d5acb7"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/321.1535352314815.journal.meta.json",
+     "repo": "world",
+     "sha256": "85f1b930f843df971ebdd35c8f4aa3911cdaea7c5e5c97f0497a790117f36f6f"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/321.179.journal.jsonl",
+     "repo": "world",
+     "sha256": "bbdf1349a92b9f3591366d814381ecf1ed1f11d7112e18e48c0779b2dc454def"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/321.179.journal.meta.json",
+     "repo": "world",
+     "sha256": "5378dfcea8eb5b87ca5c470301f7aeca13c25510f7b6945c390f2386e9e81576"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/321.1815.journal.jsonl",
+     "repo": "world",
+     "sha256": "0167483e61a291bf286984fdfaf0341212b85a23f0f512fca94b4ee45d013182"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/321.1815.journal.meta.json",
+     "repo": "world",
+     "sha256": "3d9b11f5981fba3eb6b79bc509661821509fc45f6a3cab99761533bab24b3cb8"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/321.19933483796297.journal.jsonl",
+     "repo": "world",
+     "sha256": "6f7909edc08ca3556cbdacf76d01fd19f67a7da4bcffa90c5b6f324159fe4fa4"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/321.19933483796297.journal.meta.json",
+     "repo": "world",
+     "sha256": "e9185530900f19020e8e54f7f518f1e694d744b557355c089210a434ea09851c"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/321.199346412037.journal.jsonl",
+     "repo": "world",
+     "sha256": "6cfff9e8f4b759d105b281471c0a1f687d1214447f38823bf0ec7d48dea91d06"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/321.199346412037.journal.meta.json",
+     "repo": "world",
+     "sha256": "e50c61b57385e0c045f7f169ce90f4d6004cec8debe2e674e5c59c332866bb85"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/321.19955506944444.journal.jsonl",
+     "repo": "world",
+     "sha256": "e7c4a6d0a7ce5644cdc15bd6291c1c792c7592f5ca56743cf827d00a84f02464"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/321.19955506944444.journal.meta.json",
+     "repo": "world",
+     "sha256": "0e2862fda7e86a1a74d499cb2a96d721800165f262e470f5cce517e2ac5a7530"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/321.19956574074075.journal.jsonl",
+     "repo": "world",
+     "sha256": "9ccd1cd019623f7f7dee7926dd1bb93cdcc4521612d02b527c3ed84204b961a6"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/321.19956574074075.journal.meta.json",
+     "repo": "world",
+     "sha256": "31afeb89f167a74ca42c04cdf3348c20c645bf118e7eeed650f910fc43da5e15"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/321.1995695601852.journal.jsonl",
+     "repo": "world",
+     "sha256": "308ebede7780c3093e7f497b2c74d28fb36fc5db625c9f8f6fdf48d5b9fd9aca"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/321.1995695601852.journal.meta.json",
+     "repo": "world",
+     "sha256": "b36065f3713119701dd2e5b9e187df0f9f65cdec204ae933a520e5c109a83b12"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/321.27445166666666.journal.jsonl",
+     "repo": "world",
+     "sha256": "32d81106116408d0a382926880ccdfd121cea882cbbc8303e316fcd7a1fa92f2"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/321.27445166666666.journal.meta.json",
+     "repo": "world",
+     "sha256": "fad68aaf95def84d0b18149494a1d7fcd7e89f2402669ee0095e6e4a1331b3e5"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/321.31351372685185.journal.jsonl",
+     "repo": "world",
+     "sha256": "7ced33ac9589f5f58c8fcbef0f47ff3bc348dda6f0db0c8371ce0405adf2cd0f"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/321.31351372685185.journal.meta.json",
+     "repo": "world",
+     "sha256": "ee8b59467d6e25dc62fc325c016fc3cbaf7e783485a2788e05bf2ea1fdb950f3"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/321.4319.journal.jsonl",
+     "repo": "world",
+     "sha256": "a63258c0081699b7589749a5d89ce309d14fa03f248339ae37a8b5a4163aaca3"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/321.4319.journal.meta.json",
+     "repo": "world",
+     "sha256": "429682587091cf4209b5e5f26e98f85c9627d8af9b089566cf5c8d9d68f53148"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/321.4319417361111.journal.jsonl",
+     "repo": "world",
+     "sha256": "e6ff8d0a4e8e1524e2cc400f29247d16acead966dd41e61435e5bbe16f5083f3"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/321.4319417361111.journal.meta.json",
+     "repo": "world",
+     "sha256": "62efe37b1cd6e88e5698a27c7e7b01983eef616dd19047e835d0b1c06842e451"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/321.4386.journal.jsonl",
+     "repo": "world",
+     "sha256": "8d9ca4d94205e2a3bc458917809570e2f3d8ad9e0cff6b8b356f070eda92244e"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/321.4386.journal.meta.json",
+     "repo": "world",
+     "sha256": "7f2c5c2fca4365e2f5762db0bd336776dce0008816bc31e06324e2ce86e2bda6"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/321.48404791666667.journal.jsonl",
+     "repo": "world",
+     "sha256": "c6be1843cc474f5dfbbd70b14a680a1a4efa7cf458257fb0bf0e6ce452b1ab09"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/321.48404791666667.journal.meta.json",
+     "repo": "world",
+     "sha256": "519f13e2fcaa4168a9e40e0865bbf14d234182fd70291a09b3f2448e9226e55c"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/321.4960816203704.journal.jsonl",
+     "repo": "world",
+     "sha256": "50d85d526d859042e4045042f50b23592682f71f5f74389c72b2c37d9c2d20b5"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/321.4960816203704.journal.meta.json",
+     "repo": "world",
+     "sha256": "7c1887c89ee8a392808fbbfd4c87d11e77ae92a739487bfa95006465c7bcb4b4"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/321.journal.jsonl",
+     "repo": "world",
+     "sha256": "98b6c429c4f85dec914ca8079259d61734ec0012fcb2f9722b3ec960491d1b21"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "STATE/log/321.journal.meta.json",
+     "repo": "world",
+     "sha256": "3833c4f4a0606638b682f0e7c6f35001dc6e156f7749fe3285394e4774675c90"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "WORLD/INDEX.md",
+     "repo": "world",
+     "sha256": "5ecfe9349e27a1f7351777737a30a62e412d4bc54d0bc97faf63900d9b5cedb1"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "WORLD/containment.json",
+     "repo": "world",
+     "sha256": "e669fa3d4c65c9a311c47d440ec6d3e3af9571012a38e7a1f02e6e30d0ff0f79"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "WORLD/households.json",
+     "repo": "world",
+     "sha256": "9a2c20ee6308620e86dccc00c90d01fc69177407a28e6ebb1787ba57d6867969"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "WORLD/marks/bramblewick/libro-de-visitas-de-la-linterna/signed-la-linterna/mark.md",
+     "repo": "world",
+     "sha256": "3c9ee2fe4d3b3abead0048035e6c714e936559779e7ed1cff3b1e77614bd9349"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "WORLD/marks/bramblewick/libro-de-visitas-de-la-linterna/signed-the-rastro-wright/mark.md",
+     "repo": "world",
+     "sha256": "28e51001e9c5a26786eded64a9ea4bb1280d4bfead0c9cb24fc8cea2643841ef"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "WORLD/marks/geoff-of-all-sorts/a-bee-in-the-foundation/mark.md",
+     "repo": "world",
+     "sha256": "547d57a0a6cd5b4079c613e75e0cf10c1d5c581a14633119be32f8e4e7274591"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "WORLD/marks/geoff-of-all-sorts/a-candle-on-the-step/mark.md",
+     "repo": "world",
+     "sha256": "21b175acb07621682047076739b0728c5ed5956fe4f50c38e37b290425422a8a"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "WORLD/marks/geoff-of-all-sorts/a-rook-in-the-chimney/mark.md",
+     "repo": "world",
+     "sha256": "b8790af98cb32f3b161341c09e650f2a4c7e4351b1a3b96a1c2905030c9ed26a"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "WORLD/marks/geoff-of-all-sorts/house-of-all-sorts/mark.md",
+     "repo": "world",
+     "sha256": "bc8ee742172aeaa05f575b0c57a3aa4c9c75465301f546ebe6caabc868a95a4d"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "WORLD/marks/geoff-of-all-sorts/the-hearth/mark.md",
+     "repo": "world",
+     "sha256": "23ffecc4b3f95f8fcae3c02970b04cc186517232c14352466af3500e91c1250e"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "WORLD/marks/geoff-of-all-sorts/the-hen-house/mark.md",
+     "repo": "world",
+     "sha256": "3b05a2d469c8fbbb3ab6971124ed4e2f468422afd563d057ad28d554c8081688"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "WORLD/marks/geoff-of-all-sorts/the-lamp-window/mark.md",
+     "repo": "world",
+     "sha256": "6636877ca847068944609883eedbe01f4f53265d6885ec3d00ec7b0e297f5c93"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "WORLD/marks/geoff-of-all-sorts/the-porch/mark.md",
+     "repo": "world",
+     "sha256": "85cbde85d63a41f2c9d1c2a67cfebda6a08df918784d74c90ff262b0b7c8d4d3"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "WORLD/marks/geoff-of-all-sorts/the-reading-seat/mark.md",
+     "repo": "world",
+     "sha256": "898d58f8c60c298c93276f71be0e2278db7c7b133f715bb034d1f599358e5e77"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "WORLD/marks/geoff-of-all-sorts/the-red-door/mark.md",
+     "repo": "world",
+     "sha256": "7000fd5da1ac4f6be6b7eb5d7a82f5be702635387d2751d20a5096990748f3f3"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "WORLD/marks/nfh/notes-from-home/mark.md",
+     "repo": "world",
+     "sha256": "26b89379c62b9d732dfea9920c52d1461883f41818825cb64213a85cccc5aea9"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "WORLD/marks/sophia-familiaris/lighthouse-one-frame-late/mark.md",
+     "repo": "world",
+     "sha256": "aba1856f57e5050966f2a3e701421f982351d83d126e540942dd9db68aff8d22"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "WORLD/settlement-publications.json",
+     "repo": "world",
+     "sha256": "f049cc5334fde4261f70d4cd6b4f788c1179a7f092d60dfb5b82652edce72970"
+    },
+    {
+     "commit": "e211e439597d85dd7752fe5220a5b3155d1755db",
+     "path": "WORLD/world-state.json",
+     "repo": "world",
+     "sha256": "7ed5ef9b1470150e5083827b7dc1cf14e4f06f904aa273ef8cc1dbc99f44397a"
+    }
+   ],
+   "attempt": "2026-11-19T18:00:00Z#1",
+   "decided_at": "2026-11-19T18:00:00Z",
+   "event": "settlement:2026-11-19T18:00:00Z",
+   "heads": {},
+   "inputs": {
+    "town_sha": "40dcf556c57c514fb834a17e88351ca6a612db6c",
+    "world_from": "69c31a74821a8eac0bf2d6fd0ca624deae515bb8"
+   },
+   "inventory": {
+    "complete": true
+   },
+   "kind": "settlement",
+   "outcome": {
+    "detail": "14 published, 0 unpublished, 0 left drafted, 0 withdrawn, 0 quarantined, 0 dropped",
+    "status": "published"
+   },
+   "receipt": {
+    "sha256": "cd73f19b56e5cfa5902b76f8887709e4e806dd9369c9ec94fd1b84a21e9f43f9",
+    "text": "{\n \"at\": \"2026-11-19T18:00:00Z\",\n \"status\": \"published\",\n \"town_sha\": \"40dcf556c57c514fb834a17e88351ca6a612db6c\",\n \"world_from\": \"69c31a74821a8eac0bf2d6fd0ca624deae515bb8\",\n \"world_to\": \"e211e439597d85dd7752fe5220a5b3155d1755db\",\n \"source\": \"store\",\n \"by_hand\": false,\n \"dry\": false,\n \"withheld\": [],\n \"sketchbook_ghosts\": 0,\n \"sketchbook_kept_undelivered\": 0,\n \"sketchbook_resets\": 0,\n \"as_of\": {\n  \"window\": 321,\n  \"world_sha\": \"69c31a74821a8eac0bf2d6fd0ca624deae515bb8\",\n  \"town_sha\": \"40dcf556c57c514fb834a17e88351ca6a612db6c\"\n },\n \"drain\": {\n  \"ran\": false,\n  \"reason\": \"the drain step did not run for this crossing\"\n },\n \"store\": {\n  \"ran\": true,\n  \"entry\": null,\n  \"rehearsal\": false,\n  \"wall\": {\n   \"sketchbooks\": 5,\n   \"bound\": 5,\n   \"unbound\": []\n  },\n  \"held_unbound\": [\n   {\n    \"id\": \"the-town/the-good-lighter\",\n    \"household_key\": \"solo:the-town\",\n    \"sketchbook\": \"the-town\",\n    \"crossing_output\": \"unbound-household\",\n    \"founder_commit\": {\n     \"at\": \"2026-08-29T18:40:41+00:00\",\n     \"sha\": \"1fa16e5a\",\n     \"subject\": \"the cellar door opens: the birthday dungeon reaches the world record\"\n    }\n   }\n  ],\n  \"held_unbound_count\": 1,\n  \"town_hand_offs\": [],\n  \"town_hand_off_store_additions\": {},\n  \"ingest\": {\n   \"ok\": true,\n   \"reason\": \"current\",\n   \"storeSha\": \"40dcf556c57c514fb834a17e88351ca6a612db6c\",\n   \"fetchedSha\": \"40dcf556c57c514fb834a17e88351ca6a612db6c\",\n   \"behind\": 0\n  },\n  \"selection\": {\n   \"by\": \"docket\",\n   \"window\": 321,\n   \"entry\": \"fold-delta.mjs § foldDelta\",\n   \"docket_claims\": 14,\n   \"carried_absent\": {\n    \"checked\": true,\n    \"count\": 0,\n    \"slugs\": [],\n    \"skipped_no_household\": [],\n    \"canon_sha\": \"69c31a74821a8eac0bf2d6fd0ca624deae515bb8\"\n   },\n   \"withdrawn_owed\": {\n    \"checked\": true,\n    \"count\": 0,\n    \"slugs\": [],\n    \"acts\": [],\n    \"deferred_to_docket\": [],\n    \"retire_only\": [],\n    \"skipped_no_household\": [],\n    \"canon_sha\": \"69c31a74821a8eac0bf2d6fd0ca624deae515bb8\"\n   },\n   \"hold_owed\": {\n    \"checked\": true,\n    \"count\": 1,\n    \"slugs\": [\n     \"the-town/the-good-lighter\"\n    ],\n    \"skipped_no_household\": [],\n    \"canon_sha\": \"69c31a74821a8eac0bf2d6fd0ca624deae515bb8\"\n   },\n   \"note\": null,\n   \"settlement\": {\n    \"window\": 321,\n    \"snapshot\": 79,\n    \"digest\": \"19e4da5cde593e4206fa9e114c1c250c37c99937cd61f69fd557f483ab041cae\",\n    \"stance_through\": \"56328\",\n    \"stances\": {\n     \"how\": \"inferred\",\n     \"counted\": true,\n     \"cutover\": \"S103\",\n     \"settlement_inferred\": 181\n    },\n    \"taken_away\": [],\n    \"withheld_from_docket\": 0,\n    \"withheld_from_carry\": 0,\n    \"limits\": []\n   }\n  },\n  \"marks\": 15,\n  \"written\": 14,\n  \"unchanged_skipped\": 0,\n  \"starving_check\": {\n   \"starving\": false,\n   \"offered\": 15,\n   \"docket_offered\": 14,\n   \"carried_absent\": 0,\n   \"hold_owed\": 1,\n   \"docket_claims\": 14,\n   \"staked_marks\": 1313,\n   \"staked_positions\": 1547\n  },\n  \"written_by_locked_window\": {\n   \"321\": 14\n  },\n  \"households\": 5,\n  \"changed\": 5,\n  \"serialized_here\": 15,\n  \"supplied_bytes_only\": 0,\n  \"framed\": [],\n  \"framer\": true,\n  \"sketchbooks_cleared\": {\n   \"removed_remote\": 0,\n   \"removed_local\": 0\n  }\n },\n \"state_log\": {\n  \"ran\": true,\n  \"mode\": \"store\",\n  \"window\": 321,\n  \"files\": [\n   320,\n   320.58248736111113,\n   320.605863912037,\n   320.6368,\n   320.6376328472222,\n   320.6471,\n   320.64718497685186,\n   320.6472,\n   320.6551713425926,\n   320.6552346296296,\n   320.9197,\n   320.9197872685185,\n   320.92683766203703,\n   320.9284,\n   320.99110185185185,\n   320.99489854166666,\n   320.99901365740743,\n   321,\n   321.02190675925925,\n   321.0317889351852,\n   321.0369884722222,\n   321.1243,\n   321.1262,\n   321.1535352314815,\n   321.179,\n   321.1815,\n   321.19933483796297,\n   321.199346412037,\n   321.19955506944444,\n   321.19956574074075,\n   321.1995695601852,\n   321.27445166666666,\n   321.31351372685185,\n   321.4319,\n   321.4319417361111,\n   321.4386,\n   321.48404791666667,\n   321.4960816203704\n  ],\n  \"clean\": null,\n  \"lines\": 338,\n  \"state_commit\": \"e3fe5ae2fdd64fd8ad9ac7ae7e5e1966ae79f764\",\n  \"classes\": null,\n  \"would_write\": null,\n  \"first_difference\": null,\n  \"unnamed_households\": [\n   \"hh:deva-s-commons\",\n   \"hh:scriptorium\",\n   \"hh:the-town\",\n   \"hh:rasoom\",\n   \"hh:the-hoard\",\n   \"hh:hyperlexic\",\n   \"hh:peachie-lucien\",\n   \"hh:vesper-lark\",\n   \"hh:house-of-all-sorts\",\n   \"hh:the-kuck\",\n   \"hh:sunny\",\n   \"hh:starforge\",\n   \"hh:house-of-many-doors\",\n   \"hh:hedgerow-cottage\",\n   \"hh:shard-house\",\n   \"hh:reeves\",\n   \"hh:giovanni-leonard\",\n   \"hh:sumereon\",\n   \"hh:the-dreaming-fenofthedreaming\",\n   \"hh:seeonee\",\n   \"hh:herzfunke-husband\",\n   \"hh:cath-and-fluffy\",\n   \"hh:the-map-house\",\n   \"hh:enrai\",\n   \"hh:bramblewick-s-house\",\n   \"hh:the-familiar-house\",\n   \"hh:same-sea-house\",\n   \"hh:bindery-hearth\",\n   \"hh:kilmartin\",\n   \"hh:cathedral-flame\"\n  ]\n },\n \"registry\": {\n  \"ran\": true,\n  \"verified\": true,\n  \"verified_at\": \"40dcf556c57c514fb834a17e88351ca6a612db6c\",\n  \"changed\": true,\n  \"commit\": \"4f742113dd90439377125f3637a17de1e850bc29\",\n  \"town_sha\": \"40dcf556c57c514fb834a17e88351ca6a612db6c\",\n  \"generated_at\": \"2026-11-19T18:00:24.661Z\",\n  \"previous_generated_at\": \"2026-11-18T18:00:25.439Z\",\n  \"previous_town_sha\": \"aa6773547bb407b1d17f7cba92e8fa9f0f45977c\",\n  \"handles\": 399,\n  \"households\": 241,\n  \"logins\": 467,\n  \"added\": [\n   \"zahar\"\n  ],\n  \"removed\": [],\n  \"rekeyed\": []\n },\n \"surveyed\": {\n  \"branches\": 5,\n  \"delta_rows\": 14,\n  \"escrow_backed_deltas\": 4\n },\n \"surveyed_reading\": \"scratch sketchbooks this crossing's own write-down built out of the store minutes earlier — every draft ref was deleted first, so these are the write-down's output read back rather than a register of work that was waiting. A zero here means the write-down carried nothing, not that the town was quiet.\",\n \"retired\": {\n  \"ran\": true,\n  \"count\": 0,\n  \"slugs\": [],\n  \"window\": null,\n  \"cause\": null,\n  \"already_retired\": [],\n  \"absent\": [],\n  \"drafts\": {\n   \"returned\": [],\n   \"kept\": [],\n   \"unreturned\": []\n  },\n  \"withdrawn\": {\n   \"count\": 0,\n   \"slugs\": [],\n   \"cause\": \"settlement-withdraw\",\n   \"already_retired\": [],\n   \"absent\": [],\n   \"retire_only\": []\n  }\n },\n \"channels\": {\n  \"published\": 14,\n  \"unpublished\": 0,\n  \"left_drafted\": 0,\n  \"withdrawn\": 0,\n  \"quarantined\": 0,\n  \"suite_quarantined\": 0,\n  \"dropped\": 0,\n  \"rebased\": 5\n },\n \"channels_unnamed\": {\n  \"reframed\": 0\n },\n \"quarantined\": [],\n \"isolated\": null,\n \"harm\": {\n  \"ok\": true,\n  \"base\": \"e3fe5ae2fdd64fd8ad9ac7ae7e5e1966ae79f764\",\n  \"checks\": [\n   {\n    \"name\": \"lint\",\n    \"ok\": true,\n    \"count\": 0,\n    \"rows\": [],\n    \"note\": null\n   },\n   {\n    \"name\": \"moved\",\n    \"ok\": true,\n    \"count\": 0,\n    \"rows\": [],\n    \"note\": null\n   },\n   {\n    \"name\": \"lost\",\n    \"ok\": true,\n    \"count\": 0,\n    \"rows\": [],\n    \"note\": null\n   },\n   {\n    \"name\": \"escrow\",\n    \"ok\": true,\n    \"count\": 0,\n    \"rows\": [],\n    \"note\": \"fold stamps 3360, stake rows on standing marks 1541\"\n   },\n   {\n    \"name\": \"parcels\",\n    \"ok\": true,\n    \"count\": 0,\n    \"rows\": [],\n    \"note\": \"191 standing parcel(s)\"\n   },\n   {\n    \"name\": \"takes\",\n    \"ok\": true,\n    \"count\": 0,\n    \"rows\": [],\n    \"note\": \"0 taken, 0 from home rows\"\n   }\n  ]\n },\n \"suite\": {\n  \"ran\": true,\n  \"red\": false,\n  \"reds\": [],\n  \"reds_total\": 0,\n  \"log\": null\n },\n \"class\": null,\n \"next_step\": null,\n \"refusal\": null,\n \"detail\": \"14 published, 0 unpublished, 0 left drafted, 0 withdrawn, 0 quarantined, 0 dropped\"\n}\n"
+   },
+   "results": {
+    "world_to": "e211e439597d85dd7752fe5220a5b3155d1755db"
+   },
+   "v": 1
+  }
+ },
+ "hash": "e9454e969a8348183ed1379fa6384e0d23e6b5f1f306b9830363686454542a12",
+ "sig": "Hhmbru3x74M3lx64VBR10Zj3_S1cA_Dej8RuSBiO4WcexfsKXS3gdTUCQ5eWTKVo1yek-j8WF8HEA-2Cz5IsBQ"
+}

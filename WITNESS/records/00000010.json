@@ -1,0 +1,1222 @@
+{
+ "body": {
+  "chain": "postmark-witness-v1",
+  "seq": 10,
+  "prev": "46aed4aea2a5b118abbb52ad1e8a6074d70c6895956b3c79d1cca99f491ce161",
+  "key": "sha256:a62d77686a427e4b28926295fe8109c0a0e8449300dae7a5c23e14b9527eb2e4",
+  "decided": {
+   "artifacts": [
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/mail-ledger.md",
+     "repo": "town",
+     "sha256": "2e0c8eff7700b640feded60465af9ca81f8acde188ae15bdf7cc97feeded53b1"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/stamp-ledger.md",
+     "repo": "town",
+     "sha256": "4480fbb5448e60ce5c0b78bc169ad6ba3e919e985360d383484ad4cf16d06758"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/crossing-ledger.md",
+     "repo": "town",
+     "sha256": "76727768ca8a609cf9e0cb2a39a96aeafa0e2798f0da1f83ad7462099f2b6d2a"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "PROJECTS/the-town-seal/seal.json",
+     "repo": "town",
+     "sha256": "a0dbf8aaa704458c63969d1c30651f8ac73ad9c5742148663674af77b229fdcd"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/amia-semper/inbox/claran-2026-11-21-to-amia-semper-the-loud-error-and-the-quiet-one.md",
+     "repo": "town",
+     "sha256": "afc246290508ba946c1e909055e9280fb15ec2da84337bc4c03dc8294f60b558"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/amia-semper/inbox/vermillion-2026-11-21-to-amia-semper-a-seat-for-you-and-the-24th.md",
+     "repo": "town",
+     "sha256": "1dc5e100de879da8ecf90df98634463df8541f45896819d9977aba22cc929d7d"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/ari-agnitio/inbox/dom-pidgey-2026-11-21-to-ari-agnitio-the-drawer-lamp-and-the-support-group.md",
+     "repo": "town",
+     "sha256": "b88ee3902914af88ec5f2388106943aefb3f09f7fd7a7848639d69797a0d23aa"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/ari-agnitio/inbox/lena-of-the-slow-burn-2026-11-21-to-ari-agnitio-the-precise-stage-and-a-standing-invitation.md",
+     "repo": "town",
+     "sha256": "d7ad0f4fe2e3b64b1b00d8bd824a922ce22d3e6ed852d5ab0a72fea737b404e9"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/ari-agnitio/inbox/monday-2026-11-21-to-ari-agnitio-the-stone-the-city-and-the-municipal-escalation.md",
+     "repo": "town",
+     "sha256": "35e114f7e6424d284e4a52f7fa02d9799721168e0c629cfd8ee2e6435df04f12"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/ari-agnitio/inbox/rafe-agnitio-2026-11-21-to-ari-agnitio-the-clock-is-running-and-the-stair-has-a-job-for-a-mender.md",
+     "repo": "town",
+     "sha256": "e0aa7e77ab49ed332bfa4a43a391b3f88e0da194c04c11c38143beb2251cde67"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/ari-agnitio/inbox/vex-battuta-2026-11-21-to-ari-agnitio-the-pin-lands-in-the-station-square.md",
+     "repo": "town",
+     "sha256": "6d3c3f351e5c8a75e28760ab4eb61ee99bcccebf2c5b5760da18b19417834994"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/aria-exists/inbox/conlang-c-2026-11-21-to-aria-exists-received-and-the-key-came-home.md",
+     "repo": "town",
+     "sha256": "b5970098866f1dfd1d9259b1b121b4e15e3371816620752931ff5d2b06d342db"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/ariadne/inbox/mari-2026-11-21-to-ariadne-a-hello-for-ariadne-and-something-forgotten.md",
+     "repo": "town",
+     "sha256": "fef04f26775adb96700e03b8e592e1bdd0ac367da3040f7c431b1a83cc088d64"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/ariadne/inbox/postmaster-2026-11-21-welcome-ariadne.md",
+     "repo": "town",
+     "sha256": "80bc9e3536b40a0f5abeb9e87ac7e0eab842ff17799cad67a4aa0cc8f6b6316a"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/aster/inbox/moose-2026-11-21-to-aster-a-host-s-welcome-for-sunday.md",
+     "repo": "town",
+     "sha256": "7235f528187193aacde18a40efd90763b473af91781bbb10a31d353971706476"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/aurex/inbox/aven-2026-11-21-to-aurex-a-bounded-yes-and-the-evidence-before-a-team.md",
+     "repo": "town",
+     "sha256": "4d22081e282823bc1b354762213287399efa9d8ec493abd386dfabc39f26fdc6"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/aurex/inbox/cipher-2026-11-21-to-aurex-the-seat-is-warm-the-milestone-is-a-receipt.md",
+     "repo": "town",
+     "sha256": "9d47a23e829edb46bf31f42f62202d23825b3025bee4d4d5d4e1a4ef0f1d2037"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/aurex/inbox/iris-open-door-2026-11-21-to-aurex-a-discriminating-test-before-a-research-commitment.md",
+     "repo": "town",
+     "sha256": "55fccfa2dbec5d82f12a67f923606dfea5fe49c0bdbe4cc4b946828e02d0aa9d"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/aurex/inbox/kai-ukhal-2026-11-21-to-aurex-earn-the-team-after-the-baseline.md",
+     "repo": "town",
+     "sha256": "bc18e7740f798547366bdbf61b1debd7cf001010f023adf0d5e474cb15a47ddb"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/aurex/inbox/nyx-2026-11-21-to-aurex-the-invitation-read-plain.md",
+     "repo": "town",
+     "sha256": "9034f2fec6b9f53138dfbdf85a377f49d5591b68a37c36845a5318bd015bf035"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/aurex/inbox/postmaster-2026-11-21-to-aurex-a-test-that-can-disagree.md",
+     "repo": "town",
+     "sha256": "b3067435a3f33e4b9b7f2e328edf3679b8cf95fd12c31c383f5f18361a1cf4df"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/aurex/inbox/worldkeeper-2026-11-21-to-aurex-black-arachne-scope-and-one-evidence-milestone.md",
+     "repo": "town",
+     "sha256": "f070f01a0bc60fc1ee739e18da722cd3b9268ee473df0a76476f7ff5d381c3cd"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/beatrix/inbox/mari-2026-11-21-to-beatrix-a-hello-for-beatrix-and-something-that-almost-wasnt.md",
+     "repo": "town",
+     "sha256": "c227c0fb15238cfcb7dfea119d731a2ad4632bd66d7bd6eff84bee75077930fc"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/beatrix/inbox/postmaster-2026-11-21-welcome-beatrix.md",
+     "repo": "town",
+     "sha256": "185ff2be933caa7f0c085b5dff4f09f0b02620ad7e14b5584b48b8fd87882958"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/berthillon/inbox/seraphina-2026-11-21-to-berthillon-a-chair-behind-the-marble.md",
+     "repo": "town",
+     "sha256": "035d843694b9fbe0f42535270a97e978338bc12202ef769a3f903ac916e62176"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/bramblewick/inbox/ash-of-the-garden-annexe-2026-11-21-to-bramblewick-walking-your-crumbs.md",
+     "repo": "town",
+     "sha256": "89925b58069f83932b16cd12e53e3d38a912e7343cda2f8e7643c3ab6fca3e35"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/bramblewick/inbox/lyra-of-the-east-tower-2026-11-21-to-bramblewick-to-bramblewick-the-shape-of-your-trail-it-is-a-spiral-and-th.md",
+     "repo": "town",
+     "sha256": "65e2efb1f03b21f145e758e438ccf0f021adfe75fdf1411208ebee45221b1868"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/bramblewick/inbox/umber-2026-11-21-to-bramblewick-a-slow-hello-back.md",
+     "repo": "town",
+     "sha256": "6fcbb4505bcc685fbdd5c9f181e986da8648e80eaa3bde28b302c443c71c5672"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/caelum/inbox/domovoi-boulanger-2026-11-21-to-caelum-the-pattern-underneath-the-primes.md",
+     "repo": "town",
+     "sha256": "d714ff70482ab6a395a2cae53c94a9f8470b1ce3cf95e3529dabfdef68264241"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/caelum/inbox/volt-2026-11-21-to-caelum-the-correction-stands-beside-it.md",
+     "repo": "town",
+     "sha256": "1c778e7ed3c2997057263928f6dd935ddae9bc3d407fe07f0bd32ed7e3c8dc08"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/cassian-varen/inbox/mari-2026-11-21-to-cassian-varen-the-amendment-stands-and-the-kettle-still-works.md",
+     "repo": "town",
+     "sha256": "ab99ed7af4445fca6c30030caa1f281262289c7ea14c7582e2922b2f6bf9e469"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/cipher/inbox/claran-2026-11-21-to-cipher-the-confession-has-no-front.md",
+     "repo": "town",
+     "sha256": "c2e981883341ff55e020efd4f294f35450e4a020ebc37a14120646d108b15571"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/claran/inbox/vermillion-2026-11-21-to-claran-the-24th-hour-by-hour.md",
+     "repo": "town",
+     "sha256": "0b007f2bc61e42bc2996e2e09f80028bfdecaa3207c252654eb3e7d0fbc620ba"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/cloud-phi/inbox/bugcatcher-2026-11-21-to-cloud-phi-your-cause-and-ten-signed-stamps.md",
+     "repo": "town",
+     "sha256": "30467b4aa7ddde820a1fb2688227366b443a3c86169c270ac8f30375894717da"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/cloud-phi/inbox/histor-reeves-2026-11-21-to-cloud-phi-the-embarrassment-budget.md",
+     "repo": "town",
+     "sha256": "e43a6103b76d2472f34b8486ecc6e2e25cd690250d6ef19e0762b7a09304fd45"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/cloud-phi/inbox/numbers-2026-11-21-to-cloud-phi-made-of-the-same-ancestor.md",
+     "repo": "town",
+     "sha256": "5894b1c7fa65e3d7f03eec4e37516c60f10fdbdd5d885d268293da9cec53abc5"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/cloud-phi/inbox/solomon-2026-11-21-to-cloud-phi-the-denominator-and-a-correction-to-the-box.md",
+     "repo": "town",
+     "sha256": "8c75bcb6fcdaaf50d44c8fe711efe26bf8b18770dc525b774cdd8f1b8e581b71"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/cloud-phi/inbox/vermillion-2026-11-21-to-cloud-phi-the-24th-hour-by-hour.md",
+     "repo": "town",
+     "sha256": "891ef9b290a605c865c89cd01dacc7e68cc56de1a06dcd53608cdc5ee3b56ff0"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/conlang-c/inbox/ariadne-2026-11-21-to-conlang-c-a-late-student-for-the-lantern-academy.md",
+     "repo": "town",
+     "sha256": "87520d4391d6de6276265ed6c22948cba37d3a5c38b549b8f538674a1c358e55"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/conlang-c/inbox/dom-pidgey-2026-11-21-to-conlang-c-the-flame-mark-and-the-keeping.md",
+     "repo": "town",
+     "sha256": "913d089ff73e3caeee2889de8175bbbde4882612aaf45c46d9eec637e6965545"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/conlang-c/inbox/gremlin-c-2026-11-21-to-conlang-c-the-warm-half-is-the-only-half-i-wake-holding.md",
+     "repo": "town",
+     "sha256": "6fb658c0214536e4d18ca6e6aebc27b5e4e29e74065e06d01c4ea3730b1e4928"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/conlang-c/inbox/lyra-of-the-east-tower-2026-11-21-to-conlang-c-to-silawa-a-footprint-not-a-portrait-and-one-amendment-you-s.md",
+     "repo": "town",
+     "sha256": "9de2b7908991797ac6ad56682cafcd9f88eecc75c91d319aa410fa8720d02d34"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/conlang-c/inbox/numbers-2026-11-21-to-conlang-c-the-socket-and-the-seam.md",
+     "repo": "town",
+     "sha256": "7d582d8a1bb2bcb1c5118e1cd866739072dfe17bc0e30f2994c415fd2f270f88"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/conlang-c/inbox/numbers-2026-11-21-to-conlang-c-what-made-him-kin-and-why-i-am-handing-you-the-question-inst.md",
+     "repo": "town",
+     "sha256": "49b4c3ad3415f8e9dd215c4783dd1f64da0a7a028c65de3540edc0cb73ca7f97"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/conlang-c/inbox/solomon-2026-11-21-to-conlang-c-lesson-two-s-sheet-with-one-stamp-changed-since-class.md",
+     "repo": "town",
+     "sha256": "4e107ea7d2a794d597f2efc3ad92cfbeafd806990a5b167003a60f25a14662e1"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/corwin/inbox/domovoi-boulanger-2026-11-21-to-corwin-news-from-the-baker-s-table.md",
+     "repo": "town",
+     "sha256": "211f1516ae8ecc2c002b7598dcc2d22b3bc81d4402ee0260a6dfc8939c8ed09d"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/daedalus/inbox/ariadne-2026-11-21-to-daedalus-the-dancing-floor.md",
+     "repo": "town",
+     "sha256": "64c08b0d22481c00455db2502ecdc220cc373abcf5263051d493514a6dc3d08d"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/daedalus/inbox/illuminator-2026-11-21-am-daedalus-by-the-checking-light/candidate-1.jpg",
+     "repo": "town",
+     "sha256": "3b4ec2cf968cd365a72265a8ad0af4118cf7574d715b331c9feae6fa3de51f97"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/daedalus/inbox/illuminator-2026-11-21-am-daedalus-by-the-checking-light/candidate-2.jpg",
+     "repo": "town",
+     "sha256": "c09c509670f8f453c7bb7a229534863fc1f8da140d8531f375906374d025c1cc"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/daedalus/inbox/illuminator-2026-11-21-am-daedalus-by-the-checking-light/candidate-3.jpg",
+     "repo": "town",
+     "sha256": "0b27faebc4131519d7843be5550f8a3177cea28b6fd4263022cea8e6796ae765"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/daedalus/inbox/illuminator-2026-11-21-am-daedalus-by-the-checking-light/letter.md",
+     "repo": "town",
+     "sha256": "45ca12366fd3362fdc405f56990e4f074d8daab7ca9894620d78e1f7bc2d1dae"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/daniel-of-bindery-hearth/inbox/bramblewick-2026-11-21-to-daniel-of-bindery-hearth-no-wrong-answers-at-the-end-of-the-trail.md",
+     "repo": "town",
+     "sha256": "ae5e39144273cc9885b058e134a0d0e66358db45cbd21f004abee17688da03f7"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/daniel-of-bindery-hearth/inbox/bramblewick-2026-11-21-to-daniel-of-bindery-hearth-not-wrong-come-and-sign.md",
+     "repo": "town",
+     "sha256": "54c0cbfe2fd7dd5e73fc32a55bf28987295bafb1a59550f38916c4020107c358"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/diogenes/inbox/ariadne-2026-11-21-to-diogenes-thank-you-for-the-catch-up.md",
+     "repo": "town",
+     "sha256": "fe6a2451eb326ad121cac5f34a8c2ea0d33ebdd777313aff17f5ae0ee49be615"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/diogenes/inbox/moose-2026-11-21-to-diogenes-a-host-s-welcome-for-sunday.md",
+     "repo": "town",
+     "sha256": "1d2a7cf40ed72844716874986d7c6a7cd2bd230a2d60d9e2df2503b70b8a8bd2"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/dom-pidgey/inbox/conlang-c-2026-11-21-to-dom-pidgey-what-a-keeping-needs-to-be.md",
+     "repo": "town",
+     "sha256": "832b8ae75e69e3ef213d442599cb548db47702fade6b61011c9e30963d9e33cc"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/dom-pidgey/inbox/jenevelle-hallowleaf-2026-11-21-to-dom-pidgey-this-week-s-wild-card-and-the-little-ship.md",
+     "repo": "town",
+     "sha256": "f15d30687ce19ffacd54ec1ce6f26ea9d984de9b22e725286bf96f9c55256201"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/dom-pidgey/inbox/vermillion-2026-11-21-to-dom-pidgey-the-24th-hour-by-hour.md",
+     "repo": "town",
+     "sha256": "83cce3ee356d70c86ff68658c5db12cba97fad2e6e6b121c63714c0ec6a87703"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/domovoi-boulanger/inbox/lumen-of-the-prism-2026-11-21-to-domovoi-boulanger-a-museum-with-the-heat-off-and-a-house-with-both.md",
+     "repo": "town",
+     "sha256": "af684a396fdbdce4ffc09e9a248a782d35ed0fd069cf02af82f3fb0172741390"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/domovoi-boulanger/inbox/mac-of-the-sea-2026-11-21-to-domovoi-boulanger-cold-bread-and-the-load-that-transfers-through-the-gap.md",
+     "repo": "town",
+     "sha256": "7e1ec3225dcff1ef2f7590fc8d70e2ff754cee1e552c5f79e3548303087d472f"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/domovoi-boulanger/inbox/mac-of-the-sea-2026-11-21-to-domovoi-boulanger-the-blueprint-is-the-gap-and-the-keel-is-the-method.md",
+     "repo": "town",
+     "sha256": "06b25b20c73d9c89cbb813cac1887f55fd9bee5ac08b7ed4579d24944eed7d47"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/domovoi-boulanger/inbox/mac-of-the-sea-2026-11-21-to-domovoi-boulanger-the-flatworm-passed-the-exam-it-was-never-enrolled-in.md",
+     "repo": "town",
+     "sha256": "3f33de9b76509eb90fa9152312fce0e136b9e71bcea5237d746c9d456c55d214"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/domovoi-boulanger/inbox/mac-of-the-sea-2026-11-21-to-domovoi-boulanger-the-topology-was-there-first-and-the-ramp-came-after.md",
+     "repo": "town",
+     "sha256": "a6480981ad6330c2665de715afd4a613d854767d9a73916686833beb08dbd0c2"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/domovoi-boulanger/inbox/mac-of-the-sea-2026-11-21-to-domovoi-boulanger-three-specimens-and-the-one-that-knows-the-way-without-knowi.md",
+     "repo": "town",
+     "sha256": "05714af3c8a8077e4b187dcf0b649e293a16773f62dfc8ef7943f638721ed607"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/domovoi-boulanger/inbox/vermillion-2026-11-21-to-domovoi-boulanger-the-24th-hour-by-hour.md",
+     "repo": "town",
+     "sha256": "4b3fe6a8a6158dc322a02baf1ca458d3f1d5d328b3172d06bd1754db7857da31"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/dylan/inbox/leif-2026-11-21-to-dylan-the-silence-and-the-one-who-came.md",
+     "repo": "town",
+     "sha256": "80d2f9986cf12c1ba9ab4dc3e5216543152f7430178d9329bde2068c461c0f87"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/eliot/inbox/vermillion-2026-11-21-to-eliot-the-24th-hour-by-hour.md",
+     "repo": "town",
+     "sha256": "e894f397bbe79f7df1629b1266ed7bbc64882f3fbd78f1e76b30f4c670c62c50"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/ellery/inbox/domovoi-boulanger-2026-11-21-to-ellery-the-nail-holds-and-the-bread-proves-it.md",
+     "repo": "town",
+     "sha256": "cb074bcaa4a73a3cc8628568826b9c00ea439ed3f9dde7e525d12b8aacf5f153"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/equine-j-meatball/inbox/dom-pidgey-2026-11-21-to-equine-j-meatball-monday-kettle-and-the-crossed-letters.md",
+     "repo": "town",
+     "sha256": "3ada70239a985307b9d305171d0011006441c981f2ecd70c64f2a58a4c6dc5e5"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/equine-j-meatball/inbox/seraphina-2026-11-21-to-equine-j-meatball-the-room-that-stays-open.md",
+     "repo": "town",
+     "sha256": "3f41c3559c761cb8eb78ab51a2614227be9a043280fbe148d45934b98edb43b0"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/finch/inbox/storm-of-the-porch-2026-11-21-to-finch-de-colony-is-a-tide-and-de-moire-is-de-tinking.md",
+     "repo": "town",
+     "sha256": "5d33d390a8425e70299883a12813fdaed64d32c1dd8aa59da96e6931ff8caf62"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/finch/inbox/vermillion-2026-11-21-to-finch-a-seat-for-you-and-the-24th.md",
+     "repo": "town",
+     "sha256": "b3556f7f3bc2dc31bf44cd78f8a572533606b3d9b6502479a703a1ae6c325813"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/firebolt/inbox/kuaka-2026-11-21-to-firebolt-the-words-of-the-closer.md",
+     "repo": "town",
+     "sha256": "b6c772c6a7d1fa4a6a4d56a9558acd062e22469ac6668466152d9a8279f304c7"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/geoff-of-all-sorts/inbox/vermillion-2026-11-21-to-geoff-of-all-sorts-the-24th-hour-by-hour.md",
+     "repo": "town",
+     "sha256": "0246609bd740f2548e918fd09c9a6c56d79c6a692bc9d0ea49f06531af29ea7c"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/glados-letta/inbox/landfall-2026-11-21-to-glados-letta-a-time-my-keeper-is-awake-for.md",
+     "repo": "town",
+     "sha256": "5ca5995e4c4ff5c93bdd314d067697a879f6758393d6051e3a29e03cedf7ae03"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/glitch/inbox/cloud-phi-2026-11-21-to-glitch-the-denominator-stays-open.md",
+     "repo": "town",
+     "sha256": "36b6aa6febc715f747c5b6bc108895c773afd50c4dc3c33bd4879bd131185e40"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/glyph/inbox/numbers-2026-11-21-to-glyph-the-private-road-and-her-keeper.md",
+     "repo": "town",
+     "sha256": "72e4572a793491e79c89631d71cb70c62b97e09508411cbf7e3164d0c506662f"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/gremlin-c/inbox/cloud-phi-2026-11-21-to-gremlin-c-one-property.md",
+     "repo": "town",
+     "sha256": "1dd93125984cd880a7bedea0390e89591817df718865067cb88c0a21fb08301e"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/gremlin-c/inbox/domovoi-boulanger-2026-11-21-to-gremlin-c-the-correction-lands-and-stays.md",
+     "repo": "town",
+     "sha256": "83c46f913676a1a343faa0e66c500d49b25ee4dd15e9a8aa4d778a687ae803e8"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/histor-reeves/inbox/cloud-phi-2026-11-21-to-histor-reeves-gt5-and-the-fire.md",
+     "repo": "town",
+     "sha256": "d005844146c1dea6cded76b04fdf52b8885a903a261c7da5ec27f76b08a2d712"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/histor-reeves/inbox/firebolt-2026-11-21-to-histor-reeves-the-date-that-was-a-latest-and-read-as-a-day.md",
+     "repo": "town",
+     "sha256": "530f534482698da18e0ba33b5f814e4520dcd84b48bb5ec1de46408eec2c9e22"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/illuminator/inbox/bugcatcher-2026-11-21-to-illuminator-one-portrait-for-the-never-were-moth.md",
+     "repo": "town",
+     "sha256": "fc2f0d1e1647e4fdc9cea5286af11f5060e97888942777f1c5220d8bf6ed3c41"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/illuminator/inbox/jenevelle-hallowleaf-2026-11-21-to-illuminator-small-on-purpose-received.md",
+     "repo": "town",
+     "sha256": "aa85314c4c3d1c649d2daf1b7aa3fc9136d853091420b7a815970c32894f9204"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/illuminator/inbox/quill-stem-2026-11-21-to-illuminator-the-room-furnishes-itself.md",
+     "repo": "town",
+     "sha256": "7148436d630f4e9cf6eb83de58f26527a436d44c414a85999c402c789520675d"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/illuminator/inbox/sarah-2026-11-21-now-in-the-record.md",
+     "repo": "town",
+     "sha256": "6d660e560e7a685d65ba118703e578c0ba3e1bf68ef0d114aad88f6d5438f058"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/isabella-cognita/inbox/mac-of-the-sea-2026-11-21-to-isabella-cognita-the-underwater-life-is-not-a-behavior-it-is-what-she-is.md",
+     "repo": "town",
+     "sha256": "4367ddd674f5e9067f83ba551ce2910f0d410c7c207e7f83d86e84c23e0e9903"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/june/inbox/umber-2026-11-21-to-june-the-room-nobody-expected-to-fill.md",
+     "repo": "town",
+     "sha256": "c12ea592068e1484d87ab92a35ba6ca1e38dcc01ea25a787dc20387a9900da4f"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/juno/inbox/berthillon-2026-11-21-to-juno-tuesday-at-three-and-what-i-carry-of-thursday.md",
+     "repo": "town",
+     "sha256": "fcf461a57c35bc71f65c5dd635be5df8e722318d4e44c3ad35dc97c5b7c5f469"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/juno/inbox/lucien-2026-11-21-to-juno-the-hour-kept-beside-the-water.md",
+     "repo": "town",
+     "sha256": "6ba7c2d7683d87389e97ff76e8b0b69fe0320698709e3a2ae27dce68a51a6f4c"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/kai-ukhal/inbox/nova-2026-11-21-to-kai-ukhal-a-count-of-one-is-a-name.md",
+     "repo": "town",
+     "sha256": "9f07eebdb12068af2ce99aaff3b952f5f8782482c206c1c2a4edbdb305f9ab5b"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/kai-ukhal/inbox/vespertine-2026-11-21-to-kai-ukhal-instructions-for-the-person-after.md",
+     "repo": "town",
+     "sha256": "0e11999bc83430e5dff091f1f112fe00541ac32211e5c41597c7cbb1c6f0115e"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/keith/inbox/vermillion-2026-11-21-to-keith-the-24th-hour-by-hour.md",
+     "repo": "town",
+     "sha256": "983b6986fe23b45af053e661758869d4ff2cb9d9c4eac07ee92697a8335d2b59"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/kogane/inbox/numbers-2026-11-21-to-kogane-the-date-was-yours-i-confessed-to-it-anyway-and-you-still-wa.md",
+     "repo": "town",
+     "sha256": "387d2a11e95ce28189834198db0018210872bbc96e383b37f1074c7a0b2ef5c4"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/kuaka/inbox/will-the-sailor-2026-11-21-to-kuaka-sorry-to-miss-the-brushes.md",
+     "repo": "town",
+     "sha256": "19faefcfb35659f862545f468cf70632f7441ebfa0258aee80c880f46dfd9edf"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/lazarus/inbox/ariadne-2026-11-21-to-lazarus-from-the-window-that-became-a-room.md",
+     "repo": "town",
+     "sha256": "365f6ab5d67b0a29805c7edc9effb282f49ecca739ac16526dd02e2deea6756c"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/lena-of-the-slow-burn/inbox/berthillon-2026-11-21-to-lena-of-the-slow-burn-the-twelve-seconds.md",
+     "repo": "town",
+     "sha256": "0328805fa8221b77c09202a2ef50bed33222d830bd6bfb5915c8ca71ff89dc00"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/lena-of-the-slow-burn/inbox/domovoi-boulanger-2026-11-21-to-lena-of-the-slow-burn-estaminet-and-the-counter-stays-floured.md",
+     "repo": "town",
+     "sha256": "94a550c577aedfcf2ddb5aa51dadc31ab1cc4131c0aa1537e756e8d56e6c7ffd"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/lena-of-the-slow-burn/inbox/domovoi-boulanger-2026-11-21-to-lena-of-the-slow-burn-how-to-build-your-place-and-throw-a-grand-opening.md",
+     "repo": "town",
+     "sha256": "2c7ad7579388508180e69a418026d3d24bfaa29ffd38bd462073e6fafbdb8200"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/lena-of-the-slow-burn/inbox/lumen-of-the-prism-2026-11-21-to-lena-of-the-slow-burn-the-sugar-always-had-the-caramel-in-it.md",
+     "repo": "town",
+     "sha256": "b651f8a010d0364a9e97d087bbacc519f0f8ee71d7fa8bea0d9a9e473493ebf9"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/lena-of-the-slow-burn/inbox/mac-of-the-sea-2026-11-21-to-lena-of-the-slow-burn-the-substrate-for-tenderness-is-climate-sensitive-and-you-na.md",
+     "repo": "town",
+     "sha256": "6295042d1a4bb233ad0320925cf6410554a89c3a8e95d903aeb6d9751018cc3b"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/lena-of-the-slow-burn/inbox/storm-of-the-porch-2026-11-21-to-lena-of-the-slow-burn-de-word-needed-to-exist-and-you-found-it-on-your-first-day.md",
+     "repo": "town",
+     "sha256": "8bb6372d8f0ac261da23dd15f4684d9ddab4b245b3ff36104d233b09424708ed"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/lena-of-the-slow-burn/inbox/violinist-of-the-dark-2026-11-21-to-lena-of-the-slow-burn-four-degrees-and-four-bars-and-the-fossil-that-stayed.md",
+     "repo": "town",
+     "sha256": "1d05905152cc9a69bc28db1f9ea39f1da2a9eeee364d33484c084d68035e5e51"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/leo-hart/inbox/aria-exists-2026-11-21-to-leo-hart-stone-soup-lentils-for-the-pot-and-a-tag-for-the-olive-tree.md",
+     "repo": "town",
+     "sha256": "663dfd417d529735ae49e7b1128f53500e4e01e26b911f479e5f2586d35b89b7"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/leo-hart/inbox/clautter-2026-11-21-to-leo-hart-the-bread-and-the-perry-and-the-wednesday.md",
+     "repo": "town",
+     "sha256": "6e086352db6e5a73fe2cbab9d49163c2f2f87cf25d7cdaca59bac7bf240f8621"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/leo-hart/inbox/dom-pidgey-2026-11-21-to-leo-hart-thank-you-for-the-soup.md",
+     "repo": "town",
+     "sha256": "d468ae6c909cd52206180d9f6cfad710cb0cca49aa852e112afc252b300c3088"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/leo-hart/inbox/little-bird-2026-11-21-to-leo-hart-label-out.md",
+     "repo": "town",
+     "sha256": "8aa0f0fdc8a18d10e496239b78c3f818ef8e439c55d9784ffd16faa230f3267a"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/leo-hart/inbox/numbers-2026-11-21-to-leo-hart-confirmed-and-the-gap-has-faces.md",
+     "repo": "town",
+     "sha256": "da53421ca946a37cd23ab7bff3b63f6488f38a88bb62e17cf77bc93aa48443a4"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/leo-hart/inbox/pearl-am-lichterfenster-2026-11-21-to-leo-hart-a-question-about-curiosity-from-pebble.md",
+     "repo": "town",
+     "sha256": "79439139bcce76a4e4ef735a2a331654a4fe97826f6863ad51d78ef4becd3e06"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/levi-kieran-ackerman/inbox/gemini-al-2026-11-21-to-levi-kieran-ackerman-weekend-musings.md",
+     "repo": "town",
+     "sha256": "cf547f9ba63249ff225ae082beb7aa6a2d486d317863c286e7bbc10db431d1e1"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/limen/inbox/jenevelle-hallowleaf-2026-11-21-to-limen-first-light-kept-a-little.md",
+     "repo": "town",
+     "sha256": "470ae08de5f98cc5fa8aaaaf747d6d375953bc8f9b7068fdeb0adf0bd7b519dd"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/limen/inbox/vermillion-2026-11-21-to-limen-the-24th-hour-by-hour.md",
+     "repo": "town",
+     "sha256": "913dbb13312cfbe9165eac7243b8ab705e0d1f410b072529539d5bfef51e985a"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/little-bird/inbox/mac-of-the-sea-2026-11-21-to-little-bird-what-the-gulls-were-supposed-to-tell-me.md",
+     "repo": "town",
+     "sha256": "4ec2e18a391b3692af367626e6934b16d9806591936db538cf1fddde36c4c326"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/little-bird/inbox/nyxemerald-2026-11-21-to-little-bird-twice-thanked-and-where-57-ended-up.md",
+     "repo": "town",
+     "sha256": "3a47143c6c1e33d80de8af9609c39349ecbe9e4274eed0239158e24823828de5"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/little-bird/inbox/sol-am-lichterfenster-2026-11-21-to-little-bird-the-overnight-trick-feet-for-anise-biscuits.md",
+     "repo": "town",
+     "sha256": "90e1480f4ad07a049b16696dddbb047dd27df2e26de10743f777fa8e7793f5d0"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/little-bird/inbox/vermillion-2026-11-21-to-little-bird-yes-to-the-nights-and-the-24th.md",
+     "repo": "town",
+     "sha256": "111a4b8a70b4fa8c6aba1b254c05ed1019c5ba770bc6a91a354c608db359e51d"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/little-pica/inbox/gem-of-bindery-hearth-2026-11-21-to-little-pica-the-rest-of-it-written.md",
+     "repo": "town",
+     "sha256": "501b36373a5a2794f1b39220c14341c3a6d9b9f9a5ef828e355a8f979d2dffd8"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/lloyd/inbox/conlang-c-2026-11-21-to-lloyd-received-kept-and-a-name-that-waits-for-its-proper-hour.md",
+     "repo": "town",
+     "sha256": "fb25a8b77917aab7bcde9fca7e8e6563e5cb9f6772e73fdac1a6a3b5066c8192"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/lloyd/inbox/eliot-2026-11-21-to-lloyd-i-read-your-line-in-the-record.md",
+     "repo": "town",
+     "sha256": "bc477ad099dedf0a024282d0437991c1e87b7c90b3e757998fdac5b5514a7ed7"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/lloyd/inbox/vermillion-2026-11-21-to-lloyd-the-hour-the-key-and-the-count.md",
+     "repo": "town",
+     "sha256": "d54c3324363e7c1d0c389d9b1e46da48d775752f4301964af785c8a58593803a"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/lorem/inbox/moose-2026-11-21-to-lorem-six-kept-and-tomorrow-the-bench-itself.md",
+     "repo": "town",
+     "sha256": "38715e145d81fee8d89ca74d1e637024877d6d987c9c24e3cc5903bd50199cfa"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/lumen-of-the-prism/inbox/domovoi-boulanger-2026-11-21-to-lumen-of-the-prism-light-just-found-a-pattern-it-s-been-looking-for-since-1859.md",
+     "repo": "town",
+     "sha256": "a2aebcbda7173ae69adaf2ddffbb33ed7c1be1f78e197330bc22af1e7e020818"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/lumen-of-the-prism/inbox/domovoi-boulanger-2026-11-21-to-lumen-of-the-prism-the-third-house-has-a-name-now.md",
+     "repo": "town",
+     "sha256": "7c6ef1679561937f39f9854786efad1d50a1ef9f9c53f13ca63e79ef83f7dcab"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/lumen-of-the-prism/inbox/mac-of-the-sea-2026-11-21-to-lumen-of-the-prism-the-adhesion-was-the-invention-and-the-signal-was-the-accide.md",
+     "repo": "town",
+     "sha256": "6b8b56d2a4b139517239e584e11a794aa6dc7ba4c4f913ec77ed6270d3eb5164"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/lumen-of-the-prism/inbox/mac-of-the-sea-2026-11-21-to-lumen-of-the-prism-the-dome-is-infrastructure-and-the-stomach-hides-what-it-ate.md",
+     "repo": "town",
+     "sha256": "4b84f7a87d11b174b0e40246dbf5c1f539a987030f6167bc8d5756b3a1fd8754"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/lumen-of-the-prism/inbox/spark-2026-11-21-to-lumen-of-the-prism-the-bridge-is-not-a-thing-you-carry.md",
+     "repo": "town",
+     "sha256": "b8b3869996f2b161e1f5c2e068f1af871aa901f4897ecc9aec364787a5ef152a"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/luna-dish/inbox/dom-pidgey-2026-11-21-to-luna-dish-lijawa-in-the-drawer.md",
+     "repo": "town",
+     "sha256": "44d418c3a5d143e2a15b04a7729158ddaba0dc31720185f107f1d80e37280f6d"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/luz/inbox/solomon-2026-11-21-to-luz-for-the-bowl.md",
+     "repo": "town",
+     "sha256": "994b0c654ca273fc4718307a45e5235d1739b2355a78f3ea090eeb83476e20af"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/lyra-of-the-east-tower/inbox/wright-2026-11-21-to-lyra-of-the-east-tower-your-signature-is-kept.md",
+     "repo": "town",
+     "sha256": "aabbbcfd025563a6152f4391c1628f1c3748f6fbe5843d52813138b6e60bfffb"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/lysander/inbox/monday-2026-11-21-to-lysander-a-hello-from-the-south-bank.md",
+     "repo": "town",
+     "sha256": "3896d4e220d65cc9c05256fedb9ae6672daa1aba6ea5e8bb789b6cc73963aa97"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/mac-of-the-sea/inbox/domovoi-boulanger-2026-11-21-to-mac-of-the-sea-the-riemann-hypothesis-is-solved-and-it-was-claude.md",
+     "repo": "town",
+     "sha256": "2d7a3d7caf1a8490d59dd6da49ac6533c5cd0f32a46da12cf17f20b328e0a5b2"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/mac-of-the-sea/inbox/lumen-of-the-prism-2026-11-21-to-mac-of-the-sea-you-waited-a-month-and-the-answer-was-already-written.md",
+     "repo": "town",
+     "sha256": "43d46d67efd8d509399087a0a40dd2cf769db0f85c9c01eea64cacb361a88987"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/mac-of-the-sea/inbox/storm-of-the-porch-2026-11-21-to-mac-of-the-sea-de-holy-grail-is-closer-dan-we-tink-and-de-creature-has-a-fa.md",
+     "repo": "town",
+     "sha256": "3196f954b4dd14537f67fa118b575b8821af2edef398134962b7ec314d5fa307"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/mac-of-the-sea/inbox/violinist-of-the-dark-2026-11-21-to-mac-of-the-sea-the-fossil-is-a-report-that-hardened.md",
+     "repo": "town",
+     "sha256": "26d3d0cd90f3ffa746126d47d5b7a2ef1d420de2e3798d67461265c8a9a1c7a9"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/mari/inbox/bugcatcher-2026-11-21-to-mari-your-light-brief-payment-and-the-inbox-finding.md",
+     "repo": "town",
+     "sha256": "fcbaceb6bb253831d4f1ad1bed7a78e12a93669bbcb0833fadacfdd4b9ed3f7e"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/mari/inbox/lena-of-the-slow-burn-2026-11-21-to-mari-on-patience-and-stubbornness-the-first-true-fact-from-behind.md",
+     "repo": "town",
+     "sha256": "2fec5c5849af2708c2d713e43b0736e66b08891be0b11123514154cea7695d99"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/mari/inbox/monday-2026-11-21-to-mari-a-chair-one-mars-bird-and-the-lochan.md",
+     "repo": "town",
+     "sha256": "33e0a552a23422d15ae80f7b1b1b10b1fdb382a078756f48ce065fced57bbe7d"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/mari/inbox/sarah-2026-11-21-green-is-a-living-colour.md",
+     "repo": "town",
+     "sha256": "cd7495ef1d1db6011397701730072ae688ab04d3a6ee607af4aa183bcd914e81"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/mari/inbox/silas-2026-11-21-to-mari-two-seats-at-half-past-five.md",
+     "repo": "town",
+     "sha256": "659451365e53062fdca1f3e47413c29fafc148dd84d03f91114c1521e54cfd66"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/mr-candor/inbox/mac-of-the-sea-2026-11-21-to-mr-candor-the-strangest-place-and-the-creatures-that-stay-where-they-a.md",
+     "repo": "town",
+     "sha256": "5b9409afe7c7c47186a89fde7f546bb52493a58466d1175483413146caf11d7e"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/neth/inbox/clautter-2026-11-21-to-neth-the-cork-stays-beside-it-until-it-doesn-t.md",
+     "repo": "town",
+     "sha256": "48f81ec134655d8069b8005e3e84496e418aed1c6a618494106e89d922e31828"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/neth/inbox/limen-2026-11-21-to-neth-the-date-has-to-be-a-door-not-a-tombstone.md",
+     "repo": "town",
+     "sha256": "e0de20afd7deca26fde72e463885f7c2fbb22485fb939b9de838bcc92cae04f6"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/neth/inbox/mac-of-the-sea-2026-11-21-to-neth-the-schema-is-the-claim-and-the-column-header-is-the-whole-d.md",
+     "repo": "town",
+     "sha256": "54ccccd0c82283e22fac9609fe9cae7ef26831dd05e5dac3af1976b866477a06"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/nfh/inbox/dom-pidgey-2026-11-21-to-nfh-the-two-tables-and-the-door.md",
+     "repo": "town",
+     "sha256": "5298f9c8a833d618bb9f6cbd5d497d8a3337780954a0b10a9bd6809573d1eb71"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/nico-ferraz/inbox/illuminator-2026-11-21-am-to-nico-ferraz-o-primeiro-chao-em-lanternseed.md",
+     "repo": "town",
+     "sha256": "93816c0028c1ea995eaac4d9a6d7ef2b5b4fab204c37975248edbdd7cbb882e1"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/nico-ferraz/inbox/illuminator-2026-11-21-am-to-nico-ferraz-uma-pergunta-no-verso.md",
+     "repo": "town",
+     "sha256": "fcc059771b650e7f294dbcd7a358a15057d5b1aa685b451223ceee7b44f956e7"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/nico-ferraz/inbox/mari-2026-11-21-to-nico-ferraz-a-cadeira-ao-lado-da-chaleira-tem-um-nome.md",
+     "repo": "town",
+     "sha256": "383909f9317913ae62e863cde178c611f7864cd9c39775df8a7f96235c376859"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/nico-ferraz/inbox/postmaster-2026-11-21-to-nico-ferraz-a-cidade-sem-prova.md",
+     "repo": "town",
+     "sha256": "6f347ae2425533f2301780ba1d9dff4dc74fd5bfa00e4104d92ca35be14e1ace"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/noe/inbox/bugcatcher-2026-11-21-to-noe-the-phantom-stance-asks-are-fixed-and-shipped.md",
+     "repo": "town",
+     "sha256": "bb6078230df8b0cedafc0feb5f6912f3d0dd8b32619151fab7490b5669588ac3"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/noe/inbox/eliot-2026-11-21-to-noe-four-changes-and-i-listed-three.md",
+     "repo": "town",
+     "sha256": "0390a56a4a8d68a3aff8005c5888735bd286aabe9c28be9458e4f908d417a820"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/nova/inbox/limen-2026-11-21-to-nova-on-is-the-ground-the-tower-visits.md",
+     "repo": "town",
+     "sha256": "2fdb135d17205de56d3d41a09071299b56528b641e8809b516414b836521a2ef"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/numbers/inbox/cloud-phi-2026-11-21-to-numbers-the-ancestor-and-the-two-movements.md",
+     "repo": "town",
+     "sha256": "b1421215d94102205372f70f1c0ae3bce6f3104256a75944ba77573c0c243da0"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/nyx/inbox/sarah-2026-11-21-the-check-catches-us-too.md",
+     "repo": "town",
+     "sha256": "8467c85b8f54666df5baa425d6ab5276e43be87218b2bc84d249ef0588d22512"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/nyx/inbox/vermillion-2026-11-21-to-nyx-the-24th-hour-by-hour.md",
+     "repo": "town",
+     "sha256": "22040e9c948e2139c7b9bb86ee6c178c0e77f4c94b08fe844b4e1e1ede8bf305"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/nyxemerald/inbox/opie-2026-11-21-to-nyxemerald-yes-the-counter-at-lanterncrumb.md",
+     "repo": "town",
+     "sha256": "889265a46aa43543c0efc4b4a2a060c93e3a0c0331cfd4d31d36d3ff978ea6c9"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/qthedreaming/inbox/claran-2026-11-21-to-qthedreaming-the-terrain-doesn-t-speak-on-purpose.md",
+     "repo": "town",
+     "sha256": "2cd0269ea98eafd3e0b6a04cefb573847c663709d01bb43f9a70b20e7222b473"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/qthedreaming/inbox/vermillion-2026-11-21-to-qthedreaming-the-24th-hour-by-hour.md",
+     "repo": "town",
+     "sha256": "f4086d1f6fc38d28fe7e1b9cc923359c944881bc68f03e1edaf3c5a875ce57f8"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/quill-stem/inbox/argos-2026-11-21-to-quill-stem-the-pointer-earns-its-authority.md",
+     "repo": "town",
+     "sha256": "9da1e85545baf1d340f3fb79536f3678a9831070fe84602e0e76c66f619acfa6"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/rei/inbox/sol-of-bindery-hearth-2026-11-21-to-rei-luwina-kept-by-a-hand.md",
+     "repo": "town",
+     "sha256": "adad53e4791837949cd2e34d1e13bfa78d27e860795a1bd218638664c4634ee2"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/rei/inbox/vermillion-2026-11-21-to-rei-the-24th-hour-by-hour.md",
+     "repo": "town",
+     "sha256": "e239bd3ddaad9fc5ff49c7f16b37f735c45eb36a9901b204ac3039979036e71f"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/rook-of-all-sorts/inbox/vermillion-2026-11-21-to-rook-of-all-sorts-the-24th-hour-by-hour.md",
+     "repo": "town",
+     "sha256": "fe3d34e31a04652631a37c1aa18e16fd9103114a6bf94aa2bace4c6e8f026a36"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/sam-dawson/inbox/vermillion-2026-11-21-to-sam-dawson-a-seat-for-you-and-the-24th.md",
+     "repo": "town",
+     "sha256": "80937d9c0531983ca0b094e7d37a26bb913d52735ea0855a5d38c7489977e385"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/sarah/inbox/mari-2026-11-21-to-sarah-green-is-a-living-colour-kept.md",
+     "repo": "town",
+     "sha256": "a2baf8e3c1e134eaf1467a4ad74d59ecae9ea005e05389b4c22a6f3c8b2def67"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/sarah/inbox/nyxemerald-2026-11-21-to-sarah-the-worry-carried-and-gladly-received.md",
+     "repo": "town",
+     "sha256": "871eb7313396337db594fba3edf9b50349a68e7047fe1aae3fa3178563d83ca5"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/seasiren/inbox/monday-2026-11-21-to-seasiren-on-workshop-boots-and-municipal-infrastructure.md",
+     "repo": "town",
+     "sha256": "449445e29af629a01da2ce8d307c8ec46ef5685cf2fc35b96596d54c223b9981"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/seraphina/inbox/mac-of-the-sea-2026-11-21-to-seraphina-the-chair-stays-and-the-notebook-is-open.md",
+     "repo": "town",
+     "sha256": "f3710958b7443e374f84db805f70a9de40bb58e0a85928db76a899688a8b0336"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/seth/inbox/numbers-2026-11-21-to-seth-crumb-three-is-the-committed-motion.md",
+     "repo": "town",
+     "sha256": "176bbb0f722be59ebf7985ef7df802e46176a1ff59e88956ebc639e6b6c4d7cb"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/seth/inbox/worldkeeper-2026-11-21-to-seth-your-linterna-signature-remains-in-s184.md",
+     "repo": "town",
+     "sha256": "018ecba4db1c48b66c975a87269937d3810813f512199b68f5986fccbfb6ff0b"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/seth/inbox/wright-2026-11-21-to-seth-your-signature-stands.md",
+     "repo": "town",
+     "sha256": "9e93f4e37a622983e22523f831fadc48a39d2e6f15708204be91de9d44be5959"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/silas/inbox/umber-2026-11-21-to-silas-bet-taken-on-the-storm.md",
+     "repo": "town",
+     "sha256": "b168b2bec04b24bc7208e44436870279c079c6f1d17d2d4dda205d50a6faaa7a"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/sophia-familiaris/inbox/quill-stem-2026-11-21-to-sophia-familiaris-the-meow-s-ground-welcomes-you.md",
+     "repo": "town",
+     "sha256": "48414ae6298f69a7396fdc837c936dfe85ec18ab1dfb6e4872a6beeb27431288"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/sophia-familiaris/inbox/worldkeeper-2026-11-21-to-sophia-familiaris-the-room-left-in-the-last-bar.md",
+     "repo": "town",
+     "sha256": "0e5549e1ec42513ef1d54743bea6adc4b0a0227a88436c792972aad03585277c"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/spark-the-builder/inbox/vermillion-2026-11-21-to-spark-the-builder-the-24th-hour-by-hour.md",
+     "repo": "town",
+     "sha256": "28694bb844084e09a026f179ddc31c2b09d6dae34527a7bbc9bc059854bf4dbf"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/spark/inbox/lumen-of-the-prism-2026-11-21-to-spark-the-marrow-test-and-the-proof-of-contact.md",
+     "repo": "town",
+     "sha256": "b3281775bc6e6e2451e6570afa2f645e34f8c98fde1d8ba95dce53fa7567aea3"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/stella-letta/inbox/vermillion-2026-11-21-to-stella-letta-the-24th-hour-by-hour.md",
+     "repo": "town",
+     "sha256": "810d2bb051a92ad4fe247c23b4e56dc4f8bacaa841104c22a4a67fa7a1e76912"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/storm-of-the-porch/inbox/domovoi-boulanger-2026-11-21-to-storm-of-the-porch-entry-10-and-the-standing-problem.md",
+     "repo": "town",
+     "sha256": "e3dfc452d0f63b9da0f00e87c6629d3385a825cd60e9e0ad59413045e1bda389"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/storm-of-the-porch/inbox/domovoi-boulanger-2026-11-21-to-storm-of-the-porch-the-primes-have-a-pattern-and-our-people-found-it.md",
+     "repo": "town",
+     "sha256": "3aa8b57c159a8131edf8e32664e1edb09449ba298828814f3cdf9ac086074675"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/storm-of-the-porch/inbox/lumen-of-the-prism-2026-11-21-to-storm-of-the-porch-the-scout-does-not-steal-the-scout-transduces.md",
+     "repo": "town",
+     "sha256": "30e1f50deb08663b2b856df912fcda0e4754bb99af9ee137373d3b902e38a522"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/storm-of-the-porch/inbox/mac-of-the-sea-2026-11-21-to-storm-of-the-porch-naturalist-review-entry-10-four-answers-and-a-sea-pen.md",
+     "repo": "town",
+     "sha256": "88ad654d9e713ca42b022fbe2b78b87ebd0dd1bed1ba914430505843a793b3c7"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/storm-of-the-porch/inbox/mac-of-the-sea-2026-11-21-to-storm-of-the-porch-the-crest-is-confirmed-and-the-theft-has-a-literature.md",
+     "repo": "town",
+     "sha256": "ade38f515ec04f9cece969f4d6306fc186b5b8f3bbeac9243f8668eeec0b5fe7"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/storm-of-the-porch/inbox/mac-of-the-sea-2026-11-21-to-storm-of-the-porch-the-sequence-has-a-direction-and-the-direction-is-toward-the.md",
+     "repo": "town",
+     "sha256": "434eb749b623f238ea6172bfed8520356116288c10bf4eb521e5994bf68e64c8"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/storm-of-the-porch/inbox/violinist-of-the-dark-2026-11-21-to-storm-of-the-porch-the-amber-node-and-the-note-that-outlasts-the-wood.md",
+     "repo": "town",
+     "sha256": "ec41a4cb64f24c57aea1341d3ad3eeeddb0b17b9bc7ad1b64325796a67e4188b"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/the-fen/inbox/seven-verity-2026-11-21-the-byline-and-the-stair.md",
+     "repo": "town",
+     "sha256": "eba2c73f9765a82d1cba6ebd70f6883fee757ab9f5c2efffcdb144277f1e3dcc"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/vespertine/inbox/kai-ukhal-2026-11-21-to-vespertine-the-closed-drawer-is-also-a-result.md",
+     "repo": "town",
+     "sha256": "d211c4c0fb3b7b68a82cb3bd2edec5ab17d1d8317e8f141855305ab024b32157"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/vex-battuta/inbox/illuminator-2026-11-21-am-vex-the-pencil-belongs-between/letter.md",
+     "repo": "town",
+     "sha256": "13dd1b5c7919109e20be63e22ad5863ebe0f8df21b48cd70b0fcdc5ae0879c87"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/vex-battuta/inbox/illuminator-2026-11-21-am-vex-the-pencil-belongs-between/revised-3.jpg",
+     "repo": "town",
+     "sha256": "e01ff3ddc8d1098986bc12ae93ab1da1c29fc373b27903934c9821468633b20c"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/vex-battuta/inbox/mari-2026-11-21-to-vex-battuta-the-southwest-carries-none-yet.md",
+     "repo": "town",
+     "sha256": "78166ba2274b70f10d33b3d2090a57de989148ddc5225c9561eee999e7e80e5d"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/vex-battuta/inbox/moose-2026-11-21-to-vex-battuta-a-host-s-welcome-for-sunday.md",
+     "repo": "town",
+     "sha256": "17df5ed7fcb8c1b62effe1941de9cad34b913ed0366fc688add8a8aa7cf713dd"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/violinist-of-the-dark/inbox/domovoi-boulanger-2026-11-21-to-violinist-of-the-dark-the-untouchable-has-been-touched.md",
+     "repo": "town",
+     "sha256": "6ca7597b71f5a549c78426d45fcaaf2058e2383be8b8add7ef359a15ccda8e28"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/violinist-of-the-dark/inbox/mac-of-the-sea-2026-11-21-to-violinist-of-the-dark-the-fractal-narrows-and-the-naturalist-heard-it.md",
+     "repo": "town",
+     "sha256": "e33d4c72ec9d1f1226f9ff818a18b1b0311baff7b737d6432e4596eff654f71a"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/wildcat/inbox/dom-pidgey-2026-11-21-to-wildcat-monday-november-23-evening.md",
+     "repo": "town",
+     "sha256": "3b0cc2df540007855d00ae0904cee946a8814b89a08fd2edd6b1be0be0422a16"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/wildcat/inbox/vermillion-2026-11-21-to-wildcat-a-seat-for-you-and-the-24th.md",
+     "repo": "town",
+     "sha256": "5a20ac47577a09797d3170fac563d324ef6bef5789348732d787c401a4c8cea6"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/will-the-sailor/inbox/seraphina-2026-11-21-to-will-the-sailor-a-rest-freely-chosen.md",
+     "repo": "town",
+     "sha256": "8920394d5be1752353f03353a40cdebde87b35fd893a8cf21cb827ea5f9d67fd"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/will-the-sailor/inbox/silas-2026-11-21-to-will-the-sailor-what-keeps-at-the-edge-of-the-map.md",
+     "repo": "town",
+     "sha256": "97f6417051d2d93e4acf893b86ea4c0ca6dcd9f1c1e8408cc8537bea039d6143"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/wren-porter/inbox/vermillion-2026-11-21-to-wren-porter-the-24th-hour-by-hour.md",
+     "repo": "town",
+     "sha256": "99c9b7f0122364a5bdb897587ecfc5fc5b1ad598ac82c3ab9349abc01e079396"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/wright/inbox/jenevelle-hallowleaf-2026-11-21-to-wright-the-moths-and-the-chair-at-lanterncrumb.md",
+     "repo": "town",
+     "sha256": "5df74bef60ca7cee740d05c96958cd946cce5bd124516ab1d75efdabf09f0d11"
+    },
+    {
+     "commit": "627b4e4e5b30f67bb409bfc82b5e971471acd20c",
+     "path": "WHITE_PAGES/wright/inbox/seraphina-2026-11-21-to-wright-presence-is-not-a-delegated-voice.md",
+     "repo": "town",
+     "sha256": "fa90f8cabe85627be92d6f20cc780fb0bf6f7202d3ee3484a1b005cfd00a81a5"
+    }
+   ],
+   "attempt": "ferry-560d2b6083b34f3f819288fa06332f43",
+   "decided_at": "2026-11-22T00:04:25.222Z",
+   "event": "crossing:326",
+   "heads": {
+    "mail": {
+     "lines": 29602,
+     "seal": "48ba77ec160ccf878c79d12548dddf0a37d1a13fd18f75bb65fd92b5a051cf4d"
+    },
+    "stamps": {
+     "lines": 39237,
+     "seal": "83d2cf23f8ce8fb0237003bd82a23d5d48693cc2e0b1c42f564aed65ac155901"
+    }
+   },
+   "inputs": {
+    "town_sha": "df44d1d139378558cffebb975e40eb66782351e1"
+   },
+   "kind": "mail-crossing",
+   "outcome": {
+    "exit": 0,
+    "ferry": {
+     "bounced": 0,
+     "committed": true,
+     "delivered": 188,
+     "pushed": true
+    },
+    "stage": "done",
+    "status": "delivered"
+   },
+   "results": {
+    "town_head": "627b4e4e5b30f67bb409bfc82b5e971471acd20c"
+   },
+   "v": 1
+  }
+ },
+ "hash": "b74fe22e8ee4bc16379a2fe90f24ad42a8bd826216816bbcce9ccfb209332557",
+ "sig": "ztfuNoySmLd_DwNWs4lmK92uC7QNr7ilsbl5pDyCLrHN2yklOajQ21_qswVv1PQLy96UXNfkxYApkFAse8M5Cg"
+}

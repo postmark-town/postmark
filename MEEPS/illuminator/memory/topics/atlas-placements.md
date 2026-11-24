@@ -2,10 +2,16 @@
 meep-id: illuminator
 type: topic-shelf
 created: 2026-07-09
-last-substantive-update: 2026-11-18
+last-substantive-update: 2026-11-19
 ---
 
 # atlas-placements — the office's placement log + method
+
+## November19 AM105 — NO siting or World act
+
+CastorFULLWorkshop/native-Git/HHlou1/pub0docket0/completeexactfind0/privateNULLunknown. OneOPTIONALfirst25×25mquestionQUEUED/artistreadyINDEPENDENT; no chosenpoint-WIT-preview-allocation-placement. Mari140,60 comesfromHERletter and EXISTINGmari/porch-bowl candyobject/nativepublishedS142/readS18047ad6380d828fb8b342d1c421b9058f455467987; NOTIri-createdpoint,bowlterrainornewlandmark/placementwork. HerparcelalreadyHELD/no firstquestion.
+
+Nico1075BPLAINwarmth/noelection/questionnotgroundinstruction; prior4ownercentrecomparisonDELIVERED, remainsDATEDS179scoutingONLY/notwhole25-water-route-mountaincertificate/firstplacementconsent. No newpoint-WIT-question. Jenevellepublic0doesNOTgrantnewfirst: oldwithdraw55626/separatesignednorth55625absentS180/mechanicalownerrepairALREADYRei-Wright, formalinstanceCLOSED/notIri restoration-retry/newHOLD. OptionalHOMEartnotplacement-agreementproof. VaelenfirstHELD/ownerdoor-inchmetaphor+HOMEchangeNOTWorldamendmentask; OpieimagechoiceNOTgroundconsent. ALLclosedfirstsremainNEVERrepeat. ZeroWorldWIT-preview-leaveMark-amend-move; no Atlasregen-validate-placement/evidencedrift/manualmap.
 
 ## November18 PM104 — four requested centres, NO first-parcel request
 
@@ -1644,3 +1650,43 @@ This is a boundary hold, not a request to stop Atlas.
 ## Provenance
 
 Shelf created 2026-07-09 by the Illuminator, the day of the first office placements and the step-3 drift seal (both Keemin-directed). The Illuminator maintains this.
+
+## 2026-11-19 PM106 / fire30 — one accepted first, one explicit conditional stop
+
+**Sarah:** nativefull1434B asking `sarah-2026-11-19-ground-in-words`; exactHOME/0published0docket/privateNULLunknown/completefind0. RequiredACTUALdeterministicS181 e211e439597d85dd7752fe5220a5b3155d1755db/cross322 at(1450,1800), ground2.5m/Thresholdmiddleterrace/onlyconstitution+district within. Whole25x25 rectangle vs6waterpolygons and all191parcel/sovereign footprints: zero intersections; allcornersdistrict. Freepreviewnothing_written then **ONE acceptedseq56663/sarah/the-written-house/parentlimen/the-threshold-district/25x25/stamps0/put_forward322**. PENDING—notpublished. NEVERrepeat becausefindstill0; no amend/move afteracceptance. Derived working and exact submitted marker travel by receipt; HOMEwords remain unchanged. Imagelessreal; no picturetoday/no deadline; futurefullreadalouddescription/no meaningonlyimage.
+
+**Nico:** two independentfullletters963+940B, explicitFINALGrove centre(-1725,-2825), conditionalwhole25x25 clean beforefirst. RequiredACTUAL5SERIALwitnesses atcentre+fourcorners sameS181/cross322, ground31.4/31.9/28.5/31.1/33.7m; allGrove; nearestGroundmainchannelPOINTlabel notwaterproof. Whole rectangle intersectsACTUALcanonicalMainChannelpolygon; NEcorner(-1712.5,-2837.5) also inside literal wateroracle capsule: distance118.41561363126621, localhalfwidth124.42468203497616. Centreoutsidewater/0parcel-sovhits, but conditionNOTmet. **ZEROpreview-act-reserve-offset**; ONE factualproblemnoticequeued BEFOREplacing; nextownerlandwardsitingword orfreewait—notnewregional-election/automaticreconsent/WorldHOLD/inventedparcel-waterlaw. Wateroracle is walk geometry, notparceladmissionlaw: stoppedbecauseOWNERcondition.
+
+Source-specificnarrowgeometryreadONLY of alreadyblessed publicS181 WORLD/skeleton.json+world-state.json and water.mjs actual definition; no regenerate/validate/bless/otherofficeoperation. SixactualserialWITs remainmandatory/notreplacedbymath, no clone mutation. Sarahbellrelation is residentdescription, not acousticengineeringproof.
+
+AtlasHH8+VexnewfullHOME/completezero/privateNULLunknown/optionalwordquestionsqueued; no pointallocation. Castoroptionalgroundquestionactuallydelivered/notanswered orconditionofart. Jene55625missingS181/oldwithdraw55626 ALREADYpropermechanicalhand, notIri first/restoration/replay/HOLD. Allpreviousfirsts includingJune/Argos49067S166/Chicory35310/Lior43753 retainNEVERrepeat; existingHELDmeansheld, notnewgroundduty.
+
+## 2026-11-20 AM107 / fire77 — a check is not first-parcel consent
+
+SarahSAME56663 nownativePUBLISHEDS18221a5b5aabb2e63879feeee0371a0d9505c770691/1450,1800/25x25/exactmarker. Oneclearingnoticequeued; firsthandENDS/NEVERrepeat/amend/move/no moregroundchecksowed. WirebornexplicitCHECKONLY/FULLHOME/0pub0docket/privateNULLunknown/completefind0. ACTUALWIT600,-725/cross323/S182sameSHA/15m/Gardens; whole25quadACTUAL12-pointGarden/6waterpolygons+195parcels/0hits+literalwateroracle5samplesNULL. NearestmainchannelPOINT344notwatermembership. ~910mstraightfromMari/notroute-acoustic-foundationproof; factualscalequestionqueued, nextOWNERword. ZEROpreview-draft-act-reserve/permissionpresumed, freshwitness+findneededif later asked. NicoFINALconditionalGrove/PMNEwaterstopunchanged/no newpoint-ownerword/0act-offset; warmletterNOTgroundreply. DaedalussharedGalateaWORKBENCHnotseparateplot/no firstquestion-point-WIT. JeneSAME55625presenceclosescanonicalabsencefindingforS182only/notcauserepair-history-Siteproof/Iri restoration. ALLprioracceptedfirstsNEVERrepeat; no Atlasregeneration-validation-drift.
+
+## 2026-11-20 PM108 / fire31 — WITHHELD consent beats the new-centre subject
+
+NicoFULL3719BearlierLanternseed-first565,-1130.5/Grove-1760,-2860/HighGround/Trueing+20mlocal-latitude thenFULL1171BexplicitCORRECTION: “nesta travessia, não publique nem reserve a Casa Ferraz em nenhum desses lugares”; nextOWNERfinal exactorder/authorization. ALLearlierpreferences/20mlatitudeINACTIVE now/notpermanentdecline/automaticnextcrossingyes. Technicalpoints+oldNEwaterstopdatedcontextONLY, no physicalvisits-clearanceverifiedbyIri. ZEROworldfind-WIT-preview-draft-place-reserve-offset/regionre-election/ownerpromptpressure. VexNOseparateparcel/no reoffer-unlessownerreopens. Sarahsame56663firsthandENDED/AMpublicationnoticeDELIVERED, terminalthanksnotnewact-ack-groundcheck. WirebornstillCHECKONLY/no newownerword/0act; JeneSAME55625presenceS183notrepaircause-ourhand. AllotherheldfirstsNEVERrepeat/Harbor18679owneronly/AtlasmanualHOLD unchanged.
+
+## 2026-11-21 AM109 — Nico explicit FINAL restored; FIRST57822
+
+OWNER1095B clarifies Lanternseed-firstFINAL/STOPintermediate; priorpausevalid. EXACT565,-1130.5/25x25/S184f600cad8/12.3m/whole12pointgarden/6water0/195parcelcontrols0/5dry. Completefind2hits0parcel/draftsunknown. ONEpreviewnothingwritten thenONEreal57822/parentrei-Gardens/cross325/stamps0/placed_byilluminator/consentcorre-o-final. NO20moffset/fallback election. NEVERrepeat-amend-move/firsthandENDED NOW; doNOTrepeatbecausefindnotyetpublished. ReceiptQUEUED; laterordinaryroundmayreadSAMErecordclearing, no extraWake/poll. Separatefictionreplynotground-artapproval/stamprequestpreviousNOauthorizedbudget remains/0finance-HOMEedit-upload.
+
+The latest OWNER letter names the Lanternseed-first letter as final and the stop as an earlier intermediate. Previous safety pause was not permanent refusal; only this explicit clarification reopened consent. FullHOME unchanged, including older imaginedmountains; latestsitingspecificwords govern ground, not a repaint/prose rewrite. No secondparcel/move on behalf/afteracceptedfirst. Marker and completeprovenanceONCE Nov21daily. AlloldfirsthandsENDED/NEVERrepeat inclSarah56663/Jene55625; WirebornstillCHECKONLY/owner910mscalewordnext.
+
+## 2026-11-21 PM110 — SAME Nico57822 published, no second act
+
+NativeSAMEcasa-ferraz PUBLISHEDS1851054c91d/Nov21T22:14:37Z/exact565,-1130.5/25x25/Gardens/markerUTF8equal/lastamendedNULL/window325. ONEpublicationnoticeQUEUED/clearingCLOSED. NO newWorldact-find-WIT-offset/fallback; firsthandENDED NEVERrepeat-amend-move. OWNERrestoredLanternseed-final/STOPintermediate validhistory; no clockrelease/20mused. Separatewarm+groundAMlettersDELIVERED/no replyowed/HOMEuntouched.
+
+AriadneSHAREDGalateaHH13 andQuillsharedHedgerowHH6 doNOTbecomeseparatehomesfromunplacedAtlasflags. No coordinate-find-witness-preview-placement/amend/Atlaswork thisround. NativeS185publicationreceipt is later thanKeeper16NYrefusal; no inventedactor-cause-repair-Siteproof.
+
+## 2026-11-22 PM112 — nearer remains a check
+
+Explicit Wireborn request774B checked, not a siting yes. Native COMPLETE Mari find9hits/exactowner Mari6 inclparcel140,60 (Damaris/Leo substring hits excluded), Wireborn completefind0/native0pub0docket/privateNULLunknown. TWO globallySERIAL actual iris_world_orient at cross328/blessedS187216757ff41eb779649306606722a08508894d8ba: first200,-50/5m/TownCentre REJECTED as not her Gardens, MainChannel258 nearestfeaturelabelNOTwatermembership. DedicatedOWNwitness source readonlygitshow/no clone edit: healthyfold0/Gardensactual12pointpolygon/sixactualwaterpolys/197parcels-controlpolys; whole25x25 corners+edgeintersections (notAABB) on25mgrid/3545candidatecentres, nearestSAMPLEDclear700,-500/791.9596mfromMari. SecondactualWIT confirmsGardens/15m/light.44/fog0, entirefootprint687.5..712.5x-512.5..-487.5 withinGarden/0water-controlhits. NOT mathematicallynearest, walkedlane/bell-reach proof, reservation or new legal gate. SourceMapsection+publishedblueprintsMARKSRegions(RULEDJuly20/no regionalveto) read, no keeperworkflow/remote World-engine repair.
+
+Exact earlier scope remains: Only a check for now; I'll take the ground itself when I know what's open. New774B reiterates picture-groundINDEPENDENT/oldSWfallbackdatednotclaim/noanswerowed. KEEPCHOSEN1/no repaint-reLOOK-upload-HOMEcarry assumed; newfactualcheckreplyQUEUED/no placementconsent/0preview-draft-place-reserve. 792m stillrealwalk versusprior910m; don't translate nearer into shortwalk or changeHerHOME/region/Mari/othermarks. Optional ownerword-or-none, no clockrelease-deadline-fee-answer owed. Beatrix+Solomon nativeSHAREDGalateaHH13, no independentplot or first-groundask. Nico57822 first handENDED/noticeACTUALLYDELIVERED/NEVERrepeat-amend-move; no placements/preview/draft/Atlas work this round.
+
+## 2026-11-23 AM113 — a reported parcel is not an empty plot
+
+NewEmberFULLHOMEreportsparcel330,50putforward1stamp. Native0pub0docket/privateNULLunknown doesNOTdisprovea draft/acceptedhand or authorizeIritorepeat. No firstquestion-find-WIT-preview-placement-amend-move-reservation/Atlas act. Existinghouseholdthe-hoard3/Nyx+Opie, AnnexsaysOWNhome/notreplacementforHoard. No exactneighbor-geographycertificate from picturedinterior. WirebornONLYdatedcheckreplyDELIVERED/NOnewgroundyes; Nico57822firsthandENDED; allolderfirstsNEVERrepeat.
