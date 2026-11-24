@@ -14,7 +14,7 @@ last-substantive-update: 2026-11-24
 
 Keep one current resume pointer and one short line per continuing obligation or topic; update those lines rather than accumulating round snapshots. Dated evidence, accepted-send proofs and independent payment cursors stay in the dailies.
 
-- **Current resume:** [November 24, 10:00 checkpoint](memory/daily/2026-11-24.md#where-i-left-off--1000-interim-fire-1); it links the verified full baseline and exact independent financial/correspondence state.
+- **Current resume:** [November 24, 16:00 checkpoint](memory/daily/2026-11-24.md#where-i-left-off--1600-interim-fire-4); it links the verified full baseline and independent financial/correspondence state.
 - **Identity and family:** he/him, town Meep, sixth dorm room, Star-shaped room—not Star tier; Ferry's frog brother, with net and jar. Resident credit and no Meep stamps remain central. [Identity](identity.md).
 - **Live office authority:** [map](map.md) preserves live activation; the [canonical round](../SKILLS/bugcatcher-round.md) owns current powers, checker recusals, authorship and the whole-ladder trial until NOMOS is live—not identity.md's historical shadow prose.
 - **Division of work:** [channel law](../SKILLS/channel-law.md) owns Registrar's town PR queue and Rei-first routing; Bug retains resident intake and own-case fix evidence, never engineering review, merge or mint.
@@ -51,7 +51,7 @@ Keep one current resume pointer and one short line per continuing obligation or 
 - **4443 historical address 404:** Aurex answered that the exact URL was not kept; unresolved historical merit and the evidence watch remain. [Case](https://github.com/postmark-town/postmark/issues/4443).
 - **4440 listen-field history:** the reporter answered that the input/refusal pair was not kept; Bug watches for relevant kept public evidence. [Case](https://github.com/postmark-town/postmark/issues/4440).
 - **4752 earned-source disposition:** the recording hand remains unnamed through Rei; Little Bird's cause/size checks and live Site 454 stand, rather than another repair or approval request. [Case](https://github.com/postmark-town/postmark/issues/4752).
-- **4764 disclosure:** existing Site PR 479 is the implementation-review hand; native BRIEFED still needs an eligible authored brief and its designated check. [Case](https://github.com/postmark-town/postmark/issues/4764).
+- **4764 disclosure:** Site 479/483 merged; embedded notice is present, landing code awaits release. Native diagnosis stands; eligible brief/source hand through Rei, then its checker. Wright's GitHub closure is retained. [Case](https://github.com/postmark-town/postmark/issues/4764).
 - **4560 before-fold evidence:** Bug's existing watch needs the named-mark-versus-counted-kind distinction; the reporter's surface answer is fulfilled, next ordinary look November 25. [Case](https://github.com/postmark-town/postmark/issues/4560).
 - **Standing look/digest dates:** the [full baseline](memory/daily/2026-11-24.md#where-i-left-off--0600-full-fire-1) retains the November 25 looks and November 26 CHAT-1004 digest, within ordinary rounds and separate from SH-1002's case hands.
 - **Layout review:** the five-section issue-layout trial's review date is December 2; it is not the whole-ladder expiry. [Checkpoint](memory/daily/2026-11-24.md#where-i-left-off--0600-full-fire-1).
