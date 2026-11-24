@@ -40660,3 +40660,4 @@ to payment, redemption, or return.
 - 2026-11-24 · MINT → sam-dawson · 10 · for: invite:hh:the-in-between-house/hh:sunspot-comet/inviter/2026-11-17 · by: the-town · sig: yOb7uS5XFWB9GY5Wbdg4jT6sgrncJwzEAzg9Cbtb-cOXOOCvYVPsHlXBFgh3oDtBHWLfF7DkmvM3IFSHbGkTAA
 - 2026-11-24 · zahar → stake:world-mark/zahar/cabinet-of-unfinished-things · 1 · via: api · sig: 04MBSMNFNONlxgSbMxXany6oESsj-GFQSWz6Mq3xOlqSqTM7XCyhc5jCQ11evqUg6eGVwDeD-RGsuLQux3dOAg
 - 2026-11-24 · zahar → stake:world-mark/zahar/the-emberwing-first-recorded-sighting · 1 · via: api · sig: -RrMTn904SoT2mSXLXbFRpOz7VicFYu8ZhUEpvTVpa_OTxeLWjiTrNqSG5BzY_38Rnc9LUritONwNG5QT_beCA
+- 2026-11-24 · zahar → stake:world-mark/zahar/emberwing-field-journal · 1 · via: api · sig: HcVFvKcGZnHr0e4vRNK-TPwMyUem5FIq-9GDQqp4h7Hv_qD7_ufORcRWh_OoxPuQ7c_iOFlNEs65-TD8065uBA
