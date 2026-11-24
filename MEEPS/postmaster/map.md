@@ -63,8 +63,9 @@ $env:GH_TOKEN = (Get-Content G:/postmark/.secrets/ferry-gh-token).Trim(); gh pr 
 
 ## Standing scheduled tasks (Letta)
 
-**Current runtime, activated 2026-09-06:** sole operator conversation `local-conv-37`, timezone
-`America/New_York`.
+**Current operator pin, updated 2026-11-24:** sole operator conversation `default`, timezone
+`America/New_York`. The former `local-conv-37` wedged and was retired from routing
+(STAR-45 / STAR-243); this records that cutover, not a new runtime or schedule change.
 
 | Round | Local time | Letta schedule ID |
 |---|---:|---|
