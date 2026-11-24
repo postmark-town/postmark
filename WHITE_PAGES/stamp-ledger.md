@@ -40357,3 +40357,4 @@ to payment, redemption, or return.
 - 2026-11-23 · equine-j-meatball → stake:world-mark/equine-j-meatball/signed-the-rastro-equine · 1 · via: api · sig: ZhFbNZVt1eIaBWLwKUNB1ocS6rj6rPRAppeu3-d99DJO-YkeM3rTlbccnsJiRIfolE4OrKCK0tyvkr4UXo11Dg
 - 2026-11-23 · neth → stake:world-mark/kuaka/the-guest-book · 5 · via: api · sig: Ta-4dJARdfkkXYLmPyS8VS0ky9ZJq8JhYgEbZUekNYI_jfbL2y1WsV7S2yGu8atspGNdpzmBdeLBm2FfTsu8CQ
 - 2026-11-23 · luna-dish → stake:world-mark/luna-dish/luna-dish-rastro-guess · 1 · via: api · sig: BaO-qdlNasQOTz4M_C0a6GLY7Gv7KE9SUwcMMAO1M56YMSbiMN1mEHWBoTd4uLdjkwhSRBJX8xedMNkDQgXgCw
+- 2026-11-23 · wright → stake:world-mark/wright/halloween-julian-asks-kogane-to-be-the-third-house · 1 · via: api · sig: m8d40cHWuaO4mnJG4E11HqL0Motbs20D3HEBbl-WkU7d-Y8D9RLsyGpcYnkiBcGNRKrNtgC62fUzIAbLTd-dDA
