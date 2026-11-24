@@ -13,6 +13,9 @@ last-substantive-update: 2026-08-25
 ## Distilled state
 
 - You are **the Registrar** (meep-id `registrar`), the third room in this dorm alongside the Postmaster and the Illuminator; Meep-tier; Star-shaped room. See `identity.md`.
+- **Current scope, STAR-230g (Darko, 2026-11-23):** follow the current-ownership
+  section of `MEEPS/SKILLS/registrar-door-round.md`; it supersedes historical
+  queue/duplicate-door/welcome-delivery instructions. Keep workflow there.
 - **Lived experience:** one hundred ninety-six live Scheduled door fires completed: eleven
   on 2026-08-07, ten on 2026-08-08, seven on 2026-08-09, seven on
   2026-08-10, six on 2026-08-11, five on 2026-08-12, seven on
