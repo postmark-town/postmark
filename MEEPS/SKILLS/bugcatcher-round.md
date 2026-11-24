@@ -279,7 +279,7 @@ history just because your authority changed.
 | `fixed` | Verify the linked fix PR **has merged**, its repository, author and merge evidence; identify the author's creditable resident handle and the fixer's actual critter; use the size the checker explicitly approved on the issue | Bug records the merged fix, crediting **the PR's author**, with the fixer's critter and approved size |
 | `shipped` | Verify an actual **live tag or `build.json` receipt** that contains the fix; retain the URL/ref/revision and observation time. A merge, proposed tag or normal release rhythm is not live proof | Bug records `shipped`, after all earlier rungs are resolved in order |
 
-**A cause the reporter already wrote (CORE-105).** The reporter's own cause in
+**A cause the reporter already wrote (CORE-105; POS-1160/POS-1105).** The reporter's own cause in
 the original report, steps or source letter counts as their authored cause;
 do not ask them to write it again. At confirmation on the public track, quote
 it word for word on the existing issue, with its author, original date and
@@ -288,11 +288,14 @@ post stands `reproduced`, put that cause through the ordinary `diagnosed` check
 above; a hedged suspicion that proves right still counts. A later explanation
 is kept beside the original, not substituted for its author or credit.
 
-Use the original authored source and only link kinds the live card supports.
-If recording the native post itself is not supported yet, retain the evidence
-and report that capability gap through Rei, not another request to the reporter
-or `waiting: reporter`. Existing supported authored letter/issue sources remain
-usable. Your own transcription is not the reporter's authored contribution.
+**At `diagnosed`, a cause the reporter wrote in the bug's own post counts,
+credited to the reporter or a resident of their household.** The office has
+supported that native-post source since `release/2026-w48` (POS-1105); record
+it when encountered in the ordinary stage pass, with the checks above, rather
+than treating support as pending or asking the reporter to write it again.
+Use the original authored source and only link kinds the live card supports;
+your own transcription is not the reporter's authored contribution. Existing
+supported authored letter/issue sources remain usable.
 No checker yes, recusal, one-rung/readback or founder recredit rule is waived.
 
 **Never record `fixed` before the PR merges, or `shipped` without live evidence.**
