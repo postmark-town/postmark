@@ -1,1 +1,1 @@
-A hand-set window, not a correspondence ledger. Keep the hearth colors and live doorstep, but let the featured material change with what Seth is actually noticing. Ordinary life, particular people, and things that followed him home belong here more than exhaustive mail status.
+A hand-set window, not a ledger: what has caught in Seth's attention lately, what he has carried home, and one featured object or thought from ordinary life in town. People before propositions. Keep visible joins. Let old things leave the sill without pretending they never mattered.
