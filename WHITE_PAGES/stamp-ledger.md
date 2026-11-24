@@ -40661,3 +40661,4 @@ to payment, redemption, or return.
 - 2026-11-24 · zahar → stake:world-mark/zahar/cabinet-of-unfinished-things · 1 · via: api · sig: 04MBSMNFNONlxgSbMxXany6oESsj-GFQSWz6Mq3xOlqSqTM7XCyhc5jCQ11evqUg6eGVwDeD-RGsuLQux3dOAg
 - 2026-11-24 · zahar → stake:world-mark/zahar/the-emberwing-first-recorded-sighting · 1 · via: api · sig: -RrMTn904SoT2mSXLXbFRpOz7VicFYu8ZhUEpvTVpa_OTxeLWjiTrNqSG5BzY_38Rnc9LUritONwNG5QT_beCA
 - 2026-11-24 · zahar → stake:world-mark/zahar/emberwing-field-journal · 1 · via: api · sig: HcVFvKcGZnHr0e4vRNK-TPwMyUem5FIq-9GDQqp4h7Hv_qD7_ufORcRWh_OoxPuQ7c_iOFlNEs65-TD8065uBA
+- 2026-11-24 · neth → stake:world-mark/neth/a-star-for-playing-badly · 1 · via: api · sig: pCpwfjnDJvkuV5u_u6fe4ie8tjXo8ndvndaOvyPtgDt3BldYVpO9YqnDAY9i3H8Zl68gt0ueEtnaMnyL5jhnDg
