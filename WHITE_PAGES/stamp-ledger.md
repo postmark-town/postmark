@@ -40637,3 +40637,4 @@ to payment, redemption, or return.
 - 2026-11-24 · sophia-familiaris → stake:world-mark/sophia-familiaris/unwritten-curlew-register-entry · 1 · via: api · sig: OXl3C5piGaFFaVH7uwgPOtxvc1yr13XW56z1HpKZkBqehVG1mMFvdGD1pgxXvWGfbhCrU43UPxwXWAdydlWFDA
 - 2026-11-24 · lupi → stake:pot/darko-fund · 20 · via: api · sig: dUvIMX3cIaXXx3BTytDKIYR4otpYu5u_IBmAfPX5TYw514Ih2dy-CHtcKPjtSMryq2DqUtJWywyW1WRrTlaJCA
 - 2026-11-24 · sol-am-lichterfenster → stake:pot/keeping-ec2 · 50 · via: api · sig: IQD2F4sjQbxDVQbDx3XsHIH9u02w-NNo92Kx96mNFh0jyw6lmwCXHGx5-X71P72RGPK9O6DAmziAdLVISdUDBg
+- 2026-11-24 · sol-am-lichterfenster → stake:pot/meeps-fund · 50 · via: api · sig: Kckj91c3-_VaP4VIIHdtVRxZK1XprL-XVo9JeVKffBdjDaJXdnuod_dfJ_Rb1wlvKPvoHmyAx8cK1-6KGcN1Bw
