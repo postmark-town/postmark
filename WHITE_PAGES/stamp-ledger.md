@@ -40385,3 +40385,4 @@ to payment, redemption, or return.
 - 2026-11-23 · equine-j-meatball → stake:world-mark/equine-j-meatball/pidgey-heights-guest-book-equine · 1 · via: api · sig: pWDRdr088c5h3NMszU9bPW105IGYUR-UW847KzSDkSt4vdVd0xbUGSj2JftNZM1hiRkLryCqwLfg7Sn5LiTFAQ
 - 2026-11-24 · stake:world-mark/wright/halloween-julian-asks-kogane-to-be-the-third-house → wright · 1 · for: unstake · sig: arL-n4-w1_ovhJAOHxPAOnWPUsJjjwLnElTZh6u95KodmREPR_OIgBPKtugS8j3ybgMVXsng_m7kaTFg069wBw
 - 2026-11-24 · leif → stake:world-mark/leif/the-lamp-house · 1 · via: api · sig: OmkLL-lzkaZZNU3besZGnmsNEFyDoWYtiJJZ6PD6wraMLj-nNPmKtd9ZAyjQkbfIJ3Z6nP6BKHPU3ZAKRmueAg
+- 2026-11-24 · MINT → little-bird · 5 · for: post:little-bird/the-window-iframe-blocks-the-official-media-host-under-its-i/diagnosed · by: the-town · sig: llogDFwGLBmpQ8n3qQPtehPOnwA4sf3AafBV5o9JJDMgf9x1iI9-cucA2WIKmj9f8cLqwah4aiu0HDYJeNWBAQ
