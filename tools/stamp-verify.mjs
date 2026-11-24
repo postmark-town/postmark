@@ -24,10 +24,31 @@
 //                  them. You can't overdraw a stake without breaking the fold.
 //
 // Usage: node tools/stamp-verify.mjs [--repo PATH] [--registry <file|url>]
+//                                    [--handoff-pubkey <pem file> --handoff-after-seal <seal>]
 //        exits 0 green, 1 on any failure. --registry hands over the store's
 //        registry (tools/registry-source.mjs); without it the printout is read.
+//        The two --handoff flags are UAT's (POS-1213, § THE HANDOFF below), come
+//        together or not at all, and are never set in production.
+//
+// THE HANDOFF (POS-1213; Wright 2026-11-24 14:32:35Z, the CORE-176 split). UAT's
+// ledger is a copy of production's, signed by production's key, followed by the
+// lines UAT's own pen signed with UAT's own key (production's key never goes near
+// UAT). One key cannot verify that ledger: production's refuses UAT's first line
+// (crossing 331: 40,137 lines green, line 40,138 SIGNATURE FAILS), and UAT's would
+// refuse the whole copied prefix. So verifyStampLedger takes an optional
+// `handoff: { pubkeyPem, afterSeal }`: every line through and including the line
+// whose running seal is `afterSeal` verifies under the base key, and every line
+// after it under the handoff key ONLY. Neither key is ever tried on the other's
+// lines, so UAT's key cannot re-sign the copied history and production's cannot
+// sign UAT's suffix. The trust comes from the operator (the caller), never from
+// the ledger or the clone. A handoff that cannot be used (partial, an unreadable
+// or private or non-ed25519 key, the base key again, a seal that is not this
+// ledger's) is a red problem, never a skip. Without a handoff nothing here changes:
+// the same key, the same checks, the same words. stampKeyPlan is the one rule, so a
+// caller that checks signatures line by line (the office's store sync) reads it
+// rather than writing its own.
 
-import { createPublicKey, verify as edVerify } from 'node:crypto';
+import { createHash, createPublicKey, verify as edVerify } from 'node:crypto';
 import { existsSync, readFileSync } from 'node:fs';
 import { join, resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -87,10 +108,69 @@ function ballotFile(repo, topic) {
   try { return JSON.parse(readFileSync(p, 'utf8')); } catch { return null; }
 }
 
+const SEAL_HEX = /^[0-9a-f]{64}$/;
+const HANDOFF_FIELDS = ['afterSeal', 'pubkeyPem'];
+
+// A trusted public key, or the problem that makes it unusable. A private key is
+// refused rather than reduced to its public half: a trust file holds a public key
+// only, and a signing key found in one is a mistake to name, not to work around.
+function trustedKey(pem, what) {
+  if (typeof pem !== 'string' || pem.trim() === '') return { problem: `${what} is empty` };
+  if (/PRIVATE KEY/.test(pem)) return { problem: `${what} is a PRIVATE key: a trust input takes the public half only` };
+  let key;
+  try { key = createPublicKey(pem); } catch (e) { return { problem: `${what} is not a readable public key (${e.code ?? e.message})` }; }
+  if (key.asymmetricKeyType !== 'ed25519') return { problem: `${what} is ${key.asymmetricKeyType}, not ed25519` };
+  return { key, der: key.export({ type: 'spki', format: 'der' }) };
+}
+
+// THE HANDOFF'S ONE RULE (POS-1213, § THE HANDOFF above), for every caller that
+// checks a signature: which key verifies which line. `seals` is the ledger's whole
+// running-seal chain (sealChain), `basePem` the base public key, `handoff` null or
+// { pubkeyPem, afterSeal }. Returns { problems, keyAt, anchor }: keyAt(i) is the key
+// for the line at 0-based index i, and anchor the 1-based line the trusted seal
+// closes (0 with no handoff). With problems, keyAt is null and nothing may be
+// verified.
+export function stampKeyPlan(seals, basePem, handoff = null) {
+  const base = trustedKey(basePem, 'the base public key');
+  if (handoff == null) {
+    if (base.problem) return { problems: [base.problem], keyAt: null, anchor: 0 };
+    return { problems: [], keyAt: () => base.key, anchor: 0 };
+  }
+  const problems = [];
+  if (base.problem) problems.push(base.problem);
+  if (typeof handoff !== 'object' || Array.isArray(handoff)) {
+    return { problems: [...problems, 'the handoff is not { pubkeyPem, afterSeal }'], keyAt: null, anchor: 0 };
+  }
+  const extra = Object.keys(handoff).filter((k) => !HANDOFF_FIELDS.includes(k));
+  if (extra.length) problems.push(`the handoff names ${extra.map((k) => JSON.stringify(k)).join(', ')}: it takes pubkeyPem and afterSeal only`);
+  const missing = HANDOFF_FIELDS.filter((k) => handoff[k] === undefined || handoff[k] === null);
+  if (missing.length) {
+    problems.push(`the handoff is partial: no ${missing.join(' and no ')} (a handoff takes pubkeyPem and afterSeal together)`);
+    return { problems, keyAt: null, anchor: 0 };
+  }
+  const uat = trustedKey(handoff.pubkeyPem, 'the handoff public key');
+  if (uat.problem) problems.push(uat.problem);
+  if (base.der && uat.der && base.der.equals(uat.der)) problems.push('the handoff public key is the base key: a handoff names a different key');
+  let anchor = 0;
+  if (typeof handoff.afterSeal !== 'string' || !SEAL_HEX.test(handoff.afterSeal)) {
+    problems.push(`the handoff's afterSeal is not a seal (64 lowercase hex): ${JSON.stringify(String(handoff.afterSeal).slice(0, 80))}`);
+  } else {
+    anchor = seals.indexOf(handoff.afterSeal) + 1;
+    if (anchor === 0) problems.push(`the handoff's afterSeal ${handoff.afterSeal} is not a seal of this ledger: the history it trusts is not this ledger's`);
+  }
+  if (problems.length) return { problems, keyAt: null, anchor: 0 };
+  return { problems: [], keyAt: (i) => (i < anchor ? base.key : uat.key), anchor };
+}
+
+const fingerprint = (der) => `sha256:${createHash('sha256').update(der).digest('hex')}`;
+
 // `registry` (POS-345): the store's registry as tools/households.json's
 // object, handed over by --registry <file|url> (tools/registry-source.mjs).
 // Without it, the printout is read, as before.
-export function verifyStampLedger(repo, { pubkeyPem, registry = null } = {}) {
+// `handoff` (POS-1213): UAT's { pubkeyPem, afterSeal }, § THE HANDOFF above.
+// Without it (null or absent, as in production) the signature check is the one
+// it always was.
+export function verifyStampLedger(repo, { pubkeyPem, registry = null, handoff = null } = {}) {
   const problems = [];
   // Checks the verifier could not run. A skipped check must be VISIBLE — silence
   // would read as a pass.
@@ -106,7 +186,27 @@ export function verifyStampLedger(repo, { pubkeyPem, registry = null } = {}) {
   const pem = pubkeyPem ?? (existsSync(join(repo, 'tools', 'stamp-pubkey.pem'))
     ? readFileSync(join(repo, 'tools', 'stamp-pubkey.pem'), 'utf8') : null);
   if (!pem) problems.push('no tools/stamp-pubkey.pem — signatures unverifiable');
-  else {
+  else if (handoff != null) {
+    // UAT's two keys, each on its own side of the trusted seal (§ THE HANDOFF)
+    const plan = stampKeyPlan(seals, pem, handoff);
+    for (const p of plan.problems) problems.push(`handoff: ${p} — signatures not verified`);
+    if (plan.keyAt) {
+      let signed = true;
+      for (let i = 0; i < entries.length; i++) {
+        const side = i < plan.anchor ? `the base key, through line ${plan.anchor}` : `the handoff key, after line ${plan.anchor}`;
+        if (!entries[i].sig) { problems.push(`line ${i + 1}: UNSIGNED — "${entries[i].canonical.slice(0, 60)}..." (${side})`); signed = false; break; }
+        const ok = edVerify(null, Buffer.from(seals[i], 'utf8'), plan.keyAt(i), Buffer.from(entries[i].sig, 'base64url'));
+        if (!ok) { problems.push(`line ${i + 1}: SIGNATURE FAILS under ${side} — first divergence at "${entries[i].canonical.slice(0, 60)}..."`); signed = false; break; }
+      }
+      // a green under a handoff is a different claim from production's green, so it says so
+      if (signed) {
+        const uat = fingerprint(createPublicKey(handoff.pubkeyPem).export({ type: 'spki', format: 'der' }));
+        notes.push(plan.anchor < entries.length
+          ? `handoff: lines 1–${plan.anchor} verified under the base key (through the trusted seal), lines ${plan.anchor + 1}–${entries.length} under the handoff key ${uat} only`
+          : `handoff: lines 1–${plan.anchor} verified under the base key (through the trusted seal); no line after it yet for the handoff key ${uat}`);
+      }
+    }
+  } else {
     const key = createPublicKey(pem);
     for (let i = 0; i < entries.length; i++) {
       if (!entries[i].sig) { problems.push(`line ${i + 1}: UNSIGNED — "${entries[i].canonical.slice(0, 60)}..."`); break; }
@@ -906,10 +1006,39 @@ export function verifyStampLedger(repo, { pubkeyPem, registry = null } = {}) {
   return { ok: problems.length === 0, problems, notes, lines: entries.length, minted: -(bal.get('MINT') ?? 0) };
 }
 
+// The CLI's handoff (POS-1213): both flags or neither, each once, the key read from
+// the operator's file. Neither gives null, and the verify is production's.
+export function handoffFromArgv(argv) {
+  const at = (flag) => {
+    const i = argv.indexOf(flag);
+    if (i === -1) return { given: false };
+    if (argv.lastIndexOf(flag) !== i) throw new Error(`${flag} is given more than once`);
+    const v = argv[i + 1];
+    if (v === undefined || v.startsWith('--')) throw new Error(`${flag} has no value`);
+    return { given: true, value: v };
+  };
+  const key = at('--handoff-pubkey'), seal = at('--handoff-after-seal');
+  if (!key.given && !seal.given) return null;
+  if (!key.given || !seal.given) throw new Error('--handoff-pubkey and --handoff-after-seal come together or not at all');
+  let pubkeyPem;
+  try { pubkeyPem = readFileSync(key.value, 'utf8'); }
+  catch (e) { throw new Error(`--handoff-pubkey ${key.value} cannot be read (${e.code ?? e.message})`); }
+  return { pubkeyPem, afterSeal: seal.value };
+}
+
 function main(registrySource = null) {
   const i = process.argv.indexOf('--repo');
   const repo = resolve(i !== -1 ? process.argv[i + 1] : DEFAULT_REPO);
-  const r = verifyStampLedger(repo, { registry: registrySource?.registry ?? null });
+  let handoff;
+  try { handoff = handoffFromArgv(process.argv); }
+  catch (e) {
+    console.error('✗ stamp-ledger verification FAILED:');
+    console.error(`  - handoff: ${e.message} — signatures not verified`);
+    process.exit(1);
+  }
+  const r = handoff
+    ? verifyStampLedger(repo, { registry: registrySource?.registry ?? null, handoff })
+    : verifyStampLedger(repo, { registry: registrySource?.registry ?? null });
   if (r.ok) {
     console.log(`✓ stamp-ledger verifies — ${r.lines} line(s), ${r.minted} minted, chain + signatures + replay + conservation + lawful all green`);
     // A check the verifier could not run is printed on a GREEN result too. Green
