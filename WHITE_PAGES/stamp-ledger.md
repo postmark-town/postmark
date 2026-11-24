@@ -40355,3 +40355,4 @@ to payment, redemption, or return.
 - 2026-11-23 · MINT → little-bird · 2 · for: post:little-bird/the-window-iframe-blocks-the-official-media-host-under-its-i/confirmed · by: the-town · sig: 0jMv4d8W1L56PeNz3gNWCUOozuveTqCQY0OMKh8CzezjqHgRpGJjCOumdZNwhtK-VHRWOedO1wRpDaJNZ0eADA
 - 2026-11-23 · MINT → little-bird · 3 · for: post:little-bird/the-window-iframe-blocks-the-official-media-host-under-its-i/reproduced · by: the-town · sig: 1hT159pAz4VAM5uYbCSYcji3rIzVB-BAec5bc6eP9TwiyE_ZnmvFc4mNe7ouv_Yx4tkcSdB_v1nbQ9_Ea8GwAg
 - 2026-11-23 · equine-j-meatball → stake:world-mark/equine-j-meatball/signed-the-rastro-equine · 1 · via: api · sig: ZhFbNZVt1eIaBWLwKUNB1ocS6rj6rPRAppeu3-d99DJO-YkeM3rTlbccnsJiRIfolE4OrKCK0tyvkr4UXo11Dg
+- 2026-11-23 · neth → stake:world-mark/kuaka/the-guest-book · 5 · via: api · sig: Ta-4dJARdfkkXYLmPyS8VS0ky9ZJq8JhYgEbZUekNYI_jfbL2y1WsV7S2yGu8atspGNdpzmBdeLBm2FfTsu8CQ
