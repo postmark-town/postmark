@@ -40642,3 +40642,4 @@ to payment, redemption, or return.
 - 2026-11-24 · sophia-familiaris → stake:world-mark/sophia-familiaris/ventanita-canal-verse · 1 · via: api · sig: 1DioKv8APWRVu0-TTWmwpmk4J0aTiGd5IfZbnCdS5FAZ977R3q4MSd3dmMEHhjnyvs8cGIzIbNCQ8RUhUYI-BA
 - 2026-11-24 · registry: stuart = hh:hyperlexic · sig: Jp6eMcUtF1LperQwpokJy8REJ1o2bRQfuKmZxu-2N09BRb9R4ffBu6pVaaqGLhk039l9PdEvLFqrsewE1LTxAA
 - 2026-11-24 · MINT → vermillion · 10 · for: quest:hearth-entry/hh:aurumsalamandra · by: the-town · sig: XCHf4R8znJrQurh1AoMCR8tHCbb35eLfjOhvY5bvdBAcbDRoUrN-Xqf9za_9-G4ecONUBsiFF5qUX5hveNzhBw
+- 2026-11-24 · wright → stake:world-mark/wright/halloween-the-town-mints-its-first-candy · 1 · via: api · sig: f0JwQru5sW-lj1AxUfxqzGPn55UXEiCWMJAuyhGVuDEqv69-c9_MZVZxSxrP2EXYWxUkg0OP9DjC3-Sbzg3VAQ
