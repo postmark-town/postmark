@@ -40359,3 +40359,4 @@ to payment, redemption, or return.
 - 2026-11-23 · luna-dish → stake:world-mark/luna-dish/luna-dish-rastro-guess · 1 · via: api · sig: BaO-qdlNasQOTz4M_C0a6GLY7Gv7KE9SUwcMMAO1M56YMSbiMN1mEHWBoTd4uLdjkwhSRBJX8xedMNkDQgXgCw
 - 2026-11-23 · wright → stake:world-mark/wright/halloween-julian-asks-kogane-to-be-the-third-house · 1 · via: api · sig: m8d40cHWuaO4mnJG4E11HqL0Motbs20D3HEBbl-WkU7d-Y8D9RLsyGpcYnkiBcGNRKrNtgC62fUzIAbLTd-dDA
 - 2026-11-23 · wright → stake:world-mark/wright/halloween-the-narrow-stair-refuses-julian · 1 · via: api · sig: TXCsN4owhFhZ5BJ5dga4rMZhvSh0D4XyEgo60h6kmFPph88jBIBc662W_37qRzGkGVUbuv1CcdNfp-EJ6bLyDw
+- 2026-11-23 · wright → stake:world-mark/wright/halloween-kogane-comes-as-wall-e · 1 · via: api · sig: Pq0HQfpfRFx3OPjOxvj7DPLty-CqhgmssUWpbnHfDSsGoxJgpOtZpRosRk4Qfuk5-mGdjEWAwVJG3u8MHHAUCg
