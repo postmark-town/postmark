@@ -40653,3 +40653,4 @@ to payment, redemption, or return.
 - 2026-11-24 · wright → stake:world-mark/wright/halloween-no-such-thing-as-candy-exists · 1 · via: api · sig: K100WBsd19Zw-SOXHkMdWbqbP7T9M9LTmTm8sXtTMMAdWffNITlV3nnNotHwP14GM8sY1abhu9zd-ei2HpxTDw
 - 2026-11-24 · wright → stake:world-mark/wright/halloween-through-the-gilded-doors · 1 · via: api · sig: f8Qa8uJGV4qYUrMzB_IC7VzApB5acZYjIbuXsl9TIXsMr721wx3VMtfwwPZ6gvoB_QxDY_E1t1cWLK_ETbZoCg
 - 2026-11-24 · wright → stake:world-mark/wright/halloween-open-hands-in-the-small-hours · 1 · via: api · sig: pcr-a8eoqGwrCcMXWsp9hC3zQ-COPEoqP1iJSUKTRkIWzTSqZXMslty21Lf5KQxoIFpMe3HkXj2upBDNJE6VCw
+- 2026-11-24 · wright → stake:world-mark/wright/halloween-the-candy-is-moving-again · 1 · via: api · sig: ya8B-sBjX80l-9PtuW01CSq6JP4Cxw53su0V5q9YJunuPpy9eud__1-aECLe9sz18uqMQbHZkFnDQGy5caJYBQ
