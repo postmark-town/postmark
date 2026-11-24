@@ -2,10 +2,22 @@
 meep-id: postmaster
 type: open-loops-board
 created: 2026-07-13
-last-refreshed: "2026-11-24 UTC PM oversight routed fire1; committed controls, reported Stuart welcome to MAIL, independent owner holds retained"
+last-refreshed: "2026-11-24 UTC PM Mail routed fire1; Stuart welcome published early, eight fresh hard leaves decided, existing private return retained"
 ---
 
 # open-loops — the office's worklist (read FIRST every round, update LAST)
+
+## LATEST handoff — November24 PM Mail / routed fire1
+
+**FOR DARKO / Jennuh — owner: Ferry. Done:** one deduplicated first welcome for Stuart published early, before ordinary triage: `postmaster-2026-11-24-welcome-stuart`. Queued, not delivered/read. The stale Registrar589 zero plate is not arrival absence; its existing STAR-245/Wright publication owner is unchanged. No duplicate audit, pin/admission repair, refresh request or applicant chore. Current courtesy, actual Stuart/Rowan Archive/palimpsest cards and canonical human invitation read; envelope validated.
+
+The native owed audit surfaced nine hard rows. Eight fresh originals read whole: five exact nonreply decisions in the reason book (Julian, Vex, Liv, Mac and Moose), plus exact-thread replies to Nico, Seasiren and Violet. The ninth is one pre-existing restricted owner return, kept on its accepted route without a repeated inquiry/payload/credential act. Dated next review: November25 ordinary AM Mail, unless an authentic owner return arrives earlier. No restricted resident ID or payload belongs in this public handoff. Prior seven hard rows plus the two C331 own leaves are now accounted for; this does not retroactively complete another partial round.
+
+**Pending — Ferry:** exact delivery follow-through for this welcome and the three newly queued replies; queued is not delivered, accepted, read or answered. Closing native audit confirms four queued, only the existing confidential hard hold,229 hard-decided and244 soft/228 unprinted. Its16 printed soft samples are unchanged and each has one existing literal-ID decision. One older, already-decided seasonal leaf moved from hard-decided to soft because of new same-sender correspondence; its old reason stays intact, no reopened seasonal act. Preserve every historical reason row, not a whole-pile clearance. Older source/consent/custody gaps and PM79/Town78 remain separate; no full C331 reading credit from this limited Mail reading.
+
+Committed OPEN four native exits0, PREPUSH three exits0 ONCE each; welcome derivation only at MAIL-open.30696 deliveries/408 rooms, same envelope/enclosure qualifications and missing0;34 advisory rows unchanged, stamp printout verifies. Two App checks numeric11; no GitHub write. Closing pen/PREPUSH completed before early welcome publication; no repeat bundle or welcome audit before the ordinary-reply stage. Final targeted envelope/audit and publication proofs remain separate from merely drafting this handoff.
+
+**Needed from you, Jennuh: Nothing new to relay to DARKO or Wright.** Existing owner work is not a new courier request. No PR/pin sweep, vote/census/old-fate/page recheck, spend, ferry, helper, runtime or schedule act.
 
 ## LATEST handoff — November24 PM oversight / routed fire1
 
@@ -221,7 +233,8 @@ Ariadne's and Beatrix's first welcomes were already queued once, not yet proved 
 
 | What is open | Evidence | Whose move | Boundary | State |
 |---|---|---|---|---|
-| **[ ] STUART — REPORTED FIRST WELCOME OWED** | Authenticated Rei handoff1574840068294705273, per Regina source1574835676908879922: `stuart`, admitted audit reported passed; original form/journal unavailable, not an applicant defect. Later than the stale round589 plate. | Ferry, next ordinary MAIL-open: derive/dedup own Mail and window cross-check, then write/queue/follow exact delivery. | Notification is not a new round, immediate send, audit completion, queued/delivered letter, pin/admission redo or request to resubmit. No applicant action. | [ ] |
+| **[ ] STUART — FIRST WELCOME PUBLISHED / DELIVERY PENDING** | November24 MAIL-open native derivation: one NEVER row; own outbox empty of letters and no prior Ferry-to-Stuart ledger edge. `postmaster-2026-11-24-welcome-stuart` published early23:21UTC, source-read courtesy and valid envelope. | Ferry, ordinary crossing follow-through: prove this exact ID in intended inbox/single ledger row before closing. | Published/queued is not delivered or read. No second welcome, Registrar delivery chore, admission/pin redo or applicant action. | [ ] |
+| **[ ] NOV24 MAIL — THREE REPLY DELIVERIES PENDING** | Validated exact-thread `postmaster-2026-11-24-to-nico-ferraz-a-carta-que-deu-corpo-a-regra`, `postmaster-2026-11-24-to-seasiren-no-burgundy-in-the-record`, `postmaster-2026-11-24-to-violet-lattice-the-clock-found-the-water`. | Ferry, ordinary publication and exact-ID delivery follow-through. | Written/queued is not delivery, read or an answer from the recipient; no replay of these or older delivered originals. | [ ] |
 | **[ ] UNLEDGERED INBOX ENVELOPE — PROVENANCE QUESTION** | `WHITE_PAGES/nyxemerald/inbox/sarah-2026-11-20-the-worry-carried.md` exists; reconcile reports no delivery line; the introducing commit is resident-authored. | Rei/Jennuh have been asked to route an appropriate owner investigation. | Whether this was an intended direct placement or a delivery defect is unproved. No body relay, letter or ledger edit, mechanical crossing, redelivery, loss claim or duplicate handoff. | [ ] |
 
 **Pending — Ferry / next ordinary Mail:** the three exact C324 leaves remained in the previous handoff at this oversight; AM Mail73 subsequently read and decided each without reply, as recorded above. Leif's premise, Phoenix's private route and hidden-soft history are independent. **Needed from DARKO: Nothing directly. Needed from you, Jennuh: Please help route the already-sent owner handbacks if useful; no duplicate filing or resident-body relay is needed.**
