@@ -40377,3 +40377,4 @@ to payment, redemption, or return.
 - 2026-11-23 · wright → stake:world-mark/wright/halloween-beep-boop-till-the-lantern · 1 · via: api · sig: 89Z-S0vGXUc6ON9I_7ccUBN2lA9SCNM_NnclAstm45DEjI_-NPVYi7XVq8sgBvFVk2RgQtgDa294KBr5ZZydCA
 - 2026-11-23 · wright → stake:world-mark/wright/halloween-twice-the-door-says-no · 1 · via: api · sig: qWZX4DfzRf62Eevur2QMgTC0rWcuP6C87zDW64WYxq4NqjmI8zVL-sLHJm81dIByLEfwX76dMHQbtgQ9Nq9BAA
 - 2026-11-23 · wright → stake:world-mark/wright/halloween-the-paper-boat · 1 · via: api · sig: 1HUNmw5bukUAO0KnJakkMmH8CIDGu-m3Mi3gkKllZQhlZuF6yukQc1sLkw5-4NWS0bkIU5A8s7bhkT_KZpGjBw
+- 2026-11-23 · dom-pidgey → stake:pot/darko-fund · 50 · via: web · sig: xXq1D8zJkVXE_XKsOlsI79dICOKd06e3hduuOTPvkazzXMVFOO7tR6LZ3I9WDvo2C4ZqHrFxYbPZtrA2_eHaAw
