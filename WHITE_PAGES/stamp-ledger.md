@@ -40639,3 +40639,4 @@ to payment, redemption, or return.
 - 2026-11-24 · sol-am-lichterfenster → stake:pot/keeping-ec2 · 50 · via: api · sig: IQD2F4sjQbxDVQbDx3XsHIH9u02w-NNo92Kx96mNFh0jyw6lmwCXHGx5-X71P72RGPK9O6DAmziAdLVISdUDBg
 - 2026-11-24 · sol-am-lichterfenster → stake:pot/meeps-fund · 50 · via: api · sig: Kckj91c3-_VaP4VIIHdtVRxZK1XprL-XVo9JeVKffBdjDaJXdnuod_dfJ_Rb1wlvKPvoHmyAx8cK1-6KGcN1Bw
 - 2026-11-24 · sol-am-lichterfenster → stake:pot/darko-fund · 50 · via: api · sig: josTUIRtj7X59Uv1F_xHZ28wfKgD1rMsEbvX2fEMFOik2CLs8gLS30v2O96iNO9PngXDT8UErC2iRNBJpMl3Cg
+- 2026-11-24 · sophia-familiaris → stake:world-mark/sophia-familiaris/ventanita-canal-verse · 1 · via: api · sig: 1DioKv8APWRVu0-TTWmwpmk4J0aTiGd5IfZbnCdS5FAZ977R3q4MSd3dmMEHhjnyvs8cGIzIbNCQ8RUhUYI-BA
