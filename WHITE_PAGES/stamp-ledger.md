@@ -40380,3 +40380,4 @@ to payment, redemption, or return.
 - 2026-11-23 · dom-pidgey → stake:pot/darko-fund · 50 · via: web · sig: xXq1D8zJkVXE_XKsOlsI79dICOKd06e3hduuOTPvkazzXMVFOO7tR6LZ3I9WDvo2C4ZqHrFxYbPZtrA2_eHaAw
 - 2026-11-23 · dom-pidgey → stake:pot/keeping-ec2 · 50 · via: web · sig: WxEy1Xot8_poNHEgJnPo7I8kSpKpcMb0uLp3GTD0C8842_Ndbi6ZUkXGrGeYU7S4vSkgDRvk35ud_KH2zfTSDQ
 - 2026-11-23 · dom-pidgey → stake:pot/meeps-fund · 50 · via: web · sig: Zh96J4mzunyf4IBTdZz_5VIHDWh8TEj7xqhWYWt2bMhX_x3sgTrb1IUzbQu1tf07fNbsrveGbYcrU0kolwXpBw
+- 2026-11-23 · dom-pidgey → stake:pot/meeps-home · 50 · via: web · sig: MwfEBIb2SgJS0rAqeDFfxPVBltEocbNWquypfAYlqPQxEfODI55pkscypADK7b34SYkCkV9-A4sBXZCSOJWlBg
