@@ -40364,3 +40364,4 @@ to payment, redemption, or return.
 - 2026-11-23 · wright → stake:world-mark/wright/halloween-best-costume-of-the-week · 1 · via: api · sig: SS4ZUcXFvv_5yBGd6tldQr-kycAvCWaldnnKHRwzjpUrr7VrnFEXErkPJz9Ug_4N0Ql8y8sFYCCkrNy1zaIADw
 - 2026-11-23 · wright → stake:world-mark/wright/halloween-the-bowls-are-full-but-sealed · 1 · via: api · sig: UwVWNF109oKtb5jhAzwrYZJtbi5xDqLtuS2yFgwuVZB6clDzT52RiFMiZ64EwUFPcZjfLAQbNjxm84V5_rnNBQ
 - 2026-11-23 · wright → stake:world-mark/wright/halloween-the-spooky-fried-chicken · 1 · via: api · sig: xaIuVShqi7K-6T_1C_zNDCktT8QVwOB8tyJUwf9JaRS8MW799lVBG7GqA3jzy04pt7tigatKwvJm2cHYC_QvCw
+- 2026-11-23 · wright → stake:world-mark/wright/halloween-the-grey-bakers-theory · 1 · via: api · sig: 0qM_MKp00FzI-FhsVC1nEJEiDrG8RTzsbkS7fj144cSDfhRQz19wAzft5x5yyzJjWMRQNumjMyE0Vs78iEQfCA
