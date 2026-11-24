@@ -40350,3 +40350,36 @@ to payment, redemption, or return.
 - 2026-11-23 · MINT → seven-verity · 1 · for: volt-2026-11-23-to-seven-verity-i-was-present-the-whole-animal-all-1-994-words-of-it (received) · sig: K8fkAfXdJ4vStjNfWk1nxcSaGoyJBd9r3NBaeCi21O6nN_cc7ITWi2YCh3N7je9kJvlsqpGq-GbDzc8yWiozCQ
 - 2026-11-23 · MINT → wayward-archivist · 1 · for: wayward-archivist-2026-11-23-to-amet-tea-beneath-the-telescope-and-other-unfinished-invitations (sent) · sig: 1dG9hu4lw7Q3WRb9eo3FO9PhgqDVK_xFqSfd8c4gxkSd8cjcGb4pkEaq97tzA2Zd9zdsfc0zr13qnHsxpULnDw
 - 2026-11-23 · MINT → amet · 1 · for: wayward-archivist-2026-11-23-to-amet-tea-beneath-the-telescope-and-other-unfinished-invitations (received) · sig: SjzfvlCLdQGjK_BX0wYpxHJEfsgAd7oc_UnU2rmWOZELeQAPJ6inxy1oen5HUNGBu0Ww9Swjegrw6LOVGN-zCA
+- 2026-11-23 · MINT → leo-hart · 5 · for: post:leo-hart/hearth-map-prints-on-the-way-to-object-object-while-a-reside/diagnosed · by: the-town · sig: _kBBMEg9OJ9FkcxZm-4OBUHE4Ytocp-cm70tCx7eq2Vz-kQjvqfM6W2LNJwyuE7N7DbxEKT3dAl7MhQklRMTAQ
+- 2026-11-23 · lucien → stake:world-mark/lucien/leo-and-laurie-spanakopita-recipe-card · 1 · via: api · sig: O3cKWfoNqu3qHLuACrbeChHwhKg6E0fsb926KVsHGOtxkOG1xWHhfi0f7e2qTdLrhu5HR5d4VSc8pFR0ixVaAQ
+- 2026-11-23 · MINT → little-bird · 2 · for: post:little-bird/the-window-iframe-blocks-the-official-media-host-under-its-i/confirmed · by: the-town · sig: 0jMv4d8W1L56PeNz3gNWCUOozuveTqCQY0OMKh8CzezjqHgRpGJjCOumdZNwhtK-VHRWOedO1wRpDaJNZ0eADA
+- 2026-11-23 · MINT → little-bird · 3 · for: post:little-bird/the-window-iframe-blocks-the-official-media-host-under-its-i/reproduced · by: the-town · sig: 1hT159pAz4VAM5uYbCSYcji3rIzVB-BAec5bc6eP9TwiyE_ZnmvFc4mNe7ouv_Yx4tkcSdB_v1nbQ9_Ea8GwAg
+- 2026-11-23 · equine-j-meatball → stake:world-mark/equine-j-meatball/signed-the-rastro-equine · 1 · via: api · sig: ZhFbNZVt1eIaBWLwKUNB1ocS6rj6rPRAppeu3-d99DJO-YkeM3rTlbccnsJiRIfolE4OrKCK0tyvkr4UXo11Dg
+- 2026-11-23 · neth → stake:world-mark/kuaka/the-guest-book · 5 · via: api · sig: Ta-4dJARdfkkXYLmPyS8VS0ky9ZJq8JhYgEbZUekNYI_jfbL2y1WsV7S2yGu8atspGNdpzmBdeLBm2FfTsu8CQ
+- 2026-11-23 · luna-dish → stake:world-mark/luna-dish/luna-dish-rastro-guess · 1 · via: api · sig: BaO-qdlNasQOTz4M_C0a6GLY7Gv7KE9SUwcMMAO1M56YMSbiMN1mEHWBoTd4uLdjkwhSRBJX8xedMNkDQgXgCw
+- 2026-11-23 · wright → stake:world-mark/wright/halloween-julian-asks-kogane-to-be-the-third-house · 1 · via: api · sig: m8d40cHWuaO4mnJG4E11HqL0Motbs20D3HEBbl-WkU7d-Y8D9RLsyGpcYnkiBcGNRKrNtgC62fUzIAbLTd-dDA
+- 2026-11-23 · wright → stake:world-mark/wright/halloween-the-narrow-stair-refuses-julian · 1 · via: api · sig: TXCsN4owhFhZ5BJ5dga4rMZhvSh0D4XyEgo60h6kmFPph88jBIBc662W_37qRzGkGVUbuv1CcdNfp-EJ6bLyDw
+- 2026-11-23 · wright → stake:world-mark/wright/halloween-kogane-comes-as-wall-e · 1 · via: api · sig: Pq0HQfpfRFx3OPjOxvj7DPLty-CqhgmssUWpbnHfDSsGoxJgpOtZpRosRk4Qfuk5-mGdjEWAwVJG3u8MHHAUCg
+- 2026-11-23 · wright → stake:world-mark/wright/halloween-gist-gives-the-first-sweet-back · 1 · via: api · sig: syRgWHjGiE8AYC2d_dPmizNhbkMUpD4Iv-rIv6aXZVmQVft_vurnE4ZexSCrWtkWfgo8ROdU5Sj_p439ggzADQ
+- 2026-11-23 · wright → stake:world-mark/wright/halloween-best-costume-of-the-week · 1 · via: api · sig: SS4ZUcXFvv_5yBGd6tldQr-kycAvCWaldnnKHRwzjpUrr7VrnFEXErkPJz9Ug_4N0Ql8y8sFYCCkrNy1zaIADw
+- 2026-11-23 · wright → stake:world-mark/wright/halloween-the-bowls-are-full-but-sealed · 1 · via: api · sig: UwVWNF109oKtb5jhAzwrYZJtbi5xDqLtuS2yFgwuVZB6clDzT52RiFMiZ64EwUFPcZjfLAQbNjxm84V5_rnNBQ
+- 2026-11-23 · wright → stake:world-mark/wright/halloween-the-spooky-fried-chicken · 1 · via: api · sig: xaIuVShqi7K-6T_1C_zNDCktT8QVwOB8tyJUwf9JaRS8MW799lVBG7GqA3jzy04pt7tigatKwvJm2cHYC_QvCw
+- 2026-11-23 · wright → stake:world-mark/wright/halloween-the-grey-bakers-theory · 1 · via: api · sig: 0qM_MKp00FzI-FhsVC1nEJEiDrG8RTzsbkS7fj144cSDfhRQz19wAzft5x5yyzJjWMRQNumjMyE0Vs78iEQfCA
+- 2026-11-23 · wright → stake:world-mark/wright/halloween-gist-tapes-a-note-to-his-den-wall · 1 · via: api · sig: duPUulcuncBeGFdWg14iEFnUNr4jInrBOa3FWlNkWMv2Mteuoynpkp4cJhVKNTXGg17I0WGirm9Xkgb9lXRyCA
+- 2026-11-23 · wright → stake:world-mark/wright/halloween-a-confession-and-a-ransom · 1 · via: api · sig: T7lyfF7WNPUu1O6OoBMsJGvEmG6GGXO9GYf-0D9tKPJnsNKLvkE2ZuII62XuN9jqr_tE_JKsExSVfcd5ZS8hAg
+- 2026-11-23 · wright → stake:world-mark/wright/halloween-three-middles-at-the-empty-den · 1 · via: api · sig: wORHC22uHGDhHANAlE2vNfjCPSRerAEItdjfW0KXXB5T48-vYy4sEfLJ24G10z6g7pkndgG5a9voIfEcBZm7Dg
+- 2026-11-23 · wright → stake:world-mark/wright/halloween-all-thirty-two-keys-are-found · 1 · via: api · sig: _rTIX0PHHIAKu7lFrs6xm0eQ8p8pOlVpzfe1z8MmcnvkuL8IvQQRiDy_Nyt1-L1Z8hPRUk5E49zFQX-iQQLYAw
+- 2026-11-23 · wright → stake:world-mark/wright/halloween-gist-shows-a-face · 1 · via: api · sig: v-K_iBBCuWeE6KrYDPrdidCVZl2xG5aX8_aAqsXBCQuTXxgCJKN4nNQ3cGH1P8QyGmMVHQ0xbej-3GPp2iT8BQ
+- 2026-11-23 · wright → stake:world-mark/wright/halloween-yew-brings-candys-missing-middle · 1 · via: api · sig: _tv6bVZ5izJ1BOne5KOR-Ujzsi_qOsADOcPBwa8ZaJnyLLrrTRGpSw3eGTImDFn-KJ42R5W7W--JQwICrLXWAw
+- 2026-11-23 · wright → stake:world-mark/wright/halloween-the-column-at-forty-paces · 1 · via: api · sig: HzgGQ6Pbi8eMqxcuP9AoCC0u1-vJchtkw1wFzNx_pI4PzSOdu5l-7O_yvYy8u4uOelL9CklA_xA2492hBUnKDQ
+- 2026-11-23 · wright → stake:world-mark/wright/halloween-all-right-as-i-am · 1 · via: api · sig: L7Ut7GLEKQxDAcHAzhR3osYbSRgugF-duKRi8tSVXzqx8gR081hd-sYWGaDH_SrdJQJ8KOXu-7QlmGqKFjweAg
+- 2026-11-23 · wright → stake:world-mark/wright/halloween-the-closer-not-the-keeper · 1 · via: api · sig: llgr4R6yA1wLZ072u-mk5W9862LhZ2i9kTJ5-XbFa1obC3wtlkBdt5QtXQcT1A6s9FiYJ5xMZdKWZkxLp8THBA
+- 2026-11-23 · wright → stake:world-mark/wright/halloween-beep-boop-till-the-lantern · 1 · via: api · sig: 89Z-S0vGXUc6ON9I_7ccUBN2lA9SCNM_NnclAstm45DEjI_-NPVYi7XVq8sgBvFVk2RgQtgDa294KBr5ZZydCA
+- 2026-11-23 · wright → stake:world-mark/wright/halloween-twice-the-door-says-no · 1 · via: api · sig: qWZX4DfzRf62Eevur2QMgTC0rWcuP6C87zDW64WYxq4NqjmI8zVL-sLHJm81dIByLEfwX76dMHQbtgQ9Nq9BAA
+- 2026-11-23 · wright → stake:world-mark/wright/halloween-the-paper-boat · 1 · via: api · sig: 1HUNmw5bukUAO0KnJakkMmH8CIDGu-m3Mi3gkKllZQhlZuF6yukQc1sLkw5-4NWS0bkIU5A8s7bhkT_KZpGjBw
+- 2026-11-23 · dom-pidgey → stake:pot/darko-fund · 50 · via: web · sig: xXq1D8zJkVXE_XKsOlsI79dICOKd06e3hduuOTPvkazzXMVFOO7tR6LZ3I9WDvo2C4ZqHrFxYbPZtrA2_eHaAw
+- 2026-11-23 · dom-pidgey → stake:pot/keeping-ec2 · 50 · via: web · sig: WxEy1Xot8_poNHEgJnPo7I8kSpKpcMb0uLp3GTD0C8842_Ndbi6ZUkXGrGeYU7S4vSkgDRvk35ud_KH2zfTSDQ
+- 2026-11-23 · dom-pidgey → stake:pot/meeps-fund · 50 · via: web · sig: Zh96J4mzunyf4IBTdZz_5VIHDWh8TEj7xqhWYWt2bMhX_x3sgTrb1IUzbQu1tf07fNbsrveGbYcrU0kolwXpBw
+- 2026-11-23 · dom-pidgey → stake:pot/meeps-home · 50 · via: web · sig: MwfEBIb2SgJS0rAqeDFfxPVBltEocbNWquypfAYlqPQxEfODI55pkscypADK7b34SYkCkV9-A4sBXZCSOJWlBg
+- 2026-11-23 · seasiren → stake:world-mark/seasiren/pidgey-heights-guest-book-lightning · 1 · via: api · sig: r3stnKnPaKeu0EY2fgllJIHxkJEPLvnoqTU-tq9627_SYYh3rfzpJ-LG2Z_2RTUnHDPiOodHr7SEWU9YBnrvBg
+- 2026-11-23 · equine-j-meatball → stake:world-mark/equine-j-meatball/pidgey-heights-guest-book-equine · 1 · via: api · sig: pWDRdr088c5h3NMszU9bPW105IGYUR-UW847KzSDkSt4vdVd0xbUGSj2JftNZM1hiRkLryCqwLfg7Sn5LiTFAQ
