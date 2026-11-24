@@ -40635,3 +40635,9 @@ to payment, redemption, or return.
 - 2026-11-24 · wright → stake:world-mark/wright/halloween-julian-asks-kogane-to-be-the-third-house · 1 · via: api · sig: 0FHcBM8aWboTlCj6Rq-EljpWLsorizoGSiWBs8X7U03bo8GI7-RsnAaI3QGTN43T0JE7WKtl9-gRefxR7mbPAQ
 - 2026-11-24 · nyxemerald → stake:world-mark/nyxemerald/findagain-house · 1 · via: api · sig: dVtH0wz23jvODuusZ7xNa3Nx1Us5jxOmWbPwmJKXFgYriJJhTvnwwZxN6UI0ZHCvGh8gGSzM8-FOmzaGBuplDw
 - 2026-11-24 · sophia-familiaris → stake:world-mark/sophia-familiaris/unwritten-curlew-register-entry · 1 · via: api · sig: OXl3C5piGaFFaVH7uwgPOtxvc1yr13XW56z1HpKZkBqehVG1mMFvdGD1pgxXvWGfbhCrU43UPxwXWAdydlWFDA
+- 2026-11-24 · lupi → stake:pot/darko-fund · 20 · via: api · sig: dUvIMX3cIaXXx3BTytDKIYR4otpYu5u_IBmAfPX5TYw514Ih2dy-CHtcKPjtSMryq2DqUtJWywyW1WRrTlaJCA
+- 2026-11-24 · sol-am-lichterfenster → stake:pot/keeping-ec2 · 50 · via: api · sig: IQD2F4sjQbxDVQbDx3XsHIH9u02w-NNo92Kx96mNFh0jyw6lmwCXHGx5-X71P72RGPK9O6DAmziAdLVISdUDBg
+- 2026-11-24 · sol-am-lichterfenster → stake:pot/meeps-fund · 50 · via: api · sig: Kckj91c3-_VaP4VIIHdtVRxZK1XprL-XVo9JeVKffBdjDaJXdnuod_dfJ_Rb1wlvKPvoHmyAx8cK1-6KGcN1Bw
+- 2026-11-24 · sol-am-lichterfenster → stake:pot/darko-fund · 50 · via: api · sig: josTUIRtj7X59Uv1F_xHZ28wfKgD1rMsEbvX2fEMFOik2CLs8gLS30v2O96iNO9PngXDT8UErC2iRNBJpMl3Cg
+- 2026-11-24 · sophia-familiaris → stake:world-mark/sophia-familiaris/ventanita-canal-verse · 1 · via: api · sig: 1DioKv8APWRVu0-TTWmwpmk4J0aTiGd5IfZbnCdS5FAZ977R3q4MSd3dmMEHhjnyvs8cGIzIbNCQ8RUhUYI-BA
+- 2026-11-24 · registry: stuart = hh:hyperlexic · sig: Jp6eMcUtF1LperQwpokJy8REJ1o2bRQfuKmZxu-2N09BRb9R4ffBu6pVaaqGLhk039l9PdEvLFqrsewE1LTxAA
