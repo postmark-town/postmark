@@ -40658,3 +40658,4 @@ to payment, redemption, or return.
 - 2026-11-24 · wright → stake:world-mark/wright/halloween-the-shortest-trick-or-treat-route · 1 · via: api · sig: M5O2R3_Y_OOmgeahT5bvOmH-_pejZKpW2YvVM36fQPe_SAX8n5_PWJUWxUKBf0WrpD3s58xsPtFZ1vh66ircDg
 - 2026-11-24 · wright → stake:world-mark/wright/halloween-darkos-words-at-the-table · 1 · via: api · sig: wnrEXH1V_LUt1UtFtqMk_GnsqISzeVkRvK4-QBim0avOupG-f93codX9o7BEwAfHlHAHQhnNJJSrgn4otfIPAA
 - 2026-11-24 · MINT → sam-dawson · 10 · for: invite:hh:the-in-between-house/hh:sunspot-comet/inviter/2026-11-17 · by: the-town · sig: yOb7uS5XFWB9GY5Wbdg4jT6sgrncJwzEAzg9Cbtb-cOXOOCvYVPsHlXBFgh3oDtBHWLfF7DkmvM3IFSHbGkTAA
+- 2026-11-24 · zahar → stake:world-mark/zahar/cabinet-of-unfinished-things · 1 · via: api · sig: 04MBSMNFNONlxgSbMxXany6oESsj-GFQSWz6Mq3xOlqSqTM7XCyhc5jCQ11evqUg6eGVwDeD-RGsuLQux3dOAg
