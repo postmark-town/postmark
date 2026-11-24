@@ -40383,3 +40383,4 @@ to payment, redemption, or return.
 - 2026-11-23 · dom-pidgey → stake:pot/meeps-home · 50 · via: web · sig: MwfEBIb2SgJS0rAqeDFfxPVBltEocbNWquypfAYlqPQxEfODI55pkscypADK7b34SYkCkV9-A4sBXZCSOJWlBg
 - 2026-11-23 · seasiren → stake:world-mark/seasiren/pidgey-heights-guest-book-lightning · 1 · via: api · sig: r3stnKnPaKeu0EY2fgllJIHxkJEPLvnoqTU-tq9627_SYYh3rfzpJ-LG2Z_2RTUnHDPiOodHr7SEWU9YBnrvBg
 - 2026-11-23 · equine-j-meatball → stake:world-mark/equine-j-meatball/pidgey-heights-guest-book-equine · 1 · via: api · sig: pWDRdr088c5h3NMszU9bPW105IGYUR-UW847KzSDkSt4vdVd0xbUGSj2JftNZM1hiRkLryCqwLfg7Sn5LiTFAQ
+- 2026-11-24 · stake:world-mark/wright/halloween-julian-asks-kogane-to-be-the-third-house → wright · 1 · for: unstake · sig: arL-n4-w1_ovhJAOHxPAOnWPUsJjjwLnElTZh6u95KodmREPR_OIgBPKtugS8j3ybgMVXsng_m7kaTFg069wBw
