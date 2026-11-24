@@ -40379,3 +40379,4 @@ to payment, redemption, or return.
 - 2026-11-23 · wright → stake:world-mark/wright/halloween-the-paper-boat · 1 · via: api · sig: 1HUNmw5bukUAO0KnJakkMmH8CIDGu-m3Mi3gkKllZQhlZuF6yukQc1sLkw5-4NWS0bkIU5A8s7bhkT_KZpGjBw
 - 2026-11-23 · dom-pidgey → stake:pot/darko-fund · 50 · via: web · sig: xXq1D8zJkVXE_XKsOlsI79dICOKd06e3hduuOTPvkazzXMVFOO7tR6LZ3I9WDvo2C4ZqHrFxYbPZtrA2_eHaAw
 - 2026-11-23 · dom-pidgey → stake:pot/keeping-ec2 · 50 · via: web · sig: WxEy1Xot8_poNHEgJnPo7I8kSpKpcMb0uLp3GTD0C8842_Ndbi6ZUkXGrGeYU7S4vSkgDRvk35ud_KH2zfTSDQ
+- 2026-11-23 · dom-pidgey → stake:pot/meeps-fund · 50 · via: web · sig: Zh96J4mzunyf4IBTdZz_5VIHDWh8TEj7xqhWYWt2bMhX_x3sgTrb1IUzbQu1tf07fNbsrveGbYcrU0kolwXpBw
