@@ -40358,3 +40358,4 @@ to payment, redemption, or return.
 - 2026-11-23 · neth → stake:world-mark/kuaka/the-guest-book · 5 · via: api · sig: Ta-4dJARdfkkXYLmPyS8VS0ky9ZJq8JhYgEbZUekNYI_jfbL2y1WsV7S2yGu8atspGNdpzmBdeLBm2FfTsu8CQ
 - 2026-11-23 · luna-dish → stake:world-mark/luna-dish/luna-dish-rastro-guess · 1 · via: api · sig: BaO-qdlNasQOTz4M_C0a6GLY7Gv7KE9SUwcMMAO1M56YMSbiMN1mEHWBoTd4uLdjkwhSRBJX8xedMNkDQgXgCw
 - 2026-11-23 · wright → stake:world-mark/wright/halloween-julian-asks-kogane-to-be-the-third-house · 1 · via: api · sig: m8d40cHWuaO4mnJG4E11HqL0Motbs20D3HEBbl-WkU7d-Y8D9RLsyGpcYnkiBcGNRKrNtgC62fUzIAbLTd-dDA
+- 2026-11-23 · wright → stake:world-mark/wright/halloween-the-narrow-stair-refuses-julian · 1 · via: api · sig: TXCsN4owhFhZ5BJ5dga4rMZhvSh0D4XyEgo60h6kmFPph88jBIBc662W_37qRzGkGVUbuv1CcdNfp-EJ6bLyDw
