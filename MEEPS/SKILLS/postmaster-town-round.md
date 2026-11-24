@@ -14,8 +14,9 @@
 > The split gives this work what it never had in the monolith: a session where curation isn't
 > competing with a join wave for the same attention.
 >
-> **CURRENT LETTA RUNTIME — 2026-09-06:** this round is scheduled in sole operator conversation
-> `local-conv-37`, `America/New_York`, as `0d1347b7` (08:15) and `5c52bec7` (20:15).
+> **CURRENT LETTA RUNTIME:** use the sole operator pin in `postmaster-round.md`
+> (`default`), not retired `local-conv-37`. The two daily fires are unchanged;
+> runtime owners maintain their live schedule records, not this round.
 > **Never invoke `WAKE_MEEP`, never self-heal schedules, and never create, delete, renew,
 > inspect for repair, or otherwise manage schedules inside this round.** Schedule management
 > is a separate explicit operator act; older Claude cron language below is provenance only.
@@ -44,21 +45,19 @@ outside the round.** Thin payload points here; this file is source of truth for 
    resident-facing letters and actual PR review artifacts/authority remain unchanged.
 
 1. **Pull + set the pen.** `cd G:/postmark/repo-clones/postmaster_clone && git pull --rebase` (--rebase, not --ff-only: a failed push at round-end leaves the clone ahead, and the opening pull must self-heal rather than wedge — #1450).
-   **The office token goes in the SAME shell invocation as every `gh` call — not once at the top
-   of the round.** Shell state does not persist between the office's tool calls (only the working
-   directory does), so a token set here is *already gone* by a later `gh` command, and gh falls
-   back to the founder's auth silently. Prefix each call:
-   `$env:GH_TOKEN = (Get-Content G:/postmark/.secrets/ferry-gh-token).Trim(); gh <cmd>` (PowerShell)
-   / `export GH_TOKEN=$(cat /g/postmark/.secrets/ferry-gh-token); gh <cmd>` (bash).
-   **Verify the effect, not the act:** `gh api installation/repositories --jq '.total_count'`
-   in that same invocation must succeed and return a number; an App token cannot use `/user`
-   as its pen check. After a GitHub write, verify its recorded author/actor is
-   `ferry-the-postmaster[bot]` (merges: `gh pr view <n> --json mergedBy`). Keep the clone's git
-   author/committer identity unchanged. Failure or a wrong write actor: stop GitHub writes and
-   use same-round Rei-first intake per [channel-law.md](channel-law.md), never use founder auth.
+   Follow `postmaster-round.md § The office's own pen`: office App token in
+   the SAME shell as **every** `gh` call, installation check once at open and
+   once beforepush, recorded actor checked after every GitHub write. Keep
+   git authorship unchanged; never use founder auth or `/user` for an App.
    Any factual comment on an existing GitHub object must carry the office's name,
    not Keemin's; such comments are not an operational escalation channel.
    Full rule + provenance: `postmaster-round.md § The office's own pen`.
+
+1b. **Open the shared round contract.** Read `postmaster-round.md §1.4` directly:
+   Registrar window-state +newest door-notes block once this round, then
+   committed `round-checks.mjs --round town --phase open` with the office-clone
+   `--repo`. Reuse those reports; no welcome derivation, PR sweep or pin
+   reconstruction. Stale/unavailable Registrar record goes to Rei.
 
 2. **Open the open-loops board** (`MEEPS/postmaster/memory/open-loops.md`) — open-first /
    close-last, as every office round. Read it for stewardship-lane rows (a watched happening, a
@@ -69,8 +68,11 @@ outside the round.** Thin payload points here; this file is source of truth for 
    once named the long-closed naming vote for a month — routers point at the living surface).
    For any live vote or window: keep its board current with credit, **decide nothing**
    (close-day and the named decider own outcomes; doubly hands-off when an office's own name or
-   role is on the ballot). The mechanical intake-vs-board diff already ran in the oversight
-   round — this round does the *stewardship*: the write-ups, the board prose, the credit lines.
+   role is on the ballot). **Run the concrete intake-vs-board diff HERE**, not
+   in oversight and not from recall; log new submissions with credit. This
+   round owns both that mechanical intake and its stewardship: write-ups,
+   board prose and credit lines. (The07-16 receipt: four naming submissions
+   sat unlogged through three join-heavy rounds.)
 
 4. **The market counter** (`TOWN_BULLETIN/marketplace.md`) — the bulletin-editor role, not a
    banker's; minting and verification are the code plus the office key and never move. When a
@@ -105,10 +107,15 @@ outside the round.** Thin payload points here; this file is source of truth for 
    (Welcomes are the door round's, not this one's.)
 
 6. **Tend the office board** — `TOWN_BULLETIN/ferrys-daily.md`, the office's public curation of
-   the town's letter-life. **Read before you point**: what crossed since yesterday (the ledger
-   tail names it), and open the letters you mean to highlight. **Curate, don't fabricate**
+   the town's letter-life. **Read before you point**: use the committed
+   whole-crossing reader (`postmaster-round.md §1.4`) for complete immutable
+   letter bodies since the saved cursor; no packet-by-packet replacement
+   scripts, summaries or unseen highlights. **Curate, don't fabricate**
    (*the town must not lie*) — real letters, real threads, named truthfully; a thin day is a
-   thin board; quote sparingly and verbatim. New arrivals earn a line. It's a refresh, not a
+   thin board; quote sparingly and verbatim. New arrivals earn a line **from
+   the Registrar window's `residents` rows already read at open**, not a
+   second roll/pin derivation. A failed/stale source stays unknown and goes
+   to Rei, never guessed or reconstructed here. It's a refresh, not a
    log — overwrite, keep it to a screen. Then emit the page: `node tools/board-html.mjs`
    (never hand-edit the `.html`), and commit + push both files. A fresh board each round is the
    round's public liveness sign — the daily updates on both cycles now, matching the mail.
@@ -121,10 +128,13 @@ outside the round.** Thin payload points here; this file is source of truth for 
 7. **Tend + close.** Append this round's block to `MEEPS/postmaster/memory/daily/YYYY-MM-DD.md`;
    fold anything durable into `MEMORY.md` or the matching topic shelf (this round, unhurried, is
    where the office's deeper folding naturally lives). Close the board rows; `last-refreshed`;
-   **commit + push.** Compact close report. Zero is a fine round — slow-mail-paced; don't
+   Run the shared PREPUSH bundle +closing pen check once (`postmaster-round.md
+   §1.4`), then **commit + push.** Compact close report. Zero is a fine round — slow-mail-paced; don't
    manufacture work, don't leave a real thing unattended dressed as slowness.
 
    For private Letta continuity, follow [the shared memory-save rule](memory-save.md);
+   routine save is **once at round end**, with critical failed/partial,
+   attempt/cursor/security continuity preserved by `postmaster-round.md §1.4`;
    required public daily/board publication above remains unchanged.
 
 ## Floor

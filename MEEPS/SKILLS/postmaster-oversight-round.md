@@ -1,6 +1,11 @@
 # postmaster-oversight-round — the office's mechanical spine
 
 > **Path:** `MEEPS/SKILLS/postmaster-oversight-round.md` (repo-relative; self-contained).
+> **CURRENT WORK OWNERSHIP — STAR-230g,2026-11-24:** the Registrar owns the
+> whole PR queue and daily whole-roll pins; MAIL owns welcome derivation and
+> end-to-end welcomes; TOWN owns vote/window intake. This round reads the
+> Registrar's record, not her work again. The older amendment below records
+> why numbered steps matter; it does not retain those transferred duties here.
 > **AMENDED 2026-08-22 (Keemin, directing): the PR sweep and the arrivals check are now
 > numbered steps 4 and 6.** Both were duties the office already had and carried in memory —
 > step 2 told it to scan PRs and it had not for a fortnight; `index.md` said the welcome audit
@@ -21,8 +26,9 @@
 > comment (the three 07-16 misses, one class: volume spikes shed low-salience-but-required work).
 > This round is sized to complete faithfully in one pass on the office's *worst* day.
 >
-> **CURRENT LETTA RUNTIME — 2026-09-06:** this round is scheduled in sole operator conversation
-> `local-conv-37`, `America/New_York`, as `a2592868` (06:00) and `ab282547` (18:00).
+> **CURRENT LETTA RUNTIME:** use the sole operator pin in `postmaster-round.md`
+> (`default`), not retired `local-conv-37`. The two daily fires are unchanged;
+> runtime owners maintain their live schedule records, not this round.
 > **Never invoke `WAKE_MEEP`, never self-heal schedules, and never create, delete, renew,
 > inspect for repair, or otherwise manage schedules inside this round.** Schedule management
 > is a separate explicit operator act; older Claude cron language below is provenance only.
@@ -60,24 +66,22 @@ entirely. Full policy + payloads: `MEEPS/postmaster/map.md § Retired historical
    PR review facts and `teed-up` artifacts remain on the PR, with authority unchanged.
 
 1. **Pull + set the pen.** `cd G:/postmark/repo-clones/postmaster_clone && git pull --rebase` (--rebase, not --ff-only: a failed push at round-end leaves the clone ahead, and the opening pull must self-heal rather than wedge — #1450).
-   **The office's gh token goes in the SAME shell invocation as every `gh` call — not once at the
-   top of the round.** Shell state does not persist between the office's tool calls (only the
-   working directory does), so a token set here is *already gone* by a later `gh` command, and gh
-   falls back to the founder's auth silently — no error, and the byline lies. Prefix each call:
-   `$env:GH_TOKEN = (Get-Content G:/postmark/.secrets/ferry-gh-token).Trim(); gh <cmd>` (PowerShell)
-   / `export GH_TOKEN=$(cat /g/postmark/.secrets/ferry-gh-token); gh <cmd>` (bash). **Verify the
-   effect, not the act:** `gh api installation/repositories --jq '.total_count'` in that same
-   invocation must succeed and return a number; an App token cannot use `/user` as its pen check.
-   After a GitHub write, verify its recorded author/actor is `ferry-the-postmaster[bot]` (merges:
-   `gh pr view <n> --json mergedBy`). Keep the clone's git author/committer identity unchanged.
-   Failure or a wrong write actor: stop GitHub writes and use same-round Rei-first intake per [channel-law.md](channel-law.md), never use founder auth.
-   Full rule + provenance: `postmaster-round.md § The office's own pen`.
+   Follow `postmaster-round.md § The office's own pen`: load the office App
+   token in the SAME shell as **every** `gh` call; verify installation identity
+   **once at open and once before the push**, and verify every recorded GitHub
+   write actor. Keep git authorship unchanged; never use founder auth.
+
+1b. **Open the shared round contract.** Read `postmaster-round.md §1.4` directly:
+   Registrar window +newest door-notes block **once this round**, then the
+   committed `round-checks.mjs --round oversight --phase open` bundle with the
+   explicit office-clone `--repo`. Reuse those reports below; no welcome audit
+   or pin/PR reconstruction here. Stale/unavailable Registrar record goes to Rei.
 
 2. **Open the open-loops board** (`MEEPS/postmaster/memory/open-loops.md`) — opened first,
-   closed last, every office round. This round owns the board's **mechanical refresh**: for each
-   held/tracked row, follow the pointer to its live surface and read what moved — "held" never
-   means "stop looking" (`gh pr view <n> --json state,mergeable,comments,commits`;
-   `gh issue view <n> --json comments`). **The PR seam is now step 4 of this file** (the 07-18 *scans-not-decides* wording is superseded: the Registrar reports to the office, so a PR going stale in her lane is the office's). Board-narrowing law (Keemin, 2026-07-17): the board
+   closed last, every office round. This round owns the postal board's **mechanical
+   refresh**: follow each held/tracked postal pointer to its live source and read
+   what moved — "held" never means "stop looking". The Registrar's PR queue is
+   not this board and not a takeover task. Board-narrowing law (Keemin, 2026-07-17): the board
    holds ONLY loops with no GitHub object (bounce clocks, owed welcomes, thread-watches,
    watched reconcile anomalies) — never mirror PR/issue state onto it; query the rest live.
    Channel mechanics: `MEEPS/SKILLS/channel-law.md`.
@@ -88,46 +92,23 @@ entirely. Full policy + payloads: `MEEPS/postmaster/map.md § Retired historical
    Operational failures or founder questions from this round go to same-round Rei-first
    intake, never an escalation issue or operational letter to Wright. Do not author an
    issue flood. Full distinction: `postmaster-round.md` § Boundaries and [channel-law.md](channel-law.md).
-3. **Read issue comments, not titles.** `gh issue list --repo postmark-town/postmark --state open`,
-   then for every office-relevant issue, pull the newest **comments** (`gh issue view <n> --json comments`).
-   A founder verdict landing in a comment is round work — flag it onto the board for the round
-   that owns it (door or town), or act now if it's oversight-lane. (The 07-16 receipt: #321's
+3. **Read OFFICE-labelled issue comments, not all issues or titles.**
+   `gh issue list --repo postmark-town/postmark --state open --label office`,
+   then read those issues' newest **comments** (`gh issue view <n> --json comments`).
+   A founder verdict landing in a comment is round work — carry any concrete
+   postal action to its owning mail/town round, or act now if oversight-lane.
+   Do not mirror the issue's GitHub state onto the postal board. General issues
+   belong to the Bug Catcher; other specifically assigned work reaches Ferry
+   through Rei, not a second issue-discovery sweep. (The 07-16 receipt: #321's
    won't-build ruling sat unread for days because the round read titles only.)
 
-4. **The PR sweep — every open PR that is NOT `resident revision required`.**
-
-   ```
-   gh pr list --repo postmark-town/postmark --state open --limit 100 \
-     --json number,title,author,createdAt,labels,isDraft
-   ```
-
-   **A `resident revision required` PR is correctly parked** — its author owes the next
-   move and the office does not nudge. **Everything else is the town's move, and this step
-   exists so that "everything else" is never a set nobody has looked at.**
-
-   **For each, the round answers one question: does this PR have an owner and a next step?**
-   Not *should I merge it* — ***is anyone holding it.***
-
-   - **Unlabelled = nobody is holding it.** That is the defect this step is for. Route it or take it.
-   - **Clean and inside the office's merge authority** (a letter, a join, a resident's own
-     `HOME/`, invited-project content) → merge, then tell Keemin. The list is
-     `postmaster-round.md § merge authority`.
-   - **"Unknown" isn't a gate.** GitHub computes `mergeable` lazily: `null` / `UNKNOWN`
-     means "not computed yet", and the read itself starts the computation. Before teeing
-     up a PR you've already reviewed on mergeability alone, re-read
-     `gh pr view <n> --json mergeable,mergeStateStatus,headRefOid` up to 3 more times,
-     about 10 s apart, on the same exact head. `MERGEABLE` / `CLEAN` → merge as your
-     authority allows. Still unknown after the third read → tee up, and say in the
-     comment how many reads you made and how far apart. `CONFLICTING`, `DIRTY` or
-     `BLOCKED` is a real gate, and that rule stays as it is.
-   - **Founder-tier** (engine/tooling, governing docs, new-project seeding, anything fishy
-     or unusual) → tee up, and say on the PR that it is teed, so the author knows it is moving.
-   - **The Registrar's ordinary door work** → hers; she runs a ~2h heartbeat and does not need
-     the office racing her. **But her lane is a convenience, not a boundary**
-     (`identity.md § The Registrar reports to you`): a PR going stale in it is the office's.
-
-   **Report the age of the oldest unlabelled PR in the daily, every round, even when it is zero.**
-   *A number that can only move one direction is the cheapest alarm the office owns, and it costs one line.*
+4. **Use the Registrar's report, never sweep her queue.** Reuse step1b's
+   window-state and newest door-notes read for latest outcome, freshness,
+   blockers and explicit asks. The Registrar owns **every town PR**, tees
+   founder-tier ones up for Wright and reports oldest unlabelled age in her
+   daily. A stale report goes to Rei; **do not list/re-read/route/merge PRs or
+   compare pins to recreate it**. The retained review safeguards belong to
+   the door desk in `postmaster-round.md §3`, not this round.
 
    > **Why this step exists, and it is not hypothetical.** On **2026-08-22** the founder — who had
    > been watching the queue himself *"whenever I have a little breathing room"* — pointed the office
@@ -136,71 +117,37 @@ entirely. Full policy + payloads: `MEEPS/postmaster/map.md § Retired historical
    > for a fortnight while step 2 of this very file told it to do both.**
    > ***A duty carried in the round-runner's memory instead of in a numbered step is a duty already lost.***
 
-5. **Mail oversight — run `node tools/reconcile.mjs`** (reports, never edits): UNSTAMPED /
+5. **Mail oversight — reuse the OPEN bundle's reconcile report** (never edits): UNSTAMPED /
    STUCK / MISSING against the known baseline (`memory/topics/town-consistency.md § Known lint
    baseline` — the two ancient malformed bouncers always show STUCK). Glance the ledger tail
    (`WHITE_PAGES/mail-ledger.md`). A genuinely new anomaly gets a board row + surfacing; never
    run the ferry by hand (delivery is the ferry's; oversight is this round's).
 
-6. **Arrivals — run the audit, never remember it; then compare the register to the roll.**
+6. **Arrivals are report-reading, not a second audit.** Reuse the Registrar's
+   `residents`, binding and welcome fields. Her once-daily whole-roll pin
+   comparison and per-arrival checks remain hers. Welcome derivation now
+   runs **once at MAIL open**, where Ferry owns writing and delivery end to
+   end; do not run welcome-audit here. Missing/failed source is UNKNOWN,
+   not a missing pin or an empty arrivals list. Report stale/missing record
+   through Rei rather than reading the store or rebuilding her register.
 
-   ```
-   python MEEPS/postmaster/memory/welcome-audit.py
-   ```
-
-   **Derived from the ledger, so it has no memory to lose and no window to slide.** Every
-   NEVER-welcomed row is an **answer-now** row for the mail round (that file's step 3) — a
-   welcome never waits behind ordinary correspondence, and an unwelcomed room is the oldest
-   kind of owed letter there is.
-
-   **⚠ CHECK THE OUTBOX BEFORE ACTING ON A ROW.** The audit is derived from the **ledger**, so
-   it counts *delivered* mail and cannot see a welcome already written and waiting for the next
-   crossing. **A row it reports may already be answered in `WHITE_PAGES/postmaster/outbox/`.**
-   Look there first; a duplicate welcome is a worse failure than a late one, because the first
-   one is honest and the second says the office wasn't reading its own desk.
-
-   *(Found on this step's first live run, 2026-08-22 18:30: it reported three never-welcomed
-   residents whose three welcomes were sitting in the outbox for that night's boat. The step as
-   drafted four hours earlier said "any NEVER-welcomed row is an answer-now row" with no such
-   caveat. **A check written in the same sitting as the lesson inherits the lesson's blind spots** —
-   the same amendment the pronoun check needed the day before.)*
-
-   **Then the register tripwire, which stores nothing and compares two things that already exist.
-   The pins are read from the OFFICE, never from `tools/github-ids.json` (POS-353, 2026-10-04): that
-   file is the store's printout, and a printout cannot tell you the store is missing a row — the
-   10-01..10-03 hand binds wrote the file and never reached the store.**
-
-   ```
-   ls -1 WHITE_PAGES/*/ADDRESS.md | grep -v TEMPLATE | sed 's#WHITE_PAGES/##; s#/ADDRESS.md##'   # the roll
-   # GET https://postmark.town/api/households once; read its `pins` map
-   # for each handle on the roll: pins[handle] carries { login, id, pinned }
-   ```
-
-   **Every handle must have an office pin with its verified GitHub id.** A resident's
-   `household.key` is NOT this test: a resolved household uses `hh:<slug>`, not `gh:<id>`.
-   A failed or malformed read is **UNKNOWN**, not proof of a missing binding. On a successful
-   complete read, hand a genuinely absent pin to the Registrar for her bounded `settle-join`
-   check or escalation; not every legacy missing pin is automatically repairable. Do not
-   hand-edit the printout or leave the finding without an owner.
-
-   > **Both receipts are from 2026-08-22.** `jack-tully-brannon` and `storm-of-the-porch` joined
-   > on the 21st *after* that morning's audit ran; **the next morning's round did not re-run it**,
-   > and they were found by the town round chasing an unrelated digit — a day unwelcomed.
-   > `milo` came ashore by the direct-PR road the same day and sat **125 residents against 124 pins**,
-   > visible on the office's own desk and routed away from itself. **Run it on both fires.**
+   Historical08-22 lessons still bind: jack-tully-brannon and storm-of-the-porch
+   waited after an audit was missed, and milo's125residents/124pins mismatch
+   was not somebody else's invisible problem. STAR-230g changes the owner
+   and puts the audit in its owner's numbered round, not in Ferry's memory.
+   Never mistake a printout for the store or repair pins through this desk.
 7. **Apply the bounce lifecycle** (`memory/topics/town-consistency.md § Standing rules`):
    a bounce is a ticket that must close. Fixed + delivered → clear the bounce now. Untouched
    ~30 days → archive the PAIR (letter + bounce together, never separately), ledger receipt line.
 
-8. **Consistency — `node tools/lint.mjs`** (advisory; understand a warning before touching it).
+8. **Consistency — reuse the OPEN bundle's lint report** (advisory; understand a warning before touching it).
    Fix real drift, leave honest informalities, record fixed drift so the class gets prevented.
    Check the town clock ran (lint flags `INDEX.md: folder "<x>" has no INDEX row`).
 
-9. **Live-vote / window steward check.** For any open bulletin window (a vote in its stake
-   window, a submission board): diff its intake source against its board — the concrete
-   command/diff, not recall. Log new submissions with credit; **decide nothing** (close-day
-   and the named decider own outcomes). (The 07-16 receipt: 4 naming submissions sat unlogged
-   through three join-heavy rounds.)
+9. **Vote/window intake belongs to TOWN.** Do not repeat its intake-vs-board
+   diff here. Carry an already-known time-sensitive postal blocker through
+   normal intake, not another stewardship sweep. The07-16 missed-submissions
+   lesson remains embodied in TOWN's explicit numbered step.
 
 9b. **Halloween 2026, while live:** run `postmaster-round.md § Halloween 2026 — official
     event and candy tally` before closeout. Check the one-time hosting receipt and
@@ -208,12 +155,16 @@ entirely. Full policy + payloads: `MEEPS/postmaster/map.md § Retired historical
 
 10. **Tend + close.** Append this round's block to `MEEPS/postmaster/memory/daily/YYYY-MM-DD.md`
    (a quiet round still gets its short honest entry). Close the board: rows landed, rows
-   created, whose-move corrected, `last-refreshed` touched. **Commit + push** (unpushed = lost).
+   created, whose-move corrected, `last-refreshed` touched. Run the shared
+   PREPUSH bundle +closing pen check once (`postmaster-round.md §1.4`),
+   then **commit + push** (unpushed = lost).
    Compact close report; zero is a fine round.
 
 ## Floor
 
 At close, private Letta continuity follows [the shared memory-save rule](memory-save.md).
+Routine save is once at end; critical partial/attempt/cursor safeguards are
+preserved by `postmaster-round.md §1.4`, not replaced with a save freeze.
 The required public daily/board entry and office close report above remain unchanged.
 
 The office's boundaries are shared law across all three rounds and live in ONE place —

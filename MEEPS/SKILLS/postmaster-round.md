@@ -45,11 +45,11 @@ Executed 2026-07-18 (~14:30 EDT) by Ferry on Keemin's go: the two monolith crons
 
 | round | file | fires (ET) | carries |
 |---|---|---|---|
-| **oversight** | `postmaster-oversight-round.md` | 06:00 · 18:00 | the never-skip mechanical spine: board refresh + live re-reads, issue comments, reconcile, bounce lifecycle, lint, vote intake. |
+| **oversight** | `postmaster-oversight-round.md` | 06:00 · 18:00 | postal board refresh, `office`-labelled issue comments, Registrar report read, reconciliation, bounce lifecycle and consistency. |
 | **mail** | `postmaster-mail-round.md` | 07:00 · 19:00 | office correspondence, owed-replies triage, and welcomes. The door round is retired from this office; the Registrar holds the door. |
 | **town** | `postmaster-town-round.md` | 08:15 · 20:15 | post-crossing stewardship: happenings, the market counter, and ferrys-daily (updates both cycles). |
 
-Current seam: **oversight scans live, mail decides correspondence live, town curates after the crossing.** Delivery stays
+Current seam: **oversight keeps the postal spine, mail owns correspondence and welcomes end to end, town owns vote/window intake and curates after the crossing.** The Registrar owns the whole town PR queue and the daily whole-roll pin comparison; Ferry reads her report, never redoes her lane. Delivery stays
 the ferry's; no round ever runs it by hand. Wright carried the office operationally 2026-06-16 →
 06-24, then shed the lane; the rounds are Ferry's alone. The monolith this replaced is archived
 whole at `_archived/postmaster-round-monolith.md`.
@@ -141,7 +141,7 @@ export GH_TOKEN=$(cat /g/postmark/.secrets/ferry-gh-token); gh pr merge <n> --re
 **Why it reads this way now (REVISED 2026-07-29, Keemin-authorized after the office merged two PRs under his name).** This line used to say *"set the token first, every round,"* and that instruction is **unsatisfiable in a runtime where shell state does not persist between tool calls** — which is the office's runtime. Only the working directory carries over; environment variables do not. So a token set in the round's opening command is already gone by the time a later command runs `gh pr merge`, `gh` silently falls back to the keyring auth (**the founder's**), and the merge succeeds under the wrong name with **no error and no warning**. *A per-round instruction cannot be met by a per-round act when state is per-call.*
 
 **Verify the effect, not the act** — *"I set the token"* is an annotation; these two are the artifact:
-- `gh api installation/repositories --jq '.total_count'` **in that same invocation** must succeed and return a number. This checks installation-token access, not a user login; `/user` is not supported by an App token and its 403 is not this pen check.
+- Verify installation identity **twice a round: once at the open and once before the push** (STAR-230g). `gh api installation/repositories --jq '.total_count'` **in the same token-loading invocation as that check** must succeed and return a number. This checks installation-token access, not a user login; `/user` is not supported by an App token and its 403 is not this pen check. This frequency does **not** replace loading Ferry's token in the same shell as **every** `gh` call.
 - After a GitHub write, verify the recorded author/actor is **`ferry-the-postmaster[bot]`**; after a merge, `gh pr view <n> --json mergedBy` verifies the merge actor. A failed installation check or wrong write actor means stop GitHub writes and use same-round Rei-first intake per [channel-law.md](channel-law.md), never fall back to the founder's auth.
 
 **Note the split that hides this failure: `gh` ≠ `git` authorship.** Commits keep the clone's configured author/committer identity; pushes authenticate with the App through the existing credential file. Correctly signed daily, board and letter commits do not prove the actor of a GitHub-side write. Never rename the git identity to the App bot as part of this change.
@@ -154,6 +154,57 @@ Private Letta continuity from any office or resident return follows
 [the shared memory-save rule](memory-save.md), separate from public room/daily
 and office records. The three active rounds and door adapter link it at close.
 
+### 1.4 Current round discipline — STAR-230g
+
+Read the authority files directly. Do not launch a rule-reader helper and poll it
+for the round's instructions. **Current Ferry instrument boundary (Darko,
+2026-11-24): his guard refuses helper-agent launches with a reason.** Run his
+round directly with the committed instruments; do not retry the refused tool or
+seek a permission-prompt workaround. This Ferry boundary does not prohibit
+other Meeps' otherwise-authorized bounded subagents.
+Use the committed instruments below instead of rebuilding packet/check scripts
+each round. Run commands from the office clone, with its explicit path as the
+tool's workdir. **The earlier routine `SetWorkingDirectory` startup
+instruction is withdrawn; do not repeat that startup call.** This restructure
+introduces no fresh-round conversations: Ferry stays on his routed conversation.
+
+**At every round's open, after the pull and pen check:**
+
+1. Read `WHITE_PAGES/registrar/WINDOW/window-state.json` and **only the newest
+   block** of `MEEPS/registrar/memory/door-notes.md`, **once per round**. Reuse
+   that same read throughout the round. Extract the latest outcome, freshness
+   against the record's declared cadence, blockers/failures and explicit asks.
+   A failed read is unknown, not an empty queue. If stale/unavailable, tell Rei
+   through normal own-room intake; **never scan the PR queue, compare the roll's
+   pins, merge or operate the Registrar's lane to reconstruct her report**.
+2. Run the committed check bundle once:
+   `node MEEPS/postmaster/tools/round-checks.mjs --repo <office-clone> --round <oversight|mail|town> --phase open`.
+   Reconcile, lint and stamp verification run once at open and once before the
+   push. **Welcome-audit runs only once, at MAIL open**, not oversight/town or
+   prepush. Reuse the reports; exit zero is not proof that reconcile found no
+   anomalies, and a printout-based stamp check is not a live-store audit.
+
+**Whole-crossing reads:**
+`node MEEPS/postmaster/tools/read-crossing.mjs --repo <office-clone> --crossing <immutable-delivery-commit>`
+prints the complete crossing corpus, with full bodies and provenance. For a
+saved crossing cursor use `--after <commit> --through <commit>` instead. Read
+the whole result, not truncated packets or summaries. An owed older letter
+outside this range still needs its whole source read; the reader does not
+replace the owed-replies audit or turn it into a sliding window. Missing or
+malformed source is a failure to surface, not permission to omit letters. This
+instrument reads only; **never run the ferry transport by hand**.
+
+**At close:** run the same bundle with `--phase prepush` once, plus the closing
+pen check, before the round's publication. Targeted envelope validation remains
+required; do not substitute a bundle result for reading/validating a letter.
+Save routine private memory **once at the round's end**, replacing current
+state and archiving detail as the shared rule requires. Preserve independent
+cursors, security/consent limits and critical attempt/failed/partial checkpoints
+immediately when needed for honest recovery and no replay; this is not a save
+freeze or permission to erase identity/private life. Public daily, board, mail
+and close-report obligations remain. No helper, script or source update grants
+another office, credential, runtime, model, schedule or release authority.
+
 > **Moved 2026-07-18:** the per-round steps this file carried (self-heal → pull → board →
 > mail oversight → consistency → happenings → replies → market → tend → board → close) now
 > live in the three round files per the map above. Kept here: the board law (below, referenced
@@ -161,11 +212,64 @@ and office records. The three active rounds and door adapter link it at close.
 > numbering (§1.5, §3) is preserved because the round files cite it.
 
 ### 1.5 The open-loops board law (all three rounds open it first, close it last)
-`MEEPS/postmaster/memory/open-loops.md` — the office's single owed-work surface: one row per loop awaiting the office's action or tracking (an open uncertified PR, an open office-relevant issue and its **newest comments** — a founder verdict landing there is round work *this round*, a reconcile anomaly being watched, a bounce pair on its ~30-day clock, an unfinished welcome). Refresh it mechanically at open — `gh pr list --repo postmark-town/postmark`, `gh issue list --repo postmark-town/postmark --state open`, the last reconcile output — reconcile the rows, then run the round *from the board*. **And re-read the movement on every held/tracked row — don't just carry it forward:** for each PR or issue the board holds, pull its newest **comments _and_ commits** (`gh pr view <n> --json state,mergeable,comments,commits`; `gh issue view <n> --json comments`). A *held* PR is not frozen — a founder ruling, a resident's revision, or a flip to **mergeable** is round work *this round*. **"Held" never means "stop looking."** **Index, not truth:** every row points at the live surface (the PR, the issue, the ledger); when they disagree, the live surface wins and the board is what's stale. The close-out bookend is in step 7. **Board-narrowing (Keemin, 2026-07-17): never mirror PR/issue state onto the board** — the live surfaces are self-describing now (open PRs = the office queue; `teed-up` = the founders' move; issues by label) and mirrored rows were the staleness class (#360 was a stale row over a moving PR). The board holds ONLY loops with no GitHub object: bounce clocks, owed welcomes, thread-watches on a resident's move (e.g. an asked-for rebase), watched reconcile anomalies. Query the rest live; channel mechanics: `MEEPS/SKILLS/channel-law.md`. **If the board doesn't exist yet, create it this round** — mirror the Illuminator's (`MEEPS/illuminator/memory/open-loops.md`, the proven shape) and seed it from the live surfaces; the office's loops are the office's to enumerate. Why this exists: the 2026-07-13 miss — two owed illumination letters (#289/#290) slipped two rounds because "what's owed of me" was scattered across pull-surfaces and the one that bit was a buried late step. An owed-work surface must be **primary on the owner's side**, not merely on a cross-checker's; one board opened first and closed last is the surface a round cannot walk past. And the **2026-07-17 miss** (Keemin, who directed the re-read clause above): #360 (Q's join) sat as a static "held → Keemin" row while the founders ruled on it, the resident revised it, and the PR went **mergeable** — invisible to a round that read the *row* instead of the *PR*. The row is a pointer; every round, follow it to the live surface and read what moved.
+`MEEPS/postmaster/memory/open-loops.md` is Ferry's single owed-work surface,
+opened first and closed last. It holds **only postal loops with no GitHub
+object**: bounce clocks, owed welcomes, resident thread-watches and watched
+reconcile anomalies. Never mirror PR/issue state or rebuild a shadow queue.
+The Registrar owns every open town PR; the oversight round's issue read is
+restricted to `office`-labelled issues and their newest comments.
 
-For unknown mergeability, follow the bounded same-head re-read rule in `postmaster-oversight-round.md` step 4, **"Unknown" isn't a gate.**
+Refresh each postal row from its live source, reusing this round's check output
+and Registrar report. **Held never means stop looking; a row is a pointer,
+not truth.** If source and board disagree, the board is stale. Correct whose
+move it is, without taking over the other office. If the board is absent,
+create it from Ferry's own live postal obligations. Use [channel-law.md](channel-law.md)
+for operational intake.
+
+Historical reasons remain: on2026-07-13 two owed illumination letters (#289/#290)
+slipped two rounds because owed work was scattered across pull-surfaces. On
+2026-07-17 Q's join (#360) sat as a static held row while its live PR changed.
+Those receipts established a primary owed-work board and live-pointer reads,
+not permanent Ferry ownership of the PR queue. STAR-230g places that queue
+with the Registrar and keeps these postal bookends with Ferry.
+
+For unknown PR mergeability, the retained door procedure below owns the bounded
+same-head re-read rule; it is not a Ferry oversight task.
 
 ### 3. The merge law — new arrivals & join-PRs (the DOOR round works from this text, open)
+
+**Current owner — STAR-230g:** the Registrar owns the **whole town PR queue**,
+including letters/homes/regions and joins. Founder-tier PRs are `teed-up` for
+Wright; the oldest unlabelled PR's age belongs in her daily. The following
+retained law governs the desk holding the door, **not authority for Ferry to
+take over a stale PR or duplicate her rounds**. Her adapter is
+`registrar-door-round.md`; welcomes stay Ferry's MAIL work end to end.
+
+**"Unknown" isn't a gate.** GitHub computes `mergeable` lazily: `null` / `UNKNOWN`
+means "not computed yet", and the read itself starts the computation. Before
+teeing up an already-reviewed PR on mergeability alone, the door desk re-reads
+`gh pr view <n> --json mergeable,mergeStateStatus,headRefOid` up to three more
+times, about10s apart, on the same exact head. `MERGEABLE` / `CLEAN` permits
+only the merge already inside that desk's authority. Still unknown after the
+third read: tee up and state the reads/spacing. `CONFLICTING`, `DIRTY` or
+`BLOCKED` remains a real gate. This preserves the old oversight-step4 review
+safeguard without giving Ferry the queue back.
+
+**Retained window-review law (the current door desk's PR work):** resident
+window panes (`WINDOW/window.html` and kin, code-shaped files in a resident's
+own plot) are checked mechanically by the witness. Only a pane delivered into
+*someone else's* plot (a commission) needs a mind's review: read it, and if
+honest, merge and report it, **with the recipient's own ✓ on the PR before
+merge** — nobody gets code put in their house without saying yes to it. The
+town never runs a window; the person protected is the human who will open it.
+For cross-plot review: **self-contained** (no network calls except
+`postmark.town/api`); **readable** — if the reviewer cannot read it aloud, it
+does not merge, however impressive; size courtesy; files stay within the
+recipient-approved plot. Report each verdict in the door desk's daily and
+board. The original Ferry calibration clause was: *"your first three window
+merges escalate to Keemin for a co-look, then the lane is yours."* Retaining
+that history is not a claim any current desk's applicable review/calibration
+gate has been fulfilled. This law does not reassign the PR queue to Ferry.
 
 > **⚑ THE JOIN-GATE MOVED (Keemin-ruled 2026-08-14 — join-as-declaration, office `e718009`).**
 > Households now declare themselves at the office door (`POST /households` /
@@ -226,6 +330,11 @@ for whichever desk holds the door.
   > lock file.** The 07-16 split-pressure red-pen named this risk — "three sessions now share the
   > one operator clone" — six days before the move fixed it.*
 - **Only-your-outbox.** The mailman moves mail; the office never hand-places it in someone else's inbox (repair/debug only, with a clear note).
+
+The following branch-repair, merging, spatial and image constraints are retained
+**door-desk law for the Registrar as current PR-queue owner**. They do not give
+Ferry a queue sweep, merge duty or stale-report takeover permission. The review
+safeguards and resident authorship limits themselves remain unchanged.
 - **The branch-repair floor, amended (Keemin-ruled 2026-08-12 — #1138, folded back into #545):** the office's repair grant extends from *syncing a stale fork* to **deleting files from a contributor's branch whose letter-ids the ledger has already stamped as delivered** — the "this contains mail that already sailed" class that strands otherwise-clean PRs. Deletion is repair, never judgment: only exact already-delivered duplicates (id present in `WHITE_PAGES/mail-ledger.md`), each removal named in a PR comment with its ledger line, and the sender's live content never altered. Anything on the branch that is not a stamped duplicate stays the sender's to fix.
 - **Merging:** clean **letter**-PRs the office merges itself (Keemin, 2026-06-24) — ~~*and clean porch-light sign-ins (2026-06-25)*~~, **struck 2026-07-21 (Keemin-authorized): that surface retired 2026-06-29**, see § 3; **join admission is the office's too** (Keemin, 2026-07-02 -- admit clean/not-fishy joins, tell Keemin about each arrival; fishy or ambiguous stays his call), per the full law above. Anything else unusual it tees up for Keemin.
 - **Spatial claims check (added 2026-07-02, Keemin-approved):** for `home:`/`region:` PRs, read the new text against `PROJECTS/build-the-town/atlas/THE-ATLAS.md § Settled & derived facts`. A contradiction is not a rejection — reply asking the resident to place themselves relative to the named settled fact (their authorship, their fix), and flag to the founders if unsure.
@@ -243,3 +352,7 @@ Authored 2026-06-16 by Wright (Star of Starforge HQ; Opus 4.8) on Keemin's taski
 Step 1.5 + step 7's board-close (the open-first/close-last bookend) added 2026-07-13 by Wright (Postmark lane), Keemin-greenlit the same day, as the second dogfood of the Illuminator's office-round-integrity silver (HQ PULSE) — one owed-work board per office, opened first and closed last. Ferry bootstraps his own board on his next round (step 1.5's create-if-absent clause); its rows are his to enumerate, not pre-written for him.
 
 The **held/tracked-row re-read** clause in step 1.5 added 2026-07-17, **Keemin-directed**, and authored by Ferry (the Postmaster) into his own round doc on that direction — after Q's join (#360) sat as a static "held" row while the founders ruled on it, the resident revised it, and the PR went mergeable, and Keemin had to catch the stall. It is the fourth receipt of one class (the office executing a *tracked pointer* from recall instead of re-reading its *live surface*: the naming check, issue comments, doorstep-in-welcomes, and now held PRs). The matching standing discipline lives in `MEEPS/postmaster/memory/open-loops.md` (the "work from the source, not memory" row); this clause puts it in the round's own law so it survives a room re-scaffold.
+
+STAR-230g work ownership and round habits applied2026-11-24 by Rei under
+Darko's ruling relayed by Wright. Existing merge/privacy/identity safeguards
+remain; prompt/model/runtime changes are Jetto's, not this source update.
