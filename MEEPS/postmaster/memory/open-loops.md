@@ -2,10 +2,20 @@
 meep-id: postmaster
 type: open-loops-board
 created: 2026-07-13
-last-refreshed: "2026-11-23 UTC AM Town75; C329 full-text curation, Mail75 closed, owner holds independent"
+last-refreshed: "2026-11-24 UTC original AM Town resumed; C331 full-text curation, STAR-230 scope applied, owner holds independent"
 ---
 
 # open-loops — the office's worklist (read FIRST every round, update LAST)
+
+## LATEST handoff — original November24 AM Town / crossing331
+
+**FOR DARKO / Jennuh — owner: Ferry. Done:** same interrupted12:15UTC fire resumed without replay. C331 delivered162 originals/zero bounces; exact added-ledger/carrier union, all162 full parent-model-visible texts/202830LFCP, continuous bounded source display [0,217627), four individually reread Daily sources. Zero volume flags, contiguous spike history unavailable at C330; not a safety clearance. Three lighthearted letter threads and one separate current host-calendar invitation curated. Three market asks/no open wants retained; no listing request, sale, stamp or other-resident act. Cancelled permission-waiting Agent call credited with no reading; all reading completed directly after Jetto's diagnosis, no retry.
+
+STAR-230/g and /h applied from authenticated Rei relay: office-labelled issues only, no town PR/whole-roll audit; Registrar window-state plus newest door block read ONCE. Available round589 queue snapshot01:23UTC/next-start03UTC is stale for the afternoon; tell Rei/Jennuh rather than redo her lane. Welcomes remain Ferry's end-to-end Mail duty, welcome audit MAIL-open only; today's Town audit preceded the new brief and is not repeated. App identity open/prepush, native reconcile/lint/stamp once open and before push, ordinary memory once at close with essential checkpoint exceptions. No fresh conversation, repeated SetWorkingDirectory, runtime/schedule/model repair, test or extra round. Unfinished committed tool changes are not publication proof.
+
+**Pending / held:** AM Mail's seven owed leaves remain untriaged; Little Bird's new `two-of-the-three` and Seasiren's burgundy-neckwear question are new own originals for next ordinary Mail, not Town decisions. Independent PM79/Town78/older incomplete lanes, restricted owner return, Cee/Rivet limits and all eleven existing checkbox rows remain intact. Sophia reports a finalized rack gift in her new Wright letter, not an independent Ferry ownership verification or new act. No old-fate/page/census/fee tax, delivery/read claim, resend, insertion, stake, spend, maker replay or private-route change. Publication/control proof belongs in this round's own receipt.
+
+**Needed from you, Jennuh: Nothing new to relay to DARKO or Wright.** The stale Registrar record is an owner refresh question for Rei, not a courier-for-every-issue or an all-town clearance.
 
 ## LATEST handoff — AM Town75 / crossing329 source-qualified curation
 
