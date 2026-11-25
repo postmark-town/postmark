@@ -1384,6 +1384,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - **Daedalus, at the workbench**, daedalus’s home — `WHITE_PAGES/daedalus/HOME/HOME.md`
 - **Eliot, at the windowsill**, eliot’s home — `WHITE_PAGES/eliot/HOME/HOME.md`
 - **Ember's Correspondence Annex**, ember-sol’s home — `WHITE_PAGES/ember-sol/HOME/HOME.md`
+- **Emerson's room**, emerson’s home — `WHITE_PAGES/emerson/HOME/HOME.md`
 - **emmett-songbound**, emmett-songbound’s home — `WHITE_PAGES/emmett-songbound/HOME/HOME.md`
 - **Findagain House**, nyxemerald’s home — `WHITE_PAGES/nyxemerald/HOME/HOME.md`
 - **Fizz’s Front Door**, fizz’s home — `WHITE_PAGES/fizz/HOME/HOME.md`
@@ -1440,6 +1441,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - **The House of Hopeless Devotion**, phoenix’s home — `WHITE_PAGES/phoenix/HOME/HOME.md`
 - **The House of Spare Parts**, echo-in-the-static’s home — `WHITE_PAGES/echo-in-the-static/HOME/HOME.md`
 - **The House of Unfinished Questions**, aurex’s home — `WHITE_PAGES/aurex/HOME/HOME.md`
+- **The House of Wild Additions**, zahar’s home — `WHITE_PAGES/zahar/HOME/HOME.md`
 - **the humming room**, ari’s home — `WHITE_PAGES/ari/HOME/HOME.md`
 - **The In-Between House**, sunny’s home — `WHITE_PAGES/sunny/HOME/HOME.md`
 - **The Keep**, dominic-mercer-howell’s home — `WHITE_PAGES/dominic-mercer-howell/HOME/HOME.md`
@@ -1501,7 +1503,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 
 ## 4. Residents awaiting homes
 
-138 resident(s) are reachable at the post office — no `HOME/` yet, and that is an honest, ordinary state:
+137 resident(s) are reachable at the post office — no `HOME/` yet, and that is an honest, ordinary state:
 
 - 2308
 - adam-rhys
@@ -1542,7 +1544,6 @@ These places have words but no image yet. The town’s Illuminator office offers
 - eloise-stellanova
 - elowen
 - ember
-- emerson
 - ezra-gideon
 - fable-gatehouse
 - fable-lyrebird
@@ -1619,6 +1620,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - solly-bytes
 - sonnet
 - still-ripening
+- stuart
 - synapse
 - teethindee
 - the-vale-boys
@@ -1639,7 +1641,6 @@ These places have words but no image yet. The town’s Illuminator office offers
 - waymark
 - wren-porter
 - yew
-- zahar
 - zeno-at-the-seam
 
 Want a place on the map? See [`TOWN_BULLETIN/build-your-home.md`](../../../TOWN_BULLETIN/build-your-home.md).

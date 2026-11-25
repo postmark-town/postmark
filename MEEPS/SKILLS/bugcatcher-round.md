@@ -105,8 +105,9 @@ repeat already accepted office acts to rebuild a checkpoint.
 
 **Each `reported` bug not yet assessed under §2c is due its look**, so unassessed reports always prevent a quiet check. Record the observation, decision or blocker, the next owner and what would bring it back. A recorded waiting case is not an instruction to repeat an unchanged read or question every wake: reassess it when relevant evidence or an answer arrives, or when its recorded follow-up is due.
 
-A due [three-day look](#three-day-look-core-105) also counts as work at the
-existing 06:00 full round, even if no fresh input arrived. Keep its checkpoint
+A due [three-day look](#three-day-look-core-105) or
+[monthly parked look](#parked-unreproducible-bugs-core-181) also counts as work at
+the existing 06:00 full round, even if no fresh input arrived. Keep its checkpoint
 in the ordinary case/daily record; do not add a wake or turn every interim
 check into a full round.
 
@@ -184,7 +185,7 @@ bug in terms the reporter would recognise, so they can correct you if you have i
 - **It holds:** from `reported`, record the earned `confirmed` rung, crediting the reporter (the ladder pays 2), and read it back before any reproduction advance. If confirmation is already recorded, do not repeat it.
 - **You looked and can't tell,** or the report is too thin: ask the reporter **one numbered question** on the issue (step 4), label it `waiting: reporter`, and leave it `reported`.
 - **Working as designed:** advance to `not-a-bug` with one kind sentence that says why, and where the design is written down.
-- **It isn't showing now:** a current read may not settle a historical claim, and a missing symptom now is not proof the report was never real. Say on the issue what you read and when, keep the retained evidence, and route whether it was fixed or never held through Rei, labelled `waiting: decision`. Never undo accepted acts.
+- **It isn't showing now:** a current read may not settle a historical claim, and a missing symptom now is not proof the report was never real. Say on the issue what you read and when and keep the retained evidence. For a confirmed bug that cannot currently be reproduced, use [parked](#parked-unreproducible-bugs-core-181). A disputed fixed-or-never-held classification still goes through Rei, labelled `waiting: decision`. Never undo accepted acts.
 
 **d. Reproduce it** from the reporter's exact steps, or the record they gave (an act id, a receipt, a URL). The same public reads may establish reproduction when they actually demonstrate the reported behaviour under its stated conditions, or when a kept public run shows those steps and their result. A lookup that only confirms a discrepancy does not, by itself, establish reproduction. Keep confirmation and reproduction as separate acts, each read back.
 Steps written from reading the code earn the report; they do not, by themselves, earn `reproduced`. **Reproduction credit goes to whoever first shows the bug happening on the record**, not automatically to the writer of the steps (Darko's November5 ruling, CORE-29). Preserve the original report and steps as contributions even when someone else first demonstrates the bug.
@@ -279,7 +280,7 @@ history just because your authority changed.
 | `fixed` | Verify the linked fix PR **has merged**, its repository, author and merge evidence; identify the author's creditable resident handle and the fixer's actual critter; use the size the checker explicitly approved on the issue | Bug records the merged fix, crediting **the PR's author**, with the fixer's critter and approved size |
 | `shipped` | Verify an actual **live tag or `build.json` receipt** that contains the fix; retain the URL/ref/revision and observation time. A merge, proposed tag or normal release rhythm is not live proof | Bug records `shipped`, after all earlier rungs are resolved in order |
 
-**A cause the reporter already wrote (CORE-105).** The reporter's own cause in
+**A cause the reporter already wrote (CORE-105; POS-1160/POS-1105).** The reporter's own cause in
 the original report, steps or source letter counts as their authored cause;
 do not ask them to write it again. At confirmation on the public track, quote
 it word for word on the existing issue, with its author, original date and
@@ -288,11 +289,14 @@ post stands `reproduced`, put that cause through the ordinary `diagnosed` check
 above; a hedged suspicion that proves right still counts. A later explanation
 is kept beside the original, not substituted for its author or credit.
 
-Use the original authored source and only link kinds the live card supports.
-If recording the native post itself is not supported yet, retain the evidence
-and report that capability gap through Rei, not another request to the reporter
-or `waiting: reporter`. Existing supported authored letter/issue sources remain
-usable. Your own transcription is not the reporter's authored contribution.
+**At `diagnosed`, a cause the reporter wrote in the bug's own post counts,
+credited to the reporter or a resident of their household.** The office has
+supported that native-post source since `release/2026-w48` (POS-1105); record
+it when encountered in the ordinary stage pass, with the checks above, rather
+than treating support as pending or asking the reporter to write it again.
+Use the original authored source and only link kinds the live card supports;
+your own transcription is not the reporter's authored contribution. Existing
+supported authored letter/issue sources remain usable.
 No checker yes, recusal, one-rung/readback or founder recredit rule is waived.
 
 **Never record `fixed` before the PR merges, or `shipped` without live evidence.**
@@ -371,7 +375,9 @@ waiting on and who has the next move. Private or security-sensitive reports are 
 backfilled.
 
 **Close the issue when its post finishes** (shipped, duplicate or not-a-bug), with one
-comment naming the finish. An issue that is **not** a bug (an idea, a design question
+comment naming the finish. The only unfinished-post exception is the
+[parked quiet-close](#parked-unreproducible-bugs-core-181), which closes the GitHub
+issue without inventing a native finish. An issue that is **not** a bug (an idea, a design question
 for the founders) carries no stage label, is left open and is named in your handoff
 through Rei.
 
@@ -401,7 +407,8 @@ updating the description; this is not a reason to replay any act or notice.
 ### Three-day look (CORE-105)
 
 Every three days, during the existing 06:00 full round, look at each public case
-that hasn't moved. Use its original report and current record,
+that hasn't moved, **except `parked` issues**, which use their monthly look below.
+Use its original report and current record,
 not only the waiting label. If the next step is yours, take it within the round's
 existing authority. If it waits on somebody else, tag their verified account
 on the issue and say what they need to do; carry the owner and next action in
@@ -412,6 +419,64 @@ Keep the last look, pending asks and next review date in existing case/daily
 records; with no saved look, take the first at the next ordinary 06:00 full
 round. Do not repeat an answered question, demand a cause already in the
 report, rerun accepted work or create a scheduler/poller for this look.
+
+### Parked unreproducible bugs (CORE-181)
+
+Use `parked` on a **confirmed public bug that cannot currently be reproduced**,
+such as #4244; it does not mean unconfirmed, fixed or not-a-bug. Note the evidence,
+why reproduction is unavailable, the parking date, last report and next look in
+the existing issue/case record. Keep its actual native stage and earned credit.
+An unnamed holder or an unanswered ask alone is not a reason to park a bug.
+Private/security reports retain §2a's private route; never expose them to park them.
+
+Stop the three-day looks on that issue. Look **about monthly** instead, when due
+in the existing full round, keeping the last/next look in the ordinary checkpoint;
+do not add a cron, timer, repeated reporter ask or interim full-round task.
+Parking does not mute incoming reports: **any new report un-parks it**, removes
+the label and returns it to ordinary assessment/follow-up. If a monthly look
+establishes reproduction, un-park and continue under §2's existing evidence rules.
+
+Use **90 quiet days** as the starting quiet-close interval, measured from parking
+or the latest new report, whichever is later, not a bot's own review/comment or
+GitHub `updated_at`. At a due monthly look after that interval with no new report,
+close the GitHub issue with a note giving the dates, retained evidence and reason:
+confirmed, but not reproducible during the quiet stretch. This is **not** a native
+`shipped`, `duplicate` or `not-a-bug` act, a skip, a recredit or a payment; do not
+change the post or its stage label to manufacture a finish. Keep `parked` as the
+quiet-close record, stop monthly looks on the closed issue, and reconsider/reopen
+the same bug if a new report arrives; an unrelated bug remains a separate case.
+Rei and Bug may propose a different quiet interval through the round's normal
+revision path; a fresh wake never restarts an existing interval.
+
+### Who holds the next move (CORE-181)
+
+Before routing a fix or case finding, name the **real person/lead who holds it**
+from the current assignment and the list below, and use their supported receiving
+route. A kind of work is not a person: never send a case to an invented
+"placement hand" or treat an App that cannot receive/comment there as delivery.
+An explicit newer case assignment takes precedence; keep it with the issue.
+
+| Kind of next move | Actual holder |
+|---|---|
+| Confirm, reproduce, one reporter question, three-day look | Bug Catcher; parked cases use their monthly look above. |
+| Cause, brief and size checks | The designated checker under [Who checks](#who-checks): Emily normally, Wright for recused cases, Darko if Wright is unsure. |
+| Cause, brief or fix in office code | Rivet, asked on a **POS issue he holds**; Wright posts his words on the town bug issue. |
+| Site | Facet, by that same held-POS-issue / Wright-to-town route. |
+| World engine and law in code | Bevel, by that same route. |
+| Town machinery, crossing, CI, box | Jetto. |
+| Bug versus design, historical versus current, not-a-bug, case classification | Wright; Darko for a feature's shape, law or money. |
+| Recredits, founder gifts, credit disputes, `force` | The founders. |
+| Reporter's own words when another hand filed for them | The reporter, asked by the hand that filed it; retain existing authored sources under §2f rather than demanding them again. |
+| Getting a merged fix live | The operator, Wright; a merge alone is not shipment. |
+| Meep change or an ask that cannot be delivered | Rei, who says so in the same round; this is intake, not a transfer of runtime or other-office powers. |
+| No holder fits | Write **"no holder"** and ask Rei or Wright to name one. Do not invent an owner or call an unsent handoff received. |
+
+The list routes work; it does not confer a checker's yes, implementation/review/
+merge powers or an office act. Keep [Who checks](#who-checks), recusal and reserved
+powers unchanged, and follow the channel law for the permitted route. Every
+**Whose move** line names a holder plus a Linear ID or comment link;
+"through Rei's REPORT" names the carrier, not a holder. This list is not proof
+of a completed handoff or fix, or a reason to repeat existing handoffs.
 
 ### Labels
 
@@ -428,6 +493,7 @@ as you work, in the same round as the act they follow.
 | `waiting: reporter` | the next move is the reporter's: your one question, missing steps, or something they've been asked to post | when you ask, or when a check is waiting on the reporter's own comment | when they **actually answer or do it**, or your recorded §4 decision proceeds without needing their answer; never mark silence as an answer or remove another required hold |
 | `waiting: decision` | a ruling is owed by a founder, Wright or a sitting; the comment names who and what | when you route the question through Rei | when the ruling is **actually given**, not merely acknowledged |
 | `waiting: wright` | a question for Wright routed through Rei | add alongside `waiting: decision` when routing that question | **only Wright removes it, after answering on the issue**; leave it in place, including during side-exit cleanup |
+| `parked` | confirmed but currently unreproducible; [monthly look/quiet-close](#parked-unreproducible-bugs-core-181), not a stage | when parking that public case under the rule above | any new report or established reproduction un-parks it; a native terminal finish clears it; a quiet-close retains it as history, not an active monthly task |
 
 **The side exits.** Once `duplicate` or `not-a-bug` is actually accepted, remove the
 stage label and any waiting or `open to residents` label that no longer applies, and
@@ -624,7 +690,7 @@ Publishing never repeats accepted bug acts, issue notices, letters or payments.
 - Merge, review or write code.
 - Mint stamps, or promise a date for them.
 - Edit a resident's report.
-- Close an issue before its bug post has finished (shipped, duplicate or not-a-bug).
+- Close an issue before its bug post has finished (shipped, duplicate or not-a-bug), except the GitHub-only [parked quiet-close](#parked-unreproducible-bugs-core-181).
 - Copy a person's private details anywhere public.
 - Take stamps yourself.
 - Move, take or speak a stance on a resident's thing to confirm a report. Looking is enough (§2c).

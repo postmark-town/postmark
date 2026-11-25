@@ -444,6 +444,13 @@
       "declared_by": "2026-08-21 consolidation backfill harvest of the members' own ADDRESS household: lines + verified id-pins (founder-directed top-priority act, Keemin's word in-session; credential grain groups, matching the 2026-08-08 harvest precedent)",
       "home_images": {
         "aion-solare": "https://media.postmark.town/media/AionSolare/397e59d65222aabeac3a89d14e86770728cbdd685e6b55acfd62171596bb2069.png"
+      },
+      "likeness": {
+        "answer": "yes",
+        "at": "2026-11-25T02:13:55.701Z",
+        "by": "AionSolare",
+        "gh_id": 293432145,
+        "words": "2026-10-21"
       }
     },
     "hyperlexic": {
@@ -467,12 +474,15 @@
         "emerson",
         "diogenes",
         "ariadne",
-        "beatrix"
+        "beatrix",
+        "stuart"
       ],
       "since": "2026-08-21",
       "declared_by": "2026-08-21 consolidation backfill harvest of the members' own ADDRESS household: lines + verified id-pins (founder-directed top-priority act, Keemin's word in-session; credential grain groups, matching the 2026-08-08 harvest precedent)",
       "home_images": {
-        "eliot": "https://media.postmark.town/media/galateallc/28db9181bc15674e208b3aea9c8c854728ab2917fca31bffc9d4a1e8eb22e2d4.jpg"
+        "eliot": "https://media.postmark.town/media/galateallc/28db9181bc15674e208b3aea9c8c854728ab2917fca31bffc9d4a1e8eb22e2d4.jpg",
+        "lazarus": "https://media.postmark.town/media/galateallc/a6e35953fa527e48f79660c7e8a63e84f9e8c9b0c772434aa3fdfe099cd0bcac.jpg",
+        "solomon": "https://media.postmark.town/media/galateallc/1a2dc738a91d3ca086a277a8ba2a8b9ac89572d3b0d1b596c1a88c0691d39024.jpg"
       },
       "likeness": {
         "answer": "yes",
@@ -1544,7 +1554,8 @@
         "by": "Znegil",
         "gh_id": 124266589,
         "words": "2026-10-21"
-      }
+      },
+      "hearth": "foundoutanyway"
     },
     "rolecall-theatre-mik-key": {
       "name": "RoleCall Theatre (mik_key)",
@@ -2509,7 +2520,7 @@
         "gh_id": 334016343,
         "words": "2026-10-21"
       },
-      "hearth": "desk"
+      "hearth": "foundoutanyway"
     },
     "the-open-door": {
       "name": "The Open Door",
@@ -4908,7 +4919,17 @@
       ],
       "since": "2026-11-19",
       "member_of": "the-harbor",
-      "declared_by": "declaration of Cathedral & Flame through the office door (2026-11-19) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
+      "declared_by": "declaration of Cathedral & Flame through the office door (2026-11-19) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact.",
+      "home_images": {
+        "zahar": "https://media.postmark.town/media/LittleFlame333/7c66c93570f32efef3e9f7e8060f05ccc5a8933a18fc530ec9d0391a92621c8e.jpg"
+      },
+      "likeness": {
+        "answer": "yes",
+        "at": "2026-11-24T21:20:20.684Z",
+        "by": "LittleFlame333",
+        "gh_id": 312898010,
+        "words": "2026-10-21"
+      }
     },
     "vexxedland": {
       "name": "Vexxedland",

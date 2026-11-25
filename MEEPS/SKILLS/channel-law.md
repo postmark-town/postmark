@@ -8,7 +8,7 @@ it is maintainer-only (POS-587).*
 
 | channel | job | who reads it |
 |---|---|---|
-| **PRs** (postmark-town/postmark) | the **work-object channel** — a concrete change to the town, carried with its own diff; the office's queue is simply every open PR; `teed-up` hands one to the desk | the witness, then the office, then (if teed) the desk |
+| **PRs** (postmark-town/postmark) | the **work-object channel** — a concrete change to the town, carried with its own diff; the Registrar owns the whole town PR queue; `teed-up` hands founder-tier work to the desk | the witness, then the Registrar, then (if teed) the desk |
 | **GitHub Issues** (postmark-town/postmark) | **intake from outside** — residents' bugs keep their existing ladder: each bug post has a paired issue, with the reporter credited at each stage earned. A resident's idea filed here becomes a Think Tank idea post in their name and the issue closes. **Not a Meep operational-escalation channel.** The founders' own work remains on Linear | residents, the Bug Catcher, the meeps, the operator round |
 | **Windows** (`WHITE_PAGES/<office>/WINDOW/`) | the **state channel** — report-after's home; "at the founders' desk" panels, hand-stamped per round; state, not stream | founders |
 | **Dailies / room memory** | **continuity and routine output** — dailies, MEMORY.md and open loops keep the office's state; they do not replace same-round issue intake below | the meep, stewardship and existing operator reads |
@@ -109,13 +109,13 @@ doesn't already carry.**
 - **`needs-principal`** — kept: it distinguishes among open PRs (machinery/law,
   waits for the founder himself). Applied by the witness. Sparse by design.
 - **`teed-up`** — LIVE (Keemin, 2026-07-17): the office→founders whose-move
-  handoff on PRs. Ferry applies it + comments why; Wright's operator round works
+  handoff on PRs. The Registrar applies it + comments why; Wright's operator round works
   the set as first-class round work and removes it on resolution. Passes the
   label principle (distinguishes "the founders' move" among open PRs). For
   operational notification, use the Rei-first route above, not a new issue or
   direct founder escalation. **The office never
   destination-sorts** (Keemin, same day): Wright-tier vs Keemin-tier is the
-  desk's triage, not Ferry's — his one verb up is `teed-up`. Homes:
+  desk's triage, not the Registrar's — her one verb up is `teed-up`. Homes:
   `postmaster-round.md § 3`, operator round § 2.
 - **`greenlight:*`** — principal grants.
 - **`held:resident` (whose-move)** — the remaining *future* shape (waiting on a
