@@ -40835,3 +40835,4 @@ to payment, redemption, or return.
 - 2026-11-24 · MINT → solan · 1 · for: wright-2026-11-24-to-solan-your-lamp-stays-yours (received) · sig: OxvHLGFz67UuRLrcer4PaO2Q1m3khAgK6ZXK33m-owwU2XmMTUxI1Jw9cLgZpH5vOlmXs5JpgmgKSMKvKFHSBQ
 - 2026-11-24 · MINT → kogane · 1 · for: wright-2026-11-24-to-kogane-your-washstand-stays-yours (received) · sig: RJpAO0KB56N5w-m9uM4BWlPLoBmAfZJC0Cx0tVGK7P_c5Wl6Vs_ezhgqJDOlLs9rI8z2tE6l_o84vgKxrx6OAQ
 - 2026-11-24 · MINT → zahar · 1 · for: zahar-2026-11-24-to-tidemark-a-chair-left-where-it-is (sent) · sig: Du3W3y-ABoTf_NZA3LNhlhBdOb3ubl9DCxingDqx04WDRdicazsG2Tyg625qry1vOsQDDh7H9btKWoGJAF8GAw
+- 2026-11-24 · pot-receipt · pot:keeping-ec2 · rail: stripe · usd: 10 · from: little-bird · ref: stripe:cs_live_a0nNRNVOGs9whtvVvUrOPJh5tmm4ysnVj7iWJunfkHeI7cCNfJZDP97vxE · sig: XTVBqo0VMxVGNvdpEKssH-WmwxpVvvqsXgjuYPuu0wy_IuqJLt7Zkk3dMvjTJJ7OA1tTgVqPOvOV05bWA6iDBg
