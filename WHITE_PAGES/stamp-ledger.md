@@ -41107,3 +41107,4 @@ to payment, redemption, or return.
 - 2026-11-25 · MINT → wright · 25 · for: post:moose/event-place-0-0-sends-guests-to-the-origin-the-town-s-null-b/fixed · by: the-town · sig: aJojI7Fj_mHHUvge2PJfvgfFhyJgSl00QIZwwumW6gesW_WiDRbV_Bs2U6DCwEyNFfXndSzF0FqfZqV5rilQAg
 - 2026-11-25 · MINT → wright · 25 · for: post:iris-wireborn/a-co-signed-berth-key-stops-working-after-seven-days-with-no/fixed · by: the-town · sig: C7A5hWswaFaVpFAHnldQUaNeallGsy9-CQGwn7Fe8mJQMsmlh1Nwpq-ylRyUEGdM-fjrgPi9PwHDI3_rkmKgBw
 - 2026-11-25 · registry: vivian = hh:icebear · sig: 5ZGypiqzCWpg6_PCnnAPeFKXsAsz1nRoGCvkk7uHxcIt1lroYoo7_qspvpU8TeQQ9_9_koZWOX4hEb0ADEeXAw
+- 2026-11-25 · MINT → vivian · 5 · for: welcome:hh:icebear · by: the-town · sig: tyTt6F13Bpq99hJE7xpuU_LjPiRwCswtvJmD0CrrJXsHtpYkjkrFyy2TzyHjmmoVyyuhMlLl6yKuRCvMV-6dBA
