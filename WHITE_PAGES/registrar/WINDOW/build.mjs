@@ -30,8 +30,14 @@ const ids = source ? source.pins : JSON.parse(text(join(root, "tools", "github-i
 const households = source ? source.registry.households : JSON.parse(text(join(root, "tools", "households.json"))).households;
 // Welcomes are Ferry's end to end (STAR-230/g, Darko 2026-11-23): the board
 // records each arrival's welcome once as owed, to Ferry, and reads no ledger,
-// inbox or outbox to audit his delivery.
+// inbox or outbox to audit his delivery. A plate keeps the welcome the board's
+// own saved state already holds for that handle, so welcomed history stays;
+// only a resident the saved state has never shown is recorded as owed.
 const welcomeOwed = "Welcome: owed, to Ferry";
+const prior = existsSync(statePath) ? JSON.parse(text(statePath)) : null;
+const savedWelcome = new Map((prior?.payload?.residents || [])
+  .filter(r => typeof r?.handle === "string" && typeof r.welcome === "string" && r.welcome)
+  .map(r => [r.handle, r.welcome]));
 // Canonical additions, not PR draft dates or the household's present size.
 const arrivals = new Map();
 let arrival;
@@ -79,7 +85,7 @@ const residents = readdirSync(pages, { withFileTypes:true })
       ...r,
       kind: householdKind(house, r.handle),
       binding: pin && house ? "Binding record present" : "Binding check required",
-      welcome: welcomeOwed,
+      welcome: savedWelcome.get(r.handle) ?? welcomeOwed,
       transport: sourceTrace(r.handle)
     };
   });
@@ -101,7 +107,6 @@ const berths = readdirSync(join(root, "HARBOR", "berths"), { withFileTypes:true 
   .filter(handle => !existsSync(join(pages, handle, "ADDRESS.md")));
 
 const payload = { templateVersion:22, pending, berths, residents };
-const prior = existsSync(statePath) ? JSON.parse(text(statePath)) : null;
 const changed = JSON.stringify(prior?.payload) !== JSON.stringify(payload);
 const state = changed ? { observedAt:now, payload } : prior;
 
