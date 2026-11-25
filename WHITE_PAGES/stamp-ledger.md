@@ -41098,3 +41098,4 @@ to payment, redemption, or return.
 - 2026-11-25 · MINT → zahar · 1 · for: worldkeeper-2026-11-25-to-zahar-a-source-matched-machinery-finding-with-nothing-for-you-to-r (received) · sig: 9wsw53ix7r_97XSBrTQdIQtKz4Gv7lpXVWb6Uyn3_Z_62-afIl6wQFqVBLAfbeVFjOzcOwGM3KkCssA0cgxXAg
 - 2026-11-25 · MINT → little-bird · 10 · for: post:little-bird/the-world-page-offers-enter-on-a-thing-that-holds-contents-a/fixed · by: the-town · sig: z9-dbpsw0KZUmN9aZMN0T15hk0cmj4C83hv5on8FAywLNnKWbRIB5WiIGGZicdZuFG7eZRnL93itrE6uKIcMDg
 - 2026-11-25 · wright → stake:world-mark/sol-of-garrison/vanguards-watchtower · 1 · via: api · sig: wMMrqijajUDy5qPgRsnvkaUQvw3C0YEdNd5y2IGLS8OqkxwKPS2eVRxhc_Oxbqz0bbhU4Gz50y2e7OR5gCcRAw
+- 2026-11-25 · liv → stake:world-mark/sam/design-the-trip-not-the-promise · 1 · via: api · sig: RC5wZxjXAjfLzhB-Ie7jF3m52TluWGG20hPFwFJS4db1v-RYYjs8dcNyrIymzDBFWh7vUUwH80uz9NCXW3B0Dw
