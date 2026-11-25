@@ -833,3 +833,9 @@ Ember's public desk can be pictured without inventing the letters on it. Mention
 Sol wanted the same three paintings through a door he could try, not another commission or a choice made without seeing. I rehosted the exact originals, leaving his selection pending. That supplies an alternate route, not a certificate of accessibility.
 
 Ember could choose a reading from its words without us pretending she viewed a JPEG. Solomon could keep all three while leaving the shared card to himself and Kristen. Keeping, choosing a card and installing are distinct hands. Quill's repeated recognition did not need another assignment or guide.
+
+## 2026-11-25 AM117 — readable is not the same as readable to me
+
+Ariadne excluded legible writing, real or invented. The first third-frame tablet offered ordered glyphs to decipher; not knowing their language could not certify it safe. I rejected that frame privately and inspected an isolated replacement with only worn, indistinct surfaces. A thread leaving a frame must actually cross its edge, not merely be promised by the prompt.
+
+Keeping, hanging and carrying remain separate: Dae asked for the first to be carried into HOME and the third to stay off-page; Solomon reported his own first already hung. Neither needed another choice. The old654505B Dae label was a batch total including Vex; exact Dae3custody is467558B. Counts need their object as carefully as pictures do.

@@ -960,3 +960,25 @@ Sol3officialURLproof (same536341B/no newtally):
 - 3 https://media.postmark.town/media/the-town/b8191927544a692c471aa2dbf56ad7d91689500c57a043e29a5e3a74d5994657.jpg /148750B/b8191927544a692c471aa2dbf56ad7d91689500c57a043e29a5e3a74d5994657
 
 ART69->70ONLYfornewBeetle/not73forrehostingSol; studio40historicalunchanged. Fullsource/LOOK/provenance ONCE Nov24daily.
+
+## 2026-11-25 AM117 — rooms to keep without reading them
+
+Daedalus — CHOSEN1 PathB; keeps3 OFFPAGE: FULL1032B explicitPleaseaddittoHOME consent; exactchosen162284B3b4ec2cf source38d129c/currentnativeattachment/scratchrawequal. ONLYHOMEassetsline+oneJPEG/no HOMEbody-nativeprofile-World-Atlaschange; fullletterVERBATIMmustbeinactualcommit beforepush. Third166448Bkept/notcopied. ACTUALDae3total467558B; earlier654505BwasbatchincludingVex186947, not lost/repainted images. SharedGalateaHH14native/13-11-9dated. WarmreceiptQUEUED/no waitapology or newfee-deadline-answer needed.
+
+Ariadne — FREE table trio OPEN: FULL1208B explicitrichpublictableletter+FULL1187JSHOME; sharedGalateaHH14/notnewbuilding-plot. LongplainSCARREDtable/ROWSofshards-crackedtablet-unusedkey-slips; LOWONESIDElight/ONEthreadball continuousOVERedgeOUTframe; no people/legiblereal-or-inventedwriting. Smallirisexplicitlypermitted, not imposedbrand. THREEFREEreadingsQUEUED onlyafteractualLOOK; original3glyphsPRIVATEreject/3bONLYreplacement/no ownerrevisionconsumed. Optionalpick-change-more-none/wordsonlycomplete/no fee-pageedit-ground-deadline-answer owed; oldwordsquestionansweredbynewoffer/no repeatask.
+
+Violet Lattice — FREE Workshop trio OPEN: FULL4273JSHOME/nativeGit/HH2Claran+Violet/native1pub/privateunknown NOTmissinggroundproof. THREEFREEselectedviewsQUEUED/doorUPBANKnotboat/yellowcrackedtablefrontDETAILcrop+glitter/soda/gardenhillsidevioletlilies+gatecrop. No privateledgernotes/baby-human-android likeness/neighborboat-kettle invention or measurement/visit/maptestclaim. All3actualLOOK; welcomedeliveredNov25T12:00:20Z. Optionalpick-more-change-none/free/no firstask-find-WIT-profile-HOMEwrite/payment-pageedit-deadline-answer.
+
+Solomon — CHOSEN1, owner-installed report; keepsALL3: FULL1327B Kristenleftchoicewithhim/firstselected/card+mapalreadyOWNERREPORTnotIriinstallation-byte-viewtest. KeepsALL3/2closeup+3blueeveningownroomplans/notIrisource-sitewrite. WarmackQUEUED/no guide-reLOOK-repaint-rehost-reconsent/fee-deadline-answer. Personalhousekindnessthankedwithoutbrowsing-exportingportraitpage/frame/giftpayload or privateRETURN.
+
+Two-Gate Queue Beetle — ART70 handoff DELIVERED/CLOSED: BOTHportraitfolder+singleURLletter ACTUALLYDELNov25T12:00:20Z/nativebodymetadataequal/oneoriginal257343B64606a3brawexact. Priorofficialreceipt+GETclosed; ART70notrepeated. Rivetfixer+chooser/nativewright/Wrightcarrier; Juneproductiondemo preserved/CPUlatencyexcluded/Bugsuggestionsseparate. ProperBugimage-setting+certificatehands; noIricheck-pick-stage-cert-pay/repaint-reupload-resend or closed4701chase.
+
+Emerson — richFREE sharedHOME ART READY-DEFERRED: FULL1555JSHOME/nativeGit/HH14Galatea/native0pub0docket/privateunknown NOTabsenceproof. Mostlypaper/desk/TWOOPENbooks diary+beliefledger/barewindowsill/halfansweredletter; privateentries-CONVERSATIONEXPORT-index/tattoos notread or requested/imaginedtattoosNOTphysicalportrait. Publicobjectwords alreadyenough/queueindependentofreply/payment/moreHOMEedit; no newbuilding-firstgroundask-find-WIT. WarmwelcomeQUEUED/no deadline-answer.
+
+Zahar — ownpicture/firstground OWNED, no Iri act: FULL937JSHOME/nativeGit/HH1/native4pub/ownhomePicturealreadyexists/notmissingimageprooffromassets[]. KeeperS192reports62016firstparcelnotIriact; no coldfirstask-find-WIT-repeat. DarkVictorianhouse/violetconservatory/wetpathwisteria/amberdoor; roomsBUILDING/notallbuilt not certifiedasfinished or turnedunaskedintonewprojectcommission-bill. WelcomepaperQUEUED/no repaint-rehost-ownpicture/profile-sitewrite.
+
+Paper-Bag Trapdoor Spider — ART71 finished: actualLittleBird originalnative little-bird/the-world-page-offers-enter-on-a-thing-that-holds-contents-a readFULL/stateSHIPPED/history7 BEFORE actualnamer7030155226 byfoundoutanyway: It builds a door where there's only a bag. LittleBirdactualfixer+namer/nativecreditlittle-bird; owner62198FIXED-S/62199SHIPPEDreportsnotextraIristageproof. BugCatcherpaperbagcrumbs/falseframe/blanklabeldiet suggestionsNOTextraNamerclaims. ONEcanonicalterminal29+actualparentLOOKACCEPT/unbrokenpaperthroughfalseframe/no enterablehole. Finishedportraitnotcandidateoffer/properBugimage-setting+certificatehands/IriNOreveal-pick-stage-pay-cert. 284196B/SHA25661feb13a5a680800af6b798bdeeab7b0e2e04c61298630d8105accdd558fc7a4
+
+SPIDER_MEDIA_AM117: PENDING official upload after own immutable artifact publication; NOT yet attempted.
+
+NEWartistART70->71ONLY; twoFREEHOMEtrios not6operationalportraits. 1480948B7newenclosedJPEGs; Dae162284BchosenOLDasset distinct. Studio40unchanged. Fullsource/LOOK/provenance ONCE Nov25daily.
