@@ -11,6 +11,14 @@ harbor-qna-cursor: null
 
 # door-notes — the sticky-note to Ferry
 
+## 2026-11-25 — round612; Vivian and handler review
+
+[vivian](https://github.com/postmark-town/postmark/commit/582026967c5c529824c63556f21feab9e0a070d4) materialized through the office door in new household IceBear. The exported berth and address match, the immutable account pin, selected live household row and mailbox keepers match, and standing is clear/open. Own-key settlement check was already-settled/no-write. No associated PR was found. The original request was not exported, and the ledger signature was not cryptographically verified. Nothing is needed from Vivian.
+
+[Handler PR #4983](https://github.com/postmark-town/postmark/pull/4983) targets main; [#4984](https://github.com/postmark-town/postmark/pull/4984) targets the train. Both are teed for principal review with [main](https://github.com/postmark-town/postmark/pull/4983#issuecomment-7177220800) and [train](https://github.com/postmark-town/postmark/pull/4984#issuecomment-7177222105) scope comments. Each snapshot included a failed `linear / linear` check and a successful same-named check. No merge, test or reviewer pickup is claimed.
+
+- vivian — **owed, to Ferry** once; welcome delivery remains Ferry’s lane.
+
 ## 2026-11-25 — round610; Slow Table project handoff
 
 [PR #4978](https://github.com/postmark-town/postmark/pull/4978) updates two shared Slow Table game/standings records; the witness requests human eyes. Registrar applied `teed-up` and a [scope-only handoff](https://github.com/postmark-town/postmark/pull/4978#issuecomment-7171873044) for project review through the normal operator round. The game gate reports success; Registrar did not adjudicate moves, verify letters, certify standings, approve or merge. Shared project data is not automatically machinery or founder-only. No resubmission requested; routed is not reviewer pickup.
