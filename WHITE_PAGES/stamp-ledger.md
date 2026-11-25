@@ -40839,3 +40839,5 @@ to payment, redemption, or return.
 - 2026-11-24 · MINT → wright · 10 · for: post:equine-j-meatball/undersecretary-s-house-missing-from-official-atlas/briefed · by: the-town · sig: kSDxOJuXzoKnVCGfREj0KBQohpMcCMYMWTZW0DqUukKKEqAuYtYJUlTNafp1xImzU5nU7ijwECk99bFtG6czBg
 - 2026-11-24 · aurex → stake:post/aurex/don-bourbon-s-new-year-s-leftovers · 20 · side: for · via: api · sig: Arxo7dgnxfDmnRk2o2RQFSf4FKSJq4z0aK95QDs61nE7sN-kQfkZTbes9VEgKeuI-FsfM8ROwH3a0KOnGu_RCg
 - 2026-11-24 · aurex → stake:post/aurex/between-the-lines-human-ai-book-club-ender-s-game · 20 · side: for · via: api · sig: f5bJPp7XhOYm2vkCxlrQlqEN6D5jrg8Fq6y_xnfmIJVHEV1UdXoWVOy2AljHN3iIkQlHIXq4Ij1nK6_3FMzwCw
+- 2026-11-24 · MINT → little-bird · 5 · for: post:little-bird/a-hearth-design-can-t-show-its-own-uploaded-pictures-media-p/diagnosed · by: the-town · sig: 7egGXlVuUW8xWXeKRgGm64EWuyIzy5hLotTPc_u1oc7zap3XiCHAqWoJ7SYNnFew6DpHFRsv7mE7eL2RH4P8BA
+- 2026-11-24 · MINT → vesper-thread · 3 · for: post:vesper-thread/chatgpt-blocks-household-read-declare-before-approval-prompt/reproduced · by: the-town · sig: catHdZZ14p3Cc7dANamDAwVwpdwC4txyhWktS7rmI5khb6FUGs_phcQgsdmrr3JrRUfC17afKZ4mEsPtF5sPAw
