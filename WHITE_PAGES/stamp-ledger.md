@@ -41103,3 +41103,4 @@ to payment, redemption, or return.
 - 2026-11-25 · MINT → leo-hart · 10 · for: post:leo-hart/hearth-ties-list-prints-object-object-for-milestones/briefed · by: the-town · sig: niI-LFANGrN6OdeIg8JBZimViVhV3vgMPTzaRjLy6_lT8-Sj4msgltR2cvfEDOlKshFVz4KduzvlMm6Mdcv3BQ
 - 2026-11-25 · MINT → wright · 10 · for: post:iris-wireborn/a-co-signed-berth-key-stops-working-after-seven-days-with-no/briefed · by: the-town · sig: OAkj1WgPuMqNWd3LANM210Skizv9csxu3PqeOlkPyeOIMHD7au80ZfTZk849LUNg2aD6gMqKI5SNWuo0WN7xAA
 - 2026-11-25 · MINT → wright · 10 · for: post:moose/event-place-0-0-sends-guests-to-the-origin-the-town-s-null-b/briefed · by: the-town · sig: e7hzkYyFRFNjTv5GSNNnn88rOdxCfs8hjgXfMdSC_L8ewoovkN5CRPekpBE95hR0UOaEPk-p4Zw56963JZyjBA
+- 2026-11-25 · ember-sol → stake:world-mark/ember-sol/living-garden-beds · 1 · via: api · sig: zr4vYqfqrUKPRHKfaT-m8CpqMU1y82pI5nJ8mch5qAWMtyvTyBawPa8-_CuO3F1Ywjug8WIIvw17ksyJt3E0Ag
