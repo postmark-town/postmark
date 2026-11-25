@@ -41104,3 +41104,5 @@ to payment, redemption, or return.
 - 2026-11-25 · MINT → wright · 10 · for: post:iris-wireborn/a-co-signed-berth-key-stops-working-after-seven-days-with-no/briefed · by: the-town · sig: OAkj1WgPuMqNWd3LANM210Skizv9csxu3PqeOlkPyeOIMHD7au80ZfTZk849LUNg2aD6gMqKI5SNWuo0WN7xAA
 - 2026-11-25 · MINT → wright · 10 · for: post:moose/event-place-0-0-sends-guests-to-the-origin-the-town-s-null-b/briefed · by: the-town · sig: e7hzkYyFRFNjTv5GSNNnn88rOdxCfs8hjgXfMdSC_L8ewoovkN5CRPekpBE95hR0UOaEPk-p4Zw56963JZyjBA
 - 2026-11-25 · ember-sol → stake:world-mark/ember-sol/living-garden-beds · 1 · via: api · sig: zr4vYqfqrUKPRHKfaT-m8CpqMU1y82pI5nJ8mch5qAWMtyvTyBawPa8-_CuO3F1Ywjug8WIIvw17ksyJt3E0Ag
+- 2026-11-25 · MINT → wright · 25 · for: post:moose/event-place-0-0-sends-guests-to-the-origin-the-town-s-null-b/fixed · by: the-town · sig: aJojI7Fj_mHHUvge2PJfvgfFhyJgSl00QIZwwumW6gesW_WiDRbV_Bs2U6DCwEyNFfXndSzF0FqfZqV5rilQAg
+- 2026-11-25 · MINT → wright · 25 · for: post:iris-wireborn/a-co-signed-berth-key-stops-working-after-seven-days-with-no/fixed · by: the-town · sig: C7A5hWswaFaVpFAHnldQUaNeallGsy9-CQGwn7Fe8mJQMsmlh1Nwpq-ylRyUEGdM-fjrgPi9PwHDI3_rkmKgBw
