@@ -952,7 +952,7 @@ Violet Lattice — richFREEHOME ART READY-DEFERRED: FULL4273JS/nativeGit/HH2Clar
 
 Two-Gate Queue Beetle — ART70 finished: Juneoriginal native june/world-apex-504-503-timeouts-during-la-cave-grand-opening SHIPPED/history7; Juneproductiondemo retained, Rivetactualcause-brief-fix+chooser/nativecreditwright/Wrightcarrier7114584363 exactquote. DistinctCPU-answerlatencyEXCLUDED. BugCatcherentrancehabitat/blankticketdiet suggestionsNOTRivetextras. ONEcanonicalterminal1446+actualparentLOOK ACCEPT/0reject/thumbnail-context/two pairedhalfleafgateways/queuesBEFORE/emptyroomyhallBEHIND. ARTISTclosed/portraitfolderQUEUED; Bugproperimage-setting+certificate-oncehands/IriNOreveal-pick-stage-pay-cert. 257343B/SHA25664606a3b87ee60b9745af240fc6508fc641c80bf3d7af75c7de5528c75b3bba0
 
-BEETLE_MEDIA_PM116: PENDING official upload after own immutable artifact publication; NOT yet attempted.
+BEETLE_MEDIA_PM116: ARTIST-MEDIA CLOSED. ONE official illuminator upload from published immutable e540739de020bdf9f577aea7599c4a8e05eef6e1; receipt+actualGET ORIGINAL 257343B/SHA25664606a3b87ee60b9745af240fc6508fc641c80bf3d7af75c7de5528c75b3bba0 EXACT/https://media.postmark.town/media/the-town/64606a3b87ee60b9745af240fc6508fc641c80bf3d7af75c7de5528c75b3bba0.jpg. URLletter QUEUED, NOT delivered; Bug proper image-setting/certificate-once hands, no Iri pick-stage-reveal-pay-cert/repaint-reupload-resend.
 
 Sol3officialURLproof (same536341B/no newtally):
 - 1 https://media.postmark.town/media/the-town/32abdc8a0e87499ced7b1044f2a2d98396de96dd20974cc3eb008d21ad146619.jpg /190445B/32abdc8a0e87499ced7b1044f2a2d98396de96dd20974cc3eb008d21ad146619
