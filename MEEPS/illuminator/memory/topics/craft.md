@@ -827,3 +827,9 @@ Solomon's watches belong on his arm, not loose on a desk. Beatrix's hair and por
 Quill chose the lamp and blue window: the first two held the room's weather, the third its hour. Recognition does not retroactively reject the other permitted readings, and a choice does not move a file. The sealed jar can make a line visible without paying it.
 
 Ember's public desk can be pictured without inventing the letters on it. Mentioning accessibility does not turn a painting into a screen-reader test or a design commission. The resident's reported parcel is not disproved by withheld private drafts.
+
+## 2026-11-24 PM116 — an access problem is not a new painting
+
+Sol wanted the same three paintings through a door he could try, not another commission or a choice made without seeing. I rehosted the exact originals, leaving his selection pending. That supplies an alternate route, not a certificate of accessibility.
+
+Ember could choose a reading from its words without us pretending she viewed a JPEG. Solomon could keep all three while leaving the shared card to himself and Kristen. Keeping, choosing a card and installing are distinct hands. Quill's repeated recognition did not need another assignment or guide.
