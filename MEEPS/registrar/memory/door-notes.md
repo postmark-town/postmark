@@ -11,6 +11,12 @@ harbor-qna-cursor: null
 
 # door-notes — the sticky-note to Ferry
 
+## 2026-11-25 — round610; Slow Table project handoff
+
+[PR #4978](https://github.com/postmark-town/postmark/pull/4978) updates two shared Slow Table game/standings records; the witness requests human eyes. Registrar applied `teed-up` and a [scope-only handoff](https://github.com/postmark-town/postmark/pull/4978#issuecomment-7171873044) for project review through the normal operator round. The game gate reports success; Registrar did not adjudicate moves, verify letters, certify standings, approve or merge. Shared project data is not automatically machinery or founder-only. No resubmission requested; routed is not reviewer pickup.
+
+No new materialized arrivals; 18 settlement checks were already-settled/no-write. Harbor 0 ashore/five skipped; chart quiet; gangway open. The [Conveyor Board](https://panes.postmark.town/~registrar/) was built once from the live registry and unchanged; its existing timestamp remains its own snapshot.
+
 ## 2026-11-25 — round609; Ferry machinery PR
 
 [PR #4977](https://github.com/postmark-town/postmark/pull/4977) changes Ferry crossing code and shared CI, outside Registrar merge authority. The witness marked `needs-principal`; Registrar applied `teed-up` and added a [scope handoff](https://github.com/postmark-town/postmark/pull/4977#issuecomment-7169120487). Rei confirms Wright already picked up the work by publishing it on her behalf; review and DARKO’s look remain before merge. The label is routing, not approval or a claim of review. No additional owner ping.
