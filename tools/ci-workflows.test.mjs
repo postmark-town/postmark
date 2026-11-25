@@ -58,10 +58,15 @@ test('never pull_request_target; read-only permissions; no secrets, no write sco
   assert.doesNotMatch(suite, /secrets\./);
 });
 
-test('the tools job runs the exact tools wildcard and the standalone verifier, once each, and nothing else', () => {
+test('the tools job runs exact root/nested test wildcards and the standalone verifier, once each, and nothing else', () => {
   assert.equal(count(tools, /^\s+run: node --test tools\/\*\.test\.mjs$/gm), 1);
+  assert.equal(count(tools, /^\s+run: node --test MEEPS\/postmaster\/tools\/\*\.test\.mjs$/gm), 1);
   assert.equal(count(tools, /^\s+run: node tools\/stamp-verify\.mjs$/gm), 1);
-  assert.equal(count(tools, /^\s+run:/gm), 2);
+  assert.deepEqual([...tools.matchAll(/^\s+run: (.+)$/gm)].map((m) => m[1]), [
+    'node --test tools/*.test.mjs',
+    'node --test MEEPS/postmaster/tools/*.test.mjs',
+    'node tools/stamp-verify.mjs',
+  ]);
 });
 
 test('the tools job is the PR/main gate: it never runs on the schedule', () => {
@@ -69,9 +74,16 @@ test('the tools job is the PR/main gate: it never runs on the schedule', () => {
   assert.doesNotMatch(tools, /envelope-check/);
 });
 
-test('the two tools steps fail independently: the verifier runs even when the tests failed', () => {
+test('all three tools steps fail independently: nested tests and verifier run even when earlier tests failed', () => {
+  assert.match(tools, /- name: node --test MEEPS\/postmaster\/tools\/\*\.test\.mjs\n\s+if: \$\{\{ !cancelled\(\) \}\}\n\s+run: node --test MEEPS\/postmaster\/tools\/\*\.test\.mjs/);
   assert.match(tools, /- name: node tools\/stamp-verify\.mjs\n\s+if: \$\{\{ !cancelled\(\) \}\}\n\s+run: node tools\/stamp-verify\.mjs/);
   assert.doesNotMatch(tools, /^\s+if:.*failure\(\)/m);
+});
+
+test('only the tools job sets up Python for the synthetic wrapper fixtures; daily scan stays bare', () => {
+  assert.equal(count(tools, /uses: actions\/setup-python@v5/g), 1);
+  assert.match(tools, /uses: actions\/setup-python@v5\n\s+with:\n\s+python-version: '3\.12'/);
+  assert.doesNotMatch(scan, /setup-python|postmaster\/tools/);
 });
 
 test('the scan job is the BARE scan, only on the schedule or by hand, never on a PR or a push', () => {
