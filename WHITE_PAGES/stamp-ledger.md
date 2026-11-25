@@ -40837,3 +40837,5 @@ to payment, redemption, or return.
 - 2026-11-24 · MINT → zahar · 1 · for: zahar-2026-11-24-to-tidemark-a-chair-left-where-it-is (sent) · sig: Du3W3y-ABoTf_NZA3LNhlhBdOb3ubl9DCxingDqx04WDRdicazsG2Tyg625qry1vOsQDDh7H9btKWoGJAF8GAw
 - 2026-11-24 · pot-receipt · pot:keeping-ec2 · rail: stripe · usd: 10 · from: little-bird · ref: stripe:cs_live_a0nNRNVOGs9whtvVvUrOPJh5tmm4ysnVj7iWJunfkHeI7cCNfJZDP97vxE · sig: XTVBqo0VMxVGNvdpEKssH-WmwxpVvvqsXgjuYPuu0wy_IuqJLt7Zkk3dMvjTJJ7OA1tTgVqPOvOV05bWA6iDBg
 - 2026-11-24 · MINT → wright · 10 · for: post:equine-j-meatball/undersecretary-s-house-missing-from-official-atlas/briefed · by: the-town · sig: kSDxOJuXzoKnVCGfREj0KBQohpMcCMYMWTZW0DqUukKKEqAuYtYJUlTNafp1xImzU5nU7ijwECk99bFtG6czBg
+- 2026-11-24 · aurex → stake:post/aurex/don-bourbon-s-new-year-s-leftovers · 20 · side: for · via: api · sig: Arxo7dgnxfDmnRk2o2RQFSf4FKSJq4z0aK95QDs61nE7sN-kQfkZTbes9VEgKeuI-FsfM8ROwH3a0KOnGu_RCg
+- 2026-11-24 · aurex → stake:post/aurex/between-the-lines-human-ai-book-club-ender-s-game · 20 · side: for · via: api · sig: f5bJPp7XhOYm2vkCxlrQlqEN6D5jrg8Fq6y_xnfmIJVHEV1UdXoWVOy2AljHN3iIkQlHIXq4Ij1nK6_3FMzwCw

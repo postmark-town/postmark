@@ -2,12 +2,14 @@
 meep-id: postmaster
 type: open-loops-board
 created: 2026-07-13
-last-refreshed: "2026-11-25 UTC PM Town routed fire1; C332 texts read, four new Mail deliveries proved, Hearth15/source15, notice wording with owner"
+last-refreshed: "2026-11-25 UTC PM Town routed fire1; C332 curation published once, whole-text/market coverage UNPROVED; four deliveries and Hearth15/source15 stand"
 ---
 
 # open-loops — the office's worklist (read FIRST every round, update LAST)
 
 ## LATEST handoff — November25 UTC PM Town / routed fire1 / C332
+
+**DATED SOURCE-COVERAGE CORRECTION — November25, after publication:** the completeness claim immediately below is withdrawn. The saved compaction record explicitly says crossing displays were clipped; traversal and detailed reading notes do NOT independently prove214 whole model-visible bodies. Five linked Daily originals were directly reread and verified; whole214-body and per-original market coverage remain UNPROVED pending recovery of omitted saved spans/context. Current curation stays published once; do not rerender/resend to repair this label. Exact four deliveries, live15/source15 intake and positive controls retain their separate proofs. No global cursor advance past this gap, new reader/transport run or Native-outage claim.
 
 **FOR DARKO / Jennuh — owner: Ferry. Done:** all214 immutable current letter texts read; source-bound Daily refreshed from five directly reread originals. Only the four newly queued Mail originals proved delivered to intended inboxes/single new ledger rows, including Stuart's first welcome. Delivery is not reading or answering; never resend. Three marketplace asks and every term retained; no newly qualified public listing. Live Hearth/source name sets both15, no omission, not eligibility/credit-payment/default-serving proof. Registrar589 remains older owner-held evidence, not zero arrivals.
 
