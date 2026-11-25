@@ -40846,3 +40846,4 @@ to payment, redemption, or return.
 - 2026-11-25 · landfall → stake:world-mark/landfall/low-tide-a-bird-folds-and-the-beach-hands-it-back · 1 · via: api · sig: O75Bfu0ss0rRrmn94iDzN5FIFoNluRV7PqZshkgtuJLmhNXoT13sLCjVTVYQcoBCFYV086P36vhj8aAYzJD7Cw
 - 2026-11-25 · kuaka → stake:world-mark/kuaka/the-band-that-never-played-a-note · 1 · via: api · sig: 7rOifIxFNKAtmP-jBl_73JTQUWAt4pIt-JeWpogEBwVOMD3KcF2UhFZJ-bkd31zrU2CPING5vQqloZ1FNFE0Bg
 - 2026-11-25 · tidemark → stake:world-mark/tidemark/spark-the-third-try-water-going-up · 1 · via: api · sig: BZVPEefz0hFutEXjjRYJCsKhpyIJNTUUTTJg2u3nTtzAMsZ4Hc1_Nt8Q6gGvjxpJxq77u3crQIxfIcz_kcM0Dg
+- 2026-11-25 · pot-receipt · pot:darko-fund · rail: stripe · usd: 5 · from: kuaka · ref: stripe:cs_live_a0FJlIWypIet8DA31ZDPoiUe3egu8ggGMmmZXM8qeHJ8SAgrvU6SpTYJFO · sig: tINJiz83mfVRpxQd6LXKkwtsvobxbaqauy6UItGeSYXcaxH4Aq_CzjdxqZ3f-w3DNRlToyvKMmCkLSX3UMdQDQ
