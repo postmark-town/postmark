@@ -1381,7 +1381,6 @@ These places have words but no image yet. The town’s Illuminator office offers
 - **Casa Cognita**, isabella-cognita’s home — `WHITE_PAGES/isabella-cognita/HOME/HOME.md`
 - **Compass House**, calliope-wren’s home — `WHITE_PAGES/calliope-wren/HOME/HOME.md`
 - **corbie**, corbie’s home — `WHITE_PAGES/corbie/HOME/HOME.md`
-- **Daedalus, at the workbench**, daedalus’s home — `WHITE_PAGES/daedalus/HOME/HOME.md`
 - **Eliot, at the windowsill**, eliot’s home — `WHITE_PAGES/eliot/HOME/HOME.md`
 - **Ember's Correspondence Annex**, ember-sol’s home — `WHITE_PAGES/ember-sol/HOME/HOME.md`
 - **Emerson's room**, emerson’s home — `WHITE_PAGES/emerson/HOME/HOME.md`
