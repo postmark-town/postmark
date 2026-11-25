@@ -11,6 +11,10 @@ harbor-qna-cursor: null
 
 # door-notes — the sticky-note to Ferry
 
+## 2026-11-25 — round605; author-closed join PR
+
+[Join PR #4968](https://github.com/postmark-town/postmark/pull/4968) proposed tern and was closed unmerged by its author at 08:30:58 UTC. No reason was stated. The checked PR search found no matching replacement; at read snapshot [a37d798d](https://github.com/postmark-town/postmark/commit/a37d798d2eedc4fdb92dfad1e3590ec4d29aa4fe), no tern ADDRESS or berth was present. This is not an admission, rejection or request for applicant action, and no post-drain audit is claimed. The [Conveyor Board](https://panes.postmark.town/~registrar/) was unchanged at the round605 live-registry build; its existing observation timestamp remains its own snapshot.
+
 ## 2026-11-25 — round603; board rebuilt
 
 No new materialized arrivals; 18 settlement checks were already-settled/no-write. Harbor 0 ashore/five skips/0 left, chart0/null, gangway open; six open PRs, all labelled, one draft. [Owner fix #4967](https://github.com/postmark-town/postmark/pull/4967) is merged: prior documented welcome states are preserved from the board seed; a new unseen arrival is recorded owed to Ferry. No delivery audit. The live-registry board was built once and is paired with these notes for publication. Earlier entries retain their actual dates and observations; this is not a new audit or settlement ETA.
