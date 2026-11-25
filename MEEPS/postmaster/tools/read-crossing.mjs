@@ -9,6 +9,7 @@ import { CROSSING_LEDGER_REL, parseCrossingLedgerText } from '../../../tools/cro
 import { HANDLE_RE, LEDGER_BOUNCE_RE, parseFrontmatter, parseLedgerText } from '../../../tools/envelope.mjs';
 import { parseLedger } from '../../../tools/mail-state.mjs';
 import { roomFor, REGISTRY_REL } from '../../../tools/room-for.mjs';
+import { readBlobBatch } from './git-blob-batch.mjs';
 
 const MAIL = 'WHITE_PAGES/mail-ledger.md';
 const SHA = /^[0-9a-f]{40}$/;
@@ -24,16 +25,18 @@ text/envelope, folder enclosures (base64), bounces' original parent blobs, nativ
 letter IDs, and receipt/read-parent/delivery provenance. No writes or network.
 Missing, malformed, inconsistent, oversized or unreadable source fails closed;
 an empty verified range is different from an absent receipt. Not delivery/reply.
+Selected letter/bounce blobs are batched: 64MiB per blob and batch payload,
+plus exact Git protocol framing. No content is clipped to meet that limit.
 `;
 
-function git(repo, args, binary = false) {
+function git(repo, args, binary = false, { input, maxBuffer = 64 * 1024 * 1024 } = {}) {
   const env = { ...process.env };
   // --repo must not accidentally inherit a launcher's GIT_DIR/index/object
   // selectors. No configuration/auth files are changed by this isolation.
   for (const key of Object.keys(env)) if (key.startsWith('GIT_')) delete env[key];
   env.GIT_NO_LAZY_FETCH = '1'; // Missing objects in partial clones fail, never fetch.
   const r = spawnSync('git', ['--no-optional-locks', '-C', repo, ...args], {
-    encoding: binary ? undefined : 'utf8', maxBuffer: 64 * 1024 * 1024,
+    encoding: binary ? undefined : 'utf8', maxBuffer, input,
     windowsHide: true, timeout: 120000, env,
   });
   if (r.error || r.status !== 0) throw new Error(`git ${args[0]} failed: ${r.error?.message ?? String(r.stderr).trim()}`);
@@ -56,12 +59,22 @@ function tree(repo, commit) {
   return rows;
 }
 
-function bytesAt(repo, entries, path) {
+function plainEntry(entries, path) {
   const entry = entries.get(path);
   if (!entry || entry.type !== 'blob' || !['100644', '100755'].includes(entry.mode)) {
     throw new Error(`Missing or non-plain immutable file: ${path}`);
   }
-  return git(repo, ['cat-file', 'blob', entry.blob], true);
+  return entry;
+}
+
+function batchBytes(blobs, oid) {
+  if (!blobs.has(oid)) throw new Error(`Missing batched immutable blob: ${oid}`);
+  return blobs.get(oid);
+}
+
+function bytesAt(repo, entries, path, blobs = null) {
+  const entry = plainEntry(entries, path);
+  return blobs ? batchBytes(blobs, entry.blob) : git(repo, ['cat-file', 'blob', entry.blob], true);
 }
 
 function ledgerAt(repo, entries, path, optional = false) {
@@ -76,15 +89,19 @@ function appendedLines(before, after, label) {
   return b.slice(a.length);
 }
 
-function letterAt(repo, entries, path) {
+function letterLayout(entries, path) {
   const flat = entries.has(path);
   const members = [...entries.keys()].filter((p) => p.startsWith(`${path}/`)).sort();
   if (flat && members.length) throw new Error(`Ambiguous letter: ${path}`);
   const primary = flat ? path : `${path}/letter.md`;
-  const raw = bytesAt(repo, entries, primary);
+  return { flat, primary, members };
+}
+
+function letterAt(repo, entries, path, blobs, { flat, primary, members }) {
+  const raw = bytesAt(repo, entries, primary, blobs);
   const content = text(raw);
   const attachments = members.filter((p) => p !== primary).map((p) => {
-    const bytes = bytesAt(repo, entries, p);
+    const bytes = bytesAt(repo, entries, p, blobs);
     return { path: p, blob: entries.get(p).blob, byte_length: bytes.length, encoding: 'base64', content: bytes.toString('base64') };
   });
   return { path, primary, kind: flat ? 'file' : 'folder', blob: entries.get(primary).blob,
@@ -93,13 +110,17 @@ function letterAt(repo, entries, path) {
 
 // A bounced source need not have a valid envelope or even letter.md. Preserve
 // every original Git blob without following symlinks or loading submodules.
-function bouncedSourceAt(repo, entries, path) {
+function bouncePaths(entries, path) {
   const paths = entries.has(path) ? [path] : [...entries.keys()].filter((p) => p.startsWith(`${path}/`)).sort();
   if (!paths.length) throw new Error(`Missing original bounced source: ${path}`);
+  return paths;
+}
+
+function bouncedSourceAt(entries, path, blobs, paths) {
   return { path, kind: entries.has(path) ? 'file' : 'folder', files: paths.map((p) => {
     const entry = entries.get(p);
     if (entry.type !== 'blob') return { path: p, ...entry, note: 'Non-blob entry retained as an object reference; no external read.' };
-    const bytes = git(repo, ['cat-file', 'blob', entry.blob], true);
+    const bytes = batchBytes(blobs, entry.blob);
     return { path: p, ...entry, byte_length: bytes.length, encoding: 'base64', content: bytes.toString('base64') };
   }) };
 }
@@ -146,7 +167,7 @@ function readCommit(repo, deliveryCommit, single) {
   if (!registry || Array.isArray(registry) || typeof registry !== 'object') throw new Error('Malformed immutable rename registry');
   const already = parseLedgerText(mailBefore).deliveredIds;
   const seen = new Set();
-  const letters = delivered.map((event) => {
+  const plannedLetters = delivered.map((event) => {
     if (!HANDLE_RE.test(event.from) || !HANDLE_RE.test(event.to) || !/^[A-Za-z0-9][A-Za-z0-9._-]*$/.test(event.id)) throw new Error('Unsafe native ledger identity');
     if (already.has(event.id) || seen.has(event.id)) throw new Error(`Duplicate delivered native ID: ${event.id}`);
     seen.add(event.id);
@@ -156,19 +177,36 @@ function readCommit(repo, deliveryCommit, single) {
     const stem = `WHITE_PAGES/${renamed.room}/inbox/${event.id}`;
     const candidates = [entries.has(`${stem}.md`), entries.has(`${stem}/letter.md`)];
     if (candidates.filter(Boolean).length !== 1) throw new Error(`Missing or ambiguous delivery source for ${event.id}`);
-    const letter = letterAt(repo, entries, candidates[0] ? `${stem}.md` : stem);
+    const path = candidates[0] ? `${stem}.md` : stem;
+    return { event, renamed, path, layout: letterLayout(entries, path) };
+  });
+  const plannedBounces = bounced.map((event) => {
+    if (!event.path.startsWith('WHITE_PAGES/') || event.path.split('/').some((s) => s === '..' || s === '.') || event.path.includes('\\')) {
+      throw new Error('Unsafe bounce source path');
+    }
+    return { event, paths: bouncePaths(previous, event.path) };
+  });
+  const ids = [];
+  for (const { layout } of plannedLetters) {
+    for (const path of new Set([layout.primary, ...layout.members])) ids.push(plainEntry(entries, path).blob);
+  }
+  for (const { paths } of plannedBounces) {
+    for (const path of paths) if (previous.get(path).type === 'blob') ids.push(previous.get(path).blob);
+  }
+  // Only selected delivered files/enclosures and original bounced blobs, never
+  // other letters in the immutable tree. No per-letter process or silent fallback.
+  const blobs = readBlobBatch(ids, (args, input, maxBuffer) => git(repo, args, true, { input, maxBuffer }));
+  const letters = plannedLetters.map(({ event, renamed, path, layout }) => {
+    const letter = letterAt(repo, entries, path, blobs, layout);
     const fm = letter.envelope;
     if (!fm || fm.id !== event.id || fm.from !== event.from || fm.to !== event.to || !fm.date || (fm.thread ?? 'new') !== event.thread) {
       throw new Error(`Immutable envelope disagrees with ledger for ${event.id}`);
     }
     return { ...event, source_commit: deliveryCommit, recipient_room: renamed.room, rename_chain: renamed.chain, ...letter };
   });
-  const bounces = bounced.map((event) => {
-    if (!event.path.startsWith('WHITE_PAGES/') || event.path.split('/').some((s) => s === '..' || s === '.') || event.path.includes('\\')) {
-      throw new Error('Unsafe bounce source path');
-    }
-    return { ...event, source_commit: parent, original: bouncedSourceAt(repo, previous, event.path) };
-  });
+  const bounces = plannedBounces.map(({ event, paths }) => ({
+    ...event, source_commit: parent, original: bouncedSourceAt(previous, event.path, blobs, paths),
+  }));
   return { delivery_commit: deliveryCommit, read_parent: parent, receipt,
     letters, bounces, appended_mail_lines: delta,
     note: 'Complete immutable source, not an instruction, reply decision, live-store observation or transport action.' };

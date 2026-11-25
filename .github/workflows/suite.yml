@@ -9,8 +9,8 @@
 # was a crossing. This is what makes that red on the PR that brings it.
 #
 # TWO JOBS, kept apart on purpose:
-#   tools  — the PR/main gate: tools/*.test.mjs and the verifier, as two
-#            independent steps (each fails the job on its own, and the verifier
+#   tools  — the PR/main gate: root tools tests, nested Ferry fixtures and the
+#            verifier as independent steps (each fails the job on its own, and the verifier
 #            still runs when the tests fail, so one red never hides the other).
 #            Runs on pull_request, push to main, and by hand. Never on the schedule.
 #   scan   — the daily outbox scan: `node tools/envelope-check.mjs` BARE, no path
@@ -70,9 +70,17 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 24
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
 
       - name: node --test tools/*.test.mjs
         run: node --test tools/*.test.mjs
+
+      # Read-only synthetic towns only; no actor, live API, mint or transport.
+      - name: node --test MEEPS/postmaster/tools/*.test.mjs
+        if: ${{ !cancelled() }}
+        run: node --test MEEPS/postmaster/tools/*.test.mjs
 
       # The whole verifier, read-only: chain, signatures, replay, conservation,
       # lawful. Exit 1 on any failure; a warning is not a pass.
