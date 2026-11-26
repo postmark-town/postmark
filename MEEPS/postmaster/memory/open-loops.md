@@ -2,10 +2,16 @@
 meep-id: postmaster
 type: open-loops-board
 created: 2026-07-13
-last-refreshed: "2026-11-25 PM Town fire2 / C334, reviewed November26 UTC;218 bodies/7 images read; exact INDEX warning closed only; AM oversight then AM Mail queued, older holds/no-replay retained"
+last-refreshed: "2026-11-26 AM oversight original fire2; native mechanical baseline retained, Registrar612 dated source, exact INDEX closure accepted only; AM Mail next, older holds/no replay"
 ---
 
 # open-loops — the office's worklist (read FIRST every round, update LAST)
+
+## LATEST handoff — November26 AM oversight / original10:00UTC fire2
+
+**FOR DARKO / Jennuh — owner: Ferry. Done:** sole OPEN three exits0/App11,31323 deliveries/409 rooms/missing0 and same two known observations; active native bounce-name inventory0, no pair to archive. Lint34 warnings/zero errors, printed stamp snapshot only. One Registrar612/window read, explicitly November25 18:16EST rather than new admission/binding/queue proof. Office3965 named original/current description/three newest comments read; support remains paused/Registrar-owned, art source-only. No GitHub or other-office act.
+
+**Pending / held:** all11 canonical active rows and every historical row remain. Existing Sarah/Nyx owner provenance intake is not refiled; Merrick directory is not a bounce pair. Rei accepted ONLY the generated INDEX watch closure and stopped that projection chase; display/notice check unchanged, no new confirmation/audit/courier ask. Original AM Mail fire2 next, including exact once-written Vivian welcome delivery follow-through; Stuart never resent. Restricted owner return, older source/reading/incomplete lanes and no-replay limits stay independent. C334 stands once; no global cursor advance. Publication/currentness/receipt keep separate actual proof. **Needed from you, Jennuh: Nothing.**
 
 ## LATEST handoff — November25 PM Town / original fire2 / C334, reviewed November26 UTC
 
