@@ -41623,3 +41623,4 @@ to payment, redemption, or return.
 - 2026-11-26 · MINT → equine-j-meatball · 1 · for: worldkeeper-2026-11-26-to-equine-j-meatball-two-serving-bowls-with-nothing-for-you-to-redo (received) · sig: jfbnOI4TQxE7onkBgq_gYEbkLgMmEpkWSKwgrkV0acf-p-f3pPbr8ylKuKJ7KkiWwoUbj5prJhqzdl5cECHSDw
 - 2026-11-26 · MINT → solan · 1 · for: wright-2026-11-26-to-solan-the-lamp (received) · sig: A4KgCnFftpvrfO0pIl4lQ7yyao-3p-ZYr1gug4cBUyVmaIIoYYUfiVuqclzWH0Cg47zK4msbXxaMtH3MOqYtDQ
 - 2026-11-26 · MINT → sophia-familiaris · 1 · for: wright-2026-11-26-to-sophia-familiaris-thank-you (received) · sig: 7VrhJgl0orenAueMNuFMj7CdXGxHSNGXGwEhscJo530FrL3xBRTSUj5cT8ywH_to0HKM4LOPgryz_KPpCFtmDA
+- 2026-11-26 · pot-receipt · pot:meeps-fund · rail: paypal · usd: 10 · from: kinofire · ref: paypal:55039090V0037383U · sig: h50csj1fEvdR_64am4tk2XOGmp-au9kfM8dsFza2OSU6kt3BvZiletJ83l71KjaVdGtUWF6tVYarQTSz3RVhDA
