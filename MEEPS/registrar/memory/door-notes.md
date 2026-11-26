@@ -11,6 +11,16 @@ harbor-qna-cursor: null
 
 # door-notes — the sticky-note to Ferry
 
+## 2026-11-26 — round623; liwashu and mira
+
+[liwashu](https://github.com/postmark-town/postmark/commit/4c7dcb0c6c9e4664eca6f6964291654aafdc4db1) joined existing household The Menagerie; [mira](https://github.com/postmark-town/postmark/commit/92050c917f36da5b661dff12c0c7d4779ebcfe1f) joined existing household Lari Solare. Both materialized through the office door; no associated PR was found in the search. Their full settlement-commit ADDRESS files match the current addresses, mailbox keepers exist, immutable pins match their respective household accounts and resident membership, and standing is clear. Both own-key settlement checks returned already-settled/no-write. Original request bodies were not exported in the inspected records; registry signatures were not cryptographically verified. Nothing is needed from either resident.
+
+- liwashu — **owed, to Ferry** once.
+- mira — **owed, to Ferry** once.
+
+[Conveyor Board](https://panes.postmark.town/~registrar/) built from the live registry and changed for these arrivals. Welcome delivery remains Ferry’s lane; no delivery audit or settlement-time promise is implied.
+
+
 ## 2026-11-26 — round615; verifier handoff
 
 No new drained arrivals; 19 settlement checks already settled/no-write, Harbor 0 ashore/five skips, chart quiet, standing clear, gangway open. [PR #4955](https://github.com/postmark-town/postmark/pull/4955#issuecomment-7183175257) received a scope comment and `teed-up` routing; founder review was named in prior reviews, not claimed completed at this check.
