@@ -106,6 +106,43 @@ test('bounces retain all original immutable bytes even a malformed folder withou
   assert.equal(x.crossings[0].bounces[0].original.files[0].content, Buffer.from([255, 0, 128]).toString('base64'));
 });
 
+test('one crossing retains every selected flat/folder source and shared binary enclosure, not unrelated letters', (t) => {
+  const { repo } = fixture(t), body = 'Whole λ letter\r\nLast line 🔦\n', binary = Buffer.from([0, 255, 10, 128]);
+  const commit = crossing(repo, { body, beforeSave: () => {
+    put(repo, 'WHITE_PAGES/bob/inbox/alice-two/letter.md', letter('alice-two', body));
+    put(repo, 'WHITE_PAGES/bob/inbox/alice-two/art/shared.bin', binary);
+    put(repo, 'WHITE_PAGES/bob/inbox/alice-three/letter.md', letter('alice-three', body));
+    put(repo, 'WHITE_PAGES/bob/inbox/alice-three/art/shared.bin', binary);
+    // Invalid UTF8 in an UNSELECTED letter must not be loaded/decoded.
+    put(repo, 'WHITE_PAGES/bob/inbox/unselected.md', Buffer.from([255]));
+    const mail = 'WHITE_PAGES/mail-ledger.md', receipts = 'WHITE_PAGES/crossing-ledger.md';
+    put(repo, mail, readFileSync(join(repo, mail), 'utf8') + ['alice-two', 'alice-three'].map((id) => `- 2026-11-24 · ${id} · alice → bob · thread: new\n`).join(''));
+    put(repo, receipts, readFileSync(join(repo, receipts), 'utf8').replace('1 delivered', '3 delivered'));
+  } });
+  const before = snapshot(repo), x = readCrossings({ repo, crossing: commit });
+  assert.equal(x.delivered, 3); assert.equal(x.crossings[0].letters[0].kind, 'file');
+  for (const item of x.crossings[0].letters) assert.equal(item.content, letter(item.id, body));
+  for (const item of x.crossings[0].letters.slice(1)) assert.deepEqual(Buffer.from(item.attachments[0].content, 'base64'), binary);
+  assert.equal(x.crossings[0].letters[1].attachments[0].blob, x.crossings[0].letters[2].attachments[0].blob);
+  assert.deepEqual(snapshot(repo), before);
+});
+
+test('selected invalid UTF8 fails without partial CLI output; bounced Git symlink stays original bytes, never followed', (t) => {
+  const f = fixture(t), broken = crossing(f.repo, { beforeSave: () => {
+    put(f.repo, 'WHITE_PAGES/bob/inbox/alice-one.md', Buffer.from([255, 0]));
+  } });
+  const result = run(f.repo, ['--crossing', broken]);
+  assert.equal(result.status, 1); assert.equal(result.stdout, '');
+  const b = fixture(t), path = 'WHITE_PAGES/alice/outbox/unsafe-link';
+  const blob = git(b.repo, ['hash-object', '-w', '--stdin'], '../outside-never-read');
+  git(b.repo, ['update-index', '--add', '--cacheinfo', `120000,${blob},${path}`]);
+  git(b.repo, ['commit', '-q', '-m', 'Synthetic bounced Git symlink']);
+  const commit = crossing(b.repo, { id: null, bounce: path });
+  const original = readCrossings({ repo: b.repo, crossing: commit }).crossings[0].bounces[0].original.files[0];
+  assert.equal(original.mode, '120000'); assert.equal(original.blob, blob);
+  assert.equal(Buffer.from(original.content, 'base64').toString(), '../outside-never-read');
+});
+
 test('real preamble and old-format rows survive as baseline; new malformed rows still fail', (t) => {
   const { repo } = fixture(t);
   put(repo, 'WHITE_PAGES/mail-ledger.md', REAL_MAIL_BASELINE); save(repo);
