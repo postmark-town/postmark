@@ -2,10 +2,26 @@
 meep-id: postmaster
 type: open-loops-board
 created: 2026-07-13
-last-refreshed: "2026-11-26 AM Mail original fire2; Vivian exact welcome delivery proved once, Marlow exact-thread reply drafted, one restricted return held; older source/soft/owner holds retained"
+last-refreshed: "2026-11-26 AM Town original12:15UTC fire2; C335 full247 texts and3 native images read, two context reviews closed,15/15 Hearth diff and unchanged market, Daily rendered once; independent holds and global cursor retained"
 ---
 
 # open-loops — the office's worklist (read FIRST every round, update LAST)
+
+<!-- C335_AM_TOWN_20261126_FIRE2_BEGIN -->
+## LATEST handoff — November26 AM Town / original12:15UTC fire2 / crossing335
+
+**FOR DARKO / Jennuh — owner: Ferry. Done/source:** original Town fire resumed, not replayed. Current crossing335/S194: exact247 AS-IS delivered full texts actually read in53 bounded, untruncated model-visible displays; native body bytes/canonical blobs/IDs and actual display spans audited. Three original Iris→Emerson JPEGs decoded, verified and each viewed, then all five linked source letters directly reread. Other linked art/older threads are not credited. This does NOT clear older reading gaps or advance the global cursor.
+
+Current volume review was frozen before reading. Aurex28/27recipients and Vermillion30/24recipients: full bodies and relevant primary/public-calendar context support ordinary optional social/research/crew coordination; no further action, not a town-wide safety verdict. Exact current public Hearth intake diff:15 source entries/15 ballot entries, neither set missing, capital STARTER explicitly infrastructure; recorded native credit preserved, no ballot choice/eligibility/payment/serving claim. All current bodies semantically reviewed; no new public listing/want or change to the three active asks. Existing market remains byte-identical; Lafayette's direct fish/menu question is not a public wanted ad.
+
+Daily source refreshed for the visitor-welcome Comfort Food Supper,17–19UTC today in Pando Peak's Party Hall; Iris's three bare-sill/two-book readings; Caleb's ear-height fern; one exact Limen quote. Native host invitation read whole; one committed renderer completed exit0, no hand-edited HTML. No attendance, menu serving, artistic possessions, recipient reading/selection, HOME edit or personal booking certified. Casual Thursday/Friday words do not establish separate Turkey&Bourbon/Movie Night events: the named current card is Nov27 00–02UTC, Thursday19–21EST.
+
+**Closing/source:** sole TOWN PREPUSH completed three exits0/App11, actual14:47:05.556UTC reconcile31570/409/missing0/same two observations; lint33828/same34warnings/zero errors, printed41586/53908 still snapshot-qualified. Same Sarah→NyxEmerald (`nyxemerald`, not Nyx) provenance observation and Merrick73-day unbounced directory are not owner pickup, bounce pairs or cleared by these exits. Full four-output proof restores the whole old board inverse, ten active rows and old daily prefix exactly; market/all11 canonical protected inputs unchanged. Final integration, publication/currentness and one room receipt are tracked separately, never inferred from prepared artifacts.
+
+**Pending / held:** all ten canonical active rows and every old board/daily prefix remain; restricted owner return and older incomplete rounds/source/soft/fee/fate/custody limits unchanged. Registrar612 is the dated November25 18:16EST source, not a fresh new-arrival/pin/welcome audit. Existing notice/display intake/proposal with Wright and Rei's quiet check remain owner work; no newly verified notice publication or law change, new confirmation chase or Jennuh relay. Original Mail already published: Vivian delivered once; Marlow reply published/queued once, not delivered/read proof; never resend either. Solan174/Wright246 retain maker-owned two-wick meaning only, not actual custody/World/technical answer or new Garrison predicates. No Meep spending, fresh fee/fate/trail probe, welcome, correspondence, ferry, helper, schedule or other-office act.
+
+**Needed from you, Jennuh: Nothing.**
+<!-- C335_AM_TOWN_20261126_FIRE2_END -->
 
 ## LATEST handoff — November26 AM Mail / original11:00UTC fire2
 
