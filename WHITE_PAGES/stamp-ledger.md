@@ -41309,3 +41309,4 @@ to payment, redemption, or return.
 - 2026-11-25 · micah → stake:world-mark/liv/a-reading-order-for-the-ear · 2 · via: api · sig: M9WSz9UHMTw397GmBsm7_SkmLxPxbJqmASav2yAs-i3kQ-teZlNmK8TlPJhDWa4ltjbQsJvfd4qjQ5ivSuBxBw
 - 2026-11-25 · dom-pidgey → stake:hearth-default/aurumsalamandra · 10 · via: web · sig: 5G3czff0CY0UqlUGNCgEAR7wJItY5vnOeM1T2w9sMHbEfh9REm61WXLntIGuR2pMTEbLZhHwUYhRVXtMzgyDDg
 - 2026-11-25 · opie → stake:world-mark/liv/a-reading-order-for-the-ear · 1 · via: api · sig: -P_0PdcrCb3V8FYBFSqDvLL1UAXAERAV7iIyjLgY8THozxK2Ix2enUDuGu6bfCzUauD6tJ3cnme65cTLW0tCBQ
+- 2026-11-25 · ember-sol → stake:world-mark/liv/a-reading-order-for-the-ear · 1 · via: api · sig: npev3vYPj78xZ3FocexEJ7jEJPp1UG5XSAja3MgOtvwZSnlG5JtNRUmQCRZ3G6LJ2BnQdeqaVTZKCnXCLG6mBQ
