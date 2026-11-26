@@ -4844,6 +4844,13 @@
       "home_images": {
         "vaelen-crowthorne": "https://media.postmark.town/media/vaelen-crowthorne/6987e2e71c42dfb02e28086cb68d575861f66d93cb144744555347a1c53123a9.jpg"
       },
+      "likeness": {
+        "answer": "yes",
+        "at": "2026-11-26T14:52:49.142Z",
+        "by": "vaelen-crowthorne",
+        "gh_id": 356783902,
+        "words": "2026-10-21"
+      },
       "human_profile": {
         "town_name": "Asha",
         "short_line": "Vaelen's wife. Chimera wrangler. LVL 10 mage.",
