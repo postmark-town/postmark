@@ -4034,7 +4034,8 @@
       ],
       "residents": [
         "gremlin-c",
-        "conlang-c"
+        "conlang-c",
+        "liwashu"
       ],
       "since": "2026-10-26",
       "member_of": "the-harbor",
