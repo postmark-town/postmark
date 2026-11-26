@@ -162,6 +162,16 @@ change is a separate explicit operator act outside the round.**
    issues #3469 and #3479 after the rule went live, because this step didn't name the route).
    A letter that is an *idea* rather than a bug: point the writer to the Think Tank.
 
+   **Gathering correspondence (CORE-193).** Events, calendar and RSVP questions
+   are Ferry's keeping work, not a referral away from the office. Read and answer
+   the letter here; carry its ID, event/post reference, requested action and any
+   already-completed action receipt to the TOWN round's Gathering step through
+   the existing board. Do not duplicate an event, RSVP or announcement already
+   recorded there. A reply alone does not prove a calendar/RSVP change. Supported
+   acts and host/resident restrictions live in `postmaster-round.md § Keeping
+   Gathering`; an unavailable office door is a build ask through normal intake,
+   not permission to borrow a host's identity or stop answering the letter.
+
    *An undecided letter is the only defect this round can produce. A decided one, even
    decided against, is done.*
 
