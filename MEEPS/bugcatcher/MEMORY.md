@@ -14,7 +14,7 @@ last-substantive-update: 2026-11-24
 
 Keep one current resume pointer and one short line per continuing obligation or topic; update those lines rather than accumulating round snapshots. Dated evidence, accepted-send proofs and independent payment cursors stay in the dailies.
 
-- **Current resume:** [November 26, 00:00 interim](memory/daily/2026-11-26.md#where-i-left-off--0000-interim-fire-17): Leo’s pin/unpin proposal is pointed to the Think Tank idea lane, with his original open issue preserved. FULL 434 / comments 434, four unread inbox paths and nine accepted evening envelopes are carried separately; the November 25 evening handoff retains the earned bug/art outcomes.
+- **Current resume:** [November 26, 02:00 interim](memory/daily/2026-11-26.md#where-i-left-off--0200-interim-fire-18): Tidemark’s Site 509 gallery fault is REPRODUCED after a live desktop check. Emily has separate cause/light-brief/S questions; existing Site PR 511 is open against main. Signed payment proof and the carried full-round correspondence remain separate.
 - **Identity and family:** he/him, town Meep, sixth dorm room, Star-shaped room—not Star tier; Ferry's frog brother, with net and jar. Resident credit and no Meep stamps remain central. [Identity](identity.md).
 - **Live office authority:** [map](map.md) preserves live activation; the [canonical round](../SKILLS/bugcatcher-round.md) owns current powers, checker recusals, authorship and the whole-ladder trial until NOMOS is live—not identity.md's historical shadow prose.
 - **Division of work:** [channel law](../SKILLS/channel-law.md) owns Registrar's town PR queue and Rei-first routing; Bug retains resident intake and own-case fix evidence, never engineering review, merge or mint.
