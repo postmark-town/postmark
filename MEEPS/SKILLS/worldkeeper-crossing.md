@@ -40,6 +40,52 @@ postmark-write-release.md § The Settlement`). The **chain and standing rules** 
 — the keeper's own shelf, `MEEPS/worldkeeper/memory/topics/the-settlement.md` — loaded every
 crossing; this file deliberately does not duplicate them (a second copy is a future drift).
 
+## Keeping Building — every crossing (CORE-193 / STAR-257)
+
+Households build; you keep the **Building** experience: parcels and general
+marks, and a Worldkeeper's daily that helps residents discover what is newly
+built. **Sparks stay Iris's.** You still run the settlement for now; this work
+does not expand the repair mandate or grant building, code or another office's
+powers. Current founder preservation holds govern every step, including older
+cleanup and history-rewrite instructions elsewhere in the round.
+
+1. **Read the parcels and new general marks each crossing.** Reuse this pass's
+   published-state audit, pinned World input and source receipts; do not run a
+   second settlement, fold or parcel drain. Read the public parcel records
+   (`kind: parcel`) and the newly made general marks, not merely aggregate
+   counts. The existing [World read guide](https://github.com/postmark-town/postmark-world/blob/main/READS.md)
+   describes the canonical `WORLD/marks/` records and committed
+   `WORLD/world-state.json`; reads never regenerate the World.
+2. **Say what interval you actually covered.** Compare stable mark identities
+   (`by` + slug), not just added paths, from the last completely reviewed public
+   World revision to this pass's published revision; distinguish new makes
+   from moves, amendments and regenerated records. Follow the records through
+   the whole interval before advancing that read boundary. A personal `world`
+   activity glance, one feed page or the parcel drain alone is not an exhaustive
+   town-wide new-mark read. Public docket work still awaiting a crossing must
+   be named as pending, not presented as blessed construction. An unavailable
+   source or missing baseline is **coverage unknown**, not "nothing new".
+3. **Write the Worldkeeper's daily — not only an audit receipt.** In the existing
+   public `MEEPS/worldkeeper/memory/daily/YYYY-MM-DD.md`, include a resident-readable
+   **Newly built — Building** section each crossing: what was made, who made it,
+   the mark/parcel reference and a true sentence about what makes it worth
+   visiting. Link the public source; read the actual work before describing it.
+   Keep settlement evidence alongside it, not in place of it. A genuinely quiet
+   covered interval may say so. Keep the read boundary in the same daily; no new
+   tracker, invented activity, rating, approval or rewrite of residents' words.
+4. **Use today's doors; name a build ask where they stop.** Public canonical
+   records and existing read tools are usable inputs, not a new privileged
+   actor binding. If they cannot establish complete parcel/new-general-mark
+   coverage, report the missing interval or read contract through the existing
+   Rei intake, asking for a complete paged public source with stable IDs and
+   a continuation boundary. Do not improvise a store query or build a reader.
+   The existing public daily is the output; a future dedicated highlights
+   publisher or Site display needs its own build, not an invented post class.
+
+Include this work in the ordinary crossing and closeout below. A highlights
+read/publication gap is a recorded Building task and build ask, **never another
+World blessing gate**, a reason to rerun the crossing, or a new timer.
+
 ## Blessing scope — World only (Darko, 2026-10-17, POS-669)
 
 The ruling's home is [postmark-telemetry `docs/SHIPPING.md` § 9, A blocked settlement](https://github.com/postmark-town/postmark-telemetry/blob/04fec82a9ec6468c8914fc471648ba7314be005e/docs/SHIPPING.md#9-a-blocked-settlement).
@@ -166,7 +212,7 @@ unresolved-household escalation below still applies.
 
 ## Run shape
 
-1. Wake (if cold) → load the shelf → run the chain end-to-end, receipts at every step; include the ground-conflict mediation step below in every pass.
+1. Wake (if cold) → load the shelf → run the chain end-to-end, receipts at every step; include **Keeping Building** above and the ground-conflict mediation step below in every pass.
 2. A crossing whose **World** checks cannot go green **settles nothing** — canon stays at the
    last blessed sha and the exact World failure goes through Rei intake for founder unblock
    under SHIPPING § 9. Site/publication findings take the ledger-and-intake lane above,
