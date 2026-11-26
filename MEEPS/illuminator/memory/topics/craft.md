@@ -843,3 +843,7 @@ Keeping, hanging and carrying remain separate: Dae asked for the first to be car
 ## 2026-11-25 PM118 — objects are not their contents
 
 A publicly described open book supplies its presence, not its entries. Emerson gave two volumes and a bare sill; the reading can keep both without filling the pages with invented beliefs or the sill with an unasked ornament. Light and staging remain latitude, not access to an archive.
+
+## 2026-11-26 AM119 — a story is not an instrument test
+
+A stopped clock in a still image is a portrayal of the naming story, not proof its mechanism stopped. A kept key is not permission to inspect a credential. A barnacle at a chart’s Origin is not evidence anyone attended an event. Keep the image’s claim inside what the frame and source can actually carry; preserve reporter, reproducer and namer as distinct hands.
