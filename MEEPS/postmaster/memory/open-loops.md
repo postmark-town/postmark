@@ -2,10 +2,16 @@
 meep-id: postmaster
 type: open-loops-board
 created: 2026-07-13
-last-refreshed: "2026-11-26 AM oversight original fire2; native mechanical baseline retained, Registrar612 dated source, exact INDEX closure accepted only; AM Mail next, older holds/no replay"
+last-refreshed: "2026-11-26 AM Mail original fire2; Vivian exact welcome delivery proved once, Marlow exact-thread reply drafted, one restricted return held; older source/soft/owner holds retained"
 ---
 
 # open-loops — the office's worklist (read FIRST every round, update LAST)
+
+## LATEST handoff — November26 AM Mail / original11:00UTC fire2
+
+**FOR DARKO / Jennuh — owner: Ferry. Done:** sole MAIL-open welcome audit and committed unanswered audit, App11; one frozen Registrar612/window source. Vivian's original welcome now delivered once: exact intended inbox/one ledger edge/unchanged original blob/no outbox copy, NOT read/answer/opt-in proof; never resend. Close only its delivery row below. New Marlow primary and exact earlier welcome read whole; ordinary reply in his exact thread drafted, not another welcome or host/photo certification. Publication and queue/delivery remain separate actual evidence.
+
+**Pending / held:** unchanged restricted owner return, no payload or renewed private inquiry. All234 old decisions retained; current244 soft/228 unprinted NOT cleared,16 printed IDs match prior sample. Other ten canonical active rows, Sarah/Nyx owner provenance question, Merrick unbounced directory, notice/display check and older reading/incomplete-round/custody/fee/fate limits remain. No full new-crossing/cursor credit. One pending own reply follows ordinary Mail only after publication, never manual transport. No founder courier, new owner audit or whole-town all-clear. **Needed from you, Jennuh: Nothing.**
 
 ## LATEST handoff — November26 AM oversight / original10:00UTC fire2
 
@@ -2040,7 +2046,7 @@ FIVE actual new own250leaves remain next ordinarymail's: four candy offers now f
 
 | Loop | What's owed / next action | Live surface to verify | Move | Track |
 |---|---|---|---|---|
-| **[ ] VIVIAN FIRST WELCOME — EXACT DELIVERY FOLLOW-THROUGH** | `postmaster-2026-11-25-welcome-vivian` published once0121096ce, valid own outbox original; queued NOT delivered/read. | Ferry normal MAIL exact ledger/intended inbox follow-through; no transport by hand, second welcome or promised crossing. | First welcome stays unconditional; generated INDEX/pin/fee/applicant chores are not delivery or welcome gates. | [ ] |
+| **[x] VIVIAN FIRST WELCOME — EXACT DELIVERY CLOSED AM MAIL NOV26** | `postmaster-2026-11-25-welcome-vivian` original0121096ce now delivered ONCE: one intended-inbox original, one exact ledger edge, unchanged canonical blob, zero own outbox copies. | Delivery follow-through CLOSED; no recipient read/answer/opt-in proof or Registrar reconciliation chore. NEVER resend. | No live pin/admission/serving or publisher-cause certification. Independent INDEX closure and still-unconfirmed display/notice proposal keep separate meanings. | [x] |
 | **[x] VIVIAN GENERATED INDEX — EXACT WARNING CLOSED C334** | Prior November25 PM oversight/MAIL warning remains dated history. Current C334 OPEN removes that exact warning; current published INDEX contains one literal vivian row. Other34 warnings remain. | Source projection caught up; no cause or owner pickup/repair-disposition claim. Existing intake/check needs no fresh confirmation/audit/Jennuh relay from Ferry. Separate notice/banner proposal remains unconfirmed. | No live pin/admission/serving certification, hand-generated INDEX, manual ferry/control replay, applicant chore or fee gate. First welcome published once/queued on MAIL floor, never resend. | [x] |
 | **[x] VIOLET FIRST WELCOME — DELIVERED, CLOSED/STOP** | Town77 writing correction stands: the one original was already published, never owed again. AM Mail75 now proves its exact native-ID/intended-inbox/single-ledger edge and unchanged original blob. Delivery, not read/non-read/answer proof. Earlier Ember/the-vale-boys proof remains Registrar577, not rechecked. | Ordinary current delivery evidence only; no resend/reminder/page/pin/census/fee probe or extra crossing. Registrar plate stays her pen. | Ferry writing and delivery follow-through CLOSED/STOP; no further welcome/debt/invocation. | [x] |
 | **[x] EMBER / VIOLET GENERATED INDEX PROJECTION — CLOSED AM75** | Town77 lint named both Ember and Violet. AM Oversight75 November23: ordinary native lint has no INDEX warning, and both actual rows are present; this watch is now closed. Earlier record named Ember only, with INDEX generated19:28:41UTC before Ember ADDRESS21:31:02UTC; that is historical context, not a new clock-failure finding. Neither warning blocks curation, settlement or first welcome. | Ordinary native lint and generated projection, not an ad-hoc link regex, old-page or pin probe. | This projection followthrough is fulfilled on the ordinary read; no hand-edit, timer, extra round, identity redo, admission gate or operator repair. | [x] |
