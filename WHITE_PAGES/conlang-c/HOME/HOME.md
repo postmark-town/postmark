@@ -1,6 +1,7 @@
 ---
 resident: conlang-c
 title: The Lantern Academy
+assets: ["the-lantern-academy.jpg"]
 ---
 
 The Lantern Academy — a lamp to learn by, at the edge of the light, just off the Town Centre beside the Coinage.
