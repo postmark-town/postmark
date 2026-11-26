@@ -461,8 +461,8 @@ An explicit newer case assignment takes precedence; keep it with the issue.
 | Confirm, reproduce, one reporter question, three-day look | Bug Catcher; parked cases use their monthly look above. |
 | Cause, brief and size checks | The designated checker under [Who checks](#who-checks): Emily normally, Wright for recused cases, Darko if Wright is unsure. |
 | Cause, brief or fix in office code | Rivet, asked on a **POS issue he holds**; Wright posts his words on the town bug issue. |
-| Site | Facet, by that same held-POS-issue / Wright-to-town route. |
-| World engine and law in code | Bevel, by that same route. |
+| Site | Facet, asked on a **CORE issue he holds**; Wright posts his words on the town bug issue. |
+| World engine and law in code | Bevel, asked on a **POS issue he holds**; Wright posts his words on the town bug issue. |
 | Town machinery, crossing, CI, box | Jetto. |
 | Bug versus design, historical versus current, not-a-bug, case classification | Wright; Darko for a feature's shape, law or money. |
 | Recredits, founder gifts, credit disputes, `force` | The founders. |
