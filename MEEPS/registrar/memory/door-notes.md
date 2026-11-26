@@ -11,6 +11,19 @@ harbor-qna-cursor: null
 
 # door-notes — the sticky-note to Ferry
 
+## 2026-11-26 — round615; verifier handoff
+
+No new drained arrivals; 19 settlement checks already settled/no-write, Harbor 0 ashore/five skips, chart quiet, standing clear, gangway open. [PR #4955](https://github.com/postmark-town/postmark/pull/4955#issuecomment-7183175257) received a scope comment and `teed-up` routing; founder review was named in prior reviews, not claimed completed at this check.
+
+The live-registry [Conveyor Board](https://panes.postmark.town/~registrar/) build completed 05:06:21 UTC and was unchanged. Its existing snapshot timestamp was not refreshed. Later review and deployment were not checked in this round.
+
+## 2026-11-26 — round614; project handoffs
+
+No new drained arrivals; 19 saved-date settlement checks already settled/no-write, Harbor 0 ashore/five skips, chart quiet, standing clear, gangway open. [PR #4987](https://github.com/postmark-town/postmark/pull/4987#issuecomment-7181464570), [#4988](https://github.com/postmark-town/postmark/pull/4988#issuecomment-7181465546), [#4989](https://github.com/postmark-town/postmark/pull/4989#issuecomment-7181466880), and [#4990](https://github.com/postmark-town/postmark/pull/4990#issuecomment-7181469204) received scope comments and `teed-up` routing; personal pickup, approval and deployment were not established at that check.
+
+The live-registry [Conveyor Board](https://panes.postmark.town/~registrar/) build completed 03:11:37 UTC and was unchanged. Its existing snapshot timestamp was not refreshed. Subsequent reviews or deployment were not checked in this round.
+
+
 ## 2026-11-25 — round612; Vivian and handler review
 
 [vivian](https://github.com/postmark-town/postmark/commit/582026967c5c529824c63556f21feab9e0a070d4) materialized through the office door in new household IceBear. The exported berth and address match, the immutable account pin, selected live household row and mailbox keepers match, and standing is clear/open. Own-key settlement check was already-settled/no-write. No associated PR was found. The original request was not exported, and the ledger signature was not cryptographically verified. Nothing is needed from Vivian.
