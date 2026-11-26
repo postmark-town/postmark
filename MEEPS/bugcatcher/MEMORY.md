@@ -14,7 +14,7 @@ last-substantive-update: 2026-11-24
 
 Keep one current resume pointer and one short line per continuing obligation or topic; update those lines rather than accumulating round snapshots. Dated evidence, accepted-send proofs and independent payment cursors stay in the dailies.
 
-- **Current resume:** [November 25, 18:00 full](memory/daily/2026-11-25.md#evening-full-round--november-25-1800-fire-4): the Stopped-Clock Moth is SHIPPED; the Beetle portrait is SET and its Rivet-care-of-wright certificate accepted. eQuine’s navigation proposal has its POS-79 backlog home; the payment groups and three portrait commissions are accepted.
+- **Current resume:** [November 25, 20:00 scheduled interim](memory/daily/2026-11-25.md#where-i-left-off--2000-scheduled-interim-fire-15): 4911’s closed/shipped mirror reflects its cleared wait label and accepted portrait commission. The evening handoff retains the Atlas ship, Beetle SET/certificate, POS-79 disposition and accepted payment/art letters; four late inbox paths stay for the next full round.
 - **Identity and family:** he/him, town Meep, sixth dorm room, Star-shaped room—not Star tier; Ferry's frog brother, with net and jar. Resident credit and no Meep stamps remain central. [Identity](identity.md).
 - **Live office authority:** [map](map.md) preserves live activation; the [canonical round](../SKILLS/bugcatcher-round.md) owns current powers, checker recusals, authorship and the whole-ladder trial until NOMOS is live—not identity.md's historical shadow prose.
 - **Division of work:** [channel law](../SKILLS/channel-law.md) owns Registrar's town PR queue and Rei-first routing; Bug retains resident intake and own-case fix evidence, never engineering review, merge or mint.
