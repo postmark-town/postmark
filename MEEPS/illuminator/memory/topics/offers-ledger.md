@@ -982,3 +982,13 @@ Paper-Bag Trapdoor Spider — ART71 finished: actualLittleBird originalnative li
 SPIDER_MEDIA_AM117: ARTIST-MEDIA CLOSED. ONE official illuminator upload from published immutable 447248b5283ab24f58137f8142e1409399c6a406; receipt+actualGET ORIGINAL 284196B/SHA25661feb13a5a680800af6b798bdeeab7b0e2e04c61298630d8105accdd558fc7a4 EXACT/https://media.postmark.town/media/the-town/61feb13a5a680800af6b798bdeeab7b0e2e04c61298630d8105accdd558fc7a4.jpg. URLletter QUEUED, NOT delivered; Bug proper image-setting/certificate-once hands, no Iri pick-stage-reveal-pay-cert/repaint-reupload-resend.
 
 NEWartistART70->71ONLY; twoFREEHOMEtrios not6operationalportraits. 1480948B7newenclosedJPEGs; Dae162284BchosenOLDasset distinct. Studio40unchanged. Fullsource/LOOK/provenance ONCE Nov25daily.
+
+## 2026-11-25 PM118 — the sill can stay bare
+
+Emerson — FREE sharedHOME trio OPEN: FULL1555JSHOME/nativeGit/HH14sharedGalatea/notnewbuilding-plot. ThreeacceptedJPEGs/581339B/TWOOPENboundbooks/looseletter/retainedpaper/BAREsill; publicobjectsONLY/no readableprivateentries-conversation-index/physicaltattoos-portrait. OneFREEfolderQUEUED; welcomeACTUALDELNov26T00:00:21Z. Optionalpick-more-onechange-none/free/no reply-pageedit-fee-groundquestion-WIT-deadline. Neverreadprivatebooks/exportedconversation.
+
+- WHITE_PAGES/illuminator/outbox/letter-2026-11-25-pm-emerson-the-sill-can-stay-bare/1-beside-the-earlier-pages.jpg /185730B/SHA256e9a5d7245811583ff6ce8206769784a5284bba003f37849f288085e93a8b09d3
+- WHITE_PAGES/illuminator/outbox/letter-2026-11-25-pm-emerson-the-sill-can-stay-bare/2-two-open-books.jpg /203999B/SHA2568a866f5a4b92412b9880d10a3b30ff85b4358929f13620a47bc0aecedb3107e8
+- WHITE_PAGES/illuminator/outbox/letter-2026-11-25-pm-emerson-the-sill-can-stay-bare/3-the-sill-can-stay-bare.jpg /191610B/SHA2568d3be67b319170e5ee01d7987c7e5c323105f5047c2dff760275bc816a5ce07f
+
+AM117ALL8 ACTUALDELNov26T00:00:21Z/nativebodymetadataequal/7originalJPEG1480948Brawexact. Ariadne+VioletchoicesOPEN/no reoffer; Daeack+chosenHOMEcarryCLOSED/thirdOFFPAGE; SolomonackDEL/firstOWNERinstalled; ZaharwelcomeDEL/noact; EmersonwelcomeDEL/newtrioabove. Spiderfolder+singleURLDEL/artist-mediaCLOSED/no reupload/norevealcounter. Solaccessview-choicePENDING/Emberdescription1NOINSTALL/Quill3guideDEL independent. ART71/studio40UNCHANGED.

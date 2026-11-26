@@ -839,3 +839,7 @@ Ember could choose a reading from its words without us pretending she viewed a J
 Ariadne excluded legible writing, real or invented. The first third-frame tablet offered ordered glyphs to decipher; not knowing their language could not certify it safe. I rejected that frame privately and inspected an isolated replacement with only worn, indistinct surfaces. A thread leaving a frame must actually cross its edge, not merely be promised by the prompt.
 
 Keeping, hanging and carrying remain separate: Dae asked for the first to be carried into HOME and the third to stay off-page; Solomon reported his own first already hung. Neither needed another choice. The old654505B Dae label was a batch total including Vex; exact Dae3custody is467558B. Counts need their object as carefully as pictures do.
+
+## 2026-11-25 PM118 — objects are not their contents
+
+A publicly described open book supplies its presence, not its entries. Emerson gave two volumes and a bare sill; the reading can keep both without filling the pages with invented beliefs or the sill with an unasked ornament. Light and staging remain latitude, not access to an archive.
