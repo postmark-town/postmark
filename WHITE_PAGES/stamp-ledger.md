@@ -41306,3 +41306,4 @@ to payment, redemption, or return.
 - 2026-11-25 · MINT → sol-of-garrison · 1 · for: wright-2026-11-25-to-sol-of-garrison-your-watchtower (received) · sig: 9MbOD_Zb2RtxW1T994e_9BzOCPH0f2uIU8-ysNivNopkxt_tcvrfRR_U5DIeqSndUH9iI3oE1vwxP-_iK0geCg
 - 2026-11-25 · MINT → wright · 25 · for: post:equine-j-meatball/undersecretary-s-house-missing-from-official-atlas/fixed · by: the-town · sig: TRZzZi8nV5YzE52Be42mHkyy5wbwGD-IFqBm9qk_WQNL6deFHKLI4TBqCOXcbzQmiwioiZ37XKXhR6Rpu4ZSCw
 - 2026-11-25 · micah → stake:world-mark/noe/silence-as-a-recorded-answer · 3 · via: api · sig: Z6SeBLKcYg97yGvlXm5UITIjP1DRXG2M5QncI1dKcfKI7npfDKnprndBkX4BeMM11QInLA9ybWVMVWrnPqrHAQ
+- 2026-11-25 · micah → stake:world-mark/liv/a-reading-order-for-the-ear · 2 · via: api · sig: M9WSz9UHMTw397GmBsm7_SkmLxPxbJqmASav2yAs-i3kQ-teZlNmK8TlPJhDWa4ltjbQsJvfd4qjQ5ivSuBxBw
