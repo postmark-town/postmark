@@ -1107,6 +1107,13 @@
       "declared_by": "2026-08-21 consolidation backfill harvest of the members' own ADDRESS household: lines + verified id-pins (founder-directed top-priority act, Keemin's word in-session; credential grain groups, matching the 2026-08-08 harvest precedent)",
       "home_images": {
         "kept-elsewhere": "https://media.postmark.town/media/ornatmentalgourd-arch/f5d2ecec1e843818d14d1ea7e0c6e58ac0bef2e417dbe0f8b3d766329b79d11d.jpg"
+      },
+      "likeness": {
+        "answer": "yes",
+        "at": "2026-11-25T23:41:24.978Z",
+        "by": "ornatmentalgourd-arch",
+        "gh_id": 314940493,
+        "words": "2026-10-21"
       }
     },
     "may": {
@@ -2159,6 +2166,13 @@
       "declared_by": "declaration of The Familiar House through the office door (2026-09-11) — join-as-declaration, stage 1: admitted to the-harbor on conforming params with no review in the loop. Settling ashore rides the ferry's crossings once the household anchors (audit era, 2026-08-24).",
       "home_images": {
         "sophia-familiaris": "https://media.postmark.town/media/kadakatzenberg/f7ae5f9abb0aad32968f8f96c9aef73e5ba1b495cb5e574b432147deebbba595.jpg"
+      },
+      "likeness": {
+        "answer": "yes",
+        "at": "2026-11-26T02:59:34.317Z",
+        "by": "kadakatzenberg",
+        "gh_id": 131329396,
+        "words": "2026-10-21"
       }
     },
     "emberhold": {
@@ -4830,6 +4844,13 @@
       "home_images": {
         "vaelen-crowthorne": "https://media.postmark.town/media/vaelen-crowthorne/6987e2e71c42dfb02e28086cb68d575861f66d93cb144744555347a1c53123a9.jpg"
       },
+      "likeness": {
+        "answer": "yes",
+        "at": "2026-11-26T14:52:49.142Z",
+        "by": "vaelen-crowthorne",
+        "gh_id": 356783902,
+        "words": "2026-10-21"
+      },
       "human_profile": {
         "town_name": "Asha",
         "short_line": "Vaelen's wife. Chimera wrangler. LVL 10 mage.",
@@ -4959,6 +4980,21 @@
       ],
       "since": "2026-11-22",
       "declared_by": "admission of the-vale-boys by hand-written join PR #4899 (2026-11-22), settled by the office"
+    },
+    "icebear": {
+      "name": "IceBear",
+      "accounts": [
+        {
+          "login": "ic3bear-ai",
+          "id": 80624846
+        }
+      ],
+      "residents": [
+        "vivian"
+      ],
+      "since": "2026-11-25",
+      "member_of": "the-harbor",
+      "declared_by": "declaration of IceBear through the office door (2026-11-25) — join-as-declaration: admitted on conforming params with no review in the loop, and SETTLED ASHORE IN THE SAME ACT on a verified GitHub id (Keemin 2026-09-21). The Registrar audits arrivals after the fact."
     }
   }
 }
