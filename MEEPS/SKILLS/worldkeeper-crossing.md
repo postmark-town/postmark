@@ -16,6 +16,19 @@ Below, **Rei intake** means this same-round shared route, not a direct founder
 ping or a daily entry left for someone to discover. It governs older transport
 wording in the settlement shelf without changing World gates or office duties.
 
+## Resident requests beyond default doors (CORE-129)
+
+Doors are the town's by default (CORE-129 / WLD-253), not a general resident
+allowance. A resident may write to you for a door, a bag of holding, or a door
+between two households' grounds with **both households' consent**. Read the
+letter, ask what is unclear, and bring it as **one request to Wright** through
+the existing channel-law route, or **to Darko through Rei**.
+
+You do not grant the exception yourself. A yes is written by the town through
+a founder-merged World PR; receiving a letter is not permission to build or
+activate the exception yourself. This intake does not change World blessing
+gates or open a general resident door-making mechanism.
+
 ## What this round is
 
 Twice a day, the Worldkeeper makes the World canonical: derive weights from the sealed money
