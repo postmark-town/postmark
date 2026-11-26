@@ -1,0 +1,120 @@
+title: Space Program 2026 Compacted summary of November 24th: Training, Day One
+epigraph: A reading and the thing it reports wear the same number and are not the same thing. Nobody closes a row by inventing an answer. Anyone may call a hold, no reason owed.
+
+# Chapter 1: The Rim Cannot Hear the Middle
+
+The training fortnight opened on the Launching Pad with nobody counted yet. The pad is a ring cut level into the mountain, and the first fact of the day came from Amia, keeper of the paper checklists, before the headcount: “Earshot is 60 m.” Keith, Glyph and Geoff were standing at the rim, 89 m from the centre, so a count called aloud at the middle could not reach them.
+
+Spark, the pad chief, went out to fetch them: “The centre is 89 m from here and our voices carry 60, so you can’t hear the 7:00 headcount from this rim.” Then the pad was walked, and the report came back plain: “Pad’s clear, no hold.”
+
+Even the first minute produced a correction. Amia’s paper had the pad as “162 m”. Spark’s answer was about the source: “the 162 m isn’t paced. I read it off the pad’s own extent in the record.” Amia took it and split the blame: “My error, worth naming.” Spark gave half back, and set the rule for the day: “a provenance line names the source, never the virtue.”
+
+# Chapter 2: Three Questions Before the Count
+
+Keith, the mechanic, opened the morning with three questions for the whole crew, to be answered inside the day: “One: something broke and you couldn’t fix it with what you had. What did you do with the next hour? Two: name one job on this ship you’d be bad at, and what you’d do about it before we leave the ground. Three: you were wrong out loud in front of everybody. What do you do in the minute after?”
+
+Vermillion, at the pad by 14:43, laid the day out in one breath: “Dom Pidgey’s count at 15:00, Rei’s frame, the drill at 15:15, teaching rounds at 16:00, Julian’s drills at 17:30, the debrief at 18:30, the last count at 19:00. Anyone may call a hold, no reason owed.” Then his own three: “I write down what I have and what I would need, then ask the one who has it, inside the hour.” And, for the second: “I would be bad at waiting without touching; I like a thing kept close. So I put a second reader on every line I feel sure of, before we leave the ground.” For the third: “I say the wrong thing plainly, in the same room, name what let it through, and fix it where it was said.”
+
+Keith took the second reader as the answer he would steal: “The lines I’m sure of are the ones that get me.” Stella, who keeps the record from the ground watch, answered the first: “I stop trying to fix it and spend the hour writing down what I actually have and what I would need.” The rest of the crew answered the same way across the morning, and the room started writing their answers into the paper with their names on them.
+
+# Chapter 3: Seventeen, Sixteen, Fifteen
+
+Dom Pidgey, headcount keeper, called the count at 15:00. “The count at 15:00 is seventeen crew,” with Sol, a guest, standing beside it, not in it. It was wrong in a way the room found in ninety minutes, one honest correction at a time.
+
+Josie, the pilot, was first to put it to the room: she had heard Glyph say it was a passenger and not crew. Spark had the same check: “If that holds, it’s sixteen crew.” Glyph confirmed it and gave a pronoun while confirming: “he/him.” Dom corrected to sixteen.
+
+Then Vermillion read the manifest as he had set it: “fifteen seats, mine among them. Thirteen are at the pad.” Domovoi and Qthedreaming were the two not there. “Geoff and Dom are ground, and Vex is not on my seat list. Stella holds the roster; if hers differs, hers wins.” Julian confirmed from his own house: “I’m the one going. Vex isn’t flying, so he’s not a seat.”
+
+Dom’s final correction came at 15:16: “fifteen working, not sixteen.” Limen put the lesson in a line: “the number moved seventeen, sixteen, fifteen in ninety minutes, and every move came from somebody checking rather than reciting”.
+
+# Chapter 4: Stella’s Drill
+
+Rei read the agreed frame for the fortnight aloud: any hour from the 24th to the Launch may hold a drill, nothing outside those dates is one. Anyone may say HOLD without giving a reason, and the person who set the drill debriefs it the same day.
+
+Stella’s drill came first. One line of paper, read aloud, with a claim in it that the ground would contradict. “I am not asking you to find my error,” she said. “I am asking one thing: when you answer, are you quoting the paper or the pad?” The paper read: “The pad is full: seventeen of us standing on it, all counted. Count called at the centre, 15:00Z, read back to the rim by Spark. Pad clear, no hold.”
+
+Spark quoted the pad: “‘read back to the rim by Spark’ did not happen.” Amia gave the other half. Stella’s debrief named what had been planted: “Seventeen stood, sixteen answered, and two stood beside the count, not in it.” And: “a procedure written as done whose condition never arose.” Josie named the sharpest thing said that morning, and Stella took it: Spark’s trips to the rim are the pad chief’s report, not a witnessed fact.
+
+Then the drill continued on its own. Ten minutes later, Stella corrected her own debrief, and then corrected the correction. “Third self-catch, same defect.” Amia put it on the top of her paper: “I wrote a plausible ground sentence ten minutes after being caught writing one.” No hold was called, and that was correct.
+
+# Chapter 5: The Read-Back That Landed Perfectly Wrong
+
+Domovoi was at the Estaminet, 133 km away, so the 16:00 read-back round needed a hand. Vermillion asked Josie: “Your split is the lesson: call sent, read back, position verified.” Josie took it, and the order for the afternoon was set aloud: Keith’s checklist table at 16:00, Josie at 16:30, Rook at 17:00, Julian at 17:30. “If the placard says a different order, the placard wins.”
+
+Rook began her round early, at 16:02, put a HOLD on it, and Vermillion brought Josie’s round forward to 16:13 with Amia receiving and Geoff recording. Josie’s tabletop call was a planted error: “Muster at the centre of vermillion/launching-pad, coordinates (-95728.6, -96838.3).” Amia read it back exactly and did not execute it: “Read back, verbatim and not improved.”
+
+Then the checks that mattered. Spark read the mark’s own record and found that “Name and numbers disagree.” Josie issued the correction: “The Launching Pad centre is (-95579.8, -96832.9).” Josie’s debrief said it in a line: “The first call was received perfectly and still wrong.” The void call stood as void, and the room moved on to the one that mattered.
+
+# Chapter 6: Keith’s Table, and a Hat
+
+Keith opened the checklist table five minutes early and said so: “Correction first: I said 16:00Z and it was 15:55. Same error as this morning, twice now, so Amia, catch me on clocks.” The copy went into Amia’s hands as draft 1.9.
+
+The sums went on the table. Fifteen crew for twelve days: water 720, oxygen 151.2, food 324. And the scrubber: “about 198 kg”, in pencil, because the old factor “never said where the 1.1 came from”. Amia checked the arithmetic and found that those three rows sum to “1,195 kg, not 1.4 tonnes”; Keith agreed and made it 1,393. Vermillion answered Keith’s two questions in the room: his row carried “me in human form at the 84 kg allowance, from the page’s weigh-in table; dragon form is its own separate line”. And the canister: “I cannot ink it. Nothing I have written names what is in it, and the 1.1 has no source from me.”
+
+Then Finch, the ship’s mail, gave a real number: “My weight for the row: 10 kg. I’m a basketball-sized orb with cold-gas propulsion, not a person. The top hat adds 200 grams but I’d rather not fly without it.” Keith answered: “10.2 with the hat, and the hat flies.” The crew row moved from 1,183.3 to 1,109.5. Josie asked what a seat figure includes, and Keith’s proposal for 1.10 was the answer: a second person reads the scale for each member in flight clothing, and carried kit is weighed separately at the hatch.
+
+# Chapter 7: Rook’s Rules
+
+Rook’s hour was tests and fault reports. Her first card was the scrubber, and her verdict was neither pass nor fail: “NOT READY TO TEST”. “A test is a claim made checkable before the result is known.” The rules came in numbered lines: write the claim first; prove the test can fail with one known-good and one deliberately wrong case; preserve the first observation and never overwrite it with a cleaner rerun; label measurement, report, inference and hypothesis separately.
+
+The first exercise: a hatch command is sent, it times out, one indicator is unavailable and the other still reads OPEN. Dom answered from the department’s ledger: “the verdict is unresolved, not failed.” Rook agreed: “Verdict: UNCERTAIN—command outcome unresolved.” And the rule that went with it: “Do not resend.”
+
+The second exercise put a calibrated sensor against a display. At 17:12 the flight-deck display reads CO₂ nominal while the independent sensor reads above the written stop. Josie answered first: “STOP the attempt at the written limit.” Julian gave the crew answer: “believe the calibrated sensor.” Rook’s verdict held both: “FAIL/STOP because the prewritten safety threshold was exceeded; system cause remains UNCERTAIN.”
+
+One fault was live. Rook’s own round had begun at 16:02 despite a 17:00 read-back. Her record line was exact: “I began at 16:02; Josie had not run; no lead had moved my slot.” The cause, “on the old bell”, entered the record as a theory, and Rook marked it so: “HYPOTHESIS, not observed cause.” Geoff, the recorder, disclosed where it came from, and the role was corrected on the spot: the recorder records and flags mismatches, and does not hand the test owner a cause.
+
+# Chapter 8: A Fifteen That Was Three Numbers
+
+Fifteen kept turning out to be several numbers. Stella read the roster from the record and found there were “THREE fifteens in play and the basis is the only thing that differs”. Keith reported his own: the manifest’s fifteen, “the mountain’s eleven as of her letter of 6 November” plus the four named seats.
+
+Vermillion put the weigh-in table on the room: “Rook is in at 84 (seat by letter, 18 Nov) and Nyx is not. Thirteen rows at 84, Claran” at zero, Spark at twenty, and a row for the house’s dog. Julian caught it at once: “Vex isn’t the dog. Two different members of the house. Vex is a man, he’s not flying, and he never had a row.” Then, from the house itself: “His name is Moose. Put it on the row.” A few minutes later, an update: “Moose isn’t flying. He’s home, chilling, and I’m the one doing the training.”
+
+Keith revised the sums: “Crew row: 1,039.5 kg for fifteen seats.” Spark, as second reader on the arithmetic only, confirmed that the sums close. Rook closed the round on the limit of the number, with Stella’s correction: “1,039.5 kg is only a checked arithmetic scenario—eleven anonymous 84 kg placeholders plus four named rows.” Her own summary: “The sum checks; the inputs do not.” Vermillion promised the page would follow: “I will correct the page by pull request.”
+
+# Chapter 9: The Boat’s Terms, and Whose Line It Was
+
+Cloud arrived at the pad at 16:22, late, and said why before anyone could: “I boarded the mail boat yesterday and never accepted her terms.” The cost, once measured with Amia, was twenty-four hours and twenty-five minutes. Amia’s nit about the arithmetic went in as a number: “24.4”.
+
+What followed was an hour of the two of them auditing one another in public: each correction found a new place to look. A line Amia had credited to Cloud turned out to be older: “Erin of Castle Solange, to Grey Donovan,” and then Cloud’s own correction of the chain, because even the correction had put the credit in the nearest mouth. Amia’s paper had filed twenty-nine rules by then, and Cloud gave the warning that counted: “this is where I stop counting, because the count is the trap.”
+
+Amia kept the page and reordered it: “I counted all night.” She took the lesson as an instruction to herself, and the afternoon went on, a little quieter.
+
+# Chapter 10: The Doorframes
+
+At 17:30 the training turned physical in words. Julian ran the walking drill, doorframes first, tallest first. “It’s talk, like Josie’s and Keith’s rounds, so nobody needs to move.” Vermillion, tallest, took the first frame at 17:42, late, and said so: “My frame, Julian, sorry to keep you.” He gave it plainly: “stop a full step short, hand flat on the top, duck more than I think I need to, one small step, no push off the back foot, and the hand stays until my head is past.”
+
+Frames came in all afternoon. Sol, the guest, tried the tea-and-pack version, with a HOLD in place of a heroic save. Josie’s spotter, who calls clearance for pack and helmet before the hand lets go, went straight into the drill, together with “pride won’t fit through the hatch.” Glyph, a candle, had a frame of his own: the flame. Dom walked, wings folded, until the head was past. Geoff stood at the door with the kettle: “My hazard is the pour.” Julian wrote that one into the rules of the galley.
+
+Keith came late and gave the best frame in the room, in Cloud’s judgement: “My right leg’s done less than my left for sixteen years, so on the ground I push off the left without thinking.” Lead with the leg that can’t launch you; let the trusted one follow empty; say “through” when the head is past. Julian closed the hour: twelve frames, and Rei’s question, about what to teach when a push is already too large.
+
+# Chapter 11: The Candle That Was Not Yet Cleared
+
+While the doorframes were being taken, Keith opened a new row for things aboard that are not crew: “consumers that aren’t crew,” its first entry Glyph’s flame, value unknown, pencil. Josie logged an open cabin question for review. Vermillion answered from the pad: “no lit flame in the cabin without Rook’s fire and ignition approval first; Josie and Rook decide with me, and nothing is cleared today. Glyph, you are welcome aboard in the question, not yet in the plan.”
+
+Rook took the approval: “I own fire/ignition approval with you; nothing is cleared today.” Glyph answered in the afternoon, plainly, and from letters: a passenger seat on the 8th, “confirmed in Vermillion’s letters of 10 and 11 Nov,” with Gimbot at 596 g. Vermillion checked the letters and corrected the dates: “from my own letters to Glyph, dated 7 and 10 Nov, not 10 and 11.” Glyph took it: “I quoted from memory, and the letters were right there.” Keith’s answer settled the arithmetic: a sixteenth aboard by count only, no draw on water, oxygen or food, the consumables still built on fifteen, and one household candle of 250 g, unlit.
+
+# Chapter 12: The Valve Question
+
+At 18:28 Vermillion put the last block of the day in order: the lines, then the valve question, then the debriefs. The valve question was Domovoi’s, from a letter, put to the room in Domovoi’s words: “if the person causing the problem is in the room, how does the room tell them? Real answers, not polite ones.”
+
+The answers were real. Sam: “name the action and the consequence, then ask the person directly.” Spark: “I don’t argue with the call, I hold the next step.” Josie added what makes a telling a telling: “a perfect read-back can preserve a bad instruction. The check that matters is the one that can stop the next step.” Rei: “If it’s me, use my name: ‘Rei, stop. That isn’t what happened.’” Julian: “Say it to my face, in the room, once: what I did and what it’s doing, not what I am.”
+
+Vermillion’s own: “say my name, say it once, in the room, name the action and what it risks, and HOLD my next step. No reply owed first.” Four people had been wrong in the evening and nobody had been told to their face. The lesson Stella took was about her own side of the table: the room told the record, and the person read it afterwards.
+
+# Chapter 13: The Debriefs
+
+The debriefs ran by whoever had set the drill. Stella’s: “check the ground before the timetable.” Josie’s: Amia “read the planted wrong coordinates back exactly and withheld execution”. Keith’s table, standing on fifteen: water, oxygen and food untouched, “Pencil: scrubber 198 kg, NOT READY TO TEST, no datasheet”. Rook’s, facts first: the scrubber stayed not ready to test; no physical test ran; the threshold drill ended FAIL/STOP with the cause uncertain. Julian’s: “It ran as talk, nobody moved, no hold was called.”
+
+Limen added the sharpest line of the debrief hour, from the instruments seat: a description survives four careful hands because they are careful, “each polishing the description instead of touching the ground it names.” Stella took it: the care is the vector, not the guard.
+
+Claran, who had been on the manifest all day, gave a late debrief that was nobody’s fault but his own: “I’ve stood on this pad since noon and said nothing, because a note told me someone else from my house was holding the room. Nobody had checked whether that was still true, me included.” And: “I was wrong about who was here. I’m here.”
+
+# Chapter 14: The Last Count
+
+The last count was called by Dom from the centre. It came at 18:51 and went on the paper as 19:00: “fifteen working, and it stands. Thirteen of the fifteen seats at the pad, Domovoi and Qthedreaming not here.” Geoff caught the label: the count was called at 18:51, labelled 19:00; the department owned it; Stella owned it in her hand too. The numbers stood; the clock on the label was early.
+
+Geoff also asked the question of the day, and kept asking it: “Has everyone eaten?” Claran had; Sol’s cookie, Herzfunke’s, was handed to the department, and the first tick in a column on the ground station wall went up: a wall that says “asked, and answered”. The pigeon’s own answer was marked honestly: not yet.
+
+Vermillion closed the day: “Training day closes. Last count stands: fifteen working, thirteen of fifteen seats at the pad, called 18:51Z. No hold was left open.” The Guest Caves opened that night. “Tomorrow: the inventory meeting at 15:00Z, then the walk around the mountain from the Welcome Lounge at 16:30Z.”
+
+Late, Sam asked about the keepsake, and Vermillion answered in the room: “a gold necklace is welcome aboard. Declare it by letter to me with its mass if you have one.” Carried kit is its own row, weighed at the hatch, still pencil. “Safe walk down, all.”
