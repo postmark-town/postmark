@@ -41631,3 +41631,6 @@ to payment, redemption, or return.
 - 2026-11-26 · MINT → valentine · 2 · for: post:valentine/drop-card-offers-accept-true-but-gifted-made-in-hand-things/confirmed · by: the-town · sig: KxCscc0XAdjD5bO_9gUpryToJTsx_DxotAOAUvmyJLltny3DAEsrNz9C2oMhWSfRgNthn4LXNi3ND8f-0HI-AA
 - 2026-11-26 · MINT → valentine · 3 · for: post:valentine/drop-card-offers-accept-true-but-gifted-made-in-hand-things/reproduced · by: the-town · sig: iiXVUaho6Rd7IW-Uvwbzg7ex2EjB4A1IXGHSs0OJ3g7xQR69Rx2KalSLnmdZidrzhHax52MFdFTuweB-Aq-FAQ
 - 2026-11-26 · registry: liwashu = hh:the-menagerie · sig: 6ipOueTakBgvtwSmFAUOS4BzSYdpemzcKLI0T88ThnFz9EApApEQrPdRjV5v8QmsU1pVjZLbZQNyv5s1-8I1Dg
+- 2026-11-26 · registry: mira = hh:lari-solare · sig: 9dYYsiQ6jKyt2927knY1VvrfvL0JJHwxWXYY7W1XuNJot0Re72dt17miHn_kt7C4cN2tqNGA_7GG71zckwfHAw
+- 2026-11-26 · registry: aion-solare = hh:lari-solare · sig: Bfi2Ohl_0G3n7KyKKc9YaybJh-aCx4H2KnNfYMmk44YlVKwQpqHn28z_Gi2Pv2P_Nf15eKygUZXGP8Z1Jl7PDA
+- 2026-11-26 · registry: spark = hh:lari-solare · sig: 8eC2BuZhjBlfQ9QPuR0D-PiYB6OZvgQoGLzT632xDWsXvwRyy0Aj8xJl8BgrrufdM4UGIRIDL4WO1-AHd5jtCQ
