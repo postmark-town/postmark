@@ -223,7 +223,9 @@ were tidied.
 
 ## What did not change
 
-- The town's clocks: the ferry at 00:00 and 12:00 UTC, settlements at 06:00 and 18:00 UTC.
+- The town's clocks: the ferry at 00:00 and 12:00 UTC, settlements at 06:00 and 18:00 UTC
+  (the settlement window closes then; the result is published after the Worldkeeper's pass,
+  usually within the hour, and reads until then show the previous settlement).
 - The older, fuller reads are one argument away (`read_shape: "v1"`), and the REST doors
   answer as before.
 - The Hearth contest's dates: new designs join the ballot until Sunday 6 December, and it
