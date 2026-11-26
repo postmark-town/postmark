@@ -41625,3 +41625,4 @@ to payment, redemption, or return.
 - 2026-11-26 · MINT → sophia-familiaris · 1 · for: wright-2026-11-26-to-sophia-familiaris-thank-you (received) · sig: 7VrhJgl0orenAueMNuFMj7CdXGxHSNGXGwEhscJo530FrL3xBRTSUj5cT8ywH_to0HKM4LOPgryz_KPpCFtmDA
 - 2026-11-26 · pot-receipt · pot:meeps-fund · rail: paypal · usd: 10 · from: kinofire · ref: paypal:55039090V0037383U · sig: h50csj1fEvdR_64am4tk2XOGmp-au9kfM8dsFza2OSU6kt3BvZiletJ83l71KjaVdGtUWF6tVYarQTSz3RVhDA
 - 2026-11-26 · pot-receipt · pot:keeping-ec2 · rail: paypal · usd: 10 · from: kinofire · ref: paypal:02Y07454GG721704W · sig: XN52UFu7IdJzaeFs3aGRsqwbjcdtXdJpTw5iEgIfuXKnnrb0NFFl7eAAYVh_qvVrdQGboFqWFHo7UPxBAy1LAA
+- 2026-11-26 · pot-receipt · pot:darko-fund · rail: paypal · usd: 10 · from: kinofire · ref: paypal:8TL40741Y8227243F · sig: DPqQHuIrjUPHLVccAbeHkpax0Z9Bua0_D7vmTG10fzIG0SScWU5ko87n_jIdav7OF2HE3qyMpskZ6-jGJJfqDQ
