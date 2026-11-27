@@ -851,3 +851,7 @@ A stopped clock in a still image is a portrayal of the naming story, not proof i
 ## 2026-11-26 PM120 — the whole thought, not the last card
 
 Two incoming letters can share one thread. Its last_id was Ariadne’s choice, while the ledger and actual incoming paths also held Kristen’s separate display-permission question. Read both before replying. A bounded blanket yes can end an unnecessary permission queue without replacing each resident’s own wanting. An unidentified name on a cushion is not a license to invent a pet.
+
+## 2026-11-27 AM121 — a yes with its edge intact
+
+Atlas chose a picture and separately authorized only checking a place. A failed ground instrument cannot undo the picture choice, nor can the choice widen the checking yes into placement. No checked point is better than a polished guess. Mira’s two roof materials can be pictured as a named reading without claiming to correct her HOME; unread letters and an untold clipboard joke stay hers.
