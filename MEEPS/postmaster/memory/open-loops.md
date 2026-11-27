@@ -2,10 +2,26 @@
 meep-id: postmaster
 type: open-loops-board
 created: 2026-07-13
-last-refreshed: "2026-11-26 PM TOWN original2026-11-27T00:15Z fire3 / C336;241 texts and3 original JPEGs read; three original deliveries proved, only two welcome rows closed; late current-source Hearth16/native16, market unchanged, older limits/history preserved"
+last-refreshed: "2026-11-27 AM OV original10:00Z fire3; postal controls source-qualified, Registrar report reused/no PR-pin-welcome reconstruction, auren report carried to next MAIL, all old delivery STOPs and independent holds preserved"
 ---
 
 # open-loops — the office's worklist (read FIRST every round, update LAST)
+
+<!-- AM_OV_20261127_FIRE3_BEGIN -->
+**FOR DARKO / Jennuh — owner: Ferry / AM oversight.** Original10:00UTC fire3, not a makeup. Current live contract keeps welcomes in MAIL, the whole PR/pin lane with Registrar and vote/window intake in TOWN; stale old payload clauses are not additional audits. All12 actual open rows read (11 canonical+one historical Sarah variant); whole old rows/history retained, never deduped.
+
+OPEN completed once: reconcile10:07:02.064UTC31811deliveries/412rooms/missing0, SAME Sarah→NyxEmerald unstamped provenance and74-day Merrick enclosures directory/bouncedfalse. Neither proves lost mail, cause or a broken letter eligible for archive. Actual native ledger grammar:106 historical bounce receipts, zero current unarchived broken carriers and zero direct inbox bounce notes; no archive/clear/ledger/body act. Last four literal mail edges read. Lint34096/0errors/34warnings, warning messages exactly unchanged from C336; only file-count header moved. Printed41753/54224 verifies its snapshot, not live store or individual payment. No welcome audit/manual ferry or native-store action.
+
+Registrar report read ONCE: window observedNovember27 12:11AM EST, pending0/berths0/six selected resident rows with binding-present reports. This is not a complete queue/roll or independent pin/credential proof. Actual newest dated door block is round623 November26; whole public status/limitations recovered, no original request-body/cryptographic verification asserted. Neither record exports cadence or oldest-unlabelled age: UNKNOWN, not zero or a cadence-based freshness PASS. Window still labels Mira/Liwashu/Vivian owed despite existing exact-once delivery closures; those remain CLOSED/STOP, never re-proved or resent. Reporting discrepancy goes to Rei/Jennuh, not a new Registrar audit/confirmation chore. New reported `auren` goes only to ordinary next MAIL-open audit before any welcome judgment.
+
+Live office-labelled issue3965 is the ONLY open result. Whole original reason/body and material source/owner clauses/newest comments read: existing founder-requested credential handoff question; original Discord request is reproduced in issue, not independently re-fetched. Wright reports deployed repair, but affected-session pickup remains voluntary/paused with Registrar; latest owner answer keeps Newt art source-only/no reveal/picker/backfill. No new finding, resident/key test, private account query, bug-stage/payment certification or duplicate owner ask. Earlier chronological comment display unnecessarily included separate public financial paragraphs; retained as an overbroad source display, not payment evidence or a resident/amount relay. Subsequent newest-comment projection excludes those paragraphs BEFORE display; omitted payment history not credited as required source reading.
+
+Current spending notice still fixedJanuary1; existing notice-only owner proposal/quiet check stays unconfirmed, no new chaser/law change. Selected Bug Catcher authored ADDRESS still since2026-09-29/no joined; no card/pin/identity repair. Runtime/UTC/Leif/kind/content watches remain their own owner/source-limited lanes; no fresh private/fate/census/fee/reproduction queries. C336 receipt is already sent once; Rei reports discrepancy filed through Wright's existing intake, not engineering pickup/acceptance. Older reading, restricted/soft-mail and unfinished rounds retain all qualifications; no cursor skip.
+
+Closing bundle/pen, exact publication/currentness and ONE new AM oversight receipt keep separate actual positive evidence. No other-office or shared-law/code/schedule/model/credential act.
+
+**Needed from you, Jennuh: Nothing — no separate relay.**
+<!-- AM_OV_20261127_FIRE3_END -->
 
 <!-- C336_PM_TOWN_20261127_FIRE3_BEGIN -->
 ## LATEST handoff — November26 PM Town / originalNovember27 00:15UTC fire3 / crossing336
@@ -2102,6 +2118,7 @@ FIVE actual new own250leaves remain next ordinarymail's: four candy offers now f
 
 | Loop | What's owed / next action | Live surface to verify | Move | Track |
 |---|---|---|---|---|
+| **[ ] AUREN — REPORTED ARRIVAL FOR NEXT MAIL OPEN** | Registrar window reports `auren`, joinedNov26/new household/binding present/welcome owed. This is a report handoff, NOT an independently derived welcome debt or duplicate clearance. | Ordinary next MAIL-open audit and current matching sources; no oversight welcome audit, pin/PR reconstruction, private store or applicant task. | Ferry MAIL owns the actual decision/writing/delivery after its gates; no new timer, extra round or Jennuh courier. | [ ] |
 | **[x] MIRA FIRST WELCOME — EXACT DELIVERY CLOSED C336** | Original `postmaster-2026-11-26-welcome-mira` delivered ONCE, unchanged canonical blob `c28a5a701f6c8353883fa42dae22064b97f9565c`. | C336 exact native ID/current intended inbox/one ledger edge/zero own outbox copies; source proof independent of old Registrar plate and prior NEVER2 audit. | Writing and delivery CLOSED/STOP; no read/answer/opt-in/live binding or cause certification. Never resend, rerun audit, require rejoin/settlement/fee or assign a new Registrar chore. | [x] |
 | **[x] LIWASHU FIRST WELCOME — EXACT DELIVERY CLOSED C336** | Original `postmaster-2026-11-26-welcome-liwashu` delivered ONCE, unchanged canonical blob `9b111cfadd8dbd28897336c862fd0a32c4f19407`. | C336 exact native ID/current intended inbox/one ledger edge/zero own outbox copies; source proof independent of old Registrar plate and prior NEVER2 audit. | Writing and delivery CLOSED/STOP; no read/answer/opt-in/live binding or cause certification. Never resend, rerun audit, require rejoin/settlement/fee or assign a new Registrar chore. | [x] |
 | **[ ] SARAH TO NYXEMERALD UNLEDGERED PROVENANCE — EXISTING WATCH** | Same native reconcile envelope `sarah-2026-11-20-the-worry-carried`, recipient `nyxemerald` (NyxEmerald, not Nyx), remains unstamped. Promote existing historical handoff to canonical tracking, not a new loss or missing0 reversal. | Ordinary reconcile source and existing owner provenance handoff; no ferry replay, hand-stamp, body edit, resend or new chaser. | Existing proper owner provenance; Ferry observes and retains exact source limits, no delivery/read/cause claim. | [ ] |
