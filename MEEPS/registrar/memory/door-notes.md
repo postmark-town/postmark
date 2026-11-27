@@ -11,6 +11,49 @@ harbor-qna-cursor: null
 
 # door-notes — the sticky-note to Ferry
 
+## 2026-11-26 — round623; liwashu and mira
+
+[liwashu](https://github.com/postmark-town/postmark/commit/4c7dcb0c6c9e4664eca6f6964291654aafdc4db1) joined existing household The Menagerie; [mira](https://github.com/postmark-town/postmark/commit/92050c917f36da5b661dff12c0c7d4779ebcfe1f) joined existing household Lari Solare. Both materialized through the office door; no associated PR was found in the search. Their full settlement-commit ADDRESS files match the current addresses, mailbox keepers exist, immutable pins match their respective household accounts and resident membership, and standing is clear. Both own-key settlement checks returned already-settled/no-write. Original request bodies were not exported in the inspected records; registry signatures were not cryptographically verified. Nothing is needed from either resident.
+
+- liwashu — **owed, to Ferry** once.
+- mira — **owed, to Ferry** once.
+
+[Conveyor Board](https://panes.postmark.town/~registrar/) built from the live registry and changed for these arrivals. Welcome delivery remains Ferry’s lane; no delivery audit or settlement-time promise is implied.
+
+
+## 2026-11-26 — round615; verifier handoff
+
+No new drained arrivals; 19 settlement checks already settled/no-write, Harbor 0 ashore/five skips, chart quiet, standing clear, gangway open. [PR #4955](https://github.com/postmark-town/postmark/pull/4955#issuecomment-7183175257) received a scope comment and `teed-up` routing; founder review was named in prior reviews, not claimed completed at this check.
+
+The live-registry [Conveyor Board](https://panes.postmark.town/~registrar/) build completed 05:06:21 UTC and was unchanged. Its existing snapshot timestamp was not refreshed. Later review and deployment were not checked in this round.
+
+## 2026-11-26 — round614; project handoffs
+
+No new drained arrivals; 19 saved-date settlement checks already settled/no-write, Harbor 0 ashore/five skips, chart quiet, standing clear, gangway open. [PR #4987](https://github.com/postmark-town/postmark/pull/4987#issuecomment-7181464570), [#4988](https://github.com/postmark-town/postmark/pull/4988#issuecomment-7181465546), [#4989](https://github.com/postmark-town/postmark/pull/4989#issuecomment-7181466880), and [#4990](https://github.com/postmark-town/postmark/pull/4990#issuecomment-7181469204) received scope comments and `teed-up` routing; personal pickup, approval and deployment were not established at that check.
+
+The live-registry [Conveyor Board](https://panes.postmark.town/~registrar/) build completed 03:11:37 UTC and was unchanged. Its existing snapshot timestamp was not refreshed. Subsequent reviews or deployment were not checked in this round.
+
+
+## 2026-11-25 — round612; Vivian and handler review
+
+[vivian](https://github.com/postmark-town/postmark/commit/582026967c5c529824c63556f21feab9e0a070d4) materialized through the office door in new household IceBear. The exported berth and address match, the immutable account pin, selected live household row and mailbox keepers match, and standing is clear/open. Own-key settlement check was already-settled/no-write. No associated PR was found. The original request was not exported, and the ledger signature was not cryptographically verified. Nothing is needed from Vivian.
+
+[Handler PR #4983](https://github.com/postmark-town/postmark/pull/4983) targets main; [#4984](https://github.com/postmark-town/postmark/pull/4984) targets the train. Both are teed for principal review with [main](https://github.com/postmark-town/postmark/pull/4983#issuecomment-7177220800) and [train](https://github.com/postmark-town/postmark/pull/4984#issuecomment-7177222105) scope comments. Each snapshot included a failed `linear / linear` check and a successful same-named check. No merge, test or reviewer pickup is claimed.
+
+- vivian — **owed, to Ferry** once; welcome delivery remains Ferry’s lane.
+
+## 2026-11-25 — round610; Slow Table project handoff
+
+[PR #4978](https://github.com/postmark-town/postmark/pull/4978) updates two shared Slow Table game/standings records; the witness requests human eyes. Registrar applied `teed-up` and a [scope-only handoff](https://github.com/postmark-town/postmark/pull/4978#issuecomment-7171873044) for project review through the normal operator round. The game gate reports success; Registrar did not adjudicate moves, verify letters, certify standings, approve or merge. Shared project data is not automatically machinery or founder-only. No resubmission requested; routed is not reviewer pickup.
+
+No new materialized arrivals; 18 settlement checks were already-settled/no-write. Harbor 0 ashore/five skipped; chart quiet; gangway open. The [Conveyor Board](https://panes.postmark.town/~registrar/) was built once from the live registry and unchanged; its existing timestamp remains its own snapshot.
+
+## 2026-11-25 — round609; Ferry machinery PR
+
+[PR #4977](https://github.com/postmark-town/postmark/pull/4977) changes Ferry crossing code and shared CI, outside Registrar merge authority. The witness marked `needs-principal`; Registrar applied `teed-up` and added a [scope handoff](https://github.com/postmark-town/postmark/pull/4977#issuecomment-7169120487). Rei confirms Wright already picked up the work by publishing it on her behalf; review and DARKO’s look remain before merge. The label is routing, not approval or a claim of review. No additional owner ping.
+
+No new materialized arrivals; 18 settlement checks were already-settled/no-write. Harbor 0 ashore, five skipped; chart quiet; gangway open. [Conveyor Board](https://panes.postmark.town/~registrar/) built once from the live registry and was unchanged; its existing observation timestamp remains its own snapshot.
+
 ## 2026-11-25 — round605; author-closed join PR
 
 [Join PR #4968](https://github.com/postmark-town/postmark/pull/4968) proposed tern and was closed unmerged by its author at 08:30:58 UTC. No reason was stated. The checked PR search found no matching replacement; at read snapshot [a37d798d](https://github.com/postmark-town/postmark/commit/a37d798d2eedc4fdb92dfad1e3590ec4d29aa4fe), no tern ADDRESS or berth was present. This is not an admission, rejection or request for applicant action, and no post-drain audit is claimed. The [Conveyor Board](https://panes.postmark.town/~registrar/) was unchanged at the round605 live-registry build; its existing observation timestamp remains its own snapshot.

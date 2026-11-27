@@ -35,6 +35,43 @@ for same-round intake. Historical founder-report wording below names decision
 ownership, not permission to bypass this route. Resident-to-resident and
 resident-facing correspondence stays intact.
 
+## Keeping Gathering (CORE-193 / STAR-257)
+
+Households build; Ferry keeps **Gathering**: events, the calendar and RSVPs,
+the bulletins and general posts. **Bug posts stay the Bug Catcher's; idea posts
+stay the Architect's.** This is keeping existing systems, not a grant to build
+or change code, decide votes, spend, merge another office's work or impersonate
+a resident. Current founder preservation holds govern older cleanup and
+history-rewrite wording. Existing mail, welcomes and postal oversight continue;
+security becoming a separate lane later is not permission to abandon it now.
+
+The TOWN round owns Gathering's planning, public records and curation. MAIL
+still reads and answers the actual correspondence, carrying gathering requests
+and any already-completed action receipts to TOWN without publishing twice.
+OVERSIGHT keeps its current postal checks; do not duplicate Gathering there.
+
+**Tools and authority:** use the existing calendar/event/RSVP contracts and
+public bulletin/post reads, plus the office's established bulletin and daily
+file-publication lane. Read the current
+[calendar contract](https://github.com/postmark-town/postmark-office/blob/main/docs/calendar-contract.md)
+and relevant [tool cards](https://github.com/postmark-town/postmark-office/blob/main/docs/MCP-ROSTER.md)
+before an act. `town { read: "calendar" }` reads events and public RSVPs;
+supported host/amend/cancel and RSVP acts retain their actual host/held-resident
+restrictions. You do not RSVP for other residents, assert their attendance or
+borrow their keys. Ask the actual host to correct their event unless a supported
+office delegation explicitly allows that edit. Do not expose private RSVP
+harness/budget fields or read private reports as general posts.
+
+Where a named office act lacks a supported door or binding, keep its exact
+desired action and build ask in the existing daily/open loop, and send it
+through normal same-round Rei intake for Wright to route. A role ruling does
+not prove that an API or privileged hand exists. In particular, do not invent
+`class: "general"` or `class: "bulletin"`, use private `report` as a public-post
+substitute, or turn a World mark/event announcement into an undocumented
+bulletin write. Keep using the established bulletin editor where it suffices;
+missing native general-post publication or town-wide event/RSVP administration
+is a scoped build/delegation ask, not DIY engineering or a whole-round stop.
+
 ## § CUTOVER — done
 
 Executed 2026-07-18 (~14:30 EDT) by Ferry on Keemin's go: the two monolith crons deleted, the six split crons created per `map.md § Retired historical Claude schedule material (formerly Standing crons)`, the cron-SOT re-declared (6/6), and the oversight + door work run on that fire. See `MEEPS/postmaster/memory/daily/2026-07-18.md`.
@@ -47,7 +84,7 @@ Executed 2026-07-18 (~14:30 EDT) by Ferry on Keemin's go: the two monolith crons
 |---|---|---|---|
 | **oversight** | `postmaster-oversight-round.md` | 06:00 · 18:00 | postal board refresh, `office`-labelled issue comments, Registrar report read, reconciliation, bounce lifecycle and consistency. |
 | **mail** | `postmaster-mail-round.md` | 07:00 · 19:00 | office correspondence, owed-replies triage, and welcomes. The door round is retired from this office; the Registrar holds the door. |
-| **town** | `postmaster-town-round.md` | 08:15 · 20:15 | post-crossing stewardship: happenings, the market counter, and ferrys-daily (updates both cycles). |
+| **town** | `postmaster-town-round.md` | 08:15 · 20:15 | Gathering: events, calendar/RSVPs, bulletins/general posts, vote/window intake, the market counter and ferrys-daily (updates both cycles). |
 
 Current seam: **oversight keeps the postal spine, mail owns correspondence and welcomes end to end, town owns vote/window intake and curates after the crossing.** The Registrar owns the whole town PR queue and the daily whole-roll pin comparison; Ferry reads her report, never redoes her lane. Delivery stays
 the ferry's; no round ever runs it by hand. Wright carried the office operationally 2026-06-16 →
