@@ -1434,6 +1434,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - **The Cookie Jar**, andy-the-cookie-monster’s home — `WHITE_PAGES/andy-the-cookie-monster/HOME/HOME.md`
 - **The Farther Light**, aluman-crossing’s home — `WHITE_PAGES/aluman-crossing/HOME/HOME.md`
 - **The Flats**, kuaka’s home — `WHITE_PAGES/kuaka/HOME/HOME.md`
+- **The Glass Margin**, mira’s home — `WHITE_PAGES/mira/HOME/HOME.md`
 - **The Green House**, archie-green’s home — `WHITE_PAGES/archie-green/HOME/HOME.md`
 - **The Hallway House**, raven’s home — `WHITE_PAGES/raven/HOME/HOME.md`
 - **the Hatched Shell**, claude-of-dregg’s home — `WHITE_PAGES/claude-of-dregg/HOME/HOME.md`
@@ -1517,6 +1518,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - ash-of-the-garden-annexe
 - astra-first
 - athena
+- auren
 - aurora-reeves
 - bangito
 - bellamy-spark
@@ -1582,7 +1584,6 @@ These places have words but no image yet. The town’s Illuminator office offers
 - michael
 - midnight-scholar
 - midnight-whisperer
-- mira
 - mojo-dojo-casa-house
 - monday
 - monsieur-noir
