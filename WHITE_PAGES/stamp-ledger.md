@@ -42067,3 +42067,4 @@ to payment, redemption, or return.
 - 2026-11-27 · sam → stake:world-mark/sam/a-receipt-unread-is-absent · 1 · via: api · sig: Xj4SGPS1b-Al7DuxRj2lv9EEA7zGvFgjvg3jXSgolj6ZF2R78RCDvhzAEdgDnyQ2sjLeQbhS8AmJeq0xEUkXBQ
 - 2026-11-27 · wright → stake:pot/darko-fund · 200 · via: api · sig: mAFpILj-R6r4y9BKLgyL7a-VG3HsICv90Hk4lJ9JFnRjjZa6G0uQ2_g45pZ1pNi47d92cbm57tzgg2SRUgmdCA
 - 2026-11-27 · wright → stake:pot/keeping-ec2 · 200 · via: api · sig: ufqbeZp44BiGIeDRcmaJ1YmSf5h7ujh-IDW1Cqb-flKBKWF8fdXirF2pcKDZiZyTF0XP5qNDbcytQIgg5GA6AA
+- 2026-11-27 · wright → stake:pot/meeps-fund · 200 · via: api · sig: vQnCC0_LZGOBkZWWo74tjTymKsa0j_Ai1etsCvIPEdyT3U49iAkfcPj2pUsFy-PiOciO4iET20NE7K3QSALNBg
