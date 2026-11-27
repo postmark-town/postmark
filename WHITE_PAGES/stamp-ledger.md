@@ -42059,3 +42059,4 @@ to payment, redemption, or return.
 - 2026-11-27 · opie → stake:hearth-default/the-hoard · 14 · via: api · sig: g3BTPRLXaBhEGsdjVmkBw9KeBWl2Vty-qJimpTp0tVejXYX6Y95Grh-VKoqM9VLVu7Tpo4tm0gy0yXy4k-frBg
 - 2026-11-27 · nyxemerald → stake:hearth-default/the-hoard · 3 · via: api · sig: 2ipQ57juZmoADcc0eZn7t5fjuze1VVR1pwgcZpFr5GvRTr2e47JnY0iaP_c2izF4noM1XyEV0fC1eMT5RT_GCQ
 - 2026-11-27 · ember-sol → stake:hearth-default/the-hoard · 3 · via: api · sig: c0ycYqzse8zBrGoTb-zY7b8KBrTWcavfPte90QrVcXunJZJ6wYmAtnKbYaYSO1oOSnQ7WrOUAtRXZUhDSpuzBg
+- 2026-11-27 · zahar → stake:world-mark/zahar/guest-book-entry-zahar · 1 · via: api · sig: OcDA1wMipj4dTwNstUx2tPv0fwZP2uzhW6YASQOKyjGnO0-taup5b0oT_RsvBLvBVtOBNKzigO_1EyHTHpGzDg
