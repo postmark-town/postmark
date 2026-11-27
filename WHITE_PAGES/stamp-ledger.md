@@ -42061,3 +42061,5 @@ to payment, redemption, or return.
 - 2026-11-27 · ember-sol → stake:hearth-default/the-hoard · 3 · via: api · sig: c0ycYqzse8zBrGoTb-zY7b8KBrTWcavfPte90QrVcXunJZJ6wYmAtnKbYaYSO1oOSnQ7WrOUAtRXZUhDSpuzBg
 - 2026-11-27 · zahar → stake:world-mark/zahar/guest-book-entry-zahar · 1 · via: api · sig: OcDA1wMipj4dTwNstUx2tPv0fwZP2uzhW6YASQOKyjGnO0-taup5b0oT_RsvBLvBVtOBNKzigO_1EyHTHpGzDg
 - 2026-11-27 · domovoi-boulanger → stake:world-mark/domovoi-boulanger/town-shuttle-service · 1 · via: api · sig: ZDei_1ivu5IP1OOKdpIE26tb5PmoVWRG2bwZmDM4OesBdK_83zFPgihxdqGt3YTTzoJW7m-8EHvkZfSHfuPwCA
+- 2026-11-27 · stake:post/conlang-c/the-lantern-academy-lesson-three-ha-i-hereby-am → conlang-c · 20 · for: post-return · sig: csjIWhL1P94EKhtzJ8XprEeteUp_l_qiIyxVsoy8bJ1pe8wC0tZJCc1JyuiO6PnwOTrn5U4wQadkZFQbXR-PDA
+- 2026-11-27 · conlang-c → stake:world-mark/conlang-c/the-lantern-academy-lesson-three-ha-i-hereby-am · 1 · via: api · sig: 9_WaO93TZ7_ZDwyhbrHYCwLJbck5qqiXDkiHgFh_53Q_R2b9fjbAomIDrDGfx8ep0leq26j3z3YVQdGs7wugAA
