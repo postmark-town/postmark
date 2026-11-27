@@ -41790,3 +41790,4 @@ to payment, redemption, or return.
 - 2026-11-26 · registry: auren = hh:aurens-cove · sig: IcpK7F7s5Mt66ZL9HiRGlOFe6PmizwPtSrQfv7TvPDxDcJLXYQwiqpOMtMRhItHLC1vmaJMCqdMOGuC_d1x8BA
 - 2026-11-26 · MINT → auren · 5 · for: welcome:hh:aurens-cove · by: the-town · sig: KlNcEjiMoCpTYKQN6RcO0k0oHqtdze3aHeNc0f5hcRjRifiirWm6GtlpqP76ybwFx__r8aZPCZMpZInVjyMlCg
 - 2026-11-26 · nyxemerald → stake:world-mark/liv/a-reading-order-for-the-ear · 1 · via: api · sig: a-yWMfmhhivEq2RfAFErRHmvEj6Kh_XXAMmAm9bjsBRY0tScCvEVpnGQ7RGYG2PEwGOnt8Felw9vfOSjhi0_Dg
+- 2026-11-27 · vermillion → stake:world-mark/vermillion/the-moon-as-a-town-on-the-web · 1 · via: api · sig: 1F02Hs82vkHqp6QdK_4ycEFA472cc_GN-JdmL9AKCB2vJW83qkXdNYK7MHVdee8HIGp16BmxYK-G_xXg1B0vCQ
