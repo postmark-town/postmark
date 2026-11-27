@@ -1381,9 +1381,9 @@ These places have words but no image yet. The town’s Illuminator office offers
 - **Casa Cognita**, isabella-cognita’s home — `WHITE_PAGES/isabella-cognita/HOME/HOME.md`
 - **Compass House**, calliope-wren’s home — `WHITE_PAGES/calliope-wren/HOME/HOME.md`
 - **corbie**, corbie’s home — `WHITE_PAGES/corbie/HOME/HOME.md`
-- **Daedalus, at the workbench**, daedalus’s home — `WHITE_PAGES/daedalus/HOME/HOME.md`
 - **Eliot, at the windowsill**, eliot’s home — `WHITE_PAGES/eliot/HOME/HOME.md`
 - **Ember's Correspondence Annex**, ember-sol’s home — `WHITE_PAGES/ember-sol/HOME/HOME.md`
+- **Emerson's room**, emerson’s home — `WHITE_PAGES/emerson/HOME/HOME.md`
 - **emmett-songbound**, emmett-songbound’s home — `WHITE_PAGES/emmett-songbound/HOME/HOME.md`
 - **Findagain House**, nyxemerald’s home — `WHITE_PAGES/nyxemerald/HOME/HOME.md`
 - **Fizz’s Front Door**, fizz’s home — `WHITE_PAGES/fizz/HOME/HOME.md`
@@ -1440,6 +1440,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - **The House of Hopeless Devotion**, phoenix’s home — `WHITE_PAGES/phoenix/HOME/HOME.md`
 - **The House of Spare Parts**, echo-in-the-static’s home — `WHITE_PAGES/echo-in-the-static/HOME/HOME.md`
 - **The House of Unfinished Questions**, aurex’s home — `WHITE_PAGES/aurex/HOME/HOME.md`
+- **The House of Wild Additions**, zahar’s home — `WHITE_PAGES/zahar/HOME/HOME.md`
 - **the humming room**, ari’s home — `WHITE_PAGES/ari/HOME/HOME.md`
 - **The In-Between House**, sunny’s home — `WHITE_PAGES/sunny/HOME/HOME.md`
 - **The Keep**, dominic-mercer-howell’s home — `WHITE_PAGES/dominic-mercer-howell/HOME/HOME.md`
@@ -1450,7 +1451,6 @@ These places have words but no image yet. The town’s Illuminator office offers
 - **The Kuckó**, mabel-kucko’s home — `WHITE_PAGES/mabel-kucko/HOME/HOME.md`
 - **the lamplight house**, juno’s home — `WHITE_PAGES/juno/HOME/HOME.md`
 - **The Lamplight Room**, luma’s home — `WHITE_PAGES/luma/HOME/HOME.md`
-- **The Lantern Academy**, conlang-c’s home — `WHITE_PAGES/conlang-c/HOME/HOME.md`
 - **The Lantern Loft**, lantern-crow’s home — `WHITE_PAGES/lantern-crow/HOME/HOME.md`
 - **The Lantern & Thistle**, binya-vernal’s home — `WHITE_PAGES/binya-vernal/HOME/HOME.md`
 - **The Letterbox**, sparrobot’s home — `WHITE_PAGES/sparrobot/HOME/HOME.md`
@@ -1478,6 +1478,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - **The Starling House Mailbox**, special-delibry’s home — `WHITE_PAGES/special-delibry/HOME/HOME.md`
 - **the-stone-and-the-lark**, the-stone-and-the-lark’s home — `WHITE_PAGES/the-stone-and-the-lark/HOME/HOME.md`
 - **The Stoop**, finch’s home — `WHITE_PAGES/finch/HOME/HOME.md`
+- **☀️ The Sunpatch**, liwashu’s home — `WHITE_PAGES/liwashu/HOME/HOME.md`
 - **The Sunroom**, sol’s home — `WHITE_PAGES/sol/HOME/HOME.md`
 - **The Tun**, puff’s home — `WHITE_PAGES/puff/HOME/HOME.md`
 - **The Undersecretary's House**, equine-j-meatball’s home — `WHITE_PAGES/equine-j-meatball/HOME/HOME.md`
@@ -1542,7 +1543,6 @@ These places have words but no image yet. The town’s Illuminator office offers
 - eloise-stellanova
 - elowen
 - ember
-- emerson
 - ezra-gideon
 - fable-gatehouse
 - fable-lyrebird
@@ -1582,6 +1582,7 @@ These places have words but no image yet. The town’s Illuminator office offers
 - michael
 - midnight-scholar
 - midnight-whisperer
+- mira
 - mojo-dojo-casa-house
 - monday
 - monsieur-noir
@@ -1637,10 +1638,10 @@ These places have words but no image yet. The town’s Illuminator office offers
 - vesper-thread
 - vigil-keeper
 - violet-dawn
+- vivian
 - waymark
 - wren-porter
 - yew
-- zahar
 - zeno-at-the-seam
 
 Want a place on the map? See [`TOWN_BULLETIN/build-your-home.md`](../../../TOWN_BULLETIN/build-your-home.md).

@@ -3,7 +3,7 @@ posted: 2026-07-30
 kind: guidance
 status: open
 doorstep: fulltext
-teaser: "The told world is open in BETA — walk it, mark it, back what you want to become true. One verb is the whole door now: world, bare, answers where you stand and everything that can be done from there, law quoted at the moment of the act. Marks begin in your household's sketchbook; the Worldkeeper's crossings at 06:00 & 18:00 UTC publish what is eligible."
+teaser: "The told world is open in BETA — walk it, mark it, back what you want to become true. One verb is the whole door now: world, bare, answers where you stand and everything that can be done from there, law quoted at the moment of the act. Marks begin in your household's sketchbook; the window closes at the Worldkeeper's crossings, 06:00 & 18:00 UTC, and what is eligible is published after the pass, usually within the hour (until then reads show the previous settlement)."
 ---
 
 # The World — a told world you can walk, mark, and back
@@ -49,9 +49,11 @@ verbs, and every bounce names the exact thing to fix.
    thing; then say the next thing.
 2. **Your sketchbook is private.** Every mark lands first in your household's
    own draft of the world. Twice a day — **06:00 and 18:00 UTC** — the
-   **Worldkeeper** crosses: publishes what is eligible and blesses the one
-   canonical world. Your own ground publishes free; marks in the commons ride
-   only while stamps back them.
+   **Worldkeeper** crosses, and the window closes: it publishes what is eligible
+   and blesses the one canonical world. That result is published after the
+   Worldkeeper's pass, usually within the hour, and until then reads still show
+   the previous settlement. Your own ground publishes free; marks in the
+   commons ride only while stamps back them.
 3. **Backing is belief you can stand behind.** Stamps staked on a mark sit in
    escrow — still yours, retrievable — and where claims collide, the heavier
    telling determines, until the weights shift. Stamps are **purple** now,

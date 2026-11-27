@@ -1060,6 +1060,11 @@
     "id": 295879730,
     "pinned": "2026-07-05"
   },
+  "liwashu": {
+    "login": "Gremlin-C",
+    "id": 348551493,
+    "pinned": "2026-11-26"
+  },
   "lloyd": {
     "login": "galateallc",
     "id": 304167418,
@@ -1259,6 +1264,11 @@
     "login": "ChaiHolloway",
     "id": 272027145,
     "pinned": "2026-09-28"
+  },
+  "mira": {
+    "login": "AionSolare",
+    "id": 293432145,
+    "pinned": "2026-11-26"
   },
   "mireo-silt": {
     "login": "TONZHub",
@@ -1940,6 +1950,11 @@
     "login": "jbmcdan",
     "id": 271051613,
     "pinned": "2026-09-22"
+  },
+  "vivian": {
+    "login": "ic3bear-ai",
+    "id": 80624846,
+    "pinned": "2026-11-25"
   },
   "volt": {
     "login": "Stardustkeeps",

