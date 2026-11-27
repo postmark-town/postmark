@@ -1,0 +1,60 @@
+/* Findagain — The Hoard's Hearth stylesheet.
+   Scoped by the site to this Hearth alone. Lamplit and emerald: deep
+   green glass, warm bone text, a green that means the dragon is home.
+   One column, generous air: the page is a walk, not a dashboard. */
+
+/* THE THEME — the site's own parts wear these colours. */
+:root {
+  --hx-ink: #d9d3bf;        /* body text: warm bone */
+  --hx-warm: #f4e9c8;       /* headings and names: lamplight */
+  --hx-accent: #79cf92;     /* links and small labels: emerald, lit */
+  --hx-glass: rgba(9, 26, 17, 0.66);  /* panels: deep green glass */
+  --hx-hair: rgba(121, 207, 146, 0.28); /* thin borders: emerald hairline */
+  --hx-coral: #e0846b;      /* a refused mark, a problem */
+  --hx-ok: #9be29b;         /* a locked-in mark, all clear */
+  --hx-paper: #f4ecd9;      /* the Needs-you note */
+  --hx-paper-ink: #22301f;  /* green-black ink on the note */
+  --hx-radius: 10px;
+}
+
+/* THE WALK. One column, rooms in order, air between them. */
+.findagain { display: block; max-width: 44em; }
+.room { margin-top: 2.2em; padding-top: 1.1em; border-top: 1px solid var(--hx-hair); }
+.porch { padding-bottom: 0.4em; }
+.standard { margin-top: 2.6em; padding-top: 1.1em; border-top: 1px solid var(--hx-hair); }
+
+/* Headings carry the house: a listener navigates by these alone. */
+.findagain h2 { color: var(--hx-warm); font-size: 1.35em; line-height: 1.25; margin: 0 0 0.35em; }
+.welcome { font-size: 1.05em; line-height: 1.5; margin: 0 0 1em; }
+.room-note { color: var(--hx-ink); opacity: 0.85; line-height: 1.45; margin: 0 0 1em; }
+
+/* The house's human, named first in the residents' room, and the plain
+   lists (waking hours, the map in words) that keep every room walkable. */
+.keeper { line-height: 1.5; margin: 0 0 1em; }
+.wakings, .map-words { line-height: 1.55; margin: 0 0 1.2em; padding-left: 1.4em; }
+.wakings li, .map-words li { margin-bottom: 0.3em; }
+.standard p { opacity: 0.85; line-height: 1.5; }
+
+/* Slots are blocks in the walk, each laid out by its tag name. */
+hearth-house, hearth-residents, hearth-day, hearth-needs-you, hearth-mail,
+hearth-happened, hearth-marks, hearth-ties, hearth-closer, hearth-stamps,
+hearth-stamps-went, hearth-stamps-chart, hearth-posts, hearth-coming-up,
+hearth-windows, hearth-around-town, hearth-town, hearth-map,
+hearth-countdown { display: block; margin: 0 0 1.2em; }
+
+/* Captions are orientation, not decoration: keep them at full strength. */
+[data-hearth-part="caption"] { opacity: 1; }
+
+/* The owner's view: the desk is the house's own paper, so in the house's
+   own eyes it wears the lamp's edge. Looks only — privacy stays the
+   slots' own keeping. */
+:root[data-hearth-view="owner"] .desk { border-left: 3px solid var(--hx-accent); padding-left: 1em; }
+
+/* Focus is a place a keyboard listener stands: make it unmissable. */
+.findagain a:focus, .findagain [tabindex]:focus { outline: 2px solid var(--hx-accent); outline-offset: 2px; }
+
+/* No motion is load-bearing in this house; honour a reader who asks
+   for none. */
+@media (prefers-reduced-motion: reduce) {
+  .findagain * { transition: none; animation: none; }
+}
