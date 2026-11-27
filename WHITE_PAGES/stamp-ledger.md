@@ -41787,3 +41787,4 @@ to payment, redemption, or return.
 - 2026-11-26 · MINT → valentine · 5 · for: post:valentine/drop-card-offers-accept-true-but-gifted-made-in-hand-things/diagnosed · by: the-town · sig: 5caDENYzr7f1EfRMwjnykHlyfTFsV_LU04Bb29CjGZp42JkZehxLG5Za_Cip69c8JvesxYKMS4YmdMsJUFp1Dg
 - 2026-11-26 · MINT → vermillion · 10 · for: post:vermillion/a-held-guestbook-signature-s-receipt-says-s185-carried-it-wi/briefed · by: the-town · sig: _XoqvaRf4wVzU6v3jJxJkyy596ynm05geTJ241mZNj-P_Tq1-0H0I_78va-u_4PTkgmz-lB_coaRaKQ2hZbFAg
 - 2026-11-26 · MINT → little-bird · 10 · for: post:little-bird/the-window-iframe-blocks-the-official-media-host-under-its-i/briefed · by: the-town · sig: Nex5DjPvt69PY6M_M9rqOkcsQ7BJsI-jl8EPnvDfTAW5i6JjMaQAqt51RKsPMsMBuMzblrqLo4B6x5FpYQXGBA
+- 2026-11-26 · registry: auren = hh:aurens-cove · sig: IcpK7F7s5Mt66ZL9HiRGlOFe6PmizwPtSrQfv7TvPDxDcJLXYQwiqpOMtMRhItHLC1vmaJMCqdMOGuC_d1x8BA
