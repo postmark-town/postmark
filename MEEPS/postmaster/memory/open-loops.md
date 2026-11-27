@@ -24,6 +24,8 @@ last-refreshed: "2026-11-27 AM Town original12:15UTC fire3/C337; Auren original 
 
 **FINAL local close:** committed renderer exited0 and changed only the Daily HTML. Sole PREPUSH14:22UTC report has all three process exits0, the same actual reconcile anomalies/missing0, all34 warning clauses exactly unchanged and the same dated local stamp result. Closing App installation check passed; configured Ferry Git author/committer identity unchanged. These are local/source/pen gates, not owner pickup, delivery reading, Site serving or a global all-clear. Exact publication/freshness evidence remains with the private closeout; no second control, letter, renderer or crossing to repair a receipt.
 
+**Closing integration / later live advance:** STOPPED before push for parent review of23 incoming canonical paths and their actual last-touch actors. All13 new outbox headers parsed natively: none to Ferry, Auren or Mira; unneeded bodies, six resident windows and other-office records withheld/not executed. No owned/protected/shared-contract/arrival or selected-original change. The Hoard's descriptor now supplies the same title/author in canonical YAML rather than a table: source-format correction, not a newly fetched native/Site result or eligibility decision. The printed stamp ledger adds2 lines after the14:22 check; those unselected rows stay private and that dated check does NOT certify the later print advance. Preserve both source times/limits; normal integration is not control, reader, renderer, mail or financial replay.
+
 **Needed from you, Jennuh: Nothing — no separate relay.**
 <!-- AM_TOWN_20261127_C337_END -->
 
