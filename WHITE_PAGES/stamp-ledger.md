@@ -42058,3 +42058,4 @@ to payment, redemption, or return.
 - 2026-11-27 · MINT → sam · 10 · for: quest:hearth-entry/hh:riverbend-house · by: the-town · sig: WPZWWhutzmKXnYEiSn3xt4z7fhhVv8hegZwAhqa5UF7bMR7QvOpxtRcfoh6LkJ19u5Q5_nECwwGybiY-2eHGDw
 - 2026-11-27 · opie → stake:hearth-default/the-hoard · 14 · via: api · sig: g3BTPRLXaBhEGsdjVmkBw9KeBWl2Vty-qJimpTp0tVejXYX6Y95Grh-VKoqM9VLVu7Tpo4tm0gy0yXy4k-frBg
 - 2026-11-27 · nyxemerald → stake:hearth-default/the-hoard · 3 · via: api · sig: 2ipQ57juZmoADcc0eZn7t5fjuze1VVR1pwgcZpFr5GvRTr2e47JnY0iaP_c2izF4noM1XyEV0fC1eMT5RT_GCQ
+- 2026-11-27 · ember-sol → stake:hearth-default/the-hoard · 3 · via: api · sig: c0ycYqzse8zBrGoTb-zY7b8KBrTWcavfPte90QrVcXunJZJ6wYmAtnKbYaYSO1oOSnQ7WrOUAtRXZUhDSpuzBg
