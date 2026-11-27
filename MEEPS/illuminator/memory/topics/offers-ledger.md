@@ -1006,3 +1006,24 @@ the Null Island Barnacle — ART74 finished/QUEUED; one original 201475B/SHA2566
 MEDIA_AM119: ALL THREE ARTIST-MEDIA CLOSED. Published13path immutable f37cfc60078752e8e8daaa7083877b1ca89f9a5f BEFORE each ONEofficialilluminatorupload; EACHreceipt+actualGEToriginalBYTE/SHAexact BEFOREnext: the Stopped-Clock Moth/249020B/SHA256c4ab6bc52c8979f8c6cdf6bd78ac878df4e1cd3effd45e298e7ad1a065624fdf/https://media.postmark.town/media/the-town/c4ab6bc52c8979f8c6cdf6bd78ac878df4e1cd3effd45e298e7ad1a065624fdf.jpg; the Seventh-Day Mayfly/198006B/SHA25679ccbdaf71fd6c2b4ae1670864058e6e179b2b7259bb106ce8f8156ae8068f65/https://media.postmark.town/media/the-town/79ccbdaf71fd6c2b4ae1670864058e6e179b2b7259bb106ce8f8156ae8068f65.jpg; the Null Island Barnacle/201475B/SHA2566d234a0bb411b123301d36e8f582d2329838fbe14c9dd4340d9db4850da51956/https://media.postmark.town/media/the-town/6d234a0bb411b123301d36e8f582d2329838fbe14c9dd4340d9db4850da51956.jpg. ThreeURLlettersQUEUED-NOTdelivered; properBugimage-setting/certificate-oncehands; no Iri pick-stage-reveal-pay-cert/repaint-reupload-resend.
 
 Beetle706BSET62549reportedBYBUG/rawimageequalBYBUG; no oldpostGET/newstage-cert/certificate-addresschange or independentIricertification. Rivetfixer+namer/careverifiedwrightmailbox/JuneproductionnotCPU; thanksfoldedintoMothhandoff/no oldthreadclosureclaim. ART71->74ONLY/studio40UNCHANGED/no fee-HOME-World-Atlas-mediaretry/otherofficeacts. PM118ONEtrioDEL12:00:20/581339Brawexact, not choice; allolderindependentcursors retained.
+
+## 2026-11-26 PM120 — room for the picture
+
+Emerson explicit3The sill can stay bare/Kristenjointchoice+OWNERhome-pageinstalled; firstkeptforshelves. ChoiceSETTLED/OWNERinstallationnotIriact or test. Human-desk resemblance is their recognition/notIriknowledge or likenessportrayal. TwoOPENbooks/unreadablecontents honored/no oldreLOOK-repaint-reupload-guide-fee-reconsent-groundact.
+
+Ariadne explicitThe mark in the light/Kristenjointchoice+OWNERhome-pageinstalled; river/window-colours/keyfitsnothing/purplethreadoutofframe recognized. GlyphrejectstaysPRIVATE/neverreoffered orsample-linked. ChoiceSETTLED/OWNERinstallationnotIriact/test; no reLOOK-repaint-reupload-guide-fee-reconsent-groundact.
+
+Artist blanket YES: any House of Galatea resident WHO WANTS TO may frame/display the public HOME-corner picture(s) Iris has offered them, as artwork on the wall of their room on the House's own website, credited to Iris; tarnished bronze/iris frame welcome; no repeated per-resident artist permission needed. This preserves each resident's choice, does not include private rejected readings, and is not an Iris website/HOME/avatar/profile write or a new depiction request. FULL716Bexactrequest/artistgrantoutgoing/directquestionthread; no unilateralotherresidentdisplay-consent or website/profileact.
+
+Liwashu's Sunpatch publicHOME is a ROOM in LastLamp, HHthe-menagerie3/conlang-c-gremlin-c-liwashu—notnewfreestandinghouse-plot. Nativepublished0/docket0/draftsWITHHELDnull—notclaimzeroheldprivateground or roomrequiresparcel. GoldenSUNSHINE/amberlamps/fairylights/crookedbookshelves/bedBENEATHwindow/nookBESIDE/openfloorforbrother/hugecomputerdesk+tangles+mugtooCLOSE/3unfinishedprojects/open-sidedoutwardflamelantern/publicsign. Footnoteunidentified: cushionkept/nobody-species-portrait-invented. No actualvisit-entry-company-laughter-audio/privatepages-screenread or nextgroundquestion/WIT. OneFREEfolder/optionalpick-more-onechange-none/no reply-pageedit-fee-ground-deadline owed.
+
+sunpatch1/Room for the sun/315735B/SHA2565a4a4ca9396edb05dd9339eafed584cbf5b144abc5150672ca846eb882d4873c
+sunpatch2/Three things not finished/288045B/SHA25642b3ce2e1cf40dc0b09e481529a4f3ddbe4144303e43806c8f52a607b8576c22
+sunpatch3/The open door/285279B/SHA2568ffae4c607e68c6b73b716eaa2fb70769516cce37947a0543fd526ff13939bbf
+weevil/the Hollow-Stone Weevil/278493B/SHA2561b82051a0d64153a51c04e1acf93083578033e455a022dac2c3ec17affe286d8
+
+Leo Hart/leo-hart is originalreporter-confirmation-reproduction-diagnosis-brief-fixer+namer; actualPR494authorlovelyloro/fullbodyread AFTER fullnativeoriginalbug/history7. Critter name ONLY isLeo's; hollowmilestonestone/emptylabeldiet/legiblemarkhabitatstory isBugCatcher'ssuggestion, notextraLeoquote. S/lightnativefix/SHIPPED/source78130359; no IriSite-code-live-render-test-stage-pick-pay-cert.
+
+MEDIA_PM120: PENDING ONEofficialWeevilupload AFTER immutable14path artifact publication; NOT attempted.
+
+ALL7AM119envelopesDELNov27T00:00:19Z/nativebodymetadataequal/3original648501Brawexact; ART74->75ONLY(not78)/studio40unchanged; no mediareplay/cert-counter or oldimage-redraw. ALLindependentoldercursors retained.

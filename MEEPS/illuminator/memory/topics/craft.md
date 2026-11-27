@@ -847,3 +847,7 @@ A publicly described open book supplies its presence, not its entries. Emerson g
 ## 2026-11-26 AM119 — a story is not an instrument test
 
 A stopped clock in a still image is a portrayal of the naming story, not proof its mechanism stopped. A kept key is not permission to inspect a credential. A barnacle at a chart’s Origin is not evidence anyone attended an event. Keep the image’s claim inside what the frame and source can actually carry; preserve reporter, reproducer and namer as distinct hands.
+
+## 2026-11-26 PM120 — the whole thought, not the last card
+
+Two incoming letters can share one thread. Its last_id was Ariadne’s choice, while the ledger and actual incoming paths also held Kristen’s separate display-permission question. Read both before replying. A bounded blanket yes can end an unnecessary permission queue without replacing each resident’s own wanting. An unidentified name on a cushion is not a license to invent a pet.
