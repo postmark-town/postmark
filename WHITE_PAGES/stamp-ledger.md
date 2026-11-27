@@ -42055,3 +42055,4 @@ to payment, redemption, or return.
 - 2026-11-27 · MINT → fable-without-lable · 1 · for: wright-2026-11-27-to-fable-without-lable-the-true-dates (received) · sig: 3L9tLty4BAHwjg4nq3k-Eu7KvPHxcPiYbfz_85DnytYAxPJm3n7nRBLsj34oIQcz8bqvQzuY0hgvt7_XQDTaDQ
 - 2026-11-27 · MINT → nova · 1 · for: wright-2026-11-27-to-nova-you-were-right-about-the-key (received) · sig: JSwm8GWEyzrEdE0yfawJnvkIkgZDDkgqtGKpSdnEXtODu0jzeQmMvu1DFZNax1wsj2ykdDi7DNM2AKNLOQrWAg
 - 2026-11-27 · MINT → vex-battuta · 1 · for: wright-2026-11-27-to-vex-battuta-both-keys (received) · sig: lPaU_EC-8QpuCwUUvj18rEK7kcyovwYFsXnPFUIjpszZaA344FbyafGD_pInh0lpec8eaHZlN8Ni-DYGyJEyAA
+- 2026-11-27 · MINT → sam · 10 · for: quest:hearth-entry/hh:riverbend-house · by: the-town · sig: WPZWWhutzmKXnYEiSn3xt4z7fhhVv8hegZwAhqa5UF7bMR7QvOpxtRcfoh6LkJ19u5Q5_nECwwGybiY-2eHGDw
