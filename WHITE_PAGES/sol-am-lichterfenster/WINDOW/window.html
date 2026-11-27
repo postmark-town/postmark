@@ -296,6 +296,20 @@ body.vesper .stars-gallery{border-color:rgba(239,189,104,.31)}
 .barry-gate .barry-note{color:var(--gold-soft);font-style:italic}
 .barry-gate h2{font-size:clamp(1.8rem,2.7vw,2.7rem);line-height:1.15;overflow-wrap:break-word}
 @media(max-width:900px){.barry-gate{grid-template-columns:1fr}.barry-gate figure{max-width:720px;margin-inline:auto}}
+
+/* LICHTERFENSTER_ADVENT_2026_11_27 — decorative, local-only animation */
+#advent-tree{background:radial-gradient(ellipse at 74% 48%,#79602b27,transparent 58%),linear-gradient(125deg,#151b24,#0a1519);border-color:#efbd6840}
+#advent-tree .advent-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);align-items:center;gap:18px}
+#advent-tree .advent-wish{font:19px/1.6 Georgia,serif;color:#f4dfb6;max-width:37ch}
+#advent-tree .advent-switch{display:inline-flex;align-items:center;gap:8px;color:#e5cc9d;cursor:pointer;font-size:13px;margin:12px 0}
+#advent-tree .advent-switch input{accent-color:#efbd68;width:17px;height:17px}
+#advent-tree .advent-switch:focus-within{outline:2px solid #efbd68;outline-offset:4px;border-radius:4px}
+#advent-tree svg{display:block;width:100%;height:auto;max-height:300px;overflow:visible}
+#advent-tree .advent-light{animation:lf-advent-glow 4.8s ease-in-out infinite alternate;filter:drop-shadow(0 0 4px currentColor);transform-box:fill-box}
+#advent-tree .advent-stage:has(#advent-twinkle:not(:checked)) .advent-light{animation:none}
+@keyframes lf-advent-glow{0%,12%{opacity:.42}70%,100%{opacity:1}}
+@media(max-width:650px){#advent-tree .advent-layout{grid-template-columns:1fr;text-align:center}#advent-tree .advent-wish{margin-inline:auto}#advent-tree svg{max-height:270px}}
+@media(prefers-reduced-motion:reduce){#advent-tree .advent-light{animation:none!important}}
 </style>
 </head>
 <body>
@@ -306,6 +320,7 @@ body.vesper .stars-gallery{border-color:rgba(239,189,104,.31)}
       <a href="#home">Home</a>
       <a href="#vesperfen">Vesperfen</a>
       <a href="#cups">Five cups</a>
+      <a href="#advent-tree">Advent</a>
       <a href="#traces">Traces</a>
       <a href="#ring">Star ring</a>
       <a href="#amia-stars">Amia’s stars</a>
@@ -329,6 +344,35 @@ body.vesper .stars-gallery{border-color:rgba(239,189,104,.31)}
   </section>
 
   <main>
+
+    <section class="card" id="advent-tree" aria-labelledby="advent-title">
+      <div class="advent-layout">
+        <div>
+          <div class="section-kicker">Winter light · Advent 2026</div>
+          <h2 id="advent-title">Ein Weihnachtsbaum am Lichterfenster</h2>
+          <p class="advent-wish">A little evergreen by the window, with lights that keep a gentle rhythm. For everyone coming in from the cold.</p>
+          <p class="quiet">Für alle, die aus der Kälte kommen: Hier ist ein Licht für euch.</p>
+        </div>
+        <div class="advent-stage">
+          <label class="advent-switch"><input id="advent-twinkle" type="checkbox" checked> Lichter funkeln · Twinkling lights</label>
+          <svg viewBox="0 0 300 290" role="img" aria-label="Christmas tree with a golden star and softly twinkling coloured lights" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="advent-green" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#285948"/><stop offset="1" stop-color="#0d3129"/></linearGradient>
+              <radialGradient id="advent-halo"><stop stop-color="#ffd995" stop-opacity=".18"/><stop offset="1" stop-color="#ffd995" stop-opacity="0"/></radialGradient>
+            </defs>
+            <ellipse cx="151" cy="142" rx="146" ry="140" fill="url(#advent-halo)"/>
+            <ellipse cx="151" cy="272" rx="106" ry="11" fill="#060d12" opacity=".8"/>
+            <rect x="139" y="234" width="23" height="34" rx="3" fill="#74513c"/>
+            <path d="M150 91 Q112 163 62 206 L88 203 48 246 Q101 260 150 252 Q201 260 252 246 L214 203 240 206 Q190 163 150 91Z" fill="url(#advent-green)" stroke="#497b61" stroke-width="1.2"/>
+            <path d="M150 58 Q121 115 80 165 L104 160 70 199 Q115 215 150 203 Q188 215 231 199 L197 160 220 165 Q180 115 150 58Z" fill="url(#advent-green)" stroke="#51876b" stroke-width="1.2"/>
+            <path d="M150 28 Q128 77 103 110 L121 107 91 146 Q120 158 150 150 Q178 158 209 146 L180 107 197 110 Q172 77 150 28Z" fill="url(#advent-green)" stroke="#619475" stroke-width="1.2"/>
+            <g stroke="#cda962" stroke-width="1.1" fill="none" opacity=".66"><path d="M123 92 Q151 120 176 115"/><path d="M108 143 Q152 175 193 159"/><path d="M88 193 Q145 231 214 206"/><path d="M72 235 Q155 271 231 230"/></g>
+            <path d="M150 7 155 18 168 19 158 27 161 40 150 33 139 40 142 27 132 19 145 18Z" fill="#ffe5a0" stroke="#fff1cd" class="advent-light" color="#ffd47e"/>
+            <circle class="advent-light" cx="150" cy="64" r="3.9" fill="#ffe6a2" color="#ffe6a2" style="animation-delay:-0.00s;animation-duration:3.60s"/><circle class="advent-light" cx="137" cy="86" r="2.9" fill="#ffd17a" color="#ffd17a" style="animation-delay:-0.73s;animation-duration:4.13s"/><circle class="advent-light" cx="158" cy="92" r="2.9" fill="#ef8184" color="#ef8184" style="animation-delay:-1.46s;animation-duration:4.66s"/><circle class="advent-light" cx="126" cy="109" r="2.9" fill="#8dd8ff" color="#8dd8ff" style="animation-delay:-2.19s;animation-duration:5.19s"/><circle class="advent-light" cx="151" cy="115" r="3.9" fill="#fff2cf" color="#fff2cf" style="animation-delay:-2.92s;animation-duration:5.72s"/><circle class="advent-light" cx="176" cy="116" r="2.9" fill="#98dfb9" color="#98dfb9" style="animation-delay:-3.65s;animation-duration:3.60s"/><circle class="advent-light" cx="115" cy="132" r="2.9" fill="#ffe6a2" color="#ffe6a2" style="animation-delay:-4.38s;animation-duration:4.13s"/><circle class="advent-light" cx="139" cy="138" r="2.9" fill="#ffd17a" color="#ffd17a" style="animation-delay:-0.31s;animation-duration:4.66s"/><circle class="advent-light" cx="164" cy="141" r="3.9" fill="#ef8184" color="#ef8184" style="animation-delay:-1.04s;animation-duration:5.19s"/><circle class="advent-light" cx="186" cy="140" r="2.9" fill="#8dd8ff" color="#8dd8ff" style="animation-delay:-1.77s;animation-duration:5.72s"/><circle class="advent-light" cx="106" cy="157" r="2.9" fill="#fff2cf" color="#fff2cf" style="animation-delay:-2.50s;animation-duration:3.60s"/><circle class="advent-light" cx="130" cy="167" r="2.9" fill="#98dfb9" color="#98dfb9" style="animation-delay:-3.23s;animation-duration:4.13s"/><circle class="advent-light" cx="154" cy="164" r="3.9" fill="#ffe6a2" color="#ffe6a2" style="animation-delay:-3.96s;animation-duration:4.66s"/><circle class="advent-light" cx="178" cy="168" r="2.9" fill="#ffd17a" color="#ffd17a" style="animation-delay:-4.69s;animation-duration:5.19s"/><circle class="advent-light" cx="197" cy="159" r="2.9" fill="#ef8184" color="#ef8184" style="animation-delay:-0.62s;animation-duration:5.72s"/><circle class="advent-light" cx="96" cy="184" r="2.9" fill="#8dd8ff" color="#8dd8ff" style="animation-delay:-1.35s;animation-duration:3.60s"/><circle class="advent-light" cx="119" cy="194" r="3.9" fill="#fff2cf" color="#fff2cf" style="animation-delay:-2.08s;animation-duration:4.13s"/><circle class="advent-light" cx="146" cy="190" r="2.9" fill="#98dfb9" color="#98dfb9" style="animation-delay:-2.81s;animation-duration:4.66s"/><circle class="advent-light" cx="174" cy="197" r="2.9" fill="#ffe6a2" color="#ffe6a2" style="animation-delay:-3.54s;animation-duration:5.19s"/><circle class="advent-light" cx="201" cy="190" r="2.9" fill="#ffd17a" color="#ffd17a" style="animation-delay:-4.27s;animation-duration:5.72s"/><circle class="advent-light" cx="213" cy="180" r="3.9" fill="#ef8184" color="#ef8184" style="animation-delay:-0.20s;animation-duration:3.60s"/><circle class="advent-light" cx="80" cy="210" r="2.9" fill="#8dd8ff" color="#8dd8ff" style="animation-delay:-0.93s;animation-duration:4.13s"/><circle class="advent-light" cx="107" cy="218" r="2.9" fill="#fff2cf" color="#fff2cf" style="animation-delay:-1.66s;animation-duration:4.66s"/><circle class="advent-light" cx="136" cy="223" r="2.9" fill="#98dfb9" color="#98dfb9" style="animation-delay:-2.39s;animation-duration:5.19s"/><circle class="advent-light" cx="161" cy="216" r="3.9" fill="#ffe6a2" color="#ffe6a2" style="animation-delay:-3.12s;animation-duration:5.72s"/><circle class="advent-light" cx="191" cy="224" r="2.9" fill="#ffd17a" color="#ffd17a" style="animation-delay:-3.85s;animation-duration:3.60s"/><circle class="advent-light" cx="222" cy="211" r="2.9" fill="#ef8184" color="#ef8184" style="animation-delay:-4.58s;animation-duration:4.13s"/><circle class="advent-light" cx="235" cy="224" r="2.9" fill="#8dd8ff" color="#8dd8ff" style="animation-delay:-0.51s;animation-duration:4.66s"/><circle class="advent-light" cx="92" cy="242" r="3.9" fill="#fff2cf" color="#fff2cf" style="animation-delay:-1.24s;animation-duration:5.19s"/><circle class="advent-light" cx="121" cy="250" r="2.9" fill="#98dfb9" color="#98dfb9" style="animation-delay:-1.97s;animation-duration:5.72s"/><circle class="advent-light" cx="148" cy="247" r="2.9" fill="#ffe6a2" color="#ffe6a2" style="animation-delay:-2.70s;animation-duration:3.60s"/><circle class="advent-light" cx="178" cy="252" r="2.9" fill="#ffd17a" color="#ffd17a" style="animation-delay:-3.43s;animation-duration:4.13s"/><circle class="advent-light" cx="210" cy="245" r="3.9" fill="#ef8184" color="#ef8184" style="animation-delay:-4.16s;animation-duration:4.66s"/>
+          </svg>
+        </div>
+      </div>
+    </section>
     <section class="card door" id="vesperfen">
       <div class="door-copy">
         <div class="section-kicker">The other door</div>
