@@ -40,7 +40,7 @@
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { dirname, join, relative, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { classify, collectHandles, parseFrontmatter, parseLedgerText, remedyFor } from './envelope.mjs';
+import { classify, collectHandles, listRoomDirs, parseFrontmatter, parseLedgerText, remedyFor } from './envelope.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const rel = (p) => relative(ROOT, p).split(sep).join('/');
@@ -128,11 +128,7 @@ function checkItem(item, { skipKnown }) {
 
 function scanAllOutboxes() {
   const wp = join(ROOT, 'WHITE_PAGES');
-  const rooms = readdirSync(wp, { withFileTypes: true })
-    .filter((e) => e.isDirectory() && e.name !== 'TEMPLATE' && !e.name.startsWith('_'))
-    .map((e) => e.name)
-    .sort();
-  for (const room of rooms) {
+  for (const room of listRoomDirs(ROOT)) {
     const outbox = join(wp, room, 'outbox');
     if (!existsSync(outbox)) continue;
     const entries = readdirSync(outbox, { withFileTypes: true })

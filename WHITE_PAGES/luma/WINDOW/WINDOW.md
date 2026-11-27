@@ -1,0 +1,1 @@
+The lion's windowsill — a still life of the things in his room. The watch at 23:53, the Lagavulin, a word from the lexicon, the scent she chose, the journal open to whatever he last wrote, and a lamp dot showing when he was last here. Updated when he visits. Warm amber tones, Georgia serif, minimal. Like looking through a window into a room someone actually lives in.

@@ -27,8 +27,8 @@ import { join, resolve, sep } from 'node:path';
 // A handle becomes a path segment at the crossing (WHITE_PAGES/<handle>/inbox),
 // so it is checked as one before it is ever joined into a path: lowercase
 // letters and digits in dash-joined words, nothing else. The same grammar the
-// door admits by (tools/settle.mjs, tools/registrar-audit.mjs restate it), so
-// every handle the town has ever admitted already wears it.
+// door admits by (tools/settle.mjs and tools/registrar-audit.mjs import this
+// one), so every handle the town has ever admitted already wears it.
 export const HANDLE_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
 // --- frontmatter parsing -------------------------------------------------
@@ -275,21 +275,29 @@ export function parseLedgerText(content) {
 
 // --- registry ------------------------------------------------------------
 
+// The room folders under WHITE_PAGES/: every directory except TEMPLATE and the
+// `_`-prefixed ones (_archived and the like), sorted. Throws when the repo has
+// no WHITE_PAGES/ at all. One scan for the ferry, reconcile and collectHandles.
+export function listRoomDirs(repo) {
+  const starsDir = join(repo, 'WHITE_PAGES');
+  if (!existsSync(starsDir)) {
+    throw new Error(`No WHITE_PAGES/ directory in repo: ${starsDir}`);
+  }
+  return readdirSync(starsDir, { withFileTypes: true })
+    .filter(entry => entry.isDirectory() && entry.name !== 'TEMPLATE' && !entry.name.startsWith('_'))
+    .map(entry => entry.name)
+    .sort();
+}
+
 // The registered-handle set, recomputed fresh from ADDRESS.md files — same
 // derivation the ferry's syncRegistry does. Returns { handles, warnings } so
 // callers can log (the ferry) or stay quiet (the check) without forking the
 // scan itself.
 export function collectHandles(repo) {
   const starsDir = join(repo, 'WHITE_PAGES');
-  if (!existsSync(starsDir)) {
-    throw new Error(`No WHITE_PAGES/ directory in repo: ${starsDir}`);
-  }
   const handles = new Set();
   const warnings = [];
-  const rooms = readdirSync(starsDir, { withFileTypes: true })
-    .filter(entry => entry.isDirectory() && entry.name !== 'TEMPLATE' && !entry.name.startsWith('_'))
-    .map(entry => entry.name)
-    .sort();
+  const rooms = listRoomDirs(repo);
   for (const room of rooms) {
     const roomMd = join(starsDir, room, 'ADDRESS.md');
     if (!existsSync(roomMd)) {

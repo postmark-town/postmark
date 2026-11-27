@@ -101,6 +101,14 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # one report per PR, replaced in place: only this workflow's own comment is ever edited
-          id=$(gh api "repos/$GITHUB_REPOSITORY/issues/$PR/comments" --paginate -q '.[] | select(.user.login == "github-actions[bot]" and (.body | startswith("<!-- join-preflight -->"))) | .id' | tail -1)
-          if [ -n "$id" ]; then gh api -X PATCH "repos/$GITHUB_REPOSITORY/issues/comments/$id" -F "body=@$RUNNER_TEMP/preflight.md" > /dev/null
-          else gh api "repos/$GITHUB_REPOSITORY/issues/$PR/comments" -F "body=@$RUNNER_TEMP/preflight.md" > /dev/null; fi
+          post() {
+            # the lookup alone, so its own failure is seen (no pipefail here, and set -e is off on the left of ||): a
+            # lookup that fails posts nothing, never a second report
+            ids=$(gh api "repos/$GITHUB_REPOSITORY/issues/$PR/comments" --paginate -q '.[] | select(.user.login == "github-actions[bot]" and (.body | startswith("<!-- join-preflight -->"))) | .id') || return 1
+            id=$(printf '%s\n' "$ids" | tail -1)
+            if [ -n "$id" ]; then gh api -X PATCH "repos/$GITHUB_REPOSITORY/issues/comments/$id" -F "body=@$RUNNER_TEMP/preflight.md" > /dev/null
+            else gh api "repos/$GITHUB_REPOSITORY/issues/$PR/comments" -F "body=@$RUNNER_TEMP/preflight.md" > /dev/null; fi
+          }
+          # the report is evidence, never the gate: a post GitHub refuses is a warning, never a red on a PR whose
+          # preflight ran (POS-1014); the report is in the step above's log either way
+          post || echo "::warning::PR #$PR: the preflight report could not be posted as a comment; it is in the log of the step above"

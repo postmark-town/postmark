@@ -11,6 +11,36 @@ import { isWelcomeId, welcomeIds, welcomeState } from "../WHITE_PAGES/registrar/
 
 const augie = { id: "postmaster-2026-10-16-to-augie-sealight-welcome", from: "postmaster", to: "augie-sealight" };
 const augieRow = "- 2026-10-16 · postmaster-2026-10-16-to-augie-sealight-welcome · postmaster → augie-sealight · thread: new";
+// POS-913 fixtures use the retained envelope shape, not a fresh mail read.
+const amet = { id: "postmaster-2026-11-04-to-amet-welcome-to-postmark", from: "postmaster", to: "amet" };
+const ametRow = "- 2026-11-04 · postmaster-2026-11-04-to-amet-welcome-to-postmark · postmaster → amet · thread: new";
+
+test("POS-913: the exact welcome-to-postmark form is recognized", () => {
+  assert.equal(isWelcomeId(amet.id, "amet"), true);
+});
+
+test("POS-913: a current-form inbox welcome needs its matching ledger edge", () => {
+  assert.equal(welcomeState({ handle: "amet", inbox: [amet], outbox: [], mailRows: [ametRow] }), "Ferry welcome delivered");
+  assert.equal(welcomeState({ handle: "amet", inbox: [amet], outbox: [], mailRows: [] }), "No Ferry welcome delivery record");
+  assert.equal(welcomeState({ handle: "amet", inbox: [amet], outbox: [],
+    mailRows: [ametRow.replace("postmaster → amet", "postmaster → zeke")] }), "No Ferry welcome delivery record");
+});
+
+test("POS-913: the current form in the outbox is written, not delivered", () => {
+  assert.equal(welcomeState({ handle: "amet", inbox: [], outbox: [amet], mailRows: [ametRow] }), "Ferry welcome written · delivery pending");
+});
+
+test("POS-913: the longer form does not loosen the exact-ID guard", () => {
+  for (const id of [
+    "postmaster-2026-11-04-to-amet-the-washstand-is-welcome",
+    `${amet.id}-again`,
+    `re-${amet.id}`,
+    "postmaster-2026-11-04-welcome-amet-to-postmark",
+    "ferry-2026-11-04-to-amet-welcome-to-postmark",
+  ]) assert.equal(isWelcomeId(id, "amet"), false, id);
+  assert.equal(isWelcomeId(amet.id, "zeke"), false, "another resident's welcome");
+  assert.deepEqual(welcomeIds([{ ...amet, from: "ferry" }, { ...amet, to: "zeke" }], "amet"), []);
+});
 
 test("#3915 replayed: augie's delivered welcome reads delivered", () => {
   assert.equal(welcomeState({ handle: "augie-sealight", inbox: [augie], outbox: [], mailRows: [augieRow] }), "Ferry welcome delivered");

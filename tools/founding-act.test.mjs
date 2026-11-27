@@ -54,7 +54,8 @@ function townRepo() {
   mkdirSync(join(repo, 'tools'), { recursive: true });
   mkdirSync(join(repo, 'WHITE_PAGES'), { recursive: true });
   // registry-source.mjs: stamp-mint and stamp-verify import it at their CLI entry (POS-345).
-  for (const f of ['stamp-mint.mjs', 'stamp-verify.mjs', 'registry-source.mjs', 'world-stake.mjs', 'founding-act.mjs']) {
+  // census-fold.mjs: stamp-mint imports it at load (CORE-108); until then this list had no such file.
+  for (const f of ['stamp-mint.mjs', 'census-fold.mjs', 'stamp-verify.mjs', 'registry-source.mjs', 'world-stake.mjs', 'founding-act.mjs']) {
     copyFileSync(join(HERE, f), join(repo, 'tools', f));
   }
   writeFileSync(join(repo, 'tools', 'stamp-pubkey.pem'), pub);

@@ -3,13 +3,14 @@
 # Security shape (this workflow uses pull_request_target, so read carefully
 # before changing it): the checkout below is always the BASE branch — PR code
 # is NEVER executed. Rule evaluation reads only the GitHub API (changed paths,
-# plus ONE file's content as data: tools/households.json for rule 2b's own-row
-# judgment — JSON.parse is all that touches it) plus base-branch truth
+# and file content as data, never executed) plus base-branch truth
 # (ADDRESS.md bindings, the founder roster). Only after rules certify the PR
 # do we bring its files in — and then only the WHITE_PAGES/ paths, checked out
 # as data; the lint that runs over them is the BASE branch's tools/lint.mjs.
-# A certified PR cannot touch tools/ or workflows by rule 2, with rule 2b's
-# single scoped exception: a resident's OWN row in tools/households.json.
+# A certified PR cannot touch tools/ or workflows by rule 2. Rule 2b's old
+# exception (a resident's own row in tools/households.json) is retired
+# (POS-894, superseded by POS-345): the registry printouts are the drain's
+# alone, and a PR touching either goes to a person.
 # Rule 2c (2026-08-24, the Levi ruling): the office pen's join PRs certify and
 # MERGE mechanically on the exact join shape (verified identity in the body,
 # one new ADDRESS binding that account, handle free) — the welcome is a letter

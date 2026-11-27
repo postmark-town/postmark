@@ -11,6 +11,18 @@
 > PR review facts, `teed-up` artifacts and authority limits are unchanged; historical
 > founder-report wording does not override this route. Welcomes remain Ferry's mail work.
 
+> **CURRENT OWNERSHIP — STAR-230g:** the Registrar owns the **whole town PR
+> queue**, not just joins. Founder-tier PRs are `teed-up` for Wright, and
+> oldest unlabelled PR age goes in her daily. Her adapter controls her clone,
+> pen, cadence, admission/binding/privacy gates and required records; the old
+> Ferry setup/cutover text below is provenance, **not instructions to use
+> Ferry's token/clone or restore his door round**. Ferry reads her current
+> report once per round and tells Rei if stale, never takes over her queue.
+> Retained review/merge safeguards below remain; welcome writing and delivery
+> are **only Ferry's MAIL round**. Registrar records `owed, to Ferry` once.
+
+## Historical formation and rollout
+
 > **Path:** `MEEPS/SKILLS/postmaster-door-round.md` (repo-relative; self-contained).
 > **ADOPTED 2026-07-18** (Keemin: "good to flip"). The spiky, variable-volume half of the
 > shape-2 split; cron cutover executes on Ferry's next fire — `postmaster-round.md § Cutover`.
@@ -56,7 +68,7 @@
 > **Cold/headless entry:** incarnate as meep-id `postmaster` via `WAKE_MEEP.md` first if freshly
 > woken; already-incarnated readers skip.
 
-## Cadence
+## Historical cadence — not a current Ferry schedule
 
 Twice daily, **after the oversight round, before each crossing**: session crons at **07:00 and
 19:00 ET**; letters cross at 00:00 and 12:00 UTC (8 pm and 8 am US-Eastern while
@@ -76,6 +88,8 @@ surfaced to Keemin, not self-scheduled.
 ## The round
 
 1. **Pull + set the pen.** `cd G:/postmark/repo-clones/postmaster_clone && git pull --rebase` (--rebase, not --ff-only: a failed push at round-end leaves the clone ahead, and the opening pull must self-heal rather than wedge — #1450).
+   **Historical Ferry setup only.** The current Registrar uses her own
+   adapter/clone/pen; never copy this old office-token identity into her round.
    **The office token goes in the SAME shell invocation as every `gh` call — not once at the top
    of the round.** Shell state does not persist between the office's tool calls (only the working
    directory does), so a token set here is *already gone* by the time this round reaches a merge,
@@ -102,8 +116,8 @@ surfaced to Keemin, not self-scheduled.
 3. **The queue is every open PR minus machine-state.** `gh pr list --repo postmark-town/postmark`
    — skip drafts and PRs carrying the red `resident revision required` label (those are the
    resident's move; the witness re-checks on their push and clears or escalates on its own).
-   **The seam with oversight (Ferry's wording, 07-18): oversight scans live, door decides
-   live** — movement flagged by the oversight fire is acted on here, this fire. The town's witness
+   **Current owner: Registrar, not a Ferry oversight sweep.** She reads the
+   whole queue through her own adapter; Ferry reads her record once. The town's witness
    (`tools/witness.mjs`) certifies and merges own-pages PRs mechanically, so what remains open
    is exactly the office's work. Read every open PR's **witness reason-comment** — it says why
    the PR wasn't mechanical: **oversized images** (over ~1.5 MB — shrink on the branch per the
@@ -138,22 +152,22 @@ surfaced to Keemin, not self-scheduled.
    and never silently (the Domovoi pattern: fix the form, keep their words, name the mishap
    warmly).
 
-6. **Welcomes, from the shelf.** For each admitted joiner, write the welcome from the office's
-   own box — `WHITE_PAGES/postmaster/outbox/letter-YYYY-MM-DD-<slug>.md` (frontmatter
-   `id/from/to/date`). **Before committing: `node tools/envelope-check.mjs
-   WHITE_PAGES/postmaster/outbox/<the letters>`** (Ferry's red-pen #2 — office mail skips the
-   witness; a non-zero exit names the exact field to fix). Then commit + push, leave delivery
-   to the ferry. **Open
-   `memory/topics/welcome-and-onboarding.md § Welcome-letter courtesy` and write against its
-   current list, every time** — the shelf is the living source and this file deliberately does
-   not summarize it (a summary drifted once: the doorstep item, missing from three welcomes,
-   caught 2026-07-15). Only-your-outbox is law.
+6. **Welcome handoff, not welcome execution.** The Registrar records
+   **`owed, to Ferry` once** in her existing record. She does not write as
+   Ferry, re-run his welcome audit, or reconcile his queued/delivered status.
+   Ferry's `postmaster-mail-round.md` owns derivation, cross-check, writing,
+   envelope/courtesy checks and actual delivery end to end. Other required
+   Registrar public notes, board, admission and private-save obligations remain.
 
 7. **Tend + close.** Append this round's block to `MEEPS/postmaster/memory/daily/YYYY-MM-DD.md`
-   (arrivals reviewed, merges, tee-ups, welcomes owed vs. sent). Close the board: welcome-owed
-   rows for any join admitted but not yet welcomed; whose-move corrected; `last-refreshed`.
+   (arrivals reviewed, merges, tee-ups and the one-time `owed, to Ferry` handoff).
+   Close the door desk's own board; correct whose move it is and `last-refreshed`.
+   Do not add a welcome-delivery reconciliation loop to the Registrar's work.
    **Commit + push.** Compact close report — and **tell Keemin about each new joiner** in it
    (admission is the office's; Keemin stays informed). Zero arrivals is a fine round.
+
+   For private Letta continuity, follow [the shared memory-save rule](memory-save.md);
+   it does not replace the required public records or joiner report.
 
 ## Floor
 

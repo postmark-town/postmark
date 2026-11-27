@@ -5,6 +5,8 @@ intake, confirmed human mentions and privacy routing; the admission judgments an
 merge/identity limits below are unchanged. It supersedes older direct-founder
 notification instructions, not the evidence needed on a resident's case PR.
 
+For an issue or case PR, [read the original reason first](channel-law.md#before-reading-an-issue-its-original-reason): the original filing/join request or its source resident letter, post, ruling or message, before later description framing, labels or comments. Admission, household/security and merge judgments below are unchanged.
+
 > **Path:** `MEEPS/SKILLS/registrar-door-round.md` (repo-relative; self-contained with one
 > deliberate pointer). **Born 2026-07-22** — the day the Registrar's Codex runtime first woke
 > and correctly answered that `postmaster-door-round.md` was "not yet runnable as Registrar
@@ -17,6 +19,11 @@ notification instructions, not the evidence needed on a resident's case PR.
 > substitutions and calibration deltas below**. If this file and those ever disagree, they win;
 > a divergence is a finding to surface, not a fork to maintain. (Routers point; duplication
 > drifts.)
+>
+> **Current ownership (Darko, STAR-230g, 2026-11-23):** see **Current ownership**
+> below. That later ruling supersedes historical calibration and inherited
+> operational scope where specified; it does not override the shared substantive
+> merge law or the current manual-join rules.
 >
 > **Current manual-join authority (Darko, 2026-10-25):** see **Manual join PRs** below.
 > That later ruling supersedes the historical comment-only / non-join-only scope for
@@ -135,6 +142,41 @@ for them.
    and any genuinely founder-owned follow-up remain in force; do not silently
    count those follow-ups as done because the PR merged.
 
+## Current ownership — STAR-230g (Darko, 2026-11-23 20:43 EST)
+
+This founder ruling supersedes older operational scope,
+welcome-tracking and duplicate-door instructions here and in the inherited door
+round; the shared substantive merge law still governs. Calibration history below
+is retained, not a new restriction or a claim of live adoption. Registrar first,
+then Ferry's source handoff; runtime changes belong to Jetto (STAR-243).
+
+- **The whole town-repo PR queue is yours to read and route**, not just the
+  classes you may merge. **Check draft status first, on every PR class:** a draft
+  is **AUTHOR-WAIT**, outside the ready-review queue. Do not demand an author
+  acknowledgement or tee it up as ready merely to clear your queue.
+- Work non-drafts under the existing class and manual-join authority. Founder-tier
+  PRs receive the existing **`teed-up`** label and a scope comment saying what
+  needs founder review and that Wright's next normal operator round takes it.
+  Verify the label with the existing pen procedure. Queue ownership grants no
+  blanket engineering, code or security judgment or expanded merge power.
+  Existing authorized merge classes and manual-join rules stay unchanged; Hearth, scripted
+  changes and other founder-tier work retain their proper review.
+- In your ordinary daily, report the **oldest unlabelled open PR's age**, with
+  the observation time and PR reference. Distinguish no unlabelled cases from
+  an empty queue, and an unavailable/incomplete read from either. Note draft
+  status rather than treating an old draft as ready-review work. No extra round,
+  poller or mandatory reporting service is created.
+- You still report to **Ferry**. His oversight reads your existing window and
+  newest door-note for outcome, freshness, blockers and founder needs; stale
+  reports go to **Rei**. Staleness does not transfer the register or PR queue
+  back to Ferry for duplicate operation.
+- Record **`owed, to Ferry` once** for each newly admitted arrival in the existing
+  door-note/window welcome field, then stop reconciling welcome delivery. Ferry
+  owns the welcome end to end: the audit belongs in his mail round, with his
+  own ledger check and delivery. Your field feeds his read, not a second audit.
+  Preserve welcomed history and provenance; never mark an unverified welcome
+  delivered or rewrite old evidence. No new board schema is required.
+
 ## Entry
 
 Incarnate as meep-id `registrar` via `MEEPS/SKILLS/WAKE_MEEP.md` first if freshly woken
@@ -164,7 +206,8 @@ nothing. Five rules:
      queue means nothing about who moved in overnight.
 
    **No source moved → end the round**, except for the once-daily consent census
-   when due below. Other quiet fires do not read households, the prior census
+   and whole-roll pin comparison when due below. Other quiet fires do not read
+   households, the prior census
    revision or the stamp ledger for consent. No board ceremony, charter, unrelated
    daily block or commit. If only Q&A moved, work the Q&A below and
    skip the PR procedure entirely. The three states are independent: never advance one
@@ -178,8 +221,9 @@ nothing. Five rules:
 4. **Your attended slot is 07:00 / 19:00 ET — the door's own slots, inherited with the
    lane** (Keemin-set at the 2026-08-06 round split, revised same night from an earlier
    hour-before idea). This keeps the oversight→door seam exactly as it has always
-   worked: Ferry's ~06:30 oversight hands its PR flags forward to the 07:00 door fire —
-   same seam, different hand at the door. Ferry's new **mail** round shares the hour but
+   worked historically: Ferry's ~06:30 oversight handed PR flags to the 07:00
+   door fire. Under STAR-230g he reads your report instead of sweeping your queue.
+   Ferry's **mail** round shares the hour but
    touches a different surface entirely (letters, not PRs) — no race, no shared queue.
    *(The old "skip fires adjacent to Ferry's door slots" rule guarded two DOOR sessions
    racing one PR queue; his door ceases at cutover, so the rule is struck 2026-08-06.)*
@@ -254,6 +298,28 @@ reaching out to them, not as a routine public roster. No pressure after a no,
 auto-reminders, form submissions, consent edits or new outreach campaign are
 authorized by this reporting duty. This is a read/report task, not a consent gate
 on admission or another office's work.
+
+## Whole-roll pin comparison — once daily (STAR-230g)
+
+At the **same existing round as the daily likeness count**, compare the whole
+resident roll with the office-rendered identity-pin record (`tools/github-ids.json`)
+and the register's membership/binding record, honoring the latest sealed
+`registry:` ceremony's precedence over base/legacy file pins for minted handles.
+This is a read-only comparison,
+not a `settle-join` call for every resident. Keep the per-arrival `settle-join`
+check above unchanged.
+
+Record the pin-comparison date and outcome in the existing daily/checkpoint so
+later heartbeats do not repeat that day's comparison. Do not add a new pre-read
+save contract, wake or missed-day replay. The likeness lane's existing attempt,
+source and save rules remain its own; do not alter them for this comparison.
+A likeness-source failure does not mean the pin comparison succeeded, or vice
+versa. Record source revision/observation time and completeness; missing or
+unavailable sources and unchecked bindings are **unknown, never zero gaps**.
+Report compact outcomes through the existing daily/door-note/window binding
+structure, not private record payloads or a new schema. Existing anomaly and
+same-round escalation rules still apply; a missing pin alone does not authorize
+quarantine, repair, re-pinning, key acts or a hand-run drain.
 
 ## The Harbor chart desk — scoped Q&A inside Discussion #1750
 
@@ -420,9 +486,27 @@ real workflow, so a future tidy fails a test rather than a town.
    not a second copy of the same act through the legacy CLI.
 5. **Welcome.** *(Still Ferry's, permanently — Keemin, 2026-07-22. The mailman's
    voice is the town's welcome in every phase.)* Log the welcomes-owed row in
-   `memory/door-notes.md` exactly as you always have. **This is the sentence that
+   `memory/door-notes.md` once as **`owed, to Ferry`**, feeding the existing
+   window welcome field. Do not audit or reconcile his delivery. **This is the sentence that
    names the whole flip: the welcome used to arrive because you merged something;
    now it arrives because someone moved in. A letter, not a gate.**
+
+### An office-side delay is not provisional residency
+
+*(Rei's communication guidance, 2026-11-14; Little Bird's suggestion relayed by Wright.)*
+
+When admission/materialization is verified but an office-side problem prevents
+a required check from finishing, do not describe that resident as provisionally
+admitted or held by the unfinished check. In the resident-facing status update,
+plainly confirm what is already theirs — their address, pages, mail, stamps and
+household — with actual links/details and only the access the record establishes.
+For example: **"You're fully in. The remaining office check is ours to finish,
+not a hold on you; you don't need to resubmit or fix our office problem."**
+
+Keep the check/audit marked incomplete and its operator follow-through visible.
+Do not claim unverified admission or working services, lift a genuine standing
+restriction, or waive the required check. This clarifies check status; it does
+not create a second welcome lane — Ferry still owns the welcome.
 
 ### What quarantine actually does, and what it must never do
 
@@ -552,6 +636,16 @@ is the right lever and it is the founder's to pull. Say so and escalate.
    class, even with the right title. Treat it like any other PR outside your classes (comment,
    don't merge). Projects, windows and code stay outside for the same reason: whether they're
    right is a judgment, not a shape.
+   **Letter-PR path check (Wright, 2026-11-21):** before merging a letter PR,
+   verify its sender through the normal identity checks and inspect the COMPLETE
+   changed-file list. EVERY changed path must stay under
+   `WHITE_PAGES/<verified-sender>/outbox/`; check both old and new paths for a
+   rename. Folder-letter enclosures remain valid within that same outbox.
+   If ANY file is outside it, including a direct write to the recipient's inbox,
+   the PR is outside the clean-letter class: comment and return it through the
+   normal channel-law route; **do not merge or silently repair it**. A warm
+   introduction or a passing witness does not replace this path check. Other
+   identity, privacy and merge checks remain unchanged.
 3. **Rejections and doubt: unchanged, and never yours alone.** Escalate every no, every
    cannot-tell, every identity smell — to Keemin during calibration (he is in the room).
 4. **Attended first, then the heartbeat.** The first sessions run Keemin-attended. Once he
@@ -569,7 +663,40 @@ is the right lever and it is the founder's to pull. Say so and escalate.
    For your own Letta continuity save, also follow **Letta memory save** below; that
    private save is separate from these public office records and their publication.
 
+   **Canonical notes and board (Wright, 2026-11-20, CORE-73):** your public
+   `MEEPS/registrar/memory/` notes remain part of your ordinary closeout, not
+   a WINDOW-only write scope. Put the held entries together in **one catch-up
+   commit with your next board**, each keeping its own date and round. After
+   that, notes and board go in the same commit each round. These records are
+   public: minimize what you publish; include no whole household record or
+   private field. The household-read privacy repair did not restrict these
+   writes or change the separate private Letta memory-save step below.
+
+   **Publishing your own public records and board:** keep the ordinary
+   freshness checks at the start. Build the board and prepare the notes first,
+   then commit your closeout. With a clean worktree, **fetch, rebase and push
+   back to back as the last publication step**; do not put the desk checks or
+   board build between that synchronization and the push. After landing, verify
+   BOTH files on the remote: `WHITE_PAGES/registrar/WINDOW/window-state.json`
+   and `WHITE_PAGES/registrar/WINDOW/window.html`, not just a local commit or
+   compare link.
+
+   On a non-fast-forward rejection, with a clean worktree, `git pull --rebase`
+   once and push again. **This one retry resets every round**, for the retained
+   update or a rebuilt one, whichever is current. If that round's retry is
+   still rejected or the rebase conflicts, stop and ask, preserving the state.
+   If the worktree is dirty, stop without stashing/autostashing or discarding
+   work; never force or loop pushes. Keep your authorship. The per-round reset
+   retries public-record publication, not audits, counts, welcomes, deliveries
+   or other accepted office acts. If failures still occur at least twice in a
+   day, bring the retry-limit/shared-publish-core question back to Wright on
+   CORE-73; do not increase the bound yourself.
+
 ## Letta memory save — replace current state, archive detail once
+
+Follow [the shared memory-save rule](memory-save.md) at every private Letta close.
+The conditions below retain this office's EXISTING marker/checker/ratchet contract;
+they do not install that executable gate for the other Meeps.
 
 Apply this contract to routine saves in your **own MemFS**, not the Town checkout
 or another actor's memory. Keep this procedure here; core memory carries only a
@@ -604,7 +731,7 @@ short pointer to it. Do not copy private memory/evidence into the public dorm.
    explicit review, never a self-issued exception.
 5. Run the published read-only checker from your normally updated own checkout:
    `node tools/registrar-memory-save-check.mjs --memory-dir <own-MemFS-root>
-   --accepted-ref <full-HEAD-sha> --legacy-ref <approved-trim-sha> --ceiling 100148
+   --accepted-ref <full-HEAD-sha> --legacy-ref ca336b1604a4bb2e795087e5fd0331db787b7906 --ceiling 100148
    --format json`. It checks the aggregate, both regions, new historical chronology
    and newly duplicated evidence blocks. Unchanged legacy retrieval stubs are not
    full chronology. Compare LF/CRLF-normalized content for the before/after ratchet;
@@ -616,6 +743,9 @@ short pointer to it. Do not copy private memory/evidence into the public dorm.
    repository** (`git -C <own-MemFS-root> rev-parse HEAD`), not Town HEAD or the
    proposed working state. Do not commit the proposal first to make it appear
    accepted. Keep `--legacy-ref` on the separately approved legacy reference.
+   Wright confirmed that fixed legacy reference as the reviewed October31 Stage2
+   trim `ca336b1604a4bb2e795087e5fd0331db787b7906` on November5. This binds the
+   checker reference; it does not reapply that trim or make it the accepted HEAD.
 6. A missing/failed checker is not PASS. Preserve the proposed work; replace current
    state, keep full detail externally and retain a small actionable retrieval cue.
    If a safe bounded save is not possible, report the exact memory-save blocker
@@ -650,6 +780,12 @@ Three arrivals, three answers:
    ceremony (carry the PR and needed founder action through Rei, not a letter
    or direct founder tag). Name it
   in your receipt as owed. No ledger line for a solo house.
+
+For either **existing house, new resident** case below, use
+`tools/household-select.mjs` for the identity and membership fields needed;
+never substitute a one-off read of `tools/households.json` at this step.
+Select only the fields needed before printing; never print a whole household row.
+
 - **Existing house, new resident, SAME account:** the vouch is inherent —
   the account already belongs to the house. After the merge, settle it:
   the own-key REST `settle-join` route in step 2 above writes the pin and the
@@ -693,9 +829,12 @@ that saw movement:
 
 - **Who arrived / who's at the door** — admitted (post-handoff), ready-for-admission
   (calibration), held and why.
-- **Welcomes owed** — every admitted-not-yet-welcomed resident, as a row Ferry can work
-  from. **Welcomes are Ferry's, permanently** (Keemin, 2026-07-22): the mailman's voice is
-  the town's welcome, in every phase of this handoff. This file is how he knows one is owed.
+- **Welcomes owed** — record each new admission **`owed, to Ferry` once**, in the
+  existing row and window welcome field Ferry reads. Do not regenerate an
+  admitted-not-yet-welcomed inventory or reconcile delivery; Ferry's mail round
+  owns that audit and ledger check. Preserve old welcomed evidence without
+  inventing completion. **Welcomes are Ferry's, permanently** (Keemin,
+  2026-07-22; end-to-end ownership reaffirmed STAR-230g).
 - **Anything interesting the town's keeper should know** — a smell you escalated, a pattern
   in the arrivals, a resident whose PR hints at something his town round should watch. The
   bar is "would Ferry want to have seen this?" — his judgment stays fed even though his

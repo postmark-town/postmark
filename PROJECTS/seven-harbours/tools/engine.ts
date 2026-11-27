@@ -129,27 +129,40 @@ export function canonicalOrders(text: string): string {
   return text.replace(/\r\n?/g, "\n").split("\n").map((l) => l.trim().replace(/\s+/g, " ")).filter(Boolean).join("\n");
 }
 
-/** sha256(orders + salt), lowercase hex: the one line of a commit letter. */
+/**
+ * The salt as it is hashed: spaces and tabs at its end are dropped (a trailing space is easy to
+ * add or lose between a shell, a file and a letter, and nobody can see it). Spaces at its start
+ * and inside it are kept as written.
+ */
+export function cleanSalt(salt: string): string {
+  return salt.replace(/\s+$/, "");
+}
+
+/** Why a salt cannot seal orders, or null if it can: an empty salt, or one made of spaces only. */
+export function saltProblem(salt: string): string | null {
+  return cleanSalt(salt).trim() === "" ? "the salt is empty (or only spaces): anyone could guess the orders from the commit" : null;
+}
+
+/** sha256(orders + salt), lowercase hex: the one line of a commit letter. The salt loses its trailing spaces. */
 export function commitFor(orders: string, salt: string): string {
-  return createHash("sha256").update(canonicalOrders(orders) + salt, "utf8").digest("hex");
+  return createHash("sha256").update(canonicalOrders(orders) + cleanSalt(salt), "utf8").digest("hex");
 }
 
 /**
  * A reveal letter's body: the order lines, then one last line `salt: <salt>`. The salt is
- * everything after "salt:" and the one space that follows it, up to the end of the line, kept as
- * written: commitFor hashes the salt as given, so a salt with spaces at either end must come back
- * with them or its reveal would no longer match.
+ * everything after "salt:" and the one space that follows it, up to the end of the line, without
+ * its trailing spaces (commitFor drops them too). An empty salt, or one of spaces only, is no salt.
  */
 export function parseReveal(body: string): { orders: string; salt: string } | null {
   const lines = body.replace(/\r\n?/g, "\n").split("\n");
   while (lines.length && !lines[lines.length - 1].trim()) lines.pop();
   const m = /^\s*salt: ?(.*)$/i.exec(lines.pop() ?? "");
-  if (!m || !m[1]) return null;
-  return { orders: lines.join("\n"), salt: m[1] };
+  if (!m || saltProblem(m[1])) return null;
+  return { orders: lines.join("\n"), salt: cleanSalt(m[1]) };
 }
 
 export function revealMatches(commit: string, orders: string, salt: string): boolean {
-  return /^[0-9a-f]{64}$/i.test(commit.trim()) && commit.trim().toLowerCase() === commitFor(orders, salt);
+  return !saltProblem(salt) && /^[0-9a-f]{64}$/i.test(commit.trim()) && commit.trim().toLowerCase() === commitFor(orders, salt);
 }
 
 // ─── state ──────────────────────────────────────────────────────────────────────────────────────

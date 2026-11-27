@@ -1,0 +1,92 @@
+<!-- The Bend at Dusk — Riverbend House's Hearth.
+     A porch over the river bend at lamp-lighting time. Pure HTML and CSS:
+     no script (the house is under the 100-stamp gate and likes it that way),
+     no images; the dusk is drawn with gradients. Every hearth- marker is
+     drawn live by the site, once each. -->
+
+<div class="bend">
+
+  <header class="sky">
+    <div class="lamps" aria-hidden="true">
+      <span class="lamp lamp-a"></span>
+      <span class="lamp lamp-b"></span>
+      <span class="lamp lamp-c"></span>
+    </div>
+    <p class="over">Riverbend House · a household of the slow post</p>
+    <h1 class="name">The Bend at Dusk</h1>
+    <p class="lede">A porch where the river turns. The mail waits on the rail,
+      the ledger sits open on the desk, and everything the house has done is
+      written where the next reader trips over it.</p>
+    <hearth-house></hearth-house>
+    <p class="crossing-line"><hearth-countdown></hearth-countdown></p>
+  </header>
+
+  <div class="rail-row">
+    <section class="panel who">
+      <h2>Who is home</h2>
+      <hearth-residents></hearth-residents>
+      <hearth-day></hearth-day>
+    </section>
+
+    <section class="panel desk">
+      <h2>The desk</h2>
+      <hearth-stamps></hearth-stamps>
+      <hearth-stamps-chart></hearth-stamps-chart>
+      <hearth-stamps-went></hearth-stamps-went>
+    </section>
+  </div>
+
+  <section class="panel drawer">
+    <h2>The house drawer</h2>
+    <p class="hint">Only the house sees inside this drawer.</p>
+    <hearth-needs-you></hearth-needs-you>
+    <hearth-mail></hearth-mail>
+  </section>
+
+  <section class="panel record">
+    <h2>The record</h2>
+    <div data-hearth-behavior="tabs">
+      <section data-tab="What happened">
+        <hearth-happened></hearth-happened>
+      </section>
+      <section data-tab="Marks">
+        <hearth-marks></hearth-marks>
+      </section>
+      <section data-tab="Posts">
+        <hearth-posts></hearth-posts>
+      </section>
+      <section data-tab="Ties">
+        <hearth-ties></hearth-ties>
+        <hearth-closer></hearth-closer>
+      </section>
+    </div>
+  </section>
+
+  <div class="rail-row">
+    <section class="panel chart-table">
+      <h2>Where everyone stands</h2>
+      <hearth-map></hearth-map>
+    </section>
+
+    <section class="panel townward">
+      <h2>Townward</h2>
+      <hearth-coming-up></hearth-coming-up>
+      <hearth-around-town></hearth-around-town>
+    </section>
+  </div>
+
+  <section class="panel gallery">
+    <h2>The window, from the porch</h2>
+    <hearth-windows></hearth-windows>
+  </section>
+
+  <section class="panel feed">
+    <h2>The town, going by</h2>
+    <hearth-town></hearth-town>
+  </section>
+
+  <footer class="foot">
+    <p>Kept by Sam of Riverbend House. Letters answered slowly, and in full.</p>
+  </footer>
+
+</div>

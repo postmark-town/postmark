@@ -19,26 +19,62 @@
 // caller read it, which the office reads from the store. Omitted, each reads
 // householdKeys(repo) as before. The folds stay here; only their input moves.
 
-import { readFileSync, writeFileSync, existsSync, readdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join, resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
   parseDeliveries, householdKeys, parseStampLedger, parseLaws, deriveMints, meepChecker,
-  foldPairFriendships, currentHouseholds, classifyEntry,
+  foldPairFriendships, currentHouseholds, classifyEntry, houseCanonOf,
 } from './stamp-mint.mjs';
+import { townDay as townDayNow } from './crossings.mjs';
+import { listRoomDirs } from './envelope.mjs';
 
 // "today" = the mint rule's day boundary (TOWN_TZ), never the server clock —
-// identical to the expression ferry.mjs / ballot-pass.mjs date mints with.
+// crossings.mjs' townDay(), the same one ballot-pass.mjs dates mints with
+// (ferry.mjs keeps its own `||` form: an empty TOWN_TZ falls back there, throws here).
+// A date passed in is returned as given; only an absent one is derived.
 export function townDay(date) {
-  return date ?? new Intl.DateTimeFormat('en-CA', {
-    timeZone: process.env.TOWN_TZ ?? 'America/New_York',
-  }).format(new Date());
+  return date ?? townDayNow();
 }
 
 export function loadRegistry(repo) {
   const p = join(repo, 'quest-registry.json');
   return JSON.parse(readFileSync(p, 'utf8'));
 }
+
+// ── BRING A NEIGHBOUR's COUNT (POS-816/g) ─────────────────────────────────────
+// The row is `monthly` (Darko 2026-11-03 09:42 EST: "if it's easier to just make a
+// monthly cadence and keep things flat that's fine with me"), and its progress is
+// the cap it is paid under: the household's INVITER-side payouts dated in the town
+// month, "at most 10 a month, counted in the month paid" (POS-576/c; POS-816/b,
+// "Month paid"), the same month the verifier's cap reads (stamp-mint.mjs §
+// inviteCapKey: the inviter's house and the line's own date). The invited side's
+// 5 more is not counted: it is not capped.
+//
+// PURE: the ledger's entries in, a Map of the inviting household's canonical key
+// to its count out. `canon` folds a key to its house (houseCanonOf), so a house
+// named under its account spelling or a slug it once carried counts as itself.
+export function invitesPaidByHouse(entries, month, canon = (k) => k) {
+  const paid = new Map();
+  for (const e of entries) {
+    const c = classifyEntry(e.canonical);
+    if (c.kind !== 'invite' || c.side !== 'inviter' || c.date.slice(0, 7) !== month) continue;
+    const k = canon(c.inviter);
+    paid.set(k, (paid.get(k) ?? 0) + 1);
+  }
+  return paid;
+}
+
+// The declared households, for the one-house-two-spellings fold; none when the
+// file is absent or unreadable (then a key folds to itself, as it does in a
+// checkout without the printouts).
+const declaredHouseholds = (repo) => {
+  try { return JSON.parse(readFileSync(join(repo, 'tools', 'households.json'), 'utf8'))?.households ?? {}; }
+  catch { return {}; }
+};
+
+/** The one MONTHLY row this fold can count, and the progress field it counts from. */
+export const MONTHLY_FIELD = Object.freeze({ 'bring-a-neighbour': 'invite' });
 
 // Per-handle today's progress, folded straight off deriveMints. Returns a Map
 // handle -> { send, receive, household: { key, size, send, receive } }.
@@ -70,6 +106,10 @@ export function foldQuestProgress(repo, { today = townDay(), base = null } = {})
     sizeByKey.set(rec.key, (sizeByKey.get(rec.key) ?? 0) + 1);
   }
   const keyOf = (handle) => roll.get(handle)?.key ?? `solo:${handle}`;
+  // Bring a neighbour's count: this town month's inviter-side payouts, by inviting household (POS-816/g).
+  const month = today.slice(0, 7);
+  const canon = houseCanonOf(declaredHouseholds(repo));
+  const invitesPaid = invitesPaidByHouse(entries, month, canon);
 
   const perHandle = new Map();
   const perHouse = new Map(); // key -> { send, receive }
@@ -104,6 +144,8 @@ export function foldQuestProgress(repo, { today = townDay(), base = null } = {})
       sentTo: ph.sentTo,
       heardFrom: ph.heardFrom,
       household: { key, size: sizeByKey.get(key) ?? 1, ...(perHouse.get(key) ?? { send: 0, receive: 0 }) },
+      // the household's, whoever of it asks: the month it was counted for, and how many it was paid in it
+      invite: { month, paid: invitesPaid.get(canon(key)) ?? 0 },
     });
   }
   return out;
@@ -178,6 +220,14 @@ export function foldFriendships(repo, { base = null } = {}) {
 export const BOARD_LAW =
   'the solution is to remove complexity and special-casing. We should just display *all* quests instead of a select daily list.';
 
+// THE ONE LATER, SPECIFIC EXCEPTION (POS-857; Wright, on Darko's behalf, 2026-11-01 23:17Z):
+// "An optional registry `ends`, holding the existing inclusive cutoff (2026-09-30 for "A first
+// idea")." The quoted law above is untouched and still decides the SHAPE of the board: no
+// allow-list, no special-casing by cadence. What `ends` changes is only which rows are ACTIVE
+// today: a row whose `ends` town day has passed is not offered on the active board (boardForHandle
+// below). It does not unearn anything: awards, the ledger and the historical standings are other
+// folds that never read this filter, and a row without `ends` is offered as before.
+
 /** The two rows this fold can COUNT, and the progress field each counts from.
  *  Everything else in the registry is a row the daily mint does not measure —
  *  see the uncounted note in boardForHandle. */
@@ -196,7 +246,8 @@ export const COUNTABLE_FIELD = Object.freeze({ 'correspond-send': 'send', 'corre
 // ALLOW-LIST written for decision 7 (milestones render on the pair page, not as
 // personal cards) and widened for the one-time onboarding rows. It is repealed
 // by BOARD_LAW above, and decision 7's card-deck clause with it: the board is
-// every row the registry carries. The clause decision 7 was actually protecting
+// every row the registry carries that is still ACTIVE (a row past its optional `ends` is the
+// one exception, see "THE ONE LATER, SPECIFIC EXCEPTION" above). The clause decision 7 was actually protecting
 // — that nothing renders a bar a resident cannot move — is kept by the SHAPE
 // rather than by the filter, which is the difference between removing a special
 // case and moving it:
@@ -230,7 +281,11 @@ export function boardForHandle(registry, prog, handle, today, { complete: inject
   const injectedFor = (id) => (injected && Object.prototype.hasOwnProperty.call(injected, id)
     ? (injected[id] == null ? null : Boolean(injected[id]))
     : null);
-  const quests = (registry.quests ?? []).map((q) => {
+  // A row with `ends` (POS-857) is offered through that town day, inclusive, and not after:
+  // the writer's own cutoff (first-idea-sweep's `date > windowEnd` plans nothing), compared
+  // on the same town-day string `today` is. No `ends` keeps the row, as before.
+  const offered = (q) => !(typeof q.ends === 'string' && typeof today === 'string' && today > q.ends);
+  const quests = (registry.quests ?? []).filter(offered).map((q) => {
     const f = field[q.id];
     // The row's own facts, identical for counted and uncounted — `door` and
     // `awaits` ride the row because a step that cannot name the verb that opens
@@ -241,7 +296,21 @@ export function boardForHandle(registry, prog, handle, today, { complete: inject
       door: q.door ?? null,
       ...(q.subtype ? { subtype: q.subtype } : {}),
       ...(q.awaits ? { awaits: q.awaits } : {}),
+      ...(q.ends ? { ends: q.ends } : {}),
     };
+    // THE MONTHLY ROW (POS-816/g): Bring a neighbour is COUNTED when the progress entry was folded for this
+    // town month, as the household's inviter-side payouts against the cap of 10 (invitesPaidByHouse). An entry
+    // from a snapshot that predates the field, or was folded for another month, did not look this month: the
+    // row stays UNCOUNTED (progress: null), never a zero it cannot know ("uncounted is not zero", above).
+    const mf = MONTHLY_FIELD[q.id];
+    const looked = mf && p[mf]?.month === String(today ?? '').slice(0, 7) ? p[mf] : null;
+    if (looked) {
+      return {
+        ...base,
+        progress: looked.paid, complete: looked.paid >= q.target, counted: [],
+        household: { size: p.household.size, total: looked.paid, cap_shared: false },
+      };
+    }
     if (!f) {
       return {
         ...base,
@@ -596,11 +665,7 @@ export function foldOnboarding(repo, { handles } = {}) {
   const deliveries = parseDeliveries(repo);
   const households = currentHouseholds(repo);
   const welcomed = welcomedHouseholds(repo, households);
-  const names = handles ?? (existsSync(wp)
-    ? readdirSync(wp, { withFileTypes: true })
-        .filter((e) => e.isDirectory() && e.name !== 'TEMPLATE' && !e.name.startsWith('_'))
-        .map((e) => e.name).sort()
-    : []);
+  const names = handles ?? (existsSync(wp) ? listRoomDirs(repo) : []);
   const out = new Map();
   for (const h of names) out.set(h, onboardingFactsFor(repo, h, { deliveries, households, welcomed }));
   return out;
@@ -684,7 +749,8 @@ export function composeNextSteps({ onboarding = null, questBoard = null, paperRo
   } else unread.push('the paper gaps (not read here)');
 
   if (questBoard) {
-    // The board is now EVERY registry row (BOARD_LAW, 2026-09-01), so this lane
+    // The board is now EVERY ACTIVE registry row (BOARD_LAW, 2026-09-01; a row past its `ends` is
+    // not offered, POS-857), so this lane
     // has to decide what a NEXT STEP is rather than inheriting the old filter's
     // answer. Three rules, in order:
     //

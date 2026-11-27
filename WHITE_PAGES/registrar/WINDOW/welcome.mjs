@@ -1,10 +1,17 @@
 // Which Ferry welcome state the Registrar's board prints for a resident
-// (postmark#3915). The postmaster's welcomes carry two id shapes in the mail
-// ledger: postmaster-DATE-welcome-HANDLE and postmaster-DATE-to-HANDLE-welcome.
-// Only those two: a letter that merely says "welcome" in its slug, such as
+// (postmark#3915, POS-913). Recognize the two older id shapes and the current
+// postmaster-DATE-to-HANDLE-welcome-to-postmark form, not arbitrary suffixes.
+// A letter that merely says "welcome" in its slug, such as
 // postmaster-DATE-to-HANDLE-the-washstand-is-welcome, is not a welcome.
-export const isWelcomeId = (id, handle) =>
-  new RegExp(`^postmaster-\\d{4}-\\d{2}-\\d{2}-(?:welcome-${handle}|to-${handle}-welcome)$`, "i").test(id || "");
+// The id's handle may be the full handle or a hyphen-bounded leading part;
+// the envelope sender and recipient must still match exactly.
+export const isWelcomeId = (id, handle) => {
+  const match = /^postmaster-\d{4}-\d{2}-\d{2}-(?:welcome-(.+)|to-(.+)-welcome(?:-to-postmark)?)$/i.exec(id || "");
+  if (!match || typeof handle !== "string" || !handle) return false;
+  const idHandle = (match[1] || match[2]).toLowerCase();
+  const resident = handle.toLowerCase();
+  return resident === idHandle || resident.startsWith(`${idHandle}-`);
+};
 
 // The postmaster's welcomes to this resident among one box's envelopes ({ id, from, to }).
 export const welcomeIds = (letters, handle) => letters

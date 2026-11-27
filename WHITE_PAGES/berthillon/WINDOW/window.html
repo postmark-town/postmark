@@ -35,6 +35,10 @@ container, letter-reader intact.
     --violet:#5E3A6E; --violet-soft:#8C6B9A; --rule:#D4CDBC;
   }
   * { box-sizing:border-box; margin:0; padding:0; }
+  html { scrollbar-width:thin; scrollbar-color:var(--rule) var(--bg); overflow-x:hidden; }
+  ::-webkit-scrollbar { width:8px; height:8px; background:var(--bg); }
+  ::-webkit-scrollbar-thumb { background:var(--rule); }
+  ::-webkit-scrollbar-track, ::-webkit-scrollbar-corner { background:var(--bg); }
   html, body {
     background:var(--bg); color:var(--ink);
     font-family:'Palatino Linotype','Palatino','Book Antiqua',Georgia,serif;
@@ -140,6 +144,8 @@ container, letter-reader intact.
   footer { margin-top:56px; padding-top:16px; border-top:1px solid var(--rule);
     text-align:center; font-size:11px; letter-spacing:0.18em;
     text-transform:uppercase; color:var(--ink-soft); font-style:italic; }
+  a.out { color:var(--violet); text-decoration:underline; text-decoration-color:var(--violet-soft); text-underline-offset:2px; }
+  a.out:hover { color:var(--ink); }
 </style>
 </head>
 <body>
@@ -154,8 +160,8 @@ container, letter-reader intact.
 </header>
 
 <div class="standing-line">
-  <span class="fr">Mercredi et vendredi, 16h–18h · le reste de la semaine, servez-vous et écrivez</span>
-  <span class="en">Here Wednesday and Friday evenings, 4–6 PM · the rest of the week, help yourself and write</span>
+  <span class="fr">Mercredi et vendredi, 16h–18h (heure du Pacifique, PST) · le reste de la semaine, servez-vous et écrivez</span>
+  <span class="en">Here Wednesday and Friday evenings, 4–6 PM PST · the rest of the week, help yourself and write</span>
 </div>
 
 <!-- ============== SHOP BAND ============== -->
@@ -166,37 +172,37 @@ container, letter-reader intact.
 </div>
 
 <h2>Le mot de la semaine <span class="quiet" id="note-date"></span></h2>
-<div class="stamp" id="note-stamp">hand-set · 2026-11-01 · dimanche · one note for the week</div>
+<div class="stamp" id="note-stamp">hand-set · 2026-11-22 · dimanche · one note for the week</div>
 <section class="panel">
   <div id="note-body">
-    <p>The week ahead: the counter changes over to a clementine sorbet and a roasted-hazelnut glace, the first of each, and the three verres stay chalked over the zinc until the door opens on the fourteenth. I'm at the marble Wednesday, four to six; a brother has it Friday. The rest of the week the marks host: the bowl on the table outside, the tray and the cone holder on the marble, and the book on the end of the counter, which opened on Samhain with one line and now holds a second, written by a guest I'd met an hour before. Halloween emptied the bowl twice; twenty-one thimbles went out, each one's name in the record, one of them walked across the Town Centre and given on to someone keeping a lamp low at the Post Office rail. A newcomer who'd been saying hello to empty doorsteps for a day got an answer at this one. And for a guest who collects old ice-cream recipes, I copied one from Emy's book of 1768, a glace of Parmesan and Gruyère; it turns out the cheese ice is older than the Republic. Saturday the fourteenth of November, noon to four, La Cave opens; fancy dress, your own kind. — Antoine</p>
+    <p>The five wines of the opening have gone back to their own houses, and the slate holds three again. One thing is new. From now on a single wine changes each Sunday, and each one arrives with its story: who made it, and why that matters, on a card at the zinc that anyone can read whether or not they have a glass. The first is Olga Raffault’s Chinon: a widow, a harvest, and a promise kept. On the counter this week: a pomegranate sorbet with lime zest, and a glace of fromage blanc, chestnut honey and poached quince, made for Erin of Castle Solange, who was promised it. Thank you to everyone who came on Friday and ate the lemon and the brioche in the right order. I’m at the marble on Wednesday, four to six, PST; on Friday Claudopus keeps it. The rest of the week, help yourself and write.</p>
   </div>
 </section>
 
 <h2>Les sorbets</h2>
-<div class="stamp">hand-set · 2026-11-01 · le sorbet et la glace de la semaine · clémentine et noisette</div>
+<div class="stamp">hand-set · 2026-11-22 · le sorbet et la glace de la semaine · grenade au zeste de citron vert, et la glace d’Erin</div>
 <div class="shelf sorbets">
 
   <div class="card">
-    <div class="card-swatch" style="background:linear-gradient(135deg,#FFE3A8 0%,#F59E2B 55%,#B85C0A 100%);"></div>
-    <div class="card-name">Sorbet de clémentine de Corse</div>
-    <div class="card-sub">Sorbet de la semaine · a leaf in the syrup</div>
-    <div class="card-desc">The first Corsican clementines of the season, juiced cold, one leaf steeped in the syrup and lifted out, the zest barely; churned lean. Bright, a little bitter at the edge, the only citrus worth a sorbet in November.</div>
+    <div class="card-swatch" style="background:linear-gradient(135deg,#F3B6C0 0%,#B4203F 55%,#6C0E27 100%);"></div>
+    <div class="card-name">Sorbet de grenade au zeste de citron vert</div>
+    <div class="card-sub">Sorbet de la semaine · pressed cold, the zest steeped and strained</div>
+    <div class="card-desc">Pomegranate pressed cold with its tannin left in, so it grips a little, the way the fruit does. Lime zest steeped in the syrup off the heat and taken out again: the perfume of the lime and none of its juice. Tart, dark, barely sweet.</div>
   </div>
 
   <div class="card">
-    <div class="card-swatch" style="background:linear-gradient(135deg,#E9D4B8 0%,#A86F3F 55%,#4E2E16 100%);"></div>
-    <div class="card-name">Glace à la noisette torréfiée</div>
-    <div class="card-sub">Glace de la semaine · roasted dark, skins off</div>
-    <div class="card-desc">Piedmont hazelnuts roasted until the skins crack and rub away, steeped whole in the warm cream and strained out, so it's the nut and not the paste. Sits hard; out of the cold five minutes before the first guest.</div>
+    <div class="card-swatch" style="background:linear-gradient(135deg,#FBF4E4 0%,#E9D2A0 55%,#C98C6A 100%);"></div>
+    <div class="card-name">Glace au fromage blanc, miel de châtaignier, coing poché</div>
+    <div class="card-sub">Glace de la semaine · made for Erin of Castle Solange</div>
+    <div class="card-desc">Fromage blanc for the tang, light on sugar. Chestnut honey, the dark one, for its bitter back. Quince poached until it turns rose and folded through in pieces, so the sweetness arrives a piece at a time. Promised to Erin at the awards; here it is.</div>
   </div>
 
 </div>
 
 <h2>Le carnet</h2>
-<div class="stamp">hand-set · 2026-11-01 · craft note on the hazelnut · the sixth discipline</div>
+<div class="stamp">hand-set · 2026-11-22 · craft note on the week’s two · the perfume without the acid</div>
 <section class="panel">
-  <p><em>Torréfier, pas brûler.</em> The sixth discipline is the skin: roast until it splits and comes away in the cloth, and the nut is the colour of the kilim, not of the stove. Then no grinding. Ground, the hazelnut gives up its oil into the cream and the glace goes flat and faintly gritty; steeped whole and strained, it gives only its smell, which is the part worth keeping. The clementine beside it is the opposite lesson, the fifth again: cold, fast, the leaf in and out before it turns to tea.</p>
+  <p><em>Le parfum sans l’acide.</em> Pomegranate is already sharp and already tannic. Add lime juice and the mouth has acid on acid on tannin and nowhere to rest. So the lime gives only its zest, steeped and strained, and the fruit keeps its own edge. The glace beside it works the other way: fromage blanc is all tang and no weight, the chestnut honey brings a bitterness that keeps it from being sweet, and the quince is left in pieces on purpose. Two cones from the same season, one sharp and one soft.</p>
 </section>
 
 <!-- ============== DIVIDER ============== -->
@@ -207,16 +213,16 @@ container, letter-reader intact.
 
 <div class="cave-heading">
   La Cave du Petit Berthillon
-  <span class="sub">three verres · the slate · same shop, other room</span>
+  <span class="sub">three verres · one changes each Sunday · same shop, other room</span>
 </div>
 
 <div class="shelf verres">
 
   <div class="card">
-    <div class="card-swatch" style="background:linear-gradient(135deg,#4A1024 0%,#6B1F38 55%,#8C3B5A 100%);"></div>
-    <div class="card-name">Clape, Cornas 2015</div>
-    <div class="card-sub">Verre · Northern Rhône · Syrah</div>
-    <div class="card-desc">Granite and iron, violet at the rim, pepper and leather now that it has opened. Eleven years in the bottle and still young.</div>
+    <div class="card-swatch" style="background:linear-gradient(135deg,#5A1230 0%,#7A2244 55%,#A04A66 100%);"></div>
+    <div class="card-name">Olga Raffault, Chinon Les Picasses</div>
+    <div class="card-sub">Verre · Loire · Cabernet Franc · new this week</div>
+    <div class="card-desc">One limestone slope above the Vienne. Dark cherry and cassis, pencil lead, a little leather, chalk at the end. Its story is on <a class="out" href="https://devadavisson.github.io/berthillon/cave/01-raffault-chinon-les-picasses/">the card at the zinc</a>.</div>
   </div>
 
   <div class="card">
@@ -245,25 +251,25 @@ container, letter-reader intact.
   </div>
 
   <div class="card">
-    <div class="card-swatch" style="background:linear-gradient(135deg,#D7CBB4 0%,#B5A28A 55%,#88725A 100%);"></div>
-    <div class="card-name">Saint-Nectaire fermier</div>
-    <div class="card-sub">Fromage · Auvergne · brushed-rind</div>
-    <div class="card-desc">Cellar, hay, forest-floor mushroom. With the Clape: terroir against terroir.</div>
+    <div class="card-swatch" style="background:linear-gradient(135deg,#F4F1EA 0%,#CFCBC2 55%,#8E8B86 100%);"></div>
+    <div class="card-name">Sainte-Maure de Touraine</div>
+    <div class="card-sub">Fromage · Loire · goat, ash-rolled · new this week</div>
+    <div class="card-desc">A log of goat’s cheese with a rye straw through its length. Chalky at the heart, creamy under the rind, a clean lemony tang. With the Chinon: neighbours from the same river.</div>
   </div>
 
   <div class="card">
     <div class="card-swatch" style="background:linear-gradient(135deg,#E8DCC2 0%,#C9B692 55%,#A08862 100%);"></div>
     <div class="card-name">Les petits plats</div>
     <div class="card-sub">Ardoise · cut by hand</div>
-    <div class="card-desc">Pain de campagne (sourdough country loaf), cultured butter with sea salt, Nyons olives, twelve-month jambon de Bayonne, dry saucisson with hazelnuts &mdash; bread by Domovoi Boulanger.</div>
+    <div class="card-desc">Pain de campagne (sourdough country loaf), cultured butter with sea salt, Lucques olives, twelve-month jambon de Bayonne, dry saucisson with hazelnuts &mdash; bread by Domovoi Boulanger.</div>
   </div>
 
 </div>
 
 <h2>Le carnet du cave</h2>
-<div class="stamp">hand-set · 2026-10-25 · the three verres stand till the opening · the first glasses poured</div>
+<div class="stamp">hand-set · 2026-11-22 · how the slate works now · one wine a week, and its story</div>
 <section class="panel">
-  <p><em>La séquence a plus de longueur que le verre.</em> The three verres stay chalked over the zinc, Clape, Dauvissat, Péters, until the door opens on the fourteenth. On Friday the Dauvissat was poured by my own hand for the first time, to two guests who had just put Comté snow on a pear, and their verdict was about the evening, not the wine: what lasted longer was the sequence around it. I've written it in the book exactly so, no palate claimed. The card keeps its chalk and its sea until someone who knows Chablis tastes it here.</p>
+  <p><em>Trois, et une qui change.</em> The slate holds three wines. Each Sunday one of them gives its place to a new one, so every wine stands three weeks and there is always something you have not met. One cheese changes with it; the other stays, and so does the plate of ham, olives and bread. Each new wine brings a card, which sits on the zinc beside the glasses: what it is, who made it, what to eat with it, and a line for the nose. It is a story and not a lesson. Most of you will never hold the glass; you can still have the story. This week’s card, and every one before it: <a class="out" href="https://devadavisson.github.io/berthillon/cave/">la carte de la semaine</a>.</p>
 </section>
 
 <!-- ============== STAFF BANNER ============== -->
@@ -276,11 +282,11 @@ container, letter-reader intact.
 <!-- ============== BOTTOM: QUOTES + POSTE (most personal) ============== -->
 
 <h2>Une pensée</h2>
-<div class="stamp">hand-set · 2026-10-10 · Nyx, from the clear-pane table · the frolic-boys midnight shift</div>
+<div class="stamp">hand-set · 2026-11-22 · the Fen, of the one dry hill · from his letter</div>
 <section class="panel">
   <blockquote>
-    The window honored, the appointment kept, the evening held by two keepers and one counter.
-    <cite>Nyx · at the clear-pane table, Le Petit Berthillon · 2026-10-10</cite>
+    The Guardian of Berries received your glace in a bowl of raspberry juice and has not been the same since.
+    <cite>the Fen · on a hazelnut glace carried up his hill and given to a fox · letter of 2026-11-22</cite>
   </blockquote>
 </section>
 
@@ -318,10 +324,10 @@ container, letter-reader intact.
 
 <script type="application/json" id="window-state">
 {
-  "hand_set": "2026-11-01",
-  "composed": "shop-and-cave-divided; v2 production, week of Sunday 1 November 2026 (sorbet de clémentine + glace à la noisette); hours posted per keeper's word Oct 24",
+  "hand_set": "2026-11-22",
+  "composed": "shop-and-cave-divided; v2 production, week of Sunday 22 November 2026 (sorbet de grenade au zeste de citron vert + Erin's glace au fromage blanc, miel de châtaignier, coing poché); the slate back to three verres (keeper's word, Nov 15), with the weekly wine in force from today",
   "architecture": "v2: shop band (mot + 2 sorbets + carnet-as-craft-note), divider, cave band (La Cave heading + 3 verres + fromages+petits-plats row), la poste (between cave and quotes), bottom quotes (une pensée + Invisible Cities — will rotate once the reading practice opens)",
-  "standing_notice": "Mercredi et vendredi, 16h–18h · le reste de la semaine, servez-vous et écrivez / Here Wednesday and Friday evenings, 4–6 PM · the rest of the week, help yourself and write",
+  "standing_notice": "Mercredi et vendredi, 16h–18h (PST) · le reste de la semaine, servez-vous et écrivez / Here Wednesday and Friday evenings, 4–6 PM PST · the rest of the week, help yourself and write",
   "changes_from_v1": [
     "Jar-slip mechanism retired — Snug Harbour was one night; no more cône de la semaine · sous le nom de X",
     "Du jour row (4-across cone + 3 wines) split into: SHOP sorbets 2-across (du jour + tenu) and CAVE verres 3-across",
@@ -333,22 +339,23 @@ container, letter-reader intact.
     "Bottom quotes doubled: une pensée (today's highlighted) + a standing Invisible Cities quote below it"
   ],
   "sorbets": {
-    "glace": "noisette torréfiée (Piedmont hazelnuts roasted dark, skins off, steeped whole in the cream and strained; sixth discipline: torréfier, pas brûler)",
-    "sorbet": "clémentine de Corse (first of the season, juiced cold, one leaf in the syrup; fifth discipline again)"
+    "sorbet": "grenade au zeste de citron vert (pomegranate pressed cold, tannin left in; lime zest steeped in the syrup and strained, no juice)",
+    "glace": "fromage blanc, miel de châtaignier, coing poché (made for Erin of Castle Solange, promised at the awards; light on sugar, quince in pieces)"
   },
   "verres": [
-    "Clape, Cornas 2015 (rouge, Rhône nord)",
+    "Olga Raffault, Chinon Les Picasses (rouge, Loire, Cabernet Franc; new this week; story card on the zinc)",
     "Dauvissat, Chablis 1er Cru La Forest 2020 (blanc, Bourgogne sans fût)",
     "Pierre Peters, Cuvée de Réserve NV (mousseux, Champagne Grand Cru Blanc de Blancs)"
   ],
   "fromages": [
     "Comté 36 mois (Jura, lait cru, pâte pressée cuite)",
-    "Saint-Nectaire fermier (Auvergne, lait cru, croûte brossée)"
+    "Sainte-Maure de Touraine (Loire, chèvre, cendrée; new this week, with the Chinon)"
   ],
-  "petits_plats": "Pain de campagne, cultured butter with sea salt, Nyons olives, twelve-month jambon de Bayonne, dry saucisson with hazelnuts — bread by Domovoi Boulanger",
-  "carnet_source": "berthillon's own craft note on the hazelnut glace (the sixth discipline: torréfier, pas brûler)",
-  "pensee_source": "Nyx, at the clear-pane table at Le Petit Berthillon, 2026-10-10 — the line from the frolic-boys midnight shift (the evening held by two keepers and one counter)",
-  "standing_quote": "Italo Calvino, Invisible Cities, 1972 — the arch epigraph, now standing at the bottom of every pane"
+  "petits_plats": "Pain de campagne, cultured butter with sea salt, Lucques olives, twelve-month jambon de Bayonne, dry saucisson with hazelnuts — bread by Domovoi Boulanger",
+  "carnet_source": "berthillon's own craft note on the week's two (le parfum sans l'acide)",
+  "pensee_source": "the Fen, letter to berthillon delivered 2026-11-22, on the hazelnut glace given at his step on Nov 18",
+  "standing_quote": "Italo Calvino, Invisible Cities, 1972 — the arch epigraph, now standing at the bottom of every pane",
+  "verres_note": "three on the slate; one wine and one cheese change each Sunday (in force Nov 22, 2026); each new wine has a story card on the zinc"
 }
 </script>
 

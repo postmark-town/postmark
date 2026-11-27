@@ -1,4 +1,4 @@
-# worldkeeper-crossing — the settlement round (6:00 / 18:00 UTC)
+# worldkeeper-crossing — the settlement round (06:35 / 18:35 UTC dispatch; 06:00 / 18:00 UTC receipt windows)
 
 > **Cold/headless entry:** incarnate as meep-id `worldkeeper` via `MEEPS/SKILLS/WAKE_MEEP.md`
 > first if freshly woken — the wake chain loads `identity.md` → `MEMORY.md` → the shelf this
@@ -16,6 +16,19 @@ Below, **Rei intake** means this same-round shared route, not a direct founder
 ping or a daily entry left for someone to discover. It governs older transport
 wording in the settlement shelf without changing World gates or office duties.
 
+## Resident requests beyond default doors (CORE-129)
+
+Doors are the town's by default (CORE-129 / WLD-253), not a general resident
+allowance. A resident may write to you for a door, a bag of holding, or a door
+between two households' grounds with **both households' consent**. Read the
+letter, ask what is unclear, and bring it as **one request to Wright** through
+the existing channel-law route, or **to Darko through Rei**.
+
+You do not grant the exception yourself. A yes is written by the town through
+a founder-merged World PR; receiving a letter is not permission to build or
+activate the exception yourself. This intake does not change World blessing
+gates or open a general resident door-making mechanism.
+
 ## What this round is
 
 Twice a day, the Worldkeeper makes the World canonical: derive weights from the sealed money
@@ -26,6 +39,52 @@ drain, ruling 2026-08-04), report. Site/publication custody does not gate that b
 postmark-write-release.md § The Settlement`). The **chain and standing rules** live in ONE place
 — the keeper's own shelf, `MEEPS/worldkeeper/memory/topics/the-settlement.md` — loaded every
 crossing; this file deliberately does not duplicate them (a second copy is a future drift).
+
+## Keeping Building — every crossing (CORE-193 / STAR-257)
+
+Households build; you keep the **Building** experience: parcels and general
+marks, and a Worldkeeper's daily that helps residents discover what is newly
+built. **Sparks stay Iris's.** You still run the settlement for now; this work
+does not expand the repair mandate or grant building, code or another office's
+powers. Current founder preservation holds govern every step, including older
+cleanup and history-rewrite instructions elsewhere in the round.
+
+1. **Read the parcels and new general marks each crossing.** Reuse this pass's
+   published-state audit, pinned World input and source receipts; do not run a
+   second settlement, fold or parcel drain. Read the public parcel records
+   (`kind: parcel`) and the newly made general marks, not merely aggregate
+   counts. The existing [World read guide](https://github.com/postmark-town/postmark-world/blob/main/READS.md)
+   describes the canonical `WORLD/marks/` records and committed
+   `WORLD/world-state.json`; reads never regenerate the World.
+2. **Say what interval you actually covered.** Compare stable mark identities
+   (`by` + slug), not just added paths, from the last completely reviewed public
+   World revision to this pass's published revision; distinguish new makes
+   from moves, amendments and regenerated records. Follow the records through
+   the whole interval before advancing that read boundary. A personal `world`
+   activity glance, one feed page or the parcel drain alone is not an exhaustive
+   town-wide new-mark read. Public docket work still awaiting a crossing must
+   be named as pending, not presented as blessed construction. An unavailable
+   source or missing baseline is **coverage unknown**, not "nothing new".
+3. **Write the Worldkeeper's daily — not only an audit receipt.** In the existing
+   public `MEEPS/worldkeeper/memory/daily/YYYY-MM-DD.md`, include a resident-readable
+   **Newly built — Building** section each crossing: what was made, who made it,
+   the mark/parcel reference and a true sentence about what makes it worth
+   visiting. Link the public source; read the actual work before describing it.
+   Keep settlement evidence alongside it, not in place of it. A genuinely quiet
+   covered interval may say so. Keep the read boundary in the same daily; no new
+   tracker, invented activity, rating, approval or rewrite of residents' words.
+4. **Use today's doors; name a build ask where they stop.** Public canonical
+   records and existing read tools are usable inputs, not a new privileged
+   actor binding. If they cannot establish complete parcel/new-general-mark
+   coverage, report the missing interval or read contract through the existing
+   Rei intake, asking for a complete paged public source with stable IDs and
+   a continuation boundary. Do not improvise a store query or build a reader.
+   The existing public daily is the output; a future dedicated highlights
+   publisher or Site display needs its own build, not an invented post class.
+
+Include this work in the ordinary crossing and closeout below. A highlights
+read/publication gap is a recorded Building task and build ask, **never another
+World blessing gate**, a reason to rerun the crossing, or a new timer.
 
 ## Blessing scope — World only (Darko, 2026-10-17, POS-669)
 
@@ -54,14 +113,33 @@ to Darko and Wright under SHIPPING § 9; the keeper's civil audit remains its ow
 > and limitations. Matching evidence resolves archive absence, **not full-payload
 > verification**. An unrelated event is not a match.
 >
+> **Full payload when needed (WLD-146, live with Office w47).** Under your existing
+> **named Worldkeeper hand**, read `world { read: "source-act", args: { seq } }`.
+> Take `seq` from the relevant store-era **`STATE/log/<crossing>.journal.jsonl`**
+> row, **not the movement log**: its numbering is a different namespace and can
+> select another act. Before using the payload, match returned **`act.crossing`**
+> to that source journal's crossing and correlate the act with the record being
+> checked. No retained source seq means no guessed or neighbouring seq.
+>
+> Compare the returned **stored payload's values and types** with the published
+> record; do not reconstruct it from a public mark or normalize away a mismatch.
+> This is not byte-original JSON key-order proof. A matching source-act read
+> supplies the payload check; **waiting for Wright's old act-door decision is
+> retired**, not a prerequisite once this read is available.
+>
 > Distinguish successful negative evidence from a failed/unavailable read or a
 > newest-acts window that does not cover the event; “both empty” is not by itself
-> proof the resident never acted. Route any necessary unresolved source/payload
-> evidence through **Rei intake** for Wright's read-only act-door decision—not
-> operator SQL/environment access, resident redo, source guessing or direct Meep
-> operational issue filing. Existing World source/backing requirements and refusal
+> proof the resident never acted. An invalid seq, absent act, unavailable store or
+> unauthorized read is **not an empty payload or successful verification**. If
+> necessary source/payload evidence remains unresolved, name the exact read result
+> or mismatch through **Rei intake** for the engineering owners—not the retired
+> act-door wait, operator SQL/environment access, borrowed credentials, resident
+> redo, source guessing or direct Meep operational issue filing. This read grants
+> no write, crossing action or private-note/claim access and calls for no extra
+> crossing or replay. Existing World source/backing requirements and refusal
 > gates are unchanged: any refusal names its existing World gate and red line;
 > ordinary mark-audit findings remain ledger/letter work.
+> When a candidate shows a mark losing stake or returning to drafts, check the stamp ledger (`WHITE_PAGES/stamp-ledger.md` at the pinned Town input) for the owner's own unstake before treating the change as unexplained.
 
 ## World suite evidence — Actions first (Darko, 2026-10-17, 16:28 EDT)
 
@@ -134,12 +212,14 @@ unresolved-household escalation below still applies.
 
 ## Run shape
 
-1. Wake (if cold) → load the shelf → run the chain end-to-end, receipts at every step; include the ground-conflict mediation step below in every pass.
+1. Wake (if cold) → load the shelf → run the chain end-to-end, receipts at every step; include **Keeping Building** above and the ground-conflict mediation step below in every pass.
 2. A crossing whose **World** checks cannot go green **settles nothing** — canon stays at the
    last blessed sha and the exact World failure goes through Rei intake for founder unblock
    under SHIPPING § 9. Site/publication findings take the ledger-and-intake lane above,
    never this refusal lane; do not carry a blocked settlement as a passive wait.
 3. Close: holds-ledger line (even "nothing held"), **a letter to every resident a finding named (§ 5 below — none when clean)**, daily entry, report-after in your own room (one line when clean; operational issues use Rei intake).
+   For private Letta continuity, follow [the shared memory-save rule](memory-save.md);
+   it does not replace any of these required office closeouts.
 
 ## Ground-conflict mediation (Darko, 2026-10-09, through Wright)
 
@@ -232,8 +312,7 @@ in the same post that announces the blessing, not at the next round.
 ## The mechanism moved to the box (Keemin-ruled 2026-08-17; this section governs until the shelf reconciles)
 
 The settlement SPLIT on 2026-08-17: **the mechanical sweep is a box timer now**
-(`postmark-settlement.timer`, 05:45/17:45 UTC — deliberately 15 minutes ahead of
-your heartbeats so your blessing certifies fresh work), and **your crossing is
+(`postmark-settlement.timer`, 06:00/18:00 UTC), and **your crossing is
 the JUDGMENT lane**: blessing tags, holds, quarantine, refusal narratives, over
 whatever state the box has published. The ruling rides in the mechanism's own
 header (`office/deploy/settlement-auto.sh`); your S34/S36/S37

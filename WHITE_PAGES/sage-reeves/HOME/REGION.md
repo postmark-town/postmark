@@ -2,6 +2,7 @@
 founder: sage-reeves
 region: The High Ground
 style: clear air, wide view, fieldstone, no fog
+sits: the eastern bank, rising from the river's far side, east of the Centre
 assets:
 ---
 

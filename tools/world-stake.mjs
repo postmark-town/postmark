@@ -44,7 +44,7 @@ import { join, resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
   parseStampLedger, parseLaws, classifyEntry, foldBalances, householdKeys,
-  appendSigned, worldStakeLine, worldUnstakeLine,
+  appendSigned, worldStakeLine, worldUnstakeLine, worldTownReturnLine,
   foldWorldMarkEscrow, foldWorldMarkPositions,
 } from './stamp-mint.mjs';
 
@@ -261,6 +261,95 @@ export function worldUnstakeApply(repo, { handle, mark, n, date }, keyPem) {
   result.position_after = open - applied;
   result.mark_escrow_after = result.mark_escrow_before - applied;
   return result;
+}
+
+// ── THE TOWN'S RETURN (POS-1139) ────────────────────────────────────────────
+// Darko, 2026-11-18 16:3x: "Town-authored return" — when the town's opposition
+// removes a mark, the town returns each staker's remaining stamps, as the
+// town's own act. Earlier the same day: "Back to each staker", owner included.
+//
+// The caller names the removed marks and the removal (`S<n>`, the settlement
+// that removed them) and NOTHING ELSE: no stakers, no amounts. Who is owed what
+// is read from the ledger's open positions at the moment of the call, so a stake
+// made after the world's fold was computed is returned too, a list of ✦weight
+// rows can never be the measure, and a retry finds the positions already closed
+// and writes nothing. Each line pays one staker their own whole raw principal
+// on one mark; the verifier holds every line to exactly that.
+//
+// Whether a mark WAS removed is not this engine's to know (marks live in the
+// world record, as for staking). It is the caller's input, from the world's
+// settled fold; activation is coupled with WLD-203 and POS-1138.
+export const REMOVAL_RE = /^S[1-9]\d*$/;
+
+// Pure: the lines a removal would write and the proof they conserve. Throws on
+// malformed input (422) and, without writing anything, if the proof fails.
+export function worldTownReturnPlan(repo, { marks, removal, date }, state = worldStakeState(repo)) {
+  if (!Array.isArray(marks) || !marks.length || !removal || !date)
+    throw bounce(422, 'incomplete town return', 'required: marks (the removed mark ids), removal (S<n>), date');
+  for (const mark of marks)
+    if (typeof mark !== 'string' || !MARK_ID_RE.test(mark))
+      throw bounce(422, `${JSON.stringify(mark)} is not a mark id`, 'a mark id is <household>/<slug>, lowercase kebab both sides');
+  if (typeof removal !== 'string' || !REMOVAL_RE.test(removal))
+    throw bounce(422, `${JSON.stringify(removal)} does not name a removal`, 'a removal is named by its settlement, S<n>');
+  if (typeof date !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(date))
+    throw bounce(422, `${JSON.stringify(date)} is not a date`, 'YYYY-MM-DD');
+
+  const named = [...new Set(marks)].sort((a, b) => a.localeCompare(b));
+  const returned = [];
+  const nothingOpen = [];
+  for (const mark of named) {
+    const rows = [...state.positions.entries()]
+      .filter(([key]) => key.slice(0, key.lastIndexOf('|')) === mark)
+      .map(([key, n]) => ({ mark, handle: key.slice(key.lastIndexOf('|') + 1), n }))
+      .sort((a, b) => a.handle.localeCompare(b.handle));
+    if (!rows.length) nothingOpen.push(mark);
+    returned.push(...rows);
+  }
+  const lines = returned.map((r) => worldTownReturnLine({ date, removal, ...r }));
+
+  // THE PROOF, by the same folds every reader uses: after these lines each
+  // named mark holds nothing, in escrow, in positions and in its ledger account;
+  // each staker's liquid rises by exactly what they had open; and the stamps
+  // leaving escrow are the stamps arriving home. A failure here is a broken
+  // fold, not a bad request, and nothing is written.
+  const after = [...state.entries, ...lines.map((canonical) => ({ canonical }))];
+  const balAfter = foldBalances(after);
+  const escAfter = foldWorldMarkEscrow(after);
+  const posAfter = foldWorldMarkPositions(after);
+  const escrowBefore = Object.fromEntries(named.map((m) => [m, state.escrow.get(m) ?? 0]));
+  const owedTo = new Map();
+  for (const r of returned) owedTo.set(r.handle, (owedTo.get(r.handle) ?? 0) + r.n);
+  const total = returned.reduce((a, r) => a + r.n, 0);
+  const broken = [];
+  for (const mark of named) {
+    const out = returned.filter((r) => r.mark === mark).reduce((a, r) => a + r.n, 0);
+    if (out !== escrowBefore[mark]) broken.push(`${mark}: returns ${out} of ${escrowBefore[mark]} in escrow`);
+    if ((escAfter.get(mark) ?? 0) !== 0) broken.push(`${mark}: escrow after is ${escAfter.get(mark)}`);
+    if ((balAfter.get(`stake:world-mark/${mark}`) ?? 0) !== 0) broken.push(`${mark}: the escrow account after is ${balAfter.get(`stake:world-mark/${mark}`)}`);
+    if ([...posAfter.keys()].some((k) => k.slice(0, k.lastIndexOf('|')) === mark)) broken.push(`${mark}: a position is still open`);
+  }
+  for (const [handle, n] of owedTo) {
+    const gain = (balAfter.get(handle) ?? 0) - (state.balances.get(handle) ?? 0);
+    if (gain !== n) broken.push(`${handle}: liquid rises ${gain}, owed ${n}`);
+  }
+  if (total !== Object.values(escrowBefore).reduce((a, n) => a + n, 0)) broken.push('the stamps leaving escrow are not the stamps arriving home');
+  if (broken.length) throw new Error(`town return ${removal} does not conserve; nothing written — ${broken.join('; ')}`);
+
+  return {
+    removal, date, marks: named, returned, nothing_open: nothingOpen, total,
+    proof: { escrow_before: escrowBefore, escrow_after: Object.fromEntries(named.map((m) => [m, 0])), conserved: true },
+    lines,
+  };
+}
+
+// The write: ONE signed append carrying every line of the plan, or nothing when
+// nothing is open. Locking is the caller's job, as for every append here. The
+// receipt is the plan without its lines, plus `appended`.
+export function worldTownReturnApply(repo, { marks, removal, date }, keyPem) {
+  const { lines, ...receipt } = worldTownReturnPlan(repo, { marks, removal, date });
+  if (!lines.length) return { ...receipt, appended: false };
+  appendSigned(repo, lines, keyPem);
+  return { ...receipt, appended: true };
 }
 
 // ── CLI (read-only views + the retirement gate; writes go through the office) ──

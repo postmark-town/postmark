@@ -1,0 +1,158 @@
+/* The Treeline: a house at the edge of a night wood. Light travels outward from the lit clearing in five rings.
+   HTML and CSS only; no script, no image, no font. Every slot may be empty and the page still holds together. */
+
+:root {
+  --hx-ink: #c3cfd0;
+  --hx-warm: #f6efd9;
+  --hx-accent: #f0c77a;
+  --hx-glass: rgba(9, 18, 22, 0.7);
+  --hx-hair: rgba(240, 199, 122, 0.2);
+  --hx-coral: #e08a6a;
+  --hx-ok: #8fd7a4;
+  --hx-paper: #f1e8d0;
+  --hx-paper-ink: #1f2a26;
+  --hx-radius: 10px;
+  --moss: #1c3a33;
+  --ember: rgba(240, 199, 122, 0.55);
+  background-color: #05090c;
+  background-image:
+    radial-gradient(1.2px 1.2px at 9% 6%, rgba(255, 250, 235, 0.8), transparent),
+    radial-gradient(1px 1px at 41% 11%, rgba(255, 255, 255, 0.55), transparent),
+    radial-gradient(1.4px 1.4px at 77% 5%, rgba(255, 244, 214, 0.75), transparent),
+    radial-gradient(1px 1px at 91% 19%, rgba(190, 215, 230, 0.6), transparent),
+    linear-gradient(180deg, #0b1620 0, #06100f 38%, #040807 100%);
+  background-size: 260px 210px, 310px 250px, 240px 200px, 340px 280px, 100% 100%;
+  border-radius: 14px;
+  padding: 0 0 2em;
+  color: var(--hx-ink);
+}
+
+h2 { font-family: var(--pm-serif); font-weight: 600; }
+.wood { display: grid; gap: 0; }
+
+/* THE CLEARING: the house, the next crossing, a low moon, and a line of pines along the foot. */
+.clearing {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1em 2em;
+  padding: 2.6em 1.6em 5.2em;
+  overflow: hidden;
+  background-image:
+    radial-gradient(ellipse at 22% 100%, rgba(240, 199, 122, 0.32), rgba(240, 199, 122, 0.08) 38%, transparent 68%),
+    radial-gradient(ellipse at 22% 100%, transparent 0, transparent 20%, rgba(240, 199, 122, 0.07) 21%, transparent 23%, transparent 38%, rgba(240, 199, 122, 0.05) 39%, transparent 41%);
+  animation: breathe 9s ease-in-out infinite;
+}
+.moon {
+  position: absolute;
+  top: 1.5em;
+  right: 2.2em;
+  width: 3.4em;
+  height: 3.4em;
+  margin: 0;
+  border-radius: 50%;
+  background-image: radial-gradient(circle at 36% 34%, #fffaf0, #d7e1e6 62%, #9fb3bd);
+  box-shadow: 0 0 2.4em rgba(200, 225, 240, 0.35), 0 0 7em rgba(150, 190, 210, 0.15);
+}
+.lamp { position: relative; flex: 1 1 22em; min-width: 0; }
+.clearing hearth-house { display: block; padding: 0; }
+.clearing hearth-house p:nth-of-type(2) {
+  font-size: clamp(2.1rem, 5.4vw, 3.3rem);
+  color: var(--hx-warm);
+  text-shadow: 0 0 1.1em var(--ember);
+}
+.motto { margin: 0.7em 0 0; max-width: 32em; font-style: italic; color: var(--hx-ink); }
+.when { position: relative; flex: 0 1 18em; min-width: 0; }
+.clearing hearth-countdown { display: block; }
+
+/* the pines: two staggered saw-tooth rows of dark triangles, built from gradients (no image) */
+.trees {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3.8em;
+  background-image:
+    linear-gradient(135deg, #040807 25%, transparent 25%),
+    linear-gradient(225deg, #040807 25%, transparent 25%),
+    linear-gradient(135deg, #0a1b17 25%, transparent 25%),
+    linear-gradient(225deg, #0a1b17 25%, transparent 25%);
+  background-size: 2.6em 2.6em, 2.6em 2.6em, 3.7em 3.7em, 3.7em 3.7em;
+  background-position: 0 100%, 0 100%, 1.1em 100%, 1.1em 100%;
+  background-repeat: repeat-x;
+}
+
+/* THE RINGS: each section a little farther from the lamp, so a little dimmer and a little wider. */
+.ring { display: grid; gap: 1em; padding: 1.6em 1.6em 1.3em; min-width: 0; }
+.head { margin: 0; font-size: 1.35rem; color: var(--hx-warm); }
+.head::before { content: "●"; margin-right: 0.55em; font-size: 0.55em; vertical-align: 0.25em; color: var(--hx-accent); text-shadow: 0 0 0.9em var(--ember); }
+.ring-two .head::before { opacity: 0.8; }
+.ring-three .head::before { opacity: 0.62; }
+.ring-four .head::before { opacity: 0.44; }
+.ring-five .head::before { opacity: 0.3; }
+
+.ring-one { background-image: linear-gradient(180deg, rgba(240, 199, 122, 0.09), transparent 70%); }
+.ring-two { background-image: linear-gradient(180deg, rgba(240, 199, 122, 0.06), transparent 70%); }
+.ring-three { background-image: linear-gradient(180deg, rgba(120, 180, 160, 0.05), transparent 70%); }
+
+hearth-residents { display: block; }
+hearth-residents > div { grid-template-columns: repeat(auto-fill, minmax(15em, 1fr)); }
+hearth-residents article { box-shadow: 0 0 2.2em rgba(240, 199, 122, 0.1); border-top: 2px solid var(--hx-accent); }
+
+/* the near ring holds two slots side by side; a lone slot takes the whole row, an empty one takes none */
+.near { display: grid; grid-template-columns: repeat(auto-fit, minmax(17em, 1fr)); gap: 1em; align-items: start; }
+.near hearth-stamps, .near hearth-windows { min-width: 0; }
+.door { display: grid; gap: 1em; }
+.door hearth-needs-you, .door hearth-mail { display: block; }
+hearth-mail { background: var(--hx-glass); border: 1px solid var(--hx-hair); border-radius: var(--hx-radius); padding: 1em 1.15em; }
+
+.trails { display: grid; grid-template-columns: repeat(auto-fit, minmax(19em, 1fr)); gap: 1.1em; align-items: start; }
+.trails hearth-ties, .trails hearth-day, .trails hearth-closer, .trails hearth-stamps-went, .trails hearth-map, .trails hearth-stamps-chart {
+  display: block;
+  min-width: 0;
+  padding: 1em 1.1em;
+  background: var(--hx-glass);
+  border: 1px solid var(--hx-hair);
+  border-radius: var(--hx-radius);
+}
+hearth-ties li::before { content: "✦"; margin-right: 0.5em; color: var(--hx-accent); opacity: 0.8; }
+
+.far { display: grid; grid-template-columns: repeat(auto-fit, minmax(20em, 1fr)); gap: 1.1em; align-items: start; opacity: 0.94; }
+.far hearth-coming-up, .far hearth-around-town, .far hearth-town, .far hearth-posts, .far hearth-marks {
+  display: block;
+  min-width: 0;
+  padding: 1em 1.1em;
+  background: rgba(7, 14, 16, 0.62);
+  border: 1px solid rgba(195, 207, 208, 0.13);
+  border-radius: var(--hx-radius);
+}
+
+.ring-five hearth-happened { display: block; padding: 1em 1.1em; background: rgba(5, 9, 10, 0.7); border: 1px solid rgba(195, 207, 208, 0.1); border-radius: var(--hx-radius); }
+
+/* fewer small words: the grey line under a heading only explains it */
+[data-hearth-part="caption"] { opacity: 0.7; }
+
+/* a lit house: the window is warmer for its own people */
+:root[data-hearth-view="owner"] .clearing { background-color: rgba(240, 199, 122, 0.05); }
+:root[data-hearth-view="owner"] .motto { color: var(--hx-accent); }
+
+a:hover, a:focus { color: var(--hx-warm); }
+
+@keyframes breathe {
+  0% { background-size: 100% 100%, 100% 100%; }
+  50% { background-size: 112% 118%, 108% 112%; }
+  100% { background-size: 100% 100%, 100% 100%; }
+}
+
+@media (max-width: 700px) {
+  .clearing { padding: 2em 1em 4.6em; }
+  .moon { top: 1em; right: 1em; width: 2.4em; height: 2.4em; }
+  .ring { padding: 1.2em 0.9em 1em; }
+  .when { flex: 1 1 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .clearing { animation: none; }
+}

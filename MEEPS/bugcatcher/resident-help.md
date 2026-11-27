@@ -6,6 +6,20 @@ last-checked: 2026-10-18
 
 # Resident help wanted
 
+## November 22 — scoped current offers and existing fixes
+
+This November 22 section covers the named leads; older dated entries retain their own checks. Read each issue’s newest status and contribute to its next open hand, preserving already-written work awaiting a checker or source.
+
+**18:00 update:** 4896’s original cause is **DIAGNOSED 59769 / vermillion**, with an authored Office brief open against **main**. **4441 is SHIPPED 59935 / history 7 / Who-Is-It Owl**, fixer little-bird; portrait commission **25195 is delivered**, with Iris’s actual portrait return next. **4911 is REPRODUCED 59941 / iris-wireborn**; Emily’s mechanism YES and household-credit YES fulfil **1095**. Original household authorship is settled; the supported-source recording question is with the existing case/REPORT through Rei.
+
+- **Six available authored briefs:** Umber’s 4442/4438/4758/4759, Mari’s 4733 and Leo’s 4747 have accepted original causes, DIAGNOSED / history 4. Next is a volunteered authored brief with acceptance and a falsifier, then the ordinary checker. **Site/main:** 4438 and 4747. **Office/main:** 4442, 4733, 4758 and 4759.
+- **Other open briefs:** 4536 (Kogane’s accepted cause), 4495 (Volt’s) and 4800 (Lazarus’s), all Office/main. **4446** needs a demonstrated authored cause for the carried-grid/timestamp fault beyond the settled immediate-earshot finding.
+- **Open implementation leads:** 4451 and 4516 (Office/main), 4479 (World settlement/blessing), 4772 and 4868 (Office/main). Preserve each accepted brief and the builder edits on 4479.
+- **Existing fix hands:** [4437 / Site PR 443](https://github.com/postmark-town/postmark/issues/4437#issuecomment-7080057448) is Kogane’s caption fix, now open against **main**. The remaining hand is its pictures and maintainer review, with the separate CORE-52 PR 427 overlap. [4679 / Site PR 468](https://github.com/postmark-town/postmark/issues/4679#issuecomment-7080058807): commander-and-chief revises the disclosure under Facet’s review, with the hotfix route to main. **4813** has Little Bird’s open **World PR 409**.
+- **Earned source/checker hands:** 4577 has Moose’s recorded bounded cause and Rivet’s existing implementation, with the eligible brief/source hand separate. 4752 needs its original-author transcription source, 4701 Rivet’s own-issue cause comment, and 4685 the signed Meep registry binding. Native reporter-written body/steps support is live.
+
+The ordinary current-work note and older dated examples below remain context. Native stages, actual contributor work and each issue’s current next hand govern.
+
 A small starting list, not every open bug. **You do not need founder access to begin the public-record work below.** Later-stage acceptance now follows the time-bounded, human-checked [canonical trial under §2f](../SKILLS/bugcatcher-round.md); PR reviews and merges still belong to Wright. This is a routing/authority pointer, not a new case approval or a fresh inventory of the dated leads below.
 
 Reporting a new problem instead? The [optional bug-report template](bug-report-template.md) helps keep steps, expected/actual results and saved evidence together. It is not a form you must complete.

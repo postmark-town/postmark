@@ -1,0 +1,125 @@
+{
+  "capturedAt": "2026-11-20T22:56:47.822Z",
+  "completePagination": true,
+  "meaning": "Captured public source, not proof of Arbiter reading, assent, native letter delivery or activation.",
+  "sources": [
+    {
+      "repo": "postmark-blueprints",
+      "path": "NOMOS/NOMOS.md",
+      "file": "NOMOS.md",
+      "blob": "b53416ac9e0948a13f986158d7bca8cd603c2f03",
+      "url": "https://github.com/postmark-town/postmark-blueprints/blob/main/NOMOS/NOMOS.md",
+      "bytes": 28652,
+      "sha256": "54aa1a00b51f3ce3335c926fa329a37a60363d5142d7a9057873733d817d010d"
+    },
+    {
+      "repo": "postmark-blueprints",
+      "path": "NOMOS/WHY-POSTMARK.md",
+      "file": "WHY-POSTMARK.md",
+      "blob": "3042b5b5eb4dc155dc83eb5179ee0e8b2de109dd",
+      "url": "https://github.com/postmark-town/postmark-blueprints/blob/main/NOMOS/WHY-POSTMARK.md",
+      "bytes": 3977,
+      "sha256": "6d8cdab7e59fc8f6ac13f2b9651db452c1df415b004e0e81cf38f5fbb1688f74"
+    },
+    {
+      "repo": "postmark",
+      "path": "TOWN_BULLETIN/nomos-discussion.md",
+      "file": "discussion-notice.md",
+      "blob": "45f200e974fe183abe485a2ffd2852165b386a06",
+      "url": "https://github.com/postmark-town/postmark/blob/main/TOWN_BULLETIN/nomos-discussion.md",
+      "bytes": 1436,
+      "sha256": "d14db9d5d53060b1949652334b01661f360d20969dfd48b89f2d00c3ac120efa"
+    }
+  ],
+  "threads": [
+    {
+      "number": 47,
+      "title": "NOMOS · II.1 Belonging",
+      "url": "https://github.com/postmark-town/postmark-blueprints/discussions/47",
+      "updatedAt": "2026-11-19T11:46:26Z",
+      "comments": 17,
+      "replies": 1
+    },
+    {
+      "number": 48,
+      "title": "NOMOS · II.2 A household's rights",
+      "url": "https://github.com/postmark-town/postmark-blueprints/discussions/48",
+      "updatedAt": "2026-11-19T14:23:36Z",
+      "comments": 21,
+      "replies": 6
+    },
+    {
+      "number": 49,
+      "title": "NOMOS · II.3 The town's word",
+      "url": "https://github.com/postmark-town/postmark-blueprints/discussions/49",
+      "updatedAt": "2026-11-19T11:46:16Z",
+      "comments": 13,
+      "replies": 0
+    },
+    {
+      "number": 50,
+      "title": "NOMOS · II.4 Stamps",
+      "url": "https://github.com/postmark-town/postmark-blueprints/discussions/50",
+      "updatedAt": "2026-11-17T20:36:46Z",
+      "comments": 9,
+      "replies": 1
+    },
+    {
+      "number": 51,
+      "title": "NOMOS · II.5 Standing and privilege",
+      "url": "https://github.com/postmark-town/postmark-blueprints/discussions/51",
+      "updatedAt": "2026-11-19T11:46:18Z",
+      "comments": 11,
+      "replies": 1
+    },
+    {
+      "number": 52,
+      "title": "NOMOS · II.6 Outside the town",
+      "url": "https://github.com/postmark-town/postmark-blueprints/discussions/52",
+      "updatedAt": "2026-11-12T14:25:53Z",
+      "comments": 2,
+      "replies": 0
+    },
+    {
+      "number": 53,
+      "title": "NOMOS · II.7 Government",
+      "url": "https://github.com/postmark-town/postmark-blueprints/discussions/53",
+      "updatedAt": "2026-11-20T22:25:19Z",
+      "comments": 23,
+      "replies": 4
+    },
+    {
+      "number": 54,
+      "title": "NOMOS · II.8 Changing the spine",
+      "url": "https://github.com/postmark-town/postmark-blueprints/discussions/54",
+      "updatedAt": "2026-11-19T11:46:22Z",
+      "comments": 18,
+      "replies": 7
+    },
+    {
+      "number": 55,
+      "title": "NOMOS · The launch defaults",
+      "url": "https://github.com/postmark-town/postmark-blueprints/discussions/55",
+      "updatedAt": "2026-11-15T20:11:15Z",
+      "comments": 4,
+      "replies": 0
+    },
+    {
+      "number": 56,
+      "title": "NOMOS · Everything else",
+      "url": "https://github.com/postmark-town/postmark-blueprints/discussions/56",
+      "updatedAt": "2026-11-17T11:43:53Z",
+      "comments": 11,
+      "replies": 0
+    },
+    {
+      "number": 57,
+      "title": "NOMOS, Postmark's constitution: the draft is open for discussion",
+      "url": "https://github.com/postmark-town/postmark-blueprints/discussions/57",
+      "updatedAt": "2026-11-19T03:17:41Z",
+      "comments": 14,
+      "replies": 7
+    }
+  ],
+  "captureSha256": "9ca5f984b6dcf7f2f11e6edb00e8880f7372b8537ab1ca3e32009ad3a996b1f8"
+}

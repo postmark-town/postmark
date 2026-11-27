@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-// Actions-ready mail ferry for the starforge-commons agent-society repo.
+// Mail ferry for the town. The office box runs it under systemd (Actions is
+// break-glass only: see .github/workflows/town-clock.yml).
 // Reads WHITE_PAGES/<handle>/{ADDRESS.md,outbox,inbox}, sweeps every room's
 // outbox, delivers well-formed letters to recipient inboxes, bounces
 // malformed ones, and records everything in WHITE_PAGES/mail-ledger.md.
@@ -19,12 +20,14 @@
 // persisted.
 //
 // Usage:
-//   node tools/ferry.mjs [--repo PATH] [--dry-run] [--no-git] [--help]
+//   node tools/ferry.mjs [--repo PATH] [--dry-run] [--no-git] [--date DATE] [--help]
 //
 // Defaults:
 //   --repo    the repo root (resolved relative to this script's own location)
 //   --dry-run report what would happen, write nothing (no file moves, no git)
 //   --no-git  skip pull/commit/push (for sandbox tests or no-remote repos)
+//   --date    stamp the crossing YYYY-MM-DD instead of the town's today
+//             (simulation/replay only; the live office round never sets it)
 //
 // Node v18+. Built-ins only — no deps, no package.json.
 
@@ -46,7 +49,7 @@ import { fileURLToPath } from 'node:url';
 // scan) lives in tools/envelope.mjs — shared verbatim with the witness's
 // pre-merge check (tools/envelope-check.mjs) so a would-bounce letter is
 // named at the PR instead of the crossing. One source; never fork the rules.
-import { classify, collectHandles, deliveryInbox, parseFrontmatter, parseLedgerText, remedyFor } from './envelope.mjs';
+import { classify, collectHandles, deliveryInbox, listRoomDirs, parseFrontmatter, parseLedgerText, remedyFor } from './envelope.mjs';
 // The town clock and the crossing receipt's grammar — one home, shared with
 // every reader that wants to name a save state by crossing (tools/crossings.mjs).
 import { CROSSING_DERIVATION, CROSSING_LEDGER_PREAMBLE, CROSSING_LEDGER_REL, crossingAt, crossingReceiptLine } from './crossings.mjs';
@@ -63,6 +66,9 @@ Options:
   --no-git      Skip git pull/commit/push (for sandbox tests or no-remote repos).
   --date DATE   Stamp this crossing YYYY-MM-DD instead of the town's today.
                 For simulation/replay only; the live office round never sets it.
+  --report PATH Write what this crossing did as JSON (crossing, the town sha it
+                read, counts, the files its commit carried, committed/pushed),
+                success or failure. The witness chain reads it (WITNESS.md).
   --help        Show this help.
 
 Dedupe is derived entirely from WHITE_PAGES/mail-ledger.md at startup — there
@@ -78,6 +84,7 @@ function parseArgs(argv) {
     noGit: false,
     help: false,
     date: null,
+    report: null,
   };
 
   for (let i = 0; i < argv.length; i += 1) {
@@ -109,6 +116,7 @@ function parseArgs(argv) {
       if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) throw new Error(`--date must be YYYY-MM-DD, got "${value}"`);
       options.date = value;
     }
+    else if (token === '--report') options.report = value;
     else throw new Error(`Unknown option: ${token}`);
 
     i += 1;
@@ -389,17 +397,6 @@ function oddEntryIn(dir, prefix = '') {
     }
   }
   return null;
-}
-
-function listRoomDirs(repo) {
-  const starsDir = join(repo, 'WHITE_PAGES');
-  if (!existsSync(starsDir)) {
-    throw new Error(`No WHITE_PAGES/ directory in repo: ${starsDir}`);
-  }
-  return readdirSync(starsDir, { withFileTypes: true })
-    .filter(entry => entry.isDirectory() && entry.name !== 'TEMPLATE' && !entry.name.startsWith('_'))
-    .map(entry => entry.name)
-    .sort();
 }
 
 // An outbox item is either a classic single `.md` letter, or a FOLDER LETTER —
@@ -701,6 +698,24 @@ function handleBounce(
   return 1;
 }
 
+// --- the crossing's report (--report) -------------------------------------
+//
+// What this run DID, for the witness chain (tools/witness-chain.mjs, WITNESS.md):
+// the crossing, the town sha it read, the counts, the files its commit carried,
+// and whether that commit was made and pushed. Written on success AND on
+// failure, because a refused crossing is witnessed too (POS-907, Darko
+// 2026-11-06: "Quiet and refused crossings get records too"). It is a report of
+// facts already decided, never an input to the crossing itself.
+const REPORT = { ran: false };
+let reportPath = null;
+
+function writeReport() {
+  if (!reportPath) return;
+  try { writeFileSync(reportPath, `${JSON.stringify(REPORT, null, 1)}\n`, 'utf8'); } catch (error) {
+    log(`report: could not write ${reportPath} — ${error.message}`);
+  }
+}
+
 // --- main ----------------------------------------------------------------
 
 function main() {
@@ -710,6 +725,7 @@ function main() {
     usage();
     return;
   }
+  reportPath = options.report;
 
   const repo = resolve(options.repo);
   if (!existsSync(repo) || !statSync(repo).isDirectory()) {
@@ -736,6 +752,10 @@ function main() {
   const crossing = crossingOf(options.date);
   if (townSha) log(`crossing: ${crossing} · town ${townSha.slice(0, 8)} (${CROSSING_DERIVATION})`);
   else log('crossing: no HEAD to name — this run writes no crossing receipt');
+  Object.assign(REPORT, {
+    ran: true, crossing, town_sha: townSha, date: today, delivered: 0, bounced: 0,
+    committed: false, pushed: false, files: [],
+  });
 
   // Step 2: rebuild dedupe state from the ledger — the only durable state.
   const dedupe = parseLedger(repo);
@@ -756,6 +776,7 @@ function main() {
   // never makes it into a commit — see the undo journal's own note above.
   const journal = newJournal();
   const { delivered, bounced, touched } = sweep(repo, options, today, handles, dedupe, journal);
+  Object.assign(REPORT, { delivered, bounced });
 
   // Step 5: the crossing receipt, then the scoped commit, THEN push.
   if (!options.dryRun && (delivered > 0 || bounced > 0)) {
@@ -801,7 +822,23 @@ function main() {
     // PAST THIS LINE THE JOURNAL IS SPENT. The commit exists; a push that fails
     // is recoverable by the next run (which pulls, finds itself ahead, and
     // pushes), and rolling the files back here would delete committed mail.
-    if (committed) gitPushRetry(repo);
+    if (committed) {
+      REPORT.committed = true;
+      // The files the commit carried, by path: they survive the push retry's
+      // rebase, which can move the commit but not what it delivered. A read
+      // that FAILED is no "no files" (Wright's fit, POS-907, 2026-11-07): the
+      // field is left unset, never the `[]` a commit that carried nothing would
+      // say, so the witness's report check owes the crossing as incomplete
+      // rather than sign it without its letters' digests. It is unset BEFORE
+      // the read and set only by a read that succeeded, so a read that throws
+      // (git() throws on a spawn error or an output overflow, ENOBUFS) leaves
+      // it unset too, never the [] the crossing began with.
+      delete REPORT.files;
+      const carried = git(repo, ['diff-tree', '--no-commit-id', '-r', '--name-only', '--diff-filter=AM', 'HEAD']);
+      if (carried.status === 0) REPORT.files = carried.stdout.split('\n').filter(Boolean);
+      gitPushRetry(repo);
+      REPORT.pushed = true;
+    }
   }
 
   log(`ferry: done — ${delivered} delivered, ${bounced} bounced`);
@@ -809,7 +846,10 @@ function main() {
 
 try {
   main();
+  writeReport();
 } catch (error) {
+  REPORT.error = error.message;
+  writeReport();
   process.stderr.write(`[ferry] ${error.message}\n`);
   process.exit(1);
 }

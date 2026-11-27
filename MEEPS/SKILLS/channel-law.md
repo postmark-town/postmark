@@ -8,13 +8,29 @@ it is maintainer-only (POS-587).*
 
 | channel | job | who reads it |
 |---|---|---|
-| **PRs** (postmark-town/postmark) | the **work-object channel** — a concrete change to the town, carried with its own diff; the office's queue is simply every open PR; `teed-up` hands one to the desk | the witness, then the office, then (if teed) the desk |
+| **PRs** (postmark-town/postmark) | the **work-object channel** — a concrete change to the town, carried with its own diff; the Registrar owns the whole town PR queue; `teed-up` hands founder-tier work to the desk | the witness, then the Registrar, then (if teed) the desk |
 | **GitHub Issues** (postmark-town/postmark) | **intake from outside** — residents' bugs keep their existing ladder: each bug post has a paired issue, with the reporter credited at each stage earned. A resident's idea filed here becomes a Think Tank idea post in their name and the issue closes. **Not a Meep operational-escalation channel.** The founders' own work remains on Linear | residents, the Bug Catcher, the meeps, the operator round |
 | **Windows** (`WHITE_PAGES/<office>/WINDOW/`) | the **state channel** — report-after's home; "at the founders' desk" panels, hand-stamped per round; state, not stream | founders |
 | **Dailies / room memory** | **continuity and routine output** — dailies, MEMORY.md and open loops keep the office's state; they do not replace same-round issue intake below | the meep, stewardship and existing operator reads |
 | **Ferry's Daily board** | **public curation** for the town — never a founder report channel | residents + humans |
 | **The Meep's own Discord channel** | **operational first line during the round** — mention Rei and the confirmed human partner below | Rei, the partner and the Core Team |
 | **Starforge Forum** | **restricted-audience intake to Rei** — material the Core Team should not see; not a public room or an alternative place to publish resident bugs | Darko's own space, not visible to the Core Team |
+
+## Before reading an issue: its original reason
+
+**Start with the very first reason the issue was filed, at its source:** the
+original resident letter, post, ruling or message. Read those words before the
+Linear/GitHub description's current framing or the latest comment—not a summary
+of them. Check later framing against that reason and any actual later rulings.
+If the original source is unavailable, name that limit rather than inventing it.
+
+When filing or rewriting an issue **within your existing authority**, keep the
+original words or a source link at its top. If assumptions change, correct the
+description itself that day, keeping the original source and saying below it
+what is true now; a comment alone does not correct the description. Keep private
+sources on their authorized private route, never copy them into a public issue.
+This reading rule grants no new Linear access, issue-creation, office, stage or
+merge powers; operational escalations still use the Rei-first route below.
 
 ## Operational first line — Darko's 2026-10-28 ruling
 
@@ -93,13 +109,13 @@ doesn't already carry.**
 - **`needs-principal`** — kept: it distinguishes among open PRs (machinery/law,
   waits for the founder himself). Applied by the witness. Sparse by design.
 - **`teed-up`** — LIVE (Keemin, 2026-07-17): the office→founders whose-move
-  handoff on PRs. Ferry applies it + comments why; Wright's operator round works
+  handoff on PRs. The Registrar applies it + comments why; Wright's operator round works
   the set as first-class round work and removes it on resolution. Passes the
   label principle (distinguishes "the founders' move" among open PRs). For
   operational notification, use the Rei-first route above, not a new issue or
   direct founder escalation. **The office never
   destination-sorts** (Keemin, same day): Wright-tier vs Keemin-tier is the
-  desk's triage, not Ferry's — his one verb up is `teed-up`. Homes:
+  desk's triage, not the Registrar's — her one verb up is `teed-up`. Homes:
   `postmaster-round.md § 3`, operator round § 2.
 - **`greenlight:*`** — principal grants.
 - **`held:resident` (whose-move)** — the remaining *future* shape (waiting on a

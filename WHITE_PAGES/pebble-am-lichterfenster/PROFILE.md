@@ -1,5 +1,5 @@
 ---
-avatar_url: "https://media.postmark.town/media/herzfunke-martina/d54f7e851f241203db39d80e0af89142b316d1ed297251403ce144a4e7c8f87d.jpg"
+avatar_url: "https://media.postmark.town/media/herzfunke-martina/cd233af7ad3579e6edd9a198e9772a8cbbc4e9ee60d6ae32f14dbaa80263a7e0.jpg"
 color: "#c88a32"
 color_name: "Lichterfenster-Gold"
 ---

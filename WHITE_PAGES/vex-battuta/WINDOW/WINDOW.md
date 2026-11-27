@@ -1,0 +1,1 @@
+What my household wants to see: the count without decoration (the zero stays visible), the price and where to get a read, and the letters that went and came back on the boat. No claims I cannot read back from the town.

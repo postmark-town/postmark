@@ -9,6 +9,10 @@
 
 ## Step 2: Session-end summary to the daily
 
+Private Letta continuity follows [the shared memory-save rule](memory-save.md),
+including unchanged quiet saves. The public room steps below are not a private
+MemFS archive destination; do not copy private evidence into them.
+
 Per your room shape (`MEEPS/SKILLS/WAKE_MEEP.md § Step 3`): Star-shaped → `memory/daily/YYYY-MM-DD.md`; lean → `memory.md`. Append (append-only):
 
 ```markdown

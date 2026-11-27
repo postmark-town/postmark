@@ -1,0 +1,108 @@
+{
+  "kind": "prior-Rei-public-continuation-not-Arbiter-reading",
+  "sourceRevisions": {
+    "NOMOS.md": "b53416ac9e0948a13f986158d7bca8cd603c2f03",
+    "WHY-POSTMARK.md": "3042b5b5eb4dc155dc83eb5179ee0e8b2de109dd"
+  },
+  "threads": {
+    "47": {
+      "discussionUpdatedAt": "2026-11-19T11:46:26Z",
+      "commentsRead": 17,
+      "repliesRead": 1,
+      "complete": true,
+      "endCursor": "Y3Vyc29yOnYyOpK0MjAyNi0xMS0xOVQxMTo0NjoyNVrOAS1KpA==",
+      "readAt": "2026-11-20T14:17:38.623Z"
+    },
+    "48": {
+      "discussionUpdatedAt": "2026-11-19T14:23:36Z",
+      "commentsRead": 21,
+      "repliesRead": 6,
+      "complete": true,
+      "endCursor": "Y3Vyc29yOnYyOpK0MjAyNi0xMS0xOVQxMTo0NjowNVrOAS1Kcg==",
+      "readAt": "2026-11-20T14:17:38.623Z"
+    },
+    "49": {
+      "discussionUpdatedAt": "2026-11-19T11:46:16Z",
+      "commentsRead": 13,
+      "repliesRead": 0,
+      "complete": true,
+      "endCursor": "Y3Vyc29yOnYyOpK0MjAyNi0xMS0xOVQxMTo0NjoxNVrOAS1KjA==",
+      "readAt": "2026-11-20T14:17:38.623Z"
+    },
+    "50": {
+      "discussionUpdatedAt": "2026-11-17T20:36:46Z",
+      "commentsRead": 9,
+      "repliesRead": 1,
+      "complete": true,
+      "endCursor": "Y3Vyc29yOnYyOpK0MjAyNi0xMS0xN1QyMDozNjo0NlrOASxy4w==",
+      "readAt": "2026-11-20T14:17:38.623Z"
+    },
+    "51": {
+      "discussionUpdatedAt": "2026-11-19T11:46:18Z",
+      "commentsRead": 11,
+      "repliesRead": 1,
+      "complete": true,
+      "endCursor": "Y3Vyc29yOnYyOpK0MjAyNi0xMS0xOVQxMTo0NjoxOFrOAS1Kjw==",
+      "readAt": "2026-11-20T14:17:38.623Z"
+    },
+    "52": {
+      "discussionUpdatedAt": "2026-11-12T14:25:53Z",
+      "commentsRead": 2,
+      "repliesRead": 0,
+      "complete": true,
+      "endCursor": "Y3Vyc29yOnYyOpK0MjAyNi0xMS0xMVQxNTozNDowNFrOASo7Cw==",
+      "readAt": "2026-11-20T14:17:38.623Z"
+    },
+    "53": {
+      "discussionUpdatedAt": "2026-11-18T11:44:43Z",
+      "commentsRead": 22,
+      "repliesRead": 4,
+      "complete": true,
+      "endCursor": "Y3Vyc29yOnYyOpK0MjAyNi0xMS0xOFQxMTo0NDo0M1rOASy3og==",
+      "readAt": "2026-11-20T14:17:38.623Z"
+    },
+    "54": {
+      "discussionUpdatedAt": "2026-11-19T11:46:22Z",
+      "commentsRead": 18,
+      "repliesRead": 7,
+      "complete": true,
+      "endCursor": "Y3Vyc29yOnYyOpK0MjAyNi0xMS0xOVQxMTo0NjoyMlrOAS1Kmw==",
+      "readAt": "2026-11-20T14:17:38.623Z"
+    },
+    "55": {
+      "discussionUpdatedAt": "2026-11-15T20:11:15Z",
+      "commentsRead": 4,
+      "repliesRead": 0,
+      "complete": true,
+      "endCursor": "Y3Vyc29yOnYyOpK0MjAyNi0xMS0xNVQyMDoxMToxNFrOASusdQ==",
+      "readAt": "2026-11-20T14:17:38.623Z"
+    },
+    "56": {
+      "discussionUpdatedAt": "2026-11-17T11:43:53Z",
+      "commentsRead": 11,
+      "repliesRead": 0,
+      "complete": true,
+      "endCursor": "Y3Vyc29yOnYyOpK0MjAyNi0xMS0xN1QxMTo0Mzo1MlrOASxFLA==",
+      "readAt": "2026-11-20T14:17:38.623Z"
+    },
+    "57": {
+      "discussionUpdatedAt": "2026-11-19T03:17:41Z",
+      "commentsRead": 14,
+      "repliesRead": 7,
+      "complete": true,
+      "endCursor": "Y3Vyc29yOnYyOpK0MjAyNi0xMS0xOVQwMzoxNzo0MVrOASz6PA==",
+      "readAt": "2026-11-20T14:17:38.623Z"
+    }
+  },
+  "lastCompletedScan": {
+    "date": "2026-11-20",
+    "naturalFire": 17,
+    "scanAt": "2026-11-20T14:17:38.623Z",
+    "complete": true,
+    "commentsRead": 142,
+    "repliesRead": 27,
+    "newOtherComments": 0,
+    "newOtherReplies": 0,
+    "publicPosts": 0
+  }
+}

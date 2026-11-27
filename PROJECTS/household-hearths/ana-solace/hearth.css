@@ -1,0 +1,437 @@
+:root {
+  --night: #101a2b;
+  --night-soft: #18263c;
+  --blue: #223856;
+  --amber: #f2c778;
+  --amber-soft: #f8dfad;
+  --cream: #f7f1e5;
+  --ink: #243040;
+  --ink-soft: #66707b;
+  --moss: #70836d;
+  --river: #8fb6c8;
+  --paper: #fffdf8;
+  --line: rgba(242, 199, 120, 0.35);
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --hx-ink: #243040;
+  --hx-warm: #17263a;
+  --hx-accent: #9d6418;
+  --hx-glass: rgba(255, 253, 248, 0.96);
+  --hx-hair: rgba(34, 56, 86, 0.18);
+  --hx-coral: #b65f54;
+  --hx-ok: #52785c;
+  --hx-paper: #17263a;
+  --hx-paper-ink: #fff9ee;
+  --hx-radius: 16px;
+
+  background:
+    radial-gradient(ellipse at 50% -6%, rgba(242, 199, 120, 0.18), transparent 33%),
+    linear-gradient(180deg, #0d1727 0, #132137 310px, #edf0e8 700px, #f7f1e5 100%);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.62;
+  padding: 0 1.2em 1.8em;
+  border-radius: 18px;
+}
+
+.lantern-root {
+  display: grid;
+  gap: 1.35em;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.threshold {
+  position: relative;
+  text-align: center;
+  padding: 2.2em 1em 1.2em;
+  color: var(--cream);
+}
+
+.lantern {
+  position: relative;
+  width: 68px;
+  height: 90px;
+  margin: 0 auto 0.7em;
+  filter: drop-shadow(0 0 18px rgba(242, 199, 120, 0.5));
+}
+
+.lantern-top,
+.lantern-base,
+.lantern-glow {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.lantern-top {
+  top: 0;
+  width: 28px;
+  height: 8px;
+  border-radius: 6px 6px 2px 2px;
+  background: var(--amber);
+}
+
+.lantern-glow {
+  top: 12px;
+  width: 46px;
+  height: 58px;
+  border: 2px solid var(--amber);
+  border-radius: 10px 10px 14px 14px;
+  background:
+    radial-gradient(circle at 50% 54%, #fff8db 0 12%, #f7d68c 13% 30%, rgba(242, 199, 120, 0.22) 31% 60%, transparent 61%);
+}
+
+.lantern-base {
+  bottom: 0;
+  width: 38px;
+  height: 9px;
+  border-radius: 2px 2px 7px 7px;
+  background: var(--amber);
+}
+
+.kicker,
+.room-kicker,
+.owner-kicker {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+}
+
+.kicker {
+  color: var(--amber-soft);
+}
+
+.threshold hearth-house {
+  display: block;
+  margin: 0.35em auto 0;
+  max-width: 760px;
+  --hx-ink: #efe8d9;
+  --hx-warm: #ffffff;
+  --hx-accent: #f2c778;
+  --hx-glass: rgba(13, 23, 39, 0.45);
+  --hx-hair: rgba(242, 199, 120, 0.26);
+}
+
+.welcome {
+  max-width: 760px;
+  margin: 0.7em auto 0;
+  font-size: clamp(1.25rem, 2.6vw, 1.75rem);
+  line-height: 1.4;
+  color: #fff9ee;
+}
+
+.threshold-note {
+  margin: 0.5em 0 0;
+  color: #d7dfdf;
+  font-style: italic;
+}
+
+.river-line {
+  height: 20px;
+  margin: -0.2em 2em 0;
+  border-top: 1px solid rgba(143, 182, 200, 0.55);
+  border-radius: 50%;
+  opacity: 0.85;
+}
+
+.river-line::before,
+.river-line::after {
+  content: "";
+  display: block;
+  height: 5px;
+  margin: 5px auto 0;
+  border-top: 1px solid rgba(143, 182, 200, 0.32);
+  border-radius: 50%;
+}
+
+.river-line::before { width: 78%; }
+.river-line::after { width: 58%; margin-top: 1px; }
+
+hearth-countdown {
+  margin-top: -0.6em;
+  --hx-glass: rgba(18, 33, 55, 0.82);
+  --hx-hair: rgba(242, 199, 120, 0.28);
+  --hx-warm: #fffaf0;
+  --hx-ink: #e6e8e7;
+  --hx-accent: #f2c778;
+}
+
+.porch {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+  gap: 1.2em;
+  align-items: stretch;
+}
+
+.porch-room,
+.room,
+.owner-only {
+  background: rgba(255, 253, 248, 0.97);
+  border: 1px solid rgba(34, 56, 86, 0.16);
+  border-radius: 18px;
+  box-shadow: 0 14px 35px -28px rgba(11, 25, 43, 0.65);
+}
+
+.porch-room {
+  padding: 1.15em 1.25em 1.25em;
+  min-width: 0;
+}
+
+.porch-room h2,
+.room-heading h2 {
+  margin: 0;
+  color: var(--night-soft);
+  font-weight: 500;
+}
+
+.room-intro {
+  margin: 0.2em 0 0.9em;
+  color: var(--ink-soft);
+  font-style: italic;
+}
+
+.window-room {
+  border-top: 3px solid var(--river);
+}
+
+.window-room hearth-windows {
+  display: block;
+}
+
+.owner-only {
+  padding: 1em 1.15em 1.15em;
+  border-color: rgba(242, 199, 120, 0.46);
+}
+
+:root[data-hearth-view="public"] .owner-only {
+  display: none;
+}
+
+.owner-note {
+  padding: 0.1em 0 0.8em;
+}
+
+.owner-kicker {
+  color: #8a5a1c;
+}
+
+.owner-copy {
+  margin: 0.18em 0 0;
+  color: var(--ink-soft);
+}
+
+.owner-grid {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.rooms {
+  min-width: 0;
+}
+
+.rooms > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45em;
+  justify-content: center;
+  margin: 0 0 0.9em;
+  padding: 0.55em;
+  border: 1px solid rgba(242, 199, 120, 0.26);
+  border-radius: 999px;
+  background: rgba(15, 27, 45, 0.78);
+}
+
+.rooms > div > * {
+  font-family: var(--sans);
+  font-size: 0.88rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 0.48em 0.9em;
+  background: transparent;
+  color: #e8ebea;
+  cursor: pointer;
+}
+
+.rooms > div > *:hover,
+.rooms > div > *:focus {
+  color: #ffffff;
+  border-color: rgba(242, 199, 120, 0.45);
+}
+
+.rooms > div > [aria-selected="true"] {
+  background: var(--amber);
+  color: #182235;
+  border-color: var(--amber);
+}
+
+.room {
+  padding: 1.25em 1.3em 1.4em;
+  min-width: 0;
+}
+
+.room-heading {
+  margin-bottom: 0.7em;
+  padding-bottom: 0.65em;
+  border-bottom: 1px solid rgba(34, 56, 86, 0.12);
+}
+
+.room-kicker {
+  color: #8a5a1c;
+}
+
+.room-heading h2 {
+  font-size: 1.65rem;
+}
+
+.room > * + * {
+  margin-top: 1.05em;
+}
+
+hearth-residents,
+hearth-windows,
+hearth-day,
+hearth-coming-up,
+hearth-happened,
+hearth-ties,
+hearth-closer,
+hearth-around-town,
+hearth-town,
+hearth-map,
+hearth-stamps,
+hearth-stamps-chart,
+hearth-stamps-went,
+hearth-marks,
+hearth-posts,
+hearth-needs-you,
+hearth-mail {
+  min-width: 0;
+}
+
+hearth-residents article,
+hearth-coming-up,
+hearth-around-town,
+hearth-stamps,
+hearth-posts,
+hearth-marks {
+  border-radius: 14px;
+}
+
+[data-hearth-part="caption"] {
+  color: var(--ink-soft);
+  font-style: italic;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+a {
+  color: #6e4917;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
+}
+
+a:hover,
+a:focus {
+  color: #3f6480;
+}
+
+.roots {
+  position: relative;
+  text-align: center;
+  margin-top: 0.2em;
+  padding: 2.2em 1em 0.5em;
+  color: #415047;
+}
+
+.root-crown {
+  width: 72%;
+  max-width: 680px;
+  height: 46px;
+  margin: 0 auto -0.8em;
+  border-top: 2px solid rgba(112, 131, 109, 0.48);
+  border-radius: 50%;
+  transform: rotate(-1deg);
+}
+
+.root-crown::before,
+.root-crown::after {
+  content: "";
+  display: block;
+  width: 55%;
+  height: 30px;
+  margin: 8px auto 0;
+  border-top: 1px solid rgba(112, 131, 109, 0.38);
+  border-radius: 50%;
+}
+
+.root-crown::after {
+  width: 34%;
+  margin-top: -18px;
+}
+
+.root-rabbits {
+  display: flex;
+  justify-content: center;
+  gap: 1.3em;
+  margin: 0;
+  font-size: 1rem;
+  filter: grayscale(1);
+  opacity: 0.64;
+}
+
+.root-line {
+  max-width: 720px;
+  margin: 0.85em auto 0;
+  font-style: italic;
+}
+
+.sigil {
+  margin: 0.55em 0 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  color: rgba(65, 80, 71, 0.62);
+}
+
+@media (max-width: 780px) {
+  :root {
+    padding: 0 0.72em 1.2em;
+    font-size: 16px;
+    border-radius: 12px;
+  }
+
+  .threshold {
+    padding-left: 0.35em;
+    padding-right: 0.35em;
+  }
+
+  .porch,
+  .owner-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .rooms > div {
+    border-radius: 16px;
+  }
+
+  .room,
+  .porch-room,
+  .owner-only {
+    padding-left: 0.9em;
+    padding-right: 0.9em;
+  }
+
+  .river-line {
+    margin-left: 0.6em;
+    margin-right: 0.6em;
+  }
+
+  .root-crown {
+    width: 90%;
+  }
+}

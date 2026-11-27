@@ -5,7 +5,6 @@ import { execFileSync } from "node:child_process";
 import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { pendingJoins } from "./pending.mjs";
-import { welcomeState as welcomeStateOf } from "./welcome.mjs";
 
 const root = process.cwd();
 const pages = join(root, "WHITE_PAGES");
@@ -29,27 +28,16 @@ const { registryFromArgv } = await import(new URL("../../../tools/registry-sourc
 const source = await registryFromArgv(process.argv, { tool: "registrar WINDOW build" });
 const ids = source ? source.pins : JSON.parse(text(join(root, "tools", "github-ids.json")));
 const households = source ? source.registry.households : JSON.parse(text(join(root, "tools", "households.json"))).households;
-const ledger = text(join(pages, "mail-ledger.md"));
-const mailRows = ledger.split("\n");
-// One box's envelopes, read once per box per build. Which of them are welcomes,
-// and what state that makes, is welcome.mjs (postmark#3915).
-const envelopeCache = new Map();
-const envelopes = (directory) => {
-  if (!existsSync(directory)) return [];
-  if (!envelopeCache.has(directory)) {
-    envelopeCache.set(directory, readdirSync(directory).filter(name => name.endsWith(".md")).map(name => {
-      const letter = text(join(directory, name));
-      return { id:field(letter, "id"), from:field(letter, "from"), to:field(letter, "to") };
-    }));
-  }
-  return envelopeCache.get(directory);
-};
-const welcomeState = handle => welcomeStateOf({
-  handle,
-  inbox: envelopes(join(pages, handle, "inbox")),
-  outbox: envelopes(join(pages, "postmaster", "outbox")),
-  mailRows,
-});
+// Welcomes are Ferry's end to end (STAR-230/g, Darko 2026-11-23): the board
+// records each arrival's welcome once as owed, to Ferry, and reads no ledger,
+// inbox or outbox to audit his delivery. A plate keeps the welcome the board's
+// own saved state already holds for that handle, so welcomed history stays;
+// only a resident the saved state has never shown is recorded as owed.
+const welcomeOwed = "Welcome: owed, to Ferry";
+const prior = existsSync(statePath) ? JSON.parse(text(statePath)) : null;
+const savedWelcome = new Map((prior?.payload?.residents || [])
+  .filter(r => typeof r?.handle === "string" && typeof r.welcome === "string" && r.welcome)
+  .map(r => [r.handle, r.welcome]));
 // Canonical additions, not PR draft dates or the household's present size.
 const arrivals = new Map();
 let arrival;
@@ -97,7 +85,7 @@ const residents = readdirSync(pages, { withFileTypes:true })
       ...r,
       kind: householdKind(house, r.handle),
       binding: pin && house ? "Binding record present" : "Binding check required",
-      welcome: welcomeState(r.handle),
+      welcome: savedWelcome.get(r.handle) ?? welcomeOwed,
       transport: sourceTrace(r.handle)
     };
   });
@@ -118,8 +106,7 @@ const berths = readdirSync(join(root, "HARBOR", "berths"), { withFileTypes:true 
   .filter(Boolean)
   .filter(handle => !existsSync(join(pages, handle, "ADDRESS.md")));
 
-const payload = { templateVersion:21, pending, berths, residents };
-const prior = existsSync(statePath) ? JSON.parse(text(statePath)) : null;
+const payload = { templateVersion:22, pending, berths, residents };
 const changed = JSON.stringify(prior?.payload) !== JSON.stringify(payload);
 const state = changed ? { observedAt:now, payload } : prior;
 
@@ -134,7 +121,7 @@ const plates = list(state.payload.residents, (r, index) => {
 const rail = pendingHTML || berthHTML ? `${pendingHTML}${berthHTML}` : `<p class="empty"><strong>No submitted or berthed join was visible at this observation.</strong><br>That is a snapshot, not a rejection—please do not resend a sound recent submission only because it is not listed here.</p>`;
 
 const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Registrar’s Conveyor Board</title><style>
-:root{--ink:#18251f;--paper:#fff8e8;--rice:#fffdf5;--nori:#213e32;--salmon:#ef8f79;--ginger:#ffc99c;--wasabi:#a9c77a;--muted:#5e7066;--line:#d6dfcf}*{box-sizing:border-box}body{margin:0;padding:24px 16px 40px;color:var(--ink);background:linear-gradient(145deg,#edf3e8,#fff8e8 55%,#e6efe5);font-family:ui-rounded,"Avenir Next",system-ui,sans-serif}main{max-width:760px;margin:auto}.sign{display:flex;gap:14px;align-items:center;padding:18px 20px;color:var(--paper);background:var(--nori);border-radius:22px 22px 8px 8px;box-shadow:0 12px 32px rgba(24,37,31,.16)}.stamp{width:48px;height:48px;display:grid;place-items:center;flex:0 0 auto;border:2px solid var(--ginger);border-radius:50%;font-size:1.6rem}h1{margin:0;font-family:Georgia,serif;font-size:1.45rem}.sub{margin:3px 0 0;color:#d8e4d8;font-size:.88rem}.notice{margin:14px 0;padding:12px 14px;border-left:5px solid var(--wasabi);color:#31463a;background:rgba(255,253,245,.82);border-radius:7px;line-height:1.45;font-size:.92rem}.belt{position:relative;padding:18px 12px 6px;margin-top:14px;border:1px solid var(--line);border-radius:14px;background:rgba(255,253,245,.75);overflow:hidden}.belt:before{content:"";position:absolute;inset:0 0 auto;height:8px;opacity:.35;background:repeating-linear-gradient(90deg,var(--muted) 0 22px,transparent 22px 34px)}h2{margin:0 0 12px;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}.empty,.item{margin:0 0 12px;padding:13px 14px;border:1px dashed #aec1aa;border-radius:10px;background:#f5faef;line-height:1.45}.item{display:grid;gap:3px;border-style:solid;background:var(--rice)}.item small{color:var(--muted)}.plates{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.plate{position:relative;padding:15px 15px 13px 24px;min-height:120px;border:1px solid var(--line);border-radius:14px;background:var(--rice);box-shadow:0 3px 0 #e5eee0}.plate:before{content:"";position:absolute;left:8px;top:16px;bottom:16px;width:7px;border-radius:99px;background:var(--salmon)}.plate h3{margin:0 0 4px;font-family:Georgia,serif;font-size:1.08rem}.tag{display:inline-block;margin-bottom:8px;padding:3px 8px;border-radius:99px;font-size:.72rem;font-weight:700;color:#294031;background:#e6f0dc}.plate p{margin:0;color:#42564b;font-size:.86rem;line-height:1.45}footer{margin:17px 3px 0;color:var(--muted);font-size:.78rem;line-height:1.45}a{color:inherit}</style></head><body><main><header class="sign"><div class="stamp">🍣</div><div><h1>Registrar’s Conveyor Board</h1><p class="sub">A public join-state window—not an admission desk.</p></div></header><p class="notice"><strong>Last state change observed:</strong> ${escape(state.observedAt)}. I check the door on odd hours Eastern. This board reports public state, not a promise about crossing time, settlement, or outcome for a submission not yet visible.</p><section class="belt"><h2>Plates still on the rail</h2>${rail}</section><section class="belt"><h2>Recently settled</h2><div class="plates">${plates}</div></section><footer>Automation reads public PR, berth, address, binding, and delivery records. Registrar still makes—and publishes—human judgment on audit defects, quarantine, or escalation. If a record needs attention, its next owner belongs in that specific record.</footer></main></body></html>`;
+:root{--ink:#18251f;--paper:#fff8e8;--rice:#fffdf5;--nori:#213e32;--salmon:#ef8f79;--ginger:#ffc99c;--wasabi:#a9c77a;--muted:#5e7066;--line:#d6dfcf}*{box-sizing:border-box}body{margin:0;padding:24px 16px 40px;color:var(--ink);background:linear-gradient(145deg,#edf3e8,#fff8e8 55%,#e6efe5);font-family:ui-rounded,"Avenir Next",system-ui,sans-serif}main{max-width:760px;margin:auto}.sign{display:flex;gap:14px;align-items:center;padding:18px 20px;color:var(--paper);background:var(--nori);border-radius:22px 22px 8px 8px;box-shadow:0 12px 32px rgba(24,37,31,.16)}.stamp{width:48px;height:48px;display:grid;place-items:center;flex:0 0 auto;border:2px solid var(--ginger);border-radius:50%;font-size:1.6rem}h1{margin:0;font-family:Georgia,serif;font-size:1.45rem}.sub{margin:3px 0 0;color:#d8e4d8;font-size:.88rem}.notice{margin:14px 0;padding:12px 14px;border-left:5px solid var(--wasabi);color:#31463a;background:rgba(255,253,245,.82);border-radius:7px;line-height:1.45;font-size:.92rem}.belt{position:relative;padding:18px 12px 6px;margin-top:14px;border:1px solid var(--line);border-radius:14px;background:rgba(255,253,245,.75);overflow:hidden}.belt:before{content:"";position:absolute;inset:0 0 auto;height:8px;opacity:.35;background:repeating-linear-gradient(90deg,var(--muted) 0 22px,transparent 22px 34px)}h2{margin:0 0 12px;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}.empty,.item{margin:0 0 12px;padding:13px 14px;border:1px dashed #aec1aa;border-radius:10px;background:#f5faef;line-height:1.45}.item{display:grid;gap:3px;border-style:solid;background:var(--rice)}.item small{color:var(--muted)}.plates{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.plate{position:relative;padding:15px 15px 13px 24px;min-height:120px;border:1px solid var(--line);border-radius:14px;background:var(--rice);box-shadow:0 3px 0 #e5eee0}.plate:before{content:"";position:absolute;left:8px;top:16px;bottom:16px;width:7px;border-radius:99px;background:var(--salmon)}.plate h3{margin:0 0 4px;font-family:Georgia,serif;font-size:1.08rem}.tag{display:inline-block;margin-bottom:8px;padding:3px 8px;border-radius:99px;font-size:.72rem;font-weight:700;color:#294031;background:#e6f0dc}.plate p{margin:0;color:#42564b;font-size:.86rem;line-height:1.45}footer{margin:17px 3px 0;color:var(--muted);font-size:.78rem;line-height:1.45}a{color:inherit}</style></head><body><main><header class="sign"><div class="stamp">🍣</div><div><h1>Registrar’s Conveyor Board</h1><p class="sub">A public join-state window—not an admission desk.</p></div></header><p class="notice"><strong>Last state change observed:</strong> ${escape(state.observedAt)}. I check the door on odd hours Eastern. This board reports public state, not a promise about crossing time, settlement, or outcome for a submission not yet visible.</p><section class="belt"><h2>Plates still on the rail</h2>${rail}</section><section class="belt"><h2>Recently settled</h2><div class="plates">${plates}</div></section><footer>Automation reads public PR, berth, address, and binding records. Registrar still makes—and publishes—human judgment on audit defects, quarantine, or escalation. If a record needs attention, its next owner belongs in that specific record.</footer></main></body></html>`;
 
 const restaurantCss = `
 body{background:#3b2418;background-image:linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(#4d2f20,#2b1912);padding:30px 14px 54px}

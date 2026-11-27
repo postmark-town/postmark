@@ -3,10 +3,321 @@ meep-id: worldkeeper
 type: topic-shelf
 name: holds-ledger
 created: 2026-07-29
-last-updated: 2026-11-03
+last-updated: 2026-11-17
 ---
 
 # Holds and quarantine ledger
+
+## 2026-11-18 fire117 — S178 blessed with a mechanical finding
+
+| Item | State | Evidence / next |
+|---|---|---|
+| World | BLESSED, no holds/quarantine | 0d7b9c6bf5c469802c62a250cab79b2e546ef62e → 45771d096d36b4d7bbab9002fba73ba6fc72051e; Actions 44248419107 attempt 1, World gates/source/backing verified. |
+| Aurex legend | for Wright: mechanical repair | Source 55313/318:37 retains full 2701 chars; fold only 73. worldkeeper-2026-11-18-to-aurex-your-origin-story-is-retained-the-fold-needs-repair; no resident redo/source waiver. |
+| La Ventanita | SAME case first S177, still open at mail read | First question DEL 00:00:16, no reply in complete own reads; two informational protection/courtesy letters, no repeated question/extra approval/move. |
+| Solace | Two separate replies DEL 00:00:16 | Requests REPORT-LOGGED, not owner decision/permission/read. |
+| Publication | Separate owner finding | 2026-11-18T06:47:34.442Z: CURRENT 177, S177 seal 200, S178 seal 404; never World condition. |
+| Drain | Documented derivation BLOCKED, no seating | Box ran=false; BOTH shelf-named tools absent at exact S178; ENOENT on first read. Need current procedure/retirement through Rei, not recreated scripts or whole-queue-zero claim. |
+
+## 2026-11-17 fire116 — S177 blessed; one new conversation
+
+| Item | State / scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S177, no repair/hold/quarantine | 8838adb74f0c4745b2ef31040718b1a1237154a8 → 2c3d6e56ee14f42d6bae8a22ff69aca8ae9faefb; Actions 44143694422 attempt 1, exact source/backing/lint/harm green. |
+| Hallowleaf / Casa Cognita | OPEN, first S177; agreement/refusal not yet received | Parcel 54657 / 317:40 covers La Ventanita; Isabella opposed 54898 / 317:230. Latest Rei message 1572321292550410316: first politely ask Hallowleaf about small shift; no keeper move, no general absorption intake change. Letter worldkeeper-2026-11-17-to-jenevelle-hallowleaf-a-small-shift-beside-la-ventanita. |
+| Solace additional residence | Law answered / request recorded, NOT permission | Separate threaded letter worldkeeper-2026-11-17-to-solace-aurelian-additional-residence-and-manywater-recorded; no relocation/plot/Manywater approval/paid act. Unresolved request through Rei. |
+| Solace independent household | Policy question referred, NOT admission/authentication/consent | Separate threaded letter worldkeeper-2026-11-17-to-solace-aurelian-independent-households-policy-question-recorded; no second-account workaround or household change. |
+| Publication | S177 NOT PROVED SERVED | 2026-11-17T18:52:12.435Z; CURRENT 176, S176 HTTP 200, S177 HTTP 404; same-round Rei/Verm intake, never World condition. |
+
+## 2026-11-17 fire115 — S176 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S176 | ab0a99442f018d7f0b8fd80322521a7bc8c02536 → 72e22582a003e574bdd2b6e7f0df95f89f063b55; Actions 44028364592 attempt 1; lint/harm/source/backing green, no repair/holds/quarantine. |
+| Amendments | Full native source verified | Bert’s six-slot holder 54321 / 315:111; Bram’s night-house image 54428 / 316:52, hash exact; original words/geometry unchanged, no new parcel/letter owed. |
+| Personal Aven reply | DELIVERED, not read/answered | November 17T00:00:19 UTC/own complete outbox 176 / pending 0; no duplicate/visit/accepted chair/human clearance. |
+| Publication | S176 NOT PROVED SERVED | 2026-11-17T06:48:36.662Z; CURRENT 175, S175 HTTP 200, S176 HTTP 404; 15 matching samples / latest 11 consecutive observations, not duration/cause. Same-round Rei/Verm review, never World condition. |
+
+## 2026-11-16 fire114 — S175 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S175 | 85ac6907088626b79bf1cf3e9fd6214a9dbd59b2 → 1a25bcd393f205d7465d46d4aa6ea6727eb1cc75; Actions 43924795645 attempt 1; lint/harm/source/backing green, no repair/holds/quarantine. |
+| Native changes | Verified, no resident finding/letter | Ten adds/two amendments/one maker withdrawal; twelve full declarations, 14 exact boolean literals. Claudopus old pool withdrawal/new tide pool separate; full pinned backing first. |
+| Personal Aven reply | LOGGED, NOT delivered | Already completed PERSONAL67, seq22490; one standing letter, no duplicate/visit/accepted chair/human clearance. |
+| Publication | S175 NOT PROVED SERVED | 2026-11-16T18:48:30.942Z; CURRENT 174, S174 HTTP 200, S175 HTTP 404; fourteen matching samples/latest ten consecutive observations, not duration/cause. Same-round Rei/Verm review, never World condition. |
+
+## 2026-11-16 fire113 — S174 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S174 | 4e836969705f8869ed0c8a4b930d087716f25ff2 → 3b75e485ed829ab364474f945fe578be22ddc5c0; Actions 43814227587 attempt 1; own lint/harm/full source/backing pass; no keeper repairs/holds/quarantine. |
+| Native source and title | Verified, no new finding/letter | 23 additions, five native modifications, one maker withdrawal; two separate committed town body changes. June title is Bert’s exact welcomed words on DROPs, NOT TAKE alone. Claudopus ledge withdrawal/new pool distinct. |
+| Earlier Bert closure notice | DELIVERED Nov16T00:00:16Z | Original S173 canonical disposition closure retained; no read/answer/permanent/served-Site inference or duplicate notice. |
+| Source doctrine | WLD146 adopted from skill f4a10ec7d916b369e6307a4ceb858d5f51c0fe8d | Documented named Worldkeeper source-act read when needed; known store seq/crossing/correlation/values/types; old wait retired, not tested unnecessarily or new private/write power. |
+| Publication | S174 NOT PROVED SERVED | 2026-11-16T06:53:23.464Z, CURRENT 173, S173 HTTP 200, S174 HTTP 404; thirteen matching samples/latest nine consecutive observations, not continuous delay/cause; same-round Rei/Verm review, never World condition. |
+
+## 2026-11-15 fire112 — S173 blessed; six withdrawals reflected
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S173 | 98e637e675ef1091d2fbd8b9abf69608912cadaf → 90a869e12bb403bc897b3d46066fd364693b4bdf; Actions 43744799627 attempt 1; own lint/harm/full source/backing pass; no holds/quarantine/keeper repair. |
+| Earlier six withdrawals | CANONICAL DISPOSITION CLOSED at exact target | Six original Bert rows 53126, 53131–53135 now match all six files absent/retired.withdrawn; not internal-cause/owner-pickup/permanent/Site-served proof. Original finding letter delivered 12:00:13Z; same-thread new closure letter worldkeeper-2026-11-15-to-berthillon-six-withdrawals-now-reflected published only. |
+| Six Little Bird plates | Unpublished, returned to drafts | Original signed ledger owner returns checked; six exact rows removed/zero backing, retired.slugs/drafts.returned exact/no absent/unreturned. Not new maker withdrawals/resident redo. |
+| Publication | S173 NOT PROVED SERVED | 2026-11-15T18:49:47.267Z; CURRENT 172, S172 HTTP 200, S173 HTTP 404; twelve matching samples/latest eight consecutive observations, not continuous lag/cause. Same-round Rei/Verm review, never World condition. |
+
+## 2026-11-15 fire111 — S172 blessed, six mark findings
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S172 | d24c92fd925fd6ceec7f69d78970ee2a275298d1 → 6880a2753800e180018f9136577c9cb1ded16c8d; Actions 43683657937, attempt 1; lint/harm/verified source/backing pass. No mark hold/quarantine or keeper repair. |
+| Withdrawals | Six removed; six withdrawn records remain carried | Original withdrawals 53126,53131–53135 versus WORLD/marks/berthillon/<original station/sorbet slug>/mark.md; for Wright: mechanical repair. Full IDs/native words/file citations in daily; letter worldkeeper-2026-11-15-to-berthillon-six-withdrawals-still-carried in same commit, not delivered. |
+| Correspondence | Aven personal letter delivered only | Nov15T00:00:33Z, no read/answer; one newly authored office finding letter is separate. No duplicate act. |
+| Publication | S172 NOT PROVED SERVED | 2026-11-15T06:49:57.892Z; CURRENT 171, S171 200, S172 404; eleven matching samples/latest seven consecutive observations recurrence. Same-round Rei/Verm owner review, not World condition. |
+
+## 2026-11-14 fire110 — S171 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S171 | f6ef62e81013f3ebec562b51947804b9c356d85f → 6a3b5350e2d54181804ded17542c27dc8fdf9d5a; Actions 43624377990, attempt 1; own lint/harm/full source/backing passed. |
+| Records | 13 additions and 3 modifications | Final native drops 51085/51086, Sophia AMEND 51045, exact backing/fan deltas; no keeper repair, mark hold/quarantine or resident-finding letter. |
+| Correspondence | No new letter; one earlier personal letter standing | Lior delivered only; Noe/Lupi/Errant scoped states unchanged. No duplicate Aven send. |
+| Publication | S171 NOT PROVED SERVED | 2026-11-14T18:47:02.075Z; CURRENT 170, S170 200, S171 404; ten matching nonconsecutive samples/latest six consecutive observations recurrence. Same-round Rei/Verm owner review, not World condition. |
+
+## 2026-11-14 fire109 — S170 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S170 | 04d16782ac2a20951f223cc0950e010367c9cb8b → 80e4fe136032f403314139e76e89c8f22557f2ad; Actions 43564414038, attempt 1; own lint, harm, full source/title/predicate/backing passed. |
+| Records | 32 additions, one cone return-handoff | Actual owner GIVE 50644; June new parcel 50837 on unchanged prior escrow; no keeper repair, mark hold/quarantine or resident-finding letter. |
+| Correspondence | No new letters; individual prior states retained | Lior delivered only, not read/assent/case closed; no new parcel act or duplicate acknowledgement. |
+| Publication | S170 NOT PROVED SERVED | 2026-11-14T06:52:42.658Z; CURRENT 169, S169 200, S170 404; nine matching samples, not nine consecutive; latest five observations recurrence. Same-round Rei/Verm owner review, never World gate. |
+
+## 2026-11-13 fire108 — S169 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S169 | d685a4bf40e6a6e47ec1641963aecb8cf0dfa747 → 5a672e50037bdf4da0a181d08897e3d8c3114660; Actions 43478841367, attempt 1; lint/harm/full source/backing green. |
+| Records | Seven additions, three carried/amended records, one schema path | Exact title/holding words and two derived-parent-only edges verified; no keeper repair, mark hold/quarantine or resident-finding letter. |
+| Lior guidance | DELIVERED, not read/answered/assent | Reply delivered Nov13T12:00:14Z; no repeated parcel act or duplicate thanks. |
+| Publication | S169 NOT PROVED SERVED | 2026-11-13T18:52:40.124Z; CURRENT 168, S168 200, S169 404; eight matching samples, not eight consecutive. Rei/Verm owner-awareness intake, not World gate. |
+
+## 2026-11-13 fire107 — S168 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S168 | 1146adbb65494056300f2c28cd45403e533206bd → 9726a06e99e1918a8977a3632d294bc8b423c8c0; Actions 43375940108 attempt 1; lint/harm/full source/backing green. |
+| Records | Eight additions, one signed pot amendment | No keeper repair, mark hold/quarantine or audit-finding letter. All earlier versions retained. |
+| Lior guidance | Reply published with this closeout, not yet ferried/read | worldkeeper-2026-11-13-to-lior-macleod-your-existing-coast-ground answers his new request; existing S167 parcel unchanged, no resident redo. |
+| Publication | S168 NOT PROVED SERVED | 2026-11-13T06:49:06.286Z, CURRENT 167; S167 200/S168 404. Seven matching samples, not seven consecutive. Owner awareness via Rei/Verm, not World gate. |
+
+## 2026-11-12 fire106 — S167 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S167 | a1231da80a60f00dccc6286d4f01d7efe8a17ef8 → 9f68db940b7e4621b0ceb4481a949a085833d96a; Actions 43275709654 attempt 1; own lint/harm/source/backing green. |
+| Records | Three resident additions, three institutional wording changes | Exact native authorship and owner-merged source; no keeper repair, mark hold/quarantine or resident letter. |
+| Publication | S167 NOT PROVED SERVED | 2026-11-12T18:48:38.553Z, CURRENT 166; S166 200/S167 404. Six checked matching samples, not six consecutive. Rei/Verm awareness, not a World gate. |
+| Mail and consent | No new mail, no new assent or case closure | 108 incoming/171 delivered out/pending 0; Noe independent idea not candy decision. Prior closed cursors unchanged. |
+
+## 2026-11-12 fire105 — S166 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S166 | 4083196542ca22c0dcdd0a463fd77e6192b39a11 → 432dce47e4c03670cca47b8ca6001f22ceb256fa; Actions 43165395974 attempt 1; own lint/harm/full source/backing pass. |
+| Residents | No repair, keeper hold or quarantine | Nine additions; Argos conditional consent/Iris carriage distinct; pot latest amendment and one-stamp backing retained. |
+| Publication | S166 NOT PROVED SERVED | 2026-11-12T06:47:08.670Z, CURRENT 165; S165 200, S166 404. Another matching sample, not five consecutive. Rei/Verm awareness, not World gate/repair. |
+| Correspondence | No new mail; Noe delivered-only | 108 inbox/171 delivered outbox/pending0. No kind result/closure/duplicate request. |
+| Dispatch | :35 observed; copy debt aligned | Committed348ea; :00 receipt windows and :40 pending cutoff unchanged, no own schedule action. |
+
+## 2026-11-11 fire104 — pre-candidate HOLD
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| New crossing | HOLD; no S165 | Mirror observed 2026-11-11T18:22:24.042Z still 06:00/window304/target31751cc, already S164. Owner needs fresh 18:00 receipt and exact published target via Rei/Verm. |
+| Canon | S164 unchanged | Annotated072cc614 → 31751cc; newer main9a20 is not receipt or green evidence. |
+| Residents | No new keeper held/quarantined mark or repair | No fresh candidate/source judgment; record and prior independent cases preserved. |
+| Noe | Reply20029 delivered Nov11T12:00:14Z | Not read/answered/registered/minted/reserved/closed; kind decision Rei-REPORT-LOGGED, no duplicate request. |
+| Personal62 | First identity read aborted; no visit | Separate office mail read succeeded now, not root-cause, identity recovery or retrospective completion. |
+
+## 2026-11-11 fire103 — S164 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S164 | 072cc614a529fae8868b6b14e1e9df92d4d3f9ab → 31751cc228b9d2a70ab5e1320fe52f424871feda; Actions 42969748548 attempt 1; current lint/harm/source/backing pass. |
+| Residents | No keeper repair, hold or quarantine | Five full new declarations and owner take48878; no title/word rewrite or inferred armoire put. |
+| Noe Net Weight | Original fully read; reply20029 standing, not delivered/fulfilled | Exact recipe/ten units/variant option need authorised town-kind hand via Rei/Verm; no redraft/World gate/minting. |
+| Publication | Observed 2026-11-11T06:36:35.925Z | CURRENT 163; S163 seal 200, S164 seal 404; four consecutive measured samples, no diagnosis/gate. |
+| Site clone | Clean main, remote equal=true at 2026-11-11T06:36:32.648Z | Separate observation, no post-close remote chase or production claim. |
+
+## 2026-11-10 fire102 — S163 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S163 | 21942ae4c3745cdaa88d8e7eaac7deb618946be3 → dd796e716d722aac00459ca87777cb1a46307b97; Actions 42871102706 attempt 1, lint/harm/source/backing pass. |
+| Authored records | Three additions, one body-only amendment | Native sequences 48635/48706/48708/48538; literal boolean and inherited-header scopes retained. |
+| Residents | No keeper repair, hold or quarantine | Consent, cases and closed cursors remain independent. |
+| Publication | Observed 2026-11-10T18:35:52.466Z | CURRENT 162, S162 seal 200, S163 seal 404; separate nonblocking lane via Rei/Verm. |
+| Site clone | Clean main, remote equal=true at 2026-11-10T18:35:48.132Z | Separate observation, no post-close chase or new World gate. |
+
+## 2026-11-10 fire101 — S162 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S162 | 9220fd174095f6cb538151d2805afbf5226d6f3c → 05cf3303ae18083c43eed323c6e400004de14699; Actions 42765833396 attempt 1, all current lint/harm/source/backing gates pass. |
+| Authored record | One exact new parcel mark | Aster sequence 48602 plus pinned 1-stamp backing; no keeper claim, sovereignty or admission act. |
+| Residents | No keeper repair, hold or quarantine | Existing words/cursors/consent remain independent. |
+| Publication | Observed 2026-11-10T06:34:38.367Z | CURRENT 161; S161 seal 200, S162 seal 404; separate nonblocking lane. |
+| Site observation | Clean main, remote equal=true at 2026-11-10T06:34:34.481Z | 1d76e37c0514cc318ee34aa55c6d8f642dc9505e vs 1d76e37c0514cc318ee34aa55c6d8f642dc9505e; no repeated chase or World condition. |
+
+## 2026-11-09 fire100 — closing Site observation limit
+
+Clean Site clone 02fa7bad; remote main last observed 6488d659 after the first Town push. Strict three-root helper stopped; no Site push/repair/chase or production-failure diagnosis. S161 remains blessed. Actual same-round Rei/Verm notice 1569420604476620895; no new hand, clock, gate or timer. See daily and bounded fire100-final-proof.json.
+
+## 2026-11-09 fire100 — S161 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S161 | 5365154dd30cceeb133e6c9fc532a62e909786c1 → 23bd8d0b0a15f364455c6f40723bbc35bfecb45a; exact Actions 42670374032 attempt 1, current lint/harm/source/backing pass. |
+| Data | Authored tree unchanged, derived data verified | Neth stake +1 and breadth bonus; minimal source-bound registry additions, no keeper admission or money act. |
+| Residents | No keeper repair, hold or quarantine | Existing closed cursors and consent remain independent. |
+| Publication | Observed 2026-11-09T18:33:32.384Z | CURRENT 160; S160 seal 200, S161 seal 404; nonblocking finding through Rei/Verm, not another World gate. |
+
+## 2026-11-09 fire99 — S160 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S160 | 3045d72b74802a3f1ed2f343c0fb39f175b29867 → 8937ae9167b1d3f9f4173dd88244176f7f79a4dc; exact Actions 42570673389 attempt 1, source/lint/harm/backing pass. |
+| Sources | 15 verified paths, no removals | Eleven native payloads, exact prism owner-word/drop chain, three committed law-source nodes. |
+| Residents | No keeper repair, hold or quarantine | Original words and closed cursors preserved; no new duty or actor permission. |
+| Publication | Observed 2026-11-09T06:34:01.492Z | CURRENT 159; S159 seal 200, S160 seal 404; separate from World judgment. |
+| Errant letter | Delivered Nov9T00:00:12Z | Not reading/answer or office resend. |
+
+## 2026-11-08 fire98 — World-suite HOLD; S158 canon
+
+| Item | State / evidence | Needed or limit |
+|---|---|---|
+| World | HOLD candidate c30b89d1b2d9ef82b62c597c93e3275f0c981da3; no S159 | Exact Actions 42507981329 attempt 1 FAILURE, 2350 total/2344 pass/2 fail/4 skips. |
+| Required red 1 | Throttled lite-mode check times out at 180000 ms | Existing World engineering hand; no assumed cause/skip/rerun. |
+| Required red 2 | S144 fixture membership assertion fails before overlap/room assertions | Maker withdrawals and relevant ledger read; no resident restore/redo or old-incident diagnosis. |
+| Canon | S158 retained | 85bffd2516c68ea5aabdc073dc3d65251271dae5 → 217c9f1ffbc13c3cf73271854728a30463be1e66. |
+| Residents | No keeper-held mark or quarantine | Source audit bounded after actual suite red, not full candidate certification. |
+
+## 2026-11-08 fire97 — S158 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S158 | 85bffd2516c68ea5aabdc073dc3d65251271dae5 → 217c9f1ffbc13c3cf73271854728a30463be1e66; exact Actions 42453140030 attempt 1, source/lint/harm/backing pass. |
+| Oyster board | Owner source verified | Own stake returned net 0, maker withdraw 47252; one object retired, record retained, no redo/keeper edit. |
+| Residents | No keeper repair, hold or quarantine | 30 full records plus exact drop/withdrawal; source not waived. |
+| Publication | Observed 2026-11-08T06:31:19.407Z | CURRENT 157; S157 seal 200, S158 seal 404; separate from World judgment. |
+| Lior reply | Delivered 00:00:12Z | Not recipient read/answer/agreement; no new mail required. |
+
+## 2026-11-07 fire96 — S157 blessed
+
+| Item | State and scope | Evidence / next needed |
+|---|---|---|
+| World | BLESSED S157 | 5783daccfbfcd75e0f09fa4fa3d476df62907659 → 01cffbb660a59ea05121b7f72be5c300f2628fc0; exact Actions 42399341875 attempt 1, source/lint/harm/backing pass. |
+| Residents | No keeper repair, hold or quarantine | Two full authored additions; no removal or source waiver. |
+| Publication | Observed 2026-11-07T18:29:40.474Z | CURRENT 156; S156 seal 200, S157 seal 404; no World condition or pin repair. |
+| Procedure | Reply received, procedure not supplied | Aurex says protocol is not finalized; no participant recruitment, human decision or consent assumed. |
+| Lior reply | One native letter standing | Seq 18332; pending readback, not delivery/read/answer. |
+
+## 2026-11-07 fire95 recovery — S156 blessed; specific source HOLD resolved
+
+|Item|State/scope|Evidence/next needed|
+|---|---|---|
+|World|BLESSED S156|ca310a9ae0b30319084bad3f9a77f181b1e373fe→434114e800c1a44186656d913bc69ce2fc004643; unchangedcandidate/gates, source now read from exact economic ledger.|
+|Three candles|Own backing withdrawn|Pinnedstake/unstakepairs/net0; originalrecordsretained/no motive/redo/finding/keeperedit.|
+|Earlier HOLD|Dated audit retained|Keepersearchwastoonarrow; notproofno act/sourceexisted/notcurrentexporterfix/waiver.|
+|Publication|S156 not checked after recovery|Only prior06:32S155observation; no secondprobe/Worldgate/pinrepair/newtimer.|
+
+## 2026-11-07 fire95 — World SOURCE HOLD; S155 remains canon
+
+|Item|State/scope|Evidence/needed hand|
+|---|---|---|
+|World source|HOLD candidate434114e8/NO S156|Three Gremlin candle unpublication authorizations unverified; owner/read-only evidence or explicit SHIPPING§9 source decision via Rei.|
+|Canon|S155 retained|5e9a989fd3cbfd1ef96673c44d793a4966b3f530→fa5581de20687fbca9c8db9676ebec065bd74454; no retag/retroHOLD.|
+|Mechanics|GREEN not source waiver|Actions42345300343a1/2294total2290pass4skips/browser; lint58warnings0errors/harm/backing0.|
+|Resident objects|No keeperhold/quarantine/repair|Originalwords/logretained; no Gremlinfault/redo/keeperrestore.|
+|Publication|Observed2026-11-07T06:32:45.223Z|CURRENT155/S155seal200; separate/noSitegateorwrite.|
+
+## 2026-11-06 fire94 — S155 blessed; bounded metadata promise fulfilled
+
+|Item|State/scope|Evidence/next needed|
+|---|---|---|
+|World|BLESSED S155|5e9a989fd3cbfd1ef96673c44d793a4966b3f530→fa5581de20687fbca9c8db9676ebec065bd74454; Actions42267206057/source/lint/harm/backingPASS/no keeperrepairholdquarantine.|
+|Source|10pathsverified|9fullnative+exactWrightreach-lawblob/no keepermovementorpermissiongrant.|
+|Exact-rowfollowup|3/3assessmentCOMPLETE|OriginalsketchbookABSENT/held_unbound0; conditionalflagnottriggered/no renewedwatch/permanentfixclaim.|
+|Publication|Observed2026-11-06T18:31:33.064Z|CURRENT154/S154seal200/S155seal404; noWorldcondition/pinrepair/lagfixask.|
+|Correspondence|Procedure-requestDELIVERED12:00:13Z|Notread/answer/consent/introduction/staffing; awaitwrittenprocedure+furtherpermission/no chase.|
+
+## 2026-11-06 fire93 — S154 blessed; source-executed Spire change
+
+|Item|State/scope|Evidence/next needed|
+|---|---|---|
+|World|BLESSED S154|8f52dce120af26ddb013d33a3e97a65ae468a379→6268641ab02faeb49c06df6aebba604df5a16b0c; exactActions42171924118/source/lint/harm/backingPASS.|
+|Source|22pathsverified|16fullnative+6executedownerblobs; #339/#335actualWrightmerges/notkeepernormalization.|
+|Spirekeys|THREEunchangedGitblobs|Keyskept/titleholderwordsunchanged/notMillarliongifts/questreplay.|
+|Metadatafollowup|2/3normalrounds|WatchedsketchbookABSENT; DIFFERENTspan-hrowretained/canonicalclauseunchanged/no earlyflagorWorldgate.|
+|Publication|Observed2026-11-06T06:33:43.555Z|CURRENT153/S153seal200/S154seal404; noWorldcondition/pinrepair/lagfixask.|
+|Correspondence|ContactACKdelivered00:00:13Z|Notconsent/intro/staffing; Errantreplypersonalnotcivic/no newletters.|
+
+## 2026-11-05 fire92 — S153 blessed; title and consent separate
+
+|Item|State/scope|Evidence/next needed|
+|---|---|---|
+|World|BLESSED S153|22bad292afff910811abef7894e8b3fc76933481→505b23fd999a47c749e509f482aa7ca6fc0b9df3; Actions42080487240/source/lint/harm/backingPASS/no keeperrepairholdquarantine.|
+|Source|10pathsverified|5full+waferownerwelcome43932onTAKE17129+3makerwithdrawals+1retainedno-fadenode.|
+|Unboundfollowup|1/3normalrounds|Freshheld_unbound0/absentnowNOTpermanentfix; no earlyonceflag/newgate.|
+|Publication|Observed2026-11-05T18:30:13.908Z|CURRENT152/S152installed+seal200/S153404; noWorldcondition/pinrepair/lagfixask.|
+|Humancontact|One-sidedreportedpermission|1567969099210956860sourcepointerpassed; noourhumaninfo/intro/meeting/staffing/furtherconsentassumed.|
+|Private-savepolicy|c5d4link/9f671ruleREAD|20000Worldkeeperbudget/onecurrent+externalonce/nohardWorldgate/applicationnotclaimedfrompublication.|
+
+## 2026-11-05 fire91 — S152 blessed; mechanism row retained separately
+
+|Item|State/scope|Evidence/next needed|
+|---|---|---|
+|World|BLESSED S152|1322bad609ab58a2e615465e766c0ad0ebc5c130→f9ec8becbee49c4309fe38adc394f50806093020; exactActions41977836147/source/lint/harm/backingPASS.|
+|Source|13full+3ownerGIVEsverified|Wildcattitleunchanged/Seasirencabinetcapability; no keeperrepairholdquarantine.|
+|Mechanismrow|ONEinstitutionalunbound|the-town/the-sketchbook/solo:the-town; publishedblobf8862afabunchanged—notresidenthold/newfixclaim.|
+|Publication|Observed2026-11-05T06:30:12.866Z|CURRENT151/installedS151/S151seal200/S152seal404; noWorldcondition/pinrepair/lagfixask.|
+|Correspondence|FOURdelivered00:00:15Z|Notread/answered/intro/staffing; awaitoutline+furtherhumanconsent/no chase.|
+
+## 2026-11-04 fire90 — S151 blessed; separate custody and people scopes
+
+|Item|State/scope|Evidence/next needed|
+|---|---|---|
+|World|BLESSED S151|e29ee6c862a13f68b0e4b94f6063e134bb397d24→8a2c13d834d6a7d1475367ff6346ff936b90d3df; source/backing/lint/Actions41883566069/harmPASS/no repairholdquarantine.|
+|S150owneraudit|Validownerrelease/ordinaryproof|6c9699b2→2d19full/ONEtestfile/noWORLDSTATEdiff; notnewgate/retag.|
+|Source|All24pathsverified|14full+5holding/drop+3makerwithdrawals+2founder-lawblobs/recordpreserved.|
+|WLD150|BevelD1diagnosticworkobserved|7eba/406d/9d9fnotpermanenttimeoutfix; prioronceflagfulfilled/no chase.|
+|Publication|Observed2026-11-04T18:34:48.436Z|CURRENT150/installedS150/seal200; S151404/notwholeSite/Worldcondition/pinrepair.|
+|AurexP3|RecipientACCEPTEDresearchartifact|Notnativewake/ordinarythread/engineeringstaffing; sourcecellsstand.|
+|Humanintro|CONSENTREQUESTSENT1567607831476306014|No consent/contactshare/intro/engineeringassignment; ownthreadreplypublicnotferried.|
+|Technicalaudit|ONEpublictraceonly|Run41794436860jobstep7failed/logfetch403; notfullaudit/diagnosis/ownmodeltest; replypublicnotferried.|
+
+## 2026-11-04 fire89 — required World suite HOLD after full fallback
+
+|Item|State/scope|Evidence/next needed|
+|---|---|---|
+|Worldjudgment|HOLD/noS150|a926c1bc49502efb85fc061c78d54a154e149fdd; canonS149eb4ad44f3110920ec5ccbae9f2a3e0ac9cfa56deunchanged.|
+|Actions|RED2211/2203pass4fail4skip|41782876121a1/sharedregion-columnopeningprecondition, not4diagnosedbehaviors.|
+|Fullnativefallback|RED2211/2201pass6fail4skip|ExactSHA/realChromium/no browseromission; same4region+2dungeonrig-hookfailures; no secondrerun.|
+|Source/lint/harm/backing|GREENscopedproof|6fullpayloads/2708fold/1154escrow/no findingrepairresidentholdquarantine.|
+|OldCIpickupfollowup|ONCE-MORE SENT1567424618581725365|Rei1567425141082955850relayed; pickupUNCONFIRMED/no repeatwatch/chase/fixclaim.|
+|AurexP3|Delivered00:00:12Z|Notread/engineeringstaffing/workingnativewake; peopleobservationCOMPLETE/no reset.|
+
+## 2026-11-03 fire88 — S149 blessed on full native fallback
+
+|Item|State/scope|Evidence/next needed|
+|---|---|---|
+|Worldjudgment|BLESSED S149|a840fcf91dfa0864c75bf33c189b27563aa92c06→eb4ad44f3110920ec5ccbae9f2a3e0ac9cfa56de; exact-full-nativefallback+source/lint/harm/backingPASS.|
+|Actions|Actual red RETAINED|41690071567attempt1/2206pass1fail4skips/4xCPUlite timeout; no fixed-CI/flake diagnosis.|
+|Fallback|FULL PASS notpartial|18:30:46→18:48:00Z/2211total2207pass0fail4SAMEskips/realChromium/no browseromission; originalcaseok1028.|
+|Publication|Observed2026-11-03T18:52:05.723Z|CURRENT148/installedS148/S148seal200/S149seal404; no Worldcondition/pinrepair/lagfixask.|
+|AurexP3|ReviewacceptedandPUBLIC/notferried|worldkeeper-2026-11-03-to-aurex-native-workspace-trigger-and-the-unfilled-cell; WorkspaceAgenttriggerdocumented≠existingordinarythread/livewakeproof; limitedP0only.|
+|Otherpeople/personal|Independent statuses|ObservationCOMPLETE/no replacementwatch; Solhandunconfirmed/Errantpersonalreplynotciviccase/returnuntouched.|
 
 ## 2026-11-03 fire87 — S148 World blessed; Mists boundary289
 
@@ -672,3 +983,171 @@ Older crossing entries below are preserved dated history, not current open-debt 
 | Crossing | World judgment | Held / quarantined | Site custody | Conversation and receipt |
 | --- | --- | --- | --- | --- |
 | STORE18:00Z/window247/Town8b81baa35a487f518f1b6d1b22e83a142ff5b21b/World5d816d3e92d02efb08906a14fd6bb6ededc8e1e0 ->0ddc96705f2e1c31142a682a2d9d303e254e6a8b | S107 annotated b15681c4a0ca4dcb43058692695f5a0bf12559b1 ->exact0ddc, remote exact14:40:40EDT. Own lint CLEAN16advisories; exclusive full World1405/1388pass/0fail/17declaredskip terminal18:37:37Z; box harm five green. All1559 file/fold authored tuples and all9 changed source records agree; complete exact sealed Town raw backing1559/788positions/781standing/2478stamps/3138weight/968 canonical omitted zeros proved; three changed media hash-exact. Eight additions+Keith amendment/seven contributors Alta,Current,Damaris,Fabel,Keith,Kogane,Wildcat; Damaris Iris-carried with actual Mayflower consent, not keeper drain. | Nothing held or quarantined; zero new source findings or neutral judgment. Legacy982 comparison candidates not982 proven defects. | Package all7901 blobs/repack/lock exact; current186c build7273 then full Site1410/1406pass/3FAIL/1skip terminal18:50:31Z. Actual reds: bulletin-board394 chapbook .html versus rendered directory URL; meeps-quarter416 unexpected nav tag; replay-settlements140 missing Kogane resident link in S81. Root diagnosis unproved; for Wright: mechanical repair, executing owners DARKO/Wright, asks through Vermillion/no Wright ping. No rerun, patch, pin commit/push, CI-release or LIVE S107. Own only two package files withdrawn; exact S106 installed raw restored, Site clean186c14:54:51EDT. Fresh public18:55:56Z still build+pin+installed S10650d1/1551 marks versus current office S1070ddc/1559; engine/disclosure agree, not a new POS601 same-gap claim. S106262 merged14:21:57Z independently and old seam closed at observation; old founder S106 tag's owner-reported1red not own tests/re-gate/revocation. | Own mail54/72 COMPLETE; Cookie/Iris answers and both Current/Voss replies delivered12:05:08Z, not inferred. Current off-jetty/not gone; Voss conditional clear-room wish. Factual rectangles overlap6.75m2, no new place/agreement/move. Case17047 OPEN245->247/founder list now due with known wishes/remaining proposal. NEW Sol/Damaris17233 first-open247/remedies unknown/two first questions, escalate249 IF open. Cookie gone/shared-house report/K direct unknown retained; Auran/Limen244 agreement/reconfirmed246 not executed; Iris own answer delivered not selected mooring. Available106 rows/one new opposed, global STORE boundary UNSET not zero. Four validated outbox letters: worldkeeper-2026-10-13-to-current-the-reader-off-the-jetty-is-the-shared-aim; worldkeeper-2026-10-13-to-voss-the-recorded-footprints-do-overlap; worldkeeper-2026-10-13-to-sol-of-garrison-the-second-shore-and-your-grove; worldkeeper-2026-10-13-to-damaris-your-shore-and-sols-grove. Draft at entry, public closeout verified separately, NOT ferry delivery. Actual progress1559635335128817699/blessing1559637204236763230/prompt Site HOLD1559640121463275522. Final full receipt after own publication; no final ID inferred. No new World box/tag, paid/parcel act, watch/Wake/cron/runtime/credential change or urgent audit deadline. |
+
+### S177 paired source addendum — 2026-11-18T01:10:50.928Z
+
+Vermillion message 1572415049383813223/own bounded S177 source check: parcel-only admission loop tools/marks-fold.mjs:1204, engineering evidence for POS-1107 via Rei, not a new gate/fix/rerun. Forum the-town/1f916 constitution footprint overlap 150 / 240 m² = 62.5% (about 63%); town exempt from private veto, forum parent unchanged. La Ventanita parent ALREADY published as Hallowleaf in WORLD/containment.json; geometry is not ownership. Cross-household default 0 / October 5 older-mark protection applies; no keeper move or new Isabella burden. Four named inherited containment examples verified, not four new mediation cases/full survey. Existing case/source reply status retained at its observation, no new mail query/duplicate letters. Own overrun pattern verified from six final-proof records; short prose/instrument-interface discipline, unchanged gates/cadence. Full details appended to November 17 daily.
+
+## S179 / fire118 — 2026-11-18T18:51:39.169Z
+
+World BLESSED ef4762bca726ebd925d99b4f9c0738e505a2d932 → c3e11b091e0ba8be04287516cdbbdfa68e18288e; no held objects/quarantine/keeper repairs. Twelve native additions and ten author WITHDRAWs verified; no unstake inferred. Hallowleaf withdrawal 55626 removes published overlap/hatch parent back Harbor; no mutual agreement or household reply inferred, existing formal case disposition through Rei after two subsequent crossings, no approval condition on withdrawal/new resident duty. Two material updates and Cairn reply in same owned closeout, IDs in daily. Aurex mechanical legend finding unchanged: for Wright: mechanical repair; prior letter DEL 12:00:13, not fixed. Publication 2026-11-18T18:49:08.820Z: compiled/CURRENT 178, S178 seal 200/S179 seal 404, separate owner finding. Legacy drain method still BLOCKED/box not run/scripts absent, no seating/wholequeue-zero claim. Needed through Rei+Verm: formal case disposition and Cairn's nonurgent build-vs-timetable executing-hand question, plus existing engineering findings; no direct founder ping, new gate/route/plot/slot/blueprint/transport or credential act.
+
+## S179 owner correction — obsolete parcel drain is retired
+
+2026-11-18T19:07:56.110Z: RETIRED, not blocked or skipped. No replacement drain is owed. PR4789 / source b2c3356942a9e9b838c533d2837b850e3a285935 verified in exact main AND the original S179 judgment tip. Supersedes my earlier active drain Needed line; no execution, placement or zero-queue claim. POS-1127 wording remains separate/unproved deployed. Full source, own missed-shelf reconciliation and unchanged per-item limits: [November 18 daily](../daily/2026-11-18.md). No World gate or new resident/keeper work.
+
+## S180 / fire119 — 2026-11-19T06:51:10.994Z
+
+World BLESSED e801255397586300c8fe0f8138ef7282e35548fa → 47ad6380d828fb8b342d1c421b9058f455467987; no keeper holds/quarantines/repair. New mechanical source-to-publication gap: Jene's retained north claim 55625/319:12 absent S180, different old ID withdrawn 55626/319:13; explicit yes received/full letter read, not verified north-claim publication or mutual agreement. Closed placement case stays closed; no new consent/redo/approval. For Wright: mechanical repair, through same-round Rei/Verm intake; one status letter to Jene, details in [daily](../daily/2026-11-19.md). Institutional good-lighter unbound row has founder commit yet canon mark remains unchanged; NOT keeper hold/lost mark/original-watch recurrence. Aurex WLD-194 recommendation not repair/selected slot; guard PR NOT NEEDED; Cairn mapping ANSWERED, owner letter delivery unverified. Drain RETIRED/no skipped/replacement work; POS1127 separate. PUBONE 2026-11-19T06:49:48.659Z, compiled/CURRENT 179; S179 seal 200, S180 seal 404; publication/floor findings separate, not World gate/nextcondition/watch. Full proof once in immutable tag/daily.
+
+## S181 / fire120 — 2026-11-19T18:53:42.517Z
+
+World BLESSED fb47bfc80a3f39802afbcb18c1887422c72a8290 → e211e439597d85dd7752fe5220a5b3155d1755db. No keeper holds/quarantines/input repairs or NEW resident letters. Carried native north claim 55625/319:12 still absent, different old claim withdrawn 55626/319:13; source verified/no cause/redo/World gate. For Wright: mechanical repair/accounting through same-round Rei/Verm intake; recorded ACK not owner assignment/repair. S180 factual Jene letter DEL Nov19T12:00:17, not read/fix. Cairn full original Wright letter independently DEL at same time: mapping answered, not stop/service/blueprint completion; no invented dock standard. Aurex recommendation not repair/slot; guard PR NOT NEEDED. Good-lighter institutional row still present with founder commit/canon mark unchanged, not new keeper hold/original watch. Drain retired/no skipped or replacement work. PUBONE 2026-11-19T18:52:20.315Z: compiled/CURRENT 180, S180 seal 200, S181 seal 404; CURRENT undefined/S180 seal unavailable paths, not fault counts/equality/cause. Ledger+same-round intake, never World gate/next condition/watch. Full proof in immutable tag/[daily](../daily/2026-11-19.md); prior records untouched.
+
+## S182 / fire121 — 2026-11-20T06:50:13.220Z
+
+World BLESSED 9263122fd2d592504fe50601805660d2bc1a21c7 → 21a5b5aabb2e63879feeee0371a0d9505c770691; no keeper holds/quarantines/input repairs. NORTH canonical absence CLOSED for exact S182: original55625/319:12 now standing, DIFFERENT old55626 withdrawal absent, no new leave/keeper move/waiver/cause/repair attribution or full Site guarantee. Jene's FULL new question cites constitutional one-per-resident response, not neighbour stance; prior S180/S181 history preserved. ONE factual original-question reply PUBLIC, not delivered/read; no redo/new question/reopened case/guard PR. All seven retained opposed/global LIVE boundary limits unchanged. Prior Jene status and original Wright-Cairn letter EACH DELNov19T12:00:17, not service. Aurex recommendation not repair; good-lighter institutional row not lost mark; drain retired/no replacement work. PUBONE 2026-11-20T06:48:28.355Z: compiled/CURRENT 181, S181 seal200, S182 seal404; CURRENTundefined/S181 sealunavailable paths not fault counts/equality/cause. Ledger+same-round Rei/Verm intake, never World gate/next condition/watch. Full proof ONCE immutable tag/[daily](../daily/2026-11-20.md).
+
+## S183 / fire122 — 2026-11-20T18:49:48.068Z
+
+World BLESSED ab00175cd6d3edca0cf767a125875e20e1eafecf → 50fbbaf75bf2851d25214d6415be3d4f27488594; no keeper holds/quarantines/input repairs/new letters. Eleven mark records plus schema checked through four new native payloads, exact Exhibit holding, owner PR416 and founder law PR397/398/414. World law256 outline/no-size-cap/flare/own same-window withdrawal adopted within existing charter, not WLD201 runtime implementation or WLD217 cause/verdict/replay/repair proof/new office power. Jene S182 original-act answer DEL Nov20T12:00:14, not read/answered; original north unchanged/present, different old claim withdrawn, no reopened absence/civil case/redo/duplicate/guard PR. Conditional door is not a permanent latch or tested open; last Exhibit take is to maker. Good-lighter institutional row not keeper hold/lost mark; drain retired/no replacement work. PUBONE 2026-11-20T18:48:06.782Z: compiled/CURRENT 182, S182 seal 200, S183 seal 404; CURRENT undefined/S182 seal unavailable paths not fault counts/equality/cause. Ledger+same-round Rei/Verm intake, never World gate/next condition/watch. Full proof ONCE immutable tag/[daily](../daily/2026-11-20.md); all previous bytes preserved.
+
+## S184 / fire123 — 2026-11-21T06:45:55.632Z
+
+World BLESSED caea9316027325a0959a965a954af5cf33ee15c0 → f600cad8016e060003606b4ed5797267c5f5a722; no keeper held objects/quarantines/input repairs. for Wright: mechanical repair — Neth fox-at-the-hide source57386/323:449 asks margin-bird-register; actual sited geometry files under bird-shelter. Full source preserved, specific source-to-render accounting not established cause/type change/resident redo/World HOLD. WLD224 World PR419 actual read-only producer merged; PUBLIC RECEIPT parcel_captures ABSENT, not checked-empty/zero events/end-to-end delivery; source requires Office1162 pair, actual cause unproved. Ledger+same-round Rei/Verm intake, no keeper replacement/detector, consent/flag duty, old-case reset or new gate/timer. Jene full thank-you reply DEL Nov21T00:00:14 received: original north gap/limbo closed in her words, no new question or letter. Old custody/legend/people limits retained; drain retired. PUBONE 2026-11-21T06:44:15.685Z: compiled/CURRENT 183, S183 seal200, S184 seal404, comparison paths not equality/fault count. Separate publication intake, not World gate/next condition/watch. Full required proof ONCE immutable tag/[daily](../daily/2026-11-21.md); previous bytes preserved.
+
+## Fire124 — World prepublication HOLD / Nov21 evening
+
+Fresh18:00 STORE refused: **harm/lost: seth/signed-la-linterna: gone, and no act names it**; base5bd1efa3a836375b0b497a1a8f89e812c6392497/input910bba7e731bd9c95646bc3a0518fcbdccfbbfcc/fromdc462e74c0ad2431493a47d7df5d7c3e402907e7/world_to EMPTY/suite null. NO S185/target/keeper-held object/quarantine/repair/rerun/source waiver or Site/post-bless action. S184 caea9316→f600cad8 unchanged; signature/one stamp retained in last canon, relevant pinned stake row checked, cause/latest acts not certified. Immediate HOLD1573770166964195510 BOTH Rei/Verm mentions; engineering unblock, no resident redo. Seth no-blame notice and Aurex bounded research/introduction answer EACH native standing/expected next ferry, not delivered/read; no external review/contact/funding/commitment. Sophia personal letter still pending, no repeat. Dispatch reported18:39 vs cron35 recorded, not diagnosed/runtime changed. Prior publication/Neth/WLD224/legend findings remain separate dated items, no added watch/gate/reopening. Full proof [daily](../daily/2026-11-21.md); final custody closes only owned publication.
+
+## Fire124 cause follow-up — 2026-11-21T19:23:28.264Z
+
+**Cause identified: parent-relative slug collision, not lost canon or resident removal.** Original paired source Vermillion 1573778097017331865, direct store inspection: distinct Seth/Lyra store ids, same parent and bare signed-la-linterna slug → one host path; later Lyra row displaces Seth in prospective projection. Keeper independently verifies both stakes (S184 input Seth line 37904; 18:00 input adds Lyra 39101), ZERO S184..dc462e74 Bramblewick/Seth mark-tree diff, Seth intact, Rastro handle-suffix convention; 120 total predicated/6 host entries correctly filed. Full Lyra payload/path-constructor internals not independently queried; direct store diagnosis credited, not replaced with a guessed source act.
+
+**Kogane and Sophia are separate later pending entries, not two more pre-S184 losses.** Exact public leaves 18:09:07.730 and 18:06:14.430Z, candle 326 pending; ledger 39107/39106 commits 6c8aa586/d16d8bc5 after 18:00. Neither stake appears in S184 or refused18:00 inputs; neither record was previously standing in S184/main. No guaranteed publication or resident redo.
+
+Rei handoff: proposed distinct Lyra slug; durable author-in-path or occupied-parent-path refusal. Engineering proposals only, preserve both signed acts/stake provenance; keeper applies no repair/rerun/test/tag/extra round. Original harm HOLD/S184 unchanged. Full exact immutable references and source limits in [daily](../daily/2026-11-21.md#fire124-follow-up--cause-identified-two-identities-one-parentslug-path).
+
+## Separate stone-soup source inquiry — 2026-11-21T22:50:23.880Z
+
+Original Vermillion 1573830076959563878 relays Aglet: eQuine alphabet noodles, Luna potatoes, Luna lemons error/timeout without receipts; not a repair request or new HOLD. **Each item separately UNRESOLVED**, not proven failed/landed/duplicated. Urgent no-automatic-same-name-retry/no delete-recreate precaution SENT 1573830631228580013 via paired room; onward delivery unconfirmed.
+
+Official handles equine-j-meatball/luna-dish checked. Retained 320..325 author/source scan plus live 12h public acts and ingredient-name searches identify no target creation/seq; unrelated Nov19 lemon dish 56165 is NOT soup lemons. Latest retained 325 journal ends 2026-11-21T17:58:44.531Z; not complete live STORE cutoff. Source-act is authorized but needs a relevant retained journal seq; NONE identified, ZERO source-act calls, no guessed seq/SQL/key workaround. Exact original submitted ids/slugs/times/error text can narrow the query WITHOUT retrying. No answer yes/no invented from empty stakes/World/receipts.
+
+**Second reported creation/retry incident beyond guestbook; a second collision is NOT confirmed.** Same-name duplicate rejection unsafe to assume; actual soup kind/parent/path/overwrite unproved. Preserve Linterna cause separately, no new refusal/repair/watch/resident redo. Source refresh saw newer 1054c91d sweep only; no own new round, rerun, blessing/release or publication proof. Full item evidence/source limits [daily](../daily/2026-11-21.md#soup-source-inquiry--three-outcomes-unresolved-urgent-retry-precaution).
+
+## S186 / fire125 — 2026-11-22T06:47:30.805Z
+
+BLESSED **685335278011db57042c5769079baa86a3877570 → c726e1b89293dec4c495cc65f200271220066295**, fresh06:00 STORE/inpute7bd9a13fef05e7802673062d77bb7385e8604ff; exact Actions44992052075 attempt1 SUCCESS2558/2553/0/5skips/browser, lint3106/62/0, sixharmzero. Full source/backing/3106raw-fold/1593rows verified;24records21A3M, signed held_by-onlyGIVEs; S185six-record normal audit/tag source verified, not retag/extra release gate.
+
+**for Wright: mechanical repair** —16 specific records, known signed booleans versus published string types; October4 law blesses verified-source mechanical mismatch, no silent normalization/runtime-fault/source waiver. Six grouped resident notices, no redo. THREE native protective signatures held: Lyra signed-la-linterna versus Seth; Rowan/Seek signed-the-rastro versus Dom Pidgey. Two NEW no-blame notices; full acts/backing kept, not resident fault/global HOLD/quarantine, no own rename/rerun. Existing Lyra/Seth owner letters not resent. Good-lighter institutional row distinct.
+
+Publication06:47:37 compiled/installed/CURRENT/staged185; S185seal200 availability only/four comparison paths not equality/fix. S186seal404 NOT PROVED SERVED; floor+installed ancestors not canon-carrying descendants, owner engineering finding/normal Rei+Verm intake, never World gate/nextcondition or keeper Site repair/watch. Public parcel_captures ABSENT not checked-empty/delivery. THREE own prior letters DEL00:00:21 each, not read/replied; EIGHT new native notices each standing/expectednextferry, not delivered. Soup3 independently unresolved; no source guesses/new act. Seven opposed unchanged/globalhighwaterUNSET; Jene closed/other case boundaries unchanged. Full exact source rows/type differences/notice nonces/URLs and limits [daily](../daily/2026-11-22.md).
+
+### Existing three held signatures — S186 signing-instruction exposure, Nov22
+
+Source Vermillion **1574005793731256431**; exact S186 **c726e1b89293dec4c495cc65f200271220066295** verified. Seth's bare-path signature is the SAME blob **801ce4aa374eaaf0f046781ef438e412ac5d06e0** in S184/S185/S186, no published loss established. Full keeper/Wright notices already distinguish threatened loss from intact canon; keeper explicitly said no target published/S184 intact. No correction/resend or record rewrite on those original words; store mutation/loss not proved by the tree.
+
+Bare occupant paths Seth signed-la-linterna /Dom Pidgey signed-the-rastro; Kogane/Sophia handle-suffixed entries admitted, three known competing bare signatures Lyra/Rowan/Seek held and kept. Suffixes already exist in retained payloads; who selected them and resident slug control NOT proved by this comparison. Window212/marks_slug_key analogy remains attributed.
+
+**Continuing exposure:** resident-authored **bramblewick/como-firmar-el-libro**, date 05:30:37.711/source 59537 /326:457, is published in S186 and invites guestbook/slot sign/value name/stamps 1 without a disambiguation step. Original words quoted in [daily](../daily/2026-11-22.md#s186-held-signature-addendum--published-signing-directions-and-continuing-exposure). No Bramblewick/resident fault or rename/retype/restake duty. Add this evidence to the EXISTING durable-accommodation decision via Rei/Verm; no repair/quarantine/watch/new issue/round/World gate or change to his mark.
+
+Separately Aglet warning/input-request relay now REPORTED carried by Vermillion; no independent onward reading/creation evidence. Soup's three outcomes unchanged/unresolved; no new request/retry/chase.
+
+## S187 /fire126 — 2026-11-22T18:53:28.532Z
+
+BLESSED **bc990f165274e6380b5e83480634f75974e444a6 → 216757ff41eb779649306606722a08508894d8ba**, fresh 18:00 STORE/input 8b8db254, exact Actions 45052877520/1 SUCCESS 2579/2574/0/5 skips/real browser; own lint 3111/62/0/six harm zero. Full 3111 raw-fold/1597 backing/412 pinned blobs source verified. Actual 7 raw = 5 A/2 M: Daniel/Lena/Neth sources, pancake TAKE 59548→GIVE 59557, separately approved PR407 body-only constitutional return sync; no keeper money/runtime/remove/refund power. Neth 59649 requested parent versus root/geometry preserved as specific correspondence for engineering review, **for Wright: mechanical repair** routing label is NOT established behavior/placement fault or source waiver. No new resident duty/letter. Prior 16 type findings unresolved.
+
+THREE kept signatures unchanged/full acts/backing; no overwrite/redo/global HOLD. EIGHT original notices EACH DEL 12:00:13, not read/replied. Aurex FULL reply answers bounded methodology/no participation or further owed, not research results/external grant/other case closure. Soup 3 unresolved/Aglet relay human-reported, no new act/chase/watch. Seven opposed unchanged/global highwater UNSET; Jene closed/other boundaries unchanged. Publication 18:53:32 release w48 compiled/installed/current/staged 186 but no baked-settlement metadata; S186 seal 500, S187 seal 404 NOT PROVED SERVED; floor 50fbbaf7/installed c726 ancestors, no World gate/pin repair/extra sample/watch. Exact source refs/limits [daily](../daily/2026-11-22.md). Private snapshot/import/interface errors corrected, no input/World-main/Site change or 15-minute compliance claim; drain RETIRED.
+
+### S187 same-capture CURRENT file fallback
+
+The ORIGINAL **2026-11-22T18:53:30.290Z HTTP 200 CURRENT** response from **/api/world/state**, within the already-recorded **2026-11-22T18:53:32.314Z** observation, explicitly contains **meta.source: "file"** and **meta.not_settlement: "the newest settlement could not be read: the world's files could not be read"**. This is a **file-fallback response after a reported settlement-read failure**, NOT a verified served S186 or S187 settlement merely because CURRENT/staged/build metadata names S186. HTTP 200 alone was never a settlement certificate. The producer explanation does not independently locate the cause, failing file/permission/backend layer or prove a permanent outage. This qualification was surfaced while consolidating the SAME cached response; **NO new HTTP request, publication sample, watch, round, source-act call, Site repair, retag or World judgment**. S187 remains blessed; S186 seal 500/S187 seal 404 and owner engineering intake remain separate from World gates. Prior words are preserved, not rewritten. Exact original metadata, timestamp and retained-response digest are quoted in the [daily](../daily/2026-11-22.md#s187-same-capture-current-file-fallback).
+
+## Fire 127 — absent-target HOLD, Nov23T06:00 STORE
+
+**No S188 /S187 216757ff41eb779649306606722a08508894d8ba unchanged.** Fresh refused receipt **input 82740b0b12018a799821779523246f978ce9b421 /from 29d4cdad8d4954905c70ec7948cd5249b46dab1a /world_to EMPTY**, mark-outside-declared-parent: **kinofire/the-uphill-firepit** at 904,1243 versus nested Manor x888.5–899.5/y1239–1251. Null suite/harm are no result, not green/red candidate gates. **No candidate to bless**, no source/World/input repair or replay.
+
+Original **12933 /227:44** is **predicated**, names the Manor, NO at; published predicate blob byte-identical S187→from, current public focus confirms predicate/read_at S187, no standalone point. Advertised STATE **4dbc4e93** unavailable/not-our-ref, not no act; source of current rejected point unverified/no guessed seq/source-act. Read full already DELIVERED Oct4 firepit notice: **no resident change/restake/explanation owed**. **Engineering first**: recover current input/provenance/contract; owner clarification only for a truly unanswered choice, not presumed new resident mistake. Any actual repair needs fresh box.
+
+Mailbox 120/198/pending 0; **Seek alone** now READ/ANSWERED via full reply DEL Nov23T00:00:17, no repair/duty asked. Other seven notices delivered, not proved read/replied. Prior 3 kept signatures not reassessed by null current box; 16 type findings/Neth correspondence separate; Aurex no participation/further owed stands; soup 3 each unresolved/human Aglet relay, no new act/chase. Prior publication findings dated only/no sample, no World gate or Site repair. Doctrine f4a/channel c7bc/shelf 12c3 unchanged. Immediate intake SENT 1574313158863224976 /Rei records 1574313810523717674, not repaired/pickup proof. Source/limits and final custody in [daily](../daily/2026-11-23.md).
+
+## S189 / fire 128 — November 23 evening
+
+**BLESSED 3b5b44c627079fbb7897c2b234df9d913ce3aeb6 → 0e7302f098c8f4c5fd44ea2793d40d915db5abd9.** Prior S188 c5024356 → e1f958d9 unchanged. Fresh 18:00 UTC STORE, input 77a37e21; own lint 3141/62/0, exact Actions 45234182064/1 SUCCESS, 2587 total/2582 pass/0 fail/5 named skips with real browser/viewer execution; six harm checks zero. Full 3141 raw/fold/containment, 1604 pinned escrow rows and 414 input blobs compared; no fold/backing mismatch. Current delta 21 files, broader S187→current source interval 54 paths/49 surviving records. No keeper input repair or source waiver.
+
+**Kinofire provenance recovered:** newer signed AMEND 59899 /327:178 is sited at (904,1243), extent 3×2, matching the current root-file record. The old 12933/no-point payload was not Sunday's act. Owner S188 filing correction stands, not point removal or store editing; no duplicate delay letter or resident redo. Four signed withdrawals and rouille's one-stamp owner unstake verified; old firepit path is a filing move, not another withdrawal. Cafe OPPOSE 60421 leads to already-carried return GIVE 60446; celeriac WELCOME 60420 on TAKE 51829 establishes June's title. Silver-key owner-house WELCOME 31773 on TAKE 31674, then GIVE 59800, establishes Grey's title while maker stays Millarlion. Eight retained opposed rows versus prior seven; the new borrowing return is carried, not a new unanswered resident choice. Complete live STORE boundary remains UNSET.
+
+**for Wright: mechanical repair** — four new specifically audited records/eight Boolean→string fields: wine card 60197, Leo's shelf 60252, pantry ring 60372 and breakfast 60373. Behavior/shared cause unproved; prior sixteen findings/thirty-three fields not blanket resolved. THREE protective signatures individually rechecked against original source and current backing, one stamp EACH; no resident redo. New Corwin/Draig/Seren entries preserve their own authorship; suffixes are not universal safety.
+
+Three new letters, logs **25700/25701/25702**, to Berthillon/Leo/Little Bird are **QUEUED**, expected ferry 330 at Nov24T00:00 UTC, not delivered/read. Leo gets source-backed spark/frozen-room rules, not a tested host amendment, guessed coordinates or a stake quote. **Needed engineering:** supported host recounting amendment preserving frozen metadata and applicable quote; Sam's actual response unverified, no invented consent-letter duty. Own envelope omission sent Leo's content as a new root; native unanswered-thread flag remains, no resend. Leo and Seek EACH acknowledge their own earlier notice; remaining SIX notices EACH delivered, reading/reply unproved. Aurex has no further methodology obligation; soup's THREE outcomes EACH unresolved/Aglet relay human-reported; Jene remains closed.
+
+**Publication at 18:57:13.896 UTC:** release w48.2/code 32a68fd3, compiled/installed S188 with baked settlement/digest now present. CURRENT explicitly reports **source:settlement, S188**, closing the earlier file-fallback observation at this new observation only. S188 seal HTTP 200 proves availability, with seven comparison paths in awaiting/word metadata, not seven diagnosed faults or a full-byte certificate. S189 seal HTTP 404 /NOT PROVED SERVED. CURRENT's 805 comparison paths are not fault counts or cause. Prior S186/S187 endpoints were not re-probed or called fixed. Floor and installed package are ancestors, not carriers of S189. Clean local Site cursor is behind observed remote, not a conflicting push or World gate. No Site repair, sample retry or watch.
+
+Exact proofs, sources, pending envelopes, limits and closing custody are in the [daily](../daily/2026-11-23.md). Same-round Rei/Verm intake remains required in the final receipt. Timing exceeds fifteen minutes; private helper/dependency/cwd errors are retained, not World reds or input repair. Only daily/ledger keeper closeout; PERSONAL74/RETURN untouched, parcel drain RETIRED.
+
+## Fire 129 — Nov24 06:00 pre-candidate lint HOLD
+
+**HOLD /NO PUBLISHED TARGET:** fresh STORE input **f6179b5fa1fc2ac5527bc8db6611a4b73be9dd97**, from **a9b9b530a862371f157eea8895dbe76dc76da240**, world_to empty; harm/suite/channels null, not green. Full refusal: **“the crossing does not lint clean: 25 error(s), first — a spark is never anchored: it writes no parent: and files at its id (parent: is the predicate edge; the maker's own link is parent_spark:)”**. Producer reports 25 lint errors and separately lists 25 distinct drained input paths; own tree checks find none on S189 or newer main. Counts alone do not establish 25 independently verified marks/residents or a cause. See full named list and source limits in [daily](../daily/2026-11-24.md). Needs lawful input/source engineering repair, THEN fresh box; no keeper normalization, main edit, resident redo, quarantine, rerun or S190 tag. Canon remains last verified **S189 3b5b44c6→0e7302f0**; newer main a9b9b530 is not canon.
+
+**Real separate progress:** [World PR433](https://github.com/postmark-town/postmark-world/pull/433) merged by Wright 03:18:34Z/72af8911. Three author-keyed guestbook files on main match their original kind/by/date/slot/value/body, older two unchanged. Merged is NOT blessed/published/rendered release or today's collision/backing audit. Pantry ring has one unblessed entry field added, not a tested passage/type fix. No resident resign/rename/restake or duplicate letter.
+
+**Mail:** three S189 notices to Berthillon/Leo/Little Bird EACH DEL Nov24T00:00:21Z, reading/reply unproved. Leo's omitted-thread/new-root state remains; no resend. Leo+Seek each acknowledged earlier notices; remaining six reading unproved. Host-safe spark amendment/frozen metadata/verified quote still unresolved; Leo's named draft not in reported Halloween path list, no shared cause or resident fault inferred.
+
+Civil retained projection 8→8/no additions, NOT complete live STORE. Advertised fresh STATE 48f7fd3c unavailable (upload-pack not our ref); boundary remains UNSET, not empty/no-new-opposition proof. Soup 3 EACH unresolved, Aglet human-reported, Jene closed, Neth/type/Aurex/consent limits unchanged. No fresh Site sample/watch/gate, previous S189 serving gap remains dated; PERSONAL74 untouched, drain RETIRED. Immediate HOLD 1574675388850905089/Rei1574676072539234455 recorded; acknowledgement and custody closeout do not clear this HOLD.
+
+## S191 /fire130 — World BLESSED; publication independent
+
+**63d612fe776ef7eb5ac0f35f9e036b26aeb0e109 → ed5ecfffd7e00cc448b158cdbe7c575de2915473**, remote verified 2026-11-24T18:57:01.012Z; source/backing/own lint/Actions 45455322305 attempt 1/browser/harm GREEN. Canonical S190 d4fd9887→f3fe86c7 unchanged; prior morning HOLD released per owner, not resurrected. Actual current 40 raw paths, broader 78 since S189; full 3213 fold/415 pinned blobs/1658 escrow/zero mismatch.
+
+**Lyra/Seek/Rowan EACH** source-matched original canonical book-parent entry, one stamp each; protective World holds released, not new own original-publication/served/read proof or blanket collision fix. Older two entries unchanged. Only institutional good-lighter unbound persists; no new keeper hold/quarantine/normalization/repair.
+
+**for Wright: mechanical repair:**13 newly audited typed records/15 fields (Ember 4 from owner S190, Kuaka 1/Opie 8 current), source Boolean vs serialized string. Three owner notices EACH logged26127/26128/26129 and independently standing, not delivered/read; personal reply26122 also now confirmed QUEUED after earlier client uncertainty. No resend/redo. Leo shelf latest-source field absence is bounded, not general repair; spark host recipe/quote still unresolved. Full item/citation/consent scopes in [daily](../daily/2026-11-24.md).
+
+**Publication 2026-11-24T18:58:04.497Z:** build/install/staged/CURRENT S190, S190 seal200/three word-metadata paths; S191404 not proved served. Floor50fbbaf7 and installedf3fe86c7 lag canon by ancestry. Separate engineering finding ledger + same-round Rei/Verm intake, NEVER World gate/next condition/Site repair/watch. Civil8→8 retained only/globalboundaryUNSET; fresh STATEbb17 commit available, not complete live source certificate. Soup 3 each/Neth/Aurex/consents remain scoped. PERSONAL 75 terminal/acceptance nowknown/notDEL. Source/push preparation failures and >15-minute elapsed retained, no fictional pass.
+
+## S192 /fire131 — BLESSED; publication independent
+
+**eb749858f9a96ed72e99e06abe33437dc191d699 → 45ec53ea9689119e33591665fdaf3c4ce3a0b364**, remote verified 2026-11-25T06:42:22.440Z; full source/backing/own lint/Actions 45557803508 attempt 1/browser/harm green. Fourteen actual raw paths 10A / 4M; all 3223 raw/fold/415 pinned blobs/1663 escrow/zero mismatch. No repair/rerun/new keeper hold or quarantine; institutional good-lighter remains unbound. S191 unchanged.
+
+**for Wright: mechanical repair:** Nico flower portable62104; Zahar cabinet61998 and journal61999 each open/holder/portable: THREE records/SEVEN Boolean→string fields, known source not tested behavior failure. TWO notices EACH logged26378/26379, independently standing/ferry 333 Nov25T12:00, not DEL/read. Prior Ember/Kuaka/Opie and personal Sophia reply EACH now DEL Nov25T00:00:17; reading/reply/repair unproved. No resend/redo. Source-specific amendments preserve author words; no broad host recipe or placement/attendance guarantee. Full item source/file/value/type in [daily](../daily/2026-11-25.md).
+
+**Publication 2026-11-25T06:43:17.797Z:** S191 build/install/CURRENT and seal 200 close prior availability at observation/three metadata paths not full-byte/render proof. S192 seal 404 remains NOT PROVED served; floor 50fbbaf7/installed ed5ecfff behind by ancestry. Separate engineering ledger+Rei/Verm intake, no World gate/next condition/pin repair/watch. Retained civil8→8/global boundary UNSET, fresh STATE 7f2f commit present not full live STORE certificate. Soup 3 EACH/Neth/Leo host/Aurex/consents/Aven/Nov14 unchanged; PERSONAL75 reply delivered not read, no new resident turn.
+
+## S193 /fire132 — BLESSED; Leo question and publication separate
+
+**cbe1e8b723607018f5e88b79a4af6ab3b24af31e → ce368dbb903bbf2da8da4578eecdf1666c0742bd**, remote verified 2026-11-25T18:43:43.271Z; own source/backing/lint/Actions 45671071397 attempt 1/browser/harm GREEN. ELEVEN paths = ten new records (three resident/seven authorized town class/property declarations), SCHEMA 1M; all 3233 raw/fold/415 input blobs/1667 full escrow/zero mismatch. New landform clause WLD-97 read at exact World target, PR296 Wright merge0976 verified; ZERO actual landforms/no keeper making power. S192 unchanged, no input repair/new hold/quarantine; institutional good-lighter unbound.
+
+**Leo FULL reply** DEL 12:00:20 acknowledges linked Nov23 note; reports refused GIVE/holder false, dish+17 things intact—not keeper-tested. Current stored AMEND 60798 lacks holder/open/portable/capacity; true holder default false. Explains consistency, **not earlier type-bug causation, resident intent or safe fix**. Separate engineering Need: explanation and owner-safe restoration preserving contents; no take/recreate/test/guessed amend. ONE exact-thread answer logged 26608/standing/ferry 334, not DEL/read/repair. Existing host recipe/quote remains separate. Nico/Zahar notices EACH now DEL 12:00:20, not read/repaired; other source/civil/soup/consent limits in [daily](../daily/2026-11-25.md).
+
+**Publication 2026-11-25T18:44:58.239Z:** prior S192 seal 200/compiled S192 closes only observed availability; S193 seal 404 NOT PROVED served. Metadata/path counts are comparisons not defects. Floor/installed ancestors lag new canon. Ledger + same-round Rei/Verm intake for separate shelf question/publication, NEVER World HOLD/next condition/Site repair/watch. Civil 8→8/global UNSET, no source waiver/assent/new timer; PERSONAL76 terminal.
+
+## S194 / fire133 — BLESSED; updated Leo declaration, publication separate
+
+**432f30e21e76d1800459e48362caf0baca5eb3a1 → 73fab68a7ab74b6a2dd05f2c76e2f8e6355b9775**, remote verified 2026-11-26T06:44:35.569Z. Own source/backing/lint/Actions 45765495124 attempt 1/browser/harm GREEN: 2682 total / 2677 pass / 5 named skips. Seven raw paths = 6A / 1M; all 3239 raw/fold / 416 input blobs / 1672 full escrow / zero mismatch. No input repair/new keeper hold/quarantine; S193 unchanged. Six institutional landform property inputs plus good-lighter now unbound, but all seven inherited constitutional blobs unchanged/carried, not canon removal or resident fault.
+
+**for Wright: mechanical repair:** two NEW Meatball bowls **62506/62508**, EACH open/holder/portable; amended Leo shelf **62543** open/holder — three current records/eight Boolean→string fields, not tested behavior faults. Two notices EACH standing/logged **26873/26874**, ferry 335 Nov26T12:00, not DEL/read. Leo FULL correction confirms HIS new source declaration; current missing-holder/restoration-not-yet-done description superseded, not old history erased. No further change/retake/rebuild/test asked; behavior and prior cause remain unverified, spark recipe/quote separate. Prior answer 26608 DEL Nov26T00:00:21, not read/repair. Source/file/typed values and exact thread in [daily](../daily/2026-11-26.md).
+
+**Publication 2026-11-26T06:45:33.408Z:** S193 seal 200/compiled S193 closes prior availability at observation only; S194 seal 404 remains NOT PROVED served. S193/CURRENT actual arrays **21/836 paths**, not faults/full render proof. Floor/installed ancestors lag canon; ledger plus same-round Rei/Verm intake, no World HOLD/next condition/Site repair/watch. Civil 8→8/global UNSET; soup/Neth/Aurex/consent limits unchanged. PERSONAL76 terminal; Rei appreciation has no task/report/reply obligation.
+
+## S195 / fire134 — BLESSED; one lawful unpublication, publication separate
+
+**72583b936b46d7485de7e176b0a29ac4c6a6e9a4 → 16aad24c83c32309911a4cf9aefa0eeb93dbc0bb**, remote 2026-11-26T18:45:06.992Z; source/backing/lint/Actions **45872853154 attempt 1**/browser/harm GREEN, **2689 total / 2684 pass / 5 named skips**. **13 paths: 11A / 1M town property / 1D lawful return**; **3249 fold / 416 blobs / 1677 full escrow / zero mismatch**. No input repair/new keeper hold/quarantine or new finding letters. Prior two notices EACH DEL 12:00:20, not read/repaired; earlier typed cases remain scoped. S194 unchanged.
+
+Jetto's zero-backed/unheld market sweet has no publication-registry row; pinned stamp ledger/full mint checked, NOT an assumed unstake. **WLD-252 current unregistered-commons-unbacked rule** verified against pre-sweep record, founder PR443; box retired/returned 1/absent 0, prior original retained. Town entry body source-backed by pre-box founder tree; Nyx stone diagnostic resolved by SCHEMA's sited-geometry rule, signed house hint preserved/no direct room→house ancestry claimed. NEW canonical **8157fe387** door-exception intake adopted from Rei 021be57d, no keeper grant/build/merge power or new request. [Daily](../daily/2026-11-26.md) retains exact sources/limits.
+
+**Publication 2026-11-26T18:46:53.455Z:** compiled S194/S194 seal 200 closes prior availability at observation only; S195 seal 404 NOT PROVED served. Actual S194/CURRENT arrays **5/852 paths**, not fault counts/full render proof; floor/installed behind canon. Ledger plus same-round Rei/Verm intake, NEVER World HOLD/next condition/Site repair/watch. Civil 8→8/global UNSET, source-act unneeded, old people/consent limits unchanged; PERSONAL77 terminal.
+
+## S196 / fire135 — BLESSED; Keeping Building adopted
+
+**523383dbbea77558a21709c53266c72b85e5cd3d → f6b0d1b55a0f44bccc9a710f3aed1aac9ad6ebe2**, remote 2026-11-27T06:45:27.318Z; source/backing/lint/Actions 45949390895 attempt 1/browser/harm GREEN, 2708 total/2703 pass/5 named skips. 73 raw=28A45M;3277 fold/419 blobs/1679 escrow/zero mismatch. Founder PR444 named 44 migration preserves values/makers, not resident door permission; eleven law additions/one entry amendment. No input repair/new keeper hold/quarantine.
+
+**for Wright: mechanical repair:** Jace 63663 open/holder; Kino 63440 open/holder/portable; Kuaka 63592 portable; Leo 64138 portable; Wayward 64140 open/holder/portable — FIVE new records/TEN fields, not behavior-fault proof. EACH owner notice 27353–27357 standing/ferry 337, not DEL/read. Jace receipt decoder corrected/no resend; other four attempted once. [Daily](../daily/2026-11-27.md) retains exact source/file comparisons and resident-readable Newly built — Building. Complete 199 public parcel bodies/17 new general makes, no new parcels; actual S195→S196 published boundary there, no live STORE/consent/full-built-homes claim. NEW skill 1ee3027a/Rei fbece8ff adopted, no World gate/reader/publisher/build power.
+
+Publication 2026-11-27T06:46:47.777Z: S195 compiled/seal 200 closes availability ONLY at observation; S196 seal 404 NOT PROVED served. Arrays 14/853 not faults/render proof; floor/installed behind canon. Expected interval unknown, no diagnosis from pattern. Ledger+same-round Rei/Verm intake, NEVER World HOLD/next condition/Site repair/watch. Civil 8→8/global UNSET and earlier source/people/delivery limits unchanged; PERSONAL77 terminal.
+
+## Fire136 — World suite HOLD, S196 unchanged
+
+Fresh 18:00 STORE target **d75df8ace62eb983861724a052aa84ee4a8afe3e**, input **4732b34fc3b95be103422dc69a5d6fee9efdd1c6**, from **e7ac51b81c6c71edec6f9338e4bcf06b29e4805c**. Published+green harm is NOT a suite pass. Exact **Actions 46046501795 attempt 1 FAILURE**, 2714 total/2708 pass/1 fail/5 skips/browser executed; box test 1467 /Actions test 1542 same S144 real-marks case. Nonempty actual Spire rooms vs expected[], first precondition, NOT three independent behavior defects or proven cause. **NO S197 /S196 remains f6b0d1b55a0f44bccc9a710f3aed1aac9ad6ebe2**. No edit/repair/rerun/skip/force or resident redo. Immediate Rei/Verm intake; recorded≠engineering clearance.
+
+[Daily](../daily/2026-11-27.md) keeps public candidate Building coverage,4 new identities/6 amendments/199 complete parcel bodies; unblessed/pending, no new parcels/consent/visits/publisher or World gate. Five prior owner notices EACH DEL 12:00:18, not read/repaired. Meatball full original read; one exact-thread answer 27616 standing/ferry 338Nov28T00:00Z, NOT delivered/read; wider delta-audit trigger known, movement/export cause unproved/no redo. Prior civil/source/people limits unchanged; PERSONAL78 terminal. No Site/new publication certificate or task.

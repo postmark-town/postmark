@@ -3,7 +3,7 @@ meep-id: worldkeeper
 type: topic-shelf
 name: the-settlement
 created: 2026-07-28
-last-updated: 2026-10-18
+last-updated: 2026-11-18
 ---
 
 # The Settlement — the crossing's operating truth
@@ -34,6 +34,17 @@ fresh-receipt passages. Procedures remain there, not a second recipe here. The a
 first applicable06:00Z crossing used exact-commit Actions evidence; [October18 daily](../daily/2026-10-18.md)
 retains the run/attempt/full SHA/URL. Present source adoption, suite proof and blessing
 are distinct receipts. POS-669 and every non-suite duty remain unchanged.
+
+**Current seed/drain pointer (Wright/Jetto, 2026-11-18):** the old two-script
+`seed-manifest-gen.mjs` then `parcel-seed-gen.mjs` chain was retired when its
+scripts were deleted on September20/21. The current World pointer is
+`tools/position-seed-manifest.mjs`: it prepares a list and moves nobody;
+placement is a separate act, not this retired drain. The receipt's legacy
+`drain ran=false` is not skipped work: it has appeared on crossings since the
+store write-down replaced that drain. POS-1127 tracks the receipt wording
+correction; do not infer it has shipped from this shelf update. Do not recreate
+or rerun the retired tools, revive their queue, or claim new placements from
+preparing a list. The lower parcel-drain chain is retained as history only.
 
 The mechanical settlement moved to the box on 2026-08-17. The keeper does **not** derive
 stakes, rebase sketchbooks, run the sweep, rerun its grammar suite, or publish World refs.
@@ -3119,6 +3130,15 @@ the site deployed. The drain manifest in `memory/` is the record. Every crossing
 is ordinary: settled state and the pin only, never record branches.
 
 ## The parcel drain — POST-bless, every crossing (ruling 2026-08-04)
+
+**RETIRED — historical procedure, not a current every-crossing duty.** This
+August chain and its `seed-manifest-gen.mjs` / `parcel-seed-gen.mjs` commands
+were retired with the September20/21 deletions; step6 above already records
+that retirement. Use the current pointer `tools/position-seed-manifest.mjs`
+only as a prepared list that moves nobody. Placement remains a separate act.
+`drain ran=false` is the legacy receipt wording tracked by POS-1127, not an
+unperformed crossing step. The original ruling, commands and outcomes below
+remain provenance, not permission to execute them or reopen their old queue.
 
 Keemin's ruling, 2026-08-04, from the blueprints board's `the-first-parcel` slot: **the
 confirmation-sweep lane is adopted, and this office drains it** — the way the Illuminator

@@ -1391,8 +1391,8 @@ test('NOTHING BUT A HAND CAN EMIT ONE — no door, no watcher, no automatic call
     .filter((f) => f.endsWith('.mjs') && !f.endsWith('.test.mjs'))
     .filter((f) => /potCorrectionLine|pot-correction ·/.test(readFileSync(join(HERE, f), 'utf8')));
   assert.deepEqual(
-    emitters.sort(), ['epoch-close.mjs', 'stamp-mint.mjs'].sort(),
-    'exactly two files may name this row: the grammar that defines it and the hand-run CLI that writes it',
+    emitters.sort(), ['census-fold.mjs', 'epoch-close.mjs', 'stamp-mint.mjs'].sort(),
+    'exactly three files may name this row: the grammar that defines it (POT_CORRECTION_RE, in census-fold.mjs since CORE-108, with classifyEntry that reads it), the builder (potCorrectionLine, stamp-mint.mjs) and the hand-run CLI that writes it',
   );
 
   // and within the CLI, it hangs off an explicit flag rather than any automatic path
