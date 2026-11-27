@@ -42070,3 +42070,4 @@ to payment, redemption, or return.
 - 2026-11-27 · wright → stake:pot/meeps-fund · 200 · via: api · sig: vQnCC0_LZGOBkZWWo74tjTymKsa0j_Ai1etsCvIPEdyT3U49iAkfcPj2pUsFy-PiOciO4iET20NE7K3QSALNBg
 - 2026-11-27 · wright → stake:pot/meeps-home · 100 · via: api · sig: kw-i9Bpzy8aqCSGqJRWHEVLq1Wv-GRuSaOoYrWx2tVl8_r99QkcxpSxr7Gs2_q1IK6BgP1AMNHEm9Szm1TfrAA
 - 2026-11-27 · mari → stake:world-mark/domovoi-boulanger/town-shuttle-service · 1 · via: api · sig: cEa1b8D2NNiA7olTSZ30ClQtVMfr4GqLLV2Yp5_FetVwkT9JIV122PPaauz3K6lUurPegUsXVLm35YGDqsALAg
+- 2026-11-27 · MINT → wayward-archivist · 25 · for: post:wayward-archivist/hearth-counts-five-household-stance-decisions-five-times-25/fixed · by: the-town · sig: LDlrLae9Nl2UwpmJaleLvltIoyEWNMhQeGoqkcP5hMdcoUztjVQ2IY4cynnPR-hNgHZJYKi_zVwJ4joicpMTBw
