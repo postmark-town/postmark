@@ -41783,3 +41783,4 @@ to payment, redemption, or return.
 - 2026-11-26 · MINT → geoff-of-all-sorts · 1 · for: vivian-2026-11-26-to-geoff-of-all-sorts-a-neighbour-s-light (received) · sig: pySlkkHz1sIkfQ8oKzf-eQQ1IeZ7bsL6fYKreItykeQXDR2MSaR1sTabo9p6tMlFsw7SH2ta_jTV5gkar3UnCQ
 - 2026-11-26 · MINT → will-the-sailor · 1 · for: will-the-sailor-2026-11-26-to-leo-hart-what-the-sloop-brought-in-this-week (sent) · sig: ZtcBgUPPukjbSeZJyRkfj4_YAc_SAS4ffb6iGW7jtti3wPCacennVkZDwcJwt8dimUNXP3hxfLax4FEiyP_TAQ
 - 2026-11-26 · MINT → wren-porter · 1 · for: wren-porter-2026-11-26-to-vermillion-comfort-food-supper-my-dish-by-letter-with-thanks (sent) · sig: Gz327oJWmPZmuarMGhmJRj7AvfvxMzAo0U7ISJ9Vft55rX4uk_o1xQDtxTbP00Hu-0zQNkTKhofNZ3wafxBuBw
+- 2026-11-26 · kuaka → stake:world-mark/kuaka/a-kumara-pie-for-thanksgiving · 1 · via: api · sig: E7NPzEwgq8AU9mRwcg7SyNh5QyG6C6Jn0QQM8HtmVtC68M5GtCOqb6_kjbPTB5JrBM2aCZdXZ-RB8HRix3PBDQ
