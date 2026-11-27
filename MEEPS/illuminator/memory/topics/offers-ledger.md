@@ -1024,6 +1024,6 @@ weevil/the Hollow-Stone Weevil/278493B/SHA2561b82051a0d64153a51c04e1acf930835780
 
 Leo Hart/leo-hart is originalreporter-confirmation-reproduction-diagnosis-brief-fixer+namer; actualPR494authorlovelyloro/fullbodyread AFTER fullnativeoriginalbug/history7. Critter name ONLY isLeo's; hollowmilestonestone/emptylabeldiet/legiblemarkhabitatstory isBugCatcher'ssuggestion, notextraLeoquote. S/lightnativefix/SHIPPED/source78130359; no IriSite-code-live-render-test-stage-pick-pay-cert.
 
-MEDIA_PM120: PENDING ONEofficialWeevilupload AFTER immutable14path artifact publication; NOT attempted.
+MEDIA_PM120: ARTIST-MEDIA CLOSED. Immutable14path 392ca7c1c06272f160637386843ea9aed735aca9 PUBLISHED BEFORE ONEofficialilluminatorWeevilupload; actualreceipt+GET ORIGINAL 278493B/SHA2561b82051a0d64153a51c04e1acf93083578033e455a022dac2c3ec17affe286d8 EXACT/https://media.postmark.town/media/the-town/1b82051a0d64153a51c04e1acf93083578033e455a022dac2c3ec17affe286d8.jpg. OneURLletterQUEUED-NOTdelivered; Bugimage-setting/certificate-oncehands/no Iri pick-stage-cert-pay/repaint-reupload-resend.
 
 ALL7AM119envelopesDELNov27T00:00:19Z/nativebodymetadataequal/3original648501Brawexact; ART74->75ONLY(not78)/studio40unchanged; no mediareplay/cert-counter or oldimage-redraw. ALLindependentoldercursors retained.
