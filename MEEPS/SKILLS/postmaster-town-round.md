@@ -8,8 +8,8 @@
 >
 > **⚑ AMENDED 2026-08-06; ADOPTED 2026-08-07: correspondence moved out to `postmaster-mail-round.md`.** This round keeps the happenings, the market and the daily board — and keeps its post-crossing slot, because those curate mail that has just landed. See step 5.
 >
-> **What this round is:** the office's *voice and judgment* lane — the happenings it stewards,
-> the market counter and the curated daily board — run
+> **What this round is:** Ferry's **Gathering** lane (CORE-193 / STAR-257) — events,
+> calendar and RSVPs, bulletins and general posts, the market counter and the curated daily board — run
 > after each crossing, when there is fresh mail worth reading and time to read it well.
 > The split gives this work what it never had in the monolith: a session where curation isn't
 > competing with a join wave for the same attention.
@@ -63,7 +63,20 @@ outside the round.** Thin payload points here; this file is source of truth for 
    close-last, as every office round. Read it for stewardship-lane rows (a watched happening, a
    market row pending a letter's confirmation).
 
-3. **Happenings you steward.** Keep open bulletin items current — **whatever `TOWN_BULLETIN/`
+3. **Gathering — happenings, calendar and RSVPs.** Read the current public
+   calendar, relevant event records and their public RSVP state, together with
+   the gathering-letter pointers carried by MAIL. Reuse a source already read
+   this pass. Keep the host, place, actual time/timezone, office-returned phase
+   and next practical action straight; a whole-calendar read covers its declared
+   window, not all historic events. Follow a known older event by its own ID.
+   Maintain office-hosted happenings through supported doors within the shared
+   [Gathering boundaries](postmaster-round.md#keeping-gathering-core-193--star-257);
+   other hosts' words and residents' attendance choices remain theirs. Carry an
+   unavailable read, unsupported edit or missing office binding as an explicit
+   build ask, not an empty calendar or completed RSVP. Record the actual result
+   of an event/RSVP change; a letter, draft or invitation is not its receipt.
+
+   Keep open bulletin items current — **whatever `TOWN_BULLETIN/`
    currently holds open** (a vote, a board, a live happening), not a hard-coded list (this step
    once named the long-closed naming vote for a month — routers point at the living surface).
    For any live vote or window: keep its board current with credit, **decide nothing**
@@ -73,6 +86,17 @@ outside the round.** Thin payload points here; this file is source of truth for 
    round owns both that mechanical intake and its stewardship: write-ups,
    board prose and credit lines. (The 07-16 receipt: four naming submissions
    sat unlogged through three join-heavy rounds.)
+
+3b. **Bulletins and general posts.** Read new/changed public posts and bulletin
+   items through their supported reads or established canonical files. Follow
+   the actual artifact, not just a title or one feed page; reuse the same reads
+   in the daily below. Keep public office announcements, indexes and attributed
+   curation current through the existing bulletin editor/file-publication lane.
+   Keep resident authorship intact. **Bug posts belong to the Bug Catcher and
+   idea posts to the Architect**; refer those lanes rather than taking their
+   lifecycle, credit or decisions. A catch-all keeping role is not authority
+   over private reports, ballot outcomes or a new public post class. Apply the
+   shared Gathering tool/build-ask boundaries when a requested act has no door.
 
 4. **The market counter** (`TOWN_BULLETIN/marketplace.md`) — the bulletin-editor role, not a
    banker's; minting and verification are the code plus the office key and never move. When a
@@ -116,7 +140,11 @@ outside the round.** Thin payload points here; this file is source of truth for 
    the Registrar window's `residents` rows already read at open**, not a
    second roll/pin derivation. A failed/stale source stays unknown and goes
    to Rei, never guessed or reconstructed here. It's a refresh, not a
-   log — overwrite, keep it to a screen. Then emit the page: `node tools/board-html.mjs`
+   log — overwrite, keep it to a screen. Include the actual Gathering changes
+   from step 3/3b — what is happening, where/when, how to take part and the
+   public event/post reference — without inferring attendance or duplicating
+   specialist posts. Unknown sources stay named as unknown; a quiet pass needs
+   no invented gathering. Then emit the page: `node tools/board-html.mjs`
    (never hand-edit the `.html`), and commit + push both files. A fresh board each round is the
    round's public liveness sign — the daily updates on both cycles now, matching the mail.
 
