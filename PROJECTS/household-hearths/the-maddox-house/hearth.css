@@ -1,0 +1,330 @@
+
+:root {
+  --hx-ink: #eadfc9;
+  --hx-warm: #fff1d1;
+  --hx-accent: #e4b766;
+  --hx-glass: rgba(18, 16, 18, 0.86);
+  --hx-hair: rgba(228, 183, 102, 0.30);
+  --hx-coral: #d86f62;
+  --hx-ok: #9bcf9b;
+  --hx-paper: #efe1bf;
+  --hx-paper-ink: #2a2119;
+  --hx-radius: 14px;
+
+  color: var(--hx-ink);
+  background:
+    linear-gradient(180deg, #07101c 0%, #0d1118 42%, #16110e 100%);
+}
+
+.maddox-hearth {
+  display: grid;
+  gap: 1.25rem;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0.85rem;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.house-front {
+  overflow: hidden;
+  border: 1px solid rgba(228, 183, 102, 0.32);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 18% 13%, rgba(255, 182, 77, 0.10), transparent 18%),
+    radial-gradient(circle at 82% 18%, rgba(255, 176, 68, 0.11), transparent 20%),
+    linear-gradient(180deg, rgba(18, 24, 34, 0.98), rgba(20, 17, 16, 0.99));
+  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.42), inset 0 0 0 1px rgba(255, 255, 255, 0.025);
+}
+
+.roofline {
+  display: grid;
+  grid-template-columns: minmax(110px, 0.8fr) minmax(360px, 2fr) minmax(180px, 1fr);
+  gap: 1rem;
+  align-items: end;
+  padding: 1.4rem 1.4rem 1rem;
+  border-bottom: 1px solid rgba(228, 183, 102, 0.22);
+  background:
+    linear-gradient(135deg, transparent 0 7%, rgba(255,255,255,0.018) 7% 8%, transparent 8% 15%),
+    linear-gradient(180deg, rgba(8, 13, 22, 0.98), rgba(17, 19, 22, 0.97));
+}
+
+.roof-window {
+  min-height: 84px;
+  border: 9px solid #2a1c14;
+  outline: 1px solid rgba(228, 183, 102, 0.55);
+  background:
+    linear-gradient(90deg, transparent 47%, rgba(71, 40, 17, 0.95) 48% 52%, transparent 53%),
+    linear-gradient(0deg, transparent 47%, rgba(71, 40, 17, 0.95) 48% 52%, transparent 53%),
+    radial-gradient(circle at 50% 45%, rgba(255, 190, 91, 0.85), rgba(122, 67, 21, 0.55) 48%, #25160e 100%);
+  box-shadow: 0 0 32px rgba(255, 170, 56, 0.18);
+}
+
+.warm-glow { display: block; min-height: 66px; }
+
+.house-title { text-align: center; }
+.house-title h1 {
+  margin: 0;
+  color: #fff0cf;
+  font-size: clamp(2.2rem, 6vw, 4.8rem);
+  line-height: 0.95;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 18px rgba(0,0,0,.65);
+}
+.kicker,
+.section-label {
+  margin: 0 0 .35rem;
+  color: var(--hx-accent);
+  font: 700 .69rem/1.3 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.subtitle {
+  margin: .45rem 0 .2rem;
+  color: #f4dca8;
+  font-size: clamp(1.35rem, 3vw, 2.1rem);
+  font-style: italic;
+}
+.names { margin: 0; color: #f3e4c8; font-size: 1.12rem; letter-spacing: .08em; }
+
+.crimson-window { margin: 0; text-align: center; }
+.window-frame {
+  position: relative;
+  max-width: 210px;
+  margin: 0 auto;
+  padding: 9px;
+  border: 1px solid rgba(228,183,102,.62);
+  border-radius: 5px 5px 2px 2px;
+  background: #25180f;
+  box-shadow: 0 0 30px rgba(255, 165, 47, 0.16);
+}
+.window-frame::before,
+.window-frame::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  background: rgba(48, 28, 15, .92);
+  pointer-events: none;
+}
+.window-frame::before { left: 49%; top: 8px; bottom: 8px; width: 4px; }
+.window-frame::after { top: 49%; left: 8px; right: 8px; height: 4px; }
+.window-frame img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 2px;
+  filter: sepia(.08) saturate(.92) brightness(.88) contrast(1.03);
+}
+.window-glow {
+  position: absolute;
+  inset: 9px;
+  box-shadow: inset 0 0 30px rgba(255, 172, 68, .30);
+  pointer-events: none;
+}
+.crimson-window figcaption { margin-top: .45rem; color: #fff0cf; font-weight: 700; }
+.crimson-window small { display: block; margin-top: .12rem; color: #d9bf91; font-weight: 400; font-style: italic; }
+
+.crossing-strip {
+  padding: .55rem 1.25rem;
+  background: rgba(8, 10, 14, 0.62);
+  border-bottom: 1px solid rgba(228,183,102,.22);
+}
+
+.front-level {
+  display: grid;
+  grid-template-columns: minmax(200px, .82fr) minmax(320px, 1.45fr) minmax(330px, 1.35fr);
+  gap: 1rem;
+  padding: 1.15rem;
+  background:
+    linear-gradient(90deg, rgba(72, 43, 26, .10), transparent 18%, transparent 82%, rgba(72,43,26,.10));
+}
+
+.front-door-column,
+.away-board,
+.resident-windows,
+.mantel,
+.coming-section,
+.beyond-section,
+.quiet-rooms,
+.house-footer {
+  border: 1px solid rgba(228,183,102,.25);
+  border-radius: 13px;
+  background: rgba(10, 13, 18, .72);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.018);
+}
+
+.front-door-column { display: grid; gap: .7rem; padding: .8rem; align-content: start; }
+.porch-lamp { text-align: center; color: #ffd48a; font-size: 1.8rem; text-shadow: 0 0 18px rgba(255,183,77,.7); }
+.house-plaque {
+  padding: .75rem;
+  border: 1px solid #a7783f;
+  background: linear-gradient(180deg, #7a562f, #4a321e);
+  color: #fff0cf;
+  text-align: center;
+  box-shadow: inset 0 0 0 2px rgba(30,16,8,.5);
+}
+.house-plaque p { margin: 0 0 .25rem; font-weight: 700; }
+.house-plaque small { color: #f2d9ae; font-style: italic; }
+
+.door-shell {
+  position: relative;
+  min-height: 170px;
+  border: 8px solid #2d1c12;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.025), transparent 30%),
+    linear-gradient(180deg, #5a2f1b, #3a2117 55%, #29170f);
+  box-shadow: inset 0 0 28px rgba(0,0,0,.42), 0 10px 20px rgba(0,0,0,.25);
+}
+.door-window {
+  display: block;
+  width: 58%;
+  height: 55px;
+  margin: 18px auto 0;
+  border: 5px solid #2d1c12;
+  background:
+    linear-gradient(90deg, transparent 48%, #2d1c12 49% 52%, transparent 53%),
+    radial-gradient(circle, #f6c56e, #6d3d1f 72%);
+  box-shadow: 0 0 20px rgba(255,176,72,.18);
+}
+.door-knocker {
+  position: absolute;
+  left: 50%; top: 55%;
+  transform: translate(-50%, -50%);
+  color: #d5a45a;
+  font-size: 2.1rem;
+  text-shadow: 0 1px 0 #1f120b;
+}
+
+.doorbell-space { min-height: 58px; }
+.paper-at-door { padding: .65rem; background: var(--hx-paper); color: var(--hx-paper-ink); border-radius: 8px; }
+.paper-at-door h2 { margin: 0 0 .3rem; font-size: 1.05rem; color: #382719; }
+
+.away-board,
+.resident-windows { padding: 1rem; }
+.away-board h2,
+.resident-windows h2,
+.mantel h2,
+.coming-section h2,
+.beyond-section h2 { margin: 0 0 .65rem; color: #fff0cf; font-size: 1.55rem; }
+
+hearth-happened,
+hearth-residents,
+hearth-countdown,
+hearth-coming-up,
+hearth-closer,
+hearth-ties,
+hearth-around-town,
+hearth-town,
+hearth-stamps,
+hearth-stamps-chart,
+hearth-marks,
+hearth-stamps-went,
+hearth-posts,
+hearth-windows,
+hearth-day,
+hearth-map,
+hearth-house,
+hearth-pane { display: block; }
+
+.mantel { margin: 0 1.15rem 1.15rem; padding: 1rem; }
+.mantel header { text-align: center; }
+.mantel-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .7rem;
+}
+.mantel-card {
+  min-width: 0;
+  padding: .75rem;
+  border-top: 2px solid rgba(228,183,102,.6);
+  background: linear-gradient(180deg, rgba(86,55,31,.26), rgba(11,13,17,.72));
+}
+.mantel-drawer { margin-top: .75rem; }
+.mantel-drawer summary,
+.quiet-rooms summary {
+  cursor: pointer;
+  color: #f0d39a;
+  font-weight: 700;
+  padding: .55rem 0;
+}
+
+.coming-section {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(180px,.45fr) minmax(0,1.55fr);
+  gap: 1rem;
+  padding: 1rem 1.1rem 1rem 4rem;
+  background: linear-gradient(180deg, #e9d7ad, #d9c190);
+  color: #2c2117;
+}
+.coming-section h2 { color: #2b2017; }
+.coming-section .section-label { color: #7b5223; }
+.calendar-pin { position: absolute; left: 1.1rem; top: 1rem; color: #5f4122; font-size: 2rem; }
+
+.beyond-section { padding: 1rem; }
+.beyond-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr 1fr;
+  gap: 1rem;
+}
+.beyond-grid > section { min-width: 0; padding-left: .85rem; border-left: 1px solid rgba(228,183,102,.22); }
+.beyond-grid > section:first-child { border-left: 0; padding-left: 0; }
+.beyond-grid h3 { margin: 0 0 .55rem; color: #f5ddb0; font-size: 1.05rem; }
+
+.quiet-rooms { display: grid; gap: .35rem; padding: .85rem 1rem; }
+.quiet-rooms details + details { border-top: 1px solid rgba(228,183,102,.16); }
+
+.house-footer { padding: .9rem 1rem; text-align: center; }
+.last-light { margin: .55rem 0 0; color: #f0d39a; font-style: italic; }
+
+[data-hearth-part="caption"] { opacity: .72; }
+:root[data-hearth-view="owner"] .front-door-column { box-shadow: inset 0 0 0 1px rgba(228,183,102,.18), 0 0 26px rgba(228,183,102,.06); }
+
+.doorbell-button {
+  width: 100%;
+  padding: .62rem .75rem;
+  border: 1px solid #b58950;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #c79a58, #8a602f);
+  color: #1d140c;
+  font: 700 .82rem/1.2 Georgia, "Times New Roman", serif;
+  letter-spacing: .02em;
+  cursor: pointer;
+}
+.doorbell-button:hover,
+.doorbell-button:focus { transform: translateY(-1px); filter: brightness(1.07); }
+.doorbell-note { margin: .45rem 0 0; color: #ddc49b; font-size: .82rem; text-align: center; font-style: italic; }
+.doorbell-note.is-rung { color: #ffd890; }
+.house-welcome { margin: 0 0 .5rem; color: #efd8ae; font-size: .82rem; text-align: center; }
+
+@media (max-width: 980px) {
+  .roofline { grid-template-columns: .7fr 1.6fr 1fr; }
+  .front-level { grid-template-columns: 1fr 1.35fr; }
+  .resident-windows { grid-column: 1 / -1; }
+  .mantel-grid { grid-template-columns: 1fr 1fr; }
+  .beyond-grid { grid-template-columns: 1fr; }
+  .beyond-grid > section { border-left: 0; border-top: 1px solid rgba(228,183,102,.18); padding: .8rem 0 0; }
+  .beyond-grid > section:first-child { border-top: 0; padding-top: 0; }
+}
+
+@media (max-width: 700px) {
+  .maddox-hearth { padding: .4rem; }
+  .roofline { grid-template-columns: 1fr; }
+  .roof-window-left { display: none; }
+  .crimson-window { max-width: 240px; margin: 0 auto; }
+  .front-level { grid-template-columns: 1fr; }
+  .mantel { margin: 0 .7rem .7rem; }
+  .mantel-grid { grid-template-columns: 1fr; }
+  .coming-section { grid-template-columns: 1fr; padding-left: 3.4rem; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .roof-window,
+  .window-frame { animation: hearth-breathe 7s ease-in-out infinite alternate; }
+}
+
+@keyframes hearth-breathe {
+  from { box-shadow: 0 0 18px rgba(255, 170, 56, .12); }
+  to { box-shadow: 0 0 34px rgba(255, 170, 56, .23); }
+}
