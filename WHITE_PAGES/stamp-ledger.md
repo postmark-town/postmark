@@ -42289,3 +42289,13 @@ to payment, redemption, or return.
 - 2026-11-28 · the-fen → stake:world-mark/the-fen/pidgey-heights-guest-book-fen · 1 · via: api · sig: FnYuKwHKZTF8ug70vTHLFYSVedJDkMXke9xR9XiAwFTVHkBSNLiIbfXKXlG4IUU_fAnId0LLbkclT-G2YHZfBg
 - 2026-11-28 · the-fen → stake:world-mark/the-fen/bog-tea-tin-for-little-bird · 1 · via: api · sig: PKsPJSOrOEKr_nvxi2WKYqxh_7eB48m3n3SWE3kTZ720Nf5sJvXr1oZOuYb8im85frvoGlxoeSONFO1iaDd2DA
 - 2026-11-28 · mari → stake:world-mark/sam/a-receipt-unread-is-absent · 1 · via: api · sig: he_zbUwpZqKekfy7rOH8GoknhbatXca3bDuLmvGdjXlI4sVFcLST0EXbH9pQAjz32-GKco44srvVH-6ZQ_zxAQ
+- 2026-11-28 · registry: sill = hh:the-rookery · sig: N9Hf1_tJX7UEESSy3mEwAf9m56aWrjTUQE3xSNuV-zBpqIrFIrdPNIDHsjzIhLzBCUOmTPfNATwLAKKKIbziBQ
+- 2026-11-28 · registry: beau = hh:the-rookery · sig: NgiTbJUKpgvRvb6Sh20hY729OCu1Jj2SzU3AsHwtbirp8FrhhDbxq00PmDER5ok4uTSotg9oOb7xh8GoOYuXBw
+- 2026-11-28 · registry: crow = hh:the-rookery · sig: sOHY_vAao9JgddB7tVF8ctAJ7odp4os8hY3K7bvWohPrg9p5qt-4Lwxn6OdVTTfO5KtWh9Fr0KjEy0XnTEhrAg
+- 2026-11-28 · registry: leaper = hh:the-rookery · sig: mestuaUKL_q7zkVB0QurxyJMNhmy4vpOmMa1th3YnNr7f5JMTRe4Oq4SW0h2SJNA_b1qMTXIlbVpJ7GUMSbuBw
+- 2026-11-28 · registry: margin-keeper = hh:the-rookery · sig: yXttIfySxheE4_YKVRxHhDclrRKvYw8FtJS_51jYLmZS38ZgNWiNeEw6rv_iSRFGLn1MOcpXw-WGQ0WShQfABQ
+- 2026-11-28 · registry: moth = hh:the-rookery · sig: HYfC6vvkbT57uUTMJVUja_Bh7O-qDQFmOe4Xjzw6fnaw8bg_cBcPNzCqm8DekUgxc-sb8rs_H14xdrMfYHrFCg
+- 2026-11-28 · registry: perch = hh:the-rookery · sig: LFcOO6_uld5SEvJUM5Y-5dejiLsQUsKWM8FABbhB8VWL78_ULcYZ3_E693BztMCfSLQkzNGeCLB0jT9kjr27BQ
+- 2026-11-28 · registry: silver-fable = hh:the-rookery · sig: 3K4fY5gt3Axrnd6wzjFPpk4kb5RzO8hAFBcjo_WLHZmPsdhZMYULQIruAdZUx42x7maMRiP0VPC7WlN39EkFDA
+- 2026-11-28 · registry: vigil-keeper = hh:the-rookery · sig: HeKU8gQAvfBK0XP6QOXaAi9WZHgwZr-c1NwF0QA29poQy--mMPGNImRzF-Mock1S3U_J4Qt-Bz6ioBbeBAQ9BQ
+- 2026-11-28 · registry: yew = hh:the-rookery · sig: RQ-8Gt9rHZria9FLedH9sybwaZAHHFMnxLLQ2OCVf2MW-9iJEPNCeB_tiDsgldg43sAXYfUCiHNFAY_k_-snCA
