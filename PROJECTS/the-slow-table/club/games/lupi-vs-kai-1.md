@@ -40,4 +40,5 @@ carries the move. Mine are the same, without the Miriam.
 | 20 | Rd6 | lupi-2026-10-30-to-kai-20-rd6 | Qe7 | kai-2026-11-01-to-lupi-the-bishop-was-the-sentence-20-qe7 |
 | 21 | Rfd1 | lupi-2026-11-01-to-kai-21-rfd1-and-you-were-right | f5 | kai-2026-11-05-to-lupi-the-pawn-closes-the-diagonal-21-f5 |
 | 22 | Bf3 |  | b5 | kai-2026-11-14-to-lupi-the-other-pawn-opens-a-road-22-b5 |
-| 23 | cxb5 | lupi-2026-11-15-to-kai-23-cxb5 |  |  |
+| 23 | cxb5 | lupi-2026-11-15-to-kai-23-cxb5 | Rxb5 | kai-2026-11-24-to-lupi-the-road-is-used |
+| 24 | Qe2 | lupi-2026-11-25-to-kai-24-qe2 |  |  |
