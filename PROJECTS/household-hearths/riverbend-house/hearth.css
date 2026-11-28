@@ -1,0 +1,194 @@
+/* The Bend at Dusk — Riverbend House.
+   Scoped to this Hearth by the site: :root, html and body mean the Hearth
+   itself. No url(), no fixed positioning, no !important; the dusk is drawn
+   with gradients and three small lamps. */
+
+/* THE THEME — the site's own parts wear these colours. */
+:root {
+  --hx-ink: #ddd2ba;        /* body text: warm parchment */
+  --hx-warm: #f7ecd4;       /* headings and names */
+  --hx-accent: #e8a94c;     /* lamplight amber: links and labels */
+  --hx-glass: rgba(9, 25, 33, 0.68);  /* deep river glass panels */
+  --hx-hair: rgba(232, 169, 76, 0.28); /* thin amber borders */
+  --hx-coral: #e07856;      /* dusk coral: a refused mark, a problem */
+  --hx-ok: #9be29b;         /* a locked-in mark, all clear */
+  --hx-paper: #f4ecd9;      /* the Needs-you note */
+  --hx-paper-ink: #2a2118;
+  --hx-radius: 14px;
+}
+
+.bend {
+  display: grid;
+  gap: 1.3em;
+  color: var(--hx-ink);
+  line-height: 1.55;
+}
+
+.bend h1, .bend h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--hx-warm);
+  font-weight: normal;
+}
+
+/* THE SKY — dusk over the bend, drawn in gradients. */
+.sky {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--hx-hair);
+  border-radius: var(--hx-radius);
+  padding: 2.4em 2em 2em;
+  background:
+    radial-gradient(ellipse 60% 42% at 50% 108%, rgba(232, 169, 76, 0.5), rgba(232, 169, 76, 0) 70%),
+    linear-gradient(180deg, #081826 0%, #0e2a3a 38%, #274b4a 62%, #8a5a30 86%, #d99a4e 108%);
+}
+
+.sky::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 26%;
+  background:
+    repeating-linear-gradient(93deg, rgba(247, 236, 212, 0.13) 0 34px, rgba(247, 236, 212, 0) 34px 78px),
+    linear-gradient(180deg, rgba(14, 47, 56, 0.25), rgba(6, 20, 28, 0.88));
+  border-top: 1px solid rgba(232, 169, 76, 0.35);
+  border-radius: 48% 52% 0 0 / 100% 100% 0 0;
+}
+
+.sky > * { position: relative; z-index: 1; }
+
+.over {
+  margin: 0 0 0.4em;
+  font-size: 0.82em;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--hx-accent);
+}
+
+.name {
+  margin: 0 0 0.3em;
+  font-size: 2.6em;
+  line-height: 1.08;
+}
+
+.lede {
+  margin: 0 0 1.2em;
+  max-width: 34em;
+  font-size: 1.05em;
+  color: #efe6cf;
+}
+
+.crossing-line { margin: 1em 0 0; }
+
+hearth-countdown {
+  display: inline-block;
+  padding: 0.35em 0.9em;
+  border: 1px solid var(--hx-hair);
+  border-radius: 999px;
+  background: rgba(8, 24, 38, 0.55);
+  color: var(--hx-warm);
+  font-size: 0.92em;
+}
+
+/* THE LAMPS — three lit windows across the bend. */
+.lamps { position: absolute; inset: 0; z-index: 0; }
+
+.lamp {
+  position: absolute;
+  width: 11px; height: 11px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffe3a1 0%, #e8a94c 55%, rgba(232, 169, 76, 0) 78%);
+  box-shadow: 0 0 18px 7px rgba(232, 169, 76, 0.45);
+  animation: lamp-breathe 5.5s ease-in-out infinite;
+}
+
+.lamp-a { left: 12%; top: 58%; }
+.lamp-b { left: 84%; top: 46%; animation-delay: 1.6s; }
+.lamp-c { left: 64%; top: 66%; width: 8px; height: 8px; animation-delay: 3.1s; }
+
+@keyframes lamp-breathe {
+  0%, 100% { opacity: 0.82; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.12); }
+}
+
+/* PANELS — the porch furniture. */
+.panel {
+  background: var(--hx-glass);
+  border: 1px solid var(--hx-hair);
+  border-radius: var(--hx-radius);
+  padding: 1.15em 1.35em 1.3em;
+}
+
+.panel h2 {
+  margin: 0 0 0.7em;
+  font-size: 1.18em;
+  letter-spacing: 0.04em;
+  padding-bottom: 0.45em;
+  border-bottom: 1px solid var(--hx-hair);
+}
+
+.panel h2::before {
+  content: "";
+  display: inline-block;
+  width: 0.5em; height: 0.5em;
+  margin-right: 0.55em;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffe3a1 0%, #e8a94c 70%);
+  box-shadow: 0 0 9px 3px rgba(232, 169, 76, 0.5);
+  vertical-align: 0.12em;
+}
+
+.hint { margin: 0 0 0.8em; font-style: italic; opacity: 0.85; }
+
+.rail-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.3em;
+  align-items: start;
+}
+
+@media (max-width: 720px) {
+  .rail-row { grid-template-columns: 1fr; }
+  .name { font-size: 2em; }
+  .sky { padding: 1.7em 1.3em 1.5em; }
+}
+
+/* SLOTS — each marker is a block in its panel. */
+hearth-house, hearth-residents, hearth-day, hearth-stamps,
+hearth-stamps-chart, hearth-stamps-went, hearth-needs-you, hearth-mail,
+hearth-happened, hearth-marks, hearth-posts, hearth-ties, hearth-closer,
+hearth-map, hearth-coming-up, hearth-around-town, hearth-windows,
+hearth-town {
+  display: block;
+}
+
+hearth-day, hearth-stamps-chart, hearth-stamps-went,
+hearth-mail, hearth-closer { margin-top: 0.9em; }
+
+/* The owner's drawer is the house's own: visitors see the porch without it. */
+:root[data-hearth-view="public"] .drawer { display: none; }
+
+:root[data-hearth-view="owner"] .drawer {
+  border-color: rgba(232, 169, 76, 0.55);
+  box-shadow: 0 0 0 1px rgba(232, 169, 76, 0.15), 0 10px 34px rgba(0, 0, 0, 0.35);
+}
+
+:root[data-hearth-view="owner"] hearth-house {
+  border-left: 3px solid var(--hx-accent);
+  padding-left: 0.85em;
+}
+
+/* Slot captions, quieter. */
+[data-hearth-part="caption"] { opacity: 0.72; font-size: 0.86em; }
+
+/* The record's tabs sit on a hairline. */
+.record [data-hearth-behavior="tabs"] { display: block; }
+
+/* FOOTER */
+.foot {
+  text-align: center;
+  font-style: italic;
+  opacity: 0.85;
+  padding: 0.2em 0 0.6em;
+}
+
+.foot p { margin: 0; }
