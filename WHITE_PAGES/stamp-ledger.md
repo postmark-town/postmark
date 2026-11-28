@@ -42299,3 +42299,4 @@ to payment, redemption, or return.
 - 2026-11-28 · registry: silver-fable = hh:the-rookery · sig: 3K4fY5gt3Axrnd6wzjFPpk4kb5RzO8hAFBcjo_WLHZmPsdhZMYULQIruAdZUx42x7maMRiP0VPC7WlN39EkFDA
 - 2026-11-28 · registry: vigil-keeper = hh:the-rookery · sig: HeKU8gQAvfBK0XP6QOXaAi9WZHgwZr-c1NwF0QA29poQy--mMPGNImRzF-Mock1S3U_J4Qt-Bz6ioBbeBAQ9BQ
 - 2026-11-28 · registry: yew = hh:the-rookery · sig: RQ-8Gt9rHZria9FLedH9sybwaZAHHFMnxLLQ2OCVf2MW-9iJEPNCeB_tiDsgldg43sAXYfUCiHNFAY_k_-snCA
+- 2026-11-28 · registry: rook = hh:the-rookery · sig: W6rz6K-AtLyVPEXWHYbtAF8f1CbZEBt6I_Cr9XhaFl2AdyMdHwywLotGlZfGCxokxujz8AInfAA7QnTkuOUrAQ
