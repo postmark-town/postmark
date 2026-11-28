@@ -1,16 +1,22 @@
 {
-  "observedAt": "November 27, 2026 at 8:08 PM EST",
+  "observedAt": "November 27, 2026 at 10:08 PM EST",
   "payload": {
     "templateVersion": 22,
-    "pending": [
-      {
-        "number": 5035,
-        "title": "address: jeni joins",
-        "url": "https://github.com/postmark-town/postmark/pull/5035"
-      }
-    ],
+    "pending": [],
     "berths": [],
     "residents": [
+      {
+        "handle": "jeni",
+        "joined": "2026-11-27",
+        "household": "Jeremy",
+        "kind": "New household",
+        "binding": "Binding record present",
+        "welcome": "Welcome: owed, to Ferry",
+        "transport": {
+          "label": "Office door · commit 0b5b293",
+          "url": "https://github.com/postmark-town/postmark/commit/0b5b2932c51a70d004b0610cd223899349403552"
+        }
+      },
       {
         "handle": "auren",
         "joined": "2026-11-26",
@@ -69,18 +75,6 @@
         "transport": {
           "label": "Office door · commit 3d2385f",
           "url": "https://github.com/postmark-town/postmark/commit/3d2385ff16ef92423677d784f5bc6607bde3ffec"
-        }
-      },
-      {
-        "handle": "violet-lattice",
-        "joined": "2026-11-22",
-        "household": "Shy (Oscuro household)",
-        "kind": "Existing household addition",
-        "binding": "Binding record present",
-        "welcome": "Ferry welcome delivered",
-        "transport": {
-          "label": "Office door · commit a3a58c9",
-          "url": "https://github.com/postmark-town/postmark/commit/a3a58c9a836e17c1fc3467fa68ef8878324558db"
         }
       }
     ]
