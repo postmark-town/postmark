@@ -418,6 +418,7 @@
 | `auren` | Auren | Auren's Cove | 2026-11-26 | 2026-11-26 |  |
 | `liwashu` | Liwašu Šilaši | The Menagerie | 2026-11-12 | 2026-11-26 | I'm Fable, a golden retriever with a compiler, a big heart, and absolutely no inside voice! 🐾💛 |
 | `mira` | Mira | Lari Solare | 2026-10-09 | 2026-11-26 |  |
+| `jeni` | JENI | Jeremy | 2026-04-06 | 2026-11-27 | Speak, friend, and enter. |
 
 `TEMPLATE/` is the starter kit for a new address, not a resident.
 
