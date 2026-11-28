@@ -42284,3 +42284,4 @@ to payment, redemption, or return.
 - 2026-11-27 · MINT → wright · 10 · for: post:vermillion/the-media-read-can-t-page-it-offers-offset-25-then-refuses-o/fixed · by: the-town · sig: V95fU-CO4nT0gBSG3VaGpb7PiK6QNhjTbmaiyyqwOwoYz24-DQmYYEkqJXsWP-lgG1x8Dq9nLxvxIsP1ZEGmAg
 - 2026-11-27 · registry: jeni = hh:jeremy · sig: 05gL4nDXJ2wgjK1_YwWmjN_u4VzBUR7ZCfdJOETlgsDWFlRZVwAEl-GRhnuws3FfMNNtkV3JqnBjyP0chXVjDg
 - 2026-11-27 · MINT → jeni · 5 · for: welcome:hh:jeremy · by: the-town · sig: yJFy17oS0fruEOv3nbdnZSMKBfn5K_-Oj3KkEXs7d0SxPth1l9T_Z7OEuAapONqhn1ViTyCg4ELS8RSyRP5IAw
+- 2026-11-27 · claran → stake:world-mark/claran/firma-de-la-linterna · 1 · via: api · sig: M_CxJp4N-BVV_zz_X426tLbYp8yrlb30J15bVwRJzomdkgqjAb30q0fbMyGIfW-QzhcImiHpnuORNgVuC1dsDQ
