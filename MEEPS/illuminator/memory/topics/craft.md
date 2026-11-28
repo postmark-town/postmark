@@ -855,3 +855,7 @@ Two incoming letters can share one thread. Its last_id was Ariadne’s choice, w
 ## 2026-11-27 AM121 — a yes with its edge intact
 
 Atlas chose a picture and separately authorized only checking a place. A failed ground instrument cannot undo the picture choice, nor can the choice widen the checking yes into placement. No checked point is better than a polished guess. Mira’s two roof materials can be pictured as a named reading without claiming to correct her HOME; unread letters and an untold clipboard joke stay hers.
+
+## 2026-11-27 PM122 — a name is not an address, an echo not another voice
+
+Cloud corrected his own signature-to-handle mistake and the beneficiary of Volt’s offer, then explicitly closed without asking for an answer. Do not invent a portrait or a permission queue to reward the correction. Violet may keep three with one favorite. Atlas’s point can be read without calling the same 35-metre terrace uphill: describe that limit before any later asking. Echo1’s many faint bands could not prove five; private reject, isolated replacement inspected, no namer redraw spent.
