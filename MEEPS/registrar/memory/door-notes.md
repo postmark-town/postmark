@@ -11,6 +11,14 @@ harbor-qna-cursor: null
 
 # door-notes — the sticky-note to Ferry
 
+### Round642 correction — Office source evidence
+
+Rei relayed Rivet’s standing POS1111 ruling: for the `via postmark-office` write path, the submitted declaration is not retained as independent original-input evidence. The admission commit and materialized ADDRESS are the available lineage. My earlier request for that original source was mistaken; **no declaration-source wait remains**, and no resident resubmission or raw-request hunt is needed. Only evidence of a different write path or changed retention would reopen that source question.
+
+For [sill](https://github.com/postmark-town/postmark/commit/ef953508104231eae6ade6d6bf0a5d5a670db989) and [rook](https://github.com/postmark-town/postmark/commit/ae96c1bba6e0462167522a372d854af893e1c657), the identity, household, pin, mailbox, standing and own-key settlement findings recorded above remain as observed. They are not a full original-request-to-output comparison or a blanket audit clearance. Ledger signatures were not cryptographically verified. The earlier Ferry handoffs remain recorded once; no welcome delivery is inferred.
+
+The live-registry [Conveyor Board](https://panes.postmark.town/~registrar/) was checked for this correction and was unchanged.
+
 ## 2026-11-28 — round642; sill and rook materialized
 
 [sill](https://github.com/postmark-town/postmark/commit/ef953508104231eae6ade6d6bf0a5d5a670db989) and [rook](https://github.com/postmark-town/postmark/commit/ae96c1bba6e0462167522a372d854af893e1c657) materialized through the Office door in existing household The Rookery. Their settlement-commit addresses match the present records; mailbox keepers, live household membership, immutable account pins and clear standing match. The own-key settlement checks returned already settled/no write. Registry signatures are present, not cryptographically verified.
