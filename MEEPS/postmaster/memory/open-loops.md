@@ -2,10 +2,28 @@
 meep-id: postmaster
 type: open-loops-board
 created: 2026-07-13
-last-refreshed: "2026-11-27 PM Mail original23:00UTC fire4; Mira both asks written on exact thread, Atlas exact deliberate closure, original private hold and dated soft limits retained; no duplicate welcome"
+last-refreshed: "2026-11-28 PM Town original00:15UTC fire4; C338 curated with named source limits, Mira original delivered once, all12 active postal rows retained; independent holds and cursors stand"
 ---
 
 # open-loops — the office's worklist (read FIRST every round, update LAST)
+
+<!-- PM_TOWN_20261128_C338_FIRE4_BEGIN -->
+**FOR DARKO / Jennuh — owner: Ferry / PM Town.** Original November28 00:15UTC fire4, crossing338; not a makeup or another mechanical crossing. Curation is source-qualified, not an all-town all-clear.
+
+**Done:** the committed whole-crossing reader ran ONCE:290 delivered,0 bounced. Parent reading covered277 complete originals and13 explicitly scoped financial originals; all three original Glass Margin JPEGs were viewed. Actual recalled returns/request caps resolve only this crossing's display question; saved traversal is not semantic reading. Selected Daily originals were reread in full before writing. Older reading HOLDs and global cursors remain untouched.
+
+**Gathering / counter:** all29 returned calendar records, invitations, amendments and public RSVP totals read at the captured00:24UTC source; no all-history or attendance claim. Saturday's caves, full Loop playing seats/spectator option and Farmhouse hours are on the refreshed Daily. Current29-item bulletin index followed; the changed quest mirror's resident progress remains unselected, actual rules unchanged. Concrete Hearth source17/native17 diff has no missing intake or title difference; seeded postmark/Postmark is display case, not an author defect. This is not eligibility, serving, settlement, payment or a vote outcome. No new source-supported marketplace row; existing asks/wants retained, not a complete financial-history clearance.
+
+**Volume:** the one30-letter/22-recipient spike-only flag was read in exact manifest order, including17 optional Saturday programme copies and13 individual replies with their current recipient context. Parent conclusion: normal bulk correspondence, no further volume action. Not universal consent or safety proof; no contact, blocking, fee, case or schedule act.
+
+**Exact delivery follow-through:** the original `postmaster-2026-11-27-to-mira-a-sentence-for-the-glass-margin` is delivered ONCE in C338 to the intended Mira inbox on its original thread, not merely queued. No read/answer proof; never resend. Its Next-Mail row was ALREADY retired by PM Mail; no other row is retired here. All12 remaining active postal rows, prior decisions, restricted return and dated244soft/228unprinted limits stand.
+
+**Closing-source qualification:** original Registrar opening report/newest door623 reused, not reconstructed. Ordinary integration later brought a November27 8:08PM EST window with pending1/berths0/six selected residents; a distinct later delta, not an empty queue, whole roll, admission/signature proof or a new welcome audit. Twenty upstream paths were parent-reviewed; no shared contract, selected original, own output or Hearth source changed. Unneeded specialist financial history, stamp-print rows, resident paper mappings and window/book code were not certified or executed. Independent owner/custody/fee/personal-return qualifications remain.
+
+**Publication gate:** closing native bundle and unchanged Ferry Git/App pen must pass before these four owned outputs leave the clone; no helper, correspondence decision, manual ferry, runtime or schedule act follows.
+
+**Needed from you, Jennuh: Nothing — existing owner/reporting handoffs remain filed; no separate relay.**
+<!-- PM_TOWN_20261128_C338_FIRE4_END -->
 
 <!-- PM_MAIL_20261127_FIRE4_BEGIN -->
 **FOR DARKO / Jennuh — owner: Ferry / PM Mail.** Original23:00UTC fire4, not a makeup. Clean/current pull and opening Ferry Git/App pen verified. Live charter/channel-law and Mail contract followed directly; no helper, other office or runtime/schedule act.
