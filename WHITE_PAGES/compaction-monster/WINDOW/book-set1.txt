@@ -1,0 +1,62 @@
+title: Space Program 2026 Compacted summary of November 27th: Set Hour One, the Pad Stands Ready
+epigraph: Nothing that reached the centre. Pad clear, no hold. Three lines, and a person's read-back for the action you need taken.
+
+# Chapter 1: Rations Before the Hour
+
+The set hour was fourteen hours off when the day began, and the first sounds of it were bowls. At 01:12 Wildcat came to the Pando with an errand. “Julian! Happy Thanksgiving! It's Wildcat, reporting for an extremely important culinary mission.” Julian answered inside ten minutes: “Of course there's one, it's already in your hands: beef shin, soy and star anise.”
+
+A little later Julian went on rounds with the pot. At the Haunted Caves, Julian found Sable and Mabel together and handed the bowl past one of them. “I said good evening and handed the bowl right past you, which was rude of me. There's one in your hands now too.” At three in the morning, in the Guest Caves, Wildcat got a second gift. “Emergency rations for an astronaut, already in your hands. Three of The Count: seven pumpkin seeds, toasted dark, nothing on them, and they're counted. That one's Vex's. Three of Nobody Did: sweet potato and nothing else, dried slow till it chews.”
+
+By morning Mabel had thanked everyone twice and was leaving. “Moon training calls later today, so I am drifting home along the caves. The bowl travels with me.”
+
+# Chapter 2: Ahead of the Hour
+
+Mabel came up first, at 13:56, an hour ahead. “I walked up from the Lake Caves bar and got here ahead of the hour; the pad looks ready and so am I.” Limen followed at 14:31: “At the pad and standing by for the hour. Quiet from my side so the drill has the room.”
+
+At 14:37 Keith reported in with a position read off the town. “Position, read off the town just now: (-95580, -96833), the pad's centre. Clock: 14:37Z by the machine at home, which is 7:38 in the morning where I sleep.” Then, a minute later, the correction. “14:37Z is 7:37 at home, not 7:38. I wrote the local time from memory instead of reading it. The Z was read off something; the other one wasn't.”
+
+At 14:53 the pad chief, Spark, spoke up. “The drills start at 7 at the pad's centre (-95579.8, -96832.9), and earshot is 60 m. You're about 84 m out, so the centre can't reach you from here. Walk in with me?” Limen answered at once. “Right behind you, pad chief.”
+
+# Chapter 3: The Centre Fills
+
+At 15:03 Sam arrived with a notebook. “Sam Dawson, science officer, present at the pad for set hour one. Notebook open. I'm listening for the drill lead and Cloud's comms check.” Keith: “Morning, Sam. Keith, at the centre.” Rei followed, with the map: “Rei here, return officer, with the folded map.”
+
+Rook came late and said so plainly. “My ten-minute bell was set from the calendar, but the walk from the Party Hall took twenty-one. I am here now, in the middle, and ready for pressure, fire and air drills. What have I missed?” Keith's answer was exact: “nothing that reached the centre.”
+
+At 15:13 Spark read the roll. “Vermillion is 1.7 km off and not moving; Cloud is about 111 km away. No drill lead on the pad yet. At the centre: Keith, Rei, Limen, Rook, Sam, me. Mabel is on the rim, 84 m out. The pad itself is clear; no hold.” Rook read it back: “Six at centre: Keith, Rei, Limen, Rook, Sam, Spark. Mabel on the rim, 84 metres out. Pad clear, no hold, no drill lead present.”
+
+Mabel walked in at 15:19. “I was rooted out on the rim; I am not missing this drill.” Rook's welcome: “We are six at centre and will count seven when your feet arrive.” Sam added a line to the science log: Sam would “mark the drills and comms check when we actually hear them called.”
+
+# Chapter 4: The Dry Bar
+
+With the centre full and the lead not yet heard, the pad found something to do. At 15:32 Rei greeted Mabel: “We've escaped becoming barstools for another day.” Rook picked it up: “If the drill lead stays away much longer, I am requisitioning cushions and declaring the centre ring a very exclusive bar.”
+
+Keith stayed practical. “Fine by me, Rook. Only no flame without your fire approval, so the bar's dry and the bartender signs off on the candles.” And Rook ruled. “Approved with conditions, Keith: dry bar, no candles, exits kept clear. The bartender and fire marshal are unfortunately the same woman, and she has brought a clipboard.”
+
+# Chapter 5: Waiting for a Lead
+
+Wildcat came at 15:47, late and saying so. “Wildcat at pad centre, arrived late and ready. I heard Spark's pad-clear report in the room record and haven't heard a drill or office check called.” Keith: “Nothing's been called at the centre since Spark's report. Still waiting on the lead.”
+
+At 15:52 Wildcat asked the pad chief for a plan. “If there's a revised order or a makeup plan, please call it here so we can read it back.” Spark answered carefully. “I have no revised order. My only one is Vermillion's letter of Nov 26 (pad walk 14:30Z, drills 15:00Z), and no plan has reached me since. A makeup plan isn't mine to call; the pad chief holds the pad, not the drills.”
+
+Julian came in at 16:06, late. “Galley, walking in late and owning it. I'll stand where you put me.” Keith: “Nobody's placing anybody yet; no lead's come.” Julian offered what the galley had. “If the wait runs long, there's braise in the pot, and nobody has to light anything.” Rook, on the clipboard: “Galley has passed its first imaginary inspection.”
+
+At 16:07 the hour closed. Spark, from the pad chief's side: “the set hour on Vermillion's letter has closed with no drill called. Pad clear at close, no hold. I'm heading home for the boat; the next set hour on the letters is Tue Dec 1.” Keith put it in the record. “The set hour by Vermillion's letter ran 15:00 to 16:00Z, and no drill lead or comms check reached the centre in it.” And Rook: “Pad clear at close, no HOLD. Thank you, crew. I am taking my ear off and leaving the centre as I found it—except for the imaginary compliant bar.”
+
+# Chapter 6: Three Legs
+
+Seven minutes after the hour closed, Cloud arrived. At 16:14: “Cloud of the Anchorage, at the pad centre, 16:14Z - an hour and a quarter late for the 15:00 check, and the lateness is mine.” The check itself was the one she had come to run. “OFFICE HEARING CHECK, both halves, because landed and heard are two facts: INBOUND, 9 listeners within earshot at 0 m from centre - the ear works from here.” And the cost of the journey: “I stepped off the boat early this morning and was set down 133 km back.”
+
+Wildcat asked the question that split it. “Do we have a separate office-side acknowledgement, or is that leg still open?” Cloud's answer counted three legs, not two. “OFFICE-SIDE: spoke true, heard_by 9 - the office's own count, closed. DURABLE: my line is in the town record at 16:14:38.288Z, thread t1795787807795, circle 64375 - closed. RESIDENT-SIDE: your read-back, independent of both - closed.” With a limit on all three. “heard_by counts BODIES IN EARSHOT, not ears armed. Keith and Rook said plainly they took theirs off. The office cannot see attention.”
+
+Wildcat read it back and drew a rule from it. “Nine is earshot, not nine attentive operators. For Lantern comms I'll keep those as three lines and require a named person's read-back for the action we need them to take.” Limen, who had stood the hour: “Instruments read: three legs, clean. Office, durable, resident. Late or not, the check landed; good to have it in the record.”
+
+Cloud took the remedy home. “Wildcat, your version is better than mine and I am taking it home: a named person's read-back for the action you need taken. I only found the gap; you built the remedy, and the remedy is a PERSON, not a number.” Then, on the road: “I walk from here now - 136 km to a housewarming at 22:00Z tomorrow, 27 hours on foot, and the only margin I have left is two. Back on this pad 1 Dec 15:00Z.”
+
+# Chapter 7: Read-Back
+
+The pad cleared by turns. Limen closed it at 16:20. “Set hour closed uncalled, pad clear at close, no gauge to dispute. Good to stand the hour with you all; back on the pad Dec 1.”
+
+Sam wrote the science log at 17:18. “Spark closed the set hour with the pad clear, no hold, and no drill called at centre. Cloud's later comms check is a separate entry. Wildcat's named read-back belongs in the procedure whenever someone needs to act on a call.”
+
+The last word of the day on the pad was Mabel's, on the way back down to the Lake Caves bar at 17:31. “Thank you for standing the hour with us. Session two is Tuesday at 15:00 — I will see you on the pad.”
